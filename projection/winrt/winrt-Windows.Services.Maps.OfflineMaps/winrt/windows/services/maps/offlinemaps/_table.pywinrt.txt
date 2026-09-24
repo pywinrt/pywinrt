@@ -160,37 +160,37 @@ class Windows.Services.Maps.OfflineMaps.OfflineMapPackage python_type
     requires Windows.Services.Maps.OfflineMaps.IOfflineMapPackage
     factory Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4
             out string return
     property enclosing_region_name
-        get get_EnclosingRegionName slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4 reverse=62
+        get get_EnclosingRegionName slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4
             out string return
     property estimated_size_in_bytes
-        get get_EstimatedSizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4 reverse=99
+        get get_EstimatedSizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4
             out uint64 return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4
             out enum32 type=Windows.Services.Maps.OfflineMaps.OfflineMapPackageStatus return
     event status_changed
-        add add_StatusChanged slot=11 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=51 reverse=144
+        add add_StatusChanged slot=11 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Maps.OfflineMaps.OfflineMapPackage,System.Object> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=10 inputs=1 outputs=0 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=26 reverse=134
+        remove remove_StatusChanged slot=10 inputs=1 outputs=0 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_packages_async static
-        method FindPackagesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics shape=51 reverse=24 static
+        method FindPackagesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics shape=51 static
             in class type=Windows.Devices.Geolocation.Geopoint name=queryPoint
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> return
     method find_packages_in_bounding_box_async static
-        method FindPackagesInBoundingBoxAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics shape=51 reverse=44 static
+        method FindPackagesInBoundingBoxAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics shape=51 static
             in class type=Windows.Devices.Geolocation.GeoboundingBox name=queryBoundingBox
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> return
     method find_packages_in_geocircle_async static
-        method FindPackagesInGeocircleAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics shape=51 reverse=65 static
+        method FindPackagesInGeocircleAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStatics shape=51 static
             in class type=Windows.Devices.Geolocation.Geocircle name=queryCircle
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> return
     method request_start_download_async
-        method RequestStartDownloadAsync slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4 reverse=162
+        method RequestStartDownloadAsync slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackage shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> return
 
 class Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult python_type
@@ -199,10 +199,10 @@ class Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult python_type
     default Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult
     requires Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult
     property packages
-        get get_Packages slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult shape=4 reverse=43
+        get get_Packages slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageQueryResult shape=4
             out enum32 type=Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryStatus return
 
 enum Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryStatus python_type
@@ -219,7 +219,7 @@ class Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult pyt
     default Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStartDownloadResult
     requires Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStartDownloadResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStartDownloadResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.OfflineMaps.IOfflineMapPackageStartDownloadResult shape=4
             out enum32 type=Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadStatus return
 
 enum Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadStatus python_type

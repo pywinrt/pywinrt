@@ -151,39 +151,39 @@ class Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo activatable py
             in struct type=Windows.Gaming.Input.GamepadReading name=reading
             out class type=Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo return
     property right_trigger
-        get get_RightTrigger slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=218
+        get get_RightTrigger slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out double return
         put put_RightTrigger slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2
             in double name=value
     property right_thumbstick_y
-        get get_RightThumbstickY slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=202
+        get get_RightThumbstickY slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out double return
         put put_RightThumbstickY slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2
             in double name=value
     property right_thumbstick_x
-        get get_RightThumbstickX slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=186
+        get get_RightThumbstickX slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out double return
         put put_RightThumbstickX slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2
             in double name=value
     property left_trigger
-        get get_LeftTrigger slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=162
+        get get_LeftTrigger slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out double return
-        put put_LeftTrigger slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2 reverse=171
+        put put_LeftTrigger slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2
             in double name=value
     property left_thumbstick_y
-        get get_LeftThumbstickY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=121
+        get get_LeftThumbstickY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out double return
-        put put_LeftThumbstickY slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2 reverse=138
+        put put_LeftThumbstickY slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2
             in double name=value
     property left_thumbstick_x
-        get get_LeftThumbstickX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=62
+        get get_LeftThumbstickX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out double return
         put put_LeftThumbstickX slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=2
             in double name=value
     property buttons
-        get get_Buttons slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=22
+        get get_Buttons slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             out enum_u32 type=Windows.Gaming.Input.GamepadButtons return
-        put put_Buttons slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4 reverse=43
+        put put_Buttons slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputGamepadInfo shape=4
             in enum_u32 type=Windows.Gaming.Input.GamepadButtons name=value
 
 enum Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions python_type flags_enum
@@ -204,19 +204,19 @@ class Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo activatable p
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property virtual_key
-        get get_VirtualKey slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4 reverse=121
+        get get_VirtualKey slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4
             out uint16 return
-        put put_VirtualKey slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4 reverse=141
+        put put_VirtualKey slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4
             in uint16 name=value
     property scan_code
-        get get_ScanCode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4 reverse=62
+        get get_ScanCode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4
             out uint16 return
-        put put_ScanCode slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4 reverse=99
+        put put_ScanCode slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4
             in uint16 name=value
     property key_options
-        get get_KeyOptions slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4 reverse=22
+        get get_KeyOptions slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions return
-        put put_KeyOptions slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4 reverse=43
+        put put_KeyOptions slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputKeyboardInfo shape=4
             in enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions name=value
 
 class Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo activatable python_type
@@ -228,29 +228,29 @@ class Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property time_offset_in_milliseconds
-        get get_TimeOffsetInMilliseconds slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=186
+        get get_TimeOffsetInMilliseconds slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             out uint32 return
-        put put_TimeOffsetInMilliseconds slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=194
+        put put_TimeOffsetInMilliseconds slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             in uint32 name=value
     property mouse_options
-        get get_MouseOptions slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=22
+        get get_MouseOptions slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions return
-        put put_MouseOptions slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=43
+        put put_MouseOptions slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             in enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions name=value
     property mouse_data
-        get get_MouseData slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=62
+        get get_MouseData slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             out uint32 return
-        put put_MouseData slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=99
+        put put_MouseData slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             in uint32 name=value
     property delta_y
-        get get_DeltaY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=121
+        get get_DeltaY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             out int32 return
-        put put_DeltaY slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=141
+        put put_DeltaY slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             in int32 name=value
     property delta_x
-        get get_DeltaX slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=162
+        get get_DeltaX slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             out int32 return
-        put put_DeltaX slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4 reverse=173
+        put put_DeltaX slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputMouseInfo shape=4
             in int32 name=value
 
 enum Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions python_type flags_enum
@@ -289,39 +289,39 @@ class Windows.UI.Input.Preview.Injection.InjectedInputPenInfo activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property tilt_y
-        get get_TiltY slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=218
+        get get_TiltY slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out int32 return
-        put put_TiltY slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=223
+        put put_TiltY slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             in int32 name=value
     property tilt_x
-        get get_TiltX slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=202
+        get get_TiltX slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out int32 return
-        put put_TiltX slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=210
+        put put_TiltX slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             in int32 name=value
     property rotation
-        get get_Rotation slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=186
+        get get_Rotation slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out double return
         put put_Rotation slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=2
             in double name=value
     property pressure
-        get get_Pressure slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=162
+        get get_Pressure slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out double return
-        put put_Pressure slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=2 reverse=171
+        put put_Pressure slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=2
             in double name=value
     property pointer_info
-        get get_PointerInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=22
+        get get_PointerInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out struct type=Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo return
         put put_PointerInfo slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=34
             in struct type=Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo name=value
     property pen_parameters
-        get get_PenParameters slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=121
+        get get_PenParameters slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputPenParameters return
-        put put_PenParameters slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=141
+        put put_PenParameters slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             in enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputPenParameters name=value
     property pen_buttons
-        get get_PenButtons slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=62
+        get get_PenButtons slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputPenButtons return
-        put put_PenButtons slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4 reverse=99
+        put put_PenButtons slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputPenInfo shape=4
             in enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputPenButtons name=value
 
 enum Windows.UI.Input.Preview.Injection.InjectedInputPenParameters python_type flags_enum
@@ -389,27 +389,27 @@ class Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property touch_parameters
-        get get_TouchParameters slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=186
+        get get_TouchParameters slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters return
-        put put_TouchParameters slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=194
+        put put_TouchParameters slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             in enum_u32 type=Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters name=value
     property pressure
-        get get_Pressure slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=162
+        get get_Pressure slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             out double return
-        put put_Pressure slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=2 reverse=171
+        put put_Pressure slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=2
             in double name=value
     property pointer_info
-        get get_PointerInfo slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=121
+        get get_PointerInfo slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             out struct type=Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo return
         put put_PointerInfo slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=34
             in struct type=Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo name=value
     property orientation
-        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=62
+        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             out int32 return
-        put put_Orientation slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=99
+        put put_Orientation slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             in int32 name=value
     property contact
-        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4 reverse=22
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=4
             out struct type=Windows.UI.Input.Preview.Injection.InjectedInputRectangle return
         put put_Contact slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInjectedInputTouchInfo shape=21
             in struct type=Windows.UI.Input.Preview.Injection.InjectedInputRectangle name=value
@@ -438,43 +438,43 @@ class Windows.UI.Input.Preview.Injection.InputInjector python_type
     factory Windows.UI.Input.Preview.Injection.IInputInjectorStatics
     factory Windows.UI.Input.Preview.Injection.IInputInjectorStatics2
     method initialize_gamepad_injection
-        method InitializeGamepadInjection slot=6 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=0 reverse=16
+        method InitializeGamepadInjection slot=6 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=0
     method initialize_pen_injection
-        method InitializePenInjection slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=141
+        method InitializePenInjection slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in enum32 type=Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode name=visualMode
     method initialize_touch_injection
-        method InitializeTouchInjection slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=62
+        method InitializeTouchInjection slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in enum32 type=Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode name=visualMode
     method inject_gamepad_input
-        method InjectGamepadInput slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=4 reverse=43
+        method InjectGamepadInput slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=4
             in class type=Windows.UI.Input.Preview.Injection.InjectedInputGamepadInfo name=input
     method inject_keyboard_input
-        method InjectKeyboardInput slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=22
+        method InjectKeyboardInput slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo> name=input
     method inject_mouse_input
-        method InjectMouseInput slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=43
+        method InjectMouseInput slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo> name=input
     method inject_pen_input
-        method InjectPenInput slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=162
+        method InjectPenInput slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in class type=Windows.UI.Input.Preview.Injection.InjectedInputPenInfo name=input
     method inject_shortcut
-        method InjectShortcut slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=186
+        method InjectShortcut slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in enum32 type=Windows.UI.Input.Preview.Injection.InjectedInputShortcut name=shortcut
     method inject_touch_input
-        method InjectTouchInput slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4 reverse=99
+        method InjectTouchInput slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo> name=input
     method try_create static
-        method TryCreate slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInputInjectorStatics shape=4 reverse=22 static
+        method TryCreate slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInputInjectorStatics shape=4 static
             out class type=Windows.UI.Input.Preview.Injection.InputInjector return
     method try_create_for_app_broadcast_only static
-        method TryCreateForAppBroadcastOnly slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInputInjectorStatics2 shape=4 reverse=22 static
+        method TryCreateForAppBroadcastOnly slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Injection.IInputInjectorStatics2 shape=4 static
             out class type=Windows.UI.Input.Preview.Injection.InputInjector return
     method uninitialize_gamepad_injection
-        method UninitializeGamepadInjection slot=8 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=0 reverse=55
+        method UninitializeGamepadInjection slot=8 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=0
     method uninitialize_pen_injection
-        method UninitializePenInjection slot=13 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=0 reverse=169
+        method UninitializePenInjection slot=13 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=0
     method uninitialize_touch_injection
-        method UninitializeTouchInjection slot=10 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=0 reverse=117
+        method UninitializeTouchInjection slot=10 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector shape=0
 
 interface Windows.Foundation.Collections.IIterable external parameterized
     py winrt.windows.foundation.collections._IIterable

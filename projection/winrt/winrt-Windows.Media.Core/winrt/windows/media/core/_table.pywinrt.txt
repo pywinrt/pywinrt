@@ -75,21 +75,21 @@ class Windows.Media.Core.AudioStreamDescriptor python_type
     requires Windows.Media.Core.IAudioStreamDescriptor3
     factory Windows.Media.Core.IAudioStreamDescriptorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptorFactory shape=51
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             out class type=Windows.Media.Core.AudioStreamDescriptor return
     property encoding_properties
-        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor shape=4 reverse=22
+        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor shape=4
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     property trailing_encoder_padding
-        get get_TrailingEncoderPadding slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4 reverse=99
+        get get_TrailingEncoderPadding slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
-        put put_TrailingEncoderPadding slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4 reverse=62
+        put put_TrailingEncoderPadding slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
     property leading_encoder_padding
-        get get_LeadingEncoderPadding slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4 reverse=43
+        get get_LeadingEncoderPadding slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
-        put put_LeadingEncoderPadding slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4 reverse=22
+        put put_LeadingEncoderPadding slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioStreamDescriptor2 shape=4
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
     property name
         get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamDescriptor shape=4 reverse=62
@@ -110,7 +110,7 @@ class Windows.Media.Core.AudioStreamDescriptor python_type
         put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamDescriptor2 shape=4 reverse=22
             in string name=value
     method copy
-        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor3 shape=4 reverse=22
+        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioStreamDescriptor3 shape=4
             out class type=Windows.Media.Core.AudioStreamDescriptor return
 
 class Windows.Media.Core.AudioTrack python_type
@@ -120,13 +120,13 @@ class Windows.Media.Core.AudioTrack python_type
     requires Windows.Media.Core.IMediaTrack
     requires Windows.Media.Core.IAudioTrack
     property name
-        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4 reverse=121
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4
             out string return
     property playback_item
-        get get_PlaybackItem slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4 reverse=99
+        get get_PlaybackItem slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4
             out class type=Windows.Media.Playback.MediaPlaybackItem return
     property support_info
-        get get_SupportInfo slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4 reverse=141
+        get get_SupportInfo slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4
             out class type=Windows.Media.Core.AudioTrackSupportInfo return
     property label
         get get_Label slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaTrack shape=4 reverse=121
@@ -143,13 +143,13 @@ class Windows.Media.Core.AudioTrack python_type
         get get_TrackKind slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaTrack shape=4 reverse=62
             out enum32 type=Windows.Media.Core.MediaTrackKind return
     event open_failed
-        add add_OpenFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=51 reverse=24
+        add add_OpenFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.AudioTrack,Windows.Media.Core.AudioTrackOpenFailedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OpenFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioTrack shape=26 reverse=53
+        remove remove_OpenFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IAudioTrack shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_encoding_properties
-        method GetEncodingProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4 reverse=62
+        method GetEncodingProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrack shape=4
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
 
 class Windows.Media.Core.AudioTrackOpenFailedEventArgs python_type
@@ -158,7 +158,7 @@ class Windows.Media.Core.AudioTrackOpenFailedEventArgs python_type
     default Windows.Media.Core.IAudioTrackOpenFailedEventArgs
     requires Windows.Media.Core.IAudioTrackOpenFailedEventArgs
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackOpenFailedEventArgs shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackOpenFailedEventArgs shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Core.AudioTrackSupportInfo python_type
@@ -167,16 +167,16 @@ class Windows.Media.Core.AudioTrackSupportInfo python_type
     default Windows.Media.Core.IAudioTrackSupportInfo
     requires Windows.Media.Core.IAudioTrackSupportInfo
     property decoder_status
-        get get_DecoderStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4 reverse=22
+        get get_DecoderStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4
             out enum32 type=Windows.Media.Core.MediaDecoderStatus return
     property degradation
-        get get_Degradation slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4 reverse=43
+        get get_Degradation slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4
             out enum32 type=Windows.Media.Core.AudioDecoderDegradation return
     property degradation_reason
-        get get_DegradationReason slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4 reverse=62
+        get get_DegradationReason slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4
             out enum32 type=Windows.Media.Core.AudioDecoderDegradationReason return
     property media_source_status
-        get get_MediaSourceStatus slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4 reverse=99
+        get get_MediaSourceStatus slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IAudioTrackSupportInfo shape=4
             out enum32 type=Windows.Media.Core.MediaSourceStatus return
 
 class Windows.Media.Core.ChapterCue activatable python_type
@@ -189,9 +189,9 @@ class Windows.Media.Core.ChapterCue activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property title
-        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IChapterCue shape=4 reverse=43
+        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IChapterCue shape=4
             out string return
-        put put_Title slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IChapterCue shape=4 reverse=22
+        put put_Title slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IChapterCue shape=4
             in string name=value
     property start_time
         get get_StartTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaCue shape=4 reverse=43
@@ -221,19 +221,19 @@ class Windows.Media.Core.CodecInfo python_type
     default Windows.Media.Core.ICodecInfo
     requires Windows.Media.Core.ICodecInfo
     property category
-        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4 reverse=43
+        get get_Category slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4
             out enum32 type=Windows.Media.Core.CodecCategory return
     property display_name
-        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4 reverse=99
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4
             out string return
     property is_trusted
-        get get_IsTrusted slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4 reverse=121
+        get get_IsTrusted slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4
             out boolean return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4
             out enum32 type=Windows.Media.Core.CodecKind return
     property subtypes
-        get get_Subtypes slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4 reverse=62
+        get get_Subtypes slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 enum Windows.Media.Core.CodecKind python_type
@@ -251,7 +251,7 @@ class Windows.Media.Core.CodecQuery activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method find_all_async
-        method FindAllAsync slot=6 inputs=3 outputs=1 declaring=Windows.Media.Core.ICodecQuery shape=195 reverse=26
+        method FindAllAsync slot=6 inputs=3 outputs=1 declaring=Windows.Media.Core.ICodecQuery shape=195
             in enum32 type=Windows.Media.Core.CodecKind name=kind
             in enum32 type=Windows.Media.Core.CodecCategory name=category
             in string name=subType
@@ -262,160 +262,160 @@ class Windows.Media.Core.CodecSubtypes static python_type
     factory Windows.Media.Core.ICodecSubtypesStatics
     factory Windows.Media.Core.ICodecSubtypesStatics2
     property audio_format_w_m_audio_lossless static
-        get get_AudioFormatWMAudioLossless slot=54 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=368 static
+        get get_AudioFormatWMAudioLossless slot=54 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_aac static
-        get get_AudioFormatAac slot=35 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=292 static
+        get get_AudioFormatAac slot=35 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_adts static
-        get get_AudioFormatAdts slot=36 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=296 static
+        get get_AudioFormatAdts slot=36 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_alac static
-        get get_AudioFormatAlac slot=37 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=299 static
+        get get_AudioFormatAlac slot=37 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_amr_n_b static
-        get get_AudioFormatAmrNB slot=38 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=302 static
+        get get_AudioFormatAmrNB slot=38 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_amr_w_b static
-        get get_AudioFormatAmrWB slot=39 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=307 static
+        get get_AudioFormatAmrWB slot=39 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_amr_w_p static
-        get get_AudioFormatAmrWP slot=40 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=312 static
+        get get_AudioFormatAmrWP slot=40 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_dolby_a_c3 static
-        get get_AudioFormatDolbyAC3 slot=41 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=316 static
+        get get_AudioFormatDolbyAC3 slot=41 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_dolby_a_c3_spdif static
-        get get_AudioFormatDolbyAC3Spdif slot=42 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=319 static
+        get get_AudioFormatDolbyAC3Spdif slot=42 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_dolby_d_d_plus static
-        get get_AudioFormatDolbyDDPlus slot=43 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=322 static
+        get get_AudioFormatDolbyDDPlus slot=43 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_drm static
-        get get_AudioFormatDrm slot=44 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=326 static
+        get get_AudioFormatDrm slot=44 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_dts static
-        get get_AudioFormatDts slot=45 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=330 static
+        get get_AudioFormatDts slot=45 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_flac static
-        get get_AudioFormatFlac slot=46 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=334 static
+        get get_AudioFormatFlac slot=46 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_float static
-        get get_AudioFormatFloat slot=47 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=339 static
+        get get_AudioFormatFloat slot=47 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_m_p3 static
-        get get_AudioFormatMP3 slot=48 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=343 static
+        get get_AudioFormatMP3 slot=48 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_m_peg static
-        get get_AudioFormatMPeg slot=49 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=347 static
+        get get_AudioFormatMPeg slot=49 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_msp1 static
-        get get_AudioFormatMsp1 slot=50 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=351 static
+        get get_AudioFormatMsp1 slot=50 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_opus static
-        get get_AudioFormatOpus slot=51 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=355 static
+        get get_AudioFormatOpus slot=51 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_pcm static
-        get get_AudioFormatPcm slot=52 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=359 static
+        get get_AudioFormatPcm slot=52 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_m_p43 static
-        get get_VideoFormatMP43 slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=232 static
+        get get_VideoFormatMP43 slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_w_m_audio_v8 static
-        get get_AudioFormatWMAudioV8 slot=55 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=440 static
+        get get_AudioFormatWMAudioV8 slot=55 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_w_m_audio_v9 static
-        get get_AudioFormatWMAudioV9 slot=56 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=441 static
+        get get_AudioFormatWMAudioV9 slot=56 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_wma_spdif static
-        get get_AudioFormatWmaSpdif slot=53 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=363 static
+        get get_AudioFormatWmaSpdif slot=53 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format420_o static
-        get get_VideoFormat420O slot=34 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=288 static
+        get get_VideoFormat420O slot=34 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_d_v25 static
-        get get_VideoFormatDV25 slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=22 static
+        get get_VideoFormatDV25 slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_d_v50 static
-        get get_VideoFormatDV50 slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=43 static
+        get get_VideoFormatDV50 slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_dvc static
-        get get_VideoFormatDvc slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=62 static
+        get get_VideoFormatDvc slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_dvh1 static
-        get get_VideoFormatDvh1 slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=99 static
+        get get_VideoFormatDvh1 slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_dvh_d static
-        get get_VideoFormatDvhD slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=121 static
+        get get_VideoFormatDvhD slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_dvsd static
-        get get_VideoFormatDvsd slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=141 static
+        get get_VideoFormatDvsd slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_dvsl static
-        get get_VideoFormatDvsl slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=162 static
+        get get_VideoFormatDvsl slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_h263 static
-        get get_VideoFormatH263 slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=173 static
+        get get_VideoFormatH263 slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_h264 static
-        get get_VideoFormatH264 slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=186 static
+        get get_VideoFormatH264 slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_h264_e_s static
-        get get_VideoFormatH264ES slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=202 static
+        get get_VideoFormatH264ES slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_h265 static
-        get get_VideoFormatH265 slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=194 static
+        get get_VideoFormatH265 slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_hevc static
-        get get_VideoFormatHevc slot=17 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=210 static
+        get get_VideoFormatHevc slot=17 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_hevc_e_s static
-        get get_VideoFormatHevcES slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=218 static
+        get get_VideoFormatHevcES slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_m4_s2 static
-        get get_VideoFormatM4S2 slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=223 static
+        get get_VideoFormatM4S2 slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_m_p4_s static
-        get get_VideoFormatMP4S slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=237 static
+        get get_VideoFormatMP4S slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_m_p4_v static
-        get get_VideoFormatMP4V slot=23 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=242 static
+        get get_VideoFormatMP4V slot=23 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_mjpg static
-        get get_VideoFormatMjpg slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=228 static
+        get get_VideoFormatMjpg slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_mpeg2 static
-        get get_VideoFormatMpeg2 slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=247 static
+        get get_VideoFormatMpeg2 slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_mpg1 static
-        get get_VideoFormatMpg1 slot=27 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=259 static
+        get get_VideoFormatMpg1 slot=27 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_mss1 static
-        get get_VideoFormatMss1 slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=263 static
+        get get_VideoFormatMss1 slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_mss2 static
-        get get_VideoFormatMss2 slot=29 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=266 static
+        get get_VideoFormatMss2 slot=29 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_v_p80 static
-        get get_VideoFormatVP80 slot=25 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=252 static
+        get get_VideoFormatVP80 slot=25 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_v_p90 static
-        get get_VideoFormatVP90 slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=255 static
+        get get_VideoFormatVP90 slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_wmv1 static
-        get get_VideoFormatWmv1 slot=30 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=270 static
+        get get_VideoFormatWmv1 slot=30 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_wmv2 static
-        get get_VideoFormatWmv2 slot=31 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=273 static
+        get get_VideoFormatWmv2 slot=31 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_wmv3 static
-        get get_VideoFormatWmv3 slot=32 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=280 static
+        get get_VideoFormatWmv3 slot=32 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_wvc1 static
-        get get_VideoFormatWvc1 slot=33 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=285 static
+        get get_VideoFormatWvc1 slot=33 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_av1 static
-        get get_VideoFormatAv1 slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics2 shape=4 reverse=22 static
+        get get_VideoFormatAv1 slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics2 shape=4 static
             out string return
 
 class Windows.Media.Core.DataCue activatable python_type
@@ -429,12 +429,12 @@ class Windows.Media.Core.DataCue activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IDataCue shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IDataCue shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Data slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IDataCue shape=4 reverse=22
+        put put_Data slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IDataCue shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property properties
-        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IDataCue2 shape=4 reverse=22
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IDataCue2 shape=4
             out class type=Windows.Foundation.Collections.PropertySet return
     property start_time
         get get_StartTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaCue shape=4 reverse=43
@@ -458,7 +458,7 @@ class Windows.Media.Core.FaceDetectedEventArgs python_type
     default Windows.Media.Core.IFaceDetectedEventArgs
     requires Windows.Media.Core.IFaceDetectedEventArgs
     property result_frame
-        get get_ResultFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectedEventArgs shape=4 reverse=22
+        get get_ResultFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectedEventArgs shape=4
             out class type=Windows.Media.Core.FaceDetectionEffectFrame return
 
 class Windows.Media.Core.FaceDetectionEffect python_type
@@ -468,20 +468,20 @@ class Windows.Media.Core.FaceDetectionEffect python_type
     requires Windows.Media.Core.IFaceDetectionEffect
     requires Windows.Media.IMediaExtension
     property enabled
-        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=4 reverse=43
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=4
             out boolean return
-        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=4 reverse=22
+        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=4
             in boolean name=value
     property desired_detection_interval
-        get get_DesiredDetectionInterval slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=4 reverse=99
+        get get_DesiredDetectionInterval slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=4
             out timespan return
-        put put_DesiredDetectionInterval slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=26 reverse=82
+        put put_DesiredDetectionInterval slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=26
             in timespan name=value
     event face_detected
-        add add_FaceDetected slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=51 reverse=124
+        add add_FaceDetected slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffect shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.FaceDetectionEffect,Windows.Media.Core.FaceDetectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FaceDetected slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=26 reverse=156
+        remove remove_FaceDetected slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffect shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method set_properties
         method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
@@ -497,14 +497,14 @@ class Windows.Media.Core.FaceDetectionEffectDefinition activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property synchronous_detection_enabled
-        get get_SynchronousDetectionEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4 reverse=99
+        get get_SynchronousDetectionEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4
             out boolean return
-        put put_SynchronousDetectionEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4 reverse=62
+        put put_SynchronousDetectionEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4
             in boolean name=value
     property detection_mode
-        get get_DetectionMode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4 reverse=43
+        get get_DetectionMode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4
             out enum32 type=Windows.Media.Core.FaceDetectionMode return
-        put put_DetectionMode slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4 reverse=22
+        put put_DetectionMode slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IFaceDetectionEffectDefinition shape=4
             in enum32 type=Windows.Media.Core.FaceDetectionMode name=value
     property activatable_class_id
         get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IVideoEffectDefinition shape=4 reverse=22
@@ -521,7 +521,7 @@ class Windows.Media.Core.FaceDetectionEffectFrame python_type closeable
     requires Windows.Media.IMediaFrame
     requires Windows.Foundation.IClosable
     property detected_faces
-        get get_DetectedFaces slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffectFrame shape=4 reverse=22
+        get get_DetectedFaces slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IFaceDetectionEffectFrame shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.FaceAnalysis.DetectedFace> return
     property system_relative_time
         get get_SystemRelativeTime slot=11 inputs=0 outputs=1 declaring=Windows.Media.IMediaFrame shape=4 reverse=141
@@ -568,9 +568,9 @@ class Windows.Media.Core.HighDynamicRangeControl python_type
     default Windows.Media.Core.IHighDynamicRangeControl
     requires Windows.Media.Core.IHighDynamicRangeControl
     property enabled
-        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IHighDynamicRangeControl shape=4 reverse=43
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IHighDynamicRangeControl shape=4
             out boolean return
-        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IHighDynamicRangeControl shape=4 reverse=22
+        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IHighDynamicRangeControl shape=4
             in boolean name=value
 
 class Windows.Media.Core.HighDynamicRangeOutput python_type
@@ -579,10 +579,10 @@ class Windows.Media.Core.HighDynamicRangeOutput python_type
     default Windows.Media.Core.IHighDynamicRangeOutput
     requires Windows.Media.Core.IHighDynamicRangeOutput
     property certainty
-        get get_Certainty slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IHighDynamicRangeOutput shape=4 reverse=22
+        get get_Certainty slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IHighDynamicRangeOutput shape=4
             out double return
     property frame_controllers
-        get get_FrameControllers slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IHighDynamicRangeOutput shape=4 reverse=43
+        get get_FrameControllers slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IHighDynamicRangeOutput shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo>> concrete awaitable
@@ -2913,17 +2913,17 @@ class Windows.Media.Core.ImageCue activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property software_bitmap
-        get get_SoftwareBitmap slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IImageCue shape=4 reverse=141
+        get get_SoftwareBitmap slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IImageCue shape=4
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
-        put put_SoftwareBitmap slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IImageCue shape=4 reverse=121
+        put put_SoftwareBitmap slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IImageCue shape=4
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=value
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IImageCue shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IImageCue shape=4
             out struct type=Windows.Media.Core.TimedTextPoint return
         put put_Position slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IImageCue shape=16
             in struct type=Windows.Media.Core.TimedTextPoint name=value
     property extent
-        get get_Extent slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IImageCue shape=4 reverse=62
+        get get_Extent slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IImageCue shape=4
             out struct type=Windows.Media.Core.TimedTextSize return
         put put_Extent slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IImageCue shape=16
             in struct type=Windows.Media.Core.TimedTextSize name=value
@@ -2949,13 +2949,13 @@ class Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs python_ty
     default Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs
     requires Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs
     property random_access_stream
-        get get_RandomAccessStream slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4 reverse=43
+        get get_RandomAccessStream slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     property source
-        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4 reverse=22
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4
             out class type=Windows.Media.Core.MediaStreamSource return
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 enum K parameterized
@@ -2964,13 +2964,13 @@ class Windows.Media.Core.LowLightFusion static python_type
     py LowLightFusion
     factory Windows.Media.Core.ILowLightFusionStatics
     property max_supported_frame_count static
-        get get_MaxSupportedFrameCount slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ILowLightFusionStatics shape=4 reverse=43 static
+        get get_MaxSupportedFrameCount slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ILowLightFusionStatics shape=4 static
             out int32 return
     property supported_bitmap_pixel_formats static
-        get get_SupportedBitmapPixelFormats slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ILowLightFusionStatics shape=4 reverse=22 static
+        get get_SupportedBitmapPixelFormats slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ILowLightFusionStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapPixelFormat> return
     method fuse_async static
-        method FuseAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.ILowLightFusionStatics shape=51 reverse=65 static
+        method FuseAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.ILowLightFusionStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.SoftwareBitmap> name=frameSet
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Core.LowLightFusionResult,System.Double> return
 
@@ -2981,7 +2981,7 @@ class Windows.Media.Core.LowLightFusionResult python_type closeable
     requires Windows.Media.Core.ILowLightFusionResult
     requires Windows.Foundation.IClosable
     property frame
-        get get_Frame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ILowLightFusionResult shape=4 reverse=22
+        get get_Frame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ILowLightFusionResult shape=4
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -2995,18 +2995,18 @@ class Windows.Media.Core.MediaBinder activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property token
-        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=4 reverse=62
+        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=4
             out string return
-        put put_Token slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBinder shape=4 reverse=99
+        put put_Token slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBinder shape=4
             in string name=value
     property source
-        get get_Source slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=4 reverse=121
+        get get_Source slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=4
             out class type=Windows.Media.Core.MediaSource return
     event binding
-        add add_Binding slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=51 reverse=24
+        add add_Binding slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaBinder shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaBinder,Windows.Media.Core.MediaBindingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Binding slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBinder shape=26 reverse=53
+        remove remove_Binding slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBinder shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Media.Core.MediaBindingEventArgs python_type
@@ -3017,36 +3017,36 @@ class Windows.Media.Core.MediaBindingEventArgs python_type
     requires Windows.Media.Core.IMediaBindingEventArgs2
     requires Windows.Media.Core.IMediaBindingEventArgs3
     property media_binder
-        get get_MediaBinder slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4 reverse=62
+        get get_MediaBinder slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4
             out class type=Windows.Media.Core.MediaBinder return
     event canceled
-        add add_Canceled slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51 reverse=24
+        add add_Canceled slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaBindingEventArgs,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Canceled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=26 reverse=53
+        remove remove_Canceled slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_deferral
-        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4 reverse=99
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
     method set_adaptive_media_source
-        method SetAdaptiveMediaSource slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs2 shape=4 reverse=22
+        method SetAdaptiveMediaSource slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs2 shape=4
             in class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSource name=mediaSource
     method set_download_operation
-        method SetDownloadOperation slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs3 shape=4 reverse=22
+        method SetDownloadOperation slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs3 shape=4
             in class type=Windows.Networking.BackgroundTransfer.DownloadOperation name=downloadOperation
     method set_storage_file
-        method SetStorageFile slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs2 shape=4 reverse=43
+        method SetStorageFile slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs2 shape=4
             in interface type=Windows.Storage.IStorageFile name=file
     method set_stream
-        method SetStream slot=11 inputs=2 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51 reverse=144
+        method SetStream slot=11 inputs=2 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in string name=contentType
     method set_stream_reference
-        method SetStreamReference slot=12 inputs=2 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51 reverse=163
+        method SetStreamReference slot=12 inputs=2 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=51
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
             in string name=contentType
     method set_uri
-        method SetUri slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4 reverse=121
+        method SetUri slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaBindingEventArgs shape=4
             in class type=Windows.Foundation.Uri name=uri
 
 class Windows.Media.Core.MediaCueEventArgs python_type
@@ -3055,7 +3055,7 @@ class Windows.Media.Core.MediaCueEventArgs python_type
     default Windows.Media.Core.IMediaCueEventArgs
     requires Windows.Media.Core.IMediaCueEventArgs
     property cue
-        get get_Cue slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaCueEventArgs shape=4 reverse=22
+        get get_Cue slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaCueEventArgs shape=4
             out interface type=Windows.Media.Core.IMediaCue return
 
 enum Windows.Media.Core.MediaDecoderStatus python_type
@@ -3081,103 +3081,103 @@ class Windows.Media.Core.MediaSource python_type closeable
     factory Windows.Media.Core.IMediaSourceStatics3
     factory Windows.Media.Core.IMediaSourceStatics4
     property custom_properties
-        get get_CustomProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4 reverse=62
+        get get_CustomProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property duration
-        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4 reverse=99
+        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
     property external_timed_metadata_tracks
-        get get_ExternalTimedMetadataTracks slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4 reverse=162
+        get get_ExternalTimedMetadataTracks slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4
             out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedMetadataTrack> return
     property external_timed_text_sources
-        get get_ExternalTimedTextSources slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4 reverse=141
+        get get_ExternalTimedTextSources slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4
             out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.TimedTextSource> return
     property is_open
-        get get_IsOpen slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4 reverse=121
+        get get_IsOpen slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4
             out boolean return
     property state
-        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource3 shape=4 reverse=62
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource3 shape=4
             out enum32 type=Windows.Media.Core.MediaSourceState return
     property adaptive_media_source
-        get get_AdaptiveMediaSource slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4 reverse=22
+        get get_AdaptiveMediaSource slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4
             out class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSource return
     property media_stream_source
-        get get_MediaStreamSource slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4 reverse=43
+        get get_MediaStreamSource slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4
             out class type=Windows.Media.Core.MediaStreamSource return
     property mse_stream_source
-        get get_MseStreamSource slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4 reverse=62
+        get get_MseStreamSource slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4
             out class type=Windows.Media.Core.MseStreamSource return
     property uri
-        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4 reverse=99
+        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4
             out class type=Windows.Foundation.Uri return
     property download_operation
-        get get_DownloadOperation slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource5 shape=4 reverse=22
+        get get_DownloadOperation slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource5 shape=4
             out class type=Windows.Networking.BackgroundTransfer.DownloadOperation return
     event open_operation_completed
-        add add_OpenOperationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=51 reverse=24
+        add add_OpenOperationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaSource,Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OpenOperationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSource2 shape=26 reverse=53
+        remove remove_OpenOperationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSource2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
-        add add_StateChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSource3 shape=51 reverse=24
+        add add_StateChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSource3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaSource,Windows.Media.Core.MediaSourceStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSource3 shape=26 reverse=53
+        remove remove_StateChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSource3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_from_adaptive_media_source static
-        method CreateFromAdaptiveMediaSource slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 reverse=24 static
+        method CreateFromAdaptiveMediaSource slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 static
             in class type=Windows.Media.Streaming.Adaptive.AdaptiveMediaSource name=mediaSource
             out class type=Windows.Media.Core.MediaSource return
     method create_from_download_operation static
-        method CreateFromDownloadOperation slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics4 shape=51 reverse=24 static
+        method CreateFromDownloadOperation slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics4 shape=51 static
             in class type=Windows.Networking.BackgroundTransfer.DownloadOperation name=downloadOperation
             out class type=Windows.Media.Core.MediaSource return
     method create_from_imedia_source static
-        method CreateFromIMediaSource slot=9 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 reverse=100 static
+        method CreateFromIMediaSource slot=9 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 static
             in interface type=Windows.Media.Core.IMediaSource name=mediaSource
             out class type=Windows.Media.Core.MediaSource return
     method create_from_media_binder static
-        method CreateFromMediaBinder slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics2 shape=51 reverse=24 static
+        method CreateFromMediaBinder slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics2 shape=51 static
             in class type=Windows.Media.Core.MediaBinder name=binder
             out class type=Windows.Media.Core.MediaSource return
     method create_from_media_frame_source static
-        method CreateFromMediaFrameSource slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics3 shape=51 reverse=24 static
+        method CreateFromMediaFrameSource slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics3 shape=51 static
             in class type=Windows.Media.Capture.Frames.MediaFrameSource name=frameSource
             out class type=Windows.Media.Core.MediaSource return
     method create_from_media_stream_source static
-        method CreateFromMediaStreamSource slot=7 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 reverse=44 static
+        method CreateFromMediaStreamSource slot=7 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 static
             in class type=Windows.Media.Core.MediaStreamSource name=mediaSource
             out class type=Windows.Media.Core.MediaSource return
     method create_from_mse_stream_source static
-        method CreateFromMseStreamSource slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 reverse=65 static
+        method CreateFromMseStreamSource slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 static
             in class type=Windows.Media.Core.MseStreamSource name=mediaSource
             out class type=Windows.Media.Core.MediaSource return
     method create_from_storage_file static
-        method CreateFromStorageFile slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 reverse=124 static
+        method CreateFromStorageFile slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out class type=Windows.Media.Core.MediaSource return
     method create_from_stream static
-        method CreateFromStream slot=11 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=117 reverse=145 static
+        method CreateFromStream slot=11 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=117 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in string name=contentType
             out class type=Windows.Media.Core.MediaSource return
     method create_from_stream_reference static
-        method CreateFromStreamReference slot=12 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=117 reverse=164 static
+        method CreateFromStreamReference slot=12 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=117 static
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
             in string name=contentType
             out class type=Windows.Media.Core.MediaSource return
     method create_from_uri static
-        method CreateFromUri slot=13 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 reverse=174 static
+        method CreateFromUri slot=13 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.Media.Core.MediaSource return
     method open_async
-        method OpenAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4 reverse=121
+        method OpenAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource4 shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method reset
-        method Reset slot=9 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaSource3 shape=0 reverse=93
+        method Reset slot=9 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaSource3 shape=0
 
 class Windows.Media.Core.MediaSourceAppServiceConnection python_type
     py MediaSourceAppServiceConnection
@@ -3186,17 +3186,17 @@ class Windows.Media.Core.MediaSourceAppServiceConnection python_type
     requires Windows.Media.Core.IMediaSourceAppServiceConnection
     factory Windows.Media.Core.IMediaSourceAppServiceConnectionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceAppServiceConnectionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceAppServiceConnectionFactory shape=51
             in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=appServiceConnection
             out class type=Windows.Media.Core.MediaSourceAppServiceConnection return
     event initialize_media_stream_source_requested
-        add add_InitializeMediaStreamSourceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=51 reverse=24
+        add add_InitializeMediaStreamSourceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaSourceAppServiceConnection,Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_InitializeMediaStreamSourceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=26 reverse=53
+        remove remove_InitializeMediaStreamSourceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=8 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=0 reverse=55
+        method Start slot=8 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaSourceAppServiceConnection shape=0
 
 class Windows.Media.Core.MediaSourceError python_type
     py MediaSourceError
@@ -3204,7 +3204,7 @@ class Windows.Media.Core.MediaSourceError python_type
     default Windows.Media.Core.IMediaSourceError
     requires Windows.Media.Core.IMediaSourceError
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceError shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceError shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs python_type
@@ -3213,7 +3213,7 @@ class Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs python_type
     default Windows.Media.Core.IMediaSourceOpenOperationCompletedEventArgs
     requires Windows.Media.Core.IMediaSourceOpenOperationCompletedEventArgs
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceOpenOperationCompletedEventArgs shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceOpenOperationCompletedEventArgs shape=4
             out class type=Windows.Media.Core.MediaSourceError return
 
 enum Windows.Media.Core.MediaSourceState python_type
@@ -3231,10 +3231,10 @@ class Windows.Media.Core.MediaSourceStateChangedEventArgs python_type
     default Windows.Media.Core.IMediaSourceStateChangedEventArgs
     requires Windows.Media.Core.IMediaSourceStateChangedEventArgs
     property new_state
-        get get_NewState slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceStateChangedEventArgs shape=4 reverse=43
+        get get_NewState slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceStateChangedEventArgs shape=4
             out enum32 type=Windows.Media.Core.MediaSourceState return
     property old_state
-        get get_OldState slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceStateChangedEventArgs shape=4 reverse=22
+        get get_OldState slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSourceStateChangedEventArgs shape=4
             out enum32 type=Windows.Media.Core.MediaSourceState return
 
 enum Windows.Media.Core.MediaSourceStatus python_type
@@ -3252,45 +3252,45 @@ class Windows.Media.Core.MediaStreamSample python_type
     factory Windows.Media.Core.IMediaStreamSampleStatics
     factory Windows.Media.Core.IMediaStreamSampleStatics2
     property key_frame
-        get get_KeyFrame slot=17 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=210
+        get get_KeyFrame slot=17 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out boolean return
-        put put_KeyFrame slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=202
+        put put_KeyFrame slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             in boolean name=value
     property duration
-        get get_Duration slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=194
+        get get_Duration slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out timespan return
-        put put_Duration slot=14 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26 reverse=192
+        put put_Duration slot=14 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26
             in timespan name=value
     property discontinuous
-        get get_Discontinuous slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=223
+        get get_Discontinuous slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out boolean return
-        put put_Discontinuous slot=18 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=218
+        put put_Discontinuous slot=18 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             in boolean name=value
     property decode_timestamp
-        get get_DecodeTimestamp slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=173
+        get get_DecodeTimestamp slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out timespan return
-        put put_DecodeTimestamp slot=12 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26 reverse=167
+        put put_DecodeTimestamp slot=12 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26
             in timespan name=value
     property buffer
-        get get_Buffer slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=62
+        get get_Buffer slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out class type=Windows.Storage.Streams.Buffer return
     property extended_properties
-        get get_ExtendedProperties slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=121
+        get get_ExtendedProperties slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out class type=Windows.Media.Core.MediaStreamSamplePropertySet return
     property protection
-        get get_Protection slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=141
+        get get_Protection slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out class type=Windows.Media.Core.MediaStreamSampleProtectionProperties return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=99
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4
             out timespan return
     property direct3d11_surface
-        get get_Direct3D11Surface slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample2 shape=4 reverse=22
+        get get_Direct3D11Surface slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample2 shape=4
             out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
     event processed
-        add add_Processed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=51 reverse=24
+        add add_Processed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSample,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Processed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26 reverse=53
+        remove remove_Processed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSample shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_buffer static
         method CreateFromBuffer slot=6 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleStatics shape=135 static
@@ -3350,22 +3350,22 @@ class Windows.Media.Core.MediaStreamSampleProtectionProperties python_type
     default Windows.Media.Core.IMediaStreamSampleProtectionProperties
     requires Windows.Media.Core.IMediaStreamSampleProtectionProperties
     method get_initialization_vector
-        method GetInitializationVector slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51 reverse=100
+        method GetInitializationVector slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51
             receive_array uint8 name=value
     method get_key_identifier
-        method GetKeyIdentifier slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51 reverse=44
+        method GetKeyIdentifier slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51
             receive_array uint8 name=value
     method get_sub_sample_mapping
-        method GetSubSampleMapping slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51 reverse=144
+        method GetSubSampleMapping slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51
             receive_array uint8 name=value
     method set_initialization_vector
-        method SetInitializationVector slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51 reverse=65
+        method SetInitializationVector slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51
             pass_array uint8 name=value
     method set_key_identifier
-        method SetKeyIdentifier slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51 reverse=24
+        method SetKeyIdentifier slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51
             pass_array uint8 name=value
     method set_sub_sample_mapping
-        method SetSubSampleMapping slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51 reverse=124
+        method SetSubSampleMapping slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSampleProtectionProperties shape=51
             pass_array uint8 name=value
 
 class Windows.Media.Core.MediaStreamSource python_type
@@ -3379,89 +3379,89 @@ class Windows.Media.Core.MediaStreamSource python_type
     requires Windows.Media.Core.IMediaStreamSource4
     factory Windows.Media.Core.IMediaStreamSourceFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceFactory shape=51
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor
             out class type=Windows.Media.Core.MediaStreamSource return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceFactory shape=117
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor2
             out class type=Windows.Media.Core.MediaStreamSource return
     property thumbnail
-        get get_Thumbnail slot=30 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=270
+        get get_Thumbnail slot=30 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
-        put put_Thumbnail slot=29 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=266
+        put put_Thumbnail slot=29 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
     property media_protection_manager
-        get get_MediaProtectionManager slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=223
+        get get_MediaProtectionManager slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out class type=Windows.Media.Protection.MediaProtectionManager return
-        put put_MediaProtectionManager slot=18 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=218
+        put put_MediaProtectionManager slot=18 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             in class type=Windows.Media.Protection.MediaProtectionManager name=value
     property duration
-        get get_Duration slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=232
+        get get_Duration slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out timespan return
-        put put_Duration slot=20 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=399
+        put put_Duration slot=20 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in timespan name=value
     property can_seek
-        get get_CanSeek slot=23 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=242
+        get get_CanSeek slot=23 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out boolean return
-        put put_CanSeek slot=22 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=237
+        put put_CanSeek slot=22 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             in boolean name=value
     property buffer_time
-        get get_BufferTime slot=25 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=252
+        get get_BufferTime slot=25 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out timespan return
         put put_BufferTime slot=24 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in timespan name=value
     property music_properties
-        get get_MusicProperties slot=27 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=259
+        get get_MusicProperties slot=27 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out class type=Windows.Storage.FileProperties.MusicProperties return
     property video_properties
-        get get_VideoProperties slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=263
+        get get_VideoProperties slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             out class type=Windows.Storage.FileProperties.VideoProperties return
     property max_supported_playback_rate
-        get get_MaxSupportedPlaybackRate slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource3 shape=4 reverse=43
+        get get_MaxSupportedPlaybackRate slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource3 shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-        put put_MaxSupportedPlaybackRate slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource3 shape=4 reverse=22
+        put put_MaxSupportedPlaybackRate slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource3 shape=4
             in reference type=Windows.Foundation.IReference<System.Double> name=value
     property is_live
-        get get_IsLive slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource4 shape=4 reverse=43
+        get get_IsLive slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource4 shape=4
             out boolean return
-        put put_IsLive slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource4 shape=4 reverse=22
+        put put_IsLive slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource4 shape=4
             in boolean name=value
     event closed
-        add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=24
+        add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceClosedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=53
+        remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event paused
-        add add_Paused slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=124
+        add add_Paused slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Paused slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=156
+        remove remove_Paused slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sample_requested
-        add add_SampleRequested slot=12 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=163
+        add add_SampleRequested slot=12 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SampleRequested slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=181
+        remove remove_SampleRequested slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event starting
-        add add_Starting slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=65
+        add add_Starting slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceStartingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Starting slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=110
+        remove remove_Starting slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event switch_streams_requested
-        add add_SwitchStreamsRequested slot=14 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51 reverse=187
+        add add_SwitchStreamsRequested slot=14 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SwitchStreamsRequested slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26 reverse=200
+        remove remove_SwitchStreamsRequested slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sample_rendered
-        add add_SampleRendered slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource2 shape=51 reverse=24
+        add add_SampleRendered slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMediaStreamSource2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MediaStreamSource,Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SampleRendered slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource2 shape=26 reverse=53
+        remove remove_SampleRendered slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_protection_key
         method AddProtectionKey slot=31 inputs=3 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=239
@@ -3469,10 +3469,10 @@ class Windows.Media.Core.MediaStreamSource python_type
             pass_array uint8 name=keyIdentifier
             pass_array uint8 name=licenseData
     method add_stream_descriptor
-        method AddStreamDescriptor slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=210
+        method AddStreamDescriptor slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor
     method notify_error
-        method NotifyError slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4 reverse=202
+        method NotifyError slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=4
             in enum32 type=Windows.Media.Core.MediaStreamSourceErrorStatus name=errorStatus
     method set_buffered_range
         method SetBufferedRange slot=26 inputs=2 outputs=0 declaring=Windows.Media.Core.IMediaStreamSource shape=90
@@ -3485,7 +3485,7 @@ class Windows.Media.Core.MediaStreamSourceClosedEventArgs python_type
     default Windows.Media.Core.IMediaStreamSourceClosedEventArgs
     requires Windows.Media.Core.IMediaStreamSourceClosedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceClosedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceClosedEventArgs shape=4
             out class type=Windows.Media.Core.MediaStreamSourceClosedRequest return
 
 enum Windows.Media.Core.MediaStreamSourceClosedReason python_type
@@ -3505,7 +3505,7 @@ class Windows.Media.Core.MediaStreamSourceClosedRequest python_type
     default Windows.Media.Core.IMediaStreamSourceClosedRequest
     requires Windows.Media.Core.IMediaStreamSourceClosedRequest
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceClosedRequest shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceClosedRequest shape=4
             out enum32 type=Windows.Media.Core.MediaStreamSourceClosedReason return
 
 enum Windows.Media.Core.MediaStreamSourceErrorStatus python_type
@@ -3526,7 +3526,7 @@ class Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs python_type
     default Windows.Media.Core.IMediaStreamSourceSampleRenderedEventArgs
     requires Windows.Media.Core.IMediaStreamSourceSampleRenderedEventArgs
     property sample_lag
-        get get_SampleLag slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRenderedEventArgs shape=4 reverse=22
+        get get_SampleLag slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRenderedEventArgs shape=4
             out timespan return
 
 class Windows.Media.Core.MediaStreamSourceSampleRequest python_type
@@ -3535,18 +3535,18 @@ class Windows.Media.Core.MediaStreamSourceSampleRequest python_type
     default Windows.Media.Core.IMediaStreamSourceSampleRequest
     requires Windows.Media.Core.IMediaStreamSourceSampleRequest
     property sample
-        get get_Sample slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4 reverse=99
+        get get_Sample slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4
             out class type=Windows.Media.Core.MediaStreamSample return
-        put put_Sample slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4 reverse=62
+        put put_Sample slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4
             in class type=Windows.Media.Core.MediaStreamSample name=value
     property stream_descriptor
-        get get_StreamDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4 reverse=22
+        get get_StreamDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4
             out interface type=Windows.Media.Core.IMediaStreamDescriptor return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4
             out class type=Windows.Media.Core.MediaStreamSourceSampleRequestDeferral return
     method report_sample_progress
-        method ReportSampleProgress slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4 reverse=121
+        method ReportSampleProgress slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequest shape=4
             in uint32 name=progress
 
 class Windows.Media.Core.MediaStreamSourceSampleRequestDeferral python_type
@@ -3555,7 +3555,7 @@ class Windows.Media.Core.MediaStreamSourceSampleRequestDeferral python_type
     default Windows.Media.Core.IMediaStreamSourceSampleRequestDeferral
     requires Windows.Media.Core.IMediaStreamSourceSampleRequestDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequestDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequestDeferral shape=0
 
 class Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs python_type
     py MediaStreamSourceSampleRequestedEventArgs
@@ -3563,7 +3563,7 @@ class Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs python_type
     default Windows.Media.Core.IMediaStreamSourceSampleRequestedEventArgs
     requires Windows.Media.Core.IMediaStreamSourceSampleRequestedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequestedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSampleRequestedEventArgs shape=4
             out class type=Windows.Media.Core.MediaStreamSourceSampleRequest return
 
 class Windows.Media.Core.MediaStreamSourceStartingEventArgs python_type
@@ -3572,7 +3572,7 @@ class Windows.Media.Core.MediaStreamSourceStartingEventArgs python_type
     default Windows.Media.Core.IMediaStreamSourceStartingEventArgs
     requires Windows.Media.Core.IMediaStreamSourceStartingEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceStartingEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceStartingEventArgs shape=4
             out class type=Windows.Media.Core.MediaStreamSourceStartingRequest return
 
 class Windows.Media.Core.MediaStreamSourceStartingRequest python_type
@@ -3581,13 +3581,13 @@ class Windows.Media.Core.MediaStreamSourceStartingRequest python_type
     default Windows.Media.Core.IMediaStreamSourceStartingRequest
     requires Windows.Media.Core.IMediaStreamSourceStartingRequest
     property start_position
-        get get_StartPosition slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequest shape=4 reverse=22
+        get get_StartPosition slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequest shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequest shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequest shape=4
             out class type=Windows.Media.Core.MediaStreamSourceStartingRequestDeferral return
     method set_actual_start_position
-        method SetActualStartPosition slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequest shape=26 reverse=82
+        method SetActualStartPosition slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequest shape=26
             in timespan name=position
 
 class Windows.Media.Core.MediaStreamSourceStartingRequestDeferral python_type
@@ -3596,7 +3596,7 @@ class Windows.Media.Core.MediaStreamSourceStartingRequestDeferral python_type
     default Windows.Media.Core.IMediaStreamSourceStartingRequestDeferral
     requires Windows.Media.Core.IMediaStreamSourceStartingRequestDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequestDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceStartingRequestDeferral shape=0
 
 class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest python_type
     py MediaStreamSourceSwitchStreamsRequest
@@ -3604,13 +3604,13 @@ class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest python_type
     default Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest
     requires Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest
     property new_stream_descriptor
-        get get_NewStreamDescriptor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest shape=4 reverse=43
+        get get_NewStreamDescriptor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest shape=4
             out interface type=Windows.Media.Core.IMediaStreamDescriptor return
     property old_stream_descriptor
-        get get_OldStreamDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest shape=4 reverse=22
+        get get_OldStreamDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest shape=4
             out interface type=Windows.Media.Core.IMediaStreamDescriptor return
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequest shape=4
             out class type=Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral return
 
 class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral python_type
@@ -3619,7 +3619,7 @@ class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral python_ty
     default Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestDeferral
     requires Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestDeferral shape=0
 
 class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs python_type
     py MediaStreamSourceSwitchStreamsRequestedEventArgs
@@ -3627,7 +3627,7 @@ class Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs python
     default Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestedEventArgs
     requires Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSourceSwitchStreamsRequestedEventArgs shape=4
             out class type=Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest return
 
 enum Windows.Media.Core.MediaTrackKind python_type
@@ -3664,68 +3664,68 @@ class Windows.Media.Core.MseSourceBuffer python_type
     default Windows.Media.Core.IMseSourceBuffer
     requires Windows.Media.Core.IMseSourceBuffer
     property timestamp_offset
-        get get_TimestampOffset slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=228
+        get get_TimestampOffset slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             out timespan return
-        put put_TimestampOffset slot=21 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=234
+        put put_TimestampOffset slot=21 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in timespan name=value
     property mode
-        get get_Mode slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=202
+        get get_Mode slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             out enum32 type=Windows.Media.Core.MseAppendMode return
-        put put_Mode slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=210
+        put put_Mode slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             in enum32 type=Windows.Media.Core.MseAppendMode name=value
     property append_window_start
-        get get_AppendWindowStart slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=237
+        get get_AppendWindowStart slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             out timespan return
-        put put_AppendWindowStart slot=23 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=245
+        put put_AppendWindowStart slot=23 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in timespan name=value
     property append_window_end
-        get get_AppendWindowEnd slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=247
+        get get_AppendWindowEnd slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_AppendWindowEnd slot=25 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=252
+        put put_AppendWindowEnd slot=25 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property buffered
-        get get_Buffered slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=223
+        get get_Buffered slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseTimeRange> return
     property is_updating
-        get get_IsUpdating slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=218
+        get get_IsUpdating slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             out boolean return
     event aborted
-        add add_Aborted slot=14 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=187
+        add add_Aborted slot=14 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Aborted slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=200
+        remove remove_Aborted slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event error_occurred
-        add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=163
+        add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=181
+        remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_ended
-        add add_UpdateEnded slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=124
+        add add_UpdateEnded slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UpdateEnded slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=156
+        remove remove_UpdateEnded slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_starting
-        add add_UpdateStarting slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=24
+        add add_UpdateStarting slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UpdateStarting slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=53
+        remove remove_UpdateStarting slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
-        add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51 reverse=65
+        add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBuffer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBuffer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26 reverse=110
+        remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method abort
-        method Abort slot=29 inputs=0 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=0 reverse=265
+        method Abort slot=29 inputs=0 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=0
     method append_buffer
-        method AppendBuffer slot=26 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=255
+        method AppendBuffer slot=26 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
     method append_stream
-        method AppendStream slot=27 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4 reverse=259
+        method AppendStream slot=27 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=4
             in interface type=Windows.Storage.Streams.IInputStream name=stream
         method AppendStream slot=28 inputs=2 outputs=0 declaring=Windows.Media.Core.IMseSourceBuffer shape=50
             in interface type=Windows.Storage.Streams.IInputStream name=stream
@@ -3741,19 +3741,19 @@ class Windows.Media.Core.MseSourceBufferList python_type
     default Windows.Media.Core.IMseSourceBufferList
     requires Windows.Media.Core.IMseSourceBufferList
     property buffers
-        get get_Buffers slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=4 reverse=121
+        get get_Buffers slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.MseSourceBuffer> return
     event source_buffer_added
-        add add_SourceBufferAdded slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=51 reverse=24
+        add add_SourceBufferAdded slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBufferList,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceBufferAdded slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBufferList shape=26 reverse=53
+        remove remove_SourceBufferAdded slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBufferList shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_buffer_removed
-        add add_SourceBufferRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=51 reverse=65
+        add add_SourceBufferRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseSourceBufferList shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseSourceBufferList,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceBufferRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBufferList shape=26 reverse=110
+        remove remove_SourceBufferRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseSourceBufferList shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Media.Core.MseStreamSource activatable python_type
@@ -3768,55 +3768,55 @@ class Windows.Media.Core.MseStreamSource activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property duration
-        get get_Duration slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=194
+        get get_Duration slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_Duration slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=202
+        put put_Duration slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property active_source_buffers
-        get get_ActiveSourceBuffers slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=173
+        get get_ActiveSourceBuffers slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4
             out class type=Windows.Media.Core.MseSourceBufferList return
     property ready_state
-        get get_ReadyState slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=186
+        get get_ReadyState slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4
             out enum32 type=Windows.Media.Core.MseReadyState return
     property source_buffers
-        get get_SourceBuffers slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=162
+        get get_SourceBuffers slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=4
             out class type=Windows.Media.Core.MseSourceBufferList return
     property live_seekable_range
-        get get_LiveSeekableRange slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource2 shape=4 reverse=22
+        get get_LiveSeekableRange slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IMseStreamSource2 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Media.Core.MseTimeRange> return
-        put put_LiveSeekableRange slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource2 shape=4 reverse=43
+        put put_LiveSeekableRange slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource2 shape=4
             in reference type=Windows.Foundation.IReference<Windows.Media.Core.MseTimeRange> name=value
     event closed
-        add add_Closed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=124
+        add add_Closed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseStreamSource,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26 reverse=156
+        remove remove_Closed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ended
-        add add_Ended slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=65
+        add add_Ended slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseStreamSource,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Ended slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26 reverse=110
+        remove remove_Ended slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event opened
-        add add_Opened slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=24
+        add add_Opened slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.MseStreamSource,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Opened slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26 reverse=53
+        remove remove_Opened slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_source_buffer
-        method AddSourceBuffer slot=17 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51 reverse=211
+        method AddSourceBuffer slot=17 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSource shape=51
             in string name=mimeType
             out class type=Windows.Media.Core.MseSourceBuffer return
     method end_of_stream
-        method EndOfStream slot=19 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=223
+        method EndOfStream slot=19 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=4
             in enum32 type=Windows.Media.Core.MseEndOfStreamStatus name=status
     method is_content_type_supported static
-        method IsContentTypeSupported slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSourceStatics shape=51 reverse=24 static
+        method IsContentTypeSupported slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IMseStreamSourceStatics shape=51 static
             in string name=contentType
             out boolean return
     method remove_source_buffer
-        method RemoveSourceBuffer slot=18 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=4 reverse=218
+        method RemoveSourceBuffer slot=18 inputs=1 outputs=0 declaring=Windows.Media.Core.IMseStreamSource shape=4
             in class type=Windows.Media.Core.MseSourceBuffer name=buffer
 
 struct Windows.Media.Core.MseTimeRange python_type
@@ -3832,18 +3832,18 @@ class Windows.Media.Core.SceneAnalysisEffect python_type
     requires Windows.Media.Core.ISceneAnalysisEffect
     requires Windows.Media.IMediaExtension
     property desired_analysis_interval
-        get get_DesiredAnalysisInterval slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=4 reverse=62
+        get get_DesiredAnalysisInterval slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=4
             out timespan return
-        put put_DesiredAnalysisInterval slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=26 reverse=53
+        put put_DesiredAnalysisInterval slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=26
             in timespan name=value
     property high_dynamic_range_analyzer
-        get get_HighDynamicRangeAnalyzer slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=4 reverse=22
+        get get_HighDynamicRangeAnalyzer slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=4
             out class type=Windows.Media.Core.HighDynamicRangeControl return
     event scene_analyzed
-        add add_SceneAnalyzed slot=9 inputs=1 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=51 reverse=100
+        add add_SceneAnalyzed slot=9 inputs=1 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.SceneAnalysisEffect,Windows.Media.Core.SceneAnalyzedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SceneAnalyzed slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=26 reverse=134
+        remove remove_SceneAnalyzed slot=10 inputs=1 outputs=0 declaring=Windows.Media.Core.ISceneAnalysisEffect shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method set_properties
         method SetProperties slot=6 inputs=1 outputs=0 declaring=Windows.Media.IMediaExtension shape=4 reverse=22
@@ -3873,13 +3873,13 @@ class Windows.Media.Core.SceneAnalysisEffectFrame python_type closeable
     requires Windows.Foundation.IClosable
     requires Windows.Media.Core.ISceneAnalysisEffectFrame2
     property frame_control_values
-        get get_FrameControlValues slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffectFrame shape=4 reverse=22
+        get get_FrameControlValues slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffectFrame shape=4
             out class type=Windows.Media.Capture.CapturedFrameControlValues return
     property high_dynamic_range
-        get get_HighDynamicRange slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffectFrame shape=4 reverse=43
+        get get_HighDynamicRange slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffectFrame shape=4
             out class type=Windows.Media.Core.HighDynamicRangeOutput return
     property analysis_recommendation
-        get get_AnalysisRecommendation slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffectFrame2 shape=4 reverse=22
+        get get_AnalysisRecommendation slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalysisEffectFrame2 shape=4
             out enum32 type=Windows.Media.Core.SceneAnalysisRecommendation return
     property system_relative_time
         get get_SystemRelativeTime slot=11 inputs=0 outputs=1 declaring=Windows.Media.IMediaFrame shape=4 reverse=141
@@ -3926,7 +3926,7 @@ class Windows.Media.Core.SceneAnalyzedEventArgs python_type
     default Windows.Media.Core.ISceneAnalyzedEventArgs
     requires Windows.Media.Core.ISceneAnalyzedEventArgs
     property result_frame
-        get get_ResultFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalyzedEventArgs shape=4 reverse=22
+        get get_ResultFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISceneAnalyzedEventArgs shape=4
             out class type=Windows.Media.Core.SceneAnalysisEffectFrame return
 
 class Windows.Media.Core.SpeechCue activatable python_type
@@ -3954,19 +3954,19 @@ class Windows.Media.Core.SpeechCue activatable python_type
         put put_Duration slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaCue shape=26 reverse=82
             in timespan name=value
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISpeechCue shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ISpeechCue shape=4
             out string return
-        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4 reverse=43
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4
             in string name=value
     property start_position_in_input
-        get get_StartPositionInInput slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ISpeechCue shape=4 reverse=62
+        get get_StartPositionInInput slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ISpeechCue shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_StartPositionInInput slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4 reverse=99
+        put put_StartPositionInInput slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property end_position_in_input
-        get get_EndPositionInInput slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ISpeechCue shape=4 reverse=121
+        get get_EndPositionInInput slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ISpeechCue shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_EndPositionInInput slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4 reverse=141
+        put put_EndPositionInInput slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
 
 enum T parameterized
@@ -3992,7 +3992,7 @@ class Windows.Media.Core.TimedMetadataStreamDescriptor python_type
     requires Windows.Media.Core.IMediaStreamDescriptor
     factory Windows.Media.Core.ITimedMetadataStreamDescriptorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataStreamDescriptorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataStreamDescriptorFactory shape=51
             in class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties name=encodingProperties
             out class type=Windows.Media.Core.TimedMetadataStreamDescriptor return
     property name
@@ -4014,10 +4014,10 @@ class Windows.Media.Core.TimedMetadataStreamDescriptor python_type
         put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamDescriptor2 shape=4 reverse=22
             in string name=value
     property encoding_properties
-        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataStreamDescriptor shape=4 reverse=22
+        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataStreamDescriptor shape=4
             out class type=Windows.Media.MediaProperties.TimedMetadataEncodingProperties return
     method copy
-        method Copy slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataStreamDescriptor shape=4 reverse=43
+        method Copy slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataStreamDescriptor shape=4
             out class type=Windows.Media.Core.TimedMetadataStreamDescriptor return
 
 class Windows.Media.Core.TimedMetadataTrack python_type
@@ -4029,7 +4029,7 @@ class Windows.Media.Core.TimedMetadataTrack python_type
     requires Windows.Media.Core.ITimedMetadataTrack2
     factory Windows.Media.Core.ITimedMetadataTrackFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackFactory shape=195
             in string name=id
             in string name=language
             in enum32 type=Windows.Media.Core.TimedMetadataKind name=kind
@@ -4049,46 +4049,46 @@ class Windows.Media.Core.TimedMetadataTrack python_type
         get get_TrackKind slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaTrack shape=4 reverse=62
             out enum32 type=Windows.Media.Core.MediaTrackKind return
     property active_cues
-        get get_ActiveCues slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=173
+        get get_ActiveCues slot=13 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCue> return
     property cues
-        get get_Cues slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=162
+        get get_Cues slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.IMediaCue> return
     property dispatch_type
-        get get_DispatchType slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=194
+        get get_DispatchType slot=15 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4
             out string return
     property timed_metadata_kind
-        get get_TimedMetadataKind slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=186
+        get get_TimedMetadataKind slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4
             out enum32 type=Windows.Media.Core.TimedMetadataKind return
     property name
-        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack2 shape=4 reverse=43
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack2 shape=4
             out string return
     property playback_item
-        get get_PlaybackItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack2 shape=4 reverse=22
+        get get_PlaybackItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack2 shape=4
             out class type=Windows.Media.Playback.MediaPlaybackItem return
     event cue_entered
-        add add_CueEntered slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51 reverse=24
+        add add_CueEntered slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedMetadataTrack,Windows.Media.Core.MediaCueEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CueEntered slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26 reverse=53
+        remove remove_CueEntered slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event cue_exited
-        add add_CueExited slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51 reverse=65
+        add add_CueExited slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedMetadataTrack,Windows.Media.Core.MediaCueEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CueExited slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26 reverse=110
+        remove remove_CueExited slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event track_failed
-        add add_TrackFailed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51 reverse=124
+        add add_TrackFailed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrack shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedMetadataTrack,Windows.Media.Core.TimedMetadataTrackFailedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TrackFailed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26 reverse=156
+        remove remove_TrackFailed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_cue
-        method AddCue slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=202
+        method AddCue slot=16 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4
             in interface type=Windows.Media.Core.IMediaCue name=cue
     method remove_cue
-        method RemoveCue slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4 reverse=210
+        method RemoveCue slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedMetadataTrack shape=4
             in interface type=Windows.Media.Core.IMediaCue name=cue
 
 class Windows.Media.Core.TimedMetadataTrackError python_type
@@ -4097,10 +4097,10 @@ class Windows.Media.Core.TimedMetadataTrackError python_type
     default Windows.Media.Core.ITimedMetadataTrackError
     requires Windows.Media.Core.ITimedMetadataTrackError
     property error_code
-        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackError shape=4 reverse=22
+        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackError shape=4
             out enum32 type=Windows.Media.Core.TimedMetadataTrackErrorCode return
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackError shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackError shape=4
             out hresult type=Windows.Foundation.HResult return
 
 enum Windows.Media.Core.TimedMetadataTrackErrorCode python_type
@@ -4117,7 +4117,7 @@ class Windows.Media.Core.TimedMetadataTrackFailedEventArgs python_type
     default Windows.Media.Core.ITimedMetadataTrackFailedEventArgs
     requires Windows.Media.Core.ITimedMetadataTrackFailedEventArgs
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackFailedEventArgs shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackFailedEventArgs shape=4
             out class type=Windows.Media.Core.TimedMetadataTrackError return
 
 class Windows.Media.Core.TimedTextBouten python_type
@@ -4126,19 +4126,19 @@ class Windows.Media.Core.TimedTextBouten python_type
     default Windows.Media.Core.ITimedTextBouten
     requires Windows.Media.Core.ITimedTextBouten
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextBouten shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextBouten shape=4
             out enum32 type=Windows.Media.Core.TimedTextBoutenType return
-        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextBouten shape=4 reverse=43
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextBouten shape=4
             in enum32 type=Windows.Media.Core.TimedTextBoutenType name=value
     property position
-        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextBouten shape=4 reverse=121
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextBouten shape=4
             out enum32 type=Windows.Media.Core.TimedTextBoutenPosition return
-        put put_Position slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextBouten shape=4 reverse=141
+        put put_Position slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextBouten shape=4
             in enum32 type=Windows.Media.Core.TimedTextBoutenPosition name=value
     property color
-        get get_Color slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextBouten shape=4 reverse=62
+        get get_Color slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextBouten shape=4
             out struct type=Windows.UI.Color return
-        put put_Color slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextBouten shape=29 reverse=113
+        put put_Color slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextBouten shape=29
             in struct type=Windows.UI.Color name=value
 
 enum Windows.Media.Core.TimedTextBoutenPosition python_type
@@ -4185,17 +4185,17 @@ class Windows.Media.Core.TimedTextCue activatable python_type
         put put_Duration slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaCue shape=26 reverse=82
             in timespan name=value
     property cue_style
-        get get_CueStyle slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextCue shape=4 reverse=62
+        get get_CueStyle slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextCue shape=4
             out class type=Windows.Media.Core.TimedTextStyle return
-        put put_CueStyle slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextCue shape=4 reverse=99
+        put put_CueStyle slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextCue shape=4
             in class type=Windows.Media.Core.TimedTextStyle name=value
     property cue_region
-        get get_CueRegion slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextCue shape=4 reverse=22
+        get get_CueRegion slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextCue shape=4
             out class type=Windows.Media.Core.TimedTextRegion return
-        put put_CueRegion slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextCue shape=4 reverse=43
+        put put_CueRegion slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextCue shape=4
             in class type=Windows.Media.Core.TimedTextRegion name=value
     property lines
-        get get_Lines slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextCue shape=4 reverse=121
+        get get_Lines slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextCue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextLine> return
 
 enum Windows.Media.Core.TimedTextDisplayAlignment python_type
@@ -4233,12 +4233,12 @@ class Windows.Media.Core.TimedTextLine activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextLine shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextLine shape=4
             out string return
-        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextLine shape=4 reverse=43
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextLine shape=4
             in string name=value
     property subformats
-        get get_Subformats slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextLine shape=4 reverse=62
+        get get_Subformats slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextLine shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSubformat> return
 
 enum Windows.Media.Core.TimedTextLineAlignment python_type
@@ -4273,62 +4273,62 @@ class Windows.Media.Core.TimedTextRegion activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out string return
-        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=43
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in string name=value
     property line_height
-        get get_LineHeight slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=218
+        get get_LineHeight slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out struct type=Windows.Media.Core.TimedTextDouble return
         put put_LineHeight slot=19 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=18
             in struct type=Windows.Media.Core.TimedTextDouble name=value
     property is_overflow_clipped
-        get get_IsOverflowClipped slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=228
+        get get_IsOverflowClipped slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out boolean return
-        put put_IsOverflowClipped slot=21 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=232
+        put put_IsOverflowClipped slot=21 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in boolean name=value
     property extent
-        get get_Extent slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=121
+        get get_Extent slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out struct type=Windows.Media.Core.TimedTextSize return
         put put_Extent slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=16
             in struct type=Windows.Media.Core.TimedTextSize name=value
     property display_alignment
-        get get_DisplayAlignment slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=202
+        get get_DisplayAlignment slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out enum32 type=Windows.Media.Core.TimedTextDisplayAlignment return
-        put put_DisplayAlignment slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=210
+        put put_DisplayAlignment slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in enum32 type=Windows.Media.Core.TimedTextDisplayAlignment name=value
     property padding
-        get get_Padding slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=237
+        get get_Padding slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out struct type=Windows.Media.Core.TimedTextPadding return
         put put_Padding slot=23 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=13
             in struct type=Windows.Media.Core.TimedTextPadding name=value
     property background
-        get get_Background slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=162
+        get get_Background slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out struct type=Windows.UI.Color return
         put put_Background slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=29
             in struct type=Windows.UI.Color name=value
     property z_index
-        get get_ZIndex slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=255
+        get get_ZIndex slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out int32 return
-        put put_ZIndex slot=27 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=259
+        put put_ZIndex slot=27 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in int32 name=value
     property writing_mode
-        get get_WritingMode slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=186
+        get get_WritingMode slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out enum32 type=Windows.Media.Core.TimedTextWritingMode return
-        put put_WritingMode slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=194
+        put put_WritingMode slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in enum32 type=Windows.Media.Core.TimedTextWritingMode name=value
     property text_wrapping
-        get get_TextWrapping slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=247
+        get get_TextWrapping slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out enum32 type=Windows.Media.Core.TimedTextWrapping return
-        put put_TextWrapping slot=25 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=252
+        put put_TextWrapping slot=25 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in enum32 type=Windows.Media.Core.TimedTextWrapping name=value
     property scroll_mode
-        get get_ScrollMode slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=263
+        get get_ScrollMode slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out enum32 type=Windows.Media.Core.TimedTextScrollMode return
-        put put_ScrollMode slot=29 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=266
+        put put_ScrollMode slot=29 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             in enum32 type=Windows.Media.Core.TimedTextScrollMode name=value
     property position
-        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4 reverse=62
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRegion shape=4
             out struct type=Windows.Media.Core.TimedTextPoint return
         put put_Position slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRegion shape=16
             in struct type=Windows.Media.Core.TimedTextPoint name=value
@@ -4339,24 +4339,24 @@ class Windows.Media.Core.TimedTextRuby python_type
     default Windows.Media.Core.ITimedTextRuby
     requires Windows.Media.Core.ITimedTextRuby
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             out string return
-        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=43
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             in string name=value
     property reserve
-        get get_Reserve slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=162
+        get get_Reserve slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             out enum32 type=Windows.Media.Core.TimedTextRubyReserve return
-        put put_Reserve slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=173
+        put put_Reserve slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             in enum32 type=Windows.Media.Core.TimedTextRubyReserve name=value
     property position
-        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=62
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             out enum32 type=Windows.Media.Core.TimedTextRubyPosition return
-        put put_Position slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=99
+        put put_Position slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             in enum32 type=Windows.Media.Core.TimedTextRubyPosition name=value
     property align
-        get get_Align slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=121
+        get get_Align slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             out enum32 type=Windows.Media.Core.TimedTextRubyAlign return
-        put put_Align slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4 reverse=141
+        put put_Align slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextRuby shape=4
             in enum32 type=Windows.Media.Core.TimedTextRubyAlign name=value
 
 enum Windows.Media.Core.TimedTextRubyAlign python_type
@@ -4406,43 +4406,43 @@ class Windows.Media.Core.TimedTextSource python_type
     factory Windows.Media.Core.ITimedTextSourceStatics
     factory Windows.Media.Core.ITimedTextSourceStatics2
     event resolved
-        add add_Resolved slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSource shape=51 reverse=24
+        add add_Resolved slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.TimedTextSource,Windows.Media.Core.TimedTextSourceResolveResultEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Resolved slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSource shape=26 reverse=53
+        remove remove_Resolved slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_stream static
-        method CreateFromStream slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=51 reverse=24 static
+        method CreateFromStream slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=51 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             out class type=Windows.Media.Core.TimedTextSource return
-        method CreateFromStream slot=8 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=117 reverse=66 static
+        method CreateFromStream slot=8 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=117 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in string name=defaultLanguage
             out class type=Windows.Media.Core.TimedTextSource return
     method create_from_stream_with_index static
-        method CreateFromStreamWithIndex slot=6 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=117 reverse=25 static
+        method CreateFromStreamWithIndex slot=6 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=117 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=indexStream
             out class type=Windows.Media.Core.TimedTextSource return
-        method CreateFromStreamWithIndex slot=8 inputs=3 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=195 reverse=68 static
+        method CreateFromStreamWithIndex slot=8 inputs=3 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=195 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=indexStream
             in string name=defaultLanguage
             out class type=Windows.Media.Core.TimedTextSource return
     method create_from_uri static
-        method CreateFromUri slot=7 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=51 reverse=44 static
+        method CreateFromUri slot=7 inputs=1 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.Media.Core.TimedTextSource return
-        method CreateFromUri slot=9 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=117 reverse=101 static
+        method CreateFromUri slot=9 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in string name=defaultLanguage
             out class type=Windows.Media.Core.TimedTextSource return
     method create_from_uri_with_index static
-        method CreateFromUriWithIndex slot=7 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=117 reverse=45 static
+        method CreateFromUriWithIndex slot=7 inputs=2 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.Foundation.Uri name=indexUri
             out class type=Windows.Media.Core.TimedTextSource return
-        method CreateFromUriWithIndex slot=9 inputs=3 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=195 reverse=102 static
+        method CreateFromUriWithIndex slot=9 inputs=3 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceStatics2 shape=195 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.Foundation.Uri name=indexUri
             in string name=defaultLanguage
@@ -4454,10 +4454,10 @@ class Windows.Media.Core.TimedTextSourceResolveResultEventArgs python_type
     default Windows.Media.Core.ITimedTextSourceResolveResultEventArgs
     requires Windows.Media.Core.ITimedTextSourceResolveResultEventArgs
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceResolveResultEventArgs shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceResolveResultEventArgs shape=4
             out class type=Windows.Media.Core.TimedMetadataTrackError return
     property tracks
-        get get_Tracks slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceResolveResultEventArgs shape=4 reverse=43
+        get get_Tracks slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSourceResolveResultEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> return
 
 class Windows.Media.Core.TimedTextStyle activatable python_type
@@ -4471,100 +4471,100 @@ class Windows.Media.Core.TimedTextStyle activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property line_alignment
-        get get_LineAlignment slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=237
+        get get_LineAlignment slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out enum32 type=Windows.Media.Core.TimedTextLineAlignment return
-        put put_LineAlignment slot=23 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=242
+        put put_LineAlignment slot=23 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             in enum32 type=Windows.Media.Core.TimedTextLineAlignment name=value
     property is_background_always_shown
-        get get_IsBackgroundAlwaysShown slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=218
+        get get_IsBackgroundAlwaysShown slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out boolean return
-        put put_IsBackgroundAlwaysShown slot=19 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=223
+        put put_IsBackgroundAlwaysShown slot=19 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             in boolean name=value
     property outline_color
-        get get_OutlineColor slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=247
+        get get_OutlineColor slot=24 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out struct type=Windows.UI.Color return
         put put_OutlineColor slot=25 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=29
             in struct type=Windows.UI.Color name=value
     property foreground
-        get get_Foreground slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=186
+        get get_Foreground slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out struct type=Windows.UI.Color return
         put put_Foreground slot=15 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=29
             in struct type=Windows.UI.Color name=value
     property font_weight
-        get get_FontWeight slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=162
+        get get_FontWeight slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out enum32 type=Windows.Media.Core.TimedTextWeight return
-        put put_FontWeight slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=173
+        put put_FontWeight slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             in enum32 type=Windows.Media.Core.TimedTextWeight name=value
     property background
-        get get_Background slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=202
+        get get_Background slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out struct type=Windows.UI.Color return
-        put put_Background slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=29 reverse=216
+        put put_Background slot=17 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=29
             in struct type=Windows.UI.Color name=value
     property font_size
-        get get_FontSize slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=121
+        get get_FontSize slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out struct type=Windows.Media.Core.TimedTextDouble return
         put put_FontSize slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=18
             in struct type=Windows.Media.Core.TimedTextDouble name=value
     property font_family
-        get get_FontFamily slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=62
+        get get_FontFamily slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out string return
-        put put_FontFamily slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=99
+        put put_FontFamily slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             in string name=value
     property flow_direction
-        get get_FlowDirection slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=228
+        get get_FlowDirection slot=20 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out enum32 type=Windows.Media.Core.TimedTextFlowDirection return
-        put put_FlowDirection slot=21 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=232
+        put put_FlowDirection slot=21 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             in enum32 type=Windows.Media.Core.TimedTextFlowDirection name=value
     property outline_thickness
-        get get_OutlineThickness slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=255
+        get get_OutlineThickness slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out struct type=Windows.Media.Core.TimedTextDouble return
         put put_OutlineThickness slot=27 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=18
             in struct type=Windows.Media.Core.TimedTextDouble name=value
     property outline_radius
-        get get_OutlineRadius slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=263
+        get get_OutlineRadius slot=28 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out struct type=Windows.Media.Core.TimedTextDouble return
         put put_OutlineRadius slot=29 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=18
             in struct type=Windows.Media.Core.TimedTextDouble name=value
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             out string return
-        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4 reverse=43
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle shape=4
             in string name=value
     property is_underline_enabled
-        get get_IsUnderlineEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=62
+        get get_IsUnderlineEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             out boolean return
-        put put_IsUnderlineEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=99
+        put put_IsUnderlineEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             in boolean name=value
     property is_overline_enabled
-        get get_IsOverlineEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=162
+        get get_IsOverlineEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             out boolean return
-        put put_IsOverlineEnabled slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=173
+        put put_IsOverlineEnabled slot=13 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             in boolean name=value
     property is_line_through_enabled
-        get get_IsLineThroughEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=121
+        get get_IsLineThroughEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             out boolean return
-        put put_IsLineThroughEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=141
+        put put_IsLineThroughEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             in boolean name=value
     property font_style
-        get get_FontStyle slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=22
+        get get_FontStyle slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             out enum32 type=Windows.Media.Core.TimedTextFontStyle return
-        put put_FontStyle slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4 reverse=43
+        put put_FontStyle slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle2 shape=4
             in enum32 type=Windows.Media.Core.TimedTextFontStyle name=value
     property is_text_combined
-        get get_IsTextCombined slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4 reverse=62
+        get get_IsTextCombined slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4
             out boolean return
-        put put_IsTextCombined slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4 reverse=99
+        put put_IsTextCombined slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4
             in boolean name=value
     property font_angle_in_degrees
-        get get_FontAngleInDegrees slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4 reverse=121
+        get get_FontAngleInDegrees slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4
             out double return
-        put put_FontAngleInDegrees slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle3 shape=2 reverse=138
+        put put_FontAngleInDegrees slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextStyle3 shape=2
             in double name=value
     property bouten
-        get get_Bouten slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4 reverse=43
+        get get_Bouten slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4
             out class type=Windows.Media.Core.TimedTextBouten return
     property ruby
-        get get_Ruby slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4 reverse=22
+        get get_Ruby slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextStyle3 shape=4
             out class type=Windows.Media.Core.TimedTextRuby return
 
 class Windows.Media.Core.TimedTextSubformat activatable python_type
@@ -4576,19 +4576,19 @@ class Windows.Media.Core.TimedTextSubformat activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property subformat_style
-        get get_SubformatStyle slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSubformat shape=4 reverse=121
+        get get_SubformatStyle slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSubformat shape=4
             out class type=Windows.Media.Core.TimedTextStyle return
-        put put_SubformatStyle slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSubformat shape=4 reverse=141
+        put put_SubformatStyle slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSubformat shape=4
             in class type=Windows.Media.Core.TimedTextStyle name=value
     property start_index
-        get get_StartIndex slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSubformat shape=4 reverse=22
+        get get_StartIndex slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSubformat shape=4
             out int32 return
-        put put_StartIndex slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSubformat shape=4 reverse=43
+        put put_StartIndex slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSubformat shape=4
             in int32 name=value
     property length
-        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSubformat shape=4 reverse=62
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedTextSubformat shape=4
             out int32 return
-        put put_Length slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSubformat shape=4 reverse=99
+        put put_Length slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.ITimedTextSubformat shape=4
             in int32 name=value
 
 enum Windows.Media.Core.TimedTextUnit python_type
@@ -4939,18 +4939,18 @@ class Windows.Media.Core.VideoStabilizationEffect python_type
     requires Windows.Media.Core.IVideoStabilizationEffect
     requires Windows.Media.IMediaExtension
     property enabled
-        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=4 reverse=43
+        get get_Enabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=4
             out boolean return
-        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=4 reverse=22
+        put put_Enabled slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=4
             in boolean name=value
     event enabled_changed
-        add add_EnabledChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=51 reverse=65
+        add add_EnabledChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.VideoStabilizationEffect,Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnabledChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=26 reverse=110
+        remove remove_EnabledChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_recommended_stream_configuration
-        method GetRecommendedStreamConfiguration slot=10 inputs=2 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=117 reverse=125
+        method GetRecommendedStreamConfiguration slot=10 inputs=2 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffect shape=117
             in class type=Windows.Media.Devices.VideoDeviceController name=controller
             in class type=Windows.Media.MediaProperties.VideoEncodingProperties name=desiredProperties
             out class type=Windows.Media.Capture.VideoStreamConfiguration return
@@ -4979,7 +4979,7 @@ class Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs python_
     default Windows.Media.Core.IVideoStabilizationEffectEnabledChangedEventArgs
     requires Windows.Media.Core.IVideoStabilizationEffectEnabledChangedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffectEnabledChangedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStabilizationEffectEnabledChangedEventArgs shape=4
             out enum32 type=Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason return
 
 enum Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason python_type
@@ -4999,7 +4999,7 @@ class Windows.Media.Core.VideoStreamDescriptor python_type
     requires Windows.Media.Core.IVideoStreamDescriptor2
     factory Windows.Media.Core.IVideoStreamDescriptorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoStreamDescriptorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoStreamDescriptorFactory shape=51
             in class type=Windows.Media.MediaProperties.VideoEncodingProperties name=encodingProperties
             out class type=Windows.Media.Core.VideoStreamDescriptor return
     property name
@@ -5021,10 +5021,10 @@ class Windows.Media.Core.VideoStreamDescriptor python_type
         put put_Label slot=6 inputs=1 outputs=0 declaring=Windows.Media.Core.IMediaStreamDescriptor2 shape=4 reverse=22
             in string name=value
     property encoding_properties
-        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStreamDescriptor shape=4 reverse=22
+        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStreamDescriptor shape=4
             out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
     method copy
-        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStreamDescriptor2 shape=4 reverse=22
+        method Copy slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoStreamDescriptor2 shape=4
             out class type=Windows.Media.Core.VideoStreamDescriptor return
 
 class Windows.Media.Core.VideoTrack python_type
@@ -5048,22 +5048,22 @@ class Windows.Media.Core.VideoTrack python_type
         get get_TrackKind slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaTrack shape=4 reverse=62
             out enum32 type=Windows.Media.Core.MediaTrackKind return
     property name
-        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4 reverse=121
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4
             out string return
     property playback_item
-        get get_PlaybackItem slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4 reverse=99
+        get get_PlaybackItem slot=9 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4
             out class type=Windows.Media.Playback.MediaPlaybackItem return
     property support_info
-        get get_SupportInfo slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4 reverse=141
+        get get_SupportInfo slot=11 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4
             out class type=Windows.Media.Core.VideoTrackSupportInfo return
     event open_failed
-        add add_OpenFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=51 reverse=24
+        add add_OpenFailed slot=6 inputs=1 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Core.VideoTrack,Windows.Media.Core.VideoTrackOpenFailedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OpenFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoTrack shape=26 reverse=53
+        remove remove_OpenFailed slot=7 inputs=1 outputs=0 declaring=Windows.Media.Core.IVideoTrack shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_encoding_properties
-        method GetEncodingProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4 reverse=62
+        method GetEncodingProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrack shape=4
             out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
 
 class Windows.Media.Core.VideoTrackOpenFailedEventArgs python_type
@@ -5072,7 +5072,7 @@ class Windows.Media.Core.VideoTrackOpenFailedEventArgs python_type
     default Windows.Media.Core.IVideoTrackOpenFailedEventArgs
     requires Windows.Media.Core.IVideoTrackOpenFailedEventArgs
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackOpenFailedEventArgs shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackOpenFailedEventArgs shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Core.VideoTrackSupportInfo python_type
@@ -5081,10 +5081,10 @@ class Windows.Media.Core.VideoTrackSupportInfo python_type
     default Windows.Media.Core.IVideoTrackSupportInfo
     requires Windows.Media.Core.IVideoTrackSupportInfo
     property decoder_status
-        get get_DecoderStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackSupportInfo shape=4 reverse=22
+        get get_DecoderStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackSupportInfo shape=4
             out enum32 type=Windows.Media.Core.MediaDecoderStatus return
     property media_source_status
-        get get_MediaSourceStatus slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackSupportInfo shape=4 reverse=43
+        get get_MediaSourceStatus slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.IVideoTrackSupportInfo shape=4
             out enum32 type=Windows.Media.Core.MediaSourceStatus return
 
 class System.Double external

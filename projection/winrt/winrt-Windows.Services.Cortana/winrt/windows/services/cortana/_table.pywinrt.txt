@@ -32,39 +32,39 @@ class Windows.Services.Cortana.CortanaActionableInsights python_type
     requires Windows.Services.Cortana.ICortanaActionableInsights
     factory Windows.Services.Cortana.ICortanaActionableInsightsStatics
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=4 reverse=22 deprecated
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=4 deprecated
             out class type=Windows.System.User return
     method get_default static deprecated
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsStatics shape=4 reverse=22 static deprecated
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsStatics shape=4 static deprecated
             out class type=Windows.Services.Cortana.CortanaActionableInsights return
     method get_for_user static deprecated
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsStatics shape=51 reverse=44 static deprecated
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsStatics shape=51 static deprecated
             in class type=Windows.System.User name=user
             out class type=Windows.Services.Cortana.CortanaActionableInsights return
     method is_available_async deprecated
-        method IsAvailableAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=4 reverse=43 deprecated
+        method IsAvailableAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method show_insights_async deprecated
-        method ShowInsightsAsync slot=12 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=51 reverse=163 deprecated
+        method ShowInsightsAsync slot=12 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=51 deprecated
             in class type=Windows.ApplicationModel.DataTransfer.DataPackage name=datapackage
             out interface type=Windows.Foundation.IAsyncAction return
-        method ShowInsightsAsync slot=13 inputs=2 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=117 reverse=175 deprecated
+        method ShowInsightsAsync slot=13 inputs=2 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=117 deprecated
             in class type=Windows.ApplicationModel.DataTransfer.DataPackage name=datapackage
             in class type=Windows.Services.Cortana.CortanaActionableInsightsOptions name=options
             out interface type=Windows.Foundation.IAsyncAction return
     method show_insights_for_image_async deprecated
-        method ShowInsightsForImageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=51 reverse=65 deprecated
+        method ShowInsightsForImageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=51 deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=imageStream
             out interface type=Windows.Foundation.IAsyncAction return
-        method ShowInsightsForImageAsync slot=9 inputs=2 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=117 reverse=101 deprecated
+        method ShowInsightsForImageAsync slot=9 inputs=2 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=117 deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=imageStream
             in class type=Windows.Services.Cortana.CortanaActionableInsightsOptions name=options
             out interface type=Windows.Foundation.IAsyncAction return
     method show_insights_for_text_async deprecated
-        method ShowInsightsForTextAsync slot=10 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=51 reverse=124 deprecated
+        method ShowInsightsForTextAsync slot=10 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=51 deprecated
             in string name=text
             out interface type=Windows.Foundation.IAsyncAction return
-        method ShowInsightsForTextAsync slot=11 inputs=2 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=117 reverse=145 deprecated
+        method ShowInsightsForTextAsync slot=11 inputs=2 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsights shape=117 deprecated
             in string name=text
             in class type=Windows.Services.Cortana.CortanaActionableInsightsOptions name=options
             out interface type=Windows.Foundation.IAsyncAction return
@@ -78,14 +78,14 @@ class Windows.Services.Cortana.CortanaActionableInsightsOptions activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property surrounding_text
-        get get_SurroundingText slot=8 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 reverse=62 deprecated
+        get get_SurroundingText slot=8 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 deprecated
             out string return
-        put put_SurroundingText slot=9 inputs=1 outputs=0 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 reverse=99 deprecated
+        put put_SurroundingText slot=9 inputs=1 outputs=0 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 deprecated
             in string name=value
     property content_source_web_link
-        get get_ContentSourceWebLink slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 reverse=22 deprecated
+        get get_ContentSourceWebLink slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_ContentSourceWebLink slot=7 inputs=1 outputs=0 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 reverse=43 deprecated
+        put put_ContentSourceWebLink slot=7 inputs=1 outputs=0 declaring=Windows.Services.Cortana.ICortanaActionableInsightsOptions shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
 
 enum Windows.Services.Cortana.CortanaPermission python_type
@@ -117,21 +117,21 @@ class Windows.Services.Cortana.CortanaPermissionsManager python_type
     requires Windows.Services.Cortana.ICortanaPermissionsManager
     factory Windows.Services.Cortana.ICortanaPermissionsManagerStatics
     method are_permissions_granted_async deprecated
-        method ArePermissionsGrantedAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=51 reverse=44 deprecated
+        method ArePermissionsGrantedAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=51 deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Cortana.CortanaPermission> name=permissions
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method get_default static deprecated
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManagerStatics shape=4 reverse=22 static deprecated
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManagerStatics shape=4 static deprecated
             out class type=Windows.Services.Cortana.CortanaPermissionsManager return
     method grant_permissions_async deprecated
-        method GrantPermissionsAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=51 reverse=65 deprecated
+        method GrantPermissionsAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=51 deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Cortana.CortanaPermission> name=permissions
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> return
     method is_supported deprecated
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=4 reverse=22 deprecated
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=4 deprecated
             out boolean return
     method revoke_permissions_async deprecated
-        method RevokePermissionsAsync slot=9 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=51 reverse=100 deprecated
+        method RevokePermissionsAsync slot=9 inputs=1 outputs=1 declaring=Windows.Services.Cortana.ICortanaPermissionsManager shape=51 deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Cortana.CortanaPermission> name=permissions
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Cortana.CortanaPermissionsChangeResult> return
 
@@ -142,18 +142,18 @@ class Windows.Services.Cortana.CortanaSettings python_type
     requires Windows.Services.Cortana.ICortanaSettings
     factory Windows.Services.Cortana.ICortanaSettingsStatics
     property is_voice_activation_enabled
-        get get_IsVoiceActivationEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettings shape=4 reverse=43 deprecated
+        get get_IsVoiceActivationEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettings shape=4 deprecated
             out boolean return
-        put put_IsVoiceActivationEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Services.Cortana.ICortanaSettings shape=4 reverse=62 deprecated
+        put put_IsVoiceActivationEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Services.Cortana.ICortanaSettings shape=4 deprecated
             in boolean name=value
     property has_user_consent_to_voice_activation
-        get get_HasUserConsentToVoiceActivation slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettings shape=4 reverse=22 deprecated
+        get get_HasUserConsentToVoiceActivation slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettings shape=4 deprecated
             out boolean return
     method get_default static deprecated
-        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettingsStatics shape=4 reverse=43 static deprecated
+        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettingsStatics shape=4 static deprecated
             out class type=Windows.Services.Cortana.CortanaSettings return
     method is_supported static deprecated
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettingsStatics shape=4 reverse=22 static deprecated
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Services.Cortana.ICortanaSettingsStatics shape=4 static deprecated
             out boolean return
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable

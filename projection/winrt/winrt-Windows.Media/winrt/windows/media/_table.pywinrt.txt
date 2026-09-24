@@ -22,12 +22,12 @@ class Windows.Media.AudioBuffer python_type closeable
     requires Windows.Foundation.IMemoryBuffer
     requires Windows.Foundation.IClosable
     property length
-        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.Media.IAudioBuffer shape=4 reverse=43
+        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.Media.IAudioBuffer shape=4
             out uint32 return
-        put put_Length slot=8 inputs=1 outputs=0 declaring=Windows.Media.IAudioBuffer shape=4 reverse=62
+        put put_Length slot=8 inputs=1 outputs=0 declaring=Windows.Media.IAudioBuffer shape=4
             in uint32 name=value
     property capacity
-        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Media.IAudioBuffer shape=4 reverse=22
+        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Media.IAudioBuffer shape=4
             out uint32 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -51,7 +51,7 @@ class Windows.Media.AudioFrame python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Media.IAudioFrameFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.IAudioFrameFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.IAudioFrameFactory shape=51
             in uint32 name=capacity
             out class type=Windows.Media.AudioFrame return
     property system_relative_time
@@ -86,7 +86,7 @@ class Windows.Media.AudioFrame python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method lock_buffer
-        method LockBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Media.IAudioFrame shape=51 reverse=24
+        method LockBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Media.IAudioFrame shape=51
             in enum32 type=Windows.Media.AudioBufferAccessMode name=mode
             out class type=Windows.Media.AudioBuffer return
 
@@ -102,7 +102,7 @@ class Windows.Media.AutoRepeatModeChangeRequestedEventArgs python_type
     default Windows.Media.IAutoRepeatModeChangeRequestedEventArgs
     requires Windows.Media.IAutoRepeatModeChangeRequestedEventArgs
     property requested_auto_repeat_mode
-        get get_RequestedAutoRepeatMode slot=6 inputs=0 outputs=1 declaring=Windows.Media.IAutoRepeatModeChangeRequestedEventArgs shape=4 reverse=22
+        get get_RequestedAutoRepeatMode slot=6 inputs=0 outputs=1 declaring=Windows.Media.IAutoRepeatModeChangeRequestedEventArgs shape=4
             out enum32 type=Windows.Media.MediaPlaybackAutoRepeatMode return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
@@ -741,113 +741,113 @@ class Windows.Media.ImageDisplayProperties python_type
     default Windows.Media.IImageDisplayProperties
     requires Windows.Media.IImageDisplayProperties
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.IImageDisplayProperties shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.IImageDisplayProperties shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Media.IImageDisplayProperties shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Media.IImageDisplayProperties shape=4
             in string name=value
     property subtitle
-        get get_Subtitle slot=8 inputs=0 outputs=1 declaring=Windows.Media.IImageDisplayProperties shape=4 reverse=62
+        get get_Subtitle slot=8 inputs=0 outputs=1 declaring=Windows.Media.IImageDisplayProperties shape=4
             out string return
-        put put_Subtitle slot=9 inputs=1 outputs=0 declaring=Windows.Media.IImageDisplayProperties shape=4 reverse=99
+        put put_Subtitle slot=9 inputs=1 outputs=0 declaring=Windows.Media.IImageDisplayProperties shape=4
             in string name=value
 
 class Windows.Media.MediaControl static python_type
     py MediaControl
     factory Windows.Media.IMediaControl
     property track_name static
-        get get_TrackName slot=32 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 reverse=280 static deprecated
+        get get_TrackName slot=32 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             out string return
-        put put_TrackName slot=31 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 reverse=273 static deprecated
+        put put_TrackName slot=31 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             in string name=value
     property is_playing static
-        get get_IsPlaying slot=36 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 reverse=296 static deprecated
+        get get_IsPlaying slot=36 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             out boolean return
-        put put_IsPlaying slot=35 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 reverse=292 static deprecated
+        put put_IsPlaying slot=35 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             in boolean name=value
     property artist_name static
-        get get_ArtistName slot=34 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 reverse=288 static deprecated
+        get get_ArtistName slot=34 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             out string return
-        put put_ArtistName slot=33 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 reverse=285 static deprecated
+        put put_ArtistName slot=33 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             in string name=value
     property album_art static
-        get get_AlbumArt slot=38 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 reverse=302 static deprecated
+        get get_AlbumArt slot=38 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             out class type=Windows.Foundation.Uri return
-        put put_AlbumArt slot=37 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 reverse=299 static deprecated
+        put put_AlbumArt slot=37 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             in class type=Windows.Foundation.Uri name=value
     property sound_level static
-        get get_SoundLevel slot=30 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 reverse=270 static deprecated
+        get get_SoundLevel slot=30 inputs=0 outputs=1 declaring=Windows.Media.IMediaControl shape=4 static deprecated
             out enum32 type=Windows.Media.SoundLevel return
     event channel_down_pressed static
-        add add_ChannelDownPressed slot=28 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=264 static deprecated
+        add add_ChannelDownPressed slot=28 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ChannelDownPressed slot=29 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=268 static deprecated
+        remove remove_ChannelDownPressed slot=29 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event channel_up_pressed static
-        add add_ChannelUpPressed slot=26 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=256 static deprecated
+        add add_ChannelUpPressed slot=26 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ChannelUpPressed slot=27 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=262 static deprecated
+        remove remove_ChannelUpPressed slot=27 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event fast_forward_pressed static
-        add add_FastForwardPressed slot=22 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=238 static deprecated
+        add add_FastForwardPressed slot=22 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FastForwardPressed slot=23 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=245 static deprecated
+        remove remove_FastForwardPressed slot=23 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event next_track_pressed static
-        add add_NextTrackPressed slot=18 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=219 static deprecated
+        add add_NextTrackPressed slot=18 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NextTrackPressed slot=19 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=226 static deprecated
+        remove remove_NextTrackPressed slot=19 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pause_pressed static
-        add add_PausePressed slot=10 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=124 static deprecated
+        add add_PausePressed slot=10 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PausePressed slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=156 static deprecated
+        remove remove_PausePressed slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event play_pause_toggle_pressed static
-        add add_PlayPauseTogglePressed slot=14 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=187 static deprecated
+        add add_PlayPauseTogglePressed slot=14 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PlayPauseTogglePressed slot=15 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=200 static deprecated
+        remove remove_PlayPauseTogglePressed slot=15 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event play_pressed static
-        add add_PlayPressed slot=8 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=65 static deprecated
+        add add_PlayPressed slot=8 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PlayPressed slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=110 static deprecated
+        remove remove_PlayPressed slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event previous_track_pressed static
-        add add_PreviousTrackPressed slot=20 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=229 static deprecated
+        add add_PreviousTrackPressed slot=20 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PreviousTrackPressed slot=21 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=234 static deprecated
+        remove remove_PreviousTrackPressed slot=21 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event record_pressed static
-        add add_RecordPressed slot=16 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=203 static deprecated
+        add add_RecordPressed slot=16 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RecordPressed slot=17 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=215 static deprecated
+        remove remove_RecordPressed slot=17 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event rewind_pressed static
-        add add_RewindPressed slot=24 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=248 static deprecated
+        add add_RewindPressed slot=24 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RewindPressed slot=25 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=254 static deprecated
+        remove remove_RewindPressed slot=25 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event sound_level_changed static
-        add add_SoundLevelChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=24 static deprecated
+        add add_SoundLevelChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SoundLevelChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=53 static deprecated
+        remove remove_SoundLevelChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stop_pressed static
-        add add_StopPressed slot=12 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 reverse=163 static deprecated
+        add add_StopPressed slot=12 inputs=1 outputs=1 declaring=Windows.Media.IMediaControl shape=51 static deprecated
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StopPressed slot=13 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 reverse=181 static deprecated
+        remove remove_StopPressed slot=13 inputs=1 outputs=0 declaring=Windows.Media.IMediaControl shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.Media.MediaExtensionManager activatable python_type
@@ -880,24 +880,24 @@ class Windows.Media.MediaExtensionManager activatable python_type
             in guid name=outputSubtype
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
     method register_byte_stream_handler
-        method RegisterByteStreamHandler slot=8 inputs=3 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=117 reverse=66
+        method RegisterByteStreamHandler slot=8 inputs=3 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=117
             in string name=activatableClassId
             in string name=fileExtension
             in string name=mimeType
-        method RegisterByteStreamHandler slot=9 inputs=4 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=195 reverse=102
+        method RegisterByteStreamHandler slot=9 inputs=4 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=195
             in string name=activatableClassId
             in string name=fileExtension
             in string name=mimeType
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
     method register_media_extension_for_app_service
-        method RegisterMediaExtensionForAppService slot=6 inputs=2 outputs=0 declaring=Windows.Media.IMediaExtensionManager2 shape=51 reverse=24
+        method RegisterMediaExtensionForAppService slot=6 inputs=2 outputs=0 declaring=Windows.Media.IMediaExtensionManager2 shape=51
             in interface type=Windows.Media.IMediaExtension name=extension
             in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=connection
     method register_scheme_handler
-        method RegisterSchemeHandler slot=6 inputs=2 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=51 reverse=24
+        method RegisterSchemeHandler slot=6 inputs=2 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=51
             in string name=activatableClassId
             in string name=scheme
-        method RegisterSchemeHandler slot=7 inputs=3 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=117 reverse=45
+        method RegisterSchemeHandler slot=7 inputs=3 outputs=0 declaring=Windows.Media.IMediaExtensionManager shape=117
             in string name=activatableClassId
             in string name=scheme
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
@@ -926,7 +926,7 @@ class Windows.Media.MediaMarkerTypes static python_type
     py MediaMarkerTypes
     factory Windows.Media.IMediaMarkerTypesStatics
     property bookmark static
-        get get_Bookmark slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaMarkerTypesStatics shape=4 reverse=22 static
+        get get_Bookmark slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaMarkerTypesStatics shape=4 static
             out string return
 
 enum Windows.Media.MediaPlaybackAutoRepeatMode python_type
@@ -959,7 +959,7 @@ class Windows.Media.MediaProcessingTriggerDetails python_type
     default Windows.Media.IMediaProcessingTriggerDetails
     requires Windows.Media.IMediaProcessingTriggerDetails
     property arguments
-        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaProcessingTriggerDetails shape=4 reverse=22
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaProcessingTriggerDetails shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
 
 struct Windows.Media.MediaTimeRange python_type
@@ -978,58 +978,58 @@ class Windows.Media.MediaTimelineController activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property position
-        get get_Position slot=9 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=4 reverse=99
+        get get_Position slot=9 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=4
             out timespan return
-        put put_Position slot=10 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26 reverse=134
+        put put_Position slot=10 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26
             in timespan name=value
     property clock_rate
-        get get_ClockRate slot=11 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=4 reverse=141
+        get get_ClockRate slot=11 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=4
             out double return
-        put put_ClockRate slot=12 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=2 reverse=160
+        put put_ClockRate slot=12 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=2
             in double name=value
     property state
-        get get_State slot=13 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=4 reverse=173
+        get get_State slot=13 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=4
             out enum32 type=Windows.Media.MediaTimelineControllerState return
     property is_looping_enabled
-        get get_IsLoopingEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=4 reverse=62
+        get get_IsLoopingEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=4
             out boolean return
-        put put_IsLoopingEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=4 reverse=99
+        put put_IsLoopingEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=4
             in boolean name=value
     property duration
-        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=4 reverse=22
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_Duration slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=4 reverse=43
+        put put_Duration slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     event position_changed
-        add add_PositionChanged slot=14 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=51 reverse=187
+        add add_PositionChanged slot=14 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> name=positionChangedEventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PositionChanged slot=15 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26 reverse=200
+        remove remove_PositionChanged slot=15 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event state_changed
-        add add_StateChanged slot=16 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=51 reverse=203
+        add add_StateChanged slot=16 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> name=stateChangedEventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=17 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26 reverse=215
+        remove remove_StateChanged slot=17 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event ended
-        add add_Ended slot=12 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=51 reverse=163
+        add add_Ended slot=12 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Ended slot=13 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=26 reverse=181
+        remove remove_Ended slot=13 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event failed
-        add add_Failed slot=10 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=51 reverse=124
+        add add_Failed slot=10 inputs=1 outputs=1 declaring=Windows.Media.IMediaTimelineController2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,Windows.Media.MediaTimelineControllerFailedEventArgs> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Failed slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=26 reverse=156
+        remove remove_Failed slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMediaTimelineController2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method pause
-        method Pause slot=8 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0 reverse=55
+        method Pause slot=8 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0
     method resume
-        method Resume slot=7 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0 reverse=37
+        method Resume slot=7 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.Media.IMediaTimelineController shape=0
 
 class Windows.Media.MediaTimelineControllerFailedEventArgs python_type
     py MediaTimelineControllerFailedEventArgs
@@ -1037,7 +1037,7 @@ class Windows.Media.MediaTimelineControllerFailedEventArgs python_type
     default Windows.Media.IMediaTimelineControllerFailedEventArgs
     requires Windows.Media.IMediaTimelineControllerFailedEventArgs
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineControllerFailedEventArgs shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaTimelineControllerFailedEventArgs shape=4
             out hresult type=Windows.Foundation.HResult return
 
 enum Windows.Media.MediaTimelineControllerState python_type
@@ -1056,37 +1056,37 @@ class Windows.Media.MusicDisplayProperties python_type
     requires Windows.Media.IMusicDisplayProperties2
     requires Windows.Media.IMusicDisplayProperties3
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties shape=4
             in string name=value
     property artist
-        get get_Artist slot=10 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties shape=4 reverse=121
+        get get_Artist slot=10 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties shape=4
             out string return
-        put put_Artist slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties shape=4 reverse=141
+        put put_Artist slot=11 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties shape=4
             in string name=value
     property album_artist
-        get get_AlbumArtist slot=8 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties shape=4 reverse=62
+        get get_AlbumArtist slot=8 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties shape=4
             out string return
-        put put_AlbumArtist slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties shape=4 reverse=99
+        put put_AlbumArtist slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties shape=4
             in string name=value
     property track_number
-        get get_TrackNumber slot=8 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties2 shape=4 reverse=62
+        get get_TrackNumber slot=8 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties2 shape=4
             out uint32 return
-        put put_TrackNumber slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties2 shape=4 reverse=99
+        put put_TrackNumber slot=9 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties2 shape=4
             in uint32 name=value
     property album_title
-        get get_AlbumTitle slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties2 shape=4 reverse=22
+        get get_AlbumTitle slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties2 shape=4
             out string return
-        put put_AlbumTitle slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties2 shape=4 reverse=43
+        put put_AlbumTitle slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties2 shape=4
             in string name=value
     property genres
-        get get_Genres slot=10 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties2 shape=4 reverse=121
+        get get_Genres slot=10 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property album_track_count
-        get get_AlbumTrackCount slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties3 shape=4 reverse=22
+        get get_AlbumTrackCount slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMusicDisplayProperties3 shape=4
             out uint32 return
-        put put_AlbumTrackCount slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties3 shape=4 reverse=43
+        put put_AlbumTrackCount slot=7 inputs=1 outputs=0 declaring=Windows.Media.IMusicDisplayProperties3 shape=4
             in uint32 name=value
 
 class Windows.Media.PlaybackPositionChangeRequestedEventArgs python_type
@@ -1095,7 +1095,7 @@ class Windows.Media.PlaybackPositionChangeRequestedEventArgs python_type
     default Windows.Media.IPlaybackPositionChangeRequestedEventArgs
     requires Windows.Media.IPlaybackPositionChangeRequestedEventArgs
     property requested_playback_position
-        get get_RequestedPlaybackPosition slot=6 inputs=0 outputs=1 declaring=Windows.Media.IPlaybackPositionChangeRequestedEventArgs shape=4 reverse=22
+        get get_RequestedPlaybackPosition slot=6 inputs=0 outputs=1 declaring=Windows.Media.IPlaybackPositionChangeRequestedEventArgs shape=4
             out timespan return
 
 class Windows.Media.PlaybackRateChangeRequestedEventArgs python_type
@@ -1104,7 +1104,7 @@ class Windows.Media.PlaybackRateChangeRequestedEventArgs python_type
     default Windows.Media.IPlaybackRateChangeRequestedEventArgs
     requires Windows.Media.IPlaybackRateChangeRequestedEventArgs
     property requested_playback_rate
-        get get_RequestedPlaybackRate slot=6 inputs=0 outputs=1 declaring=Windows.Media.IPlaybackRateChangeRequestedEventArgs shape=4 reverse=22
+        get get_RequestedPlaybackRate slot=6 inputs=0 outputs=1 declaring=Windows.Media.IPlaybackRateChangeRequestedEventArgs shape=4
             out double return
 
 class Windows.Media.ShuffleEnabledChangeRequestedEventArgs python_type
@@ -1113,7 +1113,7 @@ class Windows.Media.ShuffleEnabledChangeRequestedEventArgs python_type
     default Windows.Media.IShuffleEnabledChangeRequestedEventArgs
     requires Windows.Media.IShuffleEnabledChangeRequestedEventArgs
     property requested_shuffle_enabled
-        get get_RequestedShuffleEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.IShuffleEnabledChangeRequestedEventArgs shape=4 reverse=22
+        get get_RequestedShuffleEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.IShuffleEnabledChangeRequestedEventArgs shape=4
             out boolean return
 
 enum Windows.Media.SoundLevel python_type
@@ -1131,127 +1131,127 @@ class Windows.Media.SystemMediaTransportControls python_type
     requires Windows.Media.ISystemMediaTransportControls2
     factory Windows.Media.ISystemMediaTransportControlsStatics
     property is_play_enabled
-        get get_IsPlayEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=162
+        get get_IsPlayEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsPlayEnabled slot=13 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=173
+        put put_IsPlayEnabled slot=13 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_pause_enabled
-        get get_IsPauseEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=202
+        get get_IsPauseEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsPauseEnabled slot=17 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=210
+        put put_IsPauseEnabled slot=17 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_next_enabled
-        get get_IsNextEnabled slot=26 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=255
+        get get_IsNextEnabled slot=26 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsNextEnabled slot=27 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=259
+        put put_IsNextEnabled slot=27 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_previous_enabled
-        get get_IsPreviousEnabled slot=24 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=247
+        get get_IsPreviousEnabled slot=24 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsPreviousEnabled slot=25 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=252
+        put put_IsPreviousEnabled slot=25 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_enabled
-        get get_IsEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=121
+        get get_IsEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=141
+        put put_IsEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_channel_down_enabled
-        get get_IsChannelDownEnabled slot=30 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=270
+        get get_IsChannelDownEnabled slot=30 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsChannelDownEnabled slot=31 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=273
+        put put_IsChannelDownEnabled slot=31 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_fast_forward_enabled
-        get get_IsFastForwardEnabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=228
+        get get_IsFastForwardEnabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsFastForwardEnabled slot=21 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=232
+        put put_IsFastForwardEnabled slot=21 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_channel_up_enabled
-        get get_IsChannelUpEnabled slot=28 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=263
+        get get_IsChannelUpEnabled slot=28 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsChannelUpEnabled slot=29 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=266
+        put put_IsChannelUpEnabled slot=29 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property playback_status
-        get get_PlaybackStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=22
+        get get_PlaybackStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out enum32 type=Windows.Media.MediaPlaybackStatus return
-        put put_PlaybackStatus slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=43
+        put put_PlaybackStatus slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in enum32 type=Windows.Media.MediaPlaybackStatus name=value
     property is_stop_enabled
-        get get_IsStopEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=186
+        get get_IsStopEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsStopEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=194
+        put put_IsStopEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_rewind_enabled
-        get get_IsRewindEnabled slot=22 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=237
+        get get_IsRewindEnabled slot=22 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsRewindEnabled slot=23 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=242
+        put put_IsRewindEnabled slot=23 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property is_record_enabled
-        get get_IsRecordEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=218
+        get get_IsRecordEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out boolean return
-        put put_IsRecordEnabled slot=19 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=223
+        put put_IsRecordEnabled slot=19 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             in boolean name=value
     property display_updater
-        get get_DisplayUpdater slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=62
+        get get_DisplayUpdater slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out class type=Windows.Media.SystemMediaTransportControlsDisplayUpdater return
     property sound_level
-        get get_SoundLevel slot=9 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4 reverse=99
+        get get_SoundLevel slot=9 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=4
             out enum32 type=Windows.Media.SoundLevel return
     property shuffle_enabled
-        get get_ShuffleEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4 reverse=62
+        get get_ShuffleEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4
             out boolean return
-        put put_ShuffleEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4 reverse=99
+        put put_ShuffleEnabled slot=9 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4
             in boolean name=value
     property playback_rate
-        get get_PlaybackRate slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4 reverse=121
+        get get_PlaybackRate slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4
             out double return
-        put put_PlaybackRate slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=2 reverse=138
+        put put_PlaybackRate slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=2
             in double name=value
     property auto_repeat_mode
-        get get_AutoRepeatMode slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4 reverse=22
+        get get_AutoRepeatMode slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4
             out enum32 type=Windows.Media.MediaPlaybackAutoRepeatMode return
-        put put_AutoRepeatMode slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4 reverse=43
+        put put_AutoRepeatMode slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4
             in enum32 type=Windows.Media.MediaPlaybackAutoRepeatMode name=value
     event button_pressed
-        add add_ButtonPressed slot=32 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=51 reverse=281
+        add add_ButtonPressed slot=32 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ButtonPressed slot=33 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=26 reverse=287
+        remove remove_ButtonPressed slot=33 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event property_changed
-        add add_PropertyChanged slot=34 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=51 reverse=289
+        add add_PropertyChanged slot=34 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PropertyChanged slot=35 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=26 reverse=294
+        remove remove_PropertyChanged slot=35 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event auto_repeat_mode_change_requested
-        add add_AutoRepeatModeChangeRequested slot=19 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=224
+        add add_AutoRepeatModeChangeRequested slot=19 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.AutoRepeatModeChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AutoRepeatModeChangeRequested slot=20 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=399
+        remove remove_AutoRepeatModeChangeRequested slot=20 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_position_change_requested
-        add add_PlaybackPositionChangeRequested slot=13 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=174
+        add add_PlaybackPositionChangeRequested slot=13 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.PlaybackPositionChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PlaybackPositionChangeRequested slot=14 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=192
+        remove remove_PlaybackPositionChangeRequested slot=14 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_rate_change_requested
-        add add_PlaybackRateChangeRequested slot=15 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=196
+        add add_PlaybackRateChangeRequested slot=15 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.PlaybackRateChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PlaybackRateChangeRequested slot=16 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=397
+        remove remove_PlaybackRateChangeRequested slot=16 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shuffle_enabled_change_requested
-        add add_ShuffleEnabledChangeRequested slot=17 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51 reverse=211
+        add add_ShuffleEnabledChangeRequested slot=17 inputs=1 outputs=1 declaring=Windows.Media.ISystemMediaTransportControls2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.SystemMediaTransportControls,Windows.Media.ShuffleEnabledChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ShuffleEnabledChangeRequested slot=18 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26 reverse=398
+        remove remove_ShuffleEnabledChangeRequested slot=18 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsStatics shape=4 static
             out class type=Windows.Media.SystemMediaTransportControls return
     method update_timeline_properties
-        method UpdateTimelineProperties slot=12 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4 reverse=162
+        method UpdateTimelineProperties slot=12 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControls2 shape=4
             in class type=Windows.Media.SystemMediaTransportControlsTimelineProperties name=timelineProperties
 
 enum Windows.Media.SystemMediaTransportControlsButton python_type
@@ -1274,7 +1274,7 @@ class Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs python_ty
     default Windows.Media.ISystemMediaTransportControlsButtonPressedEventArgs
     requires Windows.Media.ISystemMediaTransportControlsButtonPressedEventArgs
     property button
-        get get_Button slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsButtonPressedEventArgs shape=4 reverse=22
+        get get_Button slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsButtonPressedEventArgs shape=4
             out enum32 type=Windows.Media.SystemMediaTransportControlsButton return
 
 class Windows.Media.SystemMediaTransportControlsDisplayUpdater python_type
@@ -1283,38 +1283,38 @@ class Windows.Media.SystemMediaTransportControlsDisplayUpdater python_type
     default Windows.Media.ISystemMediaTransportControlsDisplayUpdater
     requires Windows.Media.ISystemMediaTransportControlsDisplayUpdater
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             out enum32 type=Windows.Media.MediaPlaybackType return
-        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=43
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             in enum32 type=Windows.Media.MediaPlaybackType name=value
     property thumbnail
-        get get_Thumbnail slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=121
+        get get_Thumbnail slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             out class type=Windows.Storage.Streams.RandomAccessStreamReference return
-        put put_Thumbnail slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=141
+        put put_Thumbnail slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             in class type=Windows.Storage.Streams.RandomAccessStreamReference name=value
     property app_media_id
-        get get_AppMediaId slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=62
+        get get_AppMediaId slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             out string return
-        put put_AppMediaId slot=9 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=99
+        put put_AppMediaId slot=9 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             in string name=value
     property image_properties
-        get get_ImageProperties slot=14 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=186
+        get get_ImageProperties slot=14 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             out class type=Windows.Media.ImageDisplayProperties return
     property music_properties
-        get get_MusicProperties slot=12 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=162
+        get get_MusicProperties slot=12 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             out class type=Windows.Media.MusicDisplayProperties return
     property video_properties
-        get get_VideoProperties slot=13 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4 reverse=173
+        get get_VideoProperties slot=13 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=4
             out class type=Windows.Media.VideoDisplayProperties return
     method clear_all
-        method ClearAll slot=16 inputs=0 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=0 reverse=201
+        method ClearAll slot=16 inputs=0 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=0
     method copy_from_file_async
-        method CopyFromFileAsync slot=15 inputs=2 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=117 reverse=197
+        method CopyFromFileAsync slot=15 inputs=2 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=117
             in enum32 type=Windows.Media.MediaPlaybackType name=type
             in class type=Windows.Storage.StorageFile name=source
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method update
-        method Update slot=17 inputs=0 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=0 reverse=209
+        method Update slot=17 inputs=0 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsDisplayUpdater shape=0
 
 enum Windows.Media.SystemMediaTransportControlsProperty python_type
     py SystemMediaTransportControlsProperty
@@ -1327,7 +1327,7 @@ class Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs python_
     default Windows.Media.ISystemMediaTransportControlsPropertyChangedEventArgs
     requires Windows.Media.ISystemMediaTransportControlsPropertyChangedEventArgs
     property property
-        get get_Property slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsPropertyChangedEventArgs shape=4 reverse=22
+        get get_Property slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsPropertyChangedEventArgs shape=4
             out enum32 type=Windows.Media.SystemMediaTransportControlsProperty return
 
 class Windows.Media.SystemMediaTransportControlsTimelineProperties activatable python_type
@@ -1339,29 +1339,29 @@ class Windows.Media.SystemMediaTransportControlsTimelineProperties activatable p
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property start_time
-        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4 reverse=22
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4
             out timespan return
-        put put_StartTime slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26 reverse=53
+        put put_StartTime slot=7 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26
             in timespan name=value
     property position
-        get get_Position slot=14 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4 reverse=186
+        get get_Position slot=14 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4
             out timespan return
-        put put_Position slot=15 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26 reverse=200
+        put put_Position slot=15 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26
             in timespan name=value
     property min_seek_time
-        get get_MinSeekTime slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4 reverse=121
+        get get_MinSeekTime slot=10 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4
             out timespan return
-        put put_MinSeekTime slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26 reverse=156
+        put put_MinSeekTime slot=11 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26
             in timespan name=value
     property max_seek_time
-        get get_MaxSeekTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4 reverse=162
+        get get_MaxSeekTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4
             out timespan return
-        put put_MaxSeekTime slot=13 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26 reverse=181
+        put put_MaxSeekTime slot=13 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26
             in timespan name=value
     property end_time
-        get get_EndTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4 reverse=62
+        get get_EndTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=4
             out timespan return
-        put put_EndTime slot=9 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26 reverse=110
+        put put_EndTime slot=9 inputs=1 outputs=0 declaring=Windows.Media.ISystemMediaTransportControlsTimelineProperties shape=26
             in timespan name=value
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.MediaTimelineController,System.Object> concrete
@@ -1467,24 +1467,24 @@ class Windows.Media.VideoDisplayProperties python_type
     requires Windows.Media.IVideoDisplayProperties
     requires Windows.Media.IVideoDisplayProperties2
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoDisplayProperties shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoDisplayProperties shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Media.IVideoDisplayProperties shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Media.IVideoDisplayProperties shape=4
             in string name=value
     property subtitle
-        get get_Subtitle slot=8 inputs=0 outputs=1 declaring=Windows.Media.IVideoDisplayProperties shape=4 reverse=62
+        get get_Subtitle slot=8 inputs=0 outputs=1 declaring=Windows.Media.IVideoDisplayProperties shape=4
             out string return
-        put put_Subtitle slot=9 inputs=1 outputs=0 declaring=Windows.Media.IVideoDisplayProperties shape=4 reverse=99
+        put put_Subtitle slot=9 inputs=1 outputs=0 declaring=Windows.Media.IVideoDisplayProperties shape=4
             in string name=value
     property genres
-        get get_Genres slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoDisplayProperties2 shape=4 reverse=22
+        get get_Genres slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoDisplayProperties2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Media.VideoEffects static python_type
     py VideoEffects
     factory Windows.Media.IVideoEffectsStatics
     property video_stabilization static
-        get get_VideoStabilization slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoEffectsStatics shape=4 reverse=22 static
+        get get_VideoStabilization slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoEffectsStatics shape=4 static
             out string return
 
 class Windows.Media.VideoFrame python_type closeable
@@ -1498,7 +1498,7 @@ class Windows.Media.VideoFrame python_type closeable
     factory Windows.Media.IVideoFrameFactory
     factory Windows.Media.IVideoFrameStatics
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.IVideoFrameFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.IVideoFrameFactory shape=195
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=format
             in int32 name=width
             in int32 name=height
@@ -1539,24 +1539,24 @@ class Windows.Media.VideoFrame python_type closeable
         get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Media.IMediaFrame shape=4 reverse=22
             out string return
     property direct3d_surface
-        get get_Direct3DSurface slot=8 inputs=0 outputs=1 declaring=Windows.Media.IVideoFrame shape=4 reverse=62
+        get get_Direct3DSurface slot=8 inputs=0 outputs=1 declaring=Windows.Media.IVideoFrame shape=4
             out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
     property software_bitmap
-        get get_SoftwareBitmap slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoFrame shape=4 reverse=22
+        get get_SoftwareBitmap slot=6 inputs=0 outputs=1 declaring=Windows.Media.IVideoFrame shape=4
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method copy_to_async
-        method CopyToAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.IVideoFrame shape=51 reverse=44
+        method CopyToAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.IVideoFrame shape=51
             in class type=Windows.Media.VideoFrame name=frame
             out interface type=Windows.Foundation.IAsyncAction return
-        method CopyToAsync slot=6 inputs=3 outputs=1 declaring=Windows.Media.IVideoFrame2 shape=195 reverse=26
+        method CopyToAsync slot=6 inputs=3 outputs=1 declaring=Windows.Media.IVideoFrame2 shape=195
             in class type=Windows.Media.VideoFrame name=frame
             in reference type=Windows.Foundation.IReference<Windows.Graphics.Imaging.BitmapBounds> name=sourceBounds
             in reference type=Windows.Foundation.IReference<Windows.Graphics.Imaging.BitmapBounds> name=destinationBounds
             out interface type=Windows.Foundation.IAsyncAction return
     method create_as_direct3d11_surface_backed static
-        method CreateAsDirect3D11SurfaceBacked slot=6 inputs=3 outputs=1 declaring=Windows.Media.IVideoFrameStatics shape=195 reverse=26 static
+        method CreateAsDirect3D11SurfaceBacked slot=6 inputs=3 outputs=1 declaring=Windows.Media.IVideoFrameStatics shape=195 static
             in enum32 type=Windows.Graphics.DirectX.DirectXPixelFormat name=format
             in int32 name=width
             in int32 name=height
@@ -1568,11 +1568,11 @@ class Windows.Media.VideoFrame python_type closeable
             in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice name=device
             out class type=Windows.Media.VideoFrame return
     method create_with_direct3d11_surface static
-        method CreateWithDirect3D11Surface slot=9 inputs=1 outputs=1 declaring=Windows.Media.IVideoFrameStatics shape=51 reverse=100 static
+        method CreateWithDirect3D11Surface slot=9 inputs=1 outputs=1 declaring=Windows.Media.IVideoFrameStatics shape=51 static
             in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=surface
             out class type=Windows.Media.VideoFrame return
     method create_with_software_bitmap static
-        method CreateWithSoftwareBitmap slot=8 inputs=1 outputs=1 declaring=Windows.Media.IVideoFrameStatics shape=51 reverse=65 static
+        method CreateWithSoftwareBitmap slot=8 inputs=1 outputs=1 declaring=Windows.Media.IVideoFrameStatics shape=51 static
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
             out class type=Windows.Media.VideoFrame return
 

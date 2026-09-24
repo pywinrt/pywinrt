@@ -23,24 +23,24 @@ class Windows.Security.Cryptography.DataProtection.DataProtectionProvider activa
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProviderFactory shape=51
             in string name=protectionDescriptor
             out class type=Windows.Security.Cryptography.DataProtection.DataProtectionProvider return
     method protect_async
-        method ProtectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=51 reverse=24
+        method ProtectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=data
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method protect_stream_async
-        method ProtectStreamAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=117 reverse=66
+        method ProtectStreamAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=117
             in interface type=Windows.Storage.Streams.IInputStream name=src
             in interface type=Windows.Storage.Streams.IOutputStream name=dest
             out interface type=Windows.Foundation.IAsyncAction return
     method unprotect_async
-        method UnprotectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=51 reverse=44
+        method UnprotectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=data
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method unprotect_stream_async
-        method UnprotectStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=117 reverse=101
+        method UnprotectStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.DataProtection.IDataProtectionProvider shape=117
             in interface type=Windows.Storage.Streams.IInputStream name=src
             in interface type=Windows.Storage.Streams.IOutputStream name=dest
             out interface type=Windows.Foundation.IAsyncAction return

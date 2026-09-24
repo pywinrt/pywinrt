@@ -27,7 +27,7 @@ class Microsoft.Windows.Widgets.Notifications.FeedAnnouncement python_type
     requires Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement
     factory Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementFactory
     constructor -
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementFactory shape=267 reverse=516
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementFactory shape=267
             in string name=id
             in string name=primaryText
             in string name=secondaryText
@@ -35,64 +35,64 @@ class Microsoft.Windows.Widgets.Notifications.FeedAnnouncement python_type
             in class type=Windows.Foundation.Uri name=darkModeIcon
             out class type=Microsoft.Windows.Widgets.Notifications.FeedAnnouncement return
     property show_badge_if_user_not_engaged
-        get get_ShowBadgeIfUserNotEngaged slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=247
+        get get_ShowBadgeIfUserNotEngaged slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out boolean return
-        put put_ShowBadgeIfUserNotEngaged slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=252
+        put put_ShowBadgeIfUserNotEngaged slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in boolean name=value
     property secondary_text_color
-        get get_SecondaryTextColor slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=218
+        get get_SecondaryTextColor slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor return
-        put put_SecondaryTextColor slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=223
+        put put_SecondaryTextColor slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor name=value
     property secondary_text
-        get get_SecondaryText slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=121
+        get get_SecondaryText slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out string return
-        put put_SecondaryText slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=141
+        put put_SecondaryText slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in string name=value
     property primary_text_color
-        get get_PrimaryTextColor slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=202
+        get get_PrimaryTextColor slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor return
-        put put_PrimaryTextColor slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=210
+        put put_PrimaryTextColor slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementTextColor name=value
     property primary_text
-        get get_PrimaryText slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=62
+        get get_PrimaryText slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out string return
-        put put_PrimaryText slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=99
+        put put_PrimaryText slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in string name=value
     property light_mode_icon_uri
-        get get_LightModeIconUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=162
+        get get_LightModeIconUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out class type=Windows.Foundation.Uri return
-        put put_LightModeIconUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=173
+        put put_LightModeIconUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in class type=Windows.Foundation.Uri name=value
     property is_secondary_text_subtle
-        get get_IsSecondaryTextSubtle slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=237
+        get get_IsSecondaryTextSubtle slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out boolean return
-        put put_IsSecondaryTextSubtle slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=242
+        put put_IsSecondaryTextSubtle slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in boolean name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out string return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in string name=value
     property expiration_time
-        get get_ExpirationTime slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=255
+        get get_ExpirationTime slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out datetime return
-        put put_ExpirationTime slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=26 reverse=262
+        put put_ExpirationTime slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=26
             in datetime name=value
     property duration
-        get get_Duration slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=263
+        get get_Duration slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out timespan return
-        put put_Duration slot=29 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=26 reverse=268
+        put put_Duration slot=29 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=26
             in timespan name=value
     property dark_mode_icon_uri
-        get get_DarkModeIconUri slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=186
+        get get_DarkModeIconUri slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out class type=Windows.Foundation.Uri return
-        put put_DarkModeIconUri slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=194
+        put put_DarkModeIconUri slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in class type=Windows.Foundation.Uri name=value
     property custom_accessibility_text
-        get get_CustomAccessibilityText slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=228
+        get get_CustomAccessibilityText slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             out string return
-        put put_CustomAccessibilityText slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4 reverse=232
+        put put_CustomAccessibilityText slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement shape=4
             in string name=value
 
 class Microsoft.Windows.Widgets.Notifications.FeedAnnouncementInvokedArgs python_type
@@ -101,16 +101,16 @@ class Microsoft.Windows.Widgets.Notifications.FeedAnnouncementInvokedArgs python
     default Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs
     requires Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs
     property action_kind
-        get get_ActionKind slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=99
+        get get_ActionKind slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4
             out enum32 type=Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind return
     property announcement_id
-        get get_AnnouncementId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=62
+        get get_AnnouncementId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4
             out string return
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Notifications.IFeedAnnouncementInvokedArgs shape=4
             out string return
 
 interface Microsoft.Windows.Widgets.Notifications.IFeedAnnouncement

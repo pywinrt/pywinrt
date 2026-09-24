@@ -11,37 +11,37 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConf
     requires Windows.Foundation.IClosable
     requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2
     property availability_info
-        get get_AvailabilityInfo slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=162
+        get get_AvailabilityInfo slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out class type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo return
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=62
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out string return
     property is_active
-        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=99
+        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out boolean return
     property model_id
-        get get_ModelId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=43
+        get get_ModelId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out string return
     property signal_id
-        get get_SignalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=22
+        get get_SignalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out string return
     property training_data_format
-        get get_TrainingDataFormat slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=252
+        get get_TrainingDataFormat slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat return
     property training_steps_completed
-        get get_TrainingStepsCompleted slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=242
+        get get_TrainingStepsCompleted slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out uint32 return
     property training_steps_remaining
-        get get_TrainingStepsRemaining slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=247
+        get get_TrainingStepsRemaining slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out uint32 return
     property training_step_completion_max_allowed_time
-        get get_TrainingStepCompletionMaxAllowedTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=4 reverse=121
+        get get_TrainingStepCompletionMaxAllowedTime slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=4
             out uint32 return
     event availability_changed
-        add add_AvailabilityChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=174
+        add add_AvailabilityChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration,Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AvailabilityChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=26 reverse=192
+        remove remove_AvailabilityChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method apply_training_data
         method ApplyTrainingData slot=26 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117
@@ -49,65 +49,65 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConf
             in interface type=Windows.Storage.Streams.IInputStream name=trainingData
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus return
     method apply_training_data_async
-        method ApplyTrainingDataAsync slot=27 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117 reverse=261
+        method ApplyTrainingDataAsync slot=27 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat name=trainingDataFormat
             in interface type=Windows.Storage.Streams.IInputStream name=trainingData
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> return
     method clear_model_data
-        method ClearModelData slot=21 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=0 reverse=231
+        method ClearModelData slot=21 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=0
     method clear_model_data_async
-        method ClearModelDataAsync slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=237
+        method ClearModelDataAsync slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method clear_training_data
         method ClearTrainingData slot=28 inputs=0 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=0
     method clear_training_data_async
-        method ClearTrainingDataAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=266
+        method ClearTrainingDataAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_model_data
-        method GetModelData slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=223
+        method GetModelData slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out interface type=Windows.Storage.Streams.IInputStream return
     method get_model_data_async
-        method GetModelDataAsync slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=228
+        method GetModelDataAsync slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> return
     method get_model_data_type
-        method GetModelDataType slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=210
+        method GetModelDataType slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out string return
     method get_model_data_type_async
-        method GetModelDataTypeAsync slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=218
+        method GetModelDataTypeAsync slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method set_enabled
-        method SetEnabled slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4 reverse=121
+        method SetEnabled slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=4
             in boolean name=value
     method set_enabled_async
-        method SetEnabledAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=144
+        method SetEnabledAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51
             in boolean name=value
             out interface type=Windows.Foundation.IAsyncAction return
     method set_enabled_with_result
-        method SetEnabledWithResult slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=51 reverse=100
+        method SetEnabledWithResult slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=51
             in boolean name=value
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult return
     method set_enabled_with_result_async
-        method SetEnabledWithResultAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=51 reverse=65
+        method SetEnabledWithResultAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=51
             in boolean name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationStateChangeResult> return
     method set_model_data
-        method SetModelData slot=15 inputs=2 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51 reverse=196
+        method SetModelData slot=15 inputs=2 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=51
             in string name=dataType
             in interface type=Windows.Storage.Streams.IInputStream name=data
     method set_model_data_async
-        method SetModelDataAsync slot=16 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117 reverse=204
+        method SetModelDataAsync slot=16 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration shape=117
             in string name=dataType
             in interface type=Windows.Storage.Streams.IInputStream name=data
             out interface type=Windows.Foundation.IAsyncAction return
     method set_model_data_with_result
-        method SetModelDataWithResult slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=117 reverse=25
+        method SetModelDataWithResult slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=117
             in string name=dataType
             in interface type=Windows.Storage.Streams.IInputStream name=data
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult return
     method set_model_data_with_result_async
-        method SetModelDataWithResultAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=117 reverse=45
+        method SetModelDataWithResultAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration2 shape=117
             in string name=dataType
             in interface type=Windows.Storage.Streams.IInputStream name=data
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationSetModelDataResult> return
@@ -118,10 +118,10 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConf
     default Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult
     requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult
     property configuration
-        get get_Configuration slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult shape=4 reverse=43
+        get get_Configuration slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult shape=4
             out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfigurationCreationResult shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus return
 
 enum Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationStatus python_type
@@ -185,83 +185,83 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector pyth
     requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector
     requires Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2
     property can_create_configurations
-        get get_CanCreateConfigurations slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=62
+        get get_CanCreateConfigurations slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out boolean return
     property kind
-        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=43
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind return
     property provider_id
-        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=22
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out string return
     property supported_model_data_types
-        get get_SupportedModelDataTypes slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=99
+        get get_SupportedModelDataTypes slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property supported_power_states
-        get get_SupportedPowerStates slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=141
+        get get_SupportedPowerStates slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState> return
     property supported_training_data_formats
-        get get_SupportedTrainingDataFormats slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=121
+        get get_SupportedTrainingDataFormats slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat> return
     property detector_id
-        get get_DetectorId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=4 reverse=162
+        get get_DetectorId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=4
             out string return
     method create_configuration
-        method CreateConfiguration slot=14 inputs=3 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117 reverse=188
+        method CreateConfiguration slot=14 inputs=3 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117
             in string name=signalId
             in string name=modelId
             in string name=displayName
     method create_configuration_async
-        method CreateConfigurationAsync slot=15 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=195 reverse=198
+        method CreateConfigurationAsync slot=15 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=195
             in string name=signalId
             in string name=modelId
             in string name=displayName
             out interface type=Windows.Foundation.IAsyncAction return
     method create_configuration_with_result
-        method CreateConfigurationWithResult slot=9 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=195 reverse=102
+        method CreateConfigurationWithResult slot=9 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=195
             in string name=signalId
             in string name=modelId
             in string name=displayName
             out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult return
     method create_configuration_with_result_async
-        method CreateConfigurationWithResultAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=195 reverse=68
+        method CreateConfigurationWithResultAsync slot=8 inputs=3 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=195
             in string name=signalId
             in string name=modelId
             in string name=displayName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult> return
     method get_available_model_ids_for_signal_id
-        method GetAvailableModelIdsForSignalId slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=51 reverse=44
+        method GetAvailableModelIdsForSignalId slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=51
             in string name=signalId
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     method get_available_model_ids_for_signal_id_async
-        method GetAvailableModelIdsForSignalIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=51 reverse=24
+        method GetAvailableModelIdsForSignalIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=51
             in string name=signalId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> return
     method get_configuration
-        method GetConfiguration slot=18 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117 reverse=220
+        method GetConfiguration slot=18 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117
             in string name=signalId
             in string name=modelId
             out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration return
     method get_configuration_async
-        method GetConfigurationAsync slot=19 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117 reverse=225
+        method GetConfigurationAsync slot=19 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=117
             in string name=signalId
             in string name=modelId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
     method get_configurations
-        method GetConfigurations slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=202
+        method GetConfigurations slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration> return
     method get_configurations_async
-        method GetConfigurationsAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4 reverse=210
+        method GetConfigurationsAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration>> return
     method get_supported_model_ids_for_signal_id
-        method GetSupportedModelIdsForSignalId slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51 reverse=163
+        method GetSupportedModelIdsForSignalId slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51
             in string name=signalId
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method get_supported_model_ids_for_signal_id_async
-        method GetSupportedModelIdsForSignalIdAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51 reverse=174
+        method GetSupportedModelIdsForSignalIdAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51
             in string name=signalId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> return
     method remove_configuration
-        method RemoveConfiguration slot=20 inputs=2 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51 reverse=229
+        method RemoveConfiguration slot=20 inputs=2 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector shape=51
             in string name=signalId
             in string name=modelId
     method remove_configuration_async
@@ -270,12 +270,12 @@ class Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector pyth
             in string name=modelId
             out interface type=Windows.Foundation.IAsyncAction return
     method remove_configuration_with_result
-        method RemoveConfigurationWithResult slot=11 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=117 reverse=145
+        method RemoveConfigurationWithResult slot=11 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=117
             in string name=signalId
             in string name=modelId
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult return
     method remove_configuration_with_result_async
-        method RemoveConfigurationWithResultAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=117 reverse=125
+        method RemoveConfigurationWithResultAsync slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector2 shape=117
             in string name=signalId
             in string name=modelId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationRemovalResult> return
@@ -558,29 +558,29 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorMa
     requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2
     factory Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics
     property default static
-        get get_Default slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics shape=4 reverse=22 static
+        get get_Default slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics shape=4 static
             out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager return
     method get_activation_signal_detector_from_id
-        method GetActivationSignalDetectorFromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 shape=51 reverse=24
+        method GetActivationSignalDetectorFromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 shape=51
             in string name=detectorId
             out class type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector return
     method get_activation_signal_detector_from_id_async
-        method GetActivationSignalDetectorFromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 shape=51 reverse=44
+        method GetActivationSignalDetectorFromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager2 shape=51
             in string name=detectorId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
     method get_activation_signal_detectors
-        method GetActivationSignalDetectors slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=51 reverse=65
+        method GetActivationSignalDetectors slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=51
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind name=kind
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
     method get_activation_signal_detectors_async
-        method GetActivationSignalDetectorsAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=51 reverse=100
+        method GetActivationSignalDetectorsAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=51
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind name=kind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> return
     method get_all_activation_signal_detectors
-        method GetAllActivationSignalDetectors slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=4 reverse=22
+        method GetAllActivationSignalDetectors slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> return
     method get_all_activation_signal_detectors_async
-        method GetAllActivationSignalDetectorsAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=4 reverse=43
+        method GetAllActivationSignalDetectorsAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector>> return
 
 class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession python_type closeable
@@ -592,142 +592,142 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession py
     requires Windows.Foundation.IClosable
     factory Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics
     property agent_state
-        get get_AgentState slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=162
+        get get_AgentState slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState return
     property is_indicator_light_available
-        get get_IsIndicatorLightAvailable slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=186
+        get get_IsIndicatorLightAvailable slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out boolean return
     property is_interrupted
-        get get_IsInterrupted slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=223
+        get get_IsInterrupted slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out boolean return
     property is_interruptible
-        get get_IsInterruptible slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=218
+        get get_IsInterruptible slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out boolean return
     property is_screen_available
-        get get_IsScreenAvailable slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=194
+        get get_IsScreenAvailable slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out boolean return
     property is_user_authenticated
-        get get_IsUserAuthenticated slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=202
+        get get_IsUserAuthenticated slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out boolean return
     property is_voice_activation_available
-        get get_IsVoiceActivationAvailable slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=210
+        get get_IsVoiceActivationAvailable slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out boolean return
     property signal
-        get get_Signal slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=173
+        get get_Signal slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal return
     event session_interrupted
-        add add_SessionInterrupted slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=24
+        add add_SessionInterrupted slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SessionInterrupted slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=53
+        remove remove_SessionInterrupted slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event signal_detected
-        add add_SignalDetected slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=65
+        add add_SignalDetected slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SignalDetected slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=110
+        remove remove_SignalDetected slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_state_changed
-        add add_SystemStateChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=124
+        add add_SystemStateChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession,Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SystemStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26 reverse=156
+        remove remove_SystemStateChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_audio_device_input_node
-        method CreateAudioDeviceInputNode slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=267
+        method CreateAudioDeviceInputNode slot=29 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in class type=Windows.Media.Audio.AudioGraph name=graph
             out class type=Windows.Media.Audio.AudioDeviceInputNode return
     method create_audio_device_input_node_async
-        method CreateAudioDeviceInputNodeAsync slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=264
+        method CreateAudioDeviceInputNodeAsync slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in class type=Windows.Media.Audio.AudioGraph name=graph
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode> return
     method get_audio_capture_device_id
-        method GetAudioCaptureDeviceId slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=273
+        method GetAudioCaptureDeviceId slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out string return
     method get_audio_capture_device_id_async
-        method GetAudioCaptureDeviceIdAsync slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=270
+        method GetAudioCaptureDeviceIdAsync slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method get_audio_client
-        method GetAudioClient slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=259
+        method GetAudioClient slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out object return
     method get_audio_client_async
-        method GetAudioClientAsync slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=255
+        method GetAudioClientAsync slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Object> return
     method get_audio_render_device_id
-        method GetAudioRenderDeviceId slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=285
+        method GetAudioRenderDeviceId slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out string return
     method get_audio_render_device_id_async
-        method GetAudioRenderDeviceIdAsync slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=280
+        method GetAudioRenderDeviceIdAsync slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method get_current_session_async static
-        method GetCurrentSessionAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics shape=4 reverse=22 static
+        method GetCurrentSessionAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> return
     method get_current_session_sync static
-        method GetCurrentSessionSync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics shape=4 reverse=43 static
+        method GetCurrentSessionSync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics shape=4 static
             out class type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession return
     method get_missing_prerequisites
-        method GetMissingPrerequisites slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4 reverse=121
+        method GetMissingPrerequisites slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind> return
     method get_missing_prerequisites_async
-        method GetMissingPrerequisitesAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4 reverse=141
+        method GetMissingPrerequisitesAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind>> return
     method get_signal_model_id
-        method GetSignalModelId slot=35 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=292
+        method GetSignalModelId slot=35 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out uint32 return
     method get_signal_model_id_async
-        method GetSignalModelIdAsync slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=288
+        method GetSignalModelIdAsync slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
     method get_supported_signal_model_ids
-        method GetSupportedSignalModelIds slot=39 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=307
+        method GetSupportedSignalModelIds slot=39 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     method get_supported_signal_model_ids_async
-        method GetSupportedSignalModelIdsAsync slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=302
+        method GetSupportedSignalModelIdsAsync slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.UInt32>> return
     method request_activation
-        method RequestActivation slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51 reverse=44
+        method RequestActivation slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind name=activationKind
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult return
     method request_activation_async
-        method RequestActivationAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51 reverse=24
+        method RequestActivationAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationKind name=activationKind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentActivationResult> return
     method request_agent_state_change
-        method RequestAgentStateChange slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=243
+        method RequestAgentStateChange slot=23 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState name=state
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
     method request_agent_state_change_async
-        method RequestAgentStateChangeAsync slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=238
+        method RequestAgentStateChangeAsync slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentState name=state
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
     method request_foreground_activation
-        method RequestForegroundActivation slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=252
+        method RequestForegroundActivation slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
     method request_foreground_activation_async
-        method RequestForegroundActivationAsync slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4 reverse=247
+        method RequestForegroundActivationAsync slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
     method request_interruptible
-        method RequestInterruptible slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=233
+        method RequestInterruptible slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in boolean name=interruptible
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse return
     method request_interruptible_async
-        method RequestInterruptibleAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=229
+        method RequestInterruptibleAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in boolean name=interruptible
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse> return
     method set_signal_model_id
-        method SetSignalModelId slot=37 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=300
+        method SetSignalModelId slot=37 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in uint32 name=signalModelId
             out boolean return
     method set_signal_model_id_async
-        method SetSignalModelIdAsync slot=36 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51 reverse=297
+        method SetSignalModelIdAsync slot=36 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession shape=51
             in uint32 name=signalModelId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method set_support_lock_screen_activation
-        method SetSupportLockScreenActivation slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4 reverse=99
+        method SetSupportLockScreenActivation slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=4
             in boolean name=lockScreenActivationSupported
     method set_support_lock_screen_activation_async
-        method SetSupportLockScreenActivationAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51 reverse=65
+        method SetSupportLockScreenActivationAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSession2 shape=51
             in boolean name=lockScreenActivationSupported
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -750,40 +750,40 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal pyt
     requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal
     requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2
     property signal_start
-        get get_SignalStart slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=186
+        get get_SignalStart slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             out timespan return
-        put put_SignalStart slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=26 reverse=200
+        put put_SignalStart slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=26
             in timespan name=value
     property signal_name
-        get get_SignalName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=121
+        get get_SignalName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             out string return
-        put put_SignalName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=141
+        put put_SignalName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             in string name=value
     property signal_id
-        get get_SignalId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=62
+        get get_SignalId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             out string return
-        put put_SignalId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=99
+        put put_SignalId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             in string name=value
     property signal_end
-        get get_SignalEnd slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=202
+        get get_SignalEnd slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             out timespan return
-        put put_SignalEnd slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=26 reverse=215
+        put put_SignalEnd slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=26
             in timespan name=value
     property signal_context
-        get get_SignalContext slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=162
+        get get_SignalContext slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             out object return
-        put put_SignalContext slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=173
+        put put_SignalContext slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             in object name=value
     property is_signal_verification_required
-        get get_IsSignalVerificationRequired slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=22
+        get get_IsSignalVerificationRequired slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             out boolean return
-        put put_IsSignalVerificationRequired slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4 reverse=43
+        put put_IsSignalVerificationRequired slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal shape=4
             in boolean name=value
     property detector_id
-        get get_DetectorId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 shape=4 reverse=22
+        get get_DetectorId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 shape=4
             out string return
     property detector_kind
-        get get_DetectorKind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 shape=4 reverse=43
+        get get_DetectorKind slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSignal2 shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind return
 
 class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignalDetectedEventArgs python_type
@@ -816,7 +816,7 @@ class Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStat
     default Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs
     requires Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs
     property system_state_change_type
-        get get_SystemStateChangeType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs shape=4 reverse=22
+        get get_SystemStateChangeType slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType return
 
 enum Windows.ApplicationModel.ConversationalAgent.ConversationalAgentVoiceActivationPrerequisiteKind python_type
@@ -842,7 +842,7 @@ class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailab
     default Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs
     requires Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind return
 
 class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo python_type
@@ -852,19 +852,19 @@ class Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailab
     requires Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo
     requires Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2
     property has_lock_screen_permission
-        get get_HasLockScreenPermission slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=99
+        get get_HasLockScreenPermission slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4
             out boolean return
     property has_permission
-        get get_HasPermission slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=62
+        get get_HasPermission slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4
             out boolean return
     property has_system_resource_access
-        get get_HasSystemResourceAccess slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=43
+        get get_HasSystemResourceAccess slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4
             out boolean return
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo shape=4
             out boolean return
     property unavailable_system_resources
-        get get_UnavailableSystemResources slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2 shape=4 reverse=22
+        get get_UnavailableSystemResources slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.SignalDetectorResourceKind> return
 
 enum Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus python_type

@@ -9,20 +9,20 @@ class Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentO
     default Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation
     requires Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation
     property appointment_information
-        get get_AppointmentInformation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4 reverse=22
+        get get_AppointmentInformation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4
             out class type=Windows.ApplicationModel.Appointments.Appointment return
     property source_package_family_name
-        get get_SourcePackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4 reverse=43
+        get get_SourcePackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4
             out string return
     method dismiss_ui
-        method DismissUI slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=0 reverse=137
+        method DismissUI slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=0
     method report_canceled
-        method ReportCanceled slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=0 reverse=93
+        method ReportCanceled slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=0
     method report_completed
-        method ReportCompleted slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4 reverse=62
+        method ReportCompleted slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4
             in string name=itemId
     method report_error
-        method ReportError slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4 reverse=121
+        method ReportError slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation shape=4
             in string name=value
 
 class Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs static python_type
@@ -30,19 +30,19 @@ class Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsPro
     factory Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics
     factory Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics2
     property add_appointment static
-        get get_AddAppointment slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 reverse=22 static
+        get get_AddAppointment slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 static
             out string return
     property remove_appointment static
-        get get_RemoveAppointment slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 reverse=62 static
+        get get_RemoveAppointment slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 static
             out string return
     property replace_appointment static
-        get get_ReplaceAppointment slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 reverse=43 static
+        get get_ReplaceAppointment slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 static
             out string return
     property show_time_frame static
-        get get_ShowTimeFrame slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 reverse=99 static
+        get get_ShowTimeFrame slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 static
             out string return
     property show_appointment_details static
-        get get_ShowAppointmentDetails slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics2 shape=4 reverse=22 static
+        get get_ShowAppointmentDetails slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics2 shape=4 static
             out string return
 
 interface Windows.ApplicationModel.Appointments.AppointmentsProvider.IAddAppointmentOperation
@@ -194,22 +194,22 @@ class Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointme
     default Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation
     requires Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation
     property appointment_id
-        get get_AppointmentId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4 reverse=22
+        get get_AppointmentId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4
             out string return
     property instance_start_date
-        get get_InstanceStartDate slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4 reverse=43
+        get get_InstanceStartDate slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property source_package_family_name
-        get get_SourcePackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4 reverse=62
+        get get_SourcePackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4
             out string return
     method dismiss_ui
-        method DismissUI slot=12 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=0 reverse=159
+        method DismissUI slot=12 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=0
     method report_canceled
-        method ReportCanceled slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=0 reverse=117
+        method ReportCanceled slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=0
     method report_completed
-        method ReportCompleted slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=0 reverse=93
+        method ReportCompleted slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=0
     method report_error
-        method ReportError slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4 reverse=141
+        method ReportError slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IRemoveAppointmentOperation shape=4
             in string name=value
 
 class Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation python_type
@@ -218,26 +218,26 @@ class Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointm
     default Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation
     requires Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation
     property appointment_id
-        get get_AppointmentId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4 reverse=22
+        get get_AppointmentId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4
             out string return
     property appointment_information
-        get get_AppointmentInformation slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4 reverse=43
+        get get_AppointmentInformation slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4
             out class type=Windows.ApplicationModel.Appointments.Appointment return
     property instance_start_date
-        get get_InstanceStartDate slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4 reverse=62
+        get get_InstanceStartDate slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property source_package_family_name
-        get get_SourcePackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4 reverse=99
+        get get_SourcePackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4
             out string return
     method dismiss_ui
-        method DismissUI slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=0 reverse=169
+        method DismissUI slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=0
     method report_canceled
-        method ReportCanceled slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=0 reverse=137
+        method ReportCanceled slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=0
     method report_completed
-        method ReportCompleted slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4 reverse=121
+        method ReportCompleted slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4
             in string name=itemId
     method report_error
-        method ReportError slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4 reverse=162
+        method ReportError slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IReplaceAppointmentOperation shape=4
             in string name=value
 
 class Windows.ApplicationModel.Appointments.Appointment external

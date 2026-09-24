@@ -487,13 +487,13 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommand python_type
     default Windows.ApplicationModel.VoiceCommands.IVoiceCommand
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommand
     property command_name
-        get get_CommandName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4 reverse=22
+        get get_CommandName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4
             out string return
     property properties
-        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4 reverse=43
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Foundation.Collections.IVectorView<System.String>> return
     property speech_recognition_result
-        get get_SpeechRecognitionResult slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4 reverse=62
+        get get_SpeechRecognitionResult slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommand shape=4
             out class type=Windows.Media.SpeechRecognition.SpeechRecognitionResult return
 
 class Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs python_type
@@ -502,7 +502,7 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs pyth
     default Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandCompletedEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason return
 
 enum Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason python_type
@@ -522,7 +522,7 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult pyth
     default Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult
     property confirmed
-        get get_Confirmed slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult shape=4 reverse=22
+        get get_Confirmed slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandConfirmationResult shape=4
             out boolean return
 
 class Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile activatable python_type
@@ -534,44 +534,44 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in string name=value
     property text_line3
-        get get_TextLine3 slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=162
+        get get_TextLine3 slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out string return
-        put put_TextLine3 slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=173
+        put put_TextLine3 slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in string name=value
     property text_line2
-        get get_TextLine2 slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=121
+        get get_TextLine2 slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out string return
-        put put_TextLine2 slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=141
+        put put_TextLine2 slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in string name=value
     property text_line1
-        get get_TextLine1 slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=62
+        get get_TextLine1 slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out string return
-        put put_TextLine1 slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=99
+        put put_TextLine1 slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in string name=value
     property image
-        get get_Image slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=186
+        get get_Image slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out interface type=Windows.Storage.IStorageFile return
-        put put_Image slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=194
+        put put_Image slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in interface type=Windows.Storage.IStorageFile name=value
     property content_tile_type
-        get get_ContentTileType slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=228
+        get get_ContentTileType slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out enum32 type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType return
-        put put_ContentTileType slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=232
+        put put_ContentTileType slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in enum32 type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType name=value
     property app_launch_argument
-        get get_AppLaunchArgument slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=218
+        get get_AppLaunchArgument slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out string return
-        put put_AppLaunchArgument slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=223
+        put put_AppLaunchArgument slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in string name=value
     property app_context
-        get get_AppContext slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=202
+        get get_AppContext slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             out object return
-        put put_AppContext slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4 reverse=210
+        put put_AppContext slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandContentTile shape=4
             in object name=value
 
 enum Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTileType python_type
@@ -592,13 +592,13 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition python_type
     default Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition
     property language
-        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=4 reverse=22
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=4
             out string return
     property name
-        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=4 reverse=43
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=4
             out string return
     method set_phrase_list_async
-        method SetPhraseListAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=117 reverse=66
+        method SetPhraseListAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinition shape=117
             in string name=phraseListName
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phraseList
             out interface type=Windows.Foundation.IAsyncAction return
@@ -607,10 +607,10 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager stati
     py VoiceCommandDefinitionManager
     factory Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics
     property installed_command_definitions static
-        get get_InstalledCommandDefinitions slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics shape=4 reverse=43 static
+        get get_InstalledCommandDefinitions slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> return
     method install_command_definitions_from_storage_file_async static
-        method InstallCommandDefinitionsFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics shape=51 reverse=24 static
+        method InstallCommandDefinitionsFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDefinitionManagerStatics shape=51 static
             in class type=Windows.Storage.StorageFile name=file
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -620,7 +620,7 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult py
     default Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult
     property selected_item
-        get get_SelectedItem slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult shape=4 reverse=22
+        get get_SelectedItem slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandDisambiguationResult shape=4
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile return
 
 class Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse python_type
@@ -630,40 +630,40 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse python_type
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse
     factory Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics
     property repeat_message
-        get get_RepeatMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=62
+        get get_RepeatMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage return
-        put put_RepeatMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=99
+        put put_RepeatMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=value
     property message
-        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=22
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage return
-        put put_Message slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=43
+        put put_Message slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=value
     property app_launch_argument
-        get get_AppLaunchArgument slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=121
+        get get_AppLaunchArgument slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             out string return
-        put put_AppLaunchArgument slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=141
+        put put_AppLaunchArgument slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             in string name=value
     property voice_command_content_tiles
-        get get_VoiceCommandContentTiles slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4 reverse=162
+        get get_VoiceCommandContentTiles slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponse shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> return
     property max_supported_voice_command_content_tiles static
-        get get_MaxSupportedVoiceCommandContentTiles slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=4 reverse=22 static
+        get get_MaxSupportedVoiceCommandContentTiles slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=4 static
             out uint32 return
     method create_response static
-        method CreateResponse slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=51 reverse=44 static
+        method CreateResponse slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=51 static
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=userMessage
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
-        method CreateResponse slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=117 reverse=66 static
+        method CreateResponse slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=117 static
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=message
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> name=contentTiles
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
     method create_response_for_prompt static
-        method CreateResponseForPrompt slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=117 reverse=101 static
+        method CreateResponseForPrompt slot=9 inputs=2 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=117 static
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=message
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=repeatMessage
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse return
-        method CreateResponseForPrompt slot=10 inputs=3 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=195 reverse=126 static
+        method CreateResponseForPrompt slot=10 inputs=3 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandResponseStatics shape=195 static
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=message
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage name=repeatMessage
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile> name=contentTiles
@@ -676,43 +676,43 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection pytho
     requires Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection
     factory Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics
     property language
-        get get_Language slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=4 reverse=173
+        get get_Language slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=4
             out class type=Windows.Globalization.Language return
     event voice_command_completed
-        add add_VoiceCommandCompleted slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=187
+        add add_VoiceCommandCompleted slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection,Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_VoiceCommandCompleted slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=26 reverse=200
+        remove remove_VoiceCommandCompleted slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_app_service_trigger_details static
-        method FromAppServiceTriggerDetails slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics shape=51 reverse=24 static
+        method FromAppServiceTriggerDetails slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnectionStatics shape=51 static
             in class type=Windows.ApplicationModel.AppService.AppServiceTriggerDetails name=triggerDetails
             out class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection return
     method get_voice_command_async
-        method GetVoiceCommandAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=4 reverse=22
+        method GetVoiceCommandAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommand> return
     method report_failure_async
-        method ReportFailureAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=144
+        method ReportFailureAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
             out interface type=Windows.Foundation.IAsyncAction return
     method report_progress_async
-        method ReportProgressAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=100
+        method ReportProgressAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
             out interface type=Windows.Foundation.IAsyncAction return
     method report_success_async
-        method ReportSuccessAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=124
+        method ReportSuccessAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
             out interface type=Windows.Foundation.IAsyncAction return
     method request_app_launch_async
-        method RequestAppLaunchAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=163
+        method RequestAppLaunchAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
             out interface type=Windows.Foundation.IAsyncAction return
     method request_confirmation_async
-        method RequestConfirmationAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=44
+        method RequestConfirmationAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult> return
     method request_disambiguation_async
-        method RequestDisambiguationAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51 reverse=65
+        method RequestDisambiguationAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandServiceConnection shape=51
             in class type=Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse name=response
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult> return
 
@@ -725,14 +725,14 @@ class Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property spoken_message
-        get get_SpokenMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=62
+        get get_SpokenMessage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4
             out string return
-        put put_SpokenMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=99
+        put put_SpokenMessage slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4
             in string name=value
     property display_message
-        get get_DisplayMessage slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=22
+        get get_DisplayMessage slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4
             out string return
-        put put_DisplayMessage slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4 reverse=43
+        put put_DisplayMessage slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.VoiceCommands.IVoiceCommandUserMessage shape=4
             in string name=value
 
 class System.String external

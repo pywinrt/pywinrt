@@ -362,16 +362,16 @@ class Windows.Storage.BulkAccess.FileInformationFactory python_type
     requires Windows.Storage.BulkAccess.IFileInformationFactory
     factory Windows.Storage.BulkAccess.IFileInformationFactoryFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=117
             in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
             in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
             out class type=Windows.Storage.BulkAccess.FileInformationFactory return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=195
             in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
             in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
             in uint32 name=requestedThumbnailSize
             out class type=Windows.Storage.BulkAccess.FileInformationFactory return
-        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=239 reverse=69
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactoryFactory shape=239
             in interface type=Windows.Storage.Search.IStorageQueryResultBase name=queryResult
             in enum32 type=Windows.Storage.FileProperties.ThumbnailMode name=mode
             in uint32 name=requestedThumbnailSize
@@ -385,34 +385,34 @@ class Windows.Storage.BulkAccess.FileInformationFactory python_type
             in boolean name=delayLoad
             out class type=Windows.Storage.BulkAccess.FileInformationFactory return
     method get_files_async
-        method GetFilesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=99
+        method GetFilesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation>> return
-        method GetFilesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117 reverse=66
+        method GetFilesAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117
             in uint32 name=startIndex
             in uint32 name=maxItemsToRetrieve
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FileInformation>> return
     method get_folders_async
-        method GetFoldersAsync slot=11 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=141
+        method GetFoldersAsync slot=11 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation>> return
-        method GetFoldersAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117 reverse=125
+        method GetFoldersAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117
             in uint32 name=startIndex
             in uint32 name=maxItemsToRetrieve
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.FolderInformation>> return
     method get_items_async
-        method GetItemsAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=43
+        method GetItemsAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation>> return
-        method GetItemsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117 reverse=25
+        method GetItemsAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=117
             in uint32 name=startIndex
             in uint32 name=maxItemsToRetrieve
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.BulkAccess.IStorageItemInformation>> return
     method get_virtualized_files_vector
-        method GetVirtualizedFilesVector slot=13 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=173
+        method GetVirtualizedFilesVector slot=13 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4
             out object return
     method get_virtualized_folders_vector
-        method GetVirtualizedFoldersVector slot=14 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=186
+        method GetVirtualizedFoldersVector slot=14 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4
             out object return
     method get_virtualized_items_vector
-        method GetVirtualizedItemsVector slot=12 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4 reverse=162
+        method GetVirtualizedItemsVector slot=12 inputs=0 outputs=1 declaring=Windows.Storage.BulkAccess.IFileInformationFactory shape=4
             out object return
 
 class Windows.Storage.BulkAccess.FolderInformation python_type

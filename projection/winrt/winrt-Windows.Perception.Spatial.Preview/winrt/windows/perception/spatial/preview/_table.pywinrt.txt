@@ -18,13 +18,13 @@ class Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePrev
     default Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview
     requires Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview
     property coordinate_system
-        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview shape=4 reverse=22
+        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview shape=4
             out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
     property coordinate_system_to_node_transform
-        get get_CoordinateSystemToNodeTransform slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview shape=4 reverse=62
+        get get_CoordinateSystemToNodeTransform slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     property node_id
-        get get_NodeId slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview shape=4 reverse=43
+        get get_NodeId slot=7 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropFrameOfReferencePreview shape=4
             out guid return
 
 class Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview static python_type
@@ -32,7 +32,7 @@ class Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview static pytho
     factory Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics
     factory Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2
     method create_coordinate_system_for_node static
-        method CreateCoordinateSystemForNode slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics shape=94 reverse=35 static
+        method CreateCoordinateSystemForNode slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics shape=94 static
             in guid name=nodeId
             out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
         method CreateCoordinateSystemForNode slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics shape=178 static
@@ -49,7 +49,7 @@ class Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview static pytho
             in guid name=nodeId
             out class type=Windows.Perception.Spatial.SpatialLocator return
     method try_create_frame_of_reference static
-        method TryCreateFrameOfReference slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2 shape=51 reverse=24 static
+        method TryCreateFrameOfReference slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2 shape=51 static
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview return
         method TryCreateFrameOfReference slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.Preview.ISpatialGraphInteropPreviewStatics2 shape=131 static

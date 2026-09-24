@@ -10,24 +10,24 @@ class Windows.UI.Core.AnimationMetrics.AnimationDescription python_type
     requires Windows.UI.Core.AnimationMetrics.IAnimationDescription
     factory Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory shape=117
             in enum32 type=Windows.UI.Core.AnimationMetrics.AnimationEffect name=effect
             in enum32 type=Windows.UI.Core.AnimationMetrics.AnimationEffectTarget name=target
             out class type=Windows.UI.Core.AnimationMetrics.AnimationDescription return
     property animations
-        get get_Animations slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4 reverse=22
+        get get_Animations slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Core.AnimationMetrics.IPropertyAnimation> return
     property delay_limit
-        get get_DelayLimit slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4 reverse=99
+        get get_DelayLimit slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4
             out timespan return
     property stagger_delay
-        get get_StaggerDelay slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4 reverse=43
+        get get_StaggerDelay slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4
             out timespan return
     property stagger_delay_factor
-        get get_StaggerDelayFactor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4 reverse=62
+        get get_StaggerDelayFactor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4
             out single return
     property z_order
-        get get_ZOrder slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4 reverse=121
+        get get_ZOrder slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IAnimationDescription shape=4
             out int32 return
 
 enum Windows.UI.Core.AnimationMetrics.AnimationEffect python_type
@@ -319,10 +319,10 @@ class Windows.UI.Core.AnimationMetrics.OpacityAnimation python_type
     requires Windows.UI.Core.AnimationMetrics.IOpacityAnimation
     requires Windows.UI.Core.AnimationMetrics.IPropertyAnimation
     property final_opacity
-        get get_FinalOpacity slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IOpacityAnimation shape=4 reverse=43
+        get get_FinalOpacity slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IOpacityAnimation shape=4
             out single return
     property initial_opacity
-        get get_InitialOpacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IOpacityAnimation shape=4 reverse=22
+        get get_InitialOpacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IOpacityAnimation shape=4
             out reference type=Windows.Foundation.IReference<System.Single> return
     property control1
         get get_Control1 slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IPropertyAnimation shape=4 reverse=99
@@ -390,19 +390,19 @@ class Windows.UI.Core.AnimationMetrics.ScaleAnimation python_type
         get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IPropertyAnimation shape=4 reverse=22
             out enum32 type=Windows.UI.Core.AnimationMetrics.PropertyAnimationType return
     property final_scale_x
-        get get_FinalScaleX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4 reverse=62
+        get get_FinalScaleX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4
             out single return
     property final_scale_y
-        get get_FinalScaleY slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4 reverse=99
+        get get_FinalScaleY slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4
             out single return
     property initial_scale_x
-        get get_InitialScaleX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4 reverse=22
+        get get_InitialScaleX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4
             out reference type=Windows.Foundation.IReference<System.Single> return
     property initial_scale_y
-        get get_InitialScaleY slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4 reverse=43
+        get get_InitialScaleY slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4
             out reference type=Windows.Foundation.IReference<System.Single> return
     property normalized_origin
-        get get_NormalizedOrigin slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4 reverse=121
+        get get_NormalizedOrigin slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.AnimationMetrics.IScaleAnimation shape=4
             out struct type=Windows.Foundation.Point return
 
 class Windows.UI.Core.AnimationMetrics.TranslationAnimation python_type

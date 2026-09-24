@@ -20,36 +20,36 @@ class Windows.Media.Devices.Core.CameraIntrinsics python_type
             in uint32 name=imageHeight
             out class type=Windows.Media.Devices.Core.CameraIntrinsics return
     property focal_length
-        get get_FocalLength slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4 reverse=22
+        get get_FocalLength slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property image_height
-        get get_ImageHeight slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4 reverse=141
+        get get_ImageHeight slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
             out uint32 return
     property image_width
-        get get_ImageWidth slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4 reverse=121
+        get get_ImageWidth slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
             out uint32 return
     property principal_point
-        get get_PrincipalPoint slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4 reverse=43
+        get get_PrincipalPoint slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property radial_distortion
-        get get_RadialDistortion slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4 reverse=62
+        get get_RadialDistortion slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property tangential_distortion
-        get get_TangentialDistortion slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4 reverse=99
+        get get_TangentialDistortion slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property undistorted_projection_transform
-        get get_UndistortedProjectionTransform slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=4 reverse=22
+        get get_UndistortedProjectionTransform slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     method distort_point
-        method DistortPoint slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=79 reverse=51
+        method DistortPoint slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=79
             in struct type=Windows.Foundation.Point name=input
             out struct type=Windows.Foundation.Point return
     method distort_points
-        method DistortPoints slot=8 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=195 reverse=68
+        method DistortPoints slot=8 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=195
             pass_array struct type=Windows.Foundation.Point name=inputs
             fill_array struct type=Windows.Foundation.Point name=results
     method project_many_onto_frame
-        method ProjectManyOntoFrame slot=14 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=195 reverse=189
+        method ProjectManyOntoFrame slot=14 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=195
             pass_array struct type=Windows.Foundation.Numerics.Vector3 name=coordinates
             fill_array struct type=Windows.Foundation.Point name=results
     method project_onto_frame
@@ -57,19 +57,19 @@ class Windows.Media.Devices.Core.CameraIntrinsics python_type
             in struct type=Windows.Foundation.Numerics.Vector3 name=coordinate
             out struct type=Windows.Foundation.Point return
     method undistort_point
-        method UndistortPoint slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=79 reverse=106
+        method UndistortPoint slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=79
             in struct type=Windows.Foundation.Point name=input
             out struct type=Windows.Foundation.Point return
     method undistort_points
-        method UndistortPoints slot=10 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=195 reverse=126
+        method UndistortPoints slot=10 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=195
             pass_array struct type=Windows.Foundation.Point name=inputs
             fill_array struct type=Windows.Foundation.Point name=results
     method unproject_at_unit_depth
-        method UnprojectAtUnitDepth slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=79 reverse=178
+        method UnprojectAtUnitDepth slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=79
             in struct type=Windows.Foundation.Point name=pixelCoordinate
             out struct type=Windows.Foundation.Numerics.Vector2 return
     method unproject_pixels_at_unit_depth
-        method UnprojectPixelsAtUnitDepth slot=15 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=195 reverse=198
+        method UnprojectPixelsAtUnitDepth slot=15 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=195
             pass_array struct type=Windows.Foundation.Point name=pixelCoordinates
             fill_array struct type=Windows.Foundation.Numerics.Vector2 name=results
 
@@ -94,7 +94,7 @@ class Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper python_type clo
             in class type=Windows.Media.Devices.Core.CameraIntrinsics name=targetCameraIntrinsics
             fill_array struct type=Windows.Foundation.Point name=results
     method unproject_point
-        method UnprojectPoint slot=6 inputs=2 outputs=1 declaring=Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper shape=151 reverse=32
+        method UnprojectPoint slot=6 inputs=2 outputs=1 declaring=Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper shape=151
             in struct type=Windows.Foundation.Point name=sourcePoint
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=targetCoordinateSystem
             out struct type=Windows.Foundation.Numerics.Vector3 return
@@ -111,22 +111,22 @@ class Windows.Media.Devices.Core.FrameControlCapabilities python_type
     requires Windows.Media.Devices.Core.IFrameControlCapabilities
     requires Windows.Media.Devices.Core.IFrameControlCapabilities2
     property exposure
-        get get_Exposure slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4 reverse=22
+        get get_Exposure slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
             out class type=Windows.Media.Devices.Core.FrameExposureCapabilities return
     property exposure_compensation
-        get get_ExposureCompensation slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4 reverse=43
+        get get_ExposureCompensation slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
             out class type=Windows.Media.Devices.Core.FrameExposureCompensationCapabilities return
     property focus
-        get get_Focus slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4 reverse=99
+        get get_Focus slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
             out class type=Windows.Media.Devices.Core.FrameFocusCapabilities return
     property iso_speed
-        get get_IsoSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4 reverse=62
+        get get_IsoSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
             out class type=Windows.Media.Devices.Core.FrameIsoSpeedCapabilities return
     property photo_confirmation_supported
-        get get_PhotoConfirmationSupported slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4 reverse=121
+        get get_PhotoConfirmationSupported slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
             out boolean return
     property flash
-        get get_Flash slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities2 shape=4 reverse=22
+        get get_Flash slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities2 shape=4
             out class type=Windows.Media.Devices.Core.FrameFlashCapabilities return
 
 class Windows.Media.Devices.Core.FrameController activatable python_type
@@ -139,24 +139,24 @@ class Windows.Media.Devices.Core.FrameController activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property photo_confirmation_enabled
-        get get_PhotoConfirmationEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4 reverse=121
+        get get_PhotoConfirmationEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
-        put put_PhotoConfirmationEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameController shape=4 reverse=141
+        put put_PhotoConfirmationEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameController shape=4
             in reference type=Windows.Foundation.IReference<System.Boolean> name=value
     property exposure_compensation_control
-        get get_ExposureCompensationControl slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4 reverse=43
+        get get_ExposureCompensationControl slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
             out class type=Windows.Media.Devices.Core.FrameExposureCompensationControl return
     property exposure_control
-        get get_ExposureControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4 reverse=22
+        get get_ExposureControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
             out class type=Windows.Media.Devices.Core.FrameExposureControl return
     property focus_control
-        get get_FocusControl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4 reverse=99
+        get get_FocusControl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
             out class type=Windows.Media.Devices.Core.FrameFocusControl return
     property iso_speed_control
-        get get_IsoSpeedControl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4 reverse=62
+        get get_IsoSpeedControl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
             out class type=Windows.Media.Devices.Core.FrameIsoSpeedControl return
     property flash_control
-        get get_FlashControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController2 shape=4 reverse=22
+        get get_FlashControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController2 shape=4
             out class type=Windows.Media.Devices.Core.FrameFlashControl return
 
 class Windows.Media.Devices.Core.FrameExposureCapabilities python_type
@@ -165,16 +165,16 @@ class Windows.Media.Devices.Core.FrameExposureCapabilities python_type
     default Windows.Media.Devices.Core.IFrameExposureCapabilities
     requires Windows.Media.Devices.Core.IFrameExposureCapabilities
     property max
-        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4 reverse=62
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
             out timespan return
     property min
-        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4 reverse=43
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
             out timespan return
     property step
-        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4 reverse=99
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
             out timespan return
     property supported
-        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4 reverse=22
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
             out boolean return
 
 class Windows.Media.Devices.Core.FrameExposureCompensationCapabilities python_type
@@ -183,16 +183,16 @@ class Windows.Media.Devices.Core.FrameExposureCompensationCapabilities python_ty
     default Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities
     requires Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities
     property max
-        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4 reverse=62
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
             out single return
     property min
-        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4 reverse=43
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
             out single return
     property step
-        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4 reverse=99
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
             out single return
     property supported
-        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4 reverse=22
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
             out boolean return
 
 class Windows.Media.Devices.Core.FrameExposureCompensationControl python_type
@@ -201,9 +201,9 @@ class Windows.Media.Devices.Core.FrameExposureCompensationControl python_type
     default Windows.Media.Devices.Core.IFrameExposureCompensationControl
     requires Windows.Media.Devices.Core.IFrameExposureCompensationControl
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationControl shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationControl shape=4
             out reference type=Windows.Foundation.IReference<System.Single> return
-        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationControl shape=4 reverse=43
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationControl shape=4
             in reference type=Windows.Foundation.IReference<System.Single> name=value
 
 class Windows.Media.Devices.Core.FrameExposureControl python_type
@@ -212,14 +212,14 @@ class Windows.Media.Devices.Core.FrameExposureControl python_type
     default Windows.Media.Devices.Core.IFrameExposureControl
     requires Windows.Media.Devices.Core.IFrameExposureControl
     property value
-        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4 reverse=62
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4 reverse=99
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property auto
-        get get_Auto slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4 reverse=22
+        get get_Auto slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
             out boolean return
-        put put_Auto slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4 reverse=43
+        put put_Auto slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
             in boolean name=value
 
 class Windows.Media.Devices.Core.FrameFlashCapabilities python_type
@@ -228,13 +228,13 @@ class Windows.Media.Devices.Core.FrameFlashCapabilities python_type
     default Windows.Media.Devices.Core.IFrameFlashCapabilities
     requires Windows.Media.Devices.Core.IFrameFlashCapabilities
     property power_supported
-        get get_PowerSupported slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4 reverse=62
+        get get_PowerSupported slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4
             out boolean return
     property red_eye_reduction_supported
-        get get_RedEyeReductionSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4 reverse=43
+        get get_RedEyeReductionSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4
             out boolean return
     property supported
-        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4 reverse=22
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4
             out boolean return
 
 class Windows.Media.Devices.Core.FrameFlashControl python_type
@@ -243,24 +243,24 @@ class Windows.Media.Devices.Core.FrameFlashControl python_type
     default Windows.Media.Devices.Core.IFrameFlashControl
     requires Windows.Media.Devices.Core.IFrameFlashControl
     property red_eye_reduction
-        get get_RedEyeReduction slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=121
+        get get_RedEyeReduction slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             out boolean return
-        put put_RedEyeReduction slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=141
+        put put_RedEyeReduction slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             in boolean name=value
     property power_percent
-        get get_PowerPercent slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=162
+        get get_PowerPercent slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             out single return
-        put put_PowerPercent slot=13 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=1 reverse=170
+        put put_PowerPercent slot=13 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=1
             in single name=value
     property mode
-        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=22
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             out enum32 type=Windows.Media.Devices.Core.FrameFlashMode return
-        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=43
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             in enum32 type=Windows.Media.Devices.Core.FrameFlashMode name=value
     property auto
-        get get_Auto slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=62
+        get get_Auto slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             out boolean return
-        put put_Auto slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4 reverse=99
+        put put_Auto slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
             in boolean name=value
 
 enum Windows.Media.Devices.Core.FrameFlashMode python_type
@@ -276,16 +276,16 @@ class Windows.Media.Devices.Core.FrameFocusCapabilities python_type
     default Windows.Media.Devices.Core.IFrameFocusCapabilities
     requires Windows.Media.Devices.Core.IFrameFocusCapabilities
     property max
-        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4 reverse=62
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
             out uint32 return
     property min
-        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4 reverse=43
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
             out uint32 return
     property step
-        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4 reverse=99
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
             out uint32 return
     property supported
-        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4 reverse=22
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
             out boolean return
 
 class Windows.Media.Devices.Core.FrameFocusControl python_type
@@ -294,9 +294,9 @@ class Windows.Media.Devices.Core.FrameFocusControl python_type
     default Windows.Media.Devices.Core.IFrameFocusControl
     requires Windows.Media.Devices.Core.IFrameFocusControl
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusControl shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusControl shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
-        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFocusControl shape=4 reverse=43
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFocusControl shape=4
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
 
 class Windows.Media.Devices.Core.FrameIsoSpeedCapabilities python_type
@@ -305,16 +305,16 @@ class Windows.Media.Devices.Core.FrameIsoSpeedCapabilities python_type
     default Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities
     requires Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities
     property max
-        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4 reverse=62
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
             out uint32 return
     property min
-        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4 reverse=43
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
             out uint32 return
     property step
-        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4 reverse=99
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
             out uint32 return
     property supported
-        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4 reverse=22
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
             out boolean return
 
 class Windows.Media.Devices.Core.FrameIsoSpeedControl python_type
@@ -323,14 +323,14 @@ class Windows.Media.Devices.Core.FrameIsoSpeedControl python_type
     default Windows.Media.Devices.Core.IFrameIsoSpeedControl
     requires Windows.Media.Devices.Core.IFrameIsoSpeedControl
     property value
-        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4 reverse=62
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
-        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4 reverse=99
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
     property auto
-        get get_Auto slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4 reverse=22
+        get get_Auto slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
             out boolean return
-        put put_Auto slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4 reverse=43
+        put put_Auto slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
             in boolean name=value
 
 interface Windows.Media.Devices.Core.ICameraIntrinsics
@@ -1018,27 +1018,27 @@ class Windows.Media.Devices.Core.VariablePhotoSequenceController python_type
     default Windows.Media.Devices.Core.IVariablePhotoSequenceController
     requires Windows.Media.Devices.Core.IVariablePhotoSequenceController
     property photos_per_second_limit
-        get get_PhotosPerSecondLimit slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4 reverse=62
+        get get_PhotosPerSecondLimit slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
             out single return
-        put put_PhotosPerSecondLimit slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=1 reverse=94
+        put put_PhotosPerSecondLimit slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=1
             in single name=value
     property desired_frame_controllers
-        get get_DesiredFrameControllers slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4 reverse=173
+        get get_DesiredFrameControllers slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> return
     property frame_capabilities
-        get get_FrameCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4 reverse=162
+        get get_FrameCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
             out class type=Windows.Media.Devices.Core.FrameControlCapabilities return
     property max_photos_per_second
-        get get_MaxPhotosPerSecond slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4 reverse=43
+        get get_MaxPhotosPerSecond slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
             out single return
     property supported
-        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4 reverse=22
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
             out boolean return
     method get_current_frame_rate
-        method GetCurrentFrameRate slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4 reverse=141
+        method GetCurrentFrameRate slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
             out class type=Windows.Media.MediaProperties.MediaRatio return
     method get_highest_concurrent_frame_rate
-        method GetHighestConcurrentFrameRate slot=10 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=51 reverse=124
+        method GetHighestConcurrentFrameRate slot=10 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=51
             in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=captureProperties
             out class type=Windows.Media.MediaProperties.MediaRatio return
 

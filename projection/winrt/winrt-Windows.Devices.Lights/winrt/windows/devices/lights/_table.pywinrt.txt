@@ -280,43 +280,43 @@ class Windows.Devices.Lights.Lamp python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Devices.Lights.ILampStatics
     property is_enabled
-        get get_IsEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=43
+        get get_IsEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4
             out boolean return
-        put put_IsEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=62
+        put put_IsEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=4
             in boolean name=value
     property color
-        get get_Color slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=162
+        get get_Color slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4
             out struct type=Windows.UI.Color return
         put put_Color slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=29
             in struct type=Windows.UI.Color name=value
     property brightness_level
-        get get_BrightnessLevel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=99
+        get get_BrightnessLevel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4
             out single return
-        put put_BrightnessLevel slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=1 reverse=391
+        put put_BrightnessLevel slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=1
             in single name=value
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4
             out string return
     property is_color_settable
-        get get_IsColorSettable slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4 reverse=141
+        get get_IsColorSettable slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=4
             out boolean return
     event availability_changed
-        add add_AvailabilityChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=51 reverse=187
+        add add_AvailabilityChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILamp shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Lamp,Windows.Devices.Lights.LampAvailabilityChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AvailabilityChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=26 reverse=200
+        remove remove_AvailabilityChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILamp shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.Lamp> return
     method get_default_async static
-        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=4 reverse=62 static
+        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.Lamp> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=4 reverse=22 static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampStatics shape=4 static
             out string return
 
 class Windows.Devices.Lights.LampArray python_type
@@ -327,75 +327,75 @@ class Windows.Devices.Lights.LampArray python_type
     requires Windows.Devices.Lights.ILampArray2
     factory Windows.Devices.Lights.ILampArrayStatics
     property is_enabled
-        get get_IsEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=186
+        get get_IsEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out boolean return
-        put put_IsEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=194
+        put put_IsEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=4
             in boolean name=value
     property brightness_level
-        get get_BrightnessLevel slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=202
+        get get_BrightnessLevel slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out double return
         put put_BrightnessLevel slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray shape=2
             in double name=value
     property bounding_box
-        get get_BoundingBox slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=173
+        get get_BoundingBox slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out string return
     property hardware_product_id
-        get get_HardwareProductId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=62
+        get get_HardwareProductId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out uint16 return
     property hardware_vendor_id
-        get get_HardwareVendorId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=43
+        get get_HardwareVendorId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out uint16 return
     property hardware_version
-        get get_HardwareVersion slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=99
+        get get_HardwareVersion slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out uint16 return
     property is_connected
-        get get_IsConnected slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=218
+        get get_IsConnected slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out boolean return
     property lamp_array_kind
-        get get_LampArrayKind slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=121
+        get get_LampArrayKind slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out enum32 type=Windows.Devices.Lights.LampArrayKind return
     property lamp_count
-        get get_LampCount slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=141
+        get get_LampCount slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out int32 return
     property min_update_interval
-        get get_MinUpdateInterval slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=162
+        get get_MinUpdateInterval slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out timespan return
     property supports_virtual_keys
-        get get_SupportsVirtualKeys slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4 reverse=223
+        get get_SupportsVirtualKeys slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=4
             out boolean return
     property is_available
-        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=4 reverse=22
+        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=4
             out boolean return
     event availability_changed
-        add add_AvailabilityChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=51 reverse=44
+        add add_AvailabilityChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.LampArray,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AvailabilityChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray2 shape=26 reverse=82
+        remove remove_AvailabilityChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Lights.ILampArray2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Lights.LampArray> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=4 reverse=22 static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampArrayStatics shape=4 static
             out string return
     method get_indices_for_key
         method GetIndicesForKey slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=117
             in enum32 type=Windows.System.VirtualKey name=key
             receive_array int32 return
     method get_indices_for_purposes
-        method GetIndicesForPurposes slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=117 reverse=239
+        method GetIndicesForPurposes slot=22 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=117
             in enum_u32 type=Windows.Devices.Lights.LampPurposes name=purposes
             receive_array int32 return
     method get_lamp_info
-        method GetLampInfo slot=20 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=51 reverse=229
+        method GetLampInfo slot=20 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=51
             in int32 name=lampIndex
             out class type=Windows.Devices.Lights.LampInfo return
     method request_message_async
-        method RequestMessageAsync slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=51 reverse=274
+        method RequestMessageAsync slot=31 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampArray shape=51
             in int32 name=messageId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method send_message_async
@@ -455,7 +455,7 @@ class Windows.Devices.Lights.LampAvailabilityChangedEventArgs python_type
     default Windows.Devices.Lights.ILampAvailabilityChangedEventArgs
     requires Windows.Devices.Lights.ILampAvailabilityChangedEventArgs
     property is_available
-        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampAvailabilityChangedEventArgs shape=4 reverse=22
+        get get_IsAvailable slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampAvailabilityChangedEventArgs shape=4
             out boolean return
 
 class Windows.Devices.Lights.LampInfo python_type
@@ -464,31 +464,31 @@ class Windows.Devices.Lights.LampInfo python_type
     default Windows.Devices.Lights.ILampInfo
     requires Windows.Devices.Lights.ILampInfo
     property blue_level_count
-        get get_BlueLevelCount slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=141
+        get get_BlueLevelCount slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out int32 return
     property fixed_color
-        get get_FixedColor slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=173
+        get get_FixedColor slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
     property gain_level_count
-        get get_GainLevelCount slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=162
+        get get_GainLevelCount slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out int32 return
     property green_level_count
-        get get_GreenLevelCount slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=121
+        get get_GreenLevelCount slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out int32 return
     property index
-        get get_Index slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=22
+        get get_Index slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out int32 return
     property position
-        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=62
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property purposes
-        get get_Purposes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=43
+        get get_Purposes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out enum_u32 type=Windows.Devices.Lights.LampPurposes return
     property red_level_count
-        get get_RedLevelCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=99
+        get get_RedLevelCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out int32 return
     property update_latency
-        get get_UpdateLatency slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4 reverse=194
+        get get_UpdateLatency slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=4
             out timespan return
     method get_nearest_supported_color
         method GetNearestSupportedColor slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Lights.ILampInfo shape=92

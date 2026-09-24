@@ -542,103 +542,103 @@ class Windows.UI.Input.Spatial.SpatialGestureRecognizer python_type
     requires Windows.UI.Input.Spatial.ISpatialGestureRecognizer
     factory Windows.UI.Input.Spatial.ISpatialGestureRecognizerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizerFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizerFactory shape=51
             in enum_u32 type=Windows.UI.Input.Spatial.SpatialGestureSettings name=settings
             out class type=Windows.UI.Input.Spatial.SpatialGestureRecognizer return
     property gesture_settings
-        get get_GestureSettings slot=37 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=4 reverse=299
+        get get_GestureSettings slot=37 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=4
             out enum_u32 type=Windows.UI.Input.Spatial.SpatialGestureSettings return
     event hold_canceled
-        add add_HoldCanceled slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=203
+        add add_HoldCanceled slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HoldCanceled slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=215
+        remove remove_HoldCanceled slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hold_completed
-        add add_HoldCompleted slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=187
+        add add_HoldCompleted slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HoldCompleted slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=200
+        remove remove_HoldCompleted slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hold_started
-        add add_HoldStarted slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=163
+        add add_HoldStarted slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HoldStarted slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=181
+        remove remove_HoldStarted slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_canceled
-        add add_ManipulationCanceled slot=24 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=248
+        add add_ManipulationCanceled slot=24 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ManipulationCanceled slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=254
+        remove remove_ManipulationCanceled slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_completed
-        add add_ManipulationCompleted slot=22 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=238
+        add add_ManipulationCompleted slot=22 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ManipulationCompleted slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=245
+        remove remove_ManipulationCompleted slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_started
-        add add_ManipulationStarted slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=219
+        add add_ManipulationStarted slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ManipulationStarted slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=226
+        remove remove_ManipulationStarted slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event manipulation_updated
-        add add_ManipulationUpdated slot=20 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=229
+        add add_ManipulationUpdated slot=20 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ManipulationUpdated slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=234
+        remove remove_ManipulationUpdated slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_canceled
-        add add_NavigationCanceled slot=32 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=281
+        add add_NavigationCanceled slot=32 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NavigationCanceled slot=33 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=287
+        remove remove_NavigationCanceled slot=33 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_completed
-        add add_NavigationCompleted slot=30 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=271
+        add add_NavigationCompleted slot=30 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NavigationCompleted slot=31 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=277
+        remove remove_NavigationCompleted slot=31 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_started
-        add add_NavigationStarted slot=26 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=256
+        add add_NavigationStarted slot=26 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NavigationStarted slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=262
+        remove remove_NavigationStarted slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigation_updated
-        add add_NavigationUpdated slot=28 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=264
+        add add_NavigationUpdated slot=28 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NavigationUpdated slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=268
+        remove remove_NavigationUpdated slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event recognition_ended
-        add add_RecognitionEnded slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=65
+        add add_RecognitionEnded slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RecognitionEnded slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=110
+        remove remove_RecognitionEnded slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event recognition_started
-        add add_RecognitionStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=24
+        add add_RecognitionStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RecognitionStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=53
+        remove remove_RecognitionStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tapped
-        add add_Tapped slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=124
+        add add_Tapped slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialGestureRecognizer,Windows.UI.Input.Spatial.SpatialTappedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Tapped slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26 reverse=156
+        remove remove_Tapped slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel_pending_gestures
         method CancelPendingGestures slot=35 inputs=0 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=0
     method capture_interaction
-        method CaptureInteraction slot=34 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=4 reverse=288
+        method CaptureInteraction slot=34 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=4
             in class type=Windows.UI.Input.Spatial.SpatialInteraction name=interaction
     method try_set_gesture_settings
-        method TrySetGestureSettings slot=36 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51 reverse=297
+        method TrySetGestureSettings slot=36 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialGestureRecognizer shape=51
             in enum_u32 type=Windows.UI.Input.Spatial.SpatialGestureSettings name=settings
             out boolean return
 
@@ -663,7 +663,7 @@ class Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialHoldCanceledEventArgs
     requires Windows.UI.Input.Spatial.ISpatialHoldCanceledEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldCanceledEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldCanceledEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
 
 class Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs python_type
@@ -672,7 +672,7 @@ class Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialHoldCompletedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialHoldCompletedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldCompletedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldCompletedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
 
 class Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs python_type
@@ -681,10 +681,10 @@ class Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs shape=51 reverse=44
+        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialHoldStartedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
@@ -694,7 +694,7 @@ class Windows.UI.Input.Spatial.SpatialInteraction python_type
     default Windows.UI.Input.Spatial.ISpatialInteraction
     requires Windows.UI.Input.Spatial.ISpatialInteraction
     property source_state
-        get get_SourceState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteraction shape=4 reverse=22
+        get get_SourceState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteraction shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState return
 
 class Windows.UI.Input.Spatial.SpatialInteractionController python_type
@@ -705,28 +705,28 @@ class Windows.UI.Input.Spatial.SpatialInteractionController python_type
     requires Windows.UI.Input.Spatial.ISpatialInteractionController2
     requires Windows.UI.Input.Spatial.ISpatialInteractionController3
     property has_thumbstick
-        get get_HasThumbstick slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4 reverse=43
+        get get_HasThumbstick slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4
             out boolean return
     property has_touchpad
-        get get_HasTouchpad slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4 reverse=22
+        get get_HasTouchpad slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4
             out boolean return
     property product_id
-        get get_ProductId slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4 reverse=121
+        get get_ProductId slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4
             out uint16 return
     property simple_haptics_controller
-        get get_SimpleHapticsController slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4 reverse=62
+        get get_SimpleHapticsController slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4
             out class type=Windows.Devices.Haptics.SimpleHapticsController return
     property vendor_id
-        get get_VendorId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4 reverse=99
+        get get_VendorId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4
             out uint16 return
     property version
-        get get_Version slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4 reverse=141
+        get get_Version slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController shape=4
             out uint16 return
     method try_get_battery_report
-        method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController3 shape=4 reverse=22
+        method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController3 shape=4
             out class type=Windows.Devices.Power.BatteryReport return
     method try_get_renderable_model_async
-        method TryGetRenderableModelAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController2 shape=4 reverse=22
+        method TryGetRenderableModelAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionController2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
 
 class Windows.UI.Input.Spatial.SpatialInteractionControllerProperties python_type
@@ -735,25 +735,25 @@ class Windows.UI.Input.Spatial.SpatialInteractionControllerProperties python_typ
     default Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties
     requires Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties
     property is_thumbstick_pressed
-        get get_IsThumbstickPressed slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=62
+        get get_IsThumbstickPressed slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out boolean return
     property is_touchpad_pressed
-        get get_IsTouchpadPressed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=43
+        get get_IsTouchpadPressed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out boolean return
     property is_touchpad_touched
-        get get_IsTouchpadTouched slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=22
+        get get_IsTouchpadTouched slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out boolean return
     property thumbstick_x
-        get get_ThumbstickX slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=99
+        get get_ThumbstickX slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out double return
     property thumbstick_y
-        get get_ThumbstickY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=121
+        get get_ThumbstickY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out double return
     property touchpad_x
-        get get_TouchpadX slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=141
+        get get_TouchpadX slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out double return
     property touchpad_y
-        get get_TouchpadY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4 reverse=162
+        get get_TouchpadY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionControllerProperties shape=4
             out double return
 
 class Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs python_type
@@ -763,16 +763,16 @@ class Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs python_type
     requires Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs2
     property interaction
-        get get_Interaction slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs shape=4 reverse=62
+        get get_Interaction slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteraction return
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     property interaction_source
-        get get_InteractionSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs2 shape=4 reverse=22
+        get get_InteractionSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs2 shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSource return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs shape=51 reverse=44
+        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionDetectedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
@@ -784,50 +784,50 @@ class Windows.UI.Input.Spatial.SpatialInteractionManager python_type
     factory Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics
     factory Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2
     event interaction_detected
-        add add_InteractionDetected slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=203
+        add add_InteractionDetected slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_InteractionDetected slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26 reverse=215
+        remove remove_InteractionDetected slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_detected
-        add add_SourceDetected slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=24
+        add add_SourceDetected slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceDetected slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26 reverse=53
+        remove remove_SourceDetected slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_lost
-        add add_SourceLost slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=65
+        add add_SourceLost slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceLost slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26 reverse=110
+        remove remove_SourceLost slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_pressed
-        add add_SourcePressed slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=163
+        add add_SourcePressed slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourcePressed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26 reverse=181
+        remove remove_SourcePressed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_released
-        add add_SourceReleased slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=187
+        add add_SourceReleased slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceReleased slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26 reverse=200
+        remove remove_SourceReleased slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_updated
-        add add_SourceUpdated slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=124
+        add add_SourceUpdated slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceUpdated slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26 reverse=156
+        remove remove_SourceUpdated slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_detected_sources_at_timestamp
-        method GetDetectedSourcesAtTimestamp slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51 reverse=219
+        method GetDetectedSourcesAtTimestamp slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManager shape=51
             in class type=Windows.Perception.PerceptionTimestamp name=timeStamp
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Spatial.SpatialInteractionSourceState> return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics shape=4 static
             out class type=Windows.UI.Input.Spatial.SpatialInteractionManager return
     method is_source_kind_supported static
-        method IsSourceKindSupported slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2 shape=51 reverse=24 static
+        method IsSourceKindSupported slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionManagerStatics2 shape=51 static
             in enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind name=kind
             out boolean return
 
@@ -850,34 +850,34 @@ class Windows.UI.Input.Spatial.SpatialInteractionSource python_type
     requires Windows.UI.Input.Spatial.ISpatialInteractionSource3
     requires Windows.UI.Input.Spatial.ISpatialInteractionSource4
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource shape=4
             out uint32 return
     property kind
-        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource shape=4 reverse=43
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     property controller
-        get get_Controller slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4 reverse=99
+        get get_Controller slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionController return
     property is_grasp_supported
-        get get_IsGraspSupported slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4 reverse=62
+        get get_IsGraspSupported slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4
             out boolean return
     property is_menu_supported
-        get get_IsMenuSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4 reverse=43
+        get get_IsMenuSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4
             out boolean return
     property is_pointing_supported
-        get get_IsPointingSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4 reverse=22
+        get get_IsPointingSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=4
             out boolean return
     property handedness
-        get get_Handedness slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource3 shape=4 reverse=22
+        get get_Handedness slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource3 shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceHandedness return
     method try_create_hand_mesh_observer
-        method TryCreateHandMeshObserver slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource4 shape=4 reverse=22
+        method TryCreateHandMeshObserver slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource4 shape=4
             out class type=Windows.Perception.People.HandMeshObserver return
     method try_create_hand_mesh_observer_async
-        method TryCreateHandMeshObserverAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource4 shape=4 reverse=43
+        method TryCreateHandMeshObserverAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource4 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.People.HandMeshObserver> return
     method try_get_state_at_timestamp
-        method TryGetStateAtTimestamp slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=51 reverse=124
+        method TryGetStateAtTimestamp slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSource2 shape=51
             in class type=Windows.Perception.PerceptionTimestamp name=timestamp
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState return
 
@@ -888,10 +888,10 @@ class Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs python_type
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs2
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs shape=4 reverse=22
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceState return
     property press_kind
-        get get_PressKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs2 shape=4 reverse=22
+        get get_PressKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceEventArgs2 shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionPressKind return
 
 enum Windows.UI.Input.Spatial.SpatialInteractionSourceHandedness python_type
@@ -917,22 +917,22 @@ class Windows.UI.Input.Spatial.SpatialInteractionSourceLocation python_type
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation2
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> return
     property velocity
-        get get_Velocity slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation shape=4 reverse=43
+        get get_Velocity slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> return
     property orientation
-        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation2 shape=4 reverse=22
+        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation2 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Quaternion> return
     property angular_velocity
-        get get_AngularVelocity slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 shape=4 reverse=43
+        get get_AngularVelocity slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> return
     property position_accuracy
-        get get_PositionAccuracy slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 shape=4 reverse=22
+        get get_PositionAccuracy slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourcePositionAccuracy return
     property source_pointer_pose
-        get get_SourcePointerPose slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 shape=4 reverse=62
+        get get_SourcePointerPose slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceLocation3 shape=4
             out class type=Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose return
 
 enum Windows.UI.Input.Spatial.SpatialInteractionSourcePositionAccuracy python_type
@@ -947,14 +947,14 @@ class Windows.UI.Input.Spatial.SpatialInteractionSourceProperties python_type
     default Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties
     property source_loss_risk
-        get get_SourceLossRisk slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties shape=4 reverse=43
+        get get_SourceLossRisk slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties shape=4
             out double return
     method try_get_location
-        method TryGetLocation slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties shape=51 reverse=65
+        method TryGetLocation slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceLocation return
     method try_get_source_loss_mitigation_direction
-        method TryGetSourceLossMitigationDirection slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties shape=51 reverse=24
+        method TryGetSourceLossMitigationDirection slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceProperties shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Numerics.Vector3> return
 
@@ -966,37 +966,37 @@ class Windows.UI.Input.Spatial.SpatialInteractionSourceState python_type
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceState2
     requires Windows.UI.Input.Spatial.ISpatialInteractionSourceState3
     property is_pressed
-        get get_IsPressed slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4 reverse=62
+        get get_IsPressed slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4
             out boolean return
     property properties
-        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4 reverse=43
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSourceProperties return
     property source
-        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4 reverse=22
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSource return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4 reverse=99
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=4
             out class type=Windows.Perception.PerceptionTimestamp return
     property controller_properties
-        get get_ControllerProperties slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4 reverse=121
+        get get_ControllerProperties slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionControllerProperties return
     property is_grasped
-        get get_IsGrasped slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4 reverse=62
+        get get_IsGrasped slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4
             out boolean return
     property is_menu_pressed
-        get get_IsMenuPressed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4 reverse=43
+        get get_IsMenuPressed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4
             out boolean return
     property is_select_pressed
-        get get_IsSelectPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4 reverse=22
+        get get_IsSelectPressed slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4
             out boolean return
     property select_pressed_value
-        get get_SelectPressedValue slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4 reverse=99
+        get get_SelectPressedValue slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState2 shape=4
             out double return
     method try_get_hand_pose
-        method TryGetHandPose slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState3 shape=4 reverse=22
+        method TryGetHandPose slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState3 shape=4
             out class type=Windows.Perception.People.HandPose return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=51 reverse=124
+        method TryGetPointerPose slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialInteractionSourceState shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
@@ -1006,7 +1006,7 @@ class Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialManipulationCanceledEventArgs
     requires Windows.UI.Input.Spatial.ISpatialManipulationCanceledEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationCanceledEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationCanceledEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
 
 class Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs python_type
@@ -1015,10 +1015,10 @@ class Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     method try_get_cumulative_delta
-        method TryGetCumulativeDelta slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs shape=51 reverse=44
+        method TryGetCumulativeDelta slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationCompletedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialManipulationDelta return
 
@@ -1028,7 +1028,7 @@ class Windows.UI.Input.Spatial.SpatialManipulationDelta python_type
     default Windows.UI.Input.Spatial.ISpatialManipulationDelta
     requires Windows.UI.Input.Spatial.ISpatialManipulationDelta
     property translation
-        get get_Translation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationDelta shape=4 reverse=22
+        get get_Translation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationDelta shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
 
 class Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs python_type
@@ -1037,10 +1037,10 @@ class Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs shape=51 reverse=44
+        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationStartedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
@@ -1050,10 +1050,10 @@ class Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     method try_get_cumulative_delta
-        method TryGetCumulativeDelta slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs shape=51 reverse=44
+        method TryGetCumulativeDelta slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialManipulationUpdatedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialManipulationDelta return
 
@@ -1063,7 +1063,7 @@ class Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialNavigationCanceledEventArgs
     requires Windows.UI.Input.Spatial.ISpatialNavigationCanceledEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationCanceledEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationCanceledEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
 
 class Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs python_type
@@ -1072,10 +1072,10 @@ class Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     property normalized_offset
-        get get_NormalizedOffset slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs shape=4 reverse=43
+        get get_NormalizedOffset slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationCompletedEventArgs shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
 
 class Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs python_type
@@ -1084,19 +1084,19 @@ class Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     property is_navigating_x
-        get get_IsNavigatingX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4 reverse=62
+        get get_IsNavigatingX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4
             out boolean return
     property is_navigating_y
-        get get_IsNavigatingY slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4 reverse=99
+        get get_IsNavigatingY slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4
             out boolean return
     property is_navigating_z
-        get get_IsNavigatingZ slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4 reverse=121
+        get get_IsNavigatingZ slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=4
             out boolean return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=51 reverse=44
+        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationStartedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
@@ -1106,10 +1106,10 @@ class Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     property normalized_offset
-        get get_NormalizedOffset slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs shape=4 reverse=43
+        get get_NormalizedOffset slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialNavigationUpdatedEventArgs shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
 
 class Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose python_type
@@ -1119,19 +1119,19 @@ class Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose python_type
     requires Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose
     requires Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2
     property forward_direction
-        get get_ForwardDirection slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose shape=4 reverse=43
+        get get_ForwardDirection slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property up_direction
-        get get_UpDirection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose shape=4 reverse=62
+        get get_UpDirection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property orientation
-        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2 shape=4 reverse=22
+        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2 shape=4
             out struct type=Windows.Foundation.Numerics.Quaternion return
     property position_accuracy
-        get get_PositionAccuracy slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2 shape=4 reverse=43
+        get get_PositionAccuracy slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerInteractionSourcePose2 shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourcePositionAccuracy return
 
 class Windows.UI.Input.Spatial.SpatialPointerPose python_type
@@ -1143,24 +1143,24 @@ class Windows.UI.Input.Spatial.SpatialPointerPose python_type
     requires Windows.UI.Input.Spatial.ISpatialPointerPose3
     factory Windows.UI.Input.Spatial.ISpatialPointerPoseStatics
     property head
-        get get_Head slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose shape=4 reverse=43
+        get get_Head slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose shape=4
             out class type=Windows.Perception.People.HeadPose return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose shape=4
             out class type=Windows.Perception.PerceptionTimestamp return
     property eyes
-        get get_Eyes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose3 shape=4 reverse=22
+        get get_Eyes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose3 shape=4
             out class type=Windows.Perception.People.EyesPose return
     property is_head_captured_by_system
-        get get_IsHeadCapturedBySystem slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose3 shape=4 reverse=43
+        get get_IsHeadCapturedBySystem slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose3 shape=4
             out boolean return
     method try_get_at_timestamp static
-        method TryGetAtTimestamp slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPoseStatics shape=117 reverse=25 static
+        method TryGetAtTimestamp slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPoseStatics shape=117 static
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             in class type=Windows.Perception.PerceptionTimestamp name=timestamp
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
     method try_get_interaction_source_pose
-        method TryGetInteractionSourcePose slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose2 shape=51 reverse=24
+        method TryGetInteractionSourcePose slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialPointerPose2 shape=51
             in class type=Windows.UI.Input.Spatial.SpatialInteractionSource name=source
             out class type=Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose return
 
@@ -1170,7 +1170,7 @@ class Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialRecognitionEndedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialRecognitionEndedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionEndedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionEndedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
 
 class Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs python_type
@@ -1179,14 +1179,14 @@ class Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     method is_gesture_possible
-        method IsGesturePossible slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs shape=51 reverse=65
+        method IsGesturePossible slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs shape=51
             in enum_u32 type=Windows.UI.Input.Spatial.SpatialGestureSettings name=gesture
             out boolean return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs shape=51 reverse=44
+        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialRecognitionStartedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 
@@ -1196,13 +1196,13 @@ class Windows.UI.Input.Spatial.SpatialTappedEventArgs python_type
     default Windows.UI.Input.Spatial.ISpatialTappedEventArgs
     requires Windows.UI.Input.Spatial.ISpatialTappedEventArgs
     property interaction_source_kind
-        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialTappedEventArgs shape=4 reverse=22
+        get get_InteractionSourceKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialTappedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Spatial.SpatialInteractionSourceKind return
     property tap_count
-        get get_TapCount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialTappedEventArgs shape=4 reverse=62
+        get get_TapCount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialTappedEventArgs shape=4
             out uint32 return
     method try_get_pointer_pose
-        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialTappedEventArgs shape=51 reverse=44
+        method TryGetPointerPose slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Spatial.ISpatialTappedEventArgs shape=51
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             out class type=Windows.UI.Input.Spatial.SpatialPointerPose return
 

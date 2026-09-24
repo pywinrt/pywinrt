@@ -9,13 +9,13 @@ class Windows.Devices.Background.DeviceServicingDetails python_type
     default Windows.Devices.Background.IDeviceServicingDetails
     requires Windows.Devices.Background.IDeviceServicingDetails
     property arguments
-        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4 reverse=43
+        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4
             out string return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4
             out string return
     property expected_duration
-        get get_ExpectedDuration slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4 reverse=62
+        get get_ExpectedDuration slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceServicingDetails shape=4
             out timespan return
 
 class Windows.Devices.Background.DeviceUseDetails python_type
@@ -24,10 +24,10 @@ class Windows.Devices.Background.DeviceUseDetails python_type
     default Windows.Devices.Background.IDeviceUseDetails
     requires Windows.Devices.Background.IDeviceUseDetails
     property arguments
-        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceUseDetails shape=4 reverse=43
+        get get_Arguments slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceUseDetails shape=4
             out string return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceUseDetails shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Background.IDeviceUseDetails shape=4
             out string return
 
 interface Windows.Devices.Background.IDeviceServicingDetails

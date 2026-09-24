@@ -28,34 +28,34 @@ class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI python_type
     requires Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
     requires Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2
     property desired_fields
-        get get_DesiredFields slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 reverse=99 deprecated
+        get get_DesiredFields slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property selection_mode
-        get get_SelectionMode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 reverse=121
+        get get_SelectionMode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4
             out enum32 type=Windows.ApplicationModel.Contacts.ContactSelectionMode return
     property desired_fields_with_contact_field_type
-        get get_DesiredFieldsWithContactFieldType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=4 reverse=43
+        get get_DesiredFieldsWithContactFieldType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> return
     event contact_removed
-        add add_ContactRemoved slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51 reverse=144
+        add add_ContactRemoved slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ContactRemoved slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=26 reverse=167
+        remove remove_ContactRemoved slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_contact
-        method AddContact slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=51 reverse=24
+        method AddContact slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=51
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             out enum32 type=Windows.ApplicationModel.Contacts.Provider.AddContactResult return
-        method AddContact slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=117 reverse=25 deprecated
+        method AddContact slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=117 deprecated
             in string name=id
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             out enum32 type=Windows.ApplicationModel.Contacts.Provider.AddContactResult return
     method contains_contact
-        method ContainsContact slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51 reverse=65
+        method ContainsContact slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51
             in string name=id
             out boolean return
     method remove_contact
-        method RemoveContact slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 reverse=43
+        method RemoveContact slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4
             in string name=id
 
 class Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs python_type
@@ -64,7 +64,7 @@ class Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs python_
     default Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
     requires Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs shape=4
             out string return
 
 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> concrete awaitable

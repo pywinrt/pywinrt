@@ -10,7 +10,7 @@ class Windows.UI.Core.Preview.CoreAppWindowPreview python_type
     requires Windows.UI.Core.Preview.ICoreAppWindowPreview
     factory Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics
     method get_id_from_window static
-        method GetIdFromWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics shape=51 reverse=24 static
+        method GetIdFromWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.Preview.ICoreAppWindowPreviewStatics shape=51 static
             in class type=Windows.UI.WindowManagement.AppWindow name=window
             out int32 return
 
@@ -46,12 +46,12 @@ class Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs pyt
     default Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs
     requires Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs shape=4
             in boolean name=value
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationCloseRequestedPreviewEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.UI.Core.Preview.SystemNavigationManagerPreview python_type
@@ -61,13 +61,13 @@ class Windows.UI.Core.Preview.SystemNavigationManagerPreview python_type
     requires Windows.UI.Core.Preview.ISystemNavigationManagerPreview
     factory Windows.UI.Core.Preview.ISystemNavigationManagerPreviewStatics
     event close_requested
-        add add_CloseRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationManagerPreview shape=51 reverse=24
+        add add_CloseRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationManagerPreview shape=51
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CloseRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.Preview.ISystemNavigationManagerPreview shape=26 reverse=53
+        remove remove_CloseRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.Preview.ISystemNavigationManagerPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationManagerPreviewStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.Preview.ISystemNavigationManagerPreviewStatics shape=4 static
             out class type=Windows.UI.Core.Preview.SystemNavigationManagerPreview return
 
 class Windows.Foundation.Deferral external

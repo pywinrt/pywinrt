@@ -39,7 +39,7 @@ class Windows.Devices.LowLevelDevicesAggregateProvider python_type
     requires Windows.Devices.ILowLevelDevicesAggregateProvider
     factory Windows.Devices.ILowLevelDevicesAggregateProviderFactory
     constructor -
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProviderFactory shape=267 reverse=516
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProviderFactory shape=267
             in interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider name=adc
             in interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider name=pwm
             in interface type=Windows.Devices.Gpio.Provider.IGpioControllerProvider name=gpio
@@ -69,9 +69,9 @@ class Windows.Devices.LowLevelDevicesController python_type
     requires Windows.Devices.ILowLevelDevicesController
     factory Windows.Devices.ILowLevelDevicesControllerStatics
     property default_provider static
-        get get_DefaultProvider slot=6 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesControllerStatics shape=4 reverse=22 static
+        get get_DefaultProvider slot=6 inputs=0 outputs=1 declaring=Windows.Devices.ILowLevelDevicesControllerStatics shape=4 static
             out interface type=Windows.Devices.ILowLevelDevicesAggregateProvider return
-        put put_DefaultProvider slot=7 inputs=1 outputs=0 declaring=Windows.Devices.ILowLevelDevicesControllerStatics shape=4 reverse=43 static
+        put put_DefaultProvider slot=7 inputs=1 outputs=0 declaring=Windows.Devices.ILowLevelDevicesControllerStatics shape=4 static
             in interface type=Windows.Devices.ILowLevelDevicesAggregateProvider name=value
 
 interface Windows.Devices.Adc.Provider.IAdcControllerProvider external

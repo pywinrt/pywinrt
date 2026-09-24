@@ -10,49 +10,49 @@ class Microsoft.Windows.AppNotifications.AppNotification python_type
     requires Microsoft.Windows.AppNotifications.IAppNotification
     factory Microsoft.Windows.AppNotifications.IAppNotificationFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationFactory shape=51
             in string name=payload
             out class type=Microsoft.Windows.AppNotifications.AppNotification return
     property tag
-        get get_Tag slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=22
+        get get_Tag slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out string return
-        put put_Tag slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=43
+        put put_Tag slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             in string name=value
     property suppress_display
-        get get_SuppressDisplay slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=228
+        get get_SuppressDisplay slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out boolean return
-        put put_SuppressDisplay slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=232
+        put put_SuppressDisplay slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             in boolean name=value
     property progress
-        get get_Progress slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=162
+        get get_Progress slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData return
-        put put_Progress slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=173
+        put put_Progress slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             in class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData name=value
     property priority
-        get get_Priority slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=218
+        get get_Priority slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out enum32 type=Microsoft.Windows.AppNotifications.AppNotificationPriority return
-        put put_Priority slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=223
+        put put_Priority slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             in enum32 type=Microsoft.Windows.AppNotifications.AppNotificationPriority name=value
     property group
-        get get_Group slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=62
+        get get_Group slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out string return
-        put put_Group slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=99
+        put put_Group slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             in string name=value
     property expires_on_reboot
-        get get_ExpiresOnReboot slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=202
+        get get_ExpiresOnReboot slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out boolean return
-        put put_ExpiresOnReboot slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=210
+        put put_ExpiresOnReboot slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             in boolean name=value
     property expiration
-        get get_Expiration slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=186
+        get get_Expiration slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out datetime return
-        put put_Expiration slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=26 reverse=200
+        put put_Expiration slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=26
             in datetime name=value
     property id
-        get get_Id slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=121
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out uint32 return
     property payload
-        get get_Payload slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4 reverse=141
+        get get_Payload slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
             out string return
 
 class Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs python_type
@@ -62,13 +62,13 @@ class Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs pytho
     requires Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs
     requires Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2
     property argument
-        get get_Argument slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs shape=4 reverse=22
+        get get_Argument slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs shape=4
             out string return
     property user_input
-        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs shape=4 reverse=43
+        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property arguments
-        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2 shape=4 reverse=22
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2 shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
 
 class Microsoft.Windows.AppNotifications.AppNotificationManager python_type
@@ -80,37 +80,37 @@ class Microsoft.Windows.AppNotifications.AppNotificationManager python_type
     factory Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics
     factory Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics2
     property setting
-        get get_Setting slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4 reverse=186
+        get get_Setting slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
             out enum32 type=Microsoft.Windows.AppNotifications.AppNotificationSetting return
     property default static
-        get get_Default slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics shape=4 reverse=22 static
+        get get_Default slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics shape=4 static
             out class type=Microsoft.Windows.AppNotifications.AppNotificationManager return
     event notification_invoked
-        add add_NotificationInvoked slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51 reverse=100
+        add add_NotificationInvoked slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.AppNotifications.AppNotificationManager,Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NotificationInvoked slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=26 reverse=134
+        remove remove_NotificationInvoked slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_all_async
-        method GetAllAsync slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4 reverse=228
+        method GetAllAsync slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> return
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics2 shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics2 shape=4 static
             out boolean return
     method register
-        method Register slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0 reverse=16
-        method Register slot=6 inputs=2 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager2 shape=51 reverse=24
+        method Register slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0
+        method Register slot=6 inputs=2 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager2 shape=51
             in string name=displayName
             in class type=Windows.Foundation.Uri name=iconUri
     method remove_all_async
-        method RemoveAllAsync slot=19 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4 reverse=223
+        method RemoveAllAsync slot=19 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method remove_by_group_async
-        method RemoveByGroupAsync slot=18 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51 reverse=219
+        method RemoveByGroupAsync slot=18 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
             in string name=group
             out interface type=Windows.Foundation.IAsyncAction return
     method remove_by_id_async
-        method RemoveByIdAsync slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51 reverse=196
+        method RemoveByIdAsync slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
             in uint32 name=notificationId
             out interface type=Windows.Foundation.IAsyncAction return
     method remove_by_tag_and_group_async
@@ -119,22 +119,22 @@ class Microsoft.Windows.AppNotifications.AppNotificationManager python_type
             in string name=group
             out interface type=Windows.Foundation.IAsyncAction return
     method remove_by_tag_async
-        method RemoveByTagAsync slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51 reverse=203
+        method RemoveByTagAsync slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
             in string name=tag
             out interface type=Windows.Foundation.IAsyncAction return
     method show
-        method Show slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4 reverse=141
+        method Show slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
             in class type=Microsoft.Windows.AppNotifications.AppNotification name=notification
     method unregister
-        method Unregister slot=7 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0 reverse=37
+        method Unregister slot=7 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0
     method unregister_all
-        method UnregisterAll slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0 reverse=55
+        method UnregisterAll slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0
     method update_async
-        method UpdateAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=117 reverse=175
+        method UpdateAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=117
             in class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData name=data
             in string name=tag
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> return
-        method UpdateAsync slot=12 inputs=3 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=195 reverse=165
+        method UpdateAsync slot=12 inputs=3 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=195
             in class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData name=data
             in string name=tag
             in string name=group
@@ -153,33 +153,33 @@ class Microsoft.Windows.AppNotifications.AppNotificationProgressData python_type
     requires Microsoft.Windows.AppNotifications.IAppNotificationProgressData
     factory Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory shape=51
             in uint32 name=sequenceNumber
             out class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData return
     property value_string_override
-        get get_ValueStringOverride slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=162
+        get get_ValueStringOverride slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             out string return
-        put put_ValueStringOverride slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=173
+        put put_ValueStringOverride slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             in string name=value
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             out double return
-        put put_Value slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=2 reverse=138
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=2
             in double name=value
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             out string return
-        put put_Title slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=99
+        put put_Title slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             in string name=value
     property status
-        get get_Status slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=186
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             out string return
-        put put_Status slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=194
+        put put_Status slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             in string name=value
     property sequence_number
-        get get_SequenceNumber slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=22
+        get get_SequenceNumber slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             out uint32 return
-        put put_SequenceNumber slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4 reverse=43
+        put put_SequenceNumber slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
             in uint32 name=value
 
 enum Microsoft.Windows.AppNotifications.AppNotificationProgressResult python_type

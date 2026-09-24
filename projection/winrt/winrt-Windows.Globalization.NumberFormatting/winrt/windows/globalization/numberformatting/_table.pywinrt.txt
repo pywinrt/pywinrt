@@ -18,23 +18,23 @@ class Windows.Globalization.NumberFormatting.CurrencyFormatter python_type
     requires Windows.Globalization.NumberFormatting.ISignedZeroOption
     factory Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory shape=51
             in string name=currencyCode
             out class type=Windows.Globalization.NumberFormatting.CurrencyFormatter return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatterFactory shape=195
             in string name=currencyCode
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
             out class type=Windows.Globalization.NumberFormatting.CurrencyFormatter return
     property currency
-        get get_Currency slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter shape=4 reverse=22
+        get get_Currency slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter shape=4
             out string return
-        put put_Currency slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter shape=4 reverse=43 deprecated
+        put put_Currency slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter shape=4 deprecated
             in string name=value
     property mode
-        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4 reverse=22
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4
             out enum32 type=Windows.Globalization.NumberFormatting.CurrencyFormatterMode return
-        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4 reverse=43
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4
             in enum32 type=Windows.Globalization.NumberFormatting.CurrencyFormatterMode name=value
     property numeral_system
         get get_NumeralSystem slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatterOptions shape=4 reverse=202
@@ -89,7 +89,7 @@ class Windows.Globalization.NumberFormatting.CurrencyFormatter python_type
         put put_SignificantDigits slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsOption shape=4 reverse=43
             in int32 name=value
     method apply_rounding_for_currency
-        method ApplyRoundingForCurrency slot=8 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4 reverse=62
+        method ApplyRoundingForCurrency slot=8 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ICurrencyFormatter2 shape=4
             in enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm name=roundingAlgorithm
     method format
         method Format slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberFormatter shape=46 reverse=58 default_overload
@@ -141,7 +141,7 @@ class Windows.Globalization.NumberFormatting.DecimalFormatter activatable python
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IDecimalFormatterFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IDecimalFormatterFactory shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
             out class type=Windows.Globalization.NumberFormatting.DecimalFormatter return
@@ -860,12 +860,12 @@ class Windows.Globalization.NumberFormatting.IncrementNumberRounder activatable 
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property rounding_algorithm
-        get get_RoundingAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4 reverse=22
+        get get_RoundingAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4
             out enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm return
-        put put_RoundingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4 reverse=43
+        put put_RoundingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4
             in enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm name=value
     property increment
-        get get_Increment slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4 reverse=62
+        get get_Increment slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=4
             out double return
         put put_Increment slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.IIncrementNumberRounder shape=2
             in double name=value
@@ -903,22 +903,22 @@ class Windows.Globalization.NumberFormatting.NumeralSystemTranslator activatable
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslatorFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             out class type=Windows.Globalization.NumberFormatting.NumeralSystemTranslator return
     property numeral_system
-        get get_NumeralSystem slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=62
+        get get_NumeralSystem slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4
             out string return
-        put put_NumeralSystem slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=99
+        put put_NumeralSystem slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4
             in string name=value
     property languages
-        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=22
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property resolved_language
-        get get_ResolvedLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4 reverse=43
+        get get_ResolvedLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=4
             out string return
     method translate_numerals
-        method TranslateNumerals slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=51 reverse=124
+        method TranslateNumerals slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumeralSystemTranslator shape=51
             in string name=value
             out string return
 
@@ -937,7 +937,7 @@ class Windows.Globalization.NumberFormatting.PercentFormatter activatable python
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPercentFormatterFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPercentFormatterFactory shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
             out class type=Windows.Globalization.NumberFormatting.PercentFormatter return
@@ -1037,7 +1037,7 @@ class Windows.Globalization.NumberFormatting.PermilleFormatter activatable pytho
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPermilleFormatterFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.NumberFormatting.IPermilleFormatterFactory shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
             out class type=Windows.Globalization.NumberFormatting.PermilleFormatter return
@@ -1147,14 +1147,14 @@ class Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder acti
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property significant_digits
-        get get_SignificantDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=62
+        get get_SignificantDigits slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4
             out uint32 return
-        put put_SignificantDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=99
+        put put_SignificantDigits slot=9 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4
             in uint32 name=value
     property rounding_algorithm
-        get get_RoundingAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=22
+        get get_RoundingAlgorithm slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4
             out enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm return
-        put put_RoundingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4 reverse=43
+        put put_RoundingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.NumberFormatting.ISignificantDigitsNumberRounder shape=4
             in enum32 type=Windows.Globalization.NumberFormatting.RoundingAlgorithm name=value
     method round_double
         method RoundDouble slot=11 inputs=1 outputs=1 declaring=Windows.Globalization.NumberFormatting.INumberRounder shape=46 reverse=139

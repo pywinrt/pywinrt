@@ -15,10 +15,10 @@ class Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs python_type
     default Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs
     requires Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs
     property is_reading_text
-        get get_IsReadingText slot=7 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs shape=4 reverse=43
+        get get_IsReadingText slot=7 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs shape=4
             out boolean return
     property screen_position_in_raw_pixels
-        get get_ScreenPositionInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs shape=4 reverse=22
+        get get_ScreenPositionInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderPositionChangedEventArgs shape=4
             out struct type=Windows.Foundation.Rect return
 
 class Windows.UI.Accessibility.ScreenReaderService activatable python_type
@@ -30,13 +30,13 @@ class Windows.UI.Accessibility.ScreenReaderService activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property current_screen_reader_position
-        get get_CurrentScreenReaderPosition slot=6 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderService shape=4 reverse=22
+        get get_CurrentScreenReaderPosition slot=6 inputs=0 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderService shape=4
             out class type=Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs return
     event screen_reader_position_changed
-        add add_ScreenReaderPositionChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderService shape=51 reverse=44
+        add add_ScreenReaderPositionChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Accessibility.IScreenReaderService shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ScreenReaderPositionChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Accessibility.IScreenReaderService shape=26 reverse=82
+        remove remove_ScreenReaderPositionChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Accessibility.IScreenReaderService shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Accessibility.ScreenReaderService,Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs> concrete

@@ -435,13 +435,13 @@ class Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview python_t
     requires Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview
     requires Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview
     property bitmap_pixel_format
-        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview shape=4 reverse=22 deprecated
+        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview shape=4 deprecated
             out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
     property height
-        get get_Height slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview shape=4 reverse=62 deprecated
+        get get_Height slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview shape=4 deprecated
             out uint32 return
     property width
-        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview shape=4 reverse=43 deprecated
+        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IImageVariableDescriptorPreview shape=4 deprecated
             out uint32 return
     property description
         get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview shape=4 reverse=43 deprecated
@@ -462,29 +462,29 @@ class Windows.AI.MachineLearning.Preview.InferencingOptionsPreview python_type
     default Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview
     requires Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview
     property reclaim_memory_after_evaluation
-        get get_ReclaimMemoryAfterEvaluation slot=14 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=186 deprecated
+        get get_ReclaimMemoryAfterEvaluation slot=14 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             out boolean return
-        put put_ReclaimMemoryAfterEvaluation slot=15 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=194 deprecated
+        put put_ReclaimMemoryAfterEvaluation slot=15 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             in boolean name=value
     property preferred_device_kind
-        get get_PreferredDeviceKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=22 deprecated
+        get get_PreferredDeviceKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             out enum32 type=Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview return
-        put put_PreferredDeviceKind slot=7 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=43 deprecated
+        put put_PreferredDeviceKind slot=7 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             in enum32 type=Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview name=value
     property minimize_memory_allocation
-        get get_MinimizeMemoryAllocation slot=12 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=162 deprecated
+        get get_MinimizeMemoryAllocation slot=12 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             out boolean return
-        put put_MinimizeMemoryAllocation slot=13 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=173 deprecated
+        put put_MinimizeMemoryAllocation slot=13 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             in boolean name=value
     property max_batch_size
-        get get_MaxBatchSize slot=10 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=121 deprecated
+        get get_MaxBatchSize slot=10 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             out int32 return
-        put put_MaxBatchSize slot=11 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=141 deprecated
+        put put_MaxBatchSize slot=11 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             in int32 name=value
     property is_tracing_enabled
-        get get_IsTracingEnabled slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=62 deprecated
+        get get_IsTracingEnabled slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             out boolean return
-        put put_IsTracingEnabled slot=9 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 reverse=99 deprecated
+        put put_IsTracingEnabled slot=9 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             in boolean name=value
 
 enum K parameterized
@@ -499,22 +499,22 @@ class Windows.AI.MachineLearning.Preview.LearningModelBindingPreview python_type
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     factory Windows.AI.MachineLearning.Preview.ILearningModelBindingPreviewFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreviewFactory shape=51 reverse=24 deprecated
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreviewFactory shape=51 deprecated
             in class type=Windows.AI.MachineLearning.Preview.LearningModelPreview name=model
             out class type=Windows.AI.MachineLearning.Preview.LearningModelBindingPreview return
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
             out uint32 return
     method bind deprecated
-        method Bind slot=6 inputs=2 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=51 reverse=24 deprecated
+        method Bind slot=6 inputs=2 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=51 deprecated
             in string name=name
             in object name=value
-        method Bind slot=7 inputs=3 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=117 reverse=45 deprecated
+        method Bind slot=7 inputs=3 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=117 deprecated
             in string name=name
             in object name=value
             in interface type=Windows.Foundation.Collections.IPropertySet name=metadata
     method clear deprecated
-        method Clear slot=8 inputs=0 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=0 reverse=55 deprecated
+        method Clear slot=8 inputs=0 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=0 deprecated
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
@@ -537,28 +537,28 @@ class Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview python_
     default Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview
     requires Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview
     property author
-        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=22 deprecated
+        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out string return
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=99 deprecated
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out string return
     property domain
-        get get_Domain slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=62 deprecated
+        get get_Domain slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out string return
     property input_features
-        get get_InputFeatures slot=12 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=162 deprecated
+        get get_InputFeatures slot=12 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IIterable<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> return
     property metadata
-        get get_Metadata slot=11 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=141 deprecated
+        get get_Metadata slot=11 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     property name
-        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=43 deprecated
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out string return
     property output_features
-        get get_OutputFeatures slot=13 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=173 deprecated
+        get get_OutputFeatures slot=13 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IIterable<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> return
     property version
-        get get_Version slot=10 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 reverse=121 deprecated
+        get get_Version slot=10 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelDescriptionPreview shape=4 deprecated
             out int64 return
 
 enum Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview python_type
@@ -577,10 +577,10 @@ class Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview py
     default Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview
     requires Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview
     property correlation_id
-        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview shape=4 reverse=22 deprecated
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview shape=4 deprecated
             out string return
     property outputs
-        get get_Outputs slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview shape=4 reverse=43 deprecated
+        get get_Outputs slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelEvaluationResultPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
 
 enum Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview python_type
@@ -599,29 +599,29 @@ class Windows.AI.MachineLearning.Preview.LearningModelPreview python_type
     requires Windows.AI.MachineLearning.Preview.ILearningModelPreview
     factory Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics
     property inferencing_options
-        get get_InferencingOptions slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 reverse=99 deprecated
+        get get_InferencingOptions slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 deprecated
             out class type=Windows.AI.MachineLearning.Preview.InferencingOptionsPreview return
-        put put_InferencingOptions slot=10 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 reverse=121 deprecated
+        put put_InferencingOptions slot=10 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 deprecated
             in class type=Windows.AI.MachineLearning.Preview.InferencingOptionsPreview name=value
     property description
-        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 reverse=62 deprecated
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 deprecated
             out class type=Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview return
     method evaluate_async deprecated
-        method EvaluateAsync slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=117 reverse=25 deprecated
+        method EvaluateAsync slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=117 deprecated
             in class type=Windows.AI.MachineLearning.Preview.LearningModelBindingPreview name=binding
             in string name=correlationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> return
     method evaluate_features_async deprecated
-        method EvaluateFeaturesAsync slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=117 reverse=45 deprecated
+        method EvaluateFeaturesAsync slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=117 deprecated
             in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> name=features
             in string name=correlationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> return
     method load_model_from_storage_file_async static deprecated
-        method LoadModelFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics shape=51 reverse=24 static deprecated
+        method LoadModelFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics shape=51 static deprecated
             in interface type=Windows.Storage.IStorageFile name=modelFile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelPreview> return
     method load_model_from_stream_async static deprecated
-        method LoadModelFromStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics shape=51 reverse=44 static deprecated
+        method LoadModelFromStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics shape=51 static deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=modelStream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelPreview> return
 
@@ -662,16 +662,16 @@ class Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview python_typ
         get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview shape=4 reverse=22 deprecated
             out string return
     property fields
-        get get_Fields slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 reverse=99 deprecated
+        get get_Fields slot=9 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 deprecated
             out interface type=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview return
     property key_kind
-        get get_KeyKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 reverse=22 deprecated
+        get get_KeyKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 deprecated
             out enum32 type=Windows.AI.MachineLearning.Preview.FeatureElementKindPreview return
     property valid_integer_keys
-        get get_ValidIntegerKeys slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 reverse=62 deprecated
+        get get_ValidIntegerKeys slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> return
     property valid_string_keys
-        get get_ValidStringKeys slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 reverse=43 deprecated
+        get get_ValidStringKeys slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.IMapVariableDescriptorPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IIterable<System.String> return
 
 class Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview python_type
@@ -693,7 +693,7 @@ class Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview pytho
         get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview shape=4 reverse=22 deprecated
             out string return
     property element_type
-        get get_ElementType slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ISequenceVariableDescriptorPreview shape=4 reverse=22 deprecated
+        get get_ElementType slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ISequenceVariableDescriptorPreview shape=4 deprecated
             out interface type=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview return
 
 class Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview python_type
@@ -715,10 +715,10 @@ class Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview python_
         get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview shape=4 reverse=22 deprecated
             out string return
     property data_type
-        get get_DataType slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ITensorVariableDescriptorPreview shape=4 reverse=22 deprecated
+        get get_DataType slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ITensorVariableDescriptorPreview shape=4 deprecated
             out enum32 type=Windows.AI.MachineLearning.Preview.FeatureElementKindPreview return
     property shape
-        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ITensorVariableDescriptorPreview shape=4 reverse=43 deprecated
+        get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ITensorVariableDescriptorPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> return
 
 enum V parameterized

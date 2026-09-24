@@ -170,16 +170,16 @@ class Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs python_type
     default Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs
     requires Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs
     property capture_time_offset
-        get get_CaptureTimeOffset slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4 reverse=43
+        get get_CaptureTimeOffset slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4
             out timespan return
     property captured_frame_control_values
-        get get_CapturedFrameControlValues slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4 reverse=99
+        get get_CapturedFrameControlValues slot=9 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4
             out class type=Windows.Media.Capture.CapturedFrameControlValues return
     property frame
-        get get_Frame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4 reverse=22
+        get get_Frame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4
             out class type=Windows.Media.Capture.CapturedFrame return
     property used_frame_controller_index
-        get get_UsedFrameControllerIndex slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4 reverse=62
+        get get_UsedFrameControllerIndex slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoCapturedEventArgs shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
 
 class Windows.Media.Capture.Core.VariablePhotoSequenceCapture python_type
@@ -189,28 +189,28 @@ class Windows.Media.Capture.Core.VariablePhotoSequenceCapture python_type
     requires Windows.Media.Capture.Core.IVariablePhotoSequenceCapture
     requires Windows.Media.Capture.Core.IVariablePhotoSequenceCapture2
     event photo_captured
-        add add_PhotoCaptured slot=9 inputs=1 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=51 reverse=100
+        add add_PhotoCaptured slot=9 inputs=1 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Core.VariablePhotoSequenceCapture,Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PhotoCaptured slot=10 inputs=1 outputs=0 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=26 reverse=134
+        remove remove_PhotoCaptured slot=10 inputs=1 outputs=0 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=11 inputs=1 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=51 reverse=144
+        add add_Stopped slot=11 inputs=1 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Capture.Core.VariablePhotoSequenceCapture,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=12 inputs=1 outputs=0 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=26 reverse=167
+        remove remove_Stopped slot=12 inputs=1 outputs=0 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method finish_async
-        method FinishAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4 reverse=62
+        method FinishAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method start_async
-        method StartAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4 reverse=22
+        method StartAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method stop_async
-        method StopAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4 reverse=43
+        method StopAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method update_settings_async
-        method UpdateSettingsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture2 shape=4 reverse=22
+        method UpdateSettingsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Capture.Core.IVariablePhotoSequenceCapture2 shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class System.Object external

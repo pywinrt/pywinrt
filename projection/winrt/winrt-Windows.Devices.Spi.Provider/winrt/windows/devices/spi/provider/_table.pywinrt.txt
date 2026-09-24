@@ -159,33 +159,33 @@ class Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings python_type
     requires Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings
     factory Windows.Devices.Spi.Provider.IProviderSpiConnectionSettingsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettingsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettingsFactory shape=51
             in int32 name=chipSelectLine
             out class type=Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings return
     property sharing_mode
-        get get_SharingMode slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=186
+        get get_SharingMode slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             out enum32 type=Windows.Devices.Spi.Provider.ProviderSpiSharingMode return
-        put put_SharingMode slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=194
+        put put_SharingMode slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             in enum32 type=Windows.Devices.Spi.Provider.ProviderSpiSharingMode name=value
     property mode
-        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=62
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             out enum32 type=Windows.Devices.Spi.Provider.ProviderSpiMode return
-        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=99
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             in enum32 type=Windows.Devices.Spi.Provider.ProviderSpiMode name=value
     property data_bit_length
-        get get_DataBitLength slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=121
+        get get_DataBitLength slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             out int32 return
-        put put_DataBitLength slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=141
+        put put_DataBitLength slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             in int32 name=value
     property clock_frequency
-        get get_ClockFrequency slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=162
+        get get_ClockFrequency slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             out int32 return
-        put put_ClockFrequency slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=173
+        put put_ClockFrequency slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             in int32 name=value
     property chip_select_line
-        get get_ChipSelectLine slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=22
+        get get_ChipSelectLine slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             out int32 return
-        put put_ChipSelectLine slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4 reverse=43
+        put put_ChipSelectLine slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Spi.Provider.IProviderSpiConnectionSettings shape=4
             in int32 name=value
 
 enum Windows.Devices.Spi.Provider.ProviderSpiMode python_type

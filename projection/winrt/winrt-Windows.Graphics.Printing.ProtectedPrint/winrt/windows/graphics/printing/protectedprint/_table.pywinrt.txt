@@ -10,5 +10,5 @@ class Windows.Graphics.Printing.ProtectedPrint.WindowsProtectedPrintInfo static 
     py WindowsProtectedPrintInfo
     factory Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics
     property is_protected_print_enabled static
-        get get_IsProtectedPrintEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics shape=4 reverse=22 static
+        get get_IsProtectedPrintEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.ProtectedPrint.IWindowsProtectedPrintInfoStatics shape=4 static
             out boolean return

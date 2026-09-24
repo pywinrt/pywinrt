@@ -483,14 +483,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails python_t
     requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBindingOptionDetails shape=4
             in string name=value
     property items
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
@@ -527,14 +527,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails python
     requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintBorderingOptionDetails shape=4
             in string name=value
     property items
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
@@ -571,14 +571,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails python
     requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCollationOptionDetails shape=4
             in string name=value
     property items
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
@@ -615,14 +615,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails python
     requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintColorModeOptionDetails shape=4
             in string name=value
     property items
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
@@ -659,14 +659,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails python_ty
     requires Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCopiesOptionDetails shape=4
             in string name=value
     property max_value
         get get_MaxValue slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintNumberOptionDetails shape=4 reverse=43
@@ -704,12 +704,12 @@ class Windows.Graphics.Printing.OptionDetails.PrintCustomItemDetails python_type
     default Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails
     property item_display_name
-        get get_ItemDisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4 reverse=62
+        get get_ItemDisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4
             out string return
-        put put_ItemDisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4 reverse=43
+        put put_ItemDisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4
             in string name=value
     property item_id
-        get get_ItemId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4 reverse=22
+        get get_ItemId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemDetails shape=4
             out string return
 
 class Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails python_type
@@ -723,14 +723,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails p
     requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails2
     requires Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails3 shape=4
             in string name=value
     property display_name
         get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=43
@@ -760,10 +760,10 @@ class Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails p
         get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
             out object return
     method add_item
-        method AddItem slot=6 inputs=2 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails shape=51 reverse=24
+        method AddItem slot=6 inputs=2 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails shape=51
             in string name=itemId
             in string name=displayName
-        method AddItem slot=6 inputs=4 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails2 shape=195 reverse=26
+        method AddItem slot=6 inputs=4 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomItemListOptionDetails2 shape=195
             in string name=itemId
             in string name=displayName
             in string name=description
@@ -787,19 +787,19 @@ class Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails pytho
         put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=22
             in string name=value
     property max_characters
-        get get_MaxCharacters slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails shape=4 reverse=43
+        get get_MaxCharacters slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails shape=4
             out uint32 return
-        put put_MaxCharacters slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails shape=4 reverse=22
+        put put_MaxCharacters slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails shape=4
             in uint32 name=value
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomTextOptionDetails2 shape=4
             in string name=value
     property state
         get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
@@ -838,14 +838,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails pyt
         put put_DisplayName slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails shape=4 reverse=22
             in string name=value
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintCustomToggleOptionDetails shape=4
             in string name=value
     property state
         get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
@@ -879,14 +879,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails python_ty
     requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintDuplexOptionDetails shape=4
             in string name=value
     property items
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
@@ -923,14 +923,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails python
     requires Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails
     requires Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintHolePunchOptionDetails shape=4
             in string name=value
     property items
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
@@ -970,14 +970,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails python
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaSizeOptionDetails shape=4
             in string name=value
     property state
         get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
@@ -1014,14 +1014,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails python
         get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintItemListOptionDetails shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> return
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintMediaTypeOptionDetails shape=4
             in string name=value
     property state
         get get_State slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=141
@@ -1093,14 +1093,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails pyth
         get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
             out object return
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOrientationOptionDetails shape=4
             in string name=value
     method try_set_value
         method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
@@ -1133,14 +1133,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails python
         get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
             out object return
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintPageRangeOptionDetails shape=4
             in string name=value
     method try_set_value
         method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
@@ -1177,14 +1177,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails python_t
         get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
             out object return
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintQualityOptionDetails shape=4
             in string name=value
     method try_set_value
         method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
@@ -1221,14 +1221,14 @@ class Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails python_ty
         get get_Value slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=4 reverse=162
             out object return
     property warning_text
-        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=43
+        get get_WarningText slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4
             out string return
-        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=22
+        put put_WarningText slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4
             in string name=value
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4
             out string return
-        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4 reverse=62
+        put put_Description slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintStapleOptionDetails shape=4
             in string name=value
     method try_set_value
         method TrySetValue slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails shape=51 reverse=174
@@ -1241,7 +1241,7 @@ class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs py
     default Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs
     requires Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs
     property option_id
-        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs shape=4 reverse=22
+        get get_OptionId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionChangedEventArgs shape=4
             out object return
 
 class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails python_type
@@ -1257,37 +1257,37 @@ class Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails python_type
         get get_DisplayedOptions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property options
-        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=4 reverse=22
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails> return
     event begin_validation
-        add add_BeginValidation slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51 reverse=144
+        add add_BeginValidation slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,System.Object> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BeginValidation slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26 reverse=167
+        remove remove_BeginValidation slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     event option_changed
-        add add_OptionChanged slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51 reverse=100
+        add add_OptionChanged slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails,Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OptionChanged slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26 reverse=134
+        remove remove_OptionChanged slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method create_item_list_option
-        method CreateItemListOption slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117 reverse=45
+        method CreateItemListOption slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117
             in string name=optionId
             in string name=displayName
             out class type=Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails return
     method create_text_option
-        method CreateTextOption slot=8 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117 reverse=66
+        method CreateTextOption slot=8 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails shape=117
             in string name=optionId
             in string name=displayName
             out class type=Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails return
     method create_toggle_option
-        method CreateToggleOption slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails2 shape=117 reverse=25
+        method CreateToggleOption slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetails2 shape=117
             in string name=optionId
             in string name=displayName
             out class type=Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails return
     method get_from_print_task_options static
-        method GetFromPrintTaskOptions slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetailsStatic shape=51 reverse=24 static
+        method GetFromPrintTaskOptions slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.OptionDetails.IPrintTaskOptionDetailsStatic shape=51 static
             in class type=Windows.Graphics.Printing.PrintTaskOptions name=printTaskOptions
             out class type=Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails return
     method get_page_description

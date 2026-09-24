@@ -21,22 +21,22 @@ class Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator python_type
     requires Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator
     factory Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics
     property companion_window_id
-        get get_CompanionWindowId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=4 reverse=62
+        get get_CompanionWindowId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=4
             out struct type=Windows.UI.WindowId return
     event changed
-        add add_Changed slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=51 reverse=100
+        add add_Changed slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=10 inputs=1 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=26 reverse=134
+        remove remove_Changed slot=10 inputs=1 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method detach_companion_window
-        method DetachCompanionWindow slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=0 reverse=37
+        method DetachCompanionWindow slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=0
     method get_for_window static
         method GetForWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics shape=97 static
             in struct type=Windows.UI.WindowId name=windowId
             out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator return
     method request_window_from_app_async
-        method RequestWindowFromAppAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=51 reverse=24
+        method RequestWindowFromAppAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=51
             in string name=appId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> return
 
@@ -47,21 +47,21 @@ class Windows.UI.Shell.CompanionWindows.CompanionWindowRequest python_type
     requires Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest
     factory Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics
     property requesting_window_id
-        get get_RequestingWindowId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=4 reverse=99
+        get get_RequestingWindowId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=4
             out struct type=Windows.UI.WindowId return
     method accept
         method Accept slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=97
             in struct type=Windows.UI.WindowId name=windowId
             out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator return
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=4
             out class type=Windows.Foundation.Deferral return
     method get_from_launch_uri static
-        method GetFromLaunchUri slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics shape=51 reverse=24 static
+        method GetFromLaunchUri slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics shape=51 static
             in class type=Windows.Foundation.Uri name=launchUri
             out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowRequest return
     method reject
-        method Reject slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=0 reverse=37
+        method Reject slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=0
 
 class Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult python_type
     py CompanionWindowRequestResult
@@ -69,16 +69,16 @@ class Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult python_type
     default Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult
     requires Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult
     property companion_window_id
-        get get_CompanionWindowId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=99
+        get get_CompanionWindowId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4
             out struct type=Windows.UI.WindowId return
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4
             out enum32 type=Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResultStatus return
     property succeeded
-        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=22
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4
             out boolean return
 
 enum Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResultStatus python_type

@@ -7,51 +7,51 @@ class Windows.Foundation.Metadata.ApiInformation static python_type
     py ApiInformation
     factory Windows.Foundation.Metadata.IApiInformationStatics
     method is_api_contract_present static
-        method IsApiContractPresent slot=14 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=188 static
+        method IsApiContractPresent slot=14 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=contractName
             in uint16 name=majorVersion
             out boolean return
-        method IsApiContractPresent slot=15 inputs=3 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=195 reverse=198 static
+        method IsApiContractPresent slot=15 inputs=3 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=195 static
             in string name=contractName
             in uint16 name=majorVersion
             in uint16 name=minorVersion
             out boolean return
     method is_enum_named_value_present static
-        method IsEnumNamedValuePresent slot=13 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=175 static
+        method IsEnumNamedValuePresent slot=13 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=enumTypeName
             in string name=valueName
             out boolean return
     method is_event_present static
-        method IsEventPresent slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=101 static
+        method IsEventPresent slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=typeName
             in string name=eventName
             out boolean return
     method is_method_present static
-        method IsMethodPresent slot=7 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=45 static
+        method IsMethodPresent slot=7 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=typeName
             in string name=methodName
             out boolean return
-        method IsMethodPresent slot=8 inputs=3 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=195 reverse=68 static
+        method IsMethodPresent slot=8 inputs=3 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=195 static
             in string name=typeName
             in string name=methodName
             in uint32 name=inputParameterCount
             out boolean return
     method is_property_present static
-        method IsPropertyPresent slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=125 static
+        method IsPropertyPresent slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=typeName
             in string name=propertyName
             out boolean return
     method is_read_only_property_present static
-        method IsReadOnlyPropertyPresent slot=11 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=145 static
+        method IsReadOnlyPropertyPresent slot=11 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=typeName
             in string name=propertyName
             out boolean return
     method is_type_present static
-        method IsTypePresent slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=51 reverse=24 static
+        method IsTypePresent slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=51 static
             in string name=typeName
             out boolean return
     method is_writeable_property_present static
-        method IsWriteablePropertyPresent slot=12 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 reverse=164 static
+        method IsWriteablePropertyPresent slot=12 inputs=2 outputs=1 declaring=Windows.Foundation.Metadata.IApiInformationStatics shape=117 static
             in string name=typeName
             in string name=propertyName
             out boolean return

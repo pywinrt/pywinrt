@@ -367,28 +367,28 @@ class Windows.Media.Ocr.OcrEngine python_type
     requires Windows.Media.Ocr.IOcrEngine
     factory Windows.Media.Ocr.IOcrEngineStatics
     property recognizer_language
-        get get_RecognizerLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngine shape=4 reverse=43
+        get get_RecognizerLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngine shape=4
             out class type=Windows.Globalization.Language return
     property available_recognizer_languages static
-        get get_AvailableRecognizerLanguages slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 reverse=43 static
+        get get_AvailableRecognizerLanguages slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.Language> return
     property max_image_dimension static
-        get get_MaxImageDimension slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 reverse=22 static
+        get get_MaxImageDimension slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 static
             out uint32 return
     method is_language_supported static
-        method IsLanguageSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=51 reverse=65 static
+        method IsLanguageSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=51 static
             in class type=Windows.Globalization.Language name=language
             out boolean return
     method recognize_async
-        method RecognizeAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngine shape=51 reverse=24
+        method RecognizeAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngine shape=51
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Ocr.OcrResult> return
     method try_create_from_language static
-        method TryCreateFromLanguage slot=9 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=51 reverse=100 static
+        method TryCreateFromLanguage slot=9 inputs=1 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=51 static
             in class type=Windows.Globalization.Language name=language
             out class type=Windows.Media.Ocr.OcrEngine return
     method try_create_from_user_profile_languages static
-        method TryCreateFromUserProfileLanguages slot=10 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 reverse=121 static
+        method TryCreateFromUserProfileLanguages slot=10 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrEngineStatics shape=4 static
             out class type=Windows.Media.Ocr.OcrEngine return
 
 class Windows.Media.Ocr.OcrLine python_type
@@ -397,10 +397,10 @@ class Windows.Media.Ocr.OcrLine python_type
     default Windows.Media.Ocr.IOcrLine
     requires Windows.Media.Ocr.IOcrLine
     property text
-        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrLine shape=4 reverse=43
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrLine shape=4
             out string return
     property words
-        get get_Words slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrLine shape=4 reverse=22
+        get get_Words slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrLine shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrWord> return
 
 class Windows.Media.Ocr.OcrResult python_type
@@ -409,13 +409,13 @@ class Windows.Media.Ocr.OcrResult python_type
     default Windows.Media.Ocr.IOcrResult
     requires Windows.Media.Ocr.IOcrResult
     property lines
-        get get_Lines slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4 reverse=22
+        get get_Lines slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Ocr.OcrLine> return
     property text
-        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4 reverse=62
+        get get_Text slot=8 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4
             out string return
     property text_angle
-        get get_TextAngle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4 reverse=43
+        get get_TextAngle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrResult shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
 
 class Windows.Media.Ocr.OcrWord python_type
@@ -424,10 +424,10 @@ class Windows.Media.Ocr.OcrWord python_type
     default Windows.Media.Ocr.IOcrWord
     requires Windows.Media.Ocr.IOcrWord
     property bounding_rect
-        get get_BoundingRect slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrWord shape=4 reverse=22
+        get get_BoundingRect slot=6 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrWord shape=4
             out struct type=Windows.Foundation.Rect return
     property text
-        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrWord shape=4 reverse=43
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Media.Ocr.IOcrWord shape=4
             out string return
 
 class System.Double external

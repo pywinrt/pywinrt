@@ -29,29 +29,29 @@ class Windows.Devices.Input.Preview.GazeDevicePreview python_type
     default Windows.Devices.Input.Preview.IGazeDevicePreview
     requires Windows.Devices.Input.Preview.IGazeDevicePreview
     property can_track_eyes
-        get get_CanTrackEyes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4 reverse=43
+        get get_CanTrackEyes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4
             out boolean return
     property can_track_head
-        get get_CanTrackHead slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4 reverse=62
+        get get_CanTrackHead slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4
             out boolean return
     property configuration_state
-        get get_ConfigurationState slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4 reverse=99
+        get get_ConfigurationState slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4
             out enum32 type=Windows.Devices.Input.Preview.GazeDeviceConfigurationStatePreview return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4
             out uint32 return
     method get_boolean_control_descriptions
-        method GetBooleanControlDescriptions slot=12 inputs=2 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=117 reverse=164
+        method GetBooleanControlDescriptions slot=12 inputs=2 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> return
     method get_numeric_control_descriptions
-        method GetNumericControlDescriptions slot=11 inputs=2 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=117 reverse=145
+        method GetNumericControlDescriptions slot=11 inputs=2 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> return
     method request_calibration_async
-        method RequestCalibrationAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4 reverse=121
+        method RequestCalibrationAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDevicePreview shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 class Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs python_type
@@ -60,7 +60,7 @@ class Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs pytho
     default Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs
     requires Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherAddedPreviewEventArgs shape=4
             out class type=Windows.Devices.Input.Preview.GazeDevicePreview return
 
 class Windows.Devices.Input.Preview.GazeDeviceWatcherPreview python_type
@@ -69,33 +69,33 @@ class Windows.Devices.Input.Preview.GazeDeviceWatcherPreview python_type
     default Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview
     requires Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview
     event added
-        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=24
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=53
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=163
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=181
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=65
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=110
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
-        add add_Updated slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51 reverse=124
+        add add_Updated slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeDeviceWatcherPreview,Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Updated slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26 reverse=156
+        remove remove_Updated slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=0 reverse=185
+        method Start slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=0
     method stop
-        method Stop slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=0 reverse=193
+        method Stop slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherPreview shape=0
 
 class Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs python_type
     py GazeDeviceWatcherRemovedPreviewEventArgs
@@ -103,7 +103,7 @@ class Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs pyt
     default Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs
     requires Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherRemovedPreviewEventArgs shape=4
             out class type=Windows.Devices.Input.Preview.GazeDevicePreview return
 
 class Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs python_type
@@ -112,7 +112,7 @@ class Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs pyt
     default Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs
     requires Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeDeviceWatcherUpdatedPreviewEventArgs shape=4
             out class type=Windows.Devices.Input.Preview.GazeDevicePreview return
 
 class Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs python_type
@@ -121,12 +121,12 @@ class Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs python_type
     default Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs
     requires Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs shape=4
             in boolean name=value
     property current_point
-        get get_CurrentPoint slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs shape=4 reverse=62
+        get get_CurrentPoint slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeEnteredPreviewEventArgs shape=4
             out class type=Windows.Devices.Input.Preview.GazePointPreview return
 
 class Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs python_type
@@ -135,12 +135,12 @@ class Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs python_type
     default Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs
     requires Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs shape=4
             in boolean name=value
     property current_point
-        get get_CurrentPoint slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs shape=4 reverse=62
+        get get_CurrentPoint slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeExitedPreviewEventArgs shape=4
             out class type=Windows.Devices.Input.Preview.GazePointPreview return
 
 class Windows.Devices.Input.Preview.GazeInputSourcePreview python_type
@@ -150,28 +150,28 @@ class Windows.Devices.Input.Preview.GazeInputSourcePreview python_type
     requires Windows.Devices.Input.Preview.IGazeInputSourcePreview
     factory Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics
     event gaze_entered
-        add add_GazeEntered slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51 reverse=65
+        add add_GazeEntered slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GazeEntered slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26 reverse=110
+        remove remove_GazeEntered slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gaze_exited
-        add add_GazeExited slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51 reverse=124
+        add add_GazeExited slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GazeExited slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26 reverse=156
+        remove remove_GazeExited slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gaze_moved
-        add add_GazeMoved slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51 reverse=24
+        add add_GazeMoved slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GazeMoved slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26 reverse=53
+        remove remove_GazeMoved slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_watcher static
-        method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics shape=4 reverse=43 static
+        method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics shape=4 static
             out class type=Windows.Devices.Input.Preview.GazeDeviceWatcherPreview return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeInputSourcePreviewStatics shape=4 static
             out class type=Windows.Devices.Input.Preview.GazeInputSourcePreview return
 
 class Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs python_type
@@ -180,15 +180,15 @@ class Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs python_type
     default Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs
     requires Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4
             in boolean name=value
     property current_point
-        get get_CurrentPoint slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4 reverse=62
+        get get_CurrentPoint slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4
             out class type=Windows.Devices.Input.Preview.GazePointPreview return
     method get_intermediate_points
-        method GetIntermediatePoints slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4 reverse=99
+        method GetIntermediatePoints slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazeMovedPreviewEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Input.Preview.GazePointPreview> return
 
 class Windows.Devices.Input.Preview.GazePointPreview python_type
@@ -197,19 +197,19 @@ class Windows.Devices.Input.Preview.GazePointPreview python_type
     default Windows.Devices.Input.Preview.IGazePointPreview
     requires Windows.Devices.Input.Preview.IGazePointPreview
     property eye_gaze_position
-        get get_EyeGazePosition slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4 reverse=43
+        get get_EyeGazePosition slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
     property head_gaze_position
-        get get_HeadGazePosition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4 reverse=62
+        get get_HeadGazePosition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
     property hid_input_report
-        get get_HidInputReport slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4 reverse=121
+        get get_HidInputReport slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4
             out class type=Windows.Devices.HumanInterfaceDevice.HidInputReport return
     property source_device
-        get get_SourceDevice slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4 reverse=22
+        get get_SourceDevice slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4
             out class type=Windows.Devices.Input.Preview.GazeDevicePreview return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4 reverse=99
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.Preview.IGazePointPreview shape=4
             out uint64 return
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable

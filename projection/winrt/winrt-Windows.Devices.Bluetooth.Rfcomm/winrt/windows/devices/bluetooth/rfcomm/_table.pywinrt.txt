@@ -372,62 +372,62 @@ class Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService python_type closeable
     factory Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics
     factory Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2
     property connection_host_name
-        get get_ConnectionHostName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4 reverse=22
+        get get_ConnectionHostName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4
             out class type=Windows.Networking.HostName return
     property connection_service_name
-        get get_ConnectionServiceName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4 reverse=43
+        get get_ConnectionServiceName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4
             out string return
     property max_protection_level
-        get get_MaxProtectionLevel slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4 reverse=121
+        get get_MaxProtectionLevel slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4
             out enum32 type=Windows.Networking.Sockets.SocketProtectionLevel return
     property protection_level
-        get get_ProtectionLevel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4 reverse=99
+        get get_ProtectionLevel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4
             out enum32 type=Windows.Networking.Sockets.SocketProtectionLevel return
     property service_id
-        get get_ServiceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4 reverse=62
+        get get_ServiceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService2 shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService2 shape=4
             out class type=Windows.Devices.Bluetooth.BluetoothDevice return
     property device_access_information
-        get get_DeviceAccessInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService3 shape=4 reverse=22
+        get get_DeviceAccessInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService3 shape=4
             out class type=Windows.Devices.Enumeration.DeviceAccessInformation return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
-        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics shape=51 reverse=24 static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> return
     method get_device_selector static
-        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics shape=51 reverse=44 static
+        method GetDeviceSelector slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics shape=51 static
             in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=serviceId
             out string return
     method get_device_selector_for_bluetooth_device static
-        method GetDeviceSelectorForBluetoothDevice slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=51 reverse=24 static
+        method GetDeviceSelectorForBluetoothDevice slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=51 static
             in class type=Windows.Devices.Bluetooth.BluetoothDevice name=bluetoothDevice
             out string return
-        method GetDeviceSelectorForBluetoothDevice slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=117 reverse=45 static
+        method GetDeviceSelectorForBluetoothDevice slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=117 static
             in class type=Windows.Devices.Bluetooth.BluetoothDevice name=bluetoothDevice
             in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
             out string return
     method get_device_selector_for_bluetooth_device_and_service_id static
-        method GetDeviceSelectorForBluetoothDeviceAndServiceId slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=117 reverse=66 static
+        method GetDeviceSelectorForBluetoothDeviceAndServiceId slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=117 static
             in class type=Windows.Devices.Bluetooth.BluetoothDevice name=bluetoothDevice
             in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=serviceId
             out string return
-        method GetDeviceSelectorForBluetoothDeviceAndServiceId slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=195 reverse=102 static
+        method GetDeviceSelectorForBluetoothDeviceAndServiceId slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2 shape=195 static
             in class type=Windows.Devices.Bluetooth.BluetoothDevice name=bluetoothDevice
             in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=serviceId
             in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
             out string return
     method get_sdp_raw_attributes_async
-        method GetSdpRawAttributesAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4 reverse=141
+        method GetSdpRawAttributesAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer>> return
-        method GetSdpRawAttributesAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=51 reverse=163
+        method GetSdpRawAttributesAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService shape=51
             in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.UInt32,Windows.Storage.Streams.IBuffer>> return
     method request_access_async
-        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService3 shape=4 reverse=43
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService3 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> return
 
 class Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult python_type
@@ -436,10 +436,10 @@ class Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult python_type
     default Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult
     requires Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult shape=4
             out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
     property services
-        get get_Services slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult shape=4 reverse=43
+        get get_Services slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> return
 
 class Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId python_type
@@ -449,38 +449,38 @@ class Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId python_type
     requires Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId
     factory Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics
     property uuid
-        get get_Uuid slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId shape=4 reverse=22
+        get get_Uuid slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId shape=4
             out guid return
     property generic_file_transfer static
-        get get_GenericFileTransfer slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 reverse=173 static
+        get get_GenericFileTransfer slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     property obex_file_transfer static
-        get get_ObexFileTransfer slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 reverse=121 static
+        get get_ObexFileTransfer slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     property obex_object_push static
-        get get_ObexObjectPush slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 reverse=99 static
+        get get_ObexObjectPush slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     property phone_book_access_pce static
-        get get_PhoneBookAccessPce slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 reverse=141 static
+        get get_PhoneBookAccessPce slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     property phone_book_access_pse static
-        get get_PhoneBookAccessPse slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 reverse=162 static
+        get get_PhoneBookAccessPse slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     property serial_port static
-        get get_SerialPort slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 reverse=62 static
+        get get_SerialPort slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     method as_short_id
-        method AsShortId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId shape=4 reverse=43
+        method AsShortId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId shape=4
             out uint32 return
     method as_string
-        method AsString slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId shape=4 reverse=62
+        method AsString slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId shape=4
             out string return
     method from_short_id static
-        method FromShortId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=51 reverse=44 static
+        method FromShortId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=51 static
             in uint32 name=shortId
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     method from_uuid static
-        method FromUuid slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=94 reverse=35 static
+        method FromUuid slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics shape=94 static
             in guid name=uuid
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
 
@@ -492,23 +492,23 @@ class Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider python_type
     requires Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider2
     factory Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProviderStatics
     property sdp_raw_attributes
-        get get_SdpRawAttributes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=4 reverse=43
+        get get_SdpRawAttributes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.UInt32,Windows.Storage.Streams.IBuffer> return
     property service_id
-        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=4 reverse=22
+        get get_ServiceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=4
             out class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId return
     method create_async static
-        method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProviderStatics shape=51 reverse=24 static
+        method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProviderStatics shape=51 static
             in class type=Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId name=serviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider> return
     method start_advertising
-        method StartAdvertising slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=4 reverse=62
+        method StartAdvertising slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=4
             in class type=Windows.Networking.Sockets.StreamSocketListener name=listener
-        method StartAdvertising slot=6 inputs=2 outputs=0 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider2 shape=51 reverse=24
+        method StartAdvertising slot=6 inputs=2 outputs=0 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider2 shape=51
             in class type=Windows.Networking.Sockets.StreamSocketListener name=listener
             in boolean name=radioDiscoverable
     method stop_advertising
-        method StopAdvertising slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=0 reverse=93
+        method StopAdvertising slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider shape=0
 
 class System.UInt32 external
     py winrt.system.UInt32

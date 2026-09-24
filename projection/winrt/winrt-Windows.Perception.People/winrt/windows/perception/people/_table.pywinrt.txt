@@ -21,19 +21,19 @@ class Windows.Perception.People.EyesPose python_type
     requires Windows.Perception.People.IEyesPose
     factory Windows.Perception.People.IEyesPoseStatics
     property gaze
-        get get_Gaze slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPose shape=4 reverse=43
+        get get_Gaze slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPose shape=4
             out reference type=Windows.Foundation.IReference<Windows.Perception.Spatial.SpatialRay> return
     property is_calibration_valid
-        get get_IsCalibrationValid slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPose shape=4 reverse=22
+        get get_IsCalibrationValid slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPose shape=4
             out boolean return
     property update_timestamp
-        get get_UpdateTimestamp slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPose shape=4 reverse=62
+        get get_UpdateTimestamp slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPose shape=4
             out class type=Windows.Perception.PerceptionTimestamp return
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPoseStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPoseStatics shape=4 static
             out boolean return
     method request_access_async static
-        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPoseStatics shape=4 reverse=43 static
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IEyesPoseStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Input.GazeInputAccessStatus> return
 
 enum Windows.Perception.People.HandJointKind python_type
@@ -72,28 +72,28 @@ class Windows.Perception.People.HandMeshObserver python_type
     default Windows.Perception.People.IHandMeshObserver
     requires Windows.Perception.People.IHandMeshObserver
     property model_id
-        get get_ModelId slot=13 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4 reverse=173
+        get get_ModelId slot=13 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4
             out int32 return
     property neutral_pose
-        get get_NeutralPose slot=11 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4 reverse=141
+        get get_NeutralPose slot=11 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4
             out class type=Windows.Perception.People.HandPose return
     property neutral_pose_version
-        get get_NeutralPoseVersion slot=12 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4 reverse=162
+        get get_NeutralPoseVersion slot=12 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4
             out int32 return
     property source
-        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4 reverse=22
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4
             out class type=Windows.UI.Input.Spatial.SpatialInteractionSource return
     property triangle_index_count
-        get get_TriangleIndexCount slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4 reverse=43
+        get get_TriangleIndexCount slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4
             out uint32 return
     property vertex_count
-        get get_VertexCount slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4 reverse=62
+        get get_VertexCount slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=4
             out uint32 return
     method get_triangle_indices
-        method GetTriangleIndices slot=9 inputs=1 outputs=0 declaring=Windows.Perception.People.IHandMeshObserver shape=51 reverse=100
+        method GetTriangleIndices slot=9 inputs=1 outputs=0 declaring=Windows.Perception.People.IHandMeshObserver shape=51
             fill_array uint16 name=indices
     method get_vertex_state_for_pose
-        method GetVertexStateForPose slot=10 inputs=1 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=51 reverse=124
+        method GetVertexStateForPose slot=10 inputs=1 outputs=1 declaring=Windows.Perception.People.IHandMeshObserver shape=51
             in class type=Windows.Perception.People.HandPose name=handPose
             out class type=Windows.Perception.People.HandMeshVertexState return
 
@@ -109,13 +109,13 @@ class Windows.Perception.People.HandMeshVertexState python_type
     default Windows.Perception.People.IHandMeshVertexState
     requires Windows.Perception.People.IHandMeshVertexState
     property coordinate_system
-        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshVertexState shape=4 reverse=22
+        get get_CoordinateSystem slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshVertexState shape=4
             out class type=Windows.Perception.Spatial.SpatialCoordinateSystem return
     property update_timestamp
-        get get_UpdateTimestamp slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshVertexState shape=4 reverse=62
+        get get_UpdateTimestamp slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IHandMeshVertexState shape=4
             out class type=Windows.Perception.PerceptionTimestamp return
     method get_vertices
-        method GetVertices slot=7 inputs=1 outputs=0 declaring=Windows.Perception.People.IHandMeshVertexState shape=51 reverse=44
+        method GetVertices slot=7 inputs=1 outputs=0 declaring=Windows.Perception.People.IHandMeshVertexState shape=51
             fill_array struct type=Windows.Perception.People.HandMeshVertex name=vertices
 
 class Windows.Perception.People.HandPose python_type
@@ -124,7 +124,7 @@ class Windows.Perception.People.HandPose python_type
     default Windows.Perception.People.IHandPose
     requires Windows.Perception.People.IHandPose
     method get_relative_joint
-        method GetRelativeJoint slot=8 inputs=2 outputs=1 declaring=Windows.Perception.People.IHandPose shape=117 reverse=66
+        method GetRelativeJoint slot=8 inputs=2 outputs=1 declaring=Windows.Perception.People.IHandPose shape=117
             in enum32 type=Windows.Perception.People.HandJointKind name=joint
             in enum32 type=Windows.Perception.People.HandJointKind name=referenceJoint
             out struct type=Windows.Perception.People.JointPose return
@@ -134,7 +134,7 @@ class Windows.Perception.People.HandPose python_type
             pass_array enum32 type=Windows.Perception.People.HandJointKind name=referenceJoints
             fill_array struct type=Windows.Perception.People.JointPose name=jointPoses
     method try_get_joint
-        method TryGetJoint slot=6 inputs=2 outputs=2 declaring=Windows.Perception.People.IHandPose shape=195 reverse=26
+        method TryGetJoint slot=6 inputs=2 outputs=2 declaring=Windows.Perception.People.IHandPose shape=195
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             in enum32 type=Windows.Perception.People.HandJointKind name=joint
             out struct type=Windows.Perception.People.JointPose name=jointPose
@@ -152,13 +152,13 @@ class Windows.Perception.People.HeadPose python_type
     default Windows.Perception.People.IHeadPose
     requires Windows.Perception.People.IHeadPose
     property forward_direction
-        get get_ForwardDirection slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IHeadPose shape=4 reverse=43
+        get get_ForwardDirection slot=7 inputs=0 outputs=1 declaring=Windows.Perception.People.IHeadPose shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IHeadPose shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Perception.People.IHeadPose shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property up_direction
-        get get_UpDirection slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IHeadPose shape=4 reverse=62
+        get get_UpDirection slot=8 inputs=0 outputs=1 declaring=Windows.Perception.People.IHeadPose shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
 
 interface Windows.Foundation.IAsyncOperation<Windows.UI.Input.GazeInputAccessStatus> concrete awaitable

@@ -10,7 +10,7 @@ class Microsoft.UI.Input.Interop.PenDeviceInterop static python_type
     py PenDeviceInterop
     factory Microsoft.UI.Input.Interop.IPenDeviceInteropStatics
     method from_pointer_point static
-        method FromPointerPoint slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.Interop.IPenDeviceInteropStatics shape=51 reverse=24 static
+        method FromPointerPoint slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.Interop.IPenDeviceInteropStatics shape=51 static
             in class type=Microsoft.UI.Input.PointerPoint name=pointerPoint
             out class type=Windows.Devices.Input.PenDevice return
 

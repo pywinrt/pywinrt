@@ -48,41 +48,41 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSession python_typ
     default Windows.Media.Control.IGlobalSystemMediaTransportControlsSession
     requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSession
     property source_app_user_model_id
-        get get_SourceAppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=22
+        get get_SourceAppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out string return
     event media_properties_changed
-        add add_MediaPropertiesChanged slot=29 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=267
+        add add_MediaPropertiesChanged slot=29 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.MediaPropertiesChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MediaPropertiesChanged slot=30 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26 reverse=272
+        remove remove_MediaPropertiesChanged slot=30 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_info_changed
-        add add_PlaybackInfoChanged slot=27 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=260
+        add add_PlaybackInfoChanged slot=27 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.PlaybackInfoChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PlaybackInfoChanged slot=28 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event timeline_properties_changed
-        add add_TimelinePropertiesChanged slot=25 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=253
+        add add_TimelinePropertiesChanged slot=25 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSession,Windows.Media.Control.TimelinePropertiesChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TimelinePropertiesChanged slot=26 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26 reverse=257
+        remove remove_TimelinePropertiesChanged slot=26 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_playback_info
-        method GetPlaybackInfo slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=99
+        method GetPlaybackInfo slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo return
     method get_timeline_properties
-        method GetTimelineProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=62
+        method GetTimelineProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties return
     method try_change_auto_repeat_mode_async
-        method TryChangeAutoRepeatModeAsync slot=21 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=233
+        method TryChangeAutoRepeatModeAsync slot=21 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51
             in enum32 type=Windows.Media.MediaPlaybackAutoRepeatMode name=requestedAutoRepeatMode
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_change_channel_down_async
-        method TryChangeChannelDownAsync slot=19 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=223
+        method TryChangeChannelDownAsync slot=19 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_change_channel_up_async
-        method TryChangeChannelUpAsync slot=18 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=218
+        method TryChangeChannelUpAsync slot=18 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_change_playback_position_async
         method TryChangePlaybackPositionAsync slot=24 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=47
@@ -93,38 +93,38 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSession python_typ
             in double name=requestedPlaybackRate
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_change_shuffle_active_async
-        method TryChangeShuffleActiveAsync slot=23 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51 reverse=243
+        method TryChangeShuffleActiveAsync slot=23 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=51
             in boolean name=requestedShuffleState
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_fast_forward_async
-        method TryFastForwardAsync slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=186
+        method TryFastForwardAsync slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_get_media_properties_async
-        method TryGetMediaPropertiesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=43
+        method TryGetMediaPropertiesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties> return
     method try_pause_async
-        method TryPauseAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=141
+        method TryPauseAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_play_async
-        method TryPlayAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=121
+        method TryPlayAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_record_async
-        method TryRecordAsync slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=173
+        method TryRecordAsync slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_rewind_async
-        method TryRewindAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=194
+        method TryRewindAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_skip_next_async
-        method TrySkipNextAsync slot=16 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=202
+        method TrySkipNextAsync slot=16 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_skip_previous_async
-        method TrySkipPreviousAsync slot=17 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=210
+        method TrySkipPreviousAsync slot=17 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_stop_async
-        method TryStopAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=162
+        method TryStopAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_toggle_play_pause_async
-        method TryTogglePlayPauseAsync slot=20 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4 reverse=228
+        method TryTogglePlayPauseAsync slot=20 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager python_type
@@ -134,25 +134,25 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager pyt
     requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager
     factory Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics
     event current_session_changed
-        add add_CurrentSessionChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51 reverse=65
+        add add_CurrentSessionChanged slot=8 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.CurrentSessionChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CurrentSessionChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26 reverse=110
+        remove remove_CurrentSessionChanged slot=9 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sessions_changed
-        add add_SessionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51 reverse=124
+        add add_SessionsChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control.SessionsChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SessionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26 reverse=156
+        remove remove_SessionsChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_session
-        method GetCurrentSession slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4 reverse=22
+        method GetCurrentSession slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4
             out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSession return
     method get_sessions
-        method GetSessions slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4 reverse=43
+        method GetSessions slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManager shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Control.GlobalSystemMediaTransportControlsSession> return
     method request_async static
-        method RequestAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics shape=4 reverse=22 static
+        method RequestAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager> return
 
 class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties python_type
@@ -161,34 +161,34 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProper
     default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties
     requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties
     property album_artist
-        get get_AlbumArtist slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=62
+        get get_AlbumArtist slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out string return
     property album_title
-        get get_AlbumTitle slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=121
+        get get_AlbumTitle slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out string return
     property album_track_count
-        get get_AlbumTrackCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=173
+        get get_AlbumTrackCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out int32 return
     property artist
-        get get_Artist slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=99
+        get get_Artist slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out string return
     property genres
-        get get_Genres slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=162
+        get get_Genres slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property playback_type
-        get get_PlaybackType slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=186
+        get get_PlaybackType slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out reference type=Windows.Foundation.IReference<Windows.Media.MediaPlaybackType> return
     property subtitle
-        get get_Subtitle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=43
+        get get_Subtitle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out string return
     property thumbnail
-        get get_Thumbnail slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=194
+        get get_Thumbnail slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out string return
     property track_number
-        get get_TrackNumber slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4 reverse=141
+        get get_TrackNumber slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionMediaProperties shape=4
             out int32 return
 
 class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls python_type
@@ -197,49 +197,49 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackCon
     default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls
     requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls
     property is_channel_down_enabled
-        get get_IsChannelDownEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=194
+        get get_IsChannelDownEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_channel_up_enabled
-        get get_IsChannelUpEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=186
+        get get_IsChannelUpEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_fast_forward_enabled
-        get get_IsFastForwardEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=121
+        get get_IsFastForwardEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_next_enabled
-        get get_IsNextEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=162
+        get get_IsNextEnabled slot=12 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_pause_enabled
-        get get_IsPauseEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=43
+        get get_IsPauseEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_play_enabled
-        get get_IsPlayEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=22
+        get get_IsPlayEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_play_pause_toggle_enabled
-        get get_IsPlayPauseToggleEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=202
+        get get_IsPlayPauseToggleEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_playback_position_enabled
-        get get_IsPlaybackPositionEnabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=228
+        get get_IsPlaybackPositionEnabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_playback_rate_enabled
-        get get_IsPlaybackRateEnabled slot=19 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=223
+        get get_IsPlaybackRateEnabled slot=19 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_previous_enabled
-        get get_IsPreviousEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=173
+        get get_IsPreviousEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_record_enabled
-        get get_IsRecordEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=99
+        get get_IsRecordEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_repeat_enabled
-        get get_IsRepeatEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=218
+        get get_IsRepeatEnabled slot=18 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_rewind_enabled
-        get get_IsRewindEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=141
+        get get_IsRewindEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_shuffle_enabled
-        get get_IsShuffleEnabled slot=17 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=210
+        get get_IsShuffleEnabled slot=17 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
     property is_stop_enabled
-        get get_IsStopEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4 reverse=62
+        get get_IsStopEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackControls shape=4
             out boolean return
 
 class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo python_type
@@ -248,22 +248,22 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInf
     default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo
     requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo
     property auto_repeat_mode
-        get get_AutoRepeatMode slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=99
+        get get_AutoRepeatMode slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4
             out reference type=Windows.Foundation.IReference<Windows.Media.MediaPlaybackAutoRepeatMode> return
     property controls
-        get get_Controls slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=22
+        get get_Controls slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4
             out class type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls return
     property is_shuffle_active
-        get get_IsShuffleActive slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=141
+        get get_IsShuffleActive slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
     property playback_rate
-        get get_PlaybackRate slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=121
+        get get_PlaybackRate slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property playback_status
-        get get_PlaybackStatus slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=43
+        get get_PlaybackStatus slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4
             out enum32 type=Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackStatus return
     property playback_type
-        get get_PlaybackType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4 reverse=62
+        get get_PlaybackType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionPlaybackInfo shape=4
             out reference type=Windows.Foundation.IReference<Windows.Media.MediaPlaybackType> return
 
 enum Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackStatus python_type
@@ -282,22 +282,22 @@ class Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelinePro
     default Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties
     requires Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties
     property end_time
-        get get_EndTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=43
+        get get_EndTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4
             out timespan return
     property last_updated_time
-        get get_LastUpdatedTime slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=141
+        get get_LastUpdatedTime slot=11 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4
             out datetime return
     property max_seek_time
-        get get_MaxSeekTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=99
+        get get_MaxSeekTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4
             out timespan return
     property min_seek_time
-        get get_MinSeekTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=62
+        get get_MinSeekTime slot=8 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4
             out timespan return
     property position
-        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=121
+        get get_Position slot=10 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4
             out timespan return
     property start_time
-        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4 reverse=22
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.Control.IGlobalSystemMediaTransportControlsSessionTimelineProperties shape=4
             out timespan return
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable

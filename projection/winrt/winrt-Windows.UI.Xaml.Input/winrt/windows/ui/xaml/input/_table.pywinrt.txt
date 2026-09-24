@@ -21,7 +21,7 @@ class Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property pressed_keys
-        get get_PressedKeys slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs shape=4 reverse=22
+        get get_PressedKeys slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs shape=4
             out string return
 
 class Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs activatable python_type
@@ -33,9 +33,9 @@ class Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyInvokedEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyInvokedEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyInvokedEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyInvokedEventArgs shape=4
             in boolean name=value
 
 class Windows.UI.Xaml.Input.AccessKeyManager python_type
@@ -46,21 +46,21 @@ class Windows.UI.Xaml.Input.AccessKeyManager python_type
     factory Windows.UI.Xaml.Input.IAccessKeyManagerStatics
     factory Windows.UI.Xaml.Input.IAccessKeyManagerStatics2
     property is_display_mode_enabled static
-        get get_IsDisplayModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=4 reverse=22 static
+        get get_IsDisplayModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=4 static
             out boolean return
     property are_key_tips_enabled static
-        get get_AreKeyTipsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics2 shape=4 reverse=22 static
+        get get_AreKeyTipsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics2 shape=4 static
             out boolean return
-        put put_AreKeyTipsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics2 shape=4 reverse=43 static
+        put put_AreKeyTipsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics2 shape=4 static
             in boolean name=value
     event is_display_mode_enabled_changed static
-        add add_IsDisplayModeEnabledChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=51 reverse=44 static
+        add add_IsDisplayModeEnabledChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=51 static
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsDisplayModeEnabledChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=26 reverse=82 static
+        remove remove_IsDisplayModeEnabledChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method exit_display_mode static
-        method ExitDisplayMode slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=0 reverse=93 static
+        method ExitDisplayMode slot=9 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=0 static
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Xaml.Input.FocusMovementResult> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[FocusMovementResult]
@@ -79,12 +79,12 @@ class Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs python_type
     default Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs
     requires Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs
     property can_execute
-        get get_CanExecute slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs shape=4 reverse=43
+        get get_CanExecute slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs shape=4
             out boolean return
-        put put_CanExecute slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs shape=4 reverse=62
+        put put_CanExecute slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs shape=4
             in boolean name=value
     property parameter
-        get get_Parameter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs shape=4 reverse=22
+        get get_Parameter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICanExecuteRequestedEventArgs shape=4
             out object return
 
 class Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs python_type
@@ -94,15 +94,15 @@ class Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs python_type
     default Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs
     requires Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4
             in boolean name=value
     property character
-        get get_Character slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4 reverse=22
+        get get_Character slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4
             out char16 return
     property key_status
-        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4 reverse=43
+        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
 
 class Windows.UI.Xaml.Input.ContextRequestedEventArgs activatable python_type
@@ -115,12 +115,12 @@ class Windows.UI.Xaml.Input.ContextRequestedEventArgs activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IContextRequestedEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IContextRequestedEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IContextRequestedEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IContextRequestedEventArgs shape=4
             in boolean name=value
     method try_get_position
-        method TryGetPosition slot=8 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Input.IContextRequestedEventArgs shape=117 reverse=66
+        method TryGetPosition slot=8 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Input.IContextRequestedEventArgs shape=117
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out struct type=Windows.Foundation.Point name=point
             out boolean return
@@ -144,15 +144,15 @@ class Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=4 reverse=43
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=4 reverse=62
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=4
             in boolean name=value
     property pointer_device_type
-        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=4 reverse=22
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     method get_position
-        method GetPosition slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=51 reverse=100
+        method GetPosition slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs shape=51
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out struct type=Windows.Foundation.Point return
 
@@ -217,7 +217,7 @@ class Windows.UI.Xaml.Input.ExecuteRequestedEventArgs python_type
     default Windows.UI.Xaml.Input.IExecuteRequestedEventArgs
     requires Windows.UI.Xaml.Input.IExecuteRequestedEventArgs
     property parameter
-        get get_Parameter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IExecuteRequestedEventArgs shape=4 reverse=22
+        get get_Parameter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IExecuteRequestedEventArgs shape=4
             out object return
 
 class Windows.UI.Xaml.Input.FindNextElementOptions activatable python_type
@@ -229,24 +229,24 @@ class Windows.UI.Xaml.Input.FindNextElementOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property x_y_focus_navigation_strategy_override
-        get get_XYFocusNavigationStrategyOverride slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4 reverse=162
+        get get_XYFocusNavigationStrategyOverride slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride return
-        put put_XYFocusNavigationStrategyOverride slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4 reverse=173
+        put put_XYFocusNavigationStrategyOverride slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride name=value
     property search_root
-        get get_SearchRoot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4 reverse=22
+        get get_SearchRoot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
-        put put_SearchRoot slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4 reverse=43
+        put put_SearchRoot slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
     property hint_rect
-        get get_HintRect slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4 reverse=121
+        get get_HintRect slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             out struct type=Windows.Foundation.Rect return
         put put_HintRect slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=8
             in struct type=Windows.Foundation.Rect name=value
     property exclusion_rect
-        get get_ExclusionRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4 reverse=62
+        get get_ExclusionRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             out struct type=Windows.Foundation.Rect return
-        put put_ExclusionRect slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=8 reverse=105
+        put put_ExclusionRect slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=8
             in struct type=Windows.Foundation.Rect name=value
 
 enum Windows.UI.Xaml.Input.FocusInputDeviceKind python_type
@@ -272,47 +272,47 @@ class Windows.UI.Xaml.Input.FocusManager python_type
     factory Windows.UI.Xaml.Input.IFocusManagerStatics6
     factory Windows.UI.Xaml.Input.IFocusManagerStatics7
     event getting_focus static
-        add add_GettingFocus slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 reverse=124 static
+        add add_GettingFocus slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.GettingFocusEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GettingFocus slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 reverse=156 static
+        remove remove_GettingFocus slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event got_focus static
-        add add_GotFocus slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 reverse=24 static
+        add add_GotFocus slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GotFocus slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 reverse=53 static
+        remove remove_GotFocus slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event losing_focus static
-        add add_LosingFocus slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 reverse=163 static
+        add add_LosingFocus slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.LosingFocusEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LosingFocus slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 reverse=181 static
+        remove remove_LosingFocus slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus static
-        add add_LostFocus slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 reverse=65 static
+        add add_LostFocus slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LostFocus slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 reverse=110 static
+        remove remove_LostFocus slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_first_focusable_element static
-        method FindFirstFocusableElement slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=51 reverse=65 static
+        method FindFirstFocusableElement slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=51 static
             in class type=Windows.UI.Xaml.DependencyObject name=searchScope
             out class type=Windows.UI.Xaml.DependencyObject return
     method find_last_focusable_element static
-        method FindLastFocusableElement slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=51 reverse=100 static
+        method FindLastFocusableElement slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=51 static
             in class type=Windows.UI.Xaml.DependencyObject name=searchScope
             out class type=Windows.UI.Xaml.DependencyObject return
     method find_next_element static
-        method FindNextElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=51 reverse=44 static
+        method FindNextElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=51 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             out class type=Windows.UI.Xaml.DependencyObject return
-        method FindNextElement slot=10 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=117 reverse=125 static
+        method FindNextElement slot=10 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=117 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             in class type=Windows.UI.Xaml.Input.FindNextElementOptions name=focusNavigationOptions
             out class type=Windows.UI.Xaml.DependencyObject return
     method find_next_focusable_element static
-        method FindNextFocusableElement slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics3 shape=51 reverse=24 static
+        method FindNextFocusableElement slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics3 shape=51 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             out class type=Windows.UI.Xaml.UIElement return
         method FindNextFocusableElement slot=7 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics3 shape=130 static
@@ -320,29 +320,29 @@ class Windows.UI.Xaml.Input.FocusManager python_type
             in struct type=Windows.Foundation.Rect name=hintRect
             out class type=Windows.UI.Xaml.UIElement return
     method get_focused_element static
-        method GetFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics shape=4 reverse=22 static
+        method GetFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics shape=4 static
             out object return
-        method GetFocusedElement slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics7 shape=51 reverse=24 static
+        method GetFocusedElement slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics7 shape=51 static
             in class type=Windows.UI.Xaml.XamlRoot name=xamlRoot
             out object return
     method try_focus_async static
-        method TryFocusAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics5 shape=117 reverse=25 static
+        method TryFocusAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics5 shape=117 static
             in class type=Windows.UI.Xaml.DependencyObject name=element
             in enum32 type=Windows.UI.Xaml.FocusState name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> return
     method try_move_focus static
-        method TryMoveFocus slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics2 shape=51 reverse=24 static
+        method TryMoveFocus slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics2 shape=51 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             out boolean return
-        method TryMoveFocus slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=117 reverse=25 static
+        method TryMoveFocus slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics4 shape=117 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             in class type=Windows.UI.Xaml.Input.FindNextElementOptions name=focusNavigationOptions
             out boolean return
     method try_move_focus_async static
-        method TryMoveFocusAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics5 shape=51 reverse=44 static
+        method TryMoveFocusAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics5 shape=51 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> return
-        method TryMoveFocusAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics5 shape=117 reverse=66 static
+        method TryMoveFocusAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics5 shape=117 static
             in enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection name=focusNavigationDirection
             in class type=Windows.UI.Xaml.Input.FindNextElementOptions name=focusNavigationOptions
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Xaml.Input.FocusMovementResult> return
@@ -353,10 +353,10 @@ class Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs python_type
     default Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs
     requires Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs
     property correlation_id
-        get get_CorrelationId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs shape=4 reverse=43
+        get get_CorrelationId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs shape=4
             out guid return
     property new_focused_element
-        get get_NewFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs shape=4 reverse=22
+        get get_NewFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerGotFocusEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
 
 class Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs python_type
@@ -365,10 +365,10 @@ class Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs python_type
     default Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs
     requires Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs
     property correlation_id
-        get get_CorrelationId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs shape=4 reverse=43
+        get get_CorrelationId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs shape=4
             out guid return
     property old_focused_element
-        get get_OldFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs shape=4 reverse=22
+        get get_OldFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerLostFocusEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
 
 class Windows.UI.Xaml.Input.FocusMovementResult python_type
@@ -377,7 +377,7 @@ class Windows.UI.Xaml.Input.FocusMovementResult python_type
     default Windows.UI.Xaml.Input.IFocusMovementResult
     requires Windows.UI.Xaml.Input.IFocusMovementResult
     property succeeded
-        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusMovementResult shape=4 reverse=22
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusMovementResult shape=4
             out boolean return
 
 enum Windows.UI.Xaml.Input.FocusNavigationDirection python_type
@@ -400,40 +400,40 @@ class Windows.UI.Xaml.Input.GettingFocusEventArgs python_type
     requires Windows.UI.Xaml.Input.IGettingFocusEventArgs2
     requires Windows.UI.Xaml.Input.IGettingFocusEventArgs3
     property new_focused_element
-        get get_NewFocusedElement slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=43
+        get get_NewFocusedElement slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
-        put put_NewFocusedElement slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=62
+        put put_NewFocusedElement slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
     property handled
-        get get_Handled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=141
+        get get_Handled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out boolean return
-        put put_Handled slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=162
+        put put_Handled slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             in boolean name=value
     property cancel
-        get get_Cancel slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=186
+        get get_Cancel slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out boolean return
-        put put_Cancel slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=194
+        put put_Cancel slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             in boolean name=value
     property direction
-        get get_Direction slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=121
+        get get_Direction slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection return
     property focus_state
-        get get_FocusState slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=99
+        get get_FocusState slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.FocusState return
     property input_device
-        get get_InputDevice slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=173
+        get get_InputDevice slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Input.FocusInputDeviceKind return
     property old_focused_element
-        get get_OldFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4 reverse=22
+        get get_OldFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
     property correlation_id
-        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs3 shape=4 reverse=22
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs3 shape=4
             out guid return
     method try_cancel
-        method TryCancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs2 shape=4 reverse=22
+        method TryCancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs2 shape=4
             out boolean return
     method try_set_new_focused_element
-        method TrySetNewFocusedElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs2 shape=51 reverse=44
+        method TrySetNewFocusedElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IGettingFocusEventArgs2 shape=51
             in class type=Windows.UI.Xaml.DependencyObject name=element
             out boolean return
 
@@ -456,18 +456,18 @@ class Windows.UI.Xaml.Input.HoldingRoutedEventArgs activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4
             in boolean name=value
     property holding_state
-        get get_HoldingState slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4 reverse=43
+        get get_HoldingState slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4
             out enum32 type=Windows.UI.Input.HoldingState return
     property pointer_device_type
-        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4 reverse=22
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     method get_position
-        method GetPosition slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=51 reverse=124
+        method GetPosition slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IHoldingRoutedEventArgs shape=51
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out struct type=Windows.Foundation.Point return
 
@@ -1052,14 +1052,14 @@ class Windows.UI.Xaml.Input.InertiaExpansionBehavior python_type
     default Windows.UI.Xaml.Input.IInertiaExpansionBehavior
     requires Windows.UI.Xaml.Input.IInertiaExpansionBehavior
     property desired_expansion
-        get get_DesiredExpansion slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=4 reverse=62
+        get get_DesiredExpansion slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=4
             out double return
         put put_DesiredExpansion slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=2
             in double name=value
     property desired_deceleration
-        get get_DesiredDeceleration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=4 reverse=22
+        get get_DesiredDeceleration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=4
             out double return
-        put put_DesiredDeceleration slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=2 reverse=38
+        put put_DesiredDeceleration slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaExpansionBehavior shape=2
             in double name=value
 
 class Windows.UI.Xaml.Input.InertiaRotationBehavior python_type
@@ -1068,14 +1068,14 @@ class Windows.UI.Xaml.Input.InertiaRotationBehavior python_type
     default Windows.UI.Xaml.Input.IInertiaRotationBehavior
     requires Windows.UI.Xaml.Input.IInertiaRotationBehavior
     property desired_rotation
-        get get_DesiredRotation slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=4 reverse=62
+        get get_DesiredRotation slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=4
             out double return
         put put_DesiredRotation slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=2
             in double name=value
     property desired_deceleration
-        get get_DesiredDeceleration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=4 reverse=22
+        get get_DesiredDeceleration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=4
             out double return
-        put put_DesiredDeceleration slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=2 reverse=38
+        put put_DesiredDeceleration slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaRotationBehavior shape=2
             in double name=value
 
 class Windows.UI.Xaml.Input.InertiaTranslationBehavior python_type
@@ -1084,14 +1084,14 @@ class Windows.UI.Xaml.Input.InertiaTranslationBehavior python_type
     default Windows.UI.Xaml.Input.IInertiaTranslationBehavior
     requires Windows.UI.Xaml.Input.IInertiaTranslationBehavior
     property desired_displacement
-        get get_DesiredDisplacement slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=4 reverse=62
+        get get_DesiredDisplacement slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=4
             out double return
         put put_DesiredDisplacement slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=2
             in double name=value
     property desired_deceleration
-        get get_DesiredDeceleration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=4 reverse=22
+        get get_DesiredDeceleration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=4
             out double return
-        put put_DesiredDeceleration slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=2 reverse=38
+        put put_DesiredDeceleration slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInertiaTranslationBehavior shape=2
             in double name=value
 
 class Windows.UI.Xaml.Input.InputScope activatable python_type
@@ -1104,7 +1104,7 @@ class Windows.UI.Xaml.Input.InputScope activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property names
-        get get_Names slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScope shape=4 reverse=22
+        get get_Names slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScope shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.InputScopeName> return
 
 class Windows.UI.Xaml.Input.InputScopeName activatable python_type
@@ -1117,13 +1117,13 @@ class Windows.UI.Xaml.Input.InputScopeName activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScopeNameFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScopeNameFactory shape=51
             in enum32 type=Windows.UI.Xaml.Input.InputScopeNameValue name=nameValue
             out class type=Windows.UI.Xaml.Input.InputScopeName return
     property name_value
-        get get_NameValue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScopeName shape=4 reverse=22
+        get get_NameValue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IInputScopeName shape=4
             out enum32 type=Windows.UI.Xaml.Input.InputScopeNameValue return
-        put put_NameValue slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInputScopeName shape=4 reverse=43
+        put put_NameValue slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IInputScopeName shape=4
             in enum32 type=Windows.UI.Xaml.Input.InputScopeNameValue name=value
 
 enum Windows.UI.Xaml.Input.InputScopeNameValue python_type
@@ -1192,21 +1192,21 @@ class Windows.UI.Xaml.Input.KeyRoutedEventArgs python_type
     requires Windows.UI.Xaml.Input.IKeyRoutedEventArgs2
     requires Windows.UI.Xaml.Input.IKeyRoutedEventArgs3
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4
             in boolean name=value
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4
             out enum32 type=Windows.System.VirtualKey return
     property key_status
-        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4 reverse=43
+        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
     property original_key
-        get get_OriginalKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs2 shape=4 reverse=22
+        get get_OriginalKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs2 shape=4
             out enum32 type=Windows.System.VirtualKey return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs3 shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyRoutedEventArgs3 shape=4
             out string return
 
 enum Windows.UI.Xaml.Input.KeyTipPlacementMode python_type
@@ -1229,47 +1229,47 @@ class Windows.UI.Xaml.Input.KeyboardAccelerator composable python_type
     factory Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics
     composable Windows.UI.Xaml.Input.IKeyboardAcceleratorFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Input.KeyboardAccelerator return
     property scope_owner
-        get get_ScopeOwner slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=162
+        get get_ScopeOwner slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
-        put put_ScopeOwner slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=173
+        put put_ScopeOwner slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
     property modifiers
-        get get_Modifiers slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=62
+        get get_Modifiers slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             out enum_u32 type=Windows.System.VirtualKeyModifiers return
-        put put_Modifiers slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=99
+        put put_Modifiers slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             in enum_u32 type=Windows.System.VirtualKeyModifiers name=value
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             out enum32 type=Windows.System.VirtualKey return
-        put put_Key slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=43
+        put put_Key slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             in enum32 type=Windows.System.VirtualKey name=value
     property is_enabled
-        get get_IsEnabled slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=121
+        get get_IsEnabled slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             out boolean return
-        put put_IsEnabled slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4 reverse=141
+        put put_IsEnabled slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=4
             in boolean name=value
     property is_enabled_property static
-        get get_IsEnabledProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 reverse=62 static
+        get get_IsEnabledProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property key_property static
-        get get_KeyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 reverse=22 static
+        get get_KeyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property modifiers_property static
-        get get_ModifiersProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 reverse=43 static
+        get get_ModifiersProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property scope_owner_property static
-        get get_ScopeOwnerProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 reverse=99 static
+        get get_ScopeOwnerProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     event invoked
-        add add_Invoked slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=51 reverse=187
+        add add_Invoked slot=14 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.KeyboardAccelerator,Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Invoked slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=26 reverse=200
+        remove remove_Invoked slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAccelerator shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs python_type
@@ -1279,15 +1279,15 @@ class Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs python_type
     requires Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs
     requires Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs2
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs shape=4
             in boolean name=value
     property element
-        get get_Element slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs shape=4 reverse=62
+        get get_Element slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
     property keyboard_accelerator
-        get get_KeyboardAccelerator slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs2 shape=4 reverse=22
+        get get_KeyboardAccelerator slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs2 shape=4
             out class type=Windows.UI.Xaml.Input.KeyboardAccelerator return
 
 enum Windows.UI.Xaml.Input.KeyboardAcceleratorPlacementMode python_type
@@ -1312,40 +1312,40 @@ class Windows.UI.Xaml.Input.LosingFocusEventArgs python_type
     requires Windows.UI.Xaml.Input.ILosingFocusEventArgs2
     requires Windows.UI.Xaml.Input.ILosingFocusEventArgs3
     property new_focused_element
-        get get_NewFocusedElement slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=43
+        get get_NewFocusedElement slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
-        put put_NewFocusedElement slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=62
+        put put_NewFocusedElement slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
     property handled
-        get get_Handled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=141
+        get get_Handled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out boolean return
-        put put_Handled slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=162
+        put put_Handled slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             in boolean name=value
     property cancel
-        get get_Cancel slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=186
+        get get_Cancel slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out boolean return
-        put put_Cancel slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=194
+        put put_Cancel slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             in boolean name=value
     property direction
-        get get_Direction slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=121
+        get get_Direction slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection return
     property focus_state
-        get get_FocusState slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=99
+        get get_FocusState slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.FocusState return
     property input_device
-        get get_InputDevice slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=173
+        get get_InputDevice slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Input.FocusInputDeviceKind return
     property old_focused_element
-        get get_OldFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4 reverse=22
+        get get_OldFocusedElement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
     property correlation_id
-        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs3 shape=4 reverse=22
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs3 shape=4
             out guid return
     method try_cancel
-        method TryCancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs2 shape=4 reverse=22
+        method TryCancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs2 shape=4
             out boolean return
     method try_set_new_focused_element
-        method TrySetNewFocusedElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs2 shape=51 reverse=44
+        method TrySetNewFocusedElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.ILosingFocusEventArgs2 shape=51
             in class type=Windows.UI.Xaml.DependencyObject name=element
             out boolean return
 
@@ -1368,27 +1368,27 @@ class Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=141
+        get get_Handled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=162
+        put put_Handled slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             in boolean name=value
     property container
-        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=22
+        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.UIElement return
     property cumulative
-        get get_Cumulative slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=99
+        get get_Cumulative slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationDelta return
     property is_inertial
-        get get_IsInertial slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=62
+        get get_IsInertial slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out boolean return
     property pointer_device_type
-        get get_PointerDeviceType slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=173
+        get get_PointerDeviceType slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     property position
-        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=43
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out struct type=Windows.Foundation.Point return
     property velocities
-        get get_Velocities slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4 reverse=121
+        get get_Velocities slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationVelocities return
 
 delegate Windows.UI.Xaml.Input.ManipulationDeltaEventHandler python_type
@@ -1410,33 +1410,33 @@ class Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=162
+        get get_Handled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=173
+        put put_Handled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             in boolean name=value
     property container
-        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=22
+        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.UIElement return
     property cumulative
-        get get_Cumulative slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=121
+        get get_Cumulative slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationDelta return
     property delta
-        get get_Delta slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=99
+        get get_Delta slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationDelta return
     property is_inertial
-        get get_IsInertial slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=62
+        get get_IsInertial slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out boolean return
     property pointer_device_type
-        get get_PointerDeviceType slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=186
+        get get_PointerDeviceType slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     property position
-        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=43
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out struct type=Windows.Foundation.Point return
     property velocities
-        get get_Velocities slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4 reverse=141
+        get get_Velocities slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationVelocities return
     method complete
-        method Complete slot=15 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=0 reverse=193
+        method Complete slot=15 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs shape=0
 
 delegate Windows.UI.Xaml.Input.ManipulationInertiaStartingEventHandler python_type
     py ManipulationInertiaStartingEventHandler
@@ -1457,39 +1457,39 @@ class Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs activatab
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property translation_behavior
-        get get_TranslationBehavior slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=141
+        get get_TranslationBehavior slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.Input.InertiaTranslationBehavior return
-        put put_TranslationBehavior slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=162
+        put put_TranslationBehavior slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             in class type=Windows.UI.Xaml.Input.InertiaTranslationBehavior name=value
     property rotation_behavior
-        get get_RotationBehavior slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=99
+        get get_RotationBehavior slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.Input.InertiaRotationBehavior return
-        put put_RotationBehavior slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=121
+        put put_RotationBehavior slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             in class type=Windows.UI.Xaml.Input.InertiaRotationBehavior name=value
     property handled
-        get get_Handled slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=173
+        get get_Handled slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=186
+        put put_Handled slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             in boolean name=value
     property expansion_behavior
-        get get_ExpansionBehavior slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=43
+        get get_ExpansionBehavior slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.Input.InertiaExpansionBehavior return
-        put put_ExpansionBehavior slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=62
+        put put_ExpansionBehavior slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             in class type=Windows.UI.Xaml.Input.InertiaExpansionBehavior name=value
     property container
-        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=22
+        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.UIElement return
     property cumulative
-        get get_Cumulative slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=210
+        get get_Cumulative slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationDelta return
     property delta
-        get get_Delta slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=202
+        get get_Delta slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationDelta return
     property pointer_device_type
-        get get_PointerDeviceType slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=194
+        get get_PointerDeviceType slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     property velocities
-        get get_Velocities slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4 reverse=218
+        get get_Velocities slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationVelocities return
 
 enum Windows.UI.Xaml.Input.ManipulationModes python_type flags_enum
@@ -1522,12 +1522,12 @@ class Windows.UI.Xaml.Input.ManipulationPivot activatable python_type
             in double name=radius
             out class type=Windows.UI.Xaml.Input.ManipulationPivot return
     property radius
-        get get_Radius slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationPivot shape=4 reverse=62
+        get get_Radius slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationPivot shape=4
             out double return
         put put_Radius slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationPivot shape=2
             in double name=value
     property center
-        get get_Center slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationPivot shape=4 reverse=22
+        get get_Center slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationPivot shape=4
             out struct type=Windows.Foundation.Point return
         put put_Center slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationPivot shape=10
             in struct type=Windows.Foundation.Point name=value
@@ -1549,29 +1549,29 @@ class Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs composable python
     requires Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs
     composable Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs return
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4
             in boolean name=value
     property container
-        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4 reverse=22
+        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.UIElement return
     property cumulative
-        get get_Cumulative slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4 reverse=141
+        get get_Cumulative slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4
             out struct type=Windows.UI.Input.ManipulationDelta return
     property pointer_device_type
-        get get_PointerDeviceType slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4 reverse=121
+        get get_PointerDeviceType slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     property position
-        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4 reverse=43
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=4
             out struct type=Windows.Foundation.Point return
     method complete
-        method Complete slot=12 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=0 reverse=159
+        method Complete slot=12 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs shape=0
 
 delegate Windows.UI.Xaml.Input.ManipulationStartingEventHandler python_type
     py ManipulationStartingEventHandler
@@ -1592,24 +1592,24 @@ class Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property pivot
-        get get_Pivot slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=121
+        get get_Pivot slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.Input.ManipulationPivot return
-        put put_Pivot slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=141
+        put put_Pivot slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             in class type=Windows.UI.Xaml.Input.ManipulationPivot name=value
     property mode
-        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=22
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             out enum_u32 type=Windows.UI.Xaml.Input.ManipulationModes return
-        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=43
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             in enum_u32 type=Windows.UI.Xaml.Input.ManipulationModes name=value
     property handled
-        get get_Handled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=162
+        get get_Handled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=173
+        put put_Handled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             in boolean name=value
     property container
-        get get_Container slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=62
+        get get_Container slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.UIElement return
-        put put_Container slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4 reverse=99
+        put put_Container slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs shape=4
             in class type=Windows.UI.Xaml.UIElement name=value
 
 class Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs python_type
@@ -1619,15 +1619,15 @@ class Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs python_type
     default Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs
     requires Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs
     property handled
-        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4 reverse=43
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4
             out boolean return
-        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4 reverse=62
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4
             in boolean name=value
     property direction
-        get get_Direction slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4 reverse=22
+        get get_Direction slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Input.FocusNavigationDirection return
     property input_device
-        get get_InputDevice slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4 reverse=99
+        get get_InputDevice slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.INoFocusCandidateFoundEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Input.FocusInputDeviceKind return
 
 class Windows.UI.Xaml.Input.Pointer python_type
@@ -1636,16 +1636,16 @@ class Windows.UI.Xaml.Input.Pointer python_type
     default Windows.UI.Xaml.Input.IPointer
     requires Windows.UI.Xaml.Input.IPointer
     property is_in_contact
-        get get_IsInContact slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4 reverse=62
+        get get_IsInContact slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4
             out boolean return
     property is_in_range
-        get get_IsInRange slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4 reverse=99
+        get get_IsInRange slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4
             out boolean return
     property pointer_device_type
-        get get_PointerDeviceType slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4 reverse=43
+        get get_PointerDeviceType slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     property pointer_id
-        get get_PointerId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4 reverse=22
+        get get_PointerId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointer shape=4
             out uint32 return
 
 delegate Windows.UI.Xaml.Input.PointerEventHandler python_type
@@ -1665,25 +1665,25 @@ class Windows.UI.Xaml.Input.PointerRoutedEventArgs python_type
     requires Windows.UI.Xaml.Input.IPointerRoutedEventArgs
     requires Windows.UI.Xaml.Input.IPointerRoutedEventArgs2
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4
             in boolean name=value
     property key_modifiers
-        get get_KeyModifiers slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4 reverse=43
+        get get_KeyModifiers slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4
             out enum_u32 type=Windows.System.VirtualKeyModifiers return
     property pointer
-        get get_Pointer slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4 reverse=22
+        get get_Pointer slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.Input.Pointer return
     property is_generated
-        get get_IsGenerated slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs2 shape=4 reverse=22
+        get get_IsGenerated slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs2 shape=4
             out boolean return
     method get_current_point
-        method GetCurrentPoint slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=51 reverse=124
+        method GetCurrentPoint slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=51
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out class type=Windows.UI.Input.PointerPoint return
     method get_intermediate_points
-        method GetIntermediatePoints slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=51 reverse=144
+        method GetIntermediatePoints slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IPointerRoutedEventArgs shape=51
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> return
 
@@ -1693,15 +1693,15 @@ class Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs python_type
     default Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs
     requires Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4
             in boolean name=value
     property key
-        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4 reverse=22
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4
             out enum32 type=Windows.System.VirtualKey return
     property modifiers
-        get get_Modifiers slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4 reverse=43
+        get get_Modifiers slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs shape=4
             out enum_u32 type=Windows.System.VirtualKeyModifiers return
 
 delegate Windows.UI.Xaml.Input.RightTappedEventHandler python_type
@@ -1723,15 +1723,15 @@ class Windows.UI.Xaml.Input.RightTappedRoutedEventArgs activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=4 reverse=43
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=4 reverse=62
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=4
             in boolean name=value
     property pointer_device_type
-        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=4 reverse=22
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     method get_position
-        method GetPosition slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=51 reverse=100
+        method GetPosition slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs shape=51
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out struct type=Windows.Foundation.Point return
 
@@ -1745,22 +1745,22 @@ class Windows.UI.Xaml.Input.StandardUICommand composable python_type
     factory Windows.UI.Xaml.Input.IStandardUICommandStatics
     composable Windows.UI.Xaml.Input.IStandardUICommandFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommandFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommandFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Input.StandardUICommand return
-        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommandFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommandFactory shape=195
             in enum32 type=Windows.UI.Xaml.Input.StandardUICommandKind name=kind
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Input.StandardUICommand return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommand shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommand shape=4
             out enum32 type=Windows.UI.Xaml.Input.StandardUICommandKind return
-        put put_Kind slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IStandardUICommand2 shape=4 reverse=22
+        put put_Kind slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IStandardUICommand2 shape=4
             in enum32 type=Windows.UI.Xaml.Input.StandardUICommandKind name=value
     property kind_property static
-        get get_KindProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommandStatics shape=4 reverse=22 static
+        get get_KindProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IStandardUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 enum Windows.UI.Xaml.Input.StandardUICommandKind python_type
@@ -1803,15 +1803,15 @@ class Windows.UI.Xaml.Input.TappedRoutedEventArgs activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property handled
-        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=4 reverse=43
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=4
             out boolean return
-        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=4 reverse=62
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=4
             in boolean name=value
     property pointer_device_type
-        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=4 reverse=22
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     method get_position
-        method GetPosition slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=51 reverse=100
+        method GetPosition slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.ITappedRoutedEventArgs shape=51
             in class type=Windows.UI.Xaml.UIElement name=relativeTo
             out struct type=Windows.Foundation.Point return
 
@@ -1897,67 +1897,67 @@ class Windows.UI.Xaml.Input.XamlUICommand composable python_type
     factory Windows.UI.Xaml.Input.IXamlUICommandStatics
     composable Windows.UI.Xaml.Input.IXamlUICommandFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Input.XamlUICommand return
     property label
-        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=22
+        get get_Label slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             out string return
-        put put_Label slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=43
+        put put_Label slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             in string name=value
     property icon_source
-        get get_IconSource slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=62
+        get get_IconSource slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             out class type=Windows.UI.Xaml.Controls.IconSource return
-        put put_IconSource slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=99
+        put put_IconSource slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             in class type=Windows.UI.Xaml.Controls.IconSource name=value
     property description
-        get get_Description slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=173
+        get get_Description slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             out string return
-        put put_Description slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=186
+        put put_Description slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             in string name=value
     property command
-        get get_Command slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=194
+        get get_Command slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             out interface type=Windows.UI.Xaml.Input.ICommand return
-        put put_Command slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=202
+        put put_Command slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             in interface type=Windows.UI.Xaml.Input.ICommand name=value
     property access_key
-        get get_AccessKey slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=141
+        get get_AccessKey slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             out string return
-        put put_AccessKey slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=162
+        put put_AccessKey slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             in string name=value
     property keyboard_accelerators
-        get get_KeyboardAccelerators slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4 reverse=121
+        get get_KeyboardAccelerators slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Input.KeyboardAccelerator> return
     property access_key_property static
-        get get_AccessKeyProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 reverse=99 static
+        get get_AccessKeyProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property command_property static
-        get get_CommandProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 reverse=141 static
+        get get_CommandProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property description_property static
-        get get_DescriptionProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 reverse=121 static
+        get get_DescriptionProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property icon_source_property static
-        get get_IconSourceProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 reverse=43 static
+        get get_IconSourceProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property keyboard_accelerators_property static
-        get get_KeyboardAcceleratorsProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 reverse=62 static
+        get get_KeyboardAcceleratorsProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property label_property static
-        get get_LabelProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 reverse=22 static
+        get get_LabelProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommandStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     event can_execute_requested
-        add add_CanExecuteRequested slot=19 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=51 reverse=224
+        add add_CanExecuteRequested slot=19 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.XamlUICommand,Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CanExecuteRequested slot=20 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=26 reverse=399
+        remove remove_CanExecuteRequested slot=20 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event execute_requested
-        add add_ExecuteRequested slot=17 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=51 reverse=211
+        add add_ExecuteRequested slot=17 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Input.XamlUICommand,Windows.UI.Xaml.Input.ExecuteRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ExecuteRequested slot=18 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=26 reverse=398
+        remove remove_ExecuteRequested slot=18 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event can_execute_changed
         add add_CanExecuteChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.ICommand shape=51 reverse=24
@@ -1973,7 +1973,7 @@ class Windows.UI.Xaml.Input.XamlUICommand composable python_type
         method Execute slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.ICommand shape=4 reverse=99
             in object name=parameter
     method notify_can_execute_changed
-        method NotifyCanExecuteChanged slot=21 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=0 reverse=231
+        method NotifyCanExecuteChanged slot=21 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Input.IXamlUICommand shape=0
 
 class System.Object external
     py winrt.system.Object

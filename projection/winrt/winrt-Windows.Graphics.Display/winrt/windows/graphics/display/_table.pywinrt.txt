@@ -9,38 +9,38 @@ class Windows.Graphics.Display.AdvancedColorInfo python_type
     default Windows.Graphics.Display.IAdvancedColorInfo
     requires Windows.Graphics.Display.IAdvancedColorInfo
     property blue_primary
-        get get_BluePrimary slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=99
+        get get_BluePrimary slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     property current_advanced_color_kind
-        get get_CurrentAdvancedColorKind slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=22
+        get get_CurrentAdvancedColorKind slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out enum32 type=Windows.Graphics.Display.AdvancedColorKind return
     property green_primary
-        get get_GreenPrimary slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=62
+        get get_GreenPrimary slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     property max_average_full_frame_luminance_in_nits
-        get get_MaxAverageFullFrameLuminanceInNits slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=173
+        get get_MaxAverageFullFrameLuminanceInNits slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out single return
     property max_luminance_in_nits
-        get get_MaxLuminanceInNits slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=141
+        get get_MaxLuminanceInNits slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out single return
     property min_luminance_in_nits
-        get get_MinLuminanceInNits slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=162
+        get get_MinLuminanceInNits slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out single return
     property red_primary
-        get get_RedPrimary slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=43
+        get get_RedPrimary slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     property sdr_white_level_in_nits
-        get get_SdrWhiteLevelInNits slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=186
+        get get_SdrWhiteLevelInNits slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out single return
     property white_point
-        get get_WhitePoint slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4 reverse=121
+        get get_WhitePoint slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     method is_advanced_color_kind_available
-        method IsAdvancedColorKindAvailable slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=51 reverse=203
+        method IsAdvancedColorKindAvailable slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=51
             in enum32 type=Windows.Graphics.Display.AdvancedColorKind name=kind
             out boolean return
     method is_hdr_metadata_format_currently_supported
-        method IsHdrMetadataFormatCurrentlySupported slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=51 reverse=196
+        method IsHdrMetadataFormatCurrentlySupported slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=51
             in enum32 type=Windows.Graphics.Display.HdrMetadataFormat name=format
             out boolean return
 
@@ -80,44 +80,44 @@ class Windows.Graphics.Display.BrightnessOverride python_type
     requires Windows.Graphics.Display.IBrightnessOverride
     factory Windows.Graphics.Display.IBrightnessOverrideStatics
     property brightness_level
-        get get_BrightnessLevel slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4 reverse=62
+        get get_BrightnessLevel slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4
             out double return
     property is_override_active
-        get get_IsOverrideActive slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4 reverse=43
+        get get_IsOverrideActive slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4
             out boolean return
     property is_supported
-        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4 reverse=22
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4
             out boolean return
     event brightness_level_changed
-        add add_BrightnessLevelChanged slot=18 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=219
+        add add_BrightnessLevelChanged slot=18 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BrightnessLevelChanged slot=19 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26 reverse=226
+        remove remove_BrightnessLevelChanged slot=19 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_override_active_changed
-        add add_IsOverrideActiveChanged slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=203
+        add add_IsOverrideActiveChanged slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsOverrideActiveChanged slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26 reverse=215
+        remove remove_IsOverrideActiveChanged slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_supported_changed
-        add add_IsSupportedChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=187
+        add add_IsSupportedChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsSupportedChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26 reverse=200
+        remove remove_IsSupportedChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_default_for_system static
-        method GetDefaultForSystem slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 reverse=22 static
+        method GetDefaultForSystem slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 static
             out class type=Windows.Graphics.Display.BrightnessOverride return
     method get_for_current_view static
-        method GetForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 reverse=43 static
+        method GetForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 static
             out class type=Windows.Graphics.Display.BrightnessOverride return
     method get_level_for_scenario
-        method GetLevelForScenario slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=144
+        method GetLevelForScenario slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
             in enum32 type=Windows.Graphics.Display.DisplayBrightnessScenario name=scenario
             out double return
     method save_for_system_async static
-        method SaveForSystemAsync slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=51 reverse=65 static
+        method SaveForSystemAsync slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=51 static
             in class type=Windows.Graphics.Display.BrightnessOverride name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method set_brightness_level
@@ -125,13 +125,13 @@ class Windows.Graphics.Display.BrightnessOverride python_type
             in double name=brightnessLevel
             in enum_u32 type=Windows.Graphics.Display.DisplayBrightnessOverrideOptions name=options
     method set_brightness_scenario
-        method SetBrightnessScenario slot=10 inputs=2 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51 reverse=124
+        method SetBrightnessScenario slot=10 inputs=2 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
             in enum32 type=Windows.Graphics.Display.DisplayBrightnessScenario name=scenario
             in enum_u32 type=Windows.Graphics.Display.DisplayBrightnessOverrideOptions name=options
     method start_override
-        method StartOverride slot=12 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=0 reverse=159
+        method StartOverride slot=12 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=0
     method stop_override
-        method StopOverride slot=13 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=0 reverse=169
+        method StopOverride slot=13 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=0
 
 class Windows.Graphics.Display.BrightnessOverrideSettings python_type
     py BrightnessOverrideSettings
@@ -140,13 +140,13 @@ class Windows.Graphics.Display.BrightnessOverrideSettings python_type
     requires Windows.Graphics.Display.IBrightnessOverrideSettings
     factory Windows.Graphics.Display.IBrightnessOverrideSettingsStatics
     property desired_level
-        get get_DesiredLevel slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettings shape=4 reverse=22
+        get get_DesiredLevel slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettings shape=4
             out double return
     property desired_nits
-        get get_DesiredNits slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettings shape=4 reverse=43
+        get get_DesiredNits slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettings shape=4
             out single return
     method create_from_display_brightness_override_scenario static
-        method CreateFromDisplayBrightnessOverrideScenario slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettingsStatics shape=51 reverse=65 static
+        method CreateFromDisplayBrightnessOverrideScenario slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettingsStatics shape=51 static
             in enum32 type=Windows.Graphics.Display.DisplayBrightnessOverrideScenario name=overrideScenario
             out class type=Windows.Graphics.Display.BrightnessOverrideSettings return
     method create_from_level static
@@ -165,10 +165,10 @@ class Windows.Graphics.Display.ColorOverrideSettings python_type
     requires Windows.Graphics.Display.IColorOverrideSettings
     factory Windows.Graphics.Display.IColorOverrideSettingsStatics
     property desired_display_color_override_scenario
-        get get_DesiredDisplayColorOverrideScenario slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IColorOverrideSettings shape=4 reverse=22
+        get get_DesiredDisplayColorOverrideScenario slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IColorOverrideSettings shape=4
             out enum32 type=Windows.Graphics.Display.DisplayColorOverrideScenario return
     method create_from_display_color_override_scenario static
-        method CreateFromDisplayColorOverrideScenario slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IColorOverrideSettingsStatics shape=51 reverse=24 static
+        method CreateFromDisplayColorOverrideScenario slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IColorOverrideSettingsStatics shape=51 static
             in enum32 type=Windows.Graphics.Display.DisplayColorOverrideScenario name=overrideScenario
             out class type=Windows.Graphics.Display.ColorOverrideSettings return
 
@@ -205,49 +205,49 @@ class Windows.Graphics.Display.DisplayEnhancementOverride python_type
     requires Windows.Graphics.Display.IDisplayEnhancementOverride
     factory Windows.Graphics.Display.IDisplayEnhancementOverrideStatics
     property color_override_settings
-        get get_ColorOverrideSettings slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=22
+        get get_ColorOverrideSettings slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             out class type=Windows.Graphics.Display.ColorOverrideSettings return
-        put put_ColorOverrideSettings slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=43
+        put put_ColorOverrideSettings slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             in class type=Windows.Graphics.Display.ColorOverrideSettings name=value
     property brightness_override_settings
-        get get_BrightnessOverrideSettings slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=62
+        get get_BrightnessOverrideSettings slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             out class type=Windows.Graphics.Display.BrightnessOverrideSettings return
-        put put_BrightnessOverrideSettings slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=99
+        put put_BrightnessOverrideSettings slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             in class type=Windows.Graphics.Display.BrightnessOverrideSettings name=value
     property can_override
-        get get_CanOverride slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=121
+        get get_CanOverride slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             out boolean return
     property is_override_active
-        get get_IsOverrideActive slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=141
+        get get_IsOverrideActive slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             out boolean return
     event can_override_changed
-        add add_CanOverrideChanged slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51 reverse=196
+        add add_CanOverrideChanged slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CanOverrideChanged slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26 reverse=397
+        remove remove_CanOverrideChanged slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_enhancement_override_capabilities_changed
-        add add_DisplayEnhancementOverrideCapabilitiesChanged slot=19 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51 reverse=224
+        add add_DisplayEnhancementOverrideCapabilitiesChanged slot=19 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DisplayEnhancementOverrideCapabilitiesChanged slot=20 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26 reverse=399
+        remove remove_DisplayEnhancementOverrideCapabilitiesChanged slot=20 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_override_active_changed
-        add add_IsOverrideActiveChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51 reverse=211
+        add add_IsOverrideActiveChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsOverrideActiveChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26 reverse=398
+        remove remove_IsOverrideActiveChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_display_enhancement_override_capabilities
-        method GetCurrentDisplayEnhancementOverrideCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4 reverse=162
+        method GetCurrentDisplayEnhancementOverrideCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
             out class type=Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideStatics shape=4 static
             out class type=Windows.Graphics.Display.DisplayEnhancementOverride return
     method request_override
-        method RequestOverride slot=13 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=0 reverse=169
+        method RequestOverride slot=13 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=0
     method stop_override
-        method StopOverride slot=14 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=0 reverse=185
+        method StopOverride slot=14 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=0
 
 class Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities python_type
     py DisplayEnhancementOverrideCapabilities
@@ -255,13 +255,13 @@ class Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities python_typ
     default Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities
     requires Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities
     property is_brightness_control_supported
-        get get_IsBrightnessControlSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4 reverse=22
+        get get_IsBrightnessControlSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4
             out boolean return
     property is_brightness_nits_control_supported
-        get get_IsBrightnessNitsControlSupported slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4 reverse=43
+        get get_IsBrightnessNitsControlSupported slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4
             out boolean return
     method get_supported_nit_ranges
-        method GetSupportedNitRanges slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4 reverse=62
+        method GetSupportedNitRanges slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> return
 
 class Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs python_type
@@ -270,7 +270,7 @@ class Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEven
     default Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs
     requires Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs
     property capabilities
-        get get_Capabilities slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs shape=4 reverse=22
+        get get_Capabilities slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs shape=4
             out class type=Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities return
 
 class Windows.Graphics.Display.DisplayInformation python_type
@@ -284,87 +284,87 @@ class Windows.Graphics.Display.DisplayInformation python_type
     requires Windows.Graphics.Display.IDisplayInformation5
     factory Windows.Graphics.Display.IDisplayInformationStatics
     property current_orientation
-        get get_CurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=22
+        get get_CurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
     property logical_dpi
-        get get_LogicalDpi slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=141
+        get get_LogicalDpi slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out single return
     property native_orientation
-        get get_NativeOrientation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=43
+        get get_NativeOrientation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
     property raw_dpi_x
-        get get_RawDpiX slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=162
+        get get_RawDpiX slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out single return
     property raw_dpi_y
-        get get_RawDpiY slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=173
+        get get_RawDpiY slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out single return
     property resolution_scale
-        get get_ResolutionScale slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=121
+        get get_ResolutionScale slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out enum32 type=Windows.Graphics.Display.ResolutionScale return
     property stereo_enabled
-        get get_StereoEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=202
+        get get_StereoEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out boolean return
     property raw_pixels_per_view_pixel
-        get get_RawPixelsPerViewPixel slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation2 shape=4 reverse=22
+        get get_RawPixelsPerViewPixel slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation2 shape=4
             out double return
     property diagonal_size_in_inches
-        get get_DiagonalSizeInInches slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation3 shape=4 reverse=22
+        get get_DiagonalSizeInInches slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation3 shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property screen_height_in_raw_pixels
-        get get_ScreenHeightInRawPixels slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation4 shape=4 reverse=43
+        get get_ScreenHeightInRawPixels slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation4 shape=4
             out uint32 return
     property screen_width_in_raw_pixels
-        get get_ScreenWidthInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation4 shape=4 reverse=22
+        get get_ScreenWidthInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation4 shape=4
             out uint32 return
     property auto_rotation_preferences static
-        get get_AutoRotationPreferences slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 reverse=43 static
+        get get_AutoRotationPreferences slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 static
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
-        put put_AutoRotationPreferences slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 reverse=62 static
+        put put_AutoRotationPreferences slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 static
             in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
     event color_profile_changed
-        add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=229
+        add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=234
+        remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dpi_changed
-        add add_DpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=187
+        add add_DpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=200
+        remove remove_DpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event orientation_changed
-        add add_OrientationChanged slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=65
+        add add_OrientationChanged slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OrientationChanged slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=110
+        remove remove_OrientationChanged slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stereo_enabled_changed
-        add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51 reverse=211
+        add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26 reverse=398
+        remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event advanced_color_info_changed
-        add add_AdvancedColorInfoChanged slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=51 reverse=44
+        add add_AdvancedColorInfoChanged slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AdvancedColorInfoChanged slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=26 reverse=82
+        remove remove_AdvancedColorInfoChanged slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_contents_invalidated static
-        add add_DisplayContentsInvalidated slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=51 reverse=100 static
+        add add_DisplayContentsInvalidated slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=51 static
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DisplayContentsInvalidated slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=26 reverse=134 static
+        remove remove_DisplayContentsInvalidated slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_advanced_color_info
-        method GetAdvancedColorInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=4 reverse=22
+        method GetAdvancedColorInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=4
             out class type=Windows.Graphics.Display.AdvancedColorInfo return
     method get_color_profile_async
-        method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4 reverse=223
+        method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 static
             out class type=Windows.Graphics.Display.DisplayInformation return
 
 enum Windows.Graphics.Display.DisplayOrientations python_type flags_enum
@@ -380,57 +380,57 @@ class Windows.Graphics.Display.DisplayProperties static python_type
     py DisplayProperties
     factory Windows.Graphics.Display.IDisplayPropertiesStatics
     property auto_rotation_preferences static
-        get get_AutoRotationPreferences slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=62 static deprecated
+        get get_AutoRotationPreferences slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
-        put put_AutoRotationPreferences slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=99 static deprecated
+        put put_AutoRotationPreferences slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
     property current_orientation static
-        get get_CurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=22 static deprecated
+        get get_CurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
     property logical_dpi static
-        get get_LogicalDpi slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=173 static deprecated
+        get get_LogicalDpi slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out single return
     property native_orientation static
-        get get_NativeOrientation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=43 static deprecated
+        get get_NativeOrientation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
     property resolution_scale static
-        get get_ResolutionScale slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=162 static deprecated
+        get get_ResolutionScale slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out enum32 type=Windows.Graphics.Display.ResolutionScale return
     property stereo_enabled static
-        get get_StereoEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=202 static deprecated
+        get get_StereoEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out boolean return
     event color_profile_changed static
-        add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=229 static deprecated
+        add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=234 static deprecated
+        remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event display_contents_invalidated static
-        add add_DisplayContentsInvalidated slot=22 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=238 static deprecated
+        add add_DisplayContentsInvalidated slot=22 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DisplayContentsInvalidated slot=23 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=245 static deprecated
+        remove remove_DisplayContentsInvalidated slot=23 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event logical_dpi_changed static
-        add add_LogicalDpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=187 static deprecated
+        add add_LogicalDpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LogicalDpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=200 static deprecated
+        remove remove_LogicalDpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event orientation_changed static
-        add add_OrientationChanged slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=124 static deprecated
+        add add_OrientationChanged slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OrientationChanged slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=156 static deprecated
+        remove remove_OrientationChanged slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stereo_enabled_changed static
-        add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 reverse=211 static deprecated
+        add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
             in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 reverse=398 static deprecated
+        remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_color_profile_async static deprecated
-        method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 reverse=223 static deprecated
+        method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
 
 delegate Windows.Graphics.Display.DisplayPropertiesEventHandler python_type
@@ -448,7 +448,7 @@ class Windows.Graphics.Display.DisplayServices python_type
     requires Windows.Graphics.Display.IDisplayServices
     factory Windows.Graphics.Display.IDisplayServicesStatics
     method find_all static
-        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayServicesStatics shape=51 reverse=24 static
+        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayServicesStatics shape=51 static
             receive_array struct type=Windows.Graphics.DisplayId return
 
 enum Windows.Graphics.Display.HdrMetadataFormat python_type

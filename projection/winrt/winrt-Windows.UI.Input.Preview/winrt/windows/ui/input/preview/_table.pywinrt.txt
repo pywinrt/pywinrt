@@ -10,7 +10,7 @@ class Windows.UI.Input.Preview.InputActivationListenerPreview static python_type
     py InputActivationListenerPreview
     factory Windows.UI.Input.Preview.IInputActivationListenerPreviewStatics
     method create_for_application_window static
-        method CreateForApplicationWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.IInputActivationListenerPreviewStatics shape=51 reverse=24 static
+        method CreateForApplicationWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.IInputActivationListenerPreviewStatics shape=51 static
             in class type=Windows.UI.WindowManagement.AppWindow name=window
             out class type=Windows.UI.Input.InputActivationListener return
 

@@ -443,28 +443,28 @@ class Windows.Services.Maps.LocalSearch.LocalCategories static python_type
     py LocalCategories
     factory Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics
     property all static
-        get get_All slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=121 static
+        get get_All slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property bank_and_credit_unions static
-        get get_BankAndCreditUnions slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=22 static
+        get get_BankAndCreditUnions slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property eat_drink static
-        get get_EatDrink slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=43 static
+        get get_EatDrink slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property hospitals static
-        get get_Hospitals slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=62 static
+        get get_Hospitals slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property hotels_and_motels static
-        get get_HotelsAndMotels slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=99 static
+        get get_HotelsAndMotels slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property parking static
-        get get_Parking slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=141 static
+        get get_Parking slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property see_do static
-        get get_SeeDo slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=162 static
+        get get_SeeDo slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
     property shop static
-        get get_Shop slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 reverse=173 static
+        get get_Shop slot=13 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalCategoriesStatics shape=4 static
             out string return
 
 class Windows.Services.Maps.LocalSearch.LocalLocation python_type
@@ -474,41 +474,41 @@ class Windows.Services.Maps.LocalSearch.LocalLocation python_type
     requires Windows.Services.Maps.LocalSearch.ILocalLocation
     requires Windows.Services.Maps.LocalSearch.ILocalLocation2
     property address
-        get get_Address slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=22
+        get get_Address slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out class type=Windows.Services.Maps.MapAddress return
     property data_attribution
-        get get_DataAttribution slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=162
+        get get_DataAttribution slot=12 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out string return
     property description
-        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=62
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out string return
     property display_name
-        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=99
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out string return
     property identifier
-        get get_Identifier slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=43
+        get get_Identifier slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out string return
     property phone_number
-        get get_PhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=141
+        get get_PhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out string return
     property point
-        get get_Point slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4 reverse=121
+        get get_Point slot=10 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation shape=4
             out class type=Windows.Devices.Geolocation.Geopoint return
     property category
-        get get_Category slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4 reverse=22
+        get get_Category slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4
             out string return
     property hours_of_operation
-        get get_HoursOfOperation slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4 reverse=62
+        get get_HoursOfOperation slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem> return
     property rating_info
-        get get_RatingInfo slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4 reverse=43
+        get get_RatingInfo slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocation2 shape=4
             out class type=Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo return
 
 class Windows.Services.Maps.LocalSearch.LocalLocationFinder static python_type
     py LocalLocationFinder
     factory Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics
     method find_local_locations_async static
-        method FindLocalLocationsAsync slot=6 inputs=4 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics shape=239 reverse=27 static
+        method FindLocalLocationsAsync slot=6 inputs=4 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderStatics shape=239 static
             in string name=searchTerm
             in class type=Windows.Devices.Geolocation.Geocircle name=searchArea
             in string name=localCategory
@@ -521,10 +521,10 @@ class Windows.Services.Maps.LocalSearch.LocalLocationFinderResult python_type
     default Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult
     requires Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult
     property local_locations
-        get get_LocalLocations slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult shape=4 reverse=22
+        get get_LocalLocations slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Maps.LocalSearch.LocalLocation> return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationFinderResult shape=4
             out enum32 type=Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus return
 
 enum Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus python_type
@@ -545,13 +545,13 @@ class Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem python
     default Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem
     requires Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem
     property day
-        get get_Day slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4 reverse=22
+        get get_Day slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4
             out enum32 type=Windows.Globalization.DayOfWeek return
     property span
-        get get_Span slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4 reverse=62
+        get get_Span slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4
             out timespan return
     property start
-        get get_Start slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4 reverse=43
+        get get_Start slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationHoursOfOperationItem shape=4
             out timespan return
 
 class Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo python_type
@@ -560,20 +560,20 @@ class Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo python_type
     default Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo
     requires Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo
     property aggregate_rating
-        get get_AggregateRating slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4 reverse=22
+        get get_AggregateRating slot=6 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property provider_identifier
-        get get_ProviderIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4 reverse=62
+        get get_ProviderIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4
             out string return
     property rating_count
-        get get_RatingCount slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4 reverse=43
+        get get_RatingCount slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.LocalSearch.ILocalLocationRatingInfo shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
 
 class Windows.Services.Maps.LocalSearch.PlaceInfoHelper static python_type
     py PlaceInfoHelper
     factory Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics
     method create_from_local_location static
-        method CreateFromLocalLocation slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics shape=51 reverse=24 static
+        method CreateFromLocalLocation slot=6 inputs=1 outputs=1 declaring=Windows.Services.Maps.LocalSearch.IPlaceInfoHelperStatics shape=51 static
             in class type=Windows.Services.Maps.LocalSearch.LocalLocation name=location
             out class type=Windows.Services.Maps.PlaceInfo return
 

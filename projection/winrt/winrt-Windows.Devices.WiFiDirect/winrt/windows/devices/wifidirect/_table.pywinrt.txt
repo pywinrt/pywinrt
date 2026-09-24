@@ -412,25 +412,25 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisement python_type
     requires Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement
     requires Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2
     property listen_state_discoverability
-        get get_ListenStateDiscoverability slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=62
+        get get_ListenStateDiscoverability slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability return
-        put put_ListenStateDiscoverability slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=99
+        put put_ListenStateDiscoverability slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability name=value
     property is_autonomous_group_owner_enabled
-        get get_IsAutonomousGroupOwnerEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=121
+        get get_IsAutonomousGroupOwnerEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             out boolean return
-        put put_IsAutonomousGroupOwnerEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=141
+        put put_IsAutonomousGroupOwnerEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             in boolean name=value
     property information_elements
-        get get_InformationElements slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=22
+        get get_InformationElements slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
-        put put_InformationElements slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=43
+        put put_InformationElements slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> name=value
     property legacy_settings
-        get get_LegacySettings slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4 reverse=162
+        get get_LegacySettings slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement shape=4
             out class type=Windows.Devices.WiFiDirect.WiFiDirectLegacySettings return
     property supported_configuration_methods
-        get get_SupportedConfigurationMethods slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2 shape=4 reverse=22
+        get get_SupportedConfigurationMethods slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisement2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> return
 
 enum Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability python_type
@@ -449,21 +449,21 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property advertisement
-        get get_Advertisement slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=4 reverse=22
+        get get_Advertisement slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=4
             out class type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisement return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=4
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus return
     event status_changed
-        add add_StatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=51 reverse=65
+        add add_StatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher,Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=26 reverse=110
+        remove remove_StatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=10 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=0 reverse=117
+        method Start slot=10 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=0
     method stop
-        method Stop slot=11 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=0 reverse=137
+        method Stop slot=11 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisher shape=0
 
 enum Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus python_type
     py WiFiDirectAdvertisementPublisherStatus
@@ -479,10 +479,10 @@ class Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEv
     default Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs
     requires Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs
     property error
-        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs shape=4 reverse=43
+        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs shape=4
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectError return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectAdvertisementPublisherStatusChangedEventArgs shape=4
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatus return
 
 enum Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod python_type
@@ -501,10 +501,10 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionListener activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     event connection_requested
-        add add_ConnectionRequested slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener shape=51 reverse=24
+        add add_ConnectionRequested slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectConnectionListener,Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ConnectionRequested slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener shape=26 reverse=53
+        remove remove_ConnectionRequested slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters activatable python_type
@@ -519,20 +519,20 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property group_owner_intent
-        get get_GroupOwnerIntent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters shape=4 reverse=22
+        get get_GroupOwnerIntent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters shape=4
             out int16 return
-        put put_GroupOwnerIntent slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters shape=4 reverse=43
+        put put_GroupOwnerIntent slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters shape=4
             in int16 name=value
     property preferred_pairing_procedure
-        get get_PreferredPairingProcedure slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 shape=4 reverse=43
+        get get_PreferredPairingProcedure slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 shape=4
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure return
-        put put_PreferredPairingProcedure slot=8 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 shape=4 reverse=62
+        put put_PreferredPairingProcedure slot=8 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 shape=4
             in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure name=value
     property preference_ordered_configuration_methods
-        get get_PreferenceOrderedConfigurationMethods slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 shape=4 reverse=22
+        get get_PreferenceOrderedConfigurationMethods slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParameters2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod> return
     method get_device_pairing_kinds static
-        method GetDevicePairingKinds slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParametersStatics shape=51 reverse=24 static
+        method GetDevicePairingKinds slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionParametersStatics shape=51 static
             in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod name=configurationMethod
             out enum_u32 type=Windows.Devices.Enumeration.DevicePairingKinds return
 
@@ -543,7 +543,7 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest python_type closeab
     requires Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest
     requires Windows.Foundation.IClosable
     property device_information
-        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest shape=4 reverse=22
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequest shape=4
             out class type=Windows.Devices.Enumeration.DeviceInformation return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -554,7 +554,7 @@ class Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs python_t
     default Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs
     requires Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs
     method get_connection_request
-        method GetConnectionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs shape=4 reverse=22
+        method GetConnectionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectConnectionRequestedEventArgs shape=4
             out class type=Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest return
 
 enum Windows.Devices.WiFiDirect.WiFiDirectConnectionStatus python_type
@@ -572,34 +572,34 @@ class Windows.Devices.WiFiDirect.WiFiDirectDevice python_type closeable
     factory Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics
     factory Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2
     property connection_status
-        get get_ConnectionStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=4 reverse=22
+        get get_ConnectionStatus slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=4
             out enum32 type=Windows.Devices.WiFiDirect.WiFiDirectConnectionStatus return
     property device_id
-        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=4 reverse=43
+        get get_DeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=4
             out string return
     event connection_status_changed
-        add add_ConnectionStatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=51 reverse=65
+        add add_ConnectionStatusChanged slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.WiFiDirectDevice,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ConnectionStatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=26 reverse=110
+        remove remove_ConnectionStatusChanged slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> return
-        method FromIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2 shape=117 reverse=45 static
+        method FromIdAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2 shape=117 static
             in string name=deviceId
             in class type=Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters name=connectionParameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.WiFiDirectDevice> return
     method get_connection_endpoint_pairs
-        method GetConnectionEndpointPairs slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=4 reverse=121
+        method GetConnectionEndpointPairs slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDevice shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics shape=4 reverse=22 static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics shape=4 static
             out string return
-        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2 shape=51 reverse=24 static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectDeviceStatics2 shape=51 static
             in enum32 type=Windows.Devices.WiFiDirect.WiFiDirectDeviceSelectorType name=type
             out string return
 
@@ -626,26 +626,26 @@ class Windows.Devices.WiFiDirect.WiFiDirectInformationElement activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4 reverse=141
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property oui_type
-        get get_OuiType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4 reverse=62
+        get get_OuiType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4
             out uint8 return
-        put put_OuiType slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4 reverse=99
+        put put_OuiType slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4
             in uint8 name=value
     property oui
-        get get_Oui slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4 reverse=22
+        get get_Oui slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Oui slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4 reverse=43
+        put put_Oui slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElement shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     method create_from_buffer static
-        method CreateFromBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics shape=51 reverse=24 static
+        method CreateFromBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
     method create_from_device_information static
-        method CreateFromDeviceInformation slot=7 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics shape=51 reverse=44 static
+        method CreateFromDeviceInformation slot=7 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectInformationElementStatics shape=51 static
             in class type=Windows.Devices.Enumeration.DeviceInformation name=deviceInformation
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> return
 
@@ -655,19 +655,19 @@ class Windows.Devices.WiFiDirect.WiFiDirectLegacySettings python_type
     default Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings
     requires Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings
     property ssid
-        get get_Ssid slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4 reverse=62
+        get get_Ssid slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4
             out string return
-        put put_Ssid slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4 reverse=99
+        put put_Ssid slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4
             in string name=value
     property passphrase
-        get get_Passphrase slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4 reverse=121
+        get get_Passphrase slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4
             out class type=Windows.Security.Credentials.PasswordCredential return
-        put put_Passphrase slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4 reverse=141
+        put put_Passphrase slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4
             in class type=Windows.Security.Credentials.PasswordCredential name=value
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4
             out boolean return
-        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4 reverse=43
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.IWiFiDirectLegacySettings shape=4
             in boolean name=value
 
 enum Windows.Devices.WiFiDirect.WiFiDirectPairingProcedure python_type

@@ -12,30 +12,30 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement activatab
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property local_name
-        get get_LocalName slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=62
+        get get_LocalName slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             out string return
-        put put_LocalName slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=99
+        put put_LocalName slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             in string name=value
     property flags
-        get get_Flags slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=22
+        get get_Flags slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             out reference type=Windows.Foundation.IReference<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags> return
-        put put_Flags slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=43
+        put put_Flags slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             in reference type=Windows.Foundation.IReference<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags> name=value
     property data_sections
-        get get_DataSections slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=162
+        get get_DataSections slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> return
     property manufacturer_data
-        get get_ManufacturerData slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=141
+        get get_ManufacturerData slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> return
     property service_uuids
-        get get_ServiceUuids slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4 reverse=121
+        get get_ServiceUuids slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.Guid> return
     method get_manufacturer_data_by_company_id
-        method GetManufacturerDataByCompanyId slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=51 reverse=174
+        method GetManufacturerDataByCompanyId slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=51
             in uint16 name=companyId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData> return
     method get_sections_by_type
-        method GetSectionsByType slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=51 reverse=187
+        method GetSectionsByType slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisement shape=51
             in uint8 name=type
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection> return
 
@@ -48,25 +48,25 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePatter
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePatternFactory shape=195
             in uint8 name=dataType
             in int16 name=offset
             in interface type=Windows.Storage.Streams.IBuffer name=data
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern return
     property offset
-        get get_Offset slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4 reverse=62
+        get get_Offset slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4
             out int16 return
-        put put_Offset slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4 reverse=99
+        put put_Offset slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4
             in int16 name=value
     property data_type
-        get get_DataType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4 reverse=22
+        get get_DataType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4
             out uint8 return
-        put put_DataType slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4 reverse=43
+        put put_DataType slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4
             in uint8 name=value
     property data
-        get get_Data slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4 reverse=121
+        get get_Data slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Data slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4 reverse=141
+        put put_Data slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementBytePattern shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection activatable python_type
@@ -78,89 +78,89 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSectio
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSectionFactory shape=117
             in uint8 name=dataType
             in interface type=Windows.Storage.Streams.IBuffer name=data
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection return
     property data_type
-        get get_DataType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4 reverse=22
+        get get_DataType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4
             out uint8 return
-        put put_DataType slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4 reverse=43
+        put put_DataType slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4
             in uint8 name=value
     property data
-        get get_Data slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4 reverse=62
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Data slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4 reverse=99
+        put put_Data slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataSection shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes static python_type
     py BluetoothLEAdvertisementDataTypes
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics
     property advertising_interval static
-        get get_AdvertisingInterval slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=255 static
+        get get_AdvertisingInterval slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property appearance static
-        get get_Appearance slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=252 static
+        get get_Appearance slot=25 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property complete_local_name static
-        get get_CompleteLocalName slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=186 static
+        get get_CompleteLocalName slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property complete_service128_bit_uuids static
-        get get_CompleteService128BitUuids slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=162 static
+        get get_CompleteService128BitUuids slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property complete_service16_bit_uuids static
-        get get_CompleteService16BitUuids slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=62 static
+        get get_CompleteService16BitUuids slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property complete_service32_bit_uuids static
-        get get_CompleteService32BitUuids slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=121 static
+        get get_CompleteService32BitUuids slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property flags static
-        get get_Flags slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=22 static
+        get get_Flags slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property incomplete_service128_bit_uuids static
-        get get_IncompleteService128BitUuids slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=141 static
+        get get_IncompleteService128BitUuids slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property incomplete_service16_bit_uuids static
-        get get_IncompleteService16BitUuids slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=43 static
+        get get_IncompleteService16BitUuids slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property incomplete_service32_bit_uuids static
-        get get_IncompleteService32BitUuids slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=99 static
+        get get_IncompleteService32BitUuids slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property manufacturer_specific_data static
-        get get_ManufacturerSpecificData slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=259 static
+        get get_ManufacturerSpecificData slot=27 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property peripheral_connection_interval_range static
-        get get_PeripheralConnectionIntervalRange slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=202 static
+        get get_PeripheralConnectionIntervalRange slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property public_target_address static
-        get get_PublicTargetAddress slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=242 static
+        get get_PublicTargetAddress slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property random_target_address static
-        get get_RandomTargetAddress slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=247 static
+        get get_RandomTargetAddress slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property service_data128_bit_uuids static
-        get get_ServiceData128BitUuids slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=237 static
+        get get_ServiceData128BitUuids slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property service_data16_bit_uuids static
-        get get_ServiceData16BitUuids slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=228 static
+        get get_ServiceData16BitUuids slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property service_data32_bit_uuids static
-        get get_ServiceData32BitUuids slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=232 static
+        get get_ServiceData32BitUuids slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property service_solicitation128_bit_uuids static
-        get get_ServiceSolicitation128BitUuids slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=223 static
+        get get_ServiceSolicitation128BitUuids slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property service_solicitation16_bit_uuids static
-        get get_ServiceSolicitation16BitUuids slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=210 static
+        get get_ServiceSolicitation16BitUuids slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property service_solicitation32_bit_uuids static
-        get get_ServiceSolicitation32BitUuids slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=218 static
+        get get_ServiceSolicitation32BitUuids slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property shortened_local_name static
-        get get_ShortenedLocalName slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=173 static
+        get get_ShortenedLocalName slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
     property tx_power_level static
-        get get_TxPowerLevel slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 reverse=194 static
+        get get_TxPowerLevel slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementDataTypesStatics shape=4 static
             out uint8 return
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter activatable python_type
@@ -172,12 +172,12 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter act
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property advertisement
-        get get_Advertisement slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4 reverse=22
+        get get_Advertisement slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement return
-        put put_Advertisement slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4 reverse=43
+        put put_Advertisement slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement name=value
     property byte_patterns
-        get get_BytePatterns slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4 reverse=62
+        get get_BytePatterns slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementBytePattern> return
 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFlags python_type flags_enum
@@ -209,55 +209,55 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher 
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherFactory shape=51
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement name=advertisement
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher return
     property advertisement
-        get get_Advertisement slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=4 reverse=43
+        get get_Advertisement slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=4
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus return
     property use_extended_advertisement
-        get get_UseExtendedAdvertisement slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=62
+        get get_UseExtendedAdvertisement slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             out boolean return
-        put put_UseExtendedAdvertisement slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=99
+        put put_UseExtendedAdvertisement slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             in boolean name=value
     property preferred_transmit_power_level_in_dbm
-        get get_PreferredTransmitPowerLevelInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=22
+        get get_PreferredTransmitPowerLevelInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             out reference type=Windows.Foundation.IReference<System.Int16> return
-        put put_PreferredTransmitPowerLevelInDBm slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=43
+        put put_PreferredTransmitPowerLevelInDBm slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             in reference type=Windows.Foundation.IReference<System.Int16> name=value
     property is_anonymous
-        get get_IsAnonymous slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=121
+        get get_IsAnonymous slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             out boolean return
-        put put_IsAnonymous slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=141
+        put put_IsAnonymous slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             in boolean name=value
     property include_transmit_power_level
-        get get_IncludeTransmitPowerLevel slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=162
+        get get_IncludeTransmitPowerLevel slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             out boolean return
-        put put_IncludeTransmitPowerLevel slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4 reverse=173
+        put put_IncludeTransmitPowerLevel slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher2 shape=4
             in boolean name=value
     property secondary_phy
-        get get_SecondaryPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4 reverse=62
+        get get_SecondaryPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType return
-        put put_SecondaryPhy slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4 reverse=99
+        put put_SecondaryPhy slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4
             in enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType name=value
     property primary_phy
-        get get_PrimaryPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4 reverse=22
+        get get_PrimaryPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType return
-        put put_PrimaryPhy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4 reverse=43
+        put put_PrimaryPhy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher3 shape=4
             in enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType name=value
     event status_changed
-        add add_StatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=51 reverse=124
+        add add_StatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher,Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=26 reverse=156
+        remove remove_StatusChanged slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=0 reverse=55
+        method Start slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=0
     method stop
-        method Stop slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=0 reverse=93
+        method Stop slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisher shape=0
 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus python_type
     py BluetoothLEAdvertisementPublisherStatus
@@ -276,13 +276,13 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherS
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2
     property error
-        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs shape=4 reverse=43
+        get get_Error slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs shape=4
             out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus return
     property selected_transmit_power_level_in_dbm
-        get get_SelectedTransmitPowerLevelInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2 shape=4 reverse=22
+        get get_SelectedTransmitPowerLevelInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementPublisherStatusChangedEventArgs2 shape=4
             out reference type=Windows.Foundation.IReference<System.Int16> return
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs python_type
@@ -293,46 +293,46 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEv
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3
     property advertisement
-        get get_Advertisement slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4 reverse=121
+        get get_Advertisement slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement return
     property advertisement_type
-        get get_AdvertisementType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4 reverse=62
+        get get_AdvertisementType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType return
     property bluetooth_address
-        get get_BluetoothAddress slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4 reverse=43
+        get get_BluetoothAddress slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4
             out uint64 return
     property raw_signal_strength_in_dbm
-        get get_RawSignalStrengthInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4 reverse=22
+        get get_RawSignalStrengthInDBm slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4
             out int16 return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4 reverse=99
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs shape=4
             out datetime return
     property bluetooth_address_type
-        get get_BluetoothAddressType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=22
+        get get_BluetoothAddressType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out enum32 type=Windows.Devices.Bluetooth.BluetoothAddressType return
     property is_anonymous
-        get get_IsAnonymous slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=62
+        get get_IsAnonymous slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out boolean return
     property is_connectable
-        get get_IsConnectable slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=99
+        get get_IsConnectable slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out boolean return
     property is_directed
-        get get_IsDirected slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=141
+        get get_IsDirected slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out boolean return
     property is_scan_response
-        get get_IsScanResponse slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=162
+        get get_IsScanResponse slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out boolean return
     property is_scannable
-        get get_IsScannable slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=121
+        get get_IsScannable slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out boolean return
     property transmit_power_level_in_dbm
-        get get_TransmitPowerLevelInDBm slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4 reverse=43
+        get get_TransmitPowerLevelInDBm slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs2 shape=4
             out reference type=Windows.Foundation.IReference<System.Int16> return
     property primary_phy
-        get get_PrimaryPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3 shape=4 reverse=22
+        get get_PrimaryPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3 shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType return
     property secondary_phy
-        get get_SecondaryPhy slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3 shape=4 reverse=43
+        get get_SecondaryPhy slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementReceivedEventArgs3 shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType return
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters python_type
@@ -342,16 +342,16 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParame
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParameters
     factory Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics
     property scan_interval
-        get get_ScanInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParameters shape=4 reverse=43
+        get get_ScanInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParameters shape=4
             out uint16 return
     property scan_window
-        get get_ScanWindow slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParameters shape=4 reverse=22
+        get get_ScanWindow slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParameters shape=4
             out uint16 return
     method coexistence_optimized static
-        method CoexistenceOptimized slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics shape=4 reverse=22 static
+        method CoexistenceOptimized slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters return
     method low_latency static
-        method LowLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics shape=4 reverse=43 static
+        method LowLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementScanParametersStatics shape=4 static
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters return
 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementType python_type
@@ -375,80 +375,80 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher ac
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherFactory shape=51
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter name=advertisementFilter
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher return
     property signal_strength_filter
-        get get_SignalStrengthFilter slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=173
+        get get_SignalStrengthFilter slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out class type=Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter return
-        put put_SignalStrengthFilter slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=186
+        put put_SignalStrengthFilter slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             in class type=Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter name=value
     property scanning_mode
-        get get_ScanningMode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=141
+        get get_ScanningMode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEScanningMode return
-        put put_ScanningMode slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=162
+        put put_ScanningMode slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             in enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEScanningMode name=value
     property advertisement_filter
-        get get_AdvertisementFilter slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=194
+        get get_AdvertisementFilter slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter return
-        put put_AdvertisementFilter slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=202
+        put put_AdvertisementFilter slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter name=value
     property max_out_of_range_timeout
-        get get_MaxOutOfRangeTimeout slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=99
+        get get_MaxOutOfRangeTimeout slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out timespan return
     property max_sampling_interval
-        get get_MaxSamplingInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=43
+        get get_MaxSamplingInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out timespan return
     property min_out_of_range_timeout
-        get get_MinOutOfRangeTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=62
+        get get_MinOutOfRangeTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out timespan return
     property min_sampling_interval
-        get get_MinSamplingInterval slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=22
+        get get_MinSamplingInterval slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out timespan return
     property status
-        get get_Status slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4 reverse=121
+        get get_Status slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=4
             out enum32 type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStatus return
     property allow_extended_advertisements
-        get get_AllowExtendedAdvertisements slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2 shape=4 reverse=22
+        get get_AllowExtendedAdvertisements slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2 shape=4
             out boolean return
-        put put_AllowExtendedAdvertisements slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2 shape=4 reverse=43
+        put put_AllowExtendedAdvertisements slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2 shape=4
             in boolean name=value
     property use_uncoded1_m_phy
-        get get_UseUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=22
+        get get_UseUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             out boolean return
-        put put_UseUncoded1MPhy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=43
+        put put_UseUncoded1MPhy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             in boolean name=value
     property use_hardware_filter
-        get get_UseHardwareFilter slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=162
+        get get_UseHardwareFilter slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             out boolean return
-        put put_UseHardwareFilter slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=173
+        put put_UseHardwareFilter slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             in boolean name=value
     property use_coded_phy
-        get get_UseCodedPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=62
+        get get_UseCodedPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             out boolean return
-        put put_UseCodedPhy slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=99
+        put put_UseCodedPhy slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             in boolean name=value
     property scan_parameters
-        get get_ScanParameters slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=121
+        get get_ScanParameters slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters return
-        put put_ScanParameters slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4 reverse=141
+        put put_ScanParameters slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             in class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters name=value
     event received
-        add add_Received slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=51 reverse=224
+        add add_Received slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher,Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Received slot=20 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=26 reverse=399
+        remove remove_Received slot=20 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=51 reverse=233
+        add add_Stopped slot=21 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher,Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=26 reverse=400
+        remove remove_Stopped slot=22 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=17 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=0 reverse=209
+        method Start slot=17 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=0
     method stop
-        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=0 reverse=217
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher shape=0
 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStatus python_type
     py BluetoothLEAdvertisementWatcherStatus
@@ -465,7 +465,7 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherSto
     default Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherStoppedEventArgs
     requires Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherStoppedEventArgs
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherStoppedEventArgs shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcherStoppedEventArgs shape=4
             out enum32 type=Windows.Devices.Bluetooth.BluetoothError return
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData activatable python_type
@@ -477,19 +477,19 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData activa
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerDataFactory shape=117
             in uint16 name=companyId
             in interface type=Windows.Storage.Streams.IBuffer name=data
             out class type=Windows.Devices.Bluetooth.Advertisement.BluetoothLEManufacturerData return
     property data
-        get get_Data slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4 reverse=62
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Data slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4 reverse=99
+        put put_Data slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property company_id
-        get get_CompanyId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4 reverse=22
+        get get_CompanyId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4
             out uint16 return
-        put put_CompanyId slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4 reverse=43
+        put put_CompanyId slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEManufacturerData shape=4
             in uint16 name=value
 
 enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEScanningMode python_type

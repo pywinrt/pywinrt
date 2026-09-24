@@ -140,31 +140,31 @@ class Windows.ApplicationModel.SocialInfo.SocialFeedChildItem activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=99 deprecated
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out datetime return
-        put put_Timestamp slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=26 reverse=134 deprecated
+        put put_Timestamp slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=26 deprecated
             in datetime name=value
     property target_uri
-        get get_TargetUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=141 deprecated
+        get get_TargetUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_TargetUri slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=162 deprecated
+        put put_TargetUri slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property shared_item
-        get get_SharedItem slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=186 deprecated
+        get get_SharedItem slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem return
-        put put_SharedItem slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=194 deprecated
+        put put_SharedItem slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             in class type=Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem name=value
     property author
-        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=22 deprecated
+        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialUserInfo return
     property primary_content
-        get get_PrimaryContent slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=43 deprecated
+        get get_PrimaryContent slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedContent return
     property secondary_content
-        get get_SecondaryContent slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=62 deprecated
+        get get_SecondaryContent slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedContent return
     property thumbnails
-        get get_Thumbnails slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 reverse=173 deprecated
+        get get_Thumbnails slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedChildItem shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> return
 
 class Windows.ApplicationModel.SocialInfo.SocialFeedContent python_type
@@ -173,19 +173,19 @@ class Windows.ApplicationModel.SocialInfo.SocialFeedContent python_type
     default Windows.ApplicationModel.SocialInfo.ISocialFeedContent
     requires Windows.ApplicationModel.SocialInfo.ISocialFeedContent
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 reverse=22 deprecated
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 deprecated
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 reverse=43 deprecated
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 deprecated
             in string name=value
     property target_uri
-        get get_TargetUri slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 reverse=121 deprecated
+        get get_TargetUri slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_TargetUri slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 reverse=141 deprecated
+        put put_TargetUri slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property message
-        get get_Message slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 reverse=62 deprecated
+        get get_Message slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 deprecated
             out string return
-        put put_Message slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 reverse=99 deprecated
+        put put_Message slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedContent shape=4 deprecated
             in string name=value
 
 class Windows.ApplicationModel.SocialInfo.SocialFeedItem activatable python_type
@@ -197,56 +197,56 @@ class Windows.ApplicationModel.SocialInfo.SocialFeedItem activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=99 deprecated
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out datetime return
-        put put_Timestamp slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=26 reverse=134 deprecated
+        put put_Timestamp slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=26 deprecated
             in datetime name=value
     property target_uri
-        get get_TargetUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=141 deprecated
+        get get_TargetUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_TargetUri slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=162 deprecated
+        put put_TargetUri slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property style
-        get get_Style slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=247 deprecated
+        get get_Style slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle return
-        put put_Style slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=252 deprecated
+        put put_Style slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle name=value
     property shared_item
-        get get_SharedItem slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=186 deprecated
+        get get_SharedItem slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem return
-        put put_SharedItem slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=194 deprecated
+        put put_SharedItem slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in class type=Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem name=value
     property remote_id
-        get get_RemoteId slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=228 deprecated
+        get get_RemoteId slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out string return
-        put put_RemoteId slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=232 deprecated
+        put put_RemoteId slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in string name=value
     property child_item
-        get get_ChildItem slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=237 deprecated
+        get get_ChildItem slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedChildItem return
-        put put_ChildItem slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=242 deprecated
+        put put_ChildItem slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in class type=Windows.ApplicationModel.SocialInfo.SocialFeedChildItem name=value
     property badge_style
-        get get_BadgeStyle slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=202 deprecated
+        get get_BadgeStyle slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out enum32 type=Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle return
-        put put_BadgeStyle slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=210 deprecated
+        put put_BadgeStyle slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in enum32 type=Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle name=value
     property badge_count_value
-        get get_BadgeCountValue slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=218 deprecated
+        get get_BadgeCountValue slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out int32 return
-        put put_BadgeCountValue slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=223 deprecated
+        put put_BadgeCountValue slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             in int32 name=value
     property author
-        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=22 deprecated
+        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialUserInfo return
     property thumbnails
-        get get_Thumbnails slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=173 deprecated
+        get get_Thumbnails slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> return
     property primary_content
-        get get_PrimaryContent slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=43 deprecated
+        get get_PrimaryContent slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedContent return
     property secondary_content
-        get get_SecondaryContent slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 reverse=62 deprecated
+        get get_SecondaryContent slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedContent return
 
 enum Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle python_type
@@ -271,27 +271,27 @@ class Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property timestamp
-        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=99 deprecated
+        get get_Timestamp slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             out datetime return
-        put put_Timestamp slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=26 reverse=134 deprecated
+        put put_Timestamp slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=26 deprecated
             in datetime name=value
     property thumbnail
-        get get_Thumbnail slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=186 deprecated
+        get get_Thumbnail slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail return
-        put put_Thumbnail slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=173 deprecated
+        put put_Thumbnail slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             in class type=Windows.ApplicationModel.SocialInfo.SocialItemThumbnail name=value
     property target_uri
-        get get_TargetUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=141 deprecated
+        get get_TargetUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_TargetUri slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=162 deprecated
+        put put_TargetUri slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property original_source
-        get get_OriginalSource slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=22 deprecated
+        get get_OriginalSource slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_OriginalSource slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=43 deprecated
+        put put_OriginalSource slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property content
-        get get_Content slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 reverse=62 deprecated
+        get get_Content slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialFeedSharedItem shape=4 deprecated
             out class type=Windows.ApplicationModel.SocialInfo.SocialFeedContent return
 
 enum Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode python_type
@@ -316,22 +316,22 @@ class Windows.ApplicationModel.SocialInfo.SocialItemThumbnail activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_uri
-        get get_TargetUri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 reverse=22 deprecated
+        get get_TargetUri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_TargetUri slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 reverse=43 deprecated
+        put put_TargetUri slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property image_uri
-        get get_ImageUri slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 reverse=62 deprecated
+        get get_ImageUri slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_ImageUri slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 reverse=99 deprecated
+        put put_ImageUri slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property bitmap_size
-        get get_BitmapSize slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 reverse=121 deprecated
+        get get_BitmapSize slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=4 deprecated
             out struct type=Windows.Graphics.Imaging.BitmapSize return
         put put_BitmapSize slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=36 deprecated
             in struct type=Windows.Graphics.Imaging.BitmapSize name=value
     method set_image_async deprecated
-        method SetImageAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=51 reverse=163 deprecated
+        method SetImageAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=51 deprecated
             in interface type=Windows.Storage.Streams.IInputStream name=image
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -341,24 +341,24 @@ class Windows.ApplicationModel.SocialInfo.SocialUserInfo python_type
     default Windows.ApplicationModel.SocialInfo.ISocialUserInfo
     requires Windows.ApplicationModel.SocialInfo.ISocialUserInfo
     property user_name
-        get get_UserName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=62 deprecated
+        get get_UserName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             out string return
-        put put_UserName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=99 deprecated
+        put put_UserName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             in string name=value
     property target_uri
-        get get_TargetUri slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=162 deprecated
+        get get_TargetUri slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_TargetUri slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=173 deprecated
+        put put_TargetUri slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     property remote_id
-        get get_RemoteId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=121 deprecated
+        get get_RemoteId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             out string return
-        put put_RemoteId slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=141 deprecated
+        put put_RemoteId slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             in string name=value
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=22 deprecated
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             out string return
-        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 reverse=43 deprecated
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialUserInfo shape=4 deprecated
             in string name=value
 
 interface Windows.Foundation.IAsyncAction external

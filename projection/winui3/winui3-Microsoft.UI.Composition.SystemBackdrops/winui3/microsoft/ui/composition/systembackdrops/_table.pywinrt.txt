@@ -19,29 +19,29 @@ class Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController activata
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property tint_opacity
-        get get_TintOpacity slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4 reverse=162
+        get get_TintOpacity slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4
             out single return
-        put put_TintOpacity slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=1 reverse=170
+        put put_TintOpacity slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=1
             in single name=value
     property tint_color
-        get get_TintColor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4 reverse=121
+        get get_TintColor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4
             out struct type=Windows.UI.Color return
-        put put_TintColor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=29 reverse=157
+        put put_TintColor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=29
             in struct type=Windows.UI.Color name=value
     property luminosity_opacity
-        get get_LuminosityOpacity slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4 reverse=62
+        get get_LuminosityOpacity slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4
             out single return
-        put put_LuminosityOpacity slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=1 reverse=94
+        put put_LuminosityOpacity slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=1
             in single name=value
     property fallback_color
-        get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4 reverse=22
+        get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=4
             out struct type=Windows.UI.Color return
         put put_FallbackColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController shape=29
             in struct type=Windows.UI.Color name=value
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController3 shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController3 shape=4
             out enum32 type=Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicKind return
-        put put_Kind slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController3 shape=4 reverse=43
+        put put_Kind slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController3 shape=4
             in enum32 type=Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicKind name=value
     property state
         get get_State slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=4 reverse=22
@@ -74,7 +74,7 @@ class Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController activata
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicControllerStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicControllerStatics shape=4 static
             out boolean return
     method remove_all_system_backdrop_targets
         method RemoveAllSystemBackdropTargets slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=0 reverse=55
@@ -83,7 +83,7 @@ class Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController activata
             in interface type=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop name=systemBackdropTarget
             out boolean return
     method reset_properties
-        method ResetProperties slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController2 shape=0 reverse=16
+        method ResetProperties slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IDesktopAcrylicController2 shape=0
     method set_system_backdrop_configuration
         method SetSystemBackdropConfiguration slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=4 reverse=121
             in class type=Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration name=configuration
@@ -331,29 +331,29 @@ class Microsoft.UI.Composition.SystemBackdrops.MicaController activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property tint_opacity
-        get get_TintOpacity slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4 reverse=162
+        get get_TintOpacity slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4
             out single return
-        put put_TintOpacity slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=1 reverse=170
+        put put_TintOpacity slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=1
             in single name=value
     property tint_color
-        get get_TintColor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4 reverse=121
+        get get_TintColor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4
             out struct type=Windows.UI.Color return
-        put put_TintColor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=29 reverse=157
+        put put_TintColor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=29
             in struct type=Windows.UI.Color name=value
     property luminosity_opacity
-        get get_LuminosityOpacity slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4 reverse=62
+        get get_LuminosityOpacity slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4
             out single return
-        put put_LuminosityOpacity slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=1 reverse=94
+        put put_LuminosityOpacity slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=1
             in single name=value
     property fallback_color
-        get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4 reverse=22
+        get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=4
             out struct type=Windows.UI.Color return
         put put_FallbackColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController shape=29
             in struct type=Windows.UI.Color name=value
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController2 shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController2 shape=4
             out enum32 type=Microsoft.UI.Composition.SystemBackdrops.MicaKind return
-        put put_Kind slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController2 shape=4 reverse=43
+        put put_Kind slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController2 shape=4
             in enum32 type=Microsoft.UI.Composition.SystemBackdrops.MicaKind name=value
     property state
         get get_State slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=4 reverse=22
@@ -386,7 +386,7 @@ class Microsoft.UI.Composition.SystemBackdrops.MicaController activatable python
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaControllerStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaControllerStatics shape=4 static
             out boolean return
     method remove_all_system_backdrop_targets
         method RemoveAllSystemBackdropTargets slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=0 reverse=55
@@ -395,7 +395,7 @@ class Microsoft.UI.Composition.SystemBackdrops.MicaController activatable python
             in interface type=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop name=systemBackdropTarget
             out boolean return
     method reset_properties
-        method ResetProperties slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController2 shape=0 reverse=55
+        method ResetProperties slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.IMicaController2 shape=0
     method set_system_backdrop_configuration
         method SetSystemBackdropConfiguration slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets shape=4 reverse=121
             in class type=Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration name=configuration
@@ -425,24 +425,24 @@ class Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration activ
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property theme
-        get get_Theme slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=162
+        get get_Theme slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             out enum32 type=Microsoft.UI.Composition.SystemBackdrops.SystemBackdropTheme return
-        put put_Theme slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=173
+        put put_Theme slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             in enum32 type=Microsoft.UI.Composition.SystemBackdrops.SystemBackdropTheme name=value
     property is_input_active
-        get get_IsInputActive slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=121
+        get get_IsInputActive slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             out boolean return
-        put put_IsInputActive slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=141
+        put put_IsInputActive slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             in boolean name=value
     property is_high_contrast
-        get get_IsHighContrast slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=62
+        get get_IsHighContrast slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             out boolean return
-        put put_IsHighContrast slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=99
+        put put_IsHighContrast slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             in boolean name=value
     property high_contrast_background_color
-        get get_HighContrastBackgroundColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=22
+        get get_HighContrastBackgroundColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_HighContrastBackgroundColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4 reverse=43
+        put put_HighContrastBackgroundColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropConfiguration shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
 
 enum Microsoft.UI.Composition.SystemBackdrops.SystemBackdropState python_type

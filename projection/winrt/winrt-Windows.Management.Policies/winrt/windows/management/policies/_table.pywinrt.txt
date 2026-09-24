@@ -13,12 +13,12 @@ class Windows.Management.Policies.NamedPolicy static python_type
     py NamedPolicy
     factory Windows.Management.Policies.INamedPolicyStatics
     method get_policy_from_path static
-        method GetPolicyFromPath slot=6 inputs=2 outputs=1 declaring=Windows.Management.Policies.INamedPolicyStatics shape=117 reverse=25 static
+        method GetPolicyFromPath slot=6 inputs=2 outputs=1 declaring=Windows.Management.Policies.INamedPolicyStatics shape=117 static
             in string name=area
             in string name=name
             out class type=Windows.Management.Policies.NamedPolicyData return
     method get_policy_from_path_for_user static
-        method GetPolicyFromPathForUser slot=7 inputs=3 outputs=1 declaring=Windows.Management.Policies.INamedPolicyStatics shape=195 reverse=46 static
+        method GetPolicyFromPathForUser slot=7 inputs=3 outputs=1 declaring=Windows.Management.Policies.INamedPolicyStatics shape=195 static
             in class type=Windows.System.User name=user
             in string name=area
             in string name=name
@@ -30,43 +30,43 @@ class Windows.Management.Policies.NamedPolicyData python_type
     default Windows.Management.Policies.INamedPolicyData
     requires Windows.Management.Policies.INamedPolicyData
     property area
-        get get_Area slot=6 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=22
+        get get_Area slot=6 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out string return
     property is_managed
-        get get_IsManaged slot=9 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=99
+        get get_IsManaged slot=9 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out boolean return
     property is_user_policy
-        get get_IsUserPolicy slot=10 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=121
+        get get_IsUserPolicy slot=10 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out boolean return
     property kind
-        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=62
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out enum32 type=Windows.Management.Policies.NamedPolicyKind return
     property name
-        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=43
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out string return
     property user
-        get get_User slot=11 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=141
+        get get_User slot=11 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out class type=Windows.System.User return
     event changed
-        add add_Changed slot=17 inputs=1 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=51 reverse=211
+        add add_Changed slot=17 inputs=1 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Policies.NamedPolicyData,System.Object> name=changedHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=18 inputs=1 outputs=0 declaring=Windows.Management.Policies.INamedPolicyData shape=26 reverse=398
+        remove remove_Changed slot=18 inputs=1 outputs=0 declaring=Windows.Management.Policies.INamedPolicyData shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_binary
-        method GetBinary slot=13 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=173
+        method GetBinary slot=13 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     method get_boolean
-        method GetBoolean slot=12 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=162
+        method GetBoolean slot=12 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out boolean return
     method get_int32
-        method GetInt32 slot=14 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=186
+        method GetInt32 slot=14 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out int32 return
     method get_int64
-        method GetInt64 slot=15 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=194
+        method GetInt64 slot=15 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out int64 return
     method get_string
-        method GetString slot=16 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4 reverse=202
+        method GetString slot=16 inputs=0 outputs=1 declaring=Windows.Management.Policies.INamedPolicyData shape=4
             out string return
 
 enum Windows.Management.Policies.NamedPolicyKind python_type

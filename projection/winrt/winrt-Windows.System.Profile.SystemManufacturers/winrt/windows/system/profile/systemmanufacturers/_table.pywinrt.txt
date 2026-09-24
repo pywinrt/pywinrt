@@ -24,20 +24,20 @@ class Windows.System.Profile.SystemManufacturers.OemSupportInfo python_type
     default Windows.System.Profile.SystemManufacturers.IOemSupportInfo
     requires Windows.System.Profile.SystemManufacturers.IOemSupportInfo
     property support_app_link
-        get get_SupportAppLink slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.IOemSupportInfo shape=4 reverse=43
+        get get_SupportAppLink slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.IOemSupportInfo shape=4
             out class type=Windows.Foundation.Uri return
     property support_link
-        get get_SupportLink slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.IOemSupportInfo shape=4 reverse=22
+        get get_SupportLink slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.IOemSupportInfo shape=4
             out class type=Windows.Foundation.Uri return
     property support_provider
-        get get_SupportProvider slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.IOemSupportInfo shape=4 reverse=62
+        get get_SupportProvider slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.IOemSupportInfo shape=4
             out string return
 
 class Windows.System.Profile.SystemManufacturers.SmbiosInformation static python_type
     py SmbiosInformation
     factory Windows.System.Profile.SystemManufacturers.ISmbiosInformationStatics
     property serial_number static
-        get get_SerialNumber slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISmbiosInformationStatics shape=4 reverse=22 static
+        get get_SerialNumber slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISmbiosInformationStatics shape=4 static
             out string return
 
 class Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo python_type
@@ -46,25 +46,25 @@ class Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo python_
     default Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo
     requires Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo
     property friendly_name
-        get get_FriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=43
+        get get_FriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
     property operating_system
-        get get_OperatingSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=22
+        get get_OperatingSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
     property system_firmware_version
-        get get_SystemFirmwareVersion slot=12 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=162
+        get get_SystemFirmwareVersion slot=12 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
     property system_hardware_version
-        get get_SystemHardwareVersion slot=11 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=141
+        get get_SystemHardwareVersion slot=11 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
     property system_manufacturer
-        get get_SystemManufacturer slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=62
+        get get_SystemManufacturer slot=8 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
     property system_product_name
-        get get_SystemProductName slot=9 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=99
+        get get_SystemProductName slot=9 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
     property system_sku
-        get get_SystemSku slot=10 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4 reverse=121
+        get get_SystemSku slot=10 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportDeviceInfo shape=4
             out string return
 
 class Windows.System.Profile.SystemManufacturers.SystemSupportInfo static python_type
@@ -72,13 +72,13 @@ class Windows.System.Profile.SystemManufacturers.SystemSupportInfo static python
     factory Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics
     factory Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics2
     property local_system_edition static
-        get get_LocalSystemEdition slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics shape=4 reverse=22 static
+        get get_LocalSystemEdition slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics shape=4 static
             out string return
     property oem_support_info static
-        get get_OemSupportInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics shape=4 reverse=43 static
+        get get_OemSupportInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics shape=4 static
             out class type=Windows.System.Profile.SystemManufacturers.OemSupportInfo return
     property local_device_info static
-        get get_LocalDeviceInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics2 shape=4 reverse=22 static
+        get get_LocalDeviceInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.SystemManufacturers.ISystemSupportInfoStatics2 shape=4 static
             out class type=Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo return
 
 class Windows.Foundation.Uri external

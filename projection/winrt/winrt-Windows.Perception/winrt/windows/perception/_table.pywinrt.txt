@@ -22,13 +22,13 @@ class Windows.Perception.PerceptionTimestamp python_type
     requires Windows.Perception.IPerceptionTimestamp
     requires Windows.Perception.IPerceptionTimestamp2
     property prediction_amount
-        get get_PredictionAmount slot=7 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp shape=4 reverse=43
+        get get_PredictionAmount slot=7 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp shape=4
             out timespan return
     property target_time
-        get get_TargetTime slot=6 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp shape=4 reverse=22
+        get get_TargetTime slot=6 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp shape=4
             out datetime return
     property system_relative_target_time
-        get get_SystemRelativeTargetTime slot=6 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp2 shape=4 reverse=22
+        get get_SystemRelativeTargetTime slot=6 inputs=0 outputs=1 declaring=Windows.Perception.IPerceptionTimestamp2 shape=4
             out timespan return
 
 class Windows.Perception.PerceptionTimestampHelper static python_type

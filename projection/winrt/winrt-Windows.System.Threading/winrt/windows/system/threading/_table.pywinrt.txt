@@ -16,14 +16,14 @@ class Windows.System.Threading.ThreadPool static python_type
     py ThreadPool
     factory Windows.System.Threading.IThreadPoolStatics
     method run_async static
-        method RunAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Threading.IThreadPoolStatics shape=51 reverse=24 static
+        method RunAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Threading.IThreadPoolStatics shape=51 static
             in delegate type=Windows.System.Threading.WorkItemHandler name=handler
             out interface type=Windows.Foundation.IAsyncAction return
-        method RunAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.Threading.IThreadPoolStatics shape=117 reverse=45 static
+        method RunAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.Threading.IThreadPoolStatics shape=117 static
             in delegate type=Windows.System.Threading.WorkItemHandler name=handler
             in enum32 type=Windows.System.Threading.WorkItemPriority name=priority
             out interface type=Windows.Foundation.IAsyncAction return
-        method RunAsync slot=8 inputs=3 outputs=1 declaring=Windows.System.Threading.IThreadPoolStatics shape=195 reverse=68 static
+        method RunAsync slot=8 inputs=3 outputs=1 declaring=Windows.System.Threading.IThreadPoolStatics shape=195 static
             in delegate type=Windows.System.Threading.WorkItemHandler name=handler
             in enum32 type=Windows.System.Threading.WorkItemPriority name=priority
             in enum_u32 type=Windows.System.Threading.WorkItemOptions name=options
@@ -36,13 +36,13 @@ class Windows.System.Threading.ThreadPoolTimer python_type
     requires Windows.System.Threading.IThreadPoolTimer
     factory Windows.System.Threading.IThreadPoolTimerStatics
     property delay
-        get get_Delay slot=7 inputs=0 outputs=1 declaring=Windows.System.Threading.IThreadPoolTimer shape=4 reverse=43
+        get get_Delay slot=7 inputs=0 outputs=1 declaring=Windows.System.Threading.IThreadPoolTimer shape=4
             out timespan return
     property period
-        get get_Period slot=6 inputs=0 outputs=1 declaring=Windows.System.Threading.IThreadPoolTimer shape=4 reverse=22
+        get get_Period slot=6 inputs=0 outputs=1 declaring=Windows.System.Threading.IThreadPoolTimer shape=4
             out timespan return
     method cancel
-        method Cancel slot=8 inputs=0 outputs=0 declaring=Windows.System.Threading.IThreadPoolTimer shape=0 reverse=55
+        method Cancel slot=8 inputs=0 outputs=0 declaring=Windows.System.Threading.IThreadPoolTimer shape=0
     method create_periodic_timer static
         method CreatePeriodicTimer slot=6 inputs=2 outputs=1 declaring=Windows.System.Threading.IThreadPoolTimerStatics shape=135 static
             in delegate type=Windows.System.Threading.TimerElapsedHandler name=handler

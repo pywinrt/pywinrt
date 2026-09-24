@@ -167,19 +167,19 @@ class Windows.Networking.PushNotifications.PushNotificationChannel python_type
     default Windows.Networking.PushNotifications.IPushNotificationChannel
     requires Windows.Networking.PushNotifications.IPushNotificationChannel
     property expiration_time
-        get get_ExpirationTime slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=4 reverse=43
+        get get_ExpirationTime slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=4
             out datetime return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=4
             out string return
     event push_notification_received
-        add add_PushNotificationReceived slot=9 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=51 reverse=100
+        add add_PushNotificationReceived slot=9 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.PushNotifications.PushNotificationChannel,Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PushNotificationReceived slot=10 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=26 reverse=134
+        remove remove_PushNotificationReceived slot=10 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
-        method Close slot=8 inputs=0 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=0 reverse=55
+        method Close slot=8 inputs=0 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannel shape=0
 
 class Windows.Networking.PushNotifications.PushNotificationChannelManager static python_type
     py PushNotificationChannelManager
@@ -188,26 +188,26 @@ class Windows.Networking.PushNotifications.PushNotificationChannelManager static
     factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3
     factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4
     event channels_revoked static
-        add add_ChannelsRevoked slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=51 reverse=24 static
+        add add_ChannelsRevoked slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ChannelsRevoked slot=7 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=26 reverse=53 static
+        remove remove_ChannelsRevoked slot=7 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_push_notification_channel_for_application_async static
-        method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=4 reverse=22 static
+        method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
-        method CreatePushNotificationChannelForApplicationAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=51 reverse=44 static
+        method CreatePushNotificationChannelForApplicationAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=51 static
             in string name=applicationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
     method create_push_notification_channel_for_secondary_tile_async static
-        method CreatePushNotificationChannelForSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=51 reverse=65 static
+        method CreatePushNotificationChannelForSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics shape=51 static
             in string name=tileId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3 shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3 shape=4 static
             out class type=Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2 shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser return
 
@@ -218,24 +218,24 @@ class Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser
     requires Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser
     requires Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2
     property user
-        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=4 reverse=99
+        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=4
             out class type=Windows.System.User return
     method create_push_notification_channel_for_application_async
-        method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=4 reverse=22
+        method CreatePushNotificationChannelForApplicationAsync slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
-        method CreatePushNotificationChannelForApplicationAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=51 reverse=44
+        method CreatePushNotificationChannelForApplicationAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=51
             in string name=applicationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
     method create_push_notification_channel_for_secondary_tile_async
-        method CreatePushNotificationChannelForSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=51 reverse=65
+        method CreatePushNotificationChannelForSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser shape=51
             in string name=tileId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
     method create_raw_push_notification_channel_with_alternate_key_for_application_async
-        method CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 shape=117 reverse=25
+        method CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync slot=6 inputs=2 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 shape=117
             in interface type=Windows.Storage.Streams.IBuffer name=appServerKey
             in string name=channelId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> return
-        method CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync slot=7 inputs=3 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 shape=195 reverse=46
+        method CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync slot=7 inputs=3 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2 shape=195
             in interface type=Windows.Storage.Streams.IBuffer name=appServerKey
             in string name=channelId
             in string name=appId
@@ -253,24 +253,24 @@ class Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs pyt
     default Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs
     requires Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs
     property cancel
-        get get_Cancel slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=43
+        get get_Cancel slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             out boolean return
-        put put_Cancel slot=6 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=22
+        put put_Cancel slot=6 inputs=1 outputs=0 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             in boolean name=value
     property badge_notification
-        get get_BadgeNotification slot=11 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=141
+        get get_BadgeNotification slot=11 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             out class type=Windows.UI.Notifications.BadgeNotification return
     property notification_type
-        get get_NotificationType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=62
+        get get_NotificationType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             out enum32 type=Windows.Networking.PushNotifications.PushNotificationType return
     property raw_notification
-        get get_RawNotification slot=12 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=162
+        get get_RawNotification slot=12 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             out class type=Windows.Networking.PushNotifications.RawNotification return
     property tile_notification
-        get get_TileNotification slot=10 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=121
+        get get_TileNotification slot=10 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             out class type=Windows.UI.Notifications.TileNotification return
     property toast_notification
-        get get_ToastNotification slot=9 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4 reverse=99
+        get get_ToastNotification slot=9 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs shape=4
             out class type=Windows.UI.Notifications.ToastNotification return
 
 enum Windows.Networking.PushNotifications.PushNotificationType python_type
@@ -290,16 +290,16 @@ class Windows.Networking.PushNotifications.RawNotification python_type
     requires Windows.Networking.PushNotifications.IRawNotification2
     requires Windows.Networking.PushNotifications.IRawNotification3
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification shape=4
             out string return
     property channel_id
-        get get_ChannelId slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification2 shape=4 reverse=43
+        get get_ChannelId slot=7 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification2 shape=4
             out string return
     property headers
-        get get_Headers slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification2 shape=4 reverse=22
+        get get_Headers slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification2 shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     property content_bytes
-        get get_ContentBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification3 shape=4 reverse=22
+        get get_ContentBytes slot=6 inputs=0 outputs=1 declaring=Windows.Networking.PushNotifications.IRawNotification3 shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.PushNotifications.PushNotificationChannel,Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs> concrete

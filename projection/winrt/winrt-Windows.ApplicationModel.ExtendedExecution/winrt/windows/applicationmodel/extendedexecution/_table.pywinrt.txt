@@ -33,7 +33,7 @@ class Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedEventAr
     default Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionRevokedEventArgs
     requires Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionRevokedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionRevokedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionRevokedEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedReason return
 
 enum Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedReason python_type
@@ -52,30 +52,30 @@ class Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionSession activa
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             out enum32 type=Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason return
-        put put_Reason slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=43
+        put put_Reason slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             in enum32 type=Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionReason name=value
     property percent_progress
-        get get_PercentProgress slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=121
+        get get_PercentProgress slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             out uint32 return
-        put put_PercentProgress slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=141
+        put put_PercentProgress slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             in uint32 name=value
     property description
-        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=62
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             out string return
-        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=99
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             in string name=value
     event revoked
-        add add_Revoked slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=51 reverse=163
+        add add_Revoked slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionRevokedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Revoked slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=26 reverse=181
+        remove remove_Revoked slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method request_extension_async
-        method RequestExtensionAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4 reverse=186
+        method RequestExtensionAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.IExtendedExecutionSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionResult> return
 
 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ExtendedExecution.ExtendedExecutionResult> concrete awaitable

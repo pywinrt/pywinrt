@@ -20,38 +20,38 @@ class Microsoft.Graphics.Display.DisplayAdvancedColorInfo python_type
     default Microsoft.Graphics.Display.IDisplayAdvancedColorInfo
     requires Microsoft.Graphics.Display.IDisplayAdvancedColorInfo
     property blue_primary
-        get get_BluePrimary slot=9 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=99
+        get get_BluePrimary slot=9 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     property current_advanced_color_kind
-        get get_CurrentAdvancedColorKind slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=22
+        get get_CurrentAdvancedColorKind slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out enum32 type=Microsoft.Graphics.Display.DisplayAdvancedColorKind return
     property green_primary
-        get get_GreenPrimary slot=8 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=62
+        get get_GreenPrimary slot=8 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     property max_average_full_frame_luminance_in_nits
-        get get_MaxAverageFullFrameLuminanceInNits slot=13 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=173
+        get get_MaxAverageFullFrameLuminanceInNits slot=13 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out double return
     property max_luminance_in_nits
-        get get_MaxLuminanceInNits slot=11 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=141
+        get get_MaxLuminanceInNits slot=11 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out double return
     property min_luminance_in_nits
-        get get_MinLuminanceInNits slot=12 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=162
+        get get_MinLuminanceInNits slot=12 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out double return
     property red_primary
-        get get_RedPrimary slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=43
+        get get_RedPrimary slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     property sdr_white_level_in_nits
-        get get_SdrWhiteLevelInNits slot=14 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=186
+        get get_SdrWhiteLevelInNits slot=14 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out double return
     property white_point
-        get get_WhitePoint slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4 reverse=121
+        get get_WhitePoint slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=4
             out struct type=Windows.Foundation.Point return
     method is_advanced_color_kind_available
-        method IsAdvancedColorKindAvailable slot=16 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=51 reverse=203
+        method IsAdvancedColorKindAvailable slot=16 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=51
             in enum32 type=Microsoft.Graphics.Display.DisplayAdvancedColorKind name=kind
             out boolean return
     method is_hdr_metadata_format_currently_supported
-        method IsHdrMetadataFormatCurrentlySupported slot=15 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=51 reverse=196
+        method IsHdrMetadataFormatCurrentlySupported slot=15 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayAdvancedColorInfo shape=51
             in enum32 type=Microsoft.Graphics.Display.DisplayHdrMetadataFormat name=format
             out boolean return
 
@@ -76,34 +76,34 @@ class Microsoft.Graphics.Display.DisplayInformation python_type closeable
     requires Windows.Foundation.IClosable
     factory Microsoft.Graphics.Display.IDisplayInformationStatics
     property dispatcher_queue
-        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4 reverse=22
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     property is_stereo_enabled
-        get get_IsStereoEnabled slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4 reverse=43
+        get get_IsStereoEnabled slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4
             out boolean return
     event advanced_color_info_changed
-        add add_AdvancedColorInfoChanged slot=15 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51 reverse=196
+        add add_AdvancedColorInfoChanged slot=15 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AdvancedColorInfoChanged slot=16 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26 reverse=397
+        remove remove_AdvancedColorInfoChanged slot=16 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event color_profile_changed
-        add add_ColorProfileChanged slot=12 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51 reverse=163
+        add add_ColorProfileChanged slot=12 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ColorProfileChanged slot=13 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26 reverse=181
+        remove remove_ColorProfileChanged slot=13 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event destroyed
-        add add_Destroyed slot=17 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51 reverse=211
+        add add_Destroyed slot=17 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Destroyed slot=18 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26 reverse=398
+        remove remove_Destroyed slot=18 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_stereo_enabled_changed
-        add add_IsStereoEnabledChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51 reverse=65
+        add add_IsStereoEnabledChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Display.DisplayInformation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsStereoEnabledChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26 reverse=110
+        remove remove_IsStereoEnabledChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -116,13 +116,13 @@ class Microsoft.Graphics.Display.DisplayInformation python_type closeable
             in struct type=Microsoft.UI.WindowId name=windowId
             out class type=Microsoft.Graphics.Display.DisplayInformation return
     method get_advanced_color_info
-        method GetAdvancedColorInfo slot=14 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4 reverse=186
+        method GetAdvancedColorInfo slot=14 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4
             out class type=Microsoft.Graphics.Display.DisplayAdvancedColorInfo return
     method get_color_profile
-        method GetColorProfile slot=11 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4 reverse=141
+        method GetColorProfile slot=11 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method get_color_profile_async
-        method GetColorProfileAsync slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4 reverse=121
+        method GetColorProfileAsync slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Display.IDisplayInformation shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete awaitable

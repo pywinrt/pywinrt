@@ -10,7 +10,7 @@ class Windows.Management.Core.ApplicationDataManager python_type
     requires Windows.Management.Core.IApplicationDataManager
     factory Windows.Management.Core.IApplicationDataManagerStatics
     method create_for_package_family static
-        method CreateForPackageFamily slot=6 inputs=1 outputs=1 declaring=Windows.Management.Core.IApplicationDataManagerStatics shape=51 reverse=24 static
+        method CreateForPackageFamily slot=6 inputs=1 outputs=1 declaring=Windows.Management.Core.IApplicationDataManagerStatics shape=51 static
             in string name=packageFamilyName
             out class type=Windows.Storage.ApplicationData return
 

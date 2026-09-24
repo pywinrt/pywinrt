@@ -86,17 +86,17 @@ class Windows.Media.DialProtocol.DialApp python_type
     default Windows.Media.DialProtocol.IDialApp
     requires Windows.Media.DialProtocol.IDialApp
     property app_name
-        get get_AppName slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=4 reverse=22
+        get get_AppName slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=4
             out string return
     method get_app_state_async
-        method GetAppStateAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=4 reverse=99
+        method GetAppStateAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.DialProtocol.DialAppStateDetails> return
     method request_launch_async
-        method RequestLaunchAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=51 reverse=44
+        method RequestLaunchAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=51
             in string name=appArgument
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.DialProtocol.DialAppLaunchResult> return
     method stop_async
-        method StopAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=4 reverse=62
+        method StopAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialApp shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.DialProtocol.DialAppStopResult> return
 
 enum Windows.Media.DialProtocol.DialAppLaunchResult python_type
@@ -121,10 +121,10 @@ class Windows.Media.DialProtocol.DialAppStateDetails python_type
     default Windows.Media.DialProtocol.IDialAppStateDetails
     requires Windows.Media.DialProtocol.IDialAppStateDetails
     property full_xml
-        get get_FullXml slot=7 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialAppStateDetails shape=4 reverse=43
+        get get_FullXml slot=7 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialAppStateDetails shape=4
             out string return
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialAppStateDetails shape=4 reverse=22
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialAppStateDetails shape=4
             out enum32 type=Windows.Media.DialProtocol.DialAppState return
 
 enum Windows.Media.DialProtocol.DialAppStopResult python_type
@@ -143,28 +143,28 @@ class Windows.Media.DialProtocol.DialDevice python_type
     requires Windows.Media.DialProtocol.IDialDevice2
     factory Windows.Media.DialProtocol.IDialDeviceStatics
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice shape=4
             out string return
     property friendly_name
-        get get_FriendlyName slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice2 shape=4 reverse=22
+        get get_FriendlyName slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice2 shape=4
             out string return
     property thumbnail
-        get get_Thumbnail slot=7 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice2 shape=4 reverse=43
+        get get_Thumbnail slot=7 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice2 shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     method device_info_supports_dial_async static
-        method DeviceInfoSupportsDialAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceStatics shape=51 reverse=65 static
+        method DeviceInfoSupportsDialAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceStatics shape=51 static
             in class type=Windows.Devices.Enumeration.DeviceInformation name=device
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceStatics shape=51 static
             in string name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.DialProtocol.DialDevice> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceStatics shape=51 reverse=24 static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceStatics shape=51 static
             in string name=appName
             out string return
     method get_dial_app
-        method GetDialApp slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice shape=51 reverse=44
+        method GetDialApp slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevice shape=51
             in string name=appName
             out class type=Windows.Media.DialProtocol.DialApp return
 
@@ -187,31 +187,31 @@ class Windows.Media.DialProtocol.DialDevicePicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property appearance
-        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=4 reverse=43
+        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=4
             out class type=Windows.Devices.Enumeration.DevicePickerAppearance return
     property filter
-        get get_Filter slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=4 reverse=22
+        get get_Filter slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=4
             out class type=Windows.Media.DialProtocol.DialDevicePickerFilter return
     event dial_device_picker_dismissed
-        add add_DialDevicePickerDismissed slot=12 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51 reverse=163
+        add add_DialDevicePickerDismissed slot=12 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.DialProtocol.DialDevicePicker,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DialDevicePickerDismissed slot=13 inputs=1 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=26 reverse=181
+        remove remove_DialDevicePickerDismissed slot=13 inputs=1 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dial_device_selected
-        add add_DialDeviceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51 reverse=65
+        add add_DialDeviceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.DialProtocol.DialDevicePicker,Windows.Media.DialProtocol.DialDeviceSelectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DialDeviceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=26 reverse=110
+        remove remove_DialDeviceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event disconnect_button_clicked
-        add add_DisconnectButtonClicked slot=10 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51 reverse=124
+        add add_DisconnectButtonClicked slot=10 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.DialProtocol.DialDevicePicker,Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DisconnectButtonClicked slot=11 inputs=1 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=26 reverse=156
+        remove remove_DisconnectButtonClicked slot=11 inputs=1 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method hide
-        method Hide slot=18 inputs=0 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=0 reverse=217
+        method Hide slot=18 inputs=0 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=0
     method pick_single_dial_device_async
         method PickSingleDialDeviceAsync slot=16 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=74
             in struct type=Windows.Foundation.Rect name=selection
@@ -221,7 +221,7 @@ class Windows.Media.DialProtocol.DialDevicePicker activatable python_type
             in enum32 type=Windows.UI.Popups.Placement name=preferredPlacement
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.DialProtocol.DialDevice> return
     method set_display_status
-        method SetDisplayStatus slot=19 inputs=2 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51 reverse=224
+        method SetDisplayStatus slot=19 inputs=2 outputs=0 declaring=Windows.Media.DialProtocol.IDialDevicePicker shape=51
             in class type=Windows.Media.DialProtocol.DialDevice name=device
             in enum32 type=Windows.Media.DialProtocol.DialDeviceDisplayStatus name=status
     method show
@@ -237,7 +237,7 @@ class Windows.Media.DialProtocol.DialDevicePickerFilter python_type
     default Windows.Media.DialProtocol.IDialDevicePickerFilter
     requires Windows.Media.DialProtocol.IDialDevicePickerFilter
     property supported_app_names
-        get get_SupportedAppNames slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePickerFilter shape=4 reverse=22
+        get get_SupportedAppNames slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDevicePickerFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Media.DialProtocol.DialDeviceSelectedEventArgs python_type
@@ -246,7 +246,7 @@ class Windows.Media.DialProtocol.DialDeviceSelectedEventArgs python_type
     default Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs
     requires Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs
     property selected_dial_device
-        get get_SelectedDialDevice slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs shape=4 reverse=22
+        get get_SelectedDialDevice slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDeviceSelectedEventArgs shape=4
             out class type=Windows.Media.DialProtocol.DialDevice return
 
 class Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs python_type
@@ -255,7 +255,7 @@ class Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs python_typ
     default Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs
     requires Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialDisconnectButtonClickedEventArgs shape=4
             out class type=Windows.Media.DialProtocol.DialDevice return
 
 class Windows.Media.DialProtocol.DialReceiverApp python_type
@@ -266,16 +266,16 @@ class Windows.Media.DialProtocol.DialReceiverApp python_type
     requires Windows.Media.DialProtocol.IDialReceiverApp2
     factory Windows.Media.DialProtocol.IDialReceiverAppStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverAppStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverAppStatics shape=4 static
             out class type=Windows.Media.DialProtocol.DialReceiverApp return
     method get_additional_data_async
-        method GetAdditionalDataAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverApp shape=4 reverse=22
+        method GetAdditionalDataAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverApp shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMap<System.String,System.String>> return
     method get_unique_device_name_async
-        method GetUniqueDeviceNameAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverApp2 shape=4 reverse=22
+        method GetUniqueDeviceNameAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverApp2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method set_additional_data_async
-        method SetAdditionalDataAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverApp shape=51 reverse=44
+        method SetAdditionalDataAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.DialProtocol.IDialReceiverApp shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=additionalData
             out interface type=Windows.Foundation.IAsyncAction return
 

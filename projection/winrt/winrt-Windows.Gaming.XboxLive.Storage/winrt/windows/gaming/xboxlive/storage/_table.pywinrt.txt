@@ -86,10 +86,10 @@ class Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult
     requires Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult shape=4
             out enum32 type=Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobGetResult shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.IBuffer> return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo python_type
@@ -98,10 +98,10 @@ class Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo
     requires Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo shape=4
             out string return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfo shape=4
             out uint32 return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult python_type
@@ -110,10 +110,10 @@ class Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult
     requires Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult shape=4
             out enum32 type=Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoGetResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo> return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery python_type
@@ -122,14 +122,14 @@ class Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery
     requires Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery
     method get_blob_info_async
-        method GetBlobInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery shape=4 reverse=22 default_overload
+        method GetBlobInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery shape=4 default_overload
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> return
-        method GetBlobInfoAsync slot=7 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery shape=117 reverse=45
+        method GetBlobInfoAsync slot=7 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery shape=117
             in uint32 name=startIndex
             in uint32 name=maxNumberOfItems
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> return
     method get_item_count_async
-        method GetItemCountAsync slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery shape=4 reverse=62
+        method GetItemCountAsync slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveBlobInfoQuery shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveContainer python_type
@@ -138,31 +138,31 @@ class Windows.Gaming.XboxLive.Storage.GameSaveContainer python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveContainer
     requires Windows.Gaming.XboxLive.Storage.IGameSaveContainer
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=4
             out string return
     property provider
-        get get_Provider slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=4 reverse=43
+        get get_Provider slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=4
             out class type=Windows.Gaming.XboxLive.Storage.GameSaveProvider return
     method create_blob_info_query
-        method CreateBlobInfoQuery slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=51 reverse=163
+        method CreateBlobInfoQuery slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=51
             in string name=blobNamePrefix
             out class type=Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery return
     method get_async
-        method GetAsync slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=51 reverse=124
+        method GetAsync slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=blobsToRead
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult> return
     method read_async
-        method ReadAsync slot=9 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=51 reverse=100
+        method ReadAsync slot=9 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=51
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.IBuffer> name=blobsToRead
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> return
     method submit_property_set_updates_async
-        method SubmitPropertySetUpdatesAsync slot=11 inputs=3 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=195 reverse=146
+        method SubmitPropertySetUpdatesAsync slot=11 inputs=3 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=195
             in interface type=Windows.Foundation.Collections.IPropertySet name=blobsToWrite
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=blobsToDelete
             in string name=displayName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> return
     method submit_updates_async
-        method SubmitUpdatesAsync slot=8 inputs=3 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=195 reverse=68
+        method SubmitUpdatesAsync slot=8 inputs=3 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainer shape=195
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.Streams.IBuffer> name=blobsToWrite
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=blobsToDelete
             in string name=displayName
@@ -174,19 +174,19 @@ class Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo
     requires Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4 reverse=62
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4
             out string return
     property last_modified_time
-        get get_LastModifiedTime slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4 reverse=99
+        get get_LastModifiedTime slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4
             out datetime return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4
             out string return
     property needs_sync
-        get get_NeedsSync slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4 reverse=121
+        get get_NeedsSync slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4
             out boolean return
     property total_size
-        get get_TotalSize slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4 reverse=43
+        get get_TotalSize slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfo shape=4
             out uint64 return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult python_type
@@ -195,10 +195,10 @@ class Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult
     requires Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult shape=4
             out enum32 type=Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoGetResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo> return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery python_type
@@ -207,14 +207,14 @@ class Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery
     requires Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery
     method get_container_info_async
-        method GetContainerInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery shape=4 reverse=22 default_overload
+        method GetContainerInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery shape=4 default_overload
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> return
-        method GetContainerInfoAsync slot=7 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery shape=117 reverse=45
+        method GetContainerInfoAsync slot=7 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery shape=117
             in uint32 name=startIndex
             in uint32 name=maxNumberOfItems
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> return
     method get_item_count_async
-        method GetItemCountAsync slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery shape=4 reverse=62
+        method GetItemCountAsync slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveContainerInfoQuery shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
 
 enum Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus python_type
@@ -242,7 +242,7 @@ class Windows.Gaming.XboxLive.Storage.GameSaveOperationResult python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveOperationResult
     requires Windows.Gaming.XboxLive.Storage.IGameSaveOperationResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveOperationResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveOperationResult shape=4
             out enum32 type=Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus return
 
 class Windows.Gaming.XboxLive.Storage.GameSaveProvider python_type
@@ -252,35 +252,35 @@ class Windows.Gaming.XboxLive.Storage.GameSaveProvider python_type
     requires Windows.Gaming.XboxLive.Storage.IGameSaveProvider
     factory Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics
     property containers_changed_since_last_sync
-        get get_ContainersChangedSinceLastSync slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4 reverse=162
+        get get_ContainersChangedSinceLastSync slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4
             out class type=Windows.System.User return
     method create_container
-        method CreateContainer slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=51 reverse=44
+        method CreateContainer slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=51
             in string name=name
             out class type=Windows.Gaming.XboxLive.Storage.GameSaveContainer return
     method create_container_info_query
-        method CreateContainerInfoQuery slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4 reverse=99 default_overload
+        method CreateContainerInfoQuery slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4 default_overload
             out class type=Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery return
-        method CreateContainerInfoQuery slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=51 reverse=124
+        method CreateContainerInfoQuery slot=10 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=51
             in string name=containerNamePrefix
             out class type=Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery return
     method delete_container_async
-        method DeleteContainerAsync slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=51 reverse=65
+        method DeleteContainerAsync slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=51
             in string name=name
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveOperationResult> return
     method get_for_user_async static
-        method GetForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics shape=117 reverse=25 static
+        method GetForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics shape=117 static
             in class type=Windows.System.User name=user
             in string name=serviceConfigId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> return
     method get_remaining_bytes_in_quota_async
-        method GetRemainingBytesInQuotaAsync slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4 reverse=141
+        method GetRemainingBytesInQuotaAsync slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProvider shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Int64> return
     method get_sync_on_demand_for_user_async static
-        method GetSyncOnDemandForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics shape=117 reverse=45 static
+        method GetSyncOnDemandForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderStatics shape=117 static
             in class type=Windows.System.User name=user
             in string name=serviceConfigId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> return
@@ -291,10 +291,10 @@ class Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult python_type
     default Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult
     requires Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult shape=4
             out enum32 type=Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.XboxLive.Storage.IGameSaveProviderGetResult shape=4
             out class type=Windows.Gaming.XboxLive.Storage.GameSaveProvider return
 
 interface Windows.Foundation.IAsyncOperation<System.Int64> concrete awaitable

@@ -12,95 +12,95 @@ class Microsoft.Windows.Management.Deployment.AddPackageOptions activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_volume
-        get get_TargetVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=22
+        get get_TargetVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
-        put put_TargetVolume slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=43
+        put put_TargetVolume slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
     property stub_package_option
-        get get_StubPackageOption slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=186
+        get get_StubPackageOption slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out enum32 type=Microsoft.Windows.Management.Deployment.StubPackageOption return
-        put put_StubPackageOption slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=194
+        put put_StubPackageOption slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in enum32 type=Microsoft.Windows.Management.Deployment.StubPackageOption name=value
     property stage_in_place
-        get get_StageInPlace slot=32 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=280
+        get get_StageInPlace slot=32 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_StageInPlace slot=33 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=285
+        put put_StageInPlace slot=33 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property retain_files_on_failure
-        get get_RetainFilesOnFailure slot=30 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=270
+        get get_RetainFilesOnFailure slot=30 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_RetainFilesOnFailure slot=31 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=273
+        put put_RetainFilesOnFailure slot=31 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property required_content_group_only
-        get get_RequiredContentGroupOnly slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=263
+        get get_RequiredContentGroupOnly slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_RequiredContentGroupOnly slot=29 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=266
+        put put_RequiredContentGroupOnly slot=29 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property limit_to_existing_packages
-        get get_LimitToExistingPackages slot=39 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=307
+        get get_LimitToExistingPackages slot=39 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_LimitToExistingPackages slot=40 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=312
+        put put_LimitToExistingPackages slot=40 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property install_all_resources
-        get get_InstallAllResources slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=255
+        get get_InstallAllResources slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_InstallAllResources slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=259
+        put put_InstallAllResources slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property force_update_from_any_version
-        get get_ForceUpdateFromAnyVersion slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=247
+        get get_ForceUpdateFromAnyVersion slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_ForceUpdateFromAnyVersion slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=252
+        put put_ForceUpdateFromAnyVersion slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property force_target_app_shutdown
-        get get_ForceTargetAppShutdown slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=237
+        get get_ForceTargetAppShutdown slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_ForceTargetAppShutdown slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=242
+        put put_ForceTargetAppShutdown slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property force_app_shutdown
-        get get_ForceAppShutdown slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=228
+        get get_ForceAppShutdown slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_ForceAppShutdown slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=232
+        put put_ForceAppShutdown slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property external_location_uri
-        get get_ExternalLocationUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=162
+        get get_ExternalLocationUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ExternalLocationUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=173
+        put put_ExternalLocationUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property developer_mode
-        get get_DeveloperMode slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=218
+        get get_DeveloperMode slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_DeveloperMode slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=223
+        put put_DeveloperMode slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property defer_registration_when_packages_are_in_use
-        get get_DeferRegistrationWhenPackagesAreInUse slot=34 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=288
+        get get_DeferRegistrationWhenPackagesAreInUse slot=34 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_DeferRegistrationWhenPackagesAreInUse slot=35 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=292
+        put put_DeferRegistrationWhenPackagesAreInUse slot=35 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property allow_unsigned
-        get get_AllowUnsigned slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=202
+        get get_AllowUnsigned slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
-        put put_AllowUnsigned slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=210
+        put put_AllowUnsigned slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             in boolean name=value
     property dependency_package_uris
-        get get_DependencyPackageUris slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=62
+        get get_DependencyPackageUris slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
     property expected_digests
-        get get_ExpectedDigests slot=37 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=299
+        get get_ExpectedDigests slot=37 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
     property is_expected_digests_supported
-        get get_IsExpectedDigestsSupported slot=36 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=296
+        get get_IsExpectedDigestsSupported slot=36 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
     property is_limit_to_existing_packages_supported
-        get get_IsLimitToExistingPackagesSupported slot=38 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=302
+        get get_IsLimitToExistingPackagesSupported slot=38 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out boolean return
     property optional_package_family_names
-        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=99
+        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property optional_package_uris
-        get get_OptionalPackageUris slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=121
+        get get_OptionalPackageUris slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
     property related_package_uris
-        get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4 reverse=141
+        get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
 
 delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete
@@ -137,12 +137,12 @@ class Microsoft.Windows.Management.Deployment.EnsureReadyOptions activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property add_package_options
-        get get_AddPackageOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IEnsureReadyOptions shape=4 reverse=22
+        get get_AddPackageOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IEnsureReadyOptions shape=4
             out class type=Microsoft.Windows.Management.Deployment.AddPackageOptions return
     property register_newer_if_available
-        get get_RegisterNewerIfAvailable slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IEnsureReadyOptions2 shape=4 reverse=22
+        get get_RegisterNewerIfAvailable slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IEnsureReadyOptions2 shape=4
             out boolean return
-        put put_RegisterNewerIfAvailable slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IEnsureReadyOptions2 shape=4 reverse=43
+        put put_RegisterNewerIfAvailable slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IEnsureReadyOptions2 shape=4
             in boolean name=value
 
 interface Microsoft.Windows.Management.Deployment.IAddPackageOptions
@@ -916,101 +916,101 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentManager python_ty
     factory Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics
     factory Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics2
     method add_package_async
-        method AddPackageAsync slot=12 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=164
+        method AddPackageAsync slot=12 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=package
             in class type=Microsoft.Windows.Management.Deployment.AddPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method add_package_by_uri_async
-        method AddPackageByUriAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=175
+        method AddPackageByUriAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Windows.Foundation.Uri name=packageUri
             in class type=Microsoft.Windows.Management.Deployment.AddPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method add_package_set_async
-        method AddPackageSetAsync slot=14 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=188
+        method AddPackageSetAsync slot=14 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             in class type=Microsoft.Windows.Management.Deployment.AddPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method deprovision_package_async
-        method DeprovisionPackageAsync slot=35 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=293
+        method DeprovisionPackageAsync slot=35 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in string name=package
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method deprovision_package_by_uri_async
-        method DeprovisionPackageByUriAsync slot=36 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=297
+        method DeprovisionPackageByUriAsync slot=36 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Windows.Foundation.Uri name=packageUri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method deprovision_package_set_async
-        method DeprovisionPackageSetAsync slot=37 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=300
+        method DeprovisionPackageSetAsync slot=37 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method ensure_package_ready_async
-        method EnsurePackageReadyAsync slot=9 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=101
+        method EnsurePackageReadyAsync slot=9 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=package
             in class type=Microsoft.Windows.Management.Deployment.EnsureReadyOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method ensure_package_ready_by_uri_async
-        method EnsurePackageReadyByUriAsync slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=125
+        method EnsurePackageReadyByUriAsync slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Windows.Foundation.Uri name=packageUri
             in class type=Microsoft.Windows.Management.Deployment.EnsureReadyOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method ensure_package_set_ready_async
-        method EnsurePackageSetReadyAsync slot=11 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=145
+        method EnsurePackageSetReadyAsync slot=11 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             in class type=Microsoft.Windows.Management.Deployment.EnsureReadyOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics shape=4 static
             out class type=Microsoft.Windows.Management.Deployment.PackageDeploymentManager return
     method is_package_deployment_feature_supported static
-        method IsPackageDeploymentFeatureSupported slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics2 shape=51 reverse=24 static
+        method IsPackageDeploymentFeatureSupported slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics2 shape=51 static
             in enum32 type=Microsoft.Windows.Management.Deployment.PackageDeploymentFeature name=feature
             out boolean return
     method is_package_provisioned
-        method IsPackageProvisioned slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51 reverse=100
+        method IsPackageProvisioned slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51
             in string name=package
             out boolean return
     method is_package_provisioned_by_uri
-        method IsPackageProvisionedByUri slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51 reverse=124
+        method IsPackageProvisionedByUri slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51
             in class type=Windows.Foundation.Uri name=packageUri
             out boolean return
     method is_package_ready
-        method IsPackageReady slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=24
+        method IsPackageReady slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in string name=package
             out boolean return
     method is_package_ready_by_uri
-        method IsPackageReadyByUri slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=44
+        method IsPackageReadyByUri slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Windows.Foundation.Uri name=packageUri
             out boolean return
     method is_package_ready_or_newer_available
-        method IsPackageReadyOrNewerAvailable slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51 reverse=24
+        method IsPackageReadyOrNewerAvailable slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51
             in string name=package
             out enum32 type=Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus return
     method is_package_ready_or_newer_available_by_uri
-        method IsPackageReadyOrNewerAvailableByUri slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51 reverse=44
+        method IsPackageReadyOrNewerAvailableByUri slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51
             in class type=Windows.Foundation.Uri name=packageUri
             out enum32 type=Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus return
     method is_package_registration_pending
-        method IsPackageRegistrationPending slot=38 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=303
+        method IsPackageRegistrationPending slot=38 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in string name=packageFamilyName
             out boolean return
     method is_package_registration_pending_for_user
-        method IsPackageRegistrationPendingForUser slot=39 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=309
+        method IsPackageRegistrationPendingForUser slot=39 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=userSecurityId
             in string name=packageFamilyName
             out boolean return
     method is_package_set_provisioned
-        method IsPackageSetProvisioned slot=11 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51 reverse=144
+        method IsPackageSetProvisioned slot=11 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out boolean return
     method is_package_set_ready
-        method IsPackageSetReady slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=65
+        method IsPackageSetReady slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out boolean return
     method is_package_set_ready_or_newer_available
-        method IsPackageSetReadyOrNewerAvailable slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51 reverse=65
+        method IsPackageSetReadyOrNewerAvailable slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2 shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out enum32 type=Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus return
     method provision_package_async
-        method ProvisionPackageAsync slot=32 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=282
+        method ProvisionPackageAsync slot=32 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=package
             in class type=Microsoft.Windows.Management.Deployment.ProvisionPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
@@ -1025,17 +1025,17 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentManager python_ty
             in class type=Microsoft.Windows.Management.Deployment.ProvisionPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method register_package_async
-        method RegisterPackageAsync slot=18 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=220
+        method RegisterPackageAsync slot=18 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=package
             in class type=Microsoft.Windows.Management.Deployment.RegisterPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method register_package_by_uri_async
-        method RegisterPackageByUriAsync slot=19 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=225
+        method RegisterPackageByUriAsync slot=19 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Windows.Foundation.Uri name=packageUri
             in class type=Microsoft.Windows.Management.Deployment.RegisterPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method register_package_set_async
-        method RegisterPackageSetAsync slot=20 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=230
+        method RegisterPackageSetAsync slot=20 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             in class type=Microsoft.Windows.Management.Deployment.RegisterPackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
@@ -1045,17 +1045,17 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentManager python_ty
             in class type=Microsoft.Windows.Management.Deployment.RemovePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method remove_package_by_family_name_async
-        method RemovePackageByFamilyNameAsync slot=23 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=244
+        method RemovePackageByFamilyNameAsync slot=23 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=packageFamilyName
             in class type=Microsoft.Windows.Management.Deployment.RemovePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method remove_package_by_full_name_async
-        method RemovePackageByFullNameAsync slot=22 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=239
+        method RemovePackageByFullNameAsync slot=22 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=packageFullName
             in class type=Microsoft.Windows.Management.Deployment.RemovePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method remove_package_by_uri_async
-        method RemovePackageByUriAsync slot=24 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=249
+        method RemovePackageByUriAsync slot=24 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Windows.Foundation.Uri name=packageUri
             in class type=Microsoft.Windows.Management.Deployment.RemovePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
@@ -1065,36 +1065,36 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentManager python_ty
             in class type=Microsoft.Windows.Management.Deployment.RemovePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method repair_package_async
-        method RepairPackageAsync slot=29 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=267
+        method RepairPackageAsync slot=29 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in string name=package
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method repair_package_by_uri_async
-        method RepairPackageByUriAsync slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=271
+        method RepairPackageByUriAsync slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Windows.Foundation.Uri name=packageUri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method repair_package_set_async
-        method RepairPackageSetAsync slot=31 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=274
+        method RepairPackageSetAsync slot=31 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method reset_package_async
-        method ResetPackageAsync slot=26 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=256
+        method ResetPackageAsync slot=26 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in string name=package
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method reset_package_by_uri_async
-        method ResetPackageByUriAsync slot=27 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=260
+        method ResetPackageByUriAsync slot=27 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Windows.Foundation.Uri name=packageUri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method reset_package_set_async
-        method ResetPackageSetAsync slot=28 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51 reverse=264
+        method ResetPackageSetAsync slot=28 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method stage_package_async
-        method StagePackageAsync slot=15 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=197
+        method StagePackageAsync slot=15 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in string name=package
             in class type=Microsoft.Windows.Management.Deployment.StagePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method stage_package_by_uri_async
-        method StagePackageByUriAsync slot=16 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117 reverse=204
+        method StagePackageByUriAsync slot=16 inputs=2 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentManager shape=117
             in class type=Windows.Foundation.Uri name=packageUri
             in class type=Microsoft.Windows.Management.Deployment.StagePackageOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
@@ -1124,19 +1124,19 @@ class Microsoft.Windows.Management.Deployment.PackageDeploymentResult python_typ
     default Microsoft.Windows.Management.Deployment.IPackageDeploymentResult
     requires Microsoft.Windows.Management.Deployment.IPackageDeploymentResult
     property activity_id
-        get get_ActivityId slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=121
+        get get_ActivityId slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4
             out guid return
     property error
-        get get_Error slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=43
+        get get_Error slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property error_text
-        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=99
+        get get_ErrorText slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4
             out string return
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageDeploymentResult shape=4
             out enum32 type=Microsoft.Windows.Management.Deployment.PackageDeploymentStatus return
 
 enum Microsoft.Windows.Management.Deployment.PackageDeploymentStatus python_type
@@ -1160,19 +1160,19 @@ class Microsoft.Windows.Management.Deployment.PackageRuntimeManager python_type
     requires Microsoft.Windows.Management.Deployment.IPackageRuntimeManager
     factory Microsoft.Windows.Management.Deployment.IPackageRuntimeManagerStatics
     method add_package_set
-        method AddPackageSet slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManager shape=51 reverse=24
+        method AddPackageSet slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManager shape=51
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             out class type=Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition return
-        method AddPackageSet slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManager shape=195 reverse=46
+        method AddPackageSet slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManager shape=195
             in class type=Microsoft.Windows.Management.Deployment.PackageSet name=packageSet
             in class type=Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions name=createOptions
             in class type=Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions name=addOptions
             out class type=Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManagerStatics shape=4 static
             out class type=Microsoft.Windows.Management.Deployment.PackageRuntimeManager return
     method remove_package_set
-        method RemovePackageSet slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManager shape=4 reverse=62
+        method RemovePackageSet slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageRuntimeManager shape=4
             in class type=Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition name=packageSetRuntimeDisposition
 
 class Microsoft.Windows.Management.Deployment.PackageSet activatable python_type
@@ -1184,17 +1184,17 @@ class Microsoft.Windows.Management.Deployment.PackageSet activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property package_uri
-        get get_PackageUri slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4 reverse=62
+        get get_PackageUri slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4
             out class type=Windows.Foundation.Uri return
-        put put_PackageUri slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4 reverse=99
+        put put_PackageUri slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4
             in class type=Windows.Foundation.Uri name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4
             out string return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4
             in string name=value
     property items
-        get get_Items slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4 reverse=121
+        get get_Items slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSet shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> return
 
 class Microsoft.Windows.Management.Deployment.PackageSetItem activatable python_type
@@ -1206,29 +1206,29 @@ class Microsoft.Windows.Management.Deployment.PackageSetItem activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property processor_architecture_filter
-        get get_ProcessorArchitectureFilter slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=162
+        get get_ProcessorArchitectureFilter slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             out enum_u32 type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures return
-        put put_ProcessorArchitectureFilter slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=173
+        put put_ProcessorArchitectureFilter slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             in enum_u32 type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProcessorArchitectures name=value
     property package_uri
-        get get_PackageUri slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=186
+        get get_PackageUri slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             out class type=Windows.Foundation.Uri return
-        put put_PackageUri slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=194
+        put put_PackageUri slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             in class type=Windows.Foundation.Uri name=value
     property package_family_name
-        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=62
+        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             out string return
-        put put_PackageFamilyName slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=99
+        put put_PackageFamilyName slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             in string name=value
     property min_version
-        get get_MinVersion slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=121
+        get get_MinVersion slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             out struct type=Windows.ApplicationModel.PackageVersion return
         put put_MinVersion slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=30
             in struct type=Windows.ApplicationModel.PackageVersion name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             out string return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItem shape=4
             in string name=value
 
 class Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition activatable python_type
@@ -1240,16 +1240,16 @@ class Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition a
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property package_dependency_context_id
-        get get_PackageDependencyContextId slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4 reverse=99
+        get get_PackageDependencyContextId slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4
             out struct type=Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContextId return
     property package_dependency_id
-        get get_PackageDependencyId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4 reverse=62
+        get get_PackageDependencyId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4
             out string return
     property package_full_name
-        get get_PackageFullName slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4 reverse=43
+        get get_PackageFullName slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4
             out string return
     property package_set_item_id
-        get get_PackageSetItemId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4 reverse=22
+        get get_PackageSetItemId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposition shape=4
             out string return
 
 class Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition activatable python_type
@@ -1261,12 +1261,12 @@ class Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition activ
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property package_set_id
-        get get_PackageSetId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4 reverse=22
+        get get_PackageSetId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4
             out string return
-        put put_PackageSetId slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4 reverse=43
+        put put_PackageSetId slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4
             in string name=value
     property package_set_item_runtime_dispositions
-        get get_PackageSetItemRuntimeDispositions slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4 reverse=62
+        get get_PackageSetItemRuntimeDispositions slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> return
 
 class Microsoft.Windows.Management.Deployment.PackageVolume python_type
@@ -1276,42 +1276,42 @@ class Microsoft.Windows.Management.Deployment.PackageVolume python_type
     requires Microsoft.Windows.Management.Deployment.IPackageVolume
     factory Microsoft.Windows.Management.Deployment.IPackageVolumeStatics
     property is_appx_install_supported
-        get get_IsAppxInstallSupported slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=162
+        get get_IsAppxInstallSupported slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     property is_full_trust_package_supported
-        get get_IsFullTrustPackageSupported slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=141
+        get get_IsFullTrustPackageSupported slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     property is_system_volume
-        get get_IsSystemVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=22
+        get get_IsSystemVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     property mount_point
-        get get_MountPoint slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=43
+        get get_MountPoint slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out string return
     property name
-        get get_Name slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=62
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out string return
     property package_store_path
-        get get_PackageStorePath slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=99
+        get get_PackageStorePath slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out string return
     property supports_hard_links
-        get get_SupportsHardLinks slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=121
+        get get_SupportsHardLinks slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     method find_package_volume_by_name static
-        method FindPackageVolumeByName slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=51 reverse=65 static
+        method FindPackageVolumeByName slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=51 static
             in string name=name
             out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
     method find_package_volume_by_path static
-        method FindPackageVolumeByPath slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=51 reverse=44 static
+        method FindPackageVolumeByPath slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=51 static
             in string name=packageStorePath
             out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
     method find_package_volumes static
-        method FindPackageVolumes slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=4 reverse=22 static
+        method FindPackageVolumes slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> return
     method is_repair_needed
-        method IsRepairNeeded slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4 reverse=173
+        method IsRepairNeeded slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     method repair
-        method Repair slot=14 inputs=0 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=0 reverse=185
+        method Repair slot=14 inputs=0 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=0
 
 class Microsoft.Windows.Management.Deployment.ProvisionPackageOptions activatable python_type
     py ProvisionPackageOptions
@@ -1322,16 +1322,16 @@ class Microsoft.Windows.Management.Deployment.ProvisionPackageOptions activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_optional_package_family_names_supported
-        get get_IsOptionalPackageFamilyNamesSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4 reverse=22
+        get get_IsOptionalPackageFamilyNamesSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4
             out boolean return
     property is_projection_order_package_family_names_supported
-        get get_IsProjectionOrderPackageFamilyNamesSupported slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4 reverse=62
+        get get_IsProjectionOrderPackageFamilyNamesSupported slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4
             out boolean return
     property optional_package_family_names
-        get get_OptionalPackageFamilyNames slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4 reverse=43
+        get get_OptionalPackageFamilyNames slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property projection_order_package_family_names
-        get get_ProjectionOrderPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4 reverse=99
+        get get_ProjectionOrderPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IProvisionPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Microsoft.Windows.Management.Deployment.RegisterPackageOptions activatable python_type
@@ -1343,69 +1343,69 @@ class Microsoft.Windows.Management.Deployment.RegisterPackageOptions activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property stage_in_place
-        get get_StageInPlace slot=25 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=252
+        get get_StageInPlace slot=25 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_StageInPlace slot=26 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=255
+        put put_StageInPlace slot=26 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property install_all_resources
-        get get_InstallAllResources slot=23 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=242
+        get get_InstallAllResources slot=23 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_InstallAllResources slot=24 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=247
+        put put_InstallAllResources slot=24 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property force_update_from_any_version
-        get get_ForceUpdateFromAnyVersion slot=21 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=232
+        get get_ForceUpdateFromAnyVersion slot=21 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_ForceUpdateFromAnyVersion slot=22 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=237
+        put put_ForceUpdateFromAnyVersion slot=22 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property force_target_app_shutdown
-        get get_ForceTargetAppShutdown slot=19 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=223
+        get get_ForceTargetAppShutdown slot=19 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_ForceTargetAppShutdown slot=20 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=228
+        put put_ForceTargetAppShutdown slot=20 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property force_app_shutdown
-        get get_ForceAppShutdown slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=210
+        get get_ForceAppShutdown slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_ForceAppShutdown slot=18 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=218
+        put put_ForceAppShutdown slot=18 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property external_location_uri
-        get get_ExternalLocationUri slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=141
+        get get_ExternalLocationUri slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ExternalLocationUri slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=162
+        put put_ExternalLocationUri slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property developer_mode
-        get get_DeveloperMode slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=194
+        get get_DeveloperMode slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_DeveloperMode slot=16 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=202
+        put put_DeveloperMode slot=16 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property defer_registration_when_packages_are_in_use
-        get get_DeferRegistrationWhenPackagesAreInUse slot=27 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=259
+        get get_DeferRegistrationWhenPackagesAreInUse slot=27 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_DeferRegistrationWhenPackagesAreInUse slot=28 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=263
+        put put_DeferRegistrationWhenPackagesAreInUse slot=28 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property app_data_volume
-        get get_AppDataVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=22
+        get get_AppDataVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
-        put put_AppDataVolume slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=43
+        put put_AppDataVolume slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
     property allow_unsigned
-        get get_AllowUnsigned slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=173
+        get get_AllowUnsigned slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
-        put put_AllowUnsigned slot=14 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=186
+        put put_AllowUnsigned slot=14 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             in boolean name=value
     property dependency_package_family_names
-        get get_DependencyPackageFamilyNames slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=62
+        get get_DependencyPackageFamilyNames slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property dependency_package_uris
-        get get_DependencyPackageUris slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=99
+        get get_DependencyPackageUris slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
     property expected_digests
-        get get_ExpectedDigests slot=30 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=270
+        get get_ExpectedDigests slot=30 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
     property is_expected_digests_supported
-        get get_IsExpectedDigestsSupported slot=29 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=266
+        get get_IsExpectedDigestsSupported slot=29 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out boolean return
     property optional_package_family_names
-        get get_OptionalPackageFamilyNames slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4 reverse=121
+        get get_OptionalPackageFamilyNames slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRegisterPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Microsoft.Windows.Management.Deployment.RemovePackageOptions activatable python_type
@@ -1417,24 +1417,24 @@ class Microsoft.Windows.Management.Deployment.RemovePackageOptions activatable p
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property remove_for_all_users
-        get get_RemoveForAllUsers slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=162
+        get get_RemoveForAllUsers slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             out boolean return
-        put put_RemoveForAllUsers slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=173
+        put put_RemoveForAllUsers slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             in boolean name=value
     property preserve_roamable_application_data
-        get get_PreserveRoamableApplicationData slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=121
+        get get_PreserveRoamableApplicationData slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             out boolean return
-        put put_PreserveRoamableApplicationData slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=141
+        put put_PreserveRoamableApplicationData slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             in boolean name=value
     property preserve_application_data
-        get get_PreserveApplicationData slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=62
+        get get_PreserveApplicationData slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             out boolean return
-        put put_PreserveApplicationData slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=99
+        put put_PreserveApplicationData slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             in boolean name=value
     property fail_if_not_found
-        get get_FailIfNotFound slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=22
+        get get_FailIfNotFound slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             out boolean return
-        put put_FailIfNotFound slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4 reverse=43
+        put put_FailIfNotFound slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IRemovePackageOptions shape=4
             in boolean name=value
 
 class Microsoft.Windows.Management.Deployment.StagePackageOptions activatable python_type
@@ -1446,67 +1446,67 @@ class Microsoft.Windows.Management.Deployment.StagePackageOptions activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_volume
-        get get_TargetVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=22
+        get get_TargetVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
-        put put_TargetVolume slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=43
+        put put_TargetVolume slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in class type=Microsoft.Windows.Management.Deployment.PackageVolume name=value
     property stub_package_option
-        get get_StubPackageOption slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=186
+        get get_StubPackageOption slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out enum32 type=Microsoft.Windows.Management.Deployment.StubPackageOption return
-        put put_StubPackageOption slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=194
+        put put_StubPackageOption slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in enum32 type=Microsoft.Windows.Management.Deployment.StubPackageOption name=value
     property stage_in_place
-        get get_StageInPlace slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=247
+        get get_StageInPlace slot=24 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
-        put put_StageInPlace slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=252
+        put put_StageInPlace slot=25 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in boolean name=value
     property required_content_group_only
-        get get_RequiredContentGroupOnly slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=237
+        get get_RequiredContentGroupOnly slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
-        put put_RequiredContentGroupOnly slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=242
+        put put_RequiredContentGroupOnly slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in boolean name=value
     property install_all_resources
-        get get_InstallAllResources slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=228
+        get get_InstallAllResources slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
-        put put_InstallAllResources slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=232
+        put put_InstallAllResources slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in boolean name=value
     property force_update_from_any_version
-        get get_ForceUpdateFromAnyVersion slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=218
+        get get_ForceUpdateFromAnyVersion slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
-        put put_ForceUpdateFromAnyVersion slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=223
+        put put_ForceUpdateFromAnyVersion slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in boolean name=value
     property external_location_uri
-        get get_ExternalLocationUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=162
+        get get_ExternalLocationUri slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ExternalLocationUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=173
+        put put_ExternalLocationUri slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property developer_mode
-        get get_DeveloperMode slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=202
+        get get_DeveloperMode slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
-        put put_DeveloperMode slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=210
+        put put_DeveloperMode slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in boolean name=value
     property allow_unsigned
-        get get_AllowUnsigned slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=255
+        get get_AllowUnsigned slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
-        put put_AllowUnsigned slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=259
+        put put_AllowUnsigned slot=27 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             in boolean name=value
     property dependency_package_uris
-        get get_DependencyPackageUris slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=62
+        get get_DependencyPackageUris slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
     property expected_digests
-        get get_ExpectedDigests slot=29 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=266
+        get get_ExpectedDigests slot=29 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
     property is_expected_digests_supported
-        get get_IsExpectedDigestsSupported slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=263
+        get get_IsExpectedDigestsSupported slot=28 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out boolean return
     property optional_package_family_names
-        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=99
+        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property optional_package_uris
-        get get_OptionalPackageUris slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=121
+        get get_OptionalPackageUris slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
     property related_package_uris
-        get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4 reverse=141
+        get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
 
 enum Microsoft.Windows.Management.Deployment.StubPackageOption python_type

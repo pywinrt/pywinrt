@@ -7,7 +7,7 @@ class Windows.ApplicationModel.AppService.AppServiceCatalog static python_type
     py AppServiceCatalog
     factory Windows.ApplicationModel.AppService.IAppServiceCatalogStatics
     method find_app_service_providers_async static
-        method FindAppServiceProvidersAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceCatalogStatics shape=51 reverse=24 static
+        method FindAppServiceProvidersAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceCatalogStatics shape=51 static
             in string name=appServiceName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
 
@@ -17,7 +17,7 @@ class Windows.ApplicationModel.AppService.AppServiceClosedEventArgs python_type
     default Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs
     requires Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceClosedEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.AppService.AppServiceClosedStatus return
 
 enum Windows.ApplicationModel.AppService.AppServiceClosedStatus python_type
@@ -40,47 +40,47 @@ class Windows.ApplicationModel.AppService.AppServiceConnection activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property package_family_name
-        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=62
+        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4
             out string return
-        put put_PackageFamilyName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=99
+        put put_PackageFamilyName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4
             in string name=value
     property app_service_name
-        get get_AppServiceName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=22
+        get get_AppServiceName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4
             out string return
-        put put_AppServiceName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=43
+        put put_AppServiceName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4
             in string name=value
     property user
-        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=4 reverse=43
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=4
             out class type=Windows.System.User return
-        put put_User slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=4 reverse=62
+        put put_User slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=4
             in class type=Windows.System.User name=value
     event request_received
-        add add_RequestReceived slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51 reverse=163
+        add add_RequestReceived slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RequestReceived slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26 reverse=181
+        remove remove_RequestReceived slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event service_closed
-        add add_ServiceClosed slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51 reverse=187
+        add add_ServiceClosed slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.AppService.AppServiceConnection,Windows.ApplicationModel.AppService.AppServiceClosedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ServiceClosed slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26 reverse=200
+        remove remove_ServiceClosed slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method open_async
-        method OpenAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4 reverse=121
+        method OpenAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> return
     method open_remote_async
-        method OpenRemoteAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=51 reverse=24
+        method OpenRemoteAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection2 shape=51
             in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceConnectionStatus> return
     method send_message_async
-        method SendMessageAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51 reverse=144
+        method SendMessageAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnection shape=51
             in class type=Windows.Foundation.Collections.ValueSet name=message
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponse> return
     method send_stateless_message_async static
-        method SendStatelessMessageAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnectionStatics shape=195 reverse=26 static
+        method SendStatelessMessageAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceConnectionStatics shape=195 static
             in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=connection
             in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=connectionRequest
             in class type=Windows.Foundation.Collections.ValueSet name=message
@@ -108,7 +108,7 @@ class Windows.ApplicationModel.AppService.AppServiceDeferral python_type
     default Windows.ApplicationModel.AppService.IAppServiceDeferral
     requires Windows.ApplicationModel.AppService.IAppServiceDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.AppService.IAppServiceDeferral shape=0
 
 class Windows.ApplicationModel.AppService.AppServiceRequest python_type
     py AppServiceRequest
@@ -116,10 +116,10 @@ class Windows.ApplicationModel.AppService.AppServiceRequest python_type
     default Windows.ApplicationModel.AppService.IAppServiceRequest
     requires Windows.ApplicationModel.AppService.IAppServiceRequest
     property message
-        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequest shape=4 reverse=22
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequest shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     method send_response_async
-        method SendResponseAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequest shape=51 reverse=44
+        method SendResponseAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequest shape=51
             in class type=Windows.Foundation.Collections.ValueSet name=message
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.AppService.AppServiceResponseStatus> return
 
@@ -129,10 +129,10 @@ class Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs pyt
     default Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs
     requires Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs shape=4
             out class type=Windows.ApplicationModel.AppService.AppServiceRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceRequestReceivedEventArgs shape=4
             out class type=Windows.ApplicationModel.AppService.AppServiceDeferral return
 
 class Windows.ApplicationModel.AppService.AppServiceResponse python_type
@@ -141,10 +141,10 @@ class Windows.ApplicationModel.AppService.AppServiceResponse python_type
     default Windows.ApplicationModel.AppService.IAppServiceResponse
     requires Windows.ApplicationModel.AppService.IAppServiceResponse
     property message
-        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceResponse shape=4 reverse=22
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceResponse shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceResponse shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceResponse shape=4
             out enum32 type=Windows.ApplicationModel.AppService.AppServiceResponseStatus return
 
 enum Windows.ApplicationModel.AppService.AppServiceResponseStatus python_type
@@ -171,22 +171,22 @@ class Windows.ApplicationModel.AppService.AppServiceTriggerDetails python_type
     requires Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3
     requires Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4
     property app_service_connection
-        get get_AppServiceConnection slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4 reverse=62
+        get get_AppServiceConnection slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4
             out class type=Windows.ApplicationModel.AppService.AppServiceConnection return
     property caller_package_family_name
-        get get_CallerPackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4 reverse=43
+        get get_CallerPackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4
             out string return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails shape=4
             out string return
     property is_remote_system_connection
-        get get_IsRemoteSystemConnection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2 shape=4 reverse=22
+        get get_IsRemoteSystemConnection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails2 shape=4
             out boolean return
     property caller_remote_connection_token
-        get get_CallerRemoteConnectionToken slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4 shape=4 reverse=22
+        get get_CallerRemoteConnectionToken slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails4 shape=4
             out string return
     method check_caller_for_capability_async
-        method CheckCallerForCapabilityAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3 shape=51 reverse=24
+        method CheckCallerForCapabilityAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.AppService.IAppServiceTriggerDetails3 shape=51
             in string name=capabilityName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -536,10 +536,10 @@ class Windows.ApplicationModel.AppService.StatelessAppServiceResponse python_typ
     default Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
     requires Windows.ApplicationModel.AppService.IStatelessAppServiceResponse
     property message
-        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IStatelessAppServiceResponse shape=4 reverse=22
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IStatelessAppServiceResponse shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IStatelessAppServiceResponse shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.AppService.IStatelessAppServiceResponse shape=4
             out enum32 type=Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus return
 
 enum Windows.ApplicationModel.AppService.StatelessAppServiceResponseStatus python_type

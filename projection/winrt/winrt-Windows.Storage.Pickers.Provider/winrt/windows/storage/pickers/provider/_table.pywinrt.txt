@@ -17,46 +17,46 @@ class Windows.Storage.Pickers.Provider.FileOpenPickerUI python_type
     default Windows.Storage.Pickers.Provider.IFileOpenPickerUI
     requires Windows.Storage.Pickers.Provider.IFileOpenPickerUI
     property title
-        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=173
+        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4
             out string return
-        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=186
+        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4
             in string name=value
     property allowed_file_types
-        get get_AllowedFileTypes slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=121
+        get get_AllowedFileTypes slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property selection_mode
-        get get_SelectionMode slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=141
+        get get_SelectionMode slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4
             out enum32 type=Windows.Storage.Pickers.Provider.FileSelectionMode return
     property settings_identifier
-        get get_SettingsIdentifier slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=162
+        get get_SettingsIdentifier slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4
             out string return
     event closing
-        add add_Closing slot=17 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=211
+        add add_Closing slot=17 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.PickerClosingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closing slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=26 reverse=398
+        remove remove_Closing slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event file_removed
-        add add_FileRemoved slot=15 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=196 deprecated
+        add add_FileRemoved slot=15 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FileRemoved slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=26 reverse=397 deprecated
+        remove remove_FileRemoved slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_file
-        method AddFile slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=117 reverse=25
+        method AddFile slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=117
             in string name=id
             in interface type=Windows.Storage.IStorageFile name=file
             out enum32 type=Windows.Storage.Pickers.Provider.AddFileResult return
     method can_add_file
-        method CanAddFile slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=100
+        method CanAddFile slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51
             in interface type=Windows.Storage.IStorageFile name=file
             out boolean return
     method contains_file
-        method ContainsFile slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51 reverse=65
+        method ContainsFile slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=51
             in string name=id
             out boolean return
     method remove_file
-        method RemoveFile slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4 reverse=43
+        method RemoveFile slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileOpenPickerUI shape=4
             in string name=id
 
 class Windows.Storage.Pickers.Provider.FileRemovedEventArgs python_type
@@ -65,7 +65,7 @@ class Windows.Storage.Pickers.Provider.FileRemovedEventArgs python_type
     default Windows.Storage.Pickers.Provider.IFileRemovedEventArgs
     requires Windows.Storage.Pickers.Provider.IFileRemovedEventArgs
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileRemovedEventArgs shape=4 reverse=22 deprecated
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileRemovedEventArgs shape=4 deprecated
             out string return
 
 class Windows.Storage.Pickers.Provider.FileSavePickerUI python_type
@@ -74,33 +74,33 @@ class Windows.Storage.Pickers.Provider.FileSavePickerUI python_type
     default Windows.Storage.Pickers.Provider.IFileSavePickerUI
     requires Windows.Storage.Pickers.Provider.IFileSavePickerUI
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4
             in string name=value
     property allowed_file_types
-        get get_AllowedFileTypes slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=62
+        get get_AllowedFileTypes slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property file_name
-        get get_FileName slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=121
+        get get_FileName slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4
             out string return
     property settings_identifier
-        get get_SettingsIdentifier slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4 reverse=99
+        get get_SettingsIdentifier slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=4
             out string return
     event file_name_changed
-        add add_FileNameChanged slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51 reverse=163
+        add add_FileNameChanged slot=12 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FileNameChanged slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=26 reverse=181
+        remove remove_FileNameChanged slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event target_file_requested
-        add add_TargetFileRequested slot=14 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51 reverse=187
+        add add_TargetFileRequested slot=14 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileSavePickerUI,Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TargetFileRequested slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=26 reverse=200
+        remove remove_TargetFileRequested slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method try_set_file_name
-        method TrySetFileName slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51 reverse=144
+        method TrySetFileName slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.Provider.IFileSavePickerUI shape=51
             in string name=value
             out enum32 type=Windows.Storage.Pickers.Provider.SetFileNameResult return
 
@@ -201,7 +201,7 @@ class Windows.Storage.Pickers.Provider.PickerClosingDeferral python_type
     default Windows.Storage.Pickers.Provider.IPickerClosingDeferral
     requires Windows.Storage.Pickers.Provider.IPickerClosingDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.Provider.IPickerClosingDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.Provider.IPickerClosingDeferral shape=0
 
 class Windows.Storage.Pickers.Provider.PickerClosingEventArgs python_type
     py PickerClosingEventArgs
@@ -209,10 +209,10 @@ class Windows.Storage.Pickers.Provider.PickerClosingEventArgs python_type
     default Windows.Storage.Pickers.Provider.IPickerClosingEventArgs
     requires Windows.Storage.Pickers.Provider.IPickerClosingEventArgs
     property closing_operation
-        get get_ClosingOperation slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingEventArgs shape=4 reverse=22
+        get get_ClosingOperation slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingEventArgs shape=4
             out class type=Windows.Storage.Pickers.Provider.PickerClosingOperation return
     property is_canceled
-        get get_IsCanceled slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingEventArgs shape=4 reverse=43
+        get get_IsCanceled slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingEventArgs shape=4
             out boolean return
 
 class Windows.Storage.Pickers.Provider.PickerClosingOperation python_type
@@ -221,10 +221,10 @@ class Windows.Storage.Pickers.Provider.PickerClosingOperation python_type
     default Windows.Storage.Pickers.Provider.IPickerClosingOperation
     requires Windows.Storage.Pickers.Provider.IPickerClosingOperation
     property deadline
-        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingOperation shape=4 reverse=43
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingOperation shape=4
             out datetime return
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingOperation shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.IPickerClosingOperation shape=4
             out class type=Windows.Storage.Pickers.Provider.PickerClosingDeferral return
 
 enum Windows.Storage.Pickers.Provider.SetFileNameResult python_type
@@ -240,12 +240,12 @@ class Windows.Storage.Pickers.Provider.TargetFileRequest python_type
     default Windows.Storage.Pickers.Provider.ITargetFileRequest
     requires Windows.Storage.Pickers.Provider.ITargetFileRequest
     property target_file
-        get get_TargetFile slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4 reverse=22
+        get get_TargetFile slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4
             out interface type=Windows.Storage.IStorageFile return
-        put put_TargetFile slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4 reverse=43
+        put put_TargetFile slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4
             in interface type=Windows.Storage.IStorageFile name=value
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequest shape=4
             out class type=Windows.Storage.Pickers.Provider.TargetFileRequestDeferral return
 
 class Windows.Storage.Pickers.Provider.TargetFileRequestDeferral python_type
@@ -254,7 +254,7 @@ class Windows.Storage.Pickers.Provider.TargetFileRequestDeferral python_type
     default Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral
     requires Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequestDeferral shape=0
 
 class Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs python_type
     py TargetFileRequestedEventArgs
@@ -262,7 +262,7 @@ class Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs python_type
     default Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs
     requires Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.Provider.ITargetFileRequestedEventArgs shape=4
             out class type=Windows.Storage.Pickers.Provider.TargetFileRequest return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs> concrete

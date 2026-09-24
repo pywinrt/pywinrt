@@ -112,7 +112,7 @@ class Windows.Media.Audio.AudioDeviceInputNode python_type closeable
     requires Windows.Foundation.IClosable
     requires Windows.Media.Audio.IAudioInputNode2
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioDeviceInputNode shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioDeviceInputNode shape=4
             out class type=Windows.Devices.Enumeration.DeviceInformation return
     property outgoing_connections
         get get_OutgoingConnections slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=22
@@ -178,7 +178,7 @@ class Windows.Media.Audio.AudioDeviceOutputNode python_type closeable
     requires Windows.Foundation.IClosable
     requires Windows.Media.Audio.IAudioNodeWithListener
     property device
-        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioDeviceOutputNode shape=4 reverse=22
+        get get_Device slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioDeviceOutputNode shape=4
             out class type=Windows.Devices.Enumeration.DeviceInformation return
     property outgoing_gain
         get get_OutgoingGain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=62
@@ -223,27 +223,27 @@ class Windows.Media.Audio.AudioEffectsPackConfiguration python_type
     requires Windows.Media.Audio.IAudioEffectsPackConfiguration
     factory Windows.Media.Audio.IAudioEffectsPackConfigurationStatics
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=4
             out string return
     property effects_pack_id
-        get get_EffectsPackId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=4 reverse=43
+        get get_EffectsPackId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=4
             out string return
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=4
             out enum32 type=Windows.Media.Audio.AudioEffectsPackStatus return
     event status_changed
-        add add_StatusChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=51 reverse=100
+        add add_StatusChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=26 reverse=134
+        remove remove_StatusChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioEffectsPackConfiguration shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_device_id static
-        method GetForDeviceId slot=6 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfigurationStatics shape=117 reverse=25 static
+        method GetForDeviceId slot=6 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfigurationStatics shape=117 static
             in string name=effectsPackId
             in string name=deviceId
             out class type=Windows.Media.Audio.AudioEffectsPackConfiguration return
     method is_device_id_supported static
-        method IsDeviceIdSupported slot=7 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfigurationStatics shape=117 reverse=45 static
+        method IsDeviceIdSupported slot=7 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioEffectsPackConfigurationStatics shape=117 static
             in string name=effectsPackId
             in string name=deviceId
             out boolean return
@@ -265,33 +265,33 @@ class Windows.Media.Audio.AudioFileInputNode python_type closeable
     requires Windows.Foundation.IClosable
     requires Windows.Media.Audio.IAudioInputNode2
     property playback_speed_factor
-        get get_PlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=43
+        get get_PlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out double return
         put put_PlaybackSpeedFactor slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=2
             in double name=value
     property loop_count
-        get get_LoopCount slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=186
+        get get_LoopCount slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_LoopCount slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=194
+        put put_LoopCount slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property end_time
-        get get_EndTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=162
+        get get_EndTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_EndTime slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=173
+        put put_EndTime slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property start_time
-        get get_StartTime slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=121
+        get get_StartTime slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_StartTime slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=141
+        put put_StartTime slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property position
-        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=62
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out timespan return
     property source_file
-        get get_SourceFile slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=210
+        get get_SourceFile slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out class type=Windows.Storage.StorageFile return
     property duration
-        get get_Duration slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4 reverse=202
+        get get_Duration slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=4
             out timespan return
     property outgoing_connections
         get get_OutgoingConnections slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=22
@@ -316,10 +316,10 @@ class Windows.Media.Audio.AudioFileInputNode python_type closeable
         get get_EncodingProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=99
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     event file_completed
-        add add_FileCompleted slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=51 reverse=219
+        add add_FileCompleted slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFileInputNode shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFileInputNode,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FileCompleted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=26 reverse=226
+        remove remove_FileCompleted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_outgoing_connection
         method AddOutgoingConnection slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=43
@@ -341,7 +341,7 @@ class Windows.Media.Audio.AudioFileInputNode python_type closeable
     method reset
         method Reset slot=14 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=0 reverse=185
     method seek
-        method Seek slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=26 reverse=110
+        method Seek slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFileInputNode shape=26
             in timespan name=position
     method start
         method Start slot=12 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=0 reverse=159
@@ -365,10 +365,10 @@ class Windows.Media.Audio.AudioFileOutputNode python_type closeable
     requires Windows.Media.Audio.IAudioNode
     requires Windows.Foundation.IClosable
     property file
-        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileOutputNode shape=4 reverse=22
+        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileOutputNode shape=4
             out interface type=Windows.Storage.IStorageFile return
     property file_encoding_profile
-        get get_FileEncodingProfile slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileOutputNode shape=4 reverse=43
+        get get_FileEncodingProfile slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileOutputNode shape=4
             out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
     property outgoing_gain
         get get_OutgoingGain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=62
@@ -395,7 +395,7 @@ class Windows.Media.Audio.AudioFileOutputNode python_type closeable
         method EnableEffectsByDefinition slot=16 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=202
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
     method finalize_async
-        method FinalizeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileOutputNode shape=4 reverse=62
+        method FinalizeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFileOutputNode shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.TranscodeFailureReason> return
     method reset
         method Reset slot=14 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=0 reverse=185
@@ -410,7 +410,7 @@ class Windows.Media.Audio.AudioFrameCompletedEventArgs python_type
     default Windows.Media.Audio.IAudioFrameCompletedEventArgs
     requires Windows.Media.Audio.IAudioFrameCompletedEventArgs
     property frame
-        get get_Frame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameCompletedEventArgs shape=4 reverse=22
+        get get_Frame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameCompletedEventArgs shape=4
             out class type=Windows.Media.AudioFrame return
 
 class Windows.Media.Audio.AudioFrameInputNode python_type closeable
@@ -423,12 +423,12 @@ class Windows.Media.Audio.AudioFrameInputNode python_type closeable
     requires Windows.Foundation.IClosable
     requires Windows.Media.Audio.IAudioInputNode2
     property playback_speed_factor
-        get get_PlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4 reverse=43
+        get get_PlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4
             out double return
         put put_PlaybackSpeedFactor slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=2
             in double name=value
     property queued_sample_count
-        get get_QueuedSampleCount slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4 reverse=121
+        get get_QueuedSampleCount slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4
             out uint64 return
     property outgoing_connections
         get get_OutgoingConnections slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=22
@@ -453,19 +453,19 @@ class Windows.Media.Audio.AudioFrameInputNode python_type closeable
         get get_EncodingProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=99
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     event audio_frame_completed
-        add add_AudioFrameCompleted slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=51 reverse=144
+        add add_AudioFrameCompleted slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode,Windows.Media.Audio.AudioFrameCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AudioFrameCompleted slot=12 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=26 reverse=167
+        remove remove_AudioFrameCompleted slot=12 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event quantum_started
-        add add_QuantumStarted slot=13 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=51 reverse=174
+        add add_QuantumStarted slot=13 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode,Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_QuantumStarted slot=14 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=26 reverse=192
+        remove remove_QuantumStarted slot=14 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_frame
-        method AddFrame slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4 reverse=62
+        method AddFrame slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=4
             in class type=Windows.Media.AudioFrame name=frame
     method add_outgoing_connection
         method AddOutgoingConnection slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=43
@@ -479,7 +479,7 @@ class Windows.Media.Audio.AudioFrameInputNode python_type closeable
         method DisableEffectsByDefinition slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=194
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
     method discard_queued_frames
-        method DiscardQueuedFrames slot=9 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=0 reverse=93
+        method DiscardQueuedFrames slot=9 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioFrameInputNode shape=0
     method enable_effects_by_definition
         method EnableEffectsByDefinition slot=16 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=202
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
@@ -525,7 +525,7 @@ class Windows.Media.Audio.AudioFrameOutputNode python_type closeable
         method EnableEffectsByDefinition slot=16 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=202
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
     method get_frame
-        method GetFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameOutputNode shape=4 reverse=22
+        method GetFrame slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioFrameOutputNode shape=4
             out class type=Windows.Media.AudioFrame return
     method reset
         method Reset slot=14 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=0 reverse=185
@@ -544,59 +544,59 @@ class Windows.Media.Audio.AudioGraph python_type closeable
     requires Windows.Media.Audio.IAudioGraph3
     factory Windows.Media.Audio.IAudioGraphStatics
     property completed_quantum_count
-        get get_CompletedQuantumCount slot=28 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=263
+        get get_CompletedQuantumCount slot=28 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out uint64 return
     property encoding_properties
-        get get_EncodingProperties slot=29 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=266
+        get get_EncodingProperties slot=29 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     property latency_in_samples
-        get get_LatencyInSamples slot=30 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=270
+        get get_LatencyInSamples slot=30 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out int32 return
     property primary_render_device
-        get get_PrimaryRenderDevice slot=31 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=273
+        get get_PrimaryRenderDevice slot=31 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out class type=Windows.Devices.Enumeration.DeviceInformation return
     property render_device_audio_processing
-        get get_RenderDeviceAudioProcessing slot=32 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=280
+        get get_RenderDeviceAudioProcessing slot=32 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out enum32 type=Windows.Media.AudioProcessing return
     property samples_per_quantum
-        get get_SamplesPerQuantum slot=33 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=285
+        get get_SamplesPerQuantum slot=33 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out int32 return
     event quantum_processed
-        add add_QuantumProcessed slot=24 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=248
+        add add_QuantumProcessed slot=24 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_QuantumProcessed slot=25 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=254
+        remove remove_QuantumProcessed slot=25 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event quantum_started
-        add add_QuantumStarted slot=22 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=238
+        add add_QuantumStarted slot=22 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_QuantumStarted slot=23 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=245
+        remove remove_QuantumStarted slot=23 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event unrecoverable_error_occurred
-        add add_UnrecoverableErrorOccurred slot=26 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=256
+        add add_UnrecoverableErrorOccurred slot=26 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph,Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UnrecoverableErrorOccurred slot=27 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26 reverse=262
+        remove remove_UnrecoverableErrorOccurred slot=27 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
-        method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraphStatics shape=51 reverse=24 static
+        method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraphStatics shape=51 static
             in class type=Windows.Media.Audio.AudioGraphSettings name=settings
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioGraphResult> return
     method create_batch_updater
-        method CreateBatchUpdater slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=4 reverse=121
+        method CreateBatchUpdater slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=4
             out class type=Windows.Media.Audio.AudioGraphBatchUpdater return
     method create_device_input_node_async
-        method CreateDeviceInputNodeAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=65
+        method CreateDeviceInputNodeAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in enum32 type=Windows.Media.Capture.MediaCategory name=category
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> return
-        method CreateDeviceInputNodeAsync slot=9 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=117 reverse=101
+        method CreateDeviceInputNodeAsync slot=9 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=117
             in enum32 type=Windows.Media.Capture.MediaCategory name=category
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> return
-        method CreateDeviceInputNodeAsync slot=10 inputs=3 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=195 reverse=126
+        method CreateDeviceInputNodeAsync slot=10 inputs=3 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=195
             in enum32 type=Windows.Media.Capture.MediaCategory name=category
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             in class type=Windows.Devices.Enumeration.DeviceInformation name=device
@@ -608,64 +608,64 @@ class Windows.Media.Audio.AudioGraph python_type closeable
             in class type=Windows.Media.Audio.AudioNodeEmitter name=emitter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult> return
     method create_device_output_node_async
-        method CreateDeviceOutputNodeAsync slot=13 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=173
+        method CreateDeviceOutputNodeAsync slot=13 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult> return
     method create_file_input_node_async
-        method CreateFileInputNodeAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=187
+        method CreateFileInputNodeAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> return
-        method CreateFileInputNodeAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=117 reverse=66
+        method CreateFileInputNodeAsync slot=8 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=117
             in interface type=Windows.Storage.IStorageFile name=file
             in class type=Windows.Media.Audio.AudioNodeEmitter name=emitter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileInputNodeResult> return
     method create_file_output_node_async
-        method CreateFileOutputNodeAsync slot=15 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=196
+        method CreateFileOutputNodeAsync slot=15 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> return
-        method CreateFileOutputNodeAsync slot=16 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=117 reverse=204
+        method CreateFileOutputNodeAsync slot=16 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=117
             in interface type=Windows.Storage.IStorageFile name=file
             in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=fileEncodingProfile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioFileOutputNodeResult> return
     method create_frame_input_node
-        method CreateFrameInputNode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=22
+        method CreateFrameInputNode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out class type=Windows.Media.Audio.AudioFrameInputNode return
-        method CreateFrameInputNode slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=44
+        method CreateFrameInputNode slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             out class type=Windows.Media.Audio.AudioFrameInputNode return
-        method CreateFrameInputNode slot=6 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=117 reverse=25
+        method CreateFrameInputNode slot=6 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=117
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             in class type=Windows.Media.Audio.AudioNodeEmitter name=emitter
             out class type=Windows.Media.Audio.AudioFrameInputNode return
     method create_frame_output_node
-        method CreateFrameOutputNode slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=141
+        method CreateFrameOutputNode slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out class type=Windows.Media.Audio.AudioFrameOutputNode return
-        method CreateFrameOutputNode slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=163
+        method CreateFrameOutputNode slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             out class type=Windows.Media.Audio.AudioFrameOutputNode return
     method create_media_source_audio_input_node_async
-        method CreateMediaSourceAudioInputNodeAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph3 shape=51 reverse=24
+        method CreateMediaSourceAudioInputNodeAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph3 shape=51
             in class type=Windows.Media.Core.MediaSource name=mediaSource
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> return
-        method CreateMediaSourceAudioInputNodeAsync slot=7 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph3 shape=117 reverse=45
+        method CreateMediaSourceAudioInputNodeAsync slot=7 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph3 shape=117
             in class type=Windows.Media.Core.MediaSource name=mediaSource
             in class type=Windows.Media.Audio.AudioNodeEmitter name=emitter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult> return
     method create_submix_node
-        method CreateSubmixNode slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4 reverse=210
+        method CreateSubmixNode slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=4
             out class type=Windows.Media.Audio.AudioSubmixNode return
-        method CreateSubmixNode slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51 reverse=219
+        method CreateSubmixNode slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraph shape=51
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             out class type=Windows.Media.Audio.AudioSubmixNode return
-        method CreateSubmixNode slot=9 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=117 reverse=101
+        method CreateSubmixNode slot=9 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioGraph2 shape=117
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=encodingProperties
             in class type=Windows.Media.Audio.AudioNodeEmitter name=emitter
             out class type=Windows.Media.Audio.AudioSubmixNode return
     method reset_all_nodes
-        method ResetAllNodes slot=21 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=0 reverse=231
+        method ResetAllNodes slot=21 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=0
     method start
-        method Start slot=19 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=0 reverse=221
+        method Start slot=19 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=0
     method stop
-        method Stop slot=20 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=0 reverse=227
+        method Stop slot=20 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioGraph shape=0
 
 class Windows.Media.Audio.AudioGraphBatchUpdater python_type closeable
     py AudioGraphBatchUpdater
@@ -681,12 +681,12 @@ class Windows.Media.Audio.AudioGraphConnection python_type
     default Windows.Media.Audio.IAudioGraphConnection
     requires Windows.Media.Audio.IAudioGraphConnection
     property gain
-        get get_Gain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphConnection shape=4 reverse=62
+        get get_Gain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphConnection shape=4
             out double return
-        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphConnection shape=2 reverse=38
+        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphConnection shape=2
             in double name=value
     property destination
-        get get_Destination slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphConnection shape=4 reverse=22
+        get get_Destination slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphConnection shape=4
             out interface type=Windows.Media.Audio.IAudioNode return
 
 enum Windows.Media.Audio.AudioGraphCreationStatus python_type
@@ -705,41 +705,41 @@ class Windows.Media.Audio.AudioGraphSettings python_type
     requires Windows.Media.Audio.IAudioGraphSettings2
     factory Windows.Media.Audio.IAudioGraphSettingsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettingsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettingsFactory shape=51
             in enum32 type=Windows.Media.Render.AudioRenderCategory name=audioRenderCategory
             out class type=Windows.Media.Audio.AudioGraphSettings return
     property quantum_size_selection_mode
-        get get_QuantumSizeSelectionMode slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=121
+        get get_QuantumSizeSelectionMode slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             out enum32 type=Windows.Media.Audio.QuantumSizeSelectionMode return
-        put put_QuantumSizeSelectionMode slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=141
+        put put_QuantumSizeSelectionMode slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             in enum32 type=Windows.Media.Audio.QuantumSizeSelectionMode name=value
     property primary_render_device
-        get get_PrimaryRenderDevice slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=62
+        get get_PrimaryRenderDevice slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             out class type=Windows.Devices.Enumeration.DeviceInformation return
-        put put_PrimaryRenderDevice slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=99
+        put put_PrimaryRenderDevice slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             in class type=Windows.Devices.Enumeration.DeviceInformation name=value
     property encoding_properties
-        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=22
+        get get_EncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
-        put put_EncodingProperties slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=43
+        put put_EncodingProperties slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             in class type=Windows.Media.MediaProperties.AudioEncodingProperties name=value
     property desired_samples_per_quantum
-        get get_DesiredSamplesPerQuantum slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=162
+        get get_DesiredSamplesPerQuantum slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             out int32 return
-        put put_DesiredSamplesPerQuantum slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=173
+        put put_DesiredSamplesPerQuantum slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             in int32 name=value
     property desired_render_device_audio_processing
-        get get_DesiredRenderDeviceAudioProcessing slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=202
+        get get_DesiredRenderDeviceAudioProcessing slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             out enum32 type=Windows.Media.AudioProcessing return
-        put put_DesiredRenderDeviceAudioProcessing slot=17 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=210
+        put put_DesiredRenderDeviceAudioProcessing slot=17 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             in enum32 type=Windows.Media.AudioProcessing name=value
     property audio_render_category
-        get get_AudioRenderCategory slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=186
+        get get_AudioRenderCategory slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             out enum32 type=Windows.Media.Render.AudioRenderCategory return
-        put put_AudioRenderCategory slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4 reverse=194
+        put put_AudioRenderCategory slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings shape=4
             in enum32 type=Windows.Media.Render.AudioRenderCategory name=value
     property max_playback_speed_factor
-        get get_MaxPlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings2 shape=4 reverse=43
+        get get_MaxPlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphSettings2 shape=4
             out double return
         put put_MaxPlaybackSpeedFactor slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioGraphSettings2 shape=2
             in double name=value
@@ -758,7 +758,7 @@ class Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs python_t
     default Windows.Media.Audio.IAudioGraphUnrecoverableErrorOccurredEventArgs
     requires Windows.Media.Audio.IAudioGraphUnrecoverableErrorOccurredEventArgs
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphUnrecoverableErrorOccurredEventArgs shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioGraphUnrecoverableErrorOccurredEventArgs shape=4
             out enum32 type=Windows.Media.Audio.AudioGraphUnrecoverableError return
 
 class Windows.Media.Audio.AudioNodeEmitter activatable python_type
@@ -771,54 +771,54 @@ class Windows.Media.Audio.AudioNodeEmitter activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterFactory shape=195
             in class type=Windows.Media.Audio.AudioNodeEmitterShape name=shape
             in class type=Windows.Media.Audio.AudioNodeEmitterDecayModel name=decayModel
             in enum_u32 type=Windows.Media.Audio.AudioNodeEmitterSettings name=settings
             out class type=Windows.Media.Audio.AudioNodeEmitter return
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_Position slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property gain
-        get get_Gain slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=162
+        get get_Gain slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out double return
-        put put_Gain slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=2 reverse=171
+        put put_Gain slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=2
             in double name=value
     property doppler_velocity
-        get get_DopplerVelocity slot=18 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=218
+        get get_DopplerVelocity slot=18 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_DopplerVelocity slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property doppler_scale
-        get get_DopplerScale slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=202
+        get get_DopplerScale slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out double return
         put put_DopplerScale slot=17 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=2
             in double name=value
     property distance_scale
-        get get_DistanceScale slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=186
+        get get_DistanceScale slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out double return
         put put_DistanceScale slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=2
             in double name=value
     property direction
-        get get_Direction slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=62
+        get get_Direction slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_Direction slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property decay_model
-        get get_DecayModel slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=141
+        get get_DecayModel slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out class type=Windows.Media.Audio.AudioNodeEmitterDecayModel return
     property is_doppler_disabled
-        get get_IsDopplerDisabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=228
+        get get_IsDopplerDisabled slot=20 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out boolean return
     property shape
-        get get_Shape slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4 reverse=121
+        get get_Shape slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter shape=4
             out class type=Windows.Media.Audio.AudioNodeEmitterShape return
     property spatial_audio_model
-        get get_SpatialAudioModel slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter2 shape=4 reverse=22
+        get get_SpatialAudioModel slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitter2 shape=4
             out enum32 type=Windows.Media.Audio.SpatialAudioModel return
-        put put_SpatialAudioModel slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter2 shape=4 reverse=43
+        put put_SpatialAudioModel slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeEmitter2 shape=4
             in enum32 type=Windows.Media.Audio.SpatialAudioModel name=value
 
 class Windows.Media.Audio.AudioNodeEmitterConeProperties python_type
@@ -827,13 +827,13 @@ class Windows.Media.Audio.AudioNodeEmitterConeProperties python_type
     default Windows.Media.Audio.IAudioNodeEmitterConeProperties
     requires Windows.Media.Audio.IAudioNodeEmitterConeProperties
     property inner_angle
-        get get_InnerAngle slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterConeProperties shape=4 reverse=22
+        get get_InnerAngle slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterConeProperties shape=4
             out double return
     property outer_angle
-        get get_OuterAngle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterConeProperties shape=4 reverse=43
+        get get_OuterAngle slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterConeProperties shape=4
             out double return
     property outer_angle_gain
-        get get_OuterAngleGain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterConeProperties shape=4 reverse=62
+        get get_OuterAngleGain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterConeProperties shape=4
             out double return
 
 enum Windows.Media.Audio.AudioNodeEmitterDecayKind python_type
@@ -849,16 +849,16 @@ class Windows.Media.Audio.AudioNodeEmitterDecayModel python_type
     requires Windows.Media.Audio.IAudioNodeEmitterDecayModel
     factory Windows.Media.Audio.IAudioNodeEmitterDecayModelStatics
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4
             out enum32 type=Windows.Media.Audio.AudioNodeEmitterDecayKind return
     property max_gain
-        get get_MaxGain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4 reverse=62
+        get get_MaxGain slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4
             out double return
     property min_gain
-        get get_MinGain slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4 reverse=43
+        get get_MinGain slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4
             out double return
     property natural_properties
-        get get_NaturalProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4 reverse=99
+        get get_NaturalProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModel shape=4
             out class type=Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties return
     method create_custom static
         method CreateCustom slot=7 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterDecayModelStatics shape=105 static
@@ -879,10 +879,10 @@ class Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties python_typ
     default Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties
     requires Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties
     property cutoff_distance
-        get get_CutoffDistance slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties shape=4 reverse=43
+        get get_CutoffDistance slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties shape=4
             out double return
     property unity_gain_distance
-        get get_UnityGainDistance slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties shape=4 reverse=22
+        get get_UnityGainDistance slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterNaturalDecayModelProperties shape=4
             out double return
 
 enum Windows.Media.Audio.AudioNodeEmitterSettings python_type flags_enum
@@ -898,10 +898,10 @@ class Windows.Media.Audio.AudioNodeEmitterShape python_type
     requires Windows.Media.Audio.IAudioNodeEmitterShape
     factory Windows.Media.Audio.IAudioNodeEmitterShapeStatics
     property cone_properties
-        get get_ConeProperties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShape shape=4 reverse=43
+        get get_ConeProperties slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShape shape=4
             out class type=Windows.Media.Audio.AudioNodeEmitterConeProperties return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShape shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShape shape=4
             out enum32 type=Windows.Media.Audio.AudioNodeEmitterShapeKind return
     method create_cone static
         method CreateCone slot=6 inputs=3 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShapeStatics shape=185 static
@@ -910,7 +910,7 @@ class Windows.Media.Audio.AudioNodeEmitterShape python_type
             in double name=outerAngleGain
             out class type=Windows.Media.Audio.AudioNodeEmitterShape return
     method create_omnidirectional static
-        method CreateOmnidirectional slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShapeStatics shape=4 reverse=43 static
+        method CreateOmnidirectional slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeEmitterShapeStatics shape=4 static
             out class type=Windows.Media.Audio.AudioNodeEmitterShape return
 
 enum Windows.Media.Audio.AudioNodeEmitterShapeKind python_type
@@ -928,22 +928,22 @@ class Windows.Media.Audio.AudioNodeListener activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property speed_of_sound
-        get get_SpeedOfSound slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4 reverse=121
+        get get_SpeedOfSound slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4
             out double return
-        put put_SpeedOfSound slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeListener shape=2 reverse=138
+        put put_SpeedOfSound slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeListener shape=2
             in double name=value
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_Position slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeListener shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property orientation
-        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4 reverse=62
+        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4
             out struct type=Windows.Foundation.Numerics.Quaternion return
-        put put_Orientation slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeListener shape=8 reverse=105
+        put put_Orientation slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeListener shape=8
             in struct type=Windows.Foundation.Numerics.Quaternion name=value
     property doppler_velocity
-        get get_DopplerVelocity slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4 reverse=162
+        get get_DopplerVelocity slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNodeListener shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_DopplerVelocity slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioNodeListener shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
@@ -956,35 +956,35 @@ class Windows.Media.Audio.AudioPlaybackConnection python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Media.Audio.IAudioPlaybackConnectionStatics
     property device_id
-        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4 reverse=62
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4
             out string return
     property state
-        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4 reverse=99
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4
             out enum32 type=Windows.Media.Audio.AudioPlaybackConnectionState return
     event state_changed
-        add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=51 reverse=163
+        add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioPlaybackConnection,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=26 reverse=181
+        remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionStatics shape=4 reverse=22 static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionStatics shape=4 static
             out string return
     method open
-        method Open slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4 reverse=121
+        method Open slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4
             out class type=Windows.Media.Audio.AudioPlaybackConnectionOpenResult return
     method open_async
-        method OpenAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4 reverse=141
+        method OpenAsync slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> return
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=0
     method start_async
-        method StartAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4 reverse=43
+        method StartAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnection shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method try_create_from_id static
-        method TryCreateFromId slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionStatics shape=51 reverse=44 static
+        method TryCreateFromId slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionStatics shape=51 static
             in string name=id
             out class type=Windows.Media.Audio.AudioPlaybackConnection return
 
@@ -994,10 +994,10 @@ class Windows.Media.Audio.AudioPlaybackConnectionOpenResult python_type
     default Windows.Media.Audio.IAudioPlaybackConnectionOpenResult
     requires Windows.Media.Audio.IAudioPlaybackConnectionOpenResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionOpenResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionOpenResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionOpenResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioPlaybackConnectionOpenResult shape=4
             out enum32 type=Windows.Media.Audio.AudioPlaybackConnectionOpenResultStatus return
 
 enum Windows.Media.Audio.AudioPlaybackConnectionOpenResultStatus python_type
@@ -1021,41 +1021,41 @@ class Windows.Media.Audio.AudioStateMonitor python_type
     requires Windows.Media.Audio.IAudioStateMonitor
     factory Windows.Media.Audio.IAudioStateMonitorStatics
     property sound_level
-        get get_SoundLevel slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitor shape=4 reverse=62
+        get get_SoundLevel slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitor shape=4
             out enum32 type=Windows.Media.SoundLevel return
     event sound_level_changed
-        add add_SoundLevelChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitor shape=51 reverse=24
+        add add_SoundLevelChanged slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioStateMonitor,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SoundLevelChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioStateMonitor shape=26 reverse=53
+        remove remove_SoundLevelChanged slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioStateMonitor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_for_capture_monitoring static
-        method CreateForCaptureMonitoring slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=4 reverse=121 static
+        method CreateForCaptureMonitoring slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=4 static
             out class type=Windows.Media.Audio.AudioStateMonitor return
-        method CreateForCaptureMonitoring slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=51 reverse=144 static
+        method CreateForCaptureMonitoring slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=51 static
             in enum32 type=Windows.Media.Capture.MediaCategory name=category
             out class type=Windows.Media.Audio.AudioStateMonitor return
-        method CreateForCaptureMonitoring slot=12 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 reverse=164 static
+        method CreateForCaptureMonitoring slot=12 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 static
             in enum32 type=Windows.Media.Capture.MediaCategory name=category
             in enum32 type=Windows.Media.Devices.AudioDeviceRole name=role
             out class type=Windows.Media.Audio.AudioStateMonitor return
     method create_for_capture_monitoring_with_category_and_device_id static
-        method CreateForCaptureMonitoringWithCategoryAndDeviceId slot=13 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 reverse=175 static
+        method CreateForCaptureMonitoringWithCategoryAndDeviceId slot=13 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 static
             in enum32 type=Windows.Media.Capture.MediaCategory name=category
             in string name=deviceId
             out class type=Windows.Media.Audio.AudioStateMonitor return
     method create_for_render_monitoring static
-        method CreateForRenderMonitoring slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=4 reverse=22 static
+        method CreateForRenderMonitoring slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=4 static
             out class type=Windows.Media.Audio.AudioStateMonitor return
-        method CreateForRenderMonitoring slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=51 reverse=44 static
+        method CreateForRenderMonitoring slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=51 static
             in enum32 type=Windows.Media.Render.AudioRenderCategory name=category
             out class type=Windows.Media.Audio.AudioStateMonitor return
-        method CreateForRenderMonitoring slot=8 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 reverse=66 static
+        method CreateForRenderMonitoring slot=8 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 static
             in enum32 type=Windows.Media.Render.AudioRenderCategory name=category
             in enum32 type=Windows.Media.Devices.AudioDeviceRole name=role
             out class type=Windows.Media.Audio.AudioStateMonitor return
     method create_for_render_monitoring_with_category_and_device_id static
-        method CreateForRenderMonitoringWithCategoryAndDeviceId slot=9 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 reverse=101 static
+        method CreateForRenderMonitoringWithCategoryAndDeviceId slot=9 inputs=2 outputs=1 declaring=Windows.Media.Audio.IAudioStateMonitorStatics shape=117 static
             in enum32 type=Windows.Media.Render.AudioRenderCategory name=category
             in string name=deviceId
             out class type=Windows.Media.Audio.AudioStateMonitor return
@@ -1121,13 +1121,13 @@ class Windows.Media.Audio.CreateAudioDeviceInputNodeResult python_type
     requires Windows.Media.Audio.ICreateAudioDeviceInputNodeResult
     requires Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2
     property device_input_node
-        get get_DeviceInputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult shape=4 reverse=43
+        get get_DeviceInputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult shape=4
             out class type=Windows.Media.Audio.AudioDeviceInputNode return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult shape=4
             out enum32 type=Windows.Media.Audio.AudioDeviceNodeCreationStatus return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceInputNodeResult2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioDeviceOutputNodeResult python_type
@@ -1137,13 +1137,13 @@ class Windows.Media.Audio.CreateAudioDeviceOutputNodeResult python_type
     requires Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult
     requires Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2
     property device_output_node
-        get get_DeviceOutputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult shape=4 reverse=43
+        get get_DeviceOutputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult shape=4
             out class type=Windows.Media.Audio.AudioDeviceOutputNode return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult shape=4
             out enum32 type=Windows.Media.Audio.AudioDeviceNodeCreationStatus return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioDeviceOutputNodeResult2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioFileInputNodeResult python_type
@@ -1153,13 +1153,13 @@ class Windows.Media.Audio.CreateAudioFileInputNodeResult python_type
     requires Windows.Media.Audio.ICreateAudioFileInputNodeResult
     requires Windows.Media.Audio.ICreateAudioFileInputNodeResult2
     property file_input_node
-        get get_FileInputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult shape=4 reverse=43
+        get get_FileInputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult shape=4
             out class type=Windows.Media.Audio.AudioFileInputNode return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult shape=4
             out enum32 type=Windows.Media.Audio.AudioFileNodeCreationStatus return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileInputNodeResult2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioFileOutputNodeResult python_type
@@ -1169,13 +1169,13 @@ class Windows.Media.Audio.CreateAudioFileOutputNodeResult python_type
     requires Windows.Media.Audio.ICreateAudioFileOutputNodeResult
     requires Windows.Media.Audio.ICreateAudioFileOutputNodeResult2
     property file_output_node
-        get get_FileOutputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult shape=4 reverse=43
+        get get_FileOutputNode slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult shape=4
             out class type=Windows.Media.Audio.AudioFileOutputNode return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult shape=4
             out enum32 type=Windows.Media.Audio.AudioFileNodeCreationStatus return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioFileOutputNodeResult2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateAudioGraphResult python_type
@@ -1185,13 +1185,13 @@ class Windows.Media.Audio.CreateAudioGraphResult python_type
     requires Windows.Media.Audio.ICreateAudioGraphResult
     requires Windows.Media.Audio.ICreateAudioGraphResult2
     property graph
-        get get_Graph slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult shape=4 reverse=43
+        get get_Graph slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult shape=4
             out class type=Windows.Media.Audio.AudioGraph return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult shape=4
             out enum32 type=Windows.Media.Audio.AudioGraphCreationStatus return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateAudioGraphResult2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult python_type
@@ -1201,13 +1201,13 @@ class Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult python_type
     requires Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult
     requires Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2
     property node
-        get get_Node slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult shape=4 reverse=43
+        get get_Node slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult shape=4
             out class type=Windows.Media.Audio.MediaSourceAudioInputNode return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult shape=4
             out enum32 type=Windows.Media.Audio.MediaSourceAudioInputNodeCreationStatus return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ICreateMediaSourceAudioInputNodeResult2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.Media.Audio.EchoEffectDefinition python_type
@@ -1218,23 +1218,23 @@ class Windows.Media.Audio.EchoEffectDefinition python_type
     requires Windows.Media.Effects.IAudioEffectDefinition
     factory Windows.Media.Audio.IEchoEffectDefinitionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinitionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinitionFactory shape=51
             in class type=Windows.Media.Audio.AudioGraph name=audioGraph
             out class type=Windows.Media.Audio.EchoEffectDefinition return
     property wet_dry_mix
-        get get_WetDryMix slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=4 reverse=43
+        get get_WetDryMix slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=4
             out double return
         put put_WetDryMix slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=2
             in double name=value
     property feedback
-        get get_Feedback slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=4 reverse=99
+        get get_Feedback slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=4
             out double return
         put put_Feedback slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=2
             in double name=value
     property delay
-        get get_Delay slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=4 reverse=141
+        get get_Delay slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=4
             out double return
-        put put_Delay slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=2 reverse=119
+        put put_Delay slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEchoEffectDefinition shape=2
             in double name=value
     property activatable_class_id
         get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=22
@@ -1249,19 +1249,19 @@ class Windows.Media.Audio.EqualizerBand python_type
     default Windows.Media.Audio.IEqualizerBand
     requires Windows.Media.Audio.IEqualizerBand
     property gain
-        get get_Gain slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerBand shape=4 reverse=121
+        get get_Gain slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerBand shape=4
             out double return
-        put put_Gain slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEqualizerBand shape=2 reverse=138
+        put put_Gain slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEqualizerBand shape=2
             in double name=value
     property frequency_center
-        get get_FrequencyCenter slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerBand shape=4 reverse=62
+        get get_FrequencyCenter slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerBand shape=4
             out double return
         put put_FrequencyCenter slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEqualizerBand shape=2
             in double name=value
     property bandwidth
-        get get_Bandwidth slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerBand shape=4 reverse=22
+        get get_Bandwidth slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerBand shape=4
             out double return
-        put put_Bandwidth slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEqualizerBand shape=2 reverse=38
+        put put_Bandwidth slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IEqualizerBand shape=2
             in double name=value
 
 class Windows.Media.Audio.EqualizerEffectDefinition python_type
@@ -1272,11 +1272,11 @@ class Windows.Media.Audio.EqualizerEffectDefinition python_type
     requires Windows.Media.Effects.IAudioEffectDefinition
     factory Windows.Media.Audio.IEqualizerEffectDefinitionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IEqualizerEffectDefinitionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IEqualizerEffectDefinitionFactory shape=51
             in class type=Windows.Media.Audio.AudioGraph name=audioGraph
             out class type=Windows.Media.Audio.EqualizerEffectDefinition return
     property bands
-        get get_Bands slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerEffectDefinition shape=4 reverse=22
+        get get_Bands slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IEqualizerEffectDefinition shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Audio.EqualizerBand> return
     property activatable_class_id
         get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=22
@@ -1291,7 +1291,7 @@ class Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs python_type
     default Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs
     requires Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs
     property required_samples
-        get get_RequiredSamples slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs shape=4 reverse=22
+        get get_RequiredSamples slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.IFrameInputNodeQuantumStartedEventArgs shape=4
             out int32 return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult> concrete awaitable
@@ -2414,18 +2414,18 @@ class Windows.Media.Audio.LimiterEffectDefinition python_type
     requires Windows.Media.Effects.IAudioEffectDefinition
     factory Windows.Media.Audio.ILimiterEffectDefinitionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ILimiterEffectDefinitionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ILimiterEffectDefinitionFactory shape=51
             in class type=Windows.Media.Audio.AudioGraph name=audioGraph
             out class type=Windows.Media.Audio.LimiterEffectDefinition return
     property release
-        get get_Release slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4 reverse=43
+        get get_Release slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4
             out uint32 return
-        put put_Release slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4 reverse=22
+        put put_Release slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4
             in uint32 name=value
     property loudness
-        get get_Loudness slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4 reverse=99
+        get get_Loudness slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4
             out uint32 return
-        put put_Loudness slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4 reverse=62
+        put put_Loudness slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.ILimiterEffectDefinition shape=4
             in uint32 name=value
     property activatable_class_id
         get get_ActivatableClassId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioEffectDefinition shape=4 reverse=22
@@ -2466,39 +2466,39 @@ class Windows.Media.Audio.MediaSourceAudioInputNode python_type closeable
         get get_EncodingProperties slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IAudioNode shape=4 reverse=99
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
     property start_time
-        get get_StartTime slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=121
+        get get_StartTime slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_StartTime slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=141
+        put put_StartTime slot=11 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property playback_speed_factor
-        get get_PlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=43
+        get get_PlaybackSpeedFactor slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out double return
         put put_PlaybackSpeedFactor slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=2
             in double name=value
     property loop_count
-        get get_LoopCount slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=186
+        get get_LoopCount slot=14 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_LoopCount slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=194
+        put put_LoopCount slot=15 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property end_time
-        get get_EndTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=162
+        get get_EndTime slot=12 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_EndTime slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=173
+        put put_EndTime slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property duration
-        get get_Duration slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=202
+        get get_Duration slot=16 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out timespan return
     property media_source
-        get get_MediaSource slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=210
+        get get_MediaSource slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out class type=Windows.Media.Core.MediaSource return
     property position
-        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4 reverse=62
+        get get_Position slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=4
             out timespan return
     event media_source_completed
-        add add_MediaSourceCompleted slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=51 reverse=219
+        add add_MediaSourceCompleted slot=18 inputs=1 outputs=1 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.MediaSourceAudioInputNode,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MediaSourceCompleted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=26 reverse=226
+        remove remove_MediaSourceCompleted slot=19 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_outgoing_connection
         method AddOutgoingConnection slot=7 inputs=1 outputs=0 declaring=Windows.Media.Audio.IAudioInputNode shape=4 reverse=43
@@ -2520,7 +2520,7 @@ class Windows.Media.Audio.MediaSourceAudioInputNode python_type closeable
     method reset
         method Reset slot=14 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=0 reverse=185
     method seek
-        method Seek slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=26 reverse=110
+        method Seek slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.IMediaSourceAudioInputNode shape=26
             in timespan name=position
     method start
         method Start slot=12 inputs=0 outputs=0 declaring=Windows.Media.Audio.IAudioNode shape=0 reverse=159
@@ -2556,121 +2556,121 @@ class Windows.Media.Audio.ReverbEffectDefinition python_type
     requires Windows.Media.Effects.IAudioEffectDefinition
     factory Windows.Media.Audio.IReverbEffectDefinitionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinitionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinitionFactory shape=51
             in class type=Windows.Media.Audio.AudioGraph name=audioGraph
             out class type=Windows.Media.Audio.ReverbEffectDefinition return
     property high_e_q_gain
-        get get_HighEQGain slot=31 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=273
+        get get_HighEQGain slot=31 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_HighEQGain slot=30 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=270
+        put put_HighEQGain slot=30 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property high_e_q_cutoff
-        get get_HighEQCutoff slot=33 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=285
+        get get_HighEQCutoff slot=33 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_HighEQCutoff slot=32 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=280
+        put put_HighEQCutoff slot=32 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property disable_late_field
-        get get_DisableLateField slot=51 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=355
+        get get_DisableLateField slot=51 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out boolean return
-        put put_DisableLateField slot=50 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=351
+        put put_DisableLateField slot=50 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in boolean name=value
     property density
-        get get_Density slot=47 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=339
+        get get_Density slot=47 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_Density slot=46 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property position_right
-        get get_PositionRight slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=210
+        get get_PositionRight slot=17 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_PositionRight slot=16 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=202
+        put put_PositionRight slot=16 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property decay_time
-        get get_DecayTime slot=45 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=330
+        get get_DecayTime slot=45 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_DecayTime slot=44 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property late_diffusion
-        get get_LateDiffusion slot=25 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=252
+        get get_LateDiffusion slot=25 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_LateDiffusion slot=24 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=247
+        put put_LateDiffusion slot=24 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property position_matrix_right
-        get get_PositionMatrixRight slot=21 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=232
+        get get_PositionMatrixRight slot=21 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_PositionMatrixRight slot=20 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=228
+        put put_PositionMatrixRight slot=20 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property position_matrix_left
-        get get_PositionMatrixLeft slot=19 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=223
+        get get_PositionMatrixLeft slot=19 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_PositionMatrixLeft slot=18 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=218
+        put put_PositionMatrixLeft slot=18 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property position_left
-        get get_PositionLeft slot=15 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=194
+        get get_PositionLeft slot=15 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_PositionLeft slot=14 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=186
+        put put_PositionLeft slot=14 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property low_e_q_gain
-        get get_LowEQGain slot=27 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=259
+        get get_LowEQGain slot=27 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_LowEQGain slot=26 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=255
+        put put_LowEQGain slot=26 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property low_e_q_cutoff
-        get get_LowEQCutoff slot=29 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=266
+        get get_LowEQCutoff slot=29 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_LowEQCutoff slot=28 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=263
+        put put_LowEQCutoff slot=28 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property room_filter_freq
-        get get_RoomFilterFreq slot=35 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=292
+        get get_RoomFilterFreq slot=35 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_RoomFilterFreq slot=34 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property reverb_gain
-        get get_ReverbGain slot=43 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=322
+        get get_ReverbGain slot=43 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_ReverbGain slot=42 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property reverb_delay
-        get get_ReverbDelay slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=141
+        get get_ReverbDelay slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_ReverbDelay slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=121
+        put put_ReverbDelay slot=10 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property reflections_gain
-        get get_ReflectionsGain slot=41 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=316
+        get get_ReflectionsGain slot=41 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_ReflectionsGain slot=40 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property reflections_delay
-        get get_ReflectionsDelay slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=99
+        get get_ReflectionsDelay slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint32 return
-        put put_ReflectionsDelay slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=62
+        put put_ReflectionsDelay slot=8 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint32 name=value
     property rear_delay
-        get get_RearDelay slot=13 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=173
+        get get_RearDelay slot=13 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_RearDelay slot=12 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=162
+        put put_RearDelay slot=12 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property wet_dry_mix
-        get get_WetDryMix slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=43
+        get get_WetDryMix slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_WetDryMix slot=6 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property early_diffusion
-        get get_EarlyDiffusion slot=23 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=242
+        get get_EarlyDiffusion slot=23 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
-        put put_EarlyDiffusion slot=22 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=237
+        put put_EarlyDiffusion slot=22 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
     property room_size
-        get get_RoomSize slot=49 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=347
+        get get_RoomSize slot=49 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_RoomSize slot=48 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property room_filter_main
-        get get_RoomFilterMain slot=37 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=299
+        get get_RoomFilterMain slot=37 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_RoomFilterMain slot=36 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
     property room_filter_h_f
-        get get_RoomFilterHF slot=39 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4 reverse=307
+        get get_RoomFilterHF slot=39 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_RoomFilterHF slot=38 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
@@ -2687,7 +2687,7 @@ class Windows.Media.Audio.SetDefaultSpatialAudioFormatResult python_type
     default Windows.Media.Audio.ISetDefaultSpatialAudioFormatResult
     requires Windows.Media.Audio.ISetDefaultSpatialAudioFormatResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISetDefaultSpatialAudioFormatResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISetDefaultSpatialAudioFormatResult shape=4
             out enum32 type=Windows.Media.Audio.SetDefaultSpatialAudioFormatStatus return
 
 enum Windows.Media.Audio.SetDefaultSpatialAudioFormatStatus python_type
@@ -2707,33 +2707,33 @@ class Windows.Media.Audio.SpatialAudioDeviceConfiguration python_type
     requires Windows.Media.Audio.ISpatialAudioDeviceConfiguration
     factory Windows.Media.Audio.ISpatialAudioDeviceConfigurationStatics
     property active_spatial_audio_format
-        get get_ActiveSpatialAudioFormat slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4 reverse=99
+        get get_ActiveSpatialAudioFormat slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4
             out string return
     property default_spatial_audio_format
-        get get_DefaultSpatialAudioFormat slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4 reverse=121
+        get get_DefaultSpatialAudioFormat slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4
             out string return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4
             out string return
     property is_spatial_audio_supported
-        get get_IsSpatialAudioSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4 reverse=43
+        get get_IsSpatialAudioSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=4
             out boolean return
     event configuration_changed
-        add add_ConfigurationChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51 reverse=163
+        add add_ConfigurationChanged slot=12 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Audio.SpatialAudioDeviceConfiguration,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ConfigurationChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=26 reverse=181
+        remove remove_ConfigurationChanged slot=13 inputs=1 outputs=0 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_device_id static
-        method GetForDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfigurationStatics shape=51 reverse=24 static
+        method GetForDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfigurationStatics shape=51 static
             in string name=deviceId
             out class type=Windows.Media.Audio.SpatialAudioDeviceConfiguration return
     method is_spatial_audio_format_supported
-        method IsSpatialAudioFormatSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51 reverse=65
+        method IsSpatialAudioFormatSupported slot=8 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51
             in string name=subtype
             out boolean return
     method set_default_spatial_audio_format_async
-        method SetDefaultSpatialAudioFormatAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51 reverse=144
+        method SetDefaultSpatialAudioFormatAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioDeviceConfiguration shape=51
             in string name=subtype
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> return
 
@@ -2744,19 +2744,19 @@ class Windows.Media.Audio.SpatialAudioFormatConfiguration python_type
     requires Windows.Media.Audio.ISpatialAudioFormatConfiguration
     factory Windows.Media.Audio.ISpatialAudioFormatConfigurationStatics
     property mixed_reality_exclusive_mode_policy
-        get get_MixedRealityExclusiveModePolicy slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=4 reverse=62
+        get get_MixedRealityExclusiveModePolicy slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=4
             out enum32 type=Windows.Media.Audio.MixedRealitySpatialAudioFormatPolicy return
-        put put_MixedRealityExclusiveModePolicy slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=4 reverse=99
+        put put_MixedRealityExclusiveModePolicy slot=9 inputs=1 outputs=0 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=4
             in enum32 type=Windows.Media.Audio.MixedRealitySpatialAudioFormatPolicy name=value
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfigurationStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfigurationStatics shape=4 static
             out class type=Windows.Media.Audio.SpatialAudioFormatConfiguration return
     method report_configuration_changed_async
-        method ReportConfigurationChangedAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=51 reverse=44
+        method ReportConfigurationChangedAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=51
             in string name=subtype
             out interface type=Windows.Foundation.IAsyncAction return
     method report_license_changed_async
-        method ReportLicenseChangedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=51 reverse=24
+        method ReportLicenseChangedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatConfiguration shape=51
             in string name=subtype
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -2765,25 +2765,25 @@ class Windows.Media.Audio.SpatialAudioFormatSubtype static python_type
     factory Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics
     factory Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2
     property d_t_s_headphone_x static
-        get get_DTSHeadphoneX slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 reverse=121 static
+        get get_DTSHeadphoneX slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property d_t_s_x_ultra static
-        get get_DTSXUltra slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 reverse=141 static
+        get get_DTSXUltra slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property dolby_atmos_for_headphones static
-        get get_DolbyAtmosForHeadphones slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 reverse=43 static
+        get get_DolbyAtmosForHeadphones slot=7 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property dolby_atmos_for_home_theater static
-        get get_DolbyAtmosForHomeTheater slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 reverse=62 static
+        get get_DolbyAtmosForHomeTheater slot=8 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property dolby_atmos_for_speakers static
-        get get_DolbyAtmosForSpeakers slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 reverse=99 static
+        get get_DolbyAtmosForSpeakers slot=9 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property windows_sonic static
-        get get_WindowsSonic slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 reverse=22 static
+        get get_WindowsSonic slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property d_t_s_x_for_home_theater static
-        get get_DTSXForHomeTheater slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2 shape=4 reverse=22 static
+        get get_DTSXForHomeTheater slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2 shape=4 static
             out string return
 
 enum Windows.Media.Audio.SpatialAudioModel python_type

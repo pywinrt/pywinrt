@@ -24,13 +24,13 @@ class Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult activata
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property has_instance_name_changed
-        get get_HasInstanceNameChanged slot=8 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult shape=4 reverse=62
+        get get_HasInstanceNameChanged slot=8 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult shape=4
             out boolean return
     property ip_address
-        get get_IPAddress slot=7 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult shape=4 reverse=43
+        get get_IPAddress slot=7 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult shape=4
             out class type=Windows.Networking.HostName return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult shape=4
             out enum32 type=Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationStatus return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
@@ -52,52 +52,52 @@ class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance python_type
     requires Windows.Foundation.IStringable
     factory Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory shape=195
             in string name=dnssdServiceInstanceName
             in class type=Windows.Networking.HostName name=hostName
             in uint16 name=port
             out class type=Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance return
     property weight
-        get get_Weight slot=14 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=186
+        get get_Weight slot=14 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             out uint16 return
-        put put_Weight slot=15 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=194
+        put put_Weight slot=15 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             in uint16 name=value
     property priority
-        get get_Priority slot=12 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=162
+        get get_Priority slot=12 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             out uint16 return
-        put put_Priority slot=13 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=173
+        put put_Priority slot=13 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             in uint16 name=value
     property port
-        get get_Port slot=10 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=121
+        get get_Port slot=10 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             out uint16 return
-        put put_Port slot=11 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=141
+        put put_Port slot=11 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             in uint16 name=value
     property host_name
-        get get_HostName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=62
+        get get_HostName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             out class type=Windows.Networking.HostName return
-        put put_HostName slot=9 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=99
+        put put_HostName slot=9 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             in class type=Windows.Networking.HostName name=value
     property dnssd_service_instance_name
-        get get_DnssdServiceInstanceName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=22
+        get get_DnssdServiceInstanceName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             out string return
-        put put_DnssdServiceInstanceName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=43
+        put put_DnssdServiceInstanceName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             in string name=value
     property text_attributes
-        get get_TextAttributes slot=16 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4 reverse=202
+        get get_TextAttributes slot=16 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     method register_datagram_socket_async
-        method RegisterDatagramSocketAsync slot=19 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=51 reverse=224
+        method RegisterDatagramSocketAsync slot=19 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=51
             in class type=Windows.Networking.Sockets.DatagramSocket name=socket
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> return
-        method RegisterDatagramSocketAsync slot=20 inputs=2 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=117 reverse=230
+        method RegisterDatagramSocketAsync slot=20 inputs=2 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=117
             in class type=Windows.Networking.Sockets.DatagramSocket name=socket
             in class type=Windows.Networking.Connectivity.NetworkAdapter name=adapter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> return
     method register_stream_socket_listener_async
-        method RegisterStreamSocketListenerAsync slot=17 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=51 reverse=211
+        method RegisterStreamSocketListenerAsync slot=17 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=51
             in class type=Windows.Networking.Sockets.StreamSocketListener name=socket
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> return
-        method RegisterStreamSocketListenerAsync slot=18 inputs=2 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=117 reverse=220
+        method RegisterStreamSocketListenerAsync slot=18 inputs=2 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance shape=117
             in class type=Windows.Networking.Sockets.StreamSocketListener name=socket
             in class type=Windows.Networking.Connectivity.NetworkAdapter name=adapter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> return
@@ -139,30 +139,30 @@ class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher python_type
     default Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher
     requires Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher
     property status
-        get get_Status slot=12 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=4 reverse=162
+        get get_Status slot=12 inputs=0 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=4
             out enum32 type=Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcherStatus return
     event added
-        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=51 reverse=24
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher,Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=26 reverse=53
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=8 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=51 reverse=65
+        add add_EnumerationCompleted slot=8 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=9 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=26 reverse=110
+        remove remove_EnumerationCompleted slot=9 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=51 reverse=124
+        add add_Stopped slot=10 inputs=1 outputs=1 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=26 reverse=156
+        remove remove_Stopped slot=11 inputs=1 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=13 inputs=0 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=0 reverse=169
+        method Start slot=13 inputs=0 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=0
     method stop
-        method Stop slot=14 inputs=0 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=0 reverse=185
+        method Stop slot=14 inputs=0 outputs=0 declaring=Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher shape=0
 
 enum Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcherStatus python_type
     py DnssdServiceWatcherStatus

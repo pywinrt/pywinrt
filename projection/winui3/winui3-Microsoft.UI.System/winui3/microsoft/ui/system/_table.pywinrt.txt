@@ -16,16 +16,16 @@ class Microsoft.UI.System.ThemeSettings python_type
     requires Microsoft.UI.System.IThemeSettings
     factory Microsoft.UI.System.IThemeSettingsStatics
     property high_contrast
-        get get_HighContrast slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.System.IThemeSettings shape=4 reverse=62
+        get get_HighContrast slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.System.IThemeSettings shape=4
             out boolean return
     property high_contrast_scheme
-        get get_HighContrastScheme slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.System.IThemeSettings shape=4 reverse=99
+        get get_HighContrastScheme slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.System.IThemeSettings shape=4
             out string return
     event changed
-        add add_Changed slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.System.IThemeSettings shape=51 reverse=24
+        add add_Changed slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.System.IThemeSettings shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.System.ThemeSettings,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.System.IThemeSettings shape=26 reverse=53
+        remove remove_Changed slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.System.IThemeSettings shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_for_window_id static
         method CreateForWindowId slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.System.IThemeSettingsStatics shape=97 static

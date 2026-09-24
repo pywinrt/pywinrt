@@ -189,19 +189,19 @@ class Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs composable python
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs return
     property action
-        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=22
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Interop.NotifyCollectionChangedAction return
     property new_items
-        get get_NewItems slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=43
+        get get_NewItems slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4
             out interface type=Windows.UI.Xaml.Interop.IBindableVector return
     property new_starting_index
-        get get_NewStartingIndex slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=99
+        get get_NewStartingIndex slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4
             out int32 return
     property old_items
-        get get_OldItems slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=62
+        get get_OldItems slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4
             out interface type=Windows.UI.Xaml.Interop.IBindableVector return
     property old_starting_index
-        get get_OldStartingIndex slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4 reverse=121
+        get get_OldStartingIndex slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs shape=4
             out int32 return
 
 delegate Windows.UI.Xaml.Interop.NotifyCollectionChangedEventHandler python_type

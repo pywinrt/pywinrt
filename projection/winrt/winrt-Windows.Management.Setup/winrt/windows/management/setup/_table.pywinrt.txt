@@ -12,37 +12,37 @@ class Windows.Management.Setup.AgentProvisioningProgressReport activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=22
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out enum32 type=Windows.Management.Setup.DeploymentAgentProgressState return
-        put put_State slot=7 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=43
+        put put_State slot=7 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             in enum32 type=Windows.Management.Setup.DeploymentAgentProgressState name=value
     property progress_percentage
-        get get_ProgressPercentage slot=8 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=62
+        get get_ProgressPercentage slot=8 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out double return
         put put_ProgressPercentage slot=9 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=2
             in double name=value
     property estimated_time_remaining
-        get get_EstimatedTimeRemaining slot=10 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=121
+        get get_EstimatedTimeRemaining slot=10 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out timespan return
-        put put_EstimatedTimeRemaining slot=11 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=26 reverse=156
+        put put_EstimatedTimeRemaining slot=11 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=26
             in timespan name=value
     property display_progress_secondary
-        get get_DisplayProgressSecondary slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=186
+        get get_DisplayProgressSecondary slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out string return
-        put put_DisplayProgressSecondary slot=15 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=194
+        put put_DisplayProgressSecondary slot=15 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             in string name=value
     property display_progress
-        get get_DisplayProgress slot=12 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=162
+        get get_DisplayProgress slot=12 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out string return
-        put put_DisplayProgress slot=13 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=173
+        put put_DisplayProgress slot=13 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             in string name=value
     property current_batch_index
-        get get_CurrentBatchIndex slot=17 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=210
+        get get_CurrentBatchIndex slot=17 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out uint32 return
-        put put_CurrentBatchIndex slot=18 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=218
+        put put_CurrentBatchIndex slot=18 inputs=1 outputs=0 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             in uint32 name=value
     property batches
-        get get_Batches slot=16 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4 reverse=202
+        get get_Batches slot=16 inputs=0 outputs=1 declaring=Windows.Management.Setup.IAgentProvisioningProgressReport shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkloadBatch> return
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Setup.DevicePreparationExecutionContext> concrete
@@ -84,10 +84,10 @@ class Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs pytho
     default Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs
     requires Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs
     property change
-        get get_Change slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs shape=4 reverse=43
+        get get_Change slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs shape=4
             out enum32 type=Windows.Management.Setup.DeploymentSessionConnectionChange return
     property session_id
-        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs shape=4 reverse=22
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionConnectionChangedEventArgs shape=4
             out string return
 
 delegate Windows.Management.Setup.DeploymentSessionHeartbeatRequested python_type
@@ -104,9 +104,9 @@ class Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs pyth
     default Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs
     requires Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentSessionHeartbeatRequestedEventArgs shape=4
             in boolean name=value
 
 enum Windows.Management.Setup.DeploymentSessionStateChange python_type
@@ -122,10 +122,10 @@ class Windows.Management.Setup.DeploymentSessionStateChangedEventArgs python_typ
     default Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs
     requires Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs
     property change
-        get get_Change slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs shape=4 reverse=43
+        get get_Change slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs shape=4
             out enum32 type=Windows.Management.Setup.DeploymentSessionStateChange return
     property session_id
-        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs shape=4 reverse=22
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentSessionStateChangedEventArgs shape=4
             out string return
 
 class Windows.Management.Setup.DeploymentWorkload python_type
@@ -135,56 +135,56 @@ class Windows.Management.Setup.DeploymentWorkload python_type
     requires Windows.Management.Setup.IDeploymentWorkload
     factory Windows.Management.Setup.IDeploymentWorkloadFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadFactory shape=51
             in string name=id
             out class type=Windows.Management.Setup.DeploymentWorkload return
     property state_details
-        get get_StateDetails slot=23 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=242
+        get get_StateDetails slot=23 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out string return
-        put put_StateDetails slot=24 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=247
+        put put_StateDetails slot=24 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in string name=value
     property state
-        get get_State slot=21 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=232
+        get get_State slot=21 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out enum32 type=Windows.Management.Setup.DeploymentWorkloadState return
-        put put_State slot=22 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=237
+        put put_State slot=22 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in enum32 type=Windows.Management.Setup.DeploymentWorkloadState name=value
     property start_time
-        get get_StartTime slot=9 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=99
+        get get_StartTime slot=9 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_StartTime slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=121
+        put put_StartTime slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property possible_resolution
-        get get_PossibleResolution slot=19 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=223
+        get get_PossibleResolution slot=19 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out string return
-        put put_PossibleResolution slot=20 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=228
+        put put_PossibleResolution slot=20 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in string name=value
     property possible_cause
-        get get_PossibleCause slot=17 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=210
+        get get_PossibleCause slot=17 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out string return
-        put put_PossibleCause slot=18 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=218
+        put put_PossibleCause slot=18 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in string name=value
     property error_message
-        get get_ErrorMessage slot=15 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=194
+        get get_ErrorMessage slot=15 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out string return
-        put put_ErrorMessage slot=16 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=202
+        put put_ErrorMessage slot=16 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in string name=value
     property error_code
-        get get_ErrorCode slot=13 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=173
+        get get_ErrorCode slot=13 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out uint32 return
-        put put_ErrorCode slot=14 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=186
+        put put_ErrorCode slot=14 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in uint32 name=value
     property end_time
-        get get_EndTime slot=11 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=141
+        get get_EndTime slot=11 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_EndTime slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=162
+        put put_EndTime slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property display_friendly_name
-        get get_DisplayFriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=43
+        get get_DisplayFriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out string return
-        put put_DisplayFriendlyName slot=8 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=62
+        put put_DisplayFriendlyName slot=8 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             in string name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkload shape=4
             out string return
 
 class Windows.Management.Setup.DeploymentWorkloadBatch python_type
@@ -194,19 +194,19 @@ class Windows.Management.Setup.DeploymentWorkloadBatch python_type
     requires Windows.Management.Setup.IDeploymentWorkloadBatch
     factory Windows.Management.Setup.IDeploymentWorkloadBatchFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatchFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatchFactory shape=51
             in uint32 name=id
             out class type=Windows.Management.Setup.DeploymentWorkloadBatch return
     property display_category_title
-        get get_DisplayCategoryTitle slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=43
+        get get_DisplayCategoryTitle slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4
             out string return
-        put put_DisplayCategoryTitle slot=8 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=62
+        put put_DisplayCategoryTitle slot=8 inputs=1 outputs=0 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4
             in string name=value
     property batch_workloads
-        get get_BatchWorkloads slot=9 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=99
+        get get_BatchWorkloads slot=9 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Setup.DeploymentWorkload> return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDeploymentWorkloadBatch shape=4
             out uint32 return
 
 enum Windows.Management.Setup.DeploymentWorkloadState python_type
@@ -227,7 +227,7 @@ class Windows.Management.Setup.DevicePreparationExecutionContext python_type
     default Windows.Management.Setup.IDevicePreparationExecutionContext
     requires Windows.Management.Setup.IDevicePreparationExecutionContext
     property context
-        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDevicePreparationExecutionContext shape=4 reverse=22
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IDevicePreparationExecutionContext shape=4
             out string return
 
 interface Windows.Management.Setup.IAgentProvisioningProgressReport
@@ -647,36 +647,36 @@ class Windows.Management.Setup.MachineProvisioningProgressReporter python_type
     requires Windows.Management.Setup.IMachineProvisioningProgressReporter
     factory Windows.Management.Setup.IMachineProvisioningProgressReporterStatics
     property session_connection
-        get get_SessionConnection slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=43
+        get get_SessionConnection slot=7 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4
             out enum32 type=Windows.Management.Setup.DeploymentSessionConnectionChange return
     property session_id
-        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=22
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4
             out guid return
     property session_state
-        get get_SessionState slot=8 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=62
+        get get_SessionState slot=8 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4
             out enum32 type=Windows.Management.Setup.DeploymentSessionStateChange return
     event session_connection_changed
-        add add_SessionConnectionChanged slot=11 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51 reverse=144
+        add add_SessionConnectionChanged slot=11 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SessionConnectionChanged slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26 reverse=167
+        remove remove_SessionConnectionChanged slot=12 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event session_state_changed
-        add add_SessionStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51 reverse=100
+        add add_SessionStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SessionStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26 reverse=134
+        remove remove_SessionStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_device_preparation_execution_context_async
-        method GetDevicePreparationExecutionContextAsync slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=186
+        method GetDevicePreparationExecutionContextAsync slot=14 inputs=0 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Management.Setup.DevicePreparationExecutionContext> return
     method get_for_launch_uri static
-        method GetForLaunchUri slot=6 inputs=2 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporterStatics shape=117 reverse=25 static
+        method GetForLaunchUri slot=6 inputs=2 outputs=1 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporterStatics shape=117 static
             in class type=Windows.Foundation.Uri name=launchUri
             in delegate type=Windows.Management.Setup.DeploymentSessionHeartbeatRequested name=heartbeatHandler
             out class type=Windows.Management.Setup.MachineProvisioningProgressReporter return
     method report_progress
-        method ReportProgress slot=13 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4 reverse=173
+        method ReportProgress slot=13 inputs=1 outputs=0 declaring=Windows.Management.Setup.IMachineProvisioningProgressReporter shape=4
             in class type=Windows.Management.Setup.AgentProvisioningProgressReport name=updateReport
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Management.Setup.MachineProvisioningProgressReporter,Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs> concrete
