@@ -119,6 +119,10 @@ static class NullabilityJson
     {
         Indented = true,
         Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+        // Every tracked file in this repository is LF, and this default is
+        // Environment.NewLine, so without it a run on Windows rewrites all
+        // five of these files with carriage returns in them.
+        NewLine = "\n",
     };
 
     /// <summary>
