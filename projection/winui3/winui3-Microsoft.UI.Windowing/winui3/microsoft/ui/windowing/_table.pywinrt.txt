@@ -11,8 +11,8 @@ class Microsoft.UI.Windowing.AppWindow python_type
     requires Microsoft.UI.Windowing.IAppWindow2
     requires Microsoft.UI.Windowing.IAppWindow3
     requires Microsoft.UI.Windowing.IAppWindow4
-    factory Microsoft.UI.Windowing.IAppWindowStatics2
     factory Microsoft.UI.Windowing.IAppWindowStatics
+    factory Microsoft.UI.Windowing.IAppWindowStatics2
     property title
         get get_Title slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=186
             out string return
@@ -341,8 +341,8 @@ class Microsoft.UI.Windowing.DisplayArea python_type
     signature rc(Microsoft.UI.Windowing.DisplayArea;{5c7e0537-b621-5579-bcae-a84aa8746167})
     default Microsoft.UI.Windowing.IDisplayArea
     requires Microsoft.UI.Windowing.IDisplayArea
-    factory Microsoft.UI.Windowing.IDisplayAreaStatics2
     factory Microsoft.UI.Windowing.IDisplayAreaStatics
+    factory Microsoft.UI.Windowing.IDisplayAreaStatics2
     property display_id
         get get_DisplayId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4 reverse=22
             out struct type=Microsoft.UI.DisplayId return
@@ -867,8 +867,8 @@ class Microsoft.UI.Windowing.OverlappedPresenter python_type
     requires Microsoft.UI.Windowing.IOverlappedPresenter
     requires Microsoft.UI.Windowing.IOverlappedPresenter2
     requires Microsoft.UI.Windowing.IOverlappedPresenter3
-    factory Microsoft.UI.Windowing.IOverlappedPresenterStatics2
     factory Microsoft.UI.Windowing.IOverlappedPresenterStatics
+    factory Microsoft.UI.Windowing.IOverlappedPresenterStatics2
     property is_resizable
         get get_IsResizable slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=202
             out boolean return

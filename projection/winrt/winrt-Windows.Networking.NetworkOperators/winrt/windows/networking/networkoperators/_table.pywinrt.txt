@@ -4747,10 +4747,10 @@ class Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager python
     requires Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager
     requires Windows.Networking.NetworkOperators.INetworkOperatorTetheringClientManager
     requires Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager2
-    factory Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2
     factory Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics
-    factory Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4
+    factory Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2
     factory Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3
+    factory Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4
     property client_count
         get get_ClientCount slot=7 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager shape=4 reverse=43
             out uint32 return

@@ -1365,10 +1365,10 @@ class Windows.UI.Xaml.FrameworkElement composable python_type
     requires Windows.UI.Xaml.IFrameworkElementProtected7
     requires Windows.UI.Xaml.IFrameworkElementOverrides
     requires Windows.UI.Xaml.IFrameworkElementOverrides2
-    factory Windows.UI.Xaml.IFrameworkElementStatics2
-    factory Windows.UI.Xaml.IFrameworkElementStatics5
     factory Windows.UI.Xaml.IFrameworkElementStatics
+    factory Windows.UI.Xaml.IFrameworkElementStatics2
     factory Windows.UI.Xaml.IFrameworkElementStatics4
+    factory Windows.UI.Xaml.IFrameworkElementStatics5
     factory Windows.UI.Xaml.IFrameworkElementStatics6
     composable Windows.UI.Xaml.IFrameworkElementFactory
     overridable Windows.UI.Xaml.IFrameworkElementOverrides
@@ -5164,15 +5164,15 @@ class Windows.UI.Xaml.UIElement composable python_type
     requires Windows.UI.Composition.IAnimationObject
     requires Windows.UI.Composition.IVisualElement
     factory Windows.UI.Xaml.IUIElementStatics
-    factory Windows.UI.Xaml.IUIElementStatics6
-    factory Windows.UI.Xaml.IUIElementStatics2
-    factory Windows.UI.Xaml.IUIElementStatics7
-    factory Windows.UI.Xaml.IUIElementStatics9
-    factory Windows.UI.Xaml.IUIElementStatics8
-    factory Windows.UI.Xaml.IUIElementStatics4
-    factory Windows.UI.Xaml.IUIElementStatics3
-    factory Windows.UI.Xaml.IUIElementStatics5
     factory Windows.UI.Xaml.IUIElementStatics10
+    factory Windows.UI.Xaml.IUIElementStatics2
+    factory Windows.UI.Xaml.IUIElementStatics3
+    factory Windows.UI.Xaml.IUIElementStatics4
+    factory Windows.UI.Xaml.IUIElementStatics5
+    factory Windows.UI.Xaml.IUIElementStatics6
+    factory Windows.UI.Xaml.IUIElementStatics7
+    factory Windows.UI.Xaml.IUIElementStatics8
+    factory Windows.UI.Xaml.IUIElementStatics9
     composable Windows.UI.Xaml.IUIElementFactory
     overridable Windows.UI.Xaml.IUIElementOverrides
     overridable Windows.UI.Xaml.IUIElementOverrides7

@@ -504,8 +504,8 @@ class Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver activatable pyt
     signature rc(Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver;{10b69819-ddca-3483-ac3a-748fe8c86df5})
     default Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver
     requires Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserver
-    factory Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2
     factory Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics
+    factory Windows.Perception.Spatial.Surfaces.ISpatialSurfaceObserverStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

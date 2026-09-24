@@ -209,9 +209,9 @@ class Windows.Devices.Enumeration.DeviceInformation python_type
     default Windows.Devices.Enumeration.IDeviceInformation
     requires Windows.Devices.Enumeration.IDeviceInformation
     requires Windows.Devices.Enumeration.IDeviceInformation2
+    factory Windows.Devices.Enumeration.IDeviceInformationStatics
     factory Windows.Devices.Enumeration.IDeviceInformationStatics2
     factory Windows.Devices.Enumeration.IDeviceInformationStatics3
-    factory Windows.Devices.Enumeration.IDeviceInformationStatics
     property enclosure_location
         get get_EnclosureLocation slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformation shape=4 reverse=121
             out class type=Windows.Devices.Enumeration.EnclosureLocation return
@@ -402,8 +402,8 @@ class Windows.Devices.Enumeration.DeviceInformationPairing python_type
     default Windows.Devices.Enumeration.IDeviceInformationPairing
     requires Windows.Devices.Enumeration.IDeviceInformationPairing
     requires Windows.Devices.Enumeration.IDeviceInformationPairing2
-    factory Windows.Devices.Enumeration.IDeviceInformationPairingStatics2
     factory Windows.Devices.Enumeration.IDeviceInformationPairingStatics
+    factory Windows.Devices.Enumeration.IDeviceInformationPairingStatics2
     property can_pair
         get get_CanPair slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.IDeviceInformationPairing shape=4 reverse=43
             out boolean return

@@ -535,8 +535,8 @@ class Microsoft.Security.Authentication.OAuth.TokenRequestParams python_type
     signature rc(Microsoft.Security.Authentication.OAuth.TokenRequestParams;{49134dbc-aab5-5ba4-bcdf-950214d81182})
     default Microsoft.Security.Authentication.OAuth.ITokenRequestParams
     requires Microsoft.Security.Authentication.OAuth.ITokenRequestParams
-    factory Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics
     factory Microsoft.Security.Authentication.OAuth.ITokenRequestParamsFactory
+    factory Microsoft.Security.Authentication.OAuth.ITokenRequestParamsStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Security.Authentication.OAuth.ITokenRequestParamsFactory shape=51 reverse=24
             in string name=grantType

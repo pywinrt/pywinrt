@@ -135,14 +135,14 @@ class Windows.UI.Xaml.Automation.AutomationElementIdentifiers python_type
     signature rc(Windows.UI.Xaml.Automation.AutomationElementIdentifiers;{e68a63cf-4345-4e2d-8a6a-49cce1fa2dcc})
     default Windows.UI.Xaml.Automation.IAutomationElementIdentifiers
     requires Windows.UI.Xaml.Automation.IAutomationElementIdentifiers
-    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7
-    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2
-    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5
-    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4
-    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3
-    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8
     factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics2
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics3
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics4
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics5
     factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics6
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics7
+    factory Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics8
     property bounding_rectangle_property static
         get get_BoundingRectangleProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationElementIdentifiersStatics shape=4 reverse=99 static
             out class type=Windows.UI.Xaml.Automation.AutomationProperty return
@@ -283,15 +283,15 @@ class Windows.UI.Xaml.Automation.AutomationProperties python_type
     signature rc(Windows.UI.Xaml.Automation.AutomationProperties;{68d7232c-e622-48e9-af0b-1ffa33cc5cba})
     default Windows.UI.Xaml.Automation.IAutomationProperties
     requires Windows.UI.Xaml.Automation.IAutomationProperties
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6
-    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9
     factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics
     factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics2
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics3
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics4
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics5
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8
+    factory Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9
     property accelerator_key_property static
         get get_AcceleratorKeyProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=22 static
             out class type=Windows.UI.Xaml.DependencyProperty return

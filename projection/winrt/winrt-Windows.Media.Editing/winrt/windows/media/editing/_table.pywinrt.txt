@@ -1281,8 +1281,8 @@ class Windows.Media.Editing.MediaClip python_type
     signature rc(Windows.Media.Editing.MediaClip;{53f25366-5fba-3ea4-8693-24761811140a})
     default Windows.Media.Editing.IMediaClip
     requires Windows.Media.Editing.IMediaClip
-    factory Windows.Media.Editing.IMediaClipStatics2
     factory Windows.Media.Editing.IMediaClipStatics
+    factory Windows.Media.Editing.IMediaClipStatics2
     property selected_embedded_audio_track_index
         get get_SelectedEmbeddedAudioTrackIndex slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=210
             out uint32 return

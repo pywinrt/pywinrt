@@ -333,8 +333,8 @@ enum Windows.Networking.Proximity.PeerDiscoveryTypes python_type flags_enum
 
 class Windows.Networking.Proximity.PeerFinder static python_type
     py PeerFinder
-    factory Windows.Networking.Proximity.IPeerFinderStatics2
     factory Windows.Networking.Proximity.IPeerFinderStatics
+    factory Windows.Networking.Proximity.IPeerFinderStatics2
     property display_name static
         get get_DisplayName slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Proximity.IPeerFinderStatics shape=4 reverse=162 static
             out string return

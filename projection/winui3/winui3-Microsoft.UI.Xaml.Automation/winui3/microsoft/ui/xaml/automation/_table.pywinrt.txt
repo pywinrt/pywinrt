@@ -276,8 +276,8 @@ class Microsoft.UI.Xaml.Automation.AutomationProperties python_type
     signature rc(Microsoft.UI.Xaml.Automation.AutomationProperties;{525c6a71-dd8a-52a0-977b-db1b02f8e896})
     default Microsoft.UI.Xaml.Automation.IAutomationProperties
     requires Microsoft.UI.Xaml.Automation.IAutomationProperties
-    factory Microsoft.UI.Xaml.Automation.IAutomationPropertiesStatics2
     factory Microsoft.UI.Xaml.Automation.IAutomationPropertiesStatics
+    factory Microsoft.UI.Xaml.Automation.IAutomationPropertiesStatics2
     property accelerator_key_property static
         get get_AcceleratorKeyProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.IAutomationPropertiesStatics shape=4 reverse=22 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return

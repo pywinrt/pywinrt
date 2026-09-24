@@ -870,8 +870,8 @@ class Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties stati
 
 class Windows.Devices.Perception.KnownPerceptionFrameSourceProperties static python_type
     py KnownPerceptionFrameSourceProperties
-    factory Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2
     factory Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics
+    factory Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics2
     property device_model_version static
         get get_DeviceModelVersion slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.IKnownPerceptionFrameSourcePropertiesStatics shape=4 reverse=99 static deprecated
             out string return

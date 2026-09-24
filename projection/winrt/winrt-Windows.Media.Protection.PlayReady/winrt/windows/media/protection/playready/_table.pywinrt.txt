@@ -1537,8 +1537,8 @@ class Windows.Media.Protection.PlayReady.PlayReadyContentHeader python_type
     default Windows.Media.Protection.PlayReady.IPlayReadyContentHeader
     requires Windows.Media.Protection.PlayReady.IPlayReadyContentHeader
     requires Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2
-    factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory2
     factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory
+    factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory2
     constructor -
         ctor .ctor slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=117 reverse=66
             pass_array uint8 name=headerBytes
@@ -2243,11 +2243,11 @@ class Windows.Media.Protection.PlayReady.PlayReadySoapMessage python_type
 
 class Windows.Media.Protection.PlayReady.PlayReadyStatics static python_type
     py PlayReadyStatics
-    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics5
-    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics4
-    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics3
-    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics2
     factory Windows.Media.Protection.PlayReady.IPlayReadyStatics
+    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics2
+    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics3
+    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics4
+    factory Windows.Media.Protection.PlayReady.IPlayReadyStatics5
     property domain_join_service_request_type static
         get get_DomainJoinServiceRequestType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=22 static
             out guid return

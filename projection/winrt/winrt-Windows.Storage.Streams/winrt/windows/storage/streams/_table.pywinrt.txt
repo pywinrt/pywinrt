@@ -146,8 +146,8 @@ class Windows.Storage.Streams.Buffer python_type buffer buffer_length
     signature rc(Windows.Storage.Streams.Buffer;{905a0fe0-bc53-11df-8c49-001e4fc686da})
     default Windows.Storage.Streams.IBuffer
     requires Windows.Storage.Streams.IBuffer
-    factory Windows.Storage.Streams.IBufferStatics
     factory Windows.Storage.Streams.IBufferFactory
+    factory Windows.Storage.Streams.IBufferStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferFactory shape=51 reverse=24
             in uint32 name=capacity

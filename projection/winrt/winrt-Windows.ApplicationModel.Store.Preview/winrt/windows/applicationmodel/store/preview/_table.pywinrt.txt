@@ -578,11 +578,11 @@ interface Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHe
 
 class Windows.ApplicationModel.Store.Preview.StoreConfiguration static python_type
     py StoreConfiguration
-    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5
-    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3
-    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2
-    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4
     factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4
+    factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5
     property hardware_manufacturer_info static
         get get_HardwareManufacturerInfo slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 reverse=121 static
             out class type=Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo return

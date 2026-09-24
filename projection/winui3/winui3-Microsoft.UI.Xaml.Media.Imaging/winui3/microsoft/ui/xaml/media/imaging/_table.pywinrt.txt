@@ -37,8 +37,8 @@ class Microsoft.UI.Xaml.Media.Imaging.BitmapImage activatable python_type
     base Microsoft.UI.Xaml.Media.Imaging.BitmapSource
     default Microsoft.UI.Xaml.Media.Imaging.IBitmapImage
     requires Microsoft.UI.Xaml.Media.Imaging.IBitmapImage
-    factory Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics
     factory Microsoft.UI.Xaml.Media.Imaging.IBitmapImageFactory
+    factory Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

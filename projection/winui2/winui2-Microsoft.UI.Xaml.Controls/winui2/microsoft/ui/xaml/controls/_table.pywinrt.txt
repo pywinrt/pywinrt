@@ -97,8 +97,8 @@ class Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer composable python_type
     default Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayer
     requires Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayer
     requires Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayer2
-    factory Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayerStatics2
     factory Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayerStatics
+    factory Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayerStatics2
     composable Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayerFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IAnimatedVisualPlayerFactory shape=117 reverse=25
@@ -337,8 +337,8 @@ class Microsoft.UI.Xaml.Controls.ColorPicker composable python_type
     default Microsoft.UI.Xaml.Controls.IColorPicker
     requires Microsoft.UI.Xaml.Controls.IColorPicker
     requires Microsoft.UI.Xaml.Controls.IColorPicker2
-    factory Microsoft.UI.Xaml.Controls.IColorPickerStatics2
     factory Microsoft.UI.Xaml.Controls.IColorPickerStatics
+    factory Microsoft.UI.Xaml.Controls.IColorPickerStatics2
     composable Microsoft.UI.Xaml.Controls.IColorPickerFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IColorPickerFactory shape=117 reverse=25
@@ -3571,8 +3571,8 @@ class Microsoft.UI.Xaml.Controls.NavigationView composable python_type
     default Microsoft.UI.Xaml.Controls.INavigationView
     requires Microsoft.UI.Xaml.Controls.INavigationView
     requires Microsoft.UI.Xaml.Controls.INavigationView2
-    factory Microsoft.UI.Xaml.Controls.INavigationViewStatics2
     factory Microsoft.UI.Xaml.Controls.INavigationViewStatics
+    factory Microsoft.UI.Xaml.Controls.INavigationViewStatics2
     composable Microsoft.UI.Xaml.Controls.INavigationViewFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationViewFactory shape=117 reverse=25
@@ -3978,8 +3978,8 @@ class Microsoft.UI.Xaml.Controls.NavigationViewItem composable python_type
     requires Microsoft.UI.Xaml.Controls.INavigationViewItem2
     requires Microsoft.UI.Xaml.Controls.INavigationViewItem3
     factory Microsoft.UI.Xaml.Controls.INavigationViewItemStatics
-    factory Microsoft.UI.Xaml.Controls.INavigationViewItemStatics3
     factory Microsoft.UI.Xaml.Controls.INavigationViewItemStatics2
+    factory Microsoft.UI.Xaml.Controls.INavigationViewItemStatics3
     composable Microsoft.UI.Xaml.Controls.INavigationViewItemFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationViewItemFactory shape=117 reverse=25
@@ -4210,8 +4210,8 @@ class Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings composable pytho
     default Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettings
     requires Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettings
     requires Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettings2
-    factory Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettingsStatics2
     factory Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettingsStatics
+    factory Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettingsStatics2
     composable Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettingsFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INavigationViewTemplateSettingsFactory shape=117 reverse=25
@@ -6196,8 +6196,8 @@ class Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings composable python_t
     default Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettings
     requires Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettings
     requires Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettings2
-    factory Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsStatics2
     factory Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsStatics
+    factory Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsStatics2
     composable Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsFactory shape=117 reverse=25
@@ -6648,8 +6648,8 @@ class Microsoft.UI.Xaml.Controls.TreeView composable python_type
     default Microsoft.UI.Xaml.Controls.ITreeView
     requires Microsoft.UI.Xaml.Controls.ITreeView
     requires Microsoft.UI.Xaml.Controls.ITreeView2
-    factory Microsoft.UI.Xaml.Controls.ITreeViewStatics2
     factory Microsoft.UI.Xaml.Controls.ITreeViewStatics
+    factory Microsoft.UI.Xaml.Controls.ITreeViewStatics2
     composable Microsoft.UI.Xaml.Controls.ITreeViewFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITreeViewFactory shape=117 reverse=25

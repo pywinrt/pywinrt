@@ -959,8 +959,8 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Web.UI.IWebViewControl,Win
 
 class Windows.UI.WebUI.WebUIApplication static python_type
     py WebUIApplication
-    factory Windows.UI.WebUI.IWebUIActivationStatics2
     factory Windows.UI.WebUI.IWebUIActivationStatics
+    factory Windows.UI.WebUI.IWebUIActivationStatics2
     factory Windows.UI.WebUI.IWebUIActivationStatics3
     factory Windows.UI.WebUI.IWebUIActivationStatics4
     event background_activated static

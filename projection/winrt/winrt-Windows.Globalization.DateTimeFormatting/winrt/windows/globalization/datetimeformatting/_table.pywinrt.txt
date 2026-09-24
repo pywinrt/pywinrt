@@ -9,8 +9,8 @@ class Windows.Globalization.DateTimeFormatting.DateTimeFormatter python_type
     default Windows.Globalization.DateTimeFormatting.IDateTimeFormatter
     requires Windows.Globalization.DateTimeFormatting.IDateTimeFormatter
     requires Windows.Globalization.DateTimeFormatting.IDateTimeFormatter2
-    factory Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics
     factory Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory
+    factory Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=51 reverse=24
             in string name=formatTemplate

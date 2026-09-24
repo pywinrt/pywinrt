@@ -93,8 +93,8 @@ class Windows.Web.Http.Headers.HttpChallengeHeaderValue python_type stringable
     default Windows.Web.Http.Headers.IHttpChallengeHeaderValue
     requires Windows.Web.Http.Headers.IHttpChallengeHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=51 reverse=24
             in string name=scheme
@@ -195,8 +195,8 @@ class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue python_type strin
     default Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue
     requires Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory shape=51 reverse=24
             in string name=token
@@ -478,8 +478,8 @@ class Windows.Web.Http.Headers.HttpContentDispositionHeaderValue python_type str
     default Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue
     requires Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory shape=51 reverse=24
             in string name=dispositionType
@@ -778,8 +778,8 @@ class Windows.Web.Http.Headers.HttpCredentialsHeaderValue python_type stringable
     default Windows.Web.Http.Headers.IHttpCredentialsHeaderValue
     requires Windows.Web.Http.Headers.IHttpCredentialsHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=51 reverse=24
             in string name=scheme
@@ -1010,8 +1010,8 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue python_ty
     default Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue
     requires Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory shape=51 reverse=24
             in string name=languageRange
@@ -1322,8 +1322,8 @@ class Windows.Web.Http.Headers.HttpNameValueHeaderValue python_type stringable
     default Windows.Web.Http.Headers.IHttpNameValueHeaderValue
     requires Windows.Web.Http.Headers.IHttpNameValueHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=51 reverse=24
             in string name=name
@@ -1359,8 +1359,8 @@ class Windows.Web.Http.Headers.HttpProductHeaderValue python_type stringable
     default Windows.Web.Http.Headers.IHttpProductHeaderValue
     requires Windows.Web.Http.Headers.IHttpProductHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpProductHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpProductHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpProductHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=51 reverse=24
             in string name=productName
@@ -1394,8 +1394,8 @@ class Windows.Web.Http.Headers.HttpProductInfoHeaderValue python_type stringable
     default Windows.Web.Http.Headers.IHttpProductInfoHeaderValue
     requires Windows.Web.Http.Headers.IHttpProductInfoHeaderValue
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics
     factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory
+    factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=51 reverse=24
             in string name=productComment

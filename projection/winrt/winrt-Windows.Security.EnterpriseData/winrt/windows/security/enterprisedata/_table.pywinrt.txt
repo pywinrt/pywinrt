@@ -252,8 +252,8 @@ class Windows.Security.EnterpriseData.FileProtectionInfo python_type
 
 class Windows.Security.EnterpriseData.FileProtectionManager static python_type
     py FileProtectionManager
-    factory Windows.Security.EnterpriseData.IFileProtectionManagerStatics2
     factory Windows.Security.EnterpriseData.IFileProtectionManagerStatics
+    factory Windows.Security.EnterpriseData.IFileProtectionManagerStatics2
     factory Windows.Security.EnterpriseData.IFileProtectionManagerStatics3
     method copy_protection_async static
         method CopyProtectionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 reverse=45 static
@@ -962,10 +962,10 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
     default Windows.Security.EnterpriseData.IProtectionPolicyManager
     requires Windows.Security.EnterpriseData.IProtectionPolicyManager
     requires Windows.Security.EnterpriseData.IProtectionPolicyManager2
-    factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4
-    factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2
     factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics
+    factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2
     factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3
+    factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4
     property identity
         get get_Identity slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager shape=4 reverse=43
             out string return

@@ -218,8 +218,8 @@ class Windows.ApplicationModel.Email.EmailAttachment activatable python_type
     default Windows.ApplicationModel.Email.IEmailAttachment
     requires Windows.ApplicationModel.Email.IEmailAttachment
     requires Windows.ApplicationModel.Email.IEmailAttachment2
-    factory Windows.ApplicationModel.Email.IEmailAttachmentFactory2
     factory Windows.ApplicationModel.Email.IEmailAttachmentFactory
+    factory Windows.ApplicationModel.Email.IEmailAttachmentFactory2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -1243,8 +1243,8 @@ enum Windows.ApplicationModel.Email.EmailMailboxSyncStatus python_type
 
 class Windows.ApplicationModel.Email.EmailManager static python_type
     py EmailManager
-    factory Windows.ApplicationModel.Email.IEmailManagerStatics2
     factory Windows.ApplicationModel.Email.IEmailManagerStatics
+    factory Windows.ApplicationModel.Email.IEmailManagerStatics2
     factory Windows.ApplicationModel.Email.IEmailManagerStatics3
     method get_for_user static
         method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.IEmailManagerStatics3 shape=51 reverse=24 static

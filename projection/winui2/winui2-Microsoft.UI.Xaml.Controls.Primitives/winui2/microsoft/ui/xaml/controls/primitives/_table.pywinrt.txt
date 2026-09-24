@@ -608,8 +608,8 @@ class Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter composab
     default Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter
     requires Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter
     requires Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2
-    factory Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics2
     factory Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics
+    factory Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics2
     composable Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterFactory shape=117 reverse=25

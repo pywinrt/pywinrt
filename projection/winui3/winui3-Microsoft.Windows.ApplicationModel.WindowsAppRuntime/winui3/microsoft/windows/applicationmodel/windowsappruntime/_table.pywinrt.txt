@@ -25,8 +25,8 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeO
 
 class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager static python_type
     py DeploymentManager
-    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2
     factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics
+    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2
     method get_status static
         method GetStatus slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 reverse=22 static
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return

@@ -43,8 +43,8 @@ class Windows.UI.Xaml.Input.AccessKeyManager python_type
     signature rc(Windows.UI.Xaml.Input.AccessKeyManager;{ecc973b0-2ee9-4b1c-98d7-6e0e816d334b})
     default Windows.UI.Xaml.Input.IAccessKeyManager
     requires Windows.UI.Xaml.Input.IAccessKeyManager
-    factory Windows.UI.Xaml.Input.IAccessKeyManagerStatics2
     factory Windows.UI.Xaml.Input.IAccessKeyManagerStatics
+    factory Windows.UI.Xaml.Input.IAccessKeyManagerStatics2
     property is_display_mode_enabled static
         get get_IsDisplayModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IAccessKeyManagerStatics shape=4 reverse=22 static
             out boolean return
@@ -264,13 +264,13 @@ class Windows.UI.Xaml.Input.FocusManager python_type
     signature rc(Windows.UI.Xaml.Input.FocusManager;{c843f50b-3b83-4da1-9d6f-557c1169f341})
     default Windows.UI.Xaml.Input.IFocusManager
     requires Windows.UI.Xaml.Input.IFocusManager
+    factory Windows.UI.Xaml.Input.IFocusManagerStatics
+    factory Windows.UI.Xaml.Input.IFocusManagerStatics2
+    factory Windows.UI.Xaml.Input.IFocusManagerStatics3
     factory Windows.UI.Xaml.Input.IFocusManagerStatics4
     factory Windows.UI.Xaml.Input.IFocusManagerStatics5
-    factory Windows.UI.Xaml.Input.IFocusManagerStatics7
-    factory Windows.UI.Xaml.Input.IFocusManagerStatics
-    factory Windows.UI.Xaml.Input.IFocusManagerStatics3
     factory Windows.UI.Xaml.Input.IFocusManagerStatics6
-    factory Windows.UI.Xaml.Input.IFocusManagerStatics2
+    factory Windows.UI.Xaml.Input.IFocusManagerStatics7
     event getting_focus static
         add add_GettingFocus slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Input.IFocusManagerStatics6 shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Input.GettingFocusEventArgs> name=handler

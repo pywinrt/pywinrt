@@ -183,8 +183,8 @@ class Windows.Networking.PushNotifications.PushNotificationChannel python_type
 
 class Windows.Networking.PushNotifications.PushNotificationChannelManager static python_type
     py PushNotificationChannelManager
-    factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2
     factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics
+    factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2
     factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3
     factory Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4
     event channels_revoked static

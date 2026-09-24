@@ -3835,9 +3835,9 @@ class Windows.UI.Xaml.Media.VisualTreeHelper python_type
     signature rc(Windows.UI.Xaml.Media.VisualTreeHelper;{24b935e3-52c7-4141-8bac-a73d06130569})
     default Windows.UI.Xaml.Media.IVisualTreeHelper
     requires Windows.UI.Xaml.Media.IVisualTreeHelper
-    factory Windows.UI.Xaml.Media.IVisualTreeHelperStatics3
     factory Windows.UI.Xaml.Media.IVisualTreeHelperStatics
     factory Windows.UI.Xaml.Media.IVisualTreeHelperStatics2
+    factory Windows.UI.Xaml.Media.IVisualTreeHelperStatics3
     method disconnect_children_recursive static
         method DisconnectChildrenRecursive slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=4 reverse=173 static
             in class type=Windows.UI.Xaml.UIElement name=element

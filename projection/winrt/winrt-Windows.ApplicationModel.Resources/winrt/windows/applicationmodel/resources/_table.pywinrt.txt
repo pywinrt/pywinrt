@@ -30,11 +30,11 @@ class Windows.ApplicationModel.Resources.ResourceLoader activatable python_type
     default Windows.ApplicationModel.Resources.IResourceLoader
     requires Windows.ApplicationModel.Resources.IResourceLoader
     requires Windows.ApplicationModel.Resources.IResourceLoader2
-    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics2
-    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics4
-    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics3
-    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics
     factory Windows.ApplicationModel.Resources.IResourceLoaderFactory
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics2
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics3
+    factory Windows.ApplicationModel.Resources.IResourceLoaderStatics4
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

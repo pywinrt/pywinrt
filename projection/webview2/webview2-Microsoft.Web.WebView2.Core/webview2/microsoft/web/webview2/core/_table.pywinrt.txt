@@ -878,8 +878,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2CompositionController python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController3
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController4
     requires Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController
-    factory Microsoft.Web.WebView2.Core.ICoreWebView2CompositionControllerStatics2_Manual
     factory Microsoft.Web.WebView2.Core.ICoreWebView2CompositionControllerStatics
+    factory Microsoft.Web.WebView2.Core.ICoreWebView2CompositionControllerStatics2_Manual
     property root_visual_target
         get get_RootVisualTarget slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CompositionController shape=4 reverse=22
             out object return
@@ -1539,8 +1539,8 @@ class Microsoft.Web.WebView2.Core.CoreWebView2Environment python_type
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment9
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment_Manual
     requires Microsoft.Web.WebView2.Core.ICoreWebView2Environment
-    factory Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics2
     factory Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics
+    factory Microsoft.Web.WebView2.Core.ICoreWebView2EnvironmentStatics2
     property browser_version_string
         get get_BrowserVersionString slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2Environment shape=4 reverse=22
             out string return

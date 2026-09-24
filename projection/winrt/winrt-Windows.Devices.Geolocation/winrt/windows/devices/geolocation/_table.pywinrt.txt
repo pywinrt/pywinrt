@@ -90,8 +90,8 @@ class Windows.Devices.Geolocation.GeoboundingBox python_type
     default Windows.Devices.Geolocation.IGeoboundingBox
     requires Windows.Devices.Geolocation.IGeoboundingBox
     requires Windows.Devices.Geolocation.IGeoshape
-    factory Windows.Devices.Geolocation.IGeoboundingBoxStatics
     factory Windows.Devices.Geolocation.IGeoboundingBoxFactory
+    factory Windows.Devices.Geolocation.IGeoboundingBoxStatics
     constructor -
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.IGeoboundingBoxFactory shape=158
             in struct type=Windows.Devices.Geolocation.BasicGeoposition name=northwestCorner

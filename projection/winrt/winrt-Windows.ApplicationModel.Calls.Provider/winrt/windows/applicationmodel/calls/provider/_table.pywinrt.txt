@@ -99,8 +99,8 @@ class Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin activatable python
 
 class Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager static python_type
     py PhoneCallOriginManager
-    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2
     factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2
     factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3
     property is_current_app_active_call_origin_app static
         get get_IsCurrentAppActiveCallOriginApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=4 reverse=22 static deprecated

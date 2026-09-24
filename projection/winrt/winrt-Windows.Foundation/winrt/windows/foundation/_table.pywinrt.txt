@@ -1087,8 +1087,8 @@ class Windows.Foundation.Uri python_type stringable
     requires Windows.Foundation.IUriRuntimeClass
     requires Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
     requires Windows.Foundation.IStringable
-    factory Windows.Foundation.IUriRuntimeClassFactory
     factory Windows.Foundation.IUriEscapeStatics
+    factory Windows.Foundation.IUriRuntimeClassFactory
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IUriRuntimeClassFactory shape=51 reverse=24
             in string name=uri

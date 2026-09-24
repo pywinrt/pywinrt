@@ -1089,9 +1089,9 @@ class Windows.Services.Maps.MapRouteDrivingOptions activatable python_type
 
 class Windows.Services.Maps.MapRouteFinder static python_type
     py MapRouteFinder
+    factory Windows.Services.Maps.IMapRouteFinderStatics
     factory Windows.Services.Maps.IMapRouteFinderStatics2
     factory Windows.Services.Maps.IMapRouteFinderStatics3
-    factory Windows.Services.Maps.IMapRouteFinderStatics
     method get_driving_route_async static
         method GetDrivingRouteAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Maps.IMapRouteFinderStatics shape=117 reverse=25 static
             in class type=Windows.Devices.Geolocation.Geopoint name=startPoint
@@ -1305,9 +1305,9 @@ enum Windows.Services.Maps.MapRouteRestrictions python_type flags_enum
 class Windows.Services.Maps.MapService static python_type
     py MapService
     factory Windows.Services.Maps.IMapServiceStatics
-    factory Windows.Services.Maps.IMapServiceStatics4
-    factory Windows.Services.Maps.IMapServiceStatics3
     factory Windows.Services.Maps.IMapServiceStatics2
+    factory Windows.Services.Maps.IMapServiceStatics3
+    factory Windows.Services.Maps.IMapServiceStatics4
     property service_token static
         get get_ServiceToken slot=7 inputs=0 outputs=1 declaring=Windows.Services.Maps.IMapServiceStatics shape=4 reverse=43 static
             out string return

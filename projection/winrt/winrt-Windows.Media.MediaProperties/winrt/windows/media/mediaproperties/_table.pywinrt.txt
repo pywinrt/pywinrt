@@ -916,8 +916,8 @@ class Windows.Media.MediaProperties.ImageEncodingProperties activatable python_t
     requires Windows.Media.MediaProperties.IImageEncodingProperties
     requires Windows.Media.MediaProperties.IMediaEncodingProperties
     requires Windows.Media.MediaProperties.IImageEncodingProperties2
-    factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2
     factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics
+    factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2
     factory Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -975,10 +975,10 @@ class Windows.Media.MediaProperties.MediaEncodingProfile activatable python_type
     requires Windows.Media.MediaProperties.IMediaEncodingProfile
     requires Windows.Media.MediaProperties.IMediaEncodingProfile2
     requires Windows.Media.MediaProperties.IMediaEncodingProfile3
-    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics2
-    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
     factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics
+    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics2
     factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics3
+    factory Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -1074,13 +1074,13 @@ class Windows.Media.MediaProperties.MediaEncodingProfile activatable python_type
 
 class Windows.Media.MediaProperties.MediaEncodingSubtypes static python_type
     py MediaEncodingSubtypes
-    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6
-    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
     factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics
-    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3
     factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3
     factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4
     factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6
+    factory Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
     property argb32 static
         get get_Argb32 slot=11 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics shape=4 reverse=141 static
             out string return
@@ -1414,8 +1414,8 @@ class Windows.Media.MediaProperties.VideoEncodingProperties activatable python_t
     requires Windows.Media.MediaProperties.IVideoEncodingProperties4
     requires Windows.Media.MediaProperties.IVideoEncodingProperties5
     factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics
-    factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
     factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2
+    factory Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

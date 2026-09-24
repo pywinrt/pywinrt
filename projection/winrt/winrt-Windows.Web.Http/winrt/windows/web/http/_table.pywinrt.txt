@@ -683,8 +683,8 @@ class Windows.Web.Http.HttpMethod python_type stringable
     default Windows.Web.Http.IHttpMethod
     requires Windows.Web.Http.IHttpMethod
     requires Windows.Foundation.IStringable
-    factory Windows.Web.Http.IHttpMethodStatics
     factory Windows.Web.Http.IHttpMethodFactory
+    factory Windows.Web.Http.IHttpMethodStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMethodFactory shape=51 reverse=24
             in string name=method

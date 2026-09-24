@@ -96,8 +96,8 @@ interface Microsoft.Windows.System.Power.IPowerManagerStatics2
 
 class Microsoft.Windows.System.Power.PowerManager static python_type
     py PowerManager
-    factory Microsoft.Windows.System.Power.IPowerManagerStatics2
     factory Microsoft.Windows.System.Power.IPowerManagerStatics
+    factory Microsoft.Windows.System.Power.IPowerManagerStatics2
     property battery_status static
         get get_BatteryStatus slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.System.Power.IPowerManagerStatics shape=4 reverse=99 static
             out enum32 type=Microsoft.Windows.System.Power.BatteryStatus return

@@ -60,15 +60,15 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationMo
 
 class Windows.ApplicationModel.Core.CoreApplication static python_type
     py CoreApplication
-    factory Windows.ApplicationModel.Core.ICoreImmersiveApplication3
-    factory Windows.ApplicationModel.Core.ICoreImmersiveApplication2
-    factory Windows.ApplicationModel.Core.ICoreImmersiveApplication
     factory Windows.ApplicationModel.Core.ICoreApplication
     factory Windows.ApplicationModel.Core.ICoreApplication2
-    factory Windows.ApplicationModel.Core.ICoreApplicationUseCount
+    factory Windows.ApplicationModel.Core.ICoreApplication3
     factory Windows.ApplicationModel.Core.ICoreApplicationExit
     factory Windows.ApplicationModel.Core.ICoreApplicationUnhandledError
-    factory Windows.ApplicationModel.Core.ICoreApplication3
+    factory Windows.ApplicationModel.Core.ICoreApplicationUseCount
+    factory Windows.ApplicationModel.Core.ICoreImmersiveApplication
+    factory Windows.ApplicationModel.Core.ICoreImmersiveApplication2
+    factory Windows.ApplicationModel.Core.ICoreImmersiveApplication3
     property id static
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 reverse=22 static
             out string return

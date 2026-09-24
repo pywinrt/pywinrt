@@ -621,8 +621,8 @@ class Microsoft.UI.Xaml.Automation.Peers.AutomationPeerAnnotation activatable py
     base Microsoft.UI.Xaml.DependencyObject
     default Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation
     requires Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotation
-    factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics
     factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationFactory
+    factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerAnnotationStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

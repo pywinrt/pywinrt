@@ -1317,8 +1317,8 @@ class Windows.UI.Input.Inking.InkPoint python_type
     default Windows.UI.Input.Inking.IInkPoint
     requires Windows.UI.Input.Inking.IInkPoint
     requires Windows.UI.Input.Inking.IInkPoint2
-    factory Windows.UI.Input.Inking.IInkPointFactory2
     factory Windows.UI.Input.Inking.IInkPointFactory
+    factory Windows.UI.Input.Inking.IInkPointFactory2
     constructor -
         ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkPointFactory shape=149 reverse=30
             in struct type=Windows.Foundation.Point name=position

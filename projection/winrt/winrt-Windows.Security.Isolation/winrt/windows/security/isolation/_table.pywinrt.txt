@@ -1306,8 +1306,8 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo python_type
 
 class Windows.Security.Isolation.IsolatedWindowsHostMessenger static python_type
     py IsolatedWindowsHostMessenger
-    factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
     factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics
+    factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
     method get_file_id static deprecated
         method GetFileId slot=7 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=51 reverse=44 static deprecated
             in string name=filePath

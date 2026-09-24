@@ -2642,13 +2642,13 @@ enum Windows.Storage.KnownFolderId python_type
 
 class Windows.Storage.KnownFolders static python_type
     py KnownFolders
-    factory Windows.Storage.IKnownFoldersStatics4
     factory Windows.Storage.IKnownFoldersCameraRollStatics
     factory Windows.Storage.IKnownFoldersPlaylistsStatics
-    factory Windows.Storage.IKnownFoldersStatics3
+    factory Windows.Storage.IKnownFoldersSavedPicturesStatics
     factory Windows.Storage.IKnownFoldersStatics
     factory Windows.Storage.IKnownFoldersStatics2
-    factory Windows.Storage.IKnownFoldersSavedPicturesStatics
+    factory Windows.Storage.IKnownFoldersStatics3
+    factory Windows.Storage.IKnownFoldersStatics4
     property camera_roll static
         get get_CameraRoll slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersCameraRollStatics shape=4 reverse=22 static
             out class type=Windows.Storage.StorageFolder return
@@ -3271,8 +3271,8 @@ class Windows.Storage.StorageLibrary python_type
     requires Windows.Storage.IStorageLibrary
     requires Windows.Storage.IStorageLibrary2
     requires Windows.Storage.IStorageLibrary3
-    factory Windows.Storage.IStorageLibraryStatics2
     factory Windows.Storage.IStorageLibraryStatics
+    factory Windows.Storage.IStorageLibraryStatics2
     property folders
         get get_Folders slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4 reverse=62
             out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.Storage.StorageFolder> return

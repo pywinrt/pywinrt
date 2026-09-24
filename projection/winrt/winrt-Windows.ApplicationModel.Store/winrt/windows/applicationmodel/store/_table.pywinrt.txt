@@ -60,11 +60,11 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
 
 class Windows.ApplicationModel.Store.CurrentApp static python_type
     py CurrentApp
+    factory Windows.ApplicationModel.Store.ICurrentApp
     factory Windows.ApplicationModel.Store.ICurrentApp2Statics
     factory Windows.ApplicationModel.Store.ICurrentAppStaticsWithFiltering
-    factory Windows.ApplicationModel.Store.ICurrentAppWithConsumables
     factory Windows.ApplicationModel.Store.ICurrentAppWithCampaignId
-    factory Windows.ApplicationModel.Store.ICurrentApp
+    factory Windows.ApplicationModel.Store.ICurrentAppWithConsumables
     property app_id static
         get get_AppId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentApp shape=4 reverse=62 static
             out guid return
@@ -137,9 +137,9 @@ class Windows.ApplicationModel.Store.CurrentApp static python_type
 class Windows.ApplicationModel.Store.CurrentAppSimulator static python_type
     py CurrentAppSimulator
     factory Windows.ApplicationModel.Store.ICurrentAppSimulator
-    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables
-    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId
     factory Windows.ApplicationModel.Store.ICurrentAppSimulatorStaticsWithFiltering
+    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorWithCampaignId
+    factory Windows.ApplicationModel.Store.ICurrentAppSimulatorWithConsumables
     property app_id static
         get get_AppId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.ICurrentAppSimulator shape=4 reverse=62 static
             out guid return

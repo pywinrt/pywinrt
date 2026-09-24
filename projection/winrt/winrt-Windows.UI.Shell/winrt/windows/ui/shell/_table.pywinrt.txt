@@ -395,8 +395,8 @@ class Windows.UI.Shell.TaskbarManager python_type
     default Windows.UI.Shell.ITaskbarManager
     requires Windows.UI.Shell.ITaskbarManager
     requires Windows.UI.Shell.ITaskbarManager2
-    factory Windows.UI.Shell.ITaskbarManagerStatics
     factory Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics
+    factory Windows.UI.Shell.ITaskbarManagerStatics
     property is_pinning_allowed
         get get_IsPinningAllowed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4 reverse=43
             out boolean return

@@ -608,8 +608,8 @@ class Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions
     requires Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions
     requires Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2
-    factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics
     factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory
+    factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory shape=51 reverse=24
             in string name=widgetId

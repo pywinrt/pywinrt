@@ -284,8 +284,8 @@ class Windows.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
     requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides6
     requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides8
     requires Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides9
-    factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3
     factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics
+    factory Windows.UI.Xaml.Automation.Peers.IAutomationPeerStatics3
     composable Windows.UI.Xaml.Automation.Peers.IAutomationPeerFactory
     overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
     overridable Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides2

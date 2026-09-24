@@ -534,7 +534,12 @@ class ProjectedType
 
     private static IReadOnlyDictionary<string, FactoryInfo> GetFactories(TypeDefinition type)
     {
-        var factories = new Dictionary<string, FactoryInfo>();
+        // Keyed in name order rather than in the order the attributes appear
+        // on the type. The order they are read back in is written into the
+        // table and decides which factory a redeclared member is matched
+        // against, so metadata order would move both whenever a winmd lists
+        // its attributes differently, which is churn that says nothing.
+        var factories = new SortedDictionary<string, FactoryInfo>(StringComparer.Ordinal);
 
         // NB: Only the factory attributes are of interest here. Reading the
         // constructor arguments of every metadata attribute (e.g. the

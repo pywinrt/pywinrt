@@ -824,12 +824,12 @@ enum Windows.Security.Authentication.Web.Provider.WebAccountClientViewType pytho
 
 class Windows.Security.Authentication.Web.Provider.WebAccountManager static python_type
     py WebAccountManager
-    factory Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics
     factory Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics
     factory Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics2
     factory Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics3
     factory Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics4
     factory Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics
+    factory Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics
     method add_web_account_async static
         method AddWebAccountAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=195 reverse=46 static
             in string name=webAccountId

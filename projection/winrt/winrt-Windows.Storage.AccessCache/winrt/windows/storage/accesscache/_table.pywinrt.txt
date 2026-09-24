@@ -323,8 +323,8 @@ enum Windows.Storage.AccessCache.RecentStorageItemVisibility python_type
 
 class Windows.Storage.AccessCache.StorageApplicationPermissions static python_type
     py StorageApplicationPermissions
-    factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
     factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics
+    factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
     property future_access_list static
         get get_FutureAccessList slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 reverse=22 static
             out class type=Windows.Storage.AccessCache.StorageItemAccessList return

@@ -460,8 +460,8 @@ class Windows.Graphics.Holographic.HolographicSpace python_type
     requires Windows.Graphics.Holographic.IHolographicSpace
     requires Windows.Graphics.Holographic.IHolographicSpace2
     requires Windows.Graphics.Holographic.IHolographicSpace3
-    factory Windows.Graphics.Holographic.IHolographicSpaceStatics2
     factory Windows.Graphics.Holographic.IHolographicSpaceStatics
+    factory Windows.Graphics.Holographic.IHolographicSpaceStatics2
     factory Windows.Graphics.Holographic.IHolographicSpaceStatics3
     property primary_adapter_id
         get get_PrimaryAdapterId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace shape=4 reverse=22

@@ -144,8 +144,8 @@ enum Windows.Security.Cryptography.Core.Capi1KdfTargetAlgorithm python_type
 
 class Windows.Security.Cryptography.Core.CryptographicEngine static python_type
     py CryptographicEngine
-    factory Windows.Security.Cryptography.Core.ICryptographicEngineStatics2
     factory Windows.Security.Cryptography.Core.ICryptographicEngineStatics
+    factory Windows.Security.Cryptography.Core.ICryptographicEngineStatics2
     method decrypt static
         method Decrypt slot=7 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Core.ICryptographicEngineStatics shape=195 reverse=46 static
             in class type=Windows.Security.Cryptography.Core.CryptographicKey name=key
@@ -682,8 +682,8 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
 
 class Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames static python_type
     py KeyDerivationAlgorithmNames
-    factory Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2
     factory Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics
+    factory Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics2
     property pbkdf2_sha256 static
         get get_Pbkdf2Sha256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationAlgorithmNamesStatics shape=4 reverse=62 static
             out string return

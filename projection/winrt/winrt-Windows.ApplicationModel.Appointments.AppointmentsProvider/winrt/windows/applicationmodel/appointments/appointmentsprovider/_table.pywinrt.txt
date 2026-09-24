@@ -27,8 +27,8 @@ class Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentO
 
 class Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs static python_type
     py AppointmentsProviderLaunchActionVerbs
-    factory Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics2
     factory Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics
+    factory Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics2
     property add_appointment static
         get get_AddAppointment slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.AppointmentsProvider.IAppointmentsProviderLaunchActionVerbsStatics shape=4 reverse=22 static
             out string return

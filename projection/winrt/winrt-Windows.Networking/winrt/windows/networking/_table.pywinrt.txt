@@ -49,8 +49,8 @@ class Windows.Networking.HostName python_type stringable
     default Windows.Networking.IHostName
     requires Windows.Networking.IHostName
     requires Windows.Foundation.IStringable
-    factory Windows.Networking.IHostNameStatics
     factory Windows.Networking.IHostNameFactory
+    factory Windows.Networking.IHostNameStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.IHostNameFactory shape=51 reverse=24
             in string name=hostName

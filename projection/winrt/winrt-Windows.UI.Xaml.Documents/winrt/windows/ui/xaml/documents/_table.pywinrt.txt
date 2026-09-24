@@ -10,8 +10,8 @@ class Windows.UI.Xaml.Documents.Block composable python_type
     default Windows.UI.Xaml.Documents.IBlock
     requires Windows.UI.Xaml.Documents.IBlock
     requires Windows.UI.Xaml.Documents.IBlock2
-    factory Windows.UI.Xaml.Documents.IBlockStatics2
     factory Windows.UI.Xaml.Documents.IBlockStatics
+    factory Windows.UI.Xaml.Documents.IBlockStatics2
     composable Windows.UI.Xaml.Documents.IBlockFactory
     property text_alignment
         get get_TextAlignment slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock shape=4 reverse=22
@@ -359,8 +359,8 @@ class Windows.UI.Xaml.Documents.Glyphs activatable python_type
     default Windows.UI.Xaml.Documents.IGlyphs
     requires Windows.UI.Xaml.Documents.IGlyphs
     requires Windows.UI.Xaml.Documents.IGlyphs2
-    factory Windows.UI.Xaml.Documents.IGlyphsStatics2
     factory Windows.UI.Xaml.Documents.IGlyphsStatics
+    factory Windows.UI.Xaml.Documents.IGlyphsStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -455,11 +455,11 @@ class Windows.UI.Xaml.Documents.Hyperlink activatable python_type
     requires Windows.UI.Xaml.Documents.IHyperlink3
     requires Windows.UI.Xaml.Documents.IHyperlink4
     requires Windows.UI.Xaml.Documents.IHyperlink5
-    factory Windows.UI.Xaml.Documents.IHyperlinkStatics2
-    factory Windows.UI.Xaml.Documents.IHyperlinkStatics5
     factory Windows.UI.Xaml.Documents.IHyperlinkStatics
-    factory Windows.UI.Xaml.Documents.IHyperlinkStatics4
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics2
     factory Windows.UI.Xaml.Documents.IHyperlinkStatics3
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics4
+    factory Windows.UI.Xaml.Documents.IHyperlinkStatics5
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -1414,10 +1414,10 @@ class Windows.UI.Xaml.Documents.TextElement composable python_type
     requires Windows.UI.Xaml.Documents.ITextElement4
     requires Windows.UI.Xaml.Documents.ITextElement5
     requires Windows.UI.Xaml.Documents.ITextElementOverrides
-    factory Windows.UI.Xaml.Documents.ITextElementStatics3
     factory Windows.UI.Xaml.Documents.ITextElementStatics
-    factory Windows.UI.Xaml.Documents.ITextElementStatics4
     factory Windows.UI.Xaml.Documents.ITextElementStatics2
+    factory Windows.UI.Xaml.Documents.ITextElementStatics3
+    factory Windows.UI.Xaml.Documents.ITextElementStatics4
     composable Windows.UI.Xaml.Documents.ITextElementFactory
     overridable Windows.UI.Xaml.Documents.ITextElementOverrides
     property language

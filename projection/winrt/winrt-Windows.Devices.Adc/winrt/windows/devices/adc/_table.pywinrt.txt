@@ -32,8 +32,8 @@ class Windows.Devices.Adc.AdcController python_type
     signature rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56})
     default Windows.Devices.Adc.IAdcController
     requires Windows.Devices.Adc.IAdcController
-    factory Windows.Devices.Adc.IAdcControllerStatics2
     factory Windows.Devices.Adc.IAdcControllerStatics
+    factory Windows.Devices.Adc.IAdcControllerStatics2
     property channel_mode
         get get_ChannelMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=121
             out enum32 type=Windows.Devices.Adc.AdcChannelMode return

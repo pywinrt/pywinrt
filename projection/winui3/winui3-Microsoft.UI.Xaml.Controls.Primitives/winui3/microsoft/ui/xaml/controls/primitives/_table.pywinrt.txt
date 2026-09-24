@@ -4134,8 +4134,8 @@ class Microsoft.UI.Xaml.Controls.Primitives.Popup activatable python_type
     requires Microsoft.UI.Xaml.Controls.Primitives.IPopup2
     requires Microsoft.UI.Xaml.Controls.Primitives.IPopup3
     factory Microsoft.UI.Xaml.Controls.Primitives.IPopupStatics
-    factory Microsoft.UI.Xaml.Controls.Primitives.IPopupStatics3
     factory Microsoft.UI.Xaml.Controls.Primitives.IPopupStatics2
+    factory Microsoft.UI.Xaml.Controls.Primitives.IPopupStatics3
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

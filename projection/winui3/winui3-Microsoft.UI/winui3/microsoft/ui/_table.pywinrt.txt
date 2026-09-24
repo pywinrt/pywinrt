@@ -15,8 +15,8 @@ class Microsoft.UI.ColorHelper python_type
     signature rc(Microsoft.UI.ColorHelper;{3adddccd-3949-585b-a566-ccb8350dd221})
     default Microsoft.UI.IColorHelper
     requires Microsoft.UI.IColorHelper
-    factory Microsoft.UI.IColorHelperStatics2
     factory Microsoft.UI.IColorHelperStatics
+    factory Microsoft.UI.IColorHelperStatics2
     method from_argb static
         method FromArgb slot=6 inputs=4 outputs=1 declaring=Microsoft.UI.IColorHelperStatics shape=239 reverse=27 static
             in uint8 name=a

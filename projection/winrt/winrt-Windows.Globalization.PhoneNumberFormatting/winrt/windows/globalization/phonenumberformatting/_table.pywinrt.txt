@@ -79,8 +79,8 @@ class Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo python_type st
     default Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo
     requires Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo
     requires Windows.Foundation.IStringable
-    factory Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics
     factory Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory
+    factory Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory shape=51 reverse=24
             in string name=number

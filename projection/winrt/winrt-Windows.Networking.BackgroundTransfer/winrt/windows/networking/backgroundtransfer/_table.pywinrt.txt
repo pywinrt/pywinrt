@@ -123,10 +123,10 @@ class Windows.Networking.BackgroundTransfer.BackgroundDownloader activatable pyt
     requires Windows.Networking.BackgroundTransfer.IBackgroundTransferBase
     requires Windows.Networking.BackgroundTransfer.IBackgroundDownloader2
     requires Windows.Networking.BackgroundTransfer.IBackgroundDownloader3
+    factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory
     factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods
     factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2
     factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent
-    factory Windows.Networking.BackgroundTransfer.IBackgroundDownloaderFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -378,10 +378,10 @@ class Windows.Networking.BackgroundTransfer.BackgroundUploader activatable pytho
     requires Windows.Networking.BackgroundTransfer.IBackgroundTransferBase
     requires Windows.Networking.BackgroundTransfer.IBackgroundUploader2
     requires Windows.Networking.BackgroundTransfer.IBackgroundUploader3
-    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent
     factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderFactory
-    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2
     factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods
+    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2
+    factory Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

@@ -28,8 +28,8 @@ class Windows.UI.Xaml.Controls.AppBar composable python_type
     requires Windows.UI.Xaml.Controls.IAppBar4
     requires Windows.UI.Xaml.Controls.IAppBarOverrides
     requires Windows.UI.Xaml.Controls.IAppBarOverrides3
-    factory Windows.UI.Xaml.Controls.IAppBarStatics2
     factory Windows.UI.Xaml.Controls.IAppBarStatics
+    factory Windows.UI.Xaml.Controls.IAppBarStatics2
     factory Windows.UI.Xaml.Controls.IAppBarStatics4
     composable Windows.UI.Xaml.Controls.IAppBarFactory
     overridable Windows.UI.Xaml.Controls.IAppBarOverrides
@@ -122,9 +122,9 @@ class Windows.UI.Xaml.Controls.AppBarButton composable python_type
     requires Windows.UI.Xaml.Controls.IAppBarButton5
     requires Windows.UI.Xaml.Controls.ICommandBarElement
     requires Windows.UI.Xaml.Controls.ICommandBarElement2
-    factory Windows.UI.Xaml.Controls.IAppBarButtonStatics4
     factory Windows.UI.Xaml.Controls.IAppBarButtonStatics
     factory Windows.UI.Xaml.Controls.IAppBarButtonStatics3
+    factory Windows.UI.Xaml.Controls.IAppBarButtonStatics4
     composable Windows.UI.Xaml.Controls.IAppBarButtonFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IAppBarButtonFactory shape=117 reverse=25
@@ -284,9 +284,9 @@ class Windows.UI.Xaml.Controls.AppBarToggleButton composable python_type
     requires Windows.UI.Xaml.Controls.IAppBarToggleButton5
     requires Windows.UI.Xaml.Controls.ICommandBarElement
     requires Windows.UI.Xaml.Controls.ICommandBarElement2
-    factory Windows.UI.Xaml.Controls.IAppBarToggleButtonStatics4
-    factory Windows.UI.Xaml.Controls.IAppBarToggleButtonStatics3
     factory Windows.UI.Xaml.Controls.IAppBarToggleButtonStatics
+    factory Windows.UI.Xaml.Controls.IAppBarToggleButtonStatics3
+    factory Windows.UI.Xaml.Controls.IAppBarToggleButtonStatics4
     composable Windows.UI.Xaml.Controls.IAppBarToggleButtonFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IAppBarToggleButtonFactory shape=117 reverse=25
@@ -471,8 +471,8 @@ class Windows.UI.Xaml.Controls.AutoSuggestBox activatable python_type
     requires Windows.UI.Xaml.Controls.IAutoSuggestBox3
     requires Windows.UI.Xaml.Controls.IAutoSuggestBox4
     factory Windows.UI.Xaml.Controls.IAutoSuggestBoxStatics
-    factory Windows.UI.Xaml.Controls.IAutoSuggestBoxStatics3
     factory Windows.UI.Xaml.Controls.IAutoSuggestBoxStatics2
+    factory Windows.UI.Xaml.Controls.IAutoSuggestBoxStatics3
     factory Windows.UI.Xaml.Controls.IAutoSuggestBoxStatics4
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -686,8 +686,8 @@ class Windows.UI.Xaml.Controls.BitmapIcon composable python_type
     default Windows.UI.Xaml.Controls.IBitmapIcon
     requires Windows.UI.Xaml.Controls.IBitmapIcon
     requires Windows.UI.Xaml.Controls.IBitmapIcon2
-    factory Windows.UI.Xaml.Controls.IBitmapIconStatics2
     factory Windows.UI.Xaml.Controls.IBitmapIconStatics
+    factory Windows.UI.Xaml.Controls.IBitmapIconStatics2
     composable Windows.UI.Xaml.Controls.IBitmapIconFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IBitmapIconFactory shape=117 reverse=25
@@ -748,8 +748,8 @@ class Windows.UI.Xaml.Controls.Border activatable python_type
     default Windows.UI.Xaml.Controls.IBorder
     requires Windows.UI.Xaml.Controls.IBorder
     requires Windows.UI.Xaml.Controls.IBorder2
-    factory Windows.UI.Xaml.Controls.IBorderStatics2
     factory Windows.UI.Xaml.Controls.IBorderStatics
+    factory Windows.UI.Xaml.Controls.IBorderStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -1055,8 +1055,8 @@ class Windows.UI.Xaml.Controls.CalendarView composable python_type
     default Windows.UI.Xaml.Controls.ICalendarView
     requires Windows.UI.Xaml.Controls.ICalendarView
     requires Windows.UI.Xaml.Controls.ICalendarView2
-    factory Windows.UI.Xaml.Controls.ICalendarViewStatics2
     factory Windows.UI.Xaml.Controls.ICalendarViewStatics
+    factory Windows.UI.Xaml.Controls.ICalendarViewStatics2
     composable Windows.UI.Xaml.Controls.ICalendarViewFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ICalendarViewFactory shape=117 reverse=25
@@ -2264,12 +2264,12 @@ class Windows.UI.Xaml.Controls.ComboBox composable python_type
     requires Windows.UI.Xaml.Controls.IComboBox5
     requires Windows.UI.Xaml.Controls.IComboBox6
     requires Windows.UI.Xaml.Controls.IComboBoxOverrides
-    factory Windows.UI.Xaml.Controls.IComboBoxStatics6
-    factory Windows.UI.Xaml.Controls.IComboBoxStatics3
-    factory Windows.UI.Xaml.Controls.IComboBoxStatics2
-    factory Windows.UI.Xaml.Controls.IComboBoxStatics5
     factory Windows.UI.Xaml.Controls.IComboBoxStatics
+    factory Windows.UI.Xaml.Controls.IComboBoxStatics2
+    factory Windows.UI.Xaml.Controls.IComboBoxStatics3
     factory Windows.UI.Xaml.Controls.IComboBoxStatics4
+    factory Windows.UI.Xaml.Controls.IComboBoxStatics5
+    factory Windows.UI.Xaml.Controls.IComboBoxStatics6
     composable Windows.UI.Xaml.Controls.IComboBoxFactory
     overridable Windows.UI.Xaml.Controls.IComboBoxOverrides
     constructor -
@@ -2459,9 +2459,9 @@ class Windows.UI.Xaml.Controls.CommandBar composable python_type
     requires Windows.UI.Xaml.Controls.ICommandBar
     requires Windows.UI.Xaml.Controls.ICommandBar2
     requires Windows.UI.Xaml.Controls.ICommandBar3
+    factory Windows.UI.Xaml.Controls.ICommandBarStatics
     factory Windows.UI.Xaml.Controls.ICommandBarStatics2
     factory Windows.UI.Xaml.Controls.ICommandBarStatics3
-    factory Windows.UI.Xaml.Controls.ICommandBarStatics
     composable Windows.UI.Xaml.Controls.ICommandBarFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ICommandBarFactory shape=117 reverse=25
@@ -3000,11 +3000,11 @@ class Windows.UI.Xaml.Controls.ContentPresenter composable python_type
     requires Windows.UI.Xaml.Controls.IContentPresenter4
     requires Windows.UI.Xaml.Controls.IContentPresenter5
     requires Windows.UI.Xaml.Controls.IContentPresenterOverrides
-    factory Windows.UI.Xaml.Controls.IContentPresenterStatics3
     factory Windows.UI.Xaml.Controls.IContentPresenterStatics
+    factory Windows.UI.Xaml.Controls.IContentPresenterStatics2
+    factory Windows.UI.Xaml.Controls.IContentPresenterStatics3
     factory Windows.UI.Xaml.Controls.IContentPresenterStatics4
     factory Windows.UI.Xaml.Controls.IContentPresenterStatics5
-    factory Windows.UI.Xaml.Controls.IContentPresenterStatics2
     composable Windows.UI.Xaml.Controls.IContentPresenterFactory
     overridable Windows.UI.Xaml.Controls.IContentPresenterOverrides
     constructor -
@@ -3275,12 +3275,12 @@ class Windows.UI.Xaml.Controls.Control composable python_type
     requires Windows.UI.Xaml.Controls.IControlProtected
     requires Windows.UI.Xaml.Controls.IControlOverrides
     requires Windows.UI.Xaml.Controls.IControlOverrides6
-    factory Windows.UI.Xaml.Controls.IControlStatics2
-    factory Windows.UI.Xaml.Controls.IControlStatics4
-    factory Windows.UI.Xaml.Controls.IControlStatics3
-    factory Windows.UI.Xaml.Controls.IControlStatics7
     factory Windows.UI.Xaml.Controls.IControlStatics
+    factory Windows.UI.Xaml.Controls.IControlStatics2
+    factory Windows.UI.Xaml.Controls.IControlStatics3
+    factory Windows.UI.Xaml.Controls.IControlStatics4
     factory Windows.UI.Xaml.Controls.IControlStatics5
+    factory Windows.UI.Xaml.Controls.IControlStatics7
     composable Windows.UI.Xaml.Controls.IControlFactory
     overridable Windows.UI.Xaml.Controls.IControlOverrides
     overridable Windows.UI.Xaml.Controls.IControlOverrides6
@@ -3760,9 +3760,9 @@ class Windows.UI.Xaml.Controls.DatePicker composable python_type
     requires Windows.UI.Xaml.Controls.IDatePicker
     requires Windows.UI.Xaml.Controls.IDatePicker2
     requires Windows.UI.Xaml.Controls.IDatePicker3
-    factory Windows.UI.Xaml.Controls.IDatePickerStatics3
     factory Windows.UI.Xaml.Controls.IDatePickerStatics
     factory Windows.UI.Xaml.Controls.IDatePickerStatics2
+    factory Windows.UI.Xaml.Controls.IDatePickerStatics3
     composable Windows.UI.Xaml.Controls.IDatePickerFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IDatePickerFactory shape=117 reverse=25
@@ -4356,8 +4356,8 @@ class Windows.UI.Xaml.Controls.FontIcon composable python_type
     requires Windows.UI.Xaml.Controls.IFontIcon2
     requires Windows.UI.Xaml.Controls.IFontIcon3
     factory Windows.UI.Xaml.Controls.IFontIconStatics
-    factory Windows.UI.Xaml.Controls.IFontIconStatics3
     factory Windows.UI.Xaml.Controls.IFontIconStatics2
+    factory Windows.UI.Xaml.Controls.IFontIconStatics3
     composable Windows.UI.Xaml.Controls.IFontIconFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IFontIconFactory shape=117 reverse=25
@@ -4502,8 +4502,8 @@ class Windows.UI.Xaml.Controls.Frame composable python_type
     requires Windows.UI.Xaml.Controls.IFrame4
     requires Windows.UI.Xaml.Controls.IFrame5
     requires Windows.UI.Xaml.Controls.INavigate
-    factory Windows.UI.Xaml.Controls.IFrameStatics2
     factory Windows.UI.Xaml.Controls.IFrameStatics
+    factory Windows.UI.Xaml.Controls.IFrameStatics2
     factory Windows.UI.Xaml.Controls.IFrameStatics5
     composable Windows.UI.Xaml.Controls.IFrameFactory
     constructor -
@@ -4639,10 +4639,10 @@ class Windows.UI.Xaml.Controls.Grid composable python_type
     requires Windows.UI.Xaml.Controls.IGrid2
     requires Windows.UI.Xaml.Controls.IGrid3
     requires Windows.UI.Xaml.Controls.IGrid4
-    factory Windows.UI.Xaml.Controls.IGridStatics4
     factory Windows.UI.Xaml.Controls.IGridStatics
-    factory Windows.UI.Xaml.Controls.IGridStatics3
     factory Windows.UI.Xaml.Controls.IGridStatics2
+    factory Windows.UI.Xaml.Controls.IGridStatics3
+    factory Windows.UI.Xaml.Controls.IGridStatics4
     composable Windows.UI.Xaml.Controls.IGridFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IGridFactory shape=117 reverse=25
@@ -11582,8 +11582,8 @@ class Windows.UI.Xaml.Controls.InkToolbar composable python_type
     requires Windows.UI.Xaml.Controls.IInkToolbar2
     requires Windows.UI.Xaml.Controls.IInkToolbar3
     factory Windows.UI.Xaml.Controls.IInkToolbarStatics
-    factory Windows.UI.Xaml.Controls.IInkToolbarStatics3
     factory Windows.UI.Xaml.Controls.IInkToolbarStatics2
+    factory Windows.UI.Xaml.Controls.IInkToolbarStatics3
     composable Windows.UI.Xaml.Controls.IInkToolbarFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IInkToolbarFactory shape=117 reverse=25
@@ -12522,8 +12522,8 @@ class Windows.UI.Xaml.Controls.ItemsPresenter activatable python_type
     requires Windows.UI.Xaml.Controls.IItemsPresenter
     requires Windows.UI.Xaml.Controls.IItemsPresenter2
     requires Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo
-    factory Windows.UI.Xaml.Controls.IItemsPresenterStatics2
     factory Windows.UI.Xaml.Controls.IItemsPresenterStatics
+    factory Windows.UI.Xaml.Controls.IItemsPresenterStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -12620,8 +12620,8 @@ class Windows.UI.Xaml.Controls.ItemsStackPanel activatable python_type
     default Windows.UI.Xaml.Controls.IItemsStackPanel
     requires Windows.UI.Xaml.Controls.IItemsStackPanel
     requires Windows.UI.Xaml.Controls.IItemsStackPanel2
-    factory Windows.UI.Xaml.Controls.IItemsStackPanelStatics2
     factory Windows.UI.Xaml.Controls.IItemsStackPanelStatics
+    factory Windows.UI.Xaml.Controls.IItemsStackPanelStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -12700,8 +12700,8 @@ class Windows.UI.Xaml.Controls.ItemsWrapGrid activatable python_type
     default Windows.UI.Xaml.Controls.IItemsWrapGrid
     requires Windows.UI.Xaml.Controls.IItemsWrapGrid
     requires Windows.UI.Xaml.Controls.IItemsWrapGrid2
-    factory Windows.UI.Xaml.Controls.IItemsWrapGridStatics2
     factory Windows.UI.Xaml.Controls.IItemsWrapGridStatics
+    factory Windows.UI.Xaml.Controls.IItemsWrapGridStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -12799,8 +12799,8 @@ class Windows.UI.Xaml.Controls.ListBox composable python_type
     default Windows.UI.Xaml.Controls.IListBox
     requires Windows.UI.Xaml.Controls.IListBox
     requires Windows.UI.Xaml.Controls.IListBox2
-    factory Windows.UI.Xaml.Controls.IListBoxStatics2
     factory Windows.UI.Xaml.Controls.IListBoxStatics
+    factory Windows.UI.Xaml.Controls.IListBoxStatics2
     composable Windows.UI.Xaml.Controls.IListBoxFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IListBoxFactory shape=117 reverse=25
@@ -12971,11 +12971,11 @@ class Windows.UI.Xaml.Controls.ListViewBase composable python_type
     requires Windows.UI.Xaml.Controls.IListViewBase5
     requires Windows.UI.Xaml.Controls.IListViewBase6
     requires Windows.UI.Xaml.Controls.ISemanticZoomInformation
+    factory Windows.UI.Xaml.Controls.IListViewBaseStatics
+    factory Windows.UI.Xaml.Controls.IListViewBaseStatics2
+    factory Windows.UI.Xaml.Controls.IListViewBaseStatics3
     factory Windows.UI.Xaml.Controls.IListViewBaseStatics4
     factory Windows.UI.Xaml.Controls.IListViewBaseStatics5
-    factory Windows.UI.Xaml.Controls.IListViewBaseStatics2
-    factory Windows.UI.Xaml.Controls.IListViewBaseStatics
-    factory Windows.UI.Xaml.Controls.IListViewBaseStatics3
     composable Windows.UI.Xaml.Controls.IListViewBaseFactory
     property selection_mode
         get get_SelectionMode slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IListViewBase shape=4 reverse=43
@@ -13341,8 +13341,8 @@ class Windows.UI.Xaml.Controls.MediaElement activatable python_type
     requires Windows.UI.Xaml.Controls.IMediaElement
     requires Windows.UI.Xaml.Controls.IMediaElement2
     requires Windows.UI.Xaml.Controls.IMediaElement3
-    factory Windows.UI.Xaml.Controls.IMediaElementStatics2
     factory Windows.UI.Xaml.Controls.IMediaElementStatics
+    factory Windows.UI.Xaml.Controls.IMediaElementStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -13847,10 +13847,10 @@ class Windows.UI.Xaml.Controls.MediaTransportControls composable python_type
     requires Windows.UI.Xaml.Controls.IMediaTransportControls2
     requires Windows.UI.Xaml.Controls.IMediaTransportControls3
     requires Windows.UI.Xaml.Controls.IMediaTransportControls4
-    factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics4
-    factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics3
-    factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics2
     factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics
+    factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics2
+    factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics3
+    factory Windows.UI.Xaml.Controls.IMediaTransportControlsStatics4
     composable Windows.UI.Xaml.Controls.IMediaTransportControlsFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IMediaTransportControlsFactory shape=117 reverse=25
@@ -14217,9 +14217,9 @@ class Windows.UI.Xaml.Controls.MenuFlyoutItem composable python_type
     requires Windows.UI.Xaml.Controls.IMenuFlyoutItem
     requires Windows.UI.Xaml.Controls.IMenuFlyoutItem2
     requires Windows.UI.Xaml.Controls.IMenuFlyoutItem3
-    factory Windows.UI.Xaml.Controls.IMenuFlyoutItemStatics3
     factory Windows.UI.Xaml.Controls.IMenuFlyoutItemStatics
     factory Windows.UI.Xaml.Controls.IMenuFlyoutItemStatics2
+    factory Windows.UI.Xaml.Controls.IMenuFlyoutItemStatics3
     composable Windows.UI.Xaml.Controls.IMenuFlyoutItemFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IMenuFlyoutItemFactory shape=117 reverse=25
@@ -14364,9 +14364,9 @@ class Windows.UI.Xaml.Controls.NavigationView composable python_type
     requires Windows.UI.Xaml.Controls.INavigationView
     requires Windows.UI.Xaml.Controls.INavigationView2
     requires Windows.UI.Xaml.Controls.INavigationView3
-    factory Windows.UI.Xaml.Controls.INavigationViewStatics3
-    factory Windows.UI.Xaml.Controls.INavigationViewStatics2
     factory Windows.UI.Xaml.Controls.INavigationViewStatics
+    factory Windows.UI.Xaml.Controls.INavigationViewStatics2
+    factory Windows.UI.Xaml.Controls.INavigationViewStatics3
     composable Windows.UI.Xaml.Controls.INavigationViewFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.INavigationViewFactory shape=117 reverse=25
@@ -15217,9 +15217,9 @@ class Windows.UI.Xaml.Controls.PasswordBox activatable python_type
     requires Windows.UI.Xaml.Controls.IPasswordBox3
     requires Windows.UI.Xaml.Controls.IPasswordBox4
     requires Windows.UI.Xaml.Controls.IPasswordBox5
+    factory Windows.UI.Xaml.Controls.IPasswordBoxStatics
     factory Windows.UI.Xaml.Controls.IPasswordBoxStatics2
     factory Windows.UI.Xaml.Controls.IPasswordBoxStatics3
-    factory Windows.UI.Xaml.Controls.IPasswordBoxStatics
     factory Windows.UI.Xaml.Controls.IPasswordBoxStatics5
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -15587,9 +15587,9 @@ class Windows.UI.Xaml.Controls.Pivot composable python_type
     requires Windows.UI.Xaml.Controls.IPivot
     requires Windows.UI.Xaml.Controls.IPivot2
     requires Windows.UI.Xaml.Controls.IPivot3
-    factory Windows.UI.Xaml.Controls.IPivotStatics3
-    factory Windows.UI.Xaml.Controls.IPivotStatics2
     factory Windows.UI.Xaml.Controls.IPivotStatics
+    factory Windows.UI.Xaml.Controls.IPivotStatics2
+    factory Windows.UI.Xaml.Controls.IPivotStatics3
     composable Windows.UI.Xaml.Controls.IPivotFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IPivotFactory shape=117 reverse=25
@@ -16488,14 +16488,14 @@ class Windows.UI.Xaml.Controls.RichEditBox composable python_type
     requires Windows.UI.Xaml.Controls.IRichEditBox6
     requires Windows.UI.Xaml.Controls.IRichEditBox7
     requires Windows.UI.Xaml.Controls.IRichEditBox8
+    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics
+    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics2
+    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics3
+    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics4
+    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics5
+    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics6
     factory Windows.UI.Xaml.Controls.IRichEditBoxStatics7
     factory Windows.UI.Xaml.Controls.IRichEditBoxStatics8
-    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics6
-    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics4
-    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics3
-    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics
-    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics5
-    factory Windows.UI.Xaml.Controls.IRichEditBoxStatics2
     composable Windows.UI.Xaml.Controls.IRichEditBoxFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IRichEditBoxFactory shape=117 reverse=25
@@ -16870,12 +16870,12 @@ class Windows.UI.Xaml.Controls.RichTextBlock activatable python_type
     requires Windows.UI.Xaml.Controls.IRichTextBlock4
     requires Windows.UI.Xaml.Controls.IRichTextBlock5
     requires Windows.UI.Xaml.Controls.IRichTextBlock6
-    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics6
-    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics5
-    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics4
-    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics3
-    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics2
     factory Windows.UI.Xaml.Controls.IRichTextBlockStatics
+    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics2
+    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics3
+    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics4
+    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics5
+    factory Windows.UI.Xaml.Controls.IRichTextBlockStatics6
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -17169,9 +17169,9 @@ class Windows.UI.Xaml.Controls.RichTextBlockOverflow activatable python_type
     requires Windows.UI.Xaml.Controls.IRichTextBlockOverflow
     requires Windows.UI.Xaml.Controls.IRichTextBlockOverflow2
     requires Windows.UI.Xaml.Controls.IRichTextBlockOverflow3
-    factory Windows.UI.Xaml.Controls.IRichTextBlockOverflowStatics3
-    factory Windows.UI.Xaml.Controls.IRichTextBlockOverflowStatics2
     factory Windows.UI.Xaml.Controls.IRichTextBlockOverflowStatics
+    factory Windows.UI.Xaml.Controls.IRichTextBlockOverflowStatics2
+    factory Windows.UI.Xaml.Controls.IRichTextBlockOverflowStatics3
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -17456,8 +17456,8 @@ class Windows.UI.Xaml.Controls.ScrollViewer activatable python_type
     requires Windows.UI.Xaml.Controls.IScrollViewer4
     requires Windows.UI.Xaml.Controls.IScrollAnchorProvider
     factory Windows.UI.Xaml.Controls.IScrollViewerStatics
-    factory Windows.UI.Xaml.Controls.IScrollViewerStatics4
     factory Windows.UI.Xaml.Controls.IScrollViewerStatics2
+    factory Windows.UI.Xaml.Controls.IScrollViewerStatics4
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -18387,8 +18387,8 @@ class Windows.UI.Xaml.Controls.Slider composable python_type
     default Windows.UI.Xaml.Controls.ISlider
     requires Windows.UI.Xaml.Controls.ISlider
     requires Windows.UI.Xaml.Controls.ISlider2
-    factory Windows.UI.Xaml.Controls.ISliderStatics2
     factory Windows.UI.Xaml.Controls.ISliderStatics
+    factory Windows.UI.Xaml.Controls.ISliderStatics2
     composable Windows.UI.Xaml.Controls.ISliderFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ISliderFactory shape=117 reverse=25
@@ -18576,8 +18576,8 @@ class Windows.UI.Xaml.Controls.SplitView composable python_type
     requires Windows.UI.Xaml.Controls.ISplitView
     requires Windows.UI.Xaml.Controls.ISplitView2
     requires Windows.UI.Xaml.Controls.ISplitView3
-    factory Windows.UI.Xaml.Controls.ISplitViewStatics2
     factory Windows.UI.Xaml.Controls.ISplitViewStatics
+    factory Windows.UI.Xaml.Controls.ISplitViewStatics2
     composable Windows.UI.Xaml.Controls.ISplitViewFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ISplitViewFactory shape=117 reverse=25
@@ -18723,10 +18723,10 @@ class Windows.UI.Xaml.Controls.StackPanel composable python_type
     requires Windows.UI.Xaml.Controls.IStackPanel5
     requires Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo
     requires Windows.UI.Xaml.Controls.IInsertionPanel
+    factory Windows.UI.Xaml.Controls.IStackPanelStatics
+    factory Windows.UI.Xaml.Controls.IStackPanelStatics2
     factory Windows.UI.Xaml.Controls.IStackPanelStatics4
     factory Windows.UI.Xaml.Controls.IStackPanelStatics5
-    factory Windows.UI.Xaml.Controls.IStackPanelStatics2
-    factory Windows.UI.Xaml.Controls.IStackPanelStatics
     composable Windows.UI.Xaml.Controls.IStackPanelFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IStackPanelFactory shape=117 reverse=25
@@ -19339,8 +19339,8 @@ class Windows.UI.Xaml.Controls.SymbolIcon activatable python_type
     base Windows.UI.Xaml.Controls.IconElement
     default Windows.UI.Xaml.Controls.ISymbolIcon
     requires Windows.UI.Xaml.Controls.ISymbolIcon
-    factory Windows.UI.Xaml.Controls.ISymbolIconStatics
     factory Windows.UI.Xaml.Controls.ISymbolIconFactory
+    factory Windows.UI.Xaml.Controls.ISymbolIconStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -19392,12 +19392,12 @@ class Windows.UI.Xaml.Controls.TextBlock activatable python_type
     requires Windows.UI.Xaml.Controls.ITextBlock5
     requires Windows.UI.Xaml.Controls.ITextBlock6
     requires Windows.UI.Xaml.Controls.ITextBlock7
-    factory Windows.UI.Xaml.Controls.ITextBlockStatics5
-    factory Windows.UI.Xaml.Controls.ITextBlockStatics3
-    factory Windows.UI.Xaml.Controls.ITextBlockStatics7
-    factory Windows.UI.Xaml.Controls.ITextBlockStatics2
-    factory Windows.UI.Xaml.Controls.ITextBlockStatics6
     factory Windows.UI.Xaml.Controls.ITextBlockStatics
+    factory Windows.UI.Xaml.Controls.ITextBlockStatics2
+    factory Windows.UI.Xaml.Controls.ITextBlockStatics3
+    factory Windows.UI.Xaml.Controls.ITextBlockStatics5
+    factory Windows.UI.Xaml.Controls.ITextBlockStatics6
+    factory Windows.UI.Xaml.Controls.ITextBlockStatics7
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -19682,12 +19682,12 @@ class Windows.UI.Xaml.Controls.TextBox composable python_type
     requires Windows.UI.Xaml.Controls.ITextBox7
     requires Windows.UI.Xaml.Controls.ITextBox8
     factory Windows.UI.Xaml.Controls.ITextBoxStatics
-    factory Windows.UI.Xaml.Controls.ITextBoxStatics7
-    factory Windows.UI.Xaml.Controls.ITextBoxStatics3
-    factory Windows.UI.Xaml.Controls.ITextBoxStatics8
-    factory Windows.UI.Xaml.Controls.ITextBoxStatics6
-    factory Windows.UI.Xaml.Controls.ITextBoxStatics5
     factory Windows.UI.Xaml.Controls.ITextBoxStatics2
+    factory Windows.UI.Xaml.Controls.ITextBoxStatics3
+    factory Windows.UI.Xaml.Controls.ITextBoxStatics5
+    factory Windows.UI.Xaml.Controls.ITextBoxStatics6
+    factory Windows.UI.Xaml.Controls.ITextBoxStatics7
+    factory Windows.UI.Xaml.Controls.ITextBoxStatics8
     composable Windows.UI.Xaml.Controls.ITextBoxFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ITextBoxFactory shape=117 reverse=25
@@ -20210,9 +20210,9 @@ class Windows.UI.Xaml.Controls.TimePicker composable python_type
     requires Windows.UI.Xaml.Controls.ITimePicker
     requires Windows.UI.Xaml.Controls.ITimePicker2
     requires Windows.UI.Xaml.Controls.ITimePicker3
+    factory Windows.UI.Xaml.Controls.ITimePickerStatics
     factory Windows.UI.Xaml.Controls.ITimePickerStatics2
     factory Windows.UI.Xaml.Controls.ITimePickerStatics3
-    factory Windows.UI.Xaml.Controls.ITimePickerStatics
     composable Windows.UI.Xaml.Controls.ITimePickerFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ITimePickerFactory shape=117 reverse=25
@@ -20875,8 +20875,8 @@ class Windows.UI.Xaml.Controls.TreeViewItem composable python_type
     default Windows.UI.Xaml.Controls.ITreeViewItem
     requires Windows.UI.Xaml.Controls.ITreeViewItem
     requires Windows.UI.Xaml.Controls.ITreeViewItem2
-    factory Windows.UI.Xaml.Controls.ITreeViewItemStatics2
     factory Windows.UI.Xaml.Controls.ITreeViewItemStatics
+    factory Windows.UI.Xaml.Controls.ITreeViewItemStatics2
     composable Windows.UI.Xaml.Controls.ITreeViewItemFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ITreeViewItemFactory shape=117 reverse=25
@@ -22713,12 +22713,12 @@ class Windows.UI.Xaml.Controls.WebView activatable python_type
     requires Windows.UI.Xaml.Controls.IWebView5
     requires Windows.UI.Xaml.Controls.IWebView6
     requires Windows.UI.Xaml.Controls.IWebView7
-    factory Windows.UI.Xaml.Controls.IWebViewStatics2
     factory Windows.UI.Xaml.Controls.IWebViewFactory4
     factory Windows.UI.Xaml.Controls.IWebViewStatics
+    factory Windows.UI.Xaml.Controls.IWebViewStatics2
     factory Windows.UI.Xaml.Controls.IWebViewStatics3
-    factory Windows.UI.Xaml.Controls.IWebViewStatics5
     factory Windows.UI.Xaml.Controls.IWebViewStatics4
+    factory Windows.UI.Xaml.Controls.IWebViewStatics5
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

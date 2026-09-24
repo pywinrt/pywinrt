@@ -9,8 +9,8 @@ class Windows.UI.ApplicationSettings.AccountsSettingsPane python_type
     default Windows.UI.ApplicationSettings.IAccountsSettingsPane
     requires Windows.UI.ApplicationSettings.IAccountsSettingsPane
     factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics
-    factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3
     factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2
+    factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3
     event account_commands_requested
         add add_AccountCommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs> name=handler

@@ -521,8 +521,8 @@ class Windows.ApplicationModel.UserActivities.UserActivity python_type
     requires Windows.ApplicationModel.UserActivities.IUserActivity
     requires Windows.ApplicationModel.UserActivities.IUserActivity2
     requires Windows.ApplicationModel.UserActivities.IUserActivity3
-    factory Windows.ApplicationModel.UserActivities.IUserActivityStatics
     factory Windows.ApplicationModel.UserActivities.IUserActivityFactory
+    factory Windows.ApplicationModel.UserActivities.IUserActivityStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityFactory shape=51 reverse=24
             in string name=activityId

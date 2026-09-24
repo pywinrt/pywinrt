@@ -2892,9 +2892,9 @@ enum Windows.System.LaunchUriStatus python_type
 
 class Windows.System.Launcher static python_type
     py Launcher
+    factory Windows.System.ILauncherStatics
     factory Windows.System.ILauncherStatics2
     factory Windows.System.ILauncherStatics3
-    factory Windows.System.ILauncherStatics
     factory Windows.System.ILauncherStatics4
     factory Windows.System.ILauncherStatics5
     method find_app_uri_handlers_async static
@@ -3119,10 +3119,10 @@ class Windows.System.LauncherUIOptions python_type
 
 class Windows.System.MemoryManager static python_type
     py MemoryManager
-    factory Windows.System.IMemoryManagerStatics3
     factory Windows.System.IMemoryManagerStatics
-    factory Windows.System.IMemoryManagerStatics4
     factory Windows.System.IMemoryManagerStatics2
+    factory Windows.System.IMemoryManagerStatics3
+    factory Windows.System.IMemoryManagerStatics4
     property app_memory_usage static
         get get_AppMemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=22 static
             out uint64 return
@@ -3489,8 +3489,8 @@ class Windows.System.User python_type
     default Windows.System.IUser
     requires Windows.System.IUser
     requires Windows.System.IUser2
-    factory Windows.System.IUserStatics2
     factory Windows.System.IUserStatics
+    factory Windows.System.IUserStatics2
     property authentication_status
         get get_AuthenticationStatus slot=7 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=43
             out enum32 type=Windows.System.UserAuthenticationStatus return
