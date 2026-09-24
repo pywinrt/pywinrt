@@ -691,8 +691,8 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
     requires Windows.Foundation.IClosable
     requires Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2
     requires Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService3
-    factory Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics2
     factory Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics
+    factory Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics2
     property attribute_handle
         get get_AttributeHandle slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService shape=4 reverse=121
             out uint16 return
@@ -1427,8 +1427,8 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResul
 
 class Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids static python_type
     py GattServiceUuids
-    factory Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceUuidsStatics2
     factory Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceUuidsStatics
+    factory Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceUuidsStatics2
     property battery static
         get get_Battery slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceUuidsStatics shape=4 reverse=22 static
             out guid return

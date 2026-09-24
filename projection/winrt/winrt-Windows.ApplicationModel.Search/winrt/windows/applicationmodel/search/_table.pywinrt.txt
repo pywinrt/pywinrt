@@ -318,8 +318,8 @@ class Windows.ApplicationModel.Search.SearchPane python_type
     signature rc(Windows.ApplicationModel.Search.SearchPane;{fdacec38-3700-4d73-91a1-2f998674238a})
     default Windows.ApplicationModel.Search.ISearchPane
     requires Windows.ApplicationModel.Search.ISearchPane
-    factory Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication
     factory Windows.ApplicationModel.Search.ISearchPaneStatics
+    factory Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication
     property show_on_keyboard_input
         get get_ShowOnKeyboardInput slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 reverse=266 deprecated
             out boolean return

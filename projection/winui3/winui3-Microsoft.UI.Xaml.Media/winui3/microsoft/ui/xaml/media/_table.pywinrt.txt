@@ -3367,8 +3367,8 @@ class Microsoft.UI.Xaml.Media.SolidColorBrush activatable python_type
     base Microsoft.UI.Xaml.Media.Brush
     default Microsoft.UI.Xaml.Media.ISolidColorBrush
     requires Microsoft.UI.Xaml.Media.ISolidColorBrush
-    factory Microsoft.UI.Xaml.Media.ISolidColorBrushStatics
     factory Microsoft.UI.Xaml.Media.ISolidColorBrushFactory
+    factory Microsoft.UI.Xaml.Media.ISolidColorBrushStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

@@ -568,8 +568,8 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
     signature rc(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration;{9f4cbbb4-8cba-48b0-840d-dbb22a54c678})
     default Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistration
     requires Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistration
-    factory Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics
     factory Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics
+    factory Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics
     method abort_registering_device_async deprecated
         method AbortRegisteringDeviceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistration shape=51 reverse=44 deprecated
             in string name=errorLogMessage

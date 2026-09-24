@@ -482,8 +482,8 @@ class Windows.ApplicationModel.Appointments.AppointmentInvitee activatable pytho
 class Windows.ApplicationModel.Appointments.AppointmentManager static python_type
     py AppointmentManager
     factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics
-    factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3
     factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics2
+    factory Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3
     method get_for_user static
         method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentManagerStatics3 shape=51 reverse=24 static
             in class type=Windows.System.User name=user
@@ -667,8 +667,8 @@ enum Windows.ApplicationModel.Appointments.AppointmentParticipantRole python_typ
 
 class Windows.ApplicationModel.Appointments.AppointmentProperties static python_type
     py AppointmentProperties
-    factory Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2
     factory Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics
+    factory Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics2
     property has_invitees static
         get get_HasInvitees slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.IAppointmentPropertiesStatics shape=4 reverse=237 static
             out string return

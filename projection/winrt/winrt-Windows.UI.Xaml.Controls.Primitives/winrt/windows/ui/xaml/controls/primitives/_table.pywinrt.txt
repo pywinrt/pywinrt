@@ -699,11 +699,11 @@ class Windows.UI.Xaml.Controls.Primitives.FlyoutBase composable python_type
     requires Windows.UI.Xaml.Controls.Primitives.IFlyoutBase6
     requires Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides
     requires Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides4
-    factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6
-    factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics5
     factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics
     factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics2
     factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics3
+    factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics5
+    factory Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics6
     composable Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory
     overridable Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides
     overridable Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides4
@@ -2255,8 +2255,8 @@ class Windows.UI.Xaml.Controls.Primitives.LayoutInformation python_type
     signature rc(Windows.UI.Xaml.Controls.Primitives.LayoutInformation;{b5384c9b-c8cf-41b3-bf16-18c8420e72c9})
     default Windows.UI.Xaml.Controls.Primitives.ILayoutInformation
     requires Windows.UI.Xaml.Controls.Primitives.ILayoutInformation
-    factory Windows.UI.Xaml.Controls.Primitives.ILayoutInformationStatics2
     factory Windows.UI.Xaml.Controls.Primitives.ILayoutInformationStatics
+    factory Windows.UI.Xaml.Controls.Primitives.ILayoutInformationStatics2
     method get_available_size static
         method GetAvailableSize slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.ILayoutInformationStatics2 shape=51 reverse=24 static
             in class type=Windows.UI.Xaml.UIElement name=element
@@ -2281,8 +2281,8 @@ class Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter composable pytho
     requires Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenter4
     factory Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics
     factory Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics2
-    factory Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics4
     factory Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics3
+    factory Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics4
     composable Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterFactory shape=117 reverse=25
@@ -3160,10 +3160,10 @@ class Windows.UI.Xaml.Controls.Primitives.Popup activatable python_type
     requires Windows.UI.Xaml.Controls.Primitives.IPopup2
     requires Windows.UI.Xaml.Controls.Primitives.IPopup3
     requires Windows.UI.Xaml.Controls.Primitives.IPopup4
-    factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics4
-    factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics3
-    factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics2
     factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics
+    factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics2
+    factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics3
+    factory Windows.UI.Xaml.Controls.Primitives.IPopupStatics4
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

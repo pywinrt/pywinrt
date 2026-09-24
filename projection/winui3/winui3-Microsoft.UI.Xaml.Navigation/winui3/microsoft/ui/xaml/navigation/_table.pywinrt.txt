@@ -172,8 +172,8 @@ class Microsoft.UI.Xaml.Navigation.PageStackEntry python_type
     base Microsoft.UI.Xaml.DependencyObject
     default Microsoft.UI.Xaml.Navigation.IPageStackEntry
     requires Microsoft.UI.Xaml.Navigation.IPageStackEntry
-    factory Microsoft.UI.Xaml.Navigation.IPageStackEntryStatics
     factory Microsoft.UI.Xaml.Navigation.IPageStackEntryFactory
+    factory Microsoft.UI.Xaml.Navigation.IPageStackEntryStatics
     constructor -
         ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Navigation.IPageStackEntryFactory shape=230
             in struct type=Windows.UI.Xaml.Interop.TypeName name=sourcePageType

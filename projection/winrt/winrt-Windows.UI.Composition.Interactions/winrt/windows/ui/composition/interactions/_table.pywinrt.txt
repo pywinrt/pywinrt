@@ -637,8 +637,8 @@ class Windows.UI.Composition.Interactions.InteractionTracker python_type
     requires Windows.UI.Composition.Interactions.IInteractionTracker3
     requires Windows.UI.Composition.Interactions.IInteractionTracker4
     requires Windows.UI.Composition.Interactions.IInteractionTracker5
-    factory Windows.UI.Composition.Interactions.IInteractionTrackerStatics2
     factory Windows.UI.Composition.Interactions.IInteractionTrackerStatics
+    factory Windows.UI.Composition.Interactions.IInteractionTrackerStatics2
     property scale_inertia_decay_rate
         get get_ScaleInertiaDecayRate slot=24 inputs=0 outputs=1 declaring=Windows.UI.Composition.Interactions.IInteractionTracker shape=4 reverse=247
             out reference type=Windows.Foundation.IReference<System.Single> return

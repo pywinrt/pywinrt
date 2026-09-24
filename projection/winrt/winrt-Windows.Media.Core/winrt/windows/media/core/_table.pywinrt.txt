@@ -3069,10 +3069,10 @@ class Windows.Media.Core.MediaSource python_type closeable
     requires Windows.Media.Core.IMediaSource3
     requires Windows.Media.Core.IMediaSource4
     requires Windows.Media.Core.IMediaSource5
+    factory Windows.Media.Core.IMediaSourceStatics
     factory Windows.Media.Core.IMediaSourceStatics2
     factory Windows.Media.Core.IMediaSourceStatics3
     factory Windows.Media.Core.IMediaSourceStatics4
-    factory Windows.Media.Core.IMediaSourceStatics
     property custom_properties
         get get_CustomProperties slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaSource2 shape=4 reverse=62
             out class type=Windows.Foundation.Collections.ValueSet return
@@ -3242,8 +3242,8 @@ class Windows.Media.Core.MediaStreamSample python_type
     default Windows.Media.Core.IMediaStreamSample
     requires Windows.Media.Core.IMediaStreamSample
     requires Windows.Media.Core.IMediaStreamSample2
-    factory Windows.Media.Core.IMediaStreamSampleStatics2
     factory Windows.Media.Core.IMediaStreamSampleStatics
+    factory Windows.Media.Core.IMediaStreamSampleStatics2
     property key_frame
         get get_KeyFrame slot=17 inputs=0 outputs=1 declaring=Windows.Media.Core.IMediaStreamSample shape=4 reverse=210
             out boolean return

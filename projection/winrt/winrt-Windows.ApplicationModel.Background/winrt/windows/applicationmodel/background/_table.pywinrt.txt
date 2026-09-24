@@ -249,8 +249,8 @@ enum Windows.ApplicationModel.Background.BackgroundAccessStatus python_type
 
 class Windows.ApplicationModel.Background.BackgroundExecutionManager static python_type
     py BackgroundExecutionManager
-    factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2
     factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics
+    factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2
     factory Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3
     method get_access_status static
         method GetAccessStatus slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics shape=4 reverse=121 static
@@ -433,8 +433,8 @@ class Windows.ApplicationModel.Background.BackgroundTaskRegistration python_type
     requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration2
     requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration3
     requires Windows.ApplicationModel.Background.IBackgroundTaskRegistration4
-    factory Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2
     factory Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics
+    factory Windows.ApplicationModel.Background.IBackgroundTaskRegistrationStatics2
     property name
         get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBackgroundTaskRegistration shape=4 reverse=43
             out string return
@@ -875,8 +875,8 @@ class Windows.ApplicationModel.Background.GattCharacteristicNotificationTrigger 
     requires Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger
     requires Windows.ApplicationModel.Background.IBackgroundTrigger
     requires Windows.ApplicationModel.Background.IGattCharacteristicNotificationTrigger2
-    factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2
     factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory
+    factory Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory2
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Background.IGattCharacteristicNotificationTriggerFactory shape=51 reverse=24
             in class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic name=characteristic

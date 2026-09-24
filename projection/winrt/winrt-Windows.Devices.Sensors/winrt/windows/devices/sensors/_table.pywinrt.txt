@@ -14,8 +14,8 @@ class Windows.Devices.Sensors.Accelerometer python_type
     requires Windows.Devices.Sensors.IAccelerometer4
     requires Windows.Devices.Sensors.IAccelerometer5
     factory Windows.Devices.Sensors.IAccelerometerStatics
-    factory Windows.Devices.Sensors.IAccelerometerStatics3
     factory Windows.Devices.Sensors.IAccelerometerStatics2
+    factory Windows.Devices.Sensors.IAccelerometerStatics3
     property report_interval
         get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IAccelerometer shape=4 reverse=99
             out uint32 return
@@ -550,8 +550,8 @@ class Windows.Devices.Sensors.Barometer python_type
     requires Windows.Devices.Sensors.IBarometer
     requires Windows.Devices.Sensors.IBarometer2
     requires Windows.Devices.Sensors.IBarometer3
-    factory Windows.Devices.Sensors.IBarometerStatics2
     factory Windows.Devices.Sensors.IBarometerStatics
+    factory Windows.Devices.Sensors.IBarometerStatics2
     property report_interval
         get get_ReportInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IBarometer shape=4 reverse=121
             out uint32 return
@@ -1025,8 +1025,8 @@ class Windows.Devices.Sensors.HumanPresenceSensor python_type
     requires Windows.Devices.Sensors.IHumanPresenceSensor
     requires Windows.Devices.Sensors.IHumanPresenceSensor2
     requires Windows.Devices.Sensors.IHumanPresenceSensor3
-    factory Windows.Devices.Sensors.IHumanPresenceSensorStatics2
     factory Windows.Devices.Sensors.IHumanPresenceSensorStatics
+    factory Windows.Devices.Sensors.IHumanPresenceSensorStatics2
     property device_id
         get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IHumanPresenceSensor shape=4 reverse=22
             out string return
@@ -3872,10 +3872,10 @@ class Windows.Devices.Sensors.Inclinometer python_type
     requires Windows.Devices.Sensors.IInclinometer2
     requires Windows.Devices.Sensors.IInclinometer3
     requires Windows.Devices.Sensors.IInclinometer4
-    factory Windows.Devices.Sensors.IInclinometerStatics4
     factory Windows.Devices.Sensors.IInclinometerStatics
     factory Windows.Devices.Sensors.IInclinometerStatics2
     factory Windows.Devices.Sensors.IInclinometerStatics3
+    factory Windows.Devices.Sensors.IInclinometerStatics4
     property report_interval
         get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IInclinometer shape=4 reverse=99
             out uint32 return
@@ -4001,8 +4001,8 @@ class Windows.Devices.Sensors.LightSensor python_type
     requires Windows.Devices.Sensors.ILightSensor2
     requires Windows.Devices.Sensors.ILightSensor3
     requires Windows.Devices.Sensors.ILightSensor4
-    factory Windows.Devices.Sensors.ILightSensorStatics2
     factory Windows.Devices.Sensors.ILightSensorStatics
+    factory Windows.Devices.Sensors.ILightSensorStatics2
     property report_interval
         get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ILightSensor shape=4 reverse=99
             out uint32 return
@@ -4282,9 +4282,9 @@ class Windows.Devices.Sensors.OrientationSensor python_type
     requires Windows.Devices.Sensors.IOrientationSensorDeviceId
     requires Windows.Devices.Sensors.IOrientationSensor2
     requires Windows.Devices.Sensors.IOrientationSensor3
-    factory Windows.Devices.Sensors.IOrientationSensorStatics3
-    factory Windows.Devices.Sensors.IOrientationSensorStatics2
     factory Windows.Devices.Sensors.IOrientationSensorStatics
+    factory Windows.Devices.Sensors.IOrientationSensorStatics2
+    factory Windows.Devices.Sensors.IOrientationSensorStatics3
     factory Windows.Devices.Sensors.IOrientationSensorStatics4
     property report_interval
         get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IOrientationSensor shape=4 reverse=99
@@ -4389,8 +4389,8 @@ class Windows.Devices.Sensors.Pedometer python_type
     default Windows.Devices.Sensors.IPedometer
     requires Windows.Devices.Sensors.IPedometer
     requires Windows.Devices.Sensors.IPedometer2
-    factory Windows.Devices.Sensors.IPedometerStatics2
     factory Windows.Devices.Sensors.IPedometerStatics
+    factory Windows.Devices.Sensors.IPedometerStatics2
     property report_interval
         get get_ReportInterval slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.IPedometer shape=4 reverse=121
             out uint32 return
@@ -4676,8 +4676,8 @@ class Windows.Devices.Sensors.SimpleOrientationSensor python_type
     requires Windows.Devices.Sensors.ISimpleOrientationSensor
     requires Windows.Devices.Sensors.ISimpleOrientationSensorDeviceId
     requires Windows.Devices.Sensors.ISimpleOrientationSensor2
-    factory Windows.Devices.Sensors.ISimpleOrientationSensorStatics2
     factory Windows.Devices.Sensors.ISimpleOrientationSensorStatics
+    factory Windows.Devices.Sensors.ISimpleOrientationSensorStatics2
     property reading_transform
         get get_ReadingTransform slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.ISimpleOrientationSensor2 shape=4 reverse=43
             out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return

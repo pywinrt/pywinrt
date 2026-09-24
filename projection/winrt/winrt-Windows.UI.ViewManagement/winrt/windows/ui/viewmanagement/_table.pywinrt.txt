@@ -53,12 +53,12 @@ class Windows.UI.ViewManagement.ApplicationView python_type
     requires Windows.UI.ViewManagement.IApplicationView7
     requires Windows.UI.ViewManagement.IApplicationView9
     requires Windows.UI.ViewManagement.IApplicationViewWithContext
-    factory Windows.UI.ViewManagement.IApplicationViewStatics
-    factory Windows.UI.ViewManagement.IApplicationViewStatics4
-    factory Windows.UI.ViewManagement.IApplicationViewStatics2
     factory Windows.UI.ViewManagement.IApplicationViewFullscreenStatics
     factory Windows.UI.ViewManagement.IApplicationViewInteropStatics
+    factory Windows.UI.ViewManagement.IApplicationViewStatics
+    factory Windows.UI.ViewManagement.IApplicationViewStatics2
     factory Windows.UI.ViewManagement.IApplicationViewStatics3
+    factory Windows.UI.ViewManagement.IApplicationViewStatics4
     property is_screen_capture_enabled
         get get_IsScreenCaptureEnabled slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=141
             out boolean return
@@ -263,9 +263,9 @@ enum Windows.UI.ViewManagement.ApplicationViewState python_type
 
 class Windows.UI.ViewManagement.ApplicationViewSwitcher static python_type
     py ApplicationViewSwitcher
-    factory Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3
     factory Windows.UI.ViewManagement.IApplicationViewSwitcherStatics
     factory Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2
+    factory Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3
     method disable_showing_main_view_on_activation static
         method DisableShowingMainViewOnActivation slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=0 reverse=16 static
     method disable_system_view_activation_policy static

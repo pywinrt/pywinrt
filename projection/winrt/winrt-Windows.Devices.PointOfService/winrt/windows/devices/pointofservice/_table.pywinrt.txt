@@ -381,8 +381,8 @@ class Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs python
 
 class Windows.Devices.PointOfService.BarcodeSymbologies static python_type
     py BarcodeSymbologies
-    factory Windows.Devices.PointOfService.IBarcodeSymbologiesStatics2
     factory Windows.Devices.PointOfService.IBarcodeSymbologiesStatics
+    factory Windows.Devices.PointOfService.IBarcodeSymbologiesStatics2
     property code11 static
         get get_Code11 slot=57 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeSymbologiesStatics shape=4 reverse=442 static
             out uint32 return
@@ -723,8 +723,8 @@ class Windows.Devices.PointOfService.CashDrawer python_type closeable
     default Windows.Devices.PointOfService.ICashDrawer
     requires Windows.Devices.PointOfService.ICashDrawer
     requires Windows.Foundation.IClosable
-    factory Windows.Devices.PointOfService.ICashDrawerStatics2
     factory Windows.Devices.PointOfService.ICashDrawerStatics
+    factory Windows.Devices.PointOfService.ICashDrawerStatics2
     property capabilities
         get get_Capabilities slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.ICashDrawer shape=4 reverse=43
             out class type=Windows.Devices.PointOfService.CashDrawerCapabilities return
@@ -3768,8 +3768,8 @@ class Windows.Devices.PointOfService.MagneticStripeReader python_type closeable
     default Windows.Devices.PointOfService.IMagneticStripeReader
     requires Windows.Devices.PointOfService.IMagneticStripeReader
     requires Windows.Foundation.IClosable
-    factory Windows.Devices.PointOfService.IMagneticStripeReaderStatics2
     factory Windows.Devices.PointOfService.IMagneticStripeReaderStatics
+    factory Windows.Devices.PointOfService.IMagneticStripeReaderStatics2
     property capabilities
         get get_Capabilities slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IMagneticStripeReader shape=4 reverse=43
             out class type=Windows.Devices.PointOfService.MagneticStripeReaderCapabilities return
@@ -4135,8 +4135,8 @@ class Windows.Devices.PointOfService.PosPrinter python_type closeable
     requires Windows.Devices.PointOfService.IPosPrinter
     requires Windows.Devices.PointOfService.IPosPrinter2
     requires Windows.Foundation.IClosable
-    factory Windows.Devices.PointOfService.IPosPrinterStatics2
     factory Windows.Devices.PointOfService.IPosPrinterStatics
+    factory Windows.Devices.PointOfService.IPosPrinterStatics2
     property capabilities
         get get_Capabilities slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinter shape=4 reverse=43
             out class type=Windows.Devices.PointOfService.PosPrinterCapabilities return

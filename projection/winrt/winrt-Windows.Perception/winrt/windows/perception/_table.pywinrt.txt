@@ -33,8 +33,8 @@ class Windows.Perception.PerceptionTimestamp python_type
 
 class Windows.Perception.PerceptionTimestampHelper static python_type
     py PerceptionTimestampHelper
-    factory Windows.Perception.IPerceptionTimestampHelperStatics2
     factory Windows.Perception.IPerceptionTimestampHelperStatics
+    factory Windows.Perception.IPerceptionTimestampHelperStatics2
     method from_historical_target_time static
         method FromHistoricalTargetTime slot=6 inputs=1 outputs=1 declaring=Windows.Perception.IPerceptionTimestampHelperStatics shape=89 static
             in datetime name=targetTime

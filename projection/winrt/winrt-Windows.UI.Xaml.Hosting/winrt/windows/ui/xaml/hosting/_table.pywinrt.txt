@@ -151,9 +151,9 @@ class Windows.UI.Xaml.Hosting.ElementCompositionPreview python_type
     signature rc(Windows.UI.Xaml.Hosting.ElementCompositionPreview;{b6f1a676-cfe6-46ac-acf6-c4687bb65e60})
     default Windows.UI.Xaml.Hosting.IElementCompositionPreview
     requires Windows.UI.Xaml.Hosting.IElementCompositionPreview
-    factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3
     factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics
     factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics2
+    factory Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3
     method get_app_window_content static
         method GetAppWindowContent slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Hosting.IElementCompositionPreviewStatics3 shape=51 reverse=44 static
             in class type=Windows.UI.WindowManagement.AppWindow name=appWindow
@@ -424,8 +424,8 @@ class Windows.UI.Xaml.Hosting.XamlUIPresenter python_type
     signature rc(Windows.UI.Xaml.Hosting.XamlUIPresenter;{a714944a-1619-4fc6-b31b-89512ef022a2})
     default Windows.UI.Xaml.Hosting.IXamlUIPresenter
     requires Windows.UI.Xaml.Hosting.IXamlUIPresenter
-    factory Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2
     factory Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics
+    factory Windows.UI.Xaml.Hosting.IXamlUIPresenterStatics2
     property theme_resources_xaml
         get get_ThemeResourcesXaml slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Hosting.IXamlUIPresenter shape=4 reverse=121
             out string return

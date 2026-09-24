@@ -105,8 +105,8 @@ enum Windows.UI.Notifications.BadgeTemplateType python_type
 
 class Windows.UI.Notifications.BadgeUpdateManager static python_type
     py BadgeUpdateManager
-    factory Windows.UI.Notifications.IBadgeUpdateManagerStatics2
     factory Windows.UI.Notifications.IBadgeUpdateManagerStatics
+    factory Windows.UI.Notifications.IBadgeUpdateManagerStatics2
     method create_badge_updater_for_application static
         method CreateBadgeUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=4 reverse=22 static
             out class type=Windows.UI.Notifications.BadgeUpdater return
@@ -1841,8 +1841,8 @@ enum Windows.UI.Notifications.TileTemplateType python_type
 
 class Windows.UI.Notifications.TileUpdateManager static python_type
     py TileUpdateManager
-    factory Windows.UI.Notifications.ITileUpdateManagerStatics2
     factory Windows.UI.Notifications.ITileUpdateManagerStatics
+    factory Windows.UI.Notifications.ITileUpdateManagerStatics2
     method create_tile_updater_for_application static
         method CreateTileUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=4 reverse=22 static
             out class type=Windows.UI.Notifications.TileUpdater return
@@ -2185,10 +2185,10 @@ class Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail pyth
 
 class Windows.UI.Notifications.ToastNotificationManager static python_type
     py ToastNotificationManager
-    factory Windows.UI.Notifications.IToastNotificationManagerStatics4
-    factory Windows.UI.Notifications.IToastNotificationManagerStatics2
-    factory Windows.UI.Notifications.IToastNotificationManagerStatics5
     factory Windows.UI.Notifications.IToastNotificationManagerStatics
+    factory Windows.UI.Notifications.IToastNotificationManagerStatics2
+    factory Windows.UI.Notifications.IToastNotificationManagerStatics4
+    factory Windows.UI.Notifications.IToastNotificationManagerStatics5
     property history static
         get get_History slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics2 shape=4 reverse=22 static
             out class type=Windows.UI.Notifications.ToastNotificationHistory return

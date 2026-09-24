@@ -161,9 +161,9 @@ class Windows.Devices.Pwm.PwmController python_type
     signature rc(Windows.Devices.Pwm.PwmController;{c45f5c85-d2e8-42cf-9bd6-cf5ed029e6a7})
     default Windows.Devices.Pwm.IPwmController
     requires Windows.Devices.Pwm.IPwmController
-    factory Windows.Devices.Pwm.IPwmControllerStatics3
-    factory Windows.Devices.Pwm.IPwmControllerStatics2
     factory Windows.Devices.Pwm.IPwmControllerStatics
+    factory Windows.Devices.Pwm.IPwmControllerStatics2
+    factory Windows.Devices.Pwm.IPwmControllerStatics3
     property actual_frequency
         get get_ActualFrequency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.IPwmController shape=4 reverse=43
             out double return

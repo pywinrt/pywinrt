@@ -1482,11 +1482,11 @@ class Windows.ApplicationModel.Contacts.ContactLocationField python_type
 
 class Windows.ApplicationModel.Contacts.ContactManager static python_type
     py ContactManager
-    factory Windows.ApplicationModel.Contacts.IContactManagerStatics3
-    factory Windows.ApplicationModel.Contacts.IContactManagerStatics2
     factory Windows.ApplicationModel.Contacts.IContactManagerStatics
-    factory Windows.ApplicationModel.Contacts.IContactManagerStatics5
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics2
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics3
     factory Windows.ApplicationModel.Contacts.IContactManagerStatics4
+    factory Windows.ApplicationModel.Contacts.IContactManagerStatics5
     property system_sort_order static
         get get_SystemSortOrder slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IContactManagerStatics3 shape=4 reverse=218 static
             out enum32 type=Windows.ApplicationModel.Contacts.ContactNameOrder return

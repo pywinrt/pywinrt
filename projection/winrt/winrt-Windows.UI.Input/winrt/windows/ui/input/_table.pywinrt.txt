@@ -1614,8 +1614,8 @@ class Windows.UI.Input.RadialControllerConfiguration python_type
     default Windows.UI.Input.IRadialControllerConfiguration
     requires Windows.UI.Input.IRadialControllerConfiguration
     requires Windows.UI.Input.IRadialControllerConfiguration2
-    factory Windows.UI.Input.IRadialControllerConfigurationStatics2
     factory Windows.UI.Input.IRadialControllerConfigurationStatics
+    factory Windows.UI.Input.IRadialControllerConfigurationStatics2
     property is_menu_suppressed
         get get_IsMenuSuppressed slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.IRadialControllerConfiguration2 shape=4 reverse=99
             out boolean return

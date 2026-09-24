@@ -43,8 +43,8 @@ class Microsoft.UI.Xaml.Input.AccessKeyManager python_type
     signature rc(Microsoft.UI.Xaml.Input.AccessKeyManager;{8f2a4402-a635-53dc-bc17-da911eabaade})
     default Microsoft.UI.Xaml.Input.IAccessKeyManager
     requires Microsoft.UI.Xaml.Input.IAccessKeyManager
-    factory Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics2
     factory Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics
+    factory Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics2
     property are_key_tips_enabled static
         get get_AreKeyTipsEnabled slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Input.IAccessKeyManagerStatics shape=4 reverse=43 static
             out boolean return

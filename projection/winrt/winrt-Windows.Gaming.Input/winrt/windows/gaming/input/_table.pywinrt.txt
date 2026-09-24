@@ -10,8 +10,8 @@ class Windows.Gaming.Input.ArcadeStick python_type
     requires Windows.Gaming.Input.IArcadeStick
     requires Windows.Gaming.Input.IGameController
     requires Windows.Gaming.Input.IGameControllerBatteryInfo
-    factory Windows.Gaming.Input.IArcadeStickStatics2
     factory Windows.Gaming.Input.IArcadeStickStatics
+    factory Windows.Gaming.Input.IArcadeStickStatics2
     property headset
         get get_Headset slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=162
             out class type=Windows.Gaming.Input.Headset return
@@ -345,8 +345,8 @@ class Windows.Gaming.Input.Gamepad python_type
     requires Windows.Gaming.Input.IGameController
     requires Windows.Gaming.Input.IGamepad2
     requires Windows.Gaming.Input.IGameControllerBatteryInfo
-    factory Windows.Gaming.Input.IGamepadStatics2
     factory Windows.Gaming.Input.IGamepadStatics
+    factory Windows.Gaming.Input.IGamepadStatics2
     property headset
         get get_Headset slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=162
             out class type=Windows.Gaming.Input.Headset return

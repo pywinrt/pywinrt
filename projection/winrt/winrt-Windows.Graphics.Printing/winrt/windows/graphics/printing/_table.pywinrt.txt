@@ -494,8 +494,8 @@ class Windows.Graphics.Printing.PrintManager python_type
     signature rc(Windows.Graphics.Printing.PrintManager;{ff2a9694-8c99-44fd-ae4a-19d9aa9a0f0a})
     default Windows.Graphics.Printing.IPrintManager
     requires Windows.Graphics.Printing.IPrintManager
-    factory Windows.Graphics.Printing.IPrintManagerStatic2
     factory Windows.Graphics.Printing.IPrintManagerStatic
+    factory Windows.Graphics.Printing.IPrintManagerStatic2
     event print_task_requested
         add add_PrintTaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.IPrintManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.PrintManager,Windows.Graphics.Printing.PrintTaskRequestedEventArgs> name=eventHandler
@@ -1093,9 +1093,9 @@ delegate Windows.Graphics.Printing.PrintTaskSourceRequestedHandler python_type
 
 class Windows.Graphics.Printing.StandardPrintTaskOptions static python_type
     py StandardPrintTaskOptions
-    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3
-    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2
     factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic
+    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2
+    factory Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3
     property copies static
         get get_Copies slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic shape=4 reverse=202 static
             out string return

@@ -633,9 +633,9 @@ class Windows.UI.StartScreen.SecondaryTile activatable python_type
     default Windows.UI.StartScreen.ISecondaryTile
     requires Windows.UI.StartScreen.ISecondaryTile
     requires Windows.UI.StartScreen.ISecondaryTile2
-    factory Windows.UI.StartScreen.ISecondaryTileStatics
     factory Windows.UI.StartScreen.ISecondaryTileFactory
     factory Windows.UI.StartScreen.ISecondaryTileFactory2
+    factory Windows.UI.StartScreen.ISecondaryTileStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

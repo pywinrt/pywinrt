@@ -979,8 +979,8 @@ class Windows.Media.SpeechRecognition.SpeechRecognizer activatable python_type c
     requires Windows.Media.SpeechRecognition.ISpeechRecognizer
     requires Windows.Foundation.IClosable
     requires Windows.Media.SpeechRecognition.ISpeechRecognizer2
-    factory Windows.Media.SpeechRecognition.ISpeechRecognizerStatics
     factory Windows.Media.SpeechRecognition.ISpeechRecognizerFactory
+    factory Windows.Media.SpeechRecognition.ISpeechRecognizerStatics
     factory Windows.Media.SpeechRecognition.ISpeechRecognizerStatics2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4

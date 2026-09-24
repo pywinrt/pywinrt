@@ -5,8 +5,8 @@ namespace Windows.Globalization
 
 class Windows.Globalization.ApplicationLanguages static python_type
     py ApplicationLanguages
-    factory Windows.Globalization.IApplicationLanguagesStatics2
     factory Windows.Globalization.IApplicationLanguagesStatics
+    factory Windows.Globalization.IApplicationLanguagesStatics2
     property primary_language_override static
         get get_PrimaryLanguageOverride slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=22 static
             out string return
@@ -354,9 +354,9 @@ class Windows.Globalization.Calendar activatable python_type
 
 class Windows.Globalization.CalendarIdentifiers static python_type
     py CalendarIdentifiers
+    factory Windows.Globalization.ICalendarIdentifiersStatics
     factory Windows.Globalization.ICalendarIdentifiersStatics2
     factory Windows.Globalization.ICalendarIdentifiersStatics3
-    factory Windows.Globalization.ICalendarIdentifiersStatics
     property julian static
         get get_Julian slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=121 static
             out string return
@@ -433,9 +433,9 @@ class Windows.Globalization.CurrencyAmount python_type
 
 class Windows.Globalization.CurrencyIdentifiers static python_type
     py CurrencyIdentifiers
-    factory Windows.Globalization.ICurrencyIdentifiersStatics3
     factory Windows.Globalization.ICurrencyIdentifiersStatics
     factory Windows.Globalization.ICurrencyIdentifiersStatics2
+    factory Windows.Globalization.ICurrencyIdentifiersStatics3
     property hnl static
         get get_HNL slot=60 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=445 static
             out string return
@@ -939,8 +939,8 @@ class Windows.Globalization.GeographicRegion activatable python_type
     signature rc(Windows.Globalization.GeographicRegion;{01e9a621-4a64-4ed9-954f-9edeb07bd903})
     default Windows.Globalization.IGeographicRegion
     requires Windows.Globalization.IGeographicRegion
-    factory Windows.Globalization.IGeographicRegionStatics
     factory Windows.Globalization.IGeographicRegionFactory
+    factory Windows.Globalization.IGeographicRegionStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -1266,10 +1266,10 @@ class Windows.Globalization.Language python_type
     requires Windows.Globalization.ILanguageExtensionSubtags
     requires Windows.Globalization.ILanguage2
     requires Windows.Globalization.ILanguage3
-    factory Windows.Globalization.ILanguageStatics2
-    factory Windows.Globalization.ILanguageStatics
-    factory Windows.Globalization.ILanguageStatics3
     factory Windows.Globalization.ILanguageFactory
+    factory Windows.Globalization.ILanguageStatics
+    factory Windows.Globalization.ILanguageStatics2
+    factory Windows.Globalization.ILanguageStatics3
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageFactory shape=51 reverse=24
             in string name=languageTag
@@ -1322,8 +1322,8 @@ enum Windows.Globalization.LanguageLayoutDirection python_type
 
 class Windows.Globalization.NumeralSystemIdentifiers static python_type
     py NumeralSystemIdentifiers
-    factory Windows.Globalization.INumeralSystemIdentifiersStatics2
     factory Windows.Globalization.INumeralSystemIdentifiersStatics
+    factory Windows.Globalization.INumeralSystemIdentifiersStatics2
     property full_wide static
         get get_FullWide slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=162 static
             out string return

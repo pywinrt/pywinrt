@@ -534,8 +534,8 @@ class Windows.System.Profile.RetailInfo static python_type
 
 class Windows.System.Profile.SharedModeSettings static python_type
     py SharedModeSettings
-    factory Windows.System.Profile.ISharedModeSettingsStatics2
     factory Windows.System.Profile.ISharedModeSettingsStatics
+    factory Windows.System.Profile.ISharedModeSettingsStatics2
     property is_enabled static
         get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.ISharedModeSettingsStatics shape=4 reverse=22 static
             out boolean return
