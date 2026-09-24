@@ -1,0 +1,126 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+namespace Windows.ApplicationModel.Preview
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Preview.StartupAppInfoPreview> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[StartupAppInfoPreview]
+    guid 3ee76ee0-7bfe-5c7a-9518-1bed0ecd62ad
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Preview.StartupAppInfoPreview;{c3a147db-09fa-5aa5-b3bd-119a09963d58}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Preview.StartupAppInfoPreview
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[StartupAppInfoPreview]
+    guid 9bac9a7b-2678-5ebb-bc0d-90737a7b8f8f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Preview.StartupAppInfoPreview;{c3a147db-09fa-5aa5-b3bd-119a09963d58}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Preview.StartupAppInfoPreview
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Preview.StartupAppInfoPreview return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.ApplicationModel.Preview.StartupAppInfoPreview name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.ApplicationModel.Preview.IStartupAppInfoPreview
+    guid c3a147db-09fa-5aa5-b3bd-119a09963d58
+
+interface Windows.ApplicationModel.Preview.IStartupAppsManagerPreview
+    guid 7197b9c1-03bb-5693-87c3-6f983cc70fb3
+
+interface Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics
+    guid 9d0331f5-343f-5cd7-9d66-762cfa2c0380
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[StartupAppInfoPreview]
+    guid bae0507d-eac4-5501-a77a-583c2e45e735
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Preview.StartupAppInfoPreview;{c3a147db-09fa-5aa5-b3bd-119a09963d58}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Preview.StartupAppInfoPreview>
+    argument Windows.ApplicationModel.Preview.StartupAppInfoPreview
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Preview.StartupAppInfoPreview> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Preview.StartupAppInfoPreview return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Preview.StartupAppInfoPreview name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> shape=117 reverse=66 role=index_of
+            in class type=Windows.ApplicationModel.Preview.StartupAppInfoPreview name=value
+            out uint32 name=index
+            out boolean return
+
+enum Windows.ApplicationModel.Preview.StartupAppImpactPreview python_type
+    py StartupAppImpactPreview
+    signature enum(Windows.ApplicationModel.Preview.StartupAppImpactPreview;i4)
+    constant UNKNOWN 0
+    constant NONE 1
+    constant LOW 2
+    constant MEDIUM 3
+    constant HIGH 4
+
+class Windows.ApplicationModel.Preview.StartupAppInfoPreview python_type
+    py StartupAppInfoPreview
+    signature rc(Windows.ApplicationModel.Preview.StartupAppInfoPreview;{c3a147db-09fa-5aa5-b3bd-119a09963d58})
+    default Windows.ApplicationModel.Preview.IStartupAppInfoPreview
+    requires Windows.ApplicationModel.Preview.IStartupAppInfoPreview
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=22
+            out string return
+    property executable_path
+        get get_ExecutablePath slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=121
+            out string return
+    property impact
+        get get_Impact slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=99
+            out enum32 type=Windows.ApplicationModel.Preview.StartupAppImpactPreview return
+    property is_enabled
+        get get_IsEnabled slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=62
+            out boolean return
+    property publisher
+        get get_Publisher slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=43
+            out string return
+
+class Windows.ApplicationModel.Preview.StartupAppsManagerPreview python_type
+    py StartupAppsManagerPreview
+    signature rc(Windows.ApplicationModel.Preview.StartupAppsManagerPreview;{7197b9c1-03bb-5693-87c3-6f983cc70fb3})
+    default Windows.ApplicationModel.Preview.IStartupAppsManagerPreview
+    requires Windows.ApplicationModel.Preview.IStartupAppsManagerPreview
+    factory Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics shape=4 reverse=22 static
+            out class type=Windows.ApplicationModel.Preview.StartupAppsManagerPreview return
+    method get_startup_app_infos
+        method GetStartupAppInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppsManagerPreview shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> return
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

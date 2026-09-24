@@ -59,6 +59,8 @@ __all__ = [
     "StorageProviderSearchQueryOptions",
     "StorageProviderSearchResult",
     "StorageProviderStatusUI",
+    "StorageProviderSuggestionResult",
+    "StorageProviderSuggestionsQueryOptions",
     "StorageProviderSyncRootInfo",
     "StorageProviderSyncRootManager",
     "IStorageProviderItemPropertySource",
@@ -71,6 +73,8 @@ __all__ = [
     "IStorageProviderShareLinkSource",
     "IStorageProviderStatusUISource",
     "IStorageProviderStatusUISourceFactory",
+    "IStorageProviderSuggestionsHandler",
+    "IStorageProviderSuggestionsHandlerFactory",
     "IStorageProviderUICommand",
     "IStorageProviderUriSource",
     "StorageProviderKnownFolderSyncRequestedHandler",
@@ -606,6 +610,55 @@ class StorageProviderStatusUI(winrt.system.Object):
     def more_info_ui(self, value: StorageProviderMoreInfoUI) -> None: ...
 
 @typing.final
+class StorageProviderSuggestionResult(winrt.system.Object, IStorageProviderQueryResult):
+    def __new__(cls) -> typing.Self: ...
+    # System.String Windows.Storage.Provider.StorageProviderSuggestionResult::get_ResultId()
+    @_property
+    def result_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSuggestionResult::put_ResultId(System.String)
+    @result_id.setter
+    def result_id(self, value: str) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSuggestionResult::get_RemoteFileId()
+    @_property
+    def remote_file_id(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSuggestionResult::put_RemoteFileId(System.String)
+    @remote_file_id.setter
+    def remote_file_id(self, value: str) -> None: ...
+    # Windows.Storage.Provider.StorageProviderResultKind Windows.Storage.Provider.StorageProviderSuggestionResult::get_Kind()
+    @_property
+    def kind(self) -> StorageProviderResultKind: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSuggestionResult::put_Kind(Windows.Storage.Provider.StorageProviderResultKind)
+    @kind.setter
+    def kind(self, value: StorageProviderResultKind) -> None: ...
+    # System.String Windows.Storage.Provider.StorageProviderSuggestionResult::get_FilePath()
+    @_property
+    def file_path(self) -> str: ...
+    # System.Void Windows.Storage.Provider.StorageProviderSuggestionResult::put_FilePath(System.String)
+    @file_path.setter
+    def file_path(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.PropertySet Windows.Storage.Provider.StorageProviderSuggestionResult::get_RequestedProperties()
+    @_property
+    def requested_properties(self) -> windows_foundation_collections.PropertySet: ...
+
+@typing.final
+class StorageProviderSuggestionsQueryOptions(winrt.system.Object):
+    # System.UInt32 Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions::get_MaxResults()
+    @_property
+    def max_results(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions::get_PropertiesToFetch()
+    @_property
+    def properties_to_fetch(self) -> _cabc.Sequence[str]: ...
+    # System.String Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions::get_QueryId()
+    @_property
+    def query_id(self) -> str: ...
+    # System.String Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions::get_RemoteFileId()
+    @_property
+    def remote_file_id(self) -> str: ...
+    # Windows.Storage.Provider.StorageProviderResultKind Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions::get_SuggestionsKind()
+    @_property
+    def suggestions_kind(self) -> StorageProviderResultKind: ...
+
+@typing.final
 class StorageProviderSyncRootInfo(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderSyncRootInfo::get_Version()
@@ -863,6 +916,34 @@ class IStorageProviderStatusUISourceFactory(winrt._winrt.IInspectable):
     # Windows.Storage.Provider.IStorageProviderStatusUISource Windows.Storage.Provider.IStorageProviderStatusUISourceFactory::GetStatusUISource(System.String)
     @abstractmethod
     def get_status_ui_source(self, sync_root_id: str, /) -> IStorageProviderStatusUISource: ...
+
+@typing.final
+class _IStorageProviderSuggestionsHandler: ...
+
+class IStorageProviderSuggestionsHandler(winrt._winrt.IInspectable):
+    # System.Void Windows.Storage.Provider.IStorageProviderSuggestionsHandler::Add(Windows.Storage.Provider.StorageProviderResultKind,System.String)
+    @abstractmethod
+    def add(self, kind: StorageProviderResultKind, remote_file_id: str, /) -> None: ...
+    # Windows.Storage.Provider.StorageProviderSuggestionResult Windows.Storage.Provider.IStorageProviderSuggestionsHandler::GetDetails(System.String,System.String[],System.String)
+    @abstractmethod
+    def get_details(self, remote_file_id: str, properties_to_fetch: winrt.system.Array[str] | winrt.system.ReadableBuffer, query_id: str, /) -> StorageProviderSuggestionResult: ...
+    # Windows.Storage.Provider.StorageProviderQueryResultSet Windows.Storage.Provider.IStorageProviderSuggestionsHandler::GetSuggestions(Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions)
+    @abstractmethod
+    def get_suggestions(self, options: StorageProviderSuggestionsQueryOptions, /) -> StorageProviderQueryResultSet: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderSuggestionsHandler::Remove(Windows.Storage.Provider.StorageProviderResultKind,System.String)
+    @abstractmethod
+    def remove(self, kind: StorageProviderResultKind, remote_file_id: str, /) -> None: ...
+    # System.Void Windows.Storage.Provider.IStorageProviderSuggestionsHandler::ReportUsage(Windows.Storage.Provider.StorageProviderResultUsageKind,System.String,System.String,Windows.Foundation.TimeSpan)
+    @abstractmethod
+    def report_usage(self, result_usage_kind: StorageProviderResultUsageKind, remote_file_id: str, result_id: str, latency: datetime.timedelta, /) -> None: ...
+
+@typing.final
+class _IStorageProviderSuggestionsHandlerFactory: ...
+
+class IStorageProviderSuggestionsHandlerFactory(winrt._winrt.IInspectable):
+    # Windows.Storage.Provider.IStorageProviderSuggestionsHandler Windows.Storage.Provider.IStorageProviderSuggestionsHandlerFactory::CreateSuggestionsHandler(System.String)
+    @abstractmethod
+    def create_suggestions_handler(self, cloud_provider_id: str, /) -> IStorageProviderSuggestionsHandler: ...
 
 @typing.final
 class _IStorageProviderUICommand: ...

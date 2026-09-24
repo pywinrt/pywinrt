@@ -40,6 +40,7 @@ __all__ = [
     "DraggingEventArgs",
     "EdgeGesture",
     "EdgeGestureEventArgs",
+    "GamepadNavigationConfiguration",
     "GestureRecognizer",
     "HoldingEventArgs",
     "InputActivationListener",
@@ -170,12 +171,12 @@ class TouchpadGlobalAction(enum.IntEnum):
     THREE_FINGER_TAP = 0
     FOUR_FINGER_TAP = 1
     FIVE_FINGER_TAP = 2
-    THREE_FINGER_PRESS_DOWN = 3
-    FOUR_FINGER_PRESS_DOWN = 4
-    FIVE_FINGER_PRESS_DOWN = 5
-    THREE_FINGER_PRESS_UP = 6
-    FOUR_FINGER_PRESS_UP = 7
-    FIVE_FINGER_PRESS_UP = 8
+    THREE_FINGER_PRESS = 3
+    FOUR_FINGER_PRESS = 4
+    FIVE_FINGER_PRESS = 5
+    THREE_FINGER_RELEASE = 6
+    FOUR_FINGER_RELEASE = 7
+    FIVE_FINGER_RELEASE = 8
 
 class TouchpadGlobalGestureKinds(enum.IntFlag):
     NONE = 0x0
@@ -290,6 +291,22 @@ class EdgeGestureEventArgs(winrt.system.Object):
     # Windows.UI.Input.EdgeGestureKind Windows.UI.Input.EdgeGestureEventArgs::get_Kind()
     @_property
     def kind(self) -> EdgeGestureKind: ...
+
+@typing.final
+class GamepadNavigationConfiguration_Static(winrt._winrt.IInspectable_Static):
+    # Windows.UI.Input.GamepadNavigationConfiguration Windows.UI.Input.GamepadNavigationConfiguration::TryGetForCurrentProcess()
+    def try_get_for_current_process(cls) -> GamepadNavigationConfiguration: ...
+    # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::get_IsSupported()
+    @_property
+    def is_supported(cls) -> bool: ...
+
+@typing.final
+class GamepadNavigationConfiguration(winrt.system.Object, metaclass=GamepadNavigationConfiguration_Static):
+    # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::TrySetNavigationEnabled(System.Boolean)
+    def try_set_navigation_enabled(self, enabled: bool, /) -> bool: ...
+    # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::get_NavigationEnabled()
+    @_property
+    def navigation_enabled(self) -> bool: ...
 
 @typing.final
 class GestureRecognizer(winrt.system.Object):

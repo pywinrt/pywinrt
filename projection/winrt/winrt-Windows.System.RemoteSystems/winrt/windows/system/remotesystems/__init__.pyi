@@ -83,6 +83,7 @@ class RemoteSystemAccessStatus(enum.IntEnum):
 class RemoteSystemAuthorizationKind(enum.IntEnum):
     SAME_USER = 0
     ANONYMOUS = 1
+    SAME_FAMILY = 2
 
 class RemoteSystemDiscoveryType(enum.IntEnum):
     ANY = 0

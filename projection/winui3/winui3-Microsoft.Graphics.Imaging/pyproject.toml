@@ -19,13 +19,13 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.Storage.Streams>=4!10.0.26100.4188",
+    "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.Graphics.Imaging[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Storage.Streams[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Graphics.Imaging[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
 ]
 
 [project.urls]

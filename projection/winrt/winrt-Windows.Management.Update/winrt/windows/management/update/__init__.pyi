@@ -12,11 +12,40 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 
 __all__ = [
+    "WindowsSoftwareUpdateActionResult",
+    "WindowsSoftwareUpdateActionType",
+    "WindowsSoftwareUpdateArchitecture",
+    "WindowsSoftwareUpdateCategory",
+    "WindowsSoftwareUpdateIdentityType",
+    "WindowsSoftwareUpdateInstallationType",
+    "WindowsSoftwareUpdateProviderRegistrationType",
+    "WindowsSoftwareUpdateProviderTrustState",
+    "WindowsSoftwareUpdateProviderType",
+    "WindowsSoftwareUpdateRestartReason",
     "WindowsUpdateAdministratorOptions",
     "WindowsUpdateAdministratorStatus",
     "WindowsUpdateAttentionRequiredReason",
+    "WindowsUpdateManagerScanMode",
     "PreviewBuildsManager",
     "PreviewBuildsState",
+    "WindowsSoftwareUpdate",
+    "WindowsSoftwareUpdateActionInfo",
+    "WindowsSoftwareUpdateActionProgress",
+    "WindowsSoftwareUpdateActionResultInfo",
+    "WindowsSoftwareUpdateAppPackageInfo",
+    "WindowsSoftwareUpdateApprovalInfo",
+    "WindowsSoftwareUpdateExecutionInfo",
+    "WindowsSoftwareUpdateIdentity",
+    "WindowsSoftwareUpdateLocalizationInfo",
+    "WindowsSoftwareUpdateOptionalActionInfo",
+    "WindowsSoftwareUpdateOptionalInfo",
+    "WindowsSoftwareUpdateProvider",
+    "WindowsSoftwareUpdateProviderActionResult",
+    "WindowsSoftwareUpdateProviderPayloadFileInfo",
+    "WindowsSoftwareUpdateProviderStatus",
+    "WindowsSoftwareUpdateResult",
+    "WindowsSoftwareUpdateScanResult",
+    "WindowsSoftwareUpdateVersion",
     "WindowsUpdate",
     "WindowsUpdateActionCompletedEventArgs",
     "WindowsUpdateActionProgress",
@@ -32,6 +61,71 @@ __all__ = [
     "WindowsUpdateRestartRequestOptions",
     "WindowsUpdateScanCompletedEventArgs",
 ]
+
+class WindowsSoftwareUpdateActionResult(enum.IntEnum):
+    SUCCEEDED = 0
+    CONTINUE = 1
+    FAILED = 2
+    CANCELED = 3
+    REMOVED = 4
+
+class WindowsSoftwareUpdateActionType(enum.IntEnum):
+    DOWNLOAD = 0
+    INSTALL = 1
+    DEPLOY = 2
+    REBOOT = 3
+    APP_RESTART = 4
+
+class WindowsSoftwareUpdateArchitecture(enum.IntEnum):
+    NEUTRAL = 0
+    X86 = 1
+    X64 = 2
+    ARM = 3
+    ARM64 = 4
+
+class WindowsSoftwareUpdateCategory(enum.IntEnum):
+    OTHER = 0
+    APPLICATION = 1
+    DRIVER = 2
+    FIRMWARE = 3
+    DEFINITION = 4
+    FEATURE = 5
+    QUALITY = 6
+    A_I_COMPONENT = 7
+
+class WindowsSoftwareUpdateIdentityType(enum.IntEnum):
+    PRODUCT_CODE = 0
+    PACKAGE_FAMILY_NAME = 1
+
+class WindowsSoftwareUpdateInstallationType(enum.IntEnum):
+    WINDOWS_UPDATE = 0
+    APP_PACKAGE = 1
+    EXECUTABLE = 2
+    POWERSHELL = 3
+
+class WindowsSoftwareUpdateProviderRegistrationType(enum.IntEnum):
+    NONE = 0
+    SYSTEM = 1
+    WINDOWS = 2
+    PENDING = 3
+    REGISTERED = 4
+    UNREGISTERED = 5
+
+class WindowsSoftwareUpdateProviderTrustState(enum.IntEnum):
+    SIGNED_TRUSTED = 0
+    SIGNED_UNTRUSTED = 1
+    UNSIGNED = 2
+
+class WindowsSoftwareUpdateProviderType(enum.IntEnum):
+    WINDOWS_UPDATE = 0
+    EXECUTABLE = 1
+    POWERSHELL = 2
+
+class WindowsSoftwareUpdateRestartReason(enum.IntEnum):
+    NONE = 0
+    SYSTEM = 1
+    APP_CLOSE = 2
+    APP_RESTART = 3
 
 class WindowsUpdateAdministratorOptions(enum.IntFlag):
     NONE = 0x0
@@ -78,6 +172,18 @@ class WindowsUpdateAttentionRequiredReason(enum.IntEnum):
     BLOCKED_BY_OOBE = 30
     DEFERRED_DURING_OOBE = 31
     DEFERRED_FOR_SUSTAINABLE_TIME = 32
+    BLOCKED_BY_APP_CLOSE = 33
+    BLOCKED_BY_APP_RESTART = 34
+    OTHER_UPDATE_REVERTING = 35
+    REPAIR_IN_PROGRESS = 36
+    WAITING_FOR_LEADING_UPDATE = 37
+    UNDEFINED = 38
+
+class WindowsUpdateManagerScanMode(enum.IntEnum):
+    DEFAULT = 0
+    BYPASS_SCAN_DEFERRALS = 1
+    USER_INITIATED = 2
+    WHAT_IF = 100
 
 @typing.final
 class PreviewBuildsManager_Static(winrt._winrt.IInspectable_Static):
@@ -104,6 +210,383 @@ class PreviewBuildsState(winrt.system.Object):
     # Windows.Foundation.Collections.ValueSet Windows.Management.Update.PreviewBuildsState::get_Properties()
     @_property
     def properties(self) -> windows_foundation_collections.ValueSet: ...
+
+@typing.final
+class WindowsSoftwareUpdate(winrt.system.Object):
+    def __new__(cls, provider_id: str, installation_type: WindowsSoftwareUpdateInstallationType, update_id: str, title: str, description: str, more_info_url: windows_foundation.Uri, download_size_in_bytes: winrt.system.UInt64, install_size_in_bytes: winrt.system.UInt64, update_identity: WindowsSoftwareUpdateIdentity, source_version: WindowsSoftwareUpdateVersion, target_version: WindowsSoftwareUpdateVersion, app_package_info: WindowsSoftwareUpdateAppPackageInfo, execution_info: WindowsSoftwareUpdateExecutionInfo, optional_info: WindowsSoftwareUpdateOptionalInfo) -> typing.Self: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdate::Approve(Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo)
+    def approve(self, approval_info: WindowsSoftwareUpdateApprovalInfo, /) -> WindowsSoftwareUpdateResult: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdate::ApproveCurrentAction(System.Boolean)
+    def approve_current_action(self, approve: bool, /) -> WindowsSoftwareUpdateResult: ...
+    # System.Object Windows.Management.Update.WindowsSoftwareUpdate::GetPropertyValue(System.String)
+    def get_property_value(self, name: str, /) -> winrt.system.Object: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionProgress Windows.Management.Update.WindowsSoftwareUpdate::get_ActionProgress()
+    @_property
+    def action_progress(self) -> WindowsSoftwareUpdateActionProgress: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo Windows.Management.Update.WindowsSoftwareUpdate::get_ActionResultInfo()
+    @_property
+    def action_result_info(self) -> WindowsSoftwareUpdateActionResultInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo Windows.Management.Update.WindowsSoftwareUpdate::get_AppPackageInfo()
+    @_property
+    def app_package_info(self) -> WindowsSoftwareUpdateAppPackageInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo Windows.Management.Update.WindowsSoftwareUpdate::get_ApprovalInfo()
+    @_property
+    def approval_info(self) -> WindowsSoftwareUpdateApprovalInfo: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsSoftwareUpdateActionType> Windows.Management.Update.WindowsSoftwareUpdate::get_ApprovedActions()
+    @_property
+    def approved_actions(self) -> _cabc.Sequence[WindowsSoftwareUpdateActionType]: ...
+    # Windows.Management.Update.WindowsUpdateAttentionRequiredInfo Windows.Management.Update.WindowsSoftwareUpdate::get_AttentionRequiredInfo()
+    @_property
+    def attention_required_info(self) -> WindowsUpdateAttentionRequiredInfo: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdate::get_CurrentAction()
+    @_property
+    def current_action(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdate::get_Description()
+    @_property
+    def description(self) -> str: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdate::get_DownloadSizeInBytes()
+    @_property
+    def download_size_in_bytes(self) -> winrt.system.UInt64: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo Windows.Management.Update.WindowsSoftwareUpdate::get_ExecutionInfo()
+    @_property
+    def execution_info(self) -> WindowsSoftwareUpdateExecutionInfo: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdate::get_InstallSizeInBytes()
+    @_property
+    def install_size_in_bytes(self) -> winrt.system.UInt64: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateInstallationType Windows.Management.Update.WindowsSoftwareUpdate::get_InstallationType()
+    @_property
+    def installation_type(self) -> WindowsSoftwareUpdateInstallationType: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdate::get_IsSeeker()
+    @_property
+    def is_seeker(self) -> bool: ...
+    # Windows.Foundation.Uri Windows.Management.Update.WindowsSoftwareUpdate::get_MoreInfoUrl()
+    @_property
+    def more_info_url(self) -> windows_foundation.Uri: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo Windows.Management.Update.WindowsSoftwareUpdate::get_OptionalInfo()
+    @_property
+    def optional_info(self) -> WindowsSoftwareUpdateOptionalInfo: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Management.Update.WindowsSoftwareUpdate::get_Properties()
+    @_property
+    def properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdate::get_ProviderId()
+    @_property
+    def provider_id(self) -> str: ...
+    # Windows.Foundation.IReference`1<Windows.Management.Update.WindowsSoftwareUpdateRestartReason> Windows.Management.Update.WindowsSoftwareUpdate::get_RestartReason()
+    @_property
+    def restart_reason(self) -> WindowsSoftwareUpdateRestartReason | None: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateVersion Windows.Management.Update.WindowsSoftwareUpdate::get_SourceVersion()
+    @_property
+    def source_version(self) -> WindowsSoftwareUpdateVersion: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateVersion Windows.Management.Update.WindowsSoftwareUpdate::get_TargetVersion()
+    @_property
+    def target_version(self) -> WindowsSoftwareUpdateVersion: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdate::get_Title()
+    @_property
+    def title(self) -> str: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateCategory Windows.Management.Update.WindowsSoftwareUpdate::get_UpdateCategory()
+    @_property
+    def update_category(self) -> WindowsSoftwareUpdateCategory: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdate::get_UpdateId()
+    @_property
+    def update_id(self) -> str: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateIdentity Windows.Management.Update.WindowsSoftwareUpdate::get_UpdateIdentity()
+    @_property
+    def update_identity(self) -> WindowsSoftwareUpdateIdentity: ...
+
+@typing.final
+class WindowsSoftwareUpdateActionInfo(winrt.system.Object):
+    def __new__(cls, file_name: str, file_arguments: str, action_type: WindowsSoftwareUpdateActionType) -> typing.Self: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionType Windows.Management.Update.WindowsSoftwareUpdateActionInfo::get_ActionType()
+    @_property
+    def action_type(self) -> WindowsSoftwareUpdateActionType: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateActionInfo::get_FileArguments()
+    @_property
+    def file_arguments(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateActionInfo::get_FileName()
+    @_property
+    def file_name(self) -> str: ...
+
+@typing.final
+class WindowsSoftwareUpdateActionProgress(winrt.system.Object):
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateActionProgress::get_Action()
+    @_property
+    def action(self) -> str: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdateActionProgress::get_CurrentProgress()
+    @_property
+    def current_progress(self) -> winrt.system.UInt64: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdateActionProgress::get_TotalProgress()
+    @_property
+    def total_progress(self) -> winrt.system.UInt64: ...
+
+@typing.final
+class WindowsSoftwareUpdateActionResultInfo(winrt.system.Object):
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo::get_Action()
+    @_property
+    def action(self) -> str: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo::get_ExtendedError()
+    @_property
+    def extended_error(self) -> winrt.system.UInt64: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo::get_ResultCode()
+    @_property
+    def result_code(self) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo::get_Succeeded()
+    @_property
+    def succeeded(self) -> bool: ...
+    # Windows.Foundation.DateTime Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo::get_Timestamp()
+    @_property
+    def timestamp(self) -> datetime.datetime: ...
+
+@typing.final
+class WindowsSoftwareUpdateAppPackageInfo(winrt.system.Object):
+    def __new__(cls, package_family_name: str, package_architecture: WindowsSoftwareUpdateArchitecture, install_uri: windows_foundation.Uri) -> typing.Self: ...
+    # Windows.Foundation.Uri Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo::get_InstallUri()
+    @_property
+    def install_uri(self) -> windows_foundation.Uri: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateArchitecture Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo::get_PackageArchitecture()
+    @_property
+    def package_architecture(self) -> WindowsSoftwareUpdateArchitecture: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo::get_PackageFamilyName()
+    @_property
+    def package_family_name(self) -> str: ...
+
+@typing.final
+class WindowsSoftwareUpdateApprovalInfo(winrt.system.Object):
+    def __new__(cls, user_initiated: bool, app_closure: bool, metered_network: bool, seeker: bool) -> typing.Self: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo::get_AppClosure()
+    @_property
+    def app_closure(self) -> bool: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo::get_MeteredNetwork()
+    @_property
+    def metered_network(self) -> bool: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo::get_Seeker()
+    @_property
+    def seeker(self) -> bool: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo::get_UserInitiated()
+    @_property
+    def user_initiated(self) -> bool: ...
+
+@typing.final
+class WindowsSoftwareUpdateExecutionInfo(winrt.system.Object):
+    @typing.overload
+    def __new__(cls, download_info: WindowsSoftwareUpdateActionInfo, install_info: WindowsSoftwareUpdateActionInfo, actions: WindowsSoftwareUpdateOptionalActionInfo) -> typing.Self: ...
+    @typing.overload
+    def __new__(cls, deploy_info: WindowsSoftwareUpdateActionInfo, actions: WindowsSoftwareUpdateOptionalActionInfo) -> typing.Self: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionInfo Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo::get_DeployInfo()
+    @_property
+    def deploy_info(self) -> WindowsSoftwareUpdateActionInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionInfo Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo::get_DownloadInfo()
+    @_property
+    def download_info(self) -> WindowsSoftwareUpdateActionInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionInfo Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo::get_InstallInfo()
+    @_property
+    def install_info(self) -> WindowsSoftwareUpdateActionInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo::get_OptionalActionInfo()
+    @_property
+    def optional_action_info(self) -> WindowsSoftwareUpdateOptionalActionInfo: ...
+
+@typing.final
+class WindowsSoftwareUpdateIdentity(winrt.system.Object):
+    def __new__(cls, type: WindowsSoftwareUpdateIdentityType, identity: str) -> typing.Self: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateIdentity::get_Identity()
+    @_property
+    def identity(self) -> str: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateIdentityType Windows.Management.Update.WindowsSoftwareUpdateIdentity::get_Type()
+    @_property
+    def type(self) -> WindowsSoftwareUpdateIdentityType: ...
+
+@typing.final
+class WindowsSoftwareUpdateLocalizationInfo(winrt.system.Object):
+    def __new__(cls, language_id: winrt.system.UInt32, title: str, description: str, more_info_url: windows_foundation.Uri) -> typing.Self: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo::get_Description()
+    @_property
+    def description(self) -> str: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo::get_LanguageId()
+    @_property
+    def language_id(self) -> winrt.system.UInt32: ...
+    # Windows.Foundation.Uri Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo::get_MoreInfoUrl()
+    @_property
+    def more_info_url(self) -> windows_foundation.Uri: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo::get_Title()
+    @_property
+    def title(self) -> str: ...
+
+@typing.final
+class WindowsSoftwareUpdateOptionalActionInfo(winrt.system.Object):
+    def __new__(cls, close_and_deploy_info: WindowsSoftwareUpdateActionInfo, close_and_install_info: WindowsSoftwareUpdateActionInfo, close_and_restart_info: WindowsSoftwareUpdateActionInfo) -> typing.Self: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionInfo Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo::get_CloseAndDeployInfo()
+    @_property
+    def close_and_deploy_info(self) -> WindowsSoftwareUpdateActionInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionInfo Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo::get_CloseAndInstallInfo()
+    @_property
+    def close_and_install_info(self) -> WindowsSoftwareUpdateActionInfo: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionInfo Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo::get_CloseAndRestartInfo()
+    @_property
+    def close_and_restart_info(self) -> WindowsSoftwareUpdateActionInfo: ...
+
+@typing.final
+class WindowsSoftwareUpdateOptionalInfo(winrt.system.Object):
+    def __new__(cls, category: WindowsSoftwareUpdateCategory | None, localization_info: _cabc.Iterable[WindowsSoftwareUpdateLocalizationInfo], compliance_deadline_in_days: winrt.system.Int32 | None, compliance_grace_period_in_days: winrt.system.Int32 | None) -> typing.Self: ...
+    # Windows.Foundation.IReference`1<Windows.Management.Update.WindowsSoftwareUpdateCategory> Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo::get_Category()
+    @_property
+    def category(self) -> WindowsSoftwareUpdateCategory | None: ...
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo::get_ComplianceDeadlineInDays()
+    @_property
+    def compliance_deadline_in_days(self) -> winrt.system.Int32 | None: ...
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo::get_ComplianceGracePeriodInDays()
+    @_property
+    def compliance_grace_period_in_days(self) -> winrt.system.Int32 | None: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo::get_LocalizationInfo()
+    @_property
+    def localization_info(self) -> _cabc.Sequence[WindowsSoftwareUpdateLocalizationInfo]: ...
+
+@typing.final
+class WindowsSoftwareUpdateProvider(winrt.system.Object):
+    def __new__(cls, folder_path: str) -> typing.Self: ...
+    # System.Object Windows.Management.Update.WindowsSoftwareUpdateProvider::GetPropertyValue(System.String)
+    def get_property_value(self, name: str, /) -> winrt.system.Object: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdateProvider::Register()
+    def register(self) -> WindowsSoftwareUpdateResult: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdateProvider::Unregister()
+    def unregister(self) -> WindowsSoftwareUpdateResult: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdateProvider::Validate()
+    def validate(self) -> WindowsSoftwareUpdateResult: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_CatalogFile()
+    @_property
+    def catalog_file(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_FolderPath()
+    @_property
+    def folder_path(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_Id()
+    @_property
+    def id(self) -> str: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> Windows.Management.Update.WindowsSoftwareUpdateProvider::get_PayloadFiles()
+    @_property
+    def payload_files(self) -> _cabc.Sequence[WindowsSoftwareUpdateProviderPayloadFileInfo]: ...
+    # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Management.Update.WindowsSoftwareUpdateProvider::get_Properties()
+    @_property
+    def properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType Windows.Management.Update.WindowsSoftwareUpdateProvider::get_RegistrationType()
+    @_property
+    def registration_type(self) -> WindowsSoftwareUpdateProviderRegistrationType: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_ScanFileArguments()
+    @_property
+    def scan_file_arguments(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_ScanFileName()
+    @_property
+    def scan_file_name(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_SchemaVersion()
+    @_property
+    def schema_version(self) -> str: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateProviderTrustState Windows.Management.Update.WindowsSoftwareUpdateProvider::get_TrustState()
+    @_property
+    def trust_state(self) -> WindowsSoftwareUpdateProviderTrustState: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateProviderType Windows.Management.Update.WindowsSoftwareUpdateProvider::get_Type()
+    @_property
+    def type(self) -> WindowsSoftwareUpdateProviderType: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProvider::get_Version()
+    @_property
+    def version(self) -> str: ...
+
+@typing.final
+class WindowsSoftwareUpdateProviderActionResult(winrt.system.Object):
+    def __new__(cls, action_result: WindowsSoftwareUpdateActionResult, restart_reason: WindowsSoftwareUpdateRestartReason, result_code: winrt.system.UInt32, extended_error: winrt.system.UInt64) -> typing.Self: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> winrt.system.UInt64: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateRestartReason Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult::get_RestartReason()
+    @_property
+    def restart_reason(self) -> WindowsSoftwareUpdateRestartReason: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateActionResult Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult::get_Result()
+    @_property
+    def result(self) -> WindowsSoftwareUpdateActionResult: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult::get_ResultCode()
+    @_property
+    def result_code(self) -> winrt.system.UInt32: ...
+
+@typing.final
+class WindowsSoftwareUpdateProviderPayloadFileInfo(winrt.system.Object):
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo::get_CatalogFile()
+    @_property
+    def catalog_file(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo::get_FileHash()
+    @_property
+    def file_hash(self) -> str: ...
+    # System.String Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo::get_Filename()
+    @_property
+    def filename(self) -> str: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateProviderTrustState Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo::get_TrustState()
+    @_property
+    def trust_state(self) -> WindowsSoftwareUpdateProviderTrustState: ...
+
+@typing.final
+class WindowsSoftwareUpdateProviderStatus(winrt.system.Object):
+    def __new__(cls, provider_id: str) -> typing.Self: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdateProviderStatus::SetActionProgress(System.UInt64,System.UInt64)
+    def set_action_progress(self, current: winrt.system.UInt64, total: winrt.system.UInt64, /) -> WindowsSoftwareUpdateResult: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdateProviderStatus::SetActionResult(Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult)
+    def set_action_result(self, action_result: WindowsSoftwareUpdateProviderActionResult, /) -> WindowsSoftwareUpdateResult: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateResult Windows.Management.Update.WindowsSoftwareUpdateProviderStatus::SetScanResult(System.Boolean,System.UInt32,System.UInt64,Windows.Foundation.Collections.IIterable`1<Windows.Management.Update.WindowsSoftwareUpdate>)
+    def set_scan_result(self, succeeded: bool, result_code: winrt.system.UInt32, extended_error: winrt.system.UInt64, updates: _cabc.Iterable[WindowsSoftwareUpdate], /) -> WindowsSoftwareUpdateResult: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Management.Update.WindowsSoftwareUpdateProviderStatus::add_CancelRequested(Windows.Foundation.TypedEventHandler`2<Windows.Management.Update.WindowsSoftwareUpdateProviderStatus,System.Object>)
+    def add_cancel_requested(self, handler: windows_foundation.TypedEventHandler[WindowsSoftwareUpdateProviderStatus, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Management.Update.WindowsSoftwareUpdateProviderStatus::remove_CancelRequested(Windows.Foundation.EventRegistrationToken)
+    def remove_cancel_requested(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+
+@typing.final
+class WindowsSoftwareUpdateResult(winrt.system.Object):
+    @typing.overload
+    def __new__(cls, succeeded: bool, result_code: winrt.system.UInt32) -> typing.Self: ...
+    @typing.overload
+    def __new__(cls, succeeded: bool, result_code: winrt.system.UInt32, extended_error: winrt.system.UInt64) -> typing.Self: ...
+    @typing.overload
+    def __new__(cls, succeeded: bool, cancel_requested: bool, result_code: winrt.system.UInt32, extended_error: winrt.system.UInt64) -> typing.Self: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateResult::get_CancelRequested()
+    @_property
+    def cancel_requested(self) -> bool: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdateResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> winrt.system.UInt64: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateResult::get_ResultCode()
+    @_property
+    def result_code(self) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateResult::get_Succeeded()
+    @_property
+    def succeeded(self) -> bool: ...
+
+@typing.final
+class WindowsSoftwareUpdateScanResult(winrt.system.Object):
+    @typing.overload
+    def __new__(cls, succeeded: bool, result_code: winrt.system.UInt32, updates: _cabc.Iterable[WindowsSoftwareUpdate]) -> typing.Self: ...
+    @typing.overload
+    def __new__(cls, succeeded: bool, result_code: winrt.system.UInt32, extended_error: winrt.system.UInt64, updates: _cabc.Iterable[WindowsSoftwareUpdate]) -> typing.Self: ...
+    # System.UInt64 Windows.Management.Update.WindowsSoftwareUpdateScanResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> winrt.system.UInt64: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateScanResult::get_ResultCode()
+    @_property
+    def result_code(self) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.Management.Update.WindowsSoftwareUpdateScanResult::get_Succeeded()
+    @_property
+    def succeeded(self) -> bool: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsSoftwareUpdate> Windows.Management.Update.WindowsSoftwareUpdateScanResult::get_Updates()
+    @_property
+    def updates(self) -> _cabc.Sequence[WindowsSoftwareUpdate]: ...
+
+@typing.final
+class WindowsSoftwareUpdateVersion(winrt.system.Object):
+    def __new__(cls, major: winrt.system.UInt32, minor: winrt.system.UInt32, revision_major: winrt.system.UInt32, revision_minor: winrt.system.UInt32) -> typing.Self: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateVersion::get_Major()
+    @_property
+    def major(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateVersion::get_Minor()
+    @_property
+    def minor(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateVersion::get_RevisionMajor()
+    @_property
+    def revision_major(self) -> winrt.system.UInt32: ...
+    # System.UInt32 Windows.Management.Update.WindowsSoftwareUpdateVersion::get_RevisionMinor()
+    @_property
+    def revision_minor(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class WindowsUpdate(winrt.system.Object):
@@ -337,13 +820,22 @@ class WindowsUpdateItem(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateManager(winrt.system.Object):
+    @typing.overload
+    def __new__(cls, client_id: str, provider_id_filter: winrt.system.Array[str] | winrt.system.ReadableBuffer) -> typing.Self: ...
+    @typing.overload
     def __new__(cls, client_id: str) -> typing.Self: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsSoftwareUpdate> Windows.Management.Update.WindowsUpdateManager::GetApplicableSoftwareUpdates()
+    def get_applicable_software_updates(self) -> _cabc.Sequence[WindowsSoftwareUpdate]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsUpdate> Windows.Management.Update.WindowsUpdateManager::GetApplicableUpdates()
     def get_applicable_updates(self) -> _cabc.Sequence[WindowsUpdate]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsUpdateItem> Windows.Management.Update.WindowsUpdateManager::GetMostRecentCompletedUpdates(System.Int32)
     def get_most_recent_completed_updates(self, count: winrt.system.Int32, /) -> _cabc.Sequence[WindowsUpdateItem]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.WindowsUpdateItem>> Windows.Management.Update.WindowsUpdateManager::GetMostRecentCompletedUpdatesAsync(System.Int32)
     def get_most_recent_completed_updates_async(self, count: winrt.system.Int32, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[WindowsUpdateItem]]: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateProvider Windows.Management.Update.WindowsUpdateManager::GetProvider(System.String)
+    def get_provider(self, id: str, /) -> WindowsSoftwareUpdateProvider: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateScanResult Windows.Management.Update.WindowsUpdateManager::PerformScan(Windows.Management.Update.WindowsUpdateManagerScanMode)
+    def perform_scan(self, scan_mode: WindowsUpdateManagerScanMode, /) -> WindowsSoftwareUpdateScanResult: ...
     # System.Void Windows.Management.Update.WindowsUpdateManager::StartScan(System.Boolean)
     def start_scan(self, user_initiated: bool, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Management.Update.WindowsUpdateManager::add_ActionCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateActionCompletedEventArgs>)
@@ -379,6 +871,9 @@ class WindowsUpdateManager(winrt.system.Object):
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Management.Update.WindowsUpdateManager::get_LastSuccessfulScanTimestamp()
     @_property
     def last_successful_scan_timestamp(self) -> datetime.datetime | None: ...
+    # System.String[] Windows.Management.Update.WindowsUpdateManager::get_ProviderIds()
+    @_property
+    def provider_ids(self) -> str: ...
 
 @typing.final
 class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):

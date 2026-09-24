@@ -1,7 +1,18 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.System.RemoteDesktop.Provider
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
 
 interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo> concrete iterable
     py winrt.windows.foundation.collections._IIterable[RemoteDesktopInfo]
@@ -59,6 +70,9 @@ interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory
 
 interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
     guid 687c2750-46d9-5de3-8dc3-84a9202cecfb
+
+interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2
+    guid 4139976d-4f8e-5bb4-b953-d6447cac4e5f
 
 interface Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IVector[RemoteDesktopInfo]
@@ -239,9 +253,16 @@ enum Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction python_type
 class Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar static python_type
     py RemoteDesktopRegistrar
     factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
+    factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2
     property desktop_infos static
         get get_DesktopInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo> return
+    event connection_center_requested static
+        add add_ConnectionCenterRequested slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2 shape=51 reverse=24 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ConnectionCenterRequested slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2 shape=26 reverse=53 static
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method is_switch_to_local_session_enabled static
         method IsSwitchToLocalSessionEnabled slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 reverse=43 static
             out boolean return
@@ -272,6 +293,10 @@ delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provi
 
 class System.Object external
     py winrt.system.Object
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
 
 struct Windows.Foundation.EventRegistrationToken external
     py winrt.windows.foundation.EventRegistrationToken

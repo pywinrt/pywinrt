@@ -19,6 +19,7 @@ __all__ = [
     "DeploymentOptions",
     "DeploymentProgressState",
     "PackageInstallState",
+    "PackageOperationPriority",
     "PackageState",
     "PackageStatus",
     "PackageStubPreference",
@@ -79,6 +80,11 @@ class PackageInstallState(enum.IntEnum):
     STAGED = 1
     INSTALLED = 2
     PAUSED = 6
+
+class PackageOperationPriority(enum.IntEnum):
+    LOW = 0
+    NORMAL = 1
+    HIGH = 2
 
 class PackageState(enum.IntEnum):
     NORMAL = 0
@@ -245,6 +251,12 @@ class AddPackageOptions(winrt.system.Object):
     # Windows.Foundation.Collections.IMap`2<Windows.Foundation.Uri,System.String> Windows.Management.Deployment.AddPackageOptions::get_ExpectedDigests()
     @_property
     def expected_digests(self) -> _cabc.MutableMapping[windows_foundation.Uri, str]: ...
+    # Windows.Management.Deployment.PackageOperationPriority Windows.Management.Deployment.AddPackageOptions::get_PackageOperationPriority()
+    @_property
+    def package_operation_priority(self) -> PackageOperationPriority: ...
+    # System.Void Windows.Management.Deployment.AddPackageOptions::put_PackageOperationPriority(Windows.Management.Deployment.PackageOperationPriority)
+    @package_operation_priority.setter
+    def package_operation_priority(self, value: PackageOperationPriority) -> None: ...
 
 @typing.final
 class AppInstallerManager_Static(winrt._winrt.IInspectable_Static):
@@ -1076,6 +1088,12 @@ class StagePackageOptions(winrt.system.Object):
     # Windows.Foundation.Collections.IMap`2<Windows.Foundation.Uri,System.String> Windows.Management.Deployment.StagePackageOptions::get_ExpectedDigests()
     @_property
     def expected_digests(self) -> _cabc.MutableMapping[windows_foundation.Uri, str]: ...
+    # Windows.Management.Deployment.PackageOperationPriority Windows.Management.Deployment.StagePackageOptions::get_PackageOperationPriority()
+    @_property
+    def package_operation_priority(self) -> PackageOperationPriority: ...
+    # System.Void Windows.Management.Deployment.StagePackageOptions::put_PackageOperationPriority(Windows.Management.Deployment.PackageOperationPriority)
+    @package_operation_priority.setter
+    def package_operation_priority(self, value: PackageOperationPriority) -> None: ...
 
 @typing.final
 class UpdateSharedPackageContainerOptions(winrt.system.Object):

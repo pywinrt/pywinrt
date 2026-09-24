@@ -246,6 +246,27 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
         IStorageProviderStatusUISourceFactory(std::nullptr_t = nullptr) noexcept {}
         IStorageProviderStatusUISourceFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IStorageProviderSuggestionsHandler :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSuggestionsHandler>
+    {
+        IStorageProviderSuggestionsHandler(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSuggestionsHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IStorageProviderSuggestionsHandlerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSuggestionsHandlerFactory>
+    {
+        IStorageProviderSuggestionsHandlerFactory(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSuggestionsHandlerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IStorageProviderSuggestionsQueryOptions :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSuggestionsQueryOptions>
+    {
+        IStorageProviderSuggestionsQueryOptions(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSuggestionsQueryOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IStorageProviderSyncRootInfo :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IStorageProviderSyncRootInfo>

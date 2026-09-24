@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Graphics.Printing.Workflow
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> concrete
@@ -287,6 +287,9 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2
     guid 592aadaf-ef26-5a55-ad21-5f63ffcf8366
 
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession3
+    guid 5757086c-edcc-5a94-90ec-a0a87c1115e7
+
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobIssueDetectedEventArgs
     guid de58a46e-e41e-550a-a9fb-4b1f93fb9d98
 
@@ -308,6 +311,11 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobUISession2
     guid a8529368-9174-5c78-9fdb-894a82e92ada
 
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelProvider python_type
+    py _IPrintWorkflowObjectModelProvider
+    guid e3a9f883-6a2d-489b-bc1f-7aab44249622
+    signature {e3a9f883-6a2d-489b-bc1f-7aab44249622}
+
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelSourceFileContent
     guid c36c8a6a-8a2a-419a-b3c3-2090e6bfab2f
 
@@ -323,6 +331,9 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter2
     guid 854ceec1-7837-5b93-b7af-57a6998c2f71
 
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter3
+    guid 6b556b4f-3756-5da6-b1f7-8f9e89f629fb
+
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlDataAvailableEventArgs
     guid d4ad6b50-1547-5991-a0ef-e2ee20211518
 
@@ -331,6 +342,9 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationReques
 
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2
     guid 8d692147-6c62-5e31-a0e7-d49f92c111c0
+
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs3
+    guid 1f50a7d4-db49-5d3e-ba27-b366cb25cd7e
 
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlSourceContent
     guid 92f7fc41-32b8-56ab-845e-b1e68b3aedd5
@@ -343,6 +357,12 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob
 
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob2
     guid 747e21d7-69a9-5229-b8f0-874ca1a8871b
+
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3
+    guid f0c8eeec-66ac-5e14-8906-0de610769368
+
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs
+    guid 4a6275b9-be67-5718-921a-348c56f9d25f
 
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowSourceContent
     guid 1a28c641-ceb1-4533-bb73-fbe63eefdb18
@@ -385,6 +405,9 @@ interface Windows.Graphics.Printing.Workflow.IPrintWorkflowVirtualPrinterUIEvent
 
 interface Windows.Graphics.Printing.Workflow.IPrintWorkflowXpsDataAvailableEventArgs
     guid 4d11c331-54d1-434e-be0e-82c5fa58e5b2
+
+interface Windows.Graphics.Printing.Workflow.IPrintWorkflowXpsObjectModelProvider
+    guid 97d8c1ad-96d7-56cc-b660-a71495632ceb
 
 enum Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations python_type flags_enum
     py PdlConversionHostBasedProcessingOperations
@@ -535,6 +558,7 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession pytho
     default Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession3
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=4 reverse=22
             out enum32 type=Windows.Graphics.Printing.Workflow.PrintWorkflowSessionStatus return
@@ -555,6 +579,12 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession pytho
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_JobIssueDetected slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2 shape=26 reverse=53
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event job_status_changed
+        add add_JobStatusChanged slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession3 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_JobStatusChanged slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession3 shape=26 reverse=53
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
         method Start slot=11 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession shape=0 reverse=137
@@ -716,6 +746,7 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter python_type
     default Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter2
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter3
     method convert_pdl_async
         method ConvertPdlAsync slot=6 inputs=3 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter shape=195 reverse=26
             in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
@@ -725,6 +756,13 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter python_type
         method ConvertPdlAsync slot=6 inputs=4 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter2 shape=239 reverse=27
             in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
             in interface type=Windows.Storage.Streams.IInputStream name=inputStream
+            in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
+            in enum_u32 type=Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations name=hostBasedProcessingOperations
+            out interface type=Windows.Foundation.IAsyncAction return
+    method convert_pdl_from_object_model_async
+        method ConvertPdlFromObjectModelAsync slot=6 inputs=4 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlConverter3 shape=239 reverse=27
+            in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
+            in interface type=Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelProvider name=objectModelProvider
             in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
             in enum_u32 type=Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations name=hostBasedProcessingOperations
             out interface type=Windows.Foundation.IAsyncAction return
@@ -753,6 +791,7 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEv
     default Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs3
     property configuration
         get get_Configuration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs shape=4 reverse=22
             out class type=Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration return
@@ -774,7 +813,7 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEv
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=jobAttributes
             in string name=targetContentType
             out class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream return
-        method CreateJobOnPrinterWithAttributes slot=6 inputs=5 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2 shape=267
+        method CreateJobOnPrinterWithAttributes slot=6 inputs=5 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs2 shape=267 reverse=516
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=jobAttributes
             in string name=targetContentType
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=operationAttributes
@@ -793,6 +832,8 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEv
             in enum32 type=Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy name=jobAttributesMergePolicy
             in enum32 type=Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy name=operationAttributesMergePolicy
             out class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream return
+    method disable_ipp_compression_for_job
+        method DisableIppCompressionForJob slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs3 shape=0 reverse=16
     method get_deferral
         method GetDeferral slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPdlModificationRequestedEventArgs shape=4 reverse=186
             out class type=Windows.Foundation.Deferral return
@@ -834,12 +875,16 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob python_type
     default Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob
     requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob2
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3
     property job_id
         get get_JobId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob shape=4 reverse=22
             out int32 return
     property printer
         get get_Printer slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob shape=4 reverse=43
             out class type=Windows.Devices.Printers.IppPrintDevice return
+    property is_passthrough_job_with_attributes
+        get get_IsPassthroughJobWithAttributes slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3 shape=4 reverse=22
+            out boolean return
     method convert_print_ticket_to_job_attributes
         method ConvertPrintTicketToJobAttributes slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob2 shape=117 reverse=25
             in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
@@ -859,6 +904,12 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob python_type
     method get_job_status
         method GetJobStatus slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob shape=4 reverse=62
             out enum32 type=Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatus return
+    method get_passthrough_job_attributes
+        method GetPassthroughJobAttributes slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3 shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    method get_passthrough_job_operation_attributes
+        method GetPassthroughJobOperationAttributes slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob3 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
     method set_job_attributes
         method SetJobAttributes slot=13 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJob shape=51 reverse=174
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=jobAttributes
@@ -875,6 +926,21 @@ enum Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatus python_typ
     constant ABORTED 1
     constant IN_PROGRESS 2
     constant COMPLETED 3
+
+class Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs python_type
+    py PrintWorkflowPrinterJobStatusChangedEventArgs
+    signature rc(Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs;{4a6275b9-be67-5718-921a-348c56f9d25f})
+    default Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs
+    property configuration
+        get get_Configuration slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs shape=4 reverse=43
+            out class type=Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration return
+    property printer_job
+        get get_PrinterJob slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs shape=4 reverse=22
+            out class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowPrinterJobStatusChangedEventArgs shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
 
 enum Windows.Graphics.Printing.Workflow.PrintWorkflowSessionStatus python_type
     py PrintWorkflowSessionStatus
@@ -1110,6 +1176,16 @@ class Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs 
         method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.Workflow.IPrintWorkflowXpsDataAvailableEventArgs shape=4 reverse=43
             out class type=Windows.Foundation.Deferral return
 
+class Windows.Graphics.Printing.Workflow.PrintWorkflowXpsObjectModelProvider activatable python_type
+    py PrintWorkflowXpsObjectModelProvider
+    signature rc(Windows.Graphics.Printing.Workflow.PrintWorkflowXpsObjectModelProvider;{e3a9f883-6a2d-489b-bc1f-7aab44249622})
+    default Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelProvider
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowXpsObjectModelProvider
+    requires Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelProvider
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[PrintWorkflowBackgroundSession, PrintWorkflowBackgroundSetupRequestedEventArgs]
     guid bb5c0591-4b11-511c-8ef3-1822cb71427c
@@ -1193,6 +1269,18 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession name=sender
             in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobBackgroundSession, PrintWorkflowPrinterJobStatusChangedEventArgs]
+    guid bb005e25-aa8e-5a3d-aa86-8bd45b0ab3e1
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession;{c5ec6ad8-20c9-5d51-8507-2734b46f96c5});rc(Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs;{4a6275b9-be67-5718-921a-348c56f9d25f}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession
+    argument Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession name=sender
+            in class type=Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[PrintWorkflowJobUISession, PrintWorkflowJobNotificationEventArgs]

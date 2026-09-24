@@ -40,7 +40,7 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Search
         IndexableContent();
     };
     struct WINRT_IMPL_EMPTY_BASES QueryOptions : winrt::Windows::Storage::Search::IQueryOptions,
-        impl::require<QueryOptions, winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter>
+        impl::require<QueryOptions, winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter, winrt::Windows::Storage::Search::IQueryOptionsAdditionalSearchSources>
     {
         QueryOptions(std::nullptr_t) noexcept {}
         QueryOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Search::IQueryOptions(ptr, take_ownership_from_abi) {}

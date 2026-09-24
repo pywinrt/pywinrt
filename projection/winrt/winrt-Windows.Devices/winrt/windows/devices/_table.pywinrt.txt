@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Devices
 
 interface Windows.Devices.ILowLevelDevicesAggregateProvider python_type
@@ -39,7 +39,7 @@ class Windows.Devices.LowLevelDevicesAggregateProvider python_type
     requires Windows.Devices.ILowLevelDevicesAggregateProvider
     factory Windows.Devices.ILowLevelDevicesAggregateProviderFactory
     constructor -
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProviderFactory shape=267
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.ILowLevelDevicesAggregateProviderFactory shape=267 reverse=516
             in interface type=Windows.Devices.Adc.Provider.IAdcControllerProvider name=adc
             in interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider name=pwm
             in interface type=Windows.Devices.Gpio.Provider.IGpioControllerProvider name=gpio

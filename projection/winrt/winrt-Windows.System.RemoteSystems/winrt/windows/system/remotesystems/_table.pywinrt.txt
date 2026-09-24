@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.System.RemoteSystems
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
@@ -915,6 +915,7 @@ enum Windows.System.RemoteSystems.RemoteSystemAuthorizationKind python_type
     signature enum(Windows.System.RemoteSystems.RemoteSystemAuthorizationKind;i4)
     constant SAME_USER 0
     constant ANONYMOUS 1
+    constant SAME_FAMILY 2
 
 class Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter python_type
     py RemoteSystemAuthorizationKindFilter

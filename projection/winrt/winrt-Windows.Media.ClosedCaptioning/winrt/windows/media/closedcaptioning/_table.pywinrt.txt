@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Media.ClosedCaptioning
 
 enum Windows.Media.ClosedCaptioning.ClosedCaptionColor python_type
@@ -103,6 +103,77 @@ enum Windows.Media.ClosedCaptioning.ClosedCaptionStyle python_type
     constant CURSIVE 6
     constant SMALL_CAPITALS 7
 
+class Windows.Media.ClosedCaptioning.ClosedCaptionTheme python_type
+    py ClosedCaptionTheme
+    signature rc(Windows.Media.ClosedCaptioning.ClosedCaptionTheme;{d3974055-b9b5-52a4-b655-30661f73d1c1})
+    default Windows.Media.ClosedCaptioning.IClosedCaptionTheme
+    requires Windows.Media.ClosedCaptioning.IClosedCaptionTheme
+    factory Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics
+    property background_color
+        get get_BackgroundColor slot=14 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=186
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionColor return
+    property background_opacity
+        get get_BackgroundOpacity slot=16 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=202
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionOpacity return
+    property computed_background_color
+        get get_ComputedBackgroundColor slot=15 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=194
+            out struct type=Windows.UI.Color return
+    property computed_font_color
+        get get_ComputedFontColor slot=9 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=99
+            out struct type=Windows.UI.Color return
+    property computed_region_color
+        get get_ComputedRegionColor slot=18 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=218
+            out struct type=Windows.UI.Color return
+    property display_name
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=43
+            out string return
+    property font_color
+        get get_FontColor slot=8 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=62
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionColor return
+    property font_effect
+        get get_FontEffect slot=13 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=173
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect return
+    property font_opacity
+        get get_FontOpacity slot=10 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=121
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionOpacity return
+    property font_size
+        get get_FontSize slot=11 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=141
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionSize return
+    property font_style
+        get get_FontStyle slot=12 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=162
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionStyle return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=22
+            out string return
+    property region_color
+        get get_RegionColor slot=17 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=210
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionColor return
+    property region_opacity
+        get get_RegionOpacity slot=19 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionTheme shape=4 reverse=223
+            out enum32 type=Windows.Media.ClosedCaptioning.ClosedCaptionOpacity return
+    event selected_theme_changed static
+        add add_SelectedThemeChanged slot=11 inputs=1 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=51 reverse=144 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_SelectedThemeChanged slot=12 inputs=1 outputs=0 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=26 reverse=167 static
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event themes_changed static
+        add add_ThemesChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=51 reverse=100 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ThemesChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=26 reverse=134 static
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_available_themes static
+        method GetAvailableThemes slot=6 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=51 reverse=24 static
+            receive_array class type=Windows.Media.ClosedCaptioning.ClosedCaptionTheme return
+    method get_selected_theme static
+        method GetSelectedTheme slot=7 inputs=0 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=4 reverse=43 static
+            out class type=Windows.Media.ClosedCaptioning.ClosedCaptionTheme return
+    method try_set_selected_theme static
+        method TrySetSelectedTheme slot=8 inputs=1 outputs=1 declaring=Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics shape=51 reverse=65 static
+            in class type=Windows.Media.ClosedCaptioning.ClosedCaptionTheme name=value
+            out boolean return
+
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
@@ -119,6 +190,12 @@ interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics
 
 interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2
     guid 9de26870-37de-4197-8845-9a48dc5ac317
+
+interface Windows.Media.ClosedCaptioning.IClosedCaptionTheme
+    guid d3974055-b9b5-52a4-b655-30661f73d1c1
+
+interface Windows.Media.ClosedCaptioning.IClosedCaptionThemeStatics
+    guid 0938ae0f-214e-5760-88c9-bb3f1b54f3c7
 
 class System.Object external
     py winrt.system.Object

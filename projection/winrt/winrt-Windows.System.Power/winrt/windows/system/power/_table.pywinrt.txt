@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.System.Power
 
 class Windows.System.Power.BackgroundEnergyManager static python_type
@@ -58,6 +58,14 @@ enum Windows.System.Power.EnergySaverStatus python_type
     constant OFF 1
     constant ON 2
 
+enum Windows.System.Power.EnergySaverStatus2 python_type
+    py EnergySaverStatus2
+    signature enum(Windows.System.Power.EnergySaverStatus2;i4)
+    constant UNKNOWN 0
+    constant OFF 1
+    constant STANDARD 2
+    constant HIGH_SAVINGS 3
+
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
@@ -112,9 +120,13 @@ interface Windows.System.Power.IForegroundEnergyManagerStatics
 interface Windows.System.Power.IPowerManagerStatics
     guid 1394825d-62ce-4364-98d5-aa28c7fbd15b
 
+interface Windows.System.Power.IPowerManagerStatics2
+    guid 67a446c3-4f2e-5d56-b2e8-7707c264745b
+
 class Windows.System.Power.PowerManager static python_type
     py PowerManager
     factory Windows.System.Power.IPowerManagerStatics
+    factory Windows.System.Power.IPowerManagerStatics2
     property battery_status static
         get get_BatteryStatus slot=9 inputs=0 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=4 reverse=99 static
             out enum32 type=Windows.System.Power.BatteryStatus return
@@ -130,6 +142,18 @@ class Windows.System.Power.PowerManager static python_type
     property remaining_discharge_time static
         get get_RemainingDischargeTime slot=18 inputs=0 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=4 reverse=218 static
             out timespan return
+    property energy_saver_status2 static
+        get get_EnergySaverStatus2 slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics2 shape=4 reverse=22 static
+            out enum32 type=Windows.System.Power.EnergySaverStatus2 return
+    property is_energy_saver_status2_supported static
+        get get_IsEnergySaverStatus2Supported slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics2 shape=4 reverse=43 static
+            out boolean return
+    event energy_saver_status2_changed static
+        add add_EnergySaverStatus2Changed slot=8 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics2 shape=51 reverse=65 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_EnergySaverStatus2Changed slot=9 inputs=1 outputs=0 declaring=Windows.System.Power.IPowerManagerStatics2 shape=26 reverse=110 static
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event battery_status_changed static
         add add_BatteryStatusChanged slot=10 inputs=1 outputs=1 declaring=Windows.System.Power.IPowerManagerStatics shape=51 reverse=124 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler

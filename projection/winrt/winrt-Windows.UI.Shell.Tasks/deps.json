@@ -9,7 +9,6 @@
     "required": [
     ],
     "referenced": [
-        "winrt-Windows.ApplicationModel",
-        "winrt-Windows.UI"
+        "winrt-Windows.Foundation"
     ]
 }

@@ -8,6 +8,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     template <typename TSender, typename TResult> struct WINRT_IMPL_EMPTY_BASES TypedEventHandler;
 }
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct WINRT_IMPL_EMPTY_BASES IIterable;
+}
 WINRT_EXPORT namespace winrt::Windows::Graphics
 {
     struct DisplayId;
@@ -48,9 +52,11 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Capture
     };
     struct IDirect3D11CaptureFrame;
     struct IDirect3D11CaptureFrame2;
+    struct IDirect3D11CaptureFrame3;
     struct IDirect3D11CaptureFramePool;
     struct IDirect3D11CaptureFramePoolStatics;
     struct IDirect3D11CaptureFramePoolStatics2;
+    struct IDisplayGraphicsCaptureSession;
     struct IGraphicsCaptureAccessStatics;
     struct IGraphicsCaptureItem;
     struct IGraphicsCaptureItemStatics;
@@ -62,6 +68,7 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Capture
     struct IGraphicsCaptureSession4;
     struct IGraphicsCaptureSession5;
     struct IGraphicsCaptureSession6;
+    struct IGraphicsCaptureSession7;
     struct IGraphicsCaptureSessionStatics;
     struct Direct3D11CaptureFrame;
     struct Direct3D11CaptureFramePool;
@@ -74,9 +81,11 @@ namespace winrt::impl
 {
     template <> struct category<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Capture::IDisplayGraphicsCaptureSession>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureAccessStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureItemStatics>{ using type = interface_category; };
@@ -88,6 +97,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession4>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession5>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession6>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession7>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::IGraphicsCaptureSessionStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>{ using type = class_category; };
     template <> struct category<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>{ using type = class_category; };
@@ -107,9 +117,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode> = L"Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame> = L"Windows.Graphics.Capture.IDirect3D11CaptureFrame";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame2> = L"Windows.Graphics.Capture.IDirect3D11CaptureFrame2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame3> = L"Windows.Graphics.Capture.IDirect3D11CaptureFrame3";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool> = L"Windows.Graphics.Capture.IDirect3D11CaptureFramePool";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics> = L"Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics2> = L"Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IDisplayGraphicsCaptureSession> = L"Windows.Graphics.Capture.IDisplayGraphicsCaptureSession";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureAccessStatics> = L"Windows.Graphics.Capture.IGraphicsCaptureAccessStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem> = L"Windows.Graphics.Capture.IGraphicsCaptureItem";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureItemStatics> = L"Windows.Graphics.Capture.IGraphicsCaptureItemStatics";
@@ -121,12 +133,15 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession4> = L"Windows.Graphics.Capture.IGraphicsCaptureSession4";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession5> = L"Windows.Graphics.Capture.IGraphicsCaptureSession5";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession6> = L"Windows.Graphics.Capture.IGraphicsCaptureSession6";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession7> = L"Windows.Graphics.Capture.IGraphicsCaptureSession7";
     template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSessionStatics> = L"Windows.Graphics.Capture.IGraphicsCaptureSessionStatics";
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame>{ 0xFA50C623,0x38DA,0x4B32,{ 0xAC,0xF3,0xFA,0x97,0x34,0xAD,0x80,0x0E } }; // FA50C623-38DA-4B32-ACF3-FA9734AD800E
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame2>{ 0x37869CFA,0x2B48,0x5EBF,{ 0x9A,0xFB,0xDF,0xFD,0x80,0x5D,0xEF,0xDB } }; // 37869CFA-2B48-5EBF-9AFB-DFFD805DEFDB
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame3>{ 0x71616DC8,0xFEA5,0x5741,{ 0xA3,0xD8,0x59,0x1A,0xCC,0x39,0xA9,0xEE } }; // 71616DC8-FEA5-5741-A3D8-591ACC39A9EE
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool>{ 0x24EB6D22,0x1975,0x422E,{ 0x82,0xE7,0x78,0x0D,0xBD,0x8D,0xDF,0x24 } }; // 24EB6D22-1975-422E-82E7-780DBD8DDF24
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics>{ 0x7784056A,0x67AA,0x4D53,{ 0xAE,0x54,0x10,0x88,0xD5,0xA8,0xCA,0x21 } }; // 7784056A-67AA-4D53-AE54-1088D5A8CA21
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics2>{ 0x589B103F,0x6BBC,0x5DF5,{ 0xA9,0x91,0x02,0xE2,0x8B,0x3B,0x66,0xD5 } }; // 589B103F-6BBC-5DF5-A991-02E28B3B66D5
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IDisplayGraphicsCaptureSession>{ 0xBB91F61B,0x218A,0x587D,{ 0x85,0x80,0x27,0x01,0xA7,0x4C,0x05,0x25 } }; // BB91F61B-218A-587D-8580-2701A74C0525
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureAccessStatics>{ 0x743ED370,0x06EC,0x5040,{ 0xA5,0x8A,0x90,0x1F,0x0F,0x75,0x70,0x95 } }; // 743ED370-06EC-5040-A58A-901F0F757095
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureItem>{ 0x79C3F95B,0x31F7,0x4EC2,{ 0xA4,0x64,0x63,0x2E,0xF5,0xD3,0x07,0x60 } }; // 79C3F95B-31F7-4EC2-A464-632EF5D30760
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureItemStatics>{ 0xA87EBEA5,0x457C,0x5788,{ 0xAB,0x47,0x0C,0xF1,0xD3,0x63,0x7E,0x74 } }; // A87EBEA5-457C-5788-AB47-0CF1D3637E74
@@ -138,6 +153,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession4>{ 0xAE99813C,0xC257,0x5759,{ 0x8E,0xD0,0x66,0x8C,0x9B,0x55,0x7E,0xD4 } }; // AE99813C-C257-5759-8ED0-668C9B557ED4
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession5>{ 0x67C0EA62,0x1F85,0x5061,{ 0x92,0x5A,0x23,0x9B,0xE0,0xAC,0x09,0xCB } }; // 67C0EA62-1F85-5061-925A-239BE0AC09CB
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession6>{ 0xD7419236,0xBE20,0x5E9F,{ 0xBC,0xD6,0xC4,0xE9,0x8F,0xD6,0xAF,0xDC } }; // D7419236-BE20-5E9F-BCD6-C4E98FD6AFDC
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession7>{ 0x82D1AA4D,0x4366,0x543E,{ 0xA6,0xD0,0xA4,0x80,0x5E,0x6B,0xCF,0x2C } }; // 82D1AA4D-4366-543E-A6D0-A4805E6BCF2C
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Capture::IGraphicsCaptureSessionStatics>{ 0x2224A540,0x5974,0x49AA,{ 0xB2,0x32,0x08,0x82,0x53,0x6F,0x4C,0xB5 } }; // 2224A540-5974-49AA-B232-0882536F4CB5
     template <> struct default_interface<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>{ using type = winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame; };
     template <> struct default_interface<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>{ using type = winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool; };
@@ -159,6 +175,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_DirtyRegions(void**) noexcept = 0;
             virtual int32_t __stdcall get_DirtyRegionMode(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ConfigurationIteration(uint64_t*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePool>
@@ -185,6 +208,14 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateFreeThreaded(void*, int32_t, int32_t, struct struct_Windows_Graphics_SizeInt32, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Graphics::Capture::IDisplayGraphicsCaptureSession>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall SetWindowExclusionList(void*, uint64_t*) noexcept = 0;
+            virtual int32_t __stdcall GetWindowExclusionList(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Graphics::Capture::IGraphicsCaptureAccessStatics>
@@ -273,6 +304,13 @@ namespace winrt::impl
             virtual int32_t __stdcall put_IncludeSecondaryWindows(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession7>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ConfigurationIteration(uint64_t*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Graphics::Capture::IGraphicsCaptureSessionStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -300,6 +338,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame2>
     {
         template <typename D> using type = consume_Windows_Graphics_Capture_IDirect3D11CaptureFrame2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Graphics_Capture_IDirect3D11CaptureFrame3
+    {
+        [[nodiscard]] auto ConfigurationIteration() const;
+    };
+    template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFrame3>
+    {
+        template <typename D> using type = consume_Windows_Graphics_Capture_IDirect3D11CaptureFrame3<D>;
     };
     template <typename D>
     struct consume_Windows_Graphics_Capture_IDirect3D11CaptureFramePool
@@ -334,6 +381,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Graphics::Capture::IDirect3D11CaptureFramePoolStatics2>
     {
         template <typename D> using type = consume_Windows_Graphics_Capture_IDirect3D11CaptureFramePoolStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Graphics_Capture_IDisplayGraphicsCaptureSession
+    {
+        auto SetWindowExclusionList(param::iterable<winrt::Windows::UI::WindowId> const& excludedWindows) const;
+        auto GetWindowExclusionList() const;
+    };
+    template <> struct consume<winrt::Windows::Graphics::Capture::IDisplayGraphicsCaptureSession>
+    {
+        template <typename D> using type = consume_Windows_Graphics_Capture_IDisplayGraphicsCaptureSession<D>;
     };
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureAccessStatics
@@ -444,6 +501,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession6>
     {
         template <typename D> using type = consume_Windows_Graphics_Capture_IGraphicsCaptureSession6<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Graphics_Capture_IGraphicsCaptureSession7
+    {
+        [[nodiscard]] auto ConfigurationIteration() const;
+    };
+    template <> struct consume<winrt::Windows::Graphics::Capture::IGraphicsCaptureSession7>
+    {
+        template <typename D> using type = consume_Windows_Graphics_Capture_IGraphicsCaptureSession7<D>;
     };
     template <typename D>
     struct consume_Windows_Graphics_Capture_IGraphicsCaptureSessionStatics

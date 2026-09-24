@@ -1,0 +1,184 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+namespace Windows.UI.Shell.CompanionWindows
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[CompanionWindowRequestResult]
+    guid f9532e40-aa97-5a3d-9d0f-42906673448b
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult;{d728d2ef-e6d4-5cc0-9ff4-20c17a2ce72d}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator python_type
+    py CompanionWindowCoordinator
+    signature rc(Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator;{05620e87-b0f7-59ba-b3a5-d614bdc1ebe3})
+    default Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator
+    requires Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator
+    factory Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics
+    property companion_window_id
+        get get_CompanionWindowId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=4 reverse=62
+            out struct type=Windows.UI.WindowId return
+    event changed
+        add add_Changed slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Changed slot=10 inputs=1 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=26 reverse=134
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method detach_companion_window
+        method DetachCompanionWindow slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=0 reverse=37
+    method get_for_window static
+        method GetForWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics shape=97 static
+            in struct type=Windows.UI.WindowId name=windowId
+            out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator return
+    method request_window_from_app_async
+        method RequestWindowFromAppAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator shape=51 reverse=24
+            in string name=appId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> return
+
+class Windows.UI.Shell.CompanionWindows.CompanionWindowRequest python_type
+    py CompanionWindowRequest
+    signature rc(Windows.UI.Shell.CompanionWindows.CompanionWindowRequest;{d92c351a-2d66-59a8-b345-78489562c4d8})
+    default Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest
+    requires Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest
+    factory Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics
+    property requesting_window_id
+        get get_RequestingWindowId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=4 reverse=99
+            out struct type=Windows.UI.WindowId return
+    method accept
+        method Accept slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=97
+            in struct type=Windows.UI.WindowId name=windowId
+            out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=4 reverse=62
+            out class type=Windows.Foundation.Deferral return
+    method get_from_launch_uri static
+        method GetFromLaunchUri slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics shape=51 reverse=24 static
+            in class type=Windows.Foundation.Uri name=launchUri
+            out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowRequest return
+    method reject
+        method Reject slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest shape=0 reverse=37
+
+class Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult python_type
+    py CompanionWindowRequestResult
+    signature rc(Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult;{d728d2ef-e6d4-5cc0-9ff4-20c17a2ce72d})
+    default Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult
+    requires Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult
+    property companion_window_id
+        get get_CompanionWindowId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=99
+            out struct type=Windows.UI.WindowId return
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=43
+            out enum32 type=Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResultStatus return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult shape=4 reverse=22
+            out boolean return
+
+enum Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResultStatus python_type
+    py CompanionWindowRequestResultStatus
+    signature enum(Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResultStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant REGISTRATION_NOT_FOUND 2
+    constant ACTIVATION_TIMED_OUT 3
+    constant REJECTED_BY_COMPANION_APP 4
+
+interface Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[CompanionWindowRequestResult]
+    guid 71d91c43-b325-5c8a-815e-168c1119a2e6
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult;{d728d2ef-e6d4-5cc0-9ff4-20c17a2ce72d}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.UI.Shell.CompanionWindows.CompanionWindowRequestResult return
+
+interface Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinator
+    guid 05620e87-b0f7-59ba-b3a5-d614bdc1ebe3
+
+interface Windows.UI.Shell.CompanionWindows.ICompanionWindowCoordinatorStatics
+    guid 964022fa-380e-518c-bfc8-0f3b84fafea3
+
+interface Windows.UI.Shell.CompanionWindows.ICompanionWindowRequest
+    guid d92c351a-2d66-59a8-b345-78489562c4d8
+
+interface Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestResult
+    guid d728d2ef-e6d4-5cc0-9ff4-20c17a2ce72d
+
+interface Windows.UI.Shell.CompanionWindows.ICompanionWindowRequestStatics
+    guid 585e4544-d474-506a-96c2-3597a44882da
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CompanionWindowCoordinator, Object]
+    guid c7413260-4a0d-50d6-bbf8-5f0854315716
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator;{05620e87-b0f7-59ba-b3a5-d614bdc1ebe3});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator name=sender
+            in object name=args
+
+class System.Object external
+    py winrt.system.Object
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId

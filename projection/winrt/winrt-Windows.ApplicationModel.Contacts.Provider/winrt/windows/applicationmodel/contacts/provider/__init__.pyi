@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -15,6 +16,7 @@ __all__ = [
     "AddContactResult",
     "ContactPickerUI",
     "ContactRemovedEventArgs",
+    "IContactProvider",
 ]
 
 class AddContactResult(enum.IntEnum):
@@ -54,4 +56,16 @@ class ContactRemovedEventArgs(winrt.system.Object):
     # System.String Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
+
+@typing.final
+class _IContactProvider: ...
+
+class IContactProvider(winrt._winrt.IInspectable):
+    # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.Provider.IContactProvider::GetContactFromRemoteIdAsync(System.String)
+    @abstractmethod
+    def get_contact_from_remote_id_async(self, contact_remote_id: str, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_contacts.Contact]: ...
+    # System.String Windows.ApplicationModel.Contacts.Provider.IContactProvider::get_ContactListId()
+    @_property
+    @abstractmethod
+    def contact_list_id(self) -> str: ...
 

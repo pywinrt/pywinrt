@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Storage.Search
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt32> concrete
@@ -941,6 +941,9 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Foundati
 interface Windows.Storage.Search.IQueryOptions
     guid 1e5e46ee-0f45-4838-a8e9-d0479d446c30
 
+interface Windows.Storage.Search.IQueryOptionsAdditionalSearchSources
+    guid 8d342d6b-8800-426e-b5cf-4b328f824e7e
+
 interface Windows.Storage.Search.IQueryOptionsFactory
     guid 032e1f8c-a9c1-4e71-8011-0dee9d4811a3
 
@@ -1448,6 +1451,7 @@ class Windows.Storage.Search.QueryOptions activatable python_type
     default Windows.Storage.Search.IQueryOptions
     requires Windows.Storage.Search.IQueryOptions
     requires Windows.Storage.Search.IQueryOptionsWithProviderFilter
+    requires Windows.Storage.Search.IQueryOptionsAdditionalSearchSources
     factory Windows.Storage.Search.IQueryOptionsFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -1496,6 +1500,16 @@ class Windows.Storage.Search.QueryOptions activatable python_type
     property sort_order
         get get_SortOrder slot=17 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptions shape=4 reverse=210
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> return
+    property include_local_semantic_index
+        get get_IncludeLocalSemanticIndex slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsAdditionalSearchSources shape=4 reverse=22
+            out boolean return
+        put put_IncludeLocalSemanticIndex slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptionsAdditionalSearchSources shape=4 reverse=43
+            in boolean name=value
+    property include_cloud_providers
+        get get_IncludeCloudProviders slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsAdditionalSearchSources shape=4 reverse=62
+            out boolean return
+        put put_IncludeCloudProviders slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Search.IQueryOptionsAdditionalSearchSources shape=4 reverse=99
+            in boolean name=value
     property storage_provider_id_filter
         get get_StorageProviderIdFilter slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Search.IQueryOptionsWithProviderFilter shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return

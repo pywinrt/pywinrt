@@ -64,7 +64,7 @@ WINDOWS_SDK = (
     / versioned_package("Microsoft.Windows.SDK.CPP")
     / "c"
     / "References"
-    / "10.0.26100.0"
+    / "10.0.28000.0"
 )
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 

@@ -38,6 +38,11 @@ __all__ = [
     "SharedStorageAccessManager",
     "StandardDataFormats",
     "TargetApplicationChosenEventArgs",
+    "TransferTarget",
+    "TransferTargetChangedEventArgs",
+    "TransferTargetDiscoveryOptions",
+    "TransferTargetInvokeResult",
+    "TransferTargetWatcher",
     "DataProviderHandler",
     "ShareProviderHandler",
 ]

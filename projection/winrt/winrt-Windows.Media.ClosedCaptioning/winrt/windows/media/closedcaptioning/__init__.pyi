@@ -16,6 +16,7 @@ __all__ = [
     "ClosedCaptionSize",
     "ClosedCaptionStyle",
     "ClosedCaptionProperties",
+    "ClosedCaptionTheme",
 ]
 
 class ClosedCaptionColor(enum.IntEnum):
@@ -107,4 +108,66 @@ class ClosedCaptionProperties_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class ClosedCaptionProperties(winrt.system.Object, metaclass=ClosedCaptionProperties_Static):
     ...
+
+@typing.final
+class ClosedCaptionTheme_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Media.ClosedCaptioning.ClosedCaptionTheme[] Windows.Media.ClosedCaptioning.ClosedCaptionTheme::GetAvailableThemes()
+    def get_available_themes(cls) -> winrt.system.Array[ClosedCaptionTheme]: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionTheme Windows.Media.ClosedCaptioning.ClosedCaptionTheme::GetSelectedTheme()
+    def get_selected_theme(cls) -> ClosedCaptionTheme: ...
+    # System.Boolean Windows.Media.ClosedCaptioning.ClosedCaptionTheme::TrySetSelectedTheme(Windows.Media.ClosedCaptioning.ClosedCaptionTheme)
+    def try_set_selected_theme(cls, value: ClosedCaptionTheme, /) -> bool: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Media.ClosedCaptioning.ClosedCaptionTheme::add_SelectedThemeChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    def add_selected_theme_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Media.ClosedCaptioning.ClosedCaptionTheme::remove_SelectedThemeChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_selected_theme_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Media.ClosedCaptioning.ClosedCaptionTheme::add_ThemesChanged(Windows.Foundation.EventHandler`1<System.Object>)
+    def add_themes_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Media.ClosedCaptioning.ClosedCaptionTheme::remove_ThemesChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_themes_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+
+@typing.final
+class ClosedCaptionTheme(winrt.system.Object, metaclass=ClosedCaptionTheme_Static):
+    # Windows.Media.ClosedCaptioning.ClosedCaptionColor Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_BackgroundColor()
+    @_property
+    def background_color(self) -> ClosedCaptionColor: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionOpacity Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_BackgroundOpacity()
+    @_property
+    def background_opacity(self) -> ClosedCaptionOpacity: ...
+    # Windows.UI.Color Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_ComputedBackgroundColor()
+    @_property
+    def computed_background_color(self) -> windows_ui.Color: ...
+    # Windows.UI.Color Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_ComputedFontColor()
+    @_property
+    def computed_font_color(self) -> windows_ui.Color: ...
+    # Windows.UI.Color Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_ComputedRegionColor()
+    @_property
+    def computed_region_color(self) -> windows_ui.Color: ...
+    # System.String Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_DisplayName()
+    @_property
+    def display_name(self) -> str: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionColor Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_FontColor()
+    @_property
+    def font_color(self) -> ClosedCaptionColor: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionEdgeEffect Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_FontEffect()
+    @_property
+    def font_effect(self) -> ClosedCaptionEdgeEffect: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionOpacity Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_FontOpacity()
+    @_property
+    def font_opacity(self) -> ClosedCaptionOpacity: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionSize Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_FontSize()
+    @_property
+    def font_size(self) -> ClosedCaptionSize: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionStyle Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_FontStyle()
+    @_property
+    def font_style(self) -> ClosedCaptionStyle: ...
+    # System.String Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_Id()
+    @_property
+    def id(self) -> str: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionColor Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_RegionColor()
+    @_property
+    def region_color(self) -> ClosedCaptionColor: ...
+    # Windows.Media.ClosedCaptioning.ClosedCaptionOpacity Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_RegionOpacity()
+    @_property
+    def region_opacity(self) -> ClosedCaptionOpacity: ...
 

@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.ApplicationModel.Contacts.Provider
 
 enum Windows.ApplicationModel.Contacts.Provider.AddContactResult python_type
@@ -9,6 +9,17 @@ enum Windows.ApplicationModel.Contacts.Provider.AddContactResult python_type
     constant ADDED 0
     constant ALREADY_ADDED 1
     constant UNAVAILABLE 2
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Contact]
+    guid a1d09bee-c181-5419-bd14-8223b95f29a1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Contacts.Contact
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI python_type
     py ContactPickerUI
@@ -56,11 +67,52 @@ class Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs python_
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs shape=4 reverse=22
             out string return
 
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Contact]
+    guid 857db963-f62c-53c4-a3a0-f6bf0c8fd3d3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.ApplicationModel.Contacts.Contact
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+
 interface Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
     guid e2cc1366-cf66-43c4-a96a-a5a112db4746
 
 interface Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2
     guid 6e449e28-7b25-4999-9b0b-875400a1e8c8
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactProvider python_type
+    py _IContactProvider
+    guid c44bb54b-732f-5004-8cd7-65d90cf25f42
+    signature {c44bb54b-732f-5004-8cd7-65d90cf25f42}
+    property contact_list_id
+        get get_ContactListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactProvider shape=4 reverse=43
+            out string return
+    method get_contact_from_remote_id_async
+        method GetContactFromRemoteIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactProvider shape=51 reverse=24
+            in string name=contactRemoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
 
 interface Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
     guid 6f354338-3302-4d13-ad8d-adcc0ff9e47c
@@ -257,8 +309,26 @@ enum Windows.ApplicationModel.Contacts.ContactFieldType external
 enum Windows.ApplicationModel.Contacts.ContactSelectionMode external
     py winrt.windows.applicationmodel.contacts.ContactSelectionMode
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
 struct Windows.Foundation.EventRegistrationToken external
     py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

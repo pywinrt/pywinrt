@@ -172,7 +172,7 @@
   against the codes in `winrt.system.hresult` directly.
 - BREAKING: A package is now versioned by the metadata it projects instead of
   by the version of the generator that read that metadata.
-  `winrt-Windows.Storage` is `4!10.0.26100.4188`, the version of the
+  `winrt-Windows.Storage` is `4!10.0.28000.2705`, the version of the
   `Microsoft.Windows.SDK.CPP` NuGet package its winmd files come from, and the
   WinUI 2, Windows App SDK and WebView2 packages are likewise numbered by their
   own upstream. Each package's README names which NuGet package and version
@@ -219,6 +219,15 @@
   such as `winui3-Microsoft.UI.Xaml` and `winui3-Microsoft.UI.Xaml.Controls`,
   are still pinned to each other, because they are generated and released
   together.
+- Updated Windows SDK to 10.0.28000.2705. Seven namespaces are new and have a
+  package each: `Windows.AI.Agents.Mcp`, `Windows.ApplicationModel.Preview`,
+  `Windows.Management.Update.Cluster`, `Windows.System.Power.Thermal`,
+  `Windows.UI.Input.Preview.Text`, `Windows.UI.Shell.CompanionWindows` and
+  `Windows.UI.Shell.Tasks`.
+- REMOVED: `winrt-Windows.AI.ModelContextProtocol`. The SDK no longer has that
+  namespace. `Windows.AI.Agents.Mcp` covers Model Context Protocol in this
+  release, but it is not the same API: the classes for enumerating and
+  describing servers are gone and what is there now filters messages.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a
