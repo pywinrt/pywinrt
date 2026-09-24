@@ -1,0 +1,22 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "table_format": {
+        "major": 4,
+        "minor": 0
+    },
+    "namespaces": [
+        "Microsoft.Windows.Widgets",
+        "Microsoft.Windows.Widgets.Feeds.Providers",
+        "Microsoft.Windows.Widgets.Notifications",
+        "Microsoft.Windows.Widgets.Providers"
+    ],
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Storage.Streams"
+    ]
+}

@@ -5,9 +5,10 @@ using Mono.Cecil;
 
 static class FileWriters
 {
-    internal static void WriteNamespaceFiles(
+    internal static NamespaceDependencies? WriteNamespaceFiles(
         DirectoryInfo outputPath,
         QualifiedNamespace ns,
+        string distribution,
         Func<NamespaceNullabilityInfo> getNullabilityInfo,
         IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
@@ -15,7 +16,7 @@ static class FileWriters
         Census census
     )
     {
-        var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
+        var nsPackageName = $"{ns.PyPackage}-{distribution}";
         var nsPackageDir = new DirectoryInfo(Path.Combine(outputPath.FullName, nsPackageName));
         var rootDir = new DirectoryInfo(Path.Combine(nsPackageDir.FullName, ns.PyPackageModule));
         var nsDir = rootDir;
@@ -37,7 +38,7 @@ static class FileWriters
                 .Any()
         )
         {
-            return;
+            return null;
         }
 
         // NB: this may block until the nullability info has been loaded, so
@@ -78,27 +79,59 @@ static class FileWriters
                     componentDlls
                 ),
             () => WriteNamespacePyi(nsDir, ns, nullabilityMap, packageMap, members),
-            () => WriteDepsJson(nsPackageDir, packageMap, members),
             () => TableWriter.Write(nsDir, ns, packageMap, members, census)
+        );
+
+        // Several namespaces may be published in one distribution, so what
+        // each of them depends on is handed back and written once the whole
+        // run is done rather than into a file they would race for.
+        return new NamespaceDependencies(
+            ns.Namespace,
+            members.GetRequiredNamespaces(packageMap),
+            members.GetReferencedNamespaces(packageMap, includeDelegates: true)
         );
     }
 
-    private static void WriteDepsJson(
-        DirectoryInfo nsPackageDir,
-        IReadOnlyDictionary<string, string> packageMap,
-        Members members
+    /// <summary>
+    /// Writes the deps.json of one distribution.
+    /// </summary>
+    /// <remarks>
+    /// It names the namespaces the distribution provides and the other
+    /// distributions its types hand back, rather than namespaces, because a
+    /// distribution is what the packaging script turns into a requirement.
+    /// What the distribution provides itself is left out of both lists.
+    /// </remarks>
+    internal static void WriteDepsJson(
+        DirectoryInfo packageDir,
+        IReadOnlyCollection<string> namespaces,
+        IReadOnlyCollection<string> required,
+        IReadOnlyCollection<string> referenced
     )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
 
+        void writeList(string name, IReadOnlyCollection<string> items, string end)
+        {
+            w.WriteLine($"\"{name}\": [");
+            w.Indent++;
+
+            foreach (var (item, isLast) in items.Select((n, i) => (n, i == items.Count - 1)))
+            {
+                w.WriteLine($"\"{item}\"{(isLast ? "" : ",")}");
+            }
+
+            w.Indent--;
+            w.WriteLine($"]{end}");
+        }
+
         w.WriteBlock(() =>
         {
             w.Write("\"pywinrt\": ");
             w.WriteBlock(() => w.WriteLine($"\"version\": \"{PyWinRT.VersionString}\""), ",");
-            // The table format the namespace's table is written to, so that
-            // packaging tooling can read the runtime requirement without
-            // reading the table. The same pair heads the table itself.
+            // The table format the tables are written to, so that packaging
+            // tooling can read the runtime requirement without reading one.
+            // The same pair heads every table itself.
             w.Write("\"table_format\": ");
             w.WriteBlock(
                 () =>
@@ -108,38 +141,12 @@ static class FileWriters
                 },
                 ","
             );
-            w.WriteLine("\"required\": [");
-            w.Indent++;
-            var requiredNamespaces = members.GetRequiredNamespaces(packageMap);
-            foreach (
-                var (ns, isLast) in requiredNamespaces.Select(
-                    (n, i) => (n, i == requiredNamespaces.Count - 1)
-                )
-            )
-            {
-                w.WriteLine($"\"{ns.PyPackage}-{ns.Namespace}\"{(isLast ? "" : ",")}");
-            }
-            w.Indent--;
-            w.WriteLine("],");
-            w.WriteLine("\"referenced\": [");
-            w.Indent++;
-            var referencedNamespaces = members.GetReferencedNamespaces(
-                packageMap,
-                includeDelegates: true
-            );
-            foreach (
-                var (ns, isLast) in referencedNamespaces.Select(
-                    (n, i) => (n, i == referencedNamespaces.Count - 1)
-                )
-            )
-            {
-                w.WriteLine($"\"{ns.PyPackage}-{ns.Namespace}\"{(isLast ? "" : ",")}");
-            }
-            w.Indent--;
-            w.WriteLine("]");
+            writeList("namespaces", namespaces, ",");
+            writeList("required", required, ",");
+            writeList("referenced", referenced, "");
         });
 
-        sw.WriteFileIfChanged(nsPackageDir, "deps.json");
+        sw.WriteFileIfChanged(packageDir, "deps.json");
     }
 
     /// <summary>

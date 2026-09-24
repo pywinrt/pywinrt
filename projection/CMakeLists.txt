@@ -358,9 +358,11 @@ else()
         "winrt/winrt-Windows.UI.WindowManagement"
         "winrt/winrt-Windows.UI.Xaml.Hosting"
     )
+    # The App SDK is published one distribution per NuGet component, so the
+    # two namespaces the tests use bring their components with them.
     set(winui3_packages
-        "winui3/winui3-Microsoft.UI"
-        "winui3/winui3-Microsoft.Windows.AppNotifications"
+        "winui3/winui3-Microsoft.WindowsAppSDK.InteractiveExperiences"
+        "winui3/winui3-Microsoft.WindowsAppSDK.Foundation"
     )
 endif()
 

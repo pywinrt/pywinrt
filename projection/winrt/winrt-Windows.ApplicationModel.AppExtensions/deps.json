@@ -6,6 +6,9 @@
         "major": 4,
         "minor": 0
     },
+    "namespaces": [
+        "Windows.ApplicationModel.AppExtensions"
+    ],
     "required": [
     ],
     "referenced": [

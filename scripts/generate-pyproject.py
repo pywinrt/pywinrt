@@ -341,12 +341,12 @@ README_TEMPLATE = """\
 """
 
 BINARY_README_TEMPLATE = """\
-{important}Windows Runtime (WinRT) APIs for the `{namespace}` namespace.
+{important}Windows Runtime (WinRT) APIs for {namespaces}.
 
-This package provides the `{module_name}` module.
+{provides}
 
 The WinRT APIs in it are those of version {nuget_version} of the
-`{nuget_package}` NuGet package.
+`{nuget_package}` NuGet package.{component}
 """
 
 TABLE_README = """\
@@ -388,6 +388,12 @@ HUBS = frozenset(
 # come from the upstream each family tracks and from the hand-maintained
 # runtime/version.txt, and nothing generated carries the generator's own
 # version any more.
+# Every version in .config/_tools.json, so that a distribution named after a
+# NuGet package can say which one its metadata came from. That is the Windows
+# App SDK components: the family is versioned by the metapackage, which says
+# nothing about which component a given namespace was generated from.
+NUGET_PACKAGE_VERSIONS = json.loads(versions.TOOLS_JSON_PATH.read_text())
+
 RUNTIME_REQUIREMENT = versions.runtime_requirement()
 TABLE_COMPILER_REQUIREMENT = versions.table_compiler_requirement()
 RUNTIME_VERSION = versions.runtime_version()
@@ -427,8 +433,9 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
     # only converts to IInspectable
     "winrt-Windows.UI.Xaml.Hosting.Interop": [],
     "winui3-Microsoft.UI.Interop": [
-        # converts the WindowId, DisplayId and IconId structs
-        "winui3-Microsoft.UI",
+        # converts the WindowId, DisplayId and IconId structs, which the
+        # InteractiveExperiences component owns
+        "winui3-Microsoft.WindowsAppSDK.InteractiveExperiences",
     ],
     # only calls the bootstrapper, which has no projected types
     "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
@@ -580,9 +587,11 @@ def format_dependencies(requirements: list[str]) -> str:
 def write_readme(
     package_path: Path,
     package_name: str,
-    module_name: str,
+    namespaces: list[str],
+    module_names: list[str],
     nuget_package: str,
     nuget_version: str,
+    component: str | None = None,
 ) -> None:
     """
     Writes the README that PyPI shows for one package.
@@ -590,7 +599,9 @@ def write_readme(
     It names the NuGet package the family was generated from and the version
     of it, because that is what a reader who wants to know which APIs are in
     here has to look up, and the only other place it appears is folded into
-    the package's own version.
+    the package's own version. A package that carries more than one namespace
+    lists them, since its own name is then the distribution they are published
+    in rather than any one of them.
     """
     with open_if_changed(package_path / "README.md") as f:
         f.write(README_TEMPLATE.format(package_name=package_name))
@@ -602,10 +613,28 @@ def write_readme(
                     if is_windows_app_package(package_name)
                     else ""
                 ),
-                namespace=package_name.removeprefix("winrt-"),
-                module_name=module_name,
+                namespaces=(
+                    f"the `{namespaces[0]}` namespace"
+                    if len(namespaces) == 1
+                    else f"{len(namespaces)} namespaces"
+                ),
+                provides=(
+                    f"This package provides the `{module_names[0]}` module."
+                    if len(module_names) == 1
+                    else "This package provides the following modules:"
+                    + "\n"
+                    + "".join("\n" + f"- `{module}`" for module in module_names)
+                ),
                 nuget_package=nuget_package,
                 nuget_version=nuget_version,
+                component=(
+                    "\n\n"
+                    + f"Its metadata comes from the `{component}` component,"
+                    + "\n"
+                    + f"version {NUGET_PACKAGE_VERSIONS[component]}."
+                    if component is not None
+                    else ""
+                ),
             )
         )
 
@@ -733,22 +762,26 @@ def write_compiled_project_files(
 
 def write_projection_project_files(
     package_path: Path,
-    module_name: str,
+    namespaces: list[str],
+    module_names: list[str],
     version: str,
     dependencies: list[str],
     optional_dependencies: list[str],
     nuget_package: str,
     nuget_version: str,
+    component: str | None,
 ) -> None:
     """
-    Writes the packaging of one namespace's projection package.
+    Writes the packaging of one projection package.
 
     Everything in one is data, so the wheel is py3-none-any and the metadata
     is static: the version and the requirements are written here rather than
-    read back out of files at build time.
+    read back out of files at build time. A package carries the namespaces
+    that are published together, which is one of them for the Windows SDK and
+    a NuGet component's worth for the Windows App SDK.
     """
     package_name = package_path.name
-    root_dir = module_name.split(".")[0]
+    root_dir = module_names[0].split(".")[0]
 
     with open_if_changed(package_path / "pyproject.toml") as f:
         f.write(
@@ -769,10 +802,20 @@ def write_projection_project_files(
             )
         )
 
-    with open_if_changed(package_path / Path(*module_name.split(".")) / "py.typed"):
-        pass
+    # one per namespace: each is a package of its own to a type checker
+    for module_name in module_names:
+        with open_if_changed(package_path / Path(*module_name.split(".")) / "py.typed"):
+            pass
 
-    write_readme(package_path, package_name, module_name, nuget_package, nuget_version)
+    write_readme(
+        package_path,
+        package_name,
+        namespaces,
+        module_names,
+        nuget_package,
+        nuget_version,
+        component,
+    )
 
     # what a compiled projection package used to carry
     remove_if_present(package_path / "setup.py")
@@ -819,17 +862,37 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
     package_name = package_path.name
     family = package_families[package_name]
     root_package = package_name[: package_name.rindex("-")]
-    namespace = package_name.removeprefix(f"{root_package}-")
-    module_name = (
-        f"{root_package.replace('-', '_')}.{winrt_ns_to_py_package(namespace)}"
-    )
+
+    # Which namespaces a package carries is what the generator decided when it
+    # grouped them, so it is read rather than taken from the package's name:
+    # the name of a Windows App SDK component's package is the component and
+    # not any one of the namespaces in it.
+    distribution = package_name.removeprefix(f"{root_package}-")
+    namespaces = deps["namespaces"]
+    module_names = [
+        f"{root_package.replace('-', '_')}.{winrt_ns_to_py_package(ns)}"
+        for ns in namespaces
+    ]
 
     required = set(deps["required"])
     referenced = set(deps["referenced"])
+    component = distribution if distribution in NUGET_PACKAGE_VERSIONS else None
+
+    # A family published as NuGet components is released as a set - Microsoft's
+    # own build refuses a project that mixes versions of them - so a component
+    # depends outright on the others it hands types back from, rather than
+    # offering them in the [all] extra. That also carries a namespace that
+    # moves between components across releases: the whole set moves in one
+    # resolver transaction, so the new owner is never installed beside the old.
+    same_family = (
+        {dep for dep in referenced if package_families[dep] == family}
+        if component
+        else set()
+    )
 
     dependencies = [RUNTIME_REQUIREMENT]
 
-    for dep in sorted(required | (HUBS & referenced)):
+    for dep in sorted(required | same_family | (HUBS & referenced)):
         dep_version = FAMILY_VERSIONS[package_families[dep]]
 
         if dep in HUBS:
@@ -855,12 +918,14 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 
     write_projection_project_files(
         package_path,
-        module_name,
+        namespaces,
+        module_names,
         FAMILY_VERSIONS[family],
         dependencies,
         optional_dependencies,
         versions.NUGET_PACKAGES[family],
         NUGET_VERSIONS[family],
+        component,
     )
 
 # create requirements.txt for the hand-written interop projects
@@ -966,7 +1031,8 @@ for package_path in chain(
     write_readme(
         package_path,
         package_name,
-        module_name,
+        [namespace],
+        [module_name],
         versions.NUGET_PACKAGES[family],
         NUGET_VERSIONS[family],
     )

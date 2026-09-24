@@ -243,12 +243,25 @@
   from 69 packages to 78. Everything in it is now versioned `4!2.5.1`, the
   version of the `Microsoft.WindowsAppSDK` metapackage, which is the version
   Microsoft's own release notes and runtime installer speak.
-- The Windows App SDK is projected from its component packages -
-  `Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`, `.WinUI`,
-  `.Widgets`, `.AI`, `.Search` and `Microsoft.Windows.AI.MachineLearning` -
-  rather than from the metapackage, which has carried no metadata since 2.0.
-  This is not visible in a wheel; it is what lets a release be projected at
-  all.
+- BREAKING: The Windows App SDK is published as one package per NuGet
+  component instead of one per namespace, so its 78 packages become 7:
+  `winui3-Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`,
+  `.WinUI`, `.Widgets`, `.AI`, `.Search`, and
+  `winui3-Microsoft.Windows.AI.MachineLearning`. A package now carries every
+  namespace its component owns - `.WinUI` has all 25 `Microsoft.UI.Xaml.*`
+  modules and `Microsoft.UI.Text` - and its README lists them and names the
+  component and version its metadata came from. The module names are
+  unchanged, so `from winui3.microsoft.ui.xaml import Application` still
+  works; what changes is which package to install to get it. The whole family
+  is 1.2 MB of wheels, and a package that hands back a type from another
+  component of the same release requires it outright, since Microsoft's own
+  build refuses a project that mixes component versions.
+- The Windows App SDK is projected from its component packages rather than
+  from the metapackage, which has carried no metadata since 2.0. That is what
+  lets a release be projected at all, and it is also what decides the
+  packages above: a namespace is published in the component that defines it,
+  and one that several components contribute to would be published on its own
+  instead. In this release none is.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a

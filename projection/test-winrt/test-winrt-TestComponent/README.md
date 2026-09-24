@@ -2,7 +2,7 @@
 
 # test-winrt-TestComponent
 
-Windows Runtime (WinRT) APIs for the `test-winrt-TestComponent` namespace.
+Windows Runtime (WinRT) APIs for the `TestComponent` namespace.
 
 This package provides the `test_winrt.testcomponent` module.
 
