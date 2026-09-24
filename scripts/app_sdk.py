@@ -61,14 +61,28 @@ def component_path(package: str) -> Path:
     return TOOLS_PATH / f"{package}.{component_version(package)}"
 
 
+def metadata_inputs() -> list[tuple[str, Path]]:
+    """
+    The distribution each component's namespaces are published in, and the
+    winmd directory they are read from.
+
+    A component is one NuGet package and one release of it, so it is also what
+    a namespace from it is published in: winrt-Microsoft.WindowsAppSDK.WinUI
+    carries every namespace the WinUI component owns. Naming the distribution
+    after the package it came from is what makes the two line up.
+    """
+    return [
+        (package, component_path(package) / metadata)
+        for package, metadata in COMPONENTS.items()
+    ]
+
+
 def metadata_paths() -> list[Path]:
     """
     The winmd directory of every component that has one, in the order
     COMPONENTS lists them.
     """
-    return [
-        component_path(package) / metadata for package, metadata in COMPONENTS.items()
-    ]
+    return [path for _, path in metadata_inputs()]
 
 
 def fetch_version_header() -> Path:

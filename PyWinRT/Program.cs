@@ -7,7 +7,7 @@ using System.CommandLine.Parsing;
 using System.Diagnostics;
 using Mono.Cecil;
 
-var inputOption = new Option<(string, string)[]>(
+var inputOption = new Option<InputSpec[]>(
     "--input",
     CommandReader.ParseSpec,
     default,
@@ -18,7 +18,7 @@ var inputOption = new Option<(string, string)[]>(
     ArgumentHelpName = "spec",
 };
 
-var referenceOption = new Option<(string, string)[]>(
+var referenceOption = new Option<InputSpec[]>(
     "--reference",
     CommandReader.ParseSpec,
     default,
@@ -115,6 +115,11 @@ rootCommand.SetHandler(
         var types = new List<TypeDefinition>();
         var packageMap = new Dictionary<string, string>();
 
+        // Which distribution the namespaces of each metadata file are
+        // published in, when the input says so. Keyed like packageMap, by the
+        // name of the module the types come from.
+        var distributionMap = new Dictionary<string, string>();
+
         var input = invocationContext.ParseResult.GetValueForOption(inputOption)!;
         var reference = invocationContext.ParseResult.GetValueForOption(referenceOption)!;
         var output = invocationContext.ParseResult.GetValueForOption(outputOption)!;
@@ -150,7 +155,7 @@ rootCommand.SetHandler(
             .AsOrdered()
             .Select(spec =>
                 AssemblyDefinition.ReadAssembly(
-                    spec.Item1,
+                    spec.File,
                     new ReaderParameters { MetadataResolver = resolver }
                 )
             )
@@ -161,25 +166,32 @@ rootCommand.SetHandler(
             .AsOrdered()
             .Select(spec =>
                 AssemblyDefinition.ReadAssembly(
-                    spec.Item1,
+                    spec.File,
                     new ReaderParameters { MetadataResolver = resolver }
                 )
             )
             .ToList();
 
-        foreach (var ((file, package), assembly) in input.Zip(inputAssemblies))
+        foreach (var (spec, assembly) in input.Zip(inputAssemblies))
         {
             if (inputPackage is null)
             {
-                inputPackage = package;
+                inputPackage = spec.Package;
             }
-            else if (inputPackage != package)
+            else if (inputPackage != spec.Package)
             {
                 throw new Exception("All input packages must be the same python package");
             }
 
             resolver.Register(assembly);
-            packageMap.Add(assembly.Modules.Single().Name, package);
+
+            var module = assembly.Modules.Single().Name;
+            packageMap.Add(module, spec.Package);
+
+            if (spec.Distribution is not null)
+            {
+                distributionMap.Add(module, spec.Distribution);
+            }
         }
 
         if (inputPackage is null)
@@ -187,15 +199,16 @@ rootCommand.SetHandler(
             throw new Exception("At least one input package is required");
         }
 
-        foreach (var ((file, package), assembly) in reference.Zip(referenceAssemblies))
+        foreach (var (spec, assembly) in reference.Zip(referenceAssemblies))
         {
             resolver.Register(assembly);
-            packageMap.Add(assembly.Modules.Single().Name, package);
+            packageMap.Add(assembly.Modules.Single().Name, spec.Package);
 
-            if (package == inputPackage)
+            if (spec.Package == inputPackage)
             {
                 throw new Exception(
-                    $"Reference package ({package}) must not match input package for {file}"
+                    $"Reference package ({spec.Package}) must not match input package"
+                        + $" for {spec.File}"
                 );
             }
         }
@@ -288,7 +301,7 @@ rootCommand.SetHandler(
         var censusTime = stopwatch.Elapsed;
         stopwatch.Restart();
 
-        var tasks = new List<Task>();
+        var tasks = new List<Task<NamespaceDependencies?>>();
 
         foreach (var assembly in inputAssemblies)
         {
@@ -325,6 +338,46 @@ rootCommand.SetHandler(
             Console.WriteLine($"Filtered types in {filterTime.TotalMilliseconds:F0} ms");
         }
 
+        // Which distribution each namespace is published in. A namespace whose
+        // types all come from metadata of one distribution belongs to it; one
+        // that several contribute to is published on its own instead, and each
+        // of them depends on it. That rule is what keeps a namespace from
+        // being owned by two distributions at once, and it needs no list to
+        // maintain: the metadata says which case a namespace is in.
+        var distributions = new Dictionary<QualifiedNamespace, string>();
+
+        foreach (
+            var group in types.GroupBy(t => t.Namespace).OrderBy(g => g.Key, StringComparer.Ordinal)
+        )
+        {
+            var ns = new QualifiedNamespace(inputPackage, group.Key);
+            var owners = group
+                .Select(t => distributionMap.GetValueOrDefault(t.Module.Name))
+                .Distinct(StringComparer.Ordinal)
+                .ToList();
+
+            if (owners is [string only])
+            {
+                distributions[ns] = only;
+                continue;
+            }
+
+            // Either the input says nothing about distributions, in which case
+            // every namespace is published on its own, or it does and this one
+            // is contributed by more than one. Saying so matters: it is a
+            // layout the packaging has to cope with rather than notice.
+            distributions[ns] = group.Key;
+
+            if (distributionMap.Count > 0)
+            {
+                Console.WriteLine(
+                    $"note: {group.Key} is contributed by "
+                        + string.Join(", ", owners.Select(o => o ?? "no distribution"))
+                        + ", so it is published on its own"
+                );
+            }
+        }
+
         var namespaceTimes = new ConcurrentBag<(string Namespace, TimeSpan Elapsed)>();
 
         // Generation is pipelined: the metadata for each namespace is
@@ -358,9 +411,10 @@ rootCommand.SetHandler(
                 {
                     var nsStopwatch = Stopwatch.StartNew();
 
-                    FileWriters.WriteNamespaceFiles(
+                    var dependencies = FileWriters.WriteNamespaceFiles(
                         output,
                         new QualifiedNamespace(inputPackage, groupNamespace),
+                        distributions[new QualifiedNamespace(inputPackage, groupNamespace)],
                         () => nullabilityFileTask.Result.GetOrAdd(groupNamespace),
                         packageMap,
                         group,
@@ -369,6 +423,8 @@ rootCommand.SetHandler(
                     );
 
                     namespaceTimes.Add((groupNamespace, nsStopwatch.Elapsed));
+
+                    return dependencies;
                 })
             );
         }
@@ -377,6 +433,77 @@ rootCommand.SetHandler(
         Thread.CurrentThread.Priority = priority;
 
         await Task.WhenAll(tasks);
+
+        // One deps.json per distribution, now that every namespace in it has
+        // been generated. What a package says about another package is said
+        // in distributions, so the namespaces this one provides drop out of
+        // both lists rather than becoming a requirement on itself.
+        var written = new HashSet<string>(StringComparer.Ordinal);
+
+        string distributionOf(QualifiedNamespace ns) =>
+            $"{ns.PyPackage}-{distributions.GetValueOrDefault(ns, ns.Namespace)}";
+
+        foreach (
+            var distribution in tasks
+                .Select(t => t.Result)
+                .OfType<NamespaceDependencies>()
+                .GroupBy(d => distributions[new QualifiedNamespace(inputPackage, d.Namespace)])
+        )
+        {
+            var name = $"{inputPackage}-{distribution.Key}";
+            var provided = distribution.Select(d => d.Namespace).ToHashSet(StringComparer.Ordinal);
+
+            SortedSet<string> names(Func<NamespaceDependencies, IEnumerable<QualifiedNamespace>> of)
+            {
+                var result = new SortedSet<string>(StringComparer.Ordinal);
+
+                foreach (var ns in distribution.SelectMany(of))
+                {
+                    if (ns.PyPackage == inputPackage && provided.Contains(ns.Namespace))
+                    {
+                        continue;
+                    }
+
+                    result.Add(distributionOf(ns));
+                }
+
+                return result;
+            }
+
+            FileWriters.WriteDepsJson(
+                new DirectoryInfo(Path.Combine(output.FullName, name)),
+                [.. provided.Order(StringComparer.Ordinal)],
+                names(d => d.Required),
+                names(d => d.Referenced)
+            );
+
+            written.Add(name);
+        }
+
+        // A namespace that upstream withdrew, or one that moved into another
+        // distribution, leaves behind a directory that nothing writes any
+        // more, and it is published from this tree until someone notices.
+        // A deps.json is what marks a directory as one of ours, and a run that
+        // was told to generate part of the projection is in no position to say
+        // what the rest of it should be.
+        if (include.Length == 0 && exclude.Length == 0 && output.Exists)
+        {
+            foreach (var dir in output.EnumerateDirectories($"{inputPackage}-*"))
+            {
+                if (written.Contains(dir.Name))
+                {
+                    continue;
+                }
+
+                if (!File.Exists(Path.Combine(dir.FullName, "deps.json")))
+                {
+                    continue;
+                }
+
+                Console.WriteLine($"note: removing {dir.Name}, which nothing generates now");
+                dir.Delete(recursive: true);
+            }
+        }
 
         var nullabilityFile = await nullabilityFileTask;
 

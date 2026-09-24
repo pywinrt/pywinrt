@@ -6,6 +6,9 @@
         "major": 4,
         "minor": 0
     },
+    "namespaces": [
+        "Windows.UI.Xaml.Data"
+    ],
     "required": [
         "winrt-Windows.UI.Xaml"
     ],

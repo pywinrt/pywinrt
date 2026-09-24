@@ -2,7 +2,7 @@
 
 # winui2-Microsoft.UI.Xaml.Media
 
-Windows Runtime (WinRT) APIs for the `winui2-Microsoft.UI.Xaml.Media` namespace.
+Windows Runtime (WinRT) APIs for the `Microsoft.UI.Xaml.Media` namespace.
 
 This package provides the `winui2.microsoft.ui.xaml.media` module.
 

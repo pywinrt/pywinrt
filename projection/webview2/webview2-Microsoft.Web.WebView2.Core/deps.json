@@ -6,6 +6,9 @@
         "major": 4,
         "minor": 0
     },
+    "namespaces": [
+        "Microsoft.Web.WebView2.Core"
+    ],
     "required": [
     ],
     "referenced": [
