@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.ApplicationModel.Activation"
-version = "4!10.0.26100.4188"
+version = "4!10.0.28000.2705"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -19,35 +19,35 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.Foundation>=4!10.0.26100.4188",
-    "winrt-Windows.Foundation.Collections>=4!10.0.26100.4188",
+    "winrt-Windows.Foundation>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.ApplicationModel.Appointments.AppointmentsProvider[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.Background[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.Calls[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.Contacts[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.Contacts.Provider[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.DataTransfer.ShareTarget[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.Search[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.UserDataAccounts.Provider[all]>=4!10.0.26100.4188",
-    "winrt-Windows.ApplicationModel.Wallet[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Devices.Enumeration[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Devices.Printers.Extensions[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Foundation[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Foundation.Collections[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Media.SpeechRecognition[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Security.Authentication.Web[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Security.Authentication.Web.Provider[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Storage[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Storage.Pickers.Provider[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Storage.Provider[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Storage.Search[all]>=4!10.0.26100.4188",
-    "winrt-Windows.System[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Notifications[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.ViewManagement[all]>=4!10.0.26100.4188",
+    "winrt-Windows.ApplicationModel.Appointments.AppointmentsProvider[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Background[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Calls[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Contacts[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Contacts.Provider[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.DataTransfer.ShareTarget[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Search[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.UserDataAccounts.Provider[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Wallet[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Devices.Enumeration[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Devices.Printers.Extensions[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Media.SpeechRecognition[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Security.Authentication.Web[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Security.Authentication.Web.Provider[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Pickers.Provider[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Provider[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Search[all]>=4!10.0.28000.2705",
+    "winrt-Windows.System[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Notifications[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.ViewManagement[all]>=4!10.0.28000.2705",
 ]
 
 [project.urls]

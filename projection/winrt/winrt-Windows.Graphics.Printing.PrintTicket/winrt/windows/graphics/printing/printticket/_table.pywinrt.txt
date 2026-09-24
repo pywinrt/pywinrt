@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Graphics.Printing.PrintTicket
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult> concrete
@@ -121,6 +121,9 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing.P
 
 interface Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket
     guid 41d52285-35e8-448e-a8c5-e4b6a2cf826c
+
+interface Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketFactory
+    guid 966d1166-d9c7-569e-b7d8-f2b341c8f976
 
 interface Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult
     guid 0ad1f392-da7b-4a36-bf36-6a99a62e2059
@@ -355,6 +358,12 @@ class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket python_type
     signature rc(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket;{41d52285-35e8-448e-a8c5-e4b6a2cf826c})
     default Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket
     requires Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket
+    factory Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketFactory shape=117 reverse=25
+            in string name=printerName
+            in interface type=Windows.Storage.Streams.IInputStream name=printTicketStream
+            out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
     property document_binding_feature
         get get_DocumentBindingFeature slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=121
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
@@ -494,3 +503,7 @@ interface Windows.Foundation.Collections.IIterator external parameterized
 interface Windows.Foundation.Collections.IVectorView external parameterized
     py winrt.windows.foundation.collections._IVectorView
     guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+interface Windows.Storage.Streams.IInputStream external
+    py winrt.windows.storage.streams._IInputStream
+    guid 905a0fe2-bc53-11df-8c49-001e4fc686da

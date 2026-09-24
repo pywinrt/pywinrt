@@ -6,6 +6,7 @@ import enum
 import types
 import typing
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -28,6 +29,7 @@ __all__ = [
     "GraphicsCaptureItem",
     "GraphicsCapturePicker",
     "GraphicsCaptureSession",
+    "IDisplayGraphicsCaptureSession",
 ]
 
 class GraphicsCaptureAccessKind(enum.IntEnum):
@@ -59,6 +61,9 @@ class Direct3D11CaptureFrame(winrt.system.Object, windows_foundation.IClosable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.RectInt32> Windows.Graphics.Capture.Direct3D11CaptureFrame::get_DirtyRegions()
     @_property
     def dirty_regions(self) -> _cabc.Sequence[windows_graphics.RectInt32]: ...
+    # System.UInt64 Windows.Graphics.Capture.Direct3D11CaptureFrame::get_ConfigurationIteration()
+    @_property
+    def configuration_iteration(self) -> winrt.system.UInt64: ...
 
 @typing.final
 class Direct3D11CaptureFramePool_Static(winrt._winrt.IInspectable_Static):
@@ -167,4 +172,18 @@ class GraphicsCaptureSession(winrt.system.Object, windows_foundation.IClosable, 
     # System.Void Windows.Graphics.Capture.GraphicsCaptureSession::put_IncludeSecondaryWindows(System.Boolean)
     @include_secondary_windows.setter
     def include_secondary_windows(self, value: bool) -> None: ...
+    # System.UInt64 Windows.Graphics.Capture.GraphicsCaptureSession::get_ConfigurationIteration()
+    @_property
+    def configuration_iteration(self) -> winrt.system.UInt64: ...
+
+@typing.final
+class _IDisplayGraphicsCaptureSession: ...
+
+class IDisplayGraphicsCaptureSession(winrt._winrt.IInspectable):
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowId> Windows.Graphics.Capture.IDisplayGraphicsCaptureSession::GetWindowExclusionList()
+    @abstractmethod
+    def get_window_exclusion_list(self) -> _cabc.Sequence[windows_ui.WindowId]: ...
+    # System.UInt64 Windows.Graphics.Capture.IDisplayGraphicsCaptureSession::SetWindowExclusionList(Windows.Foundation.Collections.IIterable`1<Windows.UI.WindowId>)
+    @abstractmethod
+    def set_window_exclusion_list(self, excluded_windows: _cabc.Iterable[windows_ui.WindowId], /) -> winrt.system.UInt64: ...
 

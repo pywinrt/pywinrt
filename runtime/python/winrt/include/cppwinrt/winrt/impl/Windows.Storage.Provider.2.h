@@ -136,6 +136,17 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
         StorageProviderStatusUI(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderStatusUI(ptr, take_ownership_from_abi) {}
         StorageProviderStatusUI();
     };
+    struct WINRT_IMPL_EMPTY_BASES StorageProviderSuggestionResult : winrt::Windows::Storage::Provider::IStorageProviderQueryResult
+    {
+        StorageProviderSuggestionResult(std::nullptr_t) noexcept {}
+        StorageProviderSuggestionResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderQueryResult(ptr, take_ownership_from_abi) {}
+        StorageProviderSuggestionResult();
+    };
+    struct WINRT_IMPL_EMPTY_BASES StorageProviderSuggestionsQueryOptions : winrt::Windows::Storage::Provider::IStorageProviderSuggestionsQueryOptions
+    {
+        StorageProviderSuggestionsQueryOptions(std::nullptr_t) noexcept {}
+        StorageProviderSuggestionsQueryOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderSuggestionsQueryOptions(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES StorageProviderSyncRootInfo : winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo,
         impl::require<StorageProviderSyncRootInfo, winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo2, winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo3>
     {

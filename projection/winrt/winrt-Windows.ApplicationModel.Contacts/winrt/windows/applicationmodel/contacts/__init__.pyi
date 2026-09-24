@@ -112,6 +112,7 @@ class ContactAnnotationOperations(enum.IntFlag):
     VIDEO_CALL = 0x8
     SOCIAL_FEEDS = 0x10
     SHARE = 0x20
+    ACTIVITY = 0x40
 
 class ContactAnnotationStoreAccessType(enum.IntEnum):
     APP_ANNOTATIONS_READ_WRITE = 0

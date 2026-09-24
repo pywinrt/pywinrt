@@ -11,6 +11,7 @@
     "referenced": [
         "winrt-Windows.AI.Actions",
         "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
         "winrt-Windows.UI"
     ]
 }

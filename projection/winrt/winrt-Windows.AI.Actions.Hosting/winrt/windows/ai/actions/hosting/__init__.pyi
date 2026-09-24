@@ -9,6 +9,7 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.ai.actions as windows_ai_actions
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.ui as windows_ui
 
 __all__ = [
@@ -26,6 +27,8 @@ class ActionCatalog(winrt.system.Object, windows_foundation.IClosable):
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.Actions.Hosting.ActionCatalog::Close()
     def close(self) -> None: ...
+    # Windows.AI.Actions.Hosting.ActionDefinition[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForCurrentApp()
+    def get_actions_for_current_app(self) -> winrt.system.Array[ActionDefinition]: ...
     @typing.overload
     # Windows.AI.Actions.Hosting.ActionInstance[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForInputs(Windows.AI.Actions.ActionEntity[])
     def get_actions_for_inputs(self, input_entities: winrt.system.Array[windows_ai_actions.ActionEntity] | winrt.system.ReadableBuffer, /) -> winrt.system.Array[ActionInstance]: ...
@@ -49,6 +52,8 @@ class ActionDefinition(winrt.system.Object, windows_foundation.IClosable):
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.Actions.Hosting.ActionDefinition::Close()
     def close(self) -> None: ...
+    # System.String Windows.AI.Actions.Hosting.ActionDefinition::GetIconFullPath(Windows.Foundation.Collections.PropertySet)
+    def get_icon_full_path(self, qualifier_values: windows_foundation_collections.PropertySet, /) -> str: ...
     # Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo[] Windows.AI.Actions.Hosting.ActionDefinition::GetInputs()
     def get_inputs(self) -> winrt.system.Array[ActionEntityRegistrationInfo]: ...
     # Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo[] Windows.AI.Actions.Hosting.ActionDefinition::GetOutputs()
@@ -79,6 +84,9 @@ class ActionDefinition(winrt.system.Object, windows_foundation.IClosable):
     # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageRelativeApplicationId()
     @_property
     def package_relative_application_id(self) -> str: ...
+    # System.Boolean Windows.AI.Actions.Hosting.ActionDefinition::get_IsCurrentlyAvailable()
+    @_property
+    def is_currently_available(self) -> bool: ...
 
 @typing.final
 class ActionEntityRegistrationInfo(winrt.system.Object, windows_foundation.IClosable):

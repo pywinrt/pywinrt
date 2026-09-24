@@ -18,16 +18,22 @@ import winrt.windows.storage.streams as windows_storage_streams
 
 __all__ = [
     "IppAttributeErrorReason",
+    "IppAttributeGroupKind",
     "IppAttributeValueKind",
+    "IppPrintDeviceInstallationStatus",
     "IppPrintDeviceKind",
     "IppResolutionUnit",
     "PageConfigurationSource",
+    "ReplaceDevicePropertiesStatus",
     "VirtualPrinterInstallationStatus",
     "VirtualPrinterPreferredInputFormat",
+    "IppAttributeConverter",
     "IppAttributeError",
     "IppAttributeValue",
     "IppIntegerRange",
     "IppPrintDevice",
+    "IppPrintDeviceInstallationResult",
+    "IppPrintDeviceManager",
     "IppResolution",
     "IppSetAttributesResult",
     "IppTextWithLanguage",
@@ -36,6 +42,7 @@ __all__ = [
     "PdlPassthroughTarget",
     "Print3DDevice",
     "PrintSchema",
+    "ReplaceDevicePropertiesResult",
     "VirtualPrinterInstallationParameters",
     "VirtualPrinterInstallationResult",
     "VirtualPrinterManager",
@@ -48,6 +55,11 @@ class IppAttributeErrorReason(enum.IntEnum):
     ATTRIBUTE_VALUES_NOT_SUPPORTED = 2
     ATTRIBUTE_NOT_SETTABLE = 3
     CONFLICTING_ATTRIBUTES = 4
+
+class IppAttributeGroupKind(enum.IntEnum):
+    PRINTER = 0
+    JOB = 1
+    OPERATION = 2
 
 class IppAttributeValueKind(enum.IntEnum):
     UNSUPPORTED = 0
@@ -72,6 +84,12 @@ class IppAttributeValueKind(enum.IntEnum):
     NATURAL_LANGUAGE = 19
     MIME_MEDIA_TYPE = 20
 
+class IppPrintDeviceInstallationStatus(enum.IntEnum):
+    INSTALLATION_SUCCEEDED = 0
+    PRINTER_ALREADY_INSTALLED = 1
+    COMMUNICATION_ERROR = 2
+    OTHER_FAILURE = 3
+
 class IppPrintDeviceKind(enum.IntEnum):
     PRINTER = 0
     FAX_OUT = 1
@@ -85,6 +103,11 @@ class PageConfigurationSource(enum.IntEnum):
     PRINT_JOB_CONFIGURATION = 0
     PDL_CONTENT = 1
 
+class ReplaceDevicePropertiesStatus(enum.IntEnum):
+    SUCCEEDED = 0
+    ACCESS_DENIED = 1
+    OTHER_FAILURE = 2
+
 class VirtualPrinterInstallationStatus(enum.IntEnum):
     INSTALLATION_SUCCEEDED = 0
     PRINTER_ALREADY_INSTALLED = 1
@@ -94,6 +117,19 @@ class VirtualPrinterInstallationStatus(enum.IntEnum):
 class VirtualPrinterPreferredInputFormat(enum.IntEnum):
     OPEN_XPS = 0
     POST_SCRIPT = 1
+
+@typing.final
+class IppAttributeConverter_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue> Windows.Devices.Printers.IppAttributeConverter::ConvertBufferToIppAttributes(Windows.Storage.Streams.IBuffer)
+    def convert_buffer_to_ipp_attributes(cls, attributes_buffer: winrt.system.Buffer, /) -> _cabc.MutableMapping[str, IppAttributeValue]: ...
+    # Windows.Storage.Streams.IBuffer Windows.Devices.Printers.IppAttributeConverter::ConvertIppAttributesToBuffer(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Devices.Printers.IppAttributeValue>>,Windows.Devices.Printers.IppAttributeGroupKind)
+    def convert_ipp_attributes_to_buffer(cls, attributes: _cabc.Mapping[str, IppAttributeValue] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, IppAttributeValue]], attribute_group_kind: IppAttributeGroupKind, /) -> winrt.system.Buffer: ...
+    # Windows.Foundation.Collections.IMap`2<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue>> Windows.Devices.Printers.IppAttributeConverter::ConvertPrintTicketToIppAttributesForPrinter(System.String,Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket,System.String)
+    def convert_print_ticket_to_ipp_attributes_for_printer(cls, printer_name: str, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, target_pdl_format: str, /) -> _cabc.MutableMapping[IppAttributeGroupKind, _cabc.MutableMapping[str, IppAttributeValue]]: ...
+
+@typing.final
+class IppAttributeConverter(winrt.system.Object, metaclass=IppAttributeConverter_Static):
+    ...
 
 @typing.final
 class IppAttributeError(winrt.system.Object):
@@ -252,6 +288,8 @@ class IppPrintDevice_Static(winrt._winrt.IInspectable_Static):
 
 @typing.final
 class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
+    # Windows.Foundation.Collections.ValueSet Windows.Devices.Printers.IppPrintDevice::GetDeviceProperties()
+    def get_device_properties(self) -> windows_foundation_collections.ValueSet: ...
     # System.UInt64 Windows.Devices.Printers.IppPrintDevice::GetMaxSupportedPdfSize()
     def get_max_supported_pdf_size(self) -> winrt.system.UInt64: ...
     # System.String Windows.Devices.Printers.IppPrintDevice::GetMaxSupportedPdfVersion()
@@ -268,6 +306,8 @@ class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
     def is_pdl_passthrough_supported(self, pdl_content_type: str, /) -> bool: ...
     # System.Void Windows.Devices.Printers.IppPrintDevice::RefreshPrintDeviceCapabilities()
     def refresh_print_device_capabilities(self) -> None: ...
+    # Windows.Devices.Printers.ReplaceDevicePropertiesResult Windows.Devices.Printers.IppPrintDevice::ReplaceDeviceProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>>)
+    def replace_device_properties(self, device_properties: _cabc.Mapping[str, winrt.system.Object] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]], /) -> ReplaceDevicePropertiesResult: ...
     # Windows.Devices.Printers.IppSetAttributesResult Windows.Devices.Printers.IppPrintDevice::SetPrinterAttributes(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Devices.Printers.IppAttributeValue>>)
     def set_printer_attributes(self, printer_attributes: _cabc.Mapping[str, IppAttributeValue] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, IppAttributeValue]], /) -> IppSetAttributesResult: ...
     # Windows.Devices.Printers.IppSetAttributesResult Windows.Devices.Printers.IppPrintDevice::SetPrinterAttributesFromBuffer(Windows.Storage.Streams.IBuffer)
@@ -293,6 +333,29 @@ class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
     # Windows.Devices.Printers.IppPrintDeviceKind Windows.Devices.Printers.IppPrintDevice::get_DeviceKind()
     @_property
     def device_kind(self) -> IppPrintDeviceKind: ...
+
+@typing.final
+class IppPrintDeviceInstallationResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Devices.Printers.IppPrintDeviceInstallationResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> windows_foundation.HResult: ...
+    # System.String Windows.Devices.Printers.IppPrintDeviceInstallationResult::get_InstalledPrinterName()
+    @_property
+    def installed_printer_name(self) -> str: ...
+    # Windows.Devices.Printers.IppPrintDeviceInstallationStatus Windows.Devices.Printers.IppPrintDeviceInstallationResult::get_Status()
+    @_property
+    def status(self) -> IppPrintDeviceInstallationStatus: ...
+
+@typing.final
+class IppPrintDeviceManager_Static(winrt._winrt.IInspectable_Static):
+    # System.Boolean Windows.Devices.Printers.IppPrintDeviceManager::CanInstallIppPrintDevice()
+    def can_install_ipp_print_device(cls) -> bool: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.IppPrintDeviceInstallationResult> Windows.Devices.Printers.IppPrintDeviceManager::InstallIppPrintDeviceAsync(Windows.Foundation.Uri,System.String)
+    def install_ipp_print_device_async(cls, printer_uri: windows_foundation.Uri, printer_name: str, /) -> windows_foundation.IAsyncOperation[IppPrintDeviceInstallationResult]: ...
+
+@typing.final
+class IppPrintDeviceManager(winrt.system.Object, metaclass=IppPrintDeviceManager_Static):
+    ...
 
 @typing.final
 class IppResolution(winrt.system.Object):
@@ -344,6 +407,8 @@ class PageConfigurationSettings(winrt.system.Object):
 
 @typing.final
 class PdlPassthroughProvider(winrt.system.Object):
+    # Windows.Devices.Printers.PdlPassthroughTarget Windows.Devices.Printers.PdlPassthroughProvider::StartPrintJobWithIppJobAttributes(System.String,System.String,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
+    def start_print_job_with_ipp_job_attributes(self, job_name: str, pdl_content_type: str, job_attributes: winrt.system.Buffer, operation_attributes: winrt.system.Buffer, /) -> PdlPassthroughTarget: ...
     # Windows.Devices.Printers.PdlPassthroughTarget Windows.Devices.Printers.PdlPassthroughProvider::StartPrintJobWithPrintTicket(System.String,System.String,Windows.Storage.Streams.IInputStream,Windows.Devices.Printers.PageConfigurationSettings)
     def start_print_job_with_print_ticket(self, job_name: str, pdl_content_type: str, print_ticket: windows_storage_streams.IInputStream, page_configuration_settings: PageConfigurationSettings, /) -> PdlPassthroughTarget: ...
     # Windows.Devices.Printers.PdlPassthroughTarget Windows.Devices.Printers.PdlPassthroughProvider::StartPrintJobWithTaskOptions(System.String,System.String,Windows.Graphics.Printing.PrintTaskOptions,Windows.Devices.Printers.PageConfigurationSettings)
@@ -351,6 +416,9 @@ class PdlPassthroughProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.PdlPassthroughProvider::get_SupportedPdlContentTypes()
     @_property
     def supported_pdl_content_types(self) -> _cabc.Sequence[str]: ...
+    # System.Boolean Windows.Devices.Printers.PdlPassthroughProvider::get_IsPassthroughWithJobAttributesSupported()
+    @_property
+    def is_passthrough_with_job_attributes_supported(self) -> bool: ...
 
 @typing.final
 class PdlPassthroughTarget(winrt.system.Object, windows_foundation.IClosable):
@@ -387,6 +455,15 @@ class PrintSchema(winrt.system.Object):
     def get_default_print_ticket_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Devices.Printers.PrintSchema::MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)
     def merge_and_validate_with_default_print_ticket_async(self, delta_ticket: windows_storage_streams.IRandomAccessStreamWithContentType, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
+
+@typing.final
+class ReplaceDevicePropertiesResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Devices.Printers.ReplaceDevicePropertiesResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Devices.Printers.ReplaceDevicePropertiesStatus Windows.Devices.Printers.ReplaceDevicePropertiesResult::get_Status()
+    @_property
+    def status(self) -> ReplaceDevicePropertiesStatus: ...
 
 @typing.final
 class VirtualPrinterInstallationParameters(winrt.system.Object):

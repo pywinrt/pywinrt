@@ -13,6 +13,7 @@
         "winrt-Windows.Foundation.Collections",
         "winrt-Windows.Security.Cryptography.Core",
         "winrt-Windows.Storage.Streams",
-        "winrt-Windows.System"
+        "winrt-Windows.System",
+        "winrt-Windows.UI"
     ]
 }

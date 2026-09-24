@@ -237,6 +237,9 @@ class RetailInfo_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.System.Profile.RetailInfo::get_Properties()
     @_property
     def properties(cls) -> _cabc.Mapping[str, winrt.system.Object]: ...
+    # System.Boolean Windows.System.Profile.RetailInfo::get_IsDemoModeEnabledEx()
+    @_property
+    def is_demo_mode_enabled_ex(cls) -> bool: ...
 
 @typing.final
 class RetailInfo(winrt.system.Object, metaclass=RetailInfo_Static):

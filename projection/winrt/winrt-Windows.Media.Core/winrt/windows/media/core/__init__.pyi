@@ -547,6 +547,9 @@ class CodecQuery(winrt.system.Object):
 
 @typing.final
 class CodecSubtypes_Static(winrt._winrt.IInspectable_Static):
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioLossless()
+    @_property
+    def audio_format_w_m_audio_lossless(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAac()
     @_property
     def audio_format_aac(cls) -> str: ...
@@ -601,9 +604,9 @@ class CodecSubtypes_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatPcm()
     @_property
     def audio_format_pcm(cls) -> str: ...
-    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioLossless()
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP43()
     @_property
-    def audio_format_w_m_audio_lossless(cls) -> str: ...
+    def video_format_m_p43(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioV8()
     @_property
     def audio_format_w_m_audio_v8(cls) -> str: ...
@@ -658,9 +661,6 @@ class CodecSubtypes_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatM4S2()
     @_property
     def video_format_m4_s2(cls) -> str: ...
-    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP43()
-    @_property
-    def video_format_m_p43(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP4S()
     @_property
     def video_format_m_p4_s(cls) -> str: ...
@@ -700,6 +700,9 @@ class CodecSubtypes_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatWvc1()
     @_property
     def video_format_wvc1(cls) -> str: ...
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatAv1()
+    @_property
+    def video_format_av1(cls) -> str: ...
 
 @typing.final
 class CodecSubtypes(winrt.system.Object, metaclass=CodecSubtypes_Static):

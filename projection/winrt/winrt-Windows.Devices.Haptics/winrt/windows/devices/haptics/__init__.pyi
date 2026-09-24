@@ -13,18 +13,78 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 
 __all__ = [
+    "HapticDeviceType",
     "VibrationAccessStatus",
+    "HapticsControllerOverrideToken",
+    "InputHapticsManager",
     "KnownSimpleHapticsControllerWaveforms",
     "SimpleHapticsController",
     "SimpleHapticsControllerFeedback",
     "VibrationDevice",
 ]
 
+class HapticDeviceType(enum.IntEnum):
+    NONE = 0
+    GENERIC = 1
+    PEN = 2
+    TOUCHPAD = 3
+    MOUSE = 4
+
 class VibrationAccessStatus(enum.IntEnum):
     ALLOWED = 0
     DENIED_BY_USER = 1
     DENIED_BY_SYSTEM = 2
     DENIED_BY_ENERGY_SAVER = 3
+
+@typing.final
+class HapticsControllerOverrideToken:
+    @_property
+    def value(self) -> winrt.system.Int64: ...
+    def __new__(cls, value: winrt.system.Int64 = 0) -> HapticsControllerOverrideToken: ...
+    def __replace__(self, /, **changes: typing.Any) -> HapticsControllerOverrideToken: ...
+
+@typing.final
+class InputHapticsManager_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Devices.Haptics.InputHapticsManager Windows.Devices.Haptics.InputHapticsManager::GetForCurrentThread()
+    def get_for_current_thread(cls) -> InputHapticsManager: ...
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::IsHapticDevicePresent()
+    def is_haptic_device_present(cls) -> bool: ...
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::IsSupported()
+    def is_supported(cls) -> bool: ...
+    # Windows.Devices.Haptics.InputHapticsManager Windows.Devices.Haptics.InputHapticsManager::TryGetForThread(System.UInt32)
+    def try_get_for_thread(cls, thread_id: winrt.system.UInt32, /) -> InputHapticsManager: ...
+
+@typing.final
+class InputHapticsManager(winrt.system.Object, metaclass=InputHapticsManager_Static):
+    # System.Void Windows.Devices.Haptics.InputHapticsManager::ClearOverrideHapticsController(Windows.Devices.Haptics.HapticsControllerOverrideToken)
+    def clear_override_haptics_controller(self, token: HapticsControllerOverrideToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Devices.Haptics.HapticsControllerOverrideToken Windows.Devices.Haptics.InputHapticsManager::SetOverrideHapticsController(Windows.Devices.Haptics.HapticDeviceType,Windows.Devices.Haptics.SimpleHapticsController)
+    def set_override_haptics_controller(self, device_type: HapticDeviceType, controller: SimpleHapticsController, /) -> HapticsControllerOverrideToken: ...
+    @typing.overload
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::TrySendHapticWaveform(System.UInt16,System.UInt16)
+    def try_send_haptic_waveform(self, waveform: winrt.system.UInt16, waveform_fallback: winrt.system.UInt16, /) -> bool: ...
+    @typing.overload
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::TrySendHapticWaveform(System.UInt16,System.UInt16,System.Double)
+    def try_send_haptic_waveform(self, waveform: winrt.system.UInt16, waveform_fallback: winrt.system.UInt16, intensity: winrt.system.Double, /) -> bool: ...
+    # Deprecated alias of try_send_haptic_waveform() for pywinrt v3.x compatibility.
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::TrySendHapticWaveform(System.UInt16,System.UInt16,System.Double)
+    @deprecated("Use try_send_haptic_waveform() instead.")
+    def try_send_haptic_waveform_with_intensity(self, waveform: winrt.system.UInt16, waveform_fallback: winrt.system.UInt16, intensity: winrt.system.Double, /) -> bool: ...
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::TrySendHapticWaveformForDuration(System.UInt16,System.UInt16,System.Double,Windows.Foundation.TimeSpan)
+    def try_send_haptic_waveform_for_duration(self, waveform: winrt.system.UInt16, waveform_fallback: winrt.system.UInt16, intensity: winrt.system.Double, play_duration: datetime.timedelta, /) -> bool: ...
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::TrySendHapticWaveformForPlayCount(System.UInt16,System.UInt16,System.Double,System.Int32,Windows.Foundation.TimeSpan)
+    def try_send_haptic_waveform_for_play_count(self, waveform: winrt.system.UInt16, waveform_fallback: winrt.system.UInt16, intensity: winrt.system.Double, play_count: winrt.system.Int32, replay_pause_interval: datetime.timedelta, /) -> bool: ...
+    # System.Boolean Windows.Devices.Haptics.InputHapticsManager::TryStopFeedback()
+    def try_stop_feedback(self) -> bool: ...
+    # Windows.Devices.Haptics.SimpleHapticsController Windows.Devices.Haptics.InputHapticsManager::get_CurrentHapticsController()
+    @_property
+    def current_haptics_controller(self) -> SimpleHapticsController: ...
+    # Windows.Devices.Haptics.HapticDeviceType Windows.Devices.Haptics.InputHapticsManager::get_CurrentHapticsControllerDeviceType()
+    @_property
+    def current_haptics_controller_device_type(self) -> HapticDeviceType: ...
+    # System.UInt32 Windows.Devices.Haptics.InputHapticsManager::get_ThreadId()
+    @_property
+    def thread_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class KnownSimpleHapticsControllerWaveforms_Static(winrt._winrt.IInspectable_Static):
@@ -73,6 +133,18 @@ class KnownSimpleHapticsControllerWaveforms_Static(winrt._winrt.IInspectable_Sta
     # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_Success()
     @_property
     def success(cls) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_Align()
+    @_property
+    def align(cls) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_Collide()
+    @_property
+    def collide(cls) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_Grow()
+    @_property
+    def grow(cls) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_Step()
+    @_property
+    def step(cls) -> winrt.system.UInt16: ...
 
 @typing.final
 class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=KnownSimpleHapticsControllerWaveforms_Static):

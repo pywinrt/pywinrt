@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.ApplicationModel.DataTransfer
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Object> concrete
@@ -100,6 +100,30 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Strea
     method -
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[TransferTargetInvokeResult, Double]
+    guid 66518d3e-0448-5c56-920e-8a0af567fe91
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult;{15f220a6-cffe-56f5-b403-ed44e9c3ad38});f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[TransferTargetInvokeResult, Double]
+    guid b3a0b269-36e0-5c7e-a779-f7c4ae4fba85
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult;{15f220a6-cffe-56f5-b403-ed44e9c3ad38});f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 class Windows.ApplicationModel.DataTransfer.Clipboard static python_type
@@ -323,6 +347,8 @@ enum Windows.ApplicationModel.DataTransfer.DataPackageOperation python_type flag
     constant COPY 0x1
     constant MOVE 0x2
     constant LINK 0x4
+    constant NEW_TARGET 0x40000000
+    constant BACKGROUND_TARGET 0x20000000
 
 class Windows.ApplicationModel.DataTransfer.DataPackagePropertySet python_type iterable mapping mutable_mapping
     py DataPackagePropertySet
@@ -974,6 +1000,41 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAcces
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.RandomAccessStreamReference> shape=4 reverse=62 role=get_results
             out class type=Windows.Storage.Streams.RandomAccessStreamReference return
 
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[TransferTargetInvokeResult, Double]
+    guid 1822bca9-47a2-58ad-8c40-054c4b5aaf2d
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult;{15f220a6-cffe-56f5-b403-ed44e9c3ad38});f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> shape=4 reverse=121 role=get_results
+            out class type=Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult return
+
 interface Windows.ApplicationModel.DataTransfer.IClipboardContentOptions
     guid e888a98c-ad4b-5447-a056-ab3556276d2b
 
@@ -1587,6 +1648,30 @@ interface Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3
 interface Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs
     guid ca6fb8ac-2987-4ee3-9c54-d8afbcb86c1d
 
+interface Windows.ApplicationModel.DataTransfer.ITransferTarget
+    guid 897e04e5-60c2-5eae-909f-e6257e32c644
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetChangedEventArgs
+    guid d513d198-4174-53cf-a06e-4cd263d0dfef
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions
+    guid 712fe3b5-644f-5f6b-97b6-3a3400999ed7
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptionsFactory
+    guid ec4b7ffc-cbc6-5e12-8e9b-d5e892f2c6f8
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetInvokeResult
+    guid 15f220a6-cffe-56f5-b403-ed44e9c3ad38
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetStatics
+    guid 815b8804-e7f1-5f37-b52f-be1ceba9a59e
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher
+    guid 2f85ca29-0100-5d09-907c-fe554d2fcd1a
+
+interface Windows.ApplicationModel.DataTransfer.ITransferTargetWatcherStatics
+    guid a24b3528-db4e-5bdd-9d30-dcb192c701f5
+
 interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IVector[String]
     guid 98b9acc1-4b56-532e-ac73-03d5291cca90
@@ -1994,6 +2079,124 @@ class Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs pyt
         get get_ApplicationName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITargetApplicationChosenEventArgs shape=4 reverse=22
             out string return
 
+class Windows.ApplicationModel.DataTransfer.TransferTarget python_type
+    py TransferTarget
+    signature rc(Windows.ApplicationModel.DataTransfer.TransferTarget;{897e04e5-60c2-5eae-909f-e6257e32c644})
+    default Windows.ApplicationModel.DataTransfer.ITransferTarget
+    requires Windows.ApplicationModel.DataTransfer.ITransferTarget
+    factory Windows.ApplicationModel.DataTransfer.ITransferTargetStatics
+    property display_icon
+        get get_DisplayIcon slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTarget shape=4 reverse=62
+            out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTarget shape=4 reverse=22
+            out string return
+    property is_enabled
+        get get_IsEnabled slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTarget shape=4 reverse=99
+            out boolean return
+    property label
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTarget shape=4 reverse=43
+            out string return
+    method create_watcher static
+        method CreateWatcher slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetStatics shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions name=options
+            out class type=Windows.ApplicationModel.DataTransfer.TransferTargetWatcher return
+
+class Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs python_type
+    py TransferTargetChangedEventArgs
+    signature rc(Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs;{d513d198-4174-53cf-a06e-4cd263d0dfef})
+    default Windows.ApplicationModel.DataTransfer.ITransferTargetChangedEventArgs
+    requires Windows.ApplicationModel.DataTransfer.ITransferTargetChangedEventArgs
+    property target
+        get get_Target slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetChangedEventArgs shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.TransferTarget return
+
+class Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions python_type
+    py TransferTargetDiscoveryOptions
+    signature rc(Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions;{712fe3b5-644f-5f6b-97b6-3a3400999ed7})
+    default Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions
+    requires Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions
+    factory Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptionsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptionsFactory shape=51 reverse=24
+            in class type=Windows.ApplicationModel.DataTransfer.DataPackageView name=dataPackage
+            out class type=Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions return
+    property max_app_targets
+        get get_MaxAppTargets slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions shape=4 reverse=43
+            out int32 return
+        put put_MaxAppTargets slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions shape=4 reverse=62
+            in int32 name=value
+    property allowed_target_app_ids
+        get get_AllowedTargetAppIds slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions shape=51 reverse=100
+            receive_array string return
+        put put_AllowedTargetAppIds slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions shape=51 reverse=124
+            pass_array string name=value
+    property data_package
+        get get_DataPackage slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetDiscoveryOptions shape=4 reverse=22
+            out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
+
+class Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult python_type
+    py TransferTargetInvokeResult
+    signature rc(Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult;{15f220a6-cffe-56f5-b403-ed44e9c3ad38})
+    default Windows.ApplicationModel.DataTransfer.ITransferTargetInvokeResult
+    requires Windows.ApplicationModel.DataTransfer.ITransferTargetInvokeResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetInvokeResult shape=4 reverse=43
+            out hresult type=Windows.Foundation.HResult return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetInvokeResult shape=4 reverse=22
+            out boolean return
+
+class Windows.ApplicationModel.DataTransfer.TransferTargetWatcher python_type
+    py TransferTargetWatcher
+    signature rc(Windows.ApplicationModel.DataTransfer.TransferTargetWatcher;{2f85ca29-0100-5d09-907c-fe554d2fcd1a})
+    default Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher
+    requires Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher
+    factory Windows.ApplicationModel.DataTransfer.ITransferTargetWatcherStatics
+    event added
+        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=51 reverse=100
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=26 reverse=134
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event enumeration_completed
+        add add_EnumerationCompleted slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=51 reverse=196
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_EnumerationCompleted slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=26 reverse=397
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event removed
+        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=51 reverse=144
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=26 reverse=167
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event stopped
+        add add_Stopped slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=51 reverse=211
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Stopped slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=26 reverse=398
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event updated
+        add add_Updated slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Updated slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=26 reverse=192
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method is_supported static
+        method IsSupported slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcherStatics shape=51 reverse=24 static
+            in class type=Windows.ApplicationModel.DataTransfer.DataPackageView name=dataPackage
+            out boolean return
+    method start
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=0 reverse=16
+    method stop
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=0 reverse=37
+    method transfer_to_async
+        method TransferToAsync slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ITransferTargetWatcher shape=142
+            in class type=Windows.ApplicationModel.DataTransfer.TransferTarget name=target
+            in struct type=Windows.UI.WindowId name=parentWindowHandle
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> return
+
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[DataPackage, Object]
     guid c156b0c3-1cbc-5ca4-901c-62c5a8ca5cb5
@@ -2066,7 +2269,34 @@ delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTrans
             in class type=Windows.ApplicationModel.DataTransfer.DataTransferManager name=sender
             in class type=Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs name=args
 
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[TransferTargetWatcher, Object]
+    guid 2d0d4dd2-4dc7-533a-9601-84d15554f6e4
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.TransferTargetWatcher;{2f85ca29-0100-5d09-907c-fe554d2fcd1a});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.ApplicationModel.DataTransfer.TransferTargetWatcher
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.DataTransfer.TransferTargetWatcher name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[TransferTargetWatcher, TransferTargetChangedEventArgs]
+    guid 9ebd72fb-43ed-57a0-862a-cda366a68827
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.DataTransfer.TransferTargetWatcher;{2f85ca29-0100-5d09-907c-fe554d2fcd1a});rc(Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs;{d513d198-4174-53cf-a06e-4cd263d0dfef}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.ApplicationModel.DataTransfer.TransferTargetWatcher
+    argument Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.DataTransfer.TransferTargetWatcher name=sender
+            in class type=Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs name=args
+
 enum V parameterized
+
+class System.Double external
+    py winrt.system.Double
 
 class System.Object external
     py winrt.system.Object
@@ -2077,6 +2307,14 @@ class System.String external
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler
     guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
@@ -2101,6 +2339,10 @@ interface Windows.Foundation.IAsyncInfo external
 interface Windows.Foundation.IAsyncOperation external parameterized
     py winrt.windows.foundation._IAsyncOperation
     guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
 
 interface Windows.Foundation.IPropertyValue external
     py winrt.windows.foundation._IPropertyValue
@@ -2180,3 +2422,6 @@ class Windows.Storage.Streams.RandomAccessStreamReference external
 
 struct Windows.UI.Color external
     py winrt.windows.ui.Color
+
+struct Windows.UI.WindowId external
+    py winrt.windows.ui.WindowId

@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.ApplicationModel.Contacts
 
 class Windows.ApplicationModel.Contacts.AggregateContactManager python_type
@@ -562,6 +562,7 @@ enum Windows.ApplicationModel.Contacts.ContactAnnotationOperations python_type f
     constant VIDEO_CALL 0x8
     constant SOCIAL_FEEDS 0x10
     constant SHARE 0x20
+    constant ACTIVITY 0x40
 
 class Windows.ApplicationModel.Contacts.ContactAnnotationStore python_type
     py ContactAnnotationStore

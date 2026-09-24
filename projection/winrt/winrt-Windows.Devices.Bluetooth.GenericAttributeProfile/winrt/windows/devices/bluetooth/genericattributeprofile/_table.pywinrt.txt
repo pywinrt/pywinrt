@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Devices.Bluetooth.GenericAttributeProfile
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> concrete
@@ -1054,7 +1054,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat p
         get get_BluetoothSigAssignedNumbers slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattPresentationFormatStatics shape=4 reverse=22 static
             out uint8 return
     method from_parts static
-        method FromParts slot=6 inputs=5 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattPresentationFormatStatics2 shape=267 static
+        method FromParts slot=6 inputs=5 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattPresentationFormatStatics2 shape=267 reverse=516 static
             in uint8 name=formatType
             in int32 name=exponent
             in uint16 name=unit

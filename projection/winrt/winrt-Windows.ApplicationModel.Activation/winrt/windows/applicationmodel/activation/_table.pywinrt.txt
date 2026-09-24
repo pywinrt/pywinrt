@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.ApplicationModel.Activation
 
 enum Windows.ApplicationModel.Activation.ActivationKind python_type
@@ -50,6 +50,7 @@ enum Windows.ApplicationModel.Activation.ActivationKind python_type
     constant PRINT_SUPPORT_SETTINGS_UI 1024
     constant PHONE_CALL_ACTIVATION 1025
     constant VPN_FOREGROUND 1026
+    constant PRINT_SUPPORT_ENTERPRISE_MANAGEMENT_UI 1027
 
 enum Windows.ApplicationModel.Activation.ApplicationExecutionState python_type
     py ApplicationExecutionState

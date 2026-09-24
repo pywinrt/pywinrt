@@ -12,6 +12,7 @@ import winrt.windows.foundation as windows_foundation
 __all__ = [
     "BatteryStatus",
     "EnergySaverStatus",
+    "EnergySaverStatus2",
     "PowerSupplyStatus",
     "BackgroundEnergyManager",
     "ForegroundEnergyManager",
@@ -28,6 +29,12 @@ class EnergySaverStatus(enum.IntEnum):
     DISABLED = 0
     OFF = 1
     ON = 2
+
+class EnergySaverStatus2(enum.IntEnum):
+    UNKNOWN = 0
+    OFF = 1
+    STANDARD = 2
+    HIGH_SAVINGS = 3
 
 class PowerSupplyStatus(enum.IntEnum):
     NOT_PRESENT = 0
@@ -116,6 +123,10 @@ class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyMan
 
 @typing.final
 class PowerManager_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Foundation.EventRegistrationToken Windows.System.Power.PowerManager::add_EnergySaverStatus2Changed(Windows.Foundation.EventHandler`1<System.Object>)
+    def add_energy_saver_status2_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.System.Power.PowerManager::remove_EnergySaverStatus2Changed(Windows.Foundation.EventRegistrationToken)
+    def remove_energy_saver_status2_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.PowerManager::add_BatteryStatusChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_battery_status_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.PowerManager::remove_BatteryStatusChanged(Windows.Foundation.EventRegistrationToken)
@@ -151,6 +162,12 @@ class PowerManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.TimeSpan Windows.System.Power.PowerManager::get_RemainingDischargeTime()
     @_property
     def remaining_discharge_time(cls) -> datetime.timedelta: ...
+    # Windows.System.Power.EnergySaverStatus2 Windows.System.Power.PowerManager::get_EnergySaverStatus2()
+    @_property
+    def energy_saver_status2(cls) -> EnergySaverStatus2: ...
+    # System.Boolean Windows.System.Power.PowerManager::get_IsEnergySaverStatus2Supported()
+    @_property
+    def is_energy_saver_status2_supported(cls) -> bool: ...
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):

@@ -10,6 +10,7 @@ import winrt.system
 import winrt.windows.data.xml.dom as windows_data_xml_dom
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.storage.streams as windows_storage_streams
 
 __all__ = [
     "PrintTicketFeatureSelectionType",
@@ -204,6 +205,7 @@ class PrintTicketValue(winrt.system.Object):
 
 @typing.final
 class WorkflowPrintTicket(winrt.system.Object):
+    def __new__(cls, printer_name: str, print_ticket_stream: windows_storage_streams.IInputStream) -> typing.Self: ...
     # Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket::GetCapabilities()
     def get_capabilities(self) -> PrintTicketCapabilities: ...
     # Windows.Graphics.Printing.PrintTicket.PrintTicketFeature Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket::GetFeature(System.String,System.String)

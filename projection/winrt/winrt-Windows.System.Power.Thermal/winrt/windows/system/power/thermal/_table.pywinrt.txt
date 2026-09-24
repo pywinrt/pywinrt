@@ -1,0 +1,310 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+namespace Windows.System.Power.Thermal
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[PowerThermalChannelId, PowerThermalChannelConfiguration]]
+    guid 36bfae51-120d-5970-b925-dfe1b226bf9a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};struct(Windows.System.Power.Thermal.PowerThermalChannelId;g16;u2);rc(Windows.System.Power.Thermal.PowerThermalChannelConfiguration;{ad8383fa-172d-5d82-b29d-81d93710fb45})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[PowerThermalChannelId, PowerThermalChannelConfiguration]]
+    guid 9c56b5da-3bcf-5ace-9b5d-2ee52b939664
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};struct(Windows.System.Power.Thermal.PowerThermalChannelId;g16;u2);rc(Windows.System.Power.Thermal.PowerThermalChannelConfiguration;{ad8383fa-172d-5d82-b29d-81d93710fb45})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[PowerThermalChannelId, PowerThermalChannelConfiguration]
+    guid 81b90641-0b65-56ef-b040-457f2e7be35a
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};struct(Windows.System.Power.Thermal.PowerThermalChannelId;g16;u2);rc(Windows.System.Power.Thermal.PowerThermalChannelConfiguration;{ad8383fa-172d-5d82-b29d-81d93710fb45}))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.System.Power.Thermal.PowerThermalChannelId
+    argument Windows.System.Power.Thermal.PowerThermalChannelConfiguration
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> shape=4 reverse=22 role=pair_key
+            out struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> shape=4 reverse=43 role=pair_value
+            out class type=Windows.System.Power.Thermal.PowerThermalChannelConfiguration return
+
+interface Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[PowerThermalChannelId, PowerThermalChannelConfiguration]
+    guid 610ce963-2546-5e6f-8cf1-51dd64a32781
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};struct(Windows.System.Power.Thermal.PowerThermalChannelId;g16;u2);rc(Windows.System.Power.Thermal.PowerThermalChannelConfiguration;{ad8383fa-172d-5d82-b29d-81d93710fb45}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>>
+    argument Windows.System.Power.Thermal.PowerThermalChannelId
+    argument Windows.System.Power.Thermal.PowerThermalChannelConfiguration
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> shape=340 reverse=519 role=has_key
+            in struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> shape=340 reverse=518 role=lookup
+            in struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=key
+            out class type=Windows.System.Power.Thermal.PowerThermalChannelConfiguration return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> name=second
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelConfiguration
+    guid ad8383fa-172d-5d82-b29d-81d93710fb45
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer
+    guid 47cca211-7348-5026-898c-b1873123760d
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory
+    guid b42d9ab1-32f0-54bb-899a-9ae0529da381
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDataProducer
+    guid a935f244-1a7d-55d5-9c69-8adc1cd1d993
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory
+    guid d2d380cd-e09d-5472-ad62-70061e630067
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs
+    guid d6b643e0-6ab6-5683-a8fc-5ed65ee20dc5
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDiagnostics
+    guid 628fd5c4-49b7-508f-ad9f-2309b1168aad
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics
+    guid a86ec393-b684-5633-a6ca-dfa1c7eecf87
+
+interface Windows.System.Power.Thermal.IPowerThermalChannelFinderStatics
+    guid df8d288b-f056-55ce-b370-f3e1c4e32063
+
+enum Windows.System.Power.Thermal.PowerThermalBackEndStatus python_type
+    py PowerThermalBackEndStatus
+    signature enum(Windows.System.Power.Thermal.PowerThermalBackEndStatus;i4)
+    constant STOPPED 0
+    constant STARTED 1
+
+class Windows.System.Power.Thermal.PowerThermalChannelConfiguration python_type
+    py PowerThermalChannelConfiguration
+    signature rc(Windows.System.Power.Thermal.PowerThermalChannelConfiguration;{ad8383fa-172d-5d82-b29d-81d93710fb45})
+    default Windows.System.Power.Thermal.IPowerThermalChannelConfiguration
+    requires Windows.System.Power.Thermal.IPowerThermalChannelConfiguration
+    property configuration_string
+        get get_ConfigurationString slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=4 reverse=43
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=4 reverse=22
+            out struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
+    method get_configuration_numeric_parameters
+        method GetConfigurationNumericParameters slot=8 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=51 reverse=65
+            receive_array int32 return
+
+struct Windows.System.Power.Thermal.PowerThermalChannelData python_type
+    py PowerThermalChannelData
+    signature struct(Windows.System.Power.Thermal.PowerThermalChannelData;struct(Windows.System.Power.Thermal.PowerThermalChannelId;g16;u2);i4)
+    field id Id struct type=Windows.System.Power.Thermal.PowerThermalChannelId
+    field value Value int32
+
+class Windows.System.Power.Thermal.PowerThermalChannelDataConsumer python_type closeable
+    py PowerThermalChannelDataConsumer
+    signature rc(Windows.System.Power.Thermal.PowerThermalChannelDataConsumer;{47cca211-7348-5026-898c-b1873123760d})
+    default Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer
+    requires Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer
+    requires Windows.Foundation.IClosable
+    factory Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory shape=117 reverse=25
+            pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelIds
+            out class type=Windows.System.Power.Thermal.PowerThermalChannelDataConsumer return
+    property back_end_status
+        get get_BackEndStatus slot=12 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=4 reverse=162
+            out enum32 type=Windows.System.Power.Thermal.PowerThermalBackEndStatus return
+    event back_end_status_changed
+        add add_BackEndStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataConsumer,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_BackEndStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=26 reverse=192
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event channel_data_received
+        add add_ChannelDataReceived slot=10 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51 reverse=124
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataConsumer,Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ChannelDataReceived slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=26 reverse=156
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method get_channel_configurations
+        method GetChannelConfigurations slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> return
+    method get_channel_ids
+        method GetChannelIds slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51 reverse=24
+            receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
+    method start
+        method Start slot=8 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=0 reverse=55
+    method stop
+        method Stop slot=9 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=0 reverse=93
+
+class Windows.System.Power.Thermal.PowerThermalChannelDataProducer python_type closeable
+    py PowerThermalChannelDataProducer
+    signature rc(Windows.System.Power.Thermal.PowerThermalChannelDataProducer;{a935f244-1a7d-55d5-9c69-8adc1cd1d993})
+    default Windows.System.Power.Thermal.IPowerThermalChannelDataProducer
+    requires Windows.System.Power.Thermal.IPowerThermalChannelDataProducer
+    requires Windows.Foundation.IClosable
+    factory Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory shape=117 reverse=25
+            pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelIds
+            out class type=Windows.System.Power.Thermal.PowerThermalChannelDataProducer return
+    property back_end_status
+        get get_BackEndStatus slot=12 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=4 reverse=162
+            out enum32 type=Windows.System.Power.Thermal.PowerThermalBackEndStatus return
+    event back_end_status_changed
+        add add_BackEndStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51 reverse=174
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataProducer,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_BackEndStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=26 reverse=192
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method disable_channel
+        method DisableChannel slot=8 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=339
+            in struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelId
+    method get_channel_configurations
+        method GetChannelConfigurations slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> return
+    method get_channel_ids
+        method GetChannelIds slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51 reverse=24
+            receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
+    method publish_input_channel_data
+        method PublishInputChannelData slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51 reverse=144
+            pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelData name=data
+    method start
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=0 reverse=93
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=0 reverse=117
+
+class Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs python_type
+    py PowerThermalChannelDataReceivedEventArgs
+    signature rc(Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs;{d6b643e0-6ab6-5683-a8fc-5ed65ee20dc5})
+    default Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs
+    requires Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs
+    method get_data
+        method GetData slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs shape=51 reverse=24
+            receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelData return
+
+class Windows.System.Power.Thermal.PowerThermalChannelDiagnostics python_type
+    py PowerThermalChannelDiagnostics
+    signature rc(Windows.System.Power.Thermal.PowerThermalChannelDiagnostics;{628fd5c4-49b7-508f-ad9f-2309b1168aad})
+    default Windows.System.Power.Thermal.IPowerThermalChannelDiagnostics
+    requires Windows.System.Power.Thermal.IPowerThermalChannelDiagnostics
+    factory Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics shape=4 reverse=22 static
+            out class type=Windows.System.Power.Thermal.PowerThermalChannelDiagnostics return
+    method get_data_for_channels static
+        method GetDataForChannels slot=7 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics shape=195 reverse=46 static
+            pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelIds
+            receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelData return
+
+class Windows.System.Power.Thermal.PowerThermalChannelFinder static python_type
+    py PowerThermalChannelFinder
+    factory Windows.System.Power.Thermal.IPowerThermalChannelFinderStatics
+    method find_channels static
+        method FindChannels slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelFinderStatics shape=177 static
+            in guid name=channelInterfaceType
+            receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
+
+struct Windows.System.Power.Thermal.PowerThermalChannelId python_type
+    py PowerThermalChannelId
+    signature struct(Windows.System.Power.Thermal.PowerThermalChannelId;g16;u2)
+    field interface_type InterfaceType guid
+    field instance_id InstanceId uint16
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataConsumer,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PowerThermalChannelDataConsumer, Object]
+    guid fb816e05-b649-5baf-bb41-c1a7051773f0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.Power.Thermal.PowerThermalChannelDataConsumer;{47cca211-7348-5026-898c-b1873123760d});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.System.Power.Thermal.PowerThermalChannelDataConsumer
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.Power.Thermal.PowerThermalChannelDataConsumer name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataConsumer,Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PowerThermalChannelDataConsumer, PowerThermalChannelDataReceivedEventArgs]
+    guid b59910ad-a826-5040-885b-c89fc0ad2cf3
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.Power.Thermal.PowerThermalChannelDataConsumer;{47cca211-7348-5026-898c-b1873123760d});rc(Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs;{d6b643e0-6ab6-5683-a8fc-5ed65ee20dc5}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.System.Power.Thermal.PowerThermalChannelDataConsumer
+    argument Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.Power.Thermal.PowerThermalChannelDataConsumer name=sender
+            in class type=Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataProducer,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[PowerThermalChannelDataProducer, Object]
+    guid 790afc3f-625e-52ac-8769-fbb5b0ba7386
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.Power.Thermal.PowerThermalChannelDataProducer;{a935f244-1a7d-55d5-9c69-8adc1cd1d993});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.System.Power.Thermal.PowerThermalChannelDataProducer
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.Power.Thermal.PowerThermalChannelDataProducer name=sender
+            in object name=args
+
+class System.Object external
+    py winrt.system.Object
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9

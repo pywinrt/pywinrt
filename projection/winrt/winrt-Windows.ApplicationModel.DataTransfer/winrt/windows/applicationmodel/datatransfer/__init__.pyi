@@ -47,6 +47,11 @@ __all__ = [
     "SharedStorageAccessManager",
     "StandardDataFormats",
     "TargetApplicationChosenEventArgs",
+    "TransferTarget",
+    "TransferTargetChangedEventArgs",
+    "TransferTargetDiscoveryOptions",
+    "TransferTargetInvokeResult",
+    "TransferTargetWatcher",
     "DataProviderHandler",
     "ShareProviderHandler",
 ]
@@ -61,6 +66,8 @@ class DataPackageOperation(enum.IntFlag):
     COPY = 0x1
     MOVE = 0x2
     LINK = 0x4
+    NEW_TARGET = 0x40000000
+    BACKGROUND_TARGET = 0x20000000
 
 class SetHistoryItemAsContentStatus(enum.IntEnum):
     SUCCESS = 0
@@ -668,6 +675,94 @@ class TargetApplicationChosenEventArgs(winrt.system.Object):
     # System.String Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs::get_ApplicationName()
     @_property
     def application_name(self) -> str: ...
+
+@typing.final
+class TransferTarget_Static(winrt._winrt.IInspectable_Static):
+    # Windows.ApplicationModel.DataTransfer.TransferTargetWatcher Windows.ApplicationModel.DataTransfer.TransferTarget::CreateWatcher(Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions)
+    def create_watcher(cls, options: TransferTargetDiscoveryOptions, /) -> TransferTargetWatcher: ...
+
+@typing.final
+class TransferTarget(winrt.system.Object, metaclass=TransferTarget_Static):
+    # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.DataTransfer.TransferTarget::get_DisplayIcon()
+    @_property
+    def display_icon(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
+    # System.String Windows.ApplicationModel.DataTransfer.TransferTarget::get_Id()
+    @_property
+    def id(self) -> str: ...
+    # System.Boolean Windows.ApplicationModel.DataTransfer.TransferTarget::get_IsEnabled()
+    @_property
+    def is_enabled(self) -> bool: ...
+    # System.String Windows.ApplicationModel.DataTransfer.TransferTarget::get_Label()
+    @_property
+    def label(self) -> str: ...
+
+@typing.final
+class TransferTargetChangedEventArgs(winrt.system.Object):
+    # Windows.ApplicationModel.DataTransfer.TransferTarget Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs::get_Target()
+    @_property
+    def target(self) -> TransferTarget: ...
+
+@typing.final
+class TransferTargetDiscoveryOptions(winrt.system.Object):
+    def __new__(cls, data_package: DataPackageView) -> typing.Self: ...
+    # System.Int32 Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions::get_MaxAppTargets()
+    @_property
+    def max_app_targets(self) -> winrt.system.Int32: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions::put_MaxAppTargets(System.Int32)
+    @max_app_targets.setter
+    def max_app_targets(self, value: winrt.system.Int32) -> None: ...
+    # System.String[] Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions::get_AllowedTargetAppIds()
+    @_property
+    def allowed_target_app_ids(self) -> str: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions::put_AllowedTargetAppIds(System.String[])
+    @allowed_target_app_ids.setter
+    def allowed_target_app_ids(self, value: winrt.system.Array[str] | winrt.system.ReadableBuffer) -> None: ...
+    # Windows.ApplicationModel.DataTransfer.DataPackageView Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions::get_DataPackage()
+    @_property
+    def data_package(self) -> DataPackageView: ...
+
+@typing.final
+class TransferTargetInvokeResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> windows_foundation.HResult: ...
+    # System.Boolean Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult::get_Succeeded()
+    @_property
+    def succeeded(self) -> bool: ...
+
+@typing.final
+class TransferTargetWatcher_Static(winrt._winrt.IInspectable_Static):
+    # System.Boolean Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::IsSupported(Windows.ApplicationModel.DataTransfer.DataPackageView)
+    def is_supported(cls, data_package: DataPackageView, /) -> bool: ...
+
+@typing.final
+class TransferTargetWatcher(winrt.system.Object, metaclass=TransferTargetWatcher_Static):
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::Start()
+    def start(self) -> None: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::Stop()
+    def stop(self) -> None: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult,System.Double> Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::TransferToAsync(Windows.ApplicationModel.DataTransfer.TransferTarget,Windows.UI.WindowId)
+    def transfer_to_async(self, target: TransferTarget, parent_window_handle: windows_ui.WindowId | tuple[winrt.system.UInt64], /) -> windows_foundation.IAsyncOperationWithProgress[TransferTargetInvokeResult, winrt.system.Double]: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::add_Added(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs>)
+    def add_added(self, handler: windows_foundation.TypedEventHandler[TransferTargetWatcher, TransferTargetChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::remove_Added(Windows.Foundation.EventRegistrationToken)
+    def remove_added(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::add_EnumerationCompleted(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,System.Object>)
+    def add_enumeration_completed(self, handler: windows_foundation.TypedEventHandler[TransferTargetWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::remove_EnumerationCompleted(Windows.Foundation.EventRegistrationToken)
+    def remove_enumeration_completed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::add_Removed(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs>)
+    def add_removed(self, handler: windows_foundation.TypedEventHandler[TransferTargetWatcher, TransferTargetChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::remove_Removed(Windows.Foundation.EventRegistrationToken)
+    def remove_removed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::add_Stopped(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,System.Object>)
+    def add_stopped(self, handler: windows_foundation.TypedEventHandler[TransferTargetWatcher, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::remove_Stopped(Windows.Foundation.EventRegistrationToken)
+    def remove_stopped(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::add_Updated(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.TransferTargetWatcher,Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs>)
+    def add_updated(self, handler: windows_foundation.TypedEventHandler[TransferTargetWatcher, TransferTargetChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::remove_Updated(Windows.Foundation.EventRegistrationToken)
+    def remove_updated(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 DataProviderHandler: typing.TypeAlias = typing.Callable[[DataProviderRequest], None]
 ShareProviderHandler: typing.TypeAlias = typing.Callable[[ShareProviderOperation], None]

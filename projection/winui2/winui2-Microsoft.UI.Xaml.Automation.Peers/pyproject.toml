@@ -19,13 +19,13 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.UI.Xaml.Automation.Peers>=4!10.0.26100.4188",
+    "winrt-Windows.UI.Xaml.Automation.Peers>=4!10.0.28000.2705",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.UI.Xaml.Automation[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Xaml.Automation.Peers[all]>=4!10.0.26100.4188",
+    "winrt-Windows.UI.Xaml.Automation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Automation.Peers[all]>=4!10.0.28000.2705",
     "winui2-Microsoft.UI.Xaml.Controls[all]>=4!2.8.7",
     "winui2-Microsoft.UI.Xaml.Controls.Primitives[all]>=4!2.8.7",
 ]

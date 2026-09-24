@@ -23,8 +23,8 @@ dependencies = [
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Xaml.Markup[all]>=4!10.0.26100.4188",
+    "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Markup[all]>=4!10.0.28000.2705",
 ]
 
 [project.urls]

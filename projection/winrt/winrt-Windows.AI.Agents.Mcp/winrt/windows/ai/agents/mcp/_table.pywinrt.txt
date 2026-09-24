@@ -1,0 +1,79 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+namespace Windows.AI.Agents.Mcp
+
+interface Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental python_type
+    py _IMcpMessageFilterExperimental
+    guid c5f8f821-895c-5241-b45a-92e249a7d873
+    signature {c5f8f821-895c-5241-b45a-92e249a7d873}
+    method initialize
+        method Initialize slot=6 inputs=5 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental shape=239 reverse=27
+            in string name=clientAppUserModelId
+            in uint32 name=clientProcessId
+            in string name=serverIdentity
+            in string name=serverName
+            in uint32 name=serverProcessId
+    method on_message
+        method OnMessage slot=7 inputs=3 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental shape=117 reverse=45
+            in string name=message
+            in enum32 type=Windows.AI.Agents.Mcp.McpMessageDirection name=direction
+            in class type=Windows.AI.Agents.Mcp.McpMessageFilterResponse name=filterResponse
+
+interface Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2 python_type
+    py _IMcpMessageFilterExperimental2
+    guid 8127e075-4652-5645-b2eb-0e5772ee5c6f
+    signature {8127e075-4652-5645-b2eb-0e5772ee5c6f}
+    method initialize
+        method Initialize slot=6 inputs=5 outputs=1 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2 shape=267 reverse=516
+            in string name=clientProcessIdentifier
+            in uint32 name=clientProcessId
+            in string name=serverProcessIdentifier
+            in uint32 name=serverProcessId
+            in string name=serverId
+            out boolean return
+    method on_message
+        method OnMessage slot=7 inputs=3 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2 shape=117 reverse=45
+            in string name=message
+            in enum32 type=Windows.AI.Agents.Mcp.McpMessageDirection name=direction
+            in class type=Windows.AI.Agents.Mcp.McpMessageFilterResponse name=filterResponse
+
+interface Windows.AI.Agents.Mcp.IMcpMessageFilterResponse
+    guid 363ce02c-7098-5e13-a408-7b43e1f452ac
+
+interface Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental python_type
+    py _IMcpMessageFilterResponseExperimental
+    guid e215b5f2-cb02-56cf-aab0-84aef65d1665
+    signature {e215b5f2-cb02-56cf-aab0-84aef65d1665}
+    property is_allowed
+        get get_IsAllowed slot=6 inputs=0 outputs=1 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental shape=4 reverse=22
+            out boolean return
+        put put_IsAllowed slot=7 inputs=1 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental shape=4 reverse=43
+            in boolean name=value
+    property message_if_not_allowed
+        get get_MessageIfNotAllowed slot=8 inputs=0 outputs=1 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental shape=4 reverse=62
+            out string return
+        put put_MessageIfNotAllowed slot=9 inputs=1 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental shape=4 reverse=99
+            in string name=value
+
+interface Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2 python_type
+    py _IMcpMessageFilterResponseExperimental2
+    guid 10f4b099-6632-505a-a638-e704c7e47abf
+    signature {10f4b099-6632-505a-a638-e704c7e47abf}
+    method allow
+        method Allow slot=6 inputs=0 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2 shape=0 reverse=16
+    method reject
+        method Reject slot=7 inputs=1 outputs=0 declaring=Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2 shape=4 reverse=43
+            in string name=reason
+
+enum Windows.AI.Agents.Mcp.McpMessageDirection python_type
+    py McpMessageDirection
+    signature enum(Windows.AI.Agents.Mcp.McpMessageDirection;i4)
+    constant CLIENT_TO_SERVER 0
+    constant SERVER_TO_CLIENT 1
+
+class Windows.AI.Agents.Mcp.McpMessageFilterResponse python_type
+    py McpMessageFilterResponse
+    signature rc(Windows.AI.Agents.Mcp.McpMessageFilterResponse;{363ce02c-7098-5e13-a408-7b43e1f452ac})
+    default Windows.AI.Agents.Mcp.IMcpMessageFilterResponse
+    requires Windows.AI.Agents.Mcp.IMcpMessageFilterResponse

@@ -22,10 +22,13 @@ import winrt.windows.ui.shell as windows_ui_shell
 __all__ = [
     "IppCommunicationErrorKind",
     "IppPrinterCommunicationKind",
+    "PrintSupportAppContracts",
     "SettingsLaunchKind",
     "WorkflowPrintTicketValidationStatus",
     "XpsImageQuality",
+    "PrintSupportAppInfo",
     "PrintSupportCommunicationErrorDetectedEventArgs",
+    "PrintSupportEnterpriseManagementUIEventArgs",
     "PrintSupportExtensionSession",
     "PrintSupportExtensionTriggerDetails",
     "PrintSupportIppCommunicationConfiguration",
@@ -54,6 +57,15 @@ class IppPrinterCommunicationKind(enum.IntEnum):
     UNIVERSAL_PRINT = 3
     VIRTUAL_PRINTER = 4
 
+class PrintSupportAppContracts(enum.IntFlag):
+    NONE = 0x0
+    JOB_BACKGROUND_SESSION = 0x1
+    SETTINGS_UI = 0x2
+    EXTENSION = 0x4
+    JOB_UI = 0x8
+    VIRTUAL_PRINTER_BACKGROUND_SESSION = 0x10
+    ENTERPRISE_MANAGEMENT_UI = 0x20
+
 class SettingsLaunchKind(enum.IntEnum):
     JOB_PRINT_TICKET = 0
     USER_DEFAULT_PRINT_TICKET = 1
@@ -70,6 +82,22 @@ class XpsImageQuality(enum.IntEnum):
     PNG = 3
 
 @typing.final
+class PrintSupportAppInfo_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::FromPrinterName(System.String)
+    def from_printer_name(cls, printer_name: str, /) -> PrintSupportAppInfo: ...
+    # Windows.Foundation.IReference`1<System.Boolean> Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::GetPrintJobShowsUI(System.String,Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket)
+    def get_print_job_shows_ui(cls, printer_name: str, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, /) -> bool | None: ...
+
+@typing.final
+class PrintSupportAppInfo(winrt.system.Object, metaclass=PrintSupportAppInfo_Static):
+    # Windows.ApplicationModel.AppInfo Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::get_AppInfo()
+    @_property
+    def app_info(self) -> windows_applicationmodel.AppInfo: ...
+    # Windows.Graphics.Printing.PrintSupport.PrintSupportAppContracts Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::get_SupportedContracts()
+    @_property
+    def supported_contracts(self) -> PrintSupportAppContracts: ...
+
+@typing.final
 class PrintSupportCommunicationErrorDetectedEventArgs(winrt.system.Object):
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -82,6 +110,24 @@ class PrintSupportCommunicationErrorDetectedEventArgs(winrt.system.Object):
     # Windows.Foundation.HResult Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
+
+@typing.final
+class PrintSupportEnterpriseManagementUIEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs):
+    # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_Kind()
+    @_property
+    def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
+    # Windows.ApplicationModel.Activation.ApplicationExecutionState Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_PreviousExecutionState()
+    @_property
+    def previous_execution_state(self) -> windows_applicationmodel_activation.ApplicationExecutionState: ...
+    # Windows.ApplicationModel.Activation.SplashScreen Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_SplashScreen()
+    @_property
+    def splash_screen(self) -> windows_applicationmodel_activation.SplashScreen: ...
+    # Windows.System.User Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_User()
+    @_property
+    def user(self) -> windows_system.User: ...
+    # Windows.Devices.Printers.IppPrintDevice Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_Printer()
+    @_property
+    def printer(self) -> windows_devices_printers.IppPrintDevice: ...
 
 @typing.final
 class PrintSupportExtensionSession(winrt.system.Object):
@@ -202,6 +248,8 @@ class PrintSupportPrintDeviceCapabilitiesChangedEventArgs(winrt.system.Object):
     def get_current_print_device_resources(self) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs::SetPdlPassthroughWithJobAttributesSupported(System.Boolean)
+    def set_pdl_passthrough_with_job_attributes_supported(self, supported: bool, /) -> None: ...
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs::SetPrintDeviceCapabilitiesUpdatePolicy(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy)
     def set_print_device_capabilities_update_policy(self, update_policy: PrintSupportPrintDeviceCapabilitiesUpdatePolicy, /) -> None: ...
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs::SetSupportedPdlPassthroughContentTypes(Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -251,6 +299,8 @@ class PrintSupportPrintTicketElement(winrt.system.Object):
 class PrintSupportPrintTicketValidationRequestedEventArgs(winrt.system.Object):
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs::SetPrintJobShowsUI(System.Boolean)
+    def set_print_job_shows_ui(self, shows_ui: bool, /) -> None: ...
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs::SetPrintTicketValidationStatus(Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus)
     def set_print_ticket_validation_status(self, status: WorkflowPrintTicketValidationStatus, /) -> None: ...
     # Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs::get_PrintTicket()

@@ -69,7 +69,7 @@ WINDOWS_SDK_METADATA = (
     / versioned_package("Microsoft.Windows.SDK.CPP")
     / "c"
     / "References"
-    / "10.0.26100.0"
+    / "10.0.28000.0"
 )
 
 WINDOWS_APP_SDK_PATH = TOOLS_PATH / versioned_package("Microsoft.WindowsAppSDK")

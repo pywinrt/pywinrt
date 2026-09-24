@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.ApplicationModel.Calls
 
 class Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions activatable python_type
@@ -2620,7 +2620,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in timespan name=ringTimeout
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_app_initiated_call
-        method RequestNewAppInitiatedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator3 shape=267
+        method RequestNewAppInitiatedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator3 shape=267 reverse=516
             in string name=context
             in string name=contactName
             in string name=contactNumber
@@ -2686,7 +2686,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in string name=taskEntryPoint
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus> return
     method setup_new_accepted_call
-        method SetupNewAcceptedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator2 shape=267
+        method SetupNewAcceptedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator2 shape=267 reverse=516
             in string name=context
             in string name=contactName
             in string name=contactNumber

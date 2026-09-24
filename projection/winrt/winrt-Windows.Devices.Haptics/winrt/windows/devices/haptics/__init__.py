@@ -6,11 +6,15 @@ import winrt.system
 winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
+    "HapticDeviceType",
     "VibrationAccessStatus",
+    "HapticsControllerOverrideToken",
+    "InputHapticsManager",
     "KnownSimpleHapticsControllerWaveforms",
     "SimpleHapticsController",
     "SimpleHapticsControllerFeedback",
     "VibrationDevice",
 ]
 
+winrt.runtime._internals.alias_method(InputHapticsManager, "try_send_haptic_waveform_with_intensity", "try_send_haptic_waveform")
 winrt.runtime._internals.alias_method(SimpleHapticsController, "send_haptic_feedback_with_intensity", "send_haptic_feedback")

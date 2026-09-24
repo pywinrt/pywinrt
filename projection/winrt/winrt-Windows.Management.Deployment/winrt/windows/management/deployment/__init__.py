@@ -10,6 +10,7 @@ __all__ = [
     "DeploymentOptions",
     "DeploymentProgressState",
     "PackageInstallState",
+    "PackageOperationPriority",
     "PackageState",
     "PackageStatus",
     "PackageStubPreference",

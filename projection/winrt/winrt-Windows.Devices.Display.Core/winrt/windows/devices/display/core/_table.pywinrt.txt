@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Devices.Display.Core
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Display.Core.DisplayMuxDevice> concrete
@@ -92,7 +92,7 @@ class Windows.Devices.Display.Core.DisplayDevice python_type
             in class type=Windows.Devices.Display.Core.DisplayTarget name=target
             out class type=Windows.Devices.Display.Core.DisplaySource return
     method create_simple_scanout
-        method CreateSimpleScanout slot=11 inputs=4 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=239
+        method CreateSimpleScanout slot=11 inputs=4 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayDevice shape=239 reverse=521
             in class type=Windows.Devices.Display.Core.DisplaySource name=pSource
             in class type=Windows.Devices.Display.Core.DisplaySurface name=pSurface
             in uint32 name=SubResourceIndex
@@ -852,7 +852,7 @@ class Windows.Devices.Display.Core.DisplayWireFormat python_type
     factory Windows.Devices.Display.Core.IDisplayWireFormatFactory
     factory Windows.Devices.Display.Core.IDisplayWireFormatStatics
     constructor -
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormatFactory shape=267
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayWireFormatFactory shape=267 reverse=516
             in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding name=pixelEncoding
             in int32 name=bitsPerChannel
             in enum32 type=Windows.Devices.Display.Core.DisplayWireFormatColorSpace name=colorSpace

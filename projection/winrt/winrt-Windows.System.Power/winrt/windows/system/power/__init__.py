@@ -8,6 +8,7 @@ winrt.runtime._internals.load_projection(__spec__)
 __all__ = [
     "BatteryStatus",
     "EnergySaverStatus",
+    "EnergySaverStatus2",
     "PowerSupplyStatus",
     "BackgroundEnergyManager",
     "ForegroundEnergyManager",

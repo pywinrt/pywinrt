@@ -88,6 +88,7 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Search
     struct IContentIndexerStatics;
     struct IIndexableContent;
     struct IQueryOptions;
+    struct IQueryOptionsAdditionalSearchSources;
     struct IQueryOptionsFactory;
     struct IQueryOptionsWithProviderFilter;
     struct IStorageFileQueryResult;
@@ -120,6 +121,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Storage::Search::IContentIndexerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Search::IIndexableContent>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Search::IQueryOptions>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Storage::Search::IQueryOptionsAdditionalSearchSources>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Search::IQueryOptionsFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Search::IStorageFileQueryResult>{ using type = interface_category; };
@@ -173,6 +175,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IContentIndexerStatics> = L"Windows.Storage.Search.IContentIndexerStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IIndexableContent> = L"Windows.Storage.Search.IIndexableContent";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IQueryOptions> = L"Windows.Storage.Search.IQueryOptions";
+    template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IQueryOptionsAdditionalSearchSources> = L"Windows.Storage.Search.IQueryOptionsAdditionalSearchSources";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IQueryOptionsFactory> = L"Windows.Storage.Search.IQueryOptionsFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter> = L"Windows.Storage.Search.IQueryOptionsWithProviderFilter";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Search::IStorageFileQueryResult> = L"Windows.Storage.Search.IStorageFileQueryResult";
@@ -190,6 +193,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IContentIndexerStatics>{ 0x8C488375,0xB37E,0x4C60,{ 0x9B,0xA8,0xB7,0x60,0xFD,0xA3,0xE5,0x9D } }; // 8C488375-B37E-4C60-9BA8-B760FDA3E59D
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IIndexableContent>{ 0xCCF1A05F,0xD4B5,0x483A,{ 0xB0,0x6E,0xE0,0xDB,0x1E,0xC4,0x20,0xE4 } }; // CCF1A05F-D4B5-483A-B06E-E0DB1EC420E4
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IQueryOptions>{ 0x1E5E46EE,0x0F45,0x4838,{ 0xA8,0xE9,0xD0,0x47,0x9D,0x44,0x6C,0x30 } }; // 1E5E46EE-0F45-4838-A8E9-D0479D446C30
+    template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IQueryOptionsAdditionalSearchSources>{ 0x8D342D6B,0x8800,0x426E,{ 0xB5,0xCF,0x4B,0x32,0x8F,0x82,0x4E,0x7E } }; // 8D342D6B-8800-426E-B5CF-4B328F824E7E
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IQueryOptionsFactory>{ 0x032E1F8C,0xA9C1,0x4E71,{ 0x80,0x11,0x0D,0xEE,0x9D,0x48,0x11,0xA3 } }; // 032E1F8C-A9C1-4E71-8011-0DEE9D4811A3
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter>{ 0x5B9D1026,0x15C4,0x44DD,{ 0xB8,0x9A,0x47,0xA5,0x9B,0x7D,0x7C,0x4F } }; // 5B9D1026-15C4-44DD-B89A-47A59B7D7C4F
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Search::IStorageFileQueryResult>{ 0x52FDA447,0x2BAA,0x412C,{ 0xB2,0x9F,0xD4,0xB1,0x77,0x8E,0xFA,0x1E } }; // 52FDA447-2BAA-412C-B29F-D4B1778EFA1E
@@ -289,6 +293,16 @@ namespace winrt::impl
             virtual int32_t __stdcall LoadFromString(void*) noexcept = 0;
             virtual int32_t __stdcall SetThumbnailPrefetch(int32_t, uint32_t, uint32_t) noexcept = 0;
             virtual int32_t __stdcall SetPropertyPrefetch(uint32_t, void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Storage::Search::IQueryOptionsAdditionalSearchSources>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IncludeLocalSemanticIndex(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IncludeLocalSemanticIndex(bool) noexcept = 0;
+            virtual int32_t __stdcall get_IncludeCloudProviders(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IncludeCloudProviders(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Storage::Search::IQueryOptionsFactory>
@@ -491,6 +505,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Storage::Search::IQueryOptions>
     {
         template <typename D> using type = consume_Windows_Storage_Search_IQueryOptions<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Storage_Search_IQueryOptionsAdditionalSearchSources
+    {
+        [[nodiscard]] auto IncludeLocalSemanticIndex() const;
+        auto IncludeLocalSemanticIndex(bool value) const;
+        [[nodiscard]] auto IncludeCloudProviders() const;
+        auto IncludeCloudProviders(bool value) const;
+    };
+    template <> struct consume<winrt::Windows::Storage::Search::IQueryOptionsAdditionalSearchSources>
+    {
+        template <typename D> using type = consume_Windows_Storage_Search_IQueryOptionsAdditionalSearchSources<D>;
     };
     template <typename D>
     struct consume_Windows_Storage_Search_IQueryOptionsFactory

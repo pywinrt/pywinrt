@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Graphics.Printing.PrintSupport
 
 interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
@@ -63,8 +63,17 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.Pri
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketElement> shape=4 reverse=62 role=move_next
             out boolean return
 
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfo
+    guid 913cd9e0-cb44-5ae4-b984-f6e80e872320
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics
+    guid 3246a41d-2757-544d-aafa-b38461896270
+
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
     guid 9c90151e-ad1b-5081-a491-4a2d94244f2d
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportEnterpriseManagementUIEventArgs
+    guid 6b1c2850-4bf7-5894-89fa-e89d9ea4eb2e
 
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession
     guid eea45f1a-f4c6-54b3-a0b8-a559839aa4c3
@@ -99,6 +108,9 @@ interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabil
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4
     guid 31734ad5-9bfb-5bfb-bdef-8476258e3390
 
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs5
+    guid bc72f631-8177-5ef0-94c1-929080525b5a
+
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicy
     guid 5f5fc025-8c35-5529-8038-8cdc3634bbcd
 
@@ -110,6 +122,9 @@ interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketElement
 
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs
     guid 338e4e69-db55-55c7-8338-ef64680a8f90
+
+interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs2
+    guid 39749075-d02d-5fd1-9c4b-46bb8db7316b
 
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrinterSelectedEventArgs
     guid 7b1cb7d9-a8a4-5c09-adb2-66165f817977
@@ -125,6 +140,134 @@ interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsActivatedE
 
 interface Windows.Graphics.Printing.PrintSupport.IPrintSupportSettingsUISession
     guid c6da2251-83c3-55e4-a0f8-5de8b062adbf
+
+interface Windows.Foundation.IReference<System.Boolean> concrete
+    py winrt.windows.foundation._IReference[Boolean]
+    guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.Boolean
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Boolean> shape=4 reverse=22 role=value
+            out boolean return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
 
 enum Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind python_type
     py IppCommunicationErrorKind
@@ -143,6 +286,39 @@ enum Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind python_t
     constant UNIVERSAL_PRINT 3
     constant VIRTUAL_PRINTER 4
 
+enum Windows.Graphics.Printing.PrintSupport.PrintSupportAppContracts python_type flags_enum
+    py PrintSupportAppContracts
+    signature enum(Windows.Graphics.Printing.PrintSupport.PrintSupportAppContracts;u4)
+    constant NONE 0x0
+    constant JOB_BACKGROUND_SESSION 0x1
+    constant SETTINGS_UI 0x2
+    constant EXTENSION 0x4
+    constant JOB_UI 0x8
+    constant VIRTUAL_PRINTER_BACKGROUND_SESSION 0x10
+    constant ENTERPRISE_MANAGEMENT_UI 0x20
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo python_type
+    py PrintSupportAppInfo
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo;{913cd9e0-cb44-5ae4-b984-f6e80e872320})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfo
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfo
+    factory Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics
+    property app_info
+        get get_AppInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfo shape=4 reverse=22
+            out class type=Windows.ApplicationModel.AppInfo return
+    property supported_contracts
+        get get_SupportedContracts slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfo shape=4 reverse=43
+            out enum_u32 type=Windows.Graphics.Printing.PrintSupport.PrintSupportAppContracts return
+    method from_printer_name static
+        method FromPrinterName slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics shape=51 reverse=44 static
+            in string name=printerName
+            out class type=Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo return
+    method get_print_job_shows_ui static
+        method GetPrintJobShowsUI slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportAppInfoStatics shape=117 reverse=25 static
+            in string name=printerName
+            in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+
 class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs python_type
     py PrintSupportCommunicationErrorDetectedEventArgs
     signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs;{9c90151e-ad1b-5081-a491-4a2d94244f2d})
@@ -160,6 +336,29 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetec
     method get_deferral
         method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs shape=4 reverse=99
             out class type=Windows.Foundation.Deferral return
+
+class Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs python_type
+    py PrintSupportEnterpriseManagementUIEventArgs
+    signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs;{6b1c2850-4bf7-5894-89fa-e89d9ea4eb2e})
+    default Windows.Graphics.Printing.PrintSupport.IPrintSupportEnterpriseManagementUIEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportEnterpriseManagementUIEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgs
+    requires Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=22
+            out enum32 type=Windows.ApplicationModel.Activation.ActivationKind return
+    property previous_execution_state
+        get get_PreviousExecutionState slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=43
+            out enum32 type=Windows.ApplicationModel.Activation.ApplicationExecutionState return
+    property splash_screen
+        get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
+            out class type=Windows.ApplicationModel.Activation.SplashScreen return
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
+            out class type=Windows.System.User return
+    property printer
+        get get_Printer slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportEnterpriseManagementUIEventArgs shape=4 reverse=22
+            out class type=Windows.Devices.Printers.IppPrintDevice return
 
 class Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession python_type
     py PrintSupportExtensionSession
@@ -295,6 +494,7 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilities
     requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2
     requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3
     requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs5
     property resource_language
         get get_ResourceLanguage slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=43
             out string return
@@ -313,6 +513,9 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilities
     method get_deferral
         method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs shape=4 reverse=62
             out class type=Windows.Foundation.Deferral return
+    method set_pdl_passthrough_with_job_attributes_supported
+        method SetPdlPassthroughWithJobAttributesSupported slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs5 shape=4 reverse=22
+            in boolean name=supported
     method set_print_device_capabilities_update_policy
         method SetPrintDeviceCapabilitiesUpdatePolicy slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2 shape=4 reverse=121
             in class type=Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy name=updatePolicy
@@ -365,12 +568,16 @@ class Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRe
     signature rc(Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs;{338e4e69-db55-55c7-8338-ef64680a8f90})
     default Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs
     requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs
+    requires Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs2
     property print_ticket
         get get_PrintTicket slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs shape=4 reverse=22
             out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
     method get_deferral
         method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs shape=4 reverse=62
             out class type=Windows.Foundation.Deferral return
+    method set_print_job_shows_ui
+        method SetPrintJobShowsUI slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs2 shape=4 reverse=22
+            in boolean name=showsUI
     method set_print_ticket_validation_status
         method SetPrintTicketValidationStatus slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintTicketValidationRequestedEventArgs shape=4 reverse=43
             in enum32 type=Windows.Graphics.Printing.PrintSupport.WorkflowPrintTicketValidationStatus name=status
@@ -536,6 +743,9 @@ enum Windows.Graphics.Printing.PrintSupport.XpsImageQuality python_type
     constant JPEG_LOW_COMPRESSION 2
     constant PNG 3
 
+class System.Boolean external
+    py winrt.system.Boolean
+
 class System.String external
     py winrt.system.String
 
@@ -573,6 +783,26 @@ struct Windows.Foundation.EventRegistrationToken external
 
 struct Windows.Foundation.HResult external
     py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
 
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler

@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Media.Core
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Media.Core.CodecInfo>> concrete
@@ -260,6 +260,10 @@ class Windows.Media.Core.CodecQuery activatable python_type
 class Windows.Media.Core.CodecSubtypes static python_type
     py CodecSubtypes
     factory Windows.Media.Core.ICodecSubtypesStatics
+    factory Windows.Media.Core.ICodecSubtypesStatics2
+    property audio_format_w_m_audio_lossless static
+        get get_AudioFormatWMAudioLossless slot=54 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=368 static
+            out string return
     property audio_format_aac static
         get get_AudioFormatAac slot=35 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=292 static
             out string return
@@ -314,8 +318,8 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property audio_format_pcm static
         get get_AudioFormatPcm slot=52 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=359 static
             out string return
-    property audio_format_w_m_audio_lossless static
-        get get_AudioFormatWMAudioLossless slot=54 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=368 static
+    property video_format_m_p43 static
+        get get_VideoFormatMP43 slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=232 static
             out string return
     property audio_format_w_m_audio_v8 static
         get get_AudioFormatWMAudioV8 slot=55 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=440 static
@@ -371,9 +375,6 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property video_format_m4_s2 static
         get get_VideoFormatM4S2 slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=223 static
             out string return
-    property video_format_m_p43 static
-        get get_VideoFormatMP43 slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=232 static
-            out string return
     property video_format_m_p4_s static
         get get_VideoFormatMP4S slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=237 static
             out string return
@@ -412,6 +413,9 @@ class Windows.Media.Core.CodecSubtypes static python_type
             out string return
     property video_format_wvc1 static
         get get_VideoFormatWvc1 slot=33 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 reverse=285 static
+            out string return
+    property video_format_av1 static
+        get get_VideoFormatAv1 slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics2 shape=4 reverse=22 static
             out string return
 
 class Windows.Media.Core.DataCue activatable python_type
@@ -706,6 +710,9 @@ interface Windows.Media.Core.ICodecQuery
 
 interface Windows.Media.Core.ICodecSubtypesStatics
     guid a66ac4f2-888b-4224-8cf6-2a8d4eb02382
+
+interface Windows.Media.Core.ICodecSubtypesStatics2
+    guid 363b0930-de26-582e-8014-f546d0753887
 
 interface Windows.Media.Core.IDataCue
     guid 7c7f676d-1fbc-4e2d-9a87-ee38bd1dc637

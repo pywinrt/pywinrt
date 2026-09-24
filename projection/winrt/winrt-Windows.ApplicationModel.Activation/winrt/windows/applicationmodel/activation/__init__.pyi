@@ -194,6 +194,7 @@ class ActivationKind(enum.IntEnum):
     PRINT_SUPPORT_SETTINGS_UI = 1024
     PHONE_CALL_ACTIVATION = 1025
     VPN_FOREGROUND = 1026
+    PRINT_SUPPORT_ENTERPRISE_MANAGEMENT_UI = 1027
 
 class ApplicationExecutionState(enum.IntEnum):
     NOT_RUNNING = 0

@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Microsoft.Graphics.Imaging
 
 interface Microsoft.Graphics.Imaging.IImageBuffer
@@ -40,7 +40,7 @@ class Microsoft.Graphics.Imaging.ImageBuffer python_type closeable
         method CopyToSoftwareBitmap slot=12 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=162
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method create_for_buffer static
-        method CreateForBuffer slot=6 inputs=5 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=267 static
+        method CreateForBuffer slot=6 inputs=5 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=267 reverse=516 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             in enum32 type=Microsoft.Graphics.Imaging.ImageBufferPixelFormat name=pixelFormat
             in int32 name=width
