@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Isolation
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Isolation` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Isolation` namespace.
 
 This package provides the `winrt.windows.security.isolation` module.
 

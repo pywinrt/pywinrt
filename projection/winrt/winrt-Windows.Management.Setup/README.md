@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management.Setup
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management.Setup` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management.Setup` namespace.
 
 This package provides the `winrt.windows.management.setup` module.
 

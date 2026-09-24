@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.Pickers
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.Pickers` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.Pickers` namespace.
 
 This package provides the `winrt.windows.storage.pickers` module.
 

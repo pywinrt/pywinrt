@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Contacts.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Contacts.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Contacts.Provider` namespace.
 
 This package provides the `winrt.windows.applicationmodel.contacts.provider` module.
 

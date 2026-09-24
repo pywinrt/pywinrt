@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.ServiceDiscovery.Dnssd
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.ServiceDiscovery.Dnssd` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.ServiceDiscovery.Dnssd` namespace.
 
 This package provides the `winrt.windows.networking.servicediscovery.dnssd` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.DialProtocol
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.DialProtocol` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.DialProtocol` namespace.
 
 This package provides the `winrt.windows.media.dialprotocol` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Composition.Interactions
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Composition.Interactions` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Composition.Interactions` namespace.
 
 This package provides the `winrt.windows.ui.composition.interactions` module.
 

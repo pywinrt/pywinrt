@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.PointOfService.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.PointOfService.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.PointOfService.Provider` namespace.
 
 This package provides the `winrt.windows.devices.pointofservice.provider` module.
 

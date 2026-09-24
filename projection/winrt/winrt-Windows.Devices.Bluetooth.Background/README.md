@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Bluetooth.Background
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Bluetooth.Background` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Bluetooth.Background` namespace.
 
 This package provides the `winrt.windows.devices.bluetooth.background` module.
 

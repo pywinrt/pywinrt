@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Capture
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Capture` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Capture` namespace.
 
 This package provides the `winrt.windows.graphics.capture` module.
 

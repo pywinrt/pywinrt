@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Sensors
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Sensors` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Sensors` namespace.
 
 This package provides the `winrt.windows.devices.sensors` module.
 

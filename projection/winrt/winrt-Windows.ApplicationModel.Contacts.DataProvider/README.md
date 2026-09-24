@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Contacts.DataProvider
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Contacts.DataProvider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Contacts.DataProvider` namespace.
 
 This package provides the `winrt.windows.applicationmodel.contacts.dataprovider` module.
 

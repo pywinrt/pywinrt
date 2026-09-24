@@ -2,7 +2,7 @@
 
 # winrt-Windows.Gaming.Input
 
-Windows Runtime (WinRT) APIs for for the `Windows.Gaming.Input` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Gaming.Input` namespace.
 
 This package provides the `winrt.windows.gaming.input` module.
 

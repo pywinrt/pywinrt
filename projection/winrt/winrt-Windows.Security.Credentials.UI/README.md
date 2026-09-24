@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Credentials.UI
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Credentials.UI` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Credentials.UI` namespace.
 
 This package provides the `winrt.windows.security.credentials.ui` module.
 

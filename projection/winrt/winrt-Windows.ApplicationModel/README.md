@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel` namespace.
 
 This package provides the `winrt.windows.applicationmodel` module.
 

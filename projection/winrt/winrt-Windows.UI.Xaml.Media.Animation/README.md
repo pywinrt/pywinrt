@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Media.Animation
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Media.Animation` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Media.Animation` namespace.
 
 This package provides the `winrt.windows.ui.xaml.media.animation` module.
 

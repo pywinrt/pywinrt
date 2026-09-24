@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Text.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Text.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Text.Core` namespace.
 
 This package provides the `winrt.windows.ui.text.core` module.
 

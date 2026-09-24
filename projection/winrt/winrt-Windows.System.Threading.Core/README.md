@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Threading.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Threading.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Threading.Core` namespace.
 
 This package provides the `winrt.windows.system.threading.core` module.
 

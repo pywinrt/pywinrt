@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Store.LicenseManagement
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Store.LicenseManagement` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Store.LicenseManagement` namespace.
 
 This package provides the `winrt.windows.applicationmodel.store.licensemanagement` module.
 

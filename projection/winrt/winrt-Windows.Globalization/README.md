@@ -2,7 +2,7 @@
 
 # winrt-Windows.Globalization
 
-Windows Runtime (WinRT) APIs for for the `Windows.Globalization` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Globalization` namespace.
 
 This package provides the `winrt.windows.globalization` module.
 

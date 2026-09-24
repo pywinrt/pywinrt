@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.UserDataAccounts
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.UserDataAccounts` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.UserDataAccounts` namespace.
 
 This package provides the `winrt.windows.applicationmodel.userdataaccounts` module.
 

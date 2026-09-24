@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.ViewManagement.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.ViewManagement.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.ViewManagement.Core` namespace.
 
 This package provides the `winrt.windows.ui.viewmanagement.core` module.
 

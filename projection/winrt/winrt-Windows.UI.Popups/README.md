@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Popups
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Popups` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Popups` namespace.
 
 This package provides the `winrt.windows.ui.popups` module.
 

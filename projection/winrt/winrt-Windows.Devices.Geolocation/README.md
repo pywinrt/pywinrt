@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Geolocation
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Geolocation` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Geolocation` namespace.
 
 This package provides the `winrt.windows.devices.geolocation` module.
 

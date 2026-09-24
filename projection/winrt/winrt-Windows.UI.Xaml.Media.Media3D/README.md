@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Media.Media3D
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Media.Media3D` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Media.Media3D` namespace.
 
 This package provides the `winrt.windows.ui.xaml.media.media3d` module.
 

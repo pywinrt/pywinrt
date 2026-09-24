@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.Proximity
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.Proximity` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.Proximity` namespace.
 
 This package provides the `winrt.windows.networking.proximity` module.
 

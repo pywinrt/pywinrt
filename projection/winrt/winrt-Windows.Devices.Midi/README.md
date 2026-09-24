@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Midi
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Midi` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Midi` namespace.
 
 This package provides the `winrt.windows.devices.midi` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Input.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Input.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Input.Preview` namespace.
 
 This package provides the `winrt.windows.ui.input.preview` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Search
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Search` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Search` namespace.
 
 This package provides the `winrt.windows.applicationmodel.search` module.
 

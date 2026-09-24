@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Geolocation.Geofencing
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Geolocation.Geofencing` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Geolocation.Geofencing` namespace.
 
 This package provides the `winrt.windows.devices.geolocation.geofencing` module.
 

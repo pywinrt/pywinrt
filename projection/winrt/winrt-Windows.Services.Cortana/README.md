@@ -2,7 +2,7 @@
 
 # winrt-Windows.Services.Cortana
 
-Windows Runtime (WinRT) APIs for for the `Windows.Services.Cortana` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Services.Cortana` namespace.
 
 This package provides the `winrt.windows.services.cortana` module.
 

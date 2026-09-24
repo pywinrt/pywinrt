@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.SocialInfo
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.SocialInfo` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.SocialInfo` namespace.
 
 This package provides the `winrt.windows.applicationmodel.socialinfo` module.
 

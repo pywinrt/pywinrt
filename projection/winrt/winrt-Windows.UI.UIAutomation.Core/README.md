@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.UIAutomation.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.UIAutomation.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.UIAutomation.Core` namespace.
 
 This package provides the `winrt.windows.ui.uiautomation.core` module.
 

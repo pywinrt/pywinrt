@@ -2,7 +2,7 @@
 
 # winrt-Windows.Services.Maps
 
-Windows Runtime (WinRT) APIs for for the `Windows.Services.Maps` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Services.Maps` namespace.
 
 This package provides the `winrt.windows.services.maps` module.
 

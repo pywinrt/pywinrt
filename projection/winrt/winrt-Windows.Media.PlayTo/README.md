@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.PlayTo
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.PlayTo` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.PlayTo` namespace.
 
 This package provides the `winrt.windows.media.playto` module.
 

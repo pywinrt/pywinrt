@@ -2,7 +2,7 @@
 
 # winrt-Windows.Gaming.Preview.GamesEnumeration
 
-Windows Runtime (WinRT) APIs for for the `Windows.Gaming.Preview.GamesEnumeration` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Gaming.Preview.GamesEnumeration` namespace.
 
 This package provides the `winrt.windows.gaming.preview.gamesenumeration` module.
 

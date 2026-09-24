@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.Compression
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.Compression` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.Compression` namespace.
 
 This package provides the `winrt.windows.storage.compression` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.Vpn
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.Vpn` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.Vpn` namespace.
 
 This package provides the `winrt.windows.networking.vpn` module.
 

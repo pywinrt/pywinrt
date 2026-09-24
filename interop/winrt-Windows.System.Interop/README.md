@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Interop
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Interop` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Interop` namespace.
 
 This package provides the `winrt.windows.system.interop` module.
 

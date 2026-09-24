@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Automation.Text
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Automation.Text` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Automation.Text` namespace.
 
 This package provides the `winrt.windows.ui.xaml.automation.text` module.
 

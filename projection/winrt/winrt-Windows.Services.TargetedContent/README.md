@@ -2,7 +2,7 @@
 
 # winrt-Windows.Services.TargetedContent
 
-Windows Runtime (WinRT) APIs for for the `Windows.Services.TargetedContent` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Services.TargetedContent` namespace.
 
 This package provides the `winrt.windows.services.targetedcontent` module.
 

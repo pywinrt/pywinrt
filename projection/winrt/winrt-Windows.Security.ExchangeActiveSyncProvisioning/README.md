@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.ExchangeActiveSyncProvisioning
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.ExchangeActiveSyncProvisioning` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.ExchangeActiveSyncProvisioning` namespace.
 
 This package provides the `winrt.windows.security.exchangeactivesyncprovisioning` module.
 

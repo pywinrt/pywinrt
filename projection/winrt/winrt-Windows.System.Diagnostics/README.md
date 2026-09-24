@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Diagnostics
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Diagnostics` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Diagnostics` namespace.
 
 This package provides the `winrt.windows.system.diagnostics` module.
 

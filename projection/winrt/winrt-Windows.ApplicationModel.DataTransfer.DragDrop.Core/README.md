@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.DataTransfer.DragDrop.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.DataTransfer.DragDrop.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.DataTransfer.DragDrop.Core` namespace.
 
 This package provides the `winrt.windows.applicationmodel.datatransfer.dragdrop.core` module.
 

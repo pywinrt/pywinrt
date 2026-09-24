@@ -2,7 +2,7 @@
 
 # winrt-Windows.Web.Syndication
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web.Syndication` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web.Syndication` namespace.
 
 This package provides the `winrt.windows.web.syndication` module.
 

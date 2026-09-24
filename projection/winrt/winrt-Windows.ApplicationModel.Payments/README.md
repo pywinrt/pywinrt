@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Payments
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Payments` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Payments` namespace.
 
 This package provides the `winrt.windows.applicationmodel.payments` module.
 

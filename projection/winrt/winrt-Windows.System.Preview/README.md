@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Preview` namespace.
 
 This package provides the `winrt.windows.system.preview` module.
 

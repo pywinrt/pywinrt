@@ -2,7 +2,7 @@
 
 # winrt-Windows.Foundation.Diagnostics
 
-Windows Runtime (WinRT) APIs for for the `Windows.Foundation.Diagnostics` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Foundation.Diagnostics` namespace.
 
 This package provides the `winrt.windows.foundation.diagnostics` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Control
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Control` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Control` namespace.
 
 This package provides the `winrt.windows.media.control` module.
 

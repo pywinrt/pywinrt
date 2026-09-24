@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Preview.Holographic
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Preview.Holographic` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Preview.Holographic` namespace.
 
 This package provides the `winrt.windows.applicationmodel.preview.holographic` module.
 

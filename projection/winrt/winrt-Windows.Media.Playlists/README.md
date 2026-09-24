@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Playlists
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Playlists` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Playlists` namespace.
 
 This package provides the `winrt.windows.media.playlists` module.
 

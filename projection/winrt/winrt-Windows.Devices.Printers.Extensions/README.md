@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Printers.Extensions
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Printers.Extensions` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Printers.Extensions` namespace.
 
 This package provides the `winrt.windows.devices.printers.extensions` module.
 

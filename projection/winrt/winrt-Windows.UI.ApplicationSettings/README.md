@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.ApplicationSettings
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.ApplicationSettings` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.ApplicationSettings` namespace.
 
 This package provides the `winrt.windows.ui.applicationsettings` module.
 

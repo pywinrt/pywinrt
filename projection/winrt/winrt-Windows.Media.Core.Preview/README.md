@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Core.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Core.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Core.Preview` namespace.
 
 This package provides the `winrt.windows.media.core.preview` module.
 

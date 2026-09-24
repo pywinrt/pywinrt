@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Capture
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Capture` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Capture` namespace.
 
 This package provides the `winrt.windows.media.capture` module.
 

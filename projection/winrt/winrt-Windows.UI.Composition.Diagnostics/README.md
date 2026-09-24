@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Composition.Diagnostics
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Composition.Diagnostics` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Composition.Diagnostics` namespace.
 
 This package provides the `winrt.windows.ui.composition.diagnostics` module.
 

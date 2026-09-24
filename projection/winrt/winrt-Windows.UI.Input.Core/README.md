@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Input.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Input.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Input.Core` namespace.
 
 This package provides the `winrt.windows.ui.input.core` module.
 

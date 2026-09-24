@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Documents
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Documents` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Documents` namespace.
 
 This package provides the `winrt.windows.ui.xaml.documents` module.
 

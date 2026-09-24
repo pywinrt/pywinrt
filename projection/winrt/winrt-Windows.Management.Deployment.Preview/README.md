@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management.Deployment.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management.Deployment.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management.Deployment.Preview` namespace.
 
 This package provides the `winrt.windows.management.deployment.preview` module.
 

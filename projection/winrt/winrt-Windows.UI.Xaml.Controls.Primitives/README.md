@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Controls.Primitives
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Controls.Primitives` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Controls.Primitives` namespace.
 
 This package provides the `winrt.windows.ui.xaml.controls.primitives` module.
 

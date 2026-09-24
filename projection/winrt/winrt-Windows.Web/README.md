@@ -2,7 +2,7 @@
 
 # winrt-Windows.Web
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web` namespace.
 
 This package provides the `winrt.windows.web` module.
 

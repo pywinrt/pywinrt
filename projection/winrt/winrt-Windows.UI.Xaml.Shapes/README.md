@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Shapes
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Shapes` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Shapes` namespace.
 
 This package provides the `winrt.windows.ui.xaml.shapes` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Input.Inking.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Input.Inking.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Input.Inking.Preview` namespace.
 
 This package provides the `winrt.windows.ui.input.inking.preview` module.
 

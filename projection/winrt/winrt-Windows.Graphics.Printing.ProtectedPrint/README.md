@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Printing.ProtectedPrint
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Printing.ProtectedPrint` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Printing.ProtectedPrint` namespace.
 
 This package provides the `winrt.windows.graphics.printing.protectedprint` module.
 

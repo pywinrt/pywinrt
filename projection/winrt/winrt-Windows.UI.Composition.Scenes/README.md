@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Composition.Scenes
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Composition.Scenes` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Composition.Scenes` namespace.
 
 This package provides the `winrt.windows.ui.composition.scenes` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Lights.Effects
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Lights.Effects` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Lights.Effects` namespace.
 
 This package provides the `winrt.windows.devices.lights.effects` module.
 

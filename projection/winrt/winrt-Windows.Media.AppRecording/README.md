@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.AppRecording
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.AppRecording` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.AppRecording` namespace.
 
 This package provides the `winrt.windows.media.apprecording` module.
 

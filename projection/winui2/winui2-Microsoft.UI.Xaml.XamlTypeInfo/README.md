@@ -2,7 +2,7 @@
 
 # winui2-Microsoft.UI.Xaml.XamlTypeInfo
 
-Windows Runtime (WinRT) APIs for for the `winui2-Microsoft.UI.Xaml.XamlTypeInfo` namespace.
+Windows Runtime (WinRT) APIs for the `winui2-Microsoft.UI.Xaml.XamlTypeInfo` namespace.
 
 This package provides the `winui2.microsoft.ui.xaml.xamltypeinfo` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Notifications.Management
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Notifications.Management` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Notifications.Management` namespace.
 
 This package provides the `winrt.windows.ui.notifications.management` module.
 

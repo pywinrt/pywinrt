@@ -2,7 +2,7 @@
 
 # winrt-Windows.Foundation.Collections
 
-Windows Runtime (WinRT) APIs for for the `Windows.Foundation.Collections` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Foundation.Collections` namespace.
 
 This package provides the `winrt.windows.foundation.collections` module.
 

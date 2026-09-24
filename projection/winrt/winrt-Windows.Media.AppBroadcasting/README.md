@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.AppBroadcasting
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.AppBroadcasting` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.AppBroadcasting` namespace.
 
 This package provides the `winrt.windows.media.appbroadcasting` module.
 

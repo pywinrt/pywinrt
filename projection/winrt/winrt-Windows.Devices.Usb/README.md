@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Usb
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Usb` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Usb` namespace.
 
 This package provides the `winrt.windows.devices.usb` module.
 

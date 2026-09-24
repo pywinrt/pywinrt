@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Email
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Email` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Email` namespace.
 
 This package provides the `winrt.windows.applicationmodel.email` module.
 

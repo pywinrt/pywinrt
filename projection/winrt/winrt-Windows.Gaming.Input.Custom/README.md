@@ -2,7 +2,7 @@
 
 # winrt-Windows.Gaming.Input.Custom
 
-Windows Runtime (WinRT) APIs for for the `Windows.Gaming.Input.Custom` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Gaming.Input.Custom` namespace.
 
 This package provides the `winrt.windows.gaming.input.custom` module.
 

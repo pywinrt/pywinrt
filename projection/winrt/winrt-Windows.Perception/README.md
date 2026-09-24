@@ -2,7 +2,7 @@
 
 # winrt-Windows.Perception
 
-Windows Runtime (WinRT) APIs for for the `Windows.Perception` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Perception` namespace.
 
 This package provides the `winrt.windows.perception` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.Search
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.Search` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.Search` namespace.
 
 This package provides the `winrt.windows.storage.search` module.
 

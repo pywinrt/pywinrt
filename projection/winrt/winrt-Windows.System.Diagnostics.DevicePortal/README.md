@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Diagnostics.DevicePortal
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Diagnostics.DevicePortal` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Diagnostics.DevicePortal` namespace.
 
 This package provides the `winrt.windows.system.diagnostics.deviceportal` module.
 

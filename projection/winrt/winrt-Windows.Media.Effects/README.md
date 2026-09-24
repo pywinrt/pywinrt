@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Effects
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Effects` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Effects` namespace.
 
 This package provides the `winrt.windows.media.effects` module.
 

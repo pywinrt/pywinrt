@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Gpio
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Gpio` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Gpio` namespace.
 
 This package provides the `winrt.windows.devices.gpio` module.
 

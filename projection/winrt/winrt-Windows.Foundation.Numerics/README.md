@@ -2,7 +2,7 @@
 
 # winrt-Windows.Foundation.Numerics
 
-Windows Runtime (WinRT) APIs for for the `Windows.Foundation.Numerics` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Foundation.Numerics` namespace.
 
 This package provides the `winrt.windows.foundation.numerics` module.
 

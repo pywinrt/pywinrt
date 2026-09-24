@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Casting
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Casting` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Casting` namespace.
 
 This package provides the `winrt.windows.media.casting` module.
 

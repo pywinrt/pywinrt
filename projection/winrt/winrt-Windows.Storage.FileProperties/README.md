@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.FileProperties
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.FileProperties` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.FileProperties` namespace.
 
 This package provides the `winrt.windows.storage.fileproperties` module.
 

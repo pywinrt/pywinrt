@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Render
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Render` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Render` namespace.
 
 This package provides the `winrt.windows.media.render` module.
 

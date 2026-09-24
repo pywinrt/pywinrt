@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Editing
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Editing` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Editing` namespace.
 
 This package provides the `winrt.windows.media.editing` module.
 

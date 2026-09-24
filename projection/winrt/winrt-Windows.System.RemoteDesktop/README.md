@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.RemoteDesktop
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.RemoteDesktop` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.RemoteDesktop` namespace.
 
 This package provides the `winrt.windows.system.remotedesktop` module.
 

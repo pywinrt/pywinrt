@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Authentication.Identity.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Authentication.Identity.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Authentication.Identity.Provider` namespace.
 
 This package provides the `winrt.windows.security.authentication.identity.provider` module.
 

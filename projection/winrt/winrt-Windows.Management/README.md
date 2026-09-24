@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management` namespace.
 
 This package provides the `winrt.windows.management` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Perception
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Perception` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Perception` namespace.
 
 This package provides the `winrt.windows.devices.perception` module.
 

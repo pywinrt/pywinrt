@@ -2,7 +2,7 @@
 
 # winrt-Windows.Perception.People
 
-Windows Runtime (WinRT) APIs for for the `Windows.Perception.People` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Perception.People` namespace.
 
 This package provides the `winrt.windows.perception.people` module.
 

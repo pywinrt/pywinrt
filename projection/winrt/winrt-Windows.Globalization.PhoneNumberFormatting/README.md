@@ -2,7 +2,7 @@
 
 # winrt-Windows.Globalization.PhoneNumberFormatting
 
-Windows Runtime (WinRT) APIs for for the `Windows.Globalization.PhoneNumberFormatting` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Globalization.PhoneNumberFormatting` namespace.
 
 This package provides the `winrt.windows.globalization.phonenumberformatting` module.
 

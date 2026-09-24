@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.ClosedCaptioning
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.ClosedCaptioning` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.ClosedCaptioning` namespace.
 
 This package provides the `winrt.windows.media.closedcaptioning` module.
 

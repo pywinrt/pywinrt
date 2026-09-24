@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Pwm
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Pwm` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Pwm` namespace.
 
 This package provides the `winrt.windows.devices.pwm` module.
 

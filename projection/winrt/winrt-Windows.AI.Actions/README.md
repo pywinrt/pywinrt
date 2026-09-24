@@ -2,7 +2,7 @@
 
 # winrt-Windows.AI.Actions
 
-Windows Runtime (WinRT) APIs for for the `Windows.AI.Actions` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.AI.Actions` namespace.
 
 This package provides the `winrt.windows.ai.actions` module.
 

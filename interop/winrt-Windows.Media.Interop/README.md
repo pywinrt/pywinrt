@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Interop
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Interop` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Interop` namespace.
 
 This package provides the `winrt.windows.media.interop` module.
 

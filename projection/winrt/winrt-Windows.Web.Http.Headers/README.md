@@ -2,7 +2,7 @@
 
 # winrt-Windows.Web.Http.Headers
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web.Http.Headers` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web.Http.Headers` namespace.
 
 This package provides the `winrt.windows.web.http.headers` module.
 

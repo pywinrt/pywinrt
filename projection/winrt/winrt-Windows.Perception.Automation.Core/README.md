@@ -2,7 +2,7 @@
 
 # winrt-Windows.Perception.Automation.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Perception.Automation.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Perception.Automation.Core` namespace.
 
 This package provides the `winrt.windows.perception.automation.core` module.
 

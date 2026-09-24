@@ -2,7 +2,7 @@
 
 # winrt-Windows.Data.Html
 
-Windows Runtime (WinRT) APIs for for the `Windows.Data.Html` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Data.Html` namespace.
 
 This package provides the `winrt.windows.data.html` module.
 

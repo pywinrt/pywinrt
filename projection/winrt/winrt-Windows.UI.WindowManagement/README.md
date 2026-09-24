@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.WindowManagement
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.WindowManagement` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.WindowManagement` namespace.
 
 This package provides the `winrt.windows.ui.windowmanagement` module.
 

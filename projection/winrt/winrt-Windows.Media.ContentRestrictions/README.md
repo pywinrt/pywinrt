@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.ContentRestrictions
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.ContentRestrictions` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.ContentRestrictions` namespace.
 
 This package provides the `winrt.windows.media.contentrestrictions` module.
 

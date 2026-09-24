@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.FaceAnalysis
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.FaceAnalysis` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.FaceAnalysis` namespace.
 
 This package provides the `winrt.windows.media.faceanalysis` module.
 

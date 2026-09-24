@@ -2,7 +2,7 @@
 
 # winrt-Windows.Data.Json
 
-Windows Runtime (WinRT) APIs for for the `Windows.Data.Json` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Data.Json` namespace.
 
 This package provides the `winrt.windows.data.json` module.
 

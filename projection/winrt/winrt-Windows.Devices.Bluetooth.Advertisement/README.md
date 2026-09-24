@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Bluetooth.Advertisement
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Bluetooth.Advertisement` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Bluetooth.Advertisement` namespace.
 
 This package provides the `winrt.windows.devices.bluetooth.advertisement` module.
 

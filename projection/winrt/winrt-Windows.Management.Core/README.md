@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management.Core` namespace.
 
 This package provides the `winrt.windows.management.core` module.
 

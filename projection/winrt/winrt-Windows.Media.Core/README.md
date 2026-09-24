@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Core` namespace.
 
 This package provides the `winrt.windows.media.core` module.
 

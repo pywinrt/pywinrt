@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.SpeechSynthesis
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.SpeechSynthesis` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.SpeechSynthesis` namespace.
 
 This package provides the `winrt.windows.media.speechsynthesis` module.
 

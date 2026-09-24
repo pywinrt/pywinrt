@@ -2,7 +2,7 @@
 
 # winui2-Microsoft.UI.Xaml.Controls
 
-Windows Runtime (WinRT) APIs for for the `winui2-Microsoft.UI.Xaml.Controls` namespace.
+Windows Runtime (WinRT) APIs for the `winui2-Microsoft.UI.Xaml.Controls` namespace.
 
 This package provides the `winui2.microsoft.ui.xaml.controls` module.
 

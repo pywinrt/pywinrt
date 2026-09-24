@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Protection.PlayReady
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Protection.PlayReady` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Protection.PlayReady` namespace.
 
 This package provides the `winrt.windows.media.protection.playready` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Diagnostics.TraceReporting
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Diagnostics.TraceReporting` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Diagnostics.TraceReporting` namespace.
 
 This package provides the `winrt.windows.system.diagnostics.tracereporting` module.
 

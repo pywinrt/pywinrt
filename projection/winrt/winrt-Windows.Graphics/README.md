@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics` namespace.
 
 This package provides the `winrt.windows.graphics` module.
 

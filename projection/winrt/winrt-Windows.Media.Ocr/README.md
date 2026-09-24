@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Ocr
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Ocr` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Ocr` namespace.
 
 This package provides the `winrt.windows.media.ocr` module.
 

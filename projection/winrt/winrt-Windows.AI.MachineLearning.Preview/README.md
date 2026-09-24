@@ -2,7 +2,7 @@
 
 # winrt-Windows.AI.MachineLearning.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.AI.MachineLearning.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.AI.MachineLearning.Preview` namespace.
 
 This package provides the `winrt.windows.ai.machinelearning.preview` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Automation.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Automation.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Automation.Provider` namespace.
 
 This package provides the `winrt.windows.ui.xaml.automation.provider` module.
 

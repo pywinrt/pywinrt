@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Background
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Background` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Background` namespace.
 
 This package provides the `winrt.windows.applicationmodel.background` module.
 

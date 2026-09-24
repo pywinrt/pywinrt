@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Composition.Effects
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Composition.Effects` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Composition.Effects` namespace.
 
 This package provides the `winrt.windows.ui.composition.effects` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Printing.PrintTicket
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Printing.PrintTicket` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Printing.PrintTicket` namespace.
 
 This package provides the `winrt.windows.graphics.printing.printticket` module.
 

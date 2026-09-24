@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Portable
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Portable` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Portable` namespace.
 
 This package provides the `winrt.windows.devices.portable` module.
 

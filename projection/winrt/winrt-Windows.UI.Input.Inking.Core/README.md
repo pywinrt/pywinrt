@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Input.Inking.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Input.Inking.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Input.Inking.Core` namespace.
 
 This package provides the `winrt.windows.ui.input.inking.core` module.
 

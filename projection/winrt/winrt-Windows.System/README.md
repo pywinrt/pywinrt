@@ -2,7 +2,7 @@
 
 # winrt-Windows.System
 
-Windows Runtime (WinRT) APIs for for the `Windows.System` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System` namespace.
 
 This package provides the `winrt.windows.system` module.
 

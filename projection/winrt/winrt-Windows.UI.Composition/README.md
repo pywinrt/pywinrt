@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Composition
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Composition` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Composition` namespace.
 
 This package provides the `winrt.windows.ui.composition` module.
 
