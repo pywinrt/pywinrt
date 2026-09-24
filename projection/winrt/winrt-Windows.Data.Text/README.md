@@ -2,7 +2,7 @@
 
 # winrt-Windows.Data.Text
 
-Windows Runtime (WinRT) APIs for for the `Windows.Data.Text` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Data.Text` namespace.
 
 This package provides the `winrt.windows.data.text` module.
 

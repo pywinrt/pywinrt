@@ -2,7 +2,7 @@
 
 # winrt-Windows.Foundation
 
-Windows Runtime (WinRT) APIs for for the `Windows.Foundation` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Foundation` namespace.
 
 This package provides the `winrt.windows.foundation` module.
 

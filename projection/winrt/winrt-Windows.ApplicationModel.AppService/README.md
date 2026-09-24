@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.AppService
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.AppService` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.AppService` namespace.
 
 This package provides the `winrt.windows.applicationmodel.appservice` module.
 

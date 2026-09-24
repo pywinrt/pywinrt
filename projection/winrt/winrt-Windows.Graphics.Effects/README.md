@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Effects
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Effects` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Effects` namespace.
 
 This package provides the `winrt.windows.graphics.effects` module.
 

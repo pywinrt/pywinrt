@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.PushNotifications
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.PushNotifications` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.PushNotifications` namespace.
 
 This package provides the `winrt.windows.networking.pushnotifications` module.
 

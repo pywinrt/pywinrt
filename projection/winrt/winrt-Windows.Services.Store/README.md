@@ -2,7 +2,7 @@
 
 # winrt-Windows.Services.Store
 
-Windows Runtime (WinRT) APIs for for the `Windows.Services.Store` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Services.Store` namespace.
 
 This package provides the `winrt.windows.services.store` module.
 

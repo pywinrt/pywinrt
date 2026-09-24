@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Accessibility
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Accessibility` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Accessibility` namespace.
 
 This package provides the `winrt.windows.ui.accessibility` module.
 

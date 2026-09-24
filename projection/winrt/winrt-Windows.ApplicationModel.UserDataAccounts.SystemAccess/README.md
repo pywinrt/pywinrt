@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.UserDataAccounts.SystemAccess
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.UserDataAccounts.SystemAccess` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.UserDataAccounts.SystemAccess` namespace.
 
 This package provides the `winrt.windows.applicationmodel.userdataaccounts.systemaccess` module.
 

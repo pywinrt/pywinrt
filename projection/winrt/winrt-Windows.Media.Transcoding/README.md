@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Transcoding
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Transcoding` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Transcoding` namespace.
 
 This package provides the `winrt.windows.media.transcoding` module.
 

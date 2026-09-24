@@ -2,7 +2,7 @@
 
 # winrt-Windows.Data.Xml.Xsl
 
-Windows Runtime (WinRT) APIs for for the `Windows.Data.Xml.Xsl` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Data.Xml.Xsl` namespace.
 
 This package provides the `winrt.windows.data.xml.xsl` module.
 

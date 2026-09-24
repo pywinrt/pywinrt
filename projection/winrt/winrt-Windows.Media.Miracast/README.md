@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Miracast
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Miracast` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Miracast` namespace.
 
 This package provides the `winrt.windows.media.miracast` module.
 

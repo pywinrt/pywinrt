@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.UserActivities.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.UserActivities.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.UserActivities.Core` namespace.
 
 This package provides the `winrt.windows.applicationmodel.useractivities.core` module.
 

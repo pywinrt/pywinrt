@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Resources
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Resources` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Resources` namespace.
 
 This package provides the `winrt.windows.applicationmodel.resources` module.
 

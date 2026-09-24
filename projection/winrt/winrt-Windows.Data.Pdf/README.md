@@ -2,7 +2,7 @@
 
 # winrt-Windows.Data.Pdf
 
-Windows Runtime (WinRT) APIs for for the `Windows.Data.Pdf` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Data.Pdf` namespace.
 
 This package provides the `winrt.windows.data.pdf` module.
 

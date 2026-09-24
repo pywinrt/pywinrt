@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Store
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Store` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Store` namespace.
 
 This package provides the `winrt.windows.applicationmodel.store` module.
 

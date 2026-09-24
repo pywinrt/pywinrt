@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Appointments
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Appointments` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Appointments` namespace.
 
 This package provides the `winrt.windows.applicationmodel.appointments` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Store.Preview.InstallControl
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Store.Preview.InstallControl` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Store.Preview.InstallControl` namespace.
 
 This package provides the `winrt.windows.applicationmodel.store.preview.installcontrol` module.
 

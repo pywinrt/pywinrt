@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Core.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Core.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Core.Preview` namespace.
 
 This package provides the `winrt.windows.ui.core.preview` module.
 

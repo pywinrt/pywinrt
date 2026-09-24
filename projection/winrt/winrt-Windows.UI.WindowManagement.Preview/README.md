@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.WindowManagement.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.WindowManagement.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.WindowManagement.Preview` namespace.
 
 This package provides the `winrt.windows.ui.windowmanagement.preview` module.
 

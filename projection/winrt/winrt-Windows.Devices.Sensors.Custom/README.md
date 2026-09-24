@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Sensors.Custom
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Sensors.Custom` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Sensors.Custom` namespace.
 
 This package provides the `winrt.windows.devices.sensors.custom` module.
 

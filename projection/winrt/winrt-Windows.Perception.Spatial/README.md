@@ -2,7 +2,7 @@
 
 # winrt-Windows.Perception.Spatial
 
-Windows Runtime (WinRT) APIs for for the `Windows.Perception.Spatial` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Perception.Spatial` namespace.
 
 This package provides the `winrt.windows.perception.spatial` module.
 

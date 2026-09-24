@@ -2,7 +2,7 @@
 
 # winrt-Windows.Foundation.Metadata
 
-Windows Runtime (WinRT) APIs for for the `Windows.Foundation.Metadata` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Foundation.Metadata` namespace.
 
 This package provides the `winrt.windows.foundation.metadata` module.
 

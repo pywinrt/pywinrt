@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Activation
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Activation` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Activation` namespace.
 
 This package provides the `winrt.windows.applicationmodel.activation` module.
 

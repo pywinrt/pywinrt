@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Input.Spatial
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Input.Spatial` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Input.Spatial` namespace.
 
 This package provides the `winrt.windows.ui.input.spatial` module.
 

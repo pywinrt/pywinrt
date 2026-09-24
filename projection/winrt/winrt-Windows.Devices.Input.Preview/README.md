@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Input.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Input.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Input.Preview` namespace.
 
 This package provides the `winrt.windows.devices.input.preview` module.
 

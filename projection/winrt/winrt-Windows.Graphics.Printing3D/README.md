@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Printing3D
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Printing3D` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Printing3D` namespace.
 
 This package provides the `winrt.windows.graphics.printing3d` module.
 

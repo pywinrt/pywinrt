@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.Pickers.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.Pickers.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.Pickers.Provider` namespace.
 
 This package provides the `winrt.windows.storage.pickers.provider` module.
 

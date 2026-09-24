@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Holographic
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Holographic` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Holographic` namespace.
 
 This package provides the `winrt.windows.graphics.holographic` module.
 

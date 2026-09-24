@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Authentication.Web.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Authentication.Web.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Authentication.Web.Core` namespace.
 
 This package provides the `winrt.windows.security.authentication.web.core` module.
 

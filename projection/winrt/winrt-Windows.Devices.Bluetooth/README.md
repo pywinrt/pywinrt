@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Bluetooth
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Bluetooth` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Bluetooth` namespace.
 
 This package provides the `winrt.windows.devices.bluetooth` module.
 

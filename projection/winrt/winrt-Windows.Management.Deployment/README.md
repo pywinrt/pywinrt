@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management.Deployment
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management.Deployment` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management.Deployment` namespace.
 
 This package provides the `winrt.windows.management.deployment` module.
 

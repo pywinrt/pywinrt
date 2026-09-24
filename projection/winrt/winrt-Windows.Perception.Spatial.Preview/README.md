@@ -2,7 +2,7 @@
 
 # winrt-Windows.Perception.Spatial.Preview
 
-Windows Runtime (WinRT) APIs for for the `Windows.Perception.Spatial.Preview` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Perception.Spatial.Preview` namespace.
 
 This package provides the `winrt.windows.perception.spatial.preview` module.
 

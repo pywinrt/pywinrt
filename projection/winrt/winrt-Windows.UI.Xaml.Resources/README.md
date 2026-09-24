@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Resources
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Resources` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Resources` namespace.
 
 This package provides the `winrt.windows.ui.xaml.resources` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.EnterpriseData
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.EnterpriseData` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.EnterpriseData` namespace.
 
 This package provides the `winrt.windows.security.enterprisedata` module.
 

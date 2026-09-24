@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.NetworkOperators
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.NetworkOperators` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.NetworkOperators` namespace.
 
 This package provides the `winrt.windows.networking.networkoperators` module.
 

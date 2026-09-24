@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Devices.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Devices.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Devices.Core` namespace.
 
 This package provides the `winrt.windows.media.devices.core` module.
 

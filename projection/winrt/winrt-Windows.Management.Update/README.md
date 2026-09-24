@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management.Update
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management.Update` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management.Update` namespace.
 
 This package provides the `winrt.windows.management.update` module.
 

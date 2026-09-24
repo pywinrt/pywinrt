@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Cryptography.Certificates
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Cryptography.Certificates` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Cryptography.Certificates` namespace.
 
 This package provides the `winrt.windows.security.cryptography.certificates` module.
 

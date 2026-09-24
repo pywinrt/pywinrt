@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.MediaProperties
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.MediaProperties` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.MediaProperties` namespace.
 
 This package provides the `winrt.windows.media.mediaproperties` module.
 

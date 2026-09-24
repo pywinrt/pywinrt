@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.DirectX
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.DirectX` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.DirectX` namespace.
 
 This package provides the `winrt.windows.graphics.directx` module.
 

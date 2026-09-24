@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.DataProtection
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.DataProtection` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.DataProtection` namespace.
 
 This package provides the `winrt.windows.security.dataprotection` module.
 

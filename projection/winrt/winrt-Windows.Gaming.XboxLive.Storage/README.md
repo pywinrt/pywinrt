@@ -2,7 +2,7 @@
 
 # winrt-Windows.Gaming.XboxLive.Storage
 
-Windows Runtime (WinRT) APIs for for the `Windows.Gaming.XboxLive.Storage` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Gaming.XboxLive.Storage` namespace.
 
 This package provides the `winrt.windows.gaming.xboxlive.storage` module.
 

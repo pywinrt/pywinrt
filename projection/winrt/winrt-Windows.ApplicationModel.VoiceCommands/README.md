@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.VoiceCommands
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.VoiceCommands` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.VoiceCommands` namespace.
 
 This package provides the `winrt.windows.applicationmodel.voicecommands` module.
 

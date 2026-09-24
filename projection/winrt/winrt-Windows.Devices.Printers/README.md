@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Printers
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Printers` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Printers` namespace.
 
 This package provides the `winrt.windows.devices.printers` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.Streams
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.Streams` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.Streams` namespace.
 
 This package provides the `winrt.windows.storage.streams` module.
 

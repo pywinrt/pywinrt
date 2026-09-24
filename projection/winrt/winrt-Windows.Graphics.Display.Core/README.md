@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Display.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Display.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Display.Core` namespace.
 
 This package provides the `winrt.windows.graphics.display.core` module.
 

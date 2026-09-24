@@ -2,7 +2,7 @@
 
 # winrt-Windows.Web.AtomPub
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web.AtomPub` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web.AtomPub` namespace.
 
 This package provides the `winrt.windows.web.atompub` module.
 

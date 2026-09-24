@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.SpeechRecognition
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.SpeechRecognition` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.SpeechRecognition` namespace.
 
 This package provides the `winrt.windows.media.speechrecognition` module.
 

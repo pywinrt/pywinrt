@@ -2,7 +2,7 @@
 
 # winui2-Microsoft.UI.Xaml.Automation.Peers
 
-Windows Runtime (WinRT) APIs for for the `winui2-Microsoft.UI.Xaml.Automation.Peers` namespace.
+Windows Runtime (WinRT) APIs for the `winui2-Microsoft.UI.Xaml.Automation.Peers` namespace.
 
 This package provides the `winui2.microsoft.ui.xaml.automation.peers` module.
 

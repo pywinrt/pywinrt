@@ -2,7 +2,7 @@
 
 # winrt-Windows.Web.UI.Interop
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web.UI.Interop` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web.UI.Interop` namespace.
 
 This package provides the `winrt.windows.web.ui.interop` module.
 

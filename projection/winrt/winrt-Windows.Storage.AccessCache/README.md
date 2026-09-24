@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.AccessCache
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.AccessCache` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.AccessCache` namespace.
 
 This package provides the `winrt.windows.storage.accesscache` module.
 

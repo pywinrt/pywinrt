@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Composition.Desktop
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Composition.Desktop` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Composition.Desktop` namespace.
 
 This package provides the `winrt.windows.ui.composition.desktop` module.
 
