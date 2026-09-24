@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Core` namespace.
 
 This package provides the `winrt.windows.ui.core` module.
 

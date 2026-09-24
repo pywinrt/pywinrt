@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.WiFiDirect.Services
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.WiFiDirect.Services` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.WiFiDirect.Services` namespace.
 
 This package provides the `winrt.windows.devices.wifidirect.services` module.
 

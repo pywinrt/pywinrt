@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Markup
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Markup` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Markup` namespace.
 
 This package provides the `winrt.windows.ui.xaml.markup` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Sms
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Sms` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Sms` namespace.
 
 This package provides the `winrt.windows.devices.sms` module.
 

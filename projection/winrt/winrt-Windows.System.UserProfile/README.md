@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.UserProfile
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.UserProfile` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.UserProfile` namespace.
 
 This package provides the `winrt.windows.system.userprofile` module.
 

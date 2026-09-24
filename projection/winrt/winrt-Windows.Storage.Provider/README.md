@@ -2,7 +2,7 @@
 
 # winrt-Windows.Storage.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.Storage.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Storage.Provider` namespace.
 
 This package provides the `winrt.windows.storage.provider` module.
 

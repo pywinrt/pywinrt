@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Background
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Background` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Background` namespace.
 
 This package provides the `winrt.windows.devices.background` module.
 

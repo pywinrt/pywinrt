@@ -2,7 +2,7 @@
 
 # winrt-Windows.AI.Actions.Provider
 
-Windows Runtime (WinRT) APIs for for the `Windows.AI.Actions.Provider` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.AI.Actions.Provider` namespace.
 
 This package provides the `winrt.windows.ai.actions.provider` module.
 

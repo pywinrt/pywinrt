@@ -2,7 +2,7 @@
 
 # winrt-Windows.Globalization.NumberFormatting
 
-Windows Runtime (WinRT) APIs for for the `Windows.Globalization.NumberFormatting` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Globalization.NumberFormatting` namespace.
 
 This package provides the `winrt.windows.globalization.numberformatting` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices` namespace.
 
 This package provides the `winrt.windows.devices` module.
 

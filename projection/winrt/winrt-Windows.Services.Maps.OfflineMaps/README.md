@@ -2,7 +2,7 @@
 
 # winrt-Windows.Services.Maps.OfflineMaps
 
-Windows Runtime (WinRT) APIs for for the `Windows.Services.Maps.OfflineMaps` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Services.Maps.OfflineMaps` namespace.
 
 This package provides the `winrt.windows.services.maps.offlinemaps` module.
 

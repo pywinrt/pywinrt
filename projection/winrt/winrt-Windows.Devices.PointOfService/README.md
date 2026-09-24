@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.PointOfService
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.PointOfService` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.PointOfService` namespace.
 
 This package provides the `winrt.windows.devices.pointofservice` module.
 

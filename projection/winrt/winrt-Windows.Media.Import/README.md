@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Import
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Import` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Import` namespace.
 
 This package provides the `winrt.windows.media.import_` module.
 

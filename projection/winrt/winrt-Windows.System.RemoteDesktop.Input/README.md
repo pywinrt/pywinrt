@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.RemoteDesktop.Input
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.RemoteDesktop.Input` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.RemoteDesktop.Input` namespace.
 
 This package provides the `winrt.windows.system.remotedesktop.input` module.
 

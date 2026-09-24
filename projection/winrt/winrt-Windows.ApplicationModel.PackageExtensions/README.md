@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.PackageExtensions
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.PackageExtensions` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.PackageExtensions` namespace.
 
 This package provides the `winrt.windows.applicationmodel.packageextensions` module.
 

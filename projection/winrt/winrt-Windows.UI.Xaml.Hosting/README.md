@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Hosting
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Hosting` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Hosting` namespace.
 
 This package provides the `winrt.windows.ui.xaml.hosting` module.
 

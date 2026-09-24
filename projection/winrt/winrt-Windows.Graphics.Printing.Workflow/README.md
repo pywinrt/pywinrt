@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Printing.Workflow
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Printing.Workflow` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Printing.Workflow` namespace.
 
 This package provides the `winrt.windows.graphics.printing.workflow` module.
 

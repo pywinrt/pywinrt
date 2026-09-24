@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Display
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Display` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Display` namespace.
 
 This package provides the `winrt.windows.system.display` module.
 

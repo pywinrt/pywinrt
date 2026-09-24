@@ -2,7 +2,7 @@
 
 # winrt-Windows.System.Profile.SystemManufacturers
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Profile.SystemManufacturers` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Profile.SystemManufacturers` namespace.
 
 This package provides the `winrt.windows.system.profile.systemmanufacturers` module.
 

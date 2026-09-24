@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.DataTransfer
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.DataTransfer` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.DataTransfer` namespace.
 
 This package provides the `winrt.windows.applicationmodel.datatransfer` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Media
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Media` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Media` namespace.
 
 This package provides the `winrt.windows.ui.xaml.media` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Data
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Data` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Data` namespace.
 
 This package provides the `winrt.windows.ui.xaml.data` module.
 

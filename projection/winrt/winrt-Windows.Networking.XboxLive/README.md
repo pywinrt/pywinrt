@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.XboxLive
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.XboxLive` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.XboxLive` namespace.
 
 This package provides the `winrt.windows.networking.xboxlive` module.
 

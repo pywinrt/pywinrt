@@ -2,7 +2,7 @@
 
 # winrt-Windows.Management.Policies
 
-Windows Runtime (WinRT) APIs for for the `Windows.Management.Policies` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Management.Policies` namespace.
 
 This package provides the `winrt.windows.management.policies` module.
 

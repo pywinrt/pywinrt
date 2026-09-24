@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.Printing.PrintSupport
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Printing.PrintSupport` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Printing.PrintSupport` namespace.
 
 This package provides the `winrt.windows.graphics.printing.printsupport` module.
 

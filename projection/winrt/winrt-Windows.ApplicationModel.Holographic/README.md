@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Holographic
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Holographic` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Holographic` namespace.
 
 This package provides the `winrt.windows.applicationmodel.holographic` module.
 

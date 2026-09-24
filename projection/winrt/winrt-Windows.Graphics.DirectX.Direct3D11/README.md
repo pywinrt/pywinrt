@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.DirectX.Direct3D11
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.DirectX.Direct3D11` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.DirectX.Direct3D11` namespace.
 
 This package provides the `winrt.windows.graphics.directx.direct3d11` module.
 

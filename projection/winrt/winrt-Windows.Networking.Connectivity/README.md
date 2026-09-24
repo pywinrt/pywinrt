@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking.Connectivity
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking.Connectivity` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking.Connectivity` namespace.
 
 This package provides the `winrt.windows.networking.connectivity` module.
 

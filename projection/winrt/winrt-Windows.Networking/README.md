@@ -2,7 +2,7 @@
 
 # winrt-Windows.Networking
 
-Windows Runtime (WinRT) APIs for for the `Windows.Networking` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Networking` namespace.
 
 This package provides the `winrt.windows.networking` module.
 

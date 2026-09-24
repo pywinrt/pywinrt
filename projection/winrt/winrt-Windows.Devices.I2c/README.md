@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.I2c
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.I2c` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.I2c` namespace.
 
 This package provides the `winrt.windows.devices.i2c` module.
 

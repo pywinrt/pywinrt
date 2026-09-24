@@ -2,7 +2,7 @@
 
 # winrt-Windows.Media.Audio
 
-Windows Runtime (WinRT) APIs for for the `Windows.Media.Audio` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Media.Audio` namespace.
 
 This package provides the `winrt.windows.media.audio` module.
 

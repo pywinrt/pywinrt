@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Authentication.OnlineId
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Authentication.OnlineId` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Authentication.OnlineId` namespace.
 
 This package provides the `winrt.windows.security.authentication.onlineid` module.
 

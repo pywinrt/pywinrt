@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.ExtendedExecution.Foreground
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.ExtendedExecution.Foreground` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.ExtendedExecution.Foreground` namespace.
 
 This package provides the `winrt.windows.applicationmodel.extendedexecution.foreground` module.
 

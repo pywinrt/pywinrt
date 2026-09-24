@@ -2,7 +2,7 @@
 
 # winrt-Windows.Gaming.UI
 
-Windows Runtime (WinRT) APIs for for the `Windows.Gaming.UI` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Gaming.UI` namespace.
 
 This package provides the `winrt.windows.gaming.ui` module.
 

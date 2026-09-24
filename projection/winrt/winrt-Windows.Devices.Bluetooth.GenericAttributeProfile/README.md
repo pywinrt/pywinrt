@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Bluetooth.GenericAttributeProfile
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Bluetooth.GenericAttributeProfile` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Bluetooth.GenericAttributeProfile` namespace.
 
 This package provides the `winrt.windows.devices.bluetooth.genericattributeprofile` module.
 

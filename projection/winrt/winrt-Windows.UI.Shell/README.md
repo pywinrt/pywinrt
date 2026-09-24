@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Shell
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Shell` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Shell` namespace.
 
 This package provides the `winrt.windows.ui.shell` module.
 

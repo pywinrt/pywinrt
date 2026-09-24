@@ -2,7 +2,7 @@
 
 # winrt-Windows.Security.Cryptography.Core
 
-Windows Runtime (WinRT) APIs for for the `Windows.Security.Cryptography.Core` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Security.Cryptography.Core` namespace.
 
 This package provides the `winrt.windows.security.cryptography.core` module.
 

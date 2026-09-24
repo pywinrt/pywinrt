@@ -2,7 +2,7 @@
 
 # winrt-Windows.Services.Maps.LocalSearch
 
-Windows Runtime (WinRT) APIs for for the `Windows.Services.Maps.LocalSearch` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Services.Maps.LocalSearch` namespace.
 
 This package provides the `winrt.windows.services.maps.localsearch` module.
 

@@ -332,7 +332,7 @@ README_TEMPLATE = """\
 """
 
 BINARY_README_TEMPLATE = """\
-{important}Windows Runtime (WinRT) APIs for for the `{namespace}` namespace.
+{important}Windows Runtime (WinRT) APIs for the `{namespace}` namespace.
 
 This package provides the `{module_name}` module.
 

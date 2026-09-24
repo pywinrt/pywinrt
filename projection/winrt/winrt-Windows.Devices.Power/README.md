@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.Power
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.Power` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.Power` namespace.
 
 This package provides the `winrt.windows.devices.power` module.
 

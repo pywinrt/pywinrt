@@ -2,7 +2,7 @@
 
 # winrt-Windows.AI.MachineLearning
 
-Windows Runtime (WinRT) APIs for for the `Windows.AI.MachineLearning` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.AI.MachineLearning` namespace.
 
 This package provides the `winrt.windows.ai.machinelearning` module.
 

@@ -2,7 +2,7 @@
 
 # winrt-Windows.UI.Xaml.Core.Direct
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Xaml.Core.Direct` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Core.Direct` namespace.
 
 This package provides the `winrt.windows.ui.xaml.core.direct` module.
 

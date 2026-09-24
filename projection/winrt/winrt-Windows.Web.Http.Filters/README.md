@@ -2,7 +2,7 @@
 
 # winrt-Windows.Web.Http.Filters
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web.Http.Filters` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web.Http.Filters` namespace.
 
 This package provides the `winrt.windows.web.http.filters` module.
 

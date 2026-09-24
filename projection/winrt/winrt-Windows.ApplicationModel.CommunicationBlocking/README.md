@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.CommunicationBlocking
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.CommunicationBlocking` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.CommunicationBlocking` namespace.
 
 This package provides the `winrt.windows.applicationmodel.communicationblocking` module.
 

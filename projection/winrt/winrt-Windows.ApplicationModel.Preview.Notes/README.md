@@ -2,7 +2,7 @@
 
 # winrt-Windows.ApplicationModel.Preview.Notes
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Preview.Notes` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Preview.Notes` namespace.
 
 This package provides the `winrt.windows.applicationmodel.preview.notes` module.
 

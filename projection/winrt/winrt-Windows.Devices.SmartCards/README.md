@@ -2,7 +2,7 @@
 
 # winrt-Windows.Devices.SmartCards
 
-Windows Runtime (WinRT) APIs for for the `Windows.Devices.SmartCards` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Devices.SmartCards` namespace.
 
 This package provides the `winrt.windows.devices.smartcards` module.
 
