@@ -784,21 +784,21 @@ class Windows.ApplicationModel.Resources.Core.NamedResource python_type
     default Windows.ApplicationModel.Resources.Core.INamedResource
     requires Windows.ApplicationModel.Resources.Core.INamedResource
     property candidates
-        get get_Candidates slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4 reverse=43
+        get get_Candidates slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Core.ResourceCandidate> return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4
             out class type=Windows.Foundation.Uri return
     method resolve
-        method Resolve slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4 reverse=62
+        method Resolve slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4
             out class type=Windows.ApplicationModel.Resources.Core.ResourceCandidate return
-        method Resolve slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=51 reverse=100
+        method Resolve slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=51
             in class type=Windows.ApplicationModel.Resources.Core.ResourceContext name=resourceContext
             out class type=Windows.ApplicationModel.Resources.Core.ResourceCandidate return
     method resolve_all
-        method ResolveAll slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4 reverse=121
+        method ResolveAll slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Core.ResourceCandidate> return
-        method ResolveAll slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=51 reverse=144
+        method ResolveAll slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.INamedResource shape=51
             in class type=Windows.ApplicationModel.Resources.Core.ResourceContext name=resourceContext
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Core.ResourceCandidate> return
 
@@ -810,32 +810,32 @@ class Windows.ApplicationModel.Resources.Core.ResourceCandidate python_type
     requires Windows.ApplicationModel.Resources.Core.IResourceCandidate2
     requires Windows.ApplicationModel.Resources.Core.IResourceCandidate3
     property is_default
-        get get_IsDefault slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4 reverse=99
+        get get_IsDefault slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4
             out boolean return
     property is_match
-        get get_IsMatch slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4 reverse=43
+        get get_IsMatch slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4
             out boolean return
     property is_match_as_default
-        get get_IsMatchAsDefault slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4 reverse=62
+        get get_IsMatchAsDefault slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4
             out boolean return
     property qualifiers
-        get get_Qualifiers slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4 reverse=22
+        get get_Qualifiers slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Core.ResourceQualifier> return
     property value_as_string
-        get get_ValueAsString slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4 reverse=121
+        get get_ValueAsString slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4
             out string return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate3 shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate3 shape=4
             out enum32 type=Windows.ApplicationModel.Resources.Core.ResourceCandidateKind return
     method get_qualifier_value
-        method GetQualifierValue slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=51 reverse=163
+        method GetQualifierValue slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=51
             in string name=qualifierName
             out string return
     method get_value_as_file_async
-        method GetValueAsFileAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4 reverse=141
+        method GetValueAsFileAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method get_value_as_stream_async
-        method GetValueAsStreamAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate2 shape=4 reverse=22
+        method GetValueAsStreamAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceCandidate2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
 
 enum Windows.ApplicationModel.Resources.Core.ResourceCandidateKind python_type
@@ -886,46 +886,46 @@ class Windows.ApplicationModel.Resources.Core.ResourceContext activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property languages
-        get get_Languages slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4 reverse=141
+        get get_Languages slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
-        put put_Languages slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4 reverse=162
+        put put_Languages slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4
             in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=languages
     property qualifier_values
-        get get_QualifierValues slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4 reverse=22
+        get get_QualifierValues slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4
             out parameterized type=Windows.Foundation.Collections.IObservableMap<System.String,System.String> return
     method clone
-        method Clone slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4 reverse=121
+        method Clone slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4
             out class type=Windows.ApplicationModel.Resources.Core.ResourceContext return
     method create_matching_context static
-        method CreateMatchingContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics shape=51 reverse=24 static
+        method CreateMatchingContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Resources.Core.ResourceQualifier> name=result
             out class type=Windows.ApplicationModel.Resources.Core.ResourceContext return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=4 static
             out class type=Windows.ApplicationModel.Resources.Core.ResourceContext return
     method get_for_ui_context static
-        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics4 shape=51 reverse=24 static
+        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics4 shape=51 static
             in class type=Windows.UI.UIContext name=context
             out class type=Windows.ApplicationModel.Resources.Core.ResourceContext return
     method get_for_view_independent_use static
-        method GetForViewIndependentUse slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=4 reverse=121 static
+        method GetForViewIndependentUse slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=4 static
             out class type=Windows.ApplicationModel.Resources.Core.ResourceContext return
     method override_to_match
-        method OverrideToMatch slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4 reverse=99
+        method OverrideToMatch slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Resources.Core.ResourceQualifier> name=result
     method reset
-        method Reset slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=0 reverse=37
-        method Reset slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4 reverse=62
+        method Reset slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=0
+        method Reset slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContext shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=qualifierNames
     method reset_global_qualifier_values static
-        method ResetGlobalQualifierValues slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=0 reverse=55 static
-        method ResetGlobalQualifierValues slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=4 reverse=99 static
+        method ResetGlobalQualifierValues slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=0 static
+        method ResetGlobalQualifierValues slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=4 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=qualifierNames
     method set_global_qualifier_value static
-        method SetGlobalQualifierValue slot=7 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=51 reverse=44 static
+        method SetGlobalQualifierValue slot=7 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics2 shape=51 static
             in string name=key
             in string name=value
-        method SetGlobalQualifierValue slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics3 shape=117 reverse=25 static
+        method SetGlobalQualifierValue slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceContextStatics3 shape=117 static
             in string name=key
             in string name=value
             in enum32 type=Windows.ApplicationModel.Resources.Core.ResourceQualifierPersistence name=persistence
@@ -975,16 +975,16 @@ class Windows.ApplicationModel.Resources.Core.ResourceManager python_type
     requires Windows.ApplicationModel.Resources.Core.IResourceManager2
     factory Windows.ApplicationModel.Resources.Core.IResourceManagerStatics
     property all_resource_maps
-        get get_AllResourceMaps slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4 reverse=43
+        get get_AllResourceMaps slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Resources.Core.ResourceMap> return
     property default_context
-        get get_DefaultContext slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4 reverse=62
+        get get_DefaultContext slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4
             out class type=Windows.ApplicationModel.Resources.Core.ResourceContext return
     property main_resource_map
-        get get_MainResourceMap slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4 reverse=22
+        get get_MainResourceMap slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4
             out class type=Windows.ApplicationModel.Resources.Core.ResourceMap return
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManagerStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManagerStatics shape=4 static
             out class type=Windows.ApplicationModel.Resources.Core.ResourceManager return
     method get_all_named_resources_for_package
         method GetAllNamedResourcesForPackage slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager2 shape=139
@@ -997,14 +997,14 @@ class Windows.ApplicationModel.Resources.Core.ResourceManager python_type
             in struct type=Windows.ApplicationModel.Resources.Core.ResourceLayoutInfo name=resourceLayoutInfo
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Core.ResourceMap> return
     method is_resource_reference static
-        method IsResourceReference slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManagerStatics shape=51 reverse=44 static
+        method IsResourceReference slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceManagerStatics shape=51 static
             in string name=resourceReference
             out boolean return
     method load_pri_files
-        method LoadPriFiles slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4 reverse=99
+        method LoadPriFiles slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageFile> name=files
     method unload_pri_files
-        method UnloadPriFiles slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4 reverse=121
+        method UnloadPriFiles slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Resources.Core.IResourceManager shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageFile> name=files
 
 class Windows.ApplicationModel.Resources.Core.ResourceMap python_type iterable mapping
@@ -1016,7 +1016,7 @@ class Windows.ApplicationModel.Resources.Core.ResourceMap python_type iterable m
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Resources.Core.NamedResource>>
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=4
             out class type=Windows.Foundation.Uri return
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Resources.Core.NamedResource> shape=4 reverse=43 role=size
@@ -1025,14 +1025,14 @@ class Windows.ApplicationModel.Resources.Core.ResourceMap python_type iterable m
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Resources.Core.NamedResource>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.ApplicationModel.Resources.Core.NamedResource>> return
     method get_subtree
-        method GetSubtree slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=51 reverse=100
+        method GetSubtree slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=51
             in string name=reference
             out class type=Windows.ApplicationModel.Resources.Core.ResourceMap return
     method get_value
-        method GetValue slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=51 reverse=44
+        method GetValue slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=51
             in string name=resource
             out class type=Windows.ApplicationModel.Resources.Core.ResourceCandidate return
-        method GetValue slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=117 reverse=66
+        method GetValue slot=8 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceMap shape=117
             in string name=resource
             in class type=Windows.ApplicationModel.Resources.Core.ResourceContext name=context
             out class type=Windows.ApplicationModel.Resources.Core.ResourceCandidate return
@@ -1119,19 +1119,19 @@ class Windows.ApplicationModel.Resources.Core.ResourceQualifier python_type
     default Windows.ApplicationModel.Resources.Core.IResourceQualifier
     requires Windows.ApplicationModel.Resources.Core.IResourceQualifier
     property is_default
-        get get_IsDefault slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4 reverse=62
+        get get_IsDefault slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4
             out boolean return
     property is_match
-        get get_IsMatch slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4 reverse=99
+        get get_IsMatch slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4
             out boolean return
     property qualifier_name
-        get get_QualifierName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4 reverse=22
+        get get_QualifierName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4
             out string return
     property qualifier_value
-        get get_QualifierValue slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4 reverse=43
+        get get_QualifierValue slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4
             out string return
     property score
-        get get_Score slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4 reverse=121
+        get get_Score slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Core.IResourceQualifier shape=4
             out double return
 
 class Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView python_type iterable mapping

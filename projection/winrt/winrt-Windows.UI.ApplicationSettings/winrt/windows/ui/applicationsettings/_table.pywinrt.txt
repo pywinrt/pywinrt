@@ -12,28 +12,28 @@ class Windows.UI.ApplicationSettings.AccountsSettingsPane python_type
     factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2
     factory Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3
     event account_commands_requested
-        add add_AccountCommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=51 reverse=24
+        add add_AccountCommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AccountCommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=26 reverse=53
+        remove remove_AccountCommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPane shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=4 static
             out class type=Windows.UI.ApplicationSettings.AccountsSettingsPane return
     method show static
-        method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=0 reverse=37 static
+        method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics shape=0 static
     method show_add_account_async static
-        method ShowAddAccountAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 shape=4 reverse=43 static
+        method ShowAddAccountAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 shape=4 static
             out interface type=Windows.Foundation.IAsyncAction return
     method show_add_account_for_user_async static
-        method ShowAddAccountForUserAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 shape=51 reverse=44 static
+        method ShowAddAccountForUserAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out interface type=Windows.Foundation.IAsyncAction return
     method show_manage_accounts_async static
-        method ShowManageAccountsAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 shape=4 reverse=22 static
+        method ShowManageAccountsAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics2 shape=4 static
             out interface type=Windows.Foundation.IAsyncAction return
     method show_manage_accounts_for_user_async static
-        method ShowManageAccountsForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 shape=51 reverse=24 static
+        method ShowManageAccountsForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -44,27 +44,27 @@ class Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventA
     requires Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs
     requires Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2
     property header_text
-        get get_HeaderText slot=10 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=121
+        get get_HeaderText slot=10 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             out string return
-        put put_HeaderText slot=11 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=141
+        put put_HeaderText slot=11 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             in string name=value
     property commands
-        get get_Commands slot=9 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=99
+        get get_Commands slot=9 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> return
     property credential_commands
-        get get_CredentialCommands slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=62
+        get get_CredentialCommands slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.CredentialCommand> return
     property web_account_commands
-        get get_WebAccountCommands slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=43
+        get get_WebAccountCommands slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountCommand> return
     property web_account_provider_commands
-        get get_WebAccountProviderCommands slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=22
+        get get_WebAccountProviderCommands slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.WebAccountProviderCommand> return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs2 shape=4
             out class type=Windows.System.User return
     method get_deferral
-        method GetDeferral slot=12 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4 reverse=162
+        method GetDeferral slot=12 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneCommandsRequestedEventArgs shape=4
             out class type=Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral return
 
 class Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral python_type
@@ -73,7 +73,7 @@ class Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral python_ty
     default Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral
     requires Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.IAccountsSettingsPaneEventDeferral shape=0
 
 class Windows.UI.ApplicationSettings.CredentialCommand python_type
     py CredentialCommand
@@ -82,18 +82,18 @@ class Windows.UI.ApplicationSettings.CredentialCommand python_type
     requires Windows.UI.ApplicationSettings.ICredentialCommand
     factory Windows.UI.ApplicationSettings.ICredentialCommandFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommandFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommandFactory shape=51
             in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
             out class type=Windows.UI.ApplicationSettings.CredentialCommand return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommandFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommandFactory shape=117
             in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
             in delegate type=Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler name=deleted
             out class type=Windows.UI.ApplicationSettings.CredentialCommand return
     property credential_deleted
-        get get_CredentialDeleted slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommand shape=4 reverse=43
+        get get_CredentialDeleted slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommand shape=4
             out delegate type=Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler return
     property password_credential
-        get get_PasswordCredential slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommand shape=4 reverse=22
+        get get_PasswordCredential slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ICredentialCommand shape=4
             out class type=Windows.Security.Credentials.PasswordCredential return
 
 delegate Windows.UI.ApplicationSettings.CredentialCommandCredentialDeletedHandler python_type
@@ -612,7 +612,7 @@ class Windows.UI.ApplicationSettings.SettingsCommand python_type
     factory Windows.UI.ApplicationSettings.ISettingsCommandFactory
     factory Windows.UI.ApplicationSettings.ISettingsCommandStatics
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsCommandFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsCommandFactory shape=195
             in object name=settingsCommandId
             in string name=label
             in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=handler
@@ -633,7 +633,7 @@ class Windows.UI.ApplicationSettings.SettingsCommand python_type
         put put_Id slot=11 inputs=1 outputs=0 declaring=Windows.UI.Popups.IUICommand shape=4 reverse=141
             in object name=value
     property accounts_command static
-        get get_AccountsCommand slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsCommandStatics shape=4 reverse=22 static
+        get get_AccountsCommand slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsCommandStatics shape=4 static
             out class type=Windows.UI.ApplicationSettings.SettingsCommand return
 
 enum Windows.UI.ApplicationSettings.SettingsEdgeLocation python_type
@@ -649,19 +649,19 @@ class Windows.UI.ApplicationSettings.SettingsPane python_type
     requires Windows.UI.ApplicationSettings.ISettingsPane
     factory Windows.UI.ApplicationSettings.ISettingsPaneStatics
     property edge static
-        get get_Edge slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 reverse=62 static deprecated
+        get get_Edge slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 static deprecated
             out enum32 type=Windows.UI.ApplicationSettings.SettingsEdgeLocation return
     event commands_requested
-        add add_CommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=51 reverse=24 deprecated
+        add add_CommandsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=26 reverse=53 deprecated
+        remove remove_CommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_for_current_view static deprecated
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 reverse=22 static deprecated
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 static deprecated
             out class type=Windows.UI.ApplicationSettings.SettingsPane return
     method show static deprecated
-        method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=0 reverse=37 static deprecated
+        method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=0 static deprecated
 
 class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest python_type
     py SettingsPaneCommandsRequest
@@ -669,7 +669,7 @@ class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest python_type
     default Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest
     requires Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest
     property application_commands
-        get get_ApplicationCommands slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest shape=4 reverse=22 deprecated
+        get get_ApplicationCommands slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequest shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.ApplicationSettings.SettingsCommand> return
 
 class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs python_type
@@ -678,7 +678,7 @@ class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs pyth
     default Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs
     requires Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs shape=4 reverse=22 deprecated
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneCommandsRequestedEventArgs shape=4 deprecated
             out class type=Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest return
 
 enum Windows.UI.ApplicationSettings.SupportedWebAccountActions python_type flags_enum
@@ -731,19 +731,19 @@ class Windows.UI.ApplicationSettings.WebAccountCommand python_type
     requires Windows.UI.ApplicationSettings.IWebAccountCommand
     factory Windows.UI.ApplicationSettings.IWebAccountCommandFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommandFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommandFactory shape=195
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in delegate type=Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler name=invoked
             in enum_u32 type=Windows.UI.ApplicationSettings.SupportedWebAccountActions name=actions
             out class type=Windows.UI.ApplicationSettings.WebAccountCommand return
     property actions
-        get get_Actions slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4 reverse=62
+        get get_Actions slot=8 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4
             out enum_u32 type=Windows.UI.ApplicationSettings.SupportedWebAccountActions return
     property invoked
-        get get_Invoked slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4 reverse=43
+        get get_Invoked slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4
             out delegate type=Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler return
     property web_account
-        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4 reverse=22
+        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountCommand shape=4
             out class type=Windows.Security.Credentials.WebAccount return
 
 delegate Windows.UI.ApplicationSettings.WebAccountCommandInvokedHandler python_type
@@ -761,7 +761,7 @@ class Windows.UI.ApplicationSettings.WebAccountInvokedArgs python_type
     default Windows.UI.ApplicationSettings.IWebAccountInvokedArgs
     requires Windows.UI.ApplicationSettings.IWebAccountInvokedArgs
     property action
-        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountInvokedArgs shape=4 reverse=22
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountInvokedArgs shape=4
             out enum32 type=Windows.UI.ApplicationSettings.WebAccountAction return
 
 class Windows.UI.ApplicationSettings.WebAccountProviderCommand python_type
@@ -771,15 +771,15 @@ class Windows.UI.ApplicationSettings.WebAccountProviderCommand python_type
     requires Windows.UI.ApplicationSettings.IWebAccountProviderCommand
     factory Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommandFactory shape=117
             in class type=Windows.Security.Credentials.WebAccountProvider name=webAccountProvider
             in delegate type=Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler name=invoked
             out class type=Windows.UI.ApplicationSettings.WebAccountProviderCommand return
     property invoked
-        get get_Invoked slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommand shape=4 reverse=43
+        get get_Invoked slot=7 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommand shape=4
             out delegate type=Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler return
     property web_account_provider
-        get get_WebAccountProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommand shape=4 reverse=22
+        get get_WebAccountProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.IWebAccountProviderCommand shape=4
             out class type=Windows.Security.Credentials.WebAccountProvider return
 
 delegate Windows.UI.ApplicationSettings.WebAccountProviderCommandInvokedHandler python_type

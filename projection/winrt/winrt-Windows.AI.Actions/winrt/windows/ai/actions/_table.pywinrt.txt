@@ -12,13 +12,13 @@ class Windows.AI.Actions.ActionEntity composable python_type closeable
     requires Windows.Foundation.IClosable
     composable Windows.AI.Actions.IActionEntityFactory
     property display_info
-        get get_DisplayInfo slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity shape=4 reverse=43
+        get get_DisplayInfo slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity shape=4
             out class type=Windows.AI.Actions.ActionEntityDisplayInfo return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity shape=4
             out enum32 type=Windows.AI.Actions.ActionEntityKind return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity2 shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntity2 shape=4
             out string return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -30,7 +30,7 @@ class Windows.AI.Actions.ActionEntityDisplayInfo python_type closeable
     requires Windows.AI.Actions.IActionEntityDisplayInfo
     requires Windows.Foundation.IClosable
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntityDisplayInfo shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionEntityDisplayInfo shape=4
             out string return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -56,7 +56,7 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
             pass_array class type=Windows.AI.Actions.ContactActionEntity name=attendees
             out class type=Windows.AI.Actions.AppointmentActionEntity return
     method create_array_entity
-        method CreateArrayEntity slot=7 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory5 shape=195 reverse=46
+        method CreateArrayEntity slot=7 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory5 shape=195
             in enum32 type=Windows.AI.Actions.ActionEntityKind name=kind
             pass_array class type=Windows.AI.Actions.ActionEntity name=entities
             out class type=Windows.AI.Actions.ArrayActionEntity return
@@ -67,11 +67,11 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
             pass_array class type=Windows.AI.Actions.ActionEntity name=entities
             out class type=Windows.AI.Actions.ArrayActionEntity return
     method create_contact_entity
-        method CreateContactEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory4 shape=51 reverse=44
+        method CreateContactEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory4 shape=51
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             out class type=Windows.AI.Actions.ContactActionEntity return
     method create_custom_text_entity
-        method CreateCustomTextEntity slot=6 inputs=3 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory7 shape=195 reverse=26
+        method CreateCustomTextEntity slot=6 inputs=3 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory7 shape=195
             in string name=kind
             in string name=keyPhrase
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=props
@@ -81,15 +81,15 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
             in datetime name=dateTime
             out class type=Windows.AI.Actions.DateTimeActionEntity return
     method create_document_entity
-        method CreateDocumentEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51 reverse=44
+        method CreateDocumentEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51
             in string name=path
             out class type=Windows.AI.Actions.DocumentActionEntity return
     method create_file_entity
-        method CreateFileEntity slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51 reverse=24
+        method CreateFileEntity slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51
             in string name=path
             out class type=Windows.AI.Actions.FileActionEntity return
     method create_photo_entity
-        method CreatePhotoEntity slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51 reverse=65
+        method CreatePhotoEntity slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51
             in string name=path
             out class type=Windows.AI.Actions.PhotoActionEntity return
     method create_remote_file_entity
@@ -104,24 +104,24 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
             in string name=extension
             out class type=Windows.AI.Actions.RemoteFileActionEntity return
     method create_streaming_text_action_entity_writer
-        method CreateStreamingTextActionEntityWriter slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory3 shape=51 reverse=65
+        method CreateStreamingTextActionEntityWriter slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory3 shape=51
             in enum32 type=Windows.AI.Actions.ActionEntityTextFormat name=textFormat
             out class type=Windows.AI.Actions.StreamingTextActionEntityWriter return
     method create_table_entity
-        method CreateTableEntity slot=6 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory4 shape=195 reverse=26
+        method CreateTableEntity slot=6 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory4 shape=195
             pass_array string name=data
             in uint32 name=columnCount
             out class type=Windows.AI.Actions.TableActionEntity return
     method create_text_entity
-        method CreateTextEntity slot=9 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51 reverse=100
+        method CreateTextEntity slot=9 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51
             in string name=text
             out class type=Windows.AI.Actions.TextActionEntity return
-        method CreateTextEntity slot=7 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory3 shape=117 reverse=45
+        method CreateTextEntity slot=7 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory3 shape=117
             in string name=text
             in enum32 type=Windows.AI.Actions.ActionEntityTextFormat name=textFormat
             out class type=Windows.AI.Actions.TextActionEntity return
     method create_uri_entity
-        method CreateUriEntity slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory5 shape=51 reverse=24
+        method CreateUriEntity slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory5 shape=51
             in class type=Windows.Foundation.Uri name=Uri
             out class type=Windows.AI.Actions.UriActionEntity return
 
@@ -156,7 +156,7 @@ class Windows.AI.Actions.ActionFeedback python_type closeable
     requires Windows.AI.Actions.IActionFeedback
     requires Windows.Foundation.IClosable
     property feedback_kind
-        get get_FeedbackKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionFeedback shape=4 reverse=22
+        get get_FeedbackKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionFeedback shape=4
             out enum32 type=Windows.AI.Actions.ActionFeedbackKind return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -175,44 +175,44 @@ class Windows.AI.Actions.ActionInvocationContext python_type closeable
     requires Windows.AI.Actions.IActionInvocationContext2
     requires Windows.Foundation.IClosable
     property result
-        get get_Result slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4 reverse=141
+        get get_Result slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4
             out enum32 type=Windows.AI.Actions.ActionInvocationResult return
-        put put_Result slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=4 reverse=162
+        put put_Result slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=4
             in enum32 type=Windows.AI.Actions.ActionInvocationResult name=value
     property extended_error
-        get get_ExtendedError slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4 reverse=173
+        get get_ExtendedError slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4
             out hresult type=Windows.Foundation.HResult return
         put put_ExtendedError slot=14 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=24
             in hresult type=Windows.Foundation.HResult name=value
     property entity_factory
-        get get_EntityFactory slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4 reverse=22
+        get get_EntityFactory slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=4
             out class type=Windows.AI.Actions.ActionEntityFactory return
     property action_id
-        get get_ActionId slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4 reverse=62
+        get get_ActionId slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4
             out string return
     property help_details
-        get get_HelpDetails slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4 reverse=43
+        get get_HelpDetails slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4
             out class type=Windows.AI.Actions.ActionInvocationHelpDetails return
     property invoker_app_user_model_id
-        get get_InvokerAppUserModelId slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4 reverse=99
+        get get_InvokerAppUserModelId slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4
             out string return
     property invoker_window_id
-        get get_InvokerWindowId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4 reverse=22
+        get get_InvokerWindowId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext2 shape=4
             out struct type=Windows.UI.WindowId return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_input_entities
-        method GetInputEntities slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=51 reverse=65
+        method GetInputEntities slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=51
             receive_array class type=Windows.AI.Actions.NamedActionEntity return
     method get_output_entities
-        method GetOutputEntities slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=51 reverse=124
+        method GetOutputEntities slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationContext shape=51
             receive_array class type=Windows.AI.Actions.NamedActionEntity return
     method set_input_entity
-        method SetInputEntity slot=7 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=51 reverse=44
+        method SetInputEntity slot=7 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=51
             in string name=inputName
             in class type=Windows.AI.Actions.ActionEntity name=inputValue
     method set_output_entity
-        method SetOutputEntity slot=9 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=51 reverse=100
+        method SetOutputEntity slot=9 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionInvocationContext shape=51
             in string name=outputName
             in class type=Windows.AI.Actions.ActionEntity name=outputValue
 
@@ -224,35 +224,35 @@ class Windows.AI.Actions.ActionInvocationHelpDetails python_type closeable
     requires Windows.AI.Actions.IActionInvocationHelpDetails2
     requires Windows.Foundation.IClosable
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             out string return
-        put put_Title slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=99
+        put put_Title slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             in string name=value
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             out enum32 type=Windows.AI.Actions.ActionInvocationHelpKind return
-        put put_Kind slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=43
+        put put_Kind slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             in enum32 type=Windows.AI.Actions.ActionInvocationHelpKind name=value
     property help_uri_description
-        get get_HelpUriDescription slot=14 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=186
+        get get_HelpUriDescription slot=14 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             out string return
-        put put_HelpUriDescription slot=15 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=194
+        put put_HelpUriDescription slot=15 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             in string name=value
     property help_uri
-        get get_HelpUri slot=12 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=162
+        get get_HelpUri slot=12 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             out class type=Windows.Foundation.Uri return
-        put put_HelpUri slot=13 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=173
+        put put_HelpUri slot=13 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             in class type=Windows.Foundation.Uri name=value
     property description
-        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=121
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             out string return
-        put put_Description slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=141
+        put put_Description slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4
             in string name=value
     event changed
-        add add_Changed slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails2 shape=51 reverse=24
+        add add_Changed slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.AI.Actions.ActionInvocationHelpDetails,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails2 shape=26 reverse=53
+        remove remove_Changed slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -285,25 +285,25 @@ class Windows.AI.Actions.ActionRuntime composable python_type closeable
     factory Windows.AI.Actions.IActionRuntimeStatics
     composable Windows.AI.Actions.IActionRuntimeFactory
     property action_catalog
-        get get_ActionCatalog slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=4 reverse=22
+        get get_ActionCatalog slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=4
             out class type=Windows.AI.Actions.Hosting.ActionCatalog return
     property entity_factory
-        get get_EntityFactory slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=4 reverse=43
+        get get_EntityFactory slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=4
             out class type=Windows.AI.Actions.ActionEntityFactory return
     property latest_supported_schema_version
-        get get_LatestSupportedSchemaVersion slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=4 reverse=62
+        get get_LatestSupportedSchemaVersion slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=4
             out uint32 return
     property custom_entity_store
-        get get_CustomEntityStore slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime5 shape=4 reverse=22
+        get get_CustomEntityStore slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime5 shape=4
             out class type=Windows.AI.Actions.CustomActionEntityStore return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_action_feedback
-        method CreateActionFeedback slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime2 shape=51 reverse=24
+        method CreateActionFeedback slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime2 shape=51
             in enum32 type=Windows.AI.Actions.ActionFeedbackKind name=feedbackKind
             out class type=Windows.AI.Actions.ActionFeedback return
     method create_invocation_context
-        method CreateInvocationContext slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=51 reverse=65
+        method CreateInvocationContext slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=51
             in string name=actionId
             out class type=Windows.AI.Actions.ActionInvocationContext return
     method create_invocation_context_with_window_id
@@ -312,22 +312,22 @@ class Windows.AI.Actions.ActionRuntime composable python_type closeable
             in struct type=Windows.UI.WindowId name=invokerWindowId
             out class type=Windows.AI.Actions.ActionInvocationContext return
     method get_action_availability
-        method GetActionAvailability slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime2 shape=51 reverse=65
+        method GetActionAvailability slot=8 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime2 shape=51
             in string name=actionId
             out boolean return
     method get_action_entity_by_id
-        method GetActionEntityById slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=51 reverse=44
+        method GetActionEntityById slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=51
             in string name=entityId
             out class type=Windows.AI.Actions.ActionEntity return
     method get_action_invocation_context_from_token
-        method GetActionInvocationContextFromToken slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime4 shape=51 reverse=24
+        method GetActionInvocationContextFromToken slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime4 shape=51
             in string name=token
             out class type=Windows.AI.Actions.ActionInvocationContext return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntimeStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntimeStatics shape=4 static
             out class type=Windows.AI.Actions.ActionRuntime return
     method set_action_availability
-        method SetActionAvailability slot=7 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionRuntime2 shape=51 reverse=44
+        method SetActionAvailability slot=7 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionRuntime2 shape=51
             in string name=actionId
             in boolean name=isAvailable
 
@@ -338,25 +338,25 @@ class Windows.AI.Actions.AppointmentActionEntity python_type
     default Windows.AI.Actions.IAppointmentActionEntity
     requires Windows.AI.Actions.IAppointmentActionEntity
     property appointment
-        get get_Appointment slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=4 reverse=43
+        get get_Appointment slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=4
             out class type=Windows.ApplicationModel.Appointments.Appointment return
     property source_id
-        get get_SourceId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=4 reverse=22
+        get get_SourceId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=4
             out string return
     method get_attendees
-        method GetAttendees slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=65
+        method GetAttendees slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51
             receive_array class type=Windows.AI.Actions.ContactActionEntity return
     method get_presented_files
-        method GetPresentedFiles slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=100
+        method GetPresentedFiles slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51
             receive_array class type=Windows.AI.Actions.RemoteFileActionEntity return
     method get_shared_files
-        method GetSharedFiles slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=144
+        method GetSharedFiles slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51
             receive_array class type=Windows.AI.Actions.RemoteFileActionEntity return
     method set_presented_files
-        method SetPresentedFiles slot=10 inputs=1 outputs=0 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=124
+        method SetPresentedFiles slot=10 inputs=1 outputs=0 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51
             pass_array class type=Windows.AI.Actions.RemoteFileActionEntity name=files
     method set_shared_files
-        method SetSharedFiles slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=163
+        method SetSharedFiles slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51
             pass_array class type=Windows.AI.Actions.RemoteFileActionEntity name=files
 
 class Windows.AI.Actions.ArrayActionEntity python_type
@@ -367,13 +367,13 @@ class Windows.AI.Actions.ArrayActionEntity python_type
     requires Windows.AI.Actions.IArrayActionEntity
     requires Windows.AI.Actions.IArrayActionEntity2
     property element_kind
-        get get_ElementKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity shape=4 reverse=22
+        get get_ElementKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity shape=4
             out enum32 type=Windows.AI.Actions.ActionEntityKind return
     property custom_element_kind
-        get get_CustomElementKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity2 shape=4 reverse=22
+        get get_CustomElementKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity2 shape=4
             out string return
     method get_all
-        method GetAll slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity shape=51 reverse=44
+        method GetAll slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity shape=51
             receive_array class type=Windows.AI.Actions.ActionEntity return
 
 class Windows.AI.Actions.ContactActionEntity python_type
@@ -383,7 +383,7 @@ class Windows.AI.Actions.ContactActionEntity python_type
     default Windows.AI.Actions.IContactActionEntity
     requires Windows.AI.Actions.IContactActionEntity
     property contact
-        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IContactActionEntity shape=4 reverse=22
+        get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IContactActionEntity shape=4
             out class type=Windows.ApplicationModel.Contacts.Contact return
 
 class Windows.AI.Actions.CustomActionEntityStore composable python_type closeable
@@ -396,17 +396,17 @@ class Windows.AI.Actions.CustomActionEntityStore composable python_type closeabl
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method delete
-        method Delete slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=4 reverse=99
+        method Delete slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=4
             in string name=kind
     method get_last_modified_time
-        method GetLastModifiedTime slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=51 reverse=24
+        method GetLastModifiedTime slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=51
             in string name=kind
             out datetime return
     method insert
-        method Insert slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=4 reverse=43
+        method Insert slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=4
             in class type=Windows.AI.Actions.CustomTextActionEntity name=entity
     method insert_many
-        method InsertMany slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=51 reverse=65
+        method InsertMany slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=51
             pass_array class type=Windows.AI.Actions.CustomTextActionEntity name=entities
 
 class Windows.AI.Actions.CustomTextActionEntity python_type
@@ -416,13 +416,13 @@ class Windows.AI.Actions.CustomTextActionEntity python_type
     default Windows.AI.Actions.ICustomTextActionEntity
     requires Windows.AI.Actions.ICustomTextActionEntity
     property custom_text_kind
-        get get_CustomTextKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4 reverse=22
+        get get_CustomTextKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4
             out string return
     property key_phrase
-        get get_KeyPhrase slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4 reverse=43
+        get get_KeyPhrase slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4
             out string return
     property properties
-        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4 reverse=62
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
 
 class Windows.AI.Actions.DateTimeActionEntity python_type
@@ -432,7 +432,7 @@ class Windows.AI.Actions.DateTimeActionEntity python_type
     default Windows.AI.Actions.IDateTimeActionEntity
     requires Windows.AI.Actions.IDateTimeActionEntity
     property date_time
-        get get_DateTime slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IDateTimeActionEntity shape=4 reverse=22
+        get get_DateTime slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IDateTimeActionEntity shape=4
             out datetime return
 
 class Windows.AI.Actions.DocumentActionEntity python_type
@@ -442,7 +442,7 @@ class Windows.AI.Actions.DocumentActionEntity python_type
     default Windows.AI.Actions.IDocumentActionEntity
     requires Windows.AI.Actions.IDocumentActionEntity
     property full_path
-        get get_FullPath slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IDocumentActionEntity shape=4 reverse=22
+        get get_FullPath slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IDocumentActionEntity shape=4
             out string return
 
 class Windows.AI.Actions.FileActionEntity python_type
@@ -452,7 +452,7 @@ class Windows.AI.Actions.FileActionEntity python_type
     default Windows.AI.Actions.IFileActionEntity
     requires Windows.AI.Actions.IFileActionEntity
     property full_path
-        get get_FullPath slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IFileActionEntity shape=4 reverse=22
+        get get_FullPath slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IFileActionEntity shape=4
             out string return
 
 interface Windows.AI.Actions.IActionEntity
@@ -793,14 +793,14 @@ class Windows.AI.Actions.NamedActionEntity python_type closeable
     requires Windows.AI.Actions.INamedActionEntity
     requires Windows.Foundation.IClosable
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.INamedActionEntity shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.INamedActionEntity shape=4
             out string return
-        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.INamedActionEntity shape=4 reverse=43
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.INamedActionEntity shape=4
             in string name=value
     property entity
-        get get_Entity slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.INamedActionEntity shape=4 reverse=62
+        get get_Entity slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.INamedActionEntity shape=4
             out class type=Windows.AI.Actions.ActionEntity return
-        put put_Entity slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.INamedActionEntity shape=4 reverse=99
+        put put_Entity slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.INamedActionEntity shape=4
             in class type=Windows.AI.Actions.ActionEntity name=value
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -812,7 +812,7 @@ class Windows.AI.Actions.PhotoActionEntity python_type
     default Windows.AI.Actions.IPhotoActionEntity
     requires Windows.AI.Actions.IPhotoActionEntity
     property full_path
-        get get_FullPath slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IPhotoActionEntity shape=4 reverse=22
+        get get_FullPath slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IPhotoActionEntity shape=4
             out string return
 
 class Windows.AI.Actions.RemoteFileActionEntity python_type
@@ -823,49 +823,49 @@ class Windows.AI.Actions.RemoteFileActionEntity python_type
     requires Windows.AI.Actions.IRemoteFileActionEntity
     requires Windows.AI.Actions.IRemoteFileActionEntity2
     property account_id
-        get get_AccountId slot=12 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=162
+        get get_AccountId slot=12 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out string return
     property content_type
-        get get_ContentType slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=121
+        get get_ContentType slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out string return
     property drive_id
-        get get_DriveId slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=141
+        get get_DriveId slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out string return
     property extension
-        get get_Extension slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=173
+        get get_Extension slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out string return
     property file_id
-        get get_FileId slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=99
+        get get_FileId slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out string return
     property file_kind
-        get get_FileKind slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=43
+        get get_FileKind slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out enum32 type=Windows.AI.Actions.RemoteFileKind return
     property source_id
-        get get_SourceId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=22
+        get get_SourceId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out string return
     property source_uri
-        get get_SourceUri slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=62
+        get get_SourceUri slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4
             out class type=Windows.Foundation.Uri return
     property last_updated_time
-        get get_LastUpdatedTime slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=121
+        get get_LastUpdatedTime slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_LastUpdatedTime slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=141
+        put put_LastUpdatedTime slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property filename
-        get get_Filename slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=22
+        get get_Filename slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4
             out string return
-        put put_Filename slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=43
+        put put_Filename slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4
             in string name=value
     property creator
-        get get_Creator slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=62
+        get get_Creator slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4
             out class type=Windows.AI.Actions.ContactActionEntity return
-        put put_Creator slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=99
+        put put_Creator slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4
             in class type=Windows.AI.Actions.ContactActionEntity name=value
     method get_contributors
-        method GetContributors slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=51 reverse=174
+        method GetContributors slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=51
             receive_array class type=Windows.AI.Actions.ContactActionEntity return
     method set_contributors
-        method SetContributors slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=51 reverse=163
+        method SetContributors slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=51
             pass_array class type=Windows.AI.Actions.ContactActionEntity name=contributors
 
 enum Windows.AI.Actions.RemoteFileKind python_type
@@ -882,19 +882,19 @@ class Windows.AI.Actions.StreamingTextActionEntity python_type
     default Windows.AI.Actions.IStreamingTextActionEntity
     requires Windows.AI.Actions.IStreamingTextActionEntity
     property is_complete
-        get get_IsComplete slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4 reverse=22
+        get get_IsComplete slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4
             out boolean return
     property text_format
-        get get_TextFormat slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4 reverse=62
+        get get_TextFormat slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4
             out enum32 type=Windows.AI.Actions.ActionEntityTextFormat return
     event text_changed
-        add add_TextChanged slot=9 inputs=1 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=51 reverse=100
+        add add_TextChanged slot=9 inputs=1 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.AI.Actions.StreamingTextActionEntity,Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TextChanged slot=10 inputs=1 outputs=0 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=26 reverse=134
+        remove remove_TextChanged slot=10 inputs=1 outputs=0 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_text
-        method GetText slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4 reverse=43
+        method GetText slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntity shape=4
             out string return
 
 class Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs python_type
@@ -903,10 +903,10 @@ class Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs python_type
     default Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs
     requires Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs
     property is_complete
-        get get_IsComplete slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs shape=4 reverse=43
+        get get_IsComplete slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs shape=4
             out boolean return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityTextChangedArgs shape=4
             out string return
 
 class Windows.AI.Actions.StreamingTextActionEntityWriter python_type closeable
@@ -916,15 +916,15 @@ class Windows.AI.Actions.StreamingTextActionEntityWriter python_type closeable
     requires Windows.AI.Actions.IStreamingTextActionEntityWriter
     requires Windows.Foundation.IClosable
     property reader_entity
-        get get_ReaderEntity slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4 reverse=22
+        get get_ReaderEntity slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4
             out class type=Windows.AI.Actions.StreamingTextActionEntity return
     property text_format
-        get get_TextFormat slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4 reverse=43
+        get get_TextFormat slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4
             out enum32 type=Windows.AI.Actions.ActionEntityTextFormat return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method set_text
-        method SetText slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4 reverse=62
+        method SetText slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.IStreamingTextActionEntityWriter shape=4
             in string name=text
 
 class Windows.AI.Actions.TableActionEntity python_type
@@ -934,13 +934,13 @@ class Windows.AI.Actions.TableActionEntity python_type
     default Windows.AI.Actions.ITableActionEntity
     requires Windows.AI.Actions.ITableActionEntity
     property column_count
-        get get_ColumnCount slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITableActionEntity shape=4 reverse=62
+        get get_ColumnCount slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITableActionEntity shape=4
             out uint32 return
     property row_count
-        get get_RowCount slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITableActionEntity shape=4 reverse=43
+        get get_RowCount slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITableActionEntity shape=4
             out uint32 return
     method get_text_content
-        method GetTextContent slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITableActionEntity shape=51 reverse=24
+        method GetTextContent slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITableActionEntity shape=51
             receive_array string return
 
 class Windows.AI.Actions.TextActionEntity python_type
@@ -951,10 +951,10 @@ class Windows.AI.Actions.TextActionEntity python_type
     requires Windows.AI.Actions.ITextActionEntity
     requires Windows.AI.Actions.ITextActionEntity2
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITextActionEntity shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITextActionEntity shape=4
             out string return
     property text_format
-        get get_TextFormat slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITextActionEntity2 shape=4 reverse=22
+        get get_TextFormat slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITextActionEntity2 shape=4
             out enum32 type=Windows.AI.Actions.ActionEntityTextFormat return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.ActionInvocationHelpDetails,System.Object> concrete
@@ -988,7 +988,7 @@ class Windows.AI.Actions.UriActionEntity python_type
     default Windows.AI.Actions.IUriActionEntity
     requires Windows.AI.Actions.IUriActionEntity
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IUriActionEntity shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IUriActionEntity shape=4
             out class type=Windows.Foundation.Uri return
 
 class System.Object external

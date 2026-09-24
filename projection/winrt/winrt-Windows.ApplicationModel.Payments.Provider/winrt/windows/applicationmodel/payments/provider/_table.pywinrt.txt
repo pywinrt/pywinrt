@@ -177,10 +177,10 @@ class Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTrigger
     default Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails
     requires Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails shape=4
             out class type=Windows.ApplicationModel.Payments.PaymentRequest return
     method report_can_make_payment_result
-        method ReportCanMakePaymentResult slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails shape=4 reverse=43
+        method ReportCanMakePaymentResult slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppCanMakePaymentTriggerDetails shape=4
             in class type=Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult name=value
 
 class Windows.ApplicationModel.Payments.Provider.PaymentAppManager python_type
@@ -190,14 +190,14 @@ class Windows.ApplicationModel.Payments.Provider.PaymentAppManager python_type
     requires Windows.ApplicationModel.Payments.Provider.IPaymentAppManager
     factory Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManagerStatics shape=4 static
             out class type=Windows.ApplicationModel.Payments.Provider.PaymentAppManager return
     method register_async
-        method RegisterAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManager shape=51 reverse=24
+        method RegisterAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManager shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=supportedPaymentMethodIds
             out interface type=Windows.Foundation.IAsyncAction return
     method unregister_async
-        method UnregisterAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManager shape=4 reverse=43
+        method UnregisterAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentAppManager shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Payments.Provider.PaymentTransaction python_type
@@ -207,39 +207,39 @@ class Windows.ApplicationModel.Payments.Provider.PaymentTransaction python_type
     requires Windows.ApplicationModel.Payments.Provider.IPaymentTransaction
     factory Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics
     property payer_phone_number
-        get get_PayerPhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=141
+        get get_PayerPhoneNumber slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             out string return
-        put put_PayerPhoneNumber slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=162
+        put put_PayerPhoneNumber slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             in string name=value
     property payer_name
-        get get_PayerName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=99
+        get get_PayerName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             out string return
-        put put_PayerName slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=121
+        put put_PayerName slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             in string name=value
     property payer_email
-        get get_PayerEmail slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=43
+        get get_PayerEmail slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             out string return
-        put put_PayerEmail slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=62
+        put put_PayerEmail slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             in string name=value
     property payment_request
-        get get_PaymentRequest slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4 reverse=22
+        get get_PaymentRequest slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=4
             out class type=Windows.ApplicationModel.Payments.PaymentRequest return
     method accept_async
-        method AcceptAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51 reverse=196
+        method AcceptAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51
             in class type=Windows.ApplicationModel.Payments.PaymentToken name=paymentToken
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult> return
     method from_id_async static
-        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics shape=51 reverse=24 static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransactionStatics shape=51 static
             in string name=id
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.Provider.PaymentTransaction> return
     method reject
-        method Reject slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=0 reverse=201
+        method Reject slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=0
     method update_selected_shipping_option_async
-        method UpdateSelectedShippingOptionAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51 reverse=187
+        method UpdateSelectedShippingOptionAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51
             in class type=Windows.ApplicationModel.Payments.PaymentShippingOption name=selectedShippingOption
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> return
     method update_shipping_address_async
-        method UpdateShippingAddressAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51 reverse=174
+        method UpdateShippingAddressAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransaction shape=51
             in class type=Windows.ApplicationModel.Payments.PaymentAddress name=shippingAddress
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Payments.PaymentRequestChangedResult> return
 
@@ -249,7 +249,7 @@ class Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult 
     default Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult
     requires Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Payments.Provider.IPaymentTransactionAcceptResult shape=4
             out enum32 type=Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus return
 
 class System.String external

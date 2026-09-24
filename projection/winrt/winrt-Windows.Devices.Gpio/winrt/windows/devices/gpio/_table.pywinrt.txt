@@ -39,29 +39,29 @@ class Windows.Devices.Gpio.GpioChangeCounter python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Devices.Gpio.IGpioChangeCounterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounterFactory shape=51
             in class type=Windows.Devices.Gpio.GpioPin name=pin
             out class type=Windows.Devices.Gpio.GpioChangeCounter return
     property polarity
-        get get_Polarity slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4 reverse=43
+        get get_Polarity slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4
             out enum32 type=Windows.Devices.Gpio.GpioChangePolarity return
-        put put_Polarity slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4 reverse=22
+        put put_Polarity slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4
             in enum32 type=Windows.Devices.Gpio.GpioChangePolarity name=value
     property is_started
-        get get_IsStarted slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4 reverse=62
+        get get_IsStarted slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4
             out boolean return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read
-        method Read slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4 reverse=141
+        method Read slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4
             out struct type=Windows.Devices.Gpio.GpioChangeCount return
     method reset
-        method Reset slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4 reverse=162
+        method Reset slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=4
             out struct type=Windows.Devices.Gpio.GpioChangeCount return
     method start
-        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=0 reverse=93
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=0
     method stop
-        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=0 reverse=117
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeCounter shape=0
 
 enum Windows.Devices.Gpio.GpioChangePolarity python_type
     py GpioChangePolarity
@@ -78,52 +78,52 @@ class Windows.Devices.Gpio.GpioChangeReader python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Devices.Gpio.IGpioChangeReaderFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReaderFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReaderFactory shape=51
             in class type=Windows.Devices.Gpio.GpioPin name=pin
             out class type=Windows.Devices.Gpio.GpioChangeReader return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReaderFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReaderFactory shape=117
             in class type=Windows.Devices.Gpio.GpioPin name=pin
             in int32 name=minCapacity
             out class type=Windows.Devices.Gpio.GpioChangeReader return
     property polarity
-        get get_Polarity slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=141
+        get get_Polarity slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out enum32 type=Windows.Devices.Gpio.GpioChangePolarity return
-        put put_Polarity slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=121
+        put put_Polarity slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             in enum32 type=Windows.Devices.Gpio.GpioChangePolarity name=value
     property capacity
-        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=22
+        get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out int32 return
     property is_empty
-        get get_IsEmpty slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=62
+        get get_IsEmpty slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out boolean return
     property is_overflowed
-        get get_IsOverflowed slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=99
+        get get_IsOverflowed slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out boolean return
     property is_started
-        get get_IsStarted slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=162
+        get get_IsStarted slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out boolean return
     property length
-        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=43
+        get get_Length slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out int32 return
     method clear
-        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=0 reverse=193
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=0
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_all_items
-        method GetAllItems slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=218
+        method GetAllItems slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Gpio.GpioChangeRecord> return
     method get_next_item
-        method GetNextItem slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=202
+        method GetNextItem slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out struct type=Windows.Devices.Gpio.GpioChangeRecord return
     method peek_next_item
-        method PeekNextItem slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4 reverse=210
+        method PeekNextItem slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=4
             out struct type=Windows.Devices.Gpio.GpioChangeRecord return
     method start
-        method Start slot=13 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=0 reverse=169
+        method Start slot=13 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=0
     method stop
-        method Stop slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=0 reverse=185
+        method Stop slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=0
     method wait_for_items_async
-        method WaitForItemsAsync slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=51 reverse=224
+        method WaitForItemsAsync slot=19 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioChangeReader shape=51
             in int32 name=count
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -141,28 +141,28 @@ class Windows.Devices.Gpio.GpioController python_type
     factory Windows.Devices.Gpio.IGpioControllerStatics
     factory Windows.Devices.Gpio.IGpioControllerStatics2
     property pin_count
-        get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=4 reverse=22
+        get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=4
             out int32 return
     method get_controllers_async static
-        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioControllerStatics2 shape=51 reverse=24 static
+        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioControllerStatics2 shape=51 static
             in interface type=Windows.Devices.Gpio.Provider.IGpioProvider name=provider
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Gpio.GpioController>> return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioControllerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioControllerStatics shape=4 static
             out class type=Windows.Devices.Gpio.GpioController return
     method get_default_async static
-        method GetDefaultAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioControllerStatics2 shape=4 reverse=43 static
+        method GetDefaultAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioControllerStatics2 shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Gpio.GpioController> return
     method open_pin
-        method OpenPin slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=51 reverse=44
+        method OpenPin slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=51
             in int32 name=pinNumber
             out class type=Windows.Devices.Gpio.GpioPin return
-        method OpenPin slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=117 reverse=66
+        method OpenPin slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=117
             in int32 name=pinNumber
             in enum32 type=Windows.Devices.Gpio.GpioSharingMode name=sharingMode
             out class type=Windows.Devices.Gpio.GpioPin return
     method try_open_pin
-        method TryOpenPin slot=9 inputs=2 outputs=3 declaring=Windows.Devices.Gpio.IGpioController shape=239 reverse=103
+        method TryOpenPin slot=9 inputs=2 outputs=3 declaring=Windows.Devices.Gpio.IGpioController shape=239
             in int32 name=pinNumber
             in enum32 type=Windows.Devices.Gpio.GpioSharingMode name=sharingMode
             out class type=Windows.Devices.Gpio.GpioPin name=pin
@@ -185,39 +185,39 @@ class Windows.Devices.Gpio.GpioPin python_type closeable
     requires Windows.Devices.Gpio.IGpioPin
     requires Windows.Foundation.IClosable
     property debounce_timeout
-        get get_DebounceTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=62
+        get get_DebounceTimeout slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             out timespan return
-        put put_DebounceTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=26 reverse=110
+        put put_DebounceTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=26
             in timespan name=value
     property pin_number
-        get get_PinNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=121
+        get get_PinNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             out int32 return
     property sharing_mode
-        get get_SharingMode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=141
+        get get_SharingMode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             out enum32 type=Windows.Devices.Gpio.GpioSharingMode return
     event value_changed
-        add add_ValueChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=51 reverse=24
+        add add_ValueChanged slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Gpio.GpioPin,Windows.Devices.Gpio.GpioPinValueChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ValueChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=26 reverse=53
+        remove remove_ValueChanged slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_drive_mode
-        method GetDriveMode slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=173
+        method GetDriveMode slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             out enum32 type=Windows.Devices.Gpio.GpioPinDriveMode return
     method is_drive_mode_supported
-        method IsDriveModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=51 reverse=163
+        method IsDriveModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=51
             in enum32 type=Windows.Devices.Gpio.GpioPinDriveMode name=driveMode
             out boolean return
     method read
-        method Read slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=202
+        method Read slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             out enum32 type=Windows.Devices.Gpio.GpioPinValue return
     method set_drive_mode
-        method SetDriveMode slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=186
+        method SetDriveMode slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             in enum32 type=Windows.Devices.Gpio.GpioPinDriveMode name=value
     method write
-        method Write slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=4 reverse=194
+        method Write slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Gpio.IGpioPin shape=4
             in enum32 type=Windows.Devices.Gpio.GpioPinValue name=value
 
 enum Windows.Devices.Gpio.GpioPinDriveMode python_type
@@ -250,7 +250,7 @@ class Windows.Devices.Gpio.GpioPinValueChangedEventArgs python_type
     default Windows.Devices.Gpio.IGpioPinValueChangedEventArgs
     requires Windows.Devices.Gpio.IGpioPinValueChangedEventArgs
     property edge
-        get get_Edge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPinValueChangedEventArgs shape=4 reverse=22
+        get get_Edge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioPinValueChangedEventArgs shape=4
             out enum32 type=Windows.Devices.Gpio.GpioPinEdge return
 
 enum Windows.Devices.Gpio.GpioSharingMode python_type

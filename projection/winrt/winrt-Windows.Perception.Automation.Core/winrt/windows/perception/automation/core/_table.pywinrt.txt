@@ -7,7 +7,7 @@ class Windows.Perception.Automation.Core.CorePerceptionAutomation static python_
     py CorePerceptionAutomation
     factory Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics
     method set_activation_factory_provider static
-        method SetActivationFactoryProvider slot=6 inputs=1 outputs=0 declaring=Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics shape=4 reverse=22 static
+        method SetActivationFactoryProvider slot=6 inputs=1 outputs=0 declaring=Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics shape=4 static
             in interface type=Windows.Foundation.IGetActivationFactory name=provider
 
 interface Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics

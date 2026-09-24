@@ -551,7 +551,7 @@ class Windows.Web.UI.WebViewControlContentLoadingEventArgs python_type
     default Windows.Web.UI.IWebViewControlContentLoadingEventArgs
     requires Windows.Web.UI.IWebViewControlContentLoadingEventArgs
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlContentLoadingEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlContentLoadingEventArgs shape=4
             out class type=Windows.Foundation.Uri return
 
 class Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs python_type
@@ -560,7 +560,7 @@ class Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs python_type
     default Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs
     requires Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDOMContentLoadedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
 
 class Windows.Web.UI.WebViewControlDeferredPermissionRequest python_type
@@ -569,18 +569,18 @@ class Windows.Web.UI.WebViewControlDeferredPermissionRequest python_type
     default Windows.Web.UI.IWebViewControlDeferredPermissionRequest
     requires Windows.Web.UI.IWebViewControlDeferredPermissionRequest
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4
             out uint32 return
     property permission_type
-        get get_PermissionType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4 reverse=62
+        get get_PermissionType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4
             out enum32 type=Windows.Web.UI.WebViewControlPermissionType return
     property uri
-        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4 reverse=43
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=4
             out class type=Windows.Foundation.Uri return
     method allow
-        method Allow slot=9 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=0 reverse=93
+        method Allow slot=9 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=0
     method deny
-        method Deny slot=10 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=0 reverse=117
+        method Deny slot=10 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlDeferredPermissionRequest shape=0
 
 class Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs python_type
     py WebViewControlLongRunningScriptDetectedEventArgs
@@ -588,12 +588,12 @@ class Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs python_typ
     default Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs
     requires Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs
     property stop_page_script_execution
-        get get_StopPageScriptExecution slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4 reverse=43
+        get get_StopPageScriptExecution slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4
             out boolean return
-        put put_StopPageScriptExecution slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4 reverse=62
+        put put_StopPageScriptExecution slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4
             in boolean name=value
     property execution_time
-        get get_ExecutionTime slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4 reverse=22
+        get get_ExecutionTime slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlLongRunningScriptDetectedEventArgs shape=4
             out timespan return
 
 class Windows.Web.UI.WebViewControlNavigationCompletedEventArgs python_type
@@ -602,13 +602,13 @@ class Windows.Web.UI.WebViewControlNavigationCompletedEventArgs python_type
     default Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs
     requires Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs
     property is_success
-        get get_IsSuccess slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4 reverse=43
+        get get_IsSuccess slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4
             out boolean return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
     property web_error_status
-        get get_WebErrorStatus slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4 reverse=62
+        get get_WebErrorStatus slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationCompletedEventArgs shape=4
             out enum32 type=Windows.Web.WebErrorStatus return
 
 class Windows.Web.UI.WebViewControlNavigationStartingEventArgs python_type
@@ -617,12 +617,12 @@ class Windows.Web.UI.WebViewControlNavigationStartingEventArgs python_type
     default Windows.Web.UI.IWebViewControlNavigationStartingEventArgs
     requires Windows.Web.UI.IWebViewControlNavigationStartingEventArgs
     property cancel
-        get get_Cancel slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4 reverse=43
+        get get_Cancel slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4
             out boolean return
-        put put_Cancel slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4 reverse=62
+        put put_Cancel slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4
             in boolean name=value
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNavigationStartingEventArgs shape=4
             out class type=Windows.Foundation.Uri return
 
 class Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs python_type
@@ -632,23 +632,23 @@ class Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs python_type
     requires Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs
     requires Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4
             in boolean name=value
     property referrer
-        get get_Referrer slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=43
+        get get_Referrer slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
     property new_window
-        get get_NewWindow slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4 reverse=22
+        get get_NewWindow slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4
             out interface type=Windows.Web.UI.IWebViewControl return
-        put put_NewWindow slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4 reverse=43
+        put put_NewWindow slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4
             in interface type=Windows.Web.UI.IWebViewControl name=value
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlNewWindowRequestedEventArgs2 shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Web.UI.WebViewControlPermissionRequest python_type
@@ -657,23 +657,23 @@ class Windows.Web.UI.WebViewControlPermissionRequest python_type
     default Windows.Web.UI.IWebViewControlPermissionRequest
     requires Windows.Web.UI.IWebViewControlPermissionRequest
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4
             out uint32 return
     property permission_type
-        get get_PermissionType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=62
+        get get_PermissionType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4
             out enum32 type=Windows.Web.UI.WebViewControlPermissionType return
     property state
-        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=99
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4
             out enum32 type=Windows.Web.UI.WebViewControlPermissionState return
     property uri
-        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4 reverse=43
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=4
             out class type=Windows.Foundation.Uri return
     method allow
-        method Allow slot=11 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0 reverse=137
+        method Allow slot=11 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0
     method defer
-        method Defer slot=10 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0 reverse=117
+        method Defer slot=10 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0
     method deny
-        method Deny slot=12 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0 reverse=159
+        method Deny slot=12 inputs=0 outputs=0 declaring=Windows.Web.UI.IWebViewControlPermissionRequest shape=0
 
 class Windows.Web.UI.WebViewControlPermissionRequestedEventArgs python_type
     py WebViewControlPermissionRequestedEventArgs
@@ -681,7 +681,7 @@ class Windows.Web.UI.WebViewControlPermissionRequestedEventArgs python_type
     default Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs
     requires Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs
     property permission_request
-        get get_PermissionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs shape=4 reverse=22
+        get get_PermissionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlPermissionRequestedEventArgs shape=4
             out class type=Windows.Web.UI.WebViewControlPermissionRequest return
 
 enum Windows.Web.UI.WebViewControlPermissionState python_type
@@ -709,10 +709,10 @@ class Windows.Web.UI.WebViewControlScriptNotifyEventArgs python_type
     default Windows.Web.UI.IWebViewControlScriptNotifyEventArgs
     requires Windows.Web.UI.IWebViewControlScriptNotifyEventArgs
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlScriptNotifyEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlScriptNotifyEventArgs shape=4
             out class type=Windows.Foundation.Uri return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlScriptNotifyEventArgs shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlScriptNotifyEventArgs shape=4
             out string return
 
 class Windows.Web.UI.WebViewControlSettings python_type
@@ -721,19 +721,19 @@ class Windows.Web.UI.WebViewControlSettings python_type
     default Windows.Web.UI.IWebViewControlSettings
     requires Windows.Web.UI.IWebViewControlSettings
     property is_script_notify_allowed
-        get get_IsScriptNotifyAllowed slot=11 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=141
+        get get_IsScriptNotifyAllowed slot=11 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4
             out boolean return
-        put put_IsScriptNotifyAllowed slot=10 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=121
+        put put_IsScriptNotifyAllowed slot=10 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4
             in boolean name=value
     property is_java_script_enabled
-        get get_IsJavaScriptEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=43
+        get get_IsJavaScriptEnabled slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4
             out boolean return
-        put put_IsJavaScriptEnabled slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=22
+        put put_IsJavaScriptEnabled slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4
             in boolean name=value
     property is_indexed_db_enabled
-        get get_IsIndexedDBEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=99
+        get get_IsIndexedDBEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlSettings shape=4
             out boolean return
-        put put_IsIndexedDBEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4 reverse=62
+        put put_IsIndexedDBEnabled slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlSettings shape=4
             in boolean name=value
 
 class Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs python_type
@@ -742,12 +742,12 @@ class Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs pytho
     default Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
     requires Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
     property handled
-        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4 reverse=43
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4
             out boolean return
-        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4 reverse=62
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4
             in boolean name=value
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnsupportedUriSchemeIdentifiedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
 
 class Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs python_type
@@ -756,13 +756,13 @@ class Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs python_t
     default Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs
     requires Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs
     property media_type
-        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4 reverse=62
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4
             out string return
     property referrer
-        get get_Referrer slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4 reverse=43
+        get get_Referrer slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlUnviewableContentIdentifiedEventArgs shape=4
             out class type=Windows.Foundation.Uri return
 
 class Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs python_type
@@ -771,15 +771,15 @@ class Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs python_type
     default Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs
     requires Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs
     property response
-        get get_Response slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=99
+        get get_Response slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4
             out class type=Windows.Web.Http.HttpResponseMessage return
-        put put_Response slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=62
+        put put_Response slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4
             in class type=Windows.Web.Http.HttpResponseMessage name=value
     property request
-        get get_Request slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=43
+        get get_Request slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4
             out class type=Windows.Web.Http.HttpRequestMessage return
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControlWebResourceRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class System.Object external

@@ -312,7 +312,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
         method GetArray slot=11 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=141
             out class type=Windows.Data.Json.JsonArray return
     method get_array_at
-        method GetArrayAt slot=7 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=44
+        method GetArrayAt slot=7 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51
             in uint32 name=index
             out class type=Windows.Data.Json.JsonArray return
     method get_at
@@ -323,7 +323,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
         method GetBoolean slot=10 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=121
             out boolean return
     method get_boolean_at
-        method GetBooleanAt slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=124
+        method GetBooleanAt slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51
             in uint32 name=index
             out boolean return
     method get_many
@@ -335,21 +335,21 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
         method GetNumber slot=9 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=99
             out double return
     method get_number_at
-        method GetNumberAt slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=100
+        method GetNumberAt slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51
             in uint32 name=index
             out double return
     method get_object
         method GetObject slot=12 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=162
             out class type=Windows.Data.Json.JsonObject return
     method get_object_at
-        method GetObjectAt slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=24
+        method GetObjectAt slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51
             in uint32 name=index
             out class type=Windows.Data.Json.JsonObject return
     method get_string
         method GetString slot=8 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=62
             out string return
     method get_string_at
-        method GetStringAt slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51 reverse=65
+        method GetStringAt slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArray shape=51
             in uint32 name=index
             out string return
     method get_view
@@ -365,7 +365,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
             in uint32 name=index
             in interface type=Windows.Data.Json.IJsonValue name=value
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArrayStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonArrayStatics shape=51 static
             in string name=input
             out class type=Windows.Data.Json.JsonArray return
     method remove_at
@@ -387,7 +387,7 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonArrayStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonArrayStatics shape=117 static
             in string name=input
             out class type=Windows.Data.Json.JsonArray name=result
             out boolean return
@@ -396,7 +396,7 @@ class Windows.Data.Json.JsonError static python_type
     py JsonError
     factory Windows.Data.Json.IJsonErrorStatics2
     method get_json_status static
-        method GetJsonStatus slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonErrorStatics2 shape=51 reverse=24 static
+        method GetJsonStatus slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonErrorStatics2 shape=51 static
             in int32 name=hresult
             out enum32 type=Windows.Data.Json.JsonErrorStatus return
 
@@ -442,23 +442,23 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
         method GetBoolean slot=10 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=121
             out boolean return
     method get_named_array
-        method GetNamedArray slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=100
+        method GetNamedArray slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             out class type=Windows.Data.Json.JsonArray return
-        method GetNamedArray slot=9 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=101
+        method GetNamedArray slot=9 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117
             in string name=name
             in class type=Windows.Data.Json.JsonArray name=defaultValue
             out class type=Windows.Data.Json.JsonArray return
     method get_named_boolean
-        method GetNamedBoolean slot=12 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=163
+        method GetNamedBoolean slot=12 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             out boolean return
-        method GetNamedBoolean slot=11 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=145
+        method GetNamedBoolean slot=11 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117
             in string name=name
             in boolean name=defaultValue
             out boolean return
     method get_named_number
-        method GetNamedNumber slot=11 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=144
+        method GetNamedNumber slot=11 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             out double return
         method GetNamedNumber slot=10 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=111
@@ -466,26 +466,26 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
             in double name=defaultValue
             out double return
     method get_named_object
-        method GetNamedObject slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=65
+        method GetNamedObject slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             out class type=Windows.Data.Json.JsonObject return
-        method GetNamedObject slot=7 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=45
+        method GetNamedObject slot=7 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117
             in string name=name
             in class type=Windows.Data.Json.JsonObject name=defaultValue
             out class type=Windows.Data.Json.JsonObject return
     method get_named_string
-        method GetNamedString slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=124
+        method GetNamedString slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             out string return
-        method GetNamedString slot=8 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=66
+        method GetNamedString slot=8 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117
             in string name=name
             in string name=defaultValue
             out string return
     method get_named_value
-        method GetNamedValue slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=24
+        method GetNamedValue slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             out class type=Windows.Data.Json.JsonValue return
-        method GetNamedValue slot=6 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117 reverse=25
+        method GetNamedValue slot=6 inputs=2 outputs=1 declaring=Windows.Data.Json.IJsonObjectWithDefaultValues shape=117
             in string name=name
             in class type=Windows.Data.Json.JsonValue name=defaultValue
             out class type=Windows.Data.Json.JsonValue return
@@ -515,14 +515,14 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
             in string name=key
             out interface type=Windows.Data.Json.IJsonValue return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObjectStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonObjectStatics shape=51 static
             in string name=input
             out class type=Windows.Data.Json.JsonObject return
     method remove
         method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue> shape=4 reverse=141 role=remove
             in string name=key
     method set_named_value
-        method SetNamedValue slot=7 inputs=2 outputs=0 declaring=Windows.Data.Json.IJsonObject shape=51 reverse=44
+        method SetNamedValue slot=7 inputs=2 outputs=0 declaring=Windows.Data.Json.IJsonObject shape=51
             in string name=name
             in interface type=Windows.Data.Json.IJsonValue name=value
     method stringify
@@ -532,7 +532,7 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonObjectStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonObjectStatics shape=117 static
             in string name=input
             out class type=Windows.Data.Json.JsonObject name=result
             out boolean return
@@ -549,18 +549,18 @@ class Windows.Data.Json.JsonValue python_type stringable
         get get_ValueType slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=22
             out enum32 type=Windows.Data.Json.JsonValueType return
     method create_boolean_value static
-        method CreateBooleanValue slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 reverse=65 static
+        method CreateBooleanValue slot=8 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 static
             in boolean name=input
             out class type=Windows.Data.Json.JsonValue return
     method create_null_value static
-        method CreateNullValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics2 shape=4 reverse=22 static
+        method CreateNullValue slot=6 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics2 shape=4 static
             out class type=Windows.Data.Json.JsonValue return
     method create_number_value static
         method CreateNumberValue slot=9 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=46 static
             in double name=input
             out class type=Windows.Data.Json.JsonValue return
     method create_string_value static
-        method CreateStringValue slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 reverse=124 static
+        method CreateStringValue slot=10 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 static
             in string name=input
             out class type=Windows.Data.Json.JsonValue return
     method get_array
@@ -579,7 +579,7 @@ class Windows.Data.Json.JsonValue python_type stringable
         method GetString slot=8 inputs=0 outputs=1 declaring=Windows.Data.Json.IJsonValue shape=4 reverse=62
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Data.Json.IJsonValueStatics shape=51 static
             in string name=input
             out class type=Windows.Data.Json.JsonValue return
     method stringify
@@ -589,7 +589,7 @@ class Windows.Data.Json.JsonValue python_type stringable
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Data.Json.IJsonValueStatics shape=117 static
             in string name=input
             out class type=Windows.Data.Json.JsonValue name=result
             out boolean return

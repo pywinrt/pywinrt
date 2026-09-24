@@ -22,64 +22,64 @@ class Microsoft.UI.Xaml.Data.Binding composable python_type
     requires Microsoft.UI.Xaml.Data.IBinding
     composable Microsoft.UI.Xaml.Data.IBindingFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.Binding return
     property update_source_trigger
-        get get_UpdateSourceTrigger slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=255
+        get get_UpdateSourceTrigger slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out enum32 type=Microsoft.UI.Xaml.Data.UpdateSourceTrigger return
-        put put_UpdateSourceTrigger slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=259
+        put put_UpdateSourceTrigger slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in enum32 type=Microsoft.UI.Xaml.Data.UpdateSourceTrigger name=value
     property target_null_value
-        get get_TargetNullValue slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=247
+        get get_TargetNullValue slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out object return
-        put put_TargetNullValue slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=252
+        put put_TargetNullValue slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in object name=value
     property source
-        get get_Source slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=121
+        get get_Source slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out object return
-        put put_Source slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=141
+        put put_Source slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in object name=value
     property relative_source
-        get get_RelativeSource slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=162
+        get get_RelativeSource slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out class type=Microsoft.UI.Xaml.Data.RelativeSource return
-        put put_RelativeSource slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=173
+        put put_RelativeSource slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in class type=Microsoft.UI.Xaml.Data.RelativeSource name=value
     property path
-        get get_Path slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=22
+        get get_Path slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out class type=Microsoft.UI.Xaml.PropertyPath return
-        put put_Path slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=43
+        put put_Path slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in class type=Microsoft.UI.Xaml.PropertyPath name=value
     property mode
-        get get_Mode slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=62
+        get get_Mode slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out enum32 type=Microsoft.UI.Xaml.Data.BindingMode return
-        put put_Mode slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=99
+        put put_Mode slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in enum32 type=Microsoft.UI.Xaml.Data.BindingMode name=value
     property fallback_value
-        get get_FallbackValue slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=237
+        get get_FallbackValue slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out object return
-        put put_FallbackValue slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=242
+        put put_FallbackValue slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in object name=value
     property element_name
-        get get_ElementName slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=186
+        get get_ElementName slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out string return
-        put put_ElementName slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=194
+        put put_ElementName slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in string name=value
     property converter_parameter
-        get get_ConverterParameter slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=218
+        get get_ConverterParameter slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out object return
-        put put_ConverterParameter slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=223
+        put put_ConverterParameter slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in object name=value
     property converter_language
-        get get_ConverterLanguage slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=228
+        get get_ConverterLanguage slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out string return
-        put put_ConverterLanguage slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=232
+        put put_ConverterLanguage slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in string name=value
     property converter
-        get get_Converter slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=202
+        get get_Converter slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             out interface type=Microsoft.UI.Xaml.Data.IValueConverter return
-        put put_Converter slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4 reverse=210
+        put put_Converter slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBinding shape=4
             in interface type=Microsoft.UI.Xaml.Data.IValueConverter name=value
 
 class Microsoft.UI.Xaml.Data.BindingBase composable python_type
@@ -90,7 +90,7 @@ class Microsoft.UI.Xaml.Data.BindingBase composable python_type
     requires Microsoft.UI.Xaml.Data.IBindingBase
     composable Microsoft.UI.Xaml.Data.IBindingBaseFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingBaseFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingBaseFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.BindingBase return
@@ -103,13 +103,13 @@ class Microsoft.UI.Xaml.Data.BindingExpression composable python_type
     requires Microsoft.UI.Xaml.Data.IBindingExpression
     composable Microsoft.UI.Xaml.Data.IBindingExpressionFactory
     property data_item
-        get get_DataItem slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingExpression shape=4 reverse=22
+        get get_DataItem slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingExpression shape=4
             out object return
     property parent_binding
-        get get_ParentBinding slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingExpression shape=4 reverse=43
+        get get_ParentBinding slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IBindingExpression shape=4
             out class type=Microsoft.UI.Xaml.Data.Binding return
     method update_source
-        method UpdateSource slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBindingExpression shape=0 reverse=55
+        method UpdateSource slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBindingExpression shape=0
 
 class Microsoft.UI.Xaml.Data.BindingExpressionBase composable python_type
     py BindingExpressionBase
@@ -132,7 +132,7 @@ class Microsoft.UI.Xaml.Data.BindingOperations python_type
     requires Microsoft.UI.Xaml.Data.IBindingOperations
     factory Microsoft.UI.Xaml.Data.IBindingOperationsStatics
     method set_binding static
-        method SetBinding slot=6 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBindingOperationsStatics shape=117 reverse=25 static
+        method SetBinding slot=6 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Data.IBindingOperationsStatics shape=117 static
             in class type=Microsoft.UI.Xaml.DependencyObject name=target
             in class type=Microsoft.UI.Xaml.DependencyProperty name=dp
             in class type=Microsoft.UI.Xaml.Data.BindingBase name=binding
@@ -148,34 +148,34 @@ class Microsoft.UI.Xaml.Data.CollectionViewSource activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property source
-        get get_Source slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=22
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             out object return
-        put put_Source slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=43
+        put put_Source slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             in object name=value
     property items_path
-        get get_ItemsPath slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=141
+        get get_ItemsPath slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             out class type=Microsoft.UI.Xaml.PropertyPath return
-        put put_ItemsPath slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=162
+        put put_ItemsPath slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             in class type=Microsoft.UI.Xaml.PropertyPath name=value
     property is_source_grouped
-        get get_IsSourceGrouped slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=99
+        get get_IsSourceGrouped slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             out boolean return
-        put put_IsSourceGrouped slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=121
+        put put_IsSourceGrouped slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             in boolean name=value
     property view
-        get get_View slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4 reverse=62
+        get get_View slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSource shape=4
             out interface type=Microsoft.UI.Xaml.Data.ICollectionView return
     property is_source_grouped_property static
-        get get_IsSourceGroupedProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=62 static
+        get get_IsSourceGroupedProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property items_path_property static
-        get get_ItemsPathProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=99 static
+        get get_ItemsPathProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property source_property static
-        get get_SourceProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=22 static
+        get get_SourceProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property view_property static
-        get get_ViewProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 reverse=43 static
+        get get_ViewProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICollectionViewSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Data.CurrentChangingEventArgs composable python_type
@@ -185,22 +185,22 @@ class Microsoft.UI.Xaml.Data.CurrentChangingEventArgs composable python_type
     requires Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs
     composable Microsoft.UI.Xaml.Data.ICurrentChangingEventArgsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgsFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgsFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.CurrentChangingEventArgs return
-        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgsFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgsFactory shape=195
             in boolean name=isCancelable
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.CurrentChangingEventArgs return
     property cancel
-        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs shape=4 reverse=22
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs shape=4
             out boolean return
-        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs shape=4 reverse=43
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs shape=4
             in boolean name=value
     property is_cancelable
-        get get_IsCancelable slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs shape=4 reverse=62
+        get get_IsCancelable slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.ICurrentChangingEventArgs shape=4
             out boolean return
 
 delegate Microsoft.UI.Xaml.Data.CurrentChangingEventHandler python_type
@@ -219,13 +219,13 @@ class Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs python_type
     requires Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgs
     factory Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgsFactory shape=51
             in string name=name
             out class type=Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs return
     property property_name
-        get get_PropertyName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgs shape=4 reverse=22
+        get get_PropertyName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgs shape=4
             out string return
-        put put_PropertyName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgs shape=4 reverse=43
+        put put_PropertyName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IDataErrorsChangedEventArgs shape=4
             in string name=value
 
 delegate Windows.Foundation.EventHandler<Microsoft.UI.Xaml.Data.DataErrorsChangedEventArgs> concrete
@@ -863,20 +863,20 @@ class Microsoft.UI.Xaml.Data.ItemIndexRange composable python_type
     requires Microsoft.UI.Xaml.Data.IItemIndexRange
     composable Microsoft.UI.Xaml.Data.IItemIndexRangeFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRangeFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRangeFactory shape=239
             in int32 name=firstIndex
             in uint32 name=length
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.ItemIndexRange return
     property first_index
-        get get_FirstIndex slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRange shape=4 reverse=22
+        get get_FirstIndex slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRange shape=4
             out int32 return
     property last_index
-        get get_LastIndex slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRange shape=4 reverse=62
+        get get_LastIndex slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRange shape=4
             out int32 return
     property length
-        get get_Length slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRange shape=4 reverse=43
+        get get_Length slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IItemIndexRange shape=4
             out uint32 return
 
 struct Microsoft.UI.Xaml.Data.LoadMoreItemsResult python_type
@@ -891,13 +891,13 @@ class Microsoft.UI.Xaml.Data.PropertyChangedEventArgs composable python_type
     requires Microsoft.UI.Xaml.Data.IPropertyChangedEventArgs
     composable Microsoft.UI.Xaml.Data.IPropertyChangedEventArgsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.IPropertyChangedEventArgsFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Data.IPropertyChangedEventArgsFactory shape=195
             in string name=name
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.PropertyChangedEventArgs return
     property property_name
-        get get_PropertyName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IPropertyChangedEventArgs shape=4 reverse=22
+        get get_PropertyName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IPropertyChangedEventArgs shape=4
             out string return
 
 delegate Microsoft.UI.Xaml.Data.PropertyChangedEventHandler python_type
@@ -917,14 +917,14 @@ class Microsoft.UI.Xaml.Data.RelativeSource composable python_type
     requires Microsoft.UI.Xaml.Data.IRelativeSource
     composable Microsoft.UI.Xaml.Data.IRelativeSourceFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IRelativeSourceFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IRelativeSourceFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Data.RelativeSource return
     property mode
-        get get_Mode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IRelativeSource shape=4 reverse=22
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Data.IRelativeSource shape=4
             out enum32 type=Microsoft.UI.Xaml.Data.RelativeSourceMode return
-        put put_Mode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IRelativeSource shape=4 reverse=43
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Data.IRelativeSource shape=4
             in enum32 type=Microsoft.UI.Xaml.Data.RelativeSourceMode name=value
 
 enum Microsoft.UI.Xaml.Data.RelativeSourceMode python_type

@@ -12,36 +12,36 @@ class Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions activatable py
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptionsFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions return
     property service_name
-        get get_ServiceName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=162
+        get get_ServiceName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             out string return
-        put put_ServiceName slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=173
+        put put_ServiceName slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             in string name=value
     property media
-        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=186
+        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia return
-        put put_Media slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=194
+        put put_Media slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=value
     property context
-        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=22
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             out string return
-        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=43
+        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             in string name=value
     property contact_number
-        get get_ContactNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=121
+        get get_ContactNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=141
+        put put_ContactNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             in string name=value
     property contact_name
-        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=62
+        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=99
+        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             in string name=value
     property associated_device_ids
-        get get_AssociatedDeviceIds slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4 reverse=202
+        get get_AssociatedDeviceIds slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAcceptedVoipPhoneCallOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions activatable python_type
@@ -53,36 +53,36 @@ class Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions activatabl
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptionsFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions return
     property service_name
-        get get_ServiceName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=162
+        get get_ServiceName slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             out string return
-        put put_ServiceName slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=173
+        put put_ServiceName slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             in string name=value
     property media
-        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=186
+        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia return
-        put put_Media slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=194
+        put put_Media slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=value
     property context
-        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=22
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             out string return
-        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=43
+        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             in string name=value
     property contact_number
-        get get_ContactNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=121
+        get get_ContactNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=141
+        put put_ContactNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             in string name=value
     property contact_name
-        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=62
+        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=99
+        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             in string name=value
     property associated_device_ids
-        get get_AssociatedDeviceIds slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4 reverse=202
+        get get_AssociatedDeviceIds slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IAppInitiatedVoipPhoneCallOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Guid> concrete
@@ -257,10 +257,10 @@ class Windows.ApplicationModel.Calls.CallAnswerEventArgs python_type
     requires Windows.ApplicationModel.Calls.ICallAnswerEventArgs
     requires Windows.ApplicationModel.Calls.ICallAnswerEventArgs2
     property accepted_media
-        get get_AcceptedMedia slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallAnswerEventArgs shape=4 reverse=22
+        get get_AcceptedMedia slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallAnswerEventArgs shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia return
     property source_device_id
-        get get_SourceDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallAnswerEventArgs2 shape=4 reverse=22
+        get get_SourceDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallAnswerEventArgs2 shape=4
             out string return
 
 class Windows.ApplicationModel.Calls.CallRejectEventArgs python_type
@@ -269,7 +269,7 @@ class Windows.ApplicationModel.Calls.CallRejectEventArgs python_type
     default Windows.ApplicationModel.Calls.ICallRejectEventArgs
     requires Windows.ApplicationModel.Calls.ICallRejectEventArgs
     property reject_reason
-        get get_RejectReason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallRejectEventArgs shape=4 reverse=22
+        get get_RejectReason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallRejectEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason return
 
 class Windows.ApplicationModel.Calls.CallStateChangeEventArgs python_type
@@ -278,7 +278,7 @@ class Windows.ApplicationModel.Calls.CallStateChangeEventArgs python_type
     default Windows.ApplicationModel.Calls.ICallStateChangeEventArgs
     requires Windows.ApplicationModel.Calls.ICallStateChangeEventArgs
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallStateChangeEventArgs shape=4 reverse=22
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ICallStateChangeEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.Calls.VoipPhoneCallState return
 
 enum Windows.ApplicationModel.Calls.CellularDtmfMode python_type
@@ -1369,66 +1369,66 @@ class Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions activatable py
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptionsFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions return
     property service_name
-        get get_ServiceName slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=186
+        get get_ServiceName slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out string return
-        put put_ServiceName slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=194
+        put put_ServiceName slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in string name=value
     property ringtone
-        get get_Ringtone slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=228
+        get get_Ringtone slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Ringtone slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=232
+        put put_Ringtone slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property ring_timeout
-        get get_RingTimeout slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=247
+        get get_RingTimeout slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out timespan return
-        put put_RingTimeout slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=26 reverse=254
+        put put_RingTimeout slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=26
             in timespan name=value
     property media
-        get get_Media slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=237
+        get get_Media slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia return
-        put put_Media slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=242
+        put put_Media slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=value
     property context
-        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=22
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out string return
-        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=43
+        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in string name=value
     property contact_remote_id
-        get get_ContactRemoteId slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=255
+        get get_ContactRemoteId slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactRemoteId slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=259
+        put put_ContactRemoteId slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in string name=value
     property contact_number
-        get get_ContactNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=121
+        get get_ContactNumber slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=141
+        put put_ContactNumber slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in string name=value
     property contact_name
-        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=62
+        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=99
+        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in string name=value
     property contact_image
-        get get_ContactImage slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=162
+        get get_ContactImage slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ContactImage slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=173
+        put put_ContactImage slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property call_details
-        get get_CallDetails slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=218
+        get get_CallDetails slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out string return
-        put put_CallDetails slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=223
+        put put_CallDetails slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in string name=value
     property branding_image
-        get get_BrandingImage slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=202
+        get get_BrandingImage slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_BrandingImage slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=210
+        put put_BrandingImage slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property associated_device_ids
-        get get_AssociatedDeviceIds slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4 reverse=263
+        get get_AssociatedDeviceIds slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IIncomingVoipPhoneCallOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral python_type
@@ -1437,7 +1437,7 @@ class Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral python_type
     default Windows.ApplicationModel.Calls.ILockScreenCallEndCallDeferral
     requires Windows.ApplicationModel.Calls.ILockScreenCallEndCallDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallEndCallDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallEndCallDeferral shape=0
 
 class Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs python_type
     py LockScreenCallEndRequestedEventArgs
@@ -1445,10 +1445,10 @@ class Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs python_
     default Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs
     requires Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs
     property deadline
-        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs shape=4 reverse=43
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs shape=4
             out datetime return
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallEndRequestedEventArgs shape=4
             out class type=Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral return
 
 class Windows.ApplicationModel.Calls.LockScreenCallUI python_type
@@ -1457,24 +1457,24 @@ class Windows.ApplicationModel.Calls.LockScreenCallUI python_type
     default Windows.ApplicationModel.Calls.ILockScreenCallUI
     requires Windows.ApplicationModel.Calls.ILockScreenCallUI
     property call_title
-        get get_CallTitle slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=4 reverse=141
+        get get_CallTitle slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=4
             out string return
-        put put_CallTitle slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=4 reverse=162
+        put put_CallTitle slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=4
             in string name=value
     event closed
-        add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=51 reverse=100
+        add add_Closed slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.LockScreenCallUI,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=26 reverse=134
+        remove remove_Closed slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event end_requested
-        add add_EndRequested slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=51 reverse=44
+        add add_EndRequested slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.LockScreenCallUI,Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EndRequested slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=26 reverse=82
+        remove remove_EndRequested slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method dismiss
-        method Dismiss slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=0 reverse=16
+        method Dismiss slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.ILockScreenCallUI shape=0
 
 class Windows.ApplicationModel.Calls.MuteChangeEventArgs python_type
     py MuteChangeEventArgs
@@ -1482,7 +1482,7 @@ class Windows.ApplicationModel.Calls.MuteChangeEventArgs python_type
     default Windows.ApplicationModel.Calls.IMuteChangeEventArgs
     requires Windows.ApplicationModel.Calls.IMuteChangeEventArgs
     property muted
-        get get_Muted slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IMuteChangeEventArgs shape=4 reverse=22
+        get get_Muted slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IMuteChangeEventArgs shape=4
             out boolean return
 
 class Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions activatable python_type
@@ -1494,31 +1494,31 @@ class Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions activatable py
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptionsFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
             out class type=Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions return
     property service_name
-        get get_ServiceName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=121
+        get get_ServiceName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             out string return
-        put put_ServiceName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=141
+        put put_ServiceName slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             in string name=value
     property media
-        get get_Media slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=162
+        get get_Media slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia return
-        put put_Media slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=173
+        put put_Media slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=value
     property context
-        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=22
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             out string return
-        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=43
+        put put_Context slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             in string name=value
     property contact_name
-        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=62
+        get get_ContactName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             out string return
-        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=99
+        put put_ContactName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             in string name=value
     property associated_device_ids
-        get get_AssociatedDeviceIds slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4 reverse=186
+        get get_AssociatedDeviceIds slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IOutgoingVoipPhoneCallOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 enum Windows.ApplicationModel.Calls.PhoneAudioRoutingEndpoint python_type
@@ -1535,91 +1535,91 @@ class Windows.ApplicationModel.Calls.PhoneCall python_type
     requires Windows.ApplicationModel.Calls.IPhoneCall
     factory Windows.ApplicationModel.Calls.IPhoneCallStatics
     property audio_device
-        get get_AudioDevice slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=194
+        get get_AudioDevice slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallAudioDevice return
     property call_id
-        get get_CallId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=162
+        get get_CallId slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out string return
     property is_muted
-        get get_IsMuted slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=173
+        get get_IsMuted slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out boolean return
     property status
-        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=186
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallStatus return
     event audio_device_changed
-        add add_AudioDeviceChanged slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=65
+        add add_AudioDeviceChanged slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneCall,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AudioDeviceChanged slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26 reverse=110
+        remove remove_AudioDeviceChanged slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_muted_changed
-        add add_IsMutedChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=124
+        add add_IsMutedChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneCall,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsMutedChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26 reverse=156
+        remove remove_IsMutedChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_changed
-        add add_StatusChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=24
+        add add_StatusChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneCall,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26 reverse=53
+        remove remove_StatusChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method accept_incoming
-        method AcceptIncoming slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=237
+        method AcceptIncoming slot=22 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method accept_incoming_async
-        method AcceptIncomingAsync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=242
+        method AcceptIncomingAsync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method change_audio_device
-        method ChangeAudioDevice slot=34 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=289
+        method ChangeAudioDevice slot=34 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallAudioDevice name=endpoint
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method change_audio_device_async
-        method ChangeAudioDeviceAsync slot=35 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51 reverse=293
+        method ChangeAudioDeviceAsync slot=35 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=51
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallAudioDevice name=endpoint
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method end
-        method End slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=218
+        method End slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method end_async
-        method EndAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=223
+        method EndAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method get_from_id static
-        method GetFromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStatics shape=51 reverse=24 static
+        method GetFromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStatics shape=51 static
             in string name=callId
             out class type=Windows.ApplicationModel.Calls.PhoneCall return
     method get_phone_call_info
-        method GetPhoneCallInfo slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=202
+        method GetPhoneCallInfo slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneCallInfo return
     method get_phone_call_info_async
-        method GetPhoneCallInfoAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=210
+        method GetPhoneCallInfoAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallInfo> return
     method hold
-        method Hold slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=247
+        method Hold slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method hold_async
-        method HoldAsync slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=252
+        method HoldAsync slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method mute
-        method Mute slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=263
+        method Mute slot=28 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method mute_async
-        method MuteAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=266
+        method MuteAsync slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method reject_incoming
-        method RejectIncoming slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=280
+        method RejectIncoming slot=32 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method reject_incoming_async
-        method RejectIncomingAsync slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=285
+        method RejectIncomingAsync slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method resume_from_hold
-        method ResumeFromHold slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=255
+        method ResumeFromHold slot=26 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method resume_from_hold_async
-        method ResumeFromHoldAsync slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=259
+        method ResumeFromHoldAsync slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method send_dtmf_key
-        method SendDtmfKey slot=20 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=117 reverse=230
+        method SendDtmfKey slot=20 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=117
             in enum32 type=Windows.ApplicationModel.Calls.DtmfKey name=key
             in enum32 type=Windows.ApplicationModel.Calls.DtmfToneAudioPlayback name=dtmfToneAudioPlayback
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
@@ -1629,10 +1629,10 @@ class Windows.ApplicationModel.Calls.PhoneCall python_type
             in enum32 type=Windows.ApplicationModel.Calls.DtmfToneAudioPlayback name=dtmfToneAudioPlayback
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
     method unmute
-        method Unmute slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=270
+        method Unmute slot=30 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     method unmute_async
-        method UnmuteAsync slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4 reverse=273
+        method UnmuteAsync slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCall shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> return
 
 enum Windows.ApplicationModel.Calls.PhoneCallAudioDevice python_type
@@ -1646,17 +1646,17 @@ class Windows.ApplicationModel.Calls.PhoneCallBlocking static python_type
     py PhoneCallBlocking
     factory Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics
     property block_unknown_numbers static
-        get get_BlockUnknownNumbers slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 reverse=22 static
+        get get_BlockUnknownNumbers slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 static
             out boolean return
-        put put_BlockUnknownNumbers slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 reverse=43 static
+        put put_BlockUnknownNumbers slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 static
             in boolean name=value
     property block_private_numbers static
-        get get_BlockPrivateNumbers slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 reverse=62 static
+        get get_BlockPrivateNumbers slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 static
             out boolean return
-        put put_BlockPrivateNumbers slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 reverse=99 static
+        put put_BlockPrivateNumbers slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=4 static
             in boolean name=value
     method set_call_blocking_list_async static
-        method SetCallBlockingListAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=51 reverse=124 static
+        method SetCallBlockingListAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallBlockingStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phoneNumberList
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -1676,90 +1676,90 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntry activatable python_ty
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property media
-        get get_Media slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=259
+        get get_Media slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryMedia return
-        put put_Media slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=263
+        put put_Media slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryMedia name=value
     property is_missed
-        get get_IsMissed slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=210
+        get get_IsMissed slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsMissed slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=218
+        put put_IsMissed slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property is_incoming
-        get get_IsIncoming slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=194
+        get get_IsIncoming slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsIncoming slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=202
+        put put_IsIncoming slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property is_caller_id_blocked
-        get get_IsCallerIdBlocked slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=141
+        get get_IsCallerIdBlocked slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsCallerIdBlocked slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=162
+        put put_IsCallerIdBlocked slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property is_seen
-        get get_IsSeen slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=232
+        get get_IsSeen slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsSeen slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=237
+        put put_IsSeen slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property duration
-        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=99
+        get get_Duration slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_Duration slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=121
+        put put_Duration slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property is_emergency
-        get get_IsEmergency slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=173
+        get get_IsEmergency slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsEmergency slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=186
+        put put_IsEmergency slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property is_suppressed
-        get get_IsSuppressed slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=242
+        get get_IsSuppressed slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsSuppressed slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=247
+        put put_IsSuppressed slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property start_time
-        get get_StartTime slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=302
+        get get_StartTime slot=38 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out datetime return
-        put put_StartTime slot=39 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=26 reverse=310
+        put put_StartTime slot=39 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=26
             in datetime name=value
     property source_id_kind
-        get get_SourceIdKind slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=296
+        get get_SourceIdKind slot=36 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistorySourceIdKind return
-        put put_SourceIdKind slot=37 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=299
+        put put_SourceIdKind slot=37 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistorySourceIdKind name=value
     property address
-        get get_Address slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=43
+        get get_Address slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress return
-        put put_Address slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=62
+        put put_Address slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress name=value
     property source_id
-        get get_SourceId slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=288
+        get get_SourceId slot=34 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out string return
-        put put_SourceId slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=292
+        put put_SourceId slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in string name=value
     property remote_id
-        get get_RemoteId slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=273
+        get get_RemoteId slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out string return
-        put put_RemoteId slot=32 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=280
+        put put_RemoteId slot=32 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in string name=value
     property other_app_read_access
-        get get_OtherAppReadAccess slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=266
+        get get_OtherAppReadAccess slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryOtherAppReadAccess return
-        put put_OtherAppReadAccess slot=30 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=270
+        put put_OtherAppReadAccess slot=30 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryOtherAppReadAccess name=value
     property is_ringing
-        get get_IsRinging slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=223
+        get get_IsRinging slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsRinging slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=228
+        put put_IsRinging slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property is_voicemail
-        get get_IsVoicemail slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=252
+        get get_IsVoicemail slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out boolean return
-        put put_IsVoicemail slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=255
+        put put_IsVoicemail slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             in boolean name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out string return
     property source_display_name
-        get get_SourceDisplayName slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4 reverse=285
+        get get_SourceDisplayName slot=33 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntry shape=4
             out string return
 
 class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress activatable python_type
@@ -1771,29 +1771,29 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress activatable py
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddressFactory shape=117
             in string name=rawAddress
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind name=rawAddressKind
             out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryAddress return
     property raw_address_kind
-        get get_RawAddressKind slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=162
+        get get_RawAddressKind slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind return
-        put put_RawAddressKind slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=173
+        put put_RawAddressKind slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind name=value
     property raw_address
-        get get_RawAddress slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=121
+        get get_RawAddress slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             out string return
-        put put_RawAddress slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=141
+        put put_RawAddress slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             in string name=value
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=62
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             out string return
-        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=99
+        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             in string name=value
     property contact_id
-        get get_ContactId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=22
+        get get_ContactId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             out string return
-        put put_ContactId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4 reverse=43
+        put put_ContactId slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryAddress shape=4
             in string name=value
 
 enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryMedia python_type
@@ -1825,12 +1825,12 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions activatab
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property desired_media
-        get get_DesiredMedia slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions shape=4 reverse=22
+        get get_DesiredMedia slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryDesiredMedia return
-        put put_DesiredMedia slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions shape=4 reverse=43
+        put put_DesiredMedia slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryDesiredMedia name=value
     property source_ids
-        get get_SourceIds slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions shape=4 reverse=62
+        get get_SourceIds slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryQueryOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 enum Windows.ApplicationModel.Calls.PhoneCallHistoryEntryRawAddressKind python_type
@@ -1845,7 +1845,7 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader python_type
     default Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryReader
     requires Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryReader
     method read_batch_async
-        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryReader shape=4 reverse=22
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryEntryReader shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry>> return
 
 class Windows.ApplicationModel.Calls.PhoneCallHistoryManager static python_type
@@ -1853,11 +1853,11 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryManager static python_type
     factory Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics
     factory Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics2
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics2 shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser return
     method request_store_async static
-        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics shape=51 reverse=24 static
+        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerStatics shape=51 static
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryStoreAccessType name=accessType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallHistoryStore> return
 
@@ -1867,10 +1867,10 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser python_type
     default Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser
     requires Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser
     property user
-        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser shape=4 reverse=43
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser shape=4
             out class type=Windows.System.User return
     method request_store_async
-        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser shape=51 reverse=24
+        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryManagerForUser shape=51
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallHistoryStoreAccessType name=accessType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallHistoryStore> return
 
@@ -1886,47 +1886,47 @@ class Windows.ApplicationModel.Calls.PhoneCallHistoryStore python_type
     default Windows.ApplicationModel.Calls.IPhoneCallHistoryStore
     requires Windows.ApplicationModel.Calls.IPhoneCallHistoryStore
     method delete_entries_async
-        method DeleteEntriesAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=144
+        method DeleteEntriesAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry> name=callHistoryEntries
             out interface type=Windows.Foundation.IAsyncAction return
     method delete_entry_async
-        method DeleteEntryAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=124
+        method DeleteEntryAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntry name=callHistoryEntry
             out interface type=Windows.Foundation.IAsyncAction return
     method get_entry_async
-        method GetEntryAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=24
+        method GetEntryAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in string name=callHistoryEntryId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry> return
     method get_entry_reader
-        method GetEntryReader slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=4 reverse=43
+        method GetEntryReader slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader return
-        method GetEntryReader slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=65
+        method GetEntryReader slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryQueryOptions name=queryOptions
             out class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader return
     method get_sources_unseen_count_async
-        method GetSourcesUnseenCountAsync slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=203
+        method GetSourcesUnseenCountAsync slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=sourceIds
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
     method get_unseen_count_async
-        method GetUnseenCountAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=4 reverse=186
+        method GetUnseenCountAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
     method mark_all_as_seen_async
-        method MarkAllAsSeenAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=4 reverse=194
+        method MarkAllAsSeenAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method mark_entries_as_seen_async
-        method MarkEntriesAsSeenAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=174
+        method MarkEntriesAsSeenAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry> name=callHistoryEntries
             out interface type=Windows.Foundation.IAsyncAction return
     method mark_entry_as_seen_async
-        method MarkEntryAsSeenAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=163
+        method MarkEntryAsSeenAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntry name=callHistoryEntry
             out interface type=Windows.Foundation.IAsyncAction return
     method mark_sources_as_seen_async
-        method MarkSourcesAsSeenAsync slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=211
+        method MarkSourcesAsSeenAsync slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=sourceIds
             out interface type=Windows.Foundation.IAsyncAction return
     method save_entry_async
-        method SaveEntryAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51 reverse=100
+        method SaveEntryAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallHistoryStore shape=51
             in class type=Windows.ApplicationModel.Calls.PhoneCallHistoryEntry name=callHistoryEntry
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -1943,22 +1943,22 @@ class Windows.ApplicationModel.Calls.PhoneCallInfo python_type
     default Windows.ApplicationModel.Calls.IPhoneCallInfo
     requires Windows.ApplicationModel.Calls.IPhoneCallInfo
     property call_direction
-        get get_CallDirection slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4 reverse=141
+        get get_CallDirection slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallDirection return
     property display_name
-        get get_DisplayName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4 reverse=121
+        get get_DisplayName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4
             out string return
     property is_hold_supported
-        get get_IsHoldSupported slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4 reverse=43
+        get get_IsHoldSupported slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4
             out boolean return
     property line_id
-        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4 reverse=22
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4
             out guid return
     property phone_number
-        get get_PhoneNumber slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4 reverse=99
+        get get_PhoneNumber slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4
             out string return
     property start_time
-        get get_StartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4 reverse=62
+        get get_StartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallInfo shape=4
             out datetime return
 
 class Windows.ApplicationModel.Calls.PhoneCallManager static python_type
@@ -1966,24 +1966,24 @@ class Windows.ApplicationModel.Calls.PhoneCallManager static python_type
     factory Windows.ApplicationModel.Calls.IPhoneCallManagerStatics
     factory Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2
     property is_call_active static
-        get get_IsCallActive slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 reverse=62 static
+        get get_IsCallActive slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 static
             out boolean return
     property is_call_incoming static
-        get get_IsCallIncoming slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 reverse=99 static
+        get get_IsCallIncoming slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 static
             out boolean return
     event call_state_changed static
-        add add_CallStateChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=51 reverse=24 static
+        add add_CallStateChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CallStateChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=26 reverse=53 static
+        remove remove_CallStateChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method request_store_async static
-        method RequestStoreAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 reverse=141 static
+        method RequestStoreAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallStore> return
     method show_phone_call_settings_ui static
-        method ShowPhoneCallSettingsUI slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=0 reverse=117 static
+        method ShowPhoneCallSettingsUI slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics2 shape=0 static
     method show_phone_call_ui static
-        method ShowPhoneCallUI slot=6 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics shape=51 reverse=24 static
+        method ShowPhoneCallUI slot=6 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneCallManagerStatics shape=51 static
             in string name=phoneNumber
             in string name=displayName
 
@@ -2019,14 +2019,14 @@ class Windows.ApplicationModel.Calls.PhoneCallStore python_type
     default Windows.ApplicationModel.Calls.IPhoneCallStore
     requires Windows.ApplicationModel.Calls.IPhoneCallStore
     method get_default_line_async
-        method GetDefaultLineAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStore shape=4 reverse=43
+        method GetDefaultLineAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStore shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Guid> return
     method is_emergency_phone_number_async
-        method IsEmergencyPhoneNumberAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStore shape=51 reverse=24
+        method IsEmergencyPhoneNumberAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStore shape=51
             in string name=number
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_line_watcher
-        method RequestLineWatcher slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStore shape=4 reverse=62
+        method RequestLineWatcher slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallStore shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneLineWatcher return
 
 class Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities python_type
@@ -2035,14 +2035,14 @@ class Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities python_type
     default Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilities
     requires Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilities
     property is_video_calling_capable
-        get get_IsVideoCallingCapable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilities shape=4 reverse=22
+        get get_IsVideoCallingCapable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilities shape=4
             out boolean return
 
 class Windows.ApplicationModel.Calls.PhoneCallVideoCapabilitiesManager static python_type
     py PhoneCallVideoCapabilitiesManager
     factory Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilitiesManagerStatics
     method get_capabilities_async static
-        method GetCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilitiesManagerStatics shape=51 reverse=24 static
+        method GetCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallVideoCapabilitiesManagerStatics shape=51 static
             in string name=phoneNumber
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities> return
 
@@ -2052,10 +2052,10 @@ class Windows.ApplicationModel.Calls.PhoneCallsResult python_type
     default Windows.ApplicationModel.Calls.IPhoneCallsResult
     requires Windows.ApplicationModel.Calls.IPhoneCallsResult
     property all_active_phone_calls
-        get get_AllActivePhoneCalls slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallsResult shape=4 reverse=43
+        get get_AllActivePhoneCalls slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallsResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Calls.PhoneCall> return
     property operation_status
-        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallsResult shape=4 reverse=22
+        get get_OperationStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneCallsResult shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneLineOperationStatus return
 
 class Windows.ApplicationModel.Calls.PhoneDialOptions activatable python_type
@@ -2067,34 +2067,34 @@ class Windows.ApplicationModel.Calls.PhoneDialOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property number
-        get get_Number slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=22
+        get get_Number slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             out string return
-        put put_Number slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=43
+        put put_Number slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             in string name=value
     property media
-        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=186
+        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallMedia return
-        put put_Media slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=194
+        put put_Media slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             in enum32 type=Windows.ApplicationModel.Calls.PhoneCallMedia name=value
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=62
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             out string return
-        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=99
+        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             in string name=value
     property contact_phone
-        get get_ContactPhone slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=162
+        get get_ContactPhone slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             out class type=Windows.ApplicationModel.Contacts.ContactPhone return
-        put put_ContactPhone slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=173
+        put put_ContactPhone slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             in class type=Windows.ApplicationModel.Contacts.ContactPhone name=value
     property contact
-        get get_Contact slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=121
+        get get_Contact slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             out class type=Windows.ApplicationModel.Contacts.Contact return
-        put put_Contact slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=141
+        put put_Contact slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             in class type=Windows.ApplicationModel.Contacts.Contact name=value
     property audio_endpoint
-        get get_AudioEndpoint slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=202
+        get get_AudioEndpoint slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneAudioRoutingEndpoint return
-        put put_AudioEndpoint slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4 reverse=210
+        put put_AudioEndpoint slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneDialOptions shape=4
             in enum32 type=Windows.ApplicationModel.Calls.PhoneAudioRoutingEndpoint name=value
 
 class Windows.ApplicationModel.Calls.PhoneLine python_type
@@ -2106,82 +2106,82 @@ class Windows.ApplicationModel.Calls.PhoneLine python_type
     requires Windows.ApplicationModel.Calls.IPhoneLine3
     factory Windows.ApplicationModel.Calls.IPhoneLineStatics
     property can_dial
-        get get_CanDial slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=202
+        get get_CanDial slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out boolean return
     property cellular_details
-        get get_CellularDetails slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=186
+        get get_CellularDetails slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneLineCellularDetails return
     property display_color
-        get get_DisplayColor slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=99
+        get get_DisplayColor slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out struct type=Windows.UI.Color return
     property display_name
-        get get_DisplayName slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=141
+        get get_DisplayName slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out string return
     property id
-        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=62
+        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out guid return
     property line_configuration
-        get get_LineConfiguration slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=223
+        get get_LineConfiguration slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneLineConfiguration return
     property network_name
-        get get_NetworkName slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=173
+        get get_NetworkName slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out string return
     property network_state
-        get get_NetworkState slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=121
+        get get_NetworkState slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneNetworkState return
     property supports_tile
-        get get_SupportsTile slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=210
+        get get_SupportsTile slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out boolean return
     property transport
-        get get_Transport slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=194
+        get get_Transport slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneLineTransport return
     property video_calling_capabilities
-        get get_VideoCallingCapabilities slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=218
+        get get_VideoCallingCapabilities slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities return
     property voicemail
-        get get_Voicemail slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=162
+        get get_Voicemail slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneVoicemail return
     property transport_device_id
-        get get_TransportDeviceId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine2 shape=4 reverse=43
+        get get_TransportDeviceId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine2 shape=4
             out string return
     event line_changed
-        add add_LineChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51 reverse=24
+        add add_LineChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLine,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LineChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=26 reverse=53
+        remove remove_LineChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method dial
-        method Dial slot=21 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51 reverse=233
+        method Dial slot=21 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51
             in string name=number
             in string name=displayName
     method dial_with_options
-        method DialWithOptions slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4 reverse=237
+        method DialWithOptions slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=4
             in class type=Windows.ApplicationModel.Calls.PhoneDialOptions name=options
     method dial_with_result
-        method DialWithResult slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=117 reverse=25
+        method DialWithResult slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=117
             in string name=number
             in string name=displayName
             out class type=Windows.ApplicationModel.Calls.PhoneLineDialResult return
     method dial_with_result_async
-        method DialWithResultAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=117 reverse=45
+        method DialWithResultAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=117
             in string name=number
             in string name=displayName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneLineDialResult> return
     method enable_text_reply deprecated
-        method EnableTextReply slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine2 shape=4 reverse=22 deprecated
+        method EnableTextReply slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine2 shape=4 deprecated
             in boolean name=value
     method from_id_async static
-        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineStatics shape=94 reverse=35 static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineStatics shape=94 static
             in guid name=lineId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneLine> return
     method get_all_active_phone_calls
-        method GetAllActivePhoneCalls slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=4 reverse=62
+        method GetAllActivePhoneCalls slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneCallsResult return
     method get_all_active_phone_calls_async
-        method GetAllActivePhoneCallsAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=4 reverse=99
+        method GetAllActivePhoneCallsAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine3 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneCallsResult> return
     method is_immediate_dial_number_async
-        method IsImmediateDialNumberAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51 reverse=229
+        method IsImmediateDialNumberAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLine shape=51
             in string name=number
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -2191,19 +2191,19 @@ class Windows.ApplicationModel.Calls.PhoneLineCellularDetails python_type
     default Windows.ApplicationModel.Calls.IPhoneLineCellularDetails
     requires Windows.ApplicationModel.Calls.IPhoneLineCellularDetails
     property is_modem_on
-        get get_IsModemOn slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4 reverse=62
+        get get_IsModemOn slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4
             out boolean return
     property registration_reject_code
-        get get_RegistrationRejectCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4 reverse=99
+        get get_RegistrationRejectCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4
             out int32 return
     property sim_slot_index
-        get get_SimSlotIndex slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4 reverse=43
+        get get_SimSlotIndex slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4
             out int32 return
     property sim_state
-        get get_SimState slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4 reverse=22
+        get get_SimState slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneSimState return
     method get_network_operator_display_text
-        method GetNetworkOperatorDisplayText slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=51 reverse=124
+        method GetNetworkOperatorDisplayText slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineCellularDetails shape=51
             in enum32 type=Windows.ApplicationModel.Calls.PhoneLineNetworkOperatorDisplayTextLocation name=location
             out string return
 
@@ -2213,10 +2213,10 @@ class Windows.ApplicationModel.Calls.PhoneLineConfiguration python_type
     default Windows.ApplicationModel.Calls.IPhoneLineConfiguration
     requires Windows.ApplicationModel.Calls.IPhoneLineConfiguration
     property extended_properties
-        get get_ExtendedProperties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineConfiguration shape=4 reverse=43
+        get get_ExtendedProperties slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineConfiguration shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     property is_video_calling_enabled
-        get get_IsVideoCallingEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineConfiguration shape=4 reverse=22
+        get get_IsVideoCallingEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineConfiguration shape=4
             out boolean return
 
 class Windows.ApplicationModel.Calls.PhoneLineDialResult python_type
@@ -2225,10 +2225,10 @@ class Windows.ApplicationModel.Calls.PhoneLineDialResult python_type
     default Windows.ApplicationModel.Calls.IPhoneLineDialResult
     requires Windows.ApplicationModel.Calls.IPhoneLineDialResult
     property dial_call_status
-        get get_DialCallStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineDialResult shape=4 reverse=22
+        get get_DialCallStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineDialResult shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneCallOperationStatus return
     property dialed_call
-        get get_DialedCall slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineDialResult shape=4 reverse=43
+        get get_DialedCall slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineDialResult shape=4
             out class type=Windows.ApplicationModel.Calls.PhoneCall return
 
 enum Windows.ApplicationModel.Calls.PhoneLineNetworkOperatorDisplayTextLocation python_type
@@ -2263,60 +2263,60 @@ class Windows.ApplicationModel.Calls.PhoneLineTransportDevice python_type
     requires Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2
     factory Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             out string return
     property transport
-        get get_Transport slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=43
+        get get_Transport slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneLineTransport return
     property audio_routing_status
-        get get_AudioRoutingStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=4 reverse=22
+        get get_AudioRoutingStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=4
             out enum32 type=Windows.ApplicationModel.Calls.TransportDeviceAudioRoutingStatus return
     property in_band_ringing_enabled
-        get get_InBandRingingEnabled slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=4 reverse=99
+        get get_InBandRingingEnabled slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=4
             out boolean return
     event audio_routing_status_changed
-        add add_AudioRoutingStatusChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=51 reverse=44
+        add add_AudioRoutingStatusChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineTransportDevice,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AudioRoutingStatusChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=26 reverse=82
+        remove remove_AudioRoutingStatusChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event in_band_ringing_enabled_changed
-        add add_InBandRingingEnabledChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=51 reverse=124
+        add add_InBandRingingEnabledChanged slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineTransportDevice,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_InBandRingingEnabledChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=26 reverse=156
+        remove remove_InBandRingingEnabledChanged slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method connect
-        method Connect slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=186
+        method Connect slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             out boolean return
     method connect_async
-        method ConnectAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=194
+        method ConnectAsync slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method from_id static
-        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics shape=51 reverse=24 static
+        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics shape=51 static
             in string name=id
             out class type=Windows.ApplicationModel.Calls.PhoneLineTransportDevice return
     method get_device_selector static
-        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics shape=4 reverse=43 static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics shape=4 static
             out string return
-        method GetDeviceSelector slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics shape=51 reverse=65 static
+        method GetDeviceSelector slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDeviceStatics shape=51 static
             in enum32 type=Windows.ApplicationModel.Calls.PhoneLineTransport name=transport
             out string return
     method is_registered
-        method IsRegistered slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=173
+        method IsRegistered slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             out boolean return
     method register_app
-        method RegisterApp slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=0 reverse=93
+        method RegisterApp slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=0
     method register_app_for_user
-        method RegisterAppForUser slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=121
+        method RegisterAppForUser slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             in class type=Windows.System.User name=user
     method request_access_async
-        method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=62
+        method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.DeviceAccessStatus> return
     method unregister_app
-        method UnregisterApp slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=0 reverse=137
+        method UnregisterApp slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=0
     method unregister_app_for_user
-        method UnregisterAppForUser slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4 reverse=162
+        method UnregisterAppForUser slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineTransportDevice shape=4
             in class type=Windows.System.User name=user
 
 class Windows.ApplicationModel.Calls.PhoneLineWatcher python_type
@@ -2325,42 +2325,42 @@ class Windows.ApplicationModel.Calls.PhoneLineWatcher python_type
     default Windows.ApplicationModel.Calls.IPhoneLineWatcher
     requires Windows.ApplicationModel.Calls.IPhoneLineWatcher
     property status
-        get get_Status slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=4 reverse=218
+        get get_Status slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneLineWatcherStatus return
     event enumeration_completed
-        add add_EnumerationCompleted slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=187
+        add add_EnumerationCompleted slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=200
+        remove remove_EnumerationCompleted slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event line_added
-        add add_LineAdded slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=65
+        add add_LineAdded slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LineAdded slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=110
+        remove remove_LineAdded slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event line_removed
-        add add_LineRemoved slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=124
+        add add_LineRemoved slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LineRemoved slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=156
+        remove remove_LineRemoved slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event line_updated
-        add add_LineUpdated slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=163
+        add add_LineUpdated slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LineUpdated slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=181
+        remove remove_LineUpdated slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51 reverse=203
+        add add_Stopped slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.PhoneLineWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26 reverse=215
+        remove remove_Stopped slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=0
     method stop
-        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=0 reverse=37
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcher shape=0
 
 class Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs python_type
     py PhoneLineWatcherEventArgs
@@ -2368,7 +2368,7 @@ class Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs python_type
     default Windows.ApplicationModel.Calls.IPhoneLineWatcherEventArgs
     requires Windows.ApplicationModel.Calls.IPhoneLineWatcherEventArgs
     property line_id
-        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcherEventArgs shape=4 reverse=22
+        get get_LineId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneLineWatcherEventArgs shape=4
             out guid return
 
 enum Windows.ApplicationModel.Calls.PhoneLineWatcherStatus python_type
@@ -2409,16 +2409,16 @@ class Windows.ApplicationModel.Calls.PhoneVoicemail python_type
     default Windows.ApplicationModel.Calls.IPhoneVoicemail
     requires Windows.ApplicationModel.Calls.IPhoneVoicemail
     property message_count
-        get get_MessageCount slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4 reverse=43
+        get get_MessageCount slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4
             out int32 return
     property number
-        get get_Number slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4 reverse=22
+        get get_Number slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4
             out string return
     property type
-        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4 reverse=62
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4
             out enum32 type=Windows.ApplicationModel.Calls.PhoneVoicemailType return
     method dial_voicemail_async
-        method DialVoicemailAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4 reverse=99
+        method DialVoicemailAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IPhoneVoicemail shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 enum Windows.ApplicationModel.Calls.PhoneVoicemailType python_type
@@ -2585,28 +2585,28 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
     factory Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics
     factory Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2
     event mute_state_changed
-        add add_MuteStateChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=51 reverse=44
+        add add_MuteStateChanged slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipCallCoordinator,Windows.ApplicationModel.Calls.MuteChangeEventArgs> name=muteChangeHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MuteStateChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=26 reverse=82
+        remove remove_MuteStateChanged slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel_upgrade
-        method CancelUpgrade slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=33 reverse=208
+        method CancelUpgrade slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=33
             in guid name=callUpgradeGuid
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics shape=4 static
             out class type=Windows.ApplicationModel.Calls.VoipCallCoordinator return
     method get_device_selector_for_call_control static
-        method GetDeviceSelectorForCallControl slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2 shape=4 reverse=43 static
+        method GetDeviceSelectorForCallControl slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2 shape=4 static
             out string return
     method is_call_control_device_kind_supported_for_association static
-        method IsCallControlDeviceKindSupportedForAssociation slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2 shape=51 reverse=24 static
+        method IsCallControlDeviceKindSupportedForAssociation slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinatorStatics2 shape=51 static
             in enum32 type=Windows.ApplicationModel.Calls.VoipCallControlDeviceKind name=kind
             out boolean return
     method notify_muted
-        method NotifyMuted slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=0 reverse=137
+        method NotifyMuted slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=0
     method notify_unmuted
-        method NotifyUnmuted slot=12 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=0 reverse=159
+        method NotifyUnmuted slot=12 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=0
     method request_incoming_upgrade_to_video_call
         method RequestIncomingUpgradeToVideoCall slot=14 inputs=9 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=295
             in string name=context
@@ -2620,7 +2620,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in timespan name=ringTimeout
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_app_initiated_call
-        method RequestNewAppInitiatedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator3 shape=267 reverse=516
+        method RequestNewAppInitiatedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator3 shape=267
             in string name=context
             in string name=contactName
             in string name=contactNumber
@@ -2628,7 +2628,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=media
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_app_initiated_call_with_options
-        method RequestNewAppInitiatedCallWithOptions slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51 reverse=100
+        method RequestNewAppInitiatedCallWithOptions slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51
             in class type=Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions name=callOptions
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_incoming_call
@@ -2658,7 +2658,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in string name=contactRemoteId
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_incoming_call_with_options
-        method RequestNewIncomingCallWithOptions slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51 reverse=24
+        method RequestNewIncomingCallWithOptions slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51
             in class type=Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions name=callOptions
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_outgoing_call
@@ -2669,7 +2669,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=media
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_new_outgoing_call_with_options
-        method RequestNewOutgoingCallWithOptions slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51 reverse=44
+        method RequestNewOutgoingCallWithOptions slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51
             in class type=Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions name=callOptions
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method request_outgoing_upgrade_to_video_call
@@ -2680,13 +2680,13 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in string name=serviceName
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method reserve_call_resources_async
-        method ReserveCallResourcesAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator4 shape=4 reverse=22
+        method ReserveCallResourcesAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator4 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus> return
-        method ReserveCallResourcesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=51 reverse=24
+        method ReserveCallResourcesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator shape=51
             in string name=taskEntryPoint
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus> return
     method setup_new_accepted_call
-        method SetupNewAcceptedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator2 shape=267 reverse=516
+        method SetupNewAcceptedCall slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator2 shape=267
             in string name=context
             in string name=contactName
             in string name=contactNumber
@@ -2694,7 +2694,7 @@ class Windows.ApplicationModel.Calls.VoipCallCoordinator python_type
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=media
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method setup_new_accepted_call_with_options
-        method SetupNewAcceptedCallWithOptions slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51 reverse=65
+        method SetupNewAcceptedCallWithOptions slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipCallCoordinator5 shape=51
             in class type=Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions name=callOptions
             out class type=Windows.ApplicationModel.Calls.VoipPhoneCall return
     method terminate_cellular_call
@@ -2710,80 +2710,80 @@ class Windows.ApplicationModel.Calls.VoipPhoneCall python_type
     requires Windows.ApplicationModel.Calls.IVoipPhoneCall3
     requires Windows.ApplicationModel.Calls.IVoipPhoneCall4
     property start_time
-        get get_StartTime slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4 reverse=232
+        get get_StartTime slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4
             out datetime return
-        put put_StartTime slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=400
+        put put_StartTime slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26
             in datetime name=value
     property contact_name
-        get get_ContactName slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4 reverse=223
+        get get_ContactName slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4
             out string return
-        put put_ContactName slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4 reverse=228
+        put put_ContactName slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4
             in string name=value
     property call_media
-        get get_CallMedia slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4 reverse=242
+        get get_CallMedia slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4
             out enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia return
-        put put_CallMedia slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4 reverse=247
+        put put_CallMedia slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=value
     property is_using_associated_devices_list
-        get get_IsUsingAssociatedDevicesList slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=22
+        get get_IsUsingAssociatedDevicesList slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4
             out boolean return
     event answer_requested
-        add add_AnswerRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=163
+        add add_AnswerRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallAnswerEventArgs> name=acceptHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AnswerRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=181
+        remove remove_AnswerRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event end_requested
-        add add_EndRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=24
+        add add_EndRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallStateChangeEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EndRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=53
+        remove remove_EndRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hold_requested
-        add add_HoldRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=65
+        add add_HoldRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallStateChangeEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HoldRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=110
+        remove remove_HoldRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event reject_requested
-        add add_RejectRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=187
+        add add_RejectRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallRejectEventArgs> name=rejectHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RejectRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=200
+        remove remove_RejectRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event resume_requested
-        add add_ResumeRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51 reverse=124
+        add add_ResumeRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Calls.VoipPhoneCall,Windows.ApplicationModel.Calls.CallStateChangeEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ResumeRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26 reverse=156
+        remove remove_ResumeRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_associated_call_control_device
-        method AddAssociatedCallControlDevice slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=62
+        method AddAssociatedCallControlDevice slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4
             in string name=deviceId
     method get_associated_call_control_devices
-        method GetAssociatedCallControlDevices slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=141
+        method GetAssociatedCallControlDevices slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method notify_call_accepted
-        method NotifyCallAccepted slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall3 shape=4 reverse=22
+        method NotifyCallAccepted slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall3 shape=4
             in enum_u32 type=Windows.ApplicationModel.Calls.VoipPhoneCallMedia name=media
     method notify_call_active
-        method NotifyCallActive slot=17 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0 reverse=209
-        method NotifyCallActive slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=43
+        method NotifyCallActive slot=17 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0
+        method NotifyCallActive slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
     method notify_call_ended
-        method NotifyCallEnded slot=18 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0 reverse=217
+        method NotifyCallEnded slot=18 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0
     method notify_call_held
-        method NotifyCallHeld slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0 reverse=201
+        method NotifyCallHeld slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0
     method notify_call_ready
         method NotifyCallReady slot=25 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall shape=0
     method remove_associated_call_control_device
-        method RemoveAssociatedCallControlDevice slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=99
+        method RemoveAssociatedCallControlDevice slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4
             in string name=deviceId
     method set_associated_call_control_devices
-        method SetAssociatedCallControlDevices slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4 reverse=121
+        method SetAssociatedCallControlDevices slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall4 shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=associatedDeviceIds
     method try_show_app_ui
-        method TryShowAppUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall2 shape=0 reverse=16
+        method TryShowAppUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.IVoipPhoneCall2 shape=0
 
 enum Windows.ApplicationModel.Calls.VoipPhoneCallMedia python_type flags_enum
     py VoipPhoneCallMedia

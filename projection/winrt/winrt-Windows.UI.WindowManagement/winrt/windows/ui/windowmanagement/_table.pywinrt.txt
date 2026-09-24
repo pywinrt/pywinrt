@@ -10,75 +10,75 @@ class Windows.UI.WindowManagement.AppWindow python_type
     requires Windows.UI.WindowManagement.IAppWindow
     factory Windows.UI.WindowManagement.IAppWindowStatics
     property title
-        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=173
+        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out string return
-        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=186
+        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             in string name=value
     property persisted_state_id
-        get get_PersistedStateId slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=121
+        get get_PersistedStateId slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out string return
-        put put_PersistedStateId slot=11 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=141
+        put put_PersistedStateId slot=11 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             in string name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.UIContentRoot return
     property dispatcher_queue
-        get get_DispatcherQueue slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=43
+        get get_DispatcherQueue slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.System.DispatcherQueue return
     property frame
-        get get_Frame slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=62
+        get get_Frame slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.WindowManagement.AppWindowFrame return
     property is_visible
-        get get_IsVisible slot=9 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=99
+        get get_IsVisible slot=9 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out boolean return
     property presenter
-        get get_Presenter slot=12 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=162
+        get get_Presenter slot=12 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.WindowManagement.AppWindowPresenter return
     property title_bar
-        get get_TitleBar slot=15 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=194
+        get get_TitleBar slot=15 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.WindowManagement.AppWindowTitleBar return
     property ui_context
-        get get_UIContext slot=16 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=202
+        get get_UIContext slot=16 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.UIContext return
     property windowing_environment
-        get get_WindowingEnvironment slot=17 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=210
+        get get_WindowingEnvironment slot=17 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.WindowManagement.WindowingEnvironment return
     event changed
-        add add_Changed slot=29 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51 reverse=267
+        add add_Changed slot=29 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.AppWindow,Windows.UI.WindowManagement.AppWindowChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=30 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26 reverse=272
+        remove remove_Changed slot=30 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event close_requested
-        add add_CloseRequested slot=33 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51 reverse=286
+        add add_CloseRequested slot=33 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.AppWindow,Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CloseRequested slot=34 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26 reverse=291
+        remove remove_CloseRequested slot=34 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
-        add add_Closed slot=31 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51 reverse=274
+        add add_Closed slot=31 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.AppWindow,Windows.UI.WindowManagement.AppWindowClosedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closed slot=32 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26 reverse=283
+        remove remove_Closed slot=32 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_all_persisted_state static
-        method ClearAllPersistedState slot=7 inputs=0 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=0 reverse=37 static
+        method ClearAllPersistedState slot=7 inputs=0 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=0 static
     method clear_persisted_state static
-        method ClearPersistedState slot=8 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=4 reverse=62 static
+        method ClearPersistedState slot=8 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=4 static
             in string name=key
     method close_async
-        method CloseAsync slot=18 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=218
+        method CloseAsync slot=18 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method get_display_regions
-        method GetDisplayRegions slot=20 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=228
+        method GetDisplayRegions slot=20 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.DisplayRegion> return
     method get_placement
-        method GetPlacement slot=19 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=223
+        method GetPlacement slot=19 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out class type=Windows.UI.WindowManagement.AppWindowPlacement return
     method request_move_adjacent_to_current_view
-        method RequestMoveAdjacentToCurrentView slot=22 inputs=0 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=0 reverse=235
+        method RequestMoveAdjacentToCurrentView slot=22 inputs=0 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=0
     method request_move_adjacent_to_window
-        method RequestMoveAdjacentToWindow slot=23 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=242
+        method RequestMoveAdjacentToWindow slot=23 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             in class type=Windows.UI.WindowManagement.AppWindow name=anchorWindow
     method request_move_relative_to_current_view_content
         method RequestMoveRelativeToCurrentViewContent slot=25 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=10
@@ -92,16 +92,16 @@ class Windows.UI.WindowManagement.AppWindow python_type
             in class type=Windows.UI.WindowManagement.AppWindow name=anchorWindow
             in struct type=Windows.Foundation.Point name=contentOffset
     method request_move_to_display_region
-        method RequestMoveToDisplayRegion slot=21 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=232
+        method RequestMoveToDisplayRegion slot=21 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             in class type=Windows.UI.WindowManagement.DisplayRegion name=displayRegion
     method request_size
         method RequestSize slot=27 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindow shape=10
             in struct type=Windows.Foundation.Size name=frameSize
     method try_create_async static
-        method TryCreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=4 reverse=22 static
+        method TryCreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.WindowManagement.AppWindow> return
     method try_show_async
-        method TryShowAsync slot=28 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4 reverse=263
+        method TryShowAsync slot=28 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindow shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 class Windows.UI.WindowManagement.AppWindowChangedEventArgs python_type
@@ -110,28 +110,28 @@ class Windows.UI.WindowManagement.AppWindowChangedEventArgs python_type
     default Windows.UI.WindowManagement.IAppWindowChangedEventArgs
     requires Windows.UI.WindowManagement.IAppWindowChangedEventArgs
     property did_available_window_presentations_change
-        get get_DidAvailableWindowPresentationsChange slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=22
+        get get_DidAvailableWindowPresentationsChange slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_display_regions_change
-        get get_DidDisplayRegionsChange slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=43
+        get get_DidDisplayRegionsChange slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_frame_change
-        get get_DidFrameChange slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=62
+        get get_DidFrameChange slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_size_change
-        get get_DidSizeChange slot=9 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=99
+        get get_DidSizeChange slot=9 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_title_bar_change
-        get get_DidTitleBarChange slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=121
+        get get_DidTitleBarChange slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_visibility_change
-        get get_DidVisibilityChange slot=11 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=141
+        get get_DidVisibilityChange slot=11 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_window_presentation_change
-        get get_DidWindowPresentationChange slot=13 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=173
+        get get_DidWindowPresentationChange slot=13 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_windowing_environment_change
-        get get_DidWindowingEnvironmentChange slot=12 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4 reverse=162
+        get get_DidWindowingEnvironmentChange slot=12 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowChangedEventArgs shape=4
             out boolean return
 
 class Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs python_type
@@ -140,12 +140,12 @@ class Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs python_type
     default Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs
     requires Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs
     property cancel
-        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs shape=4 reverse=22
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs shape=4
             out boolean return
-        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs shape=4 reverse=43
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs shape=4
             in boolean name=value
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowCloseRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.UI.WindowManagement.AppWindowClosedEventArgs python_type
@@ -154,7 +154,7 @@ class Windows.UI.WindowManagement.AppWindowClosedEventArgs python_type
     default Windows.UI.WindowManagement.IAppWindowClosedEventArgs
     requires Windows.UI.WindowManagement.IAppWindowClosedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowClosedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowClosedEventArgs shape=4
             out enum32 type=Windows.UI.WindowManagement.AppWindowClosedReason return
 
 enum Windows.UI.WindowManagement.AppWindowClosedReason python_type
@@ -171,13 +171,13 @@ class Windows.UI.WindowManagement.AppWindowFrame python_type
     requires Windows.UI.WindowManagement.IAppWindowFrameStyle
     requires Windows.UI.WindowManagement.IAppWindowFrame
     property drag_region_visuals
-        get get_DragRegionVisuals slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowFrame shape=4 reverse=22
+        get get_DragRegionVisuals slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowFrame shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Composition.IVisualElement> return
     method get_frame_style
-        method GetFrameStyle slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowFrameStyle shape=4 reverse=22
+        method GetFrameStyle slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowFrameStyle shape=4
             out enum32 type=Windows.UI.WindowManagement.AppWindowFrameStyle return
     method set_frame_style
-        method SetFrameStyle slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowFrameStyle shape=4 reverse=43
+        method SetFrameStyle slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowFrameStyle shape=4
             in enum32 type=Windows.UI.WindowManagement.AppWindowFrameStyle name=frameStyle
 
 enum Windows.UI.WindowManagement.AppWindowFrameStyle python_type
@@ -192,13 +192,13 @@ class Windows.UI.WindowManagement.AppWindowPlacement python_type
     default Windows.UI.WindowManagement.IAppWindowPlacement
     requires Windows.UI.WindowManagement.IAppWindowPlacement
     property display_region
-        get get_DisplayRegion slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPlacement shape=4 reverse=22
+        get get_DisplayRegion slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPlacement shape=4
             out class type=Windows.UI.WindowManagement.DisplayRegion return
     property offset
-        get get_Offset slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPlacement shape=4 reverse=43
+        get get_Offset slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPlacement shape=4
             out struct type=Windows.Foundation.Point return
     property size
-        get get_Size slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPlacement shape=4 reverse=62
+        get get_Size slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPlacement shape=4
             out struct type=Windows.Foundation.Size return
 
 class Windows.UI.WindowManagement.AppWindowPresentationConfiguration composable python_type
@@ -208,7 +208,7 @@ class Windows.UI.WindowManagement.AppWindowPresentationConfiguration composable 
     requires Windows.UI.WindowManagement.IAppWindowPresentationConfiguration
     composable Windows.UI.WindowManagement.IAppWindowPresentationConfigurationFactory
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresentationConfiguration shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresentationConfiguration shape=4
             out enum32 type=Windows.UI.WindowManagement.AppWindowPresentationKind return
 
 enum Windows.UI.WindowManagement.AppWindowPresentationKind python_type
@@ -224,18 +224,18 @@ class Windows.UI.WindowManagement.AppWindowPresenter python_type
     default Windows.UI.WindowManagement.IAppWindowPresenter
     requires Windows.UI.WindowManagement.IAppWindowPresenter
     method get_configuration
-        method GetConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=4 reverse=22
+        method GetConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=4
             out class type=Windows.UI.WindowManagement.AppWindowPresentationConfiguration return
     method is_presentation_supported
-        method IsPresentationSupported slot=7 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=51 reverse=44
+        method IsPresentationSupported slot=7 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=51
             in enum32 type=Windows.UI.WindowManagement.AppWindowPresentationKind name=presentationKind
             out boolean return
     method request_presentation
-        method RequestPresentation slot=8 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=51 reverse=65
+        method RequestPresentation slot=8 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=51
             in class type=Windows.UI.WindowManagement.AppWindowPresentationConfiguration name=configuration
             out boolean return
     method request_presentation_by_kind
-        method RequestPresentation slot=9 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=51 reverse=100 default_overload
+        method RequestPresentation slot=9 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowPresenter shape=51 default_overload
             in enum32 type=Windows.UI.WindowManagement.AppWindowPresentationKind name=presentationKind
             out boolean return
 
@@ -246,81 +246,81 @@ class Windows.UI.WindowManagement.AppWindowTitleBar python_type
     requires Windows.UI.WindowManagement.IAppWindowTitleBarVisibility
     requires Windows.UI.WindowManagement.IAppWindowTitleBar
     property inactive_foreground_color
-        get get_InactiveForegroundColor slot=30 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=270
+        get get_InactiveForegroundColor slot=30 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_InactiveForegroundColor slot=31 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=273
+        put put_InactiveForegroundColor slot=31 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property inactive_background_color
-        get get_InactiveBackgroundColor slot=28 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=263
+        get get_InactiveBackgroundColor slot=28 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_InactiveBackgroundColor slot=29 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=266
+        put put_InactiveBackgroundColor slot=29 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property foreground_color
-        get get_ForegroundColor slot=26 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=255
+        get get_ForegroundColor slot=26 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ForegroundColor slot=27 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=259
+        put put_ForegroundColor slot=27 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property extends_content_into_title_bar
-        get get_ExtendsContentIntoTitleBar slot=24 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=247
+        get get_ExtendsContentIntoTitleBar slot=24 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out boolean return
-        put put_ExtendsContentIntoTitleBar slot=25 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=252
+        put put_ExtendsContentIntoTitleBar slot=25 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in boolean name=value
     property button_pressed_foreground_color
-        get get_ButtonPressedForegroundColor slot=22 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=237
+        get get_ButtonPressedForegroundColor slot=22 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonPressedForegroundColor slot=23 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=242
+        put put_ButtonPressedForegroundColor slot=23 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_pressed_background_color
-        get get_ButtonPressedBackgroundColor slot=20 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=228
+        get get_ButtonPressedBackgroundColor slot=20 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonPressedBackgroundColor slot=21 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=232
+        put put_ButtonPressedBackgroundColor slot=21 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_inactive_foreground_color
-        get get_ButtonInactiveForegroundColor slot=18 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=218
+        get get_ButtonInactiveForegroundColor slot=18 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonInactiveForegroundColor slot=19 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=223
+        put put_ButtonInactiveForegroundColor slot=19 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_inactive_background_color
-        get get_ButtonInactiveBackgroundColor slot=16 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=202
+        get get_ButtonInactiveBackgroundColor slot=16 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonInactiveBackgroundColor slot=17 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=210
+        put put_ButtonInactiveBackgroundColor slot=17 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_hover_foreground_color
-        get get_ButtonHoverForegroundColor slot=14 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=186
+        get get_ButtonHoverForegroundColor slot=14 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonHoverForegroundColor slot=15 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=194
+        put put_ButtonHoverForegroundColor slot=15 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_hover_background_color
-        get get_ButtonHoverBackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=162
+        get get_ButtonHoverBackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonHoverBackgroundColor slot=13 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=173
+        put put_ButtonHoverBackgroundColor slot=13 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_foreground_color
-        get get_ButtonForegroundColor slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=121
+        get get_ButtonForegroundColor slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonForegroundColor slot=11 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=141
+        put put_ButtonForegroundColor slot=11 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_background_color
-        get get_ButtonBackgroundColor slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=62
+        get get_ButtonBackgroundColor slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonBackgroundColor slot=9 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=99
+        put put_ButtonBackgroundColor slot=9 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property background_color
-        get get_BackgroundColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=22
+        get get_BackgroundColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_BackgroundColor slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=43
+        put put_BackgroundColor slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property is_visible
-        get get_IsVisible slot=32 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=280
+        get get_IsVisible slot=32 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out boolean return
     method get_preferred_visibility
-        method GetPreferredVisibility slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBarVisibility shape=4 reverse=22
+        method GetPreferredVisibility slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBarVisibility shape=4
             out enum32 type=Windows.UI.WindowManagement.AppWindowTitleBarVisibility return
     method get_title_bar_occlusions
-        method GetTitleBarOcclusions slot=33 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4 reverse=285
+        method GetTitleBarOcclusions slot=33 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBar shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.AppWindowTitleBarOcclusion> return
     method set_preferred_visibility
-        method SetPreferredVisibility slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBarVisibility shape=4 reverse=43
+        method SetPreferredVisibility slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IAppWindowTitleBarVisibility shape=4
             in enum32 type=Windows.UI.WindowManagement.AppWindowTitleBarVisibility name=visibilityMode
 
 class Windows.UI.WindowManagement.AppWindowTitleBarOcclusion python_type
@@ -329,7 +329,7 @@ class Windows.UI.WindowManagement.AppWindowTitleBarOcclusion python_type
     default Windows.UI.WindowManagement.IAppWindowTitleBarOcclusion
     requires Windows.UI.WindowManagement.IAppWindowTitleBarOcclusion
     property occluding_rect
-        get get_OccludingRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBarOcclusion shape=4 reverse=22
+        get get_OccludingRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IAppWindowTitleBarOcclusion shape=4
             out struct type=Windows.Foundation.Rect return
 
 enum Windows.UI.WindowManagement.AppWindowTitleBarVisibility python_type
@@ -386,25 +386,25 @@ class Windows.UI.WindowManagement.DisplayRegion python_type
     default Windows.UI.WindowManagement.IDisplayRegion
     requires Windows.UI.WindowManagement.IDisplayRegion
     property display_monitor_device_id
-        get get_DisplayMonitorDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4 reverse=22
+        get get_DisplayMonitorDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4
             out string return
     property is_visible
-        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4 reverse=43
+        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4
             out boolean return
     property windowing_environment
-        get get_WindowingEnvironment slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4 reverse=121
+        get get_WindowingEnvironment slot=10 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4
             out class type=Windows.UI.WindowManagement.WindowingEnvironment return
     property work_area_offset
-        get get_WorkAreaOffset slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4 reverse=62
+        get get_WorkAreaOffset slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4
             out struct type=Windows.Foundation.Point return
     property work_area_size
-        get get_WorkAreaSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4 reverse=99
+        get get_WorkAreaSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=4
             out struct type=Windows.Foundation.Size return
     event changed
-        add add_Changed slot=11 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=51 reverse=144
+        add add_Changed slot=11 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.DisplayRegion,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=12 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=26 reverse=167
+        remove remove_Changed slot=12 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IDisplayRegion shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.WindowManagement.FullScreenPresentationConfiguration activatable python_type
@@ -417,9 +417,9 @@ class Windows.UI.WindowManagement.FullScreenPresentationConfiguration activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_exclusive
-        get get_IsExclusive slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IFullScreenPresentationConfiguration shape=4 reverse=22
+        get get_IsExclusive slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IFullScreenPresentationConfiguration shape=4
             out boolean return
-        put put_IsExclusive slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IFullScreenPresentationConfiguration shape=4 reverse=43
+        put put_IsExclusive slot=7 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IFullScreenPresentationConfiguration shape=4
             in boolean name=value
 
 interface Windows.UI.WindowManagement.IAppWindow
@@ -1086,7 +1086,7 @@ class Windows.UI.WindowManagement.WindowServices static python_type
     py WindowServices
     factory Windows.UI.WindowManagement.IWindowServicesStatics
     method find_all_top_level_window_ids static
-        method FindAllTopLevelWindowIds slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowServicesStatics shape=4 reverse=22 static
+        method FindAllTopLevelWindowIds slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowServicesStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> return
 
 class Windows.UI.WindowManagement.WindowingEnvironment python_type
@@ -1096,25 +1096,25 @@ class Windows.UI.WindowManagement.WindowingEnvironment python_type
     requires Windows.UI.WindowManagement.IWindowingEnvironment
     factory Windows.UI.WindowManagement.IWindowingEnvironmentStatics
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=4
             out boolean return
     property kind
-        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=4 reverse=43
+        get get_Kind slot=7 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=4
             out enum32 type=Windows.UI.WindowManagement.WindowingEnvironmentKind return
     event changed
-        add add_Changed slot=9 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=51 reverse=100
+        add add_Changed slot=9 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WindowManagement.WindowingEnvironment,Windows.UI.WindowManagement.WindowingEnvironmentChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=10 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=26 reverse=134
+        remove remove_Changed slot=10 inputs=1 outputs=0 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_all static
-        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentStatics shape=4 reverse=22 static
+        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.WindowingEnvironment> return
-        method FindAll slot=7 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentStatics shape=51 reverse=44 static
+        method FindAll slot=7 inputs=1 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentStatics shape=51 static
             in enum32 type=Windows.UI.WindowManagement.WindowingEnvironmentKind name=kind
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.WindowingEnvironment> return
     method get_display_regions
-        method GetDisplayRegions slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=4 reverse=62
+        method GetDisplayRegions slot=8 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironment shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.DisplayRegion> return
 
 class Windows.UI.WindowManagement.WindowingEnvironmentAddedEventArgs python_type
@@ -1123,7 +1123,7 @@ class Windows.UI.WindowManagement.WindowingEnvironmentAddedEventArgs python_type
     default Windows.UI.WindowManagement.IWindowingEnvironmentAddedEventArgs
     requires Windows.UI.WindowManagement.IWindowingEnvironmentAddedEventArgs
     property windowing_environment
-        get get_WindowingEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentAddedEventArgs shape=4 reverse=22
+        get get_WindowingEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentAddedEventArgs shape=4
             out class type=Windows.UI.WindowManagement.WindowingEnvironment return
 
 class Windows.UI.WindowManagement.WindowingEnvironmentChangedEventArgs python_type
@@ -1145,7 +1145,7 @@ class Windows.UI.WindowManagement.WindowingEnvironmentRemovedEventArgs python_ty
     default Windows.UI.WindowManagement.IWindowingEnvironmentRemovedEventArgs
     requires Windows.UI.WindowManagement.IWindowingEnvironmentRemovedEventArgs
     property windowing_environment
-        get get_WindowingEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentRemovedEventArgs shape=4 reverse=22
+        get get_WindowingEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.UI.WindowManagement.IWindowingEnvironmentRemovedEventArgs shape=4
             out class type=Windows.UI.WindowManagement.WindowingEnvironment return
 
 class System.Boolean external

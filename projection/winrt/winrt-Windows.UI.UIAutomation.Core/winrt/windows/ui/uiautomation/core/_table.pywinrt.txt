@@ -30,13 +30,13 @@ class Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult python_type
     default Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult
     requires Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult
     property error_location
-        get get_ErrorLocation slot=8 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4 reverse=62
+        get get_ErrorLocation slot=8 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4
             out int32 return
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=4
             out enum32 type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationStatus return
     method get_operand
         method GetOperand slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IAutomationRemoteOperationResult shape=87
@@ -60,7 +60,7 @@ class Windows.UI.UIAutomation.Core.CoreAutomationRegistrar static python_type
     py CoreAutomationRegistrar
     factory Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics
     method register_annotation_type static
-        method RegisterAnnotationType slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics shape=94 reverse=35 static
+        method RegisterAnnotationType slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRegistrarStatics shape=94 static
             in guid name=guid
             out struct type=Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration return
     method unregister_annotation_type static
@@ -80,7 +80,7 @@ class Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation activatable pyt
         method AddToResults slot=9 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=24
             in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
     method execute
-        method Execute slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=117 reverse=125
+        method Execute slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=117
             pass_array uint8 name=bytecodeBuffer
             out class type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult return
     method import_connection_bound_object
@@ -96,7 +96,7 @@ class Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation activatable pyt
             in struct type=Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId name=operandId
             in class type=Windows.UI.UIAutomation.AutomationTextRange name=textRange
     method is_opcode_supported
-        method IsOpcodeSupported slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=51 reverse=24
+        method IsOpcodeSupported slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperation shape=51
             in uint32 name=opcode
             out boolean return
 
@@ -209,7 +209,7 @@ class Windows.UI.UIAutomation.Core.RemoteAutomationClientSession python_type
     requires Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession
     factory Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory shape=51
             in string name=name
             out class type=Windows.UI.UIAutomation.Core.RemoteAutomationClientSession return
         ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSessionFactory shape=137
@@ -217,19 +217,19 @@ class Windows.UI.UIAutomation.Core.RemoteAutomationClientSession python_type
             in guid name=sessionId
             out class type=Windows.UI.UIAutomation.Core.RemoteAutomationClientSession return
     property session_id
-        get get_SessionId slot=9 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=4 reverse=99
+        get get_SessionId slot=9 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=4
             out guid return
     event connection_requested
-        add add_ConnectionRequested slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=51 reverse=124
+        add add_ConnectionRequested slot=10 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ConnectionRequested slot=11 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=26 reverse=156
+        remove remove_ConnectionRequested slot=11 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event disconnected
-        add add_Disconnected slot=12 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=51 reverse=163
+        add add_Disconnected slot=12 inputs=1 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Disconnected slot=13 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=26 reverse=181
+        remove remove_Disconnected slot=13 inputs=1 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_window_async
         method CreateWindowAsync slot=8 inputs=3 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=187
@@ -238,9 +238,9 @@ class Windows.UI.UIAutomation.Core.RemoteAutomationClientSession python_type
             in object name=parentAutomationElement
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.UIAutomation.Core.RemoteAutomationWindow> return
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=0
     method stop
-        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=0 reverse=37
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationClientSession shape=0
 
 class Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs python_type
     py RemoteAutomationConnectionRequestedEventArgs
@@ -248,10 +248,10 @@ class Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs 
     default Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs
     requires Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs
     property local_pipe_name
-        get get_LocalPipeName slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs shape=4 reverse=22
+        get get_LocalPipeName slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs shape=4
             out string return
     property remote_process_id
-        get get_RemoteProcessId slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs shape=4 reverse=43
+        get get_RemoteProcessId slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationConnectionRequestedEventArgs shape=4
             out uint32 return
 
 class Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs python_type
@@ -260,7 +260,7 @@ class Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs python_
     default Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs
     requires Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs
     property local_pipe_name
-        get get_LocalPipeName slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs shape=4 reverse=22
+        get get_LocalPipeName slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationDisconnectedEventArgs shape=4
             out string return
 
 class Windows.UI.UIAutomation.Core.RemoteAutomationServer static python_type
@@ -276,10 +276,10 @@ class Windows.UI.UIAutomation.Core.RemoteAutomationWindow python_type
     default Windows.UI.UIAutomation.Core.IRemoteAutomationWindow
     requires Windows.UI.UIAutomation.Core.IRemoteAutomationWindow
     property automation_provider
-        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationWindow shape=4 reverse=22
+        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationWindow shape=4
             out object return
     method unregister_async
-        method UnregisterAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationWindow shape=4 reverse=43
+        method UnregisterAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.UIAutomation.Core.IRemoteAutomationWindow shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.UIAutomation.Core.RemoteAutomationClientSession,Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs> concrete

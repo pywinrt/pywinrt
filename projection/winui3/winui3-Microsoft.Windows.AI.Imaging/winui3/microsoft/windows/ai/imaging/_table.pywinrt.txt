@@ -593,19 +593,19 @@ class Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator python_type closeab
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
-        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 reverse=62 static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator> return
     method describe_async
-        method DescribeAsync slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGenerator shape=195 reverse=26
+        method DescribeAsync slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGenerator shape=195
             in class type=Microsoft.Graphics.Imaging.ImageBuffer name=image
             in enum32 type=Microsoft.Windows.AI.Imaging.ImageDescriptionKind name=kind
             in class type=Microsoft.Windows.AI.ContentSafety.ContentFilterOptions name=contentFilterOptions
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Imaging.ImageDescriptionResult,System.String> return
     method ensure_ready_async static
-        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 reverse=43 static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
     method get_ready_state static
-        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 reverse=22 static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionGeneratorStatics shape=4 static
             out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
 
 enum Microsoft.Windows.AI.Imaging.ImageDescriptionKind python_type
@@ -622,10 +622,10 @@ class Microsoft.Windows.AI.Imaging.ImageDescriptionResult python_type
     default Microsoft.Windows.AI.Imaging.IImageDescriptionResult
     requires Microsoft.Windows.AI.Imaging.IImageDescriptionResult
     property description
-        get get_Description slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionResult shape=4 reverse=22
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionResult shape=4
             out string return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageDescriptionResult shape=4
             out enum32 type=Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus return
 
 enum Microsoft.Windows.AI.Imaging.ImageDescriptionResultStatus python_type
@@ -650,25 +650,25 @@ class Microsoft.Windows.AI.Imaging.ImageObjectExtractor python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_with_image_buffer_async static
-        method CreateWithImageBufferAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=51 reverse=44 static
+        method CreateWithImageBufferAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=51 static
             in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> return
     method create_with_software_bitmap_async static
-        method CreateWithSoftwareBitmapAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=51 reverse=24 static
+        method CreateWithSoftwareBitmapAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=51 static
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> return
     method ensure_ready_async static
-        method EnsureReadyAsync slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=4 reverse=99 static
+        method EnsureReadyAsync slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
     method get_image_buffer_object_mask
-        method GetImageBufferObjectMask slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractor shape=51 reverse=44
+        method GetImageBufferObjectMask slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractor shape=51
             in class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint name=hint
             out class type=Microsoft.Graphics.Imaging.ImageBuffer return
     method get_ready_state static
-        method GetReadyState slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=4 reverse=62 static
+        method GetReadyState slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics shape=4 static
             out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
     method get_software_bitmap_object_mask
-        method GetSoftwareBitmapObjectMask slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractor shape=51 reverse=24
+        method GetSoftwareBitmapObjectMask slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractor shape=51
             in class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint name=hint
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
 
@@ -679,19 +679,19 @@ class Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint python_type
     requires Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint
     factory Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory shape=195
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> name=includeRects
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> name=includePoints
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.PointInt32> name=excludePoints
             out class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint return
     property exclude_points
-        get get_ExcludePoints slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4 reverse=62
+        get get_ExcludePoints slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> return
     property include_points
-        get get_IncludePoints slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4 reverse=43
+        get get_IncludePoints slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.PointInt32> return
     property include_rects
-        get get_IncludeRects slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4 reverse=22
+        get get_IncludeRects slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
 
 class Microsoft.Windows.AI.Imaging.ImageScaler python_type closeable
@@ -702,27 +702,27 @@ class Microsoft.Windows.AI.Imaging.ImageScaler python_type closeable
     requires Windows.Foundation.IClosable
     factory Microsoft.Windows.AI.Imaging.IImageScalerStatics
     property max_supported_scale_factor
-        get get_MaxSupportedScaleFactor slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=4 reverse=62
+        get get_MaxSupportedScaleFactor slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=4
             out int32 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
-        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 reverse=62 static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageScaler> return
     method ensure_ready_async static
-        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 reverse=43 static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
     method get_ready_state static
-        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 reverse=22 static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScalerStatics shape=4 static
             out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
     method scale_image_buffer
-        method ScaleImageBuffer slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=195 reverse=46
+        method ScaleImageBuffer slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=195
             in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
             in int32 name=width
             in int32 name=height
             out class type=Microsoft.Graphics.Imaging.ImageBuffer return
     method scale_software_bitmap
-        method ScaleSoftwareBitmap slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=195 reverse=26
+        method ScaleSoftwareBitmap slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageScaler shape=195
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
             in int32 name=width
             in int32 name=height
@@ -734,19 +734,19 @@ class Microsoft.Windows.AI.Imaging.RecognizedLine python_type
     default Microsoft.Windows.AI.Imaging.IRecognizedLine
     requires Microsoft.Windows.AI.Imaging.IRecognizedLine
     property bounding_box
-        get get_BoundingBox slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=43
+        get get_BoundingBox slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4
             out struct type=Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox return
     property line_style_confidence
-        get get_LineStyleConfidence slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=121
+        get get_LineStyleConfidence slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4
             out single return
     property style
-        get get_Style slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=99
+        get get_Style slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4
             out enum32 type=Microsoft.Windows.AI.Imaging.RecognizedLineStyle return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=4
             out string return
     property words
-        get get_Words slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=51 reverse=65
+        get get_Words slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedLine shape=51
             receive_array class type=Microsoft.Windows.AI.Imaging.RecognizedWord return
 
 enum Microsoft.Windows.AI.Imaging.RecognizedLineStyle python_type
@@ -760,10 +760,10 @@ class Microsoft.Windows.AI.Imaging.RecognizedText python_type
     default Microsoft.Windows.AI.Imaging.IRecognizedText
     requires Microsoft.Windows.AI.Imaging.IRecognizedText
     property lines
-        get get_Lines slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedText shape=51 reverse=24
+        get get_Lines slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedText shape=51
             receive_array class type=Microsoft.Windows.AI.Imaging.RecognizedLine return
     property text_angle
-        get get_TextAngle slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedText shape=4 reverse=43
+        get get_TextAngle slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedText shape=4
             out single return
 
 struct Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox python_type
@@ -780,13 +780,13 @@ class Microsoft.Windows.AI.Imaging.RecognizedWord python_type
     default Microsoft.Windows.AI.Imaging.IRecognizedWord
     requires Microsoft.Windows.AI.Imaging.IRecognizedWord
     property bounding_box
-        get get_BoundingBox slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4 reverse=43
+        get get_BoundingBox slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4
             out struct type=Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox return
     property match_confidence
-        get get_MatchConfidence slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4 reverse=62
+        get get_MatchConfidence slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4
             out single return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IRecognizedWord shape=4
             out string return
 
 class Microsoft.Windows.AI.Imaging.TextRecognizer python_type closeable
@@ -799,20 +799,20 @@ class Microsoft.Windows.AI.Imaging.TextRecognizer python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
-        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 reverse=62 static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.TextRecognizer> return
     method ensure_ready_async static
-        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 reverse=43 static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
     method get_ready_state static
-        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 reverse=22 static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizerStatics shape=4 static
             out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
     method recognize_text_from_image
-        method RecognizeTextFromImage slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizer shape=51 reverse=44
+        method RecognizeTextFromImage slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizer shape=51
             in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
             out class type=Microsoft.Windows.AI.Imaging.RecognizedText return
     method recognize_text_from_image_async
-        method RecognizeTextFromImageAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizer shape=51 reverse=24
+        method RecognizeTextFromImageAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Imaging.ITextRecognizer shape=51
             in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.RecognizedText> return
 

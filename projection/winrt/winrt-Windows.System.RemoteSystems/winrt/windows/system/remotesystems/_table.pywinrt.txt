@@ -754,16 +754,16 @@ class Windows.System.RemoteSystems.KnownRemoteSystemCapabilities static python_t
     py KnownRemoteSystemCapabilities
     factory Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics
     property app_service static
-        get get_AppService slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 reverse=22 static
+        get get_AppService slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 static
             out string return
     property launch_uri static
-        get get_LaunchUri slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 reverse=43 static
+        get get_LaunchUri slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 static
             out string return
     property remote_session static
-        get get_RemoteSession slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 reverse=62 static
+        get get_RemoteSession slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 static
             out string return
     property spatial_entity static
-        get get_SpatialEntity slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 reverse=99 static
+        get get_SpatialEntity slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IKnownRemoteSystemCapabilitiesStatics shape=4 static
             out string return
 
 class Windows.System.RemoteSystems.RemoteSystem python_type
@@ -780,66 +780,66 @@ class Windows.System.RemoteSystems.RemoteSystem python_type
     factory Windows.System.RemoteSystems.IRemoteSystemStatics2
     factory Windows.System.RemoteSystems.IRemoteSystemStatics3
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4 reverse=22
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4
             out string return
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4
             out string return
     property is_available_by_proximity
-        get get_IsAvailableByProximity slot=10 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4 reverse=121
+        get get_IsAvailableByProximity slot=10 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4
             out boolean return
     property kind
-        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4 reverse=62
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4
             out string return
     property status
-        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4 reverse=99
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemStatus return
     property is_available_by_spatial_proximity
-        get get_IsAvailableBySpatialProximity slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem2 shape=4 reverse=22
+        get get_IsAvailableBySpatialProximity slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem2 shape=4
             out boolean return
     property manufacturer_display_name
-        get get_ManufacturerDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem3 shape=4 reverse=22
+        get get_ManufacturerDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem3 shape=4
             out string return
     property model_display_name
-        get get_ModelDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem3 shape=4 reverse=43
+        get get_ModelDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem3 shape=4
             out string return
     property platform
-        get get_Platform slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem4 shape=4 reverse=22
+        get get_Platform slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem4 shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemPlatform return
     property apps
-        get get_Apps slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem5 shape=4 reverse=22
+        get get_Apps slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem5 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.RemoteSystems.RemoteSystemApp> return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem6 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem6 shape=4
             out class type=Windows.System.User return
     method create_watcher static
-        method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=4 reverse=43 static
+        method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=4 static
             out class type=Windows.System.RemoteSystems.RemoteSystemWatcher return
-        method CreateWatcher slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=51 reverse=65 static
+        method CreateWatcher slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.IRemoteSystemFilter> name=filters
             out class type=Windows.System.RemoteSystems.RemoteSystemWatcher return
     method create_watcher_for_user static
-        method CreateWatcherForUser slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics3 shape=51 reverse=24 static
+        method CreateWatcherForUser slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.System.RemoteSystems.RemoteSystemWatcher return
-        method CreateWatcherForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics3 shape=117 reverse=45 static
+        method CreateWatcherForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics3 shape=117 static
             in class type=Windows.System.User name=user
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.IRemoteSystemFilter> name=filters
             out class type=Windows.System.RemoteSystems.RemoteSystemWatcher return
     method find_by_host_name_async static
-        method FindByHostNameAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=51 reverse=24 static
+        method FindByHostNameAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=51 static
             in class type=Windows.Networking.HostName name=hostName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystem> return
     method get_capability_supported_async
-        method GetCapabilitySupportedAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem2 shape=51 reverse=44
+        method GetCapabilitySupportedAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem2 shape=51
             in string name=capabilityName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method is_authorization_kind_enabled static
-        method IsAuthorizationKindEnabled slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics2 shape=51 reverse=24 static
+        method IsAuthorizationKindEnabled slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics2 shape=51 static
             in enum32 type=Windows.System.RemoteSystems.RemoteSystemAuthorizationKind name=kind
             out boolean return
     method request_access_async static
-        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=4 reverse=99 static
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemAccessStatus> return
 
 enum Windows.System.RemoteSystems.RemoteSystemAccessStatus python_type
@@ -856,7 +856,7 @@ class Windows.System.RemoteSystems.RemoteSystemAddedEventArgs python_type
     default Windows.System.RemoteSystems.IRemoteSystemAddedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemAddedEventArgs
     property remote_system
-        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAddedEventArgs shape=4 reverse=22
+        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAddedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystem return
 
 class Windows.System.RemoteSystems.RemoteSystemApp python_type
@@ -866,25 +866,25 @@ class Windows.System.RemoteSystems.RemoteSystemApp python_type
     requires Windows.System.RemoteSystems.IRemoteSystemApp
     requires Windows.System.RemoteSystems.IRemoteSystemApp2
     property attributes
-        get get_Attributes slot=10 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4 reverse=121
+        get get_Attributes slot=10 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4
             out string return
     property is_available_by_proximity
-        get get_IsAvailableByProximity slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4 reverse=62
+        get get_IsAvailableByProximity slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4
             out boolean return
     property is_available_by_spatial_proximity
-        get get_IsAvailableBySpatialProximity slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4 reverse=99
+        get get_IsAvailableBySpatialProximity slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp shape=4
             out boolean return
     property connection_token
-        get get_ConnectionToken slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp2 shape=4 reverse=43
+        get get_ConnectionToken slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp2 shape=4
             out string return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp2 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemApp2 shape=4
             out class type=Windows.System.User return
 
 class Windows.System.RemoteSystems.RemoteSystemAppRegistration python_type
@@ -894,20 +894,20 @@ class Windows.System.RemoteSystems.RemoteSystemAppRegistration python_type
     requires Windows.System.RemoteSystems.IRemoteSystemAppRegistration
     factory Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics
     property attributes
-        get get_Attributes slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistration shape=4 reverse=43
+        get get_Attributes slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistration shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistration shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistration shape=4
             out class type=Windows.System.User return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics shape=4 static
             out class type=Windows.System.RemoteSystems.RemoteSystemAppRegistration return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistrationStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.System.RemoteSystems.RemoteSystemAppRegistration return
     method save_async
-        method SaveAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistration shape=4 reverse=62
+        method SaveAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAppRegistration shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 enum Windows.System.RemoteSystems.RemoteSystemAuthorizationKind python_type
@@ -925,11 +925,11 @@ class Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter python_ty
     requires Windows.System.RemoteSystems.IRemoteSystemFilter
     factory Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilterFactory shape=51
             in enum32 type=Windows.System.RemoteSystems.RemoteSystemAuthorizationKind name=remoteSystemAuthorizationKind
             out class type=Windows.System.RemoteSystems.RemoteSystemAuthorizationKindFilter return
     property remote_system_authorization_kind
-        get get_RemoteSystemAuthorizationKind slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilter shape=4 reverse=22
+        get get_RemoteSystemAuthorizationKind slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemAuthorizationKindFilter shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemAuthorizationKind return
 
 class Windows.System.RemoteSystems.RemoteSystemConnectionInfo python_type
@@ -939,10 +939,10 @@ class Windows.System.RemoteSystems.RemoteSystemConnectionInfo python_type
     requires Windows.System.RemoteSystems.IRemoteSystemConnectionInfo
     factory Windows.System.RemoteSystems.IRemoteSystemConnectionInfoStatics
     property is_proximal
-        get get_IsProximal slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionInfo shape=4 reverse=22
+        get get_IsProximal slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionInfo shape=4
             out boolean return
     method try_create_from_app_service_connection static
-        method TryCreateFromAppServiceConnection slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionInfoStatics shape=51 reverse=24 static
+        method TryCreateFromAppServiceConnection slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionInfoStatics shape=51 static
             in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=connection
             out class type=Windows.System.RemoteSystems.RemoteSystemConnectionInfo return
 
@@ -957,28 +957,28 @@ class Windows.System.RemoteSystems.RemoteSystemConnectionRequest python_type
     factory Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics
     factory Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory shape=51
             in class type=Windows.System.RemoteSystems.RemoteSystem name=remoteSystem
             out class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest return
     property remote_system
-        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequest shape=4 reverse=22
+        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequest shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystem return
     property remote_system_app
-        get get_RemoteSystemApp slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2 shape=4 reverse=22
+        get get_RemoteSystemApp slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2 shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemApp return
     property connection_token
-        get get_ConnectionToken slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3 shape=4 reverse=22
+        get get_ConnectionToken slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3 shape=4
             out string return
     method create_for_app static
-        method CreateForApp slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics shape=51 reverse=24 static
+        method CreateForApp slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics shape=51 static
             in class type=Windows.System.RemoteSystems.RemoteSystemApp name=remoteSystemApp
             out class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest return
     method create_from_connection_token static
-        method CreateFromConnectionToken slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 shape=51 reverse=24 static
+        method CreateFromConnectionToken slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 shape=51 static
             in string name=connectionToken
             out class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest return
     method create_from_connection_token_for_user static
-        method CreateFromConnectionTokenForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 shape=117 reverse=45 static
+        method CreateFromConnectionTokenForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2 shape=117 static
             in class type=Windows.System.User name=user
             in string name=connectionToken
             out class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest return
@@ -999,11 +999,11 @@ class Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter python_type
     requires Windows.System.RemoteSystems.IRemoteSystemFilter
     factory Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilterFactory shape=51
             in enum32 type=Windows.System.RemoteSystems.RemoteSystemDiscoveryType name=discoveryType
             out class type=Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter return
     property remote_system_discovery_type
-        get get_RemoteSystemDiscoveryType slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilter shape=4 reverse=22
+        get get_RemoteSystemDiscoveryType slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemDiscoveryTypeFilter shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemDiscoveryType return
 
 class Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs python_type
@@ -1020,11 +1020,11 @@ class Windows.System.RemoteSystems.RemoteSystemKindFilter python_type
     requires Windows.System.RemoteSystems.IRemoteSystemFilter
     factory Windows.System.RemoteSystems.IRemoteSystemKindFilterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindFilterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindFilterFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=remoteSystemKinds
             out class type=Windows.System.RemoteSystems.RemoteSystemKindFilter return
     property remote_system_kinds
-        get get_RemoteSystemKinds slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindFilter shape=4 reverse=22
+        get get_RemoteSystemKinds slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 class Windows.System.RemoteSystems.RemoteSystemKinds static python_type
@@ -1032,28 +1032,28 @@ class Windows.System.RemoteSystems.RemoteSystemKinds static python_type
     factory Windows.System.RemoteSystems.IRemoteSystemKindStatics
     factory Windows.System.RemoteSystems.IRemoteSystemKindStatics2
     property desktop static
-        get get_Desktop slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 reverse=99 static
+        get get_Desktop slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 static
             out string return
     property holographic static
-        get get_Holographic slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 reverse=62 static
+        get get_Holographic slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 static
             out string return
     property hub static
-        get get_Hub slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 reverse=43 static
+        get get_Hub slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 static
             out string return
     property phone static
-        get get_Phone slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 reverse=22 static
+        get get_Phone slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 static
             out string return
     property xbox static
-        get get_Xbox slot=10 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 reverse=121 static
+        get get_Xbox slot=10 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics shape=4 static
             out string return
     property iot static
-        get get_Iot slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics2 shape=4 reverse=22 static
+        get get_Iot slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics2 shape=4 static
             out string return
     property laptop static
-        get get_Laptop slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics2 shape=4 reverse=62 static
+        get get_Laptop slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics2 shape=4 static
             out string return
     property tablet static
-        get get_Tablet slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics2 shape=4 reverse=43 static
+        get get_Tablet slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemKindStatics2 shape=4 static
             out string return
 
 enum Windows.System.RemoteSystems.RemoteSystemPlatform python_type
@@ -1071,7 +1071,7 @@ class Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs python_type
     default Windows.System.RemoteSystems.IRemoteSystemRemovedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemRemovedEventArgs
     property remote_system_id
-        get get_RemoteSystemId slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemRemovedEventArgs shape=4 reverse=22
+        get get_RemoteSystemId slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemRemovedEventArgs shape=4
             out string return
 
 class Windows.System.RemoteSystems.RemoteSystemSession python_type closeable
@@ -1082,30 +1082,30 @@ class Windows.System.RemoteSystems.RemoteSystemSession python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.System.RemoteSystems.IRemoteSystemSessionStatics
     property controller_display_name
-        get get_ControllerDisplayName slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4 reverse=62
+        get get_ControllerDisplayName slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4
             out string return
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4
             out string return
     event disconnected
-        add add_Disconnected slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=51 reverse=100
+        add add_Disconnected slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSession,Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Disconnected slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=26 reverse=134
+        remove remove_Disconnected slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_participant_watcher
-        method CreateParticipantWatcher slot=11 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4 reverse=141
+        method CreateParticipantWatcher slot=11 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher return
     method create_watcher static
-        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionStatics shape=4 reverse=22 static
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionStatics shape=4 static
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionWatcher return
     method send_invitation_async
-        method SendInvitationAsync slot=12 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=51 reverse=163
+        method SendInvitationAsync slot=12 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSession shape=51
             in class type=Windows.System.RemoteSystems.RemoteSystem name=invitee
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -1115,7 +1115,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionAddedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionAddedEventArgs
     property session_info
-        get get_SessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionAddedEventArgs shape=4 reverse=22
+        get get_SessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionAddedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionInfo return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionController python_type
@@ -1125,24 +1125,24 @@ class Windows.System.RemoteSystems.RemoteSystemSessionController python_type
     requires Windows.System.RemoteSystems.IRemoteSystemSessionController
     factory Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory shape=51
             in string name=displayName
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionController return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionControllerFactory shape=117
             in string name=displayName
             in class type=Windows.System.RemoteSystems.RemoteSystemSessionOptions name=options
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionController return
     event join_requested
-        add add_JoinRequested slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=51 reverse=24
+        add add_JoinRequested slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionController,Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_JoinRequested slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=26 reverse=53
+        remove remove_JoinRequested slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_session_async
-        method CreateSessionAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=4 reverse=99
+        method CreateSessionAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionCreationResult> return
     method remove_participant_async
-        method RemoveParticipantAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=51 reverse=65
+        method RemoveParticipantAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionController shape=51
             in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant name=pParticipant
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -1152,10 +1152,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionCreationResult python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult
     requires Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult
     property session
-        get get_Session slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult shape=4 reverse=43
+        get get_Session slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSession return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionCreationResult shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemSessionCreationStatus return
 
 enum Windows.System.RemoteSystems.RemoteSystemSessionCreationStatus python_type
@@ -1171,7 +1171,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs pyth
     default Windows.System.RemoteSystems.IRemoteSystemSessionDisconnectedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionDisconnectedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionDisconnectedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionDisconnectedEventArgs shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedReason return
 
 enum Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedReason python_type
@@ -1187,13 +1187,13 @@ class Windows.System.RemoteSystems.RemoteSystemSessionInfo python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionInfo
     requires Windows.System.RemoteSystems.IRemoteSystemSessionInfo
     property controller_display_name
-        get get_ControllerDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInfo shape=4 reverse=43
+        get get_ControllerDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInfo shape=4
             out string return
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInfo shape=4 reverse=22
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInfo shape=4
             out string return
     method join_async
-        method JoinAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInfo shape=4 reverse=62
+        method JoinAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInfo shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionInvitation python_type
@@ -1202,10 +1202,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionInvitation python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionInvitation
     requires Windows.System.RemoteSystems.IRemoteSystemSessionInvitation
     property sender
-        get get_Sender slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitation shape=4 reverse=22
+        get get_Sender slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitation shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystem return
     property session_info
-        get get_SessionInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitation shape=4 reverse=43
+        get get_SessionInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitation shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionInfo return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener activatable python_type
@@ -1217,10 +1217,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener activat
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     event invitation_received
-        add add_InvitationReceived slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener shape=51 reverse=24
+        add add_InvitationReceived slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionInvitationListener,Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_InvitationReceived slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener shape=26 reverse=53
+        remove remove_InvitationReceived slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs python_type
@@ -1229,7 +1229,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArg
     default Windows.System.RemoteSystems.IRemoteSystemSessionInvitationReceivedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionInvitationReceivedEventArgs
     property invitation
-        get get_Invitation slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationReceivedEventArgs shape=4 reverse=22
+        get get_Invitation slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionInvitationReceivedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionInvitation return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest python_type
@@ -1238,10 +1238,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest
     requires Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest
     property participant
-        get get_Participant slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest shape=4 reverse=22
+        get get_Participant slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant return
     method accept
-        method Accept slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest shape=0 reverse=37
+        method Accept slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequest shape=0
 
 class Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs python_type
     py RemoteSystemSessionJoinRequestedEventArgs
@@ -1249,10 +1249,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs pyt
     default Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs
     property join_request
-        get get_JoinRequest slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs shape=4 reverse=22
+        get get_JoinRequest slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionJoinResult python_type
@@ -1261,10 +1261,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionJoinResult python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult
     requires Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult
     property session
-        get get_Session slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult shape=4 reverse=43
+        get get_Session slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSession return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionJoinResult shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemSessionJoinStatus return
 
 enum Windows.System.RemoteSystems.RemoteSystemSessionJoinStatus python_type
@@ -1283,35 +1283,35 @@ class Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel python_type
     requires Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel
     factory Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory shape=117
             in class type=Windows.System.RemoteSystems.RemoteSystemSession name=session
             in string name=channelName
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannelFactory shape=195
             in class type=Windows.System.RemoteSystems.RemoteSystemSession name=session
             in string name=channelName
             in enum32 type=Windows.System.RemoteSystems.RemoteSystemSessionMessageChannelReliability name=reliability
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel return
     property session
-        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=4 reverse=22
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSession return
     event value_set_received
-        add add_ValueSetReceived slot=10 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=51 reverse=124
+        add add_ValueSetReceived slot=10 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel,Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ValueSetReceived slot=11 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=26 reverse=156
+        remove remove_ValueSetReceived slot=11 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method broadcast_value_set_async
-        method BroadcastValueSetAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=51 reverse=44
+        method BroadcastValueSetAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=51
             in class type=Windows.Foundation.Collections.ValueSet name=messageData
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method send_value_set_async
-        method SendValueSetAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=117 reverse=66
+        method SendValueSetAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=117
             in class type=Windows.Foundation.Collections.ValueSet name=messageData
             in class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant name=participant
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method send_value_set_to_participants_async
-        method SendValueSetToParticipantsAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=117 reverse=101
+        method SendValueSetToParticipantsAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionMessageChannel shape=117
             in class type=Windows.Foundation.Collections.ValueSet name=messageData
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.RemoteSystems.RemoteSystemSessionParticipant> name=participants
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -1331,9 +1331,9 @@ class Windows.System.RemoteSystems.RemoteSystemSessionOptions activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_invite_only
-        get get_IsInviteOnly slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionOptions shape=4 reverse=22
+        get get_IsInviteOnly slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionOptions shape=4
             out boolean return
-        put put_IsInviteOnly slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionOptions shape=4 reverse=43
+        put put_IsInviteOnly slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionOptions shape=4
             in boolean name=value
 
 class Windows.System.RemoteSystems.RemoteSystemSessionParticipant python_type
@@ -1342,10 +1342,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionParticipant python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionParticipant
     requires Windows.System.RemoteSystems.IRemoteSystemSessionParticipant
     property remote_system
-        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipant shape=4 reverse=22
+        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipant shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystem return
     method get_host_names
-        method GetHostNames slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipant shape=4 reverse=43
+        method GetHostNames slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipant shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs python_type
@@ -1354,7 +1354,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs 
     default Windows.System.RemoteSystems.IRemoteSystemSessionParticipantAddedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionParticipantAddedEventArgs
     property participant
-        get get_Participant slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantAddedEventArgs shape=4 reverse=22
+        get get_Participant slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantAddedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs python_type
@@ -1363,7 +1363,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArg
     default Windows.System.RemoteSystems.IRemoteSystemSessionParticipantRemovedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionParticipantRemovedEventArgs
     property participant
-        get get_Participant slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantRemovedEventArgs shape=4 reverse=22
+        get get_Participant slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantRemovedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher python_type
@@ -1372,30 +1372,30 @@ class Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher python_
     default Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher
     requires Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcherStatus return
     event added
-        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51 reverse=100
+        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26 reverse=134
+        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=13 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51 reverse=174
+        add add_EnumerationCompleted slot=13 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=14 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26 reverse=192
+        remove remove_EnumerationCompleted slot=14 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51 reverse=144
+        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher,Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26 reverse=167
+        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=0
     method stop
-        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=0 reverse=37
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionParticipantWatcher shape=0
 
 enum Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcherStatus python_type
     py RemoteSystemSessionParticipantWatcherStatus
@@ -1413,7 +1413,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs python_ty
     default Windows.System.RemoteSystems.IRemoteSystemSessionRemovedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionRemovedEventArgs
     property session_info
-        get get_SessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionRemovedEventArgs shape=4 reverse=22
+        get get_SessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionRemovedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionInfo return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs python_type
@@ -1422,7 +1422,7 @@ class Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs python_ty
     default Windows.System.RemoteSystems.IRemoteSystemSessionUpdatedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionUpdatedEventArgs
     property session_info
-        get get_SessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionUpdatedEventArgs shape=4 reverse=22
+        get get_SessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionUpdatedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionInfo return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs python_type
@@ -1431,10 +1431,10 @@ class Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs 
     default Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs
     property message
-        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs shape=4 reverse=43
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property sender
-        get get_Sender slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs shape=4 reverse=22
+        get get_Sender slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionValueSetReceivedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystemSessionParticipant return
 
 class Windows.System.RemoteSystems.RemoteSystemSessionWatcher python_type
@@ -1443,30 +1443,30 @@ class Windows.System.RemoteSystems.RemoteSystemSessionWatcher python_type
     default Windows.System.RemoteSystems.IRemoteSystemSessionWatcher
     requires Windows.System.RemoteSystems.IRemoteSystemSessionWatcher
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemSessionWatcherStatus return
     event added
-        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51 reverse=100
+        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26 reverse=134
+        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=13 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51 reverse=174
+        add add_Removed slot=13 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26 reverse=192
+        remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
-        add add_Updated slot=11 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51 reverse=144
+        add add_Updated slot=11 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSessionWatcher,Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Updated slot=12 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26 reverse=167
+        remove remove_Updated slot=12 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=0
     method stop
-        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=0 reverse=37
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemSessionWatcher shape=0
 
 enum Windows.System.RemoteSystems.RemoteSystemSessionWatcherStatus python_type
     py RemoteSystemSessionWatcherStatus
@@ -1500,11 +1500,11 @@ class Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter python_type
     requires Windows.System.RemoteSystems.IRemoteSystemFilter
     factory Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilterFactory shape=51
             in enum32 type=Windows.System.RemoteSystems.RemoteSystemStatusType name=remoteSystemStatusType
             out class type=Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter return
     property remote_system_status_type
-        get get_RemoteSystemStatusType slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilter shape=4 reverse=22
+        get get_RemoteSystemStatusType slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemStatusTypeFilter shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemStatusType return
 
 class Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs python_type
@@ -1513,7 +1513,7 @@ class Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs python_type
     default Windows.System.RemoteSystems.IRemoteSystemUpdatedEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemUpdatedEventArgs
     property remote_system
-        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemUpdatedEventArgs shape=4 reverse=22
+        get get_RemoteSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemUpdatedEventArgs shape=4
             out class type=Windows.System.RemoteSystems.RemoteSystem return
 
 class Windows.System.RemoteSystems.RemoteSystemWatcher python_type
@@ -1524,42 +1524,42 @@ class Windows.System.RemoteSystems.RemoteSystemWatcher python_type
     requires Windows.System.RemoteSystems.IRemoteSystemWatcher2
     requires Windows.System.RemoteSystems.IRemoteSystemWatcher3
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher3 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher3 shape=4
             out class type=Windows.System.User return
     event remote_system_added
-        add add_RemoteSystemAdded slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51 reverse=65
+        add add_RemoteSystemAdded slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemAddedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RemoteSystemAdded slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26 reverse=110
+        remove remove_RemoteSystemAdded slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remote_system_removed
-        add add_RemoteSystemRemoved slot=12 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51 reverse=163
+        add add_RemoteSystemRemoved slot=12 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RemoteSystemRemoved slot=13 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26 reverse=181
+        remove remove_RemoteSystemRemoved slot=13 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event remote_system_updated
-        add add_RemoteSystemUpdated slot=10 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51 reverse=124
+        add add_RemoteSystemUpdated slot=10 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RemoteSystemUpdated slot=11 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26 reverse=156
+        remove remove_RemoteSystemUpdated slot=11 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=51 reverse=24
+        add add_EnumerationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemEnumerationCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=26 reverse=53
+        remove remove_EnumerationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event error_occurred
-        add add_ErrorOccurred slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=51 reverse=65
+        add add_ErrorOccurred slot=8 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemWatcher,Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ErrorOccurred slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=26 reverse=110
+        remove remove_ErrorOccurred slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=0
     method stop
-        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=0 reverse=37
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcher shape=0
 
 enum Windows.System.RemoteSystems.RemoteSystemWatcherError python_type
     py RemoteSystemWatcherError
@@ -1574,7 +1574,7 @@ class Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs pyt
     default Windows.System.RemoteSystems.IRemoteSystemWatcherErrorOccurredEventArgs
     requires Windows.System.RemoteSystems.IRemoteSystemWatcherErrorOccurredEventArgs
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcherErrorOccurredEventArgs shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWatcherErrorOccurredEventArgs shape=4
             out enum32 type=Windows.System.RemoteSystems.RemoteSystemWatcherError return
 
 class Windows.System.RemoteSystems.RemoteSystemWebAccountFilter python_type
@@ -1585,11 +1585,11 @@ class Windows.System.RemoteSystems.RemoteSystemWebAccountFilter python_type
     requires Windows.System.RemoteSystems.IRemoteSystemFilter
     factory Windows.System.RemoteSystems.IRemoteSystemWebAccountFilterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWebAccountFilterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWebAccountFilterFactory shape=51
             in class type=Windows.Security.Credentials.WebAccount name=account
             out class type=Windows.System.RemoteSystems.RemoteSystemWebAccountFilter return
     property account
-        get get_Account slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWebAccountFilter shape=4 reverse=22
+        get get_Account slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemWebAccountFilter shape=4
             out class type=Windows.Security.Credentials.WebAccount return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteSystems.RemoteSystemSession,Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs> concrete

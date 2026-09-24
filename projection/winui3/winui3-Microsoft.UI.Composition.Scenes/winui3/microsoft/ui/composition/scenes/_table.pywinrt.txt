@@ -454,19 +454,19 @@ class Microsoft.UI.Composition.Scenes.SceneBoundingBox python_type
     default Microsoft.UI.Composition.Scenes.ISceneBoundingBox
     requires Microsoft.UI.Composition.Scenes.ISceneBoundingBox
     property center
-        get get_Center slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4 reverse=22
+        get get_Center slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property extents
-        get get_Extents slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4 reverse=43
+        get get_Extents slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property max
-        get get_Max slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4 reverse=62
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property min
-        get get_Min slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4 reverse=99
+        get get_Min slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property size
-        get get_Size slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4 reverse=121
+        get get_Size slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneBoundingBox shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
 
 class Microsoft.UI.Composition.Scenes.SceneComponent composable python_type
@@ -477,7 +477,7 @@ class Microsoft.UI.Composition.Scenes.SceneComponent composable python_type
     requires Microsoft.UI.Composition.Scenes.ISceneComponent
     composable Microsoft.UI.Composition.Scenes.ISceneComponentFactory
     property component_type
-        get get_ComponentType slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneComponent shape=4 reverse=22
+        get get_ComponentType slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneComponent shape=4
             out enum32 type=Microsoft.UI.Composition.Scenes.SceneComponentType return
 
 class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type iterable sequence mutable_sequence
@@ -563,19 +563,19 @@ class Microsoft.UI.Composition.Scenes.SceneMesh python_type
     requires Microsoft.UI.Composition.Scenes.ISceneMesh
     factory Microsoft.UI.Composition.Scenes.ISceneMeshStatics
     property primitive_topology
-        get get_PrimitiveTopology slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=4 reverse=43
+        get get_PrimitiveTopology slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=4
             out enum32 type=Microsoft.Graphics.DirectX.DirectXPrimitiveTopology return
-        put put_PrimitiveTopology slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=4 reverse=62
+        put put_PrimitiveTopology slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=4
             in enum32 type=Microsoft.Graphics.DirectX.DirectXPrimitiveTopology name=value
     property bounds
-        get get_Bounds slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=4 reverse=22
+        get get_Bounds slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneBoundingBox return
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Scenes.SceneMesh return
     method fill_mesh_attribute
-        method FillMeshAttribute slot=9 inputs=3 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=117 reverse=101
+        method FillMeshAttribute slot=9 inputs=3 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMesh shape=117
             in enum32 type=Microsoft.UI.Composition.Scenes.SceneAttributeSemantic name=semantic
             in enum32 type=Microsoft.Graphics.DirectX.DirectXPixelFormat name=format
             in class type=Windows.Foundation.MemoryBuffer name=memory
@@ -625,20 +625,20 @@ class Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent python_type
     requires Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent
     factory Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponentStatics
     property mesh
-        get get_Mesh slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4 reverse=62
+        get get_Mesh slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMesh return
-        put put_Mesh slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4 reverse=99
+        put put_Mesh slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMesh name=value
     property material
-        get get_Material slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4 reverse=22
+        get get_Material slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterial return
-        put put_Material slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4 reverse=43
+        put put_Material slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterial name=value
     property u_v_mappings
-        get get_UVMappings slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4 reverse=121
+        get get_UVMappings slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap return
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponentStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponentStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent return
 
@@ -650,32 +650,32 @@ class Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial python_type
     requires Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial
     factory Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterialStatics
     property roughness_factor
-        get get_RoughnessFactor slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=186
+        get get_RoughnessFactor slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             out single return
         put put_RoughnessFactor slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=1
             in single name=value
     property metallic_roughness_input
-        get get_MetallicRoughnessInput slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=162
+        get get_MetallicRoughnessInput slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput return
-        put put_MetallicRoughnessInput slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=173
+        put put_MetallicRoughnessInput slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput name=value
     property metallic_factor
-        get get_MetallicFactor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=121
+        get get_MetallicFactor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             out single return
         put put_MetallicFactor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=1
             in single name=value
     property base_color_input
-        get get_BaseColorInput slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=22
+        get get_BaseColorInput slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput return
-        put put_BaseColorInput slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=43
+        put put_BaseColorInput slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput name=value
     property base_color_factor
-        get get_BaseColorFactor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4 reverse=62
+        get get_BaseColorFactor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=4
             out struct type=Windows.Foundation.Numerics.Vector4 return
-        put put_BaseColorFactor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=8 reverse=105
+        put put_BaseColorFactor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterial shape=8
             in struct type=Windows.Foundation.Numerics.Vector4 name=value
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterialStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMetallicRoughnessMaterialStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial return
 
@@ -686,32 +686,32 @@ class Microsoft.UI.Composition.Scenes.SceneModelTransform python_type
     default Microsoft.UI.Composition.Scenes.ISceneModelTransform
     requires Microsoft.UI.Composition.Scenes.ISceneModelTransform
     property translation
-        get get_Translation slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4 reverse=202
+        get get_Translation slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_Translation slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property scale
-        get get_Scale slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4 reverse=186
+        get get_Scale slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_Scale slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property rotation_axis
-        get get_RotationAxis slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4 reverse=162
+        get get_RotationAxis slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_RotationAxis slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property rotation_angle_in_degrees
-        get get_RotationAngleInDegrees slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4 reverse=121
+        get get_RotationAngleInDegrees slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4
             out single return
         put put_RotationAngleInDegrees slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=1
             in single name=value
     property rotation_angle
-        get get_RotationAngle slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4 reverse=62
+        get get_RotationAngle slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4
             out single return
-        put put_RotationAngle slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=1 reverse=94
+        put put_RotationAngle slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=1
             in single name=value
     property orientation
-        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4 reverse=22
+        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=4
             out struct type=Windows.Foundation.Numerics.Quaternion return
         put put_Orientation slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneModelTransform shape=8
             in struct type=Windows.Foundation.Numerics.Quaternion name=value
@@ -724,23 +724,23 @@ class Microsoft.UI.Composition.Scenes.SceneNode python_type
     requires Microsoft.UI.Composition.Scenes.ISceneNode
     factory Microsoft.UI.Composition.Scenes.ISceneNodeStatics
     property children
-        get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4 reverse=22
+        get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneNodeCollection return
     property components
-        get get_Components slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4 reverse=43
+        get get_Components slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneComponentCollection return
     property parent
-        get get_Parent slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4 reverse=62
+        get get_Parent slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
     property transform
-        get get_Transform slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4 reverse=99
+        get get_Transform slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneModelTransform return
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNodeStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNodeStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
     method find_first_component_of_type
-        method FindFirstComponentOfType slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=51 reverse=124
+        method FindFirstComponentOfType slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneNode shape=51
             in enum32 type=Microsoft.UI.Composition.Scenes.SceneComponentType name=value
             out class type=Microsoft.UI.Composition.Scenes.SceneComponent return
 
@@ -814,47 +814,47 @@ class Microsoft.UI.Composition.Scenes.ScenePbrMaterial composable python_type
     requires Microsoft.UI.Composition.Scenes.IScenePbrMaterial
     composable Microsoft.UI.Composition.Scenes.IScenePbrMaterialFactory
     property occlusion_strength
-        get get_OcclusionStrength slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=237
+        get get_OcclusionStrength slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out single return
-        put put_OcclusionStrength slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=1 reverse=241
+        put put_OcclusionStrength slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=1
             in single name=value
     property occlusion_input
-        get get_OcclusionInput slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=228
+        get get_OcclusionInput slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput return
-        put put_OcclusionInput slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=232
+        put put_OcclusionInput slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput name=value
     property normal_scale
-        get get_NormalScale slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=218
+        get get_NormalScale slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out single return
         put put_NormalScale slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=1
             in single name=value
     property normal_input
-        get get_NormalInput slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=202
+        get get_NormalInput slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput return
-        put put_NormalInput slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=210
+        put put_NormalInput slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput name=value
     property is_double_sided
-        get get_IsDoubleSided slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=186
+        get get_IsDoubleSided slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out boolean return
-        put put_IsDoubleSided slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=194
+        put put_IsDoubleSided slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             in boolean name=value
     property emissive_input
-        get get_EmissiveInput slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=121
+        get get_EmissiveInput slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput return
-        put put_EmissiveInput slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=141
+        put put_EmissiveInput slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterialInput name=value
     property emissive_factor
-        get get_EmissiveFactor slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=162
+        get get_EmissiveFactor slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out struct type=Windows.Foundation.Numerics.Vector3 return
         put put_EmissiveFactor slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=9
             in struct type=Windows.Foundation.Numerics.Vector3 name=value
     property alpha_mode
-        get get_AlphaMode slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=62
+        get get_AlphaMode slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out enum32 type=Microsoft.UI.Composition.Scenes.SceneAlphaMode return
-        put put_AlphaMode slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=99
+        put put_AlphaMode slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             in enum32 type=Microsoft.UI.Composition.Scenes.SceneAlphaMode name=value
     property alpha_cutoff
-        get get_AlphaCutoff slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4 reverse=22
+        get get_AlphaCutoff slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=4
             out single return
         put put_AlphaCutoff slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.IScenePbrMaterial shape=1
             in single name=value
@@ -875,27 +875,27 @@ class Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput python_type
     requires Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput
     factory Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInputStatics
     property wrapping_v_mode
-        get get_WrappingVMode slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=162
+        get get_WrappingVMode slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             out enum32 type=Microsoft.UI.Composition.Scenes.SceneWrappingMode return
-        put put_WrappingVMode slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=173
+        put put_WrappingVMode slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             in enum32 type=Microsoft.UI.Composition.Scenes.SceneWrappingMode name=value
     property wrapping_u_mode
-        get get_WrappingUMode slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=121
+        get get_WrappingUMode slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             out enum32 type=Microsoft.UI.Composition.Scenes.SceneWrappingMode return
-        put put_WrappingUMode slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=141
+        put put_WrappingUMode slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             in enum32 type=Microsoft.UI.Composition.Scenes.SceneWrappingMode name=value
     property surface
-        get get_Surface slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=62
+        get get_Surface slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             out interface type=Microsoft.UI.Composition.ICompositionSurface return
-        put put_Surface slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=99
+        put put_Surface slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             in interface type=Microsoft.UI.Composition.ICompositionSurface name=value
     property bitmap_interpolation_mode
-        get get_BitmapInterpolationMode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=22
+        get get_BitmapInterpolationMode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             out enum32 type=Microsoft.UI.Composition.CompositionBitmapInterpolationMode return
-        put put_BitmapInterpolationMode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4 reverse=43
+        put put_BitmapInterpolationMode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInput shape=4
             in enum32 type=Microsoft.UI.Composition.CompositionBitmapInterpolationMode name=value
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInputStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneSurfaceMaterialInputStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput return
 
@@ -907,12 +907,12 @@ class Microsoft.UI.Composition.Scenes.SceneVisual python_type
     requires Microsoft.UI.Composition.Scenes.ISceneVisual
     factory Microsoft.UI.Composition.Scenes.ISceneVisualStatics
     property root
-        get get_Root slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneVisual shape=4 reverse=22
+        get get_Root slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneVisual shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneNode return
-        put put_Root slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneVisual shape=4 reverse=43
+        put put_Root slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneVisual shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneNode name=value
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneVisualStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneVisualStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Scenes.SceneVisual return
 

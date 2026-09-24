@@ -102,53 +102,53 @@ class Windows.Storage.Pickers.FileOpenPicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property view_mode
-        get get_ViewMode slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=22
+        get get_ViewMode slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out enum32 type=Windows.Storage.Pickers.PickerViewMode return
-        put put_ViewMode slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=43
+        put put_ViewMode slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             in enum32 type=Windows.Storage.Pickers.PickerViewMode name=value
     property suggested_start_location
-        get get_SuggestedStartLocation slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=121
+        get get_SuggestedStartLocation slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out enum32 type=Windows.Storage.Pickers.PickerLocationId return
-        put put_SuggestedStartLocation slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=141
+        put put_SuggestedStartLocation slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             in enum32 type=Windows.Storage.Pickers.PickerLocationId name=value
     property settings_identifier
-        get get_SettingsIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=62
+        get get_SettingsIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out string return
-        put put_SettingsIdentifier slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=99
+        put put_SettingsIdentifier slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             in string name=value
     property commit_button_text
-        get get_CommitButtonText slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=162
+        get get_CommitButtonText slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out string return
-        put put_CommitButtonText slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=173
+        put put_CommitButtonText slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             in string name=value
     property file_type_filter
-        get get_FileTypeFilter slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=186
+        get get_FileTypeFilter slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property continuation_data
-        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker2 shape=4 reverse=22 deprecated
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker2 shape=4 deprecated
             out class type=Windows.Foundation.Collections.ValueSet return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker3 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker3 shape=4
             out class type=Windows.System.User return
     method create_for_user static
-        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPickerStatics2 shape=51 reverse=24 static
+        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPickerStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.Pickers.FileOpenPicker return
     method pick_multiple_files_and_continue deprecated
-        method PickMultipleFilesAndContinue slot=8 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker2 shape=0 reverse=55 deprecated
+        method PickMultipleFilesAndContinue slot=8 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker2 shape=0 deprecated
     method pick_multiple_files_async
-        method PickMultipleFilesAsync slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=202
+        method PickMultipleFilesAsync slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> return
     method pick_single_file_and_continue deprecated
-        method PickSingleFileAndContinue slot=7 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker2 shape=0 reverse=37 deprecated
+        method PickSingleFileAndContinue slot=7 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFileOpenPicker2 shape=0 deprecated
     method pick_single_file_async
-        method PickSingleFileAsync slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4 reverse=194
+        method PickSingleFileAsync slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPicker shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
-        method PickSingleFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPickerWithOperationId shape=51 reverse=24
+        method PickSingleFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPickerWithOperationId shape=51
             in string name=pickerOperationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method resume_pick_single_file_async static deprecated
-        method ResumePickSingleFileAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPickerStatics shape=4 reverse=22 static deprecated
+        method ResumePickSingleFileAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileOpenPickerStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
 
 class Windows.Storage.Pickers.FilePickerFileTypesOrderedMap python_type iterable mapping mutable_mapping
@@ -227,57 +227,57 @@ class Windows.Storage.Pickers.FileSavePicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property suggested_start_location
-        get get_SuggestedStartLocation slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=62
+        get get_SuggestedStartLocation slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out enum32 type=Windows.Storage.Pickers.PickerLocationId return
-        put put_SuggestedStartLocation slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=99
+        put put_SuggestedStartLocation slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             in enum32 type=Windows.Storage.Pickers.PickerLocationId name=value
     property suggested_save_file
-        get get_SuggestedSaveFile slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=194
+        get get_SuggestedSaveFile slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out class type=Windows.Storage.StorageFile return
-        put put_SuggestedSaveFile slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=202
+        put put_SuggestedSaveFile slot=16 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             in class type=Windows.Storage.StorageFile name=value
     property suggested_file_name
-        get get_SuggestedFileName slot=17 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=210
+        get get_SuggestedFileName slot=17 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out string return
-        put put_SuggestedFileName slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=218
+        put put_SuggestedFileName slot=18 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             in string name=value
     property settings_identifier
-        get get_SettingsIdentifier slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=22
+        get get_SettingsIdentifier slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out string return
-        put put_SettingsIdentifier slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=43
+        put put_SettingsIdentifier slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             in string name=value
     property default_file_extension
-        get get_DefaultFileExtension slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=173
+        get get_DefaultFileExtension slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out string return
-        put put_DefaultFileExtension slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=186
+        put put_DefaultFileExtension slot=14 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             in string name=value
     property commit_button_text
-        get get_CommitButtonText slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=121
+        get get_CommitButtonText slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out string return
-        put put_CommitButtonText slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=141
+        put put_CommitButtonText slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             in string name=value
     property file_type_choices
-        get get_FileTypeChoices slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=162
+        get get_FileTypeChoices slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Foundation.Collections.IVector<System.String>> return
     property continuation_data
-        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker2 shape=4 reverse=22
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker2 shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property enterprise_id
-        get get_EnterpriseId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker3 shape=4 reverse=22
+        get get_EnterpriseId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker3 shape=4
             out string return
-        put put_EnterpriseId slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker3 shape=4 reverse=43
+        put put_EnterpriseId slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker3 shape=4
             in string name=value
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker4 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker4 shape=4
             out class type=Windows.System.User return
     method create_for_user static
-        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePickerStatics shape=51 reverse=24 static
+        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePickerStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.Pickers.FileSavePicker return
     method pick_save_file_and_continue deprecated
-        method PickSaveFileAndContinue slot=7 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker2 shape=0 reverse=37 deprecated
+        method PickSaveFileAndContinue slot=7 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFileSavePicker2 shape=0 deprecated
     method pick_save_file_async
-        method PickSaveFileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4 reverse=223
+        method PickSaveFileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFileSavePicker shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
 
 class Windows.Storage.Pickers.FolderPicker activatable python_type
@@ -292,42 +292,42 @@ class Windows.Storage.Pickers.FolderPicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property view_mode
-        get get_ViewMode slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=22
+        get get_ViewMode slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             out enum32 type=Windows.Storage.Pickers.PickerViewMode return
-        put put_ViewMode slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=43
+        put put_ViewMode slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             in enum32 type=Windows.Storage.Pickers.PickerViewMode name=value
     property suggested_start_location
-        get get_SuggestedStartLocation slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=121
+        get get_SuggestedStartLocation slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             out enum32 type=Windows.Storage.Pickers.PickerLocationId return
-        put put_SuggestedStartLocation slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=141
+        put put_SuggestedStartLocation slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             in enum32 type=Windows.Storage.Pickers.PickerLocationId name=value
     property settings_identifier
-        get get_SettingsIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=62
+        get get_SettingsIdentifier slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             out string return
-        put put_SettingsIdentifier slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=99
+        put put_SettingsIdentifier slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             in string name=value
     property commit_button_text
-        get get_CommitButtonText slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=162
+        get get_CommitButtonText slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             out string return
-        put put_CommitButtonText slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=173
+        put put_CommitButtonText slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             in string name=value
     property file_type_filter
-        get get_FileTypeFilter slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=186
+        get get_FileTypeFilter slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property continuation_data
-        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker2 shape=4 reverse=22
+        get get_ContinuationData slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker2 shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker3 shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker3 shape=4
             out class type=Windows.System.User return
     method create_for_user static
-        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFolderPickerStatics shape=51 reverse=24 static
+        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Pickers.IFolderPickerStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.Pickers.FolderPicker return
     method pick_folder_and_continue deprecated
-        method PickFolderAndContinue slot=7 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker2 shape=0 reverse=37 deprecated
+        method PickFolderAndContinue slot=7 inputs=0 outputs=0 declaring=Windows.Storage.Pickers.IFolderPicker2 shape=0 deprecated
     method pick_single_folder_async
-        method PickSingleFolderAsync slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4 reverse=194
+        method PickSingleFolderAsync slot=15 inputs=0 outputs=1 declaring=Windows.Storage.Pickers.IFolderPicker shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> concrete awaitable

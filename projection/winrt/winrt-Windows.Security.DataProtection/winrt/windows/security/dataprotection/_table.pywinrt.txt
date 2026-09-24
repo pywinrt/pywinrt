@@ -203,7 +203,7 @@ class Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs 
     default Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs
     requires Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataAvailabilityStateChangedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Security.DataProtection.UserDataBufferUnprotectResult python_type
@@ -212,10 +212,10 @@ class Windows.Security.DataProtection.UserDataBufferUnprotectResult python_type
     default Windows.Security.DataProtection.IUserDataBufferUnprotectResult
     requires Windows.Security.DataProtection.IUserDataBufferUnprotectResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataBufferUnprotectResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataBufferUnprotectResult shape=4
             out enum32 type=Windows.Security.DataProtection.UserDataBufferUnprotectStatus return
     property unprotected_buffer
-        get get_UnprotectedBuffer slot=7 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataBufferUnprotectResult shape=4 reverse=43
+        get get_UnprotectedBuffer slot=7 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataBufferUnprotectResult shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
 
 enum Windows.Security.DataProtection.UserDataBufferUnprotectStatus python_type
@@ -231,38 +231,38 @@ class Windows.Security.DataProtection.UserDataProtectionManager python_type
     requires Windows.Security.DataProtection.IUserDataProtectionManager
     factory Windows.Security.DataProtection.IUserDataProtectionManagerStatics
     event data_availability_state_changed
-        add add_DataAvailabilityStateChanged slot=11 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=144
+        add add_DataAvailabilityStateChanged slot=11 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.DataProtection.UserDataProtectionManager,Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DataAvailabilityStateChanged slot=12 inputs=1 outputs=0 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=26 reverse=167
+        remove remove_DataAvailabilityStateChanged slot=12 inputs=1 outputs=0 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_storage_item_protection_info_async
-        method GetStorageItemProtectionInfoAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=44
+        method GetStorageItemProtectionInfoAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51
             in interface type=Windows.Storage.IStorageItem name=storageItem
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> return
     method is_continued_data_availability_expected
-        method IsContinuedDataAvailabilityExpected slot=10 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=124
+        method IsContinuedDataAvailabilityExpected slot=10 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51
             in enum32 type=Windows.Security.DataProtection.UserDataAvailability name=availability
             out boolean return
     method protect_buffer_async
-        method ProtectBufferAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=117 reverse=66
+        method ProtectBufferAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=117
             in interface type=Windows.Storage.Streams.IBuffer name=unprotectedBuffer
             in enum32 type=Windows.Security.DataProtection.UserDataAvailability name=availability
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method protect_storage_item_async
-        method ProtectStorageItemAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=117 reverse=25
+        method ProtectStorageItemAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=117
             in interface type=Windows.Storage.IStorageItem name=storageItem
             in enum32 type=Windows.Security.DataProtection.UserDataAvailability name=availability
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataStorageItemProtectionStatus> return
     method try_get_default static
-        method TryGetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManagerStatics shape=4 reverse=22 static
+        method TryGetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManagerStatics shape=4 static
             out class type=Windows.Security.DataProtection.UserDataProtectionManager return
     method try_get_for_user static
-        method TryGetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManagerStatics shape=51 reverse=44 static
+        method TryGetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManagerStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Security.DataProtection.UserDataProtectionManager return
     method unprotect_buffer_async
-        method UnprotectBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51 reverse=100
+        method UnprotectBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.DataProtection.IUserDataProtectionManager shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=protectedBuffer
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.DataProtection.UserDataBufferUnprotectResult> return
 
@@ -272,7 +272,7 @@ class Windows.Security.DataProtection.UserDataStorageItemProtectionInfo python_t
     default Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo
     requires Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo
     property availability
-        get get_Availability slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo shape=4 reverse=22
+        get get_Availability slot=6 inputs=0 outputs=1 declaring=Windows.Security.DataProtection.IUserDataStorageItemProtectionInfo shape=4
             out enum32 type=Windows.Security.DataProtection.UserDataAvailability return
 
 enum Windows.Security.DataProtection.UserDataStorageItemProtectionStatus python_type

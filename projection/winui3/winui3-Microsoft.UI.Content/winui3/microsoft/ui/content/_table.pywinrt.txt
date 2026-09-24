@@ -15,20 +15,20 @@ class Microsoft.UI.Content.ChildSiteLink python_type closeable
     requires Microsoft.UI.Content.IContentSiteLink
     factory Microsoft.UI.Content.IChildSiteLinkStatics
     property local_to_parent_transform_matrix
-        get get_LocalToParentTransformMatrix slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4 reverse=99
+        get get_LocalToParentTransformMatrix slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
         put put_LocalToParentTransformMatrix slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IChildSiteLink shape=6
             in struct type=Windows.Foundation.Numerics.Matrix4x4 name=value
     property actual_size
-        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4 reverse=22
+        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
         put put_ActualSize slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IChildSiteLink shape=10
             in struct type=Windows.Foundation.Numerics.Vector2 name=value
     property dispatcher_queue
-        get get_DispatcherQueue slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4 reverse=62
+        get get_DispatcherQueue slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     property site_view
-        get get_SiteView slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4 reverse=141
+        get get_SiteView slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLink shape=4
             out class type=Microsoft.UI.Content.ContentSiteView return
     property automation_option
         get get_AutomationOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomation shape=4 reverse=22
@@ -93,15 +93,15 @@ class Microsoft.UI.Content.ChildSiteLink python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
-        method Connect slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IChildSiteLink shape=4 reverse=162
+        method Connect slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IChildSiteLink shape=4
             in class type=Microsoft.UI.Content.ContentIsland name=content
     method create static
-        method Create slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLinkStatics shape=117 reverse=25 static
+        method Create slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLinkStatics shape=117 static
             in class type=Microsoft.UI.Content.ContentIsland name=parent
             in class type=Microsoft.UI.Composition.ContainerVisual name=placementVisual
             out class type=Microsoft.UI.Content.ChildSiteLink return
     method create_for_system_visual static
-        method CreateForSystemVisual slot=7 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLinkStatics shape=117 reverse=45 static
+        method CreateForSystemVisual slot=7 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IChildSiteLinkStatics shape=117 static
             in class type=Microsoft.UI.Content.ContentIsland name=parent
             in class type=Windows.UI.Composition.ContainerVisual name=placementVisual
             out class type=Microsoft.UI.Content.ChildSiteLink return
@@ -121,15 +121,15 @@ class Microsoft.UI.Content.ContentCoordinateConverter composable python_type
     factory Microsoft.UI.Content.IContentCoordinateConverterStatics
     composable Microsoft.UI.Content.IContentCoordinateConverterFactory
     method convert_local_to_screen
-        method ConvertLocalToScreen slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=79 reverse=31 default_overload
+        method ConvertLocalToScreen slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=79 default_overload
             in struct type=Windows.Foundation.Point name=localPoint
             out struct type=Windows.Graphics.PointInt32 return
-        method ConvertLocalToScreen slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=239 reverse=69
+        method ConvertLocalToScreen slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=239
             pass_array struct type=Windows.Foundation.Point name=localPoints
             in enum32 type=Microsoft.UI.Content.ContentCoordinateRoundingMode name=roundingMode
             receive_array struct type=Windows.Graphics.PointInt32 return
     method convert_local_to_screen_with_points
-        method ConvertLocalToScreen slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=195 reverse=46
+        method ConvertLocalToScreen slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=195
             pass_array struct type=Windows.Foundation.Point name=localPoints
             receive_array struct type=Windows.Graphics.PointInt32 return
     method convert_local_to_screen_with_rect
@@ -141,7 +141,7 @@ class Microsoft.UI.Content.ContentCoordinateConverter composable python_type
             in struct type=Windows.Graphics.PointInt32 name=screenPoint
             out struct type=Windows.Foundation.Point return
     method convert_screen_to_local_with_points
-        method ConvertScreenToLocal slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=195 reverse=146
+        method ConvertScreenToLocal slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentCoordinateConverter shape=195
             pass_array struct type=Windows.Graphics.PointInt32 name=screenPoints
             receive_array struct type=Windows.Foundation.Point return
     method convert_screen_to_local_with_rect
@@ -167,7 +167,7 @@ class Microsoft.UI.Content.ContentDeferral python_type
     default Microsoft.UI.Content.IContentDeferral
     requires Microsoft.UI.Content.IContentDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IContentDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IContentDeferral shape=0
 
 class Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs python_type
     py ContentEnvironmentSettingChangedEventArgs
@@ -175,7 +175,7 @@ class Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs python_type
     default Microsoft.UI.Content.IContentEnvironmentSettingChangedEventArgs
     requires Microsoft.UI.Content.IContentEnvironmentSettingChangedEventArgs
     property setting_name
-        get get_SettingName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentSettingChangedEventArgs shape=4 reverse=22
+        get get_SettingName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentSettingChangedEventArgs shape=4
             out string return
 
 class Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs python_type
@@ -185,13 +185,13 @@ class Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs python_type
     requires Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs
     requires Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs2
     property did_app_window_id_change
-        get get_DidAppWindowIdChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs shape=4 reverse=22
+        get get_DidAppWindowIdChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs shape=4
             out boolean return
     property did_display_id_change
-        get get_DidDisplayIdChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs shape=4 reverse=43
+        get get_DidDisplayIdChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs shape=4
             out boolean return
     property did_display_scale_change
-        get get_DidDisplayScaleChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs2 shape=4 reverse=22
+        get get_DidDisplayScaleChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentEnvironmentStateChangedEventArgs2 shape=4
             out boolean return
 
 class Microsoft.UI.Content.ContentIsland composable python_type closeable
@@ -213,105 +213,105 @@ class Microsoft.UI.Content.ContentIsland composable python_type closeable
         put put_SystemBackdrop slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop shape=4 reverse=43
             in class type=Windows.UI.Composition.CompositionBrush name=value
     property is_island_visible
-        get get_IsIslandVisible slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=223
+        get get_IsIslandVisible slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out boolean return
-        put put_IsIslandVisible slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=228
+        put put_IsIslandVisible slot=20 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4
             in boolean name=value
     property is_island_enabled
-        get get_IsIslandEnabled slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=210
+        get get_IsIslandEnabled slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out boolean return
-        put put_IsIslandEnabled slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=218
+        put put_IsIslandEnabled slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4
             in boolean name=value
     property is_hit_test_visible_when_transparent
-        get get_IsHitTestVisibleWhenTransparent slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=194
+        get get_IsHitTestVisibleWhenTransparent slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out boolean return
-        put put_IsHitTestVisibleWhenTransparent slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=202
+        put put_IsHitTestVisibleWhenTransparent slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4
             in boolean name=value
     property app_data
-        get get_AppData slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=43
+        get get_AppData slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out object return
-        put put_AppData slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=62
+        put put_AppData slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=4
             in object name=value
     property actual_size
-        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=22
+        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property coordinate_converter
-        get get_CoordinateConverter slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=99
+        get get_CoordinateConverter slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out class type=Microsoft.UI.Content.ContentCoordinateConverter return
     property custom_properties
-        get get_CustomProperties slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=121
+        get get_CustomProperties slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     property dispatcher_queue
-        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=141
+        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     property environment
-        get get_Environment slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=162
+        get get_Environment slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out class type=Microsoft.UI.Content.ContentIslandEnvironment return
     property id
-        get get_Id slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=173
+        get get_Id slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out uint64 return
     property is_connected
-        get get_IsConnected slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=186
+        get get_IsConnected slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out boolean return
     property is_site_enabled
-        get get_IsSiteEnabled slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=232
+        get get_IsSiteEnabled slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out boolean return
     property is_site_visible
-        get get_IsSiteVisible slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=237
+        get get_IsSiteVisible slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out boolean return
     property layout_direction
-        get get_LayoutDirection slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=242
+        get get_LayoutDirection slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out enum32 type=Microsoft.UI.Content.ContentLayoutDirection return
     property rasterization_scale
-        get get_RasterizationScale slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=247
+        get get_RasterizationScale slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out single return
     property children
-        get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4 reverse=22
+        get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4
             out parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.ChildSiteLink> return
     property local_to_client_transform_matrix
-        get get_LocalToClientTransformMatrix slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4 reverse=43
+        get get_LocalToClientTransformMatrix slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     property local_to_parent_transform_matrix
-        get get_LocalToParentTransformMatrix slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4 reverse=62
+        get get_LocalToParentTransformMatrix slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     property popups
-        get get_Popups slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4 reverse=99
+        get get_Popups slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4
             out parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Content.DesktopPopupSiteBridge> return
     property processes_keyboard_input
-        get get_ProcessesKeyboardInput slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4 reverse=121
+        get get_ProcessesKeyboardInput slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4
             out boolean return
     property processes_pointer_input
-        get get_ProcessesPointerInput slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4 reverse=141
+        get get_ProcessesPointerInput slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland2 shape=4
             out boolean return
     property automation_option
-        get get_AutomationOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4 reverse=22
+        get get_AutomationOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4
             out enum32 type=Microsoft.UI.Content.ContentAutomationOptions return
     property fragment_root_automation_provider
-        get get_FragmentRootAutomationProvider slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4 reverse=43
+        get get_FragmentRootAutomationProvider slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4
             out object return
     property next_sibling_automation_provider
-        get get_NextSiblingAutomationProvider slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4 reverse=62
+        get get_NextSiblingAutomationProvider slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4
             out object return
     property parent_automation_provider
-        get get_ParentAutomationProvider slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4 reverse=99
+        get get_ParentAutomationProvider slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4
             out object return
     property previous_sibling_automation_provider
-        get get_PreviousSiblingAutomationProvider slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4 reverse=121
+        get get_PreviousSiblingAutomationProvider slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomation shape=4
             out object return
     property is_closed
         get get_IsClosed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=4 reverse=22
             out boolean return
     event automation_provider_requested
-        add add_AutomationProviderRequested slot=28 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=51 reverse=264
+        add add_AutomationProviderRequested slot=28 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AutomationProviderRequested slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=26 reverse=268
+        remove remove_AutomationProviderRequested slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
-        add add_StateChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=51 reverse=271
+        add add_StateChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=26 reverse=277
+        remove remove_StateChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
@@ -328,34 +328,34 @@ class Microsoft.UI.Content.ContentIsland composable python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 static
             in class type=Microsoft.UI.Composition.Visual name=Root
             out class type=Microsoft.UI.Content.ContentIsland return
     method create_for_system_visual static
-        method CreateForSystemVisual slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics2 shape=117 reverse=25 static
+        method CreateForSystemVisual slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics2 shape=117 static
             in class type=Microsoft.UI.Dispatching.DispatcherQueue name=queue
             in class type=Windows.UI.Composition.Visual name=root
             out class type=Microsoft.UI.Content.ContentIsland return
     method find_all_for_compositor static
-        method FindAllForCompositor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=117 reverse=45 static
+        method FindAllForCompositor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=117 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             receive_array class type=Microsoft.UI.Content.ContentIsland return
     method find_all_for_current_thread static
-        method FindAllForCurrentThread slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 reverse=65 static
+        method FindAllForCurrentThread slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 static
             receive_array class type=Microsoft.UI.Content.ContentIsland return
     method find_all_for_system_compositor static
-        method FindAllForSystemCompositor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics2 shape=117 reverse=45 static
+        method FindAllForSystemCompositor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics2 shape=117 static
             in class type=Windows.UI.Composition.Compositor name=compositor
             receive_array class type=Microsoft.UI.Content.ContentIsland return
     method get_automation_host_provider
-        method GetAutomationHostProvider slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=252
+        method GetAutomationHostProvider slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out object return
     method get_by_system_visual static
-        method GetBySystemVisual slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics2 shape=51 reverse=65 static
+        method GetBySystemVisual slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics2 shape=51 static
             in class type=Windows.UI.Composition.Visual name=child
             out class type=Microsoft.UI.Content.ContentIsland return
     method get_by_visual static
-        method GetByVisual slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 reverse=100 static
+        method GetByVisual slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStatics shape=51 static
             in class type=Microsoft.UI.Composition.Visual name=child
             out class type=Microsoft.UI.Content.ContentIsland return
     method get_from_id static
@@ -363,7 +363,7 @@ class Microsoft.UI.Content.ContentIsland composable python_type closeable
             in uint64 name=id
             out class type=Microsoft.UI.Content.ContentIsland return
     method get_state_change_deferral
-        method GetStateChangeDeferral slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4 reverse=255
+        method GetStateChangeDeferral slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIsland shape=4
             out class type=Microsoft.UI.Content.ContentDeferral return
     method request_size
         method RequestSize slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIsland shape=10
@@ -375,14 +375,14 @@ class Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs pyt
     default Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs
     requires Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4
             in boolean name=value
     property automation_provider
-        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4 reverse=22
+        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4
             out object return
-        put put_AutomationProvider slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4 reverse=43
+        put put_AutomationProvider slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandAutomationProviderRequestedEventArgs shape=4
             in object name=value
 
 class Microsoft.UI.Content.ContentIslandEnvironment composable python_type
@@ -393,25 +393,25 @@ class Microsoft.UI.Content.ContentIslandEnvironment composable python_type
     requires Microsoft.UI.Content.IContentIslandEnvironment2
     composable Microsoft.UI.Content.IContentIslandEnvironmentFactory
     property app_window_id
-        get get_AppWindowId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=4 reverse=22
+        get get_AppWindowId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=4
             out struct type=Microsoft.UI.WindowId return
     property display_id
-        get get_DisplayId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=4 reverse=43
+        get get_DisplayId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=4
             out struct type=Microsoft.UI.DisplayId return
     property display_scale
-        get get_DisplayScale slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment2 shape=4 reverse=22
+        get get_DisplayScale slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment2 shape=4
             out single return
     event setting_changed
-        add add_SettingChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=51 reverse=65
+        add add_SettingChanged slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SettingChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=26 reverse=110
+        remove remove_SettingChanged slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
-        add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=51 reverse=124
+        add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=26 reverse=156
+        remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentIslandEnvironment shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Content.ContentIslandStateChangedEventArgs python_type
@@ -421,25 +421,25 @@ class Microsoft.UI.Content.ContentIslandStateChangedEventArgs python_type
     requires Microsoft.UI.Content.IContentIslandStateChangedEventArgs
     requires Microsoft.UI.Content.IContentIslandStateChangedEventArgs2
     property did_actual_size_change
-        get get_DidActualSizeChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4 reverse=22
+        get get_DidActualSizeChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4
             out boolean return
     property did_layout_direction_change
-        get get_DidLayoutDirectionChange slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4 reverse=99
+        get get_DidLayoutDirectionChange slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4
             out boolean return
     property did_rasterization_scale_change
-        get get_DidRasterizationScaleChange slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4 reverse=121
+        get get_DidRasterizationScaleChange slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4
             out boolean return
     property did_site_enabled_change
-        get get_DidSiteEnabledChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4 reverse=43
+        get get_DidSiteEnabledChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4
             out boolean return
     property did_site_visible_change
-        get get_DidSiteVisibleChange slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4 reverse=62
+        get get_DidSiteVisibleChange slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs shape=4
             out boolean return
     property did_local_to_client_transform_matrix_change
-        get get_DidLocalToClientTransformMatrixChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs2 shape=4 reverse=22
+        get get_DidLocalToClientTransformMatrixChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs2 shape=4
             out boolean return
     property did_local_to_parent_transform_matrix_change
-        get get_DidLocalToParentTransformMatrixChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs2 shape=4 reverse=43
+        get get_DidLocalToParentTransformMatrixChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentIslandStateChangedEventArgs2 shape=4
             out boolean return
 
 enum Microsoft.UI.Content.ContentLayoutDirection python_type
@@ -458,92 +458,92 @@ class Microsoft.UI.Content.ContentSite composable python_type closeable
     requires Microsoft.UI.IClosableNotifier
     composable Microsoft.UI.Content.IContentSiteFactory
     property should_apply_rasterization_scale
-        get get_ShouldApplyRasterizationScale slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=255
+        get get_ShouldApplyRasterizationScale slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out boolean return
-        put put_ShouldApplyRasterizationScale slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=259
+        put put_ShouldApplyRasterizationScale slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4
             in boolean name=value
     property parent_scale
-        get get_ParentScale slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=237
+        get get_ParentScale slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out single return
-        put put_ParentScale slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=1 reverse=241
+        put put_ParentScale slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=1
             in single name=value
     property override_scale
-        get get_OverrideScale slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=228
+        get get_OverrideScale slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out single return
         put put_OverrideScale slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=1
             in single name=value
     property layout_direction
-        get get_LayoutDirection slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=218
+        get get_LayoutDirection slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out enum32 type=Microsoft.UI.Content.ContentLayoutDirection return
-        put put_LayoutDirection slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=223
+        put put_LayoutDirection slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4
             in enum32 type=Microsoft.UI.Content.ContentLayoutDirection name=value
     property is_site_visible
-        get get_IsSiteVisible slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=202
+        get get_IsSiteVisible slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out boolean return
-        put put_IsSiteVisible slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=210
+        put put_IsSiteVisible slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4
             in boolean name=value
     property is_site_enabled
-        get get_IsSiteEnabled slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=186
+        get get_IsSiteEnabled slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out boolean return
-        put put_IsSiteEnabled slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=194
+        put put_IsSiteEnabled slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=4
             in boolean name=value
     property client_size
-        get get_ClientSize slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=62
+        get get_ClientSize slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out struct type=Windows.Graphics.SizeInt32 return
         put put_ClientSize slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=22
             in struct type=Windows.Graphics.SizeInt32 name=value
     property actual_size
-        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=22
+        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
         put put_ActualSize slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=10
             in struct type=Windows.Foundation.Numerics.Vector2 name=value
     property coordinate_converter
-        get get_CoordinateConverter slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=121
+        get get_CoordinateConverter slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out class type=Microsoft.UI.Content.ContentCoordinateConverter return
     property dispatcher_queue
-        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=141
+        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     property environment
-        get get_Environment slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=162
+        get get_Environment slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out class type=Microsoft.UI.Content.ContentSiteEnvironment return
     property is_connected
-        get get_IsConnected slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=173
+        get get_IsConnected slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out boolean return
     property rasterization_scale
-        get get_RasterizationScale slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=247
+        get get_RasterizationScale slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out single return
     property requested_size
-        get get_RequestedSize slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=252
+        get get_RequestedSize slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property view
-        get get_View slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=263
+        get get_View slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out class type=Microsoft.UI.Content.ContentSiteView return
     property processes_pointer_input
-        get get_ProcessesPointerInput slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4 reverse=141
+        get get_ProcessesPointerInput slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4
             out boolean return
-        put put_ProcessesPointerInput slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite2 shape=4 reverse=162
+        put put_ProcessesPointerInput slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite2 shape=4
             in boolean name=value
     property processes_keyboard_input
-        get get_ProcessesKeyboardInput slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4 reverse=99
+        get get_ProcessesKeyboardInput slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4
             out boolean return
-        put put_ProcessesKeyboardInput slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite2 shape=4 reverse=121
+        put put_ProcessesKeyboardInput slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite2 shape=4
             in boolean name=value
     property local_to_parent_transform_matrix
-        get get_LocalToParentTransformMatrix slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4 reverse=43
+        get get_LocalToParentTransformMatrix slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
         put put_LocalToParentTransformMatrix slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite2 shape=6
             in struct type=Windows.Foundation.Numerics.Matrix4x4 name=value
     property local_to_client_transform_matrix
-        get get_LocalToClientTransformMatrix slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4 reverse=22
+        get get_LocalToClientTransformMatrix slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     property is_closed
         get get_IsClosed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=4 reverse=22
             out boolean return
     event requested_state_changed
-        add add_RequestedStateChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=51 reverse=271
+        add add_RequestedStateChanged slot=30 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentSite,Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RequestedStateChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=26 reverse=277
+        remove remove_RequestedStateChanged slot=31 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSite shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
         add add_Closed slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=51 reverse=44
@@ -560,7 +560,7 @@ class Microsoft.UI.Content.ContentSite composable python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_island_state_change_deferral
-        method GetIslandStateChangeDeferral slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4 reverse=266
+        method GetIslandStateChangeDeferral slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSite shape=4
             out class type=Microsoft.UI.Content.ContentDeferral return
 
 class Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs python_type
@@ -569,14 +569,14 @@ class Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs pytho
     default Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs
     requires Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs
     property handled
-        get get_Handled slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4 reverse=62
+        get get_Handled slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4
             out boolean return
-        put put_Handled slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4 reverse=99
+        put put_Handled slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4
             in boolean name=value
     property automation_provider
-        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4 reverse=22
+        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4
             out object return
-        put put_AutomationProvider slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4 reverse=43
+        put put_AutomationProvider slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteAutomationProviderRequestedEventArgs shape=4
             in object name=value
 
 class Microsoft.UI.Content.ContentSiteEnvironment composable python_type
@@ -587,25 +587,25 @@ class Microsoft.UI.Content.ContentSiteEnvironment composable python_type
     requires Microsoft.UI.Content.IContentSiteEnvironment2
     composable Microsoft.UI.Content.IContentSiteEnvironmentFactory
     property display_id
-        get get_DisplayId slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4 reverse=62
+        get get_DisplayId slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4
             out struct type=Microsoft.UI.DisplayId return
         put put_DisplayId slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=38
             in struct type=Microsoft.UI.DisplayId name=value
     property app_window_id
-        get get_AppWindowId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4 reverse=22
+        get get_AppWindowId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4
             out struct type=Microsoft.UI.WindowId return
         put put_AppWindowId slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=38
             in struct type=Microsoft.UI.WindowId name=value
     property view
-        get get_View slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4 reverse=121
+        get get_View slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4
             out class type=Microsoft.UI.Content.ContentSiteEnvironmentView return
     property display_scale
-        get get_DisplayScale slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment2 shape=4 reverse=22
+        get get_DisplayScale slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironment2 shape=4
             out single return
         put put_DisplayScale slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteEnvironment2 shape=1
             in single name=value
     method notify_setting_changed
-        method NotifySettingChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4 reverse=141
+        method NotifySettingChanged slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteEnvironment shape=4
             in string name=setting
 
 class Microsoft.UI.Content.ContentSiteEnvironmentView composable python_type
@@ -616,13 +616,13 @@ class Microsoft.UI.Content.ContentSiteEnvironmentView composable python_type
     requires Microsoft.UI.Content.IContentSiteEnvironmentView2
     composable Microsoft.UI.Content.IContentSiteEnvironmentViewFactory
     property app_window_id
-        get get_AppWindowId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironmentView shape=4 reverse=22
+        get get_AppWindowId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironmentView shape=4
             out struct type=Microsoft.UI.WindowId return
     property display_id
-        get get_DisplayId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironmentView shape=4 reverse=43
+        get get_DisplayId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironmentView shape=4
             out struct type=Microsoft.UI.DisplayId return
     property display_scale
-        get get_DisplayScale slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironmentView2 shape=4 reverse=22
+        get get_DisplayScale slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteEnvironmentView2 shape=4
             out single return
 
 class Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs python_type
@@ -631,7 +631,7 @@ class Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs python_type
     default Microsoft.UI.Content.IContentSiteRequestedStateChangedEventArgs
     requires Microsoft.UI.Content.IContentSiteRequestedStateChangedEventArgs
     property did_requested_size_change
-        get get_DidRequestedSizeChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteRequestedStateChangedEventArgs shape=4 reverse=22
+        get get_DidRequestedSizeChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteRequestedStateChangedEventArgs shape=4
             out boolean return
 
 class Microsoft.UI.Content.ContentSiteView composable python_type
@@ -643,61 +643,61 @@ class Microsoft.UI.Content.ContentSiteView composable python_type
     requires Microsoft.UI.Content.IContentSiteViewAutomation
     composable Microsoft.UI.Content.IContentSiteViewFactory
     property actual_size
-        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=22
+        get get_ActualSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property client_size
-        get get_ClientSize slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=43
+        get get_ClientSize slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out struct type=Windows.Graphics.SizeInt32 return
     property coordinate_converter
-        get get_CoordinateConverter slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=62
+        get get_CoordinateConverter slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out class type=Microsoft.UI.Content.ContentCoordinateConverter return
     property dispatcher_queue
-        get get_DispatcherQueue slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=99
+        get get_DispatcherQueue slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     property environment_view
-        get get_EnvironmentView slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=121
+        get get_EnvironmentView slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out class type=Microsoft.UI.Content.ContentSiteEnvironmentView return
     property is_connected
-        get get_IsConnected slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=141
+        get get_IsConnected slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out boolean return
     property is_site_enabled
-        get get_IsSiteEnabled slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=162
+        get get_IsSiteEnabled slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out boolean return
     property is_site_visible
-        get get_IsSiteVisible slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=173
+        get get_IsSiteVisible slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out boolean return
     property layout_direction
-        get get_LayoutDirection slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=186
+        get get_LayoutDirection slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out enum32 type=Microsoft.UI.Content.ContentLayoutDirection return
     property override_scale
-        get get_OverrideScale slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=194
+        get get_OverrideScale slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out single return
     property parent_scale
-        get get_ParentScale slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=202
+        get get_ParentScale slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out single return
     property rasterization_scale
-        get get_RasterizationScale slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=210
+        get get_RasterizationScale slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out single return
     property requested_size
-        get get_RequestedSize slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=218
+        get get_RequestedSize slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
     property should_apply_rasterization_scale
-        get get_ShouldApplyRasterizationScale slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4 reverse=223
+        get get_ShouldApplyRasterizationScale slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView shape=4
             out boolean return
     property local_to_client_transform_matrix
-        get get_LocalToClientTransformMatrix slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4 reverse=22
+        get get_LocalToClientTransformMatrix slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     property local_to_parent_transform_matrix
-        get get_LocalToParentTransformMatrix slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4 reverse=43
+        get get_LocalToParentTransformMatrix slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix4x4 return
     property processes_keyboard_input
-        get get_ProcessesKeyboardInput slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4 reverse=62
+        get get_ProcessesKeyboardInput slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4
             out boolean return
     property processes_pointer_input
-        get get_ProcessesPointerInput slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4 reverse=99
+        get get_ProcessesPointerInput slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteView2 shape=4
             out boolean return
     property automation_option
-        get get_AutomationOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteViewAutomation shape=4 reverse=22
+        get get_AutomationOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteViewAutomation shape=4
             out enum32 type=Microsoft.UI.Content.ContentAutomationOptions return
 
 enum Microsoft.UI.Content.ContentSizePolicy python_type
@@ -741,10 +741,10 @@ class Microsoft.UI.Content.DesktopAttachedSiteBridge python_type closeable
         put put_ProcessesKeyboardInput slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IContentSiteInput shape=4 reverse=43
             in boolean name=value
     property site_view
-        get get_SiteView slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4 reverse=22
+        get get_SiteView slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4
             out class type=Microsoft.UI.Content.ContentSiteView return
     property window_id
-        get get_WindowId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4 reverse=43
+        get get_WindowId slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4
             out struct type=Microsoft.UI.WindowId return
     property is_closed
         get get_IsClosed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=4 reverse=22
@@ -764,7 +764,7 @@ class Microsoft.UI.Content.DesktopAttachedSiteBridge python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
-        method Connect slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4 reverse=62
+        method Connect slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridge shape=4
             in class type=Microsoft.UI.Content.ContentIsland name=content
     method create_from_window_id static
         method CreateFromWindowId slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IDesktopAttachedSiteBridgeStatics shape=142 static
@@ -781,12 +781,12 @@ class Microsoft.UI.Content.DesktopChildSiteBridge python_type
     factory Microsoft.UI.Content.IDesktopChildSiteBridgeStatics
     factory Microsoft.UI.Content.IDesktopChildSiteBridgeStatics2
     property resize_policy
-        get get_ResizePolicy slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopChildSiteBridge shape=4 reverse=22
+        get get_ResizePolicy slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopChildSiteBridge shape=4
             out enum32 type=Microsoft.UI.Content.ContentSizePolicy return
-        put put_ResizePolicy slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopChildSiteBridge shape=4 reverse=43
+        put put_ResizePolicy slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopChildSiteBridge shape=4
             in enum32 type=Microsoft.UI.Content.ContentSizePolicy name=value
     property site_view
-        get get_SiteView slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopChildSiteBridge shape=4 reverse=62
+        get get_SiteView slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopChildSiteBridge shape=4
             out class type=Microsoft.UI.Content.ContentSiteView return
     method create static
         method Create slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Content.IDesktopChildSiteBridgeStatics shape=142 static
@@ -835,16 +835,16 @@ class Microsoft.UI.Content.DesktopPopupSiteBridge python_type closeable
         get get_Parent slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteLink shape=4 reverse=22
             out class type=Microsoft.UI.Content.ContentIsland return
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4
             out boolean return
     property is_visible
-        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4 reverse=43
+        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4
             out boolean return
     property site_view
-        get get_SiteView slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4 reverse=62
+        get get_SiteView slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4
             out class type=Microsoft.UI.Content.ContentSiteView return
     property window_id
-        get get_WindowId slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4 reverse=99
+        get get_WindowId slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4
             out struct type=Microsoft.UI.WindowId return
     property is_closed
         get get_IsClosed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=4 reverse=22
@@ -888,30 +888,30 @@ class Microsoft.UI.Content.DesktopPopupSiteBridge python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
-        method Connect slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4 reverse=121
+        method Connect slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4
             in class type=Microsoft.UI.Content.ContentIsland name=content
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridgeStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridgeStatics shape=51 static
             in class type=Microsoft.UI.Content.ContentIsland name=parent
             out class type=Microsoft.UI.Content.DesktopPopupSiteBridge return
     method disable
-        method Disable slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0 reverse=137
+        method Disable slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0
     method enable
-        method Enable slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0 reverse=159
+        method Enable slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0
     method hide
-        method Hide slot=13 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0 reverse=169
+        method Hide slot=13 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0
     method move_and_resize
         method MoveAndResize slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=21
             in struct type=Windows.Graphics.RectInt32 name=rect
     method move_in_z_order_at_bottom
-        method MoveInZOrderAtBottom slot=15 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0 reverse=193
+        method MoveInZOrderAtBottom slot=15 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0
     method move_in_z_order_at_top
-        method MoveInZOrderAtTop slot=16 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0 reverse=201
+        method MoveInZOrderAtTop slot=16 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0
     method move_in_z_order_below
         method MoveInZOrderBelow slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=38
             in struct type=Microsoft.UI.WindowId name=windowId
     method show
-        method Show slot=18 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0 reverse=217
+        method Show slot=18 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=0
 
 class Microsoft.UI.Content.DesktopSiteBridge composable python_type closeable
     py DesktopSiteBridge
@@ -937,13 +937,13 @@ class Microsoft.UI.Content.DesktopSiteBridge composable python_type closeable
         get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IContentSiteBridge shape=4 reverse=22
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4
             out boolean return
     property is_visible
-        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4 reverse=43
+        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4
             out boolean return
     property window_id
-        get get_WindowId slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4 reverse=62
+        get get_WindowId slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4
             out struct type=Microsoft.UI.WindowId return
     property is_closed
         get get_IsClosed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=4 reverse=22
@@ -963,29 +963,29 @@ class Microsoft.UI.Content.DesktopSiteBridge composable python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method connect
-        method Connect slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4 reverse=99
+        method Connect slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=4
             in class type=Microsoft.UI.Content.ContentIsland name=content
     method disable
-        method Disable slot=10 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0 reverse=117
+        method Disable slot=10 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0
     method enable
-        method Enable slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0 reverse=137
+        method Enable slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0
     method hide
-        method Hide slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0 reverse=159
+        method Hide slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridgeStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopSiteBridgeStatics shape=4 static
             out boolean return
     method move_and_resize
-        method MoveAndResize slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=21 reverse=396
+        method MoveAndResize slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=21
             in struct type=Windows.Graphics.RectInt32 name=rect
     method move_in_z_order_at_bottom
-        method MoveInZOrderAtBottom slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0 reverse=185
+        method MoveInZOrderAtBottom slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0
     method move_in_z_order_at_top
-        method MoveInZOrderAtTop slot=15 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0 reverse=193
+        method MoveInZOrderAtTop slot=15 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0
     method move_in_z_order_below
         method MoveInZOrderBelow slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=38
             in struct type=Microsoft.UI.WindowId name=windowId
     method show
-        method Show slot=17 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0 reverse=209
+        method Show slot=17 inputs=0 outputs=0 declaring=Microsoft.UI.Content.IDesktopSiteBridge shape=0
 
 interface Microsoft.UI.Content.IChildSiteLink
     guid b5a64814-608b-5fb7-a7cb-eb628fd588cd

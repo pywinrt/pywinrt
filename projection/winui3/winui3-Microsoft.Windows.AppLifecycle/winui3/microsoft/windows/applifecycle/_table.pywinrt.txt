@@ -7,32 +7,32 @@ class Microsoft.Windows.AppLifecycle.ActivationRegistrationManager static python
     py ActivationRegistrationManager
     factory Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics
     method register_for_file_type_activation static
-        method RegisterForFileTypeActivation slot=6 inputs=5 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=278 reverse=28 static
+        method RegisterForFileTypeActivation slot=6 inputs=5 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=278 static
             pass_array string name=supportedFileTypes
             in string name=logo
             in string name=displayName
             pass_array string name=supportedVerbs
             in string name=exePath
     method register_for_protocol_activation static
-        method RegisterForProtocolActivation slot=7 inputs=4 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=195 reverse=46 static
+        method RegisterForProtocolActivation slot=7 inputs=4 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=195 static
             in string name=scheme
             in string name=logo
             in string name=displayName
             in string name=exePath
     method register_for_startup_activation static
-        method RegisterForStartupActivation slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=51 reverse=65 static
+        method RegisterForStartupActivation slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=51 static
             in string name=taskId
             in string name=exePath
     method unregister_for_file_type_activation static
-        method UnregisterForFileTypeActivation slot=9 inputs=2 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=117 reverse=101 static
+        method UnregisterForFileTypeActivation slot=9 inputs=2 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=117 static
             pass_array string name=fileTypes
             in string name=exePath
     method unregister_for_protocol_activation static
-        method UnregisterForProtocolActivation slot=10 inputs=2 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=51 reverse=124 static
+        method UnregisterForProtocolActivation slot=10 inputs=2 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=51 static
             in string name=scheme
             in string name=exePath
     method unregister_for_startup_activation static
-        method UnregisterForStartupActivation slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=4 reverse=141 static
+        method UnregisterForStartupActivation slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IActivationRegistrationManagerStatics shape=4 static
             in string name=taskId
 
 class Microsoft.Windows.AppLifecycle.AppActivationArguments python_type
@@ -41,10 +41,10 @@ class Microsoft.Windows.AppLifecycle.AppActivationArguments python_type
     default Microsoft.Windows.AppLifecycle.IAppActivationArguments
     requires Microsoft.Windows.AppLifecycle.IAppActivationArguments
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppActivationArguments shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppActivationArguments shape=4
             out object return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppActivationArguments shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppActivationArguments shape=4
             out enum32 type=Microsoft.Windows.AppLifecycle.ExtendedActivationKind return
 
 class Microsoft.Windows.AppLifecycle.AppInstance python_type
@@ -55,43 +55,43 @@ class Microsoft.Windows.AppLifecycle.AppInstance python_type
     factory Microsoft.Windows.AppLifecycle.IAppInstanceStatics
     factory Microsoft.Windows.AppLifecycle.IAppInstanceStatics2
     property is_current
-        get get_IsCurrent slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4 reverse=162
+        get get_IsCurrent slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4
             out boolean return
     property key
-        get get_Key slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4 reverse=141
+        get get_Key slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4
             out string return
     property process_id
-        get get_ProcessId slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4 reverse=173
+        get get_ProcessId slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4
             out uint32 return
     event activated
-        add add_Activated slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=51 reverse=100
+        add add_Activated slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=51
             in delegate type=Windows.Foundation.EventHandler<Microsoft.Windows.AppLifecycle.AppActivationArguments> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Activated slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=26 reverse=134
+        remove remove_Activated slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_or_register_for_key static
-        method FindOrRegisterForKey slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=51 reverse=65 static
+        method FindOrRegisterForKey slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=51 static
             in string name=key
             out class type=Microsoft.Windows.AppLifecycle.AppInstance return
     method get_activated_event_args
-        method GetActivatedEventArgs slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4 reverse=62
+        method GetActivatedEventArgs slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=4
             out class type=Microsoft.Windows.AppLifecycle.AppActivationArguments return
     method get_current static
-        method GetCurrent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=4 reverse=22 static
+        method GetCurrent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=4 static
             out class type=Microsoft.Windows.AppLifecycle.AppInstance return
     method get_instances static
-        method GetInstances slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=4 reverse=43 static
+        method GetInstances slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppLifecycle.AppInstance> return
     method redirect_activation_to_async
-        method RedirectActivationToAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=51 reverse=44
+        method RedirectActivationToAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=51
             in class type=Microsoft.Windows.AppLifecycle.AppActivationArguments name=args
             out interface type=Windows.Foundation.IAsyncAction return
     method restart static
-        method Restart slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics2 shape=51 reverse=24 static
+        method Restart slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppLifecycle.IAppInstanceStatics2 shape=51 static
             in string name=arguments
             out enum32 type=Windows.ApplicationModel.Core.AppRestartFailureReason return
     method unregister_key
-        method UnregisterKey slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=0 reverse=16
+        method UnregisterKey slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.AppLifecycle.IAppInstance shape=0
 
 delegate Windows.Foundation.EventHandler<Microsoft.Windows.AppLifecycle.AppActivationArguments> concrete
     py winrt.windows.foundation.EventHandler[AppActivationArguments]

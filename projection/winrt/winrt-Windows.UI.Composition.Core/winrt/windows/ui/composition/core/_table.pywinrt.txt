@@ -13,20 +13,20 @@ class Windows.UI.Composition.Core.CompositorController activatable python_type c
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property compositor
-        get get_Compositor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=4 reverse=22
+        get get_Compositor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=4
             out class type=Windows.UI.Composition.Compositor return
     event commit_needed
-        add add_CommitNeeded slot=9 inputs=1 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=51 reverse=100
+        add add_CommitNeeded slot=9 inputs=1 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Composition.Core.CompositorController,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CommitNeeded slot=10 inputs=1 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=26 reverse=134
+        remove remove_CommitNeeded slot=10 inputs=1 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method commit
-        method Commit slot=7 inputs=0 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=0 reverse=37
+        method Commit slot=7 inputs=0 outputs=0 declaring=Windows.UI.Composition.Core.ICompositorController shape=0
     method ensure_previous_commit_completed_async
-        method EnsurePreviousCommitCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=4 reverse=62
+        method EnsurePreviousCommitCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.UI.Composition.Core.ICompositorController shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 interface Windows.UI.Composition.Core.ICompositorController

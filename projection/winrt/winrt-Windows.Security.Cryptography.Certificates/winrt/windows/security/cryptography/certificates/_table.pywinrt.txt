@@ -78,80 +78,80 @@ class Windows.Security.Cryptography.Certificates.Certificate python_type
     requires Windows.Security.Cryptography.Certificates.ICertificate3
     factory Windows.Security.Cryptography.Certificates.ICertificateFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateFactory shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=certBlob
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
     property friendly_name
-        get get_FriendlyName slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=228
+        get get_FriendlyName slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out string return
-        put put_FriendlyName slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=223
+        put put_FriendlyName slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             in string name=value
     property enhanced_key_usages
-        get get_EnhancedKeyUsages slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=218
+        get get_EnhancedKeyUsages slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property has_private_key
-        get get_HasPrivateKey slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=186
+        get get_HasPrivateKey slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out boolean return
     property is_strongly_protected
-        get get_IsStronglyProtected slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=194
+        get get_IsStronglyProtected slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out boolean return
     property issuer
-        get get_Issuer slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=173
+        get get_Issuer slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out string return
     property serial_number
-        get get_SerialNumber slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=51 reverse=65
+        get get_SerialNumber slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=51
             receive_array uint8 return
     property subject
-        get get_Subject slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=162
+        get get_Subject slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out string return
     property valid_from
-        get get_ValidFrom slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=202
+        get get_ValidFrom slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out datetime return
     property valid_to
-        get get_ValidTo slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=210
+        get get_ValidTo slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out datetime return
     property is_security_device_bound
-        get get_IsSecurityDeviceBound slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4 reverse=22
+        get get_IsSecurityDeviceBound slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4
             out boolean return
     property key_algorithm_name
-        get get_KeyAlgorithmName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4 reverse=62
+        get get_KeyAlgorithmName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4
             out string return
     property key_usages
-        get get_KeyUsages slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4 reverse=43
+        get get_KeyUsages slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4
             out class type=Windows.Security.Cryptography.Certificates.CertificateKeyUsages return
     property signature_algorithm_name
-        get get_SignatureAlgorithmName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4 reverse=99
+        get get_SignatureAlgorithmName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4
             out string return
     property signature_hash_algorithm_name
-        get get_SignatureHashAlgorithmName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4 reverse=121
+        get get_SignatureHashAlgorithmName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4
             out string return
     property subject_alternative_name
-        get get_SubjectAlternativeName slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4 reverse=141
+        get get_SubjectAlternativeName slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate2 shape=4
             out class type=Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo return
     property is_per_user
-        get get_IsPerUser slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate3 shape=4 reverse=22
+        get get_IsPerUser slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate3 shape=4
             out boolean return
     property key_storage_provider_name
-        get get_KeyStorageProviderName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate3 shape=4 reverse=62
+        get get_KeyStorageProviderName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate3 shape=4
             out string return
     property store_name
-        get get_StoreName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate3 shape=4 reverse=43
+        get get_StoreName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate3 shape=4
             out string return
     method build_chain_async
-        method BuildChainAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=51 reverse=24
+        method BuildChainAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> name=certificates
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Cryptography.Certificates.CertificateChain> return
-        method BuildChainAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=117 reverse=45
+        method BuildChainAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> name=certificates
             in class type=Windows.Security.Cryptography.Certificates.ChainBuildingParameters name=parameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Cryptography.Certificates.CertificateChain> return
     method get_certificate_blob
-        method GetCertificateBlob slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4 reverse=141
+        method GetCertificateBlob slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     method get_hash_value
-        method GetHashValue slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=51 reverse=100
+        method GetHashValue slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=51
             receive_array uint8 return
-        method GetHashValue slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=117 reverse=125
+        method GetHashValue slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificate shape=117
             in string name=hashAlgorithmName
             receive_array uint8 return
 
@@ -161,13 +161,13 @@ class Windows.Security.Cryptography.Certificates.CertificateChain python_type
     default Windows.Security.Cryptography.Certificates.ICertificateChain
     requires Windows.Security.Cryptography.Certificates.ICertificateChain
     method get_certificates
-        method GetCertificates slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateChain shape=51 reverse=65
+        method GetCertificates slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateChain shape=51
             in boolean name=includeRoot
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     method validate
-        method Validate slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateChain shape=4 reverse=22
+        method Validate slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateChain shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
-        method Validate slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateChain shape=51 reverse=44
+        method Validate slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateChain shape=51
             in class type=Windows.Security.Cryptography.Certificates.ChainValidationParameters name=parameter
             out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
 
@@ -185,14 +185,14 @@ class Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager st
     factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2
     factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3
     property user_certificate_enrollment_manager static
-        get get_UserCertificateEnrollmentManager slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=4 reverse=22 static
+        get get_UserCertificateEnrollmentManager slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=4 static
             out class type=Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager return
     method create_request_async static
-        method CreateRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics shape=51 reverse=24 static
+        method CreateRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics shape=51 static
             in class type=Windows.Security.Cryptography.Certificates.CertificateRequestProperties name=request
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method import_pfx_data_async static
-        method ImportPfxDataAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3 shape=195 reverse=26 static
+        method ImportPfxDataAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3 shape=195 static
             in string name=pfxData
             in string name=password
             in class type=Windows.Security.Cryptography.Certificates.PfxImportParameters name=pfxImportParameters
@@ -205,7 +205,7 @@ class Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager st
             in enum_u32 type=Windows.Security.Cryptography.Certificates.InstallOptions name=installOption
             in string name=friendlyName
             out interface type=Windows.Foundation.IAsyncAction return
-        method ImportPfxDataAsync slot=7 inputs=7 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=286 reverse=47 static
+        method ImportPfxDataAsync slot=7 inputs=7 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=286 static
             in string name=pfxData
             in string name=password
             in enum32 type=Windows.Security.Cryptography.Certificates.ExportOption name=exportable
@@ -215,7 +215,7 @@ class Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager st
             in string name=keyStorageProvider
             out interface type=Windows.Foundation.IAsyncAction return
     method install_certificate_async static
-        method InstallCertificateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics shape=117 reverse=45 static
+        method InstallCertificateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics shape=117 static
             in string name=certificate
             in enum_u32 type=Windows.Security.Cryptography.Certificates.InstallOptions name=installOption
             out interface type=Windows.Foundation.IAsyncAction return
@@ -229,22 +229,22 @@ class Windows.Security.Cryptography.Certificates.CertificateExtension activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property value
-        get get_Value slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=51 reverse=144
+        get get_Value slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=51
             receive_array uint8 return
-        put put_Value slot=12 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=51 reverse=163
+        put put_Value slot=12 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=51
             pass_array uint8 name=value
     property object_id
-        get get_ObjectId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4 reverse=22
+        get get_ObjectId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4
             out string return
-        put put_ObjectId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4 reverse=43
+        put put_ObjectId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4
             in string name=value
     property is_critical
-        get get_IsCritical slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4 reverse=62
+        get get_IsCritical slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4
             out boolean return
-        put put_IsCritical slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4 reverse=99
+        put put_IsCritical slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4
             in boolean name=value
     method encode_value
-        method EncodeValue slot=10 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4 reverse=121
+        method EncodeValue slot=10 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateExtension shape=4
             in string name=value
 
 class Windows.Security.Cryptography.Certificates.CertificateKeyUsages activatable python_type
@@ -256,44 +256,44 @@ class Windows.Security.Cryptography.Certificates.CertificateKeyUsages activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property non_repudiation
-        get get_NonRepudiation slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=218
+        get get_NonRepudiation slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_NonRepudiation slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=223
+        put put_NonRepudiation slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property key_encipherment
-        get get_KeyEncipherment slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=202
+        get get_KeyEncipherment slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_KeyEncipherment slot=17 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=210
+        put put_KeyEncipherment slot=17 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property key_certificate_sign
-        get get_KeyCertificateSign slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=121
+        get get_KeyCertificateSign slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_KeyCertificateSign slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=141
+        put put_KeyCertificateSign slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property key_agreement
-        get get_KeyAgreement slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=162
+        get get_KeyAgreement slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_KeyAgreement slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=173
+        put put_KeyAgreement slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property encipher_only
-        get get_EncipherOnly slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=22
+        get get_EncipherOnly slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_EncipherOnly slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=43
+        put put_EncipherOnly slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property digital_signature
-        get get_DigitalSignature slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=228
+        get get_DigitalSignature slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_DigitalSignature slot=21 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=232
+        put put_DigitalSignature slot=21 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property data_encipherment
-        get get_DataEncipherment slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=186
+        get get_DataEncipherment slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_DataEncipherment slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=194
+        put put_DataEncipherment slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
     property crl_sign
-        get get_CrlSign slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=62
+        get get_CrlSign slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             out boolean return
-        put put_CrlSign slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4 reverse=99
+        put put_CrlSign slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateKeyUsages shape=4
             in boolean name=value
 
 class Windows.Security.Cryptography.Certificates.CertificateQuery activatable python_type
@@ -306,42 +306,42 @@ class Windows.Security.Cryptography.Certificates.CertificateQuery activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property thumbprint
-        get get_Thumbprint slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=51 reverse=144
+        get get_Thumbprint slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=51
             receive_array uint8 return
-        put put_Thumbprint slot=12 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=51 reverse=163
+        put put_Thumbprint slot=12 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=51
             pass_array uint8 name=value
     property issuer_name
-        get get_IssuerName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=43
+        get get_IssuerName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             out string return
-        put put_IssuerName slot=8 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=62
+        put put_IssuerName slot=8 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             in string name=value
     property hardware_only
-        get get_HardwareOnly slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=173
+        get get_HardwareOnly slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             out boolean return
-        put put_HardwareOnly slot=14 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=186
+        put put_HardwareOnly slot=14 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             in boolean name=value
     property friendly_name
-        get get_FriendlyName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=99
+        get get_FriendlyName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             out string return
-        put put_FriendlyName slot=10 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=121
+        put put_FriendlyName slot=10 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             in string name=value
     property enhanced_key_usages
-        get get_EnhancedKeyUsages slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4 reverse=22
+        get get_EnhancedKeyUsages slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property store_name
-        get get_StoreName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4 reverse=121
+        get get_StoreName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4
             out string return
-        put put_StoreName slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4 reverse=141
+        put put_StoreName slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4
             in string name=value
     property include_expired_certificates
-        get get_IncludeExpiredCertificates slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4 reverse=62
+        get get_IncludeExpiredCertificates slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4
             out boolean return
-        put put_IncludeExpiredCertificates slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4 reverse=99
+        put put_IncludeExpiredCertificates slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4
             in boolean name=value
     property include_duplicates
-        get get_IncludeDuplicates slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4 reverse=22
+        get get_IncludeDuplicates slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4
             out boolean return
-        put put_IncludeDuplicates slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4 reverse=43
+        put put_IncludeDuplicates slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateQuery2 shape=4
             in boolean name=value
 
 class Windows.Security.Cryptography.Certificates.CertificateRequestProperties activatable python_type
@@ -356,98 +356,98 @@ class Windows.Security.Cryptography.Certificates.CertificateRequestProperties ac
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property subject
-        get get_Subject slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=22
+        get get_Subject slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out string return
-        put put_Subject slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=43
+        put put_Subject slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in string name=value
     property key_usages
-        get get_KeyUsages slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=218
+        get get_KeyUsages slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out enum_u32 type=Windows.Security.Cryptography.Certificates.EnrollKeyUsages return
-        put put_KeyUsages slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=223
+        put put_KeyUsages slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in enum_u32 type=Windows.Security.Cryptography.Certificates.EnrollKeyUsages name=value
     property key_storage_provider_name
-        get get_KeyStorageProviderName slot=22 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=237
+        get get_KeyStorageProviderName slot=22 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out string return
-        put put_KeyStorageProviderName slot=23 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=242
+        put put_KeyStorageProviderName slot=23 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in string name=value
     property key_size
-        get get_KeySize slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=121
+        get get_KeySize slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out uint32 return
-        put put_KeySize slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=141
+        put put_KeySize slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in uint32 name=value
     property exportable
-        get get_Exportable slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=202
+        get get_Exportable slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.ExportOption return
-        put put_Exportable slot=17 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=210
+        put put_Exportable slot=17 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in enum32 type=Windows.Security.Cryptography.Certificates.ExportOption name=value
     property key_protection_level
-        get get_KeyProtectionLevel slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=228
+        get get_KeyProtectionLevel slot=20 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.KeyProtectionLevel return
-        put put_KeyProtectionLevel slot=21 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=232
+        put put_KeyProtectionLevel slot=21 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in enum32 type=Windows.Security.Cryptography.Certificates.KeyProtectionLevel name=value
     property key_algorithm_name
-        get get_KeyAlgorithmName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=62
+        get get_KeyAlgorithmName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out string return
-        put put_KeyAlgorithmName slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=99
+        put put_KeyAlgorithmName slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in string name=value
     property hash_algorithm_name
-        get get_HashAlgorithmName slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=186
+        get get_HashAlgorithmName slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out string return
-        put put_HashAlgorithmName slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=194
+        put put_HashAlgorithmName slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in string name=value
     property friendly_name
-        get get_FriendlyName slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=162
+        get get_FriendlyName slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             out string return
-        put put_FriendlyName slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4 reverse=173
+        put put_FriendlyName slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties shape=4
             in string name=value
     property attestation_credential_certificate
-        get get_AttestationCredentialCertificate slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4 reverse=121
+        get get_AttestationCredentialCertificate slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
-        put put_AttestationCredentialCertificate slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4 reverse=141
+        put put_AttestationCredentialCertificate slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
     property signing_certificate
-        get get_SigningCertificate slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4 reverse=62
+        get get_SigningCertificate slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
-        put put_SigningCertificate slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4 reverse=99
+        put put_SigningCertificate slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
     property smartcard_reader_name
-        get get_SmartcardReaderName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4 reverse=22
+        get get_SmartcardReaderName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4
             out string return
-        put put_SmartcardReaderName slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4 reverse=43
+        put put_SmartcardReaderName slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties2 shape=4
             in string name=value
     property use_existing_key
-        get get_UseExistingKey slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=186
+        get get_UseExistingKey slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             out boolean return
-        put put_UseExistingKey slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=194
+        put put_UseExistingKey slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             in boolean name=value
     property curve_parameters
-        get get_CurveParameters slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=51 reverse=65
+        get get_CurveParameters slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=51
             receive_array uint8 return
-        put put_CurveParameters slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=51 reverse=100
+        put put_CurveParameters slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=51
             pass_array uint8 name=value
     property curve_name
-        get get_CurveName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=22
+        get get_CurveName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             out string return
-        put put_CurveName slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=43
+        put put_CurveName slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             in string name=value
     property container_name_prefix
-        get get_ContainerNamePrefix slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=121
+        get get_ContainerNamePrefix slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             out string return
-        put put_ContainerNamePrefix slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=141
+        put put_ContainerNamePrefix slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             in string name=value
     property container_name
-        get get_ContainerName slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=162
+        get get_ContainerName slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             out string return
-        put put_ContainerName slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4 reverse=173
+        put put_ContainerName slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties3 shape=4
             in string name=value
     property extensions
-        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 shape=4 reverse=62
+        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.CertificateExtension> return
     property subject_alternative_name
-        get get_SubjectAlternativeName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 shape=4 reverse=43
+        get get_SubjectAlternativeName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 shape=4
             out class type=Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo return
     property suppressed_defaults
-        get get_SuppressedDefaults slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 shape=4 reverse=22
+        get get_SuppressedDefaults slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateRequestProperties4 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Security.Cryptography.Certificates.CertificateStore python_type
@@ -457,13 +457,13 @@ class Windows.Security.Cryptography.Certificates.CertificateStore python_type
     requires Windows.Security.Cryptography.Certificates.ICertificateStore
     requires Windows.Security.Cryptography.Certificates.ICertificateStore2
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStore2 shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStore2 shape=4
             out string return
     method add
-        method Add slot=6 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateStore shape=4 reverse=22
+        method Add slot=6 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateStore shape=4
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
     method delete
-        method Delete slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateStore shape=4 reverse=43
+        method Delete slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICertificateStore shape=4
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
 
 class Windows.Security.Cryptography.Certificates.CertificateStores static python_type
@@ -471,23 +471,23 @@ class Windows.Security.Cryptography.Certificates.CertificateStores static python
     factory Windows.Security.Cryptography.Certificates.ICertificateStoresStatics
     factory Windows.Security.Cryptography.Certificates.ICertificateStoresStatics2
     property intermediate_certification_authorities static
-        get get_IntermediateCertificationAuthorities slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=4 reverse=99 static
+        get get_IntermediateCertificationAuthorities slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=4 static
             out class type=Windows.Security.Cryptography.Certificates.CertificateStore return
     property trusted_root_certification_authorities static
-        get get_TrustedRootCertificationAuthorities slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=4 reverse=62 static
+        get get_TrustedRootCertificationAuthorities slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=4 static
             out class type=Windows.Security.Cryptography.Certificates.CertificateStore return
     method find_all_async static
-        method FindAllAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=4 reverse=22 static
+        method FindAllAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate>> return
-        method FindAllAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=51 reverse=44 static
+        method FindAllAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=51 static
             in class type=Windows.Security.Cryptography.Certificates.CertificateQuery name=query
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate>> return
     method get_store_by_name static
-        method GetStoreByName slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=51 reverse=124 static
+        method GetStoreByName slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics shape=51 static
             in string name=storeName
             out class type=Windows.Security.Cryptography.Certificates.CertificateStore return
     method get_user_store_by_name static
-        method GetUserStoreByName slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics2 shape=51 reverse=24 static
+        method GetUserStoreByName slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateStoresStatics2 shape=51 static
             in string name=storeName
             out class type=Windows.Security.Cryptography.Certificates.UserCertificateStore return
 
@@ -500,35 +500,35 @@ class Windows.Security.Cryptography.Certificates.ChainBuildingParameters activat
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property validation_timestamp
-        get get_ValidationTimestamp slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=43
+        get get_ValidationTimestamp slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out datetime return
-        put put_ValidationTimestamp slot=8 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=26 reverse=82
+        put put_ValidationTimestamp slot=8 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=26
             in datetime name=value
     property revocation_check_enabled
-        get get_RevocationCheckEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=99
+        get get_RevocationCheckEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out boolean return
-        put put_RevocationCheckEnabled slot=10 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=121
+        put put_RevocationCheckEnabled slot=10 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             in boolean name=value
     property network_retrieval_enabled
-        get get_NetworkRetrievalEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=141
+        get get_NetworkRetrievalEnabled slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out boolean return
-        put put_NetworkRetrievalEnabled slot=12 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=162
+        put put_NetworkRetrievalEnabled slot=12 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             in boolean name=value
     property current_time_validation_enabled
-        get get_CurrentTimeValidationEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=194
+        get get_CurrentTimeValidationEnabled slot=15 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out boolean return
-        put put_CurrentTimeValidationEnabled slot=16 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=202
+        put put_CurrentTimeValidationEnabled slot=16 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             in boolean name=value
     property authority_information_access_enabled
-        get get_AuthorityInformationAccessEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=173
+        get get_AuthorityInformationAccessEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out boolean return
-        put put_AuthorityInformationAccessEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=186
+        put put_AuthorityInformationAccessEnabled slot=14 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             in boolean name=value
     property enhanced_key_usages
-        get get_EnhancedKeyUsages slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=22
+        get get_EnhancedKeyUsages slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property exclusive_trust_roots
-        get get_ExclusiveTrustRoots slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4 reverse=210
+        get get_ExclusiveTrustRoots slot=17 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainBuildingParameters shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.Certificate> return
 
 class Windows.Security.Cryptography.Certificates.ChainValidationParameters activatable python_type
@@ -540,14 +540,14 @@ class Windows.Security.Cryptography.Certificates.ChainValidationParameters activ
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property server_dns_name
-        get get_ServerDnsName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4 reverse=62
+        get get_ServerDnsName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4
             out class type=Windows.Networking.HostName return
-        put put_ServerDnsName slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4 reverse=99
+        put put_ServerDnsName slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4
             in class type=Windows.Networking.HostName name=value
     property certificate_chain_policy
-        get get_CertificateChainPolicy slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4 reverse=22
+        get get_CertificateChainPolicy slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.CertificateChainPolicy return
-        put put_CertificateChainPolicy slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4 reverse=43
+        put put_CertificateChainPolicy slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IChainValidationParameters shape=4
             in enum32 type=Windows.Security.Cryptography.Certificates.CertificateChainPolicy name=value
 
 enum Windows.Security.Cryptography.Certificates.ChainValidationResult python_type
@@ -576,26 +576,26 @@ class Windows.Security.Cryptography.Certificates.CmsAttachedSignature python_typ
     factory Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory
     factory Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=inputBlob
             out class type=Windows.Security.Cryptography.Certificates.CmsAttachedSignature return
     property certificates
-        get get_Certificates slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=4 reverse=22
+        get get_Certificates slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     property content
-        get get_Content slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=51 reverse=44
+        get get_Content slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=51
             receive_array uint8 return
     property signers
-        get get_Signers slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=4 reverse=62
+        get get_Signers slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.CmsSignerInfo> return
     method generate_signature_async static
-        method GenerateSignatureAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics shape=195 reverse=26 static
+        method GenerateSignatureAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics shape=195 static
             in interface type=Windows.Storage.Streams.IBuffer name=data
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.CmsSignerInfo> name=signers
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> name=certificates
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method verify_signature
-        method VerifySignature slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=4 reverse=99
+        method VerifySignature slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignature shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.SignatureValidationResult return
 
 class Windows.Security.Cryptography.Certificates.CmsDetachedSignature python_type
@@ -606,23 +606,23 @@ class Windows.Security.Cryptography.Certificates.CmsDetachedSignature python_typ
     factory Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureFactory
     factory Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureFactory shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=inputBlob
             out class type=Windows.Security.Cryptography.Certificates.CmsDetachedSignature return
     property certificates
-        get get_Certificates slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignature shape=4 reverse=22
+        get get_Certificates slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignature shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     property signers
-        get get_Signers slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignature shape=4 reverse=43
+        get get_Signers slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignature shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.CmsSignerInfo> return
     method generate_signature_async static
-        method GenerateSignatureAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureStatics shape=195 reverse=26 static
+        method GenerateSignatureAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignatureStatics shape=195 static
             in interface type=Windows.Storage.Streams.IInputStream name=data
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.CmsSignerInfo> name=signers
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> name=certificates
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method verify_signature_async
-        method VerifySignatureAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignature shape=51 reverse=65
+        method VerifySignatureAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsDetachedSignature shape=51
             in interface type=Windows.Storage.Streams.IInputStream name=data
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Cryptography.Certificates.SignatureValidationResult> return
 
@@ -635,17 +635,17 @@ class Windows.Security.Cryptography.Certificates.CmsSignerInfo activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property hash_algorithm_name
-        get get_HashAlgorithmName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4 reverse=62
+        get get_HashAlgorithmName slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4
             out string return
-        put put_HashAlgorithmName slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4 reverse=99
+        put put_HashAlgorithmName slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4
             in string name=value
     property certificate
-        get get_Certificate slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4 reverse=22
+        get get_Certificate slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
-        put put_Certificate slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4 reverse=43
+        put put_Certificate slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
     property timestamp_info
-        get get_TimestampInfo slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4 reverse=121
+        get get_TimestampInfo slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsSignerInfo shape=4
             out class type=Windows.Security.Cryptography.Certificates.CmsTimestampInfo return
 
 class Windows.Security.Cryptography.Certificates.CmsTimestampInfo python_type
@@ -654,13 +654,13 @@ class Windows.Security.Cryptography.Certificates.CmsTimestampInfo python_type
     default Windows.Security.Cryptography.Certificates.ICmsTimestampInfo
     requires Windows.Security.Cryptography.Certificates.ICmsTimestampInfo
     property certificates
-        get get_Certificates slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4 reverse=43
+        get get_Certificates slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     property signing_certificate
-        get get_SigningCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4 reverse=22
+        get get_SigningCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
     property timestamp
-        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4 reverse=62
+        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsTimestampInfo shape=4
             out datetime return
 
 enum Windows.Security.Cryptography.Certificates.EnrollKeyUsages python_type flags_enum
@@ -1380,34 +1380,34 @@ class Windows.Security.Cryptography.Certificates.KeyAlgorithmNames static python
     factory Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics
     factory Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2
     property dsa static
-        get get_Dsa slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=43 static
+        get get_Dsa slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdh256 static
-        get get_Ecdh256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=62 static
+        get get_Ecdh256 slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdh384 static
-        get get_Ecdh384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=99 static
+        get get_Ecdh384 slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdh521 static
-        get get_Ecdh521 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=121 static
+        get get_Ecdh521 slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdsa256 static
-        get get_Ecdsa256 slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=141 static
+        get get_Ecdsa256 slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdsa384 static
-        get get_Ecdsa384 slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=162 static
+        get get_Ecdsa384 slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdsa521 static
-        get get_Ecdsa521 slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=173 static
+        get get_Ecdsa521 slot=13 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property rsa static
-        get get_Rsa slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=22 static
+        get get_Rsa slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 static
             out string return
     property ecdh static
-        get get_Ecdh slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2 shape=4 reverse=43 static
+        get get_Ecdh slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2 shape=4 static
             out string return
     property ecdsa static
-        get get_Ecdsa slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2 shape=4 reverse=22 static
+        get get_Ecdsa slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2 shape=4 static
             out string return
 
 class Windows.Security.Cryptography.Certificates.KeyAttestationHelper static python_type
@@ -1415,15 +1415,15 @@ class Windows.Security.Cryptography.Certificates.KeyAttestationHelper static pyt
     factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics
     factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2
     method decrypt_tpm_attestation_credential_async static
-        method DecryptTpmAttestationCredentialAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics shape=51 reverse=24 static
+        method DecryptTpmAttestationCredentialAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics shape=51 static
             in string name=credential
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-        method DecryptTpmAttestationCredentialAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2 shape=117 reverse=25 static
+        method DecryptTpmAttestationCredentialAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2 shape=117 static
             in string name=credential
             in string name=containerName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method get_tpm_attestation_credential_id static
-        method GetTpmAttestationCredentialId slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics shape=51 reverse=44 static
+        method GetTpmAttestationCredentialId slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics shape=51 static
             in string name=credential
             out string return
 
@@ -1447,16 +1447,16 @@ class Windows.Security.Cryptography.Certificates.KeyStorageProviderNames static 
     factory Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics
     factory Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics2
     property platform_key_storage_provider static
-        get get_PlatformKeyStorageProvider slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics shape=4 reverse=62 static
+        get get_PlatformKeyStorageProvider slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics shape=4 static
             out string return
     property smartcard_key_storage_provider static
-        get get_SmartcardKeyStorageProvider slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics shape=4 reverse=43 static
+        get get_SmartcardKeyStorageProvider slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics shape=4 static
             out string return
     property software_key_storage_provider static
-        get get_SoftwareKeyStorageProvider slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics shape=4 reverse=22 static
+        get get_SoftwareKeyStorageProvider slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics shape=4 static
             out string return
     property passport_key_storage_provider static
-        get get_PassportKeyStorageProvider slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics2 shape=4 reverse=22 static
+        get get_PassportKeyStorageProvider slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyStorageProviderNamesStatics2 shape=4 static
             out string return
 
 class Windows.Security.Cryptography.Certificates.PfxImportParameters activatable python_type
@@ -1468,39 +1468,39 @@ class Windows.Security.Cryptography.Certificates.PfxImportParameters activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property reader_name
-        get get_ReaderName slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=218
+        get get_ReaderName slot=18 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out string return
-        put put_ReaderName slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=223
+        put put_ReaderName slot=19 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in string name=value
     property key_storage_provider_name
-        get get_KeyStorageProviderName slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=186
+        get get_KeyStorageProviderName slot=14 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out string return
-        put put_KeyStorageProviderName slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=194
+        put put_KeyStorageProviderName slot=15 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in string name=value
     property key_protection_level
-        get get_KeyProtectionLevel slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=62
+        get get_KeyProtectionLevel slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.KeyProtectionLevel return
-        put put_KeyProtectionLevel slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=99
+        put put_KeyProtectionLevel slot=9 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in enum32 type=Windows.Security.Cryptography.Certificates.KeyProtectionLevel name=value
     property install_options
-        get get_InstallOptions slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=121
+        get get_InstallOptions slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out enum_u32 type=Windows.Security.Cryptography.Certificates.InstallOptions return
-        put put_InstallOptions slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=141
+        put put_InstallOptions slot=11 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in enum_u32 type=Windows.Security.Cryptography.Certificates.InstallOptions name=value
     property friendly_name
-        get get_FriendlyName slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=162
+        get get_FriendlyName slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out string return
-        put put_FriendlyName slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=173
+        put put_FriendlyName slot=13 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in string name=value
     property exportable
-        get get_Exportable slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=22
+        get get_Exportable slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out enum32 type=Windows.Security.Cryptography.Certificates.ExportOption return
-        put put_Exportable slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=43
+        put put_Exportable slot=7 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in enum32 type=Windows.Security.Cryptography.Certificates.ExportOption name=value
     property container_name_prefix
-        get get_ContainerNamePrefix slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=202
+        get get_ContainerNamePrefix slot=16 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             out string return
-        put put_ContainerNamePrefix slot=17 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4 reverse=210
+        put put_ContainerNamePrefix slot=17 inputs=1 outputs=0 declaring=Windows.Security.Cryptography.Certificates.IPfxImportParameters shape=4
             in string name=value
 
 enum Windows.Security.Cryptography.Certificates.SignatureValidationResult python_type
@@ -1516,13 +1516,13 @@ class Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames s
     py StandardCertificateStoreNames
     factory Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics
     property intermediate_certification_authorities static
-        get get_IntermediateCertificationAuthorities slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics shape=4 reverse=62 static
+        get get_IntermediateCertificationAuthorities slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics shape=4 static
             out string return
     property personal static
-        get get_Personal slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics shape=4 reverse=22 static
+        get get_Personal slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics shape=4 static
             out string return
     property trusted_root_certification_authorities static
-        get get_TrustedRootCertificationAuthorities slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics shape=4 reverse=43 static
+        get get_TrustedRootCertificationAuthorities slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IStandardCertificateStoreNamesStatics shape=4 static
             out string return
 
 class Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo activatable python_type
@@ -1535,43 +1535,43 @@ class Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo acti
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property distinguished_name
-        get get_DistinguishedName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4 reverse=121
+        get get_DistinguishedName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property dns_name
-        get get_DnsName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4 reverse=99
+        get get_DnsName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property email_name
-        get get_EmailName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4 reverse=22
+        get get_EmailName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property ip_address
-        get get_IPAddress slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4 reverse=43
+        get get_IPAddress slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property principal_name
-        get get_PrincipalName slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4 reverse=141
+        get get_PrincipalName slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property url
-        get get_Url slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4 reverse=62
+        get get_Url slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property distinguished_names
-        get get_DistinguishedNames slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=121
+        get get_DistinguishedNames slot=10 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property dns_names
-        get get_DnsNames slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=99
+        get get_DnsNames slot=9 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property email_names
-        get get_EmailNames slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=22
+        get get_EmailNames slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property extension
-        get get_Extension slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=162
+        get get_Extension slot=12 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out class type=Windows.Security.Cryptography.Certificates.CertificateExtension return
     property ip_addresses
-        get get_IPAddresses slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=43
+        get get_IPAddresses slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property principal_names
-        get get_PrincipalNames slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=141
+        get get_PrincipalNames slot=11 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property urls
-        get get_Urls slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4 reverse=62
+        get get_Urls slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ISubjectAlternativeNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager python_type
@@ -1581,11 +1581,11 @@ class Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManage
     requires Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager
     requires Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager2
     method create_request_async
-        method CreateRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager shape=51 reverse=24
+        method CreateRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager shape=51
             in class type=Windows.Security.Cryptography.Certificates.CertificateRequestProperties name=request
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method import_pfx_data_async
-        method ImportPfxDataAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager2 shape=195 reverse=26
+        method ImportPfxDataAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager2 shape=195
             in string name=pfxData
             in string name=password
             in class type=Windows.Security.Cryptography.Certificates.PfxImportParameters name=pfxImportParameters
@@ -1608,7 +1608,7 @@ class Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManage
             in string name=keyStorageProvider
             out interface type=Windows.Foundation.IAsyncAction return
     method install_certificate_async
-        method InstallCertificateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager shape=117 reverse=45
+        method InstallCertificateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateEnrollmentManager shape=117
             in string name=certificate
             in enum_u32 type=Windows.Security.Cryptography.Certificates.InstallOptions name=installOption
             out interface type=Windows.Foundation.IAsyncAction return
@@ -1619,14 +1619,14 @@ class Windows.Security.Cryptography.Certificates.UserCertificateStore python_typ
     default Windows.Security.Cryptography.Certificates.IUserCertificateStore
     requires Windows.Security.Cryptography.Certificates.IUserCertificateStore
     property name
-        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateStore shape=4 reverse=62
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateStore shape=4
             out string return
     method request_add_async
-        method RequestAddAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateStore shape=51 reverse=24
+        method RequestAddAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateStore shape=51
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_delete_async
-        method RequestDeleteAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateStore shape=51 reverse=44
+        method RequestDeleteAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IUserCertificateStore shape=51
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 

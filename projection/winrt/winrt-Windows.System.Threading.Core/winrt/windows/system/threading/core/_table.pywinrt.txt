@@ -22,20 +22,20 @@ class Windows.System.Threading.Core.PreallocatedWorkItem python_type
     requires Windows.System.Threading.Core.IPreallocatedWorkItem
     factory Windows.System.Threading.Core.IPreallocatedWorkItemFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=51
             in delegate type=Windows.System.Threading.WorkItemHandler name=handler
             out class type=Windows.System.Threading.Core.PreallocatedWorkItem return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=117
             in delegate type=Windows.System.Threading.WorkItemHandler name=handler
             in enum32 type=Windows.System.Threading.WorkItemPriority name=priority
             out class type=Windows.System.Threading.Core.PreallocatedWorkItem return
-        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=195 reverse=68
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItemFactory shape=195
             in delegate type=Windows.System.Threading.WorkItemHandler name=handler
             in enum32 type=Windows.System.Threading.WorkItemPriority name=priority
             in enum_u32 type=Windows.System.Threading.WorkItemOptions name=options
             out class type=Windows.System.Threading.Core.PreallocatedWorkItem return
     method run_async
-        method RunAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItem shape=4 reverse=22
+        method RunAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Threading.Core.IPreallocatedWorkItem shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 delegate Windows.System.Threading.Core.SignalHandler python_type
@@ -54,7 +54,7 @@ class Windows.System.Threading.Core.SignalNotifier python_type
     requires Windows.System.Threading.Core.ISignalNotifier
     factory Windows.System.Threading.Core.ISignalNotifierStatics
     method attach_to_event static
-        method AttachToEvent slot=6 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=117 reverse=25 static
+        method AttachToEvent slot=6 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=117 static
             in string name=name
             in delegate type=Windows.System.Threading.Core.SignalHandler name=handler
             out class type=Windows.System.Threading.Core.SignalNotifier return
@@ -64,7 +64,7 @@ class Windows.System.Threading.Core.SignalNotifier python_type
             in timespan name=timeout
             out class type=Windows.System.Threading.Core.SignalNotifier return
     method attach_to_semaphore static
-        method AttachToSemaphore slot=8 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=117 reverse=66 static
+        method AttachToSemaphore slot=8 inputs=2 outputs=1 declaring=Windows.System.Threading.Core.ISignalNotifierStatics shape=117 static
             in string name=name
             in delegate type=Windows.System.Threading.Core.SignalHandler name=handler
             out class type=Windows.System.Threading.Core.SignalNotifier return
@@ -74,9 +74,9 @@ class Windows.System.Threading.Core.SignalNotifier python_type
             in timespan name=timeout
             out class type=Windows.System.Threading.Core.SignalNotifier return
     method enable
-        method Enable slot=6 inputs=0 outputs=0 declaring=Windows.System.Threading.Core.ISignalNotifier shape=0 reverse=16
+        method Enable slot=6 inputs=0 outputs=0 declaring=Windows.System.Threading.Core.ISignalNotifier shape=0
     method terminate
-        method Terminate slot=7 inputs=0 outputs=0 declaring=Windows.System.Threading.Core.ISignalNotifier shape=0 reverse=37
+        method Terminate slot=7 inputs=0 outputs=0 declaring=Windows.System.Threading.Core.ISignalNotifier shape=0
 
 interface Windows.Foundation.IAsyncAction external
     py winrt.windows.foundation._IAsyncAction

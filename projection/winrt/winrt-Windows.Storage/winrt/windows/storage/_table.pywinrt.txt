@@ -10,37 +10,37 @@ class Windows.Storage.AppDataPaths python_type
     requires Windows.Storage.IAppDataPaths
     factory Windows.Storage.IAppDataPathsStatics
     property cookies
-        get get_Cookies slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=22
+        get get_Cookies slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property desktop
-        get get_Desktop slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=43
+        get get_Desktop slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property documents
-        get get_Documents slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=62
+        get get_Documents slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property favorites
-        get get_Favorites slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=99
+        get get_Favorites slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property history
-        get get_History slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=121
+        get get_History slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property internet_cache
-        get get_InternetCache slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=141
+        get get_InternetCache slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property local_app_data
-        get get_LocalAppData slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=162
+        get get_LocalAppData slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property program_data
-        get get_ProgramData slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=173
+        get get_ProgramData slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     property roaming_app_data
-        get get_RoamingAppData slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4 reverse=186
+        get get_RoamingAppData slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPaths shape=4
             out string return
     method get_default static
-        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPathsStatics shape=4 reverse=43 static
+        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IAppDataPathsStatics shape=4 static
             out class type=Windows.Storage.AppDataPaths return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IAppDataPathsStatics shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IAppDataPathsStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.AppDataPaths return
 
@@ -55,68 +55,68 @@ class Windows.Storage.ApplicationData python_type closeable
     factory Windows.Storage.IApplicationDataStatics
     factory Windows.Storage.IApplicationDataStatics2
     property local_folder
-        get get_LocalFolder slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=162
+        get get_LocalFolder slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property local_settings
-        get get_LocalSettings slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=121
+        get get_LocalSettings slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.ApplicationDataContainer return
     property roaming_folder
-        get get_RoamingFolder slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=173
+        get get_RoamingFolder slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property roaming_settings
-        get get_RoamingSettings slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=141
+        get get_RoamingSettings slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.ApplicationDataContainer return
     property roaming_storage_quota
-        get get_RoamingStorageQuota slot=18 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=218
+        get get_RoamingStorageQuota slot=18 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out uint64 return
     property temporary_folder
-        get get_TemporaryFolder slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=186
+        get get_TemporaryFolder slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property version
-        get get_Version slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=22
+        get get_Version slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out uint32 return
     property local_cache_folder
-        get get_LocalCacheFolder slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData2 shape=4 reverse=22
+        get get_LocalCacheFolder slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData2 shape=4
             out class type=Windows.Storage.StorageFolder return
     property shared_local_folder
-        get get_SharedLocalFolder slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData3 shape=4 reverse=62
+        get get_SharedLocalFolder slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData3 shape=4
             out class type=Windows.Storage.StorageFolder return
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataStatics shape=4 static
             out class type=Windows.Storage.ApplicationData return
     event data_changed
-        add add_DataChanged slot=15 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData shape=51 reverse=196
+        add add_DataChanged slot=15 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.ApplicationData,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DataChanged slot=16 inputs=1 outputs=0 declaring=Windows.Storage.IApplicationData shape=26 reverse=397
+        remove remove_DataChanged slot=16 inputs=1 outputs=0 declaring=Windows.Storage.IApplicationData shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_async
-        method ClearAsync slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4 reverse=62
+        method ClearAsync slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationData shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ClearAsync slot=9 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData shape=51 reverse=100
+        method ClearAsync slot=9 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData shape=51
             in enum32 type=Windows.Storage.ApplicationDataLocality name=locality
             out interface type=Windows.Foundation.IAsyncAction return
     method clear_publisher_cache_folder_async
-        method ClearPublisherCacheFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData3 shape=51 reverse=44
+        method ClearPublisherCacheFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData3 shape=51
             in string name=folderName
             out interface type=Windows.Foundation.IAsyncAction return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_for_user_async static
-        method GetForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationDataStatics2 shape=51 reverse=24 static
+        method GetForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationDataStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.ApplicationData> return
     method get_publisher_cache_folder
-        method GetPublisherCacheFolder slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData3 shape=51 reverse=24
+        method GetPublisherCacheFolder slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IApplicationData3 shape=51
             in string name=folderName
             out class type=Windows.Storage.StorageFolder return
     method set_version_async
-        method SetVersionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IApplicationData shape=117 reverse=45
+        method SetVersionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IApplicationData shape=117
             in uint32 name=desiredVersion
             in delegate type=Windows.Storage.ApplicationDataSetVersionHandler name=handler
             out interface type=Windows.Foundation.IAsyncAction return
     method signal_data_changed
-        method SignalDataChanged slot=17 inputs=0 outputs=0 declaring=Windows.Storage.IApplicationData shape=0 reverse=209
+        method SignalDataChanged slot=17 inputs=0 outputs=0 declaring=Windows.Storage.IApplicationData shape=0
 
 class Windows.Storage.ApplicationDataCompositeValue activatable python_type iterable mapping mutable_mapping
     py ApplicationDataCompositeValue
@@ -172,26 +172,26 @@ class Windows.Storage.ApplicationDataContainer python_type closeable
     requires Windows.Storage.IApplicationDataContainer
     requires Windows.Foundation.IClosable
     property containers
-        get get_Containers slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4 reverse=99
+        get get_Containers slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.ApplicationDataContainer> return
     property locality
-        get get_Locality slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4 reverse=43
+        get get_Locality slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4
             out enum32 type=Windows.Storage.ApplicationDataLocality return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4
             out string return
     property values
-        get get_Values slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4 reverse=62
+        get get_Values slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_container
-        method CreateContainer slot=10 inputs=2 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=117 reverse=125
+        method CreateContainer slot=10 inputs=2 outputs=1 declaring=Windows.Storage.IApplicationDataContainer shape=117
             in string name=name
             in enum32 type=Windows.Storage.ApplicationDataCreateDisposition name=disposition
             out class type=Windows.Storage.ApplicationDataContainer return
     method delete_container
-        method DeleteContainer slot=11 inputs=1 outputs=0 declaring=Windows.Storage.IApplicationDataContainer shape=4 reverse=141
+        method DeleteContainer slot=11 inputs=1 outputs=0 declaring=Windows.Storage.IApplicationDataContainer shape=4
             in string name=name
 
 class Windows.Storage.ApplicationDataContainerSettings python_type iterable mapping mutable_mapping
@@ -531,11 +531,11 @@ class Windows.Storage.CachedFileManager static python_type
     py CachedFileManager
     factory Windows.Storage.ICachedFileManagerStatics
     method complete_updates_async static
-        method CompleteUpdatesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.ICachedFileManagerStatics shape=51 reverse=44 static
+        method CompleteUpdatesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.ICachedFileManagerStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Provider.FileUpdateStatus> return
     method defer_updates static
-        method DeferUpdates slot=6 inputs=1 outputs=0 declaring=Windows.Storage.ICachedFileManagerStatics shape=4 reverse=22 static
+        method DeferUpdates slot=6 inputs=1 outputs=0 declaring=Windows.Storage.ICachedFileManagerStatics shape=4 static
             in interface type=Windows.Storage.IStorageFile name=file
 
 enum Windows.Storage.CreationCollisionOption python_type
@@ -551,37 +551,37 @@ class Windows.Storage.DownloadsFolder static python_type
     factory Windows.Storage.IDownloadsFolderStatics
     factory Windows.Storage.IDownloadsFolderStatics2
     method create_file_async static
-        method CreateFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=51 reverse=24 static
+        method CreateFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=51 static
             in string name=desiredName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
-        method CreateFileAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=117 reverse=66 static
+        method CreateFileAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=117 static
             in string name=desiredName
             in enum32 type=Windows.Storage.CreationCollisionOption name=option
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method create_file_for_user_async static
-        method CreateFileForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=117 reverse=25 static
+        method CreateFileForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=117 static
             in class type=Windows.System.User name=user
             in string name=desiredName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
-        method CreateFileForUserAsync slot=8 inputs=3 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=195 reverse=68 static
+        method CreateFileForUserAsync slot=8 inputs=3 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=195 static
             in class type=Windows.System.User name=user
             in string name=desiredName
             in enum32 type=Windows.Storage.CreationCollisionOption name=option
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method create_folder_async static
-        method CreateFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=51 reverse=44 static
+        method CreateFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=51 static
             in string name=desiredName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
-        method CreateFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=117 reverse=101 static
+        method CreateFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics shape=117 static
             in string name=desiredName
             in enum32 type=Windows.Storage.CreationCollisionOption name=option
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method create_folder_for_user_async static
-        method CreateFolderForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=117 reverse=45 static
+        method CreateFolderForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=117 static
             in class type=Windows.System.User name=user
             in string name=desiredName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
-        method CreateFolderForUserAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=195 reverse=102 static
+        method CreateFolderForUserAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IDownloadsFolderStatics2 shape=195 static
             in class type=Windows.System.User name=user
             in string name=desiredName
             in enum32 type=Windows.Storage.CreationCollisionOption name=option
@@ -607,47 +607,47 @@ class Windows.Storage.FileIO static python_type
     py FileIO
     factory Windows.Storage.IFileIOStatics
     method append_lines_async static
-        method AppendLinesAsync slot=16 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=204 static
+        method AppendLinesAsync slot=16 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             out interface type=Windows.Foundation.IAsyncAction return
-        method AppendLinesAsync slot=17 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 reverse=212 static
+        method AppendLinesAsync slot=17 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 static
             in interface type=Windows.Storage.IStorageFile name=file
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out interface type=Windows.Foundation.IAsyncAction return
     method append_text_async static
-        method AppendTextAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=125 static
+        method AppendTextAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in string name=contents
             out interface type=Windows.Foundation.IAsyncAction return
-        method AppendTextAsync slot=11 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 reverse=146 static
+        method AppendTextAsync slot=11 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 static
             in interface type=Windows.Storage.IStorageFile name=file
             in string name=contents
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out interface type=Windows.Foundation.IAsyncAction return
     method read_buffer_async static
-        method ReadBufferAsync slot=18 inputs=1 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=51 reverse=219 static
+        method ReadBufferAsync slot=18 inputs=1 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method read_lines_async static
-        method ReadLinesAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=51 reverse=163 static
+        method ReadLinesAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> return
-        method ReadLinesAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=175 static
+        method ReadLinesAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> return
     method read_text_async static
-        method ReadTextAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=51 reverse=24 static
+        method ReadTextAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-        method ReadTextAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=45 static
+        method ReadTextAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method write_buffer_async static
-        method WriteBufferAsync slot=19 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=225 static
+        method WriteBufferAsync slot=19 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out interface type=Windows.Foundation.IAsyncAction return
@@ -657,21 +657,21 @@ class Windows.Storage.FileIO static python_type
             pass_array uint8 name=buffer
             out interface type=Windows.Foundation.IAsyncAction return
     method write_lines_async static
-        method WriteLinesAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=188 static
+        method WriteLinesAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             out interface type=Windows.Foundation.IAsyncAction return
-        method WriteLinesAsync slot=15 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 reverse=198 static
+        method WriteLinesAsync slot=15 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 static
             in interface type=Windows.Storage.IStorageFile name=file
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out interface type=Windows.Foundation.IAsyncAction return
     method write_text_async static
-        method WriteTextAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 reverse=66 static
+        method WriteTextAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in string name=contents
             out interface type=Windows.Foundation.IAsyncAction return
-        method WriteTextAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 reverse=102 static
+        method WriteTextAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IFileIOStatics shape=195 static
             in interface type=Windows.Storage.IStorageFile name=file
             in string name=contents
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
@@ -2650,59 +2650,59 @@ class Windows.Storage.KnownFolders static python_type
     factory Windows.Storage.IKnownFoldersStatics3
     factory Windows.Storage.IKnownFoldersStatics4
     property camera_roll static
-        get get_CameraRoll slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersCameraRollStatics shape=4 reverse=22 static
+        get get_CameraRoll slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersCameraRollStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property playlists static
-        get get_Playlists slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersPlaylistsStatics shape=4 reverse=22 static
+        get get_Playlists slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersPlaylistsStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property saved_pictures static
-        get get_SavedPictures slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersSavedPicturesStatics shape=4 reverse=22 static
+        get get_SavedPictures slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersSavedPicturesStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property documents_library static
-        get get_DocumentsLibrary slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=99 static
+        get get_DocumentsLibrary slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property home_group static
-        get get_HomeGroup slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=121 static
+        get get_HomeGroup slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property media_server_devices static
-        get get_MediaServerDevices slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=162 static
+        get get_MediaServerDevices slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property music_library static
-        get get_MusicLibrary slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=22 static
+        get get_MusicLibrary slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property pictures_library static
-        get get_PicturesLibrary slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=43 static
+        get get_PicturesLibrary slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property removable_devices static
-        get get_RemovableDevices slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=141 static
+        get get_RemovableDevices slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property videos_library static
-        get get_VideosLibrary slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 reverse=62 static
+        get get_VideosLibrary slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property app_captures static
-        get get_AppCaptures slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics2 shape=4 reverse=43 static
+        get get_AppCaptures slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics2 shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property objects_3d static
-        get get_Objects3D slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics2 shape=4 reverse=22 static
+        get get_Objects3D slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics2 shape=4 static
             out class type=Windows.Storage.StorageFolder return
     property recorded_calls static
-        get get_RecordedCalls slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics2 shape=4 reverse=62 static
+        get get_RecordedCalls slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics2 shape=4 static
             out class type=Windows.Storage.StorageFolder return
     method get_folder_async static
-        method GetFolderAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics4 shape=51 reverse=65 static
+        method GetFolderAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics4 shape=51 static
             in enum32 type=Windows.Storage.KnownFolderId name=folderId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method get_folder_for_user_async static
-        method GetFolderForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics3 shape=117 reverse=25 static
+        method GetFolderForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics3 shape=117 static
             in class type=Windows.System.User name=user
             in enum32 type=Windows.Storage.KnownFolderId name=folderId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method request_access_async static
-        method RequestAccessAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics4 shape=51 reverse=24 static
+        method RequestAccessAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics4 shape=51 static
             in enum32 type=Windows.Storage.KnownFolderId name=folderId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.KnownFoldersAccessStatus> return
     method request_access_for_user_async static
-        method RequestAccessForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics4 shape=117 reverse=45 static
+        method RequestAccessForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IKnownFoldersStatics4 shape=117 static
             in class type=Windows.System.User name=user
             in enum32 type=Windows.Storage.KnownFolderId name=folderId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.KnownFoldersAccessStatus> return
@@ -2748,47 +2748,47 @@ class Windows.Storage.PathIO static python_type
     py PathIO
     factory Windows.Storage.IPathIOStatics
     method append_lines_async static
-        method AppendLinesAsync slot=16 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=204 static
+        method AppendLinesAsync slot=16 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             out interface type=Windows.Foundation.IAsyncAction return
-        method AppendLinesAsync slot=17 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 reverse=212 static
+        method AppendLinesAsync slot=17 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 static
             in string name=absolutePath
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out interface type=Windows.Foundation.IAsyncAction return
     method append_text_async static
-        method AppendTextAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=125 static
+        method AppendTextAsync slot=10 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in string name=contents
             out interface type=Windows.Foundation.IAsyncAction return
-        method AppendTextAsync slot=11 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 reverse=146 static
+        method AppendTextAsync slot=11 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 static
             in string name=absolutePath
             in string name=contents
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out interface type=Windows.Foundation.IAsyncAction return
     method read_buffer_async static
-        method ReadBufferAsync slot=18 inputs=1 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=51 reverse=219 static
+        method ReadBufferAsync slot=18 inputs=1 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=51 static
             in string name=absolutePath
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method read_lines_async static
-        method ReadLinesAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=51 reverse=163 static
+        method ReadLinesAsync slot=12 inputs=1 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=51 static
             in string name=absolutePath
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> return
-        method ReadLinesAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=175 static
+        method ReadLinesAsync slot=13 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>> return
     method read_text_async static
-        method ReadTextAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=51 reverse=24 static
+        method ReadTextAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=51 static
             in string name=absolutePath
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-        method ReadTextAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=45 static
+        method ReadTextAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method write_buffer_async static
-        method WriteBufferAsync slot=19 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=225 static
+        method WriteBufferAsync slot=19 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out interface type=Windows.Foundation.IAsyncAction return
@@ -2798,21 +2798,21 @@ class Windows.Storage.PathIO static python_type
             pass_array uint8 name=buffer
             out interface type=Windows.Foundation.IAsyncAction return
     method write_lines_async static
-        method WriteLinesAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=188 static
+        method WriteLinesAsync slot=14 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             out interface type=Windows.Foundation.IAsyncAction return
-        method WriteLinesAsync slot=15 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 reverse=198 static
+        method WriteLinesAsync slot=15 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 static
             in string name=absolutePath
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=lines
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out interface type=Windows.Foundation.IAsyncAction return
     method write_text_async static
-        method WriteTextAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 reverse=66 static
+        method WriteTextAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=117 static
             in string name=absolutePath
             in string name=contents
             out interface type=Windows.Foundation.IAsyncAction return
-        method WriteTextAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 reverse=102 static
+        method WriteTextAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IPathIOStatics shape=195 static
             in string name=absolutePath
             in string name=contents
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
@@ -2824,7 +2824,7 @@ class Windows.Storage.SetVersionDeferral python_type
     default Windows.Storage.ISetVersionDeferral
     requires Windows.Storage.ISetVersionDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.ISetVersionDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.ISetVersionDeferral shape=0
 
 class Windows.Storage.SetVersionRequest python_type
     py SetVersionRequest
@@ -2832,13 +2832,13 @@ class Windows.Storage.SetVersionRequest python_type
     default Windows.Storage.ISetVersionRequest
     requires Windows.Storage.ISetVersionRequest
     property current_version
-        get get_CurrentVersion slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISetVersionRequest shape=4 reverse=22
+        get get_CurrentVersion slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISetVersionRequest shape=4
             out uint32 return
     property desired_version
-        get get_DesiredVersion slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISetVersionRequest shape=4 reverse=43
+        get get_DesiredVersion slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISetVersionRequest shape=4
             out uint32 return
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISetVersionRequest shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISetVersionRequest shape=4
             out class type=Windows.Storage.SetVersionDeferral return
 
 enum Windows.Storage.StorageDeleteOption python_type
@@ -2917,13 +2917,13 @@ class Windows.Storage.StorageFile python_type
             in enum32 type=Windows.Storage.NameCollisionOption name=option
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method create_streamed_file_async static
-        method CreateStreamedFileAsync slot=8 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 reverse=68 static
+        method CreateStreamedFileAsync slot=8 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 static
             in string name=displayNameWithExtension
             in delegate type=Windows.Storage.StreamedFileDataRequestedHandler name=dataRequested
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=thumbnail
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method create_streamed_file_from_uri_async static
-        method CreateStreamedFileFromUriAsync slot=10 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 reverse=126 static
+        method CreateStreamedFileFromUriAsync slot=10 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 static
             in string name=displayNameWithExtension
             in class type=Windows.Foundation.Uri name=uri
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=thumbnail
@@ -2938,15 +2938,15 @@ class Windows.Storage.StorageFile python_type
         method GetBasicPropertiesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageItem shape=4 reverse=121
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.BasicProperties> return
     method get_file_from_application_uri_async static
-        method GetFileFromApplicationUriAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=51 reverse=44 static
+        method GetFileFromApplicationUriAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method get_file_from_path_async static
-        method GetFileFromPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=51 reverse=24 static
+        method GetFileFromPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=51 static
             in string name=path
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method get_file_from_path_for_user_async static
-        method GetFileFromPathForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFileStatics2 shape=117 reverse=25 static
+        method GetFileFromPathForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFileStatics2 shape=117 static
             in class type=Windows.System.User name=user
             in string name=path
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
@@ -3033,13 +3033,13 @@ class Windows.Storage.StorageFile python_type
             in enum32 type=Windows.Storage.NameCollisionOption name=option
             out interface type=Windows.Foundation.IAsyncAction return
     method replace_with_streamed_file_async static
-        method ReplaceWithStreamedFileAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 reverse=102 static
+        method ReplaceWithStreamedFileAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 static
             in interface type=Windows.Storage.IStorageFile name=fileToReplace
             in delegate type=Windows.Storage.StreamedFileDataRequestedHandler name=dataRequested
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=thumbnail
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method replace_with_streamed_file_from_uri_async static
-        method ReplaceWithStreamedFileFromUriAsync slot=11 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 reverse=146 static
+        method ReplaceWithStreamedFileFromUriAsync slot=11 inputs=3 outputs=1 declaring=Windows.Storage.IStorageFileStatics shape=195 static
             in interface type=Windows.Storage.IStorageFile name=fileToReplace
             in class type=Windows.Foundation.Uri name=uri
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=thumbnail
@@ -3163,11 +3163,11 @@ class Windows.Storage.StorageFolder python_type
             in string name=name
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method get_folder_from_path_async static
-        method GetFolderFromPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolderStatics shape=51 reverse=24 static
+        method GetFolderFromPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolderStatics shape=51 static
             in string name=path
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method get_folder_from_path_for_user_async static
-        method GetFolderFromPathForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFolderStatics2 shape=117 reverse=25 static
+        method GetFolderFromPathForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageFolderStatics2 shape=117 static
             in class type=Windows.System.User name=user
             in string name=path
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
@@ -3250,7 +3250,7 @@ class Windows.Storage.StorageFolder python_type
             in enum32 type=Windows.Storage.NameCollisionOption name=option
             out interface type=Windows.Foundation.IAsyncAction return
     method try_get_change_tracker
-        method TryGetChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFolder3 shape=4 reverse=22
+        method TryGetChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageFolder3 shape=4
             out class type=Windows.Storage.StorageLibraryChangeTracker return
     method try_get_item_async
         method TryGetItemAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageFolder2 shape=51 reverse=24
@@ -3274,37 +3274,37 @@ class Windows.Storage.StorageLibrary python_type
     factory Windows.Storage.IStorageLibraryStatics
     factory Windows.Storage.IStorageLibraryStatics2
     property folders
-        get get_Folders slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4 reverse=62
+        get get_Folders slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4
             out parameterized type=Windows.Foundation.Collections.IObservableVector<Windows.Storage.StorageFolder> return
     property save_folder
-        get get_SaveFolder slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4 reverse=99
+        get get_SaveFolder slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4
             out class type=Windows.Storage.StorageFolder return
     property change_tracker
-        get get_ChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary2 shape=4 reverse=22
+        get get_ChangeTracker slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary2 shape=4
             out class type=Windows.Storage.StorageLibraryChangeTracker return
     event definition_changed
-        add add_DefinitionChanged slot=10 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=51 reverse=124
+        add add_DefinitionChanged slot=10 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.StorageLibrary,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DefinitionChanged slot=11 inputs=1 outputs=0 declaring=Windows.Storage.IStorageLibrary shape=26 reverse=156
+        remove remove_DefinitionChanged slot=11 inputs=1 outputs=0 declaring=Windows.Storage.IStorageLibrary shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method are_folder_suggestions_available_async
-        method AreFolderSuggestionsAvailableAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary3 shape=4 reverse=22
+        method AreFolderSuggestionsAvailableAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary3 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method get_library_async static
-        method GetLibraryAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibraryStatics shape=51 reverse=24 static
+        method GetLibraryAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibraryStatics shape=51 static
             in enum32 type=Windows.Storage.KnownLibraryId name=libraryId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageLibrary> return
     method get_library_for_user_async static
-        method GetLibraryForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageLibraryStatics2 shape=117 reverse=25 static
+        method GetLibraryForUserAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.IStorageLibraryStatics2 shape=117 static
             in class type=Windows.System.User name=user
             in enum32 type=Windows.Storage.KnownLibraryId name=libraryId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageLibrary> return
     method request_add_folder_async
-        method RequestAddFolderAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4 reverse=22
+        method RequestAddFolderAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method request_remove_folder_async
-        method RequestRemoveFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=51 reverse=44
+        method RequestRemoveFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibrary shape=51
             in class type=Windows.Storage.StorageFolder name=folder
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -3314,19 +3314,19 @@ class Windows.Storage.StorageLibraryChange python_type
     default Windows.Storage.IStorageLibraryChange
     requires Windows.Storage.IStorageLibraryChange
     property change_type
-        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4 reverse=22
+        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4
             out enum32 type=Windows.Storage.StorageLibraryChangeType return
     property path
-        get get_Path slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4 reverse=43
+        get get_Path slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4
             out string return
     property previous_path
-        get get_PreviousPath slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4 reverse=62
+        get get_PreviousPath slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4
             out string return
     method get_storage_item_async
-        method GetStorageItemAsync slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4 reverse=121
+        method GetStorageItemAsync slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> return
     method is_of_type
-        method IsOfType slot=9 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=51 reverse=100
+        method IsOfType slot=9 inputs=1 outputs=1 declaring=Windows.Storage.IStorageLibraryChange shape=51
             in enum_u32 type=Windows.Storage.StorageItemTypes name=type
             out boolean return
 
@@ -3337,13 +3337,13 @@ class Windows.Storage.StorageLibraryChangeReader python_type
     requires Windows.Storage.IStorageLibraryChangeReader
     requires Windows.Storage.IStorageLibraryChangeReader2
     method accept_changes_async
-        method AcceptChangesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeReader shape=4 reverse=43
+        method AcceptChangesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeReader shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method get_last_change_id
-        method GetLastChangeId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeReader2 shape=4 reverse=22
+        method GetLastChangeId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeReader2 shape=4
             out uint64 return
     method read_batch_async
-        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeReader shape=4 reverse=22
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeReader shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageLibraryChange>> return
 
 class Windows.Storage.StorageLibraryChangeTracker python_type
@@ -3353,16 +3353,16 @@ class Windows.Storage.StorageLibraryChangeTracker python_type
     requires Windows.Storage.IStorageLibraryChangeTracker
     requires Windows.Storage.IStorageLibraryChangeTracker2
     method disable
-        method Disable slot=7 inputs=0 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker2 shape=0 reverse=37
+        method Disable slot=7 inputs=0 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker2 shape=0
     method enable
-        method Enable slot=7 inputs=0 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker shape=0 reverse=37
-        method Enable slot=6 inputs=1 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker2 shape=4 reverse=22
+        method Enable slot=7 inputs=0 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker shape=0
+        method Enable slot=6 inputs=1 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker2 shape=4
             in class type=Windows.Storage.StorageLibraryChangeTrackerOptions name=options
     method get_change_reader
-        method GetChangeReader slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeTracker shape=4 reverse=22
+        method GetChangeReader slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeTracker shape=4
             out class type=Windows.Storage.StorageLibraryChangeReader return
     method reset
-        method Reset slot=8 inputs=0 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker shape=0 reverse=55
+        method Reset slot=8 inputs=0 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTracker shape=0
 
 class Windows.Storage.StorageLibraryChangeTrackerOptions activatable python_type
     py StorageLibraryChangeTrackerOptions
@@ -3373,9 +3373,9 @@ class Windows.Storage.StorageLibraryChangeTrackerOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property track_change_details
-        get get_TrackChangeDetails slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeTrackerOptions shape=4 reverse=22
+        get get_TrackChangeDetails slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryChangeTrackerOptions shape=4
             out boolean return
-        put put_TrackChangeDetails slot=7 inputs=1 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTrackerOptions shape=4 reverse=43
+        put put_TrackChangeDetails slot=7 inputs=1 outputs=0 declaring=Windows.Storage.IStorageLibraryChangeTrackerOptions shape=4
             in boolean name=value
 
 enum Windows.Storage.StorageLibraryChangeType python_type
@@ -3399,7 +3399,7 @@ class Windows.Storage.StorageLibraryLastChangeId python_type
     requires Windows.Storage.IStorageLibraryLastChangeId
     factory Windows.Storage.IStorageLibraryLastChangeIdStatics
     property unknown static
-        get get_Unknown slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryLastChangeIdStatics shape=4 reverse=22 static
+        get get_Unknown slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageLibraryLastChangeIdStatics shape=4 static
             out uint64 return
 
 enum Windows.Storage.StorageOpenOptions python_type flags_enum
@@ -3416,13 +3416,13 @@ class Windows.Storage.StorageProvider python_type
     requires Windows.Storage.IStorageProvider
     requires Windows.Storage.IStorageProvider2
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageProvider shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageProvider shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageProvider shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageProvider shape=4
             out string return
     method is_property_supported_for_partial_file_async
-        method IsPropertySupportedForPartialFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageProvider2 shape=51 reverse=24
+        method IsPropertySupportedForPartialFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IStorageProvider2 shape=51
             in string name=propertyCanonicalName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -3433,12 +3433,12 @@ class Windows.Storage.StorageStreamTransaction python_type closeable
     requires Windows.Storage.IStorageStreamTransaction
     requires Windows.Foundation.IClosable
     property stream
-        get get_Stream slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageStreamTransaction shape=4 reverse=22
+        get get_Stream slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IStorageStreamTransaction shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method commit_async
-        method CommitAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageStreamTransaction shape=4 reverse=43
+        method CommitAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IStorageStreamTransaction shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.Storage.StreamedFileDataRequest python_type closeable
@@ -3482,7 +3482,7 @@ class Windows.Storage.SystemAudioProperties python_type
     default Windows.Storage.ISystemAudioProperties
     requires Windows.Storage.ISystemAudioProperties
     property encoding_bitrate
-        get get_EncodingBitrate slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemAudioProperties shape=4 reverse=22
+        get get_EncodingBitrate slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemAudioProperties shape=4
             out string return
 
 class Windows.Storage.SystemDataPaths python_type
@@ -3492,55 +3492,55 @@ class Windows.Storage.SystemDataPaths python_type
     requires Windows.Storage.ISystemDataPaths
     factory Windows.Storage.ISystemDataPathsStatics
     property fonts
-        get get_Fonts slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=22
+        get get_Fonts slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property program_data
-        get get_ProgramData slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=43
+        get get_ProgramData slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public
-        get get_Public slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=62
+        get get_Public slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public_desktop
-        get get_PublicDesktop slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=99
+        get get_PublicDesktop slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public_documents
-        get get_PublicDocuments slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=121
+        get get_PublicDocuments slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public_downloads
-        get get_PublicDownloads slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=141
+        get get_PublicDownloads slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public_music
-        get get_PublicMusic slot=12 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=162
+        get get_PublicMusic slot=12 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public_pictures
-        get get_PublicPictures slot=13 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=173
+        get get_PublicPictures slot=13 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property public_videos
-        get get_PublicVideos slot=14 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=186
+        get get_PublicVideos slot=14 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property system
-        get get_System slot=15 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=194
+        get get_System slot=15 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property system_arm
-        get get_SystemArm slot=19 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=223
+        get get_SystemArm slot=19 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property system_host
-        get get_SystemHost slot=16 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=202
+        get get_SystemHost slot=16 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property system_x64
-        get get_SystemX64 slot=18 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=218
+        get get_SystemX64 slot=18 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property system_x86
-        get get_SystemX86 slot=17 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=210
+        get get_SystemX86 slot=17 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property user_profiles
-        get get_UserProfiles slot=20 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=228
+        get get_UserProfiles slot=20 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     property windows
-        get get_Windows slot=21 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4 reverse=232
+        get get_Windows slot=21 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPaths shape=4
             out string return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPathsStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemDataPathsStatics shape=4 static
             out class type=Windows.Storage.SystemDataPaths return
 
 class Windows.Storage.SystemGPSProperties python_type
@@ -3549,10 +3549,10 @@ class Windows.Storage.SystemGPSProperties python_type
     default Windows.Storage.ISystemGPSProperties
     requires Windows.Storage.ISystemGPSProperties
     property latitude_decimal
-        get get_LatitudeDecimal slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemGPSProperties shape=4 reverse=22
+        get get_LatitudeDecimal slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemGPSProperties shape=4
             out string return
     property longitude_decimal
-        get get_LongitudeDecimal slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemGPSProperties shape=4 reverse=43
+        get get_LongitudeDecimal slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemGPSProperties shape=4
             out string return
 
 class Windows.Storage.SystemImageProperties python_type
@@ -3561,10 +3561,10 @@ class Windows.Storage.SystemImageProperties python_type
     default Windows.Storage.ISystemImageProperties
     requires Windows.Storage.ISystemImageProperties
     property horizontal_size
-        get get_HorizontalSize slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemImageProperties shape=4 reverse=22
+        get get_HorizontalSize slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemImageProperties shape=4
             out string return
     property vertical_size
-        get get_VerticalSize slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemImageProperties shape=4 reverse=43
+        get get_VerticalSize slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemImageProperties shape=4
             out string return
 
 class Windows.Storage.SystemMediaProperties python_type
@@ -3573,22 +3573,22 @@ class Windows.Storage.SystemMediaProperties python_type
     default Windows.Storage.ISystemMediaProperties
     requires Windows.Storage.ISystemMediaProperties
     property duration
-        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4 reverse=22
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4
             out string return
     property producer
-        get get_Producer slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4 reverse=43
+        get get_Producer slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4
             out string return
     property publisher
-        get get_Publisher slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4 reverse=62
+        get get_Publisher slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4
             out string return
     property sub_title
-        get get_SubTitle slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4 reverse=99
+        get get_SubTitle slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4
             out string return
     property writer
-        get get_Writer slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4 reverse=121
+        get get_Writer slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4
             out string return
     property year
-        get get_Year slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4 reverse=141
+        get get_Year slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMediaProperties shape=4
             out string return
 
 class Windows.Storage.SystemMusicProperties python_type
@@ -3597,28 +3597,28 @@ class Windows.Storage.SystemMusicProperties python_type
     default Windows.Storage.ISystemMusicProperties
     requires Windows.Storage.ISystemMusicProperties
     property album_artist
-        get get_AlbumArtist slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=22
+        get get_AlbumArtist slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property album_title
-        get get_AlbumTitle slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=43
+        get get_AlbumTitle slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property artist
-        get get_Artist slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=62
+        get get_Artist slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property composer
-        get get_Composer slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=99
+        get get_Composer slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property conductor
-        get get_Conductor slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=121
+        get get_Conductor slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property display_artist
-        get get_DisplayArtist slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=141
+        get get_DisplayArtist slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property genre
-        get get_Genre slot=12 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=162
+        get get_Genre slot=12 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
     property track_number
-        get get_TrackNumber slot=13 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4 reverse=173
+        get get_TrackNumber slot=13 inputs=0 outputs=1 declaring=Windows.Storage.ISystemMusicProperties shape=4
             out string return
 
 class Windows.Storage.SystemPhotoProperties python_type
@@ -3627,62 +3627,62 @@ class Windows.Storage.SystemPhotoProperties python_type
     default Windows.Storage.ISystemPhotoProperties
     requires Windows.Storage.ISystemPhotoProperties
     property camera_manufacturer
-        get get_CameraManufacturer slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4 reverse=22
+        get get_CameraManufacturer slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4
             out string return
     property camera_model
-        get get_CameraModel slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4 reverse=43
+        get get_CameraModel slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4
             out string return
     property date_taken
-        get get_DateTaken slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4 reverse=62
+        get get_DateTaken slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4
             out string return
     property orientation
-        get get_Orientation slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4 reverse=99
+        get get_Orientation slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4
             out string return
     property people_names
-        get get_PeopleNames slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4 reverse=121
+        get get_PeopleNames slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemPhotoProperties shape=4
             out string return
 
 class Windows.Storage.SystemProperties static python_type
     py SystemProperties
     factory Windows.Storage.ISystemProperties
     property audio static
-        get get_Audio slot=12 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=162 static
+        get get_Audio slot=12 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemAudioProperties return
     property author static
-        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=22 static
+        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out string return
     property comment static
-        get get_Comment slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=43 static
+        get get_Comment slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out string return
     property gps static
-        get get_GPS slot=13 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=173 static
+        get get_GPS slot=13 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemGPSProperties return
     property image static
-        get get_Image slot=18 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=218 static
+        get get_Image slot=18 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemImageProperties return
     property item_name_display static
-        get get_ItemNameDisplay slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=62 static
+        get get_ItemNameDisplay slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out string return
     property keywords static
-        get get_Keywords slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=99 static
+        get get_Keywords slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out string return
     property media static
-        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=186 static
+        get get_Media slot=14 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemMediaProperties return
     property music static
-        get get_Music slot=15 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=194 static
+        get get_Music slot=15 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemMusicProperties return
     property photo static
-        get get_Photo slot=16 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=202 static
+        get get_Photo slot=16 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemPhotoProperties return
     property rating static
-        get get_Rating slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=121 static
+        get get_Rating slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out string return
     property title static
-        get get_Title slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=141 static
+        get get_Title slot=11 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out string return
     property video static
-        get get_Video slot=17 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 reverse=210 static
+        get get_Video slot=17 inputs=0 outputs=1 declaring=Windows.Storage.ISystemProperties shape=4 static
             out class type=Windows.Storage.SystemVideoProperties return
 
 class Windows.Storage.SystemVideoProperties python_type
@@ -3691,19 +3691,19 @@ class Windows.Storage.SystemVideoProperties python_type
     default Windows.Storage.ISystemVideoProperties
     requires Windows.Storage.ISystemVideoProperties
     property director
-        get get_Director slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4 reverse=22
+        get get_Director slot=6 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4
             out string return
     property frame_height
-        get get_FrameHeight slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4 reverse=43
+        get get_FrameHeight slot=7 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4
             out string return
     property frame_width
-        get get_FrameWidth slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4 reverse=62
+        get get_FrameWidth slot=8 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4
             out string return
     property orientation
-        get get_Orientation slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4 reverse=99
+        get get_Orientation slot=9 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4
             out string return
     property total_bitrate
-        get get_TotalBitrate slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4 reverse=121
+        get get_TotalBitrate slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4
             out string return
 
 enum T parameterized
@@ -3739,67 +3739,67 @@ class Windows.Storage.UserDataPaths python_type
     requires Windows.Storage.IUserDataPaths
     factory Windows.Storage.IUserDataPathsStatics
     property camera_roll
-        get get_CameraRoll slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=22
+        get get_CameraRoll slot=6 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property cookies
-        get get_Cookies slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=43
+        get get_Cookies slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property desktop
-        get get_Desktop slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=62
+        get get_Desktop slot=8 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property documents
-        get get_Documents slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=99
+        get get_Documents slot=9 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property downloads
-        get get_Downloads slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=121
+        get get_Downloads slot=10 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property favorites
-        get get_Favorites slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=141
+        get get_Favorites slot=11 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property history
-        get get_History slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=162
+        get get_History slot=12 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property internet_cache
-        get get_InternetCache slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=173
+        get get_InternetCache slot=13 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property local_app_data
-        get get_LocalAppData slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=186
+        get get_LocalAppData slot=14 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property local_app_data_low
-        get get_LocalAppDataLow slot=15 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=194
+        get get_LocalAppDataLow slot=15 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property music
-        get get_Music slot=16 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=202
+        get get_Music slot=16 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property pictures
-        get get_Pictures slot=17 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=210
+        get get_Pictures slot=17 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property profile
-        get get_Profile slot=18 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=218
+        get get_Profile slot=18 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property recent
-        get get_Recent slot=19 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=223
+        get get_Recent slot=19 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property roaming_app_data
-        get get_RoamingAppData slot=20 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=228
+        get get_RoamingAppData slot=20 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property saved_pictures
-        get get_SavedPictures slot=21 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=232
+        get get_SavedPictures slot=21 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property screenshots
-        get get_Screenshots slot=22 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=237
+        get get_Screenshots slot=22 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property templates
-        get get_Templates slot=23 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=242
+        get get_Templates slot=23 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     property videos
-        get get_Videos slot=24 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4 reverse=247
+        get get_Videos slot=24 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPaths shape=4
             out string return
     method get_default static
-        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPathsStatics shape=4 reverse=43 static
+        method GetDefault slot=7 inputs=0 outputs=1 declaring=Windows.Storage.IUserDataPathsStatics shape=4 static
             out class type=Windows.Storage.UserDataPaths return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IUserDataPathsStatics shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IUserDataPathsStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.UserDataPaths return
 

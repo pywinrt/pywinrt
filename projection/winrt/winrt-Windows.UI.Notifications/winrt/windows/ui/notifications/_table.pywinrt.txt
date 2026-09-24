@@ -24,14 +24,14 @@ class Windows.UI.Notifications.AdaptiveNotificationText activatable python_type
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IAdaptiveNotificationContent shape=4 reverse=22
             out enum32 type=Windows.UI.Notifications.AdaptiveNotificationContentKind return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4
             out string return
-        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4 reverse=43
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4
             in string name=value
     property language
-        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4 reverse=62
+        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4
             out string return
-        put put_Language slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4 reverse=99
+        put put_Language slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IAdaptiveNotificationText shape=4
             in string name=value
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastCollection>> concrete
@@ -85,16 +85,16 @@ class Windows.UI.Notifications.BadgeNotification python_type
     requires Windows.UI.Notifications.IBadgeNotification
     factory Windows.UI.Notifications.IBadgeNotificationFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeNotificationFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeNotificationFactory shape=51
             in class type=Windows.Data.Xml.Dom.XmlDocument name=content
             out class type=Windows.UI.Notifications.BadgeNotification return
     property expiration_time
-        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeNotification shape=4 reverse=62
+        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeNotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IBadgeNotification shape=4 reverse=43
+        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IBadgeNotification shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeNotification shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
 enum Windows.UI.Notifications.BadgeTemplateType python_type
@@ -108,21 +108,21 @@ class Windows.UI.Notifications.BadgeUpdateManager static python_type
     factory Windows.UI.Notifications.IBadgeUpdateManagerStatics
     factory Windows.UI.Notifications.IBadgeUpdateManagerStatics2
     method create_badge_updater_for_application static
-        method CreateBadgeUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=4 reverse=22 static
+        method CreateBadgeUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=4 static
             out class type=Windows.UI.Notifications.BadgeUpdater return
-        method CreateBadgeUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=51 reverse=44 static
+        method CreateBadgeUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=51 static
             in string name=applicationId
             out class type=Windows.UI.Notifications.BadgeUpdater return
     method create_badge_updater_for_secondary_tile static
-        method CreateBadgeUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=51 reverse=65 static
+        method CreateBadgeUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=51 static
             in string name=tileId
             out class type=Windows.UI.Notifications.BadgeUpdater return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics2 shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.UI.Notifications.BadgeUpdateManagerForUser return
     method get_template_content static
-        method GetTemplateContent slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=51 reverse=100 static
+        method GetTemplateContent slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerStatics shape=51 static
             in enum32 type=Windows.UI.Notifications.BadgeTemplateType name=type
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
@@ -132,16 +132,16 @@ class Windows.UI.Notifications.BadgeUpdateManagerForUser python_type
     default Windows.UI.Notifications.IBadgeUpdateManagerForUser
     requires Windows.UI.Notifications.IBadgeUpdateManagerForUser
     property user
-        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=4 reverse=99
+        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=4
             out class type=Windows.System.User return
     method create_badge_updater_for_application
-        method CreateBadgeUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=4 reverse=22
+        method CreateBadgeUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=4
             out class type=Windows.UI.Notifications.BadgeUpdater return
-        method CreateBadgeUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=51 reverse=44
+        method CreateBadgeUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=51
             in string name=applicationId
             out class type=Windows.UI.Notifications.BadgeUpdater return
     method create_badge_updater_for_secondary_tile
-        method CreateBadgeUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=51 reverse=65
+        method CreateBadgeUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IBadgeUpdateManagerForUser shape=51
             in string name=tileId
             out class type=Windows.UI.Notifications.BadgeUpdater return
 
@@ -151,9 +151,9 @@ class Windows.UI.Notifications.BadgeUpdater python_type
     default Windows.UI.Notifications.IBadgeUpdater
     requires Windows.UI.Notifications.IBadgeUpdater
     method clear
-        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=0 reverse=37
+        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=0
     method start_periodic_update
-        method StartPeriodicUpdate slot=8 inputs=2 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=51 reverse=65
+        method StartPeriodicUpdate slot=8 inputs=2 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=51
             in class type=Windows.Foundation.Uri name=badgeContent
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
         method StartPeriodicUpdate slot=9 inputs=3 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=135
@@ -161,9 +161,9 @@ class Windows.UI.Notifications.BadgeUpdater python_type
             in datetime name=startTime
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
     method stop_periodic_update
-        method StopPeriodicUpdate slot=10 inputs=0 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=0 reverse=117
+        method StopPeriodicUpdate slot=10 inputs=0 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=0
     method update
-        method Update slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=4 reverse=22
+        method Update slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IBadgeUpdater shape=4
             in class type=Windows.UI.Notifications.BadgeNotification name=notification
 
 interface Windows.UI.Notifications.IAdaptiveNotificationContent python_type
@@ -1288,90 +1288,90 @@ class Windows.UI.Notifications.KnownAdaptiveNotificationHints static python_type
     py KnownAdaptiveNotificationHints
     factory Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics
     property align static
-        get get_Align slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 reverse=141 static
+        get get_Align slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 static
             out string return
     property max_lines static
-        get get_MaxLines slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 reverse=62 static
+        get get_MaxLines slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 static
             out string return
     property min_lines static
-        get get_MinLines slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 reverse=99 static
+        get get_MinLines slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 static
             out string return
     property style static
-        get get_Style slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 reverse=22 static
+        get get_Style slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 static
             out string return
     property text_stacking static
-        get get_TextStacking slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 reverse=121 static
+        get get_TextStacking slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 static
             out string return
     property wrap static
-        get get_Wrap slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 reverse=43 static
+        get get_Wrap slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationHintsStatics shape=4 static
             out string return
 
 class Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles static python_type
     py KnownAdaptiveNotificationTextStyles
     factory Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics
     property base static
-        get get_Base slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=62 static
+        get get_Base slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property base_subtle static
-        get get_BaseSubtle slot=18 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=218 static
+        get get_BaseSubtle slot=18 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property body static
-        get get_Body slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=43 static
+        get get_Body slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property body_subtle static
-        get get_BodySubtle slot=17 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=210 static
+        get get_BodySubtle slot=17 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property caption static
-        get get_Caption slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=22 static
+        get get_Caption slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property caption_subtle static
-        get get_CaptionSubtle slot=16 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=202 static
+        get get_CaptionSubtle slot=16 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property header static
-        get get_Header slot=12 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=162 static
+        get get_Header slot=12 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property header_numeral static
-        get get_HeaderNumeral slot=15 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=194 static
+        get get_HeaderNumeral slot=15 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property header_numeral_subtle static
-        get get_HeaderNumeralSubtle slot=24 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=247 static
+        get get_HeaderNumeralSubtle slot=24 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property header_subtle static
-        get get_HeaderSubtle slot=23 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=242 static
+        get get_HeaderSubtle slot=23 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property subheader static
-        get get_Subheader slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=141 static
+        get get_Subheader slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property subheader_numeral static
-        get get_SubheaderNumeral slot=14 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=186 static
+        get get_SubheaderNumeral slot=14 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property subheader_numeral_subtle static
-        get get_SubheaderNumeralSubtle slot=22 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=237 static
+        get get_SubheaderNumeralSubtle slot=22 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property subheader_subtle static
-        get get_SubheaderSubtle slot=21 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=232 static
+        get get_SubheaderSubtle slot=21 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property subtitle static
-        get get_Subtitle slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=99 static
+        get get_Subtitle slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property subtitle_subtle static
-        get get_SubtitleSubtle slot=19 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=223 static
+        get get_SubtitleSubtle slot=19 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property title static
-        get get_Title slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=121 static
+        get get_Title slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property title_numeral static
-        get get_TitleNumeral slot=13 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=173 static
+        get get_TitleNumeral slot=13 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
     property title_subtle static
-        get get_TitleSubtle slot=20 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 reverse=228 static
+        get get_TitleSubtle slot=20 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownAdaptiveNotificationTextStylesStatics shape=4 static
             out string return
 
 class Windows.UI.Notifications.KnownNotificationBindings static python_type
     py KnownNotificationBindings
     factory Windows.UI.Notifications.IKnownNotificationBindingsStatics
     property toast_generic static
-        get get_ToastGeneric slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownNotificationBindingsStatics shape=4 reverse=22 static
+        get get_ToastGeneric slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IKnownNotificationBindingsStatics shape=4 static
             out string return
 
 class Windows.UI.Notifications.Notification activatable python_type
@@ -1383,14 +1383,14 @@ class Windows.UI.Notifications.Notification activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property visual
-        get get_Visual slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotification shape=4 reverse=62
+        get get_Visual slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotification shape=4
             out class type=Windows.UI.Notifications.NotificationVisual return
-        put put_Visual slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotification shape=4 reverse=99
+        put put_Visual slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotification shape=4
             in class type=Windows.UI.Notifications.NotificationVisual name=value
     property expiration_time
-        get get_ExpirationTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotification shape=4 reverse=22
+        get get_ExpirationTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotification shape=4 reverse=43
+        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotification shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
 
 class Windows.UI.Notifications.NotificationBinding python_type
@@ -1399,20 +1399,20 @@ class Windows.UI.Notifications.NotificationBinding python_type
     default Windows.UI.Notifications.INotificationBinding
     requires Windows.UI.Notifications.INotificationBinding
     property template
-        get get_Template slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4 reverse=22
+        get get_Template slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4
             out string return
-        put put_Template slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationBinding shape=4 reverse=43
+        put put_Template slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationBinding shape=4
             in string name=value
     property language
-        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4 reverse=62
+        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4
             out string return
-        put put_Language slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationBinding shape=4 reverse=99
+        put put_Language slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationBinding shape=4
             in string name=value
     property hints
-        get get_Hints slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4 reverse=121
+        get get_Hints slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     method get_text_elements
-        method GetTextElements slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4 reverse=141
+        method GetTextElements slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationBinding shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.AdaptiveNotificationText> return
 
 class Windows.UI.Notifications.NotificationData activatable python_type
@@ -1424,20 +1424,20 @@ class Windows.UI.Notifications.NotificationData activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=51 reverse=44
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=initialValues
             out class type=Windows.UI.Notifications.NotificationData return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Notifications.INotificationDataFactory shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=initialValues
             in uint32 name=sequenceNumber
             out class type=Windows.UI.Notifications.NotificationData return
     property sequence_number
-        get get_SequenceNumber slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationData shape=4 reverse=43
+        get get_SequenceNumber slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationData shape=4
             out uint32 return
-        put put_SequenceNumber slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationData shape=4 reverse=62
+        put put_SequenceNumber slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationData shape=4
             in uint32 name=value
     property values
-        get get_Values slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationData shape=4 reverse=22
+        get get_Values slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationData shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
 
 enum Windows.UI.Notifications.NotificationKinds python_type flags_enum
@@ -1474,15 +1474,15 @@ class Windows.UI.Notifications.NotificationVisual python_type
     default Windows.UI.Notifications.INotificationVisual
     requires Windows.UI.Notifications.INotificationVisual
     property language
-        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationVisual shape=4 reverse=22
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationVisual shape=4
             out string return
-        put put_Language slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationVisual shape=4 reverse=43
+        put put_Language slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.INotificationVisual shape=4
             in string name=value
     property bindings
-        get get_Bindings slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationVisual shape=4 reverse=62
+        get get_Bindings slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.INotificationVisual shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Notifications.NotificationBinding> return
     method get_binding
-        method GetBinding slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.INotificationVisual shape=51 reverse=100
+        method GetBinding slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.INotificationVisual shape=51
             in string name=templateName
             out class type=Windows.UI.Notifications.NotificationBinding return
 
@@ -1507,25 +1507,25 @@ class Windows.UI.Notifications.ScheduledTileNotification python_type
             in datetime name=deliveryTime
             out class type=Windows.UI.Notifications.ScheduledTileNotification return
     property tag
-        get get_Tag slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=141
+        get get_Tag slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             out string return
-        put put_Tag slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=121
+        put put_Tag slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             in string name=value
     property id
-        get get_Id slot=13 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=173
+        get get_Id slot=13 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             out string return
-        put put_Id slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=162
+        put put_Id slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             in string name=value
     property expiration_time
-        get get_ExpirationTime slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=99
+        get get_ExpirationTime slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=62
+        put put_ExpirationTime slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocument return
     property delivery_time
-        get get_DeliveryTime slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4 reverse=43
+        get get_DeliveryTime slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledTileNotification shape=4
             out datetime return
 
 class Windows.UI.Notifications.ScheduledToastNotification python_type
@@ -1549,51 +1549,51 @@ class Windows.UI.Notifications.ScheduledToastNotification python_type
             in uint32 name=maximumSnoozeCount
             out class type=Windows.UI.Notifications.ScheduledToastNotification return
     property id
-        get get_Id slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4 reverse=141
+        get get_Id slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4
             out string return
-        put put_Id slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4 reverse=121
+        put put_Id slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4
             in string name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocument return
     property delivery_time
-        get get_DeliveryTime slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4 reverse=43
+        get get_DeliveryTime slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4
             out datetime return
     property maximum_snooze_count
-        get get_MaximumSnoozeCount slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4 reverse=99
+        get get_MaximumSnoozeCount slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4
             out uint32 return
     property snooze_interval
-        get get_SnoozeInterval slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4 reverse=62
+        get get_SnoozeInterval slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
     property tag
-        get get_Tag slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4 reverse=43
+        get get_Tag slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4
             out string return
-        put put_Tag slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4 reverse=22
+        put put_Tag slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4
             in string name=value
     property suppress_popup
-        get get_SuppressPopup slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4 reverse=141
+        get get_SuppressPopup slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4
             out boolean return
-        put put_SuppressPopup slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4 reverse=121
+        put put_SuppressPopup slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4
             in boolean name=value
     property group
-        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4 reverse=99
+        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4
             out string return
-        put put_Group slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4 reverse=62
+        put put_Group slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification2 shape=4
             in string name=value
     property remote_id
-        get get_RemoteId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4 reverse=62
+        get get_RemoteId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4
             out string return
-        put put_RemoteId slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4 reverse=99
+        put put_RemoteId slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4
             in string name=value
     property notification_mirroring
-        get get_NotificationMirroring slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4 reverse=22
+        get get_NotificationMirroring slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4
             out enum32 type=Windows.UI.Notifications.NotificationMirroring return
-        put put_NotificationMirroring slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4 reverse=43
+        put put_NotificationMirroring slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification3 shape=4
             in enum32 type=Windows.UI.Notifications.NotificationMirroring name=value
     property expiration_time
-        get get_ExpirationTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification4 shape=4 reverse=22
+        get get_ExpirationTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotification4 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification4 shape=4 reverse=43
+        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotification4 shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
 
 class Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs python_type
@@ -1602,15 +1602,15 @@ class Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs python
     default Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs
     requires Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs
     property cancel
-        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4 reverse=22
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4
             out boolean return
-        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4 reverse=43
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4
             in boolean name=value
     property scheduled_toast_notification
-        get get_ScheduledToastNotification slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4 reverse=62
+        get get_ScheduledToastNotification slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4
             out class type=Windows.UI.Notifications.ScheduledToastNotification return
     method get_deferral
-        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4 reverse=99
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.UI.Notifications.ShownTileNotification python_type
@@ -1619,7 +1619,7 @@ class Windows.UI.Notifications.ShownTileNotification python_type
     default Windows.UI.Notifications.IShownTileNotification
     requires Windows.UI.Notifications.IShownTileNotification
     property arguments
-        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IShownTileNotification shape=4 reverse=22
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IShownTileNotification shape=4
             out string return
 
 class Windows.UI.Notifications.TileFlyoutNotification python_type
@@ -1629,16 +1629,16 @@ class Windows.UI.Notifications.TileFlyoutNotification python_type
     requires Windows.UI.Notifications.ITileFlyoutNotification
     factory Windows.UI.Notifications.ITileFlyoutNotificationFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutNotificationFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutNotificationFactory shape=51
             in class type=Windows.Data.Xml.Dom.XmlDocument name=content
             out class type=Windows.UI.Notifications.TileFlyoutNotification return
     property expiration_time
-        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutNotification shape=4 reverse=62
+        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutNotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutNotification shape=4 reverse=43
+        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutNotification shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutNotification shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
 enum Windows.UI.Notifications.TileFlyoutTemplateType python_type
@@ -1650,17 +1650,17 @@ class Windows.UI.Notifications.TileFlyoutUpdateManager static python_type
     py TileFlyoutUpdateManager
     factory Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics
     method create_tile_flyout_updater_for_application static
-        method CreateTileFlyoutUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=4 reverse=22 static
+        method CreateTileFlyoutUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=4 static
             out class type=Windows.UI.Notifications.TileFlyoutUpdater return
-        method CreateTileFlyoutUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=51 reverse=44 static
+        method CreateTileFlyoutUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=51 static
             in string name=applicationId
             out class type=Windows.UI.Notifications.TileFlyoutUpdater return
     method create_tile_flyout_updater_for_secondary_tile static
-        method CreateTileFlyoutUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=51 reverse=65 static
+        method CreateTileFlyoutUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=51 static
             in string name=tileId
             out class type=Windows.UI.Notifications.TileFlyoutUpdater return
     method get_template_content static
-        method GetTemplateContent slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=51 reverse=100 static
+        method GetTemplateContent slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdateManagerStatics shape=51 static
             in enum32 type=Windows.UI.Notifications.TileFlyoutTemplateType name=type
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
@@ -1670,12 +1670,12 @@ class Windows.UI.Notifications.TileFlyoutUpdater python_type
     default Windows.UI.Notifications.ITileFlyoutUpdater
     requires Windows.UI.Notifications.ITileFlyoutUpdater
     property setting
-        get get_Setting slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=4 reverse=141
+        get get_Setting slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=4
             out enum32 type=Windows.UI.Notifications.NotificationSetting return
     method clear
-        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=0 reverse=37
+        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=0
     method start_periodic_update
-        method StartPeriodicUpdate slot=8 inputs=2 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=51 reverse=65
+        method StartPeriodicUpdate slot=8 inputs=2 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=51
             in class type=Windows.Foundation.Uri name=tileFlyoutContent
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
         method StartPeriodicUpdate slot=9 inputs=3 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=135
@@ -1683,9 +1683,9 @@ class Windows.UI.Notifications.TileFlyoutUpdater python_type
             in datetime name=startTime
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
     method stop_periodic_update
-        method StopPeriodicUpdate slot=10 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=0 reverse=117
+        method StopPeriodicUpdate slot=10 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=0
     method update
-        method Update slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=4 reverse=22
+        method Update slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileFlyoutUpdater shape=4
             in class type=Windows.UI.Notifications.TileFlyoutNotification name=notification
 
 class Windows.UI.Notifications.TileNotification python_type
@@ -1695,21 +1695,21 @@ class Windows.UI.Notifications.TileNotification python_type
     requires Windows.UI.Notifications.ITileNotification
     factory Windows.UI.Notifications.ITileNotificationFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileNotificationFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileNotificationFactory shape=51
             in class type=Windows.Data.Xml.Dom.XmlDocument name=content
             out class type=Windows.UI.Notifications.TileNotification return
     property tag
-        get get_Tag slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileNotification shape=4 reverse=121
+        get get_Tag slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileNotification shape=4
             out string return
-        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileNotification shape=4 reverse=99
+        put put_Tag slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileNotification shape=4
             in string name=value
     property expiration_time
-        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileNotification shape=4 reverse=62
+        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileNotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileNotification shape=4 reverse=43
+        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileNotification shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileNotification shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
 enum Windows.UI.Notifications.TileTemplateType python_type
@@ -1847,21 +1847,21 @@ class Windows.UI.Notifications.TileUpdateManager static python_type
     factory Windows.UI.Notifications.ITileUpdateManagerStatics
     factory Windows.UI.Notifications.ITileUpdateManagerStatics2
     method create_tile_updater_for_application static
-        method CreateTileUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=4 reverse=22 static
+        method CreateTileUpdaterForApplication slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=4 static
             out class type=Windows.UI.Notifications.TileUpdater return
-        method CreateTileUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=51 reverse=44 static
+        method CreateTileUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=51 static
             in string name=applicationId
             out class type=Windows.UI.Notifications.TileUpdater return
     method create_tile_updater_for_secondary_tile static
-        method CreateTileUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=51 reverse=65 static
+        method CreateTileUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=51 static
             in string name=tileId
             out class type=Windows.UI.Notifications.TileUpdater return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics2 shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.UI.Notifications.TileUpdateManagerForUser return
     method get_template_content static
-        method GetTemplateContent slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=51 reverse=100 static
+        method GetTemplateContent slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerStatics shape=51 static
             in enum32 type=Windows.UI.Notifications.TileTemplateType name=type
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
@@ -1871,17 +1871,17 @@ class Windows.UI.Notifications.TileUpdateManagerForUser python_type
     default Windows.UI.Notifications.ITileUpdateManagerForUser
     requires Windows.UI.Notifications.ITileUpdateManagerForUser
     property user
-        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=4 reverse=99
+        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=4
             out class type=Windows.System.User return
     method create_tile_updater_for_application
-        method CreateTileUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=51 reverse=44
+        method CreateTileUpdaterForApplication slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=51
             in string name=applicationId
             out class type=Windows.UI.Notifications.TileUpdater return
     method create_tile_updater_for_application_for_user
-        method CreateTileUpdaterForApplicationForUser slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=4 reverse=22
+        method CreateTileUpdaterForApplicationForUser slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=4
             out class type=Windows.UI.Notifications.TileUpdater return
     method create_tile_updater_for_secondary_tile
-        method CreateTileUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=51 reverse=65
+        method CreateTileUpdaterForSecondaryTile slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.ITileUpdateManagerForUser shape=51
             in string name=tileId
             out class type=Windows.UI.Notifications.TileUpdater return
 
@@ -1892,33 +1892,33 @@ class Windows.UI.Notifications.TileUpdater python_type
     requires Windows.UI.Notifications.ITileUpdater
     requires Windows.UI.Notifications.ITileUpdater2
     property setting
-        get get_Setting slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdater shape=4 reverse=99
+        get get_Setting slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdater shape=4
             out enum32 type=Windows.UI.Notifications.NotificationSetting return
     method add_to_schedule
-        method AddToSchedule slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4 reverse=121
+        method AddToSchedule slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4
             in class type=Windows.UI.Notifications.ScheduledTileNotification name=scheduledTile
     method clear
-        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=0 reverse=37
+        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=0
     method enable_notification_queue
-        method EnableNotificationQueue slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4 reverse=62
+        method EnableNotificationQueue slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4
             in boolean name=enable
     method enable_notification_queue_for_square150x150
-        method EnableNotificationQueueForSquare150x150 slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater2 shape=4 reverse=22
+        method EnableNotificationQueueForSquare150x150 slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater2 shape=4
             in boolean name=enable
     method enable_notification_queue_for_square310x310
-        method EnableNotificationQueueForSquare310x310 slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater2 shape=4 reverse=62
+        method EnableNotificationQueueForSquare310x310 slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater2 shape=4
             in boolean name=enable
     method enable_notification_queue_for_wide310x150
-        method EnableNotificationQueueForWide310x150 slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater2 shape=4 reverse=43
+        method EnableNotificationQueueForWide310x150 slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater2 shape=4
             in boolean name=enable
     method get_scheduled_tile_notifications
-        method GetScheduledTileNotifications slot=12 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdater shape=4 reverse=162
+        method GetScheduledTileNotifications slot=12 inputs=0 outputs=1 declaring=Windows.UI.Notifications.ITileUpdater shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledTileNotification> return
     method remove_from_schedule
-        method RemoveFromSchedule slot=11 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4 reverse=141
+        method RemoveFromSchedule slot=11 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4
             in class type=Windows.UI.Notifications.ScheduledTileNotification name=scheduledTile
     method start_periodic_update
-        method StartPeriodicUpdate slot=13 inputs=2 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=51 reverse=174
+        method StartPeriodicUpdate slot=13 inputs=2 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=51
             in class type=Windows.Foundation.Uri name=tileContent
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
         method StartPeriodicUpdate slot=14 inputs=3 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=135
@@ -1926,7 +1926,7 @@ class Windows.UI.Notifications.TileUpdater python_type
             in datetime name=startTime
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
     method start_periodic_update_batch
-        method StartPeriodicUpdateBatch slot=16 inputs=2 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=51 reverse=203
+        method StartPeriodicUpdateBatch slot=16 inputs=2 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=tileContents
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
         method StartPeriodicUpdateBatch slot=17 inputs=3 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=135
@@ -1934,9 +1934,9 @@ class Windows.UI.Notifications.TileUpdater python_type
             in datetime name=startTime
             in enum32 type=Windows.UI.Notifications.PeriodicUpdateRecurrence name=requestedInterval
     method stop_periodic_update
-        method StopPeriodicUpdate slot=15 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=0 reverse=193
+        method StopPeriodicUpdate slot=15 inputs=0 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=0
     method update
-        method Update slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4 reverse=22
+        method Update slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.ITileUpdater shape=4
             in class type=Windows.UI.Notifications.TileNotification name=notification
 
 class Windows.UI.Notifications.ToastActivatedEventArgs python_type
@@ -1946,10 +1946,10 @@ class Windows.UI.Notifications.ToastActivatedEventArgs python_type
     requires Windows.UI.Notifications.IToastActivatedEventArgs
     requires Windows.UI.Notifications.IToastActivatedEventArgs2
     property arguments
-        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastActivatedEventArgs shape=4 reverse=22
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastActivatedEventArgs shape=4
             out string return
     property user_input
-        get get_UserInput slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastActivatedEventArgs2 shape=4 reverse=22
+        get get_UserInput slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastActivatedEventArgs2 shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
 
 class Windows.UI.Notifications.ToastCollection python_type
@@ -1959,29 +1959,29 @@ class Windows.UI.Notifications.ToastCollection python_type
     requires Windows.UI.Notifications.IToastCollection
     factory Windows.UI.Notifications.IToastCollectionFactory
     constructor -
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionFactory shape=239
             in string name=collectionId
             in string name=displayName
             in string name=launchArgs
             in class type=Windows.Foundation.Uri name=iconUri
             out class type=Windows.UI.Notifications.ToastCollection return
     property launch_args
-        get get_LaunchArgs slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=99
+        get get_LaunchArgs slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4
             out string return
-        put put_LaunchArgs slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=121
+        put put_LaunchArgs slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastCollection shape=4
             in string name=value
     property icon
-        get get_Icon slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=141
+        get get_Icon slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Icon slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=162
+        put put_Icon slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastCollection shape=4
             in class type=Windows.Foundation.Uri name=value
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4
             out string return
-        put put_DisplayName slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=62
+        put put_DisplayName slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastCollection shape=4
             in string name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollection shape=4
             out string return
 
 class Windows.UI.Notifications.ToastCollectionManager python_type
@@ -1990,27 +1990,27 @@ class Windows.UI.Notifications.ToastCollectionManager python_type
     default Windows.UI.Notifications.IToastCollectionManager
     requires Windows.UI.Notifications.IToastCollectionManager
     property app_id
-        get get_AppId slot=12 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4 reverse=162
+        get get_AppId slot=12 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4
             out string return
     property user
-        get get_User slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4 reverse=141
+        get get_User slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4
             out class type=Windows.System.User return
     method find_all_toast_collections_async
-        method FindAllToastCollectionsAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4 reverse=43
+        method FindAllToastCollectionsAsync slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastCollection>> return
     method get_toast_collection_async
-        method GetToastCollectionAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=51 reverse=65
+        method GetToastCollectionAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=51
             in string name=collectionId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.ToastCollection> return
     method remove_all_toast_collections_async
-        method RemoveAllToastCollectionsAsync slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4 reverse=121
+        method RemoveAllToastCollectionsAsync slot=10 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method remove_toast_collection_async
-        method RemoveToastCollectionAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=51 reverse=100
+        method RemoveToastCollectionAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=51
             in string name=collectionId
             out interface type=Windows.Foundation.IAsyncAction return
     method save_toast_collection_async
-        method SaveToastCollectionAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=51 reverse=24
+        method SaveToastCollectionAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastCollectionManager shape=51
             in class type=Windows.UI.Notifications.ToastCollection name=collection
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -2027,7 +2027,7 @@ class Windows.UI.Notifications.ToastDismissedEventArgs python_type
     default Windows.UI.Notifications.IToastDismissedEventArgs
     requires Windows.UI.Notifications.IToastDismissedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastDismissedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastDismissedEventArgs shape=4
             out enum32 type=Windows.UI.Notifications.ToastDismissalReason return
 
 class Windows.UI.Notifications.ToastFailedEventArgs python_type
@@ -2036,7 +2036,7 @@ class Windows.UI.Notifications.ToastFailedEventArgs python_type
     default Windows.UI.Notifications.IToastFailedEventArgs
     requires Windows.UI.Notifications.IToastFailedEventArgs
     property error_code
-        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastFailedEventArgs shape=4 reverse=22
+        get get_ErrorCode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastFailedEventArgs shape=4
             out hresult type=Windows.Foundation.HResult return
 
 enum Windows.UI.Notifications.ToastHistoryChangedType python_type
@@ -2059,77 +2059,77 @@ class Windows.UI.Notifications.ToastNotification python_type
     factory Windows.UI.Notifications.IToastNotificationFactory
     factory Windows.UI.Notifications.IToastNotificationStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationFactory shape=51
             in class type=Windows.Data.Xml.Dom.XmlDocument name=content
             out class type=Windows.UI.Notifications.ToastNotification return
     property expiration_time
-        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=4 reverse=62
+        get get_ExpirationTime slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=4 reverse=43
+        put put_ExpirationTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocument return
     property tag
-        get get_Tag slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification2 shape=4 reverse=43
+        get get_Tag slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification2 shape=4
             out string return
-        put put_Tag slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification2 shape=4 reverse=22
+        put put_Tag slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification2 shape=4
             in string name=value
     property suppress_popup
-        get get_SuppressPopup slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification2 shape=4 reverse=141
+        get get_SuppressPopup slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification2 shape=4
             out boolean return
-        put put_SuppressPopup slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification2 shape=4 reverse=121
+        put put_SuppressPopup slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification2 shape=4
             in boolean name=value
     property group
-        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification2 shape=4 reverse=99
+        get get_Group slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification2 shape=4
             out string return
-        put put_Group slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification2 shape=4 reverse=62
+        put put_Group slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification2 shape=4
             in string name=value
     property remote_id
-        get get_RemoteId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification3 shape=4 reverse=62
+        get get_RemoteId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification3 shape=4
             out string return
-        put put_RemoteId slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification3 shape=4 reverse=99
+        put put_RemoteId slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification3 shape=4
             in string name=value
     property notification_mirroring
-        get get_NotificationMirroring slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification3 shape=4 reverse=22
+        get get_NotificationMirroring slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification3 shape=4
             out enum32 type=Windows.UI.Notifications.NotificationMirroring return
-        put put_NotificationMirroring slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification3 shape=4 reverse=43
+        put put_NotificationMirroring slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification3 shape=4
             in enum32 type=Windows.UI.Notifications.NotificationMirroring name=value
     property priority
-        get get_Priority slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification4 shape=4 reverse=62
+        get get_Priority slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification4 shape=4
             out enum32 type=Windows.UI.Notifications.ToastNotificationPriority return
-        put put_Priority slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification4 shape=4 reverse=99
+        put put_Priority slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification4 shape=4
             in enum32 type=Windows.UI.Notifications.ToastNotificationPriority name=value
     property data
-        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification4 shape=4 reverse=22
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification4 shape=4
             out class type=Windows.UI.Notifications.NotificationData return
-        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification4 shape=4 reverse=43
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification4 shape=4
             in class type=Windows.UI.Notifications.NotificationData name=value
     property expires_on_reboot
-        get get_ExpiresOnReboot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification6 shape=4 reverse=22
+        get get_ExpiresOnReboot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotification6 shape=4
             out boolean return
-        put put_ExpiresOnReboot slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification6 shape=4 reverse=43
+        put put_ExpiresOnReboot slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification6 shape=4
             in boolean name=value
     property is_expandable_content_supported static
-        get get_IsExpandableContentSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationStatics shape=4 reverse=22 static
+        get get_IsExpandableContentSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationStatics shape=4 static
             out boolean return
     event activated
-        add add_Activated slot=11 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=144
+        add add_Activated slot=11 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Activated slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26 reverse=167
+        remove remove_Activated slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event dismissed
-        add add_Dismissed slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=100
+        add add_Dismissed slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastDismissedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Dismissed slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26 reverse=134
+        remove remove_Dismissed slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event failed
-        add add_Failed slot=13 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=174
+        add add_Failed slot=13 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastFailedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Failed slot=14 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26 reverse=192
+        remove remove_Failed slot=14 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Notifications.ToastNotificationActionTriggerDetail python_type
@@ -2138,10 +2138,10 @@ class Windows.UI.Notifications.ToastNotificationActionTriggerDetail python_type
     default Windows.UI.Notifications.IToastNotificationActionTriggerDetail
     requires Windows.UI.Notifications.IToastNotificationActionTriggerDetail
     property argument
-        get get_Argument slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationActionTriggerDetail shape=4 reverse=22
+        get get_Argument slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationActionTriggerDetail shape=4
             out string return
     property user_input
-        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationActionTriggerDetail shape=4 reverse=43
+        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationActionTriggerDetail shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
 
 class Windows.UI.Notifications.ToastNotificationHistory python_type
@@ -2151,29 +2151,29 @@ class Windows.UI.Notifications.ToastNotificationHistory python_type
     requires Windows.UI.Notifications.IToastNotificationHistory2
     requires Windows.UI.Notifications.IToastNotificationHistory
     method clear
-        method Clear slot=11 inputs=0 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=0 reverse=137
-        method Clear slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=4 reverse=162
+        method Clear slot=11 inputs=0 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=0
+        method Clear slot=12 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=4
             in string name=applicationId
     method get_history
-        method GetHistory slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistory2 shape=4 reverse=22
+        method GetHistory slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistory2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastNotification> return
-        method GetHistory slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistory2 shape=51 reverse=44
+        method GetHistory slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistory2 shape=51
             in string name=applicationId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ToastNotification> return
     method remove
-        method Remove slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=4 reverse=121
+        method Remove slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=4
             in string name=tag
-        method Remove slot=9 inputs=2 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=51 reverse=100
+        method Remove slot=9 inputs=2 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=51
             in string name=tag
             in string name=group
-        method Remove slot=8 inputs=3 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=117 reverse=66
+        method Remove slot=8 inputs=3 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=117
             in string name=tag
             in string name=group
             in string name=applicationId
     method remove_group
-        method RemoveGroup slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=4 reverse=22
+        method RemoveGroup slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=4
             in string name=group
-        method RemoveGroup slot=7 inputs=2 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=51 reverse=44
+        method RemoveGroup slot=7 inputs=2 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationHistory shape=51
             in string name=group
             in string name=applicationId
 
@@ -2184,10 +2184,10 @@ class Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail pyth
     requires Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail
     requires Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail2
     property change_type
-        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail shape=4 reverse=22
+        get get_ChangeType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail shape=4
             out enum32 type=Windows.UI.Notifications.ToastHistoryChangedType return
     property collection_id
-        get get_CollectionId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail2 shape=4 reverse=22
+        get get_CollectionId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationHistoryChangedTriggerDetail2 shape=4
             out string return
 
 class Windows.UI.Notifications.ToastNotificationManager static python_type
@@ -2197,26 +2197,26 @@ class Windows.UI.Notifications.ToastNotificationManager static python_type
     factory Windows.UI.Notifications.IToastNotificationManagerStatics4
     factory Windows.UI.Notifications.IToastNotificationManagerStatics5
     property history static
-        get get_History slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics2 shape=4 reverse=22 static
+        get get_History slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics2 shape=4 static
             out class type=Windows.UI.Notifications.ToastNotificationHistory return
     method configure_notification_mirroring static
-        method ConfigureNotificationMirroring slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics4 shape=4 reverse=43 static
+        method ConfigureNotificationMirroring slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics4 shape=4 static
             in enum32 type=Windows.UI.Notifications.NotificationMirroring name=value
     method create_toast_notifier static
-        method CreateToastNotifier slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics shape=4 reverse=22 static
+        method CreateToastNotifier slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics shape=4 static
             out class type=Windows.UI.Notifications.ToastNotifier return
-        method CreateToastNotifier slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics shape=51 reverse=44 static
+        method CreateToastNotifier slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics shape=51 static
             in string name=applicationId
             out class type=Windows.UI.Notifications.ToastNotifier return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics5 shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics5 shape=4 static
             out class type=Windows.UI.Notifications.ToastNotificationManagerForUser return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics4 shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics4 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.UI.Notifications.ToastNotificationManagerForUser return
     method get_template_content static
-        method GetTemplateContent slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics shape=51 reverse=65 static
+        method GetTemplateContent slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerStatics shape=51 static
             in enum32 type=Windows.UI.Notifications.ToastTemplateType name=type
             out class type=Windows.Data.Xml.Dom.XmlDocument return
 
@@ -2228,38 +2228,38 @@ class Windows.UI.Notifications.ToastNotificationManagerForUser python_type
     requires Windows.UI.Notifications.IToastNotificationManagerForUser2
     requires Windows.UI.Notifications.IToastNotificationManagerForUser3
     property history
-        get get_History slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4 reverse=62
+        get get_History slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4
             out class type=Windows.UI.Notifications.ToastNotificationHistory return
     property user
-        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4 reverse=99
+        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4
             out class type=Windows.System.User return
     property notification_mode
-        get get_NotificationMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=4 reverse=22
+        get get_NotificationMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=4
             out enum32 type=Windows.UI.Notifications.ToastNotificationMode return
     event notification_mode_changed
-        add add_NotificationModeChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=51 reverse=44
+        add add_NotificationModeChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotificationManagerForUser,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NotificationModeChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=26 reverse=82
+        remove remove_NotificationModeChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_toast_notifier
-        method CreateToastNotifier slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4 reverse=22
+        method CreateToastNotifier slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=4
             out class type=Windows.UI.Notifications.ToastNotifier return
-        method CreateToastNotifier slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=51 reverse=44
+        method CreateToastNotifier slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser shape=51
             in string name=applicationId
             out class type=Windows.UI.Notifications.ToastNotifier return
     method get_history_for_toast_collection_id_async
-        method GetHistoryForToastCollectionIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=51 reverse=44
+        method GetHistoryForToastCollectionIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=51
             in string name=collectionId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.ToastNotificationHistory> return
     method get_toast_collection_manager
-        method GetToastCollectionManager slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=4 reverse=62
+        method GetToastCollectionManager slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=4
             out class type=Windows.UI.Notifications.ToastCollectionManager return
-        method GetToastCollectionManager slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=51 reverse=100
+        method GetToastCollectionManager slot=9 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=51
             in string name=appId
             out class type=Windows.UI.Notifications.ToastCollectionManager return
     method get_toast_notifier_for_toast_collection_id_async
-        method GetToastNotifierForToastCollectionIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=51 reverse=24
+        method GetToastNotifierForToastCollectionIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationManagerForUser2 shape=51
             in string name=collectionId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.ToastNotifier> return
 
@@ -2284,35 +2284,35 @@ class Windows.UI.Notifications.ToastNotifier python_type
     requires Windows.UI.Notifications.IToastNotifier2
     requires Windows.UI.Notifications.IToastNotifier3
     property setting
-        get get_Setting slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=62
+        get get_Setting slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier shape=4
             out enum32 type=Windows.UI.Notifications.NotificationSetting return
     event scheduled_toast_notification_showing
-        add add_ScheduledToastNotificationShowing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier3 shape=51 reverse=24
+        add add_ScheduledToastNotificationShowing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotifier,Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ScheduledToastNotificationShowing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier3 shape=26 reverse=53
+        remove remove_ScheduledToastNotificationShowing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_to_schedule
-        method AddToSchedule slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=99
+        method AddToSchedule slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4
             in class type=Windows.UI.Notifications.ScheduledToastNotification name=scheduledToast
     method get_scheduled_toast_notifications
-        method GetScheduledToastNotifications slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=141
+        method GetScheduledToastNotifications slot=11 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledToastNotification> return
     method hide
-        method Hide slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=43
+        method Hide slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4
             in class type=Windows.UI.Notifications.ToastNotification name=notification
     method remove_from_schedule
-        method RemoveFromSchedule slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=121
+        method RemoveFromSchedule slot=10 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4
             in class type=Windows.UI.Notifications.ScheduledToastNotification name=scheduledToast
     method show
-        method Show slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4 reverse=22
+        method Show slot=6 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotifier shape=4
             in class type=Windows.UI.Notifications.ToastNotification name=notification
     method update
-        method Update slot=7 inputs=2 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier2 shape=117 reverse=45
+        method Update slot=7 inputs=2 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier2 shape=117
             in class type=Windows.UI.Notifications.NotificationData name=data
             in string name=tag
             out enum32 type=Windows.UI.Notifications.NotificationUpdateResult return
-        method Update slot=6 inputs=3 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier2 shape=195 reverse=26
+        method Update slot=6 inputs=3 outputs=1 declaring=Windows.UI.Notifications.IToastNotifier2 shape=195
             in class type=Windows.UI.Notifications.NotificationData name=data
             in string name=tag
             in string name=group
@@ -2396,16 +2396,16 @@ class Windows.UI.Notifications.UserNotification python_type
     default Windows.UI.Notifications.IUserNotification
     requires Windows.UI.Notifications.IUserNotification
     property app_info
-        get get_AppInfo slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4 reverse=43
+        get get_AppInfo slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4
             out class type=Windows.ApplicationModel.AppInfo return
     property creation_time
-        get get_CreationTime slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4 reverse=99
+        get get_CreationTime slot=9 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4
             out datetime return
     property id
-        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4 reverse=62
+        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4
             out uint32 return
     property notification
-        get get_Notification slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4 reverse=22
+        get get_Notification slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotification shape=4
             out class type=Windows.UI.Notifications.Notification return
 
 class Windows.UI.Notifications.UserNotificationChangedEventArgs python_type
@@ -2414,10 +2414,10 @@ class Windows.UI.Notifications.UserNotificationChangedEventArgs python_type
     default Windows.UI.Notifications.IUserNotificationChangedEventArgs
     requires Windows.UI.Notifications.IUserNotificationChangedEventArgs
     property change_kind
-        get get_ChangeKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotificationChangedEventArgs shape=4 reverse=22
+        get get_ChangeKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotificationChangedEventArgs shape=4
             out enum32 type=Windows.UI.Notifications.UserNotificationChangedKind return
     property user_notification_id
-        get get_UserNotificationId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotificationChangedEventArgs shape=4 reverse=43
+        get get_UserNotificationId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IUserNotificationChangedEventArgs shape=4
             out uint32 return
 
 enum Windows.UI.Notifications.UserNotificationChangedKind python_type

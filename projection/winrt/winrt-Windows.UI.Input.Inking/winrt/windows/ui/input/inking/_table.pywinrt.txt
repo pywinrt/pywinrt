@@ -1057,56 +1057,56 @@ class Windows.UI.Input.Inking.InkDrawingAttributes activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property size
-        get get_Size slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=121
+        get get_Size slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             out struct type=Windows.Foundation.Size return
         put put_Size slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=10
             in struct type=Windows.Foundation.Size name=value
     property pen_tip
-        get get_PenTip slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=62
+        get get_PenTip slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             out enum32 type=Windows.UI.Input.Inking.PenTipShape return
-        put put_PenTip slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=99
+        put put_PenTip slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             in enum32 type=Windows.UI.Input.Inking.PenTipShape name=value
     property ignore_pressure
-        get get_IgnorePressure slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=162
+        get get_IgnorePressure slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             out boolean return
-        put put_IgnorePressure slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=173
+        put put_IgnorePressure slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             in boolean name=value
     property fit_to_curve
-        get get_FitToCurve slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=186
+        get get_FitToCurve slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             out boolean return
-        put put_FitToCurve slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=194
+        put put_FitToCurve slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             in boolean name=value
     property color
-        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4 reverse=22
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=4
             out struct type=Windows.UI.Color return
         put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes shape=29
             in struct type=Windows.UI.Color name=value
     property pen_tip_transform
-        get get_PenTipTransform slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=4 reverse=22
+        get get_PenTipTransform slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix3x2 return
         put put_PenTipTransform slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=7
             in struct type=Windows.Foundation.Numerics.Matrix3x2 name=value
     property draw_as_highlighter
-        get get_DrawAsHighlighter slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=4 reverse=62
+        get get_DrawAsHighlighter slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=4
             out boolean return
-        put put_DrawAsHighlighter slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=4 reverse=99
+        put put_DrawAsHighlighter slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes2 shape=4
             in boolean name=value
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes3 shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes3 shape=4
             out enum32 type=Windows.UI.Input.Inking.InkDrawingAttributesKind return
     property pencil_properties
-        get get_PencilProperties slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes3 shape=4 reverse=43
+        get get_PencilProperties slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes3 shape=4
             out class type=Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties return
     property ignore_tilt
-        get get_IgnoreTilt slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes4 shape=4 reverse=22
+        get get_IgnoreTilt slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes4 shape=4
             out boolean return
-        put put_IgnoreTilt slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes4 shape=4 reverse=43
+        put put_IgnoreTilt slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes4 shape=4
             in boolean name=value
     property modeler_attributes
-        get get_ModelerAttributes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes5 shape=4 reverse=22
+        get get_ModelerAttributes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributes5 shape=4
             out class type=Windows.UI.Input.Inking.InkModelerAttributes return
     method create_for_pencil static
-        method CreateForPencil slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributesStatics shape=4 reverse=22 static
+        method CreateForPencil slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributesStatics shape=4 static
             out class type=Windows.UI.Input.Inking.InkDrawingAttributes return
 
 enum Windows.UI.Input.Inking.InkDrawingAttributesKind python_type
@@ -1121,9 +1121,9 @@ class Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties python_type
     default Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties
     requires Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties
     property opacity
-        get get_Opacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties shape=4 reverse=22
+        get get_Opacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties shape=4
             out double return
-        put put_Opacity slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties shape=2 reverse=38
+        put put_Opacity slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties shape=2
             in double name=value
 
 enum Windows.UI.Input.Inking.InkHighContrastAdjustment python_type
@@ -1140,19 +1140,19 @@ class Windows.UI.Input.Inking.InkInputConfiguration python_type
     requires Windows.UI.Input.Inking.IInkInputConfiguration
     requires Windows.UI.Input.Inking.IInkInputConfiguration2
     property is_primary_barrel_button_input_enabled
-        get get_IsPrimaryBarrelButtonInputEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4 reverse=22
+        get get_IsPrimaryBarrelButtonInputEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4
             out boolean return
-        put put_IsPrimaryBarrelButtonInputEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4 reverse=43
+        put put_IsPrimaryBarrelButtonInputEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4
             in boolean name=value
     property is_eraser_input_enabled
-        get get_IsEraserInputEnabled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4 reverse=62
+        get get_IsEraserInputEnabled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4
             out boolean return
-        put put_IsEraserInputEnabled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4 reverse=99
+        put put_IsEraserInputEnabled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputConfiguration shape=4
             in boolean name=value
     property is_pen_haptic_feedback_enabled
-        get get_IsPenHapticFeedbackEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputConfiguration2 shape=4 reverse=22
+        get get_IsPenHapticFeedbackEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputConfiguration2 shape=4
             out boolean return
-        put put_IsPenHapticFeedbackEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputConfiguration2 shape=4 reverse=43
+        put put_IsPenHapticFeedbackEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputConfiguration2 shape=4
             in boolean name=value
 
 class Windows.UI.Input.Inking.InkInputProcessingConfiguration python_type
@@ -1161,14 +1161,14 @@ class Windows.UI.Input.Inking.InkInputProcessingConfiguration python_type
     default Windows.UI.Input.Inking.IInkInputProcessingConfiguration
     requires Windows.UI.Input.Inking.IInkInputProcessingConfiguration
     property right_drag_action
-        get get_RightDragAction slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4 reverse=62
+        get get_RightDragAction slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4
             out enum32 type=Windows.UI.Input.Inking.InkInputRightDragAction return
-        put put_RightDragAction slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4 reverse=99
+        put put_RightDragAction slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4
             in enum32 type=Windows.UI.Input.Inking.InkInputRightDragAction name=value
     property mode
-        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4 reverse=22
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4
             out enum32 type=Windows.UI.Input.Inking.InkInputProcessingMode return
-        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4 reverse=43
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkInputProcessingConfiguration shape=4
             in enum32 type=Windows.UI.Input.Inking.InkInputProcessingMode name=value
 
 enum Windows.UI.Input.Inking.InkInputProcessingMode python_type
@@ -1195,9 +1195,9 @@ class Windows.UI.Input.Inking.InkManager activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property mode
-        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=4 reverse=22
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=4
             out enum32 type=Windows.UI.Input.Inking.InkManipulationMode return
-        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkManager shape=4 reverse=43
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkManager shape=4
             in enum32 type=Windows.UI.Input.Inking.InkManipulationMode name=value
     property bounding_rect
         get get_BoundingRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer shape=4 reverse=22
@@ -1235,18 +1235,18 @@ class Windows.UI.Input.Inking.InkManager activatable python_type
             in struct type=Windows.Foundation.Point name=position
             out struct type=Windows.Foundation.Rect return
     method process_pointer_down
-        method ProcessPointerDown slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkManager shape=4 reverse=62
+        method ProcessPointerDown slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkManager shape=4
             in class type=Windows.UI.Input.PointerPoint name=pointerPoint
     method process_pointer_up
-        method ProcessPointerUp slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=51 reverse=124
+        method ProcessPointerUp slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=51
             in class type=Windows.UI.Input.PointerPoint name=pointerPoint
             out struct type=Windows.Foundation.Rect return
     method process_pointer_update
-        method ProcessPointerUpdate slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=51 reverse=100
+        method ProcessPointerUpdate slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=51
             in class type=Windows.UI.Input.PointerPoint name=pointerPoint
             out object return
     method recognize_async
-        method RecognizeAsync slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=51 reverse=163
+        method RecognizeAsync slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkManager shape=51
             in enum32 type=Windows.UI.Input.Inking.InkRecognitionTarget name=recognitionTarget
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult>> return
         method RecognizeAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognizerContainer shape=117 reverse=45
@@ -1267,7 +1267,7 @@ class Windows.UI.Input.Inking.InkManager activatable python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Point> name=polyline
             out struct type=Windows.Foundation.Rect return
     method set_default_drawing_attributes
-        method SetDefaultDrawingAttributes slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkManager shape=4 reverse=141
+        method SetDefaultDrawingAttributes slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkManager shape=4
             in class type=Windows.UI.Input.Inking.InkDrawingAttributes name=drawingAttributes
     method set_default_recognizer
         method SetDefaultRecognizer slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkRecognizerContainer shape=4 reverse=22
@@ -1290,19 +1290,19 @@ class Windows.UI.Input.Inking.InkModelerAttributes python_type
     requires Windows.UI.Input.Inking.IInkModelerAttributes
     requires Windows.UI.Input.Inking.IInkModelerAttributes2
     property scaling_factor
-        get get_ScalingFactor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=4 reverse=62
+        get get_ScalingFactor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=4
             out single return
-        put put_ScalingFactor slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=1 reverse=94
+        put put_ScalingFactor slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=1
             in single name=value
     property prediction_time
-        get get_PredictionTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=4 reverse=22
+        get get_PredictionTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=4
             out timespan return
-        put put_PredictionTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=26 reverse=53
+        put put_PredictionTime slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkModelerAttributes shape=26
             in timespan name=value
     property use_velocity_based_pressure
-        get get_UseVelocityBasedPressure slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkModelerAttributes2 shape=4 reverse=22
+        get get_UseVelocityBasedPressure slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkModelerAttributes2 shape=4
             out boolean return
-        put put_UseVelocityBasedPressure slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkModelerAttributes2 shape=4 reverse=43
+        put put_UseVelocityBasedPressure slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkModelerAttributes2 shape=4
             in boolean name=value
 
 enum Windows.UI.Input.Inking.InkPersistenceFormat python_type
@@ -1320,7 +1320,7 @@ class Windows.UI.Input.Inking.InkPoint python_type
     factory Windows.UI.Input.Inking.IInkPointFactory
     factory Windows.UI.Input.Inking.IInkPointFactory2
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkPointFactory shape=149 reverse=30
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkPointFactory shape=149
             in struct type=Windows.Foundation.Point name=position
             in single name=pressure
             out class type=Windows.UI.Input.Inking.InkPoint return
@@ -1332,19 +1332,19 @@ class Windows.UI.Input.Inking.InkPoint python_type
             in uint64 name=timestamp
             out class type=Windows.UI.Input.Inking.InkPoint return
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint shape=4
             out struct type=Windows.Foundation.Point return
     property pressure
-        get get_Pressure slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint shape=4 reverse=43
+        get get_Pressure slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint shape=4
             out single return
     property tilt_x
-        get get_TiltX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint2 shape=4 reverse=22
+        get get_TiltX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint2 shape=4
             out single return
     property tilt_y
-        get get_TiltY slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint2 shape=4 reverse=43
+        get get_TiltY slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint2 shape=4
             out single return
     property timestamp
-        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint2 shape=4 reverse=62
+        get get_Timestamp slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPoint2 shape=4
             out uint64 return
 
 class Windows.UI.Input.Inking.InkPresenter python_type
@@ -1355,60 +1355,60 @@ class Windows.UI.Input.Inking.InkPresenter python_type
     requires Windows.UI.Input.Inking.IInkPresenter2
     requires Windows.UI.Input.Inking.IInkPresenter3
     property stroke_container
-        get get_StrokeContainer slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=173
+        get get_StrokeContainer slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out class type=Windows.UI.Input.Inking.InkStrokeContainer return
-        put put_StrokeContainer slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=186
+        put put_StrokeContainer slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             in class type=Windows.UI.Input.Inking.InkStrokeContainer name=value
     property is_input_enabled
-        get get_IsInputEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=22
+        get get_IsInputEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out boolean return
-        put put_IsInputEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=43
+        put put_IsInputEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             in boolean name=value
     property input_device_types
-        get get_InputDeviceTypes slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=62
+        get get_InputDeviceTypes slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out enum_u32 type=Windows.UI.Core.CoreInputDeviceTypes return
-        put put_InputDeviceTypes slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=99
+        put put_InputDeviceTypes slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             in enum_u32 type=Windows.UI.Core.CoreInputDeviceTypes name=value
     property input_processing_configuration
-        get get_InputProcessingConfiguration slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=162
+        get get_InputProcessingConfiguration slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out class type=Windows.UI.Input.Inking.InkInputProcessingConfiguration return
     property stroke_input
-        get get_StrokeInput slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=141
+        get get_StrokeInput slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out class type=Windows.UI.Input.Inking.InkStrokeInput return
     property unprocessed_input
-        get get_UnprocessedInput slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=121
+        get get_UnprocessedInput slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out class type=Windows.UI.Input.Inking.InkUnprocessedInput return
     property high_contrast_adjustment
-        get get_HighContrastAdjustment slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter2 shape=4 reverse=22
+        get get_HighContrastAdjustment slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter2 shape=4
             out enum32 type=Windows.UI.Input.Inking.InkHighContrastAdjustment return
-        put put_HighContrastAdjustment slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter2 shape=4 reverse=43
+        put put_HighContrastAdjustment slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter2 shape=4
             in enum32 type=Windows.UI.Input.Inking.InkHighContrastAdjustment name=value
     property input_configuration
-        get get_InputConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter3 shape=4 reverse=22
+        get get_InputConfiguration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter3 shape=4
             out class type=Windows.UI.Input.Inking.InkInputConfiguration return
     event strokes_collected
-        add add_StrokesCollected slot=19 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=51 reverse=224
+        add add_StrokesCollected slot=19 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkPresenter,Windows.UI.Input.Inking.InkStrokesCollectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StrokesCollected slot=20 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=26 reverse=399
+        remove remove_StrokesCollected slot=20 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event strokes_erased
-        add add_StrokesErased slot=21 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=51 reverse=233
+        add add_StrokesErased slot=21 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkPresenter,Windows.UI.Input.Inking.InkStrokesErasedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StrokesErased slot=22 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=26 reverse=400
+        remove remove_StrokesErased slot=22 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method activate_custom_drying
-        method ActivateCustomDrying slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=210
+        method ActivateCustomDrying slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out class type=Windows.UI.Input.Inking.InkSynchronizer return
     method copy_default_drawing_attributes
-        method CopyDefaultDrawingAttributes slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=194
+        method CopyDefaultDrawingAttributes slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             out class type=Windows.UI.Input.Inking.InkDrawingAttributes return
     method set_predefined_configuration
-        method SetPredefinedConfiguration slot=18 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=218
+        method SetPredefinedConfiguration slot=18 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             in enum32 type=Windows.UI.Input.Inking.InkPresenterPredefinedConfiguration name=value
     method update_default_drawing_attributes
-        method UpdateDefaultDrawingAttributes slot=16 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4 reverse=202
+        method UpdateDefaultDrawingAttributes slot=16 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenter shape=4
             in class type=Windows.UI.Input.Inking.InkDrawingAttributes name=value
 
 enum Windows.UI.Input.Inking.InkPresenterPredefinedConfiguration python_type
@@ -1425,41 +1425,41 @@ class Windows.UI.Input.Inking.InkPresenterProtractor python_type
     requires Windows.UI.Input.Inking.IInkPresenterStencil
     factory Windows.UI.Input.Inking.IInkPresenterProtractorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractorFactory shape=51
             in class type=Windows.UI.Input.Inking.InkPresenter name=inkPresenter
             out class type=Windows.UI.Input.Inking.InkPresenterProtractor return
     property radius
-        get get_Radius slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=202
+        get get_Radius slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out double return
         put put_Radius slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=2
             in double name=value
     property is_resizable
-        get get_IsResizable slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=186
+        get get_IsResizable slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out boolean return
-        put put_IsResizable slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=194
+        put put_IsResizable slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             in boolean name=value
     property is_center_marker_visible
-        get get_IsCenterMarkerVisible slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=121
+        get get_IsCenterMarkerVisible slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out boolean return
-        put put_IsCenterMarkerVisible slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=141
+        put put_IsCenterMarkerVisible slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             in boolean name=value
     property is_angle_readout_visible
-        get get_IsAngleReadoutVisible slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=162
+        get get_IsAngleReadoutVisible slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out boolean return
-        put put_IsAngleReadoutVisible slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=173
+        put put_IsAngleReadoutVisible slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             in boolean name=value
     property are_tick_marks_visible
-        get get_AreTickMarksVisible slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=22
+        get get_AreTickMarksVisible slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out boolean return
-        put put_AreTickMarksVisible slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=43
+        put put_AreTickMarksVisible slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             in boolean name=value
     property are_rays_visible
-        get get_AreRaysVisible slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=62
+        get get_AreRaysVisible slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out boolean return
-        put put_AreRaysVisible slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=99
+        put put_AreRaysVisible slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             in boolean name=value
     property accent_color
-        get get_AccentColor slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4 reverse=218
+        get get_AccentColor slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=4
             out struct type=Windows.UI.Color return
         put put_AccentColor slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterProtractor shape=29
             in struct type=Windows.UI.Color name=value
@@ -1496,28 +1496,28 @@ class Windows.UI.Input.Inking.InkPresenterRuler python_type
     requires Windows.UI.Input.Inking.IInkPresenterRuler2
     factory Windows.UI.Input.Inking.IInkPresenterRulerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRulerFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRulerFactory shape=51
             in class type=Windows.UI.Input.Inking.InkPresenter name=inkPresenter
             out class type=Windows.UI.Input.Inking.InkPresenterRuler return
     property width
-        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=4 reverse=62
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=4
             out double return
         put put_Width slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=2
             in double name=value
     property length
-        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=4 reverse=22
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=4
             out double return
-        put put_Length slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=2 reverse=38
+        put put_Length slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler shape=2
             in double name=value
     property is_compass_visible
-        get get_IsCompassVisible slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4 reverse=62
+        get get_IsCompassVisible slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4
             out boolean return
-        put put_IsCompassVisible slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4 reverse=99
+        put put_IsCompassVisible slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4
             in boolean name=value
     property are_tick_marks_visible
-        get get_AreTickMarksVisible slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4 reverse=22
+        get get_AreTickMarksVisible slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4
             out boolean return
-        put put_AreTickMarksVisible slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4 reverse=43
+        put put_AreTickMarksVisible slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkPresenterRuler2 shape=4
             in boolean name=value
     property transform
         get get_Transform slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkPresenterStencil shape=4 reverse=173
@@ -1556,13 +1556,13 @@ class Windows.UI.Input.Inking.InkRecognitionResult python_type
     default Windows.UI.Input.Inking.IInkRecognitionResult
     requires Windows.UI.Input.Inking.IInkRecognitionResult
     property bounding_rect
-        get get_BoundingRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognitionResult shape=4 reverse=22
+        get get_BoundingRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognitionResult shape=4
             out struct type=Windows.Foundation.Rect return
     method get_strokes
-        method GetStrokes slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognitionResult shape=4 reverse=62
+        method GetStrokes slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognitionResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> return
     method get_text_candidates
-        method GetTextCandidates slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognitionResult shape=4 reverse=43
+        method GetTextCandidates slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognitionResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 enum Windows.UI.Input.Inking.InkRecognitionTarget python_type
@@ -1578,7 +1578,7 @@ class Windows.UI.Input.Inking.InkRecognizer python_type
     default Windows.UI.Input.Inking.IInkRecognizer
     requires Windows.UI.Input.Inking.IInkRecognizer
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognizer shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkRecognizer shape=4
             out string return
 
 class Windows.UI.Input.Inking.InkRecognizerContainer activatable python_type
@@ -1610,50 +1610,50 @@ class Windows.UI.Input.Inking.InkStroke python_type
     requires Windows.UI.Input.Inking.IInkStroke3
     requires Windows.UI.Input.Inking.IInkStroke4
     property selected
-        get get_Selected slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=99
+        get get_Selected slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             out boolean return
-        put put_Selected slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=121
+        put put_Selected slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             in boolean name=value
     property drawing_attributes
-        get get_DrawingAttributes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=22
+        get get_DrawingAttributes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             out class type=Windows.UI.Input.Inking.InkDrawingAttributes return
-        put put_DrawingAttributes slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=43
+        put put_DrawingAttributes slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             in class type=Windows.UI.Input.Inking.InkDrawingAttributes name=value
     property bounding_rect
-        get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=62
+        get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             out struct type=Windows.Foundation.Rect return
     property recognized
-        get get_Recognized slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=141
+        get get_Recognized slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             out boolean return
     property point_transform
-        get get_PointTransform slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke2 shape=4 reverse=22
+        get get_PointTransform slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke2 shape=4
             out struct type=Windows.Foundation.Numerics.Matrix3x2 return
         put put_PointTransform slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke2 shape=7
             in struct type=Windows.Foundation.Numerics.Matrix3x2 name=value
     property stroke_started_time
-        get get_StrokeStartedTime slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4 reverse=43
+        get get_StrokeStartedTime slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_StrokeStartedTime slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4 reverse=62
+        put put_StrokeStartedTime slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property stroke_duration
-        get get_StrokeDuration slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4 reverse=99
+        get get_StrokeDuration slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_StrokeDuration slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4 reverse=121
+        put put_StrokeDuration slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke3 shape=4
             out uint32 return
     property pointer_id
-        get get_PointerId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke4 shape=4 reverse=22
+        get get_PointerId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke4 shape=4
             out uint32 return
     method clone
-        method Clone slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=173
+        method Clone slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             out class type=Windows.UI.Input.Inking.InkStroke return
     method get_ink_points
-        method GetInkPoints slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke2 shape=4 reverse=62
+        method GetInkPoints slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkPoint> return
     method get_rendering_segments
-        method GetRenderingSegments slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4 reverse=162
+        method GetRenderingSegments slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStroke shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStrokeRenderingSegment> return
 
 class Windows.UI.Input.Inking.InkStrokeBuilder activatable python_type
@@ -1667,14 +1667,14 @@ class Windows.UI.Input.Inking.InkStrokeBuilder activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method append_to_stroke
-        method AppendToStroke slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=51 reverse=44
+        method AppendToStroke slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=51
             in class type=Windows.UI.Input.PointerPoint name=pointerPoint
             out class type=Windows.UI.Input.PointerPoint return
     method begin_stroke
-        method BeginStroke slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=4 reverse=22
+        method BeginStroke slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=4
             in class type=Windows.UI.Input.PointerPoint name=pointerPoint
     method create_stroke
-        method CreateStroke slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=51 reverse=100
+        method CreateStroke slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Point> name=points
             out class type=Windows.UI.Input.Inking.InkStroke return
     method create_stroke_from_ink_points
@@ -1689,11 +1689,11 @@ class Windows.UI.Input.Inking.InkStrokeBuilder activatable python_type
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=strokeDuration
             out class type=Windows.UI.Input.Inking.InkStroke return
     method end_stroke
-        method EndStroke slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=51 reverse=65
+        method EndStroke slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=51
             in class type=Windows.UI.Input.PointerPoint name=pointerPoint
             out class type=Windows.UI.Input.Inking.InkStroke return
     method set_default_drawing_attributes
-        method SetDefaultDrawingAttributes slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=4 reverse=121
+        method SetDefaultDrawingAttributes slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeBuilder shape=4
             in class type=Windows.UI.Input.Inking.InkDrawingAttributes name=drawingAttributes
 
 class Windows.UI.Input.Inking.InkStrokeContainer activatable python_type
@@ -1713,13 +1713,13 @@ class Windows.UI.Input.Inking.InkStrokeContainer activatable python_type
         method AddStroke slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeContainer shape=4 reverse=43
             in class type=Windows.UI.Input.Inking.InkStroke name=stroke
     method add_strokes
-        method AddStrokes slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeContainer2 shape=4 reverse=22
+        method AddStrokes slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeContainer2 shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkStroke> name=strokes
     method can_paste_from_clipboard
         method CanPasteFromClipboard slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer shape=4 reverse=186
             out boolean return
     method clear
-        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeContainer2 shape=0 reverse=37
+        method Clear slot=7 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeContainer2 shape=0
     method copy_selected_to_clipboard
         method CopySelectedToClipboard slot=12 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeContainer shape=0 reverse=159
     method delete_selected
@@ -1729,7 +1729,7 @@ class Windows.UI.Input.Inking.InkStrokeContainer activatable python_type
         method GetRecognitionResults slot=19 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer shape=4 reverse=223
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkRecognitionResult> return
     method get_stroke_by_id
-        method GetStrokeById slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer3 shape=51 reverse=44
+        method GetStrokeById slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer3 shape=51
             in uint32 name=id
             out class type=Windows.UI.Input.Inking.InkStroke return
     method get_strokes
@@ -1751,7 +1751,7 @@ class Windows.UI.Input.Inking.InkStrokeContainer activatable python_type
         method SaveAsync slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer shape=51 reverse=203
             in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
-        method SaveAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer3 shape=117 reverse=25
+        method SaveAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeContainer3 shape=117
             in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
             in enum32 type=Windows.UI.Input.Inking.InkPersistenceFormat name=inkPersistenceFormat
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> return
@@ -1774,31 +1774,31 @@ class Windows.UI.Input.Inking.InkStrokeInput python_type
     default Windows.UI.Input.Inking.IInkStrokeInput
     requires Windows.UI.Input.Inking.IInkStrokeInput
     property ink_presenter
-        get get_InkPresenter slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=4 reverse=186
+        get get_InkPresenter slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=4
             out class type=Windows.UI.Input.Inking.InkPresenter return
     event stroke_canceled
-        add add_StrokeCanceled slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=163
+        add add_StrokeCanceled slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StrokeCanceled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=181
+        remove remove_StrokeCanceled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stroke_continued
-        add add_StrokeContinued slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=65
+        add add_StrokeContinued slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StrokeContinued slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=110
+        remove remove_StrokeContinued slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stroke_ended
-        add add_StrokeEnded slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=124
+        add add_StrokeEnded slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StrokeEnded slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=156
+        remove remove_StrokeEnded slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event stroke_started
-        add add_StrokeStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51 reverse=24
+        add add_StrokeStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StrokeStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26 reverse=53
+        remove remove_StrokeStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkStrokeInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.UI.Input.Inking.InkStrokeRenderingSegment python_type
@@ -1807,25 +1807,25 @@ class Windows.UI.Input.Inking.InkStrokeRenderingSegment python_type
     default Windows.UI.Input.Inking.IInkStrokeRenderingSegment
     requires Windows.UI.Input.Inking.IInkStrokeRenderingSegment
     property bezier_control_point1
-        get get_BezierControlPoint1 slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=43
+        get get_BezierControlPoint1 slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out struct type=Windows.Foundation.Point return
     property bezier_control_point2
-        get get_BezierControlPoint2 slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=62
+        get get_BezierControlPoint2 slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out struct type=Windows.Foundation.Point return
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out struct type=Windows.Foundation.Point return
     property pressure
-        get get_Pressure slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=99
+        get get_Pressure slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out single return
     property tilt_x
-        get get_TiltX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=121
+        get get_TiltX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out single return
     property tilt_y
-        get get_TiltY slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=141
+        get get_TiltY slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out single return
     property twist
-        get get_Twist slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4 reverse=162
+        get get_Twist slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokeRenderingSegment shape=4
             out single return
 
 class Windows.UI.Input.Inking.InkStrokesCollectedEventArgs python_type
@@ -1834,7 +1834,7 @@ class Windows.UI.Input.Inking.InkStrokesCollectedEventArgs python_type
     default Windows.UI.Input.Inking.IInkStrokesCollectedEventArgs
     requires Windows.UI.Input.Inking.IInkStrokesCollectedEventArgs
     property strokes
-        get get_Strokes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokesCollectedEventArgs shape=4 reverse=22
+        get get_Strokes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokesCollectedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> return
 
 class Windows.UI.Input.Inking.InkStrokesErasedEventArgs python_type
@@ -1843,7 +1843,7 @@ class Windows.UI.Input.Inking.InkStrokesErasedEventArgs python_type
     default Windows.UI.Input.Inking.IInkStrokesErasedEventArgs
     requires Windows.UI.Input.Inking.IInkStrokesErasedEventArgs
     property strokes
-        get get_Strokes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokesErasedEventArgs shape=4 reverse=22
+        get get_Strokes slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkStrokesErasedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> return
 
 class Windows.UI.Input.Inking.InkSynchronizer python_type
@@ -1852,10 +1852,10 @@ class Windows.UI.Input.Inking.InkSynchronizer python_type
     default Windows.UI.Input.Inking.IInkSynchronizer
     requires Windows.UI.Input.Inking.IInkSynchronizer
     method begin_dry
-        method BeginDry slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkSynchronizer shape=4 reverse=22
+        method BeginDry slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkSynchronizer shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.InkStroke> return
     method end_dry
-        method EndDry slot=7 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.IInkSynchronizer shape=0 reverse=37
+        method EndDry slot=7 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.IInkSynchronizer shape=0
 
 class Windows.UI.Input.Inking.InkUnprocessedInput python_type
     py InkUnprocessedInput
@@ -1863,49 +1863,49 @@ class Windows.UI.Input.Inking.InkUnprocessedInput python_type
     default Windows.UI.Input.Inking.IInkUnprocessedInput
     requires Windows.UI.Input.Inking.IInkUnprocessedInput
     property ink_presenter
-        get get_InkPresenter slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=4 reverse=228
+        get get_InkPresenter slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=4
             out class type=Windows.UI.Input.Inking.InkPresenter return
     event pointer_entered
-        add add_PointerEntered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=24
+        add add_PointerEntered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerEntered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=53
+        remove remove_PointerEntered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_exited
-        add add_PointerExited slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=124
+        add add_PointerExited slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerExited slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=156
+        remove remove_PointerExited slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_hovered
-        add add_PointerHovered slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=65
+        add add_PointerHovered slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerHovered slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=110
+        remove remove_PointerHovered slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_lost
-        add add_PointerLost slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=219
+        add add_PointerLost slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerLost slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=226
+        remove remove_PointerLost slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_moved
-        add add_PointerMoved slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=187
+        add add_PointerMoved slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerMoved slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=200
+        remove remove_PointerMoved slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_pressed
-        add add_PointerPressed slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=163
+        add add_PointerPressed slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerPressed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=181
+        remove remove_PointerPressed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_released
-        add add_PointerReleased slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51 reverse=203
+        add add_PointerReleased slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerReleased slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26 reverse=215
+        remove remove_PointerReleased slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IInkUnprocessedInput shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.UI.Input.Inking.PenAndInkSettings python_type
@@ -1916,28 +1916,28 @@ class Windows.UI.Input.Inking.PenAndInkSettings python_type
     requires Windows.UI.Input.Inking.IPenAndInkSettings2
     factory Windows.UI.Input.Inking.IPenAndInkSettingsStatics
     property font_family_name
-        get get_FontFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4 reverse=99
+        get get_FontFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4
             out string return
     property handwriting_line_height
-        get get_HandwritingLineHeight slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4 reverse=62
+        get get_HandwritingLineHeight slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4
             out enum32 type=Windows.UI.Input.Inking.HandwritingLineHeight return
     property is_handwriting_directly_into_text_field_enabled
-        get get_IsHandwritingDirectlyIntoTextFieldEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4 reverse=22
+        get get_IsHandwritingDirectlyIntoTextFieldEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4
             out boolean return
     property is_touch_handwriting_enabled
-        get get_IsTouchHandwritingEnabled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4 reverse=141
+        get get_IsTouchHandwritingEnabled slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4
             out boolean return
     property pen_handedness
-        get get_PenHandedness slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4 reverse=43
+        get get_PenHandedness slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4
             out enum32 type=Windows.UI.Input.Inking.PenHandedness return
     property user_consents_to_handwriting_telemetry_collection
-        get get_UserConsentsToHandwritingTelemetryCollection slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4 reverse=121
+        get get_UserConsentsToHandwritingTelemetryCollection slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettings shape=4
             out boolean return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettingsStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.IPenAndInkSettingsStatics shape=4 static
             out class type=Windows.UI.Input.Inking.PenAndInkSettings return
     method set_pen_handedness
-        method SetPenHandedness slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IPenAndInkSettings2 shape=4 reverse=22
+        method SetPenHandedness slot=6 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.IPenAndInkSettings2 shape=4
             in enum32 type=Windows.UI.Input.Inking.PenHandedness name=value
 
 enum Windows.UI.Input.Inking.PenHandedness python_type

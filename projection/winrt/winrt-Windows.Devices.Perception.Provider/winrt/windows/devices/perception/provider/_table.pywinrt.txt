@@ -204,13 +204,13 @@ class Windows.Devices.Perception.Provider.KnownPerceptionFrameKind static python
     py KnownPerceptionFrameKind
     factory Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics
     property color static
-        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics shape=4 reverse=22 static deprecated
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics shape=4 static deprecated
             out string return
     property depth static
-        get get_Depth slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics shape=4 reverse=43 static deprecated
+        get get_Depth slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics shape=4 static deprecated
             out string return
     property infrared static
-        get get_Infrared slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics shape=4 reverse=62 static deprecated
+        get get_Infrared slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IKnownPerceptionFrameKindStatics shape=4 static deprecated
             out string return
 
 class Windows.Devices.Perception.Provider.PerceptionControlGroup python_type
@@ -220,11 +220,11 @@ class Windows.Devices.Perception.Provider.PerceptionControlGroup python_type
     requires Windows.Devices.Perception.Provider.IPerceptionControlGroup
     factory Windows.Devices.Perception.Provider.IPerceptionControlGroupFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionControlGroupFactory shape=51 reverse=24 deprecated
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionControlGroupFactory shape=51 deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=ids
             out class type=Windows.Devices.Perception.Provider.PerceptionControlGroup return
     property frame_provider_ids
-        get get_FrameProviderIds slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionControlGroup shape=4 reverse=22 deprecated
+        get get_FrameProviderIds slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionControlGroup shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 class Windows.Devices.Perception.Provider.PerceptionCorrelation python_type
@@ -240,13 +240,13 @@ class Windows.Devices.Perception.Provider.PerceptionCorrelation python_type
             in struct type=Windows.Foundation.Numerics.Quaternion name=orientation
             out class type=Windows.Devices.Perception.Provider.PerceptionCorrelation return
     property orientation
-        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelation shape=4 reverse=62 deprecated
+        get get_Orientation slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelation shape=4 deprecated
             out struct type=Windows.Foundation.Numerics.Quaternion return
     property position
-        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelation shape=4 reverse=43 deprecated
+        get get_Position slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelation shape=4 deprecated
             out struct type=Windows.Foundation.Numerics.Vector3 return
     property target_id
-        get get_TargetId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelation shape=4 reverse=22 deprecated
+        get get_TargetId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelation shape=4 deprecated
             out string return
 
 class Windows.Devices.Perception.Provider.PerceptionCorrelationGroup python_type
@@ -256,11 +256,11 @@ class Windows.Devices.Perception.Provider.PerceptionCorrelationGroup python_type
     requires Windows.Devices.Perception.Provider.IPerceptionCorrelationGroup
     factory Windows.Devices.Perception.Provider.IPerceptionCorrelationGroupFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelationGroupFactory shape=51 reverse=24 deprecated
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelationGroupFactory shape=51 deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Devices.Perception.Provider.PerceptionCorrelation> name=relativeLocations
             out class type=Windows.Devices.Perception.Provider.PerceptionCorrelationGroup return
     property relative_locations
-        get get_RelativeLocations slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelationGroup shape=4 reverse=22 deprecated
+        get get_RelativeLocations slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionCorrelationGroup shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Perception.Provider.PerceptionCorrelation> return
 
 class Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup python_type
@@ -270,13 +270,13 @@ class Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup pyth
     requires Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroup
     factory Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroupFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroupFactory shape=195 reverse=26 deprecated
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroupFactory shape=195 deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=ids
             in delegate type=Windows.Devices.Perception.Provider.PerceptionStartFaceAuthenticationHandler name=startHandler
             in delegate type=Windows.Devices.Perception.Provider.PerceptionStopFaceAuthenticationHandler name=stopHandler
             out class type=Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup return
     property frame_provider_ids
-        get get_FrameProviderIds slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroup shape=4 reverse=22 deprecated
+        get get_FrameProviderIds slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFaceAuthenticationGroup shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 class Windows.Devices.Perception.Provider.PerceptionFrame python_type
@@ -285,15 +285,15 @@ class Windows.Devices.Perception.Provider.PerceptionFrame python_type
     default Windows.Devices.Perception.Provider.IPerceptionFrame
     requires Windows.Devices.Perception.Provider.IPerceptionFrame
     property relative_time
-        get get_RelativeTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=4 reverse=22 deprecated
+        get get_RelativeTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=4 deprecated
             out timespan return
-        put put_RelativeTime slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=26 reverse=53 deprecated
+        put put_RelativeTime slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=26 deprecated
             in timespan name=value
     property frame_data
-        get get_FrameData slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=4 reverse=99 deprecated
+        get get_FrameData slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=4 deprecated
             out interface type=Windows.Foundation.IMemoryBuffer return
     property properties
-        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=4 reverse=62 deprecated
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrame shape=4 deprecated
             out class type=Windows.Foundation.Collections.ValueSet return
 
 class Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo activatable python_type
@@ -305,72 +305,72 @@ class Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=22 deprecated
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             out string return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=43 deprecated
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             in string name=value
     property hidden
-        get get_Hidden slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=186 deprecated
+        get get_Hidden slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             out boolean return
-        put put_Hidden slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=194 deprecated
+        put put_Hidden slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             in boolean name=value
     property frame_kind
-        get get_FrameKind slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=162 deprecated
+        get get_FrameKind slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             out string return
-        put put_FrameKind slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=173 deprecated
+        put put_FrameKind slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             in string name=value
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=62 deprecated
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             out string return
-        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=99 deprecated
+        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             in string name=value
     property device_kind
-        get get_DeviceKind slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=121 deprecated
+        get get_DeviceKind slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             out string return
-        put put_DeviceKind slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 reverse=141 deprecated
+        put put_DeviceKind slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderInfo shape=4 deprecated
             in string name=value
 
 class Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService static python_type
     py PerceptionFrameProviderManagerService
     factory Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics
     method publish_frame_for_provider static deprecated
-        method PublishFrameForProvider slot=15 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=196 static deprecated
+        method PublishFrameForProvider slot=15 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProvider name=provider
             in class type=Windows.Devices.Perception.Provider.PerceptionFrame name=frame
     method register_control_group static deprecated
-        method RegisterControlGroup slot=10 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=124 static deprecated
+        method RegisterControlGroup slot=10 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionControlGroup name=controlGroup
     method register_correlation_group static deprecated
-        method RegisterCorrelationGroup slot=12 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=163 static deprecated
+        method RegisterCorrelationGroup slot=12 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionCorrelationGroup name=correlationGroup
     method register_face_authentication_group static deprecated
-        method RegisterFaceAuthenticationGroup slot=8 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=65 static deprecated
+        method RegisterFaceAuthenticationGroup slot=8 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup name=faceAuthenticationGroup
     method register_frame_provider_info static deprecated
-        method RegisterFrameProviderInfo slot=6 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=24 static deprecated
+        method RegisterFrameProviderInfo slot=6 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo name=frameProviderInfo
     method unregister_control_group static deprecated
-        method UnregisterControlGroup slot=11 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=144 static deprecated
+        method UnregisterControlGroup slot=11 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionControlGroup name=controlGroup
     method unregister_correlation_group static deprecated
-        method UnregisterCorrelationGroup slot=13 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=174 static deprecated
+        method UnregisterCorrelationGroup slot=13 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionCorrelationGroup name=correlationGroup
     method unregister_face_authentication_group static deprecated
-        method UnregisterFaceAuthenticationGroup slot=9 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=100 static deprecated
+        method UnregisterFaceAuthenticationGroup slot=9 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup name=faceAuthenticationGroup
     method unregister_frame_provider_info static deprecated
-        method UnregisterFrameProviderInfo slot=7 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=44 static deprecated
+        method UnregisterFrameProviderInfo slot=7 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager name=manager
             in class type=Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo name=frameProviderInfo
     method update_availability_for_provider static deprecated
-        method UpdateAvailabilityForProvider slot=14 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 reverse=187 static deprecated
+        method UpdateAvailabilityForProvider slot=14 inputs=2 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionFrameProviderManagerServiceStatics shape=51 static deprecated
             in interface type=Windows.Devices.Perception.Provider.IPerceptionFrameProvider name=provider
             in boolean name=available
 
@@ -380,18 +380,18 @@ class Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest python
     default Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest
     requires Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 reverse=62 deprecated
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 deprecated
             out enum32 type=Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus return
-        put put_Status slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 reverse=99 deprecated
+        put put_Status slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 deprecated
             in enum32 type=Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus name=value
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 reverse=22 deprecated
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 deprecated
             out string return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 reverse=43 deprecated
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 deprecated
             out object return
     method get_deferral deprecated
-        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 reverse=121 deprecated
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionPropertyChangeRequest shape=4 deprecated
             out class type=Windows.Foundation.Deferral return
 
 delegate Windows.Devices.Perception.Provider.PerceptionStartFaceAuthenticationHandler python_type
@@ -426,12 +426,12 @@ class Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator python_t
             in enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode name=alpha
             out class type=Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator return
     method allocate_frame deprecated
-        method AllocateFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocator shape=4 reverse=22 deprecated
+        method AllocateFrame slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocator shape=4 deprecated
             out class type=Windows.Devices.Perception.Provider.PerceptionFrame return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method copy_from_video_frame deprecated
-        method CopyFromVideoFrame slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocator shape=51 reverse=44 deprecated
+        method CopyFromVideoFrame slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Perception.Provider.IPerceptionVideoFrameAllocator shape=51 deprecated
             in class type=Windows.Media.VideoFrame name=frame
             out class type=Windows.Devices.Perception.Provider.PerceptionFrame return
 

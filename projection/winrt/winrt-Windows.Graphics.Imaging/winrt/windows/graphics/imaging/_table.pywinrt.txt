@@ -167,10 +167,10 @@ class Windows.Graphics.Imaging.BitmapBuffer python_type closeable
         method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_plane_count
-        method GetPlaneCount slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapBuffer shape=4 reverse=22
+        method GetPlaneCount slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapBuffer shape=4
             out int32 return
     method get_plane_description
-        method GetPlaneDescription slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapBuffer shape=51 reverse=44
+        method GetPlaneDescription slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapBuffer shape=51
             in int32 name=index
             out struct type=Windows.Graphics.Imaging.BitmapPlaneDescription return
 
@@ -187,16 +187,16 @@ class Windows.Graphics.Imaging.BitmapCodecInformation python_type
     default Windows.Graphics.Imaging.IBitmapCodecInformation
     requires Windows.Graphics.Imaging.IBitmapCodecInformation
     property codec_id
-        get get_CodecId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4 reverse=22
+        get get_CodecId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4
             out guid return
     property file_extensions
-        get get_FileExtensions slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4 reverse=43
+        get get_FileExtensions slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property friendly_name
-        get get_FriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4 reverse=62
+        get get_FriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4
             out string return
     property mime_types
-        get get_MimeTypes slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4 reverse=99
+        get get_MimeTypes slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapCodecInformation shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 class Windows.Graphics.Imaging.BitmapDecoder python_type
@@ -209,13 +209,13 @@ class Windows.Graphics.Imaging.BitmapDecoder python_type
     factory Windows.Graphics.Imaging.IBitmapDecoderStatics
     factory Windows.Graphics.Imaging.IBitmapDecoderStatics2
     property bitmap_container_properties
-        get get_BitmapContainerProperties slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4 reverse=22
+        get get_BitmapContainerProperties slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4
             out class type=Windows.Graphics.Imaging.BitmapPropertiesView return
     property decoder_information
-        get get_DecoderInformation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4 reverse=43
+        get get_DecoderInformation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4
             out class type=Windows.Graphics.Imaging.BitmapCodecInformation return
     property frame_count
-        get get_FrameCount slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4 reverse=62
+        get get_FrameCount slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4
             out uint32 return
     property bitmap_alpha_mode
         get get_BitmapAlphaMode slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapFrame shape=4 reverse=99
@@ -245,34 +245,34 @@ class Windows.Graphics.Imaging.BitmapDecoder python_type
         get get_PixelWidth slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapFrame shape=4 reverse=162
             out uint32 return
     property bmp_decoder_id static
-        get get_BmpDecoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=22 static
+        get get_BmpDecoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property gif_decoder_id static
-        get get_GifDecoderId slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=121 static
+        get get_GifDecoderId slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property ico_decoder_id static
-        get get_IcoDecoderId slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=162 static
+        get get_IcoDecoderId slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property jpeg_decoder_id static
-        get get_JpegDecoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=43 static
+        get get_JpegDecoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property jpeg_x_r_decoder_id static
-        get get_JpegXRDecoderId slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=141 static
+        get get_JpegXRDecoderId slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property png_decoder_id static
-        get get_PngDecoderId slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=62 static
+        get get_PngDecoderId slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property tiff_decoder_id static
-        get get_TiffDecoderId slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=99 static
+        get get_TiffDecoderId slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property heif_decoder_id static
-        get get_HeifDecoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics2 shape=4 reverse=22 static
+        get get_HeifDecoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics2 shape=4 static
             out guid return
     property webp_decoder_id static
-        get get_WebpDecoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics2 shape=4 reverse=43 static
+        get get_WebpDecoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics2 shape=4 static
             out guid return
     method create_async static
-        method CreateAsync slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=51 reverse=187 static
+        method CreateAsync slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=51 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapDecoder> return
         method CreateAsync slot=15 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=177 static
@@ -280,10 +280,10 @@ class Windows.Graphics.Imaging.BitmapDecoder python_type
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapDecoder> return
     method get_decoder_information_enumerator static
-        method GetDecoderInformationEnumerator slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 reverse=173 static
+        method GetDecoderInformationEnumerator slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapCodecInformation> return
     method get_frame_async
-        method GetFrameAsync slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=51 reverse=124
+        method GetFrameAsync slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=51
             in uint32 name=frameIndex
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapFrame> return
     method get_pixel_data_async
@@ -297,7 +297,7 @@ class Windows.Graphics.Imaging.BitmapDecoder python_type
             in enum32 type=Windows.Graphics.Imaging.ColorManagementMode name=colorManagementMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.PixelDataProvider> return
     method get_preview_async
-        method GetPreviewAsync slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4 reverse=99
+        method GetPreviewAsync slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.ImageStream> return
     method get_software_bitmap_async
         method GetSoftwareBitmapAsync slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap shape=4 reverse=22
@@ -326,52 +326,52 @@ class Windows.Graphics.Imaging.BitmapEncoder python_type
     factory Windows.Graphics.Imaging.IBitmapEncoderStatics
     factory Windows.Graphics.Imaging.IBitmapEncoderStatics2
     property is_thumbnail_generated
-        get get_IsThumbnailGenerated slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=99
+        get get_IsThumbnailGenerated slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out boolean return
-        put put_IsThumbnailGenerated slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=121
+        put put_IsThumbnailGenerated slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             in boolean name=value
     property generated_thumbnail_width
-        get get_GeneratedThumbnailWidth slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=141
+        get get_GeneratedThumbnailWidth slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out uint32 return
-        put put_GeneratedThumbnailWidth slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=162
+        put put_GeneratedThumbnailWidth slot=12 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             in uint32 name=value
     property generated_thumbnail_height
-        get get_GeneratedThumbnailHeight slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=173
+        get get_GeneratedThumbnailHeight slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out uint32 return
-        put put_GeneratedThumbnailHeight slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=186
+        put put_GeneratedThumbnailHeight slot=14 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             in uint32 name=value
     property bitmap_container_properties
-        get get_BitmapContainerProperties slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=62
+        get get_BitmapContainerProperties slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out class type=Windows.Graphics.Imaging.BitmapProperties return
     property bitmap_properties
-        get get_BitmapProperties slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=43
+        get get_BitmapProperties slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out class type=Windows.Graphics.Imaging.BitmapProperties return
     property bitmap_transform
-        get get_BitmapTransform slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=194
+        get get_BitmapTransform slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out class type=Windows.Graphics.Imaging.BitmapTransform return
     property encoder_information
-        get get_EncoderInformation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=22
+        get get_EncoderInformation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out class type=Windows.Graphics.Imaging.BitmapCodecInformation return
     property bmp_encoder_id static
-        get get_BmpEncoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=22 static
+        get get_BmpEncoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property gif_encoder_id static
-        get get_GifEncoderId slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=121 static
+        get get_GifEncoderId slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property jpeg_encoder_id static
-        get get_JpegEncoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=43 static
+        get get_JpegEncoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property jpeg_x_r_encoder_id static
-        get get_JpegXREncoderId slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=141 static
+        get get_JpegXREncoderId slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property png_encoder_id static
-        get get_PngEncoderId slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=62 static
+        get get_PngEncoderId slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property tiff_encoder_id static
-        get get_TiffEncoderId slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=99 static
+        get get_TiffEncoderId slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property heif_encoder_id static
-        get get_HeifEncoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics2 shape=4 reverse=22 static
+        get get_HeifEncoderId slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics2 shape=4 static
             out guid return
     method create_async static
         method CreateAsync slot=13 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=177 static
@@ -384,24 +384,24 @@ class Windows.Graphics.Imaging.BitmapEncoder python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Imaging.BitmapTypedValue>> name=encodingOptions
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapEncoder> return
     method create_for_in_place_property_encoding_async static
-        method CreateForInPlacePropertyEncodingAsync slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=51 reverse=203 static
+        method CreateForInPlacePropertyEncodingAsync slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=51 static
             in class type=Windows.Graphics.Imaging.BitmapDecoder name=bitmapDecoder
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapEncoder> return
     method create_for_transcoding_async static
-        method CreateForTranscodingAsync slot=15 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=117 reverse=197 static
+        method CreateForTranscodingAsync slot=15 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=117 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in class type=Windows.Graphics.Imaging.BitmapDecoder name=bitmapDecoder
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapEncoder> return
     method flush_async
-        method FlushAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=223
+        method FlushAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method get_encoder_information_enumerator static
-        method GetEncoderInformationEnumerator slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 reverse=162 static
+        method GetEncoderInformationEnumerator slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.BitmapCodecInformation> return
     method go_to_next_frame_async
-        method GoToNextFrameAsync slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=210
+        method GoToNextFrameAsync slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method GoToNextFrameAsync slot=18 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=51 reverse=219
+        method GoToNextFrameAsync slot=18 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Imaging.BitmapTypedValue>> name=encodingOptions
             out interface type=Windows.Foundation.IAsyncAction return
     method set_pixel_data
@@ -414,7 +414,7 @@ class Windows.Graphics.Imaging.BitmapEncoder python_type
             in double name=dpiY
             pass_array uint8 name=pixels
     method set_software_bitmap
-        method SetSoftwareBitmap slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoderWithSoftwareBitmap shape=4 reverse=22
+        method SetSoftwareBitmap slot=6 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapEncoderWithSoftwareBitmap shape=4
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
 
 enum Windows.Graphics.Imaging.BitmapFlip python_type
@@ -525,7 +525,7 @@ class Windows.Graphics.Imaging.BitmapProperties python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=propertiesToRetrieve
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.BitmapPropertySet> return
     method set_properties_async
-        method SetPropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapProperties shape=51 reverse=24
+        method SetPropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapProperties shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Imaging.BitmapTypedValue>> name=propertiesToSet
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -600,32 +600,32 @@ class Windows.Graphics.Imaging.BitmapTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property scaled_width
-        get get_ScaledWidth slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=22
+        get get_ScaledWidth slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             out uint32 return
-        put put_ScaledWidth slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=43
+        put put_ScaledWidth slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             in uint32 name=value
     property scaled_height
-        get get_ScaledHeight slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=62
+        get get_ScaledHeight slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             out uint32 return
-        put put_ScaledHeight slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=99
+        put put_ScaledHeight slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             in uint32 name=value
     property rotation
-        get get_Rotation slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=186
+        get get_Rotation slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             out enum32 type=Windows.Graphics.Imaging.BitmapRotation return
-        put put_Rotation slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=194
+        put put_Rotation slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             in enum32 type=Windows.Graphics.Imaging.BitmapRotation name=value
     property interpolation_mode
-        get get_InterpolationMode slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=121
+        get get_InterpolationMode slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             out enum32 type=Windows.Graphics.Imaging.BitmapInterpolationMode return
-        put put_InterpolationMode slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=141
+        put put_InterpolationMode slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             in enum32 type=Windows.Graphics.Imaging.BitmapInterpolationMode name=value
     property flip
-        get get_Flip slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=162
+        get get_Flip slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             out enum32 type=Windows.Graphics.Imaging.BitmapFlip return
-        put put_Flip slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=173
+        put put_Flip slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             in enum32 type=Windows.Graphics.Imaging.BitmapFlip name=value
     property bounds
-        get get_Bounds slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4 reverse=202
+        get get_Bounds slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=4
             out struct type=Windows.Graphics.Imaging.BitmapBounds return
         put put_Bounds slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.IBitmapTransform shape=35
             in struct type=Windows.Graphics.Imaging.BitmapBounds name=value
@@ -637,15 +637,15 @@ class Windows.Graphics.Imaging.BitmapTypedValue python_type
     requires Windows.Graphics.Imaging.IBitmapTypedValue
     factory Windows.Graphics.Imaging.IBitmapTypedValueFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTypedValueFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTypedValueFactory shape=117
             in object name=value
             in enum32 type=Windows.Foundation.PropertyType name=type
             out class type=Windows.Graphics.Imaging.BitmapTypedValue return
     property type
-        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTypedValue shape=4 reverse=43
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTypedValue shape=4
             out enum32 type=Windows.Foundation.PropertyType return
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTypedValue shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapTypedValue shape=4
             out object return
 
 enum Windows.Graphics.Imaging.ColorManagementMode python_type
@@ -1430,7 +1430,7 @@ class Windows.Graphics.Imaging.PixelDataProvider python_type
     default Windows.Graphics.Imaging.IPixelDataProvider
     requires Windows.Graphics.Imaging.IPixelDataProvider
     method detach_pixel_data
-        method DetachPixelData slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IPixelDataProvider shape=51 reverse=24
+        method DetachPixelData slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IPixelDataProvider shape=51
             receive_array uint8 return
 
 enum Windows.Graphics.Imaging.PngFilterMode python_type
@@ -1453,7 +1453,7 @@ class Windows.Graphics.Imaging.SoftwareBitmap python_type closeable
     factory Windows.Graphics.Imaging.ISoftwareBitmapFactory
     factory Windows.Graphics.Imaging.ISoftwareBitmapStatics
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapFactory shape=195
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=format
             in int32 name=width
             in int32 name=height
@@ -1465,57 +1465,57 @@ class Windows.Graphics.Imaging.SoftwareBitmap python_type closeable
             in enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode name=alpha
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     property dpi_y
-        get get_DpiY slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=186
+        get get_DpiY slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out double return
-        put put_DpiY slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=2 reverse=171
+        put put_DpiY slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=2
             in double name=value
     property dpi_x
-        get get_DpiX slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=162
+        get get_DpiX slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out double return
-        put put_DpiX slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=2 reverse=138
+        put put_DpiX slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=2
             in double name=value
     property bitmap_alpha_mode
-        get get_BitmapAlphaMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=43
+        get get_BitmapAlphaMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode return
     property bitmap_pixel_format
-        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=22
+        get get_BitmapPixelFormat slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
     property is_read_only
-        get get_IsReadOnly slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=121
+        get get_IsReadOnly slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out boolean return
     property pixel_height
-        get get_PixelHeight slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=99
+        get get_PixelHeight slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out int32 return
     property pixel_width
-        get get_PixelWidth slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=62
+        get get_PixelWidth slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out int32 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method convert static
-        method Convert slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=117 reverse=45 static
+        method Convert slot=7 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=117 static
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=source
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=format
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
-        method Convert slot=8 inputs=3 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=195 reverse=68 static
+        method Convert slot=8 inputs=3 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=195 static
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=source
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=format
             in enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode name=alpha
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method copy static
-        method Copy slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=51 reverse=24 static
+        method Copy slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=51 static
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=source
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method copy_from_buffer
-        method CopyFromBuffer slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=210
+        method CopyFromBuffer slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
     method copy_to
-        method CopyTo slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=202
+        method CopyTo slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
     method copy_to_buffer
-        method CopyToBuffer slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=218
+        method CopyToBuffer slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
     method create_copy_from_buffer static
-        method CreateCopyFromBuffer slot=9 inputs=4 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=239 reverse=103 static
+        method CreateCopyFromBuffer slot=9 inputs=4 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=239 static
             in interface type=Windows.Storage.Streams.IBuffer name=source
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=format
             in int32 name=width
@@ -1529,18 +1529,18 @@ class Windows.Graphics.Imaging.SoftwareBitmap python_type closeable
             in enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode name=alpha
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method create_copy_from_surface_async static
-        method CreateCopyFromSurfaceAsync slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=51 reverse=144 static
+        method CreateCopyFromSurfaceAsync slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=51 static
             in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=surface
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.SoftwareBitmap> return
-        method CreateCopyFromSurfaceAsync slot=12 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=117 reverse=164 static
+        method CreateCopyFromSurfaceAsync slot=12 inputs=2 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmapStatics shape=117 static
             in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=surface
             in enum32 type=Windows.Graphics.Imaging.BitmapAlphaMode name=alpha
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Imaging.SoftwareBitmap> return
     method get_read_only_view
-        method GetReadOnlyView slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4 reverse=223
+        method GetReadOnlyView slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=4
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method lock_buffer
-        method LockBuffer slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=51 reverse=196
+        method LockBuffer slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Imaging.ISoftwareBitmap shape=51
             in enum32 type=Windows.Graphics.Imaging.BitmapBufferAccessMode name=mode
             out class type=Windows.Graphics.Imaging.BitmapBuffer return
 

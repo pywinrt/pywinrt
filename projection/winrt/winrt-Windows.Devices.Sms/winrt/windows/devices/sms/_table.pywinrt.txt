@@ -1426,60 +1426,60 @@ class Windows.Devices.Sms.SmsAppMessage activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property protocol_id
-        get get_ProtocolId slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=247
+        get get_ProtocolId slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out int32 return
-        put put_ProtocolId slot=25 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=252
+        put put_ProtocolId slot=25 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in int32 name=value
     property port_number
-        get get_PortNumber slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=228
+        get get_PortNumber slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out int32 return
-        put put_PortNumber slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=232
+        put put_PortNumber slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in int32 name=value
     property is_delivery_notification_enabled
-        get get_IsDeliveryNotificationEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=186
+        get get_IsDeliveryNotificationEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out boolean return
-        put put_IsDeliveryNotificationEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=194
+        put put_IsDeliveryNotificationEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in boolean name=value
     property retry_attempt_count
-        get get_RetryAttemptCount slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=202
+        get get_RetryAttemptCount slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out int32 return
-        put put_RetryAttemptCount slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=210
+        put put_RetryAttemptCount slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in int32 name=value
     property encoding
-        get get_Encoding slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=218
+        get get_Encoding slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out enum32 type=Windows.Devices.Sms.SmsEncoding return
-        put put_Encoding slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=223
+        put put_Encoding slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in enum32 type=Windows.Devices.Sms.SmsEncoding name=value
     property body
-        get get_Body slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=121
+        get get_Body slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out string return
-        put put_Body slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=141
+        put put_Body slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in string name=value
     property callback_number
-        get get_CallbackNumber slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=162
+        get get_CallbackNumber slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out string return
-        put put_CallbackNumber slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=173
+        put put_CallbackNumber slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in string name=value
     property binary_body
-        get get_BinaryBody slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=255
+        get get_BinaryBody slot=26 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_BinaryBody slot=27 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=259
+        put put_BinaryBody slot=27 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property to
-        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=43
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out string return
-        put put_To slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=62
+        put put_To slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in string name=value
     property teleservice_id
-        get get_TeleserviceId slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=237
+        get get_TeleserviceId slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out int32 return
-        put put_TeleserviceId slot=23 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=242
+        put put_TeleserviceId slot=23 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             in int32 name=value
     property from_
-        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=99
+        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out string return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsAppMessage shape=4
             out datetime return
     property cellular_class
         get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
@@ -1531,34 +1531,34 @@ class Windows.Devices.Sms.SmsBroadcastMessage python_type
     requires Windows.Devices.Sms.ISmsBroadcastMessage
     requires Windows.Devices.Sms.ISmsMessageBase
     property body
-        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=62
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out string return
     property broadcast_type
-        get get_BroadcastType slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=173
+        get get_BroadcastType slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out enum32 type=Windows.Devices.Sms.SmsBroadcastType return
     property channel
-        get get_Channel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=99
+        get get_Channel slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out int32 return
     property geographical_scope
-        get get_GeographicalScope slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=121
+        get get_GeographicalScope slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out enum32 type=Windows.Devices.Sms.SmsGeographicalScope return
     property is_emergency_alert
-        get get_IsEmergencyAlert slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=186
+        get get_IsEmergencyAlert slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out boolean return
     property is_user_popup_requested
-        get get_IsUserPopupRequested slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=194
+        get get_IsUserPopupRequested slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out boolean return
     property message_code
-        get get_MessageCode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=141
+        get get_MessageCode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out int32 return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out datetime return
     property to
-        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=43
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out string return
     property update_number
-        get get_UpdateNumber slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4 reverse=162
+        get get_UpdateNumber slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBroadcastMessage shape=4
             out int32 return
     property cellular_class
         get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=62
@@ -1640,18 +1640,18 @@ class Windows.Devices.Sms.SmsDevice python_type
             in class type=Windows.Devices.Sms.SmsTextMessage name=message
             out struct type=Windows.Devices.Sms.SmsEncodedLength return
     method from_id_async static deprecated
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=51 reverse=44 static deprecated
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=51 static deprecated
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
     method from_network_account_id_async static deprecated
-        method FromNetworkAccountIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics2 shape=51 reverse=24 static deprecated
+        method FromNetworkAccountIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics2 shape=51 static deprecated
             in string name=networkAccountId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
     method get_default_async static deprecated
-        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 reverse=62 static deprecated
+        method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
     method get_device_selector static deprecated
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 reverse=22 static deprecated
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 static deprecated
             out string return
     method send_message_async deprecated
         method SendMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=24 deprecated
@@ -1665,51 +1665,51 @@ class Windows.Devices.Sms.SmsDevice2 python_type
     requires Windows.Devices.Sms.ISmsDevice2
     factory Windows.Devices.Sms.ISmsDevice2Statics
     property smsc_address
-        get get_SmscAddress slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=22
+        get get_SmscAddress slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             out string return
-        put put_SmscAddress slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=43
+        put put_SmscAddress slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             in string name=value
     property account_phone_number
-        get get_AccountPhoneNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=121
+        get get_AccountPhoneNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             out string return
     property cellular_class
-        get get_CellularClass slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=141
+        get get_CellularClass slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             out enum32 type=Windows.Devices.Sms.CellularClass return
     property device_id
-        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=62
+        get get_DeviceId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             out string return
     property device_status
-        get get_DeviceStatus slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=162
+        get get_DeviceStatus slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             out enum32 type=Windows.Devices.Sms.SmsDeviceStatus return
     property parent_device_id
-        get get_ParentDeviceId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4 reverse=99
+        get get_ParentDeviceId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=4
             out string return
     event device_status_changed
-        add add_DeviceStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=196
+        add add_DeviceStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsDevice2,System.Object> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DeviceStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=26 reverse=397
+        remove remove_DeviceStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method calculate_length
-        method CalculateLength slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=174
+        method CalculateLength slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51
             in interface type=Windows.Devices.Sms.ISmsMessageBase name=message
             out struct type=Windows.Devices.Sms.SmsEncodedLength return
     method from_id static
-        method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=51 reverse=44 static
+        method FromId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=51 static
             in string name=deviceId
             out class type=Windows.Devices.Sms.SmsDevice2 return
     method from_parent_id static
-        method FromParentId slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=51 reverse=100 static
+        method FromParentId slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=51 static
             in string name=parentDeviceId
             out class type=Windows.Devices.Sms.SmsDevice2 return
     method get_default static
-        method GetDefault slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=4 reverse=62 static
+        method GetDefault slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=4 static
             out class type=Windows.Devices.Sms.SmsDevice2 return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=4 reverse=22 static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2Statics shape=4 static
             out string return
     method send_message_and_get_result_async
-        method SendMessageAndGetResultAsync slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51 reverse=187
+        method SendMessageAndGetResultAsync slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice2 shape=51
             in interface type=Windows.Devices.Sms.ISmsMessageBase name=message
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsSendMessageResult> return
 
@@ -1719,22 +1719,22 @@ class Windows.Devices.Sms.SmsDeviceMessageStore python_type
     default Windows.Devices.Sms.ISmsDeviceMessageStore
     requires Windows.Devices.Sms.ISmsDeviceMessageStore
     property max_messages
-        get get_MaxMessages slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=4 reverse=121 deprecated
+        get get_MaxMessages slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=4 deprecated
             out uint32 return
     method delete_message_async deprecated
-        method DeleteMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=24 deprecated
+        method DeleteMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in uint32 name=messageId
             out interface type=Windows.Foundation.IAsyncAction return
     method delete_messages_async deprecated
-        method DeleteMessagesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=44 deprecated
+        method DeleteMessagesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in enum32 type=Windows.Devices.Sms.SmsMessageFilter name=messageFilter
             out interface type=Windows.Foundation.IAsyncAction return
     method get_message_async deprecated
-        method GetMessageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=65 deprecated
+        method GetMessageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in uint32 name=messageId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> return
     method get_messages_async deprecated
-        method GetMessagesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 reverse=100 deprecated
+        method GetMessagesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in enum32 type=Windows.Devices.Sms.SmsMessageFilter name=messageFilter
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
 
@@ -1797,49 +1797,49 @@ class Windows.Devices.Sms.SmsFilterRule python_type
     requires Windows.Devices.Sms.ISmsFilterRule
     factory Windows.Devices.Sms.ISmsFilterRuleFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRuleFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRuleFactory shape=51
             in enum32 type=Windows.Devices.Sms.SmsMessageType name=messageType
             out class type=Windows.Devices.Sms.SmsFilterRule return
     property cellular_class
-        get get_CellularClass slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=162
+        get get_CellularClass slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out enum32 type=Windows.Devices.Sms.CellularClass return
-        put put_CellularClass slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=173
+        put put_CellularClass slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             in enum32 type=Windows.Devices.Sms.CellularClass name=value
     property broadcast_channels
-        get get_BroadcastChannels slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=223
+        get get_BroadcastChannels slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
     property broadcast_types
-        get get_BroadcastTypes slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=218
+        get get_BroadcastTypes slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsBroadcastType> return
     property device_ids
-        get get_DeviceIds slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=62
+        get get_DeviceIds slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property imsi_prefixes
-        get get_ImsiPrefixes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=43
+        get get_ImsiPrefixes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property message_type
-        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=22
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out enum32 type=Windows.Devices.Sms.SmsMessageType return
     property port_numbers
-        get get_PortNumbers slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=141
+        get get_PortNumbers slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
     property protocol_ids
-        get get_ProtocolIds slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=186
+        get get_ProtocolIds slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
     property sender_numbers
-        get get_SenderNumbers slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=99
+        get get_SenderNumbers slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property teleservice_ids
-        get get_TeleserviceIds slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=194
+        get get_TeleserviceIds slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
     property text_message_prefixes
-        get get_TextMessagePrefixes slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=121
+        get get_TextMessagePrefixes slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property wap_application_ids
-        get get_WapApplicationIds slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=202
+        get get_WapApplicationIds slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property wap_content_types
-        get get_WapContentTypes slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4 reverse=210
+        get get_WapContentTypes slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRule shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Devices.Sms.SmsFilterRules python_type
@@ -1849,14 +1849,14 @@ class Windows.Devices.Sms.SmsFilterRules python_type
     requires Windows.Devices.Sms.ISmsFilterRules
     factory Windows.Devices.Sms.ISmsFilterRulesFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRulesFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRulesFactory shape=51
             in enum32 type=Windows.Devices.Sms.SmsFilterActionType name=actionType
             out class type=Windows.Devices.Sms.SmsFilterRules return
     property action_type
-        get get_ActionType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRules shape=4 reverse=22
+        get get_ActionType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRules shape=4
             out enum32 type=Windows.Devices.Sms.SmsFilterActionType return
     property rules
-        get get_Rules slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRules shape=4 reverse=43
+        get get_Rules slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsFilterRules shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Sms.SmsFilterRule> return
 
 enum Windows.Devices.Sms.SmsGeographicalScope python_type
@@ -1892,10 +1892,10 @@ class Windows.Devices.Sms.SmsMessageReceivedEventArgs python_type
     default Windows.Devices.Sms.ISmsMessageReceivedEventArgs
     requires Windows.Devices.Sms.ISmsMessageReceivedEventArgs
     property binary_message
-        get get_BinaryMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedEventArgs shape=4 reverse=43 deprecated
+        get get_BinaryMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedEventArgs shape=4 deprecated
             out class type=Windows.Devices.Sms.SmsBinaryMessage return
     property text_message
-        get get_TextMessage slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedEventArgs shape=4 reverse=22 deprecated
+        get get_TextMessage slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedEventArgs shape=4 deprecated
             out class type=Windows.Devices.Sms.SmsTextMessage return
 
 delegate Windows.Devices.Sms.SmsMessageReceivedEventHandler python_type
@@ -1913,30 +1913,30 @@ class Windows.Devices.Sms.SmsMessageReceivedTriggerDetails python_type
     default Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails
     requires Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails
     property app_message
-        get get_AppMessage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=99
+        get get_AppMessage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out class type=Windows.Devices.Sms.SmsAppMessage return
     property broadcast_message
-        get get_BroadcastMessage slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=121
+        get get_BroadcastMessage slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out class type=Windows.Devices.Sms.SmsBroadcastMessage return
     property message_type
-        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=22
+        get get_MessageType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out enum32 type=Windows.Devices.Sms.SmsMessageType return
     property status_message
-        get get_StatusMessage slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=162
+        get get_StatusMessage slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out class type=Windows.Devices.Sms.SmsStatusMessage return
     property text_message
-        get get_TextMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=43
+        get get_TextMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out class type=Windows.Devices.Sms.SmsTextMessage2 return
     property voicemail_message
-        get get_VoicemailMessage slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=141
+        get get_VoicemailMessage slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out class type=Windows.Devices.Sms.SmsVoicemailMessage return
     property wap_message
-        get get_WapMessage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4 reverse=62
+        get get_WapMessage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=4
             out class type=Windows.Devices.Sms.SmsWapMessage return
     method accept
-        method Accept slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=0 reverse=185
+        method Accept slot=14 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=0
     method drop
-        method Drop slot=13 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=0 reverse=169
+        method Drop slot=13 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageReceivedTriggerDetails shape=0
 
 class Windows.Devices.Sms.SmsMessageRegistration python_type
     py SmsMessageRegistration
@@ -1945,24 +1945,24 @@ class Windows.Devices.Sms.SmsMessageRegistration python_type
     requires Windows.Devices.Sms.ISmsMessageRegistration
     factory Windows.Devices.Sms.ISmsMessageRegistrationStatics
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=4
             out string return
     property all_registrations static
-        get get_AllRegistrations slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=4 reverse=22 static
+        get get_AllRegistrations slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.SmsMessageRegistration> return
     event message_received
-        add add_MessageReceived slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=51 reverse=65
+        add add_MessageReceived slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsMessageRegistration,Windows.Devices.Sms.SmsMessageReceivedTriggerDetails> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MessageReceived slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=26 reverse=110
+        remove remove_MessageReceived slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method register static
-        method Register slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=117 reverse=45 static
+        method Register slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageRegistrationStatics shape=117 static
             in string name=id
             in class type=Windows.Devices.Sms.SmsFilterRules name=filterRules
             out class type=Windows.Devices.Sms.SmsMessageRegistration return
     method unregister
-        method Unregister slot=7 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=0 reverse=37
+        method Unregister slot=7 inputs=0 outputs=0 declaring=Windows.Devices.Sms.ISmsMessageRegistration shape=0
 
 enum Windows.Devices.Sms.SmsMessageType python_type
     py SmsMessageType
@@ -1998,16 +1998,16 @@ class Windows.Devices.Sms.SmsReceivedEventDetails python_type
     requires Windows.Devices.Sms.ISmsReceivedEventDetails
     requires Windows.Devices.Sms.ISmsReceivedEventDetails2
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails shape=4 reverse=22 deprecated
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails shape=4 deprecated
             out string return
     property message_index
-        get get_MessageIndex slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails shape=4 reverse=43 deprecated
+        get get_MessageIndex slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails shape=4 deprecated
             out uint32 return
     property binary_message
-        get get_BinaryMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails2 shape=4 reverse=43 deprecated
+        get get_BinaryMessage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails2 shape=4 deprecated
             out class type=Windows.Devices.Sms.SmsBinaryMessage return
     property message_class
-        get get_MessageClass slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails2 shape=4 reverse=22 deprecated
+        get get_MessageClass slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsReceivedEventDetails2 shape=4 deprecated
             out enum32 type=Windows.Devices.Sms.SmsMessageClass return
 
 class Windows.Devices.Sms.SmsSendMessageResult python_type
@@ -2016,25 +2016,25 @@ class Windows.Devices.Sms.SmsSendMessageResult python_type
     default Windows.Devices.Sms.ISmsSendMessageResult
     requires Windows.Devices.Sms.ISmsSendMessageResult
     property cellular_class
-        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=62
+        get get_CellularClass slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out enum32 type=Windows.Devices.Sms.CellularClass return
     property is_error_transient
-        get get_IsErrorTransient slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=121
+        get get_IsErrorTransient slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out boolean return
     property is_successful
-        get get_IsSuccessful slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=22
+        get get_IsSuccessful slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out boolean return
     property message_reference_numbers
-        get get_MessageReferenceNumbers slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=43
+        get get_MessageReferenceNumbers slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
     property modem_error_code
-        get get_ModemErrorCode slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=99
+        get get_ModemErrorCode slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out enum32 type=Windows.Devices.Sms.SmsModemErrorCode return
     property network_cause_code
-        get get_NetworkCauseCode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=141
+        get get_NetworkCauseCode slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out int32 return
     property transport_failure_cause
-        get get_TransportFailureCause slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4 reverse=162
+        get get_TransportFailureCause slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsSendMessageResult shape=4
             out int32 return
 
 class Windows.Devices.Sms.SmsStatusMessage python_type
@@ -2059,25 +2059,25 @@ class Windows.Devices.Sms.SmsStatusMessage python_type
         get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
             out string return
     property status
-        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=99
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out int32 return
     property body
-        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=62
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out string return
     property discharge_time
-        get get_DischargeTime slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=162
+        get get_DischargeTime slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out datetime return
     property from_
-        get get_From slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=43
+        get get_From slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out string return
     property message_reference_number
-        get get_MessageReferenceNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=121
+        get get_MessageReferenceNumber slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out int32 return
     property service_center_timestamp
-        get get_ServiceCenterTimestamp slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=141
+        get get_ServiceCenterTimestamp slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out datetime return
     property to
-        get get_To slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4 reverse=22
+        get get_To slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsStatusMessage shape=4
             out string return
 
 class Windows.Devices.Sms.SmsTextMessage activatable python_type
@@ -2129,12 +2129,12 @@ class Windows.Devices.Sms.SmsTextMessage activatable python_type
         get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=22 deprecated
             out datetime return
     method from_binary_data static deprecated
-        method FromBinaryData slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=195 reverse=46 static deprecated
+        method FromBinaryData slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=195 static deprecated
             in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
             pass_array uint8 name=value
             out class type=Windows.Devices.Sms.SmsTextMessage return
     method from_binary_message static deprecated
-        method FromBinaryMessage slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=51 reverse=24 static deprecated
+        method FromBinaryMessage slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=51 static deprecated
             in class type=Windows.Devices.Sms.SmsBinaryMessage name=binaryMessage
             out class type=Windows.Devices.Sms.SmsTextMessage return
     method to_binary_messages deprecated
@@ -2167,46 +2167,46 @@ class Windows.Devices.Sms.SmsTextMessage2 activatable python_type
         get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
             out string return
     property retry_attempt_count
-        get get_RetryAttemptCount slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=218
+        get get_RetryAttemptCount slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out int32 return
-        put put_RetryAttemptCount slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=223
+        put put_RetryAttemptCount slot=19 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             in int32 name=value
     property to
-        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=43
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out string return
-        put put_To slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=62
+        put put_To slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             in string name=value
     property is_delivery_notification_enabled
-        get get_IsDeliveryNotificationEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=202
+        get get_IsDeliveryNotificationEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out boolean return
-        put put_IsDeliveryNotificationEnabled slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=210
+        put put_IsDeliveryNotificationEnabled slot=17 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             in boolean name=value
     property encoding
-        get get_Encoding slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=162
+        get get_Encoding slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out enum32 type=Windows.Devices.Sms.SmsEncoding return
-        put put_Encoding slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=173
+        put put_Encoding slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             in enum32 type=Windows.Devices.Sms.SmsEncoding name=value
     property callback_number
-        get get_CallbackNumber slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=186
+        get get_CallbackNumber slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out string return
-        put put_CallbackNumber slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=194
+        put put_CallbackNumber slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             in string name=value
     property body
-        get get_Body slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=121
+        get get_Body slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out string return
-        put put_Body slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=141
+        put put_Body slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             in string name=value
     property protocol_id
-        get get_ProtocolId slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=232
+        get get_ProtocolId slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out int32 return
     property from_
-        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=99
+        get get_From slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out string return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out datetime return
     property teleservice_id
-        get get_TeleserviceId slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4 reverse=228
+        get get_TeleserviceId slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage2 shape=4
             out int32 return
 
 class Windows.Devices.Sms.SmsVoicemailMessage python_type
@@ -2231,16 +2231,16 @@ class Windows.Devices.Sms.SmsVoicemailMessage python_type
         get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
             out string return
     property body
-        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=62
+        get get_Body slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4
             out string return
     property message_count
-        get get_MessageCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=99
+        get get_MessageCount slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4
             out datetime return
     property to
-        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4 reverse=43
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsVoicemailMessage shape=4
             out string return
 
 class Windows.Devices.Sms.SmsWapMessage python_type
@@ -2265,25 +2265,25 @@ class Windows.Devices.Sms.SmsWapMessage python_type
         get get_SimIccId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessageBase shape=4 reverse=121
             out string return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out datetime return
     property application_id
-        get get_ApplicationId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=99
+        get get_ApplicationId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out string return
     property binary_body
-        get get_BinaryBody slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=141
+        get get_BinaryBody slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property content_type
-        get get_ContentType slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=121
+        get get_ContentType slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out string return
     property from_
-        get get_From slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=62
+        get get_From slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out string return
     property headers
-        get get_Headers slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=162
+        get get_Headers slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property to
-        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4 reverse=43
+        get get_To slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsWapMessage shape=4
             out string return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Sms.SmsDevice2,System.Object> concrete

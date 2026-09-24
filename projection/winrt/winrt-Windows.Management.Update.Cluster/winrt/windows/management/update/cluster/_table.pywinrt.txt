@@ -10,15 +10,15 @@ class Windows.Management.Update.Cluster.AcquireEnvironmentInfoResult python_type
     requires Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResult
     factory Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResultFactory shape=117
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in string name=environmentInfo
             out class type=Windows.Management.Update.Cluster.AcquireEnvironmentInfoResult return
     property environment_info
-        get get_EnvironmentInfo slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResult shape=4 reverse=43
+        get get_EnvironmentInfo slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResult shape=4
             out string return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAcquireEnvironmentInfoResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
 
 class Windows.Management.Update.Cluster.AreRebootsPendingResult python_type
@@ -28,15 +28,15 @@ class Windows.Management.Update.Cluster.AreRebootsPendingResult python_type
     requires Windows.Management.Update.Cluster.IAreRebootsPendingResult
     factory Windows.Management.Update.Cluster.IAreRebootsPendingResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IAreRebootsPendingResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IAreRebootsPendingResultFactory shape=117
             in class type=Windows.Management.Update.Cluster.UpdateOperationResult name=result
             in boolean name=isRebootPending
             out class type=Windows.Management.Update.Cluster.AreRebootsPendingResult return
     property is_reboot_pending
-        get get_IsRebootPending slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAreRebootsPendingResult shape=4 reverse=43
+        get get_IsRebootPending slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAreRebootsPendingResult shape=4
             out boolean return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAreRebootsPendingResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IAreRebootsPendingResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateOperationResult return
 
 enum Windows.Management.Update.Cluster.ClusterNativeUpdateCompletionStatus python_type
@@ -83,31 +83,31 @@ class Windows.Management.Update.Cluster.ClusterUpdateServices python_type
     default Windows.Management.Update.Cluster.IClusterUpdateServices
     requires Windows.Management.Update.Cluster.IClusterUpdateServices
     method get_plugin_credential
-        method GetPluginCredential slot=8 inputs=1 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=51 reverse=65
+        method GetPluginCredential slot=8 inputs=1 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=51
             in string name=credentialId
             out class type=Windows.Management.Update.Cluster.UpdateCredential return
     method get_run_independent_information
-        method GetRunIndependentInformation slot=13 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4 reverse=173
+        method GetRunIndependentInformation slot=13 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4
             out string return
     method get_run_state_information
-        method GetRunStateInformation slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4 reverse=141
+        method GetRunStateInformation slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4
             out string return
     method is_operation_marked_as_canceled
-        method IsOperationMarkedAsCanceled slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4 reverse=99
+        method IsOperationMarkedAsCanceled slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4
             out boolean return
     method report_progress
-        method ReportProgress slot=7 inputs=3 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=117 reverse=45
+        method ReportProgress slot=7 inputs=3 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=117
             in int32 name=currentStep
             in int32 name=maxSteps
             in string name=message
     method save_run_independent_information
-        method SaveRunIndependentInformation slot=12 inputs=1 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4 reverse=162
+        method SaveRunIndependentInformation slot=12 inputs=1 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4
             in string name=persistentInformation
     method save_run_state_information
-        method SaveRunStateInformation slot=10 inputs=1 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4 reverse=121
+        method SaveRunStateInformation slot=10 inputs=1 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=4
             in string name=persistentInformation
     method write_log_entry
-        method WriteLogEntry slot=6 inputs=2 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=51 reverse=24
+        method WriteLogEntry slot=6 inputs=2 outputs=0 declaring=Windows.Management.Update.Cluster.IClusterUpdateServices shape=51
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateLogLevel name=level
             in string name=message
 
@@ -813,19 +813,19 @@ class Windows.Management.Update.Cluster.InstallUpdateTaskResult python_type
     requires Windows.Management.Update.Cluster.IInstallUpdateTaskResult
     factory Windows.Management.Update.Cluster.IInstallUpdateTaskResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResultFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResultFactory shape=195
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateInstallRecord> name=installRecords
             in boolean name=shouldRollback
             out class type=Windows.Management.Update.Cluster.InstallUpdateTaskResult return
     property install_records
-        get get_InstallRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResult shape=4 reverse=43
+        get get_InstallRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateInstallRecord> return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
     property should_rollback
-        get get_ShouldRollback slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResult shape=4 reverse=62
+        get get_ShouldRollback slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IInstallUpdateTaskResult shape=4
             out boolean return
 
 class Windows.Management.Update.Cluster.RollbackUpdateTaskResult python_type
@@ -835,15 +835,15 @@ class Windows.Management.Update.Cluster.RollbackUpdateTaskResult python_type
     requires Windows.Management.Update.Cluster.IRollbackUpdateTaskResult
     factory Windows.Management.Update.Cluster.IRollbackUpdateTaskResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IRollbackUpdateTaskResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IRollbackUpdateTaskResultFactory shape=117
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateInstallRecord> name=installRecords
             out class type=Windows.Management.Update.Cluster.RollbackUpdateTaskResult return
     property install_records
-        get get_InstallRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IRollbackUpdateTaskResult shape=4 reverse=43
+        get get_InstallRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IRollbackUpdateTaskResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateInstallRecord> return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IRollbackUpdateTaskResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IRollbackUpdateTaskResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
 
 class Windows.Management.Update.Cluster.ScanUpdateTaskResult python_type
@@ -853,15 +853,15 @@ class Windows.Management.Update.Cluster.ScanUpdateTaskResult python_type
     requires Windows.Management.Update.Cluster.IScanUpdateTaskResult
     factory Windows.Management.Update.Cluster.IScanUpdateTaskResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IScanUpdateTaskResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IScanUpdateTaskResultFactory shape=117
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateScanRecord> name=scanRecords
             out class type=Windows.Management.Update.Cluster.ScanUpdateTaskResult return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IScanUpdateTaskResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IScanUpdateTaskResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
     property scan_records
-        get get_ScanRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IScanUpdateTaskResult shape=4 reverse=43
+        get get_ScanRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IScanUpdateTaskResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateScanRecord> return
 
 class Windows.Management.Update.Cluster.StageUpdateTaskResult python_type
@@ -871,15 +871,15 @@ class Windows.Management.Update.Cluster.StageUpdateTaskResult python_type
     requires Windows.Management.Update.Cluster.IStageUpdateTaskResult
     factory Windows.Management.Update.Cluster.IStageUpdateTaskResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IStageUpdateTaskResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IStageUpdateTaskResultFactory shape=117
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateStageRecord> name=stageRecords
             out class type=Windows.Management.Update.Cluster.StageUpdateTaskResult return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IStageUpdateTaskResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IStageUpdateTaskResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
     property stage_records
-        get get_StageRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IStageUpdateTaskResult shape=4 reverse=43
+        get get_StageRecords slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IStageUpdateTaskResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateStageRecord> return
 
 class Windows.Management.Update.Cluster.UpdateCredential python_type
@@ -889,19 +889,19 @@ class Windows.Management.Update.Cluster.UpdateCredential python_type
     requires Windows.Management.Update.Cluster.IUpdateCredential
     factory Windows.Management.Update.Cluster.IUpdateCredentialFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredentialFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredentialFactory shape=195
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateCredentialStatus name=status
             in string name=userName
             in string name=password
             out class type=Windows.Management.Update.Cluster.UpdateCredential return
     property password
-        get get_Password slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredential shape=4 reverse=62
+        get get_Password slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredential shape=4
             out string return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredential shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredential shape=4
             out enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateCredentialStatus return
     property user_name
-        get get_UserName slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredential shape=4 reverse=43
+        get get_UserName slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateCredential shape=4
             out string return
 
 class Windows.Management.Update.Cluster.UpdateInstallRecord python_type
@@ -911,23 +911,23 @@ class Windows.Management.Update.Cluster.UpdateInstallRecord python_type
     requires Windows.Management.Update.Cluster.IUpdateInstallRecord
     factory Windows.Management.Update.Cluster.IUpdateInstallRecordFactory
     constructor -
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecordFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecordFactory shape=239
             in string name=updateId
             in boolean name=isRebootRequired
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateCompletionStatus name=status
             in string name=failureMessage
             out class type=Windows.Management.Update.Cluster.UpdateInstallRecord return
     property failure_message
-        get get_FailureMessage slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4 reverse=99
+        get get_FailureMessage slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4
             out string return
     property is_reboot_required
-        get get_IsRebootRequired slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4 reverse=43
+        get get_IsRebootRequired slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4
             out boolean return
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4
             out enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateCompletionStatus return
     property update_id
-        get get_UpdateId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4 reverse=22
+        get get_UpdateId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateInstallRecord shape=4
             out string return
 
 class Windows.Management.Update.Cluster.UpdateOperationResult python_type
@@ -937,23 +937,23 @@ class Windows.Management.Update.Cluster.UpdateOperationResult python_type
     requires Windows.Management.Update.Cluster.IUpdateOperationResult
     factory Windows.Management.Update.Cluster.IUpdateOperationResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResultFactory shape=117
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateOperationStatus name=status
             in string name=reason
             out class type=Windows.Management.Update.Cluster.UpdateOperationResult return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResultFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResultFactory shape=195
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateOperationStatus name=status
             in string name=reason
             in int32 name=errorCode
             out class type=Windows.Management.Update.Cluster.UpdateOperationResult return
     property error_code
-        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResult shape=4 reverse=62
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResult shape=4
             out int32 return
     property reason
-        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResult shape=4 reverse=43
+        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResult shape=4
             out string return
     property status_code
-        get get_StatusCode slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResult shape=4 reverse=22
+        get get_StatusCode slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateOperationResult shape=4
             out enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateOperationStatus return
 
 class Windows.Management.Update.Cluster.UpdatePendingOperationResult python_type
@@ -968,10 +968,10 @@ class Windows.Management.Update.Cluster.UpdatePendingOperationResult python_type
             in timespan name=suggestedRecheckInterval
             out class type=Windows.Management.Update.Cluster.UpdatePendingOperationResult return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePendingOperationResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePendingOperationResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateOperationResult return
     property suggested_recheck_interval
-        get get_SuggestedRecheckInterval slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePendingOperationResult shape=4 reverse=43
+        get get_SuggestedRecheckInterval slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePendingOperationResult shape=4
             out timespan return
 
 class Windows.Management.Update.Cluster.UpdatePluginVersionInfo python_type
@@ -981,19 +981,19 @@ class Windows.Management.Update.Cluster.UpdatePluginVersionInfo python_type
     requires Windows.Management.Update.Cluster.IUpdatePluginVersionInfo
     factory Windows.Management.Update.Cluster.IUpdatePluginVersionInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfoFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfoFactory shape=195
             in uint32 name=majorVersion
             in uint32 name=minorVersion
             in uint32 name=patchLevel
             out class type=Windows.Management.Update.Cluster.UpdatePluginVersionInfo return
     property major_version
-        get get_MajorVersion slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfo shape=4 reverse=22
+        get get_MajorVersion slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfo shape=4
             out uint32 return
     property minor_version
-        get get_MinorVersion slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfo shape=4 reverse=43
+        get get_MinorVersion slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfo shape=4
             out uint32 return
     property patch_level
-        get get_PatchLevel slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfo shape=4 reverse=62
+        get get_PatchLevel slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdatePluginVersionInfo shape=4
             out uint32 return
 
 class Windows.Management.Update.Cluster.UpdateRecipeNodeValidationInfoRecord python_type
@@ -1003,19 +1003,19 @@ class Windows.Management.Update.Cluster.UpdateRecipeNodeValidationInfoRecord pyt
     requires Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord
     factory Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecordFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecordFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecordFactory shape=195
             in string name=nodeName
             in string name=recipeValidationInfo
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateScanRecord> name=scanResults
             out class type=Windows.Management.Update.Cluster.UpdateRecipeNodeValidationInfoRecord return
     property node_name
-        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord shape=4 reverse=22
+        get get_NodeName slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord shape=4
             out string return
     property recipe_validation_info
-        get get_RecipeValidationInfo slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord shape=4 reverse=43
+        get get_RecipeValidationInfo slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord shape=4
             out string return
     property scan_results
-        get get_ScanResults slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord shape=4 reverse=62
+        get get_ScanResults slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateRecipeNodeValidationInfoRecord shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateScanRecord> return
 
 class Windows.Management.Update.Cluster.UpdateScanRecord python_type
@@ -1025,7 +1025,7 @@ class Windows.Management.Update.Cluster.UpdateScanRecord python_type
     requires Windows.Management.Update.Cluster.IUpdateScanRecord
     factory Windows.Management.Update.Cluster.IUpdateScanRecordFactory
     constructor -
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecordFactory shape=267 reverse=516
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecordFactory shape=267
             in string name=updateId
             in string name=updateTitle
             in string name=updateDescription
@@ -1033,19 +1033,19 @@ class Windows.Management.Update.Cluster.UpdateScanRecord python_type
             in string name=pluginSpecificData
             out class type=Windows.Management.Update.Cluster.UpdateScanRecord return
     property is_reboot_required
-        get get_IsRebootRequired slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4 reverse=99
+        get get_IsRebootRequired slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4
             out boolean return
     property plugin_specific_data
-        get get_PluginSpecificData slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4 reverse=121
+        get get_PluginSpecificData slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4
             out string return
     property update_description
-        get get_UpdateDescription slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4 reverse=62
+        get get_UpdateDescription slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4
             out string return
     property update_id
-        get get_UpdateId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4 reverse=22
+        get get_UpdateId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4
             out string return
     property update_title
-        get get_UpdateTitle slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4 reverse=43
+        get get_UpdateTitle slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateScanRecord shape=4
             out string return
 
 class Windows.Management.Update.Cluster.UpdateStageRecord python_type
@@ -1055,7 +1055,7 @@ class Windows.Management.Update.Cluster.UpdateStageRecord python_type
     requires Windows.Management.Update.Cluster.IUpdateStageRecord
     factory Windows.Management.Update.Cluster.IUpdateStageRecordFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecordFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecordFactory shape=195
             in string name=updateId
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateCompletionStatus name=status
             in string name=failureMessage
@@ -1067,16 +1067,16 @@ class Windows.Management.Update.Cluster.UpdateStageRecord python_type
             in string name=updatedPluginSpecificData
             out class type=Windows.Management.Update.Cluster.UpdateStageRecord return
     property failure_message
-        get get_FailureMessage slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4 reverse=62
+        get get_FailureMessage slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4
             out string return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4
             out enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateCompletionStatus return
     property update_id
-        get get_UpdateId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4 reverse=22
+        get get_UpdateId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4
             out string return
     property updated_plugin_specific_data
-        get get_UpdatedPluginSpecificData slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4 reverse=99
+        get get_UpdatedPluginSpecificData slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateStageRecord shape=4
             out string return
 
 class Windows.Management.Update.Cluster.UpdateTaskResult python_type
@@ -1086,23 +1086,23 @@ class Windows.Management.Update.Cluster.UpdateTaskResult python_type
     requires Windows.Management.Update.Cluster.IUpdateTaskResult
     factory Windows.Management.Update.Cluster.IUpdateTaskResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResultFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResultFactory shape=117
             in boolean name=succeeded
             in string name=reason
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResultFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResultFactory shape=195
             in boolean name=succeeded
             in string name=reason
             in int32 name=errorCode
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
     property error_code
-        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResult shape=4 reverse=62
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResult shape=4
             out int32 return
     property reason
-        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResult shape=4 reverse=43
+        get get_Reason slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResult shape=4
             out string return
     property succeeded
-        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResult shape=4 reverse=22
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateTaskResult shape=4
             out boolean return
 
 class Windows.Management.Update.Cluster.UpdateValidationLogMessage python_type
@@ -1112,15 +1112,15 @@ class Windows.Management.Update.Cluster.UpdateValidationLogMessage python_type
     requires Windows.Management.Update.Cluster.IUpdateValidationLogMessage
     factory Windows.Management.Update.Cluster.IUpdateValidationLogMessageFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateValidationLogMessageFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateValidationLogMessageFactory shape=117
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateLogLevel name=severity
             in string name=message
             out class type=Windows.Management.Update.Cluster.UpdateValidationLogMessage return
     property message
-        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateValidationLogMessage shape=4 reverse=43
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateValidationLogMessage shape=4
             out string return
     property severity
-        get get_Severity slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateValidationLogMessage shape=4 reverse=22
+        get get_Severity slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IUpdateValidationLogMessage shape=4
             out enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateLogLevel return
 
 class Windows.Management.Update.Cluster.ValidateAllNodesUpdateRecipeResult python_type
@@ -1130,19 +1130,19 @@ class Windows.Management.Update.Cluster.ValidateAllNodesUpdateRecipeResult pytho
     requires Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult
     factory Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResultFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResultFactory shape=195
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in boolean name=areUpdatesApproved
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateValidationLogMessage> name=validationMessages
             out class type=Windows.Management.Update.Cluster.ValidateAllNodesUpdateRecipeResult return
     property are_updates_approved
-        get get_AreUpdatesApproved slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult shape=4 reverse=43
+        get get_AreUpdatesApproved slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult shape=4
             out boolean return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
     property validation_messages
-        get get_ValidationMessages slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult shape=4 reverse=62
+        get get_ValidationMessages slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateAllNodesUpdateRecipeResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateValidationLogMessage> return
 
 class Windows.Management.Update.Cluster.ValidateClusterEnvironmentResult python_type
@@ -1152,19 +1152,19 @@ class Windows.Management.Update.Cluster.ValidateClusterEnvironmentResult python_
     requires Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult
     factory Windows.Management.Update.Cluster.IValidateClusterEnvironmentResultFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResultFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResultFactory shape=195
             in class type=Windows.Management.Update.Cluster.UpdateTaskResult name=result
             in enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateEnvironmentValidationStatus name=approvalStatus
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateValidationLogMessage> name=validationMessages
             out class type=Windows.Management.Update.Cluster.ValidateClusterEnvironmentResult return
     property approval_status
-        get get_ApprovalStatus slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult shape=4 reverse=43
+        get get_ApprovalStatus slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult shape=4
             out enum32 type=Windows.Management.Update.Cluster.ClusterNativeUpdateEnvironmentValidationStatus return
     property result
-        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult shape=4 reverse=22
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult shape=4
             out class type=Windows.Management.Update.Cluster.UpdateTaskResult return
     property validation_messages
-        get get_ValidationMessages slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult shape=4 reverse=62
+        get get_ValidationMessages slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.Cluster.IValidateClusterEnvironmentResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.Cluster.UpdateValidationLogMessage> return
 
 class System.String external

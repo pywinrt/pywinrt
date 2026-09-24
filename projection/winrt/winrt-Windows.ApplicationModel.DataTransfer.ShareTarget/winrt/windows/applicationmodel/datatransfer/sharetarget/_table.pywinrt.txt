@@ -192,25 +192,25 @@ class Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             in string name=value
     property thumbnail
-        get get_Thumbnail slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=62
+        get get_Thumbnail slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             out class type=Windows.Storage.Streams.RandomAccessStreamReference return
-        put put_Thumbnail slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=99
+        put put_Thumbnail slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             in class type=Windows.Storage.Streams.RandomAccessStreamReference name=value
     property id
-        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=121
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             out string return
-        put put_Id slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=141
+        put put_Id slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             in string name=value
     property supported_data_formats
-        get get_SupportedDataFormats slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=162
+        get get_SupportedDataFormats slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property supported_file_types
-        get get_SupportedFileTypes slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4 reverse=173
+        get get_SupportedFileTypes slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IQuickLink shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation python_type
@@ -221,31 +221,31 @@ class Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation python_ty
     requires Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation2
     requires Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation3
     property data
-        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4 reverse=22
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4
             out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
     property quick_link_id
-        get get_QuickLinkId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4 reverse=43
+        get get_QuickLinkId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4
             out string return
     property contacts
-        get get_Contacts slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation3 shape=4 reverse=22
+        get get_Contacts slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation3 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.Contact> return
     method dismiss_ui
-        method DismissUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation2 shape=0 reverse=16
+        method DismissUI slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation2 shape=0
     method remove_this_quick_link
-        method RemoveThisQuickLink slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0 reverse=55
+        method RemoveThisQuickLink slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0
     method report_completed
-        method ReportCompleted slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0 reverse=169
-        method ReportCompleted slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4 reverse=162
+        method ReportCompleted slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0
+        method ReportCompleted slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4
             in class type=Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink name=quicklink
     method report_data_retrieved
-        method ReportDataRetrieved slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0 reverse=117
+        method ReportDataRetrieved slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0
     method report_error
-        method ReportError slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4 reverse=186
+        method ReportError slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=4
             in string name=value
     method report_started
-        method ReportStarted slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0 reverse=93
+        method ReportStarted slot=9 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0
     method report_submitted_background_task
-        method ReportSubmittedBackgroundTask slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0 reverse=137
+        method ReportSubmittedBackgroundTask slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.ShareTarget.IShareOperation shape=0
 
 class System.String external
     py winrt.system.String

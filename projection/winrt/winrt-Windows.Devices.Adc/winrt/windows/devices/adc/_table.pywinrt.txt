@@ -10,15 +10,15 @@ class Windows.Devices.Adc.AdcChannel python_type closeable
     requires Windows.Devices.Adc.IAdcChannel
     requires Windows.Foundation.IClosable
     property controller
-        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4 reverse=22
+        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4
             out class type=Windows.Devices.Adc.AdcController return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_ratio
-        method ReadRatio slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4 reverse=62
+        method ReadRatio slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4
             out double return
     method read_value
-        method ReadValue slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4 reverse=43
+        method ReadValue slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4
             out int32 return
 
 enum Windows.Devices.Adc.AdcChannelMode python_type
@@ -35,35 +35,35 @@ class Windows.Devices.Adc.AdcController python_type
     factory Windows.Devices.Adc.IAdcControllerStatics
     factory Windows.Devices.Adc.IAdcControllerStatics2
     property channel_mode
-        get get_ChannelMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=121
+        get get_ChannelMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
             out enum32 type=Windows.Devices.Adc.AdcChannelMode return
-        put put_ChannelMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=141
+        put put_ChannelMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Adc.IAdcController shape=4
             in enum32 type=Windows.Devices.Adc.AdcChannelMode name=value
     property channel_count
-        get get_ChannelCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=22
+        get get_ChannelCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
             out int32 return
     property max_value
-        get get_MaxValue slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=99
+        get get_MaxValue slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
             out int32 return
     property min_value
-        get get_MinValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=62
+        get get_MinValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
             out int32 return
     property resolution_in_bits
-        get get_ResolutionInBits slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4 reverse=43
+        get get_ResolutionInBits slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
             out int32 return
     method get_controllers_async static
-        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics shape=51 reverse=24 static
+        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics shape=51 static
             in interface type=Windows.Devices.Adc.Provider.IAdcProvider name=provider
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> return
     method get_default_async static
-        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics2 shape=4 reverse=22 static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics2 shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> return
     method is_channel_mode_supported
-        method IsChannelModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51 reverse=163
+        method IsChannelModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51
             in enum32 type=Windows.Devices.Adc.AdcChannelMode name=channelMode
             out boolean return
     method open_channel
-        method OpenChannel slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51 reverse=174
+        method OpenChannel slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51
             in int32 name=channelNumber
             out class type=Windows.Devices.Adc.AdcChannel return
 

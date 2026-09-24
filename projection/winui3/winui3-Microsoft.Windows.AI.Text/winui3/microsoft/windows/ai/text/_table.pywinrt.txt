@@ -269,13 +269,13 @@ class Microsoft.Windows.AI.Text.LanguageModel python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
-        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=62 static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Text.LanguageModel> return
     method ensure_ready_async static
-        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=43 static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
     method get_ready_state static
-        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 reverse=22 static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelStatics shape=4 static
             out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
 
 class Microsoft.Windows.AI.Text.LanguageModelContext python_type closeable
@@ -296,24 +296,24 @@ class Microsoft.Windows.AI.Text.LanguageModelOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property top_p
-        get get_TopP slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=62
+        get get_TopP slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4
             out single return
-        put put_TopP slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=1 reverse=94
+        put put_TopP slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=1
             in single name=value
     property top_k
-        get get_TopK slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=121
+        get get_TopK slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4
             out uint32 return
-        put put_TopK slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=141
+        put put_TopK slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4
             in uint32 name=value
     property temperature
-        get get_Temperature slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=22
+        get get_Temperature slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4
             out single return
         put put_Temperature slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=1
             in single name=value
     property content_filter_options
-        get get_ContentFilterOptions slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=162
+        get get_ContentFilterOptions slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4
             out class type=Microsoft.Windows.AI.ContentSafety.ContentFilterOptions return
-        put put_ContentFilterOptions slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4 reverse=173
+        put put_ContentFilterOptions slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Text.ILanguageModelOptions shape=4
             in class type=Microsoft.Windows.AI.ContentSafety.ContentFilterOptions name=value
 
 class Microsoft.Windows.AI.Text.LanguageModelResponseResult python_type
@@ -322,13 +322,13 @@ class Microsoft.Windows.AI.Text.LanguageModelResponseResult python_type
     default Microsoft.Windows.AI.Text.ILanguageModelResponseResult
     requires Microsoft.Windows.AI.Text.ILanguageModelResponseResult
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4
             out enum32 type=Microsoft.Windows.AI.Text.LanguageModelResponseStatus return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelResponseResult shape=4
             out string return
 
 enum Microsoft.Windows.AI.Text.LanguageModelResponseStatus python_type
@@ -349,11 +349,11 @@ class Microsoft.Windows.AI.Text.TextRewriter python_type
     requires Microsoft.Windows.AI.Text.ITextRewriter
     factory Microsoft.Windows.AI.Text.ITextRewriterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextRewriterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextRewriterFactory shape=51
             in class type=Microsoft.Windows.AI.Text.LanguageModel name=languageModel
             out class type=Microsoft.Windows.AI.Text.TextRewriter return
     method rewrite_async
-        method RewriteAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextRewriter shape=51 reverse=24
+        method RewriteAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextRewriter shape=51
             in string name=text
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
 
@@ -364,15 +364,15 @@ class Microsoft.Windows.AI.Text.TextSummarizer python_type
     requires Microsoft.Windows.AI.Text.ITextSummarizer
     factory Microsoft.Windows.AI.Text.ITextSummarizerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizerFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizerFactory shape=51
             in class type=Microsoft.Windows.AI.Text.LanguageModel name=languageModel
             out class type=Microsoft.Windows.AI.Text.TextSummarizer return
     method summarize_async
-        method SummarizeAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizer shape=51 reverse=24
+        method SummarizeAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizer shape=51
             in string name=text
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
     method summarize_paragraph_async
-        method SummarizeParagraphAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizer shape=51 reverse=44
+        method SummarizeParagraphAsync slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextSummarizer shape=51
             in string name=text
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> return
 
@@ -383,11 +383,11 @@ class Microsoft.Windows.AI.Text.TextToTableConverter python_type
     requires Microsoft.Windows.AI.Text.ITextToTableConverter
     factory Microsoft.Windows.AI.Text.ITextToTableConverterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableConverterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableConverterFactory shape=51
             in class type=Microsoft.Windows.AI.Text.LanguageModel name=languageModel
             out class type=Microsoft.Windows.AI.Text.TextToTableConverter return
     method convert_async
-        method ConvertAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableConverter shape=51 reverse=24
+        method ConvertAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableConverter shape=51
             in string name=text
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.Text.TextToTableResponseResult,System.String> return
 
@@ -397,13 +397,13 @@ class Microsoft.Windows.AI.Text.TextToTableResponseResult python_type
     default Microsoft.Windows.AI.Text.ITextToTableResponseResult
     requires Microsoft.Windows.AI.Text.ITextToTableResponseResult
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=4
             out enum32 type=Microsoft.Windows.AI.Text.LanguageModelResponseStatus return
     method get_rows
-        method GetRows slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=51 reverse=24
+        method GetRows slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableResponseResult shape=51
             receive_array class type=Microsoft.Windows.AI.Text.TextToTableRow return
 
 class Microsoft.Windows.AI.Text.TextToTableRow python_type
@@ -412,7 +412,7 @@ class Microsoft.Windows.AI.Text.TextToTableRow python_type
     default Microsoft.Windows.AI.Text.ITextToTableRow
     requires Microsoft.Windows.AI.Text.ITextToTableRow
     method get_columns
-        method GetColumns slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableRow shape=51 reverse=24
+        method GetColumns slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ITextToTableRow shape=51
             receive_array string return
 
 class Microsoft.Windows.AI.AIFeatureReadyResult external

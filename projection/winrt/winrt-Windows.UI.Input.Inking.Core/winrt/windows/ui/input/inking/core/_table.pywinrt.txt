@@ -15,20 +15,20 @@ class Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke python_type
             in struct type=Windows.Foundation.Numerics.Matrix3x2 name=pointTransform
             out class type=Windows.UI.Input.Inking.Core.CoreIncrementalInkStroke return
     property bounding_rect
-        get get_BoundingRect slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4 reverse=121
+        get get_BoundingRect slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4
             out struct type=Windows.Foundation.Rect return
     property drawing_attributes
-        get get_DrawingAttributes slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4 reverse=62
+        get get_DrawingAttributes slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4
             out class type=Windows.UI.Input.Inking.InkDrawingAttributes return
     property point_transform
-        get get_PointTransform slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4 reverse=99
+        get get_PointTransform slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4
             out struct type=Windows.Foundation.Numerics.Matrix3x2 return
     method append_ink_points
-        method AppendInkPoints slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=51 reverse=24
+        method AppendInkPoints slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkPoint> name=inkPoints
             out struct type=Windows.Foundation.Rect return
     method create_ink_stroke
-        method CreateInkStroke slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4 reverse=43
+        method CreateInkStroke slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke shape=4
             out class type=Windows.UI.Input.Inking.InkStroke return
 
 class Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource python_type
@@ -39,57 +39,57 @@ class Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource python_type
     requires Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2
     factory Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSourceStatics
     property ink_presenter
-        get get_InkPresenter slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=4 reverse=228
+        get get_InkPresenter slot=20 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=4
             out class type=Windows.UI.Input.Inking.InkPresenter return
     property pointer_cursor
-        get get_PointerCursor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2 shape=4 reverse=22
+        get get_PointerCursor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2 shape=4
             out class type=Windows.UI.Core.CoreCursor return
-        put put_PointerCursor slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2 shape=4 reverse=43
+        put put_PointerCursor slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2 shape=4
             in class type=Windows.UI.Core.CoreCursor name=value
     event pointer_entering
-        add add_PointerEntering slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=24
+        add add_PointerEntering slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerEntering slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=53
+        remove remove_PointerEntering slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_exiting
-        add add_PointerExiting slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=124
+        add add_PointerExiting slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerExiting slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=156
+        remove remove_PointerExiting slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_hovering
-        add add_PointerHovering slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=65
+        add add_PointerHovering slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerHovering slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=110
+        remove remove_PointerHovering slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_lost
-        add add_PointerLost slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=219
+        add add_PointerLost slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerLost slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=226
+        remove remove_PointerLost slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_moving
-        add add_PointerMoving slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=187
+        add add_PointerMoving slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerMoving slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=200
+        remove remove_PointerMoving slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_pressing
-        add add_PointerPressing slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=163
+        add add_PointerPressing slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerPressing slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=181
+        remove remove_PointerPressing slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event pointer_releasing
-        add add_PointerReleasing slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51 reverse=203
+        add add_PointerReleasing slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PointerReleasing slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26 reverse=215
+        remove remove_PointerReleasing slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSourceStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSourceStatics shape=51 static
             in class type=Windows.UI.Input.Inking.InkPresenter name=inkPresenter
             out class type=Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource return
 
@@ -102,12 +102,12 @@ class Windows.UI.Input.Inking.Core.CoreInkPresenterHost activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property root_visual
-        get get_RootVisual slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkPresenterHost shape=4 reverse=43
+        get get_RootVisual slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkPresenterHost shape=4
             out class type=Windows.UI.Composition.ContainerVisual return
-        put put_RootVisual slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkPresenterHost shape=4 reverse=62
+        put put_RootVisual slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreInkPresenterHost shape=4
             in class type=Windows.UI.Composition.ContainerVisual name=value
     property ink_presenter
-        get get_InkPresenter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkPresenterHost shape=4 reverse=22
+        get get_InkPresenter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreInkPresenterHost shape=4
             out class type=Windows.UI.Input.Inking.InkPresenter return
 
 enum Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition python_type
@@ -123,15 +123,15 @@ class Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs python_type
     default Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs
     requires Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs
     property disposition
-        get get_Disposition slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4 reverse=62
+        get get_Disposition slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4
             out enum32 type=Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition return
-        put put_Disposition slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4 reverse=99
+        put put_Disposition slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4
             in enum32 type=Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition name=value
     property new_ink_points
-        get get_NewInkPoints slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4 reverse=22
+        get get_NewInkPoints slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.Inking.InkPoint> return
     property pointer_id
-        get get_PointerId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4 reverse=43
+        get get_PointerId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs shape=4
             out uint32 return
 
 class Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource python_type
@@ -141,40 +141,40 @@ class Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource python_type
     requires Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource
     factory Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSourceStatics
     property ink_presenter
-        get get_InkPresenter slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=4 reverse=202
+        get get_InkPresenter slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=4
             out class type=Windows.UI.Input.Inking.InkPresenter return
     event wet_stroke_canceled
-        add add_WetStrokeCanceled slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51 reverse=187
+        add add_WetStrokeCanceled slot=14 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_WetStrokeCanceled slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26 reverse=200
+        remove remove_WetStrokeCanceled slot=15 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event wet_stroke_completed
-        add add_WetStrokeCompleted slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51 reverse=163
+        add add_WetStrokeCompleted slot=12 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_WetStrokeCompleted slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26 reverse=181
+        remove remove_WetStrokeCompleted slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event wet_stroke_continuing
-        add add_WetStrokeContinuing slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51 reverse=65
+        add add_WetStrokeContinuing slot=8 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_WetStrokeContinuing slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26 reverse=110
+        remove remove_WetStrokeContinuing slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event wet_stroke_starting
-        add add_WetStrokeStarting slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51 reverse=24
+        add add_WetStrokeStarting slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_WetStrokeStarting slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26 reverse=53
+        remove remove_WetStrokeStarting slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event wet_stroke_stopping
-        add add_WetStrokeStopping slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51 reverse=124
+        add add_WetStrokeStopping slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_WetStrokeStopping slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26 reverse=156
+        remove remove_WetStrokeStopping slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method create static
-        method Create slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSourceStatics shape=51 reverse=24 static
+        method Create slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateSourceStatics shape=51 static
             in class type=Windows.UI.Input.Inking.InkPresenter name=inkPresenter
             out class type=Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource return
 

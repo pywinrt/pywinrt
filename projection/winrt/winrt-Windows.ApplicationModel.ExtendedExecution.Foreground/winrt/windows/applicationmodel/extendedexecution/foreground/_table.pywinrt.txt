@@ -34,7 +34,7 @@ class Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionFor
     default Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs
     requires Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs shape=4
             out enum32 type=Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason return
 
 enum Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason python_type
@@ -53,25 +53,25 @@ class Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionFor
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property reason
-        get get_Reason slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4 reverse=141
+        get get_Reason slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4
             out enum32 type=Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason return
-        put put_Reason slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4 reverse=162
+        put put_Reason slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4
             in enum32 type=Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason name=value
     property description
-        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4 reverse=22
+        get get_Description slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4
             out string return
-        put put_Description slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4 reverse=43
+        put put_Description slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4
             in string name=value
     event revoked
-        add add_Revoked slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=51 reverse=65
+        add add_Revoked slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Revoked slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=26 reverse=110
+        remove remove_Revoked slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method request_extension_async
-        method RequestExtensionAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4 reverse=121
+        method RequestExtensionAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult> return
 
 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult> concrete awaitable

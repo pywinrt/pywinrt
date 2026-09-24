@@ -38,30 +38,30 @@ class Windows.System.RemoteDesktop.Input.RemoteTextConnection python_type closea
             in guid name=connectionId
             in delegate type=Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler name=pduForwarder
             out class type=Windows.System.RemoteDesktop.Input.RemoteTextConnection return
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 shape=231 reverse=36
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 shape=231
             in guid name=connectionId
             in delegate type=Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler name=pduForwarder
             in enum_u32 type=Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions name=options
             out class type=Windows.System.RemoteDesktop.Input.RemoteTextConnection return
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4
             out boolean return
-        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4 reverse=43
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4
             in boolean name=value
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method register_thread
-        method RegisterThread slot=8 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4 reverse=62
+        method RegisterThread slot=8 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4
             in uint32 name=threadId
     method report_data_received
-        method ReportDataReceived slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=51 reverse=124
+        method ReportDataReceived slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=51
             pass_array uint8 name=pduData
     method report_predicted_key_event
-        method ReportPredictedKeyEvent slot=6 inputs=2 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection2 shape=51 reverse=24
+        method ReportPredictedKeyEvent slot=6 inputs=2 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection2 shape=51
             in uint16 name=scanCode
             in enum_u32 type=Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes name=attributes
     method unregister_thread
-        method UnregisterThread slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4 reverse=99
+        method UnregisterThread slot=9 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Input.IRemoteTextConnection shape=4
             in uint32 name=threadId
 
 delegate Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler python_type

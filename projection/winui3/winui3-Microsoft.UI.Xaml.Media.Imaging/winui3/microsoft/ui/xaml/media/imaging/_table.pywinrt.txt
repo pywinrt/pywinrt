@@ -42,91 +42,91 @@ class Microsoft.UI.Xaml.Media.Imaging.BitmapImage activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageFactory shape=51
             in class type=Windows.Foundation.Uri name=uriSource
             out class type=Microsoft.UI.Xaml.Media.Imaging.BitmapImage return
     property uri_source
-        get get_UriSource slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=62
+        get get_UriSource slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out class type=Windows.Foundation.Uri return
-        put put_UriSource slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=99
+        put put_UriSource slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             in class type=Windows.Foundation.Uri name=value
     property decode_pixel_width
-        get get_DecodePixelWidth slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=121
+        get get_DecodePixelWidth slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out int32 return
-        put put_DecodePixelWidth slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=141
+        put put_DecodePixelWidth slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             in int32 name=value
     property decode_pixel_type
-        get get_DecodePixelType slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=186
+        get get_DecodePixelType slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Imaging.DecodePixelType return
-        put put_DecodePixelType slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=194
+        put put_DecodePixelType slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             in enum32 type=Microsoft.UI.Xaml.Media.Imaging.DecodePixelType name=value
     property decode_pixel_height
-        get get_DecodePixelHeight slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=162
+        get get_DecodePixelHeight slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out int32 return
-        put put_DecodePixelHeight slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=173
+        put put_DecodePixelHeight slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             in int32 name=value
     property create_options
-        get get_CreateOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=22
+        get get_CreateOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out enum_u32 type=Microsoft.UI.Xaml.Media.Imaging.BitmapCreateOptions return
-        put put_CreateOptions slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=43
+        put put_CreateOptions slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             in enum_u32 type=Microsoft.UI.Xaml.Media.Imaging.BitmapCreateOptions name=value
     property auto_play
-        get get_AutoPlay slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=218
+        get get_AutoPlay slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out boolean return
-        put put_AutoPlay slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=223
+        put put_AutoPlay slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             in boolean name=value
     property is_animated_bitmap
-        get get_IsAnimatedBitmap slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=202
+        get get_IsAnimatedBitmap slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out boolean return
     property is_playing
-        get get_IsPlaying slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4 reverse=210
+        get get_IsPlaying slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=4
             out boolean return
     property auto_play_property static
-        get get_AutoPlayProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=173 static
+        get get_AutoPlayProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property create_options_property static
-        get get_CreateOptionsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=22 static
+        get get_CreateOptionsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property decode_pixel_height_property static
-        get get_DecodePixelHeightProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=99 static
+        get get_DecodePixelHeightProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property decode_pixel_type_property static
-        get get_DecodePixelTypeProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=121 static
+        get get_DecodePixelTypeProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property decode_pixel_width_property static
-        get get_DecodePixelWidthProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=62 static
+        get get_DecodePixelWidthProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property is_animated_bitmap_property static
-        get get_IsAnimatedBitmapProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=141 static
+        get get_IsAnimatedBitmapProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property is_playing_property static
-        get get_IsPlayingProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=162 static
+        get get_IsPlayingProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property uri_source_property static
-        get get_UriSourceProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 reverse=43 static
+        get get_UriSourceProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImageStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     event download_progress
-        add add_DownloadProgress slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=51 reverse=229
+        add add_DownloadProgress slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=51
             in delegate type=Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DownloadProgress slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=26 reverse=234
+        remove remove_DownloadProgress slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event image_failed
-        add add_ImageFailed slot=24 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=51 reverse=248
+        add add_ImageFailed slot=24 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=51
             in delegate type=Microsoft.UI.Xaml.ExceptionRoutedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ImageFailed slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=26 reverse=254
+        remove remove_ImageFailed slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event image_opened
-        add add_ImageOpened slot=22 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=51 reverse=238
+        add add_ImageOpened slot=22 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=51
             in delegate type=Microsoft.UI.Xaml.RoutedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ImageOpened slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=26 reverse=245
+        remove remove_ImageOpened slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method play
         method Play slot=26 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=0
     method stop
-        method Stop slot=27 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=0 reverse=258
+        method Stop slot=27 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapImage shape=0
 
 class Microsoft.UI.Xaml.Media.Imaging.BitmapSource composable python_type
     py BitmapSource
@@ -137,22 +137,22 @@ class Microsoft.UI.Xaml.Media.Imaging.BitmapSource composable python_type
     factory Microsoft.UI.Xaml.Media.Imaging.IBitmapSourceStatics
     composable Microsoft.UI.Xaml.Media.Imaging.IBitmapSourceFactory
     property pixel_height
-        get get_PixelHeight slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=4 reverse=43
+        get get_PixelHeight slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=4
             out int32 return
     property pixel_width
-        get get_PixelWidth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=4 reverse=22
+        get get_PixelWidth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=4
             out int32 return
     property pixel_height_property static
-        get get_PixelHeightProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSourceStatics shape=4 reverse=43 static
+        get get_PixelHeightProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property pixel_width_property static
-        get get_PixelWidthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSourceStatics shape=4 reverse=22 static
+        get get_PixelWidthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method set_source
-        method SetSource slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=4 reverse=62
+        method SetSource slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=4
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=streamSource
     method set_source_async
-        method SetSourceAsync slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=51 reverse=100
+        method SetSourceAsync slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IBitmapSource shape=51
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=streamSource
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -168,9 +168,9 @@ class Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventArgs python_type
     default Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs
     requires Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs
     property progress
-        get get_Progress slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs shape=4 reverse=22
+        get get_Progress slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs shape=4
             out int32 return
-        put put_Progress slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs shape=4 reverse=43
+        put put_Progress slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs shape=4
             in int32 name=value
 
 delegate Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventHandler python_type
@@ -323,25 +323,25 @@ class Microsoft.UI.Xaml.Media.Imaging.RenderTargetBitmap activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property pixel_height
-        get get_PixelHeight slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=4 reverse=43
+        get get_PixelHeight slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=4
             out int32 return
     property pixel_width
-        get get_PixelWidth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=4 reverse=22
+        get get_PixelWidth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=4
             out int32 return
     property pixel_height_property static
-        get get_PixelHeightProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics shape=4 reverse=43 static
+        get get_PixelHeightProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property pixel_width_property static
-        get get_PixelWidthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics shape=4 reverse=22 static
+        get get_PixelWidthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmapStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method get_pixels_async
-        method GetPixelsAsync slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=4 reverse=121
+        method GetPixelsAsync slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method render_async
-        method RenderAsync slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=51 reverse=65
+        method RenderAsync slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=51
             in class type=Microsoft.UI.Xaml.UIElement name=element
             out interface type=Windows.Foundation.IAsyncAction return
-        method RenderAsync slot=9 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=195 reverse=102
+        method RenderAsync slot=9 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IRenderTargetBitmap shape=195
             in class type=Microsoft.UI.Xaml.UIElement name=element
             in int32 name=scaledWidth
             in int32 name=scaledHeight
@@ -360,7 +360,7 @@ class Microsoft.UI.Xaml.Media.Imaging.SoftwareBitmapSource activatable python_ty
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method set_bitmap_async
-        method SetBitmapAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISoftwareBitmapSource shape=51 reverse=24
+        method SetBitmapAsync slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISoftwareBitmapSource shape=51
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -372,7 +372,7 @@ class Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource composable python_type
     requires Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource
     composable Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory shape=239
             in int32 name=pixelWidth
             in int32 name=pixelHeight
             in object name=baseInterface implicit
@@ -395,53 +395,53 @@ class Microsoft.UI.Xaml.Media.Imaging.SvgImageSource composable python_type
     factory Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics
     composable Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Media.Imaging.SvgImageSource return
-        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFactory shape=195
             in class type=Windows.Foundation.Uri name=uriSource
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Media.Imaging.SvgImageSource return
     property uri_source
-        get get_UriSource slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4 reverse=22
+        get get_UriSource slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4
             out class type=Windows.Foundation.Uri return
-        put put_UriSource slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4 reverse=43
+        put put_UriSource slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4
             in class type=Windows.Foundation.Uri name=value
     property rasterize_pixel_width
-        get get_RasterizePixelWidth slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4 reverse=62
+        get get_RasterizePixelWidth slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4
             out double return
         put put_RasterizePixelWidth slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=2
             in double name=value
     property rasterize_pixel_height
-        get get_RasterizePixelHeight slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4 reverse=121
+        get get_RasterizePixelHeight slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=4
             out double return
-        put put_RasterizePixelHeight slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=2 reverse=138
+        put put_RasterizePixelHeight slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=2
             in double name=value
     property rasterize_pixel_height_property static
-        get get_RasterizePixelHeightProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics shape=4 reverse=62 static
+        get get_RasterizePixelHeightProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property rasterize_pixel_width_property static
-        get get_RasterizePixelWidthProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics shape=4 reverse=43 static
+        get get_RasterizePixelWidthProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property uri_source_property static
-        get get_UriSourceProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics shape=4 reverse=22 static
+        get get_UriSourceProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     event open_failed
-        add add_OpenFailed slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=51 reverse=187
+        add add_OpenFailed slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Media.Imaging.SvgImageSource,Microsoft.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OpenFailed slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=26 reverse=200
+        remove remove_OpenFailed slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event opened
-        add add_Opened slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=51 reverse=163
+        add add_Opened slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Media.Imaging.SvgImageSource,Microsoft.UI.Xaml.Media.Imaging.SvgImageSourceOpenedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Opened slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=26 reverse=181
+        remove remove_Opened slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method set_source_async
-        method SetSourceAsync slot=16 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=51 reverse=203
+        method SetSourceAsync slot=16 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSource shape=51
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=streamSource
             out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus> return
 
@@ -451,7 +451,7 @@ class Microsoft.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs python_type
     default Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFailedEventArgs
     requires Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFailedEventArgs
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFailedEventArgs shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.ISvgImageSourceFailedEventArgs shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus return
 
 enum Microsoft.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus python_type
@@ -500,11 +500,11 @@ class Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource python_type
     requires Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource
     factory Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory shape=117
             in int32 name=pixelWidth
             in int32 name=pixelHeight
             out class type=Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory shape=195
             in int32 name=pixelWidth
             in int32 name=pixelHeight
             in boolean name=isOpaque
@@ -518,15 +518,15 @@ class Microsoft.UI.Xaml.Media.Imaging.WriteableBitmap python_type
     requires Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmap
     factory Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmapFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmapFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmapFactory shape=117
             in int32 name=pixelWidth
             in int32 name=pixelHeight
             out class type=Microsoft.UI.Xaml.Media.Imaging.WriteableBitmap return
     property pixel_buffer
-        get get_PixelBuffer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmap shape=4 reverse=22
+        get get_PixelBuffer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmap shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     method invalidate
-        method Invalidate slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmap shape=0 reverse=37
+        method Invalidate slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Imaging.IWriteableBitmap shape=0
 
 class Microsoft.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask composable python_type
     py XamlRenderingBackgroundTask

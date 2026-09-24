@@ -18,22 +18,22 @@ class Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccess
     py CommunicationBlockingAccessManager
     factory Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics
     property is_blocking_active static
-        get get_IsBlockingActive slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=4 reverse=22 static
+        get get_IsBlockingActive slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=4 static
             out boolean return
     method is_blocked_number_async static
-        method IsBlockedNumberAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 reverse=44 static
+        method IsBlockedNumberAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 static
             in string name=number
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method show_block_numbers_ui static
-        method ShowBlockNumbersUI slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 reverse=65 static
+        method ShowBlockNumbersUI slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phoneNumbers
             out boolean return
     method show_blocked_calls_ui static
-        method ShowBlockedCallsUI slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=0 reverse=117 static
+        method ShowBlockedCallsUI slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=0 static
     method show_blocked_messages_ui static
-        method ShowBlockedMessagesUI slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=0 reverse=137 static
+        method ShowBlockedMessagesUI slot=11 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=0 static
     method show_unblock_numbers_ui static
-        method ShowUnblockNumbersUI slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 reverse=100 static
+        method ShowUnblockNumbersUI slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAccessManagerStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=phoneNumbers
             out boolean return
 
@@ -42,13 +42,13 @@ class Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppMan
     factory Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics
     factory Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2
     property is_current_app_active_blocking_app static
-        get get_IsCurrentAppActiveBlockingApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics shape=4 reverse=22 static
+        get get_IsCurrentAppActiveBlockingApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics shape=4 static
             out boolean return
     method request_set_as_active_blocking_app_async static
-        method RequestSetAsActiveBlockingAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2 shape=4 reverse=22 static
+        method RequestSetAsActiveBlockingAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics2 shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method show_communication_blocking_settings_ui static
-        method ShowCommunicationBlockingSettingsUI slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics shape=0 reverse=37 static
+        method ShowCommunicationBlockingSettingsUI slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.CommunicationBlocking.ICommunicationBlockingAppManagerStatics shape=0 static
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Boolean]

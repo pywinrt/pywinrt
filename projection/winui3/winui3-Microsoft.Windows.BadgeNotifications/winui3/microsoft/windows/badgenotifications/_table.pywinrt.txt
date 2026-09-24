@@ -27,15 +27,15 @@ class Microsoft.Windows.BadgeNotifications.BadgeNotificationManager python_type
     requires Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager
     factory Microsoft.Windows.BadgeNotifications.IBadgeNotificationManagerStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManagerStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManagerStatics shape=4 static
             out class type=Microsoft.Windows.BadgeNotifications.BadgeNotificationManager return
     method clear_badge
-        method ClearBadge slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=0 reverse=55
+        method ClearBadge slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=0
     method set_badge_as_count
-        method SetBadgeAsCount slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=4 reverse=22
+        method SetBadgeAsCount slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=4
             in uint32 name=notificationCount
     method set_badge_as_glyph
-        method SetBadgeAsGlyph slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=4 reverse=43
+        method SetBadgeAsGlyph slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=4
             in enum32 type=Microsoft.Windows.BadgeNotifications.BadgeNotificationGlyph name=glyphValue
 
 interface Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager

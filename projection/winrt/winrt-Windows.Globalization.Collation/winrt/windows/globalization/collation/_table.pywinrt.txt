@@ -9,10 +9,10 @@ class Windows.Globalization.Collation.CharacterGrouping python_type
     default Windows.Globalization.Collation.ICharacterGrouping
     requires Windows.Globalization.Collation.ICharacterGrouping
     property first
-        get get_First slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGrouping shape=4 reverse=22
+        get get_First slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGrouping shape=4
             out string return
     property label
-        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGrouping shape=4 reverse=43
+        get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGrouping shape=4
             out string return
 
 class Windows.Globalization.Collation.CharacterGroupings activatable python_type iterable sequence
@@ -27,7 +27,7 @@ class Windows.Globalization.Collation.CharacterGroupings activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGroupingsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGroupingsFactory shape=51
             in string name=language
             out class type=Windows.Globalization.Collation.CharacterGroupings return
     property size
@@ -51,7 +51,7 @@ class Windows.Globalization.Collation.CharacterGroupings activatable python_type
             out uint32 name=index
             out boolean return
     method lookup
-        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGroupings shape=51 reverse=24
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.Collation.ICharacterGroupings shape=51
             in string name=text
             out string return
 

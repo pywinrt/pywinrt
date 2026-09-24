@@ -210,7 +210,7 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions static
     py PlatformDiagnosticActions
     factory Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics
     method download_latest_settings_for_namespace static
-        method DownloadLatestSettingsForNamespace slot=8 inputs=5 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=267 reverse=70 static
+        method DownloadLatestSettingsForNamespace slot=8 inputs=5 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=267 static
             in string name=partner
             in string name=feature
             in boolean name=isScenarioNamespace
@@ -218,24 +218,24 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions static
             in boolean name=downloadOverBattery
             out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState return
     method force_upload static
-        method ForceUpload slot=10 inputs=3 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=195 reverse=126 static
+        method ForceUpload slot=10 inputs=3 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=195 static
             in enum_u32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies name=latency
             in boolean name=uploadOverCostedNetwork
             in boolean name=uploadOverBattery
             out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState return
     method get_active_scenario_list static
-        method GetActiveScenarioList slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=4 reverse=99 static
+        method GetActiveScenarioList slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Guid> return
     method get_active_trace_runtime static
-        method GetActiveTraceRuntime slot=12 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=51 reverse=163 static
+        method GetActiveTraceRuntime slot=12 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=51 static
             in enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType name=slotType
             out class type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo return
     method get_known_trace_list static
-        method GetKnownTraceList slot=13 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=51 reverse=174 static
+        method GetKnownTraceList slot=13 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=51 static
             in enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotType name=slotType
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo> return
     method is_scenario_enabled static
-        method IsScenarioEnabled slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=94 reverse=35 static
+        method IsScenarioEnabled slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticActionsStatics shape=94 static
             in guid name=scenarioId
             out boolean return
     method is_trace_running static
@@ -273,22 +273,22 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo pyth
     default Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo
     requires Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo
     property is_auto_logger
-        get get_IsAutoLogger slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=99
+        get get_IsAutoLogger slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4
             out boolean return
     property is_exclusive
-        get get_IsExclusive slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=62
+        get get_IsExclusive slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4
             out boolean return
     property max_trace_duration_file_time
-        get get_MaxTraceDurationFileTime slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=121
+        get get_MaxTraceDurationFileTime slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4
             out int64 return
     property priority
-        get get_Priority slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=141
+        get get_Priority slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4
             out enum32 type=Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority return
     property profile_hash
-        get get_ProfileHash slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=43
+        get get_ProfileHash slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4
             out uint64 return
     property scenario_id
-        get get_ScenarioId slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4 reverse=22
+        get get_ScenarioId slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceInfo shape=4
             out guid return
 
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTracePriority python_type
@@ -303,10 +303,10 @@ class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeIn
     default Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo
     requires Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo
     property etw_runtime_file_time
-        get get_EtwRuntimeFileTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo shape=4 reverse=43
+        get get_EtwRuntimeFileTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo shape=4
             out int64 return
     property runtime_file_time
-        get get_RuntimeFileTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo shape=4 reverse=22
+        get get_RuntimeFileTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.TraceReporting.IPlatformDiagnosticTraceRuntimeInfo shape=4
             out int64 return
 
 enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceSlotState python_type

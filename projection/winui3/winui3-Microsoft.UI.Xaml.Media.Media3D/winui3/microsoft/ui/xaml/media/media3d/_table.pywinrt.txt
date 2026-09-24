@@ -14,100 +14,100 @@ class Microsoft.UI.Xaml.Media.Media3D.CompositeTransform3D activatable python_ty
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property translate_z
-        get get_TranslateZ slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=263
+        get get_TranslateZ slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_TranslateZ slot=29 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property translate_y
-        get get_TranslateY slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=255
+        get get_TranslateY slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_TranslateY slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property translate_x
-        get get_TranslateX slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=247
+        get get_TranslateX slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_TranslateX slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property scale_z
-        get get_ScaleZ slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=237
+        get get_ScaleZ slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_ScaleZ slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property scale_y
-        get get_ScaleY slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=228
+        get get_ScaleY slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_ScaleY slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property scale_x
-        get get_ScaleX slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=218
+        get get_ScaleX slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_ScaleX slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property rotation_z
-        get get_RotationZ slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=202
+        get get_RotationZ slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_RotationZ slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property rotation_y
-        get get_RotationY slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=186
+        get get_RotationY slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_RotationY slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property rotation_x
-        get get_RotationX slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=162
+        get get_RotationX slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
-        put put_RotationX slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2 reverse=171
+        put put_RotationX slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property center_z
-        get get_CenterZ slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=121
+        get get_CenterZ slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
-        put put_CenterZ slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2 reverse=138
+        put put_CenterZ slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property center_y
-        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=62
+        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
         put put_CenterY slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property center_x
-        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4 reverse=22
+        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=4
             out double return
-        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2 reverse=38
+        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D shape=2
             in double name=value
     property center_x_property static
-        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=22 static
+        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property center_y_property static
-        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=43 static
+        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property center_z_property static
-        get get_CenterZProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=62 static
+        get get_CenterZProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property rotation_x_property static
-        get get_RotationXProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=99 static
+        get get_RotationXProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property rotation_y_property static
-        get get_RotationYProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=121 static
+        get get_RotationYProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property rotation_z_property static
-        get get_RotationZProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=141 static
+        get get_RotationZProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property scale_x_property static
-        get get_ScaleXProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=162 static
+        get get_ScaleXProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property scale_y_property static
-        get get_ScaleYProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=173 static
+        get get_ScaleYProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property scale_z_property static
-        get get_ScaleZProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=186 static
+        get get_ScaleZProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property translate_x_property static
-        get get_TranslateXProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=194 static
+        get get_TranslateXProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property translate_y_property static
-        get get_TranslateYProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=202 static
+        get get_TranslateYProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property translate_z_property static
-        get get_TranslateZProperty slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 reverse=210 static
+        get get_TranslateZProperty slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 interface Microsoft.UI.Xaml.Media.Media3D.ICompositeTransform3D
@@ -161,7 +161,7 @@ class Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper python_type
     requires Microsoft.UI.Xaml.Media.Media3D.IMatrix3DHelper
     factory Microsoft.UI.Xaml.Media.Media3D.IMatrix3DHelperStatics
     property identity static
-        get get_Identity slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IMatrix3DHelperStatics shape=4 reverse=22 static
+        get get_Identity slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IMatrix3DHelperStatics shape=4 static
             out struct type=Microsoft.UI.Xaml.Media.Media3D.Matrix3D return
     method from_elements static
         method FromElements slot=8 inputs=16 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IMatrix3DHelperStatics shape=307 static
@@ -211,28 +211,28 @@ class Microsoft.UI.Xaml.Media.Media3D.PerspectiveTransform3D activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property offset_y
-        get get_OffsetY slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=4 reverse=121
+        get get_OffsetY slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=4
             out double return
-        put put_OffsetY slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=2 reverse=138
+        put put_OffsetY slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=2
             in double name=value
     property offset_x
-        get get_OffsetX slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=4 reverse=62
+        get get_OffsetX slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=4
             out double return
         put put_OffsetX slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=2
             in double name=value
     property depth
-        get get_Depth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=4 reverse=22
+        get get_Depth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=4
             out double return
-        put put_Depth slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=2 reverse=38
+        put put_Depth slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3D shape=2
             in double name=value
     property depth_property static
-        get get_DepthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3DStatics shape=4 reverse=22 static
+        get get_DepthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property offset_x_property static
-        get get_OffsetXProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3DStatics shape=4 reverse=43 static
+        get get_OffsetXProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property offset_y_property static
-        get get_OffsetYProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3DStatics shape=4 reverse=62 static
+        get get_OffsetYProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.IPerspectiveTransform3DStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Media3D.Transform3D composable python_type

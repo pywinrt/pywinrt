@@ -18,29 +18,29 @@ class Windows.UI.Text.ContentLinkInfo activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property uri
-        get get_Uri slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=162
+        get get_Uri slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Uri slot=13 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=173
+        put put_Uri slot=13 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             in class type=Windows.Foundation.Uri name=value
     property secondary_text
-        get get_SecondaryText slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=121
+        get get_SecondaryText slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             out string return
-        put put_SecondaryText slot=11 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=141
+        put put_SecondaryText slot=11 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             in string name=value
     property link_content_kind
-        get get_LinkContentKind slot=14 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=186
+        get get_LinkContentKind slot=14 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             out string return
-        put put_LinkContentKind slot=15 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=194
+        put put_LinkContentKind slot=15 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             in string name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             out uint32 return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             in uint32 name=value
     property display_text
-        get get_DisplayText slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=62
+        get get_DisplayText slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             out string return
-        put put_DisplayText slot=9 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4 reverse=99
+        put put_DisplayText slot=9 inputs=1 outputs=0 declaring=Windows.UI.Text.IContentLinkInfo shape=4
             in string name=value
 
 enum Windows.UI.Text.FindOptions python_type flags_enum
@@ -83,37 +83,37 @@ class Windows.UI.Text.FontWeights python_type
     requires Windows.UI.Text.IFontWeights
     factory Windows.UI.Text.IFontWeightsStatics
     property black static
-        get get_Black slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=22 static
+        get get_Black slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property bold static
-        get get_Bold slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=43 static
+        get get_Bold slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property extra_black static
-        get get_ExtraBlack slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=62 static
+        get get_ExtraBlack slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property extra_bold static
-        get get_ExtraBold slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=99 static
+        get get_ExtraBold slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property extra_light static
-        get get_ExtraLight slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=121 static
+        get get_ExtraLight slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property light static
-        get get_Light slot=11 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=141 static
+        get get_Light slot=11 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property medium static
-        get get_Medium slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=162 static
+        get get_Medium slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property normal static
-        get get_Normal slot=13 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=173 static
+        get get_Normal slot=13 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property semi_bold static
-        get get_SemiBold slot=14 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=186 static
+        get get_SemiBold slot=14 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property semi_light static
-        get get_SemiLight slot=15 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=194 static
+        get get_SemiLight slot=15 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
     property thin static
-        get get_Thin slot=16 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 reverse=202 static
+        get get_Thin slot=16 inputs=0 outputs=1 declaring=Windows.UI.Text.IFontWeightsStatics shape=4 static
             out struct type=Windows.UI.Text.FontWeight return
 
 enum Windows.UI.Text.FormatEffect python_type
@@ -1099,14 +1099,14 @@ class Windows.UI.Text.RichEditTextDocument python_type
         get get_Selection slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument shape=4 reverse=121
             out interface type=Windows.UI.Text.ITextSelection return
     property ignore_trailing_character_spacing
-        get get_IgnoreTrailingCharacterSpacing slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument2 shape=4 reverse=62
+        get get_IgnoreTrailingCharacterSpacing slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument2 shape=4
             out boolean return
-        put put_IgnoreTrailingCharacterSpacing slot=9 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument2 shape=4 reverse=99
+        put put_IgnoreTrailingCharacterSpacing slot=9 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument2 shape=4
             in boolean name=value
     property alignment_includes_trailing_whitespace
-        get get_AlignmentIncludesTrailingWhitespace slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument2 shape=4 reverse=22
+        get get_AlignmentIncludesTrailingWhitespace slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument2 shape=4
             out boolean return
-        put put_AlignmentIncludesTrailingWhitespace slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument2 shape=4 reverse=43
+        put put_AlignmentIncludesTrailingWhitespace slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument2 shape=4
             in boolean name=value
     method apply_display_updates
         method ApplyDisplayUpdates slot=17 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument shape=4 reverse=210
@@ -1129,7 +1129,7 @@ class Windows.UI.Text.RichEditTextDocument python_type
         method CanUndo slot=16 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument shape=4 reverse=202
             out boolean return
     method clear_undo_redo_history
-        method ClearUndoRedoHistory slot=6 inputs=0 outputs=0 declaring=Windows.UI.Text.ITextDocument3 shape=0 reverse=16
+        method ClearUndoRedoHistory slot=6 inputs=0 outputs=0 declaring=Windows.UI.Text.ITextDocument3 shape=0
     method end_undo_group
         method EndUndoGroup slot=20 inputs=0 outputs=0 declaring=Windows.UI.Text.ITextDocument shape=0 reverse=227
     method get_default_character_format
@@ -1139,7 +1139,7 @@ class Windows.UI.Text.RichEditTextDocument python_type
         method GetDefaultParagraphFormat slot=22 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument shape=4 reverse=237
             out interface type=Windows.UI.Text.ITextParagraphFormat return
     method get_math
-        method GetMath slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument4 shape=4 reverse=43
+        method GetMath slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextDocument4 shape=4
             out string name=value
     method get_range
         method GetRange slot=23 inputs=2 outputs=1 declaring=Windows.UI.Text.ITextDocument shape=117 reverse=244
@@ -1172,10 +1172,10 @@ class Windows.UI.Text.RichEditTextDocument python_type
         method SetDefaultParagraphFormat slot=30 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument shape=4 reverse=270
             in interface type=Windows.UI.Text.ITextParagraphFormat name=value
     method set_math
-        method SetMath slot=6 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument4 shape=4 reverse=22
+        method SetMath slot=6 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument4 shape=4
             in string name=value
     method set_math_mode
-        method SetMathMode slot=8 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument4 shape=4 reverse=62
+        method SetMathMode slot=8 inputs=1 outputs=0 declaring=Windows.UI.Text.ITextDocument4 shape=4
             in enum32 type=Windows.UI.Text.RichEditMathMode name=mode
     method set_text
         method SetText slot=31 inputs=2 outputs=0 declaring=Windows.UI.Text.ITextDocument shape=51 reverse=274
@@ -1191,9 +1191,9 @@ class Windows.UI.Text.RichEditTextRange python_type
     requires Windows.UI.Text.IRichEditTextRange
     requires Windows.UI.Text.ITextRange
     property content_link_info
-        get get_ContentLinkInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.IRichEditTextRange shape=4 reverse=22
+        get get_ContentLinkInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.IRichEditTextRange shape=4
             out class type=Windows.UI.Text.ContentLinkInfo return
-        put put_ContentLinkInfo slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.IRichEditTextRange shape=4 reverse=43
+        put put_ContentLinkInfo slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.IRichEditTextRange shape=4
             in class type=Windows.UI.Text.ContentLinkInfo name=value
     property text
         get get_Text slot=24 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextRange shape=4 reverse=247
@@ -1422,28 +1422,28 @@ class Windows.UI.Text.TextConstants static python_type
     py TextConstants
     factory Windows.UI.Text.ITextConstantsStatics
     property auto_color static
-        get get_AutoColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=22 static
+        get get_AutoColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out struct type=Windows.UI.Color return
     property max_unit_count static
-        get get_MaxUnitCount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=62 static
+        get get_MaxUnitCount slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out int32 return
     property min_unit_count static
-        get get_MinUnitCount slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=43 static
+        get get_MinUnitCount slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out int32 return
     property undefined_color static
-        get get_UndefinedColor slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=99 static
+        get get_UndefinedColor slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out struct type=Windows.UI.Color return
     property undefined_float_value static
-        get get_UndefinedFloatValue slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=121 static
+        get get_UndefinedFloatValue slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out single return
     property undefined_font_stretch static
-        get get_UndefinedFontStretch slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=162 static
+        get get_UndefinedFontStretch slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out enum32 type=Windows.UI.Text.FontStretch return
     property undefined_font_style static
-        get get_UndefinedFontStyle slot=13 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=173 static
+        get get_UndefinedFontStyle slot=13 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out enum32 type=Windows.UI.Text.FontStyle return
     property undefined_int32_value static
-        get get_UndefinedInt32Value slot=11 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 reverse=141 static
+        get get_UndefinedInt32Value slot=11 inputs=0 outputs=1 declaring=Windows.UI.Text.ITextConstantsStatics shape=4 static
             out int32 return
 
 enum Windows.UI.Text.TextDecorations python_type flags_enum

@@ -10,14 +10,14 @@ class Microsoft.UI.Xaml.Controls.Primitives.AutoSuggestBoxHelper python_type
     requires Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelper
     factory Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics
     property keep_interior_corners_square_property static
-        get get_KeepInteriorCornersSquareProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics shape=4 reverse=22 static
+        get get_KeepInteriorCornersSquareProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method get_keep_interior_corners_square static
-        method GetKeepInteriorCornersSquare slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics shape=51 reverse=65 static
+        method GetKeepInteriorCornersSquare slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics shape=51 static
             in class type=Windows.UI.Xaml.Controls.AutoSuggestBox name=autoSuggestBox
             out boolean return
     method set_keep_interior_corners_square static
-        method SetKeepInteriorCornersSquare slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics shape=51 reverse=44 static
+        method SetKeepInteriorCornersSquare slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IAutoSuggestBoxHelperStatics shape=51 static
             in class type=Windows.UI.Xaml.Controls.AutoSuggestBox name=autoSuggestBox
             in boolean name=value
 
@@ -30,17 +30,17 @@ class Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider composable python_
     factory Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSliderStatics
     composable Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSliderFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSliderFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSliderFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider return
     property color_channel
-        get get_ColorChannel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSlider shape=4 reverse=22
+        get get_ColorChannel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSlider shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.ColorPickerHsvChannel return
-        put put_ColorChannel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSlider shape=4 reverse=43
+        put put_ColorChannel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSlider shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.ColorPickerHsvChannel name=value
     property color_channel_property static
-        get get_ColorChannelProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSliderStatics shape=4 reverse=22 static
+        get get_ColorChannelProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorPickerSliderStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum composable python_type
@@ -52,95 +52,95 @@ class Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum composable python_type
     factory Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics
     composable Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum return
     property shape
-        get get_Shape slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=237
+        get get_Shape slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.ColorSpectrumShape return
-        put put_Shape slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=242
+        put put_Shape slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.ColorSpectrumShape name=value
     property min_value
-        get get_MinValue slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=218
+        get get_MinValue slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out int32 return
-        put put_MinValue slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=223
+        put put_MinValue slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in int32 name=value
     property min_saturation
-        get get_MinSaturation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=186
+        get get_MinSaturation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out int32 return
-        put put_MinSaturation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=194
+        put put_MinSaturation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in int32 name=value
     property min_hue
-        get get_MinHue slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=121
+        get get_MinHue slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out int32 return
-        put put_MinHue slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=141
+        put put_MinHue slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in int32 name=value
     property max_value
-        get get_MaxValue slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=228
+        get get_MaxValue slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out int32 return
-        put put_MaxValue slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=232
+        put put_MaxValue slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in int32 name=value
     property max_saturation
-        get get_MaxSaturation slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=202
+        get get_MaxSaturation slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out int32 return
-        put put_MaxSaturation slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=210
+        put put_MaxSaturation slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in int32 name=value
     property max_hue
-        get get_MaxHue slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=162
+        get get_MaxHue slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out int32 return
-        put put_MaxHue slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=173
+        put put_MaxHue slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in int32 name=value
     property hsv_color
-        get get_HsvColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=62
+        get get_HsvColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out struct type=Windows.Foundation.Numerics.Vector4 return
-        put put_HsvColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=8 reverse=105
+        put put_HsvColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=8
             in struct type=Windows.Foundation.Numerics.Vector4 name=value
     property components
-        get get_Components slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=247
+        get get_Components slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.ColorSpectrumComponents return
-        put put_Components slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=252
+        put put_Components slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.ColorSpectrumComponents name=value
     property color
-        get get_Color slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4 reverse=22
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=4
             out struct type=Windows.UI.Color return
         put put_Color slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=29
             in struct type=Windows.UI.Color name=value
     property color_property static
-        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=22 static
+        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property components_property static
-        get get_ComponentsProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=194 static
+        get get_ComponentsProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property hsv_color_property static
-        get get_HsvColorProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=43 static
+        get get_HsvColorProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property max_hue_property static
-        get get_MaxHueProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=99 static
+        get get_MaxHueProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property max_saturation_property static
-        get get_MaxSaturationProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=141 static
+        get get_MaxSaturationProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property max_value_property static
-        get get_MaxValueProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=173 static
+        get get_MaxValueProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property min_hue_property static
-        get get_MinHueProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=62 static
+        get get_MinHueProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property min_saturation_property static
-        get get_MinSaturationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=121 static
+        get get_MinSaturationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property min_value_property static
-        get get_MinValueProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=162 static
+        get get_MinValueProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property shape_property static
-        get get_ShapeProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 reverse=186 static
+        get get_ShapeProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrumStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     event color_changed
-        add add_ColorChanged slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=51 reverse=256
+        add add_ColorChanged slot=26 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Primitives.ColorSpectrum,Microsoft.UI.Xaml.Controls.ColorChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ColorChanged slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=26 reverse=262
+        remove remove_ColorChanged slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColorSpectrum shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout composable python_type
@@ -152,33 +152,33 @@ class Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayou
     factory Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics
     composable Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.ColumnMajorUniformToLargestGridLayout return
     property row_spacing
-        get get_RowSpacing slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4 reverse=121
+        get get_RowSpacing slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4
             out double return
-        put put_RowSpacing slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=2 reverse=138
+        put put_RowSpacing slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=2
             in double name=value
     property max_columns
-        get get_MaxColumns slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4 reverse=22
+        get get_MaxColumns slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4
             out int32 return
-        put put_MaxColumns slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4 reverse=43
+        put put_MaxColumns slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4
             in int32 name=value
     property column_spacing
-        get get_ColumnSpacing slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4 reverse=62
+        get get_ColumnSpacing slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=4
             out double return
         put put_ColumnSpacing slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayout shape=2
             in double name=value
     property column_spacing_property static
-        get get_ColumnSpacingProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics shape=4 reverse=43 static
+        get get_ColumnSpacingProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property max_columns_property static
-        get get_MaxColumnsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics shape=4 reverse=22 static
+        get get_MaxColumnsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property row_spacing_property static
-        get get_RowSpacingProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics shape=4 reverse=62 static
+        get get_RowSpacingProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IColumnMajorUniformToLargestGridLayoutStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Controls.Primitives.ComboBoxHelper python_type
@@ -188,14 +188,14 @@ class Microsoft.UI.Xaml.Controls.Primitives.ComboBoxHelper python_type
     requires Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelper
     factory Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics
     property keep_interior_corners_square_property static
-        get get_KeepInteriorCornersSquareProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics shape=4 reverse=22 static
+        get get_KeepInteriorCornersSquareProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method get_keep_interior_corners_square static
-        method GetKeepInteriorCornersSquare slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics shape=51 reverse=65 static
+        method GetKeepInteriorCornersSquare slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics shape=51 static
             in class type=Windows.UI.Xaml.Controls.ComboBox name=comboBox
             out boolean return
     method set_keep_interior_corners_square static
-        method SetKeepInteriorCornersSquare slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics shape=51 reverse=44 static
+        method SetKeepInteriorCornersSquare slot=7 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IComboBoxHelperStatics shape=51 static
             in class type=Windows.UI.Xaml.Controls.ComboBox name=comboBox
             in boolean name=value
 
@@ -207,26 +207,26 @@ class Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar composabl
     requires Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBar
     composable Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar return
     property flyout_template_settings
-        get get_FlyoutTemplateSettings slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBar shape=4 reverse=22
+        get get_FlyoutTemplateSettings slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBar shape=4
             out class type=Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings return
 
 class Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarAutomationProperties static python_type
     py CommandBarFlyoutCommandBarAutomationProperties
     factory Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics
     property control_type_property static
-        get get_ControlTypeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics shape=4 reverse=22 static
+        get get_ControlTypeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method get_control_type static
-        method GetControlType slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics shape=51 reverse=44 static
+        method GetControlType slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics shape=51 static
             in class type=Windows.UI.Xaml.UIElement name=element
             out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationControlType return
     method set_control_type static
-        method SetControlType slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics shape=51 reverse=65 static
+        method SetControlType slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarAutomationPropertiesStatics shape=51 static
             in class type=Windows.UI.Xaml.UIElement name=element
             in enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationControlType name=value
 
@@ -237,64 +237,64 @@ class Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSe
     default Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings
     requires Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings
     property close_animation_end_position
-        get get_CloseAnimationEndPosition slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=62
+        get get_CloseAnimationEndPosition slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property content_clip_rect
-        get get_ContentClipRect slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=247
+        get get_ContentClipRect slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out struct type=Windows.Foundation.Rect return
     property current_width
-        get get_CurrentWidth slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=99
+        get get_CurrentWidth slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_down_animation_end_position
-        get get_ExpandDownAnimationEndPosition slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=237
+        get get_ExpandDownAnimationEndPosition slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_down_animation_hold_position
-        get get_ExpandDownAnimationHoldPosition slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=242
+        get get_ExpandDownAnimationHoldPosition slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_down_animation_start_position
-        get get_ExpandDownAnimationStartPosition slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=232
+        get get_ExpandDownAnimationStartPosition slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_down_overflow_vertical_position
-        get get_ExpandDownOverflowVerticalPosition slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=210
+        get get_ExpandDownOverflowVerticalPosition slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_up_animation_end_position
-        get get_ExpandUpAnimationEndPosition slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=223
+        get get_ExpandUpAnimationEndPosition slot=19 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_up_animation_hold_position
-        get get_ExpandUpAnimationHoldPosition slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=228
+        get get_ExpandUpAnimationHoldPosition slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_up_animation_start_position
-        get get_ExpandUpAnimationStartPosition slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=218
+        get get_ExpandUpAnimationStartPosition slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expand_up_overflow_vertical_position
-        get get_ExpandUpOverflowVerticalPosition slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=202
+        get get_ExpandUpOverflowVerticalPosition slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property expanded_width
-        get get_ExpandedWidth slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=121
+        get get_ExpandedWidth slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property open_animation_end_position
-        get get_OpenAnimationEndPosition slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=43
+        get get_OpenAnimationEndPosition slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property open_animation_start_position
-        get get_OpenAnimationStartPosition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=22
+        get get_OpenAnimationStartPosition slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property overflow_content_clip_rect
-        get get_OverflowContentClipRect slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=252
+        get get_OverflowContentClipRect slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out struct type=Windows.Foundation.Rect return
     property width_expansion_animation_end_position
-        get get_WidthExpansionAnimationEndPosition slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=173
+        get get_WidthExpansionAnimationEndPosition slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property width_expansion_animation_start_position
-        get get_WidthExpansionAnimationStartPosition slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=162
+        get get_WidthExpansionAnimationStartPosition slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property width_expansion_delta
-        get get_WidthExpansionDelta slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=141
+        get get_WidthExpansionDelta slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property width_expansion_more_button_animation_end_position
-        get get_WidthExpansionMoreButtonAnimationEndPosition slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=194
+        get get_WidthExpansionMoreButtonAnimationEndPosition slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
     property width_expansion_more_button_animation_start_position
-        get get_WidthExpansionMoreButtonAnimationStartPosition slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4 reverse=186
+        get get_WidthExpansionMoreButtonAnimationStartPosition slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICommandBarFlyoutCommandBarTemplateSettings shape=4
             out double return
 
 class Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter activatable python_type
@@ -309,20 +309,20 @@ class Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterConverter activata
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property scale
-        get get_Scale slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=4 reverse=62
+        get get_Scale slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=4
             out double return
         put put_Scale slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=2
             in double name=value
     property filter
-        get get_Filter slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=4 reverse=22
+        get get_Filter slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterKind return
-        put put_Filter slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=4 reverse=43
+        put put_Filter slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverter shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusFilterKind name=value
     property filter_property static
-        get get_FilterProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverterStatics shape=4 reverse=22 static
+        get get_FilterProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property scale_property static
-        get get_ScaleProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverterStatics shape=4 reverse=43 static
+        get get_ScaleProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusFilterConverterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method convert
         method Convert slot=6 inputs=4 outputs=1 declaring=Windows.UI.Xaml.Data.IValueConverter shape=253 reverse=29
@@ -362,20 +362,20 @@ class Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverter act
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property multiplier
-        get get_Multiplier slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=4 reverse=62
+        get get_Multiplier slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=4
             out double return
         put put_Multiplier slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=2
             in double name=value
     property conversion_kind
-        get get_ConversionKind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=4 reverse=22
+        get get_ConversionKind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverterKind return
-        put put_ConversionKind slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=4 reverse=43
+        put put_ConversionKind slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverter shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.CornerRadiusToThicknessConverterKind name=value
     property conversion_kind_property static
-        get get_ConversionKindProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverterStatics shape=4 reverse=22 static
+        get get_ConversionKindProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property multiplier_property static
-        get get_MultiplierProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverterStatics shape=4 reverse=43 static
+        get get_MultiplierProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ICornerRadiusToThicknessConverterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method convert
         method Convert slot=6 inputs=4 outputs=1 declaring=Windows.UI.Xaml.Data.IValueConverter shape=253 reverse=29
@@ -528,38 +528,38 @@ class Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel composable python_type
     factory Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics
     composable Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.InfoBarPanel return
     property vertical_orientation_padding
-        get get_VerticalOrientationPadding slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel shape=4 reverse=62
+        get get_VerticalOrientationPadding slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel shape=4
             out struct type=Windows.UI.Xaml.Thickness return
         put put_VerticalOrientationPadding slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel shape=14
             in struct type=Windows.UI.Xaml.Thickness name=value
     property horizontal_orientation_padding
-        get get_HorizontalOrientationPadding slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel shape=4 reverse=22
+        get get_HorizontalOrientationPadding slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel shape=4
             out struct type=Windows.UI.Xaml.Thickness return
         put put_HorizontalOrientationPadding slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanel shape=14
             in struct type=Windows.UI.Xaml.Thickness name=value
     property horizontal_orientation_margin_property static
-        get get_HorizontalOrientationMarginProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 reverse=121 static
+        get get_HorizontalOrientationMarginProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property horizontal_orientation_padding_property static
-        get get_HorizontalOrientationPaddingProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 reverse=22 static
+        get get_HorizontalOrientationPaddingProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property vertical_orientation_margin_property static
-        get get_VerticalOrientationMarginProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 reverse=173 static
+        get get_VerticalOrientationMarginProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property vertical_orientation_padding_property static
-        get get_VerticalOrientationPaddingProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 reverse=43 static
+        get get_VerticalOrientationPaddingProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method get_horizontal_orientation_margin static
-        method GetHorizontalOrientationMargin slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=51 reverse=100 static
+        method GetHorizontalOrientationMargin slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=51 static
             in class type=Windows.UI.Xaml.DependencyObject name=object
             out struct type=Windows.UI.Xaml.Thickness return
     method get_vertical_orientation_margin static
-        method GetVerticalOrientationMargin slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=51 reverse=163 static
+        method GetVerticalOrientationMargin slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IInfoBarPanelStatics shape=51 static
             in class type=Windows.UI.Xaml.DependencyObject name=object
             out struct type=Windows.UI.Xaml.Thickness return
     method set_horizontal_orientation_margin static
@@ -580,25 +580,25 @@ class Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter compos
     factory Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterStatics
     composable Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.MonochromaticOverlayPresenter return
     property source_element
-        get get_SourceElement slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=4 reverse=22
+        get get_SourceElement slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=4
             out class type=Windows.UI.Xaml.UIElement return
-        put put_SourceElement slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=4 reverse=43
+        put put_SourceElement slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=4
             in class type=Windows.UI.Xaml.UIElement name=value
     property replacement_color
-        get get_ReplacementColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=4 reverse=62
+        get get_ReplacementColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=4
             out struct type=Windows.UI.Color return
-        put put_ReplacementColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=29 reverse=113
+        put put_ReplacementColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenter shape=29
             in struct type=Windows.UI.Color name=value
     property replacement_color_property static
-        get get_ReplacementColorProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterStatics shape=4 reverse=43 static
+        get get_ReplacementColorProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property source_element_property static
-        get get_SourceElementProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterStatics shape=4 reverse=22 static
+        get get_SourceElementProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.IMonochromaticOverlayPresenterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter composable python_type
@@ -612,31 +612,31 @@ class Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter composab
     factory Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics2
     composable Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter return
     property icon
-        get get_Icon slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter shape=4 reverse=22
+        get get_Icon slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter shape=4
             out class type=Windows.UI.Xaml.Controls.IconElement return
-        put put_Icon slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter shape=4 reverse=43
+        put put_Icon slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter shape=4
             in class type=Windows.UI.Xaml.Controls.IconElement name=value
     property template_settings
-        get get_TemplateSettings slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter shape=4 reverse=62
+        get get_TemplateSettings slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter shape=4
             out class type=Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings return
     property info_badge
-        get get_InfoBadge slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2 shape=4 reverse=22
+        get get_InfoBadge slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2 shape=4
             out class type=Microsoft.UI.Xaml.Controls.InfoBadge return
-        put put_InfoBadge slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2 shape=4 reverse=43
+        put put_InfoBadge slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenter2 shape=4
             in class type=Microsoft.UI.Xaml.Controls.InfoBadge name=value
     property icon_property static
-        get get_IconProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics shape=4 reverse=22 static
+        get get_IconProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property template_settings_property static
-        get get_TemplateSettingsProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics shape=4 reverse=43 static
+        get get_TemplateSettingsProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property info_badge_property static
-        get get_InfoBadgeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics2 shape=4 reverse=22 static
+        get get_InfoBadgeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterStatics2 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings composable python_type
@@ -648,21 +648,21 @@ class Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateS
     factory Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsStatics
     composable Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.NavigationViewItemPresenterTemplateSettings return
     property icon_width
-        get get_IconWidth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettings shape=4 reverse=22
+        get get_IconWidth slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettings shape=4
             out double return
     property smaller_icon_width
-        get get_SmallerIconWidth slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettings shape=4 reverse=43
+        get get_SmallerIconWidth slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettings shape=4
             out double return
     property icon_width_property static
-        get get_IconWidthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsStatics shape=4 reverse=22 static
+        get get_IconWidthProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property smaller_icon_width_property static
-        get get_SmallerIconWidthProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsStatics shape=4 reverse=43 static
+        get get_SmallerIconWidthProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.INavigationViewItemPresenterTemplateSettingsStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Controls.Primitives.TabViewListView composable python_type
@@ -673,7 +673,7 @@ class Microsoft.UI.Xaml.Controls.Primitives.TabViewListView composable python_ty
     requires Microsoft.UI.Xaml.Controls.Primitives.ITabViewListView
     composable Microsoft.UI.Xaml.Controls.Primitives.ITabViewListViewFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ITabViewListViewFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.Primitives.ITabViewListViewFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Controls.Primitives.TabViewListView return

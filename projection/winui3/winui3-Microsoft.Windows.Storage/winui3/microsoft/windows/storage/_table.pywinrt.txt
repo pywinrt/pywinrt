@@ -11,68 +11,68 @@ class Microsoft.Windows.Storage.ApplicationData python_type closeable
     requires Windows.Foundation.IClosable
     factory Microsoft.Windows.Storage.IApplicationDataStatics
     property is_machine_path_supported
-        get get_IsMachinePathSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=22
+        get get_IsMachinePathSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out boolean return
     property local_cache_folder
-        get get_LocalCacheFolder slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=162
+        get get_LocalCacheFolder slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property local_cache_path
-        get get_LocalCachePath slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=43
+        get get_LocalCachePath slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out string return
     property local_folder
-        get get_LocalFolder slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=173
+        get get_LocalFolder slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property local_path
-        get get_LocalPath slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=62
+        get get_LocalPath slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out string return
     property local_settings
-        get get_LocalSettings slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=210
+        get get_LocalSettings slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out class type=Microsoft.Windows.Storage.ApplicationDataContainer return
     property machine_folder
-        get get_MachineFolder slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=186
+        get get_MachineFolder slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property machine_path
-        get get_MachinePath slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=99
+        get get_MachinePath slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out string return
     property shared_local_folder
-        get get_SharedLocalFolder slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=194
+        get get_SharedLocalFolder slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property shared_local_path
-        get get_SharedLocalPath slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=121
+        get get_SharedLocalPath slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out string return
     property temporary_folder
-        get get_TemporaryFolder slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=202
+        get get_TemporaryFolder slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out class type=Windows.Storage.StorageFolder return
     property temporary_path
-        get get_TemporaryPath slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4 reverse=141
+        get get_TemporaryPath slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=4
             out string return
     method clear_async
-        method ClearAsync slot=18 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51 reverse=219
+        method ClearAsync slot=18 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51
             in enum32 type=Microsoft.Windows.Storage.ApplicationDataLocality name=locality
             out interface type=Windows.Foundation.IAsyncAction return
     method clear_publisher_cache_folder_async
-        method ClearPublisherCacheFolderAsync slot=19 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51 reverse=224
+        method ClearPublisherCacheFolderAsync slot=19 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51
             in string name=folderName
             out interface type=Windows.Foundation.IAsyncAction return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=4 static
             out class type=Microsoft.Windows.Storage.ApplicationData return
     method get_for_package_family static
-        method GetForPackageFamily slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=51 reverse=65 static
+        method GetForPackageFamily slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=51 static
             in string name=packageFamilyName
             out class type=Microsoft.Windows.Storage.ApplicationData return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Microsoft.Windows.Storage.ApplicationData return
     method get_publisher_cache_folder
-        method GetPublisherCacheFolder slot=21 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51 reverse=233
+        method GetPublisherCacheFolder slot=21 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51
             in string name=folderName
             out class type=Windows.Storage.StorageFolder return
     method get_publisher_cache_path
-        method GetPublisherCachePath slot=20 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51 reverse=229
+        method GetPublisherCachePath slot=20 inputs=1 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationData shape=51
             in string name=folderName
             out string return
 
@@ -83,26 +83,26 @@ class Microsoft.Windows.Storage.ApplicationDataContainer python_type closeable
     requires Microsoft.Windows.Storage.IApplicationDataContainer
     requires Windows.Foundation.IClosable
     property containers
-        get get_Containers slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4 reverse=22
+        get get_Containers slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,Microsoft.Windows.Storage.ApplicationDataContainer> return
     property locality
-        get get_Locality slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4 reverse=62
+        get get_Locality slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4
             out enum32 type=Microsoft.Windows.Storage.ApplicationDataLocality return
     property name
-        get get_Name slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4 reverse=43
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4
             out string return
     property values
-        get get_Values slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4 reverse=99
+        get get_Values slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_container
-        method CreateContainer slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=117 reverse=125
+        method CreateContainer slot=10 inputs=2 outputs=1 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=117
             in string name=name
             in enum32 type=Microsoft.Windows.Storage.ApplicationDataCreateDisposition name=disposition
             out class type=Microsoft.Windows.Storage.ApplicationDataContainer return
     method delete_container
-        method DeleteContainer slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4 reverse=141
+        method DeleteContainer slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Storage.IApplicationDataContainer shape=4
             in string name=name
 
 enum Microsoft.Windows.Storage.ApplicationDataCreateDisposition python_type

@@ -22,7 +22,7 @@ class Windows.Gaming.Input.ArcadeStick python_type
         get get_User slot=14 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=186
             out class type=Windows.System.User return
     property arcade_sticks static
-        get get_ArcadeSticks slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=4 reverse=121 static
+        get get_ArcadeSticks slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ArcadeStick> return
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
@@ -43,27 +43,27 @@ class Windows.Gaming.Input.ArcadeStick python_type
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event arcade_stick_added static
-        add add_ArcadeStickAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=51 reverse=24 static
+        add add_ArcadeStickAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.ArcadeStick> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ArcadeStickAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=26 reverse=53 static
+        remove remove_ArcadeStickAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event arcade_stick_removed static
-        add add_ArcadeStickRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=51 reverse=65 static
+        add add_ArcadeStickRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.ArcadeStick> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ArcadeStickRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=26 reverse=110 static
+        remove remove_ArcadeStickRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IArcadeStickStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
-        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics2 shape=51 reverse=24 static
+        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStickStatics2 shape=51 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
             out class type=Windows.Gaming.Input.ArcadeStick return
     method get_button_label
-        method GetButtonLabel slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStick shape=51 reverse=24
+        method GetButtonLabel slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IArcadeStick shape=51
             in enum_u32 type=Windows.Gaming.Input.ArcadeStickButtons name=button
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method get_current_reading
-        method GetCurrentReading slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IArcadeStick shape=4 reverse=43
+        method GetCurrentReading slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IArcadeStick shape=4
             out struct type=Windows.Gaming.Input.ArcadeStickReading return
     method try_get_battery_report
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
@@ -167,7 +167,7 @@ class Windows.Gaming.Input.FlightStick python_type
     requires Windows.Gaming.Input.IGameControllerBatteryInfo
     factory Windows.Gaming.Input.IFlightStickStatics
     property hat_switch_kind
-        get get_HatSwitchKind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IFlightStick shape=4 reverse=22
+        get get_HatSwitchKind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IFlightStick shape=4
             out enum32 type=Windows.Gaming.Input.GameControllerSwitchKind return
     property headset
         get get_Headset slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=162
@@ -179,7 +179,7 @@ class Windows.Gaming.Input.FlightStick python_type
         get get_User slot=14 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=186
             out class type=Windows.System.User return
     property flight_sticks static
-        get get_FlightSticks slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=4 reverse=121 static
+        get get_FlightSticks slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.FlightStick> return
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
@@ -200,27 +200,27 @@ class Windows.Gaming.Input.FlightStick python_type
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event flight_stick_added static
-        add add_FlightStickAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 reverse=24 static
+        add add_FlightStickAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.FlightStick> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FlightStickAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IFlightStickStatics shape=26 reverse=53 static
+        remove remove_FlightStickAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IFlightStickStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event flight_stick_removed static
-        add add_FlightStickRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 reverse=65 static
+        add add_FlightStickRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.FlightStick> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FlightStickRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IFlightStickStatics shape=26 reverse=110 static
+        remove remove_FlightStickRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IFlightStickStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
-        method FromGameController slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 reverse=144 static
+        method FromGameController slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStickStatics shape=51 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
             out class type=Windows.Gaming.Input.FlightStick return
     method get_button_label
-        method GetButtonLabel slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStick shape=51 reverse=44
+        method GetButtonLabel slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IFlightStick shape=51
             in enum_u32 type=Windows.Gaming.Input.FlightStickButtons name=button
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method get_current_reading
-        method GetCurrentReading slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IFlightStick shape=4 reverse=62
+        method GetCurrentReading slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IFlightStick shape=4
             out struct type=Windows.Gaming.Input.FlightStickReading return
     method try_get_battery_report
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
@@ -357,12 +357,12 @@ class Windows.Gaming.Input.Gamepad python_type
         get get_User slot=14 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=186
             out class type=Windows.System.User return
     property vibration
-        get get_Vibration slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGamepad shape=4 reverse=22
+        get get_Vibration slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGamepad shape=4
             out struct type=Windows.Gaming.Input.GamepadVibration return
         put put_Vibration slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepad shape=14
             in struct type=Windows.Gaming.Input.GamepadVibration name=value
     property gamepads static
-        get get_Gamepads slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=4 reverse=121 static
+        get get_Gamepads slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.Gamepad> return
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
@@ -383,27 +383,27 @@ class Windows.Gaming.Input.Gamepad python_type
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gamepad_added static
-        add add_GamepadAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=51 reverse=24 static
+        add add_GamepadAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.Gamepad> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GamepadAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepadStatics shape=26 reverse=53 static
+        remove remove_GamepadAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepadStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event gamepad_removed static
-        add add_GamepadRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=51 reverse=65 static
+        add add_GamepadRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.Gamepad> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GamepadRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepadStatics shape=26 reverse=110 static
+        remove remove_GamepadRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGamepadStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
-        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics2 shape=51 reverse=24 static
+        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepadStatics2 shape=51 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
             out class type=Windows.Gaming.Input.Gamepad return
     method get_button_label
-        method GetButtonLabel slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepad2 shape=51 reverse=24
+        method GetButtonLabel slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGamepad2 shape=51
             in enum_u32 type=Windows.Gaming.Input.GamepadButtons name=button
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method get_current_reading
-        method GetCurrentReading slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGamepad shape=4 reverse=62
+        method GetCurrentReading slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGamepad shape=4
             out struct type=Windows.Gaming.Input.GamepadReading return
     method try_get_battery_report
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
@@ -459,10 +459,10 @@ class Windows.Gaming.Input.Headset python_type
     requires Windows.Gaming.Input.IHeadset
     requires Windows.Gaming.Input.IGameControllerBatteryInfo
     property capture_device_id
-        get get_CaptureDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IHeadset shape=4 reverse=22
+        get get_CaptureDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IHeadset shape=4
             out string return
     property render_device_id
-        get get_RenderDeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IHeadset shape=4 reverse=43
+        get get_RenderDeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IHeadset shape=4
             out string return
     method try_get_battery_report
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
@@ -1065,25 +1065,25 @@ class Windows.Gaming.Input.RacingWheel python_type
         get get_User slot=14 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=186
             out class type=Windows.System.User return
     property has_clutch
-        get get_HasClutch slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=22
+        get get_HasClutch slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out boolean return
     property has_handbrake
-        get get_HasHandbrake slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=43
+        get get_HasHandbrake slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out boolean return
     property has_pattern_shifter
-        get get_HasPatternShifter slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=62
+        get get_HasPatternShifter slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out boolean return
     property max_pattern_shifter_gear
-        get get_MaxPatternShifterGear slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=99
+        get get_MaxPatternShifterGear slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out int32 return
     property max_wheel_angle
-        get get_MaxWheelAngle slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=121
+        get get_MaxWheelAngle slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out double return
     property wheel_motor
-        get get_WheelMotor slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=141
+        get get_WheelMotor slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out class type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor return
     property racing_wheels static
-        get get_RacingWheels slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=4 reverse=121 static
+        get get_RacingWheels slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RacingWheel> return
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
@@ -1104,27 +1104,27 @@ class Windows.Gaming.Input.RacingWheel python_type
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event racing_wheel_added static
-        add add_RacingWheelAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=51 reverse=24 static
+        add add_RacingWheelAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RacingWheel> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RacingWheelAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=26 reverse=53 static
+        remove remove_RacingWheelAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event racing_wheel_removed static
-        add add_RacingWheelRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=51 reverse=65 static
+        add add_RacingWheelRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RacingWheel> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RacingWheelRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=26 reverse=110 static
+        remove remove_RacingWheelRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRacingWheelStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
-        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics2 shape=51 reverse=24 static
+        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheelStatics2 shape=51 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
             out class type=Windows.Gaming.Input.RacingWheel return
     method get_button_label
-        method GetButtonLabel slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=51 reverse=163
+        method GetButtonLabel slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=51
             in enum_u32 type=Windows.Gaming.Input.RacingWheelButtons name=button
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method get_current_reading
-        method GetCurrentReading slot=13 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4 reverse=173
+        method GetCurrentReading slot=13 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRacingWheel shape=4
             out struct type=Windows.Gaming.Input.RacingWheelReading return
     method try_get_battery_report
         method TryGetBatteryReport slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameControllerBatteryInfo shape=4 reverse=22
@@ -1188,34 +1188,34 @@ class Windows.Gaming.Input.RawGameController python_type
         get get_User slot=14 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=186
             out class type=Windows.System.User return
     property axis_count
-        get get_AxisCount slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4 reverse=22
+        get get_AxisCount slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4
             out int32 return
     property button_count
-        get get_ButtonCount slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4 reverse=43
+        get get_ButtonCount slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4
             out int32 return
     property force_feedback_motors
-        get get_ForceFeedbackMotors slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4 reverse=62
+        get get_ForceFeedbackMotors slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor> return
     property hardware_product_id
-        get get_HardwareProductId slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4 reverse=99
+        get get_HardwareProductId slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4
             out uint16 return
     property hardware_vendor_id
-        get get_HardwareVendorId slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4 reverse=121
+        get get_HardwareVendorId slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4
             out uint16 return
     property switch_count
-        get get_SwitchCount slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4 reverse=141
+        get get_SwitchCount slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=4
             out int32 return
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController2 shape=4 reverse=62
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController2 shape=4
             out string return
     property non_roamable_id
-        get get_NonRoamableId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController2 shape=4 reverse=43
+        get get_NonRoamableId slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController2 shape=4
             out string return
     property simple_haptics_controllers
-        get get_SimpleHapticsControllers slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController2 shape=4 reverse=22
+        get get_SimpleHapticsControllers slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameController2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsController> return
     property raw_game_controllers static
-        get get_RawGameControllers slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=4 reverse=121 static
+        get get_RawGameControllers slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.RawGameController> return
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
@@ -1236,23 +1236,23 @@ class Windows.Gaming.Input.RawGameController python_type
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event raw_game_controller_added static
-        add add_RawGameControllerAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 reverse=24 static
+        add add_RawGameControllerAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RawGameController> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RawGameControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=26 reverse=53 static
+        remove remove_RawGameControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event raw_game_controller_removed static
-        add add_RawGameControllerRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 reverse=65 static
+        add add_RawGameControllerRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.RawGameController> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RawGameControllerRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=26 reverse=110 static
+        remove remove_RawGameControllerRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
-        method FromGameController slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 reverse=144 static
+        method FromGameController slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameControllerStatics shape=51 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
             out class type=Windows.Gaming.Input.RawGameController return
     method get_button_label
-        method GetButtonLabel slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=51 reverse=163
+        method GetButtonLabel slot=12 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=51
             in int32 name=buttonIndex
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method get_current_reading
@@ -1262,7 +1262,7 @@ class Windows.Gaming.Input.RawGameController python_type
             fill_array double name=axisArray
             out uint64 return
     method get_switch_kind
-        method GetSwitchKind slot=14 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=51 reverse=187
+        method GetSwitchKind slot=14 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IRawGameController shape=51
             in int32 name=switchIndex
             out enum32 type=Windows.Gaming.Input.GameControllerSwitchKind return
     method try_get_battery_report
@@ -1325,7 +1325,7 @@ class Windows.Gaming.Input.UINavigationController python_type
         get get_User slot=14 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=4 reverse=186
             out class type=Windows.System.User return
     property ui_navigation_controllers static
-        get get_UINavigationControllers slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=4 reverse=121 static
+        get get_UINavigationControllers slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Gaming.Input.UINavigationController> return
     event headset_connected
         add add_HeadsetConnected slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IGameController shape=51 reverse=24
@@ -1346,30 +1346,30 @@ class Windows.Gaming.Input.UINavigationController python_type
         remove remove_UserChanged slot=11 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IGameController shape=26 reverse=156
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ui_navigation_controller_added static
-        add add_UINavigationControllerAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=51 reverse=24 static
+        add add_UINavigationControllerAdded slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.UINavigationController> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UINavigationControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=26 reverse=53 static
+        remove remove_UINavigationControllerAdded slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ui_navigation_controller_removed static
-        add add_UINavigationControllerRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=51 reverse=65 static
+        add add_UINavigationControllerRemoved slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Gaming.Input.UINavigationController> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UINavigationControllerRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=26 reverse=110 static
+        remove remove_UINavigationControllerRemoved slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.Input.IUINavigationControllerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_game_controller static
-        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics2 shape=51 reverse=24 static
+        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationControllerStatics2 shape=51 static
             in interface type=Windows.Gaming.Input.IGameController name=gameController
             out class type=Windows.Gaming.Input.UINavigationController return
     method get_current_reading
-        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IUINavigationController shape=4 reverse=22
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.IUINavigationController shape=4
             out struct type=Windows.Gaming.Input.UINavigationReading return
     method get_optional_button_label
-        method GetOptionalButtonLabel slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationController shape=51 reverse=44
+        method GetOptionalButtonLabel slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationController shape=51
             in enum_u32 type=Windows.Gaming.Input.OptionalUINavigationButtons name=button
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method get_required_button_label
-        method GetRequiredButtonLabel slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationController shape=51 reverse=65
+        method GetRequiredButtonLabel slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Input.IUINavigationController shape=51
             in enum_u32 type=Windows.Gaming.Input.RequiredUINavigationButtons name=button
             out enum32 type=Windows.Gaming.Input.GameControllerButtonLabel return
     method try_get_battery_report

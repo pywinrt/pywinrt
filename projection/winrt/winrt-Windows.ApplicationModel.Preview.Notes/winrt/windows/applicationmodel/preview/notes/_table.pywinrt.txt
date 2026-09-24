@@ -27,7 +27,7 @@ class Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArg
     default Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs
     requires Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs
     property view_id
-        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs shape=4 reverse=22
+        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotePlacementChangedPreviewEventArgs shape=4
             out int32 return
 
 class Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs python_type
@@ -36,10 +36,10 @@ class Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventAr
     default Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs
     requires Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs
     property is_visible
-        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs shape=4 reverse=43
+        get get_IsVisible slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs shape=4
             out boolean return
     property view_id
-        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs shape=4 reverse=22
+        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INoteVisibilityChangedPreviewEventArgs shape=4
             out int32 return
 
 class Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview python_type
@@ -50,64 +50,64 @@ class Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview python_ty
     requires Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2
     factory Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics
     property is_screen_locked
-        get get_IsScreenLocked slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4 reverse=22
+        get get_IsScreenLocked slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4
             out boolean return
     event note_placement_changed
-        add add_NotePlacementChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=211
+        add add_NotePlacementChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NotePlacementChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26 reverse=398
+        remove remove_NotePlacementChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event note_visibility_changed
-        add add_NoteVisibilityChanged slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=224
+        add add_NoteVisibilityChanged slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NoteVisibilityChanged slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26 reverse=399
+        remove remove_NoteVisibilityChanged slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event system_lock_state_changed
-        add add_SystemLockStateChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=196
+        add add_SystemLockStateChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SystemLockStateChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26 reverse=397
+        remove remove_SystemLockStateChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_app static
-        method GetForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics shape=4 reverse=22 static
+        method GetForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewStatics shape=4 static
             out class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview return
     method get_note_placement
-        method GetNotePlacement slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=144
+        method GetNotePlacement slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in int32 name=noteViewId
             out interface type=Windows.Storage.Streams.IBuffer return
     method hide_note
-        method HideNote slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4 reverse=121
+        method HideNote slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4
             in int32 name=noteViewId
     method set_focus_to_next_view
-        method SetFocusToNextView slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=0 reverse=169
+        method SetFocusToNextView slot=13 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=0
     method set_focus_to_previous_view
-        method SetFocusToPreviousView slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=0 reverse=55
+        method SetFocusToPreviousView slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=0
     method set_notes_thumbnail_async
-        method SetNotesThumbnailAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=187
+        method SetNotesThumbnailAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=thumbnail
             out interface type=Windows.Foundation.IAsyncAction return
     method set_thumbnail_image_for_task_switcher_async
-        method SetThumbnailImageForTaskSwitcherAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=51 reverse=100
+        method SetThumbnailImageForTaskSwitcherAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=51
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
             out interface type=Windows.Foundation.IAsyncAction return
     method show_note
-        method ShowNote slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4 reverse=43
+        method ShowNote slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=4
             in int32 name=noteViewId
     method show_note_relative_to
-        method ShowNoteRelativeTo slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=65
+        method ShowNoteRelativeTo slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in int32 name=noteViewId
             in int32 name=anchorNoteViewId
-        method ShowNoteRelativeTo slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=117 reverse=25
+        method ShowNoteRelativeTo slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=117
             in int32 name=noteViewId
             in int32 name=anchorNoteViewId
             in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions name=options
     method show_note_with_placement
-        method ShowNoteWithPlacement slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51 reverse=100
+        method ShowNoteWithPlacement slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview shape=51
             in int32 name=noteViewId
             in interface type=Windows.Storage.Streams.IBuffer name=data
-        method ShowNoteWithPlacement slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=117 reverse=45
+        method ShowNoteWithPlacement slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreview2 shape=117
             in int32 name=noteViewId
             in interface type=Windows.Storage.Streams.IBuffer name=data
             in class type=Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOptions name=options
@@ -126,9 +126,9 @@ class Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreviewShowNoteOp
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property show_with_focus
-        get get_ShowWithFocus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions shape=4 reverse=22
+        get get_ShowWithFocus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions shape=4
             out boolean return
-        put put_ShowWithFocus slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions shape=4 reverse=43
+        put put_ShowWithFocus slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Preview.Notes.INotesWindowManagerPreviewShowNoteOptions shape=4
             in boolean name=value
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview,System.Object> concrete

@@ -167,19 +167,19 @@ class Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings python_type
     default Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings
     requires Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings
     property slave_address
-        get get_SlaveAddress slot=6 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=22
+        get get_SlaveAddress slot=6 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4
             out int32 return
-        put put_SlaveAddress slot=7 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=43
+        put put_SlaveAddress slot=7 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4
             in int32 name=value
     property sharing_mode
-        get get_SharingMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=121
+        get get_SharingMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4
             out enum32 type=Windows.Devices.I2c.Provider.ProviderI2cSharingMode return
-        put put_SharingMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=141
+        put put_SharingMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4
             in enum32 type=Windows.Devices.I2c.Provider.ProviderI2cSharingMode name=value
     property bus_speed
-        get get_BusSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=62
+        get get_BusSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4
             out enum32 type=Windows.Devices.I2c.Provider.ProviderI2cBusSpeed return
-        put put_BusSpeed slot=9 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4 reverse=99
+        put put_BusSpeed slot=9 inputs=1 outputs=0 declaring=Windows.Devices.I2c.Provider.IProviderI2cConnectionSettings shape=4
             in enum32 type=Windows.Devices.I2c.Provider.ProviderI2cBusSpeed name=value
 
 enum Windows.Devices.I2c.Provider.ProviderI2cSharingMode python_type

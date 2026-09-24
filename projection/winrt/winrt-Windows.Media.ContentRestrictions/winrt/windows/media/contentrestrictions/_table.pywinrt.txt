@@ -50,13 +50,13 @@ class Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy python_t
     default Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy
     requires Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy
     property geographic_region
-        get get_GeographicRegion slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy shape=4 reverse=22
+        get get_GeographicRegion slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy shape=4
             out string return
     property max_browsable_age_rating
-        get get_MaxBrowsableAgeRating slot=7 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy shape=4 reverse=43
+        get get_MaxBrowsableAgeRating slot=7 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     property preferred_age_rating
-        get get_PreferredAgeRating slot=8 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy shape=4 reverse=62
+        get get_PreferredAgeRating slot=8 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IContentRestrictionsBrowsePolicy shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
@@ -427,35 +427,35 @@ class Windows.Media.ContentRestrictions.RatedContentDescription python_type
     requires Windows.Media.ContentRestrictions.IRatedContentDescription
     factory Windows.Media.ContentRestrictions.IRatedContentDescriptionFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescriptionFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescriptionFactory shape=195
             in string name=id
             in string name=title
             in enum32 type=Windows.Media.ContentRestrictions.RatedContentCategory name=category
             out class type=Windows.Media.ContentRestrictions.RatedContentDescription return
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             out string return
-        put put_Title slot=9 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=99
+        put put_Title slot=9 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             in string name=value
     property ratings
-        get get_Ratings slot=14 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=186
+        get get_Ratings slot=14 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
-        put put_Ratings slot=15 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=194
+        put put_Ratings slot=15 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<System.String> name=value
     property image
-        get get_Image slot=10 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=121
+        get get_Image slot=10 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
-        put put_Image slot=11 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=141
+        put put_Image slot=11 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             out string return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             in string name=value
     property category
-        get get_Category slot=12 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=162
+        get get_Category slot=12 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             out enum32 type=Windows.Media.ContentRestrictions.RatedContentCategory return
-        put put_Category slot=13 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4 reverse=173
+        put put_Category slot=13 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentDescription shape=4
             in enum32 type=Windows.Media.ContentRestrictions.RatedContentCategory name=value
 
 class Windows.Media.ContentRestrictions.RatedContentRestrictions activatable python_type
@@ -467,24 +467,24 @@ class Windows.Media.ContentRestrictions.RatedContentRestrictions activatable pyt
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictionsFactory shape=51
             in uint32 name=maxAgeRating
             out class type=Windows.Media.ContentRestrictions.RatedContentRestrictions return
     event restrictions_changed
-        add add_RestrictionsChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51 reverse=100
+        add add_RestrictionsChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RestrictionsChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=26 reverse=134
+        remove remove_RestrictionsChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_browse_policy_async
-        method GetBrowsePolicyAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=4 reverse=22
+        method GetBrowsePolicyAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.ContentRestrictions.ContentRestrictionsBrowsePolicy> return
     method get_restriction_level_async
-        method GetRestrictionLevelAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51 reverse=44
+        method GetRestrictionLevelAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51
             in class type=Windows.Media.ContentRestrictions.RatedContentDescription name=RatedContentDescription
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.ContentRestrictions.ContentAccessRestrictionLevel> return
     method request_content_access_async
-        method RequestContentAccessAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51 reverse=65
+        method RequestContentAccessAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.ContentRestrictions.IRatedContentRestrictions shape=51
             in class type=Windows.Media.ContentRestrictions.RatedContentDescription name=RatedContentDescription
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 

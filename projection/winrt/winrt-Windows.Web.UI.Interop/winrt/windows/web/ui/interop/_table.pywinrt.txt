@@ -491,22 +491,22 @@ class Windows.Web.UI.Interop.WebViewControl python_type
     requires Windows.Web.UI.IWebViewControl2
     requires Windows.Web.UI.Interop.IWebViewControlSite2
     property scale
-        get get_Scale slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4 reverse=62
+        get get_Scale slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4
             out double return
-        put put_Scale slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=2 reverse=38
+        put put_Scale slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=2
             in double name=value
     property is_visible
-        get get_IsVisible slot=12 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4 reverse=162
+        get get_IsVisible slot=12 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4
             out boolean return
-        put put_IsVisible slot=11 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4 reverse=141
+        put put_IsVisible slot=11 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4
             in boolean name=value
     property bounds
-        get get_Bounds slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4 reverse=121
+        get get_Bounds slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4
             out struct type=Windows.Foundation.Rect return
-        put put_Bounds slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=8 reverse=105
+        put put_Bounds slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=8
             in struct type=Windows.Foundation.Rect name=value
     property process
-        get get_Process slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4 reverse=22
+        get get_Process slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4
             out class type=Windows.Web.UI.Interop.WebViewControlProcess return
     property source
         get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=22
@@ -639,28 +639,28 @@ class Windows.Web.UI.Interop.WebViewControl python_type
         remove remove_WebResourceRequested slot=62 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=26 reverse=382
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event accelerator_key_pressed
-        add add_AcceleratorKeyPressed slot=17 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=51 reverse=211
+        add add_AcceleratorKeyPressed slot=17 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AcceleratorKeyPressed slot=18 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=26 reverse=398
+        remove remove_AcceleratorKeyPressed slot=18 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event move_focus_requested
-        add add_MoveFocusRequested slot=15 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=51 reverse=196
+        add add_MoveFocusRequested slot=15 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MoveFocusRequested slot=16 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=26 reverse=397
+        remove remove_MoveFocusRequested slot=16 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event got_focus
-        add add_GotFocus slot=6 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=51 reverse=24
+        add add_GotFocus slot=6 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GotFocus slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=26 reverse=53
+        remove remove_GotFocus slot=7 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lost_focus
-        add add_LostFocus slot=8 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=51 reverse=65
+        add add_LostFocus slot=8 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControl,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LostFocus slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=26 reverse=110
+        remove remove_LostFocus slot=9 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_initialize_script
         method AddInitializeScript slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl2 shape=4 reverse=22
@@ -678,7 +678,7 @@ class Windows.Web.UI.Interop.WebViewControl python_type
         method CaptureSelectedContentToDataPackageAsync slot=26 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=255
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> return
     method close
-        method Close slot=13 inputs=0 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=0 reverse=169
+        method Close slot=13 inputs=0 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=0
     method get_deferred_permission_request_by_id
         method GetDeferredPermissionRequestById slot=28 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=264
             in uint32 name=id
@@ -693,7 +693,7 @@ class Windows.Web.UI.Interop.WebViewControl python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=arguments
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method move_focus
-        method MoveFocus slot=14 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4 reverse=186
+        method MoveFocus slot=14 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlSite shape=4
             in enum32 type=Windows.Web.UI.Interop.WebViewControlMoveFocusReason name=reason
     method navigate
         method Navigate slot=20 inputs=1 outputs=0 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=228
@@ -719,21 +719,21 @@ class Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs python
     default Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs
     requires Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs
     property handled
-        get get_Handled slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4 reverse=121
+        get get_Handled slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4
             out boolean return
-        put put_Handled slot=11 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4 reverse=141
+        put put_Handled slot=11 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4
             in boolean name=value
     property event_type
-        get get_EventType slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4 reverse=22
+        get get_EventType slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4
             out enum32 type=Windows.UI.Core.CoreAcceleratorKeyEventType return
     property key_status
-        get get_KeyStatus slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4 reverse=62
+        get get_KeyStatus slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
     property routing_stage
-        get get_RoutingStage slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4 reverse=99
+        get get_RoutingStage slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4
             out enum32 type=Windows.Web.UI.Interop.WebViewControlAcceleratorKeyRoutingStage return
     property virtual_key
-        get get_VirtualKey slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4 reverse=43
+        get get_VirtualKey slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlAcceleratorKeyPressedEventArgs shape=4
             out enum32 type=Windows.System.VirtualKey return
 
 enum Windows.Web.UI.Interop.WebViewControlAcceleratorKeyRoutingStage python_type
@@ -755,7 +755,7 @@ class Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs python_ty
     default Windows.Web.UI.Interop.IWebViewControlMoveFocusRequestedEventArgs
     requires Windows.Web.UI.Interop.IWebViewControlMoveFocusRequestedEventArgs
     property reason
-        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlMoveFocusRequestedEventArgs shape=4 reverse=22
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlMoveFocusRequestedEventArgs shape=4
             out enum32 type=Windows.Web.UI.Interop.WebViewControlMoveFocusReason return
 
 class Windows.Web.UI.Interop.WebViewControlProcess activatable python_type
@@ -767,23 +767,23 @@ class Windows.Web.UI.Interop.WebViewControlProcess activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcessFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcessFactory shape=51
             in class type=Windows.Web.UI.Interop.WebViewControlProcessOptions name=processOptions
             out class type=Windows.Web.UI.Interop.WebViewControlProcess return
     property enterprise_id
-        get get_EnterpriseId slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4 reverse=43
+        get get_EnterpriseId slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4
             out string return
     property is_private_network_client_server_capability_enabled
-        get get_IsPrivateNetworkClientServerCapabilityEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4 reverse=62
+        get get_IsPrivateNetworkClientServerCapabilityEnabled slot=8 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4
             out boolean return
     property process_id
-        get get_ProcessId slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4 reverse=22
+        get get_ProcessId slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4
             out uint32 return
     event process_exited
-        add add_ProcessExited slot=12 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=51 reverse=163
+        add add_ProcessExited slot=12 inputs=1 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.UI.Interop.WebViewControlProcess,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProcessExited slot=13 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=26 reverse=181
+        remove remove_ProcessExited slot=13 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_web_view_control_async
         method CreateWebViewControlAsync slot=9 inputs=2 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=109
@@ -791,10 +791,10 @@ class Windows.Web.UI.Interop.WebViewControlProcess activatable python_type
             in struct type=Windows.Foundation.Rect name=bounds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Web.UI.Interop.WebViewControl> return
     method get_web_view_controls
-        method GetWebViewControls slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4 reverse=121
+        method GetWebViewControls slot=10 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.UI.Interop.WebViewControl> return
     method terminate
-        method Terminate slot=11 inputs=0 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=0 reverse=137
+        method Terminate slot=11 inputs=0 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcess shape=0
 
 enum Windows.Web.UI.Interop.WebViewControlProcessCapabilityState python_type
     py WebViewControlProcessCapabilityState
@@ -812,14 +812,14 @@ class Windows.Web.UI.Interop.WebViewControlProcessOptions activatable python_typ
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property private_network_client_server_capability
-        get get_PrivateNetworkClientServerCapability slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4 reverse=99
+        get get_PrivateNetworkClientServerCapability slot=9 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4
             out enum32 type=Windows.Web.UI.Interop.WebViewControlProcessCapabilityState return
-        put put_PrivateNetworkClientServerCapability slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4 reverse=62
+        put put_PrivateNetworkClientServerCapability slot=8 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4
             in enum32 type=Windows.Web.UI.Interop.WebViewControlProcessCapabilityState name=value
     property enterprise_id
-        get get_EnterpriseId slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4 reverse=43
+        get get_EnterpriseId slot=7 inputs=0 outputs=1 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4
             out string return
-        put put_EnterpriseId slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4 reverse=22
+        put put_EnterpriseId slot=6 inputs=1 outputs=0 declaring=Windows.Web.UI.Interop.IWebViewControlProcessOptions shape=4
             in string name=value
 
 class System.Object external

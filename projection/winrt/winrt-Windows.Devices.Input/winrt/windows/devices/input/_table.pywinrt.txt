@@ -191,7 +191,7 @@ class Windows.Devices.Input.KeyboardCapabilities activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property keyboard_present
-        get get_KeyboardPresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IKeyboardCapabilities shape=4 reverse=22
+        get get_KeyboardPresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IKeyboardCapabilities shape=4
             out int32 return
 
 class Windows.Devices.Input.MouseCapabilities activatable python_type
@@ -203,19 +203,19 @@ class Windows.Devices.Input.MouseCapabilities activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property horizontal_wheel_present
-        get get_HorizontalWheelPresent slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=62
+        get get_HorizontalWheelPresent slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4
             out int32 return
     property mouse_present
-        get get_MousePresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=22
+        get get_MousePresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4
             out int32 return
     property number_of_buttons
-        get get_NumberOfButtons slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=121
+        get get_NumberOfButtons slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4
             out uint32 return
     property swap_buttons
-        get get_SwapButtons slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=99
+        get get_SwapButtons slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4
             out int32 return
     property vertical_wheel_present
-        get get_VerticalWheelPresent slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4 reverse=43
+        get get_VerticalWheelPresent slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseCapabilities shape=4
             out int32 return
 
 struct Windows.Devices.Input.MouseDelta python_type
@@ -231,13 +231,13 @@ class Windows.Devices.Input.MouseDevice python_type
     requires Windows.Devices.Input.IMouseDevice
     factory Windows.Devices.Input.IMouseDeviceStatics
     event mouse_moved
-        add add_MouseMoved slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IMouseDevice shape=51 reverse=24
+        add add_MouseMoved slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IMouseDevice shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MouseMoved slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.IMouseDevice shape=26 reverse=53
+        remove remove_MouseMoved slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Input.IMouseDevice shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseDeviceStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseDeviceStatics shape=4 static
             out class type=Windows.Devices.Input.MouseDevice return
 
 class Windows.Devices.Input.MouseEventArgs python_type
@@ -246,7 +246,7 @@ class Windows.Devices.Input.MouseEventArgs python_type
     default Windows.Devices.Input.IMouseEventArgs
     requires Windows.Devices.Input.IMouseEventArgs
     property mouse_delta
-        get get_MouseDelta slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseEventArgs shape=4 reverse=22
+        get get_MouseDelta slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IMouseEventArgs shape=4
             out struct type=Windows.Devices.Input.MouseDelta return
 
 class Windows.Devices.Input.PenButtonListener python_type
@@ -256,34 +256,34 @@ class Windows.Devices.Input.PenButtonListener python_type
     requires Windows.Devices.Input.IPenButtonListener
     factory Windows.Devices.Input.IPenButtonListenerStatics
     event is_supported_changed
-        add add_IsSupportedChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=44
+        add add_IsSupportedChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsSupportedChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=82
+        remove remove_IsSupportedChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tail_button_clicked
-        add add_TailButtonClicked slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=100
+        add add_TailButtonClicked slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonClickedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TailButtonClicked slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=134
+        remove remove_TailButtonClicked slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tail_button_double_clicked
-        add add_TailButtonDoubleClicked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=144
+        add add_TailButtonDoubleClicked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TailButtonDoubleClicked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=167
+        remove remove_TailButtonDoubleClicked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tail_button_long_pressed
-        add add_TailButtonLongPressed slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51 reverse=174
+        add add_TailButtonLongPressed slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenButtonListener,Windows.Devices.Input.PenTailButtonLongPressedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TailButtonLongPressed slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26 reverse=192
+        remove remove_TailButtonLongPressed slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenButtonListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenButtonListenerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenButtonListenerStatics shape=4 static
             out class type=Windows.Devices.Input.PenButtonListener return
     method is_supported
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=4 reverse=22
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenButtonListener shape=4
             out boolean return
 
 class Windows.Devices.Input.PenDevice python_type
@@ -294,13 +294,13 @@ class Windows.Devices.Input.PenDevice python_type
     requires Windows.Devices.Input.IPenDevice2
     factory Windows.Devices.Input.IPenDeviceStatics
     property pen_id
-        get get_PenId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDevice shape=4 reverse=22
+        get get_PenId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDevice shape=4
             out guid return
     property simple_haptics_controller
-        get get_SimpleHapticsController slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDevice2 shape=4 reverse=22
+        get get_SimpleHapticsController slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDevice2 shape=4
             out class type=Windows.Devices.Haptics.SimpleHapticsController return
     method get_from_pointer_id static
-        method GetFromPointerId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDeviceStatics shape=51 reverse=24 static
+        method GetFromPointerId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDeviceStatics shape=51 static
             in uint32 name=pointerId
             out class type=Windows.Devices.Input.PenDevice return
 
@@ -311,28 +311,28 @@ class Windows.Devices.Input.PenDockListener python_type
     requires Windows.Devices.Input.IPenDockListener
     factory Windows.Devices.Input.IPenDockListenerStatics
     event docked
-        add add_Docked slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51 reverse=100
+        add add_Docked slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenDockedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Docked slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26 reverse=134
+        remove remove_Docked slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event is_supported_changed
-        add add_IsSupportedChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51 reverse=44
+        add add_IsSupportedChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsSupportedChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26 reverse=82
+        remove remove_IsSupportedChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event undocked
-        add add_Undocked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51 reverse=144
+        add add_Undocked slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenUndockedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Undocked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26 reverse=167
+        remove remove_Undocked slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Input.IPenDockListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDockListenerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDockListenerStatics shape=4 static
             out class type=Windows.Devices.Input.PenDockListener return
     method is_supported
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=4 reverse=22
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPenDockListener shape=4
             out boolean return
 
 class Windows.Devices.Input.PenDockedEventArgs python_type
@@ -373,32 +373,32 @@ class Windows.Devices.Input.PointerDevice python_type
     requires Windows.Devices.Input.IPointerDevice2
     factory Windows.Devices.Input.IPointerDeviceStatics
     property is_integrated
-        get get_IsIntegrated slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=43
+        get get_IsIntegrated slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4
             out boolean return
     property max_contacts
-        get get_MaxContacts slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=62
+        get get_MaxContacts slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4
             out uint32 return
     property physical_device_rect
-        get get_PhysicalDeviceRect slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=99
+        get get_PhysicalDeviceRect slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4
             out struct type=Windows.Foundation.Rect return
     property pointer_device_type
-        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=22
+        get get_PointerDeviceType slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4
             out enum32 type=Windows.Devices.Input.PointerDeviceType return
     property screen_rect
-        get get_ScreenRect slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=121
+        get get_ScreenRect slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4
             out struct type=Windows.Foundation.Rect return
     property supported_usages
-        get get_SupportedUsages slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4 reverse=141
+        get get_SupportedUsages slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDeviceUsage> return
     property max_pointers_with_z_distance
-        get get_MaxPointersWithZDistance slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice2 shape=4 reverse=22
+        get get_MaxPointersWithZDistance slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDevice2 shape=4
             out uint32 return
     method get_pointer_device static
-        method GetPointerDevice slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPointerDeviceStatics shape=51 reverse=24 static
+        method GetPointerDevice slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Input.IPointerDeviceStatics shape=51 static
             in uint32 name=pointerId
             out class type=Windows.Devices.Input.PointerDevice return
     method get_pointer_devices static
-        method GetPointerDevices slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDeviceStatics shape=4 reverse=43 static
+        method GetPointerDevices slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.IPointerDeviceStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Input.PointerDevice> return
 
 enum Windows.Devices.Input.PointerDeviceType python_type
@@ -430,10 +430,10 @@ class Windows.Devices.Input.TouchCapabilities activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property contacts
-        get get_Contacts slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.ITouchCapabilities shape=4 reverse=43
+        get get_Contacts slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Input.ITouchCapabilities shape=4
             out uint32 return
     property touch_present
-        get get_TouchPresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.ITouchCapabilities shape=4 reverse=22
+        get get_TouchPresent slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Input.ITouchCapabilities shape=4
             out int32 return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs> concrete

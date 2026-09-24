@@ -209,26 +209,26 @@ class Windows.Media.Playlists.Playlist activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property files
-        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=4 reverse=22
+        get get_Files slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFile> return
     method load_async static
-        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playlists.IPlaylistStatics shape=51 reverse=24 static
+        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Playlists.IPlaylistStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Playlists.Playlist> return
     method save_as_async
-        method SaveAsAsync slot=8 inputs=3 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=195 reverse=68
+        method SaveAsAsync slot=8 inputs=3 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=195
             in interface type=Windows.Storage.IStorageFolder name=saveLocation
             in string name=desiredName
             in enum32 type=Windows.Storage.NameCollisionOption name=option
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
-        method SaveAsAsync slot=9 inputs=4 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=239 reverse=103
+        method SaveAsAsync slot=9 inputs=4 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=239
             in interface type=Windows.Storage.IStorageFolder name=saveLocation
             in string name=desiredName
             in enum32 type=Windows.Storage.NameCollisionOption name=option
             in enum32 type=Windows.Media.Playlists.PlaylistFormat name=playlistFormat
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
     method save_async
-        method SaveAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=4 reverse=43
+        method SaveAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Playlists.IPlaylist shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 enum Windows.Media.Playlists.PlaylistFormat python_type

@@ -214,26 +214,26 @@ class Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property application_id
-        get get_ApplicationId slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4 reverse=121
+        get get_ApplicationId slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4
             out guid return
-        put put_ApplicationId slot=9 inputs=1 outputs=0 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=33 reverse=114
+        put put_ApplicationId slot=9 inputs=1 outputs=0 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=33
             in guid name=value
     property authenticated_safe_customer_id
-        get get_AuthenticatedSafeCustomerId slot=12 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4 reverse=162
+        get get_AuthenticatedSafeCustomerId slot=12 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4
             out string return
     property can_sign_out
-        get get_CanSignOut slot=11 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4 reverse=141
+        get get_CanSignOut slot=11 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4
             out boolean return
     method authenticate_user_async
-        method AuthenticateUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=51 reverse=24
+        method AuthenticateUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=51
             in class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest name=request
             out class type=Windows.Security.Authentication.OnlineId.UserAuthenticationOperation return
-        method AuthenticateUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=117 reverse=45
+        method AuthenticateUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest> name=requests
             in enum32 type=Windows.Security.Authentication.OnlineId.CredentialPromptType name=credentialPromptType
             out class type=Windows.Security.Authentication.OnlineId.UserAuthenticationOperation return
     method sign_out_user_async
-        method SignOutUserAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4 reverse=62
+        method SignOutUserAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdAuthenticator shape=4
             out class type=Windows.Security.Authentication.OnlineId.SignOutUserOperation return
 
 class Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket python_type
@@ -242,13 +242,13 @@ class Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket python_type
     default Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket
     requires Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket
     property error_code
-        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket shape=4 reverse=62
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket shape=4
             out int32 return
     property request
-        get get_Request slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket shape=4 reverse=43
+        get get_Request slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket shape=4
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest return
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicket shape=4
             out string return
 
 class Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest python_type
@@ -258,28 +258,28 @@ class Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest pyth
     requires Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest
     factory Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory
     constructor -
-        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=51 reverse=44
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=51
             in string name=service
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequestFactory shape=117
             in string name=service
             in string name=policy
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest return
     property policy
-        get get_Policy slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest shape=4 reverse=43
+        get get_Policy slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest shape=4
             out string return
     property service
-        get get_Service slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest shape=4 reverse=22
+        get get_Service slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdServiceTicketRequest shape=4
             out string return
 
 class Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator static python_type
     py OnlineIdSystemAuthenticator
     factory Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics
     property default static
-        get get_Default slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics shape=4 reverse=22 static
+        get get_Default slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics shape=4 static
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser return
 
@@ -289,15 +289,15 @@ class Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUse
     default Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser
     requires Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser
     property application_id
-        get get_ApplicationId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=4 reverse=62
+        get get_ApplicationId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=4
             out guid return
         put put_ApplicationId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=33
             in guid name=value
     property user
-        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=4 reverse=99
+        get get_User slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=4
             out class type=Windows.System.User return
     method get_ticket_async
-        method GetTicketAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=51 reverse=24
+        method GetTicketAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemAuthenticatorForUser shape=51
             in class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest name=request
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult> return
 
@@ -307,10 +307,10 @@ class Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity python_typ
     default Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity
     requires Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity shape=4
             out string return
     property ticket
-        get get_Ticket slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity shape=4 reverse=22
+        get get_Ticket slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemIdentity shape=4
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket return
 
 class Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult python_type
@@ -319,13 +319,13 @@ class Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult python
     default Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult
     requires Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property identity
-        get get_Identity slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult shape=4 reverse=22
+        get get_Identity slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult shape=4
             out class type=Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IOnlineIdSystemTicketResult shape=4
             out enum32 type=Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketStatus return
 
 enum Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketStatus python_type
@@ -396,28 +396,28 @@ class Windows.Security.Authentication.OnlineId.UserIdentity python_type
     default Windows.Security.Authentication.OnlineId.IUserIdentity
     requires Windows.Security.Authentication.OnlineId.IUserIdentity
     property first_name
-        get get_FirstName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=121
+        get get_FirstName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out string return
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out string return
     property is_beta_account
-        get get_IsBetaAccount slot=12 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=162
+        get get_IsBetaAccount slot=12 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out boolean return
     property is_confirmed_pc
-        get get_IsConfirmedPC slot=13 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=173
+        get get_IsConfirmedPC slot=13 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out boolean return
     property last_name
-        get get_LastName slot=11 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=141
+        get get_LastName slot=11 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out string return
     property safe_customer_id
-        get get_SafeCustomerId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=62
+        get get_SafeCustomerId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out string return
     property sign_in_name
-        get get_SignInName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=99
+        get get_SignInName slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out string return
     property tickets
-        get get_Tickets slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4 reverse=22
+        get get_Tickets slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.OnlineId.IUserIdentity shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket> return
 
 delegate Windows.Foundation.AsyncActionCompletedHandler external

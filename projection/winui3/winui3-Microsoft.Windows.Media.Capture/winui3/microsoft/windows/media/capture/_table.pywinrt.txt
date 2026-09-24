@@ -25,13 +25,13 @@ class Microsoft.Windows.Media.Capture.CameraCaptureUI python_type
             in struct type=Microsoft.UI.WindowId name=windowId
             out class type=Microsoft.Windows.Media.Capture.CameraCaptureUI return
     property photo_settings
-        get get_PhotoSettings slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUI shape=4 reverse=22
+        get get_PhotoSettings slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUI shape=4
             out class type=Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings return
     property video_settings
-        get get_VideoSettings slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUI shape=4 reverse=43
+        get get_VideoSettings slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUI shape=4
             out class type=Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings return
     method capture_file_async
-        method CaptureFileAsync slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUI shape=51 reverse=65
+        method CaptureFileAsync slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUI shape=51
             in enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIMode name=mode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> return
 
@@ -69,29 +69,29 @@ class Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings activa
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property max_resolution
-        get get_MaxResolution slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=186
+        get get_MaxResolution slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             out enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution return
-        put put_MaxResolution slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=194
+        put put_MaxResolution slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             in enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution name=value
     property format
-        get get_Format slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=162
+        get get_Format slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             out enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat return
-        put put_Format slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=173
+        put put_Format slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             in enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat name=value
     property cropped_size_in_pixels
-        get get_CroppedSizeInPixels slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=121
+        get get_CroppedSizeInPixels slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             out struct type=Windows.Foundation.Size return
         put put_CroppedSizeInPixels slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=10
             in struct type=Windows.Foundation.Size name=value
     property cropped_aspect_ratio
-        get get_CroppedAspectRatio slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=62
+        get get_CroppedAspectRatio slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             out struct type=Windows.Foundation.Size return
         put put_CroppedAspectRatio slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=10
             in struct type=Windows.Foundation.Size name=value
     property allow_cropping
-        get get_AllowCropping slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=22
+        get get_AllowCropping slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             out boolean return
-        put put_AllowCropping slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4 reverse=43
+        put put_AllowCropping slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIPhotoCaptureSettings shape=4
             in boolean name=value
 
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat python_type
@@ -110,24 +110,24 @@ class Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings activa
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property max_resolution
-        get get_MaxResolution slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=162
+        get get_MaxResolution slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             out enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution return
-        put put_MaxResolution slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=173
+        put put_MaxResolution slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             in enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution name=value
     property max_duration_in_seconds
-        get get_MaxDurationInSeconds slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=121
+        get get_MaxDurationInSeconds slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             out single return
         put put_MaxDurationInSeconds slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=1
             in single name=value
     property format
-        get get_Format slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=62
+        get get_Format slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             out enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIVideoFormat return
-        put put_Format slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=99
+        put put_Format slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             in enum32 type=Microsoft.Windows.Media.Capture.CameraCaptureUIVideoFormat name=value
     property allow_trimming
-        get get_AllowTrimming slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=22
+        get get_AllowTrimming slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             out boolean return
-        put put_AllowTrimming slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4 reverse=43
+        put put_AllowTrimming slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Media.Capture.ICameraCaptureUIVideoCaptureSettings shape=4
             in boolean name=value
 
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIVideoFormat python_type

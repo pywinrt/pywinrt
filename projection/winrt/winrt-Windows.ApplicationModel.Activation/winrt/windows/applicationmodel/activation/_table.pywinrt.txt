@@ -311,18 +311,18 @@ class Windows.ApplicationModel.Activation.CommandLineActivationOperation python_
     default Windows.ApplicationModel.Activation.ICommandLineActivationOperation
     requires Windows.ApplicationModel.Activation.ICommandLineActivationOperation
     property exit_code
-        get get_ExitCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=99
+        get get_ExitCode slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4
             out int32 return
-        put put_ExitCode slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=62
+        put put_ExitCode slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4
             in int32 name=value
     property arguments
-        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=22
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4
             out string return
     property current_directory_path
-        get get_CurrentDirectoryPath slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=43
+        get get_CurrentDirectoryPath slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4
             out string return
     method get_deferral
-        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4 reverse=121
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ICommandLineActivationOperation shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs python_type
@@ -2659,13 +2659,13 @@ class Windows.ApplicationModel.Activation.SplashScreen python_type
     default Windows.ApplicationModel.Activation.ISplashScreen
     requires Windows.ApplicationModel.Activation.ISplashScreen
     property image_location
-        get get_ImageLocation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=4 reverse=22
+        get get_ImageLocation slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=4
             out struct type=Windows.Foundation.Rect return
     event dismissed
-        add add_Dismissed slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=51 reverse=44
+        add add_Dismissed slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Activation.SplashScreen,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Dismissed slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=26 reverse=82
+        remove remove_Dismissed slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Activation.ISplashScreen shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs python_type
@@ -2697,7 +2697,7 @@ class Windows.ApplicationModel.Activation.TileActivatedInfo python_type
     default Windows.ApplicationModel.Activation.ITileActivatedInfo
     requires Windows.ApplicationModel.Activation.ITileActivatedInfo
     property recently_shown_notifications
-        get get_RecentlyShownNotifications slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ITileActivatedInfo shape=4 reverse=22
+        get get_RecentlyShownNotifications slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.ITileActivatedInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ShownTileNotification> return
 
 class Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs python_type

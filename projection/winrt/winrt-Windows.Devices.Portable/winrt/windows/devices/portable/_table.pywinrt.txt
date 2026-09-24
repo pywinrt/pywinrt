@@ -13,11 +13,11 @@ class Windows.Devices.Portable.ServiceDevice static python_type
     py ServiceDevice
     factory Windows.Devices.Portable.IServiceDeviceStatics
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Portable.IServiceDeviceStatics shape=51 reverse=24 static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Portable.IServiceDeviceStatics shape=51 static
             in enum32 type=Windows.Devices.Portable.ServiceDeviceType name=serviceType
             out string return
     method get_device_selector_from_service_id static
-        method GetDeviceSelectorFromServiceId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Portable.IServiceDeviceStatics shape=94 reverse=54 static
+        method GetDeviceSelectorFromServiceId slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Portable.IServiceDeviceStatics shape=94 static
             in guid name=serviceId
             out string return
 
@@ -36,11 +36,11 @@ class Windows.Devices.Portable.StorageDevice static python_type
     py StorageDevice
     factory Windows.Devices.Portable.IStorageDeviceStatics
     method from_id static
-        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Portable.IStorageDeviceStatics shape=51 reverse=24 static
+        method FromId slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Portable.IStorageDeviceStatics shape=51 static
             in string name=deviceId
             out class type=Windows.Storage.StorageFolder return
     method get_device_selector static
-        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Portable.IStorageDeviceStatics shape=4 reverse=43 static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Portable.IStorageDeviceStatics shape=4 static
             out string return
 
 class Windows.Storage.StorageFolder external

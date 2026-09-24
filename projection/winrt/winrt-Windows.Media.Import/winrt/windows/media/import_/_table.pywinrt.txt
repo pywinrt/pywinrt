@@ -1177,43 +1177,43 @@ class Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult python
     default Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult
     requires Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult
     property deleted_items
-        get get_DeletedItems slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=62
+        get get_DeletedItems slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> return
     property has_succeeded
-        get get_HasSucceeded slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=43
+        get get_HasSucceeded slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out boolean return
     property photos_count
-        get get_PhotosCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=99
+        get get_PhotosCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint32 return
     property photos_size_in_bytes
-        get get_PhotosSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=121
+        get get_PhotosSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint64 return
     property session
-        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=22
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out class type=Windows.Media.Import.PhotoImportSession return
     property siblings_count
-        get get_SiblingsCount slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=194
+        get get_SiblingsCount slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint32 return
     property siblings_size_in_bytes
-        get get_SiblingsSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=202
+        get get_SiblingsSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint64 return
     property sidecars_count
-        get get_SidecarsCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=173
+        get get_SidecarsCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint32 return
     property sidecars_size_in_bytes
-        get get_SidecarsSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=186
+        get get_SidecarsSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint64 return
     property total_count
-        get get_TotalCount slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=210
+        get get_TotalCount slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint32 return
     property total_size_in_bytes
-        get get_TotalSizeInBytes slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=218
+        get get_TotalSizeInBytes slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint64 return
     property videos_count
-        get get_VideosCount slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=141
+        get get_VideosCount slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint32 return
     property videos_size_in_bytes
-        get get_VideosSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4 reverse=162
+        get get_VideosSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportDeleteImportedItemsFromSourceResult shape=4
             out uint64 return
 
 class Windows.Media.Import.PhotoImportFindItemsResult python_type
@@ -1223,105 +1223,105 @@ class Windows.Media.Import.PhotoImportFindItemsResult python_type
     requires Windows.Media.Import.IPhotoImportFindItemsResult
     requires Windows.Media.Import.IPhotoImportFindItemsResult2
     property found_items
-        get get_FoundItems slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=62
+        get get_FoundItems slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> return
     property has_succeeded
-        get get_HasSucceeded slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=43
+        get get_HasSucceeded slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out boolean return
     property import_mode
-        get get_ImportMode slot=23 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=242
+        get get_ImportMode slot=23 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out enum32 type=Windows.Media.Import.PhotoImportImportMode return
     property photos_count
-        get get_PhotosCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=99
+        get get_PhotosCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property photos_size_in_bytes
-        get get_PhotosSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=121
+        get get_PhotosSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property selected_photos_count
-        get get_SelectedPhotosCount slot=24 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=247
+        get get_SelectedPhotosCount slot=24 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property selected_photos_size_in_bytes
-        get get_SelectedPhotosSizeInBytes slot=25 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=252
+        get get_SelectedPhotosSizeInBytes slot=25 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property selected_siblings_count
-        get get_SelectedSiblingsCount slot=30 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=270
+        get get_SelectedSiblingsCount slot=30 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property selected_siblings_size_in_bytes
-        get get_SelectedSiblingsSizeInBytes slot=31 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=273
+        get get_SelectedSiblingsSizeInBytes slot=31 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property selected_sidecars_count
-        get get_SelectedSidecarsCount slot=28 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=263
+        get get_SelectedSidecarsCount slot=28 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property selected_sidecars_size_in_bytes
-        get get_SelectedSidecarsSizeInBytes slot=29 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=266
+        get get_SelectedSidecarsSizeInBytes slot=29 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property selected_total_count
-        get get_SelectedTotalCount slot=32 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=280
+        get get_SelectedTotalCount slot=32 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property selected_total_size_in_bytes
-        get get_SelectedTotalSizeInBytes slot=33 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=285
+        get get_SelectedTotalSizeInBytes slot=33 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property selected_videos_count
-        get get_SelectedVideosCount slot=26 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=255
+        get get_SelectedVideosCount slot=26 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property selected_videos_size_in_bytes
-        get get_SelectedVideosSizeInBytes slot=27 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=259
+        get get_SelectedVideosSizeInBytes slot=27 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property session
-        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=22
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out class type=Windows.Media.Import.PhotoImportSession return
     property siblings_count
-        get get_SiblingsCount slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=194
+        get get_SiblingsCount slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property siblings_size_in_bytes
-        get get_SiblingsSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=202
+        get get_SiblingsSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property sidecars_count
-        get get_SidecarsCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=173
+        get get_SidecarsCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property sidecars_size_in_bytes
-        get get_SidecarsSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=186
+        get get_SidecarsSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property total_count
-        get get_TotalCount slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=210
+        get get_TotalCount slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property total_size_in_bytes
-        get get_TotalSizeInBytes slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=218
+        get get_TotalSizeInBytes slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     property videos_count
-        get get_VideosCount slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=141
+        get get_VideosCount slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint32 return
     property videos_size_in_bytes
-        get get_VideosSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=162
+        get get_VideosSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out uint64 return
     event item_imported
-        add add_ItemImported slot=37 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=51 reverse=300
+        add add_ItemImported slot=37 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Import.PhotoImportFindItemsResult,Windows.Media.Import.PhotoImportItemImportedEventArgs> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ItemImported slot=38 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=26 reverse=305
+        remove remove_ItemImported slot=38 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event selection_changed
-        add add_SelectionChanged slot=34 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=51 reverse=289
+        add add_SelectionChanged slot=34 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Import.PhotoImportFindItemsResult,Windows.Media.Import.PhotoImportSelectionChangedEventArgs> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SelectionChanged slot=35 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=26 reverse=294
+        remove remove_SelectionChanged slot=35 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_items_in_date_range_to_selection
         method AddItemsInDateRangeToSelection slot=6 inputs=2 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult2 shape=90
             in datetime name=rangeStart
             in timespan name=rangeLength
     method import_items_async
-        method ImportItemsAsync slot=36 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=296
+        method ImportItemsAsync slot=36 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.PhotoImportImportItemsResult,Windows.Media.Import.PhotoImportProgress> return
     method select_all
-        method SelectAll slot=19 inputs=0 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=0 reverse=221
+        method SelectAll slot=19 inputs=0 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=0
     method select_new_async
-        method SelectNewAsync slot=21 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=232
+        method SelectNewAsync slot=21 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method select_none
-        method SelectNone slot=20 inputs=0 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=0 reverse=227
+        method SelectNone slot=20 inputs=0 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=0
     method set_import_mode
-        method SetImportMode slot=22 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4 reverse=237
+        method SetImportMode slot=22 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportFindItemsResult shape=4
             in enum32 type=Windows.Media.Import.PhotoImportImportMode name=value
 
 class Windows.Media.Import.PhotoImportImportItemsResult python_type
@@ -1330,46 +1330,46 @@ class Windows.Media.Import.PhotoImportImportItemsResult python_type
     default Windows.Media.Import.IPhotoImportImportItemsResult
     requires Windows.Media.Import.IPhotoImportImportItemsResult
     property has_succeeded
-        get get_HasSucceeded slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=43
+        get get_HasSucceeded slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out boolean return
     property imported_items
-        get get_ImportedItems slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=62
+        get get_ImportedItems slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportItem> return
     property photos_count
-        get get_PhotosCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=99
+        get get_PhotosCount slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint32 return
     property photos_size_in_bytes
-        get get_PhotosSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=121
+        get get_PhotosSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint64 return
     property session
-        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=22
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out class type=Windows.Media.Import.PhotoImportSession return
     property siblings_count
-        get get_SiblingsCount slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=194
+        get get_SiblingsCount slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint32 return
     property siblings_size_in_bytes
-        get get_SiblingsSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=202
+        get get_SiblingsSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint64 return
     property sidecars_count
-        get get_SidecarsCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=173
+        get get_SidecarsCount slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint32 return
     property sidecars_size_in_bytes
-        get get_SidecarsSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=186
+        get get_SidecarsSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint64 return
     property total_count
-        get get_TotalCount slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=210
+        get get_TotalCount slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint32 return
     property total_size_in_bytes
-        get get_TotalSizeInBytes slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=218
+        get get_TotalSizeInBytes slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint64 return
     property videos_count
-        get get_VideosCount slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=141
+        get get_VideosCount slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint32 return
     property videos_size_in_bytes
-        get get_VideosSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=162
+        get get_VideosSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out uint64 return
     method delete_imported_items_from_source_async
-        method DeleteImportedItemsFromSourceAsync slot=19 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4 reverse=223
+        method DeleteImportedItemsFromSourceAsync slot=19 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportImportItemsResult shape=4
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult,System.Double> return
 
 enum Windows.Media.Import.PhotoImportImportMode python_type
@@ -1387,45 +1387,45 @@ class Windows.Media.Import.PhotoImportItem python_type
     requires Windows.Media.Import.IPhotoImportItem
     requires Windows.Media.Import.IPhotoImportItem2
     property is_selected
-        get get_IsSelected slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=186
+        get get_IsSelected slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out boolean return
-        put put_IsSelected slot=15 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=194
+        put put_IsSelected slot=15 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             in boolean name=value
     property content_type
-        get get_ContentType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=62
+        get get_ContentType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out enum32 type=Windows.Media.Import.PhotoImportContentType return
     property date
-        get get_Date slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=121
+        get get_Date slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out datetime return
     property deleted_file_names
-        get get_DeletedFileNames slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=218
+        get get_DeletedFileNames slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property imported_file_names
-        get get_ImportedFileNames slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=210
+        get get_ImportedFileNames slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property item_key
-        get get_ItemKey slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=43
+        get get_ItemKey slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out uint64 return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out string return
     property sibling
-        get get_Sibling slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=141
+        get get_Sibling slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out class type=Windows.Media.Import.PhotoImportSidecar return
     property sidecars
-        get get_Sidecars slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=162
+        get get_Sidecars slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSidecar> return
     property size_in_bytes
-        get get_SizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=99
+        get get_SizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out uint64 return
     property thumbnail
-        get get_Thumbnail slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=202
+        get get_Thumbnail slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property video_segments
-        get get_VideoSegments slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4 reverse=173
+        get get_VideoSegments slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportVideoSegment> return
     property path
-        get get_Path slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem2 shape=4 reverse=22
+        get get_Path slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItem2 shape=4
             out string return
 
 class Windows.Media.Import.PhotoImportItemImportedEventArgs python_type
@@ -1434,7 +1434,7 @@ class Windows.Media.Import.PhotoImportItemImportedEventArgs python_type
     default Windows.Media.Import.IPhotoImportItemImportedEventArgs
     requires Windows.Media.Import.IPhotoImportItemImportedEventArgs
     property imported_item
-        get get_ImportedItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItemImportedEventArgs shape=4 reverse=22
+        get get_ImportedItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportItemImportedEventArgs shape=4
             out class type=Windows.Media.Import.PhotoImportItem return
 
 enum Windows.Media.Import.PhotoImportItemSelectionMode python_type
@@ -1448,13 +1448,13 @@ class Windows.Media.Import.PhotoImportManager static python_type
     py PhotoImportManager
     factory Windows.Media.Import.IPhotoImportManagerStatics
     method find_all_sources_async static
-        method FindAllSourcesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportManagerStatics shape=4 reverse=43 static
+        method FindAllSourcesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSource>> return
     method get_pending_operations static
-        method GetPendingOperations slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportManagerStatics shape=4 reverse=62 static
+        method GetPendingOperations slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportOperation> return
     method is_supported_async static
-        method IsSupportedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportManagerStatics shape=4 reverse=22 static
+        method IsSupportedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 class Windows.Media.Import.PhotoImportOperation python_type
@@ -1463,19 +1463,19 @@ class Windows.Media.Import.PhotoImportOperation python_type
     default Windows.Media.Import.IPhotoImportOperation
     requires Windows.Media.Import.IPhotoImportOperation
     property continue_deleting_imported_items_from_source_async
-        get get_ContinueDeletingImportedItemsFromSourceAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4 reverse=121
+        get get_ContinueDeletingImportedItemsFromSourceAsync slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult,System.Double> return
     property continue_finding_items_async
-        get get_ContinueFindingItemsAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4 reverse=62
+        get get_ContinueFindingItemsAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.PhotoImportFindItemsResult,System.UInt32> return
     property continue_importing_items_async
-        get get_ContinueImportingItemsAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4 reverse=99
+        get get_ContinueImportingItemsAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.PhotoImportImportItemsResult,Windows.Media.Import.PhotoImportProgress> return
     property session
-        get get_Session slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4 reverse=43
+        get get_Session slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4
             out class type=Windows.Media.Import.PhotoImportSession return
     property stage
-        get get_Stage slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4 reverse=22
+        get get_Stage slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportOperation shape=4
             out enum32 type=Windows.Media.Import.PhotoImportStage return
 
 enum Windows.Media.Import.PhotoImportPowerSource python_type
@@ -1500,7 +1500,7 @@ class Windows.Media.Import.PhotoImportSelectionChangedEventArgs python_type
     default Windows.Media.Import.IPhotoImportSelectionChangedEventArgs
     requires Windows.Media.Import.IPhotoImportSelectionChangedEventArgs
     property is_selection_empty
-        get get_IsSelectionEmpty slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSelectionChangedEventArgs shape=4 reverse=22
+        get get_IsSelectionEmpty slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSelectionChangedEventArgs shape=4
             out boolean return
 
 class Windows.Media.Import.PhotoImportSession python_type closeable
@@ -1511,45 +1511,45 @@ class Windows.Media.Import.PhotoImportSession python_type closeable
     requires Windows.Foundation.IClosable
     requires Windows.Media.Import.IPhotoImportSession2
     property subfolder_creation_mode
-        get get_SubfolderCreationMode slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=173
+        get get_SubfolderCreationMode slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             out enum32 type=Windows.Media.Import.PhotoImportSubfolderCreationMode return
-        put put_SubfolderCreationMode slot=12 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=162
+        put put_SubfolderCreationMode slot=12 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             in enum32 type=Windows.Media.Import.PhotoImportSubfolderCreationMode name=value
     property destination_folder
-        get get_DestinationFolder slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=99
+        get get_DestinationFolder slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             out interface type=Windows.Storage.IStorageFolder return
-        put put_DestinationFolder slot=8 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=62
+        put put_DestinationFolder slot=8 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             in interface type=Windows.Storage.IStorageFolder name=value
     property destination_file_name_prefix
-        get get_DestinationFileNamePrefix slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=194
+        get get_DestinationFileNamePrefix slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             out string return
-        put put_DestinationFileNamePrefix slot=14 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=186
+        put put_DestinationFileNamePrefix slot=14 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             in string name=value
     property append_session_date_to_destination_folder
-        get get_AppendSessionDateToDestinationFolder slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=141
+        get get_AppendSessionDateToDestinationFolder slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             out boolean return
-        put put_AppendSessionDateToDestinationFolder slot=10 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=121
+        put put_AppendSessionDateToDestinationFolder slot=10 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             in boolean name=value
     property session_id
-        get get_SessionId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=43
+        get get_SessionId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             out guid return
     property source
-        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4 reverse=22
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=4
             out class type=Windows.Media.Import.PhotoImportSource return
     property subfolder_date_format
-        get get_SubfolderDateFormat slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4 reverse=43
+        get get_SubfolderDateFormat slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4
             out enum32 type=Windows.Media.Import.PhotoImportSubfolderDateFormat return
-        put put_SubfolderDateFormat slot=6 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4 reverse=22
+        put put_SubfolderDateFormat slot=6 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4
             in enum32 type=Windows.Media.Import.PhotoImportSubfolderDateFormat name=value
     property remember_deselected_items
-        get get_RememberDeselectedItems slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4 reverse=99
+        get get_RememberDeselectedItems slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4
             out boolean return
-        put put_RememberDeselectedItems slot=8 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4 reverse=62
+        put put_RememberDeselectedItems slot=8 inputs=1 outputs=0 declaring=Windows.Media.Import.IPhotoImportSession2 shape=4
             in boolean name=value
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method find_items_async
-        method FindItemsAsync slot=16 inputs=2 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=117 reverse=204
+        method FindItemsAsync slot=16 inputs=2 outputs=1 declaring=Windows.Media.Import.IPhotoImportSession shape=117
             in enum32 type=Windows.Media.Import.PhotoImportContentTypeFilter name=contentTypeFilter
             in enum32 type=Windows.Media.Import.PhotoImportItemSelectionMode name=itemSelectionMode
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Import.PhotoImportFindItemsResult,System.UInt32> return
@@ -1560,13 +1560,13 @@ class Windows.Media.Import.PhotoImportSidecar python_type
     default Windows.Media.Import.IPhotoImportSidecar
     requires Windows.Media.Import.IPhotoImportSidecar
     property date
-        get get_Date slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSidecar shape=4 reverse=62
+        get get_Date slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSidecar shape=4
             out datetime return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSidecar shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSidecar shape=4
             out string return
     property size_in_bytes
-        get get_SizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSidecar shape=4 reverse=43
+        get get_SizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSidecar shape=4
             out uint64 return
 
 class Windows.Media.Import.PhotoImportSource python_type
@@ -1576,62 +1576,62 @@ class Windows.Media.Import.PhotoImportSource python_type
     requires Windows.Media.Import.IPhotoImportSource
     factory Windows.Media.Import.IPhotoImportSourceStatics
     property battery_level_percent
-        get get_BatteryLevelPercent slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=202
+        get get_BatteryLevelPercent slot=16 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     property connection_protocol
-        get get_ConnectionProtocol slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=162
+        get get_ConnectionProtocol slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property connection_transport
-        get get_ConnectionTransport slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=173
+        get get_ConnectionTransport slot=13 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out enum32 type=Windows.Media.Import.PhotoImportConnectionTransport return
     property date_time
-        get get_DateTime slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=210
+        get get_DateTime slot=17 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property description
-        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=62
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property is_locked
-        get get_IsLocked slot=19 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=223
+        get get_IsLocked slot=19 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
     property is_mass_storage
-        get get_IsMassStorage slot=20 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=228
+        get get_IsMassStorage slot=20 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out boolean return
     property manufacturer
-        get get_Manufacturer slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=99
+        get get_Manufacturer slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property model
-        get get_Model slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=121
+        get get_Model slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property power_source
-        get get_PowerSource slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=194
+        get get_PowerSource slot=15 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out enum32 type=Windows.Media.Import.PhotoImportPowerSource return
     property serial_number
-        get get_SerialNumber slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=141
+        get get_SerialNumber slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out string return
     property storage_media
-        get get_StorageMedia slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=218
+        get get_StorageMedia slot=18 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportStorageMedium> return
     property thumbnail
-        get get_Thumbnail slot=21 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=232
+        get get_Thumbnail slot=21 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property type
-        get get_Type slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=186
+        get get_Type slot=14 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out enum32 type=Windows.Media.Import.PhotoImportSourceType return
     method create_import_session
-        method CreateImportSession slot=22 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4 reverse=237
+        method CreateImportSession slot=22 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportSource shape=4
             out class type=Windows.Media.Import.PhotoImportSession return
     method from_folder_async static
-        method FromFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportSourceStatics shape=51 reverse=44 static
+        method FromFolderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportSourceStatics shape=51 static
             in interface type=Windows.Storage.IStorageFolder name=sourceRootFolder
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Import.PhotoImportSource> return
     method from_id_async static
-        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportSourceStatics shape=51 reverse=24 static
+        method FromIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Import.IPhotoImportSourceStatics shape=51 static
             in string name=sourceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Import.PhotoImportSource> return
 
@@ -1660,28 +1660,28 @@ class Windows.Media.Import.PhotoImportStorageMedium python_type
     default Windows.Media.Import.IPhotoImportStorageMedium
     requires Windows.Media.Import.IPhotoImportStorageMedium
     property available_space_in_bytes
-        get get_AvailableSpaceInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=162
+        get get_AvailableSpaceInBytes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out uint64 return
     property capacity_in_bytes
-        get get_CapacityInBytes slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=141
+        get get_CapacityInBytes slot=11 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out uint64 return
     property description
-        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=43
+        get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out string return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out string return
     property serial_number
-        get get_SerialNumber slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=62
+        get get_SerialNumber slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out string return
     property storage_medium_type
-        get get_StorageMediumType slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=99
+        get get_StorageMediumType slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out enum32 type=Windows.Media.Import.PhotoImportStorageMediumType return
     property supported_access_mode
-        get get_SupportedAccessMode slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4 reverse=121
+        get get_SupportedAccessMode slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=4
             out enum32 type=Windows.Media.Import.PhotoImportAccessMode return
     method refresh
-        method Refresh slot=13 inputs=0 outputs=0 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=0 reverse=169
+        method Refresh slot=13 inputs=0 outputs=0 declaring=Windows.Media.Import.IPhotoImportStorageMedium shape=0
 
 enum Windows.Media.Import.PhotoImportStorageMediumType python_type
     py PhotoImportStorageMediumType
@@ -1711,19 +1711,19 @@ class Windows.Media.Import.PhotoImportVideoSegment python_type
     default Windows.Media.Import.IPhotoImportVideoSegment
     requires Windows.Media.Import.IPhotoImportVideoSegment
     property date
-        get get_Date slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4 reverse=62
+        get get_Date slot=8 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4
             out datetime return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4
             out string return
     property sibling
-        get get_Sibling slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4 reverse=99
+        get get_Sibling slot=9 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4
             out class type=Windows.Media.Import.PhotoImportSidecar return
     property sidecars
-        get get_Sidecars slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4 reverse=121
+        get get_Sidecars slot=10 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Import.PhotoImportSidecar> return
     property size_in_bytes
-        get get_SizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4 reverse=43
+        get get_SizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.Media.Import.IPhotoImportVideoSegment shape=4
             out uint64 return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Import.PhotoImportFindItemsResult,Windows.Media.Import.PhotoImportItemImportedEventArgs> concrete

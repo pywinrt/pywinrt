@@ -272,16 +272,16 @@ class Windows.ApplicationModel.LockScreen.LockApplicationHost python_type
     requires Windows.ApplicationModel.LockScreen.ILockApplicationHost
     factory Windows.ApplicationModel.LockScreen.ILockApplicationHostStatics
     event unlocking
-        add add_Unlocking slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHost shape=51 reverse=44
+        add add_Unlocking slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHost shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.LockScreen.LockApplicationHost,Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Unlocking slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHost shape=26 reverse=82
+        remove remove_Unlocking slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHost shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHostStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHostStatics shape=4 static
             out class type=Windows.ApplicationModel.LockScreen.LockApplicationHost return
     method request_unlock
-        method RequestUnlock slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHost shape=0 reverse=16
+        method RequestUnlock slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockApplicationHost shape=0
 
 class Windows.ApplicationModel.LockScreen.LockScreenBadge python_type
     py LockScreenBadge
@@ -289,19 +289,19 @@ class Windows.ApplicationModel.LockScreen.LockScreenBadge python_type
     default Windows.ApplicationModel.LockScreen.ILockScreenBadge
     requires Windows.ApplicationModel.LockScreen.ILockScreenBadge
     property automation_name
-        get get_AutomationName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4 reverse=99
+        get get_AutomationName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4
             out string return
     property glyph
-        get get_Glyph slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4 reverse=43
+        get get_Glyph slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     property logo
-        get get_Logo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4 reverse=22
+        get get_Logo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     property number
-        get get_Number slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4 reverse=62
+        get get_Number slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     method launch_app
-        method LaunchApp slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=0 reverse=117
+        method LaunchApp slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenBadge shape=0
 
 class Windows.ApplicationModel.LockScreen.LockScreenInfo python_type
     py LockScreenInfo
@@ -309,40 +309,40 @@ class Windows.ApplicationModel.LockScreen.LockScreenInfo python_type
     default Windows.ApplicationModel.LockScreen.ILockScreenInfo
     requires Windows.ApplicationModel.LockScreen.ILockScreenInfo
     property alarm_icon
-        get get_AlarmIcon slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4 reverse=210
+        get get_AlarmIcon slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     property badges
-        get get_Badges slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4 reverse=141
+        get get_Badges slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.LockScreen.LockScreenBadge> return
     property detail_text
-        get get_DetailText slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4 reverse=186
+        get get_DetailText slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property lock_screen_image
-        get get_LockScreenImage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4 reverse=62
+        get get_LockScreenImage slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
     event alarm_icon_changed
-        add add_AlarmIconChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51 reverse=196
+        add add_AlarmIconChanged slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.LockScreen.LockScreenInfo,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AlarmIconChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26 reverse=397
+        remove remove_AlarmIconChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event badges_changed
-        add add_BadgesChanged slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51 reverse=100
+        add add_BadgesChanged slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.LockScreen.LockScreenInfo,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BadgesChanged slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26 reverse=134
+        remove remove_BadgesChanged slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event detail_text_changed
-        add add_DetailTextChanged slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51 reverse=163
+        add add_DetailTextChanged slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.LockScreen.LockScreenInfo,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DetailTextChanged slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26 reverse=181
+        remove remove_DetailTextChanged slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event lock_screen_image_changed
-        add add_LockScreenImageChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51 reverse=24
+        add add_LockScreenImageChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.LockScreen.LockScreenInfo,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LockScreenImageChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26 reverse=53
+        remove remove_LockScreenImageChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenInfo shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral python_type
@@ -351,7 +351,7 @@ class Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral python_typ
     default Windows.ApplicationModel.LockScreen.ILockScreenUnlockingDeferral
     requires Windows.ApplicationModel.LockScreen.ILockScreenUnlockingDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenUnlockingDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.LockScreen.ILockScreenUnlockingDeferral shape=0
 
 class Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs python_type
     py LockScreenUnlockingEventArgs
@@ -359,10 +359,10 @@ class Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs python_ty
     default Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs
     requires Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs
     property deadline
-        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs shape=4 reverse=43
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs shape=4
             out datetime return
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.LockScreen.ILockScreenUnlockingEventArgs shape=4
             out class type=Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.LockScreen.LockApplicationHost,Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs> concrete

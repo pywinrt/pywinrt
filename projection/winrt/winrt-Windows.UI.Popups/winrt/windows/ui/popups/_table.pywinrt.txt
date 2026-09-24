@@ -192,43 +192,43 @@ class Windows.UI.Popups.MessageDialog python_type
     requires Windows.UI.Popups.IMessageDialog
     factory Windows.UI.Popups.IMessageDialogFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Popups.IMessageDialogFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Popups.IMessageDialogFactory shape=51
             in string name=content
             out class type=Windows.UI.Popups.MessageDialog return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Popups.IMessageDialogFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Popups.IMessageDialogFactory shape=117
             in string name=content
             in string name=title
             out class type=Windows.UI.Popups.MessageDialog return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4
             in string name=value
     property options
-        get get_Options slot=16 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=202
+        get get_Options slot=16 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out enum_u32 type=Windows.UI.Popups.MessageDialogOptions return
-        put put_Options slot=17 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=210
+        put put_Options slot=17 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4
             in enum_u32 type=Windows.UI.Popups.MessageDialogOptions name=value
     property default_command_index
-        get get_DefaultCommandIndex slot=9 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=99
+        get get_DefaultCommandIndex slot=9 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out uint32 return
-        put put_DefaultCommandIndex slot=10 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=121
+        put put_DefaultCommandIndex slot=10 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4
             in uint32 name=value
     property content
-        get get_Content slot=13 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=173
+        get get_Content slot=13 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out string return
-        put put_Content slot=14 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=186
+        put put_Content slot=14 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4
             in string name=value
     property cancel_command_index
-        get get_CancelCommandIndex slot=11 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=141
+        get get_CancelCommandIndex slot=11 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out uint32 return
-        put put_CancelCommandIndex slot=12 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=162
+        put put_CancelCommandIndex slot=12 inputs=1 outputs=0 declaring=Windows.UI.Popups.IMessageDialog shape=4
             in uint32 name=value
     property commands
-        get get_Commands slot=8 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=62
+        get get_Commands slot=8 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> return
     method show_async
-        method ShowAsync slot=15 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4 reverse=194
+        method ShowAsync slot=15 inputs=0 outputs=1 declaring=Windows.UI.Popups.IMessageDialog shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> return
 
 enum Windows.UI.Popups.MessageDialogOptions python_type flags_enum
@@ -255,14 +255,14 @@ class Windows.UI.Popups.PopupMenu activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property commands
-        get get_Commands slot=6 inputs=0 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=4 reverse=22
+        get get_Commands slot=6 inputs=0 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> return
     method show_async
-        method ShowAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=79 reverse=51
+        method ShowAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=79
             in struct type=Windows.Foundation.Point name=invocationPoint
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> return
     method show_for_selection_async
-        method ShowForSelectionAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=74 reverse=73
+        method ShowForSelectionAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=74
             in struct type=Windows.Foundation.Rect name=selection
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> return
         method ShowForSelectionAsync slot=9 inputs=2 outputs=1 declaring=Windows.UI.Popups.IPopupMenu shape=143
@@ -279,14 +279,14 @@ class Windows.UI.Popups.UICommand activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=51
             in string name=label
             out class type=Windows.UI.Popups.UICommand return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=117
             in string name=label
             in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=action
             out class type=Windows.UI.Popups.UICommand return
-        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=195 reverse=68
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.UI.Popups.IUICommandFactory shape=195
             in string name=label
             in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=action
             in object name=commandId

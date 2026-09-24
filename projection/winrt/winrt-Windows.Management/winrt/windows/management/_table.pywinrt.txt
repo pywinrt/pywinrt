@@ -137,37 +137,37 @@ class Windows.Management.MdmAlert activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property type
-        get get_Type slot=17 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=210
+        get get_Type slot=17 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out string return
-        put put_Type slot=18 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4 reverse=218
+        put put_Type slot=18 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
             in string name=value
     property target
-        get get_Target slot=15 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=194
+        get get_Target slot=15 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out string return
-        put put_Target slot=16 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4 reverse=202
+        put put_Target slot=16 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
             in string name=value
     property source
-        get get_Source slot=12 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=162
+        get get_Source slot=12 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out string return
-        put put_Source slot=13 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4 reverse=173
+        put put_Source slot=13 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
             in string name=value
     property mark
-        get get_Mark slot=10 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=121
+        get get_Mark slot=10 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out enum32 type=Windows.Management.MdmAlertMark return
-        put put_Mark slot=11 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4 reverse=141
+        put put_Mark slot=11 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
             in enum32 type=Windows.Management.MdmAlertMark name=value
     property format
-        get get_Format slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=62
+        get get_Format slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out enum32 type=Windows.Management.MdmAlertDataType return
-        put put_Format slot=9 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4 reverse=99
+        put put_Format slot=9 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
             in enum32 type=Windows.Management.MdmAlertDataType name=value
     property data
-        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=22
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out string return
-        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4 reverse=43
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
             in string name=value
     property status
-        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4 reverse=186
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
             out uint32 return
 
 enum Windows.Management.MdmAlertDataType python_type
@@ -193,26 +193,26 @@ class Windows.Management.MdmSession python_type
     default Windows.Management.IMdmSession
     requires Windows.Management.IMdmSession
     property alerts
-        get get_Alerts slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=22
+        get get_Alerts slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> return
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
             out hresult type=Windows.Foundation.HResult return
     property id
-        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=62
+        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
             out string return
     property state
-        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=99
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
             out enum32 type=Windows.Management.MdmSessionState return
     method attach_async
-        method AttachAsync slot=10 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=121
+        method AttachAsync slot=10 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method delete
-        method Delete slot=11 inputs=0 outputs=0 declaring=Windows.Management.IMdmSession shape=0 reverse=137
+        method Delete slot=11 inputs=0 outputs=0 declaring=Windows.Management.IMdmSession shape=0
     method start_async
-        method StartAsync slot=12 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4 reverse=162
+        method StartAsync slot=12 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method StartAsync slot=13 inputs=1 outputs=1 declaring=Windows.Management.IMdmSession shape=51 reverse=174
+        method StartAsync slot=13 inputs=1 outputs=1 declaring=Windows.Management.IMdmSession shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.MdmAlert> name=alerts
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -220,17 +220,17 @@ class Windows.Management.MdmSessionManager static python_type
     py MdmSessionManager
     factory Windows.Management.IMdmSessionManagerStatics
     property session_ids static
-        get get_SessionIds slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 reverse=22 static
+        get get_SessionIds slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method delete_session_by_id static
-        method DeleteSessionById slot=8 inputs=1 outputs=0 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 reverse=62 static
+        method DeleteSessionById slot=8 inputs=1 outputs=0 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 static
             in string name=sessionId
     method get_session_by_id static
-        method GetSessionById slot=9 inputs=1 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=51 reverse=100 static
+        method GetSessionById slot=9 inputs=1 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=51 static
             in string name=sessionId
             out class type=Windows.Management.MdmSession return
     method try_create_session static
-        method TryCreateSession slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 reverse=43 static
+        method TryCreateSession slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 static
             out class type=Windows.Management.MdmSession return
 
 enum Windows.Management.MdmSessionState python_type

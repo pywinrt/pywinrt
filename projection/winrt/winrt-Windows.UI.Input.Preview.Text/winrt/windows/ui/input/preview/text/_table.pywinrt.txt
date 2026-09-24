@@ -20,7 +20,7 @@ class Windows.UI.Input.Preview.Text.ConversionModeChangedEventArgs python_type
     default Windows.UI.Input.Preview.Text.IConversionModeChangedEventArgs
     requires Windows.UI.Input.Preview.Text.IConversionModeChangedEventArgs
     property new_conversion_mode
-        get get_NewConversionMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IConversionModeChangedEventArgs shape=4 reverse=22
+        get get_NewConversionMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IConversionModeChangedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Preview.Text.TextConversionMode return
 
 class Windows.UI.Input.Preview.Text.FocusEnteredEventArgs python_type
@@ -29,7 +29,7 @@ class Windows.UI.Input.Preview.Text.FocusEnteredEventArgs python_type
     default Windows.UI.Input.Preview.Text.IFocusEnteredEventArgs
     requires Windows.UI.Input.Preview.Text.IFocusEnteredEventArgs
     property focused_text_box_info
-        get get_FocusedTextBoxInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IFocusEnteredEventArgs shape=4 reverse=22
+        get get_FocusedTextBoxInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IFocusEnteredEventArgs shape=4
             out class type=Windows.UI.Input.Preview.Text.TextBoxInfo return
 
 interface Windows.Foundation.IAsyncOperation<Windows.UI.Input.Preview.Text.PayloadResult> concrete awaitable
@@ -240,7 +240,7 @@ class Windows.UI.Input.Preview.Text.InputDelegationModeChangedEventArgs python_t
     default Windows.UI.Input.Preview.Text.IInputDelegationModeChangedEventArgs
     requires Windows.UI.Input.Preview.Text.IInputDelegationModeChangedEventArgs
     property delegation_on
-        get get_DelegationOn slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IInputDelegationModeChangedEventArgs shape=4 reverse=22
+        get get_DelegationOn slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IInputDelegationModeChangedEventArgs shape=4
             out boolean return
 
 enum Windows.UI.Input.Preview.Text.KeyEventDeviceType python_type
@@ -258,31 +258,31 @@ class Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs python_type
     default Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs
     requires Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs
     property handled
-        get get_Handled slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=173
+        get get_Handled slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             out boolean return
-        put put_Handled slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=186
+        put put_Handled slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             in boolean name=value
     property edit_session
-        get get_EditSession slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=162
+        get get_EditSession slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             out class type=Windows.UI.Input.Preview.Text.TextEditSession return
     property key_status
-        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=43
+        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
     property source
-        get get_Source slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=99
+        get get_Source slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Preview.Text.KeyEventDeviceType return
     property unicode
-        get get_Unicode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=62
+        get get_Unicode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             out string return
     property virtual_key
-        get get_VirtualKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4 reverse=22
+        get get_VirtualKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=4
             out enum32 type=Windows.System.VirtualKey return
     method is_key_pressed
-        method IsKeyPressed slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=51 reverse=124
+        method IsKeyPressed slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=51
             in enum32 type=Windows.System.VirtualKey name=vkey
             out boolean return
     method is_toggle_key_on
-        method IsToggleKeyOn slot=11 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=51 reverse=144
+        method IsToggleKeyOn slot=11 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyEventReceivedEventArgs shape=51
             in enum32 type=Windows.System.VirtualKey name=vkey
             out boolean return
 
@@ -292,93 +292,93 @@ class Windows.UI.Input.Preview.Text.KeyboardInputProcessor python_type
     default Windows.UI.Input.Preview.Text.IKeyboardInputProcessor
     requires Windows.UI.Input.Preview.Text.IKeyboardInputProcessor
     property conversion_mode
-        get get_ConversionMode slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=173
+        get get_ConversionMode slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out enum32 type=Windows.UI.Input.Preview.Text.TextConversionMode return
-        put put_ConversionMode slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=186
+        put put_ConversionMode slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             in enum32 type=Windows.UI.Input.Preview.Text.TextConversionMode name=value
     property focused_text_box_bounds
-        get get_FocusedTextBoxBounds slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=141
+        get get_FocusedTextBoxBounds slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
     property focused_text_box_id
-        get get_FocusedTextBoxId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=99
+        get get_FocusedTextBoxId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextBoxId return
     property focused_text_box_info
-        get get_FocusedTextBoxInfo slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=121
+        get get_FocusedTextBoxInfo slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out class type=Windows.UI.Input.Preview.Text.TextBoxInfo return
     property has_focused_text_box
-        get get_HasFocusedTextBox slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=62
+        get get_HasFocusedTextBox slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out boolean return
     property input_profile
-        get get_InputProfile slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=22
+        get get_InputProfile slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out string return
     property is_active
-        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=43
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out boolean return
     property selection_bounds
-        get get_SelectionBounds slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=162
+        get get_SelectionBounds slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
     event activated
-        add add_Activated slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=203
+        add add_Activated slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Activated slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=215
+        remove remove_Activated slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event composition_terminated
-        add add_CompositionTerminated slot=32 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=281
+        add add_CompositionTerminated slot=32 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CompositionTerminated slot=33 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=287
+        remove remove_CompositionTerminated slot=33 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event conversion_mode_changed
-        add add_ConversionModeChanged slot=26 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=256
+        add add_ConversionModeChanged slot=26 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,Windows.UI.Input.Preview.Text.ConversionModeChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ConversionModeChanged slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=262
+        remove remove_ConversionModeChanged slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event deactivated
-        add add_Deactivated slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=219
+        add add_Deactivated slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Deactivated slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=226
+        remove remove_Deactivated slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event focus_entered
-        add add_FocusEntered slot=22 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=238
+        add add_FocusEntered slot=22 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,Windows.UI.Input.Preview.Text.FocusEnteredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FocusEntered slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=245
+        remove remove_FocusEntered slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event focus_removed
-        add add_FocusRemoved slot=24 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=248
+        add add_FocusRemoved slot=24 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FocusRemoved slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=254
+        remove remove_FocusRemoved slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event key_event_received
-        add add_KeyEventReceived slot=20 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=229
+        add add_KeyEventReceived slot=20 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_KeyEventReceived slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=234
+        remove remove_KeyEventReceived slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event reconversion_requested
-        add add_ReconversionRequested slot=34 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=289
+        add add_ReconversionRequested slot=34 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ReconversionRequested slot=35 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=294
+        remove remove_ReconversionRequested slot=35 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event text_box_content_changed
-        add add_TextBoxContentChanged slot=30 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=271
+        add add_TextBoxContentChanged slot=30 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TextBoxContentChanged slot=31 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=277
+        remove remove_TextBoxContentChanged slot=31 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event text_box_info_changed
-        add add_TextBoxInfoChanged slot=28 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51 reverse=264
+        add add_TextBoxInfoChanged slot=28 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TextBoxInfoChanged slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26 reverse=268
+        remove remove_TextBoxInfoChanged slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_edit_session
-        method CreateEditSession slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4 reverse=194
+        method CreateEditSession slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IKeyboardInputProcessor shape=4
             out class type=Windows.UI.Input.Preview.Text.TextEditSession return
 
 enum Windows.UI.Input.Preview.Text.PayloadResult python_type
@@ -398,7 +398,7 @@ class Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs python_type
     default Windows.UI.Input.Preview.Text.IReconversionRequestedEventArgs
     requires Windows.UI.Input.Preview.Text.IReconversionRequestedEventArgs
     property range
-        get get_Range slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IReconversionRequestedEventArgs shape=4 reverse=22
+        get get_Range slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.IReconversionRequestedEventArgs shape=4
             out struct type=Windows.UI.Text.Core.CoreTextRange return
 
 enum Windows.UI.Input.Preview.Text.TextBoxContentAttribute python_type
@@ -416,16 +416,16 @@ class Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs python_type
     default Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs
     requires Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs
     property selection_bounds
-        get get_SelectionBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=4 reverse=62
+        get get_SelectionBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=4
             out struct type=Windows.Foundation.Rect return
     property source
-        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=4 reverse=43
+        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=4
             out enum32 type=Windows.UI.Input.Preview.Text.TextChangeSource return
     property text_box_id
-        get get_TextBoxId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=4 reverse=22
+        get get_TextBoxId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextBoxId return
     method is_content_attribute_changed
-        method IsContentAttributeChanged slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=51 reverse=100
+        method IsContentAttributeChanged slot=9 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxContentChangedEventArgs shape=51
             in enum32 type=Windows.UI.Input.Preview.Text.TextBoxContentAttribute name=value
             out boolean return
 
@@ -448,22 +448,22 @@ class Windows.UI.Input.Preview.Text.TextBoxInfo python_type
     default Windows.UI.Input.Preview.Text.ITextBoxInfo
     requires Windows.UI.Input.Preview.Text.ITextBoxInfo
     property app_name
-        get get_AppName slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4 reverse=62
+        get get_AppName slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4
             out string return
     property disabled_features
-        get get_DisabledFeatures slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4 reverse=141
+        get get_DisabledFeatures slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Text.TextBoxFeatures return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextBoxId return
     property input_scope
-        get get_InputScope slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4 reverse=43
+        get get_InputScope slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4
             out enum32 type=Windows.UI.Text.Core.CoreTextInputScope return
     property settings
-        get get_Settings slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4 reverse=121
+        get get_Settings slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4
             out enum_u32 type=Windows.UI.Input.Preview.Text.TextBoxSettings return
     property url
-        get get_Url slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4 reverse=99
+        get get_Url slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfo shape=4
             out string return
 
 class Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs python_type
@@ -472,7 +472,7 @@ class Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs python_type
     default Windows.UI.Input.Preview.Text.ITextBoxInfoChangedEventArgs
     requires Windows.UI.Input.Preview.Text.ITextBoxInfoChangedEventArgs
     property text_box_info
-        get get_TextBoxInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfoChangedEventArgs shape=4 reverse=22
+        get get_TextBoxInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextBoxInfoChangedEventArgs shape=4
             out class type=Windows.UI.Input.Preview.Text.TextBoxInfo return
 
 enum Windows.UI.Input.Preview.Text.TextBoxSettings python_type flags_enum
@@ -501,27 +501,27 @@ class Windows.UI.Input.Preview.Text.TextComposition python_type
     default Windows.UI.Input.Preview.Text.ITextComposition
     requires Windows.UI.Input.Preview.Text.ITextComposition
     property caret_position
-        get get_CaretPosition slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4 reverse=99
+        get get_CaretPosition slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4
             out uint32 return
-        put put_CaretPosition slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4 reverse=121
+        put put_CaretPosition slot=10 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4
             in uint32 name=value
     property first_segment
-        get get_FirstSegment slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4 reverse=43
+        get get_FirstSegment slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4
             out class type=Windows.UI.Input.Preview.Text.TextCompositionSegment return
     property selected_segment
-        get get_SelectedSegment slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4 reverse=62
+        get get_SelectedSegment slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4
             out class type=Windows.UI.Input.Preview.Text.TextCompositionSegment return
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=4
             out string return
     method complete
-        method Complete slot=12 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=0 reverse=159
+        method Complete slot=12 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=0
     method complete_first_segment
-        method CompleteFirstSegment slot=14 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=0 reverse=185
+        method CompleteFirstSegment slot=14 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=0
     method complete_unconverted
-        method CompleteUnconverted slot=13 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=0 reverse=169
+        method CompleteUnconverted slot=13 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=0
     method insert_text
-        method InsertText slot=11 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=51 reverse=144
+        method InsertText slot=11 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextComposition shape=51
             in string name=text
             out class type=Windows.UI.Input.Preview.Text.TextCompositionSegment return
 
@@ -531,36 +531,36 @@ class Windows.UI.Input.Preview.Text.TextCompositionSegment python_type
     default Windows.UI.Input.Preview.Text.ITextCompositionSegment
     requires Windows.UI.Input.Preview.Text.ITextCompositionSegment
     property unconverted_text
-        get get_UnconvertedText slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=121
+        get get_UnconvertedText slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out string return
-        put put_UnconvertedText slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=141
+        put put_UnconvertedText slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             in string name=value
     property text
-        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=22
+        get get_Text slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out string return
-        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=43
+        put put_Text slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             in string name=value
     property converted_text
-        get get_ConvertedText slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=62
+        get get_ConvertedText slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out string return
-        put put_ConvertedText slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=99
+        put put_ConvertedText slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             in string name=value
     property conversion_state
-        get get_ConversionState slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=173
+        get get_ConversionState slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out enum32 type=Windows.UI.Text.Core.CoreTextFormatUpdatingReason return
-        put put_ConversionState slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=186
+        put put_ConversionState slot=14 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             in enum32 type=Windows.UI.Text.Core.CoreTextFormatUpdatingReason name=value
     property next
-        get get_Next slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=194
+        get get_Next slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out class type=Windows.UI.Input.Preview.Text.TextCompositionSegment return
     property previous
-        get get_Previous slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=202
+        get get_Previous slot=16 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out class type=Windows.UI.Input.Preview.Text.TextCompositionSegment return
     property range
-        get get_Range slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=162
+        get get_Range slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out struct type=Windows.UI.Text.Core.CoreTextRange return
     method get_text_style
-        method GetTextStyle slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4 reverse=210
+        method GetTextStyle slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextStyle return
     method set_text_style
         method SetTextStyle slot=18 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextCompositionSegment shape=338
@@ -588,19 +588,19 @@ class Windows.UI.Input.Preview.Text.TextEditSession python_type
     default Windows.UI.Input.Preview.Text.ITextEditSession
     requires Windows.UI.Input.Preview.Text.ITextEditSession
     property composition
-        get get_Composition slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=186
+        get get_Composition slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out class type=Windows.UI.Input.Preview.Text.TextComposition return
     property populated_range
-        get get_PopulatedRange slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=62
+        get get_PopulatedRange slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out struct type=Windows.UI.Text.Core.CoreTextRange return
     property text_box_id
-        get get_TextBoxId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=22
+        get get_TextBoxId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextBoxId return
     property text_length
-        get get_TextLength slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=43
+        get get_TextLength slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out int32 return
     method get_selected_range
-        method GetSelectedRange slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=141
+        method GetSelectedRange slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out struct type=Windows.UI.Text.Core.CoreTextRange return
     method get_text
         method GetText slot=10 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=85
@@ -619,17 +619,17 @@ class Windows.UI.Input.Preview.Text.TextEditSession python_type
         method SetSelectedRange slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=22
             in struct type=Windows.UI.Text.Core.CoreTextRange name=value
     method start_composition
-        method StartComposition slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=194
+        method StartComposition slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out class type=Windows.UI.Input.Preview.Text.TextComposition return
     method start_reconversion
         method StartReconversion slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=85
             in struct type=Windows.UI.Text.Core.CoreTextRange name=range
             out class type=Windows.UI.Input.Preview.Text.TextComposition return
     method submit_payload
-        method SubmitPayload slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=210
+        method SubmitPayload slot=17 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out boolean return
     method submit_payload_async
-        method SubmitPayloadAsync slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4 reverse=218
+        method SubmitPayloadAsync slot=18 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextEditSession shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Input.Preview.Text.PayloadResult> return
 
 class Windows.UI.Input.Preview.Text.TextInputProvider python_type
@@ -638,75 +638,75 @@ class Windows.UI.Input.Preview.Text.TextInputProvider python_type
     default Windows.UI.Input.Preview.Text.ITextInputProvider
     requires Windows.UI.Input.Preview.Text.ITextInputProvider
     property focused_text_box_bounds
-        get get_FocusedTextBoxBounds slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=141
+        get get_FocusedTextBoxBounds slot=11 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
     property focused_text_box_id
-        get get_FocusedTextBoxId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=99
+        get get_FocusedTextBoxId slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextBoxId return
     property focused_text_box_info
-        get get_FocusedTextBoxInfo slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=121
+        get get_FocusedTextBoxInfo slot=10 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out class type=Windows.UI.Input.Preview.Text.TextBoxInfo return
     property has_focused_text_box
-        get get_HasFocusedTextBox slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=62
+        get get_HasFocusedTextBox slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out boolean return
     property selection_bounds
-        get get_SelectionBounds slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=162
+        get get_SelectionBounds slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
     event composition_terminated
-        add add_CompositionTerminated slot=24 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=248
+        add add_CompositionTerminated slot=24 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CompositionTerminated slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=254
+        remove remove_CompositionTerminated slot=25 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event focus_entered
-        add add_FocusEntered slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=203
+        add add_FocusEntered slot=16 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,Windows.UI.Input.Preview.Text.FocusEnteredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FocusEntered slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=215
+        remove remove_FocusEntered slot=17 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event focus_removed
-        add add_FocusRemoved slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=219
+        add add_FocusRemoved slot=18 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FocusRemoved slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=226
+        remove remove_FocusRemoved slot=19 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event input_delegation_mode_changed
-        add add_InputDelegationModeChanged slot=28 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=264
+        add add_InputDelegationModeChanged slot=28 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,Windows.UI.Input.Preview.Text.InputDelegationModeChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_InputDelegationModeChanged slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=268
+        remove remove_InputDelegationModeChanged slot=29 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event reconversion_requested
-        add add_ReconversionRequested slot=26 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=256
+        add add_ReconversionRequested slot=26 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ReconversionRequested slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=262
+        remove remove_ReconversionRequested slot=27 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event text_box_content_changed
-        add add_TextBoxContentChanged slot=22 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=238
+        add add_TextBoxContentChanged slot=22 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TextBoxContentChanged slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=245
+        remove remove_TextBoxContentChanged slot=23 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event text_box_info_changed
-        add add_TextBoxInfoChanged slot=20 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51 reverse=229
+        add add_TextBoxInfoChanged slot=20 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Input.Preview.Text.TextInputProvider,Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TextBoxInfoChanged slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26 reverse=234
+        remove remove_TextBoxInfoChanged slot=21 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_edit_session
-        method CreateEditSession slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=173
+        method CreateEditSession slot=13 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out class type=Windows.UI.Input.Preview.Text.TextEditSession return
     method get_subscription
-        method GetSubscription slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=22
+        method GetSubscription slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out struct type=Windows.UI.Input.Preview.Text.TextInputServiceSubscription return
     method set_subscription
         method SetSubscription slot=7 inputs=1 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=36
             in struct type=Windows.UI.Input.Preview.Text.TextInputServiceSubscription name=subscription
     method stop_delegation
-        method StopDelegation slot=15 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=0 reverse=193
+        method StopDelegation slot=15 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=0
     method try_start_delegation
-        method TryStartDelegation slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4 reverse=186
+        method TryStartDelegation slot=14 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputProvider shape=4
             out boolean return
 
 class Windows.UI.Input.Preview.Text.TextInputService python_type
@@ -716,15 +716,15 @@ class Windows.UI.Input.Preview.Text.TextInputService python_type
     requires Windows.UI.Input.Preview.Text.ITextInputService
     factory Windows.UI.Input.Preview.Text.ITextInputServiceStatics
     method create_keyboard_input_processor
-        method CreateKeyboardInputProcessor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputService shape=51 reverse=24
+        method CreateKeyboardInputProcessor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputService shape=51
             in string name=inputProfile
             out class type=Windows.UI.Input.Preview.Text.KeyboardInputProcessor return
     method create_text_input_provider
-        method CreateTextInputProvider slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputService shape=51 reverse=44
+        method CreateTextInputProvider slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputService shape=51
             in string name=inputProfile
             out class type=Windows.UI.Input.Preview.Text.TextInputProvider return
     method get_for_current_thread static
-        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputServiceStatics shape=4 reverse=22 static
+        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Preview.Text.ITextInputServiceStatics shape=4 static
             out class type=Windows.UI.Input.Preview.Text.TextInputService return
 
 struct Windows.UI.Input.Preview.Text.TextInputServiceSubscription python_type

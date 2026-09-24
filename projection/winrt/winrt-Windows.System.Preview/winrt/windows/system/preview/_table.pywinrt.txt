@@ -112,16 +112,16 @@ class Windows.System.Preview.TwoPanelHingedDevicePosturePreview python_type
     requires Windows.System.Preview.ITwoPanelHingedDevicePosturePreview
     factory Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewStatics
     event posture_changed
-        add add_PostureChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=51 reverse=44 deprecated
+        add add_PostureChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Preview.TwoPanelHingedDevicePosturePreview,Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PostureChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=26 reverse=82 deprecated
+        remove remove_PostureChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_posture_async deprecated
-        method GetCurrentPostureAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=4 reverse=22 deprecated
+        method GetCurrentPostureAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading> return
     method get_default_async static deprecated
-        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewStatics shape=4 reverse=22 static deprecated
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.Preview.TwoPanelHingedDevicePosturePreview> return
 
 class Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading python_type
@@ -130,22 +130,22 @@ class Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading python_ty
     default Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading
     requires Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading
     property hinge_state
-        get get_HingeState slot=7 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 reverse=43 deprecated
+        get get_HingeState slot=7 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 deprecated
             out enum32 type=Windows.System.Preview.HingeState return
     property panel1_id
-        get get_Panel1Id slot=9 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 reverse=99 deprecated
+        get get_Panel1Id slot=9 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 deprecated
             out string return
     property panel1_orientation
-        get get_Panel1Orientation slot=8 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 reverse=62 deprecated
+        get get_Panel1Orientation slot=8 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 deprecated
             out enum32 type=Windows.Devices.Sensors.SimpleOrientation return
     property panel2_id
-        get get_Panel2Id slot=11 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 reverse=141 deprecated
+        get get_Panel2Id slot=11 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 deprecated
             out string return
     property panel2_orientation
-        get get_Panel2Orientation slot=10 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 reverse=121 deprecated
+        get get_Panel2Orientation slot=10 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 deprecated
             out enum32 type=Windows.Devices.Sensors.SimpleOrientation return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 reverse=22 deprecated
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReading shape=4 deprecated
             out datetime return
 
 class Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs python_type
@@ -154,7 +154,7 @@ class Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEve
     default Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs
     requires Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs
     property reading
-        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs shape=4 reverse=22 deprecated
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewReadingChangedEventArgs shape=4 deprecated
             out class type=Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.Preview.TwoPanelHingedDevicePosturePreview,Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs> concrete

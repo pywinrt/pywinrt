@@ -7,7 +7,7 @@ class Windows.UI.Shell.AdaptiveCardBuilder static python_type
     py AdaptiveCardBuilder
     factory Windows.UI.Shell.IAdaptiveCardBuilderStatics
     method create_adaptive_card_from_json static
-        method CreateAdaptiveCardFromJson slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.IAdaptiveCardBuilderStatics shape=51 reverse=24 static
+        method CreateAdaptiveCardFromJson slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.IAdaptiveCardBuilderStatics shape=51 static
             in string name=value
             out interface type=Windows.UI.Shell.IAdaptiveCard return
 
@@ -28,10 +28,10 @@ class Windows.UI.Shell.FocusSession python_type
     default Windows.UI.Shell.IFocusSession
     requires Windows.UI.Shell.IFocusSession
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSession shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSession shape=4
             out string return
     method end
-        method End slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.IFocusSession shape=0 reverse=37
+        method End slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.IFocusSession shape=0
 
 class Windows.UI.Shell.FocusSessionManager python_type
     py FocusSessionManager
@@ -40,28 +40,28 @@ class Windows.UI.Shell.FocusSessionManager python_type
     requires Windows.UI.Shell.IFocusSessionManager
     factory Windows.UI.Shell.IFocusSessionManagerStatics
     property is_focus_active
-        get get_IsFocusActive slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=4 reverse=22
+        get get_IsFocusActive slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=4
             out boolean return
     property is_supported static
-        get get_IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManagerStatics shape=4 reverse=43 static
+        get get_IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManagerStatics shape=4 static
             out boolean return
     event is_focus_active_changed
-        add add_IsFocusActiveChanged slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=51 reverse=144
+        add add_IsFocusActiveChanged slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.FocusSessionManager,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsFocusActiveChanged slot=12 inputs=1 outputs=0 declaring=Windows.UI.Shell.IFocusSessionManager shape=26 reverse=167
+        remove remove_IsFocusActiveChanged slot=12 inputs=1 outputs=0 declaring=Windows.UI.Shell.IFocusSessionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method deactivate_focus
-        method DeactivateFocus slot=10 inputs=0 outputs=0 declaring=Windows.UI.Shell.IFocusSessionManager shape=0 reverse=117
+        method DeactivateFocus slot=10 inputs=0 outputs=0 declaring=Windows.UI.Shell.IFocusSessionManager shape=0
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManagerStatics shape=4 static
             out class type=Windows.UI.Shell.FocusSessionManager return
     method get_session
-        method GetSession slot=7 inputs=1 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=51 reverse=44
+        method GetSession slot=7 inputs=1 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=51
             in string name=id
             out class type=Windows.UI.Shell.FocusSession return
     method try_start_focus_session
-        method TryStartFocusSession slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=4 reverse=62
+        method TryStartFocusSession slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=4
             out class type=Windows.UI.Shell.FocusSession return
         method TryStartFocusSession slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.IFocusSessionManager shape=89
             in datetime name=endTime
@@ -306,7 +306,7 @@ class Windows.UI.Shell.SecurityAppManager activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method register
-        method Register slot=6 inputs=4 outputs=1 declaring=Windows.UI.Shell.ISecurityAppManager shape=239 reverse=27
+        method Register slot=6 inputs=4 outputs=1 declaring=Windows.UI.Shell.ISecurityAppManager shape=239
             in enum32 type=Windows.UI.Shell.SecurityAppKind name=kind
             in string name=displayName
             in class type=Windows.Foundation.Uri name=detailsUri
@@ -351,12 +351,12 @@ class Windows.UI.Shell.ShareWindowCommandEventArgs python_type
     default Windows.UI.Shell.IShareWindowCommandEventArgs
     requires Windows.UI.Shell.IShareWindowCommandEventArgs
     property command
-        get get_Command slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandEventArgs shape=4 reverse=43
+        get get_Command slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandEventArgs shape=4
             out enum32 type=Windows.UI.Shell.ShareWindowCommand return
-        put put_Command slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandEventArgs shape=4 reverse=62
+        put put_Command slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandEventArgs shape=4
             in enum32 type=Windows.UI.Shell.ShareWindowCommand name=value
     property window_id
-        get get_WindowId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandEventArgs shape=4 reverse=22
+        get get_WindowId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandEventArgs shape=4
             out struct type=Windows.UI.WindowId return
 
 class Windows.UI.Shell.ShareWindowCommandSource python_type
@@ -366,26 +366,26 @@ class Windows.UI.Shell.ShareWindowCommandSource python_type
     requires Windows.UI.Shell.IShareWindowCommandSource
     factory Windows.UI.Shell.IShareWindowCommandSourceStatics
     event command_invoked
-        add add_CommandInvoked slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=51 reverse=144
+        add add_CommandInvoked slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.ShareWindowCommandSource,Windows.UI.Shell.ShareWindowCommandEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CommandInvoked slot=12 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=26 reverse=167
+        remove remove_CommandInvoked slot=12 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event command_requested
-        add add_CommandRequested slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=51 reverse=100
+        add add_CommandRequested slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.ShareWindowCommandSource,Windows.UI.Shell.ShareWindowCommandEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CommandRequested slot=10 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=26 reverse=134
+        remove remove_CommandRequested slot=10 inputs=1 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSourceStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IShareWindowCommandSourceStatics shape=4 static
             out class type=Windows.UI.Shell.ShareWindowCommandSource return
     method report_command_changed
-        method ReportCommandChanged slot=8 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0 reverse=55
+        method ReportCommandChanged slot=8 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0
     method start
-        method Start slot=6 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0 reverse=16
+        method Start slot=6 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0
     method stop
-        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0 reverse=37
+        method Stop slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0
 
 enum T parameterized
 
@@ -398,38 +398,38 @@ class Windows.UI.Shell.TaskbarManager python_type
     factory Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics
     factory Windows.UI.Shell.ITaskbarManagerStatics
     property is_pinning_allowed
-        get get_IsPinningAllowed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4 reverse=43
+        get get_IsPinningAllowed slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4
             out boolean return
     property is_supported
-        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4 reverse=22
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4
             out boolean return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManagerStatics shape=4 static
             out class type=Windows.UI.Shell.TaskbarManager return
     method is_app_list_entry_pinned_async
-        method IsAppListEntryPinnedAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=51 reverse=100
+        method IsAppListEntryPinnedAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=51
             in class type=Windows.ApplicationModel.Core.AppListEntry name=appListEntry
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method is_current_app_pinned_async
-        method IsCurrentAppPinnedAsync slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4 reverse=62
+        method IsCurrentAppPinnedAsync slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method is_secondary_tile_pinned_async
-        method IsSecondaryTilePinnedAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager2 shape=51 reverse=24
+        method IsSecondaryTilePinnedAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager2 shape=51
             in string name=tileId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_pin_app_list_entry_async
-        method RequestPinAppListEntryAsync slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=51 reverse=144
+        method RequestPinAppListEntryAsync slot=11 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=51
             in class type=Windows.ApplicationModel.Core.AppListEntry name=appListEntry
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_pin_current_app_async
-        method RequestPinCurrentAppAsync slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4 reverse=121
+        method RequestPinCurrentAppAsync slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_pin_secondary_tile_async
-        method RequestPinSecondaryTileAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager2 shape=51 reverse=44
+        method RequestPinSecondaryTileAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager2 shape=51
             in class type=Windows.UI.StartScreen.SecondaryTile name=secondaryTile
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_unpin_secondary_tile_async
-        method TryUnpinSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager2 shape=51 reverse=65
+        method TryUnpinSecondaryTileAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.ITaskbarManager2 shape=51
             in string name=tileId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -514,32 +514,32 @@ class Windows.UI.Shell.WindowTab activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property treat_as_secondary_tile_id
-        get get_TreatAsSecondaryTileId slot=12 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=162
+        get get_TreatAsSecondaryTileId slot=12 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4
             out string return
-        put put_TreatAsSecondaryTileId slot=13 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=173
+        put put_TreatAsSecondaryTileId slot=13 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4
             in string name=value
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4
             out string return
-        put put_Title slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=99
+        put put_Title slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4
             in string name=value
     property tag
-        get get_Tag slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=22
+        get get_Tag slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4
             out object return
-        put put_Tag slot=7 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=43
+        put put_Tag slot=7 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4
             in object name=value
     property icon
-        get get_Icon slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=121
+        get get_Icon slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4
             out class type=Windows.UI.Shell.WindowTabIcon return
-        put put_Icon slot=11 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=141
+        put put_Icon slot=11 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4
             in class type=Windows.UI.Shell.WindowTabIcon name=value
     property group
-        get get_Group slot=14 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=186
+        get get_Group slot=14 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTab shape=4
             out class type=Windows.UI.Shell.WindowTabGroup return
-        put put_Group slot=15 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4 reverse=194
+        put put_Group slot=15 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=4
             in class type=Windows.UI.Shell.WindowTabGroup name=value
     method report_thumbnail_available
-        method ReportThumbnailAvailable slot=16 inputs=0 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=0 reverse=201
+        method ReportThumbnailAvailable slot=16 inputs=0 outputs=0 declaring=Windows.UI.Shell.IWindowTab shape=0
 
 class Windows.UI.Shell.WindowTabCloseRequestedEventArgs python_type
     py WindowTabCloseRequestedEventArgs
@@ -547,7 +547,7 @@ class Windows.UI.Shell.WindowTabCloseRequestedEventArgs python_type
     default Windows.UI.Shell.IWindowTabCloseRequestedEventArgs
     requires Windows.UI.Shell.IWindowTabCloseRequestedEventArgs
     property tab
-        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabCloseRequestedEventArgs shape=4 reverse=22
+        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabCloseRequestedEventArgs shape=4
             out class type=Windows.UI.Shell.WindowTab return
 
 class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable_sequence
@@ -591,7 +591,7 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
             in uint32 name=index
             in class type=Windows.UI.Shell.WindowTab name=value
     method move_tab
-        method MoveTab slot=6 inputs=2 outputs=0 declaring=Windows.UI.Shell.IWindowTabCollection shape=51 reverse=24
+        method MoveTab slot=6 inputs=2 outputs=0 declaring=Windows.UI.Shell.IWindowTabCollection shape=51
             in class type=Windows.UI.Shell.WindowTab name=tab
             in uint32 name=index
     method remove_at
@@ -616,14 +616,14 @@ class Windows.UI.Shell.WindowTabGroup activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabGroup shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabGroup shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabGroup shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabGroup shape=4
             in string name=value
     property icon
-        get get_Icon slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabGroup shape=4 reverse=62
+        get get_Icon slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabGroup shape=4
             out class type=Windows.UI.Shell.WindowTabIcon return
-        put put_Icon slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabGroup shape=4 reverse=99
+        put put_Icon slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabGroup shape=4
             in class type=Windows.UI.Shell.WindowTabIcon name=value
 
 class Windows.UI.Shell.WindowTabIcon python_type
@@ -633,17 +633,17 @@ class Windows.UI.Shell.WindowTabIcon python_type
     requires Windows.UI.Shell.IWindowTabIcon
     factory Windows.UI.Shell.IWindowTabIconStatics
     method create_from_font_glyph static
-        method CreateFromFontGlyph slot=6 inputs=2 outputs=1 declaring=Windows.UI.Shell.IWindowTabIconStatics shape=117 reverse=25 static
+        method CreateFromFontGlyph slot=6 inputs=2 outputs=1 declaring=Windows.UI.Shell.IWindowTabIconStatics shape=117 static
             in string name=glyph
             in string name=fontFamily
             out class type=Windows.UI.Shell.WindowTabIcon return
-        method CreateFromFontGlyph slot=7 inputs=3 outputs=1 declaring=Windows.UI.Shell.IWindowTabIconStatics shape=195 reverse=46 static
+        method CreateFromFontGlyph slot=7 inputs=3 outputs=1 declaring=Windows.UI.Shell.IWindowTabIconStatics shape=195 static
             in string name=glyph
             in string name=fontFamily
             in class type=Windows.Foundation.Uri name=fontUri
             out class type=Windows.UI.Shell.WindowTabIcon return
     method create_from_image static
-        method CreateFromImage slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabIconStatics shape=51 reverse=65 static
+        method CreateFromImage slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabIconStatics shape=51 static
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=image
             out class type=Windows.UI.Shell.WindowTabIcon return
 
@@ -654,44 +654,44 @@ class Windows.UI.Shell.WindowTabManager python_type
     requires Windows.UI.Shell.IWindowTabManager
     factory Windows.UI.Shell.IWindowTabManagerStatics
     property tabs
-        get get_Tabs slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=4 reverse=22
+        get get_Tabs slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=4
             out class type=Windows.UI.Shell.WindowTabCollection return
     event tab_close_requested
-        add add_TabCloseRequested slot=10 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=124
+        add add_TabCloseRequested slot=10 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabCloseRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TabCloseRequested slot=11 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=156
+        remove remove_TabCloseRequested slot=11 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_switch_requested
-        add add_TabSwitchRequested slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=65
+        add add_TabSwitchRequested slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabSwitchRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TabSwitchRequested slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=110
+        remove remove_TabSwitchRequested slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_tear_out_requested
-        add add_TabTearOutRequested slot=12 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=163
+        add add_TabTearOutRequested slot=12 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabTearOutRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TabTearOutRequested slot=13 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=181
+        remove remove_TabTearOutRequested slot=13 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event tab_thumbnail_requested
-        add add_TabThumbnailRequested slot=14 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51 reverse=187
+        add add_TabThumbnailRequested slot=14 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TabThumbnailRequested slot=15 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26 reverse=200
+        remove remove_TabThumbnailRequested slot=15 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_window static
         method GetForWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.Shell.IWindowTabManagerStatics shape=97 static
             in struct type=Windows.UI.WindowId name=id
             out class type=Windows.UI.Shell.WindowTabManager return
     method is_supported static
-        method IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabManagerStatics shape=4 reverse=43 static
+        method IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabManagerStatics shape=4 static
             out boolean return
     method is_tab_tear_out_supported static
-        method IsTabTearOutSupported slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabManagerStatics shape=4 reverse=62 static
+        method IsTabTearOutSupported slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabManagerStatics shape=4 static
             out boolean return
     method set_active_tab
-        method SetActiveTab slot=7 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=4 reverse=43
+        method SetActiveTab slot=7 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabManager shape=4
             in class type=Windows.UI.Shell.WindowTab name=tab
 
 class Windows.UI.Shell.WindowTabSwitchRequestedEventArgs python_type
@@ -700,7 +700,7 @@ class Windows.UI.Shell.WindowTabSwitchRequestedEventArgs python_type
     default Windows.UI.Shell.IWindowTabSwitchRequestedEventArgs
     requires Windows.UI.Shell.IWindowTabSwitchRequestedEventArgs
     property tab
-        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabSwitchRequestedEventArgs shape=4 reverse=22
+        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabSwitchRequestedEventArgs shape=4
             out class type=Windows.UI.Shell.WindowTab return
 
 class Windows.UI.Shell.WindowTabTearOutRequestedEventArgs python_type
@@ -709,15 +709,15 @@ class Windows.UI.Shell.WindowTabTearOutRequestedEventArgs python_type
     default Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs
     requires Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs
     property window_id
-        get get_WindowId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=4 reverse=43
+        get get_WindowId slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=4
             out uint64 return
         put put_WindowId slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=3
             in uint64 name=value
     property tab
-        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=4 reverse=22
+        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=4
             out class type=Windows.UI.Shell.WindowTab return
     method get_deferral
-        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=4 reverse=99
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabTearOutRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs python_type
@@ -726,21 +726,21 @@ class Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs python_type
     default Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs
     requires Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs
     property image
-        get get_Image slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4 reverse=62
+        get get_Image slot=8 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
-        put put_Image slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4 reverse=99
+        put put_Image slot=9 inputs=1 outputs=0 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
     property is_composited_on_window
-        get get_IsCompositedOnWindow slot=11 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4 reverse=141
+        get get_IsCompositedOnWindow slot=11 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4
             out boolean return
     property requested_size
-        get get_RequestedSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4 reverse=43
+        get get_RequestedSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4
             out struct type=Windows.Graphics.Imaging.BitmapSize return
     property tab
-        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4 reverse=22
+        get get_Tab slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4
             out class type=Windows.UI.Shell.WindowTab return
     method get_deferral
-        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4 reverse=121
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.IWindowTabThumbnailRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class System.Boolean external

@@ -22,71 +22,71 @@ class Windows.Devices.Display.DisplayMonitor python_type
     requires Windows.Devices.Display.IDisplayMonitor2
     factory Windows.Devices.Display.IDisplayMonitorStatics
     property blue_primary
-        get get_BluePrimary slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=228
+        get get_BluePrimary slot=20 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out struct type=Windows.Foundation.Point return
     property connection_kind
-        get get_ConnectionKind slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=62
+        get get_ConnectionKind slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out enum32 type=Windows.Devices.Display.DisplayMonitorConnectionKind return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out string return
     property display_adapter_device_id
-        get get_DisplayAdapterDeviceId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=121
+        get get_DisplayAdapterDeviceId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out string return
     property display_adapter_id
-        get get_DisplayAdapterId slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=141
+        get get_DisplayAdapterId slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out struct type=Windows.Graphics.DisplayAdapterId return
     property display_adapter_target_id
-        get get_DisplayAdapterTargetId slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=162
+        get get_DisplayAdapterTargetId slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out uint32 return
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out string return
     property green_primary
-        get get_GreenPrimary slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=223
+        get get_GreenPrimary slot=19 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out struct type=Windows.Foundation.Point return
     property max_average_full_frame_luminance_in_nits
-        get get_MaxAverageFullFrameLuminanceInNits slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=247
+        get get_MaxAverageFullFrameLuminanceInNits slot=24 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out single return
     property max_luminance_in_nits
-        get get_MaxLuminanceInNits slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=237
+        get get_MaxLuminanceInNits slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out single return
     property min_luminance_in_nits
-        get get_MinLuminanceInNits slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=242
+        get get_MinLuminanceInNits slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out single return
     property native_resolution_in_raw_pixels
-        get get_NativeResolutionInRawPixels slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=186
+        get get_NativeResolutionInRawPixels slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out struct type=Windows.Graphics.SizeInt32 return
     property physical_connector
-        get get_PhysicalConnector slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=99
+        get get_PhysicalConnector slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out enum32 type=Windows.Devices.Display.DisplayMonitorPhysicalConnectorKind return
     property physical_size_in_inches
-        get get_PhysicalSizeInInches slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=194
+        get get_PhysicalSizeInInches slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Size> return
     property raw_dpi_x
-        get get_RawDpiX slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=202
+        get get_RawDpiX slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out single return
     property raw_dpi_y
-        get get_RawDpiY slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=210
+        get get_RawDpiY slot=17 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out single return
     property red_primary
-        get get_RedPrimary slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=218
+        get get_RedPrimary slot=18 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out struct type=Windows.Foundation.Point return
     property usage_kind
-        get get_UsageKind slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=173
+        get get_UsageKind slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out enum32 type=Windows.Devices.Display.DisplayMonitorUsageKind return
     property white_point
-        get get_WhitePoint slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4 reverse=232
+        get get_WhitePoint slot=21 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor shape=4
             out struct type=Windows.Foundation.Point return
     property is_dolby_vision_supported_in_hdr_mode
-        get get_IsDolbyVisionSupportedInHdrMode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor2 shape=4 reverse=22
+        get get_IsDolbyVisionSupportedInHdrMode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitor2 shape=4
             out boolean return
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitorStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitorStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.DisplayMonitor> return
     method from_interface_id_async static
-        method FromInterfaceIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitorStatics shape=51 reverse=65 static
+        method FromInterfaceIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitorStatics shape=51 static
             in string name=deviceInterfaceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Display.DisplayMonitor> return
     method get_descriptor
@@ -94,7 +94,7 @@ class Windows.Devices.Display.DisplayMonitor python_type
             in enum32 type=Windows.Devices.Display.DisplayMonitorDescriptorKind name=descriptorKind
             receive_array uint8 return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitorStatics shape=4 reverse=22 static
+        method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.IDisplayMonitorStatics shape=4 static
             out string return
 
 enum Windows.Devices.Display.DisplayMonitorConnectionKind python_type

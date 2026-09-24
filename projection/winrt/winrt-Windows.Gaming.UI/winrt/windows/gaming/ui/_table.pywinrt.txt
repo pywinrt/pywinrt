@@ -18,22 +18,22 @@ class Windows.Gaming.UI.GameBar static python_type
     py GameBar
     factory Windows.Gaming.UI.IGameBarStatics
     property is_input_redirected static
-        get get_IsInputRedirected slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=4 reverse=141 static
+        get get_IsInputRedirected slot=11 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=4 static
             out boolean return
     property visible static
-        get get_Visible slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=4 reverse=121 static
+        get get_Visible slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=4 static
             out boolean return
     event is_input_redirected_changed static
-        add add_IsInputRedirectedChanged slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=51 reverse=65 static
+        add add_IsInputRedirectedChanged slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsInputRedirectedChanged slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameBarStatics shape=26 reverse=110 static
+        remove remove_IsInputRedirectedChanged slot=9 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameBarStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event visibility_changed static
-        add add_VisibilityChanged slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=51 reverse=24 static
+        add add_VisibilityChanged slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameBarStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_VisibilityChanged slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameBarStatics shape=26 reverse=53 static
+        remove remove_VisibilityChanged slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameBarStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.Gaming.UI.GameChatMessageOrigin python_type
@@ -48,19 +48,19 @@ class Windows.Gaming.UI.GameChatMessageReceivedEventArgs python_type
     default Windows.Gaming.UI.IGameChatMessageReceivedEventArgs
     requires Windows.Gaming.UI.IGameChatMessageReceivedEventArgs
     property app_display_name
-        get get_AppDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4 reverse=43
+        get get_AppDisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4
             out string return
     property app_id
-        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4 reverse=22
+        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4
             out string return
     property message
-        get get_Message slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4 reverse=99
+        get get_Message slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4
             out string return
     property origin
-        get get_Origin slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4 reverse=121
+        get get_Origin slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4
             out enum32 type=Windows.Gaming.UI.GameChatMessageOrigin return
     property sender_name
-        get get_SenderName slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4 reverse=62
+        get get_SenderName slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatMessageReceivedEventArgs shape=4
             out string return
 
 class Windows.Gaming.UI.GameChatOverlay python_type
@@ -70,17 +70,17 @@ class Windows.Gaming.UI.GameChatOverlay python_type
     requires Windows.Gaming.UI.IGameChatOverlay
     factory Windows.Gaming.UI.IGameChatOverlayStatics
     property desired_position
-        get get_DesiredPosition slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlay shape=4 reverse=22
+        get get_DesiredPosition slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlay shape=4
             out enum32 type=Windows.Gaming.UI.GameChatOverlayPosition return
-        put put_DesiredPosition slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlay shape=4 reverse=43
+        put put_DesiredPosition slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlay shape=4
             in enum32 type=Windows.Gaming.UI.GameChatOverlayPosition name=value
     method add_message
-        method AddMessage slot=8 inputs=3 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlay shape=117 reverse=66
+        method AddMessage slot=8 inputs=3 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlay shape=117
             in string name=sender
             in string name=message
             in enum32 type=Windows.Gaming.UI.GameChatMessageOrigin name=origin
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlayStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlayStatics shape=4 static
             out class type=Windows.Gaming.UI.GameChatOverlay return
 
 class Windows.Gaming.UI.GameChatOverlayMessageSource activatable python_type
@@ -92,13 +92,13 @@ class Windows.Gaming.UI.GameChatOverlayMessageSource activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     event message_received
-        add add_MessageReceived slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=51 reverse=24
+        add add_MessageReceived slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Gaming.UI.GameChatOverlayMessageSource,Windows.Gaming.UI.GameChatMessageReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MessageReceived slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=26 reverse=53
+        remove remove_MessageReceived slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method set_delay_before_closing_after_message_received
-        method SetDelayBeforeClosingAfterMessageReceived slot=8 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=26 reverse=82
+        method SetDelayBeforeClosingAfterMessageReceived slot=8 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameChatOverlayMessageSource shape=26
             in timespan name=value
 
 enum Windows.Gaming.UI.GameChatOverlayPosition python_type
@@ -129,10 +129,10 @@ class Windows.Gaming.UI.GameUIProviderActivatedEventArgs python_type
         get get_SplashScreen slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgs shape=4 reverse=62
             out class type=Windows.ApplicationModel.Activation.SplashScreen return
     property game_ui_args
-        get get_GameUIArgs slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameUIProviderActivatedEventArgs shape=4 reverse=22
+        get get_GameUIArgs slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.UI.IGameUIProviderActivatedEventArgs shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     method report_completed
-        method ReportCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameUIProviderActivatedEventArgs shape=4 reverse=43
+        method ReportCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.UI.IGameUIProviderActivatedEventArgs shape=4
             in class type=Windows.Foundation.Collections.ValueSet name=results
 
 interface Windows.Gaming.UI.IGameBarStatics

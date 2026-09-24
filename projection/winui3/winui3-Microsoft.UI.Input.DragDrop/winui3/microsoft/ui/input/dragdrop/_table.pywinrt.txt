@@ -22,20 +22,20 @@ class Microsoft.UI.Input.DragDrop.DragDropManager python_type closeable
     requires Windows.Foundation.IClosable
     factory Microsoft.UI.Input.DragDrop.IDragDropManagerStatics
     property are_concurrent_operations_enabled
-        get get_AreConcurrentOperationsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=4 reverse=22
+        get get_AreConcurrentOperationsEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=4
             out boolean return
-        put put_AreConcurrentOperationsEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=4 reverse=43
+        put put_AreConcurrentOperationsEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=4
             in boolean name=value
     event target_requested
-        add add_TargetRequested slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=51 reverse=65
+        add add_TargetRequested slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.DragDrop.DragDropManager,Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TargetRequested slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=26 reverse=110
+        remove remove_TargetRequested slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragDropManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_for_island static
-        method GetForIsland slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragDropManagerStatics shape=51 reverse=24 static
+        method GetForIsland slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragDropManagerStatics shape=51 static
             in class type=Microsoft.UI.Content.ContentIsland name=content
             out class type=Microsoft.UI.Input.DragDrop.DragDropManager return
 
@@ -56,16 +56,16 @@ class Microsoft.UI.Input.DragDrop.DragInfo python_type
     default Microsoft.UI.Input.DragDrop.IDragInfo
     requires Microsoft.UI.Input.DragDrop.IDragInfo
     property allowed_operations
-        get get_AllowedOperations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4 reverse=22
+        get get_AllowedOperations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4
             out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4
             out class type=Windows.ApplicationModel.DataTransfer.DataPackageView return
     property modifiers
-        get get_Modifiers slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4 reverse=62
+        get get_Modifiers slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4
             out enum_u32 type=Microsoft.UI.Input.DragDrop.DragDropModifiers return
     property position
-        get get_Position slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4 reverse=99
+        get get_Position slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragInfo shape=4
             out struct type=Windows.Foundation.Point return
 
 class Microsoft.UI.Input.DragDrop.DragOperation activatable python_type closeable
@@ -78,28 +78,28 @@ class Microsoft.UI.Input.DragDrop.DragOperation activatable python_type closeabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property drag_ui_content_mode
-        get get_DragUIContentMode slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4 reverse=99
+        get get_DragUIContentMode slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4
             out enum32 type=Microsoft.UI.Input.DragDrop.DragUIContentMode return
-        put put_DragUIContentMode slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4 reverse=121
+        put put_DragUIContentMode slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4
             in enum32 type=Microsoft.UI.Input.DragDrop.DragUIContentMode name=value
     property allowed_operations
-        get get_AllowedOperations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4 reverse=22
+        get get_AllowedOperations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4
             out enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation return
-        put put_AllowedOperations slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4 reverse=43
+        put put_AllowedOperations slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4
             in enum_u32 type=Windows.ApplicationModel.DataTransfer.DataPackageOperation name=value
     property data
-        get get_Data slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4 reverse=62
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4
             out class type=Windows.ApplicationModel.DataTransfer.DataPackage return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method set_drag_ui_content_from_software_bitmap
-        method SetDragUIContentFromSoftwareBitmap slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4 reverse=141
+        method SetDragUIContentFromSoftwareBitmap slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=4
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
         method SetDragUIContentFromSoftwareBitmap slot=12 inputs=2 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=57
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
             in struct type=Windows.Foundation.Point name=anchorPoint
     method start_async
-        method StartAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=117 reverse=175
+        method StartAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragOperation shape=117
             in class type=Microsoft.UI.Input.DragDrop.DragDropManager name=initialTarget
             in class type=Microsoft.UI.Input.PointerPoint name=initialPointerPoint
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> return
@@ -116,29 +116,29 @@ class Microsoft.UI.Input.DragDrop.DragUIOverride python_type
     default Microsoft.UI.Input.DragDrop.IDragUIOverride
     requires Microsoft.UI.Input.DragDrop.IDragUIOverride
     property is_glyph_visible
-        get get_IsGlyphVisible slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=162
+        get get_IsGlyphVisible slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             out boolean return
-        put put_IsGlyphVisible slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=173
+        put put_IsGlyphVisible slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             in boolean name=value
     property is_content_visible
-        get get_IsContentVisible slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=121
+        get get_IsContentVisible slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             out boolean return
-        put put_IsContentVisible slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=141
+        put put_IsContentVisible slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             in boolean name=value
     property is_caption_visible
-        get get_IsCaptionVisible slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=62
+        get get_IsCaptionVisible slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             out boolean return
-        put put_IsCaptionVisible slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=99
+        put put_IsCaptionVisible slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             in boolean name=value
     property caption
-        get get_Caption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=22
+        get get_Caption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             out string return
-        put put_Caption slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=43
+        put put_Caption slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             in string name=value
     method clear
-        method Clear slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=0 reverse=185
+        method Clear slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=0
     method set_content_from_software_bitmap
-        method SetContentFromSoftwareBitmap slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4 reverse=194
+        method SetContentFromSoftwareBitmap slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=4
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
         method SetContentFromSoftwareBitmap slot=16 inputs=2 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDragUIOverride shape=57
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
@@ -150,7 +150,7 @@ class Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs python_t
     default Microsoft.UI.Input.DragDrop.IDropOperationTargetRequestedEventArgs
     requires Microsoft.UI.Input.DragDrop.IDropOperationTargetRequestedEventArgs
     method set_target
-        method SetTarget slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDropOperationTargetRequestedEventArgs shape=4 reverse=22
+        method SetTarget slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Input.DragDrop.IDropOperationTargetRequestedEventArgs shape=4
             in interface type=Microsoft.UI.Input.DragDrop.IDropOperationTarget name=target
 
 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> concrete awaitable

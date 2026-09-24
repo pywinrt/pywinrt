@@ -392,16 +392,16 @@ class Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs
     property custom_state
-        get get_CustomState slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4 reverse=99
+        get get_CustomState slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4
             out string return
     property data
-        get get_Data slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4 reverse=62
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4
             out string return
     property verb
-        get get_Verb slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4 reverse=43
+        get get_Verb slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4
             out string return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
 
 class Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs python_type
@@ -410,10 +410,10 @@ class Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs python
     default Microsoft.Windows.Widgets.Providers.IWidgetAnalyticsInfoReportedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetAnalyticsInfoReportedArgs
     property analytics_json
-        get get_AnalyticsJson slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetAnalyticsInfoReportedArgs shape=4 reverse=43
+        get get_AnalyticsJson slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetAnalyticsInfoReportedArgs shape=4
             out string return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetAnalyticsInfoReportedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetAnalyticsInfoReportedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
 
 class Microsoft.Windows.Widgets.Providers.WidgetContext python_type
@@ -422,16 +422,16 @@ class Microsoft.Windows.Widgets.Providers.WidgetContext python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetContext
     requires Microsoft.Windows.Widgets.Providers.IWidgetContext
     property definition_id
-        get get_DefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4 reverse=43
+        get get_DefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4
             out string return
     property is_active
-        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4 reverse=99
+        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4
             out boolean return
     property size
-        get get_Size slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4 reverse=62
+        get get_Size slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContext shape=4
             out enum32 type=Microsoft.Windows.Widgets.WidgetSize return
 
 class Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs python_type
@@ -440,7 +440,7 @@ class Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetContextChangedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetContextChangedArgs
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContextChangedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetContextChangedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
 
 class Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs python_type
@@ -449,10 +449,10 @@ class Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs pytho
     default Microsoft.Windows.Widgets.Providers.IWidgetCustomizationRequestedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetCustomizationRequestedArgs
     property custom_state
-        get get_CustomState slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetCustomizationRequestedArgs shape=4 reverse=43
+        get get_CustomState slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetCustomizationRequestedArgs shape=4
             out string return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetCustomizationRequestedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetCustomizationRequestedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
 
 class Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs python_type
@@ -461,10 +461,10 @@ class Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs python_typ
     default Microsoft.Windows.Widgets.Providers.IWidgetErrorInfoReportedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetErrorInfoReportedArgs
     property error_json
-        get get_ErrorJson slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetErrorInfoReportedArgs shape=4 reverse=43
+        get get_ErrorJson slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetErrorInfoReportedArgs shape=4
             out string return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetErrorInfoReportedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetErrorInfoReportedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
 
 class Microsoft.Windows.Widgets.Providers.WidgetInfo python_type
@@ -474,22 +474,22 @@ class Microsoft.Windows.Widgets.Providers.WidgetInfo python_type
     requires Microsoft.Windows.Widgets.Providers.IWidgetInfo
     requires Microsoft.Windows.Widgets.Providers.IWidgetInfo2
     property custom_state
-        get get_CustomState slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4 reverse=99
+        get get_CustomState slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4
             out string return
     property data
-        get get_Data slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4 reverse=62
+        get get_Data slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4
             out string return
     property last_update_time
-        get get_LastUpdateTime slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4 reverse=121
+        get get_LastUpdateTime slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4
             out datetime return
     property template
-        get get_Template slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4 reverse=43
+        get get_Template slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4
             out string return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
     property is_placeholder_content
-        get get_IsPlaceholderContent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo2 shape=4 reverse=22
+        get get_IsPlaceholderContent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo2 shape=4
             out boolean return
 
 class Microsoft.Windows.Widgets.Providers.WidgetManager python_type
@@ -503,7 +503,7 @@ class Microsoft.Windows.Widgets.Providers.WidgetManager python_type
         method DeleteWidget slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetManager shape=4 reverse=121
             in string name=widgetId
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetManagerStatics shape=4 static
             out class type=Microsoft.Windows.Widgets.Providers.WidgetManager return
     method get_widget_ids
         method GetWidgetIds slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetManager shape=51 reverse=44
@@ -529,10 +529,10 @@ class Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetMessageReceivedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetMessageReceivedArgs
     property message
-        get get_Message slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetMessageReceivedArgs shape=4 reverse=43
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetMessageReceivedArgs shape=4
             out string return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetMessageReceivedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetMessageReceivedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
 
 class Microsoft.Windows.Widgets.Providers.WidgetResourceRequest python_type
@@ -541,20 +541,20 @@ class Microsoft.Windows.Widgets.Providers.WidgetResourceRequest python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest
     requires Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest
     property method
-        get get_Method slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4 reverse=43
+        get get_Method slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4
             out string return
-        put put_Method slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4 reverse=62
+        put put_Method slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4
             in string name=value
     property content
-        get get_Content slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4 reverse=99
+        get get_Content slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
-        put put_Content slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4 reverse=121
+        put put_Content slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
     property headers
-        get get_Headers slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4 reverse=141
+        get get_Headers slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequest shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs python_type
@@ -563,18 +563,18 @@ class Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs python_typ
     default Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs
     requires Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs
     property response
-        get get_Response slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4 reverse=62
+        get get_Response slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetResourceResponse return
-        put put_Response slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4 reverse=99
+        put put_Response slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4
             in class type=Microsoft.Windows.Widgets.Providers.WidgetResourceResponse name=value
     property request
-        get get_Request slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4 reverse=43
+        get get_Request slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetResourceRequest return
     property widget_context
-        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4 reverse=22
+        get get_WidgetContext slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Providers.WidgetContext return
     method get_deferral
-        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4 reverse=121
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceRequestedArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Microsoft.Windows.Widgets.Providers.WidgetResourceResponse python_type
@@ -584,22 +584,22 @@ class Microsoft.Windows.Widgets.Providers.WidgetResourceResponse python_type
     requires Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse
     factory Microsoft.Windows.Widgets.Providers.IWidgetResourceResponseFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponseFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponseFactory shape=195
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=content
             in string name=reasonPhrase
             in int32 name=statusCode
             out class type=Microsoft.Windows.Widgets.Providers.WidgetResourceResponse return
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property headers
-        get get_Headers slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4 reverse=43
+        get get_Headers slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property reason_phrase
-        get get_ReasonPhrase slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4 reverse=62
+        get get_ReasonPhrase slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4
             out string return
     property status_code
-        get get_StatusCode slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4 reverse=99
+        get get_StatusCode slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetResourceResponse shape=4
             out int32 return
 
 class Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions python_type
@@ -611,34 +611,34 @@ class Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions python_type
     factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory
     factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory shape=51
             in string name=widgetId
             out class type=Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions return
     property template
-        get get_Template slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=43
+        get get_Template slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             out string return
-        put put_Template slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=62
+        put put_Template slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             in string name=value
     property data
-        get get_Data slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=99
+        get get_Data slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             out string return
-        put put_Data slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=121
+        put put_Data slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             in string name=value
     property custom_state
-        get get_CustomState slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=141
+        get get_CustomState slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             out string return
-        put put_CustomState slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=162
+        put put_CustomState slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             in string name=value
     property widget_id
-        get get_WidgetId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4 reverse=22
+        get get_WidgetId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions shape=4
             out string return
     property is_placeholder_content
-        get get_IsPlaceholderContent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2 shape=4 reverse=22
+        get get_IsPlaceholderContent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2 shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
-        put put_IsPlaceholderContent slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2 shape=4 reverse=43
+        put put_IsPlaceholderContent slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2 shape=4
             in reference type=Windows.Foundation.IReference<System.Boolean> name=value
     property unset_value static
-        get get_UnsetValue slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics shape=4 reverse=22 static
+        get get_UnsetValue slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics shape=4 static
             out string return
 
 enum Microsoft.Windows.Widgets.WidgetSize external

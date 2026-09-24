@@ -21,34 +21,34 @@ class Microsoft.UI.Composition.Effects.SceneLightingEffect activatable python_ty
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property specular_shine
-        get get_SpecularShine slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=186
+        get get_SpecularShine slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4
             out single return
         put put_SpecularShine slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=1
             in single name=value
     property specular_amount
-        get get_SpecularAmount slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=162
+        get get_SpecularAmount slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4
             out single return
-        put put_SpecularAmount slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=1 reverse=170
+        put put_SpecularAmount slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=1
             in single name=value
     property normal_map_source
-        get get_NormalMapSource slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=121
+        get get_NormalMapSource slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4
             out interface type=Windows.Graphics.Effects.IGraphicsEffectSource return
-        put put_NormalMapSource slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=141
+        put put_NormalMapSource slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4
             in interface type=Windows.Graphics.Effects.IGraphicsEffectSource name=value
     property diffuse_amount
-        get get_DiffuseAmount slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=62
+        get get_DiffuseAmount slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4
             out single return
-        put put_DiffuseAmount slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=1 reverse=94
+        put put_DiffuseAmount slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=1
             in single name=value
     property ambient_amount
-        get get_AmbientAmount slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4 reverse=22
+        get get_AmbientAmount slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=4
             out single return
         put put_AmbientAmount slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect shape=1
             in single name=value
     property reflectance_model
-        get get_ReflectanceModel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect2 shape=4 reverse=22
+        get get_ReflectanceModel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect2 shape=4
             out enum32 type=Microsoft.UI.Composition.Effects.SceneLightingEffectReflectanceModel return
-        put put_ReflectanceModel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect2 shape=4 reverse=43
+        put put_ReflectanceModel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Effects.ISceneLightingEffect2 shape=4
             in enum32 type=Microsoft.UI.Composition.Effects.SceneLightingEffectReflectanceModel name=value
     property name
         get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Effects.IGraphicsEffect shape=4 reverse=22

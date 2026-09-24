@@ -20,16 +20,16 @@ class Windows.UI.Input.Core.RadialControllerIndependentInputSource python_type
     requires Windows.UI.Input.Core.IRadialControllerIndependentInputSource2
     factory Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics
     property controller
-        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource shape=4 reverse=22
+        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource shape=4
             out class type=Windows.UI.Input.RadialController return
     property dispatcher
-        get get_Dispatcher slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource shape=4 reverse=43
+        get get_Dispatcher slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource shape=4
             out class type=Windows.UI.Core.CoreDispatcher return
     property dispatcher_queue
-        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource2 shape=4 reverse=22
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSource2 shape=4
             out class type=Windows.System.DispatcherQueue return
     method create_for_view static
-        method CreateForView slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics shape=51 reverse=24 static
+        method CreateForView slot=6 inputs=1 outputs=1 declaring=Windows.UI.Input.Core.IRadialControllerIndependentInputSourceStatics shape=51 static
             in class type=Windows.ApplicationModel.Core.CoreApplicationView name=view
             out class type=Windows.UI.Input.Core.RadialControllerIndependentInputSource return
 

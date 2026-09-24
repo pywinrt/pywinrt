@@ -300,10 +300,10 @@ class Windows.Web.Http.HttpBufferContent python_type closeable stringable
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpBufferContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpBufferContentFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpBufferContentFactory shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=content
             out class type=Windows.Web.Http.HttpBufferContent return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Web.Http.IHttpBufferContentFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Web.Http.IHttpBufferContentFactory shape=195
             in interface type=Windows.Storage.Streams.IBuffer name=content
             in uint32 name=offset
             in uint32 name=count
@@ -350,58 +350,58 @@ class Windows.Web.Http.HttpClient activatable python_type closeable stringable
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClientFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClientFactory shape=51
             in interface type=Windows.Web.Http.Filters.IHttpFilter name=filter
             out class type=Windows.Web.Http.HttpClient return
     property default_request_headers
-        get get_DefaultRequestHeaders slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=4 reverse=202
+        get get_DefaultRequestHeaders slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=4
             out class type=Windows.Web.Http.Headers.HttpRequestHeaderCollection return
     property default_privacy_annotation
-        get get_DefaultPrivacyAnnotation slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpClient3 shape=4 reverse=22
+        get get_DefaultPrivacyAnnotation slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpClient3 shape=4
             out string return
-        put put_DefaultPrivacyAnnotation slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpClient3 shape=4 reverse=43
+        put put_DefaultPrivacyAnnotation slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpClient3 shape=4
             in string name=value
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method delete_async
-        method DeleteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=24
+        method DeleteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
     method get_async
-        method GetAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=44
+        method GetAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
-        method GetAsync slot=8 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117 reverse=66
+        method GetAsync slot=8 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117
             in class type=Windows.Foundation.Uri name=uri
             in enum32 type=Windows.Web.Http.HttpCompletionOption name=completionOption
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
     method get_buffer_async
-        method GetBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=100
+        method GetBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,Windows.Web.Http.HttpProgress> return
     method get_input_stream_async
-        method GetInputStreamAsync slot=10 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=124
+        method GetInputStreamAsync slot=10 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Http.HttpProgress> return
     method get_string_async
-        method GetStringAsync slot=11 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=144
+        method GetStringAsync slot=11 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.String,Windows.Web.Http.HttpProgress> return
     method post_async
-        method PostAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117 reverse=164
+        method PostAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117
             in class type=Windows.Foundation.Uri name=uri
             in interface type=Windows.Web.Http.IHttpContent name=content
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
     method put_async
-        method PutAsync slot=13 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117 reverse=175
+        method PutAsync slot=13 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117
             in class type=Windows.Foundation.Uri name=uri
             in interface type=Windows.Web.Http.IHttpContent name=content
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
     method send_request_async
-        method SendRequestAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51 reverse=187
+        method SendRequestAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=51
             in class type=Windows.Web.Http.HttpRequestMessage name=request
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
-        method SendRequestAsync slot=15 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117 reverse=197
+        method SendRequestAsync slot=15 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient shape=117
             in class type=Windows.Web.Http.HttpRequestMessage name=request
             in enum32 type=Windows.Web.Http.HttpCompletionOption name=completionOption
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
@@ -409,44 +409,44 @@ class Windows.Web.Http.HttpClient activatable python_type closeable stringable
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_delete_async
-        method TryDeleteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=24
+        method TryDeleteAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
     method try_get_async
-        method TryGetAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=44
+        method TryGetAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
-        method TryGetAsync slot=8 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117 reverse=66
+        method TryGetAsync slot=8 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117
             in class type=Windows.Foundation.Uri name=uri
             in enum32 type=Windows.Web.Http.HttpCompletionOption name=completionOption
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
     method try_get_buffer_async
-        method TryGetBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=100
+        method TryGetBufferAsync slot=9 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetBufferResult,Windows.Web.Http.HttpProgress> return
     method try_get_input_stream_async
-        method TryGetInputStreamAsync slot=10 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=124
+        method TryGetInputStreamAsync slot=10 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetInputStreamResult,Windows.Web.Http.HttpProgress> return
     method try_get_string_async
-        method TryGetStringAsync slot=11 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=144
+        method TryGetStringAsync slot=11 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpGetStringResult,Windows.Web.Http.HttpProgress> return
     method try_post_async
-        method TryPostAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117 reverse=164
+        method TryPostAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117
             in class type=Windows.Foundation.Uri name=uri
             in interface type=Windows.Web.Http.IHttpContent name=content
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
     method try_put_async
-        method TryPutAsync slot=13 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117 reverse=175
+        method TryPutAsync slot=13 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117
             in class type=Windows.Foundation.Uri name=uri
             in interface type=Windows.Web.Http.IHttpContent name=content
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
     method try_send_request_async
-        method TrySendRequestAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51 reverse=187
+        method TrySendRequestAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=51
             in class type=Windows.Web.Http.HttpRequestMessage name=request
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
-        method TrySendRequestAsync slot=15 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117 reverse=197
+        method TrySendRequestAsync slot=15 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpClient2 shape=117
             in class type=Windows.Web.Http.HttpRequestMessage name=request
             in enum32 type=Windows.Web.Http.HttpCompletionOption name=completionOption
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpRequestResult,Windows.Web.Http.HttpProgress> return
@@ -465,39 +465,39 @@ class Windows.Web.Http.HttpCookie python_type stringable
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpCookieFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Http.IHttpCookieFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Web.Http.IHttpCookieFactory shape=195
             in string name=name
             in string name=domain
             in string name=path
             out class type=Windows.Web.Http.HttpCookie return
     property value
-        get get_Value slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=194
+        get get_Value slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out string return
-        put put_Value slot=16 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=202
+        put put_Value slot=16 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4
             in string name=value
     property secure
-        get get_Secure slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=173
+        get get_Secure slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out boolean return
-        put put_Secure slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=186
+        put put_Secure slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4
             in boolean name=value
     property http_only
-        get get_HttpOnly slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=141
+        get get_HttpOnly slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out boolean return
-        put put_HttpOnly slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=162
+        put put_HttpOnly slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4
             in boolean name=value
     property expires
-        get get_Expires slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=99
+        get get_Expires slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Expires slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=121
+        put put_Expires slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookie shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property domain
-        get get_Domain slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=43
+        get get_Domain slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out string return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out string return
     property path
-        get get_Path slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4 reverse=62
+        get get_Path slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpCookie shape=4
             out string return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
@@ -537,17 +537,17 @@ class Windows.Web.Http.HttpCookieManager python_type
     default Windows.Web.Http.IHttpCookieManager
     requires Windows.Web.Http.IHttpCookieManager
     method delete_cookie
-        method DeleteCookie slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookieManager shape=4 reverse=62
+        method DeleteCookie slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpCookieManager shape=4
             in class type=Windows.Web.Http.HttpCookie name=cookie
     method get_cookies
-        method GetCookies slot=9 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpCookieManager shape=51 reverse=100
+        method GetCookies slot=9 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpCookieManager shape=51
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.Web.Http.HttpCookieCollection return
     method set_cookie
-        method SetCookie slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpCookieManager shape=51 reverse=24
+        method SetCookie slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpCookieManager shape=51
             in class type=Windows.Web.Http.HttpCookie name=cookie
             out boolean return
-        method SetCookie slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpCookieManager shape=117 reverse=45
+        method SetCookie slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpCookieManager shape=117
             in class type=Windows.Web.Http.HttpCookie name=cookie
             in boolean name=thirdParty
             out boolean return
@@ -561,7 +561,7 @@ class Windows.Web.Http.HttpFormUrlEncodedContent python_type closeable stringabl
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpFormUrlEncodedContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpFormUrlEncodedContentFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpFormUrlEncodedContentFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=content
             out class type=Windows.Web.Http.HttpFormUrlEncodedContent return
     property headers
@@ -601,19 +601,19 @@ class Windows.Web.Http.HttpGetBufferResult python_type closeable stringable
     requires Windows.Foundation.IClosable
     requires Windows.Foundation.IStringable
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property request_message
-        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=43
+        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4
             out class type=Windows.Web.Http.HttpRequestMessage return
     property response_message
-        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=62
+        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4
             out class type=Windows.Web.Http.HttpResponseMessage return
     property succeeded
-        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=99
+        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4
             out boolean return
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetBufferResult shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -629,19 +629,19 @@ class Windows.Web.Http.HttpGetInputStreamResult python_type closeable stringable
     requires Windows.Foundation.IClosable
     requires Windows.Foundation.IStringable
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property request_message
-        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=43
+        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4
             out class type=Windows.Web.Http.HttpRequestMessage return
     property response_message
-        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=62
+        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4
             out class type=Windows.Web.Http.HttpResponseMessage return
     property succeeded
-        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=99
+        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4
             out boolean return
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetInputStreamResult shape=4
             out interface type=Windows.Storage.Streams.IInputStream return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -657,19 +657,19 @@ class Windows.Web.Http.HttpGetStringResult python_type closeable stringable
     requires Windows.Foundation.IClosable
     requires Windows.Foundation.IStringable
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property request_message
-        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=43
+        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4
             out class type=Windows.Web.Http.HttpRequestMessage return
     property response_message
-        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=62
+        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4
             out class type=Windows.Web.Http.HttpResponseMessage return
     property succeeded
-        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=99
+        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4
             out boolean return
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpGetStringResult shape=4
             out string return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -686,32 +686,32 @@ class Windows.Web.Http.HttpMethod python_type stringable
     factory Windows.Web.Http.IHttpMethodFactory
     factory Windows.Web.Http.IHttpMethodStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMethodFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMethodFactory shape=51
             in string name=method
             out class type=Windows.Web.Http.HttpMethod return
     property method
-        get get_Method slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethod shape=4 reverse=22
+        get get_Method slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethod shape=4
             out string return
     property delete static
-        get get_Delete slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=22 static
+        get get_Delete slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     property get static
-        get get_Get slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=43 static
+        get get_Get slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     property head static
-        get get_Head slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=62 static
+        get get_Head slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     property options static
-        get get_Options slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=99 static
+        get get_Options slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     property patch static
-        get get_Patch slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=121 static
+        get get_Patch slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     property post static
-        get get_Post slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=141 static
+        get get_Post slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     property put static
-        get get_Put slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 reverse=162 static
+        get get_Put slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpMethodStatics shape=4 static
             out class type=Windows.Web.Http.HttpMethod return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
@@ -730,10 +730,10 @@ class Windows.Web.Http.HttpMultipartContent activatable python_type iterable clo
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMultipartContentFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMultipartContentFactory shape=51
             in string name=subtype
             out class type=Windows.Web.Http.HttpMultipartContent return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpMultipartContentFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpMultipartContentFactory shape=117
             in string name=subtype
             in string name=boundary
             out class type=Windows.Web.Http.HttpMultipartContent return
@@ -741,7 +741,7 @@ class Windows.Web.Http.HttpMultipartContent activatable python_type iterable clo
         get get_Headers slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=22
             out class type=Windows.Web.Http.Headers.HttpContentHeaderCollection return
     method add
-        method Add slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpMultipartContent shape=4 reverse=22
+        method Add slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpMultipartContent shape=4
             in interface type=Windows.Web.Http.IHttpContent name=content
     method buffer_all_async
         method BufferAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=43
@@ -785,19 +785,19 @@ class Windows.Web.Http.HttpMultipartFormDataContent activatable python_type iter
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMultipartFormDataContentFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpMultipartFormDataContentFactory shape=51
             in string name=boundary
             out class type=Windows.Web.Http.HttpMultipartFormDataContent return
     property headers
         get get_Headers slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpContent shape=4 reverse=22
             out class type=Windows.Web.Http.Headers.HttpContentHeaderCollection return
     method add
-        method Add slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpMultipartFormDataContent shape=4 reverse=22
+        method Add slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpMultipartFormDataContent shape=4
             in interface type=Windows.Web.Http.IHttpContent name=content
-        method Add slot=7 inputs=2 outputs=0 declaring=Windows.Web.Http.IHttpMultipartFormDataContent shape=51 reverse=44
+        method Add slot=7 inputs=2 outputs=0 declaring=Windows.Web.Http.IHttpMultipartFormDataContent shape=51
             in interface type=Windows.Web.Http.IHttpContent name=content
             in string name=name
-        method Add slot=8 inputs=3 outputs=0 declaring=Windows.Web.Http.IHttpMultipartFormDataContent shape=117 reverse=66
+        method Add slot=8 inputs=3 outputs=0 declaring=Windows.Web.Http.IHttpMultipartFormDataContent shape=117
             in interface type=Windows.Web.Http.IHttpContent name=content
             in string name=name
             in string name=fileName
@@ -866,38 +866,38 @@ class Windows.Web.Http.HttpRequestMessage activatable python_type closeable stri
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessageFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessageFactory shape=117
             in class type=Windows.Web.Http.HttpMethod name=method
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.Web.Http.HttpRequestMessage return
     property request_uri
-        get get_RequestUri slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=162
+        get get_RequestUri slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             out class type=Windows.Foundation.Uri return
-        put put_RequestUri slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=173
+        put put_RequestUri slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             in class type=Windows.Foundation.Uri name=value
     property method
-        get get_Method slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=99
+        get get_Method slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             out class type=Windows.Web.Http.HttpMethod return
-        put put_Method slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=121
+        put put_Method slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             in class type=Windows.Web.Http.HttpMethod name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             out interface type=Windows.Web.Http.IHttpContent return
-        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=43
+        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             in interface type=Windows.Web.Http.IHttpContent name=value
     property headers
-        get get_Headers slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=62
+        get get_Headers slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             out class type=Windows.Web.Http.Headers.HttpRequestHeaderCollection return
     property properties
-        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=141
+        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> return
     property transport_information
-        get get_TransportInformation slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4 reverse=186
+        get get_TransportInformation slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage shape=4
             out class type=Windows.Web.Http.HttpTransportInformation return
     property privacy_annotation
-        get get_PrivacyAnnotation slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage2 shape=4 reverse=22
+        get get_PrivacyAnnotation slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestMessage2 shape=4
             out string return
-        put put_PrivacyAnnotation slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage2 shape=4 reverse=43
+        put put_PrivacyAnnotation slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpRequestMessage2 shape=4
             in string name=value
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -913,16 +913,16 @@ class Windows.Web.Http.HttpRequestResult python_type closeable stringable
     requires Windows.Foundation.IClosable
     requires Windows.Foundation.IStringable
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property request_message
-        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=43
+        get get_RequestMessage slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4
             out class type=Windows.Web.Http.HttpRequestMessage return
     property response_message
-        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=62
+        get get_ResponseMessage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4
             out class type=Windows.Web.Http.HttpResponseMessage return
     property succeeded
-        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4 reverse=99
+        get get_Succeeded slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpRequestResult shape=4
             out boolean return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -941,49 +941,49 @@ class Windows.Web.Http.HttpResponseMessage activatable python_type closeable str
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessageFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessageFactory shape=51
             in enum32 type=Windows.Web.Http.HttpStatusCode name=statusCode
             out class type=Windows.Web.Http.HttpResponseMessage return
     property version
-        get get_Version slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=218
+        get get_Version slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out enum32 type=Windows.Web.Http.HttpVersion return
-        put put_Version slot=19 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=223
+        put put_Version slot=19 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             in enum32 type=Windows.Web.Http.HttpVersion name=value
     property status_code
-        get get_StatusCode slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=202
+        get get_StatusCode slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out enum32 type=Windows.Web.Http.HttpStatusCode return
-        put put_StatusCode slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=210
+        put put_StatusCode slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             in enum32 type=Windows.Web.Http.HttpStatusCode name=value
     property source
-        get get_Source slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=186
+        get get_Source slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out enum32 type=Windows.Web.Http.HttpResponseMessageSource return
-        put put_Source slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=194
+        put put_Source slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             in enum32 type=Windows.Web.Http.HttpResponseMessageSource name=value
     property request_message
-        get get_RequestMessage slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=162
+        get get_RequestMessage slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out class type=Windows.Web.Http.HttpRequestMessage return
-        put put_RequestMessage slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=173
+        put put_RequestMessage slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             in class type=Windows.Web.Http.HttpRequestMessage name=value
     property reason_phrase
-        get get_ReasonPhrase slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=121
+        get get_ReasonPhrase slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out string return
-        put put_ReasonPhrase slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=141
+        put put_ReasonPhrase slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             in string name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out interface type=Windows.Web.Http.IHttpContent return
-        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=43
+        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             in interface type=Windows.Web.Http.IHttpContent name=value
     property headers
-        get get_Headers slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=62
+        get get_Headers slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out class type=Windows.Web.Http.Headers.HttpResponseHeaderCollection return
     property is_success_status_code
-        get get_IsSuccessStatusCode slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=99
+        get get_IsSuccessStatusCode slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out boolean return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method ensure_success_status_code
-        method EnsureSuccessStatusCode slot=20 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4 reverse=228
+        method EnsureSuccessStatusCode slot=20 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpResponseMessage shape=4
             out class type=Windows.Web.Http.HttpResponseMessage return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
@@ -1067,7 +1067,7 @@ class Windows.Web.Http.HttpStreamContent python_type closeable stringable
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpStreamContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpStreamContentFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpStreamContentFactory shape=51
             in interface type=Windows.Storage.Streams.IInputStream name=content
             out class type=Windows.Web.Http.HttpStreamContent return
     property headers
@@ -1108,14 +1108,14 @@ class Windows.Web.Http.HttpStringContent python_type closeable stringable
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.IHttpStringContentFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpStringContentFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.IHttpStringContentFactory shape=51
             in string name=content
             out class type=Windows.Web.Http.HttpStringContent return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpStringContentFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.IHttpStringContentFactory shape=117
             in string name=content
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             out class type=Windows.Web.Http.HttpStringContent return
-        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.Web.Http.IHttpStringContentFactory shape=195 reverse=68
+        ctor .ctor slot=8 inputs=3 outputs=1 declaring=Windows.Web.Http.IHttpStringContentFactory shape=195
             in string name=content
             in enum32 type=Windows.Storage.Streams.UnicodeEncoding name=encoding
             in string name=mediaType
@@ -1156,16 +1156,16 @@ class Windows.Web.Http.HttpTransportInformation python_type stringable
     requires Windows.Web.Http.IHttpTransportInformation
     requires Windows.Foundation.IStringable
     property server_certificate
-        get get_ServerCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4 reverse=22
+        get get_ServerCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4
             out class type=Windows.Security.Cryptography.Certificates.Certificate return
     property server_certificate_error_severity
-        get get_ServerCertificateErrorSeverity slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4 reverse=43
+        get get_ServerCertificateErrorSeverity slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4
             out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
     property server_certificate_errors
-        get get_ServerCertificateErrors slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4 reverse=62
+        get get_ServerCertificateErrors slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
     property server_intermediate_certificates
-        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4 reverse=99
+        get get_ServerIntermediateCertificates slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.IHttpTransportInformation shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string

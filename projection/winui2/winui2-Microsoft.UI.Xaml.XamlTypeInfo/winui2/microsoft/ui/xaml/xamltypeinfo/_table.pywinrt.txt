@@ -31,7 +31,7 @@ class Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider activatabl
         method GetXmlnsDefinitions slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Markup.IXamlMetadataProvider shape=51 reverse=65
             receive_array struct type=Windows.UI.Xaml.Markup.XmlnsDefinition return
     method initialize static
-        method Initialize slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProviderStatics shape=0 reverse=16 static
+        method Initialize slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.XamlTypeInfo.IXamlControlsXamlMetaDataProviderStatics shape=0 static
 
 struct Windows.UI.Xaml.Interop.TypeName external
     py winrt.windows.ui.xaml.interop.TypeName

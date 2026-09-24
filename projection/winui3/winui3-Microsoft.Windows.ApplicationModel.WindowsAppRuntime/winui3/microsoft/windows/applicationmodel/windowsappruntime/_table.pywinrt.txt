@@ -13,14 +13,14 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeO
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property force_deployment
-        get get_ForceDeployment slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions shape=4 reverse=22
+        get get_ForceDeployment slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions shape=4
             out boolean return
-        put put_ForceDeployment slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions shape=4 reverse=43
+        put put_ForceDeployment slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions shape=4
             in boolean name=value
     property on_error_show_ui
-        get get_OnErrorShowUI slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2 shape=4 reverse=22
+        get get_OnErrorShowUI slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2 shape=4
             out boolean return
-        put put_OnErrorShowUI slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2 shape=4 reverse=43
+        put put_OnErrorShowUI slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2 shape=4
             in boolean name=value
 
 class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager static python_type
@@ -28,12 +28,12 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager sta
     factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics
     factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2
     method get_status static
-        method GetStatus slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 reverse=22 static
+        method GetStatus slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 static
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
     method initialize static
-        method Initialize slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 reverse=43 static
+        method Initialize slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 static
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
-        method Initialize slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2 shape=51 reverse=24 static
+        method Initialize slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2 shape=51 static
             in class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions name=deploymentInitializeOptions
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
 
@@ -49,10 +49,10 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult pyth
             in hresult type=Windows.Foundation.HResult name=extendedError
             out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult shape=4
             out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus return
 
 enum Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus python_type
@@ -204,19 +204,19 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo static py
     py ReleaseInfo
     factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics
     property as_string static
-        get get_AsString slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 reverse=121 static
+        get get_AsString slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
             out string return
     property major static
-        get get_Major slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 reverse=22 static
+        get get_Major slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
             out uint16 return
     property minor static
-        get get_Minor slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 reverse=43 static
+        get get_Minor slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
             out uint16 return
     property patch static
-        get get_Patch slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 reverse=62 static
+        get get_Patch slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
             out uint16 return
     property version_tag static
-        get get_VersionTag slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 reverse=99 static
+        get get_VersionTag slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
             out string return
 
 enum Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange python_type
@@ -244,29 +244,29 @@ class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityO
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property patch_level2
-        get get_PatchLevel2 slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4 reverse=62
+        get get_PatchLevel2 slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4
             out struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion return
         put put_PatchLevel2 slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=313
             in struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion name=value
     property patch_level1
-        get get_PatchLevel1 slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4 reverse=22
+        get get_PatchLevel1 slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4
             out struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion return
         put put_PatchLevel1 slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=313
             in struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion name=value
     property disabled_changes
-        get get_DisabledChanges slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4 reverse=121
+        get get_DisabledChanges slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
     method apply
-        method Apply slot=11 inputs=0 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=0 reverse=137
+        method Apply slot=11 inputs=0 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=0
 
 class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo static python_type
     py RuntimeInfo
     factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics
     property as_string static
-        get get_AsString slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics shape=4 reverse=43 static
+        get get_AsString slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics shape=4 static
             out string return
     property version static
-        get get_Version slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics shape=4 reverse=22 static
+        get get_Version slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics shape=4 static
             out struct type=Windows.ApplicationModel.PackageVersion return
 
 struct Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion python_type

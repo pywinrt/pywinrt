@@ -108,19 +108,19 @@ class Windows.Networking.Connectivity.AttributedNetworkUsage python_type
     default Windows.Networking.Connectivity.IAttributedNetworkUsage
     requires Windows.Networking.Connectivity.IAttributedNetworkUsage
     property attribution_id
-        get get_AttributionId slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4 reverse=62
+        get get_AttributionId slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4
             out string return
     property attribution_name
-        get get_AttributionName slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4 reverse=99
+        get get_AttributionName slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4
             out string return
     property attribution_thumbnail
-        get get_AttributionThumbnail slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4 reverse=121
+        get get_AttributionThumbnail slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property bytes_received
-        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4 reverse=43
+        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4
             out uint64 return
     property bytes_sent
-        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4 reverse=22
+        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IAttributedNetworkUsage shape=4
             out uint64 return
 
 enum Windows.Networking.Connectivity.CellularApnAuthenticationType python_type
@@ -141,39 +141,39 @@ class Windows.Networking.Connectivity.CellularApnContext activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property user_name
-        get get_UserName slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=121
+        get get_UserName slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             out string return
-        put put_UserName slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=141
+        put put_UserName slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             in string name=value
     property provider_id
-        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=22
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             out string return
-        put put_ProviderId slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=43
+        put put_ProviderId slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             in string name=value
     property password
-        get get_Password slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=162
+        get get_Password slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             out string return
-        put put_Password slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=173
+        put put_Password slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             in string name=value
     property is_compression_enabled
-        get get_IsCompressionEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=186
+        get get_IsCompressionEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             out boolean return
-        put put_IsCompressionEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=194
+        put put_IsCompressionEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             in boolean name=value
     property authentication_type
-        get get_AuthenticationType slot=16 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=202
+        get get_AuthenticationType slot=16 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             out enum32 type=Windows.Networking.Connectivity.CellularApnAuthenticationType return
-        put put_AuthenticationType slot=17 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=210
+        put put_AuthenticationType slot=17 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             in enum32 type=Windows.Networking.Connectivity.CellularApnAuthenticationType name=value
     property access_point_name
-        get get_AccessPointName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=62
+        get get_AccessPointName slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             out string return
-        put put_AccessPointName slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4 reverse=99
+        put put_AccessPointName slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext shape=4
             in string name=value
     property profile_name
-        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext2 shape=4 reverse=22
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ICellularApnContext2 shape=4
             out string return
-        put put_ProfileName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext2 shape=4 reverse=43
+        put put_ProfileName slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.ICellularApnContext2 shape=4
             in string name=value
 
 class Windows.Networking.Connectivity.ConnectionCost python_type
@@ -183,19 +183,19 @@ class Windows.Networking.Connectivity.ConnectionCost python_type
     requires Windows.Networking.Connectivity.IConnectionCost
     requires Windows.Networking.Connectivity.IConnectionCost2
     property approaching_data_limit
-        get get_ApproachingDataLimit slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4 reverse=99
+        get get_ApproachingDataLimit slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4
             out boolean return
     property network_cost_type
-        get get_NetworkCostType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4 reverse=22
+        get get_NetworkCostType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4
             out enum32 type=Windows.Networking.Connectivity.NetworkCostType return
     property over_data_limit
-        get get_OverDataLimit slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4 reverse=62
+        get get_OverDataLimit slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4
             out boolean return
     property roaming
-        get get_Roaming slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4 reverse=43
+        get get_Roaming slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost shape=4
             out boolean return
     property background_data_usage_restricted
-        get get_BackgroundDataUsageRestricted slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost2 shape=4 reverse=22
+        get get_BackgroundDataUsageRestricted slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionCost2 shape=4
             out boolean return
 
 class Windows.Networking.Connectivity.ConnectionProfile python_type
@@ -209,31 +209,31 @@ class Windows.Networking.Connectivity.ConnectionProfile python_type
     requires Windows.Networking.Connectivity.IConnectionProfile5
     requires Windows.Networking.Connectivity.IConnectionProfile6
     property network_adapter
-        get get_NetworkAdapter slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=141
+        get get_NetworkAdapter slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out class type=Windows.Networking.Connectivity.NetworkAdapter return
     property network_security_settings
-        get get_NetworkSecuritySettings slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=186
+        get get_NetworkSecuritySettings slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out class type=Windows.Networking.Connectivity.NetworkSecuritySettings return
     property profile_name
-        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=22
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out string return
     property is_wlan_connection_profile
-        get get_IsWlanConnectionProfile slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=43
+        get get_IsWlanConnectionProfile slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out boolean return
     property is_wwan_connection_profile
-        get get_IsWwanConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=22
+        get get_IsWwanConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out boolean return
     property service_provider_guid
-        get get_ServiceProviderGuid slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=121
+        get get_ServiceProviderGuid slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out reference type=Windows.Foundation.IReference<System.Guid> return
     property wlan_connection_profile_details
-        get get_WlanConnectionProfileDetails slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=99
+        get get_WlanConnectionProfileDetails slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out class type=Windows.Networking.Connectivity.WlanConnectionProfileDetails return
     property wwan_connection_profile_details
-        get get_WwanConnectionProfileDetails slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=62
+        get get_WwanConnectionProfileDetails slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out class type=Windows.Networking.Connectivity.WwanConnectionProfileDetails return
     property can_delete
-        get get_CanDelete slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile5 shape=4 reverse=22
+        get get_CanDelete slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile5 shape=4
             out boolean return
     method get_attributed_network_usage_async
         method GetAttributedNetworkUsageAsync slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile3 shape=229
@@ -242,7 +242,7 @@ class Windows.Networking.Connectivity.ConnectionProfile python_type
             in struct type=Windows.Networking.Connectivity.NetworkUsageStates name=states
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.AttributedNetworkUsage>> return
     method get_connection_cost
-        method GetConnectionCost slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=99
+        method GetConnectionCost slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out class type=Windows.Networking.Connectivity.ConnectionCost return
     method get_connectivity_intervals_async
         method GetConnectivityIntervalsAsync slot=14 inputs=3 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=229
@@ -251,10 +251,10 @@ class Windows.Networking.Connectivity.ConnectionProfile python_type
             in struct type=Windows.Networking.Connectivity.NetworkUsageStates name=states
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectivityInterval>> return
     method get_data_plan_status
-        method GetDataPlanStatus slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=121
+        method GetDataPlanStatus slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out class type=Windows.Networking.Connectivity.DataPlanStatus return
     method get_domain_connectivity_level
-        method GetDomainConnectivityLevel slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=162
+        method GetDomainConnectivityLevel slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out enum32 type=Windows.Networking.Connectivity.DomainConnectivityLevel return
     method get_local_usage deprecated
         method GetLocalUsage slot=12 inputs=2 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=170 deprecated
@@ -267,10 +267,10 @@ class Windows.Networking.Connectivity.ConnectionProfile python_type
             in enum_u32 type=Windows.Networking.Connectivity.RoamingStates name=States
             out class type=Windows.Networking.Connectivity.DataUsage return
     method get_network_connectivity_level
-        method GetNetworkConnectivityLevel slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=43
+        method GetNetworkConnectivityLevel slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out enum32 type=Windows.Networking.Connectivity.NetworkConnectivityLevel return
     method get_network_names
-        method GetNetworkNames slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4 reverse=62
+        method GetNetworkNames slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method get_network_usage_async
         method GetNetworkUsageAsync slot=13 inputs=4 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=261
@@ -286,14 +286,14 @@ class Windows.Networking.Connectivity.ConnectionProfile python_type
             in struct type=Windows.Networking.Connectivity.NetworkUsageStates name=states
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ProviderNetworkUsage>> return
     method get_signal_bars
-        method GetSignalBars slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4 reverse=141
+        method GetSignalBars slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile2 shape=4
             out reference type=Windows.Foundation.IReference<System.Byte> return
     method is_domain_authenticated_by
-        method IsDomainAuthenticatedBy slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile6 shape=51 reverse=24
+        method IsDomainAuthenticatedBy slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile6 shape=51
             in enum32 type=Windows.Networking.Connectivity.DomainAuthenticationKind name=kind
             out boolean return
     method try_delete_async
-        method TryDeleteAsync slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile5 shape=4 reverse=43
+        method TryDeleteAsync slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfile5 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ConnectionProfileDeleteStatus> return
 
 enum Windows.Networking.Connectivity.ConnectionProfileDeleteStatus python_type
@@ -315,52 +315,52 @@ class Windows.Networking.Connectivity.ConnectionProfileFilter activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property service_provider_guid
-        get get_ServiceProviderGuid slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=194
+        get get_ServiceProviderGuid slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             out reference type=Windows.Foundation.IReference<System.Guid> return
-        put put_ServiceProviderGuid slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=186
+        put put_ServiceProviderGuid slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             in reference type=Windows.Foundation.IReference<System.Guid> name=value
     property network_cost_type
-        get get_NetworkCostType slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=173
+        get get_NetworkCostType slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             out enum32 type=Windows.Networking.Connectivity.NetworkCostType return
-        put put_NetworkCostType slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=162
+        put put_NetworkCostType slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             in enum32 type=Windows.Networking.Connectivity.NetworkCostType name=value
     property is_wwan_connection_profile
-        get get_IsWwanConnectionProfile slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=99
+        get get_IsWwanConnectionProfile slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             out boolean return
-        put put_IsWwanConnectionProfile slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=62
+        put put_IsWwanConnectionProfile slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             in boolean name=value
     property is_wlan_connection_profile
-        get get_IsWlanConnectionProfile slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=141
+        get get_IsWlanConnectionProfile slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             out boolean return
-        put put_IsWlanConnectionProfile slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=121
+        put put_IsWlanConnectionProfile slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             in boolean name=value
     property is_connected
-        get get_IsConnected slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=43
+        get get_IsConnected slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             out boolean return
-        put put_IsConnected slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4 reverse=22
+        put put_IsConnected slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter shape=4
             in boolean name=value
     property is_roaming
-        get get_IsRoaming slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=43
+        get get_IsRoaming slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
-        put put_IsRoaming slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=22
+        put put_IsRoaming slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             in reference type=Windows.Foundation.IReference<System.Boolean> name=value
     property is_over_data_limit
-        get get_IsOverDataLimit slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=99
+        get get_IsOverDataLimit slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
-        put put_IsOverDataLimit slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=62
+        put put_IsOverDataLimit slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             in reference type=Windows.Foundation.IReference<System.Boolean> name=value
     property is_background_data_usage_restricted
-        get get_IsBackgroundDataUsageRestricted slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=141
+        get get_IsBackgroundDataUsageRestricted slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             out reference type=Windows.Foundation.IReference<System.Boolean> return
-        put put_IsBackgroundDataUsageRestricted slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=121
+        put put_IsBackgroundDataUsageRestricted slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             in reference type=Windows.Foundation.IReference<System.Boolean> name=value
     property raw_data
-        get get_RawData slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4 reverse=162
+        get get_RawData slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter2 shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property purpose_guid
-        get get_PurposeGuid slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter3 shape=4 reverse=43
+        get get_PurposeGuid slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter3 shape=4
             out reference type=Windows.Foundation.IReference<System.Guid> return
-        put put_PurposeGuid slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter3 shape=4 reverse=22
+        put put_PurposeGuid slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectionProfileFilter3 shape=4
             in reference type=Windows.Foundation.IReference<System.Guid> name=value
 
 class Windows.Networking.Connectivity.ConnectionSession python_type closeable
@@ -370,7 +370,7 @@ class Windows.Networking.Connectivity.ConnectionSession python_type closeable
     requires Windows.Networking.Connectivity.IConnectionSession
     requires Windows.Foundation.IClosable
     property connection_profile
-        get get_ConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionSession shape=4 reverse=22
+        get get_ConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectionSession shape=4
             out class type=Windows.Networking.Connectivity.ConnectionProfile return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -381,24 +381,24 @@ class Windows.Networking.Connectivity.ConnectivityInterval python_type
     default Windows.Networking.Connectivity.IConnectivityInterval
     requires Windows.Networking.Connectivity.IConnectivityInterval
     property connection_duration
-        get get_ConnectionDuration slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectivityInterval shape=4 reverse=43
+        get get_ConnectionDuration slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectivityInterval shape=4
             out timespan return
     property start_time
-        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectivityInterval shape=4 reverse=22
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IConnectivityInterval shape=4
             out datetime return
 
 class Windows.Networking.Connectivity.ConnectivityManager static python_type
     py ConnectivityManager
     factory Windows.Networking.Connectivity.IConnectivityManagerStatics
     method acquire_connection_async static
-        method AcquireConnectionAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.IConnectivityManagerStatics shape=51 reverse=24 static
+        method AcquireConnectionAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.IConnectivityManagerStatics shape=51 static
             in class type=Windows.Networking.Connectivity.CellularApnContext name=cellularApnContext
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ConnectionSession> return
     method add_http_route_policy static
-        method AddHttpRoutePolicy slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectivityManagerStatics shape=4 reverse=43 static
+        method AddHttpRoutePolicy slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectivityManagerStatics shape=4 static
             in class type=Windows.Networking.Connectivity.RoutePolicy name=routePolicy
     method remove_http_route_policy static
-        method RemoveHttpRoutePolicy slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectivityManagerStatics shape=4 reverse=62 static
+        method RemoveHttpRoutePolicy slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.IConnectivityManagerStatics shape=4 static
             in class type=Windows.Networking.Connectivity.RoutePolicy name=routePolicy
 
 class Windows.Networking.Connectivity.DataPlanStatus python_type
@@ -407,22 +407,22 @@ class Windows.Networking.Connectivity.DataPlanStatus python_type
     default Windows.Networking.Connectivity.IDataPlanStatus
     requires Windows.Networking.Connectivity.IDataPlanStatus
     property data_limit_in_megabytes
-        get get_DataLimitInMegabytes slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4 reverse=43
+        get get_DataLimitInMegabytes slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     property data_plan_usage
-        get get_DataPlanUsage slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4 reverse=22
+        get get_DataPlanUsage slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4
             out class type=Windows.Networking.Connectivity.DataPlanUsage return
     property inbound_bits_per_second
-        get get_InboundBitsPerSecond slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4 reverse=62
+        get get_InboundBitsPerSecond slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
     property max_transfer_size_in_megabytes
-        get get_MaxTransferSizeInMegabytes slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4 reverse=141
+        get get_MaxTransferSizeInMegabytes slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     property next_billing_cycle
-        get get_NextBillingCycle slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4 reverse=121
+        get get_NextBillingCycle slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property outbound_bits_per_second
-        get get_OutboundBitsPerSecond slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4 reverse=99
+        get get_OutboundBitsPerSecond slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanStatus shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
 
 class Windows.Networking.Connectivity.DataPlanUsage python_type
@@ -431,10 +431,10 @@ class Windows.Networking.Connectivity.DataPlanUsage python_type
     default Windows.Networking.Connectivity.IDataPlanUsage
     requires Windows.Networking.Connectivity.IDataPlanUsage
     property last_sync_time
-        get get_LastSyncTime slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanUsage shape=4 reverse=43
+        get get_LastSyncTime slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanUsage shape=4
             out datetime return
     property megabytes_used
-        get get_MegabytesUsed slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanUsage shape=4 reverse=22
+        get get_MegabytesUsed slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataPlanUsage shape=4
             out uint32 return
 
 class Windows.Networking.Connectivity.DataUsage python_type
@@ -443,10 +443,10 @@ class Windows.Networking.Connectivity.DataUsage python_type
     default Windows.Networking.Connectivity.IDataUsage
     requires Windows.Networking.Connectivity.IDataUsage
     property bytes_received
-        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataUsage shape=4 reverse=43 deprecated
+        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataUsage shape=4 deprecated
             out uint64 return
     property bytes_sent
-        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataUsage shape=4 reverse=22 deprecated
+        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IDataUsage shape=4 deprecated
             out uint64 return
 
 enum Windows.Networking.Connectivity.DataUsageGranularity python_type
@@ -1191,10 +1191,10 @@ class Windows.Networking.Connectivity.IPInformation python_type
     default Windows.Networking.Connectivity.IIPInformation
     requires Windows.Networking.Connectivity.IIPInformation
     property network_adapter
-        get get_NetworkAdapter slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IIPInformation shape=4 reverse=22
+        get get_NetworkAdapter slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IIPInformation shape=4
             out class type=Windows.Networking.Connectivity.NetworkAdapter return
     property prefix_length
-        get get_PrefixLength slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IIPInformation shape=4 reverse=43
+        get get_PrefixLength slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IIPInformation shape=4
             out reference type=Windows.Foundation.IReference<System.Byte> return
 
 interface Windows.Networking.Connectivity.IProviderNetworkUsage
@@ -2328,13 +2328,13 @@ class Windows.Networking.Connectivity.LanIdentifier python_type
     default Windows.Networking.Connectivity.ILanIdentifier
     requires Windows.Networking.Connectivity.ILanIdentifier
     property infrastructure_id
-        get get_InfrastructureId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifier shape=4 reverse=22
+        get get_InfrastructureId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifier shape=4
             out class type=Windows.Networking.Connectivity.LanIdentifierData return
     property network_adapter_id
-        get get_NetworkAdapterId slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifier shape=4 reverse=62
+        get get_NetworkAdapterId slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifier shape=4
             out guid return
     property port_id
-        get get_PortId slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifier shape=4 reverse=43
+        get get_PortId slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifier shape=4
             out class type=Windows.Networking.Connectivity.LanIdentifierData return
 
 class Windows.Networking.Connectivity.LanIdentifierData python_type
@@ -2343,10 +2343,10 @@ class Windows.Networking.Connectivity.LanIdentifierData python_type
     default Windows.Networking.Connectivity.ILanIdentifierData
     requires Windows.Networking.Connectivity.ILanIdentifierData
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifierData shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifierData shape=4
             out uint32 return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifierData shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.ILanIdentifierData shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Byte> return
 
 class Windows.Networking.Connectivity.NetworkAdapter python_type
@@ -2355,22 +2355,22 @@ class Windows.Networking.Connectivity.NetworkAdapter python_type
     default Windows.Networking.Connectivity.INetworkAdapter
     requires Windows.Networking.Connectivity.INetworkAdapter
     property iana_interface_type
-        get get_IanaInterfaceType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4 reverse=62
+        get get_IanaInterfaceType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4
             out uint32 return
     property inbound_max_bits_per_second
-        get get_InboundMaxBitsPerSecond slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4 reverse=43
+        get get_InboundMaxBitsPerSecond slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4
             out uint64 return
     property network_adapter_id
-        get get_NetworkAdapterId slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4 reverse=121
+        get get_NetworkAdapterId slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4
             out guid return
     property network_item
-        get get_NetworkItem slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4 reverse=99
+        get get_NetworkItem slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4
             out class type=Windows.Networking.Connectivity.NetworkItem return
     property outbound_max_bits_per_second
-        get get_OutboundMaxBitsPerSecond slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4 reverse=22
+        get get_OutboundMaxBitsPerSecond slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4
             out uint64 return
     method get_connected_profile_async
-        method GetConnectedProfileAsync slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4 reverse=141
+        method GetConnectedProfileAsync slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkAdapter shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ConnectionProfile> return
 
 enum Windows.Networking.Connectivity.NetworkAuthenticationType python_type
@@ -2429,33 +2429,33 @@ class Windows.Networking.Connectivity.NetworkInformation static python_type
     factory Windows.Networking.Connectivity.INetworkInformationStatics
     factory Windows.Networking.Connectivity.INetworkInformationStatics2
     event network_status_changed static
-        add add_NetworkStatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=51 reverse=163 static
+        add add_NetworkStatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=51 static
             in delegate type=Windows.Networking.Connectivity.NetworkStatusChangedEventHandler name=networkStatusHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NetworkStatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=26 reverse=181 static
+        remove remove_NetworkStatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method find_connection_profiles_async static
-        method FindConnectionProfilesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics2 shape=51 reverse=24 static
+        method FindConnectionProfilesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics2 shape=51 static
             in class type=Windows.Networking.Connectivity.ConnectionProfileFilter name=pProfileFilter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile>> return
     method get_connection_profiles static
-        method GetConnectionProfiles slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 reverse=22 static
+        method GetConnectionProfiles slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> return
     method get_host_names static
-        method GetHostNames slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 reverse=99 static
+        method GetHostNames slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> return
     method get_internet_connection_profile static
-        method GetInternetConnectionProfile slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 reverse=43 static
+        method GetInternetConnectionProfile slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 static
             out class type=Windows.Networking.Connectivity.ConnectionProfile return
     method get_lan_identifiers static
-        method GetLanIdentifiers slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 reverse=62 static
+        method GetLanIdentifiers slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.LanIdentifier> return
     method get_proxy_configuration_async static
-        method GetProxyConfigurationAsync slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=51 reverse=124 static
+        method GetProxyConfigurationAsync slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ProxyConfiguration> return
     method get_sorted_endpoint_pairs static
-        method GetSortedEndpointPairs slot=11 inputs=2 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=117 reverse=145 static
+        method GetSortedEndpointPairs slot=11 inputs=2 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=117 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.EndpointPair> name=destinationList
             in enum_u32 type=Windows.Networking.HostNameSortOptions name=sortOptions
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> return
@@ -2466,10 +2466,10 @@ class Windows.Networking.Connectivity.NetworkItem python_type
     default Windows.Networking.Connectivity.INetworkItem
     requires Windows.Networking.Connectivity.INetworkItem
     property network_id
-        get get_NetworkId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkItem shape=4 reverse=22
+        get get_NetworkId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkItem shape=4
             out guid return
     method get_network_types
-        method GetNetworkTypes slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkItem shape=4 reverse=43
+        method GetNetworkTypes slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkItem shape=4
             out enum_u32 type=Windows.Networking.Connectivity.NetworkTypes return
 
 class Windows.Networking.Connectivity.NetworkSecuritySettings python_type
@@ -2478,10 +2478,10 @@ class Windows.Networking.Connectivity.NetworkSecuritySettings python_type
     default Windows.Networking.Connectivity.INetworkSecuritySettings
     requires Windows.Networking.Connectivity.INetworkSecuritySettings
     property network_authentication_type
-        get get_NetworkAuthenticationType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkSecuritySettings shape=4 reverse=22
+        get get_NetworkAuthenticationType slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkSecuritySettings shape=4
             out enum32 type=Windows.Networking.Connectivity.NetworkAuthenticationType return
     property network_encryption_type
-        get get_NetworkEncryptionType slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkSecuritySettings shape=4 reverse=43
+        get get_NetworkEncryptionType slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkSecuritySettings shape=4
             out enum32 type=Windows.Networking.Connectivity.NetworkEncryptionType return
 
 class Windows.Networking.Connectivity.NetworkStateChangeEventDetails python_type
@@ -2491,28 +2491,28 @@ class Windows.Networking.Connectivity.NetworkStateChangeEventDetails python_type
     requires Windows.Networking.Connectivity.INetworkStateChangeEventDetails
     requires Windows.Networking.Connectivity.INetworkStateChangeEventDetails2
     property has_new_connection_cost
-        get get_HasNewConnectionCost slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4 reverse=43
+        get get_HasNewConnectionCost slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4
             out boolean return
     property has_new_domain_connectivity_level
-        get get_HasNewDomainConnectivityLevel slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4 reverse=99
+        get get_HasNewDomainConnectivityLevel slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4
             out boolean return
     property has_new_host_name_list
-        get get_HasNewHostNameList slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4 reverse=121
+        get get_HasNewHostNameList slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4
             out boolean return
     property has_new_internet_connection_profile
-        get get_HasNewInternetConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4 reverse=22
+        get get_HasNewInternetConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4
             out boolean return
     property has_new_network_connectivity_level
-        get get_HasNewNetworkConnectivityLevel slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4 reverse=62
+        get get_HasNewNetworkConnectivityLevel slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4
             out boolean return
     property has_new_wwan_registration_state
-        get get_HasNewWwanRegistrationState slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4 reverse=141
+        get get_HasNewWwanRegistrationState slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails shape=4
             out boolean return
     property has_new_tethering_client_count
-        get get_HasNewTetheringClientCount slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails2 shape=4 reverse=43
+        get get_HasNewTetheringClientCount slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails2 shape=4
             out boolean return
     property has_new_tethering_operational_state
-        get get_HasNewTetheringOperationalState slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails2 shape=4 reverse=22
+        get get_HasNewTetheringOperationalState slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkStateChangeEventDetails2 shape=4
             out boolean return
 
 delegate Windows.Networking.Connectivity.NetworkStatusChangedEventHandler python_type
@@ -2536,13 +2536,13 @@ class Windows.Networking.Connectivity.NetworkUsage python_type
     default Windows.Networking.Connectivity.INetworkUsage
     requires Windows.Networking.Connectivity.INetworkUsage
     property bytes_received
-        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkUsage shape=4 reverse=43
+        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkUsage shape=4
             out uint64 return
     property bytes_sent
-        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkUsage shape=4 reverse=22
+        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkUsage shape=4
             out uint64 return
     property connection_duration
-        get get_ConnectionDuration slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkUsage shape=4 reverse=62
+        get get_ConnectionDuration slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.INetworkUsage shape=4
             out timespan return
 
 struct Windows.Networking.Connectivity.NetworkUsageStates python_type
@@ -2557,13 +2557,13 @@ class Windows.Networking.Connectivity.ProviderNetworkUsage python_type
     default Windows.Networking.Connectivity.IProviderNetworkUsage
     requires Windows.Networking.Connectivity.IProviderNetworkUsage
     property bytes_received
-        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProviderNetworkUsage shape=4 reverse=43
+        get get_BytesReceived slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProviderNetworkUsage shape=4
             out uint64 return
     property bytes_sent
-        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProviderNetworkUsage shape=4 reverse=22
+        get get_BytesSent slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProviderNetworkUsage shape=4
             out uint64 return
     property provider_id
-        get get_ProviderId slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProviderNetworkUsage shape=4 reverse=62
+        get get_ProviderId slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProviderNetworkUsage shape=4
             out string return
 
 class Windows.Networking.Connectivity.ProxyConfiguration python_type
@@ -2572,10 +2572,10 @@ class Windows.Networking.Connectivity.ProxyConfiguration python_type
     default Windows.Networking.Connectivity.IProxyConfiguration
     requires Windows.Networking.Connectivity.IProxyConfiguration
     property can_connect_directly
-        get get_CanConnectDirectly slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProxyConfiguration shape=4 reverse=43
+        get get_CanConnectDirectly slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProxyConfiguration shape=4
             out boolean return
     property proxy_uris
-        get get_ProxyUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProxyConfiguration shape=4 reverse=22
+        get get_ProxyUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IProxyConfiguration shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
 
 enum Windows.Networking.Connectivity.RoamingStates python_type flags_enum
@@ -2592,19 +2592,19 @@ class Windows.Networking.Connectivity.RoutePolicy python_type
     requires Windows.Networking.Connectivity.IRoutePolicy
     factory Windows.Networking.Connectivity.IRoutePolicyFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicyFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicyFactory shape=195
             in class type=Windows.Networking.Connectivity.ConnectionProfile name=connectionProfile
             in class type=Windows.Networking.HostName name=hostName
             in enum32 type=Windows.Networking.DomainNameType name=type
             out class type=Windows.Networking.Connectivity.RoutePolicy return
     property connection_profile
-        get get_ConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicy shape=4 reverse=22
+        get get_ConnectionProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicy shape=4
             out class type=Windows.Networking.Connectivity.ConnectionProfile return
     property host_name
-        get get_HostName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicy shape=4 reverse=43
+        get get_HostName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicy shape=4
             out class type=Windows.Networking.HostName return
     property host_name_type
-        get get_HostNameType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicy shape=4 reverse=62
+        get get_HostNameType slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IRoutePolicy shape=4
             out enum32 type=Windows.Networking.DomainNameType return
 
 enum Windows.Networking.Connectivity.TriStates python_type
@@ -2620,7 +2620,7 @@ class Windows.Networking.Connectivity.WlanConnectionProfileDetails python_type
     default Windows.Networking.Connectivity.IWlanConnectionProfileDetails
     requires Windows.Networking.Connectivity.IWlanConnectionProfileDetails
     method get_connected_ssid
-        method GetConnectedSsid slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWlanConnectionProfileDetails shape=4 reverse=22
+        method GetConnectedSsid slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWlanConnectionProfileDetails shape=4
             out string return
 
 class Windows.Networking.Connectivity.WwanConnectionProfileDetails python_type
@@ -2630,22 +2630,22 @@ class Windows.Networking.Connectivity.WwanConnectionProfileDetails python_type
     requires Windows.Networking.Connectivity.IWwanConnectionProfileDetails
     requires Windows.Networking.Connectivity.IWwanConnectionProfileDetails2
     property access_point_name
-        get get_AccessPointName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4 reverse=43
+        get get_AccessPointName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4
             out string return
     property home_provider_id
-        get get_HomeProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4 reverse=22
+        get get_HomeProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4
             out string return
     property ip_kind
-        get get_IPKind slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails2 shape=4 reverse=22
+        get get_IPKind slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails2 shape=4
             out enum32 type=Windows.Networking.Connectivity.WwanNetworkIPKind return
     property purpose_guids
-        get get_PurposeGuids slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails2 shape=4 reverse=43
+        get get_PurposeGuids slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Guid> return
     method get_current_data_class
-        method GetCurrentDataClass slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4 reverse=99
+        method GetCurrentDataClass slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4
             out enum_u32 type=Windows.Networking.Connectivity.WwanDataClass return
     method get_network_registration_state
-        method GetNetworkRegistrationState slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4 reverse=62
+        method GetNetworkRegistrationState slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Connectivity.IWwanConnectionProfileDetails shape=4
             out enum32 type=Windows.Networking.Connectivity.WwanNetworkRegistrationState return
 
 enum Windows.Networking.Connectivity.WwanDataClass python_type flags_enum

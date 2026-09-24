@@ -17,30 +17,30 @@ class Microsoft.Graphics.Imaging.ImageBuffer python_type closeable
     requires Windows.Foundation.IClosable
     factory Microsoft.Graphics.Imaging.IImageBufferStatics
     property buffer
-        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=22
+        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property pixel_format
-        get get_PixelFormat slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=43
+        get get_PixelFormat slot=7 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4
             out enum32 type=Microsoft.Graphics.Imaging.ImageBufferPixelFormat return
     property pixel_height
-        get get_PixelHeight slot=8 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=62
+        get get_PixelHeight slot=8 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4
             out int32 return
     property pixel_width
-        get get_PixelWidth slot=9 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=99
+        get get_PixelWidth slot=9 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4
             out int32 return
     property row_stride
-        get get_RowStride slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=121
+        get get_RowStride slot=10 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4
             out int32 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method copy_to_byte_array
-        method CopyToByteArray slot=11 inputs=1 outputs=0 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=51 reverse=144
+        method CopyToByteArray slot=11 inputs=1 outputs=0 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=51
             fill_array uint8 name=values
     method copy_to_software_bitmap
-        method CopyToSoftwareBitmap slot=12 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4 reverse=162
+        method CopyToSoftwareBitmap slot=12 inputs=0 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBuffer shape=4
             out class type=Windows.Graphics.Imaging.SoftwareBitmap return
     method create_for_buffer static
-        method CreateForBuffer slot=6 inputs=5 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=267 reverse=516 static
+        method CreateForBuffer slot=6 inputs=5 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=267 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             in enum32 type=Microsoft.Graphics.Imaging.ImageBufferPixelFormat name=pixelFormat
             in int32 name=width
@@ -48,7 +48,7 @@ class Microsoft.Graphics.Imaging.ImageBuffer python_type closeable
             in int32 name=rowStride
             out class type=Microsoft.Graphics.Imaging.ImageBuffer return
     method create_for_software_bitmap static
-        method CreateForSoftwareBitmap slot=7 inputs=1 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=51 reverse=44 static
+        method CreateForSoftwareBitmap slot=7 inputs=1 outputs=1 declaring=Microsoft.Graphics.Imaging.IImageBufferStatics shape=51 static
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
             out class type=Microsoft.Graphics.Imaging.ImageBuffer return
 

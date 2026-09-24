@@ -134,61 +134,61 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities python_type
     default Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities
     requires Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities
     property document_binding_feature
-        get get_DocumentBindingFeature slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=99
+        get get_DocumentBindingFeature slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_collate_feature
-        get get_DocumentCollateFeature slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=121
+        get get_DocumentCollateFeature slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_duplex_feature
-        get get_DocumentDuplexFeature slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=141
+        get get_DocumentDuplexFeature slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_hole_punch_feature
-        get get_DocumentHolePunchFeature slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=162
+        get get_DocumentHolePunchFeature slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_input_bin_feature
-        get get_DocumentInputBinFeature slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=173
+        get get_DocumentInputBinFeature slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_n_up_feature
-        get get_DocumentNUpFeature slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=186
+        get get_DocumentNUpFeature slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_staple_feature
-        get get_DocumentStapleFeature slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=194
+        get get_DocumentStapleFeature slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property job_passcode_feature
-        get get_JobPasscodeFeature slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=202
+        get get_JobPasscodeFeature slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out string return
     property page_borderless_feature
-        get get_PageBorderlessFeature slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=210
+        get get_PageBorderlessFeature slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_media_size_feature
-        get get_PageMediaSizeFeature slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=218
+        get get_PageMediaSizeFeature slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_media_type_feature
-        get get_PageMediaTypeFeature slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=223
+        get get_PageMediaTypeFeature slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_orientation_feature
-        get get_PageOrientationFeature slot=20 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=228
+        get get_PageOrientationFeature slot=20 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_output_color_feature
-        get get_PageOutputColorFeature slot=21 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=232
+        get get_PageOutputColorFeature slot=21 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_output_quality_feature
-        get get_PageOutputQualityFeature slot=22 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=237
+        get get_PageOutputQualityFeature slot=22 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_resolution_feature
-        get get_PageResolutionFeature slot=23 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=242
+        get get_PageResolutionFeature slot=23 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property xml_namespace
-        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=43
+        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out string return
     property xml_node
-        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4 reverse=62
+        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=4
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_feature
-        method GetFeature slot=24 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=117 reverse=249
+        method GetFeature slot=24 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketCapabilities shape=117
             in string name=name
             in string name=xmlNamespace
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
@@ -204,33 +204,33 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketFeature python_type
     default Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature
     requires Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature
     property display_name
-        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=99
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out string return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out string return
     property options
-        get get_Options slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=141
+        get get_Options slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Printing.PrintTicket.PrintTicketOption> return
     property selection_type
-        get get_SelectionType slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=186
+        get get_SelectionType slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out enum32 type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeatureSelectionType return
     property xml_namespace
-        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=43
+        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out string return
     property xml_node
-        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=62
+        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_option
-        method GetOption slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=117 reverse=125
+        method GetOption slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=117
             in string name=name
             in string name=xmlNamespace
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketOption return
     method get_selected_option
-        method GetSelectedOption slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=162
+        method GetSelectedOption slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketOption return
     method set_selected_option
-        method SetSelectedOption slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4 reverse=173
+        method SetSelectedOption slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketFeature shape=4
             in class type=Windows.Graphics.Printing.PrintTicket.PrintTicketOption name=value
 
 enum Windows.Graphics.Printing.PrintTicket.PrintTicketFeatureSelectionType python_type
@@ -245,34 +245,34 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketOption python_type
     default Windows.Graphics.Printing.PrintTicket.IPrintTicketOption
     requires Windows.Graphics.Printing.PrintTicket.IPrintTicketOption
     property display_name
-        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4 reverse=99
+        get get_DisplayName slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4
             out string return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4
             out string return
     property xml_namespace
-        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4 reverse=43
+        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4
             out string return
     property xml_node
-        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4 reverse=62
+        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=4
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_property_node
-        method GetPropertyNode slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117 reverse=125
+        method GetPropertyNode slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117
             in string name=name
             in string name=xmlNamespace
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_property_value
-        method GetPropertyValue slot=12 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117 reverse=164
+        method GetPropertyValue slot=12 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117
             in string name=name
             in string name=xmlNamespace
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketValue return
     method get_scored_property_node
-        method GetScoredPropertyNode slot=11 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117 reverse=145
+        method GetScoredPropertyNode slot=11 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117
             in string name=name
             in string name=xmlNamespace
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_scored_property_value
-        method GetScoredPropertyValue slot=13 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117 reverse=175
+        method GetScoredPropertyValue slot=13 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketOption shape=117
             in string name=name
             in string name=xmlNamespace
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketValue return
@@ -290,25 +290,25 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition pytho
     default Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition
     requires Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition
     property data_type
-        get get_DataType slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=99
+        get get_DataType slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out enum32 type=Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDataType return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out string return
     property range_max
-        get get_RangeMax slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=162
+        get get_RangeMax slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out int32 return
     property range_min
-        get get_RangeMin slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=141
+        get get_RangeMin slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out int32 return
     property unit_type
-        get get_UnitType slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=121
+        get get_UnitType slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out string return
     property xml_namespace
-        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=43
+        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out string return
     property xml_node
-        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4 reverse=62
+        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterDefinition shape=4
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
 
 class Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer python_type
@@ -317,18 +317,18 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer pyth
     default Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer
     requires Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketValue return
-        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4 reverse=99
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4
             in class type=Windows.Graphics.Printing.PrintTicket.PrintTicketValue name=value
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4
             out string return
     property xml_namespace
-        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4 reverse=43
+        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4
             out string return
     property xml_node
-        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4 reverse=62
+        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketParameterInitializer shape=4
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
 
 class Windows.Graphics.Printing.PrintTicket.PrintTicketValue python_type
@@ -337,13 +337,13 @@ class Windows.Graphics.Printing.PrintTicket.PrintTicketValue python_type
     default Windows.Graphics.Printing.PrintTicket.IPrintTicketValue
     requires Windows.Graphics.Printing.PrintTicket.IPrintTicketValue
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketValue shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketValue shape=4
             out enum32 type=Windows.Graphics.Printing.PrintTicket.PrintTicketValueType return
     method get_value_as_integer
-        method GetValueAsInteger slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketValue shape=4 reverse=43
+        method GetValueAsInteger slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketValue shape=4
             out int32 return
     method get_value_as_string
-        method GetValueAsString slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketValue shape=4 reverse=62
+        method GetValueAsString slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IPrintTicketValue shape=4
             out string return
 
 enum Windows.Graphics.Printing.PrintTicket.PrintTicketValueType python_type
@@ -360,66 +360,66 @@ class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket python_type
     requires Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket
     factory Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketFactory shape=117
             in string name=printerName
             in interface type=Windows.Storage.Streams.IInputStream name=printTicketStream
             out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
     property document_binding_feature
-        get get_DocumentBindingFeature slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=121
+        get get_DocumentBindingFeature slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_collate_feature
-        get get_DocumentCollateFeature slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=141
+        get get_DocumentCollateFeature slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_duplex_feature
-        get get_DocumentDuplexFeature slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=162
+        get get_DocumentDuplexFeature slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_hole_punch_feature
-        get get_DocumentHolePunchFeature slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=173
+        get get_DocumentHolePunchFeature slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_input_bin_feature
-        get get_DocumentInputBinFeature slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=186
+        get get_DocumentInputBinFeature slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_n_up_feature
-        get get_DocumentNUpFeature slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=194
+        get get_DocumentNUpFeature slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property document_staple_feature
-        get get_DocumentStapleFeature slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=202
+        get get_DocumentStapleFeature slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property job_passcode_feature
-        get get_JobPasscodeFeature slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=210
+        get get_JobPasscodeFeature slot=17 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out string return
     property page_borderless_feature
-        get get_PageBorderlessFeature slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=218
+        get get_PageBorderlessFeature slot=18 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_media_size_feature
-        get get_PageMediaSizeFeature slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=223
+        get get_PageMediaSizeFeature slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_media_type_feature
-        get get_PageMediaTypeFeature slot=20 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=228
+        get get_PageMediaTypeFeature slot=20 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_orientation_feature
-        get get_PageOrientationFeature slot=21 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=232
+        get get_PageOrientationFeature slot=21 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_output_color_feature
-        get get_PageOutputColorFeature slot=22 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=237
+        get get_PageOutputColorFeature slot=22 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_output_quality_feature
-        get get_PageOutputQualityFeature slot=23 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=242
+        get get_PageOutputQualityFeature slot=23 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property page_resolution_feature
-        get get_PageResolutionFeature slot=24 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=247
+        get get_PageResolutionFeature slot=24 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketFeature return
     property xml_namespace
-        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=43
+        get get_XmlNamespace slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out string return
     property xml_node
-        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=62
+        get get_XmlNode slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_capabilities
-        method GetCapabilities slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=99
+        method GetCapabilities slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities return
     method get_feature
         method GetFeature slot=25 inputs=2 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=117
@@ -432,11 +432,11 @@ class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket python_type
             in string name=xmlNamespace
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer return
     method merge_and_validate_ticket
-        method MergeAndValidateTicket slot=31 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=51 reverse=274
+        method MergeAndValidateTicket slot=31 inputs=1 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=51
             in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=deltaShemaTicket
             out class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket return
     method notify_xml_changed_async
-        method NotifyXmlChangedAsync slot=26 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=255
+        method NotifyXmlChangedAsync slot=26 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method set_parameter_initializer_as_integer
         method SetParameterInitializerAsInteger slot=29 inputs=3 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=195
@@ -451,7 +451,7 @@ class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket python_type
             in string name=stringValue
             out class type=Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer return
     method validate_async
-        method ValidateAsync slot=27 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4 reverse=259
+        method ValidateAsync slot=27 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicket shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult> return
 
 class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult python_type
@@ -460,10 +460,10 @@ class Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult 
     default Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult
     requires Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property validated
-        get get_Validated slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult shape=4 reverse=22
+        get get_Validated slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Printing.PrintTicket.IWorkflowPrintTicketValidationResult shape=4
             out boolean return
 
 interface Windows.Data.Xml.Dom.IXmlNode external

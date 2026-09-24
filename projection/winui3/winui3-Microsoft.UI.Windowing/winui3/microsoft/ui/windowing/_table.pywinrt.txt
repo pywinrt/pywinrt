@@ -14,67 +14,67 @@ class Microsoft.UI.Windowing.AppWindow python_type
     factory Microsoft.UI.Windowing.IAppWindowStatics
     factory Microsoft.UI.Windowing.IAppWindowStatics2
     property title
-        get get_Title slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=186
+        get get_Title slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out string return
-        put put_Title slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=194
+        put put_Title slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             in string name=value
     property is_shown_in_switchers
-        get get_IsShownInSwitchers slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=43
+        get get_IsShownInSwitchers slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out boolean return
-        put put_IsShownInSwitchers slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=62
+        put put_IsShownInSwitchers slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             in boolean name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out struct type=Microsoft.UI.WindowId return
     property is_visible
-        get get_IsVisible slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=99
+        get get_IsVisible slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out boolean return
     property owner_window_id
-        get get_OwnerWindowId slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=121
+        get get_OwnerWindowId slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out struct type=Microsoft.UI.WindowId return
     property position
-        get get_Position slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=141
+        get get_Position slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out struct type=Windows.Graphics.PointInt32 return
     property presenter
-        get get_Presenter slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=162
+        get get_Presenter slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out class type=Microsoft.UI.Windowing.AppWindowPresenter return
     property size
-        get get_Size slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=173
+        get get_Size slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out struct type=Windows.Graphics.SizeInt32 return
     property title_bar
-        get get_TitleBar slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=202
+        get get_TitleBar slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             out class type=Microsoft.UI.Windowing.AppWindowTitleBar return
     property client_size
-        get get_ClientSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=4 reverse=22
+        get get_ClientSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=4
             out struct type=Windows.Graphics.SizeInt32 return
     property dispatcher_queue
-        get get_DispatcherQueue slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow3 shape=4 reverse=43
+        get get_DispatcherQueue slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow3 shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     event changed
-        add add_Changed slot=29 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51 reverse=267
+        add add_Changed slot=29 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,Microsoft.UI.Windowing.AppWindowChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Changed slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26 reverse=272
+        remove remove_Changed slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closing
-        add add_Closing slot=31 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51 reverse=274
+        add add_Closing slot=31 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,Microsoft.UI.Windowing.AppWindowClosingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closing slot=32 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26 reverse=283
+        remove remove_Closing slot=32 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event destroying
-        add add_Destroying slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51 reverse=286
+        add add_Destroying slot=33 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindow shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.AppWindow,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Destroying slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26 reverse=291
+        remove remove_Destroying slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method associate_with_dispatcher_queue
-        method AssociateWithDispatcherQueue slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow3 shape=4 reverse=22
+        method AssociateWithDispatcherQueue slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow3 shape=4
             in class type=Microsoft.UI.Dispatching.DispatcherQueue name=dispatcherQueue
     method create static
-        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=4 reverse=22 static
+        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=4 static
             out class type=Microsoft.UI.Windowing.AppWindow return
-        method Create slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=51 reverse=44 static
+        method Create slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=51 static
             in class type=Microsoft.UI.Windowing.AppWindowPresenter name=appWindowPresenter
             out class type=Microsoft.UI.Windowing.AppWindow return
         method Create slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=142 static
@@ -87,13 +87,13 @@ class Microsoft.UI.Windowing.AppWindow python_type
             in class type=Microsoft.UI.Dispatching.DispatcherQueue name=DispatcherQueue
             out class type=Microsoft.UI.Windowing.AppWindow return
     method destroy
-        method Destroy slot=17 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=0 reverse=209
+        method Destroy slot=17 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=0
     method get_from_window_id static
         method GetFromWindowId slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowStatics shape=97 static
             in struct type=Microsoft.UI.WindowId name=windowId
             out class type=Microsoft.UI.Windowing.AppWindow return
     method hide
-        method Hide slot=18 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=0 reverse=217
+        method Hide slot=18 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=0
     method move
         method Move slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=22
             in struct type=Windows.Graphics.PointInt32 name=position
@@ -104,9 +104,9 @@ class Microsoft.UI.Windowing.AppWindow python_type
             in struct type=Windows.Graphics.RectInt32 name=rect
             in class type=Microsoft.UI.Windowing.DisplayArea name=displayarea
     method move_in_z_order_at_bottom
-        method MoveInZOrderAtBottom slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=0 reverse=37
+        method MoveInZOrderAtBottom slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=0
     method move_in_z_order_at_top
-        method MoveInZOrderAtTop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=0 reverse=55
+        method MoveInZOrderAtTop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=0
     method move_in_z_order_below
         method MoveInZOrderBelow slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=38
             in struct type=Microsoft.UI.WindowId name=windowId
@@ -117,35 +117,35 @@ class Microsoft.UI.Windowing.AppWindow python_type
         method ResizeClient slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=22
             in struct type=Windows.Graphics.SizeInt32 name=size
     method set_icon
-        method SetIcon slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=242 default_overload
+        method SetIcon slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 default_overload
             in string name=iconPath
     method set_icon_with_icon_id
         method SetIcon slot=24 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=38
             in struct type=Microsoft.UI.IconId name=iconId
     method set_presenter
-        method SetPresenter slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=252 default_overload
+        method SetPresenter slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 default_overload
             in class type=Microsoft.UI.Windowing.AppWindowPresenter name=appWindowPresenter
     method set_presenter_by_kind
-        method SetPresenter slot=26 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=255
+        method SetPresenter slot=26 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             in enum32 type=Microsoft.UI.Windowing.AppWindowPresenterKind name=appWindowPresenterKind
     method set_taskbar_icon
-        method SetTaskbarIcon slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow4 shape=4 reverse=22 default_overload
+        method SetTaskbarIcon slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow4 shape=4 default_overload
             in string name=iconPath
     method set_taskbar_icon_with_icon_id
         method SetTaskbarIcon slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow4 shape=38
             in struct type=Microsoft.UI.IconId name=iconId
     method set_title_bar_icon
-        method SetTitleBarIcon slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow4 shape=4 reverse=62 default_overload
+        method SetTitleBarIcon slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow4 shape=4 default_overload
             in string name=iconPath
     method set_title_bar_icon_with_icon_id
         method SetTitleBarIcon slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow4 shape=38
             in struct type=Microsoft.UI.IconId name=iconId
     method show
-        method Show slot=27 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=0 reverse=258
-        method Show slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4 reverse=263
+        method Show slot=27 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=0
+        method Show slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow shape=4
             in boolean name=activateWindow
     method show_once_with_requested_startup_state
-        method ShowOnceWithRequestedStartupState slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=0 reverse=137
+        method ShowOnceWithRequestedStartupState slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindow2 shape=0
 
 class Microsoft.UI.Windowing.AppWindowChangedEventArgs python_type
     py AppWindowChangedEventArgs
@@ -154,28 +154,28 @@ class Microsoft.UI.Windowing.AppWindowChangedEventArgs python_type
     requires Microsoft.UI.Windowing.IAppWindowChangedEventArgs
     requires Microsoft.UI.Windowing.IAppWindowChangedEventArgs2
     property did_position_change
-        get get_DidPositionChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4 reverse=22
+        get get_DidPositionChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_presenter_change
-        get get_DidPresenterChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4 reverse=43
+        get get_DidPresenterChange slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_size_change
-        get get_DidSizeChange slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4 reverse=62
+        get get_DidSizeChange slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_visibility_change
-        get get_DidVisibilityChange slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4 reverse=99
+        get get_DidVisibilityChange slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs shape=4
             out boolean return
     property did_z_order_change
-        get get_DidZOrderChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4 reverse=22
+        get get_DidZOrderChange slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4
             out boolean return
     property is_z_order_at_bottom
-        get get_IsZOrderAtBottom slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4 reverse=43
+        get get_IsZOrderAtBottom slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4
             out boolean return
     property is_z_order_at_top
-        get get_IsZOrderAtTop slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4 reverse=62
+        get get_IsZOrderAtTop slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4
             out boolean return
     property z_order_below_window_id
-        get get_ZOrderBelowWindowId slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4 reverse=99
+        get get_ZOrderBelowWindowId slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowChangedEventArgs2 shape=4
             out struct type=Microsoft.UI.WindowId return
 
 class Microsoft.UI.Windowing.AppWindowClosingEventArgs python_type
@@ -184,9 +184,9 @@ class Microsoft.UI.Windowing.AppWindowClosingEventArgs python_type
     default Microsoft.UI.Windowing.IAppWindowClosingEventArgs
     requires Microsoft.UI.Windowing.IAppWindowClosingEventArgs
     property cancel
-        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowClosingEventArgs shape=4 reverse=22
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowClosingEventArgs shape=4
             out boolean return
-        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowClosingEventArgs shape=4 reverse=43
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowClosingEventArgs shape=4
             in boolean name=value
 
 class Microsoft.UI.Windowing.AppWindowPresenter composable python_type
@@ -196,7 +196,7 @@ class Microsoft.UI.Windowing.AppWindowPresenter composable python_type
     requires Microsoft.UI.Windowing.IAppWindowPresenter
     composable Microsoft.UI.Windowing.IAppWindowPresenterFactory
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowPresenter shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowPresenter shape=4
             out enum32 type=Microsoft.UI.Windowing.AppWindowPresenterKind return
 
 enum Microsoft.UI.Windowing.AppWindowPresenterKind python_type
@@ -216,101 +216,101 @@ class Microsoft.UI.Windowing.AppWindowTitleBar python_type
     requires Microsoft.UI.Windowing.IAppWindowTitleBar3
     factory Microsoft.UI.Windowing.IAppWindowTitleBarStatics
     property inactive_foreground_color
-        get get_InactiveForegroundColor slot=33 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=285
+        get get_InactiveForegroundColor slot=33 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_InactiveForegroundColor slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=288
+        put put_InactiveForegroundColor slot=34 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property inactive_background_color
-        get get_InactiveBackgroundColor slot=31 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=273
+        get get_InactiveBackgroundColor slot=31 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_InactiveBackgroundColor slot=32 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=280
+        put put_InactiveBackgroundColor slot=32 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property icon_show_options
-        get get_IconShowOptions slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=266
+        get get_IconShowOptions slot=29 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out enum32 type=Microsoft.UI.Windowing.IconShowOptions return
-        put put_IconShowOptions slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=270
+        put put_IconShowOptions slot=30 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in enum32 type=Microsoft.UI.Windowing.IconShowOptions name=value
     property foreground_color
-        get get_ForegroundColor slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=255
+        get get_ForegroundColor slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ForegroundColor slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=259
+        put put_ForegroundColor slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property extends_content_into_title_bar
-        get get_ExtendsContentIntoTitleBar slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=247
+        get get_ExtendsContentIntoTitleBar slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out boolean return
-        put put_ExtendsContentIntoTitleBar slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=252
+        put put_ExtendsContentIntoTitleBar slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in boolean name=value
     property button_pressed_foreground_color
-        get get_ButtonPressedForegroundColor slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=237
+        get get_ButtonPressedForegroundColor slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonPressedForegroundColor slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=242
+        put put_ButtonPressedForegroundColor slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_pressed_background_color
-        get get_ButtonPressedBackgroundColor slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=228
+        get get_ButtonPressedBackgroundColor slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonPressedBackgroundColor slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=232
+        put put_ButtonPressedBackgroundColor slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_inactive_foreground_color
-        get get_ButtonInactiveForegroundColor slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=218
+        get get_ButtonInactiveForegroundColor slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonInactiveForegroundColor slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=223
+        put put_ButtonInactiveForegroundColor slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_inactive_background_color
-        get get_ButtonInactiveBackgroundColor slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=202
+        get get_ButtonInactiveBackgroundColor slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonInactiveBackgroundColor slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=210
+        put put_ButtonInactiveBackgroundColor slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_hover_foreground_color
-        get get_ButtonHoverForegroundColor slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=186
+        get get_ButtonHoverForegroundColor slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonHoverForegroundColor slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=194
+        put put_ButtonHoverForegroundColor slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_hover_background_color
-        get get_ButtonHoverBackgroundColor slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=162
+        get get_ButtonHoverBackgroundColor slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonHoverBackgroundColor slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=173
+        put put_ButtonHoverBackgroundColor slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_foreground_color
-        get get_ButtonForegroundColor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=121
+        get get_ButtonForegroundColor slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonForegroundColor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=141
+        put put_ButtonForegroundColor slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_background_color
-        get get_ButtonBackgroundColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=62
+        get get_ButtonBackgroundColor slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonBackgroundColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=99
+        put put_ButtonBackgroundColor slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property background_color
-        get get_BackgroundColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=22
+        get get_BackgroundColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_BackgroundColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=43
+        put put_BackgroundColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property height
-        get get_Height slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=263
+        get get_Height slot=28 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out int32 return
     property left_inset
-        get get_LeftInset slot=35 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=292
+        get get_LeftInset slot=35 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out int32 return
     property right_inset
-        get get_RightInset slot=36 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4 reverse=296
+        get get_RightInset slot=36 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=4
             out int32 return
     property preferred_height_option
-        get get_PreferredHeightOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar2 shape=4 reverse=22
+        get get_PreferredHeightOption slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar2 shape=4
             out enum32 type=Microsoft.UI.Windowing.TitleBarHeightOption return
-        put put_PreferredHeightOption slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar2 shape=4 reverse=43
+        put put_PreferredHeightOption slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar2 shape=4
             in enum32 type=Microsoft.UI.Windowing.TitleBarHeightOption name=value
     property preferred_theme
-        get get_PreferredTheme slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar3 shape=4 reverse=22
+        get get_PreferredTheme slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar3 shape=4
             out enum32 type=Microsoft.UI.Windowing.TitleBarTheme return
-        put put_PreferredTheme slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar3 shape=4 reverse=43
+        put put_PreferredTheme slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar3 shape=4
             in enum32 type=Microsoft.UI.Windowing.TitleBarTheme name=value
     method is_customization_supported static
-        method IsCustomizationSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBarStatics shape=4 reverse=22 static
+        method IsCustomizationSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IAppWindowTitleBarStatics shape=4 static
             out boolean return
     method reset_to_default
         method ResetToDefault slot=37 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=0
     method set_drag_rectangles deprecated
-        method SetDragRectangles slot=38 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=51 reverse=303 deprecated
+        method SetDragRectangles slot=38 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=51 deprecated
             pass_array struct type=Windows.Graphics.RectInt32 name=value
 
 class Microsoft.UI.Windowing.CompactOverlayPresenter python_type
@@ -321,12 +321,12 @@ class Microsoft.UI.Windowing.CompactOverlayPresenter python_type
     requires Microsoft.UI.Windowing.ICompactOverlayPresenter
     factory Microsoft.UI.Windowing.ICompactOverlayPresenterStatics
     property initial_size
-        get get_InitialSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.ICompactOverlayPresenter shape=4 reverse=22
+        get get_InitialSize slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.ICompactOverlayPresenter shape=4
             out enum32 type=Microsoft.UI.Windowing.CompactOverlaySize return
-        put put_InitialSize slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.ICompactOverlayPresenter shape=4 reverse=43
+        put put_InitialSize slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.ICompactOverlayPresenter shape=4
             in enum32 type=Microsoft.UI.Windowing.CompactOverlaySize name=value
     method create static
-        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.ICompactOverlayPresenterStatics shape=4 reverse=22 static
+        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.ICompactOverlayPresenterStatics shape=4 static
             out class type=Microsoft.UI.Windowing.CompactOverlayPresenter return
 
 enum Microsoft.UI.Windowing.CompactOverlaySize python_type
@@ -344,25 +344,25 @@ class Microsoft.UI.Windowing.DisplayArea python_type
     factory Microsoft.UI.Windowing.IDisplayAreaStatics
     factory Microsoft.UI.Windowing.IDisplayAreaStatics2
     property display_id
-        get get_DisplayId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4 reverse=22
+        get get_DisplayId slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4
             out struct type=Microsoft.UI.DisplayId return
     property is_primary
-        get get_IsPrimary slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4 reverse=43
+        get get_IsPrimary slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4
             out boolean return
     property outer_bounds
-        get get_OuterBounds slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4 reverse=62
+        get get_OuterBounds slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4
             out struct type=Windows.Graphics.RectInt32 return
     property work_area
-        get get_WorkArea slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4 reverse=99
+        get get_WorkArea slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayArea shape=4
             out struct type=Windows.Graphics.RectInt32 return
     property primary static
-        get get_Primary slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics shape=4 reverse=22 static
+        get get_Primary slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics shape=4 static
             out class type=Microsoft.UI.Windowing.DisplayArea return
     method create_watcher static
-        method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics shape=4 reverse=43 static
+        method CreateWatcher slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics shape=4 static
             out class type=Microsoft.UI.Windowing.DisplayAreaWatcher return
     method find_all static
-        method FindAll slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics shape=4 reverse=62 static
+        method FindAll slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Windowing.DisplayArea> return
     method get_from_display_id static
         method GetFromDisplayId slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaStatics2 shape=97 static
@@ -397,42 +397,42 @@ class Microsoft.UI.Windowing.DisplayAreaWatcher python_type
     default Microsoft.UI.Windowing.IDisplayAreaWatcher
     requires Microsoft.UI.Windowing.IDisplayAreaWatcher
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=4
             out enum32 type=Microsoft.UI.Windowing.DisplayAreaWatcherStatus return
     event added
-        add add_Added slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=100
+        add add_Added slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,Microsoft.UI.Windowing.DisplayArea> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=134
+        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=144
+        add add_EnumerationCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=167
+        remove remove_EnumerationCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=174
+        add add_Removed slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,Microsoft.UI.Windowing.DisplayArea> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=192
+        remove remove_Removed slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=196
+        add add_Stopped slot=15 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=397
+        remove remove_Stopped slot=16 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
-        add add_Updated slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51 reverse=211
+        add add_Updated slot=17 inputs=1 outputs=1 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Windowing.DisplayAreaWatcher,Microsoft.UI.Windowing.DisplayArea> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Updated slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26 reverse=398
+        remove remove_Updated slot=18 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=0 reverse=37
+        method Start slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=0
     method stop
-        method Stop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=0 reverse=55
+        method Stop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IDisplayAreaWatcher shape=0
 
 enum Microsoft.UI.Windowing.DisplayAreaWatcherStatus python_type
     py DisplayAreaWatcherStatus
@@ -452,7 +452,7 @@ class Microsoft.UI.Windowing.FullScreenPresenter python_type
     requires Microsoft.UI.Windowing.IFullScreenPresenter
     factory Microsoft.UI.Windowing.IFullScreenPresenterStatics
     method create static
-        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IFullScreenPresenterStatics shape=4 reverse=22 static
+        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IFullScreenPresenterStatics shape=4 static
             out class type=Microsoft.UI.Windowing.FullScreenPresenter return
 
 interface Microsoft.UI.Windowing.IAppWindow
@@ -870,86 +870,86 @@ class Microsoft.UI.Windowing.OverlappedPresenter python_type
     factory Microsoft.UI.Windowing.IOverlappedPresenterStatics
     factory Microsoft.UI.Windowing.IOverlappedPresenterStatics2
     property is_resizable
-        get get_IsResizable slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=202
+        get get_IsResizable slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
-        put put_IsResizable slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=210
+        put put_IsResizable slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             in boolean name=value
     property is_modal
-        get get_IsModal slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=186
+        get get_IsModal slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
-        put put_IsModal slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=194
+        put put_IsModal slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             in boolean name=value
     property is_minimizable
-        get get_IsMinimizable slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=162
+        get get_IsMinimizable slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
-        put put_IsMinimizable slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=173
+        put put_IsMinimizable slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             in boolean name=value
     property is_maximizable
-        get get_IsMaximizable slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=121
+        get get_IsMaximizable slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
-        put put_IsMaximizable slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=141
+        put put_IsMaximizable slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             in boolean name=value
     property is_always_on_top
-        get get_IsAlwaysOnTop slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=62
+        get get_IsAlwaysOnTop slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
-        put put_IsAlwaysOnTop slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=99
+        put put_IsAlwaysOnTop slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             in boolean name=value
     property has_border
-        get get_HasBorder slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=22
+        get get_HasBorder slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
     property has_title_bar
-        get get_HasTitleBar slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=43
+        get get_HasTitleBar slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out boolean return
     property state
-        get get_State slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4 reverse=218
+        get get_State slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=4
             out enum32 type=Microsoft.UI.Windowing.OverlappedPresenterState return
     property preferred_minimum_width
-        get get_PreferredMinimumWidth slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=62
+        get get_PreferredMinimumWidth slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_PreferredMinimumWidth slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=99
+        put put_PreferredMinimumWidth slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property preferred_minimum_height
-        get get_PreferredMinimumHeight slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=22
+        get get_PreferredMinimumHeight slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_PreferredMinimumHeight slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=43
+        put put_PreferredMinimumHeight slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property preferred_maximum_width
-        get get_PreferredMaximumWidth slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=121
+        get get_PreferredMaximumWidth slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_PreferredMaximumWidth slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=141
+        put put_PreferredMaximumWidth slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property preferred_maximum_height
-        get get_PreferredMaximumHeight slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=162
+        get get_PreferredMaximumHeight slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_PreferredMaximumHeight slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4 reverse=173
+        put put_PreferredMaximumHeight slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter3 shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property requested_startup_state static
-        get get_RequestedStartupState slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics2 shape=4 reverse=22 static
+        get get_RequestedStartupState slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics2 shape=4 static
             out enum32 type=Microsoft.UI.Windowing.OverlappedPresenterState return
     method create static
-        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 reverse=22 static
+        method Create slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 static
             out class type=Microsoft.UI.Windowing.OverlappedPresenter return
     method create_for_context_menu static
-        method CreateForContextMenu slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 reverse=43 static
+        method CreateForContextMenu slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 static
             out class type=Microsoft.UI.Windowing.OverlappedPresenter return
     method create_for_dialog static
-        method CreateForDialog slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 reverse=62 static
+        method CreateForDialog slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 static
             out class type=Microsoft.UI.Windowing.OverlappedPresenter return
     method create_for_tool_window static
-        method CreateForToolWindow slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 reverse=99 static
+        method CreateForToolWindow slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Windowing.IOverlappedPresenterStatics shape=4 static
             out class type=Microsoft.UI.Windowing.OverlappedPresenter return
     method maximize
-        method Maximize slot=19 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=0 reverse=221
+        method Maximize slot=19 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=0
     method minimize
-        method Minimize slot=20 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=0 reverse=227
-        method Minimize slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter2 shape=4 reverse=22
+        method Minimize slot=20 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=0
+        method Minimize slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter2 shape=4
             in boolean name=activateWindow
     method restore
-        method Restore slot=21 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=0 reverse=231
-        method Restore slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter2 shape=4 reverse=43
+        method Restore slot=21 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=0
+        method Restore slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter2 shape=4
             in boolean name=activateWindow
     method set_border_and_title_bar
-        method SetBorderAndTitleBar slot=22 inputs=2 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=51 reverse=238
+        method SetBorderAndTitleBar slot=22 inputs=2 outputs=0 declaring=Microsoft.UI.Windowing.IOverlappedPresenter shape=51
             in boolean name=hasBorder
             in boolean name=hasTitleBar
 

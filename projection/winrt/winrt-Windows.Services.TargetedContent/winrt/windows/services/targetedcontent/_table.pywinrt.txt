@@ -926,7 +926,7 @@ class Windows.Services.TargetedContent.TargetedContentAction python_type
     default Windows.Services.TargetedContent.ITargetedContentAction
     requires Windows.Services.TargetedContent.ITargetedContentAction
     method invoke_async
-        method InvokeAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentAction shape=4 reverse=22
+        method InvokeAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentAction shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 enum Windows.Services.TargetedContent.TargetedContentAppInstallationState python_type
@@ -949,7 +949,7 @@ class Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventAr
     default Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs
     requires Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentAvailabilityChangedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Services.TargetedContent.TargetedContentChangedEventArgs python_type
@@ -958,10 +958,10 @@ class Windows.Services.TargetedContent.TargetedContentChangedEventArgs python_ty
     default Windows.Services.TargetedContent.ITargetedContentChangedEventArgs
     requires Windows.Services.TargetedContent.ITargetedContentChangedEventArgs
     property has_previous_content_expired
-        get get_HasPreviousContentExpired slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentChangedEventArgs shape=4 reverse=43
+        get get_HasPreviousContentExpired slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentChangedEventArgs shape=4
             out boolean return
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentChangedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentChangedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Services.TargetedContent.TargetedContentCollection python_type
@@ -970,25 +970,25 @@ class Windows.Services.TargetedContent.TargetedContentCollection python_type
     default Windows.Services.TargetedContent.ITargetedContentCollection
     requires Windows.Services.TargetedContent.ITargetedContentCollection
     property collections
-        get get_Collections slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=141
+        get get_Collections slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             out string return
     property items
-        get get_Items slot=12 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=162
+        get get_Items slot=12 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentItem> return
     property path
-        get get_Path slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=99
+        get get_Path slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             out string return
     property properties
-        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=121
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> return
     method report_custom_interaction
-        method ReportCustomInteraction slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=62
+        method ReportCustomInteraction slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             in string name=customInteractionName
     method report_interaction
-        method ReportInteraction slot=7 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4 reverse=43
+        method ReportInteraction slot=7 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentCollection shape=4
             in enum32 type=Windows.Services.TargetedContent.TargetedContentInteraction name=interaction
 
 class Windows.Services.TargetedContent.TargetedContentContainer python_type
@@ -998,23 +998,23 @@ class Windows.Services.TargetedContent.TargetedContentContainer python_type
     requires Windows.Services.TargetedContent.ITargetedContentContainer
     factory Windows.Services.TargetedContent.ITargetedContentContainerStatics
     property availability
-        get get_Availability slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=62
+        get get_Availability slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4
             out enum32 type=Windows.Services.TargetedContent.TargetedContentAvailability return
     property content
-        get get_Content slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=99
+        get get_Content slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentCollection return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4
             out string return
     property timestamp
-        get get_Timestamp slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4 reverse=43
+        get get_Timestamp slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=4
             out datetime return
     method get_async static
-        method GetAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainerStatics shape=51 reverse=24 static
+        method GetAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainerStatics shape=51 static
             in string name=contentId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> return
     method select_single_object
-        method SelectSingleObject slot=10 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=51 reverse=124
+        method SelectSingleObject slot=10 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentContainer shape=51
             in string name=path
             out class type=Windows.Services.TargetedContent.TargetedContentObject return
 
@@ -1034,10 +1034,10 @@ class Windows.Services.TargetedContent.TargetedContentImage python_type
     requires Windows.Services.TargetedContent.ITargetedContentImage
     requires Windows.Storage.Streams.IRandomAccessStreamReference
     property height
-        get get_Height slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentImage shape=4 reverse=22
+        get get_Height slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentImage shape=4
             out uint32 return
     property width
-        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentImage shape=4 reverse=43
+        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentImage shape=4
             out uint32 return
     method open_read_async
         method OpenReadAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReference shape=4 reverse=22
@@ -1066,22 +1066,22 @@ class Windows.Services.TargetedContent.TargetedContentItem python_type
     default Windows.Services.TargetedContent.ITargetedContentItem
     requires Windows.Services.TargetedContent.ITargetedContentItem
     property collections
-        get get_Collections slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=141
+        get get_Collections slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentCollection> return
     property path
-        get get_Path slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=22
+        get get_Path slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4
             out string return
     property properties
-        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=121
+        get get_Properties slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.TargetedContent.TargetedContentValue> return
     property state
-        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=99
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentItemState return
     method report_custom_interaction
-        method ReportCustomInteraction slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=62
+        method ReportCustomInteraction slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4
             in string name=customInteractionName
     method report_interaction
-        method ReportInteraction slot=7 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4 reverse=43
+        method ReportInteraction slot=7 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentItem shape=4
             in enum32 type=Windows.Services.TargetedContent.TargetedContentInteraction name=interaction
 
 class Windows.Services.TargetedContent.TargetedContentItemState python_type
@@ -1090,10 +1090,10 @@ class Windows.Services.TargetedContent.TargetedContentItemState python_type
     default Windows.Services.TargetedContent.ITargetedContentItemState
     requires Windows.Services.TargetedContent.ITargetedContentItemState
     property app_installation_state
-        get get_AppInstallationState slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItemState shape=4 reverse=43
+        get get_AppInstallationState slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItemState shape=4
             out enum32 type=Windows.Services.TargetedContent.TargetedContentAppInstallationState return
     property should_display
-        get get_ShouldDisplay slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItemState shape=4 reverse=22
+        get get_ShouldDisplay slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentItemState shape=4
             out boolean return
 
 class Windows.Services.TargetedContent.TargetedContentObject python_type
@@ -1102,16 +1102,16 @@ class Windows.Services.TargetedContent.TargetedContentObject python_type
     default Windows.Services.TargetedContent.ITargetedContentObject
     requires Windows.Services.TargetedContent.ITargetedContentObject
     property collection
-        get get_Collection slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=43
+        get get_Collection slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentCollection return
     property item
-        get get_Item slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=62
+        get get_Item slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentItem return
     property object_kind
-        get get_ObjectKind slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=22
+        get get_ObjectKind slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4
             out enum32 type=Windows.Services.TargetedContent.TargetedContentObjectKind return
     property value
-        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4 reverse=99
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentObject shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentValue return
 
 enum Windows.Services.TargetedContent.TargetedContentObjectKind python_type
@@ -1127,7 +1127,7 @@ class Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs pyth
     default Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs
     requires Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentStateChangedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Services.TargetedContent.TargetedContentSubscription python_type
@@ -1137,35 +1137,35 @@ class Windows.Services.TargetedContent.TargetedContentSubscription python_type
     requires Windows.Services.TargetedContent.ITargetedContentSubscription
     factory Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=4
             out string return
     event availability_changed
-        add add_AvailabilityChanged slot=10 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51 reverse=124
+        add add_AvailabilityChanged slot=10 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AvailabilityChanged slot=11 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26 reverse=156
+        remove remove_AvailabilityChanged slot=11 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event content_changed
-        add add_ContentChanged slot=8 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51 reverse=65
+        add add_ContentChanged slot=8 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ContentChanged slot=9 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26 reverse=110
+        remove remove_ContentChanged slot=9 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event state_changed
-        add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51 reverse=163
+        add add_StateChanged slot=12 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26 reverse=181
+        remove remove_StateChanged slot=13 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_async static
-        method GetAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics shape=51 reverse=24 static
+        method GetAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics shape=51 static
             in string name=subscriptionId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentSubscription> return
     method get_content_container_async
-        method GetContentContainerAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=4 reverse=43
+        method GetContentContainerAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscription shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.TargetedContent.TargetedContentContainer> return
     method get_options static
-        method GetOptions slot=7 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics shape=51 reverse=44 static
+        method GetOptions slot=7 inputs=1 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionStatics shape=51 static
             in string name=subscriptionId
             out class type=Windows.Services.TargetedContent.TargetedContentSubscriptionOptions return
 
@@ -1175,21 +1175,21 @@ class Windows.Services.TargetedContent.TargetedContentSubscriptionOptions python
     default Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions
     requires Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions
     property allow_partial_content_availability
-        get get_AllowPartialContentAvailability slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=43
+        get get_AllowPartialContentAvailability slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4
             out boolean return
-        put put_AllowPartialContentAvailability slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=62
+        put put_AllowPartialContentAvailability slot=8 inputs=1 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4
             in boolean name=value
     property cloud_query_parameters
-        get get_CloudQueryParameters slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=99
+        get get_CloudQueryParameters slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property local_filters
-        get get_LocalFilters slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=121
+        get get_LocalFilters slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property subscription_id
-        get get_SubscriptionId slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4 reverse=22
+        get get_SubscriptionId slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=4
             out string return
     method update
-        method Update slot=11 inputs=0 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=0 reverse=137
+        method Update slot=11 inputs=0 outputs=0 declaring=Windows.Services.TargetedContent.ITargetedContentSubscriptionOptions shape=0
 
 class Windows.Services.TargetedContent.TargetedContentValue python_type
     py TargetedContentValue
@@ -1197,52 +1197,52 @@ class Windows.Services.TargetedContent.TargetedContentValue python_type
     default Windows.Services.TargetedContent.ITargetedContentValue
     requires Windows.Services.TargetedContent.ITargetedContentValue
     property action
-        get get_Action slot=14 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=186
+        get get_Action slot=14 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentAction return
     property actions
-        get get_Actions slot=21 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=232
+        get get_Actions slot=21 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentAction> return
     property boolean
-        get get_Boolean slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=141
+        get get_Boolean slot=11 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out boolean return
     property booleans
-        get get_Booleans slot=18 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=218
+        get get_Booleans slot=18 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Boolean> return
     property file
-        get get_File slot=12 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=162
+        get get_File slot=12 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentFile return
     property files
-        get get_Files slot=19 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=223
+        get get_Files slot=19 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentFile> return
     property image_file
-        get get_ImageFile slot=13 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=173
+        get get_ImageFile slot=13 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out class type=Windows.Services.TargetedContent.TargetedContentImage return
     property image_files
-        get get_ImageFiles slot=20 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=228
+        get get_ImageFiles slot=20 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.TargetedContent.TargetedContentImage> return
     property number
-        get get_Number slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=121
+        get get_Number slot=10 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out double return
     property numbers
-        get get_Numbers slot=17 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=210
+        get get_Numbers slot=17 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Double> return
     property path
-        get get_Path slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=43
+        get get_Path slot=7 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out string return
     property string
-        get get_String slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=62
+        get get_String slot=8 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out string return
     property strings
-        get get_Strings slot=15 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=194
+        get get_Strings slot=15 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property uri
-        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=99
+        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out class type=Windows.Foundation.Uri return
     property uris
-        get get_Uris slot=16 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=202
+        get get_Uris slot=16 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
     property value_kind
-        get get_ValueKind slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4 reverse=22
+        get get_ValueKind slot=6 inputs=0 outputs=1 declaring=Windows.Services.TargetedContent.ITargetedContentValue shape=4
             out enum32 type=Windows.Services.TargetedContent.TargetedContentValueKind return
 
 enum Windows.Services.TargetedContent.TargetedContentValueKind python_type

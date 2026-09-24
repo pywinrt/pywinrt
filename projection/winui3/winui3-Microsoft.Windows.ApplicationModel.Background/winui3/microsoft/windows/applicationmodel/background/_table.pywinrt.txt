@@ -12,29 +12,29 @@ class Microsoft.Windows.ApplicationModel.Background.BackgroundTaskBuilder activa
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property task_group
-        get get_TaskGroup slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=162
+        get get_TaskGroup slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup return
-        put put_TaskGroup slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=141
+        put put_TaskGroup slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             in class type=Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup name=value
     property name
-        get get_Name slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=121
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             out string return
-        put put_Name slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=99
+        put put_Name slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             in string name=value
     method add_condition
-        method AddCondition slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=62
+        method AddCondition slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             in interface type=Windows.ApplicationModel.Background.IBackgroundCondition name=condition
     method register
-        method Register slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=173
+        method Register slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
-        method Register slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=51 reverse=187
+        method Register slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=51
             in string name=name
             out class type=Windows.ApplicationModel.Background.BackgroundTaskRegistration return
     method set_task_entry_point_clsid
         method SetTaskEntryPointClsid slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=33
             in guid name=clsId
     method set_trigger
-        method SetTrigger slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4 reverse=22
+        method SetTrigger slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder shape=4
             in interface type=Windows.ApplicationModel.Background.IBackgroundTrigger name=trigger
 
 interface Microsoft.Windows.ApplicationModel.Background.IBackgroundTaskBuilder

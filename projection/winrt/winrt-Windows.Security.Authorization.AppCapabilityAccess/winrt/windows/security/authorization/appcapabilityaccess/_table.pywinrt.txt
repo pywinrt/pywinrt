@@ -11,44 +11,44 @@ class Windows.Security.Authorization.AppCapabilityAccess.AppCapability python_ty
     requires Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2
     factory Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics
     property capability_name
-        get get_CapabilityName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=22
+        get get_CapabilityName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4
             out string return
     property user
-        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=43
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4
             out class type=Windows.System.User return
     property display_message
-        get get_DisplayMessage slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 shape=4 reverse=22
+        get get_DisplayMessage slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 shape=4
             out string return
-        put put_DisplayMessage slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 shape=4 reverse=43
+        put put_DisplayMessage slot=7 inputs=1 outputs=0 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability2 shape=4
             in string name=value
     event access_changed
-        add add_AccessChanged slot=10 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=51 reverse=124
+        add add_AccessChanged slot=10 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Security.Authorization.AppCapabilityAccess.AppCapability,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AccessChanged slot=11 inputs=1 outputs=0 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=26 reverse=156
+        remove remove_AccessChanged slot=11 inputs=1 outputs=0 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_access
-        method CheckAccess slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=99
+        method CheckAccess slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4
             out enum32 type=Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus return
     method create static
-        method Create slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=51 reverse=65 static
+        method Create slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=51 static
             in string name=capabilityName
             out class type=Windows.Security.Authorization.AppCapabilityAccess.AppCapability return
     method create_with_process_id_for_user static
-        method CreateWithProcessIdForUser slot=9 inputs=3 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=195 reverse=102 static
+        method CreateWithProcessIdForUser slot=9 inputs=3 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=195 static
             in class type=Windows.System.User name=user
             in string name=capabilityName
             in uint32 name=pid
             out class type=Windows.Security.Authorization.AppCapabilityAccess.AppCapability return
     method request_access_async
-        method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4 reverse=62
+        method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapability shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
     method request_access_for_capabilities_async static
-        method RequestAccessForCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=51 reverse=24 static
+        method RequestAccessForCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=capabilityNames
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return
     method request_access_for_capabilities_for_user_async static
-        method RequestAccessForCapabilitiesForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=117 reverse=45 static
+        method RequestAccessForCapabilitiesForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authorization.AppCapabilityAccess.IAppCapabilityStatics shape=117 static
             in class type=Windows.System.User name=user
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=capabilityNames
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus>> return

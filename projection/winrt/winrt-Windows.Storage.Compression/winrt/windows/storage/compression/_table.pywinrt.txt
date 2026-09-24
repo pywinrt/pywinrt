@@ -81,10 +81,10 @@ class Windows.Storage.Compression.Compressor python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Storage.Compression.ICompressorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Compression.ICompressorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Compression.ICompressorFactory shape=51
             in interface type=Windows.Storage.Streams.IOutputStream name=underlyingStream
             out class type=Windows.Storage.Compression.Compressor return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Storage.Compression.ICompressorFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Storage.Compression.ICompressorFactory shape=195
             in interface type=Windows.Storage.Streams.IOutputStream name=underlyingStream
             in enum32 type=Windows.Storage.Compression.CompressAlgorithm name=algorithm
             in uint32 name=blockSize
@@ -92,10 +92,10 @@ class Windows.Storage.Compression.Compressor python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method detach_stream
-        method DetachStream slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Compression.ICompressor shape=4 reverse=43
+        method DetachStream slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Compression.ICompressor shape=4
             out interface type=Windows.Storage.Streams.IOutputStream return
     method finish_async
-        method FinishAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Compression.ICompressor shape=4 reverse=22
+        method FinishAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Compression.ICompressor shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method flush_async
         method FlushAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IOutputStream shape=4 reverse=43
@@ -114,13 +114,13 @@ class Windows.Storage.Compression.Decompressor python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Storage.Compression.IDecompressorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Compression.IDecompressorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Compression.IDecompressorFactory shape=51
             in interface type=Windows.Storage.Streams.IInputStream name=underlyingStream
             out class type=Windows.Storage.Compression.Decompressor return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method detach_stream
-        method DetachStream slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Compression.IDecompressor shape=4 reverse=22
+        method DetachStream slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Compression.IDecompressor shape=4
             out interface type=Windows.Storage.Streams.IInputStream return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26

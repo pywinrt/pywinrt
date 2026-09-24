@@ -10,31 +10,31 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnecti
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2
     event server_search_read_batch_requested
-        add add_ServerSearchReadBatchRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=51 reverse=65
+        add add_ServerSearchReadBatchRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection,Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ServerSearchReadBatchRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=26 reverse=110
+        remove remove_ServerSearchReadBatchRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sync_requested
-        add add_SyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=51 reverse=24
+        add add_SyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection,Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=26 reverse=53
+        remove remove_SyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event create_or_update_contact_requested
-        add add_CreateOrUpdateContactRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=51 reverse=24
+        add add_CreateOrUpdateContactRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection,Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CreateOrUpdateContactRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=26 reverse=53
+        remove remove_CreateOrUpdateContactRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event delete_contact_requested
-        add add_DeleteContactRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=51 reverse=65
+        add add_DeleteContactRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection,Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DeleteContactRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=26 reverse=110
+        remove remove_DeleteContactRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=0 reverse=117
+        method Start slot=10 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection shape=0
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails python_type
     py ContactDataProviderTriggerDetails
@@ -42,7 +42,7 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerD
     default Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails
     property connection
-        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails shape=4 reverse=22
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderTriggerDetails shape=4
             out class type=Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest python_type
@@ -51,17 +51,17 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateCo
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest
     property contact
-        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=4 reverse=43
+        get get_Contact slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=4
             out class type=Windows.ApplicationModel.Contacts.Contact return
     property contact_list_id
-        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=4 reverse=22
+        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=51 reverse=65
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=51
             in class type=Windows.ApplicationModel.Contacts.Contact name=createdOrUpdatedContact
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs python_type
@@ -70,10 +70,10 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateCo
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListCreateOrUpdateContactRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest python_type
@@ -82,16 +82,16 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactReq
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest
     property contact_id
-        get get_ContactId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4 reverse=43
+        get get_ContactId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4
             out string return
     property contact_list_id
-        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4 reverse=22
+        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs python_type
@@ -100,10 +100,10 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactReq
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListDeleteContactRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest python_type
@@ -112,26 +112,26 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchRead
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest
     property contact_list_id
-        get get_ContactListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4 reverse=43
+        get get_ContactListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4
             out string return
     property options
-        get get_Options slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4 reverse=62
+        get get_Options slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4
             out class type=Windows.ApplicationModel.Contacts.ContactQueryOptions return
     property session_id
-        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4 reverse=22
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4
             out string return
     property suggested_batch_size
-        get get_SuggestedBatchSize slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4 reverse=99
+        get get_SuggestedBatchSize slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4
             out uint32 return
     method report_completed_async
-        method ReportCompletedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4 reverse=141
+        method ReportCompletedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=51 reverse=163
+        method ReportFailedAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=51
             in enum32 type=Windows.ApplicationModel.Contacts.ContactBatchStatus name=batchStatus
             out interface type=Windows.Foundation.IAsyncAction return
     method save_contact_async
-        method SaveContactAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=51 reverse=124
+        method SaveContactAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequest shape=51
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -141,10 +141,10 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchRead
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListServerSearchReadBatchRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest python_type
@@ -153,13 +153,13 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncR
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest
     property contact_list_id
-        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest shape=4 reverse=22
+        get get_ContactListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest shape=4 reverse=43
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest shape=4 reverse=62
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs python_type
@@ -168,10 +168,10 @@ class Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncR
     default Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs
     requires Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.DataProvider.IContactListSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 interface Windows.ApplicationModel.Contacts.DataProvider.IContactDataProviderConnection

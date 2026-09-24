@@ -8,18 +8,18 @@ class Windows.Globalization.ApplicationLanguages static python_type
     factory Windows.Globalization.IApplicationLanguagesStatics
     factory Windows.Globalization.IApplicationLanguagesStatics2
     property primary_language_override static
-        get get_PrimaryLanguageOverride slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=22 static
+        get get_PrimaryLanguageOverride slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             out string return
-        put put_PrimaryLanguageOverride slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=43 static
+        put put_PrimaryLanguageOverride slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             in string name=value
     property languages static
-        get get_Languages slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=62 static
+        get get_Languages slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property manifest_languages static
-        get get_ManifestLanguages slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=99 static
+        get get_ManifestLanguages slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method get_languages_for_user static
-        method GetLanguagesForUser slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics2 shape=51 reverse=24 static
+        method GetLanguagesForUser slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IApplicationLanguagesStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
@@ -34,24 +34,24 @@ class Windows.Globalization.Calendar activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendarFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendarFactory shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             out class type=Windows.Globalization.Calendar return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Globalization.ICalendarFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Globalization.ICalendarFactory shape=195
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=calendar
             in string name=clock
             out class type=Windows.Globalization.Calendar return
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Globalization.ICalendarFactory2 shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Globalization.ICalendarFactory2 shape=239
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=calendar
             in string name=clock
             in string name=timeZoneId
             out class type=Windows.Globalization.Calendar return
     property year
-        get get_Year slot=30 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=270
+        get get_Year slot=30 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Year slot=31 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=273
+        put put_Year slot=31 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property second
         get get_Second slot=83 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
@@ -59,34 +59,34 @@ class Windows.Globalization.Calendar activatable python_type
         put put_Second slot=84 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property period
-        get get_Period slot=65 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=450
+        get get_Period slot=65 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Period slot=66 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=451
+        put put_Period slot=66 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property nanosecond
-        get get_Nanosecond slot=88 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=473
+        get get_Nanosecond slot=88 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Nanosecond slot=89 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=474
+        put put_Nanosecond slot=89 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property month
-        get get_Month slot=39 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=307
+        get get_Month slot=39 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Month slot=40 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=312
+        put put_Month slot=40 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property minute
-        get get_Minute slot=78 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=463
+        get get_Minute slot=78 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Minute slot=79 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=464
+        put put_Minute slot=79 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property numeral_system
-        get get_NumeralSystem slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=121
+        get get_NumeralSystem slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
-        put put_NumeralSystem slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=141
+        put put_NumeralSystem slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in string name=value
     property era
-        get get_Era slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=237
+        get get_Era slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Era slot=23 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=242
+        put put_Era slot=23 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property hour
         get get_Hour slot=73 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
@@ -94,27 +94,27 @@ class Windows.Globalization.Calendar activatable python_type
         put put_Hour slot=74 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property day
-        get get_Day slot=52 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=359
+        get get_Day slot=52 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
-        put put_Day slot=53 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=363
+        put put_Day slot=53 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=value
     property first_second_in_this_minute
         get get_FirstSecondInThisMinute slot=99 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property first_year_in_this_era
-        get get_FirstYearInThisEra slot=27 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=259
+        get get_FirstYearInThisEra slot=27 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property is_daylight_saving_time
         get get_IsDaylightSavingTime slot=103 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out boolean return
     property languages
-        get get_Languages slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=99
+        get get_Languages slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property last_day_in_this_month
-        get get_LastDayInThisMonth slot=50 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=351
+        get get_LastDayInThisMonth slot=50 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property last_era
-        get get_LastEra slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=228
+        get get_LastEra slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property last_hour_in_this_period
         get get_LastHourInThisPeriod slot=71 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
@@ -123,31 +123,31 @@ class Windows.Globalization.Calendar activatable python_type
         get get_LastMinuteInThisHour slot=97 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property last_month_in_this_year
-        get get_LastMonthInThisYear slot=37 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=299
+        get get_LastMonthInThisYear slot=37 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property last_second_in_this_minute
         get get_LastSecondInThisMinute slot=100 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property last_year_in_this_era
-        get get_LastYearInThisEra slot=28 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=263
+        get get_LastYearInThisEra slot=28 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property day_of_week
-        get get_DayOfWeek slot=57 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=442
+        get get_DayOfWeek slot=57 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out enum32 type=Windows.Globalization.DayOfWeek return
     property first_day_in_this_month
-        get get_FirstDayInThisMonth slot=49 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=347
+        get get_FirstDayInThisMonth slot=49 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property last_period_in_this_day
-        get get_LastPeriodInThisDay slot=63 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=448
+        get get_LastPeriodInThisDay slot=63 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property first_era
-        get get_FirstEra slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=223
+        get get_FirstEra slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_days_in_this_month
-        get get_NumberOfDaysInThisMonth slot=51 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=355
+        get get_NumberOfDaysInThisMonth slot=51 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_eras
-        get get_NumberOfEras slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=232
+        get get_NumberOfEras slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_hours_in_this_period
         get get_NumberOfHoursInThisPeriod slot=72 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
@@ -159,16 +159,16 @@ class Windows.Globalization.Calendar activatable python_type
         get get_FirstHourInThisPeriod slot=70 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_months_in_this_year
-        get get_NumberOfMonthsInThisYear slot=38 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=302
+        get get_NumberOfMonthsInThisYear slot=38 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_periods_in_this_day
-        get get_NumberOfPeriodsInThisDay slot=64 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=449
+        get get_NumberOfPeriodsInThisDay slot=64 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_seconds_in_this_minute
         get get_NumberOfSecondsInThisMinute slot=101 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property number_of_years_in_this_era
-        get get_NumberOfYearsInThisEra slot=29 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=266
+        get get_NumberOfYearsInThisEra slot=29 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property first_minute_in_this_hour
         get get_FirstMinuteInThisHour slot=96 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
@@ -177,52 +177,52 @@ class Windows.Globalization.Calendar activatable python_type
         get get_ResolvedLanguage slot=102 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     property first_month_in_this_year
-        get get_FirstMonthInThisYear slot=36 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=296
+        get get_FirstMonthInThisYear slot=36 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     property first_period_in_this_day
-        get get_FirstPeriodInThisDay slot=62 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=447
+        get get_FirstPeriodInThisDay slot=62 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out int32 return
     method add_days
-        method AddDays slot=54 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=368
+        method AddDays slot=54 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=days
     method add_eras
-        method AddEras slot=24 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=247
+        method AddEras slot=24 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=eras
     method add_hours
         method AddHours slot=75 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=hours
     method add_minutes
-        method AddMinutes slot=80 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=465
+        method AddMinutes slot=80 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=minutes
     method add_months
-        method AddMonths slot=41 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=316
+        method AddMonths slot=41 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=months
     method add_nanoseconds
         method AddNanoseconds slot=90 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=nanoseconds
     method add_periods
-        method AddPeriods slot=67 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=452
+        method AddPeriods slot=67 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=periods
     method add_seconds
         method AddSeconds slot=85 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=seconds
     method add_weeks
-        method AddWeeks slot=48 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=343
+        method AddWeeks slot=48 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=weeks
     method add_years
-        method AddYears slot=32 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=280
+        method AddYears slot=32 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in int32 name=years
     method change_calendar_system
-        method ChangeCalendarSystem slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=173
+        method ChangeCalendarSystem slot=13 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in string name=value
     method change_clock
-        method ChangeClock slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=194
+        method ChangeClock slot=15 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in string name=value
     method change_time_zone
-        method ChangeTimeZone slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=4 reverse=43
+        method ChangeTimeZone slot=7 inputs=1 outputs=0 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=4
             in string name=timeZoneId
     method clone
-        method Clone slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=22
+        method Clone slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out class type=Windows.Globalization.Calendar return
     method compare
         method Compare slot=93 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
@@ -233,87 +233,87 @@ class Windows.Globalization.Calendar activatable python_type
             in datetime name=other
             out int32 return
     method copy_to
-        method CopyTo slot=95 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4 reverse=480
+        method CopyTo slot=95 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=4
             in class type=Windows.Globalization.Calendar name=other
     method day_as_padded_string
-        method DayAsPaddedString slot=56 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=373
+        method DayAsPaddedString slot=56 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=minDigits
             out string return
     method day_as_string
-        method DayAsString slot=55 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=440
+        method DayAsString slot=55 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method day_of_week_as_solo_string
-        method DayOfWeekAsSoloString slot=60 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=445
+        method DayOfWeekAsSoloString slot=60 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
-        method DayOfWeekAsSoloString slot=61 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=381
+        method DayOfWeekAsSoloString slot=61 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=idealLength
             out string return
     method day_of_week_as_string
-        method DayOfWeekAsString slot=58 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=443
+        method DayOfWeekAsString slot=58 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
-        method DayOfWeekAsString slot=59 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=379
+        method DayOfWeekAsString slot=59 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=idealLength
             out string return
     method era_as_string
-        method EraAsString slot=25 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=252
+        method EraAsString slot=25 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
-        method EraAsString slot=26 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=256
+        method EraAsString slot=26 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=idealLength
             out string return
     method get_calendar_system
-        method GetCalendarSystem slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=162
+        method GetCalendarSystem slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method get_clock
-        method GetClock slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=186
+        method GetClock slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method get_date_time
-        method GetDateTime slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=202
+        method GetDateTime slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out datetime return
     method get_time_zone
-        method GetTimeZone slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=4 reverse=22
+        method GetTimeZone slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=4
             out string return
     method hour_as_padded_string
         method HourAsPaddedString slot=77 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=minDigits
             out string return
     method hour_as_string
-        method HourAsString slot=76 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=461
+        method HourAsString slot=76 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method minute_as_padded_string
         method MinuteAsPaddedString slot=82 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=minDigits
             out string return
     method minute_as_string
-        method MinuteAsString slot=81 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=466
+        method MinuteAsString slot=81 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method month_as_numeric_string
-        method MonthAsNumericString slot=46 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=334
+        method MonthAsNumericString slot=46 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method month_as_padded_numeric_string
-        method MonthAsPaddedNumericString slot=47 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=340
+        method MonthAsPaddedNumericString slot=47 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=minDigits
             out string return
     method month_as_solo_string
-        method MonthAsSoloString slot=44 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=326
+        method MonthAsSoloString slot=44 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
-        method MonthAsSoloString slot=45 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=331
+        method MonthAsSoloString slot=45 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=idealLength
             out string return
     method month_as_string
-        method MonthAsString slot=42 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=319
+        method MonthAsString slot=42 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
-        method MonthAsString slot=43 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=323
+        method MonthAsString slot=43 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=idealLength
             out string return
     method nanosecond_as_padded_string
-        method NanosecondAsPaddedString slot=92 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=477
+        method NanosecondAsPaddedString slot=92 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=minDigits
             out string return
     method nanosecond_as_string
         method NanosecondAsString slot=91 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method period_as_string
-        method PeriodAsString slot=68 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=453
+        method PeriodAsString slot=68 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
         method PeriodAsString slot=69 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=idealLength
@@ -323,32 +323,32 @@ class Windows.Globalization.Calendar activatable python_type
             in int32 name=minDigits
             out string return
     method second_as_string
-        method SecondAsString slot=86 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=471
+        method SecondAsString slot=86 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method set_date_time
-        method SetDateTime slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=26 reverse=215
+        method SetDateTime slot=17 inputs=1 outputs=0 declaring=Windows.Globalization.ICalendar shape=26
             in datetime name=value
     method set_to_max
-        method SetToMax slot=8 inputs=0 outputs=0 declaring=Windows.Globalization.ICalendar shape=0 reverse=55
+        method SetToMax slot=8 inputs=0 outputs=0 declaring=Windows.Globalization.ICalendar shape=0
     method set_to_min
-        method SetToMin slot=7 inputs=0 outputs=0 declaring=Windows.Globalization.ICalendar shape=0 reverse=37
+        method SetToMin slot=7 inputs=0 outputs=0 declaring=Windows.Globalization.ICalendar shape=0
     method set_to_now
-        method SetToNow slot=18 inputs=0 outputs=0 declaring=Windows.Globalization.ICalendar shape=0 reverse=217
+        method SetToNow slot=18 inputs=0 outputs=0 declaring=Windows.Globalization.ICalendar shape=0
     method time_zone_as_string
-        method TimeZoneAsString slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=4 reverse=62
+        method TimeZoneAsString slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=4
             out string return
-        method TimeZoneAsString slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=51 reverse=100
+        method TimeZoneAsString slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.ITimeZoneOnCalendar shape=51
             in int32 name=idealLength
             out string return
     method year_as_padded_string
-        method YearAsPaddedString slot=35 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=293
+        method YearAsPaddedString slot=35 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=minDigits
             out string return
     method year_as_string
-        method YearAsString slot=33 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4 reverse=285
+        method YearAsString slot=33 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendar shape=4
             out string return
     method year_as_truncated_string
-        method YearAsTruncatedString slot=34 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51 reverse=289
+        method YearAsTruncatedString slot=34 inputs=1 outputs=1 declaring=Windows.Globalization.ICalendar shape=51
             in int32 name=remainingDigits
             out string return
 
@@ -358,59 +358,59 @@ class Windows.Globalization.CalendarIdentifiers static python_type
     factory Windows.Globalization.ICalendarIdentifiersStatics2
     factory Windows.Globalization.ICalendarIdentifiersStatics3
     property julian static
-        get get_Julian slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=121 static
+        get get_Julian slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property gregorian static
-        get get_Gregorian slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=22 static
+        get get_Gregorian slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property hebrew static
-        get get_Hebrew slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=43 static
+        get get_Hebrew slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property hijri static
-        get get_Hijri slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=62 static
+        get get_Hijri slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property japanese static
-        get get_Japanese slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=99 static
+        get get_Japanese slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property korean static
-        get get_Korean slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=141 static
+        get get_Korean slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property taiwan static
-        get get_Taiwan slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=162 static
+        get get_Taiwan slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property thai static
-        get get_Thai slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=173 static
+        get get_Thai slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property um_al_qura static
-        get get_UmAlQura slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 reverse=186 static
+        get get_UmAlQura slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics shape=4 static
             out string return
     property persian static
-        get get_Persian slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics2 shape=4 reverse=22 static
+        get get_Persian slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics2 shape=4 static
             out string return
     property chinese_lunar static
-        get get_ChineseLunar slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 reverse=22 static
+        get get_ChineseLunar slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 static
             out string return
     property vietnamese_lunar static
-        get get_VietnameseLunar slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 reverse=121 static
+        get get_VietnameseLunar slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 static
             out string return
     property taiwan_lunar static
-        get get_TaiwanLunar slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 reverse=99 static
+        get get_TaiwanLunar slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 static
             out string return
     property korean_lunar static
-        get get_KoreanLunar slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 reverse=62 static
+        get get_KoreanLunar slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 static
             out string return
     property japanese_lunar static
-        get get_JapaneseLunar slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 reverse=43 static
+        get get_JapaneseLunar slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICalendarIdentifiersStatics3 shape=4 static
             out string return
 
 class Windows.Globalization.ClockIdentifiers static python_type
     py ClockIdentifiers
     factory Windows.Globalization.IClockIdentifiersStatics
     property twelve_hour static
-        get get_TwelveHour slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IClockIdentifiersStatics shape=4 reverse=22 static
+        get get_TwelveHour slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IClockIdentifiersStatics shape=4 static
             out string return
     property twenty_four_hour static
-        get get_TwentyFourHour slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.IClockIdentifiersStatics shape=4 reverse=43 static
+        get get_TwentyFourHour slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.IClockIdentifiersStatics shape=4 static
             out string return
 
 class Windows.Globalization.CurrencyAmount python_type
@@ -420,15 +420,15 @@ class Windows.Globalization.CurrencyAmount python_type
     requires Windows.Globalization.ICurrencyAmount
     factory Windows.Globalization.ICurrencyAmountFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.ICurrencyAmountFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Globalization.ICurrencyAmountFactory shape=117
             in string name=amount
             in string name=currency
             out class type=Windows.Globalization.CurrencyAmount return
     property amount
-        get get_Amount slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyAmount shape=4 reverse=22
+        get get_Amount slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyAmount shape=4
             out string return
     property currency
-        get get_Currency slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyAmount shape=4 reverse=43
+        get get_Currency slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyAmount shape=4
             out string return
 
 class Windows.Globalization.CurrencyIdentifiers static python_type
@@ -437,199 +437,199 @@ class Windows.Globalization.CurrencyIdentifiers static python_type
     factory Windows.Globalization.ICurrencyIdentifiersStatics2
     factory Windows.Globalization.ICurrencyIdentifiersStatics3
     property hnl static
-        get get_HNL slot=60 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=445 static
+        get get_HNL slot=60 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property aed static
-        get get_AED slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=22 static
+        get get_AED slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property afn static
-        get get_AFN slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=43 static
+        get get_AFN slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property all static
-        get get_ALL slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=62 static
+        get get_ALL slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property amd static
-        get get_AMD slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=99 static
+        get get_AMD slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ang static
-        get get_ANG slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=121 static
+        get get_ANG slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property aoa static
-        get get_AOA slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=141 static
+        get get_AOA slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ars static
-        get get_ARS slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=162 static
+        get get_ARS slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property aud static
-        get get_AUD slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=173 static
+        get get_AUD slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property awg static
-        get get_AWG slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=186 static
+        get get_AWG slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property azn static
-        get get_AZN slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=194 static
+        get get_AZN slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bam static
-        get get_BAM slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=202 static
+        get get_BAM slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bbd static
-        get get_BBD slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=210 static
+        get get_BBD slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bdt static
-        get get_BDT slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=218 static
+        get get_BDT slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bgn static
-        get get_BGN slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=223 static
+        get get_BGN slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bhd static
-        get get_BHD slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=228 static
+        get get_BHD slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bif static
-        get get_BIF slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=232 static
+        get get_BIF slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bmd static
-        get get_BMD slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=237 static
+        get get_BMD slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bnd static
-        get get_BND slot=23 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=242 static
+        get get_BND slot=23 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bob static
-        get get_BOB slot=24 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=247 static
+        get get_BOB slot=24 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property brl static
-        get get_BRL slot=25 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=252 static
+        get get_BRL slot=25 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bsd static
-        get get_BSD slot=26 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=255 static
+        get get_BSD slot=26 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property btn static
-        get get_BTN slot=27 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=259 static
+        get get_BTN slot=27 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bwp static
-        get get_BWP slot=28 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=263 static
+        get get_BWP slot=28 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property byr static
-        get get_BYR slot=29 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=266 static
+        get get_BYR slot=29 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property bzd static
-        get get_BZD slot=30 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=270 static
+        get get_BZD slot=30 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property cad static
-        get get_CAD slot=31 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=273 static
+        get get_CAD slot=31 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property cdf static
-        get get_CDF slot=32 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=280 static
+        get get_CDF slot=32 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property chf static
-        get get_CHF slot=33 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=285 static
+        get get_CHF slot=33 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property clp static
-        get get_CLP slot=34 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=288 static
+        get get_CLP slot=34 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property cny static
-        get get_CNY slot=35 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=292 static
+        get get_CNY slot=35 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property cop static
-        get get_COP slot=36 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=296 static
+        get get_COP slot=36 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property crc static
-        get get_CRC slot=37 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=299 static
+        get get_CRC slot=37 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property cup static
-        get get_CUP slot=38 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=302 static
+        get get_CUP slot=38 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property cve static
-        get get_CVE slot=39 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=307 static
+        get get_CVE slot=39 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property czk static
-        get get_CZK slot=40 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=312 static
+        get get_CZK slot=40 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property djf static
-        get get_DJF slot=41 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=316 static
+        get get_DJF slot=41 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property dkk static
-        get get_DKK slot=42 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=319 static
+        get get_DKK slot=42 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property dop static
-        get get_DOP slot=43 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=322 static
+        get get_DOP slot=43 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property dzd static
-        get get_DZD slot=44 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=326 static
+        get get_DZD slot=44 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property egp static
-        get get_EGP slot=45 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=330 static
+        get get_EGP slot=45 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ern static
-        get get_ERN slot=46 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=334 static
+        get get_ERN slot=46 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property etb static
-        get get_ETB slot=47 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=339 static
+        get get_ETB slot=47 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property eur static
-        get get_EUR slot=48 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=343 static
+        get get_EUR slot=48 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property fjd static
-        get get_FJD slot=49 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=347 static
+        get get_FJD slot=49 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property fkp static
-        get get_FKP slot=50 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=351 static
+        get get_FKP slot=50 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gbp static
-        get get_GBP slot=51 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=355 static
+        get get_GBP slot=51 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gel static
-        get get_GEL slot=52 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=359 static
+        get get_GEL slot=52 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ghs static
-        get get_GHS slot=53 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=363 static
+        get get_GHS slot=53 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gip static
-        get get_GIP slot=54 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=368 static
+        get get_GIP slot=54 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gmd static
-        get get_GMD slot=55 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=440 static
+        get get_GMD slot=55 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gnf static
-        get get_GNF slot=56 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=441 static
+        get get_GNF slot=56 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gtq static
-        get get_GTQ slot=57 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=442 static
+        get get_GTQ slot=57 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property gyd static
-        get get_GYD slot=58 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=443 static
+        get get_GYD slot=58 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property hkd static
-        get get_HKD slot=59 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=444 static
+        get get_HKD slot=59 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ron static
         get get_RON slot=119 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property hrk static
-        get get_HRK slot=61 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=446 static
+        get get_HRK slot=61 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property htg static
-        get get_HTG slot=62 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=447 static
+        get get_HTG slot=62 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property huf static
-        get get_HUF slot=63 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=448 static
+        get get_HUF slot=63 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property idr static
-        get get_IDR slot=64 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=449 static
+        get get_IDR slot=64 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ils static
-        get get_ILS slot=65 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=450 static
+        get get_ILS slot=65 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property inr static
-        get get_INR slot=66 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=451 static
+        get get_INR slot=66 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property iqd static
-        get get_IQD slot=67 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=452 static
+        get get_IQD slot=67 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property irr static
-        get get_IRR slot=68 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=453 static
+        get get_IRR slot=68 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property isk static
-        get get_ISK slot=69 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=454 static
+        get get_ISK slot=69 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property jmd static
         get get_JMD slot=70 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
@@ -650,22 +650,22 @@ class Windows.Globalization.CurrencyIdentifiers static python_type
         get get_KHR slot=75 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property kmf static
-        get get_KMF slot=76 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=461 static
+        get get_KMF slot=76 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property kpw static
-        get get_KPW slot=77 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=462 static
+        get get_KPW slot=77 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property krw static
-        get get_KRW slot=78 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=463 static
+        get get_KRW slot=78 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property kwd static
-        get get_KWD slot=79 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=464 static
+        get get_KWD slot=79 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property kyd static
-        get get_KYD slot=80 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=465 static
+        get get_KYD slot=80 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property kzt static
-        get get_KZT slot=81 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=466 static
+        get get_KZT slot=81 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property lak static
         get get_LAK slot=82 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
@@ -680,16 +680,16 @@ class Windows.Globalization.CurrencyIdentifiers static python_type
         get get_LRD slot=85 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property lsl static
-        get get_LSL slot=86 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=471 static
+        get get_LSL slot=86 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property ltl static
-        get get_LTL slot=87 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=472 static
+        get get_LTL slot=87 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property lvl static
-        get get_LVL slot=88 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=473 static
+        get get_LVL slot=88 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property lyd static
-        get get_LYD slot=89 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=474 static
+        get get_LYD slot=89 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property mad static
         get get_MAD slot=90 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
@@ -704,10 +704,10 @@ class Windows.Globalization.CurrencyIdentifiers static python_type
         get get_MKD slot=93 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property mmk static
-        get get_MMK slot=94 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=479 static
+        get get_MMK slot=94 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property mnt static
-        get get_MNT slot=95 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 reverse=480 static
+        get get_MNT slot=95 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property mop static
         get get_MOP slot=96 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
@@ -908,19 +908,19 @@ class Windows.Globalization.CurrencyIdentifiers static python_type
         get get_ZWL slot=162 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics shape=4 static
             out string return
     property byn static
-        get get_BYN slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics2 shape=4 reverse=22 static
+        get get_BYN slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics2 shape=4 static
             out string return
     property ssp static
-        get get_SSP slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 reverse=43 static
+        get get_SSP slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 static
             out string return
     property stn static
-        get get_STN slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 reverse=62 static
+        get get_STN slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 static
             out string return
     property ves static
-        get get_VES slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 reverse=99 static
+        get get_VES slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 static
             out string return
     property mru static
-        get get_MRU slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 reverse=22 static
+        get get_MRU slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ICurrencyIdentifiersStatics3 shape=4 static
             out string return
 
 enum Windows.Globalization.DayOfWeek python_type
@@ -944,32 +944,32 @@ class Windows.Globalization.GeographicRegion activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IGeographicRegionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IGeographicRegionFactory shape=51
             in string name=geographicRegionCode
             out class type=Windows.Globalization.GeographicRegion return
     property code
-        get get_Code slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=22
+        get get_Code slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out string return
     property code_three_digit
-        get get_CodeThreeDigit slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=99
+        get get_CodeThreeDigit slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out string return
     property code_three_letter
-        get get_CodeThreeLetter slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=62
+        get get_CodeThreeLetter slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out string return
     property code_two_letter
-        get get_CodeTwoLetter slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=43
+        get get_CodeTwoLetter slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out string return
     property currencies_in_use
-        get get_CurrenciesInUse slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=162
+        get get_CurrenciesInUse slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property display_name
-        get get_DisplayName slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=121
+        get get_DisplayName slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out string return
     property native_name
-        get get_NativeName slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4 reverse=141
+        get get_NativeName slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.IGeographicRegion shape=4
             out string return
     method is_supported static
-        method IsSupported slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IGeographicRegionStatics shape=51 reverse=24 static
+        method IsSupported slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IGeographicRegionStatics shape=51 static
             in string name=geographicRegionCode
             out boolean return
 
@@ -1237,23 +1237,23 @@ class Windows.Globalization.JapanesePhoneme python_type
     default Windows.Globalization.IJapanesePhoneme
     requires Windows.Globalization.IJapanesePhoneme
     property display_text
-        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IJapanesePhoneme shape=4 reverse=22
+        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.IJapanesePhoneme shape=4
             out string return
     property is_phrase_start
-        get get_IsPhraseStart slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.IJapanesePhoneme shape=4 reverse=62
+        get get_IsPhraseStart slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.IJapanesePhoneme shape=4
             out boolean return
     property yomi_text
-        get get_YomiText slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.IJapanesePhoneme shape=4 reverse=43
+        get get_YomiText slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.IJapanesePhoneme shape=4
             out string return
 
 class Windows.Globalization.JapanesePhoneticAnalyzer static python_type
     py JapanesePhoneticAnalyzer
     factory Windows.Globalization.IJapanesePhoneticAnalyzerStatics
     method get_words static
-        method GetWords slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IJapanesePhoneticAnalyzerStatics shape=51 reverse=24 static
+        method GetWords slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.IJapanesePhoneticAnalyzerStatics shape=51 static
             in string name=input
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.JapanesePhoneme> return
-        method GetWords slot=7 inputs=2 outputs=1 declaring=Windows.Globalization.IJapanesePhoneticAnalyzerStatics shape=117 reverse=45 static
+        method GetWords slot=7 inputs=2 outputs=1 declaring=Windows.Globalization.IJapanesePhoneticAnalyzerStatics shape=117 static
             in string name=input
             in boolean name=monoRuby
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Globalization.JapanesePhoneme> return
@@ -1271,44 +1271,44 @@ class Windows.Globalization.Language python_type
     factory Windows.Globalization.ILanguageStatics2
     factory Windows.Globalization.ILanguageStatics3
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageFactory shape=51
             in string name=languageTag
             out class type=Windows.Globalization.Language return
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4
             out string return
     property language_tag
-        get get_LanguageTag slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4 reverse=22
+        get get_LanguageTag slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4
             out string return
     property native_name
-        get get_NativeName slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4 reverse=62
+        get get_NativeName slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4
             out string return
     property script
-        get get_Script slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4 reverse=99
+        get get_Script slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage shape=4
             out string return
     property layout_direction
-        get get_LayoutDirection slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage2 shape=4 reverse=22
+        get get_LayoutDirection slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage2 shape=4
             out enum32 type=Windows.Globalization.LanguageLayoutDirection return
     property abbreviated_name
-        get get_AbbreviatedName slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage3 shape=4 reverse=22
+        get get_AbbreviatedName slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguage3 shape=4
             out string return
     property current_input_method_language_tag static
-        get get_CurrentInputMethodLanguageTag slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguageStatics shape=4 reverse=43 static
+        get get_CurrentInputMethodLanguageTag slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.ILanguageStatics shape=4 static
             out string return
     method get_extension_subtags
-        method GetExtensionSubtags slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageExtensionSubtags shape=51 reverse=24
+        method GetExtensionSubtags slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageExtensionSubtags shape=51
             in string name=singleton
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method get_mui_compatible_language_list_from_language_tags static
-        method GetMuiCompatibleLanguageListFromLanguageTags slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageStatics3 shape=51 reverse=24 static
+        method GetMuiCompatibleLanguageListFromLanguageTags slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageStatics3 shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languageTags
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     method is_well_formed static
-        method IsWellFormed slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageStatics shape=51 reverse=24 static
+        method IsWellFormed slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageStatics shape=51 static
             in string name=languageTag
             out boolean return
     method try_set_input_method_language_tag static
-        method TrySetInputMethodLanguageTag slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageStatics2 shape=51 reverse=24 static
+        method TrySetInputMethodLanguageTag slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.ILanguageStatics2 shape=51 static
             in string name=languageTag
             out boolean return
 
@@ -1325,148 +1325,148 @@ class Windows.Globalization.NumeralSystemIdentifiers static python_type
     factory Windows.Globalization.INumeralSystemIdentifiersStatics
     factory Windows.Globalization.INumeralSystemIdentifiersStatics2
     property full_wide static
-        get get_FullWide slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=162 static
+        get get_FullWide slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property arab static
-        get get_Arab slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=22 static
+        get get_Arab slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property arab_ext static
-        get get_ArabExt slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=43 static
+        get get_ArabExt slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property bali static
-        get get_Bali slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=62 static
+        get get_Bali slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property beng static
-        get get_Beng slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=99 static
+        get get_Beng slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property cham static
-        get get_Cham slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=121 static
+        get get_Cham slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property deva static
-        get get_Deva slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=141 static
+        get get_Deva slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property mymr_shan static
-        get get_MymrShan slot=30 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=270 static
+        get get_MymrShan slot=30 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property gujr static
-        get get_Gujr slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=173 static
+        get get_Gujr slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property guru static
-        get get_Guru slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=186 static
+        get get_Guru slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property hani_dec static
-        get get_HaniDec slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=194 static
+        get get_HaniDec slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property java static
-        get get_Java slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=202 static
+        get get_Java slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property kali static
-        get get_Kali slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=210 static
+        get get_Kali slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property khmr static
-        get get_Khmr slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=218 static
+        get get_Khmr slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property knda static
-        get get_Knda slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=223 static
+        get get_Knda slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property lana static
-        get get_Lana slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=228 static
+        get get_Lana slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property lana_tham static
-        get get_LanaTham slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=232 static
+        get get_LanaTham slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property laoo static
-        get get_Laoo slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=237 static
+        get get_Laoo slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property latn static
-        get get_Latn slot=23 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=242 static
+        get get_Latn slot=23 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property lepc static
-        get get_Lepc slot=24 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=247 static
+        get get_Lepc slot=24 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property limb static
-        get get_Limb slot=25 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=252 static
+        get get_Limb slot=25 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property mlym static
-        get get_Mlym slot=26 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=255 static
+        get get_Mlym slot=26 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property mong static
-        get get_Mong slot=27 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=259 static
+        get get_Mong slot=27 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property mtei static
-        get get_Mtei slot=28 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=263 static
+        get get_Mtei slot=28 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property mymr static
-        get get_Mymr slot=29 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=266 static
+        get get_Mymr slot=29 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property nkoo static
-        get get_Nkoo slot=31 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=273 static
+        get get_Nkoo slot=31 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property olck static
-        get get_Olck slot=32 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=280 static
+        get get_Olck slot=32 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property orya static
-        get get_Orya slot=33 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=285 static
+        get get_Orya slot=33 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property saur static
-        get get_Saur slot=34 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=288 static
+        get get_Saur slot=34 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property sund static
-        get get_Sund slot=35 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=292 static
+        get get_Sund slot=35 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property talu static
-        get get_Talu slot=36 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=296 static
+        get get_Talu slot=36 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property taml_dec static
-        get get_TamlDec slot=37 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=299 static
+        get get_TamlDec slot=37 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property telu static
-        get get_Telu slot=38 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=302 static
+        get get_Telu slot=38 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property thai static
-        get get_Thai slot=39 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=307 static
+        get get_Thai slot=39 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property tibt static
-        get get_Tibt slot=40 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=312 static
+        get get_Tibt slot=40 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property vaii static
-        get get_Vaii slot=41 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 reverse=316 static
+        get get_Vaii slot=41 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics shape=4 static
             out string return
     property math_bold static
-        get get_MathBold slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=62 static
+        get get_MathBold slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property math_dbl static
-        get get_MathDbl slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=99 static
+        get get_MathDbl slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property math_mono static
-        get get_MathMono slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=162 static
+        get get_MathMono slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property math_sanb static
-        get get_MathSanb slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=141 static
+        get get_MathSanb slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property math_sans static
-        get get_MathSans slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=121 static
+        get get_MathSans slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property osma static
-        get get_Osma slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=43 static
+        get get_Osma slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property zmth_bold static
-        get get_ZmthBold slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=173 static
+        get get_ZmthBold slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property zmth_dbl static
-        get get_ZmthDbl slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=186 static
+        get get_ZmthDbl slot=14 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property zmth_mono static
-        get get_ZmthMono slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=210 static
+        get get_ZmthMono slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property zmth_sanb static
-        get get_ZmthSanb slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=202 static
+        get get_ZmthSanb slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property zmth_sans static
-        get get_ZmthSans slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=194 static
+        get get_ZmthSans slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
     property brah static
-        get get_Brah slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 reverse=22 static
+        get get_Brah slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.INumeralSystemIdentifiersStatics2 shape=4 static
             out string return
 
 class System.String external

@@ -312,7 +312,7 @@ class Windows.Storage.AccessCache.ItemRemovedEventArgs python_type
     default Windows.Storage.AccessCache.IItemRemovedEventArgs
     requires Windows.Storage.AccessCache.IItemRemovedEventArgs
     property removed_entry
-        get get_RemovedEntry slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IItemRemovedEventArgs shape=4 reverse=22
+        get get_RemovedEntry slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IItemRemovedEventArgs shape=4
             out struct type=Windows.Storage.AccessCache.AccessListEntry return
 
 enum Windows.Storage.AccessCache.RecentStorageItemVisibility python_type
@@ -326,17 +326,17 @@ class Windows.Storage.AccessCache.StorageApplicationPermissions static python_ty
     factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics
     factory Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
     property future_access_list static
-        get get_FutureAccessList slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 reverse=22 static
+        get get_FutureAccessList slot=6 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 static
             out class type=Windows.Storage.AccessCache.StorageItemAccessList return
     property most_recently_used_list static
-        get get_MostRecentlyUsedList slot=7 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 reverse=43 static
+        get get_MostRecentlyUsedList slot=7 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics shape=4 static
             out class type=Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList return
     method get_future_access_list_for_user static
-        method GetFutureAccessListForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 shape=51 reverse=24 static
+        method GetFutureAccessListForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.AccessCache.StorageItemAccessList return
     method get_most_recently_used_list_for_user static
-        method GetMostRecentlyUsedListForUser slot=7 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 shape=51 reverse=44 static
+        method GetMostRecentlyUsedListForUser slot=7 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList return
 
@@ -419,10 +419,10 @@ class Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList python_type
         get get_MaximumItemsAllowed slot=21 inputs=0 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=232
             out uint32 return
     event item_removed
-        add add_ItemRemoved slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList shape=51 reverse=24
+        add add_ItemRemoved slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList,Windows.Storage.AccessCache.ItemRemovedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ItemRemoved slot=7 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList shape=26 reverse=53
+        remove remove_ItemRemoved slot=7 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method add
         method Add slot=6 inputs=1 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=51 reverse=24
@@ -432,7 +432,7 @@ class Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList python_type
             in interface type=Windows.Storage.IStorageItem name=file
             in string name=metadata
             out string return
-        method Add slot=6 inputs=3 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 shape=195 reverse=26
+        method Add slot=6 inputs=3 outputs=1 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 shape=195
             in interface type=Windows.Storage.IStorageItem name=file
             in string name=metadata
             in enum32 type=Windows.Storage.AccessCache.RecentStorageItemVisibility name=visibility
@@ -445,7 +445,7 @@ class Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList python_type
             in string name=token
             in interface type=Windows.Storage.IStorageItem name=file
             in string name=metadata
-        method AddOrReplace slot=7 inputs=4 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 shape=195 reverse=46
+        method AddOrReplace slot=7 inputs=4 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList2 shape=195
             in string name=token
             in interface type=Windows.Storage.IStorageItem name=file
             in string name=metadata

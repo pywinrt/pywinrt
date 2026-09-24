@@ -395,7 +395,7 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet python_type
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet shape=4
             out string return
     property bounding_rect
         get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=62
@@ -426,13 +426,13 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing python_type
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
     property center
-        get get_Center slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing shape=4 reverse=43
+        get get_Center slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing shape=4
             out struct type=Windows.Foundation.Point return
     property drawing_kind
-        get get_DrawingKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing shape=4 reverse=22
+        get get_DrawingKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing shape=4
             out enum32 type=Windows.UI.Input.Inking.Analysis.InkAnalysisDrawingKind return
     property points
-        get get_Points slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing shape=4 reverse=62
+        get get_Points slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> return
     property bounding_rect
         get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=62
@@ -463,10 +463,10 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord python_type
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord shape=4
             out string return
     property text_alternates
-        get get_TextAlternates slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord shape=4 reverse=43
+        get get_TextAlternates slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property bounding_rect
         get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=62
@@ -497,10 +497,10 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisLine python_type
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisLine
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
     property indent_level
-        get get_IndentLevel slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisLine shape=4 reverse=43
+        get get_IndentLevel slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisLine shape=4
             out int32 return
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisLine shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisLine shape=4
             out string return
     property bounding_rect
         get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=62
@@ -531,7 +531,7 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisListItem python_type
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem shape=4
             out string return
     property bounding_rect
         get get_BoundingRect slot=8 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=62
@@ -620,7 +620,7 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph python_type
         get get_RotatedBoundingRect slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> return
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisParagraph shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisParagraph shape=4
             out string return
     method get_stroke_ids
         method GetStrokeIds slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=162
@@ -632,7 +632,7 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisResult python_type
     default Windows.UI.Input.Inking.Analysis.IInkAnalysisResult
     requires Windows.UI.Input.Inking.Analysis.IInkAnalysisResult
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisResult shape=4
             out enum32 type=Windows.UI.Input.Inking.Analysis.InkAnalysisStatus return
 
 class Windows.UI.Input.Inking.Analysis.InkAnalysisRoot python_type
@@ -660,10 +660,10 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisRoot python_type
         get get_RotatedBoundingRect slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> return
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot shape=4
             out string return
     method find_nodes
-        method FindNodes slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot shape=51 reverse=44
+        method FindNodes slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot shape=51
             in enum32 type=Windows.UI.Input.Inking.Analysis.InkAnalysisNodeKind name=nodeKind
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> return
     method get_stroke_ids
@@ -708,7 +708,7 @@ class Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion python_type
         get get_RotatedBoundingRect slot=9 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=99
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Point> return
     property recognized_text
-        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisWritingRegion shape=4 reverse=22
+        get get_RecognizedText slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisWritingRegion shape=4
             out string return
     method get_stroke_ids
         method GetStrokeIds slot=12 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalysisNode shape=4 reverse=162
@@ -723,33 +723,33 @@ class Windows.UI.Input.Inking.Analysis.InkAnalyzer activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property analysis_root
-        get get_AnalysisRoot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=22
+        get get_AnalysisRoot slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             out class type=Windows.UI.Input.Inking.Analysis.InkAnalysisRoot return
     property is_analyzing
-        get get_IsAnalyzing slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=43
+        get get_IsAnalyzing slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             out boolean return
     method add_data_for_stroke
-        method AddDataForStroke slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=62
+        method AddDataForStroke slot=8 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             in class type=Windows.UI.Input.Inking.InkStroke name=stroke
     method add_data_for_strokes
-        method AddDataForStrokes slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=99
+        method AddDataForStrokes slot=9 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Input.Inking.InkStroke> name=strokes
     method analyze_async
-        method AnalyzeAsync slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=194
+        method AnalyzeAsync slot=15 inputs=0 outputs=1 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Input.Inking.Analysis.InkAnalysisResult> return
     method clear_data_for_all_strokes
-        method ClearDataForAllStrokes slot=10 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=0 reverse=117
+        method ClearDataForAllStrokes slot=10 inputs=0 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=0
     method remove_data_for_stroke
-        method RemoveDataForStroke slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=141
+        method RemoveDataForStroke slot=11 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             in uint32 name=strokeId
     method remove_data_for_strokes
-        method RemoveDataForStrokes slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=162
+        method RemoveDataForStrokes slot=12 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<System.UInt32> name=strokeIds
     method replace_data_for_stroke
-        method ReplaceDataForStroke slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4 reverse=173
+        method ReplaceDataForStroke slot=13 inputs=1 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=4
             in class type=Windows.UI.Input.Inking.InkStroke name=stroke
     method set_stroke_data_kind
-        method SetStrokeDataKind slot=14 inputs=2 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=51 reverse=187
+        method SetStrokeDataKind slot=14 inputs=2 outputs=0 declaring=Windows.UI.Input.Inking.Analysis.IInkAnalyzer shape=51
             in uint32 name=strokeId
             in enum32 type=Windows.UI.Input.Inking.Analysis.InkAnalysisStrokeKind name=strokeKind
 

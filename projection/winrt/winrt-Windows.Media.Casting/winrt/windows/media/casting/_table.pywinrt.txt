@@ -65,35 +65,35 @@ class Windows.Media.Casting.CastingConnection python_type closeable
     requires Windows.Media.Casting.ICastingConnection
     requires Windows.Foundation.IClosable
     property source
-        get get_Source slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=62
+        get get_Source slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4
             out class type=Windows.Media.Casting.CastingSource return
-        put put_Source slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=99
+        put put_Source slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=4
             in class type=Windows.Media.Casting.CastingSource name=value
     property device
-        get get_Device slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=43
+        get get_Device slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4
             out class type=Windows.Media.Casting.CastingDevice return
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=22
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4
             out enum32 type=Windows.Media.Casting.CastingConnectionState return
     event error_occurred
-        add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=163
+        add add_ErrorOccurred slot=12 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=181
+        remove remove_ErrorOccurred slot=13 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
-        add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=124
+        add add_StateChanged slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingConnection,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26 reverse=156
+        remove remove_StateChanged slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method disconnect_async
-        method DisconnectAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4 reverse=194
+        method DisconnectAsync slot=15 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> return
     method request_start_casting_async
-        method RequestStartCastingAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51 reverse=187
+        method RequestStartCastingAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingConnection shape=51
             in class type=Windows.Media.Casting.CastingSource name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingConnectionErrorStatus> return
 
@@ -103,10 +103,10 @@ class Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs python_type
     default Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs
     requires Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs
     property error_status
-        get get_ErrorStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs shape=4 reverse=22
+        get get_ErrorStatus slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs shape=4
             out enum32 type=Windows.Media.Casting.CastingConnectionErrorStatus return
     property message
-        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs shape=4 reverse=43
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingConnectionErrorOccurredEventArgs shape=4
             out string return
 
 enum Windows.Media.Casting.CastingConnectionErrorStatus python_type
@@ -136,35 +136,35 @@ class Windows.Media.Casting.CastingDevice python_type
     requires Windows.Media.Casting.ICastingDevice
     factory Windows.Media.Casting.ICastingDeviceStatics
     property friendly_name
-        get get_FriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=43
+        get get_FriendlyName slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4
             out string return
     property icon
-        get get_Icon slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=62
+        get get_Icon slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4
             out string return
     method create_casting_connection
-        method CreateCastingConnection slot=10 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=121
+        method CreateCastingConnection slot=10 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4
             out class type=Windows.Media.Casting.CastingConnection return
     method device_info_supports_casting_async static
-        method DeviceInfoSupportsCastingAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=100 static
+        method DeviceInfoSupportsCastingAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 static
             in class type=Windows.Devices.Enumeration.DeviceInformation name=device
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method from_id_async static
-        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=65 static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 static
             in string name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingDevice> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=24 static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 static
             in enum_u32 type=Windows.Media.Casting.CastingPlaybackTypes name=type
             out string return
     method get_device_selector_from_casting_source_async static
-        method GetDeviceSelectorFromCastingSourceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 reverse=44 static
+        method GetDeviceSelectorFromCastingSourceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceStatics shape=51 static
             in class type=Windows.Media.Casting.CastingSource name=castingSource
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method get_supported_casting_playback_types_async
-        method GetSupportedCastingPlaybackTypesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4 reverse=99
+        method GetSupportedCastingPlaybackTypesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevice shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Casting.CastingPlaybackTypes> return
 
 class Windows.Media.Casting.CastingDevicePicker activatable python_type
@@ -176,25 +176,25 @@ class Windows.Media.Casting.CastingDevicePicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property appearance
-        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=4 reverse=43
+        get get_Appearance slot=7 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=4
             out class type=Windows.Devices.Enumeration.DevicePickerAppearance return
     property filter
-        get get_Filter slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=4 reverse=22
+        get get_Filter slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=4
             out class type=Windows.Media.Casting.CastingDevicePickerFilter return
     event casting_device_picker_dismissed
-        add add_CastingDevicePickerDismissed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51 reverse=124
+        add add_CastingDevicePickerDismissed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CastingDevicePickerDismissed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26 reverse=156
+        remove remove_CastingDevicePickerDismissed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event casting_device_selected
-        add add_CastingDeviceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51 reverse=65
+        add add_CastingDeviceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePicker shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Casting.CastingDevicePicker,Windows.Media.Casting.CastingDeviceSelectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CastingDeviceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26 reverse=110
+        remove remove_CastingDeviceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method hide
-        method Hide slot=14 inputs=0 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=0 reverse=185
+        method Hide slot=14 inputs=0 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=0
     method show
         method Show slot=12 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePicker shape=8
             in struct type=Windows.Foundation.Rect name=selection
@@ -208,22 +208,22 @@ class Windows.Media.Casting.CastingDevicePickerFilter python_type
     default Windows.Media.Casting.ICastingDevicePickerFilter
     requires Windows.Media.Casting.ICastingDevicePickerFilter
     property supports_video
-        get get_SupportsVideo slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=62
+        get get_SupportsVideo slot=8 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             out boolean return
-        put put_SupportsVideo slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=99
+        put put_SupportsVideo slot=9 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             in boolean name=value
     property supports_pictures
-        get get_SupportsPictures slot=10 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=121
+        get get_SupportsPictures slot=10 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             out boolean return
-        put put_SupportsPictures slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=141
+        put put_SupportsPictures slot=11 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             in boolean name=value
     property supports_audio
-        get get_SupportsAudio slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=22
+        get get_SupportsAudio slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             out boolean return
-        put put_SupportsAudio slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=43
+        put put_SupportsAudio slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             in boolean name=value
     property supported_casting_sources
-        get get_SupportedCastingSources slot=12 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4 reverse=162
+        get get_SupportedCastingSources slot=12 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDevicePickerFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Casting.CastingSource> return
 
 class Windows.Media.Casting.CastingDeviceSelectedEventArgs python_type
@@ -232,7 +232,7 @@ class Windows.Media.Casting.CastingDeviceSelectedEventArgs python_type
     default Windows.Media.Casting.ICastingDeviceSelectedEventArgs
     requires Windows.Media.Casting.ICastingDeviceSelectedEventArgs
     property selected_casting_device
-        get get_SelectedCastingDevice slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceSelectedEventArgs shape=4 reverse=22
+        get get_SelectedCastingDevice slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingDeviceSelectedEventArgs shape=4
             out class type=Windows.Media.Casting.CastingDevice return
 
 enum Windows.Media.Casting.CastingPlaybackTypes python_type flags_enum
@@ -249,9 +249,9 @@ class Windows.Media.Casting.CastingSource python_type
     default Windows.Media.Casting.ICastingSource
     requires Windows.Media.Casting.ICastingSource
     property preferred_source_uri
-        get get_PreferredSourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingSource shape=4 reverse=22
+        get get_PreferredSourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Media.Casting.ICastingSource shape=4
             out class type=Windows.Foundation.Uri return
-        put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingSource shape=4 reverse=43
+        put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.Casting.ICastingSource shape=4
             in class type=Windows.Foundation.Uri name=value
 
 interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable

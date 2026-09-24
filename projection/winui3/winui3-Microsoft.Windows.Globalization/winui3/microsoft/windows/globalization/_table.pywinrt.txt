@@ -7,15 +7,15 @@ class Microsoft.Windows.Globalization.ApplicationLanguages static python_type
     py ApplicationLanguages
     factory Microsoft.Windows.Globalization.IApplicationLanguagesStatics
     property primary_language_override static
-        get get_PrimaryLanguageOverride slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=62 static
+        get get_PrimaryLanguageOverride slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             out string return
-        put put_PrimaryLanguageOverride slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=99 static
+        put put_PrimaryLanguageOverride slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             in string name=value
     property languages static
-        get get_Languages slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=22 static
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property manifest_languages static
-        get get_ManifestLanguages slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 reverse=43 static
+        get get_ManifestLanguages slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Globalization.IApplicationLanguagesStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 interface Microsoft.Windows.Globalization.IApplicationLanguagesStatics

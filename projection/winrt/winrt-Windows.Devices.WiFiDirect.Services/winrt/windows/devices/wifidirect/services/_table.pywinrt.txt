@@ -513,49 +513,49 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectService python_type
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectService
     factory Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics
     property session_info
-        get get_SessionInfo slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=121
+        get get_SessionInfo slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_SessionInfo slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=141
+        put put_SessionInfo slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property prefer_group_owner_mode
-        get get_PreferGroupOwnerMode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=62
+        get get_PreferGroupOwnerMode slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             out boolean return
-        put put_PreferGroupOwnerMode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=99
+        put put_PreferGroupOwnerMode slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             in boolean name=value
     property remote_service_info
-        get get_RemoteServiceInfo slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=22
+        get get_RemoteServiceInfo slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property service_error
-        get get_ServiceError slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=162
+        get get_ServiceError slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceError return
     property supported_configuration_methods
-        get get_SupportedConfigurationMethods slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=43
+        get get_SupportedConfigurationMethods slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod> return
     event session_deferred
-        add add_SessionDeferred slot=13 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=51 reverse=174
+        add add_SessionDeferred slot=13 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.Services.WiFiDirectService,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SessionDeferred slot=14 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=26 reverse=192
+        remove remove_SessionDeferred slot=14 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method connect_async
-        method ConnectAsync slot=16 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4 reverse=202
+        method ConnectAsync slot=16 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> return
-        method ConnectAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=51 reverse=211
+        method ConnectAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=51
             in string name=pin
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> return
     method from_id_async static
-        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics shape=51 reverse=65 static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.Services.WiFiDirectService> return
     method get_provisioning_info_async
-        method GetProvisioningInfoAsync slot=15 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=51 reverse=196
+        method GetProvisioningInfoAsync slot=15 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectService shape=51
             in enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod name=selectedConfigurationMethod
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo> return
     method get_selector static
-        method GetSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics shape=51 reverse=24 static
+        method GetSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics shape=51 static
             in string name=serviceName
             out string return
-        method GetSelector slot=7 inputs=2 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics shape=117 reverse=45 static
+        method GetSelector slot=7 inputs=2 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceStatics shape=117 static
             in string name=serviceName
             in interface type=Windows.Storage.Streams.IBuffer name=serviceInfoFilter
             out string return
@@ -575,74 +575,74 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser python_typ
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser
     factory Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiserFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiserFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiserFactory shape=51
             in string name=serviceName
             out class type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser return
     property service_status
-        get get_ServiceStatus slot=15 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=194
+        get get_ServiceStatus slot=15 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceStatus return
-        put put_ServiceStatus slot=16 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=202
+        put put_ServiceStatus slot=16 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             in enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceStatus name=value
     property service_info
-        get get_ServiceInfo slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=62
+        get get_ServiceInfo slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_ServiceInfo slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=99
+        put put_ServiceInfo slot=9 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property prefer_group_owner_mode
-        get get_PreferGroupOwnerMode slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=162
+        get get_PreferGroupOwnerMode slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out boolean return
-        put put_PreferGroupOwnerMode slot=13 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=173
+        put put_PreferGroupOwnerMode slot=13 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             in boolean name=value
     property deferred_session_info
-        get get_DeferredSessionInfo slot=19 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=223
+        get get_DeferredSessionInfo slot=19 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_DeferredSessionInfo slot=20 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=228
+        put put_DeferredSessionInfo slot=20 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property custom_service_status_code
-        get get_CustomServiceStatusCode slot=17 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=210
+        get get_CustomServiceStatusCode slot=17 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out uint32 return
-        put put_CustomServiceStatusCode slot=18 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=218
+        put put_CustomServiceStatusCode slot=18 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             in uint32 name=value
     property auto_accept_session
-        get get_AutoAcceptSession slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=121
+        get get_AutoAcceptSession slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out boolean return
-        put put_AutoAcceptSession slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=141
+        put put_AutoAcceptSession slot=11 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             in boolean name=value
     property service_error
-        get get_ServiceError slot=22 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=237
+        get get_ServiceError slot=22 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceError return
     property preferred_configuration_methods
-        get get_PreferredConfigurationMethods slot=14 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=186
+        get get_PreferredConfigurationMethods slot=14 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod> return
     property service_name
-        get get_ServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=22
+        get get_ServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out string return
     property service_name_prefixes
-        get get_ServiceNamePrefixes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=43
+        get get_ServiceNamePrefixes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property advertisement_status
-        get get_AdvertisementStatus slot=21 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4 reverse=232
+        get get_AdvertisementStatus slot=21 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertisementStatus return
     event advertisement_status_changed
-        add add_AdvertisementStatusChanged slot=27 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51 reverse=260
+        add add_AdvertisementStatusChanged slot=27 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AdvertisementStatusChanged slot=28 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event auto_accept_session_connected
-        add add_AutoAcceptSessionConnected slot=25 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51 reverse=253
+        add add_AutoAcceptSessionConnected slot=25 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AutoAcceptSessionConnected slot=26 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=26 reverse=257
+        remove remove_AutoAcceptSessionConnected slot=26 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event session_requested
-        add add_SessionRequested slot=23 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51 reverse=243
+        add add_SessionRequested slot=23 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SessionRequested slot=24 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method connect_async
-        method ConnectAsync slot=29 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51 reverse=267
+        method ConnectAsync slot=29 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=51
             in class type=Windows.Devices.Enumeration.DeviceInformation name=deviceInfo
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> return
         method ConnectAsync slot=30 inputs=2 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=117
@@ -650,9 +650,9 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser python_typ
             in string name=pin
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> return
     method start
-        method Start slot=31 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=0 reverse=402
+        method Start slot=31 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=0
     method stop
-        method Stop slot=32 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=0 reverse=278
+        method Stop slot=32 inputs=0 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAdvertiser shape=0
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs python_type
     py WiFiDirectServiceAutoAcceptSessionConnectedEventArgs
@@ -660,10 +660,10 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConn
     default Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs
     property session
-        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs shape=4 reverse=22
+        get get_Session slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs shape=4
             out class type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession return
     property session_info
-        get get_SessionInfo slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs shape=4 reverse=43
+        get get_SessionInfo slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
 
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod python_type
@@ -694,10 +694,10 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo pyth
     default Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo
     property is_group_formation_needed
-        get get_IsGroupFormationNeeded slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo shape=4 reverse=43
+        get get_IsGroupFormationNeeded slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo shape=4
             out boolean return
     property selected_configuration_method
-        get get_SelectedConfigurationMethod slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo shape=4 reverse=22
+        get get_SelectedConfigurationMethod slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceProvisioningInfo shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod return
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs python_type
@@ -706,10 +706,10 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventA
     default Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs
     property endpoint_pairs
-        get get_EndpointPairs slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs shape=4 reverse=22
+        get get_EndpointPairs slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> return
     property protocol
-        get get_Protocol slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs shape=4 reverse=43
+        get get_Protocol slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceRemotePortAddedEventArgs shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol return
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession python_type closeable
@@ -719,50 +719,50 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession python_type c
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession
     requires Windows.Foundation.IClosable
     property advertisement_id
-        get get_AdvertisementId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=121
+        get get_AdvertisementId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out uint32 return
     property error_status
-        get get_ErrorStatus slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=62
+        get get_ErrorStatus slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionErrorStatus return
     property service_address
-        get get_ServiceAddress slot=11 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=141
+        get get_ServiceAddress slot=11 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out string return
     property service_name
-        get get_ServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=22
+        get get_ServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out string return
     property session_address
-        get get_SessionAddress slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=162
+        get get_SessionAddress slot=12 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out string return
     property session_id
-        get get_SessionId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=99
+        get get_SessionId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out uint32 return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out enum32 type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionStatus return
     event remote_port_added
-        add add_RemotePortAdded slot=18 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51 reverse=219
+        add add_RemotePortAdded slot=18 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RemotePortAdded slot=19 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=26 reverse=226
+        remove remove_RemotePortAdded slot=19 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event session_status_changed
-        add add_SessionStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51 reverse=187
+        add add_SessionStatusChanged slot=14 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SessionStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=26 reverse=200
+        remove remove_SessionStatusChanged slot=15 inputs=1 outputs=0 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method add_datagram_socket_async
-        method AddDatagramSocketAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51 reverse=211
+        method AddDatagramSocketAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51
             in class type=Windows.Networking.Sockets.DatagramSocket name=value
             out interface type=Windows.Foundation.IAsyncAction return
     method add_stream_socket_listener_async
-        method AddStreamSocketListenerAsync slot=16 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51 reverse=203
+        method AddStreamSocketListenerAsync slot=16 inputs=1 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=51
             in class type=Windows.Networking.Sockets.StreamSocketListener name=value
             out interface type=Windows.Foundation.IAsyncAction return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_connection_endpoint_pairs
-        method GetConnectionEndpointPairs slot=13 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4 reverse=173
+        method GetConnectionEndpointPairs slot=13 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSession shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> return
 
 class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs python_type
@@ -771,7 +771,7 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventA
     default Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionDeferredEventArgs
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionDeferredEventArgs
     property deferred_session_info
-        get get_DeferredSessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionDeferredEventArgs shape=4 reverse=22
+        get get_DeferredSessionInfo slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionDeferredEventArgs shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
 
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionErrorStatus python_type
@@ -791,13 +791,13 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest python
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest
     requires Windows.Foundation.IClosable
     property device_information
-        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest shape=4 reverse=22
+        get get_DeviceInformation slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest shape=4
             out class type=Windows.Devices.Enumeration.DeviceInformation return
     property provisioning_info
-        get get_ProvisioningInfo slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest shape=4 reverse=43
+        get get_ProvisioningInfo slot=7 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest shape=4
             out class type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo return
     property session_info
-        get get_SessionInfo slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest shape=4 reverse=62
+        get get_SessionInfo slot=8 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequest shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -808,7 +808,7 @@ class Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEvent
     default Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequestedEventArgs
     requires Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequestedEventArgs
     method get_session_request
-        method GetSessionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequestedEventArgs shape=4 reverse=22
+        method GetSessionRequest slot=6 inputs=0 outputs=1 declaring=Windows.Devices.WiFiDirect.Services.IWiFiDirectServiceSessionRequestedEventArgs shape=4
             out class type=Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest return
 
 enum Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionStatus python_type

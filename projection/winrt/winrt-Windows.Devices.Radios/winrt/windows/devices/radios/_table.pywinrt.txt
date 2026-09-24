@@ -194,35 +194,35 @@ class Windows.Devices.Radios.Radio python_type
     requires Windows.Devices.Radios.IRadio
     factory Windows.Devices.Radios.IRadioStatics
     property kind
-        get get_Kind slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4 reverse=141
+        get get_Kind slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4
             out enum32 type=Windows.Devices.Radios.RadioKind return
     property name
-        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4 reverse=121
+        get get_Name slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4
             out string return
     property state
-        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4 reverse=99
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=4
             out enum32 type=Windows.Devices.Radios.RadioState return
     event state_changed
-        add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51 reverse=44
+        add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Radios.Radio,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Radios.IRadio shape=26 reverse=82
+        remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Radios.IRadio shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
     method from_id_async static
-        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=51 reverse=65 static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.Radio> return
     method get_device_selector static
-        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 reverse=43 static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 static
             out string return
     method get_radios_async static
-        method GetRadiosAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 reverse=22 static
+        method GetRadiosAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Radios.Radio>> return
     method request_access_async static
-        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 reverse=99 static
+        method RequestAccessAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Radios.IRadioStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.RadioAccessStatus> return
     method set_state_async
-        method SetStateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51 reverse=24
+        method SetStateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Radios.IRadio shape=51
             in enum32 type=Windows.Devices.Radios.RadioState name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Radios.RadioAccessStatus> return
 

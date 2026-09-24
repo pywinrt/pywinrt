@@ -119,10 +119,10 @@ class Windows.Security.EnterpriseData.BufferProtectUnprotectResult python_type
     default Windows.Security.EnterpriseData.IBufferProtectUnprotectResult
     requires Windows.Security.EnterpriseData.IBufferProtectUnprotectResult
     property buffer
-        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IBufferProtectUnprotectResult shape=4 reverse=22
+        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IBufferProtectUnprotectResult shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property protection_info
-        get get_ProtectionInfo slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IBufferProtectUnprotectResult shape=4 reverse=43
+        get get_ProtectionInfo slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IBufferProtectUnprotectResult shape=4
             out class type=Windows.Security.EnterpriseData.DataProtectionInfo return
 
 class Windows.Security.EnterpriseData.DataProtectionInfo python_type
@@ -131,40 +131,40 @@ class Windows.Security.EnterpriseData.DataProtectionInfo python_type
     default Windows.Security.EnterpriseData.IDataProtectionInfo
     requires Windows.Security.EnterpriseData.IDataProtectionInfo
     property identity
-        get get_Identity slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionInfo shape=4 reverse=43
+        get get_Identity slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionInfo shape=4
             out string return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionInfo shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionInfo shape=4
             out enum32 type=Windows.Security.EnterpriseData.DataProtectionStatus return
 
 class Windows.Security.EnterpriseData.DataProtectionManager static python_type
     py DataProtectionManager
     factory Windows.Security.EnterpriseData.IDataProtectionManagerStatics
     method get_protection_info_async static
-        method GetProtectionInfoAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=51 reverse=124 static
+        method GetProtectionInfoAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=protectedData
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> return
     method get_stream_protection_info_async static
-        method GetStreamProtectionInfoAsync slot=11 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=51 reverse=144 static
+        method GetStreamProtectionInfoAsync slot=11 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=51 static
             in interface type=Windows.Storage.Streams.IInputStream name=protectedStream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> return
     method protect_async static
-        method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=117 reverse=25 static
+        method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=117 static
             in interface type=Windows.Storage.Streams.IBuffer name=data
             in string name=identity
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> return
     method protect_stream_async static
-        method ProtectStreamAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=195 reverse=68 static
+        method ProtectStreamAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=195 static
             in interface type=Windows.Storage.Streams.IInputStream name=unprotectedStream
             in string name=identity
             in interface type=Windows.Storage.Streams.IOutputStream name=protectedStream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> return
     method unprotect_async static
-        method UnprotectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=51 reverse=44 static
+        method UnprotectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=data
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.BufferProtectUnprotectResult> return
     method unprotect_stream_async static
-        method UnprotectStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=117 reverse=101 static
+        method UnprotectStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IDataProtectionManagerStatics shape=117 static
             in interface type=Windows.Storage.Streams.IInputStream name=protectedStream
             in interface type=Windows.Storage.Streams.IOutputStream name=unprotectedStream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.DataProtectionInfo> return
@@ -238,16 +238,16 @@ class Windows.Security.EnterpriseData.FileProtectionInfo python_type
     requires Windows.Security.EnterpriseData.IFileProtectionInfo
     requires Windows.Security.EnterpriseData.IFileProtectionInfo2
     property identity
-        get get_Identity slot=8 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo shape=4 reverse=62
+        get get_Identity slot=8 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo shape=4
             out string return
     property is_roamable
-        get get_IsRoamable slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo shape=4 reverse=43
+        get get_IsRoamable slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo shape=4
             out boolean return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo shape=4
             out enum32 type=Windows.Security.EnterpriseData.FileProtectionStatus return
     property is_protect_while_open_supported
-        get get_IsProtectWhileOpenSupported slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo2 shape=4 reverse=22
+        get get_IsProtectWhileOpenSupported slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionInfo2 shape=4
             out boolean return
 
 class Windows.Security.EnterpriseData.FileProtectionManager static python_type
@@ -256,56 +256,56 @@ class Windows.Security.EnterpriseData.FileProtectionManager static python_type
     factory Windows.Security.EnterpriseData.IFileProtectionManagerStatics2
     factory Windows.Security.EnterpriseData.IFileProtectionManagerStatics3
     method copy_protection_async static
-        method CopyProtectionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 reverse=45 static
+        method CopyProtectionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 static
             in interface type=Windows.Storage.IStorageItem name=source
             in interface type=Windows.Storage.IStorageItem name=target
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method create_protected_and_open_async static
-        method CreateProtectedAndOpenAsync slot=12 inputs=4 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=239 reverse=166 static
+        method CreateProtectedAndOpenAsync slot=12 inputs=4 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=239 static
             in interface type=Windows.Storage.IStorageFolder name=parentFolder
             in string name=desiredName
             in string name=identity
             in enum32 type=Windows.Storage.CreationCollisionOption name=collisionOption
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedFileCreateResult> return
     method get_protection_info_async static
-        method GetProtectionInfoAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=51 reverse=65 static
+        method GetProtectionInfoAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=51 static
             in interface type=Windows.Storage.IStorageItem name=source
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> return
     method is_container_async static
-        method IsContainerAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 shape=51 reverse=24 static
+        method IsContainerAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method load_file_from_container_async static
-        method LoadFileFromContainerAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=51 reverse=124 static
+        method LoadFileFromContainerAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=containerFile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> return
-        method LoadFileFromContainerAsync slot=11 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 reverse=145 static
+        method LoadFileFromContainerAsync slot=11 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=containerFile
             in interface type=Windows.Storage.IStorageItem name=target
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> return
-        method LoadFileFromContainerAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 shape=195 reverse=46 static default_overload
+        method LoadFileFromContainerAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 shape=195 static default_overload
             in interface type=Windows.Storage.IStorageFile name=containerFile
             in interface type=Windows.Storage.IStorageItem name=target
             in enum32 type=Windows.Storage.NameCollisionOption name=collisionOption
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerImportResult> return
     method protect_async static
-        method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 reverse=25 static
+        method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=117 static
             in interface type=Windows.Storage.IStorageItem name=target
             in string name=identity
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> return
     method save_file_as_container_async static
-        method SaveFileAsContainerAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=51 reverse=100 static
+        method SaveFileAsContainerAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=protectedFile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> return
-        method SaveFileAsContainerAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 shape=117 reverse=66 static default_overload
+        method SaveFileAsContainerAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics2 shape=117 static default_overload
             in interface type=Windows.Storage.IStorageFile name=protectedFile
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=sharedWithIdentities
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectedContainerExportResult> return
     method unprotect_async static
-        method UnprotectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics3 shape=51 reverse=24 static
+        method UnprotectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics3 shape=51 static
             in interface type=Windows.Storage.IStorageItem name=target
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> return
-        method UnprotectAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics3 shape=117 reverse=45 static
+        method UnprotectAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileProtectionManagerStatics3 shape=117 static
             in interface type=Windows.Storage.IStorageItem name=target
             in class type=Windows.Security.EnterpriseData.FileUnprotectOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionInfo> return
@@ -330,21 +330,21 @@ class Windows.Security.EnterpriseData.FileRevocationManager static python_type
     py FileRevocationManager
     factory Windows.Security.EnterpriseData.IFileRevocationManagerStatics
     method copy_protection_async static deprecated
-        method CopyProtectionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=117 reverse=45 static deprecated
+        method CopyProtectionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=117 static deprecated
             in interface type=Windows.Storage.IStorageItem name=sourceStorageItem
             in interface type=Windows.Storage.IStorageItem name=targetStorageItem
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method get_status_async static deprecated
-        method GetStatusAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=51 reverse=100 static deprecated
+        method GetStatusAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=51 static deprecated
             in interface type=Windows.Storage.IStorageItem name=storageItem
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> return
     method protect_async static deprecated
-        method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=117 reverse=25 static deprecated
+        method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=117 static deprecated
             in interface type=Windows.Storage.IStorageItem name=storageItem
             in string name=enterpriseIdentity
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> return
     method revoke static deprecated
-        method Revoke slot=8 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=4 reverse=62 static deprecated
+        method Revoke slot=8 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=4 static deprecated
             in string name=enterpriseIdentity
 
 class Windows.Security.EnterpriseData.FileUnprotectOptions python_type
@@ -354,13 +354,13 @@ class Windows.Security.EnterpriseData.FileUnprotectOptions python_type
     requires Windows.Security.EnterpriseData.IFileUnprotectOptions
     factory Windows.Security.EnterpriseData.IFileUnprotectOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptionsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptionsFactory shape=51
             in boolean name=audit
             out class type=Windows.Security.EnterpriseData.FileUnprotectOptions return
     property audit
-        get get_Audit slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptions shape=4 reverse=43
+        get get_Audit slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptions shape=4
             out boolean return
-        put put_Audit slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptions shape=4 reverse=22
+        put put_Audit slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IFileUnprotectOptions shape=4
             in boolean name=value
 
 interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
@@ -825,7 +825,7 @@ class Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs python_typ
     default Windows.Security.EnterpriseData.IProtectedAccessResumedEventArgs
     requires Windows.Security.EnterpriseData.IProtectedAccessResumedEventArgs
     property identities
-        get get_Identities slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessResumedEventArgs shape=4 reverse=22
+        get get_Identities slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessResumedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 class Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs python_type
@@ -834,13 +834,13 @@ class Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs python_
     default Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs
     requires Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs
     property deadline
-        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs shape=4 reverse=43
+        get get_Deadline slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs shape=4
             out datetime return
     property identities
-        get get_Identities slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs shape=4 reverse=22
+        get get_Identities slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method get_deferral
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs shape=4 reverse=62
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedAccessSuspendingEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Security.EnterpriseData.ProtectedContainerExportResult python_type
@@ -849,10 +849,10 @@ class Windows.Security.EnterpriseData.ProtectedContainerExportResult python_type
     default Windows.Security.EnterpriseData.IProtectedContainerExportResult
     requires Windows.Security.EnterpriseData.IProtectedContainerExportResult
     property file
-        get get_File slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerExportResult shape=4 reverse=43
+        get get_File slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerExportResult shape=4
             out class type=Windows.Storage.StorageFile return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerExportResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerExportResult shape=4
             out enum32 type=Windows.Security.EnterpriseData.ProtectedImportExportStatus return
 
 class Windows.Security.EnterpriseData.ProtectedContainerImportResult python_type
@@ -861,10 +861,10 @@ class Windows.Security.EnterpriseData.ProtectedContainerImportResult python_type
     default Windows.Security.EnterpriseData.IProtectedContainerImportResult
     requires Windows.Security.EnterpriseData.IProtectedContainerImportResult
     property file
-        get get_File slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerImportResult shape=4 reverse=43
+        get get_File slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerImportResult shape=4
             out class type=Windows.Storage.StorageFile return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerImportResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContainerImportResult shape=4
             out enum32 type=Windows.Security.EnterpriseData.ProtectedImportExportStatus return
 
 class Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs python_type
@@ -873,7 +873,7 @@ class Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs python_ty
     default Windows.Security.EnterpriseData.IProtectedContentRevokedEventArgs
     requires Windows.Security.EnterpriseData.IProtectedContentRevokedEventArgs
     property identities
-        get get_Identities slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContentRevokedEventArgs shape=4 reverse=22
+        get get_Identities slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedContentRevokedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
 class Windows.Security.EnterpriseData.ProtectedFileCreateResult python_type
@@ -882,13 +882,13 @@ class Windows.Security.EnterpriseData.ProtectedFileCreateResult python_type
     default Windows.Security.EnterpriseData.IProtectedFileCreateResult
     requires Windows.Security.EnterpriseData.IProtectedFileCreateResult
     property file
-        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedFileCreateResult shape=4 reverse=22
+        get get_File slot=6 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedFileCreateResult shape=4
             out class type=Windows.Storage.StorageFile return
     property protection_info
-        get get_ProtectionInfo slot=8 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedFileCreateResult shape=4 reverse=62
+        get get_ProtectionInfo slot=8 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedFileCreateResult shape=4
             out class type=Windows.Security.EnterpriseData.FileProtectionInfo return
     property stream
-        get get_Stream slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedFileCreateResult shape=4 reverse=43
+        get get_Stream slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectedFileCreateResult shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStream return
 
 enum Windows.Security.EnterpriseData.ProtectedImportExportStatus python_type
@@ -918,35 +918,35 @@ class Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo python_type
     requires Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo
     factory Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory
     constructor -
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory shape=117
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyAuditAction name=action
             in string name=dataDescription
             out class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo return
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfoFactory shape=239
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyAuditAction name=action
             in string name=dataDescription
             in string name=sourceDescription
             in string name=targetDescription
             out class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo return
     property target_description
-        get get_TargetDescription slot=13 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=173
+        get get_TargetDescription slot=13 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             out string return
-        put put_TargetDescription slot=12 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=162
+        put put_TargetDescription slot=12 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             in string name=value
     property source_description
-        get get_SourceDescription slot=11 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=141
+        get get_SourceDescription slot=11 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             out string return
-        put put_SourceDescription slot=10 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=121
+        put put_SourceDescription slot=10 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             in string name=value
     property data_description
-        get get_DataDescription slot=9 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=99
+        get get_DataDescription slot=9 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             out string return
-        put put_DataDescription slot=8 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=62
+        put put_DataDescription slot=8 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             in string name=value
     property action
-        get get_Action slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=43
+        get get_Action slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             out enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyAuditAction return
-        put put_Action slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4 reverse=22
+        put put_Action slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyAuditInfo shape=4
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyAuditAction name=value
 
 enum Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult python_type
@@ -967,74 +967,74 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
     factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3
     factory Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4
     property identity
-        get get_Identity slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager shape=4 reverse=43
+        get get_Identity slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager shape=4
             out string return
-        put put_Identity slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager shape=4 reverse=22
+        put put_Identity slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager shape=4
             in string name=value
     property show_enterprise_indicator
-        get get_ShowEnterpriseIndicator slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager2 shape=4 reverse=43
+        get get_ShowEnterpriseIndicator slot=7 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager2 shape=4
             out boolean return
-        put put_ShowEnterpriseIndicator slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager2 shape=4 reverse=22
+        put put_ShowEnterpriseIndicator slot=6 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManager2 shape=4
             in boolean name=value
     property is_protection_enabled static
-        get get_IsProtectionEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=4 reverse=186 static
+        get get_IsProtectionEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=4 static
             out boolean return
     property primary_managed_identity static
-        get get_PrimaryManagedIdentity slot=15 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=4 reverse=194 static
+        get get_PrimaryManagedIdentity slot=15 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=4 static
             out string return
     event policy_changed static
-        add add_PolicyChanged slot=12 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 reverse=163 static
+        add add_PolicyChanged slot=12 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PolicyChanged slot=13 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=26 reverse=181 static
+        remove remove_PolicyChanged slot=13 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_access_resumed static
-        add add_ProtectedAccessResumed slot=15 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=196 static
+        add add_ProtectedAccessResumed slot=15 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProtectedAccessResumed slot=16 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 reverse=397 static
+        remove remove_ProtectedAccessResumed slot=16 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_access_suspending static
-        add add_ProtectedAccessSuspending slot=13 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=174 static
+        add add_ProtectedAccessSuspending slot=13 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProtectedAccessSuspending slot=14 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 reverse=192 static
+        remove remove_ProtectedAccessSuspending slot=14 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_content_revoked static
-        add add_ProtectedContentRevoked slot=17 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=211 static
+        add add_ProtectedContentRevoked slot=17 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProtectedContentRevoked slot=18 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 reverse=398 static
+        remove remove_ProtectedContentRevoked slot=18 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method check_access static
-        method CheckAccess slot=19 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=117 reverse=225 static
+        method CheckAccess slot=19 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=117 static
             in string name=sourceIdentity
             in string name=targetIdentity
             out enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult return
     method check_access_for_app static
-        method CheckAccessForApp slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=117 reverse=45 static
+        method CheckAccessForApp slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=117 static
             in string name=sourceIdentity
             in string name=appPackageFamilyName
             out enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult return
     method clear_process_ui_policy static
-        method ClearProcessUIPolicy slot=8 inputs=0 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=0 reverse=55 static
+        method ClearProcessUIPolicy slot=8 inputs=0 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=0 static
     method create_current_thread_network_context static
-        method CreateCurrentThreadNetworkContext slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=100 static
+        method CreateCurrentThreadNetworkContext slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in string name=identity
             out class type=Windows.Security.EnterpriseData.ThreadNetworkContext return
     method get_enforcement_level static
-        method GetEnforcementLevel slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 reverse=100 static
+        method GetEnforcementLevel slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 static
             in string name=identity
             out enum32 type=Windows.Security.EnterpriseData.EnforcementLevel return
     method get_for_current_view static
-        method GetForCurrentView slot=12 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=4 reverse=162 static
+        method GetForCurrentView slot=12 inputs=0 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=4 static
             out class type=Windows.Security.EnterpriseData.ProtectionPolicyManager return
     method get_primary_managed_identity_for_identity static
-        method GetPrimaryManagedIdentityForIdentity slot=16 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=51 reverse=203 static
+        method GetPrimaryManagedIdentityForIdentity slot=16 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=51 static
             in string name=identity
             out string return
     method get_primary_managed_identity_for_network_endpoint_async static
-        method GetPrimaryManagedIdentityForNetworkEndpointAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=124 static
+        method GetPrimaryManagedIdentityForNetworkEndpointAsync slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in class type=Windows.Networking.HostName name=endpointHost
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method has_content_been_revoked_since static
@@ -1043,43 +1043,43 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
             in datetime name=since
             out boolean return
     method is_file_protection_required_async static
-        method IsFileProtectionRequiredAsync slot=13 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=117 reverse=175 static
+        method IsFileProtectionRequiredAsync slot=13 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=117 static
             in interface type=Windows.Storage.IStorageItem name=target
             in string name=identity
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method is_file_protection_required_for_new_file_async static
-        method IsFileProtectionRequiredForNewFileAsync slot=14 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=195 reverse=189 static
+        method IsFileProtectionRequiredForNewFileAsync slot=14 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=195 static
             in interface type=Windows.Storage.IStorageFolder name=parentFolder
             in string name=identity
             in string name=desiredName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method is_identity_managed static
-        method IsIdentityManaged slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=24 static
+        method IsIdentityManaged slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in string name=identity
             out boolean return
     method is_protection_under_lock_required static
-        method IsProtectionUnderLockRequired slot=11 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 reverse=144 static
+        method IsProtectionUnderLockRequired slot=11 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 static
             in string name=identity
             out boolean return
     method is_roamable_protection_enabled static
-        method IsRoamableProtectionEnabled slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=51 reverse=24 static
+        method IsRoamableProtectionEnabled slot=6 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=51 static
             in string name=identity
             out boolean return
     method is_user_decryption_allowed static
-        method IsUserDecryptionAllowed slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 reverse=124 static
+        method IsUserDecryptionAllowed slot=10 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=51 static
             in string name=identity
             out boolean return
     method log_audit_event static
-        method LogAuditEvent slot=10 inputs=3 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=117 reverse=125 static
+        method LogAuditEvent slot=10 inputs=3 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=117 static
             in string name=sourceIdentity
             in string name=targetIdentity
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
     method request_access_async static
-        method RequestAccessAsync slot=20 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=117 reverse=230 static
+        method RequestAccessAsync slot=20 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=117 static
             in string name=sourceIdentity
             in string name=targetIdentity
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
-        method RequestAccessAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=195 reverse=26 static
+        method RequestAccessAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=195 static
             in string name=sourceIdentity
             in string name=targetIdentity
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
@@ -1098,22 +1098,22 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior name=behavior
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
     method request_access_for_app_async static
-        method RequestAccessForAppAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=117 reverse=66 static
+        method RequestAccessForAppAsync slot=8 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics2 shape=117 static
             in string name=sourceIdentity
             in string name=appPackageFamilyName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
-        method RequestAccessForAppAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=195 reverse=68 static
+        method RequestAccessForAppAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=195 static
             in string name=sourceIdentity
             in string name=appPackageFamilyName
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
-        method RequestAccessForAppAsync slot=9 inputs=4 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=239 reverse=103 static
+        method RequestAccessForAppAsync slot=9 inputs=4 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics3 shape=239 static
             in string name=sourceIdentity
             in string name=appPackageFamilyName
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
             in string name=messageFromApp
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
-        method RequestAccessForAppAsync slot=8 inputs=5 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=267 reverse=70 static
+        method RequestAccessForAppAsync slot=8 inputs=5 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=267 static
             in string name=sourceIdentity
             in string name=appPackageFamilyName
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
@@ -1121,7 +1121,7 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior name=behavior
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
     method request_access_to_files_for_app_async static
-        method RequestAccessToFilesForAppAsync slot=9 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=195 reverse=102 static
+        method RequestAccessToFilesForAppAsync slot=9 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=195 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> name=sourceItemList
             in string name=appPackageFamilyName
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
@@ -1134,7 +1134,7 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior name=behavior
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
     method request_access_to_files_for_process_async static
-        method RequestAccessToFilesForProcessAsync slot=11 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=195 reverse=146 static
+        method RequestAccessToFilesForProcessAsync slot=11 inputs=3 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics4 shape=195 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.IStorageItem> name=sourceItemList
             in uint32 name=processId
             in class type=Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo name=auditInfo
@@ -1147,10 +1147,10 @@ class Windows.Security.EnterpriseData.ProtectionPolicyManager python_type
             in enum32 type=Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior name=behavior
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult> return
     method revoke_content static
-        method RevokeContent slot=11 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=4 reverse=141 static
+        method RevokeContent slot=11 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=4 static
             in string name=identity
     method try_apply_process_ui_policy static
-        method TryApplyProcessUIPolicy slot=7 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 reverse=44 static
+        method TryApplyProcessUIPolicy slot=7 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IProtectionPolicyManagerStatics shape=51 static
             in string name=identity
             out boolean return
 

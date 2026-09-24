@@ -36,40 +36,40 @@ class Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter activatab
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method format
-        method Format slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51 reverse=24
+        method Format slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51
             in class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo name=number
             out string return
-        method Format slot=7 inputs=2 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=117 reverse=45
+        method Format slot=7 inputs=2 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=117
             in class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo name=number
             in enum32 type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat name=numberFormat
             out string return
     method format_partial_string
-        method FormatPartialString slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51 reverse=65
+        method FormatPartialString slot=8 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51
             in string name=number
             out string return
     method format_string
-        method FormatString slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51 reverse=100
+        method FormatString slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51
             in string name=number
             out string return
     method format_string_with_left_to_right_markers
-        method FormatStringWithLeftToRightMarkers slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51 reverse=124
+        method FormatStringWithLeftToRightMarkers slot=10 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter shape=51
             in string name=number
             out string return
     method get_country_code_for_region static
-        method GetCountryCodeForRegion slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=51 reverse=44 static
+        method GetCountryCodeForRegion slot=7 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=51 static
             in string name=regionCode
             out int32 return
     method get_national_direct_dialing_prefix_for_region static
-        method GetNationalDirectDialingPrefixForRegion slot=8 inputs=2 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=117 reverse=66 static
+        method GetNationalDirectDialingPrefixForRegion slot=8 inputs=2 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=117 static
             in string name=regionCode
             in boolean name=stripNonDigit
             out string return
     method try_create static
-        method TryCreate slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=51 reverse=24 static
+        method TryCreate slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=51 static
             in string name=regionCode
             out class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter name=phoneNumber
     method wrap_with_left_to_right_markers static
-        method WrapWithLeftToRightMarkers slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=51 reverse=100 static
+        method WrapWithLeftToRightMarkers slot=9 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics shape=51 static
             in string name=number
             out string return
 
@@ -82,43 +82,43 @@ class Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo python_type st
     factory Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory
     factory Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory shape=51
             in string name=number
             out class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo return
     property country_code
-        get get_CountryCode slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=22
+        get get_CountryCode slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out int32 return
     property phone_number
-        get get_PhoneNumber slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=43
+        get get_PhoneNumber slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out string return
     method check_number_match
-        method CheckNumberMatch slot=13 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=51 reverse=174
+        method CheckNumberMatch slot=13 inputs=1 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=51
             in class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo name=otherNumber
             out enum32 type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult return
     method get_geographic_region_code
-        method GetGeographicRegionCode slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=162
+        method GetGeographicRegionCode slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out string return
     method get_length_of_geographical_area_code
-        method GetLengthOfGeographicalAreaCode slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=62
+        method GetLengthOfGeographicalAreaCode slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out int32 return
     method get_length_of_national_destination_code
-        method GetLengthOfNationalDestinationCode slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=121
+        method GetLengthOfNationalDestinationCode slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out int32 return
     method get_national_significant_number
-        method GetNationalSignificantNumber slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=99
+        method GetNationalSignificantNumber slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out string return
     method predict_number_kind
-        method PredictNumberKind slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4 reverse=141
+        method PredictNumberKind slot=11 inputs=0 outputs=1 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo shape=4
             out enum32 type=Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=6 inputs=1 outputs=2 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics shape=117 reverse=25 static
+        method TryParse slot=6 inputs=1 outputs=2 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics shape=117 static
             in string name=input
             out class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo name=phoneNumber
             out enum32 type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult return
-        method TryParse slot=7 inputs=2 outputs=2 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics shape=195 reverse=46 static
+        method TryParse slot=7 inputs=2 outputs=2 declaring=Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics shape=195 static
             in string name=input
             in string name=regionCode
             out class type=Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo name=phoneNumber

@@ -524,67 +524,67 @@ class Windows.ApplicationModel.UserActivities.UserActivity python_type
     factory Windows.ApplicationModel.UserActivities.IUserActivityFactory
     factory Windows.ApplicationModel.UserActivities.IUserActivityStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityFactory shape=51
             in string name=activityId
             out class type=Windows.ApplicationModel.UserActivities.UserActivity return
     property fallback_uri
-        get get_FallbackUri slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=173
+        get get_FallbackUri slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out class type=Windows.Foundation.Uri return
-        put put_FallbackUri slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=186
+        put put_FallbackUri slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             in class type=Windows.Foundation.Uri name=value
     property content_uri
-        get get_ContentUri slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=99
+        get get_ContentUri slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ContentUri slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=121
+        put put_ContentUri slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             in class type=Windows.Foundation.Uri name=value
     property content_type
-        get get_ContentType slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=141
+        get get_ContentType slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out string return
-        put put_ContentType slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=162
+        put put_ContentType slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             in string name=value
     property content_info
-        get get_ContentInfo slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=210
+        get get_ContentInfo slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out interface type=Windows.ApplicationModel.UserActivities.IUserActivityContentInfo return
-        put put_ContentInfo slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=218
+        put put_ContentInfo slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             in interface type=Windows.ApplicationModel.UserActivities.IUserActivityContentInfo name=value
     property activation_uri
-        get get_ActivationUri slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=194
+        get get_ActivationUri slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ActivationUri slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=202
+        put put_ActivationUri slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             in class type=Windows.Foundation.Uri name=value
     property activity_id
-        get get_ActivityId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=43
+        get get_ActivityId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out string return
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=22
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out enum32 type=Windows.ApplicationModel.UserActivities.UserActivityState return
     property visual_elements
-        get get_VisualElements slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=62
+        get get_VisualElements slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out class type=Windows.ApplicationModel.UserActivities.UserActivityVisualElements return
     property is_roamable
-        get get_IsRoamable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity3 shape=4 reverse=22
+        get get_IsRoamable slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity3 shape=4
             out boolean return
-        put put_IsRoamable slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity3 shape=4 reverse=43
+        put put_IsRoamable slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivity3 shape=4
             in boolean name=value
     method create_session
-        method CreateSession slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=228
+        method CreateSession slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out class type=Windows.ApplicationModel.UserActivities.UserActivitySession return
     method save_async
-        method SaveAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4 reverse=223
+        method SaveAsync slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method to_json
-        method ToJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity2 shape=4 reverse=22
+        method ToJson slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivity2 shape=4
             out string return
     method to_json_array static
-        method ToJsonArray slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 reverse=65 static
+        method ToJsonArray slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.UserActivities.UserActivity> name=activities
             out string return
     method try_parse_from_json static
-        method TryParseFromJson slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 reverse=24 static
+        method TryParseFromJson slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 static
             in string name=json
             out class type=Windows.ApplicationModel.UserActivities.UserActivity return
     method try_parse_from_json_array static
-        method TryParseFromJsonArray slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 reverse=44 static
+        method TryParseFromJsonArray slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityStatics shape=51 static
             in string name=json
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivity> return
 
@@ -597,23 +597,23 @@ class Windows.ApplicationModel.UserActivities.UserActivityAttribution activatabl
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttributionFactory shape=51
             in class type=Windows.Foundation.Uri name=iconUri
             out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return
     property icon_uri
-        get get_IconUri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=22
+        get get_IconUri slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4
             out class type=Windows.Foundation.Uri return
-        put put_IconUri slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=43
+        put put_IconUri slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4
             in class type=Windows.Foundation.Uri name=value
     property alternate_text
-        get get_AlternateText slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=62
+        get get_AlternateText slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4
             out string return
-        put put_AlternateText slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=99
+        put put_AlternateText slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4
             in string name=value
     property add_image_query
-        get get_AddImageQuery slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=121
+        get get_AddImageQuery slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4
             out boolean return
-        put put_AddImageQuery slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4 reverse=141
+        put put_AddImageQuery slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityAttribution shape=4
             in boolean name=value
 
 class Windows.ApplicationModel.UserActivities.UserActivityChannel python_type
@@ -626,27 +626,27 @@ class Windows.ApplicationModel.UserActivities.UserActivityChannel python_type
     factory Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2
     factory Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3
     method delete_activity_async
-        method DeleteActivityAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=51 reverse=44
+        method DeleteActivityAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=51
             in string name=activityId
             out interface type=Windows.Foundation.IAsyncAction return
     method delete_all_activities_async
-        method DeleteAllActivitiesAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=4 reverse=62
+        method DeleteAllActivitiesAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method disable_auto_session_creation static
-        method DisableAutoSessionCreation slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 shape=0 reverse=16 static
+        method DisableAutoSessionCreation slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 shape=0 static
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics shape=4 static
             out class type=Windows.ApplicationModel.UserActivities.UserActivityChannel return
     method get_for_user static
-        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3 shape=51 reverse=24 static
+        method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.ApplicationModel.UserActivities.UserActivityChannel return
     method get_or_create_user_activity_async
-        method GetOrCreateUserActivityAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=51 reverse=24
+        method GetOrCreateUserActivityAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel shape=51
             in string name=activityId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserActivities.UserActivity> return
     method get_recent_user_activities_async
-        method GetRecentUserActivitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel2 shape=51 reverse=24
+        method GetRecentUserActivitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannel2 shape=51
             in int32 name=maxUniqueActivities
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem>> return
     method get_session_history_items_for_user_activity_async
@@ -655,7 +655,7 @@ class Windows.ApplicationModel.UserActivities.UserActivityChannel python_type
             in datetime name=startTime
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem>> return
     method try_get_for_web_account static
-        method TryGetForWebAccount slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 shape=51 reverse=44 static
+        method TryGetForWebAccount slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityChannelStatics2 shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=account
             out class type=Windows.ApplicationModel.UserActivities.UserActivityChannel return
 
@@ -666,7 +666,7 @@ class Windows.ApplicationModel.UserActivities.UserActivityContentInfo python_typ
     requires Windows.ApplicationModel.UserActivities.IUserActivityContentInfo
     factory Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics
     method from_json static
-        method FromJson slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics shape=51 reverse=24 static
+        method FromJson slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityContentInfoStatics shape=51 static
             in string name=value
             out class type=Windows.ApplicationModel.UserActivities.UserActivityContentInfo return
     method to_json
@@ -679,7 +679,7 @@ class Windows.ApplicationModel.UserActivities.UserActivityRequest python_type
     default Windows.ApplicationModel.UserActivities.IUserActivityRequest
     requires Windows.ApplicationModel.UserActivities.IUserActivityRequest
     method set_user_activity
-        method SetUserActivity slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequest shape=4 reverse=22
+        method SetUserActivity slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequest shape=4
             in class type=Windows.ApplicationModel.UserActivities.UserActivity name=activity
 
 class Windows.ApplicationModel.UserActivities.UserActivityRequestManager python_type
@@ -689,13 +689,13 @@ class Windows.ApplicationModel.UserActivities.UserActivityRequestManager python_
     requires Windows.ApplicationModel.UserActivities.IUserActivityRequestManager
     factory Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics
     event user_activity_requested
-        add add_UserActivityRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManager shape=51 reverse=24
+        add add_UserActivityRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserActivities.UserActivityRequestManager,Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UserActivityRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManager shape=26 reverse=53
+        remove remove_UserActivityRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestManagerStatics shape=4 static
             out class type=Windows.ApplicationModel.UserActivities.UserActivityRequestManager return
 
 class Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs python_type
@@ -704,10 +704,10 @@ class Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs pyt
     default Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs
     requires Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs shape=4
             out class type=Windows.ApplicationModel.UserActivities.UserActivityRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.UserActivities.UserActivitySession python_type closeable
@@ -717,7 +717,7 @@ class Windows.ApplicationModel.UserActivities.UserActivitySession python_type cl
     requires Windows.ApplicationModel.UserActivities.IUserActivitySession
     requires Windows.Foundation.IClosable
     property activity_id
-        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySession shape=4 reverse=22
+        get get_ActivityId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySession shape=4
             out string return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -728,13 +728,13 @@ class Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem pyt
     default Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem
     requires Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem
     property end_time
-        get get_EndTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4 reverse=62
+        get get_EndTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property start_time
-        get get_StartTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4 reverse=43
+        get get_StartTime slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4
             out datetime return
     property user_activity
-        get get_UserActivity slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4 reverse=22
+        get get_UserActivity slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivitySessionHistoryItem shape=4
             out class type=Windows.ApplicationModel.UserActivities.UserActivity return
 
 enum Windows.ApplicationModel.UserActivities.UserActivityState python_type
@@ -750,34 +750,34 @@ class Windows.ApplicationModel.UserActivities.UserActivityVisualElements python_
     requires Windows.ApplicationModel.UserActivities.IUserActivityVisualElements
     requires Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2
     property display_text
-        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=22
+        get get_DisplayText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             out string return
-        put put_DisplayText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=43
+        put put_DisplayText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             in string name=value
     property description
-        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=62
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             out string return
-        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=99
+        put put_Description slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             in string name=value
     property content
-        get get_Content slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=194
+        get get_Content slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             out interface type=Windows.UI.Shell.IAdaptiveCard return
-        put put_Content slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=186
+        put put_Content slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             in interface type=Windows.UI.Shell.IAdaptiveCard name=value
     property background_color
-        get get_BackgroundColor slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=121
+        get get_BackgroundColor slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             out struct type=Windows.UI.Color return
-        put put_BackgroundColor slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=29 reverse=157
+        put put_BackgroundColor slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=29
             in struct type=Windows.UI.Color name=value
     property attribution
-        get get_Attribution slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=162
+        get get_Attribution slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             out class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution return
-        put put_Attribution slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4 reverse=173
+        put put_Attribution slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements shape=4
             in class type=Windows.ApplicationModel.UserActivities.UserActivityAttribution name=value
     property attribution_display_text
-        get get_AttributionDisplayText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 shape=4 reverse=22
+        get get_AttributionDisplayText slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 shape=4
             out string return
-        put put_AttributionDisplayText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 shape=4 reverse=43
+        put put_AttributionDisplayText slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserActivities.IUserActivityVisualElements2 shape=4
             in string name=value
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized

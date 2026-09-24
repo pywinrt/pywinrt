@@ -135,13 +135,13 @@ class Windows.Storage.FileProperties.BasicProperties python_type
     requires Windows.Storage.FileProperties.IBasicProperties
     requires Windows.Storage.FileProperties.IStorageItemExtraProperties
     property date_modified
-        get get_DateModified slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IBasicProperties shape=4 reverse=43
+        get get_DateModified slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IBasicProperties shape=4
             out datetime return
     property item_date
-        get get_ItemDate slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IBasicProperties shape=4 reverse=62
+        get get_ItemDate slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IBasicProperties shape=4
             out datetime return
     property size
-        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IBasicProperties shape=4 reverse=22
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IBasicProperties shape=4
             out uint64 return
     method retrieve_properties_async
         method RetrievePropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemExtraProperties shape=51 reverse=24
@@ -161,20 +161,20 @@ class Windows.Storage.FileProperties.DocumentProperties python_type
     requires Windows.Storage.FileProperties.IDocumentProperties
     requires Windows.Storage.FileProperties.IStorageItemExtraProperties
     property title
-        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4 reverse=43
+        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4
             out string return
-        put put_Title slot=8 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4 reverse=62
+        put put_Title slot=8 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4
             in string name=value
     property comment
-        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4 reverse=121
+        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4
             out string return
-        put put_Comment slot=11 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4 reverse=141
+        put put_Comment slot=11 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4
             in string name=value
     property author
-        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4 reverse=22
+        get get_Author slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property keywords
-        get get_Keywords slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4 reverse=99
+        get get_Keywords slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IDocumentProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     method retrieve_properties_async
         method RetrievePropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemExtraProperties shape=51 reverse=24
@@ -191,16 +191,16 @@ class Windows.Storage.FileProperties.GeotagHelper static python_type
     py GeotagHelper
     factory Windows.Storage.FileProperties.IGeotagHelperStatics
     method get_geotag_async static
-        method GetGeotagAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IGeotagHelperStatics shape=51 reverse=24 static
+        method GetGeotagAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IGeotagHelperStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> return
     method set_geotag_async static
-        method SetGeotagAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.FileProperties.IGeotagHelperStatics shape=117 reverse=66 static
+        method SetGeotagAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.FileProperties.IGeotagHelperStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in class type=Windows.Devices.Geolocation.Geopoint name=geopoint
             out interface type=Windows.Foundation.IAsyncAction return
     method set_geotag_from_geolocator_async static
-        method SetGeotagFromGeolocatorAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.FileProperties.IGeotagHelperStatics shape=117 reverse=45 static
+        method SetGeotagFromGeolocatorAsync slot=7 inputs=2 outputs=1 declaring=Windows.Storage.FileProperties.IGeotagHelperStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in class type=Windows.Devices.Geolocation.Geolocator name=geolocator
             out interface type=Windows.Foundation.IAsyncAction return
@@ -869,50 +869,50 @@ class Windows.Storage.FileProperties.ImageProperties python_type
     requires Windows.Storage.FileProperties.IImageProperties
     requires Windows.Storage.FileProperties.IStorageItemExtraProperties
     property title
-        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=173
+        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out string return
-        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=186
+        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             in string name=value
     property rating
-        get get_Rating slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=22
+        get get_Rating slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out uint32 return
-        put put_Rating slot=7 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=43
+        put put_Rating slot=7 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             in uint32 name=value
     property date_taken
-        get get_DateTaken slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=99
+        get get_DateTaken slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out datetime return
-        put put_DateTaken slot=10 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=26 reverse=134
+        put put_DateTaken slot=10 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=26
             in datetime name=value
     property camera_model
-        get get_CameraModel slot=19 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=223
+        get get_CameraModel slot=19 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out string return
-        put put_CameraModel slot=20 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=228
+        put put_CameraModel slot=20 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             in string name=value
     property camera_manufacturer
-        get get_CameraManufacturer slot=17 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=210
+        get get_CameraManufacturer slot=17 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out string return
-        put put_CameraManufacturer slot=18 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=218
+        put put_CameraManufacturer slot=18 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             in string name=value
     property height
-        get get_Height slot=12 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=162
+        get get_Height slot=12 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out uint32 return
     property keywords
-        get get_Keywords slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=62
+        get get_Keywords slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property latitude
-        get get_Latitude slot=15 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=194
+        get get_Latitude slot=15 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property longitude
-        get get_Longitude slot=16 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=202
+        get get_Longitude slot=16 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property orientation
-        get get_Orientation slot=21 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=232
+        get get_Orientation slot=21 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out enum32 type=Windows.Storage.FileProperties.PhotoOrientation return
     property people_names
-        get get_PeopleNames slot=22 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=237
+        get get_PeopleNames slot=22 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property width
-        get get_Width slot=11 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4 reverse=141
+        get get_Width slot=11 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IImageProperties shape=4
             out uint32 return
     method retrieve_properties_async
         method RetrievePropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemExtraProperties shape=51 reverse=24
@@ -932,70 +932,70 @@ class Windows.Storage.FileProperties.MusicProperties python_type
     requires Windows.Storage.FileProperties.IMusicProperties
     requires Windows.Storage.FileProperties.IStorageItemExtraProperties
     property year
-        get get_Year slot=29 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=266
+        get get_Year slot=29 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out uint32 return
-        put put_Year slot=30 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=270
+        put put_Year slot=30 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in uint32 name=value
     property track_number
-        get get_TrackNumber slot=11 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=141
+        get get_TrackNumber slot=11 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out uint32 return
-        put put_TrackNumber slot=12 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=162
+        put put_TrackNumber slot=12 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in uint32 name=value
     property title
-        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=173
+        get get_Title slot=13 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out string return
-        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=186
+        put put_Title slot=14 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in string name=value
     property subtitle
-        get get_Subtitle slot=23 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=242
+        get get_Subtitle slot=23 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out string return
-        put put_Subtitle slot=24 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=247
+        put put_Subtitle slot=24 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in string name=value
     property rating
-        get get_Rating slot=15 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=194
+        get get_Rating slot=15 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out uint32 return
-        put put_Rating slot=16 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=202
+        put put_Rating slot=16 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in uint32 name=value
     property publisher
-        get get_Publisher slot=26 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=255
+        get get_Publisher slot=26 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out string return
-        put put_Publisher slot=27 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=259
+        put put_Publisher slot=27 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in string name=value
     property artist
-        get get_Artist slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=62
+        get get_Artist slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out string return
-        put put_Artist slot=9 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=99
+        put put_Artist slot=9 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in string name=value
     property album_artist
-        get get_AlbumArtist slot=19 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=223
+        get get_AlbumArtist slot=19 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out string return
-        put put_AlbumArtist slot=20 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=228
+        put put_AlbumArtist slot=20 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in string name=value
     property album
-        get get_Album slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=22
+        get get_Album slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out string return
-        put put_Album slot=7 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=43
+        put put_Album slot=7 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             in string name=value
     property bitrate
-        get get_Bitrate slot=18 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=218
+        get get_Bitrate slot=18 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out uint32 return
     property composers
-        get get_Composers slot=21 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=232
+        get get_Composers slot=21 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property conductors
-        get get_Conductors slot=22 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=237
+        get get_Conductors slot=22 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property duration
-        get get_Duration slot=17 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=210
+        get get_Duration slot=17 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out timespan return
     property genre
-        get get_Genre slot=10 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=121
+        get get_Genre slot=10 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property producers
-        get get_Producers slot=25 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=252
+        get get_Producers slot=25 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property writers
-        get get_Writers slot=28 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4 reverse=263
+        get get_Writers slot=28 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IMusicProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     method retrieve_properties_async
         method RetrievePropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemExtraProperties shape=51 reverse=24
@@ -1038,16 +1038,16 @@ class Windows.Storage.FileProperties.StorageItemContentProperties python_type
     requires Windows.Storage.FileProperties.IStorageItemContentProperties
     requires Windows.Storage.FileProperties.IStorageItemExtraProperties
     method get_document_properties_async
-        method GetDocumentPropertiesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4 reverse=99
+        method GetDocumentPropertiesAsync slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.DocumentProperties> return
     method get_image_properties_async
-        method GetImagePropertiesAsync slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4 reverse=62
+        method GetImagePropertiesAsync slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.ImageProperties> return
     method get_music_properties_async
-        method GetMusicPropertiesAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4 reverse=22
+        method GetMusicPropertiesAsync slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.MusicProperties> return
     method get_video_properties_async
-        method GetVideoPropertiesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4 reverse=43
+        method GetVideoPropertiesAsync slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemContentProperties shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.VideoProperties> return
     method retrieve_properties_async
         method RetrievePropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemExtraProperties shape=51 reverse=24
@@ -1072,16 +1072,16 @@ class Windows.Storage.FileProperties.StorageItemThumbnail python_type closeable
     requires Windows.Storage.Streams.IContentTypeProvider
     requires Windows.Storage.FileProperties.IThumbnailProperties
     property original_height
-        get get_OriginalHeight slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4 reverse=43
+        get get_OriginalHeight slot=7 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4
             out uint32 return
     property original_width
-        get get_OriginalWidth slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4 reverse=22
+        get get_OriginalWidth slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4
             out uint32 return
     property returned_smaller_cached_size
-        get get_ReturnedSmallerCachedSize slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4 reverse=62
+        get get_ReturnedSmallerCachedSize slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4
             out boolean return
     property type
-        get get_Type slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4 reverse=99
+        get get_Type slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IThumbnailProperties shape=4
             out enum32 type=Windows.Storage.FileProperties.ThumbnailType return
     property content_type
         get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IContentTypeProvider shape=4 reverse=22
@@ -1169,62 +1169,62 @@ class Windows.Storage.FileProperties.VideoProperties python_type
     requires Windows.Storage.FileProperties.IVideoProperties
     requires Windows.Storage.FileProperties.IStorageItemExtraProperties
     property year
-        get get_Year slot=22 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=237
+        get get_Year slot=22 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out uint32 return
-        put put_Year slot=23 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=242
+        put put_Year slot=23 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             in uint32 name=value
     property title
-        get get_Title slot=14 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=186
+        get get_Title slot=14 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out string return
-        put put_Title slot=15 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=194
+        put put_Title slot=15 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             in string name=value
     property subtitle
-        get get_Subtitle slot=16 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=202
+        get get_Subtitle slot=16 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out string return
-        put put_Subtitle slot=17 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=210
+        put put_Subtitle slot=17 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             in string name=value
     property rating
-        get get_Rating slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=22
+        get get_Rating slot=6 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out uint32 return
-        put put_Rating slot=7 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=43
+        put put_Rating slot=7 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             in uint32 name=value
     property publisher
-        get get_Publisher slot=19 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=223
+        get get_Publisher slot=19 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out string return
-        put put_Publisher slot=20 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=228
+        put put_Publisher slot=20 inputs=1 outputs=0 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             in string name=value
     property bitrate
-        get get_Bitrate slot=24 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=247
+        get get_Bitrate slot=24 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out uint32 return
     property directors
-        get get_Directors slot=25 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=252
+        get get_Directors slot=25 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property duration
-        get get_Duration slot=11 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=141
+        get get_Duration slot=11 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out timespan return
     property height
-        get get_Height slot=10 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=121
+        get get_Height slot=10 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out uint32 return
     property keywords
-        get get_Keywords slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=62
+        get get_Keywords slot=8 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property latitude
-        get get_Latitude slot=12 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=162
+        get get_Latitude slot=12 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property longitude
-        get get_Longitude slot=13 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=173
+        get get_Longitude slot=13 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     property orientation
-        get get_Orientation slot=26 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=255
+        get get_Orientation slot=26 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out enum32 type=Windows.Storage.FileProperties.VideoOrientation return
     property producers
-        get get_Producers slot=18 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=218
+        get get_Producers slot=18 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property width
-        get get_Width slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=99
+        get get_Width slot=9 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out uint32 return
     property writers
-        get get_Writers slot=21 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4 reverse=232
+        get get_Writers slot=21 inputs=0 outputs=1 declaring=Windows.Storage.FileProperties.IVideoProperties shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     method retrieve_properties_async
         method RetrievePropertiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.Storage.FileProperties.IStorageItemExtraProperties shape=51 reverse=24

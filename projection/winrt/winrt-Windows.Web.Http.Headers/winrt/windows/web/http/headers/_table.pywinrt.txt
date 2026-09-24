@@ -16,24 +16,24 @@ class Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection python_ty
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=43 role=size
             out uint32 return
     property shared_max_age
-        get get_SharedMaxAge slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=162
+        get get_SharedMaxAge slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_SharedMaxAge slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=173
+        put put_SharedMaxAge slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property min_fresh
-        get get_MinFresh slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=121
+        get get_MinFresh slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_MinFresh slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=141
+        put put_MinFresh slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property max_stale
-        get get_MaxStale slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=62
+        get get_MaxStale slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_MaxStale slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=99
+        put put_MaxStale slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property max_age
-        get get_MaxAge slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=22
+        get get_MaxAge slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_MaxAge slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=43
+        put put_MaxAge slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     method append
         method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=173 role=append
@@ -65,7 +65,7 @@ class Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection python_ty
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=value
     method parse_add
-        method ParseAdd slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4 reverse=186
+        method ParseAdd slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> shape=4 reverse=162 role=remove_at
@@ -83,7 +83,7 @@ class Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection python_ty
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=15 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=51 reverse=196
+        method TryParseAdd slot=15 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -96,31 +96,31 @@ class Windows.Web.Http.Headers.HttpChallengeHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=51
             in string name=scheme
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueFactory shape=117
             in string name=scheme
             in string name=token
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
     property parameters
-        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4 reverse=22
+        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     property scheme
-        get get_Scheme slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4 reverse=43
+        get get_Scheme slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4
             out string return
     property token
-        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4 reverse=62
+        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=challengeHeaderValue
             out boolean return
@@ -167,7 +167,7 @@ class Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection python_type it
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpChallengeHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue> shape=4 reverse=162 role=remove_at
@@ -185,7 +185,7 @@ class Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection python_type it
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -198,21 +198,21 @@ class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue python_type strin
     factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueFactory shape=51
             in string name=token
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
     property token
-        get get_Token slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue shape=4 reverse=22
+        get get_Token slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=connectionOptionHeaderValue
             out boolean return
@@ -259,7 +259,7 @@ class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection python_
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue> shape=4 reverse=162 role=remove_at
@@ -277,7 +277,7 @@ class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection python_
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -290,21 +290,21 @@ class Windows.Web.Http.Headers.HttpContentCodingHeaderValue python_type stringab
     factory Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueFactory shape=51
             in string name=contentCoding
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
     property content_coding
-        get get_ContentCoding slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValue shape=4 reverse=22
+        get get_ContentCoding slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=contentCodingHeaderValue
             out boolean return
@@ -351,7 +351,7 @@ class Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection python_typ
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue> shape=4 reverse=162 role=remove_at
@@ -369,7 +369,7 @@ class Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection python_typ
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -382,7 +382,7 @@ class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue python_ty
     factory Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory shape=51
             in string name=contentCoding
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
         ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueFactory shape=111
@@ -390,20 +390,20 @@ class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue python_ty
             in double name=quality
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
     property content_coding
-        get get_ContentCoding slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue shape=4 reverse=22
+        get get_ContentCoding slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue shape=4
             out string return
     property quality
-        get get_Quality slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue shape=4 reverse=43
+        get get_Quality slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=contentCodingWithQualityHeaderValue
             out boolean return
@@ -450,7 +450,7 @@ class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue> shape=4 reverse=162 role=remove_at
@@ -468,7 +468,7 @@ class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -481,46 +481,46 @@ class Windows.Web.Http.Headers.HttpContentDispositionHeaderValue python_type str
     factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueFactory shape=51
             in string name=dispositionType
             out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue return
     property size
-        get get_Size slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=194
+        get get_Size slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
-        put put_Size slot=16 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=202
+        put put_Size slot=16 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             in reference type=Windows.Foundation.IReference<System.UInt64> name=value
     property name
-        get get_Name slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=162
+        get get_Name slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             out string return
-        put put_Name slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=173
+        put put_Name slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             in string name=value
     property file_name_star
-        get get_FileNameStar slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=121
+        get get_FileNameStar slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             out string return
-        put put_FileNameStar slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=141
+        put put_FileNameStar slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             in string name=value
     property file_name
-        get get_FileName slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=62
+        get get_FileName slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             out string return
-        put put_FileName slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=99
+        put put_FileName slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             in string name=value
     property disposition_type
-        get get_DispositionType slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=22
+        get get_DispositionType slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             out string return
-        put put_DispositionType slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=43
+        put put_DispositionType slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             in string name=value
     property parameters
-        get get_Parameters slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4 reverse=186
+        get get_Parameters slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentDispositionHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue name=contentDispositionHeaderValue
             out boolean return
@@ -541,53 +541,53 @@ class Windows.Web.Http.Headers.HttpContentHeaderCollection activatable python_ty
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     property last_modified
-        get get_LastModified slot=22 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=237
+        get get_LastModified slot=22 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_LastModified slot=23 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=242
+        put put_LastModified slot=23 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property expires
-        get get_Expires slot=20 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=228
+        get get_Expires slot=20 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Expires slot=21 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=232
+        put put_Expires slot=21 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property content_type
-        get get_ContentType slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=218
+        get get_ContentType slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue return
-        put put_ContentType slot=19 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=223
+        put put_ContentType slot=19 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue name=value
     property content_range
-        get get_ContentRange slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=202
+        get get_ContentRange slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
-        put put_ContentRange slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=210
+        put put_ContentRange slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue name=value
     property content_md5
-        get get_ContentMD5 slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=186
+        get get_ContentMD5 slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_ContentMD5 slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=194
+        put put_ContentMD5 slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property content_location
-        get get_ContentLocation slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=162
+        get get_ContentLocation slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ContentLocation slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=173
+        put put_ContentLocation slot=13 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in class type=Windows.Foundation.Uri name=value
     property content_length
-        get get_ContentLength slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=121
+        get get_ContentLength slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
-        put put_ContentLength slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=141
+        put put_ContentLength slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<System.UInt64> name=value
     property content_disposition
-        get get_ContentDisposition slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=22
+        get get_ContentDisposition slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue return
-        put put_ContentDisposition slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=43
+        put put_ContentDisposition slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             in class type=Windows.Web.Http.Headers.HttpContentDispositionHeaderValue name=value
     property content_encoding
-        get get_ContentEncoding slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=62
+        get get_ContentEncoding slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection return
     property content_language
-        get get_ContentLanguage slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4 reverse=99
+        get get_ContentLanguage slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection return
     method append
-        method Append slot=24 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=51 reverse=248
+        method Append slot=24 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentHeaderCollection shape=51
             in string name=name
             in string name=value
     method clear
@@ -632,7 +632,7 @@ class Windows.Web.Http.Headers.HttpContentRangeHeaderValue python_type stringabl
     factory Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory shape=47 reverse=19
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory shape=47
             in uint64 name=length
             out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
         ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueFactory shape=107
@@ -645,28 +645,28 @@ class Windows.Web.Http.Headers.HttpContentRangeHeaderValue python_type stringabl
             in uint64 name=length
             out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
     property unit
-        get get_Unit slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=99
+        get get_Unit slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4
             out string return
-        put put_Unit slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=121
+        put put_Unit slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4
             in string name=value
     property first_byte_position
-        get get_FirstBytePosition slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=22
+        get get_FirstBytePosition slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
     property last_byte_position
-        get get_LastBytePosition slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=43
+        get get_LastBytePosition slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
     property length
-        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4 reverse=62
+        get get_Length slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.UInt64> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpContentRangeHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpContentRangeHeaderValue name=contentRangeHeaderValue
             out boolean return
@@ -680,30 +680,30 @@ class Windows.Web.Http.Headers.HttpCookiePairHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory shape=51
             in string name=name
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueFactory shape=117
             in string name=name
             in string name=value
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4
             out string return
-        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4 reverse=62
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4
             in string name=value
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=cookiePairHeaderValue
             out boolean return
@@ -750,7 +750,7 @@ class Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection python_type i
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue> shape=4 reverse=162 role=remove_at
@@ -768,7 +768,7 @@ class Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection python_type i
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -781,31 +781,31 @@ class Windows.Web.Http.Headers.HttpCredentialsHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=51
             in string name=scheme
             out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueFactory shape=117
             in string name=scheme
             in string name=token
             out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
     property parameters
-        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4 reverse=22
+        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     property scheme
-        get get_Scheme slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4 reverse=43
+        get get_Scheme slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4
             out string return
     property token
-        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4 reverse=62
+        get get_Token slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpCredentialsHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=credentialsHeaderValue
             out boolean return
@@ -818,20 +818,20 @@ class Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue python_type stringable
     requires Windows.Foundation.IStringable
     factory Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics
     property date
-        get get_Date slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue shape=4 reverse=22
+        get get_Date slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property delta
-        get get_Delta slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue shape=4 reverse=43
+        get get_Delta slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue name=dateOrDeltaHeaderValue
             out boolean return
@@ -845,33 +845,33 @@ class Windows.Web.Http.Headers.HttpExpectationHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory shape=51
             in string name=name
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueFactory shape=117
             in string name=name
             in string name=value
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4
             out string return
-        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=62
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4
             in string name=value
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4
             out string return
     property parameters
-        get get_Parameters slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4 reverse=99
+        get get_Parameters slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=expectationHeaderValue
             out boolean return
@@ -918,7 +918,7 @@ class Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection python_type 
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpExpectationHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue> shape=4 reverse=162 role=remove_at
@@ -936,7 +936,7 @@ class Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection python_type 
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -982,7 +982,7 @@ class Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection python_type ite
             in uint32 name=index
             in class type=Windows.Globalization.Language name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Globalization.Language> shape=4 reverse=162 role=remove_at
@@ -1000,7 +1000,7 @@ class Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection python_type ite
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -1013,7 +1013,7 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue python_ty
     factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory shape=51
             in string name=languageRange
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
         ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueFactory shape=111
@@ -1021,20 +1021,20 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue python_ty
             in double name=quality
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
     property language_range
-        get get_LanguageRange slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue shape=4 reverse=22
+        get get_LanguageRange slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue shape=4
             out string return
     property quality
-        get get_Quality slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue shape=4 reverse=43
+        get get_Quality slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=languageRangeWithQualityHeaderValue
             out boolean return
@@ -1081,7 +1081,7 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue> shape=4 reverse=162 role=remove_at
@@ -1099,7 +1099,7 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -1112,31 +1112,31 @@ class Windows.Web.Http.Headers.HttpMediaTypeHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueFactory shape=51
             in string name=mediaType
             out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue return
     property media_type
-        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=62
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4
             out string return
-        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=99
+        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4
             in string name=value
     property char_set
-        get get_CharSet slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=22
+        get get_CharSet slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4
             out string return
-        put put_CharSet slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=43
+        put put_CharSet slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4
             in string name=value
     property parameters
-        get get_Parameters slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4 reverse=121
+        get get_Parameters slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpMediaTypeHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpMediaTypeHeaderValue name=mediaTypeHeaderValue
             out boolean return
@@ -1150,7 +1150,7 @@ class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue python_type s
     factory Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory shape=51
             in string name=mediaType
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
         ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueFactory shape=111
@@ -1158,32 +1158,32 @@ class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue python_type s
             in double name=quality
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
     property quality
-        get get_Quality slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=141
+        get get_Quality slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-        put put_Quality slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=162
+        put put_Quality slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             in reference type=Windows.Foundation.IReference<System.Double> name=value
     property media_type
-        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=62
+        get get_MediaType slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             out string return
-        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=99
+        put put_MediaType slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             in string name=value
     property char_set
-        get get_CharSet slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=22
+        get get_CharSet slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             out string return
-        put put_CharSet slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=43
+        put put_CharSet slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             in string name=value
     property parameters
-        get get_Parameters slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4 reverse=121
+        get get_Parameters slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=mediaTypeWithQualityHeaderValue
             out boolean return
@@ -1230,7 +1230,7 @@ class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection pyt
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue> shape=4 reverse=162 role=remove_at
@@ -1248,7 +1248,7 @@ class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection pyt
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -1294,7 +1294,7 @@ class Windows.Web.Http.Headers.HttpMethodHeaderValueCollection python_type itera
             in uint32 name=index
             in class type=Windows.Web.Http.HttpMethod name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod> shape=4 reverse=162 role=remove_at
@@ -1312,7 +1312,7 @@ class Windows.Web.Http.Headers.HttpMethodHeaderValueCollection python_type itera
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -1325,30 +1325,30 @@ class Windows.Web.Http.Headers.HttpNameValueHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=51
             in string name=name
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueFactory shape=117
             in string name=name
             in string name=value
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4
             out string return
-        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4 reverse=62
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4
             in string name=value
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpNameValueHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpNameValueHeaderValue name=nameValueHeaderValue
             out boolean return
@@ -1362,28 +1362,28 @@ class Windows.Web.Http.Headers.HttpProductHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpProductHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpProductHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=51
             in string name=productName
             out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueFactory shape=117
             in string name=productName
             in string name=productVersion
             out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValue shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValue shape=4
             out string return
     property version
-        get get_Version slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValue shape=4 reverse=43
+        get get_Version slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpProductHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpProductHeaderValue name=productHeaderValue
             out boolean return
@@ -1397,28 +1397,28 @@ class Windows.Web.Http.Headers.HttpProductInfoHeaderValue python_type stringable
     factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=51
             in string name=productComment
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueFactory shape=117
             in string name=productName
             in string name=productVersion
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
     property comment
-        get get_Comment slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValue shape=4 reverse=43
+        get get_Comment slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValue shape=4
             out string return
     property product
-        get get_Product slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValue shape=4 reverse=22
+        get get_Product slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValue shape=4
             out class type=Windows.Web.Http.Headers.HttpProductHeaderValue return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=productInfoHeaderValue
             out boolean return
@@ -1465,7 +1465,7 @@ class Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection python_type 
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue> shape=4 reverse=162 role=remove_at
@@ -1483,7 +1483,7 @@ class Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection python_type 
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection shape=51
             in string name=input
             out boolean return
 
@@ -1500,79 +1500,79 @@ class Windows.Web.Http.Headers.HttpRequestHeaderCollection python_type iterable 
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     property referer
-        get get_Referer slot=29 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=266
+        get get_Referer slot=29 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Referer slot=30 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=270
+        put put_Referer slot=30 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in class type=Windows.Foundation.Uri name=value
     property proxy_authorization
-        get get_ProxyAuthorization slot=27 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=259
+        get get_ProxyAuthorization slot=27 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
-        put put_ProxyAuthorization slot=28 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=263
+        put put_ProxyAuthorization slot=28 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=value
     property max_forwards
-        get get_MaxForwards slot=25 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=252
+        get get_MaxForwards slot=25 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
-        put put_MaxForwards slot=26 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=255
+        put put_MaxForwards slot=26 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
     property if_unmodified_since
-        get get_IfUnmodifiedSince slot=23 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=242
+        get get_IfUnmodifiedSince slot=23 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_IfUnmodifiedSince slot=24 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=247
+        put put_IfUnmodifiedSince slot=24 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property if_modified_since
-        get get_IfModifiedSince slot=21 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=232
+        get get_IfModifiedSince slot=21 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_IfModifiedSince slot=22 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=237
+        put put_IfModifiedSince slot=22 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property host
-        get get_Host slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=223
+        get get_Host slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Networking.HostName return
-        put put_Host slot=20 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=228
+        put put_Host slot=20 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in class type=Windows.Networking.HostName name=value
     property from_
-        get get_From slot=17 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=210
+        get get_From slot=17 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out string return
-        put put_From slot=18 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=218
+        put put_From slot=18 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in string name=value
     property date
-        get get_Date slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=186
+        get get_Date slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Date slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=194
+        put put_Date slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property authorization
-        get get_Authorization slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=99
+        get get_Authorization slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue return
-        put put_Authorization slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=121
+        put put_Authorization slot=10 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             in class type=Windows.Web.Http.Headers.HttpCredentialsHeaderValue name=value
     property accept
-        get get_Accept slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=22
+        get get_Accept slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection return
     property accept_encoding
-        get get_AcceptEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=43
+        get get_AcceptEncoding slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection return
     property accept_language
-        get get_AcceptLanguage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=62
+        get get_AcceptLanguage slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection return
     property cache_control
-        get get_CacheControl slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=141
+        get get_CacheControl slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection return
     property connection
-        get get_Connection slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=162
+        get get_Connection slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection return
     property cookie
-        get get_Cookie slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=173
+        get get_Cookie slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection return
     property expect
-        get get_Expect slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=202
+        get get_Expect slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection return
     property transfer_encoding
-        get get_TransferEncoding slot=31 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=273
+        get get_TransferEncoding slot=31 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection return
     property user_agent
-        get get_UserAgent slot=32 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4 reverse=280
+        get get_UserAgent slot=32 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection return
     method append
-        method Append slot=33 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=51 reverse=286
+        method Append slot=33 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpRequestHeaderCollection shape=51
             in string name=name
             in string name=value
     method clear
@@ -1621,45 +1621,45 @@ class Windows.Web.Http.Headers.HttpResponseHeaderCollection python_type iterable
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
             out uint32 return
     property retry_after
-        get get_RetryAfter slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=202
+        get get_RetryAfter slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue return
-        put put_RetryAfter slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=210
+        put put_RetryAfter slot=17 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             in class type=Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue name=value
     property location
-        get get_Location slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=173
+        get get_Location slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Location slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=186
+        put put_Location slot=14 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             in class type=Windows.Foundation.Uri name=value
     property date
-        get get_Date slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=141
+        get get_Date slot=11 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Date slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=162
+        put put_Date slot=12 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property age
-        get get_Age slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=22
+        get get_Age slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_Age slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=43
+        put put_Age slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property allow
-        get get_Allow slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=62
+        get get_Allow slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpMethodHeaderValueCollection return
     property cache_control
-        get get_CacheControl slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=99
+        get get_CacheControl slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection return
     property connection
-        get get_Connection slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=121
+        get get_Connection slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection return
     property proxy_authenticate
-        get get_ProxyAuthenticate slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=194
+        get get_ProxyAuthenticate slot=15 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection return
     property transfer_encoding
-        get get_TransferEncoding slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=218
+        get get_TransferEncoding slot=18 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection return
     property www_authenticate
-        get get_WwwAuthenticate slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4 reverse=223
+        get get_WwwAuthenticate slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=4
             out class type=Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection return
     method append
-        method Append slot=20 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=51 reverse=229
+        method Append slot=20 inputs=2 outputs=0 declaring=Windows.Web.Http.Headers.IHttpResponseHeaderCollection shape=51
             in string name=name
             in string name=value
     method clear
@@ -1704,24 +1704,24 @@ class Windows.Web.Http.Headers.HttpTransferCodingHeaderValue python_type stringa
     factory Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory
     factory Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory shape=51
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
     property parameters
-        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue shape=4 reverse=22
+        get get_Parameters slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue> return
     property value
-        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue shape=4 reverse=43
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue shape=4
             out string return
     method parse static
-        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics shape=51 reverse=24 static
+        method Parse slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics shape=51 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse static
-        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics shape=117 reverse=45 static
+        method TryParse slot=7 inputs=1 outputs=2 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics shape=117 static
             in string name=input
             out class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=transferCodingHeaderValue
             out boolean return
@@ -1768,7 +1768,7 @@ class Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection python_ty
             in uint32 name=index
             in class type=Windows.Web.Http.Headers.HttpTransferCodingHeaderValue name=value
     method parse_add
-        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection shape=4 reverse=22
+        method ParseAdd slot=6 inputs=1 outputs=0 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection shape=4
             in string name=input
     method remove_at
         method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue> shape=4 reverse=162 role=remove_at
@@ -1786,7 +1786,7 @@ class Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection python_ty
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string
             out string return
     method try_parse_add
-        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection shape=51 reverse=44
+        method TryParseAdd slot=7 inputs=1 outputs=1 declaring=Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection shape=51
             in string name=input
             out boolean return
 

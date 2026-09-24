@@ -20,15 +20,15 @@ class Windows.Data.Xml.Xsl.XsltProcessor python_type
     requires Windows.Data.Xml.Xsl.IXsltProcessor2
     factory Windows.Data.Xml.Xsl.IXsltProcessorFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessorFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessorFactory shape=51
             in class type=Windows.Data.Xml.Dom.XmlDocument name=document
             out class type=Windows.Data.Xml.Xsl.XsltProcessor return
     method transform_to_document
-        method TransformToDocument slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessor2 shape=51 reverse=24
+        method TransformToDocument slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessor2 shape=51
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=inputNode
             out class type=Windows.Data.Xml.Dom.XmlDocument return
     method transform_to_string
-        method TransformToString slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessor shape=51 reverse=24
+        method TransformToString slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Xsl.IXsltProcessor shape=51
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=inputNode
             out string return
 

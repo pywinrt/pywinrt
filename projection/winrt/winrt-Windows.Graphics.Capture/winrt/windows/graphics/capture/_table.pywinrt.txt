@@ -34,22 +34,22 @@ class Windows.Graphics.Capture.Direct3D11CaptureFrame python_type closeable
     requires Windows.Graphics.Capture.IDirect3D11CaptureFrame3
     requires Windows.Foundation.IClosable
     property content_size
-        get get_ContentSize slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=62
+        get get_ContentSize slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4
             out struct type=Windows.Graphics.SizeInt32 return
     property surface
-        get get_Surface slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=22
+        get get_Surface slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4
             out interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface return
     property system_relative_time
-        get get_SystemRelativeTime slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=43
+        get get_SystemRelativeTime slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4
             out timespan return
     property dirty_region_mode
-        get get_DirtyRegionMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4 reverse=43
+        get get_DirtyRegionMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4
             out enum32 type=Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode return
     property dirty_regions
-        get get_DirtyRegions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4 reverse=22
+        get get_DirtyRegions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
     property configuration_iteration
-        get get_ConfigurationIteration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame3 shape=4 reverse=22
+        get get_ConfigurationIteration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame3 shape=4
             out uint64 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -63,13 +63,13 @@ class Windows.Graphics.Capture.Direct3D11CaptureFramePool python_type closeable
     factory Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics
     factory Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2
     property dispatcher_queue
-        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=4 reverse=141
+        get get_DispatcherQueue slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=4
             out class type=Windows.System.DispatcherQueue return
     event frame_arrived
-        add add_FrameArrived slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=51 reverse=65
+        add add_FrameArrived slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Capture.Direct3D11CaptureFramePool,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FrameArrived slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=26 reverse=110
+        remove remove_FrameArrived slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -81,7 +81,7 @@ class Windows.Graphics.Capture.Direct3D11CaptureFramePool python_type closeable
             in struct type=Windows.Graphics.SizeInt32 name=size
             out class type=Windows.Graphics.Capture.Direct3D11CaptureFramePool return
     method create_capture_session
-        method CreateCaptureSession slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=51 reverse=124
+        method CreateCaptureSession slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=51
             in class type=Windows.Graphics.Capture.GraphicsCaptureItem name=item
             out class type=Windows.Graphics.Capture.GraphicsCaptureSession return
     method create_free_threaded static
@@ -98,14 +98,14 @@ class Windows.Graphics.Capture.Direct3D11CaptureFramePool python_type closeable
             in int32 name=numberOfBuffers
             in struct type=Windows.Graphics.SizeInt32 name=size
     method try_get_next_frame
-        method TryGetNextFrame slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=4 reverse=43
+        method TryGetNextFrame slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFramePool shape=4
             out class type=Windows.Graphics.Capture.Direct3D11CaptureFrame return
 
 class Windows.Graphics.Capture.GraphicsCaptureAccess static python_type
     py GraphicsCaptureAccess
     factory Windows.Graphics.Capture.IGraphicsCaptureAccessStatics
     method request_access_async static
-        method RequestAccessAsync slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureAccessStatics shape=51 reverse=24 static
+        method RequestAccessAsync slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureAccessStatics shape=51 static
             in enum32 type=Windows.Graphics.Capture.GraphicsCaptureAccessKind name=request
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> return
 
@@ -129,19 +129,19 @@ class Windows.Graphics.Capture.GraphicsCaptureItem python_type
     factory Windows.Graphics.Capture.IGraphicsCaptureItemStatics
     factory Windows.Graphics.Capture.IGraphicsCaptureItemStatics2
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=4 reverse=22
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=4
             out string return
     property size
-        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=4 reverse=43
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=4
             out struct type=Windows.Graphics.SizeInt32 return
     event closed
-        add add_Closed slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=51 reverse=65
+        add add_Closed slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Capture.GraphicsCaptureItem,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closed slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=26 reverse=110
+        remove remove_Closed slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureItem shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_from_visual static
-        method CreateFromVisual slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItemStatics shape=51 reverse=24 static
+        method CreateFromVisual slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureItemStatics shape=51 static
             in class type=Windows.UI.Composition.Visual name=visual
             out class type=Windows.Graphics.Capture.GraphicsCaptureItem return
     method try_create_from_display_id static
@@ -162,7 +162,7 @@ class Windows.Graphics.Capture.GraphicsCapturePicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method pick_single_item_async
-        method PickSingleItemAsync slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCapturePicker shape=4 reverse=22
+        method PickSingleItemAsync slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCapturePicker shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Graphics.Capture.GraphicsCaptureItem> return
 
 class Windows.Graphics.Capture.GraphicsCaptureSession python_type closeable
@@ -179,40 +179,40 @@ class Windows.Graphics.Capture.GraphicsCaptureSession python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Graphics.Capture.IGraphicsCaptureSessionStatics
     property is_cursor_capture_enabled
-        get get_IsCursorCaptureEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession2 shape=4 reverse=22
+        get get_IsCursorCaptureEnabled slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession2 shape=4
             out boolean return
-        put put_IsCursorCaptureEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession2 shape=4 reverse=43
+        put put_IsCursorCaptureEnabled slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession2 shape=4
             in boolean name=value
     property is_border_required
-        get get_IsBorderRequired slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession3 shape=4 reverse=22
+        get get_IsBorderRequired slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession3 shape=4
             out boolean return
-        put put_IsBorderRequired slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession3 shape=4 reverse=43
+        put put_IsBorderRequired slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession3 shape=4
             in boolean name=value
     property dirty_region_mode
-        get get_DirtyRegionMode slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession4 shape=4 reverse=22
+        get get_DirtyRegionMode slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession4 shape=4
             out enum32 type=Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode return
-        put put_DirtyRegionMode slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession4 shape=4 reverse=43
+        put put_DirtyRegionMode slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession4 shape=4
             in enum32 type=Windows.Graphics.Capture.GraphicsCaptureDirtyRegionMode name=value
     property min_update_interval
-        get get_MinUpdateInterval slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession5 shape=4 reverse=22
+        get get_MinUpdateInterval slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession5 shape=4
             out timespan return
-        put put_MinUpdateInterval slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession5 shape=26 reverse=53
+        put put_MinUpdateInterval slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession5 shape=26
             in timespan name=value
     property include_secondary_windows
-        get get_IncludeSecondaryWindows slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4 reverse=22
+        get get_IncludeSecondaryWindows slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4
             out boolean return
-        put put_IncludeSecondaryWindows slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4 reverse=43
+        put put_IncludeSecondaryWindows slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4
             in boolean name=value
     property configuration_iteration
-        get get_ConfigurationIteration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession7 shape=4 reverse=22
+        get get_ConfigurationIteration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession7 shape=4
             out uint64 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSessionStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSessionStatics shape=4 static
             out boolean return
     method start_capture
-        method StartCapture slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession shape=0 reverse=16
+        method StartCapture slot=6 inputs=0 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession shape=0
 
 interface Windows.Foundation.IAsyncOperation<Windows.Graphics.Capture.GraphicsCaptureItem> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[GraphicsCaptureItem]

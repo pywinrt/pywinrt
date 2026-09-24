@@ -10,35 +10,35 @@ class Windows.UI.Shell.Tasks.AppTaskContent python_type
     requires Windows.UI.Shell.Tasks.IAppTaskContent
     factory Windows.UI.Shell.Tasks.IAppTaskContentStatics
     property max_buttons static
-        get get_MaxButtons slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=4 reverse=121 static
+        get get_MaxButtons slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=4 static
             out uint32 return
     method add_button
-        method AddButton slot=6 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=51 reverse=24
+        method AddButton slot=6 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=51
             in string name=text
             in class type=Windows.Foundation.Uri name=actionUri
     method create_generated_assets_result static
-        method CreateGeneratedAssetsResult slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=117 reverse=101 static
+        method CreateGeneratedAssetsResult slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=117 static
             pass_array class type=Windows.UI.Shell.Tasks.AppTaskResultAsset name=assets
             out class type=Windows.UI.Shell.Tasks.AppTaskContent return
     method create_preview_thumbnail static
-        method CreatePreviewThumbnail slot=7 inputs=2 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=117 reverse=45 static
+        method CreatePreviewThumbnail slot=7 inputs=2 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=117 static
             in class type=Windows.Foundation.Uri name=imageUri
             in string name=executingStep
             out class type=Windows.UI.Shell.Tasks.AppTaskContent return
     method create_sequence_of_steps static
-        method CreateSequenceOfSteps slot=6 inputs=2 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=195 reverse=26 static
+        method CreateSequenceOfSteps slot=6 inputs=2 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=195 static
             pass_array string name=completedSteps
             in string name=executingStep
             out class type=Windows.UI.Shell.Tasks.AppTaskContent return
     method create_text_summary_result static
-        method CreateTextSummaryResult slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=51 reverse=65 static
+        method CreateTextSummaryResult slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=51 static
             in string name=text
             out class type=Windows.UI.Shell.Tasks.AppTaskContent return
     method set_question
-        method SetQuestion slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=4 reverse=62
+        method SetQuestion slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=4
             in string name=question
     method set_text_input
-        method SetTextInput slot=7 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=51 reverse=44
+        method SetTextInput slot=7 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=51
             in string name=placeholderText
             in string name=actionUriTemplate
 
@@ -50,34 +50,34 @@ class Windows.UI.Shell.Tasks.AppTaskInfo python_type
     requires Windows.UI.Shell.Tasks.IAppTaskInfo2
     factory Windows.UI.Shell.Tasks.IAppTaskInfoStatics
     property deep_link
-        get get_DeepLink slot=14 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=186
+        get get_DeepLink slot=14 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out class type=Windows.Foundation.Uri return
     property end_time
-        get get_EndTime slot=18 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=218
+        get get_EndTime slot=18 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property icon_uri
-        get get_IconUri slot=15 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=194
+        get get_IconUri slot=15 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out class type=Windows.Foundation.Uri return
     property start_time
-        get get_StartTime slot=17 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=210
+        get get_StartTime slot=17 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out datetime return
     property state
-        get get_State slot=16 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=202
+        get get_State slot=16 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out enum32 type=Windows.UI.Shell.Tasks.AppTaskState return
     property subtitle
-        get get_Subtitle slot=13 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=173
+        get get_Subtitle slot=13 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out string return
     property title
-        get get_Title slot=12 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=162
+        get get_Title slot=12 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out string return
     property hidden_by_user
-        get get_HiddenByUser slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4 reverse=43
+        get get_HiddenByUser slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4
             out boolean return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4
             out string return
     method create static
-        method Create slot=8 inputs=5 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=267 reverse=70 static
+        method Create slot=8 inputs=5 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=267 static
             in string name=title
             in string name=subtitle
             in class type=Windows.Foundation.Uri name=deepLink
@@ -85,31 +85,31 @@ class Windows.UI.Shell.Tasks.AppTaskInfo python_type
             in class type=Windows.UI.Shell.Tasks.AppTaskContent name=content
             out class type=Windows.UI.Shell.Tasks.AppTaskInfo return
     method find_all static
-        method FindAll slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=51 reverse=44 static
+        method FindAll slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=51 static
             receive_array class type=Windows.UI.Shell.Tasks.AppTaskInfo return
     method get_completed_steps
-        method GetCompletedSteps slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51 reverse=124
+        method GetCompletedSteps slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51
             receive_array string return
     method get_executing_step
-        method GetExecutingStep slot=11 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=141
+        method GetExecutingStep slot=11 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             out string return
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=4 static
             out boolean return
     method remove
-        method Remove slot=6 inputs=0 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=0 reverse=16
+        method Remove slot=6 inputs=0 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=0
     method update
-        method Update slot=7 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51 reverse=44
+        method Update slot=7 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51
             in enum32 type=Windows.UI.Shell.Tasks.AppTaskState name=state
             in class type=Windows.UI.Shell.Tasks.AppTaskContent name=content
     method update_deep_link
-        method UpdateDeepLink slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4 reverse=62
+        method UpdateDeepLink slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4
             in class type=Windows.Foundation.Uri name=deepLink
     method update_state
-        method UpdateState slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=62
+        method UpdateState slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4
             in enum32 type=Windows.UI.Shell.Tasks.AppTaskState name=state
     method update_titles
-        method UpdateTitles slot=9 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51 reverse=100
+        method UpdateTitles slot=9 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51
             in string name=title
             in string name=subtitle
 
@@ -120,7 +120,7 @@ class Windows.UI.Shell.Tasks.AppTaskResultAsset python_type
     requires Windows.UI.Shell.Tasks.IAppTaskResultAsset
     factory Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory
     constructor -
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory shape=239
             in string name=name
             in string name=context
             in class type=Windows.Foundation.Uri name=iconUri

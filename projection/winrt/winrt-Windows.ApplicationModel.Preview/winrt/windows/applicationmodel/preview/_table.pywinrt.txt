@@ -85,19 +85,19 @@ class Windows.ApplicationModel.Preview.StartupAppInfoPreview python_type
     default Windows.ApplicationModel.Preview.IStartupAppInfoPreview
     requires Windows.ApplicationModel.Preview.IStartupAppInfoPreview
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=22
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4
             out string return
     property executable_path
-        get get_ExecutablePath slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=121
+        get get_ExecutablePath slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4
             out string return
     property impact
-        get get_Impact slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=99
+        get get_Impact slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4
             out enum32 type=Windows.ApplicationModel.Preview.StartupAppImpactPreview return
     property is_enabled
-        get get_IsEnabled slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=62
+        get get_IsEnabled slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4
             out boolean return
     property publisher
-        get get_Publisher slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4 reverse=43
+        get get_Publisher slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppInfoPreview shape=4
             out string return
 
 class Windows.ApplicationModel.Preview.StartupAppsManagerPreview python_type
@@ -107,10 +107,10 @@ class Windows.ApplicationModel.Preview.StartupAppsManagerPreview python_type
     requires Windows.ApplicationModel.Preview.IStartupAppsManagerPreview
     factory Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppsManagerPreviewStatics shape=4 static
             out class type=Windows.ApplicationModel.Preview.StartupAppsManagerPreview return
     method get_startup_app_infos
-        method GetStartupAppInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppsManagerPreview shape=4 reverse=22
+        method GetStartupAppInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.IStartupAppsManagerPreview shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Preview.StartupAppInfoPreview> return
 
 interface Windows.Foundation.Collections.IIterable external parameterized

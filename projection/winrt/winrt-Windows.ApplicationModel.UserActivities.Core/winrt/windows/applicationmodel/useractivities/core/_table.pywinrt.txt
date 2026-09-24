@@ -7,7 +7,7 @@ class Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager stati
     py CoreUserActivityManager
     factory Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics
     method create_user_activity_session_in_background static
-        method CreateUserActivitySessionInBackground slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics shape=51 reverse=24 static
+        method CreateUserActivitySessionInBackground slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics shape=51 static
             in class type=Windows.ApplicationModel.UserActivities.UserActivity name=activity
             out class type=Windows.ApplicationModel.UserActivities.UserActivitySession return
     method delete_user_activity_sessions_in_time_range_async static

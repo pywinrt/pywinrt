@@ -1452,10 +1452,10 @@ class Windows.Services.Store.StoreAcquireLicenseResult python_type
     default Windows.Services.Store.IStoreAcquireLicenseResult
     requires Windows.Services.Store.IStoreAcquireLicenseResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAcquireLicenseResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAcquireLicenseResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property store_package_license
-        get get_StorePackageLicense slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAcquireLicenseResult shape=4 reverse=22
+        get get_StorePackageLicense slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAcquireLicenseResult shape=4
             out class type=Windows.Services.Store.StorePackageLicense return
 
 class Windows.Services.Store.StoreAppLicense python_type
@@ -1465,34 +1465,34 @@ class Windows.Services.Store.StoreAppLicense python_type
     requires Windows.Services.Store.IStoreAppLicense
     requires Windows.Services.Store.IStoreAppLicense2
     property add_on_licenses
-        get get_AddOnLicenses slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=141
+        get get_AddOnLicenses slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreLicense> return
     property expiration_date
-        get get_ExpirationDate slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=99
+        get get_ExpirationDate slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out datetime return
     property extended_json_data
-        get get_ExtendedJsonData slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=121
+        get get_ExtendedJsonData slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out string return
     property is_active
-        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=43
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out boolean return
     property is_trial
-        get get_IsTrial slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=62
+        get get_IsTrial slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out boolean return
     property is_trial_owned_by_this_user
-        get get_IsTrialOwnedByThisUser slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=173
+        get get_IsTrialOwnedByThisUser slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out boolean return
     property sku_store_id
-        get get_SkuStoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=22
+        get get_SkuStoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out string return
     property trial_time_remaining
-        get get_TrialTimeRemaining slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=162
+        get get_TrialTimeRemaining slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out timespan return
     property trial_unique_id
-        get get_TrialUniqueId slot=14 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4 reverse=186
+        get get_TrialUniqueId slot=14 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense shape=4
             out string return
     property is_disc_license
-        get get_IsDiscLicense slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense2 shape=4 reverse=22
+        get get_IsDiscLicense slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAppLicense2 shape=4
             out boolean return
 
 class Windows.Services.Store.StoreAvailability python_type
@@ -1501,21 +1501,21 @@ class Windows.Services.Store.StoreAvailability python_type
     default Windows.Services.Store.IStoreAvailability
     requires Windows.Services.Store.IStoreAvailability
     property end_date
-        get get_EndDate slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4 reverse=43
+        get get_EndDate slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4
             out datetime return
     property extended_json_data
-        get get_ExtendedJsonData slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4 reverse=99
+        get get_ExtendedJsonData slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4
             out string return
     property price
-        get get_Price slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4 reverse=62
+        get get_Price slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4
             out class type=Windows.Services.Store.StorePrice return
     property store_id
-        get get_StoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4 reverse=22
+        get get_StoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4
             out string return
     method request_purchase_async
-        method RequestPurchaseAsync slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4 reverse=121
+        method RequestPurchaseAsync slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
-        method RequestPurchaseAsync slot=11 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=51 reverse=144
+        method RequestPurchaseAsync slot=11 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreAvailability shape=51
             in class type=Windows.Services.Store.StorePurchaseProperties name=storePurchaseProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
 
@@ -1525,13 +1525,13 @@ class Windows.Services.Store.StoreCanAcquireLicenseResult python_type
     default Windows.Services.Store.IStoreCanAcquireLicenseResult
     requires Windows.Services.Store.IStoreCanAcquireLicenseResult
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property licensable_sku
-        get get_LicensableSku slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4 reverse=43
+        get get_LicensableSku slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4
             out string return
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCanAcquireLicenseResult shape=4
             out enum32 type=Windows.Services.Store.StoreCanLicenseStatus return
 
 enum Windows.Services.Store.StoreCanLicenseStatus python_type
@@ -1549,28 +1549,28 @@ class Windows.Services.Store.StoreCollectionData python_type
     default Windows.Services.Store.IStoreCollectionData
     requires Windows.Services.Store.IStoreCollectionData
     property acquired_date
-        get get_AcquiredDate slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=99
+        get get_AcquiredDate slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out datetime return
     property campaign_id
-        get get_CampaignId slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=43
+        get get_CampaignId slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out string return
     property developer_offer_id
-        get get_DeveloperOfferId slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=62
+        get get_DeveloperOfferId slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out string return
     property end_date
-        get get_EndDate slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=141
+        get get_EndDate slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out datetime return
     property extended_json_data
-        get get_ExtendedJsonData slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=173
+        get get_ExtendedJsonData slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out string return
     property is_trial
-        get get_IsTrial slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=22
+        get get_IsTrial slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out boolean return
     property start_date
-        get get_StartDate slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=121
+        get get_StartDate slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out datetime return
     property trial_time_remaining
-        get get_TrialTimeRemaining slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4 reverse=162
+        get get_TrialTimeRemaining slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreCollectionData shape=4
             out timespan return
 
 class Windows.Services.Store.StoreConsumableResult python_type
@@ -1579,16 +1579,16 @@ class Windows.Services.Store.StoreConsumableResult python_type
     default Windows.Services.Store.IStoreConsumableResult
     requires Windows.Services.Store.IStoreConsumableResult
     property balance_remaining
-        get get_BalanceRemaining slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4 reverse=62
+        get get_BalanceRemaining slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4
             out uint32 return
     property extended_error
-        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4 reverse=99
+        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4
             out enum32 type=Windows.Services.Store.StoreConsumableStatus return
     property tracking_id
-        get get_TrackingId slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4 reverse=43
+        get get_TrackingId slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreConsumableResult shape=4
             out guid return
 
 enum Windows.Services.Store.StoreConsumableStatus python_type
@@ -1610,100 +1610,100 @@ class Windows.Services.Store.StoreContext python_type
     requires Windows.Services.Store.IStoreContext5
     factory Windows.Services.Store.IStoreContextStatics
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4
             out class type=Windows.System.User return
     property can_silently_download_store_package_updates
-        get get_CanSilentlyDownloadStorePackageUpdates slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=4 reverse=22
+        get get_CanSilentlyDownloadStorePackageUpdates slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=4
             out boolean return
     event offline_licenses_changed
-        add add_OfflineLicensesChanged slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=44
+        add add_OfflineLicensesChanged slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreContext,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OfflineLicensesChanged slot=8 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreContext shape=26 reverse=82
+        remove remove_OfflineLicensesChanged slot=8 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreContext shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method acquire_store_license_for_optional_package_async
-        method AcquireStoreLicenseForOptionalPackageAsync slot=20 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=229
+        method AcquireStoreLicenseForOptionalPackageAsync slot=20 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in class type=Windows.ApplicationModel.Package name=optionalPackage
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAcquireLicenseResult> return
     method can_acquire_store_license_async
-        method CanAcquireStoreLicenseAsync slot=10 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=124
+        method CanAcquireStoreLicenseAsync slot=10 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in string name=productStoreId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> return
     method can_acquire_store_license_for_optional_package_async
-        method CanAcquireStoreLicenseForOptionalPackageAsync slot=9 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=100
+        method CanAcquireStoreLicenseForOptionalPackageAsync slot=9 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in class type=Windows.ApplicationModel.Package name=optionalPackage
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreCanAcquireLicenseResult> return
     method download_and_install_store_packages_async
-        method DownloadAndInstallStorePackagesAsync slot=15 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=196
+        method DownloadAndInstallStorePackagesAsync slot=15 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=storeIds
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
     method find_store_product_for_package_async
-        method FindStoreProductForPackageAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext2 shape=117 reverse=25
+        method FindStoreProductForPackageAsync slot=6 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext2 shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             in class type=Windows.ApplicationModel.Package name=package
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> return
     method get_app_and_optional_store_package_updates_async
-        method GetAppAndOptionalStorePackageUpdatesAsync slot=23 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4 reverse=242
+        method GetAppAndOptionalStorePackageUpdatesAsync slot=23 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdate>> return
     method get_app_license_async
-        method GetAppLicenseAsync slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4 reverse=141
+        method GetAppLicenseAsync slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreAppLicense> return
     method get_associated_store_products_async
-        method GetAssociatedStoreProductsAsync slot=14 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=187
+        method GetAssociatedStoreProductsAsync slot=14 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> return
     method get_associated_store_products_by_in_app_offer_token_async
-        method GetAssociatedStoreProductsByInAppOfferTokenAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext5 shape=51 reverse=44
+        method GetAssociatedStoreProductsByInAppOfferTokenAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext5 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=inAppOfferTokens
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> return
     method get_associated_store_products_with_paging_async
-        method GetAssociatedStoreProductsWithPagingAsync slot=15 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117 reverse=197
+        method GetAssociatedStoreProductsWithPagingAsync slot=15 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             in uint32 name=maxItemsToRetrievePerPage
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> return
     method get_associated_store_queue_items_async
-        method GetAssociatedStoreQueueItemsAsync slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=4 reverse=162
+        method GetAssociatedStoreQueueItemsAsync slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> return
     method get_consumable_balance_remaining_async
-        method GetConsumableBalanceRemainingAsync slot=19 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=224
+        method GetConsumableBalanceRemainingAsync slot=19 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in string name=productStoreId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> return
     method get_customer_collections_id_async
-        method GetCustomerCollectionsIdAsync slot=10 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117 reverse=125
+        method GetCustomerCollectionsIdAsync slot=10 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117
             in string name=serviceTicket
             in string name=publisherUserId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method get_customer_purchase_id_async
-        method GetCustomerPurchaseIdAsync slot=9 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117 reverse=101
+        method GetCustomerPurchaseIdAsync slot=9 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117
             in string name=serviceTicket
             in string name=publisherUserId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContextStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContextStatics shape=4 static
             out class type=Windows.Services.Store.StoreContext return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContextStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContextStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Services.Store.StoreContext return
     method get_store_product_for_current_app_async
-        method GetStoreProductForCurrentAppAsync slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4 reverse=162
+        method GetStoreProductForCurrentAppAsync slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductResult> return
     method get_store_products_async
-        method GetStoreProductsAsync slot=13 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117 reverse=175
+        method GetStoreProductsAsync slot=13 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=storeIds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> return
-        method GetStoreProductsAsync slot=11 inputs=3 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=195 reverse=146
+        method GetStoreProductsAsync slot=11 inputs=3 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=195
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=storeIds
             in class type=Windows.Services.Store.StoreProductOptions name=storeProductOptions
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> return
     method get_store_queue_items_async
-        method GetStoreQueueItemsAsync slot=13 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=174
+        method GetStoreQueueItemsAsync slot=13 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=storeIds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> return
     method get_user_collection_async
-        method GetUserCollectionAsync slot=16 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=203
+        method GetUserCollectionAsync slot=16 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> return
     method get_user_collection_with_paging_async
@@ -1712,7 +1712,7 @@ class Windows.Services.Store.StoreContext python_type
             in uint32 name=maxItemsToRetrievePerPage
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> return
     method get_user_purchase_history_async
-        method GetUserPurchaseHistoryAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext5 shape=51 reverse=24
+        method GetUserPurchaseHistoryAsync slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext5 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=productKinds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductQueryResult> return
     method report_consumable_fulfillment_async
@@ -1722,62 +1722,62 @@ class Windows.Services.Store.StoreContext python_type
             in guid name=trackingId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreConsumableResult> return
     method request_download_and_install_store_package_updates_async
-        method RequestDownloadAndInstallStorePackageUpdatesAsync slot=25 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=253
+        method RequestDownloadAndInstallStorePackageUpdatesAsync slot=25 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> name=storePackageUpdates
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
     method request_download_and_install_store_packages_async
-        method RequestDownloadAndInstallStorePackagesAsync slot=26 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=256
+        method RequestDownloadAndInstallStorePackagesAsync slot=26 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=storeIds
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
-        method RequestDownloadAndInstallStorePackagesAsync slot=14 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=117 reverse=188
+        method RequestDownloadAndInstallStorePackagesAsync slot=14 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=117
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=storeIds
             in class type=Windows.Services.Store.StorePackageInstallOptions name=storePackageInstallOptions
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
     method request_download_store_package_updates_async
-        method RequestDownloadStorePackageUpdatesAsync slot=24 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=248
+        method RequestDownloadStorePackageUpdatesAsync slot=24 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> name=storePackageUpdates
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
     method request_purchase_async
-        method RequestPurchaseAsync slot=21 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51 reverse=233
+        method RequestPurchaseAsync slot=21 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=51
             in string name=storeId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
-        method RequestPurchaseAsync slot=22 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117 reverse=239
+        method RequestPurchaseAsync slot=22 inputs=2 outputs=1 declaring=Windows.Services.Store.IStoreContext shape=117
             in string name=storeId
             in class type=Windows.Services.Store.StorePurchaseProperties name=storePurchaseProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
     method request_purchase_by_in_app_offer_token_async
-        method RequestPurchaseByInAppOfferTokenAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext5 shape=51 reverse=65
+        method RequestPurchaseByInAppOfferTokenAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext5 shape=51
             in string name=inAppOfferToken
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
     method request_rate_and_review_app_async
-        method RequestRateAndReviewAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext4 shape=4 reverse=22
+        method RequestRateAndReviewAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreContext4 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreRateAndReviewResult> return
     method request_uninstall_store_package_async
-        method RequestUninstallStorePackageAsync slot=16 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=203
+        method RequestUninstallStorePackageAsync slot=16 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in class type=Windows.ApplicationModel.Package name=package
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> return
     method request_uninstall_store_package_by_store_id_async
-        method RequestUninstallStorePackageByStoreIdAsync slot=17 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=211
+        method RequestUninstallStorePackageByStoreIdAsync slot=17 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in string name=storeId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> return
     method set_install_order_for_associated_store_queue_items_async
-        method SetInstallOrderForAssociatedStoreQueueItemsAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext4 shape=51 reverse=44
+        method SetInstallOrderForAssociatedStoreQueueItemsAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext4 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StoreQueueItem> name=items
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem>> return
     method try_silent_download_and_install_store_package_updates_async
-        method TrySilentDownloadAndInstallStorePackageUpdatesAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=65
+        method TrySilentDownloadAndInstallStorePackageUpdatesAsync slot=8 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> name=storePackageUpdates
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
     method try_silent_download_store_package_updates_async
-        method TrySilentDownloadStorePackageUpdatesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=44
+        method TrySilentDownloadStorePackageUpdatesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Services.Store.StorePackageUpdate> name=storePackageUpdates
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Services.Store.StorePackageUpdateResult,Windows.Services.Store.StorePackageUpdateStatus> return
     method uninstall_store_package_async
-        method UninstallStorePackageAsync slot=18 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=219
+        method UninstallStorePackageAsync slot=18 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in class type=Windows.ApplicationModel.Package name=package
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> return
     method uninstall_store_package_by_store_id_async
-        method UninstallStorePackageByStoreIdAsync slot=19 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51 reverse=224
+        method UninstallStorePackageByStoreIdAsync slot=19 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreContext3 shape=51
             in string name=storeId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreUninstallStorePackageResult> return
 
@@ -1797,19 +1797,19 @@ class Windows.Services.Store.StoreImage python_type
     default Windows.Services.Store.IStoreImage
     requires Windows.Services.Store.IStoreImage
     property caption
-        get get_Caption slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4 reverse=121
+        get get_Caption slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4
             out string return
     property height
-        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4 reverse=99
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4
             out uint32 return
     property image_purpose_tag
-        get get_ImagePurposeTag slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4 reverse=43
+        get get_ImagePurposeTag slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4
             out string return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4
             out class type=Windows.Foundation.Uri return
     property width
-        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4 reverse=62
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreImage shape=4
             out uint32 return
 
 class Windows.Services.Store.StoreLicense python_type
@@ -1818,19 +1818,19 @@ class Windows.Services.Store.StoreLicense python_type
     default Windows.Services.Store.IStoreLicense
     requires Windows.Services.Store.IStoreLicense
     property expiration_date
-        get get_ExpirationDate slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4 reverse=62
+        get get_ExpirationDate slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4
             out datetime return
     property extended_json_data
-        get get_ExtendedJsonData slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4 reverse=99
+        get get_ExtendedJsonData slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4
             out string return
     property in_app_offer_token
-        get get_InAppOfferToken slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4 reverse=121
+        get get_InAppOfferToken slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4
             out string return
     property is_active
-        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4 reverse=43
+        get get_IsActive slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4
             out boolean return
     property sku_store_id
-        get get_SkuStoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4 reverse=22
+        get get_SkuStoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreLicense shape=4
             out string return
 
 class Windows.Services.Store.StorePackageInstallOptions activatable python_type
@@ -1842,9 +1842,9 @@ class Windows.Services.Store.StorePackageInstallOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property allow_forced_app_restart
-        get get_AllowForcedAppRestart slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageInstallOptions shape=4 reverse=22
+        get get_AllowForcedAppRestart slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageInstallOptions shape=4
             out boolean return
-        put put_AllowForcedAppRestart slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePackageInstallOptions shape=4 reverse=43
+        put put_AllowForcedAppRestart slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePackageInstallOptions shape=4
             in boolean name=value
 
 class Windows.Services.Store.StorePackageLicense python_type closeable
@@ -1854,21 +1854,21 @@ class Windows.Services.Store.StorePackageLicense python_type closeable
     requires Windows.Services.Store.IStorePackageLicense
     requires Windows.Foundation.IClosable
     property is_valid
-        get get_IsValid slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=4 reverse=99
+        get get_IsValid slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=4
             out boolean return
     property package
-        get get_Package slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=4 reverse=62
+        get get_Package slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=4
             out class type=Windows.ApplicationModel.Package return
     event license_lost
-        add add_LicenseLost slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=51 reverse=24
+        add add_LicenseLost slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStorePackageLicense shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StorePackageLicense,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LicenseLost slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=26 reverse=53
+        remove remove_LicenseLost slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method release_license
-        method ReleaseLicense slot=10 inputs=0 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=0 reverse=117
+        method ReleaseLicense slot=10 inputs=0 outputs=0 declaring=Windows.Services.Store.IStorePackageLicense shape=0
 
 class Windows.Services.Store.StorePackageUpdate python_type
     py StorePackageUpdate
@@ -1876,10 +1876,10 @@ class Windows.Services.Store.StorePackageUpdate python_type
     default Windows.Services.Store.IStorePackageUpdate
     requires Windows.Services.Store.IStorePackageUpdate
     property mandatory
-        get get_Mandatory slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdate shape=4 reverse=43
+        get get_Mandatory slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdate shape=4
             out boolean return
     property package
-        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdate shape=4 reverse=22
+        get get_Package slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdate shape=4
             out class type=Windows.ApplicationModel.Package return
 
 class Windows.Services.Store.StorePackageUpdateResult python_type
@@ -1889,13 +1889,13 @@ class Windows.Services.Store.StorePackageUpdateResult python_type
     requires Windows.Services.Store.IStorePackageUpdateResult
     requires Windows.Services.Store.IStorePackageUpdateResult2
     property overall_state
-        get get_OverallState slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdateResult shape=4 reverse=22
+        get get_OverallState slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdateResult shape=4
             out enum32 type=Windows.Services.Store.StorePackageUpdateState return
     property store_package_update_statuses
-        get get_StorePackageUpdateStatuses slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdateResult shape=4 reverse=43
+        get get_StorePackageUpdateStatuses slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdateResult shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StorePackageUpdateStatus> return
     property store_queue_items
-        get get_StoreQueueItems slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdateResult2 shape=4 reverse=22
+        get get_StoreQueueItems slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePackageUpdateResult2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreQueueItem> return
 
 enum Windows.Services.Store.StorePackageUpdateState python_type
@@ -1928,31 +1928,31 @@ class Windows.Services.Store.StorePrice python_type
     requires Windows.Services.Store.IStorePrice
     requires Windows.Services.Store.IStorePrice2
     property currency_code
-        get get_CurrencyCode slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4 reverse=121
+        get get_CurrencyCode slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4
             out string return
     property formatted_base_price
-        get get_FormattedBasePrice slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4 reverse=22
+        get get_FormattedBasePrice slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4
             out string return
     property formatted_price
-        get get_FormattedPrice slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4 reverse=43
+        get get_FormattedPrice slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4
             out string return
     property formatted_recurrence_price
-        get get_FormattedRecurrencePrice slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4 reverse=141
+        get get_FormattedRecurrencePrice slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4
             out string return
     property is_on_sale
-        get get_IsOnSale slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4 reverse=62
+        get get_IsOnSale slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4
             out boolean return
     property sale_end_date
-        get get_SaleEndDate slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4 reverse=99
+        get get_SaleEndDate slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice shape=4
             out datetime return
     property unformatted_base_price
-        get get_UnformattedBasePrice slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice2 shape=4 reverse=22
+        get get_UnformattedBasePrice slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice2 shape=4
             out string return
     property unformatted_price
-        get get_UnformattedPrice slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice2 shape=4 reverse=43
+        get get_UnformattedPrice slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice2 shape=4
             out string return
     property unformatted_recurrence_price
-        get get_UnformattedRecurrencePrice slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice2 shape=4 reverse=62
+        get get_UnformattedRecurrencePrice slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePrice2 shape=4
             out string return
 
 class Windows.Services.Store.StoreProduct python_type
@@ -1961,57 +1961,57 @@ class Windows.Services.Store.StoreProduct python_type
     default Windows.Services.Store.IStoreProduct
     requires Windows.Services.Store.IStoreProduct
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property extended_json_data
-        get get_ExtendedJsonData slot=18 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=218
+        get get_ExtendedJsonData slot=18 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property has_digital_download
-        get get_HasDigitalDownload slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=141
+        get get_HasDigitalDownload slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out boolean return
     property images
-        get get_Images slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=173
+        get get_Images slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> return
     property in_app_offer_token
-        get get_InAppOfferToken slot=23 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=242
+        get get_InAppOfferToken slot=23 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property is_in_user_collection
-        get get_IsInUserCollection slot=16 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=202
+        get get_IsInUserCollection slot=16 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out boolean return
     property keywords
-        get get_Keywords slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=162
+        get get_Keywords slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property language
-        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=43
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property link_uri
-        get get_LinkUri slot=19 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=223
+        get get_LinkUri slot=19 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out class type=Windows.Foundation.Uri return
     property price
-        get get_Price slot=17 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=210
+        get get_Price slot=17 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out class type=Windows.Services.Store.StorePrice return
     property product_kind
-        get get_ProductKind slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=121
+        get get_ProductKind slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property skus
-        get get_Skus slot=15 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=194
+        get get_Skus slot=15 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreSku> return
     property store_id
-        get get_StoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=22
+        get get_StoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out string return
     property videos
-        get get_Videos slot=14 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=186
+        get get_Videos slot=14 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> return
     method get_is_any_sku_installed_async
-        method GetIsAnySkuInstalledAsync slot=20 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=228
+        method GetIsAnySkuInstalledAsync slot=20 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_purchase_async
-        method RequestPurchaseAsync slot=21 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4 reverse=232
+        method RequestPurchaseAsync slot=21 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
-        method RequestPurchaseAsync slot=22 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=51 reverse=238
+        method RequestPurchaseAsync slot=22 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreProduct shape=51
             in class type=Windows.Services.Store.StorePurchaseProperties name=storePurchaseProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
 
@@ -2024,7 +2024,7 @@ class Windows.Services.Store.StoreProductOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property action_filters
-        get get_ActionFilters slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductOptions shape=4 reverse=22
+        get get_ActionFilters slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Services.Store.StoreProductPagedQueryResult python_type
@@ -2033,16 +2033,16 @@ class Windows.Services.Store.StoreProductPagedQueryResult python_type
     default Windows.Services.Store.IStoreProductPagedQueryResult
     requires Windows.Services.Store.IStoreProductPagedQueryResult
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property has_more_results
-        get get_HasMoreResults slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4 reverse=43
+        get get_HasMoreResults slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4
             out boolean return
     property products
-        get get_Products slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4 reverse=22
+        get get_Products slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> return
     method get_next_async
-        method GetNextAsync slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4 reverse=99
+        method GetNextAsync slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductPagedQueryResult shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StoreProductPagedQueryResult> return
 
 class Windows.Services.Store.StoreProductQueryResult python_type
@@ -2051,10 +2051,10 @@ class Windows.Services.Store.StoreProductQueryResult python_type
     default Windows.Services.Store.IStoreProductQueryResult
     requires Windows.Services.Store.IStoreProductQueryResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductQueryResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductQueryResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property products
-        get get_Products slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductQueryResult shape=4 reverse=22
+        get get_Products slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductQueryResult shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Services.Store.StoreProduct> return
 
 class Windows.Services.Store.StoreProductResult python_type
@@ -2063,10 +2063,10 @@ class Windows.Services.Store.StoreProductResult python_type
     default Windows.Services.Store.IStoreProductResult
     requires Windows.Services.Store.IStoreProductResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property product
-        get get_Product slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductResult shape=4 reverse=22
+        get get_Product slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreProductResult shape=4
             out class type=Windows.Services.Store.StoreProduct return
 
 class Windows.Services.Store.StorePurchaseProperties activatable python_type
@@ -2078,18 +2078,18 @@ class Windows.Services.Store.StorePurchaseProperties activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStorePurchasePropertiesFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Services.Store.IStorePurchasePropertiesFactory shape=51
             in string name=name
             out class type=Windows.Services.Store.StorePurchaseProperties return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4
             out string return
-        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4 reverse=43
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4
             in string name=value
     property extended_json_data
-        get get_ExtendedJsonData slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4 reverse=62
+        get get_ExtendedJsonData slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4
             out string return
-        put put_ExtendedJsonData slot=9 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4 reverse=99
+        put put_ExtendedJsonData slot=9 inputs=1 outputs=0 declaring=Windows.Services.Store.IStorePurchaseProperties shape=4
             in string name=value
 
 class Windows.Services.Store.StorePurchaseResult python_type
@@ -2098,10 +2098,10 @@ class Windows.Services.Store.StorePurchaseResult python_type
     default Windows.Services.Store.IStorePurchaseResult
     requires Windows.Services.Store.IStorePurchaseResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStorePurchaseResult shape=4
             out enum32 type=Windows.Services.Store.StorePurchaseStatus return
 
 enum Windows.Services.Store.StorePurchaseStatus python_type
@@ -2120,37 +2120,37 @@ class Windows.Services.Store.StoreQueueItem python_type
     requires Windows.Services.Store.IStoreQueueItem
     requires Windows.Services.Store.IStoreQueueItem2
     property install_kind
-        get get_InstallKind slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4 reverse=62
+        get get_InstallKind slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4
             out enum32 type=Windows.Services.Store.StoreQueueItemKind return
     property package_family_name
-        get get_PackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4 reverse=43
+        get get_PackageFamilyName slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4
             out string return
     property product_id
-        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4 reverse=22
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4
             out string return
     event completed
-        add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=51 reverse=124
+        add add_Completed slot=10 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreQueueItem,Windows.Services.Store.StoreQueueItemCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreQueueItem shape=26 reverse=156
+        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreQueueItem shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_changed
-        add add_StatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=51 reverse=163
+        add add_StatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreQueueItem,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreQueueItem shape=26 reverse=181
+        remove remove_StatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Services.Store.IStoreQueueItem shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel_install_async
-        method CancelInstallAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4 reverse=22
+        method CancelInstallAsync slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method get_current_status
-        method GetCurrentStatus slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4 reverse=99
+        method GetCurrentStatus slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem shape=4
             out class type=Windows.Services.Store.StoreQueueItemStatus return
     method pause_install_async
-        method PauseInstallAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4 reverse=43
+        method PauseInstallAsync slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method resume_install_async
-        method ResumeInstallAsync slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4 reverse=62
+        method ResumeInstallAsync slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItem2 shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.Services.Store.StoreQueueItemCompletedEventArgs python_type
@@ -2159,7 +2159,7 @@ class Windows.Services.Store.StoreQueueItemCompletedEventArgs python_type
     default Windows.Services.Store.IStoreQueueItemCompletedEventArgs
     requires Windows.Services.Store.IStoreQueueItemCompletedEventArgs
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemCompletedEventArgs shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemCompletedEventArgs shape=4
             out class type=Windows.Services.Store.StoreQueueItemStatus return
 
 enum Windows.Services.Store.StoreQueueItemExtendedState python_type
@@ -2203,16 +2203,16 @@ class Windows.Services.Store.StoreQueueItemStatus python_type
     default Windows.Services.Store.IStoreQueueItemStatus
     requires Windows.Services.Store.IStoreQueueItemStatus
     property extended_error
-        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4 reverse=99
+        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4
             out hresult type=Windows.Foundation.HResult return
     property package_install_extended_state
-        get get_PackageInstallExtendedState slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4 reverse=43
+        get get_PackageInstallExtendedState slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4
             out enum32 type=Windows.Services.Store.StoreQueueItemExtendedState return
     property package_install_state
-        get get_PackageInstallState slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4 reverse=22
+        get get_PackageInstallState slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4
             out enum32 type=Windows.Services.Store.StoreQueueItemState return
     property update_status
-        get get_UpdateStatus slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4 reverse=62
+        get get_UpdateStatus slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreQueueItemStatus shape=4
             out struct type=Windows.Services.Store.StorePackageUpdateStatus return
 
 class Windows.Services.Store.StoreRateAndReviewResult python_type
@@ -2221,16 +2221,16 @@ class Windows.Services.Store.StoreRateAndReviewResult python_type
     default Windows.Services.Store.IStoreRateAndReviewResult
     requires Windows.Services.Store.IStoreRateAndReviewResult
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property extended_json_data
-        get get_ExtendedJsonData slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4 reverse=43
+        get get_ExtendedJsonData slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4
             out string return
     property status
-        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4 reverse=99
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4
             out enum32 type=Windows.Services.Store.StoreRateAndReviewStatus return
     property was_updated
-        get get_WasUpdated slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4 reverse=62
+        get get_WasUpdated slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreRateAndReviewResult shape=4
             out boolean return
 
 enum Windows.Services.Store.StoreRateAndReviewStatus python_type
@@ -2245,7 +2245,7 @@ class Windows.Services.Store.StoreRequestHelper static python_type
     py StoreRequestHelper
     factory Windows.Services.Store.IStoreRequestHelperStatics
     method send_request_async static
-        method SendRequestAsync slot=6 inputs=3 outputs=1 declaring=Windows.Services.Store.IStoreRequestHelperStatics shape=195 reverse=26 static
+        method SendRequestAsync slot=6 inputs=3 outputs=1 declaring=Windows.Services.Store.IStoreRequestHelperStatics shape=195 static
             in class type=Windows.Services.Store.StoreContext name=context
             in uint32 name=requestKind
             in string name=parametersAsJson
@@ -2258,13 +2258,13 @@ class Windows.Services.Store.StoreSendRequestResult python_type
     requires Windows.Services.Store.IStoreSendRequestResult
     requires Windows.Services.Store.IStoreSendRequestResult2
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property response
-        get get_Response slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult shape=4 reverse=22
+        get get_Response slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult shape=4
             out string return
     property http_status_code
-        get get_HttpStatusCode slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult2 shape=4 reverse=22
+        get get_HttpStatusCode slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSendRequestResult2 shape=4
             out enum32 type=Windows.Web.Http.HttpStatusCode return
 
 class Windows.Services.Store.StoreSku python_type
@@ -2273,60 +2273,60 @@ class Windows.Services.Store.StoreSku python_type
     default Windows.Services.Store.IStoreSku
     requires Windows.Services.Store.IStoreSku
     property availabilities
-        get get_Availabilities slot=14 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=186
+        get get_Availabilities slot=14 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreAvailability> return
     property bundled_skus
-        get get_BundledSkus slot=18 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=218
+        get get_BundledSkus slot=18 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property collection_data
-        get get_CollectionData slot=19 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=223
+        get get_CollectionData slot=19 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out class type=Windows.Services.Store.StoreCollectionData return
     property custom_developer_data
-        get get_CustomDeveloperData slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=141
+        get get_CustomDeveloperData slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out string return
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out string return
     property extended_json_data
-        get get_ExtendedJsonData slot=16 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=202
+        get get_ExtendedJsonData slot=16 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out string return
     property images
-        get get_Images slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=162
+        get get_Images slot=12 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreImage> return
     property is_in_user_collection
-        get get_IsInUserCollection slot=17 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=210
+        get get_IsInUserCollection slot=17 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out boolean return
     property is_subscription
-        get get_IsSubscription slot=23 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=242
+        get get_IsSubscription slot=23 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out boolean return
     property is_trial
-        get get_IsTrial slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=121
+        get get_IsTrial slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out boolean return
     property language
-        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=43
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out string return
     property price
-        get get_Price slot=15 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=194
+        get get_Price slot=15 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out class type=Windows.Services.Store.StorePrice return
     property store_id
-        get get_StoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=22
+        get get_StoreId slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out string return
     property subscription_info
-        get get_SubscriptionInfo slot=24 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=247
+        get get_SubscriptionInfo slot=24 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out class type=Windows.Services.Store.StoreSubscriptionInfo return
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out string return
     property videos
-        get get_Videos slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=173
+        get get_Videos slot=13 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Services.Store.StoreVideo> return
     method get_is_installed_async
-        method GetIsInstalledAsync slot=20 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=228
+        method GetIsInstalledAsync slot=20 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method request_purchase_async
-        method RequestPurchaseAsync slot=21 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4 reverse=232
+        method RequestPurchaseAsync slot=21 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
-        method RequestPurchaseAsync slot=22 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=51 reverse=238
+        method RequestPurchaseAsync slot=22 inputs=1 outputs=1 declaring=Windows.Services.Store.IStoreSku shape=51
             in class type=Windows.Services.Store.StorePurchaseProperties name=storePurchaseProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseResult> return
 
@@ -2336,19 +2336,19 @@ class Windows.Services.Store.StoreSubscriptionInfo python_type
     default Windows.Services.Store.IStoreSubscriptionInfo
     requires Windows.Services.Store.IStoreSubscriptionInfo
     property billing_period
-        get get_BillingPeriod slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4 reverse=22
+        get get_BillingPeriod slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4
             out uint32 return
     property billing_period_unit
-        get get_BillingPeriodUnit slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4 reverse=43
+        get get_BillingPeriodUnit slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4
             out enum32 type=Windows.Services.Store.StoreDurationUnit return
     property has_trial_period
-        get get_HasTrialPeriod slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4 reverse=62
+        get get_HasTrialPeriod slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4
             out boolean return
     property trial_period
-        get get_TrialPeriod slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4 reverse=99
+        get get_TrialPeriod slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4
             out uint32 return
     property trial_period_unit
-        get get_TrialPeriodUnit slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4 reverse=121
+        get get_TrialPeriodUnit slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreSubscriptionInfo shape=4
             out enum32 type=Windows.Services.Store.StoreDurationUnit return
 
 class Windows.Services.Store.StoreUninstallStorePackageResult python_type
@@ -2357,10 +2357,10 @@ class Windows.Services.Store.StoreUninstallStorePackageResult python_type
     default Windows.Services.Store.IStoreUninstallStorePackageResult
     requires Windows.Services.Store.IStoreUninstallStorePackageResult
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreUninstallStorePackageResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreUninstallStorePackageResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreUninstallStorePackageResult shape=4 reverse=43
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreUninstallStorePackageResult shape=4
             out enum32 type=Windows.Services.Store.StoreUninstallStorePackageStatus return
 
 enum Windows.Services.Store.StoreUninstallStorePackageStatus python_type
@@ -2378,22 +2378,22 @@ class Windows.Services.Store.StoreVideo python_type
     default Windows.Services.Store.IStoreVideo
     requires Windows.Services.Store.IStoreVideo
     property caption
-        get get_Caption slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4 reverse=121
+        get get_Caption slot=10 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4
             out string return
     property height
-        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4 reverse=99
+        get get_Height slot=9 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4
             out uint32 return
     property preview_image
-        get get_PreviewImage slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4 reverse=141
+        get get_PreviewImage slot=11 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4
             out class type=Windows.Services.Store.StoreImage return
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4
             out class type=Windows.Foundation.Uri return
     property video_purpose_tag
-        get get_VideoPurposeTag slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4 reverse=43
+        get get_VideoPurposeTag slot=7 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4
             out string return
     property width
-        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4 reverse=62
+        get get_Width slot=8 inputs=0 outputs=1 declaring=Windows.Services.Store.IStoreVideo shape=4
             out uint32 return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Services.Store.StoreContext,System.Object> concrete

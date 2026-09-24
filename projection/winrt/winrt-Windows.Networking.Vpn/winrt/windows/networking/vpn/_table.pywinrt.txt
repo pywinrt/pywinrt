@@ -1586,19 +1586,19 @@ class Windows.Networking.Vpn.VpnAppId python_type
     requires Windows.Networking.Vpn.IVpnAppId
     factory Windows.Networking.Vpn.IVpnAppIdFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppIdFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppIdFactory shape=117
             in enum32 type=Windows.Networking.Vpn.VpnAppIdType name=type
             in string name=value
             out class type=Windows.Networking.Vpn.VpnAppId return
     property value
-        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=62
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppId shape=4
             out string return
-        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=99
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnAppId shape=4
             in string name=value
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnAppId shape=4
             out enum32 type=Windows.Networking.Vpn.VpnAppIdType return
-        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnAppId shape=4 reverse=43
+        put put_Type slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnAppId shape=4
             in enum32 type=Windows.Networking.Vpn.VpnAppIdType name=value
 
 enum Windows.Networking.Vpn.VpnAppIdType python_type
@@ -1627,115 +1627,115 @@ class Windows.Networking.Vpn.VpnChannel python_type
     requires Windows.Networking.Vpn.IVpnChannel6
     factory Windows.Networking.Vpn.IVpnChannelStatics
     property plug_in_context
-        get get_PlugInContext slot=17 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=210
+        get get_PlugInContext slot=17 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             out object return
-        put put_PlugInContext slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=202
+        put put_PlugInContext slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             in object name=value
     property configuration
-        get get_Configuration slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=173
+        get get_Configuration slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             out class type=Windows.Networking.Vpn.VpnChannelConfiguration return
     property id
-        get get_Id slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=162
+        get get_Id slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             out uint32 return
     property system_health
-        get get_SystemHealth slot=18 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=218
+        get get_SystemHealth slot=18 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             out class type=Windows.Networking.Vpn.VpnSystemHealth return
     property current_request_transport_context
-        get get_CurrentRequestTransportContext slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=4 reverse=141
+        get get_CurrentRequestTransportContext slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=4
             out object return
     event activity_change
-        add add_ActivityChange slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=187
+        add add_ActivityChange slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ActivityChange slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=26 reverse=200
+        remove remove_ActivityChange slot=15 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event activity_state_change
-        add add_ActivityStateChange slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51 reverse=65
+        add add_ActivityStateChange slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ActivityStateChange slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=26 reverse=110
+        remove remove_ActivityStateChange slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method activate_foreground
-        method ActivateForeground slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel6 shape=117 reverse=25
+        method ActivateForeground slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel6 shape=117
             in string name=packageRelativeAppId
             in class type=Windows.Foundation.Collections.ValueSet name=sharedContext
             out class type=Windows.Foundation.Collections.ValueSet return
     method add_and_associate_transport
-        method AddAndAssociateTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=24
+        method AddAndAssociateTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51
             in object name=transport
             in object name=context
     method append_vpn_receive_packet_buffer
-        method AppendVpnReceivePacketBuffer slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=4 reverse=22
+        method AppendVpnReceivePacketBuffer slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=4
             in class type=Windows.Networking.Vpn.VpnPacketBuffer name=decapsulatedPacketBuffer
     method append_vpn_send_packet_buffer
-        method AppendVpnSendPacketBuffer slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=4 reverse=43
+        method AppendVpnSendPacketBuffer slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=4
             in class type=Windows.Networking.Vpn.VpnPacketBuffer name=encapsulatedPacketBuffer
     method associate_transport
-        method AssociateTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=24
+        method AssociateTransport slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=51
             in object name=mainOuterTunnelTransport
             in object name=optionalOuterTunnelTransport
     method flush_vpn_receive_packet_buffers
-        method FlushVpnReceivePacketBuffers slot=8 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=0 reverse=55
+        method FlushVpnReceivePacketBuffers slot=8 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=0
     method flush_vpn_send_packet_buffers
-        method FlushVpnSendPacketBuffers slot=9 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=0 reverse=93
+        method FlushVpnSendPacketBuffers slot=9 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel5 shape=0
     method get_slot_type_for_transport_context
-        method GetSlotTypeForTransportContext slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=124
+        method GetSlotTypeForTransportContext slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51
             in object name=context
             out enum32 type=Windows.Networking.Sockets.ControlChannelTriggerStatus return
     method get_vpn_receive_packet_buffer
-        method GetVpnReceivePacketBuffer slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4 reverse=141
+        method GetVpnReceivePacketBuffer slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4
             out class type=Windows.Networking.Vpn.VpnPacketBuffer return
     method get_vpn_send_packet_buffer
-        method GetVpnSendPacketBuffer slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4 reverse=121
+        method GetVpnSendPacketBuffer slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4
             out class type=Windows.Networking.Vpn.VpnPacketBuffer return
     method log_diagnostic_message
-        method LogDiagnosticMessage slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=141
+        method LogDiagnosticMessage slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             in string name=message
     method process_event_async static
-        method ProcessEventAsync slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannelStatics shape=51 reverse=24 static
+        method ProcessEventAsync slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannelStatics shape=51 static
             in object name=thirdPartyPlugIn
             in object name=event
     method replace_and_associate_transport
-        method ReplaceAndAssociateTransport slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=65
+        method ReplaceAndAssociateTransport slot=8 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51
             in object name=transport
             in object name=context
     method request_credentials
-        method RequestCredentials slot=9 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=239 reverse=103
+        method RequestCredentials slot=9 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=239
             in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
             in boolean name=isRetry
             in boolean name=isSingleSignOnCredential
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
             out class type=Windows.Networking.Vpn.VpnPickedCredential return
     method request_credentials_async
-        method RequestCredentialsAsync slot=15 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51 reverse=196
+        method RequestCredentialsAsync slot=15 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51
             in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> return
-        method RequestCredentialsAsync slot=14 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=117 reverse=188
+        method RequestCredentialsAsync slot=14 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=117
             in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
             in uint32 name=credOptions
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> return
-        method RequestCredentialsAsync slot=13 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=195 reverse=176
+        method RequestCredentialsAsync slot=13 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=195
             in enum32 type=Windows.Networking.Vpn.VpnCredentialType name=credType
             in uint32 name=credOptions
             in class type=Windows.Security.Cryptography.Certificates.Certificate name=certificate
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> return
     method request_custom_prompt
-        method RequestCustomPrompt slot=19 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=223
+        method RequestCustomPrompt slot=19 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPrompt> name=customPrompt
     method request_custom_prompt_async
-        method RequestCustomPromptAsync slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51 reverse=163
+        method RequestCustomPromptAsync slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=51
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnCustomPromptElement> name=customPromptElement
             out interface type=Windows.Foundation.IAsyncAction return
     method request_vpn_packet_buffer
-        method RequestVpnPacketBuffer slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=124
+        method RequestVpnPacketBuffer slot=10 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51
             in enum32 type=Windows.Networking.Vpn.VpnDataPathType name=type
             out class type=Windows.Networking.Vpn.VpnPacketBuffer name=vpnPacketBuffer
     method set_allowed_ssl_tls_versions
-        method SetAllowedSslTlsVersions slot=21 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=51 reverse=233
+        method SetAllowedSslTlsVersions slot=21 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=51
             in object name=tunnelTransport
             in boolean name=useTls12
     method set_error_message
-        method SetErrorMessage slot=20 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4 reverse=228
+        method SetErrorMessage slot=20 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             in string name=message
     method start
         method Start slot=7 inputs=10 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=294
@@ -1750,7 +1750,7 @@ class Windows.Networking.Vpn.VpnChannel python_type
             in object name=mainOuterTunnelTransport
             in object name=optionalOuterTunnelTransport
     method start_existing_transports
-        method StartExistingTransports slot=7 inputs=8 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=286 reverse=47
+        method StartExistingTransports slot=7 inputs=8 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=286
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv4list
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv6list
             in class type=Windows.Networking.Vpn.VpnInterfaceId name=vpnInterfaceId
@@ -1760,7 +1760,7 @@ class Windows.Networking.Vpn.VpnChannel python_type
             in uint32 name=maxFrameSize
             in boolean name=Reserved
     method start_reconnecting_transport
-        method StartReconnectingTransport slot=9 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51 reverse=100
+        method StartReconnectingTransport slot=9 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=51
             in object name=transport
             in object name=context
     method start_with_main_transport
@@ -1799,9 +1799,9 @@ class Windows.Networking.Vpn.VpnChannel python_type
             in object name=optionalOuterTunnelTransport
             in class type=Windows.Networking.Vpn.VpnTrafficFilterAssignment name=assignedTrafficFilters
     method stop
-        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=0 reverse=55
+        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=0
     method terminate_connection
-        method TerminateConnection slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4 reverse=202
+        method TerminateConnection slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel2 shape=4
             in string name=message
 
 class Windows.Networking.Vpn.VpnChannelActivityEventArgs python_type
@@ -1810,7 +1810,7 @@ class Windows.Networking.Vpn.VpnChannelActivityEventArgs python_type
     default Windows.Networking.Vpn.IVpnChannelActivityEventArgs
     requires Windows.Networking.Vpn.IVpnChannelActivityEventArgs
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelActivityEventArgs shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelActivityEventArgs shape=4
             out enum32 type=Windows.Networking.Vpn.VpnChannelActivityEventType return
 
 enum Windows.Networking.Vpn.VpnChannelActivityEventType python_type
@@ -1825,7 +1825,7 @@ class Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs python_type
     default Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs
     requires Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs
     property activity_state
-        get get_ActivityState slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs shape=4 reverse=22
+        get get_ActivityState slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelActivityStateChangedArgs shape=4
             out enum32 type=Windows.Networking.Vpn.VpnChannelActivityEventType return
 
 class Windows.Networking.Vpn.VpnChannelConfiguration python_type
@@ -1835,16 +1835,16 @@ class Windows.Networking.Vpn.VpnChannelConfiguration python_type
     requires Windows.Networking.Vpn.IVpnChannelConfiguration
     requires Windows.Networking.Vpn.IVpnChannelConfiguration2
     property custom_field
-        get get_CustomField slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4 reverse=62
+        get get_CustomField slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4
             out string return
     property server_host_name_list
-        get get_ServerHostNameList slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4 reverse=43
+        get get_ServerHostNameList slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> return
     property server_service_name
-        get get_ServerServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4 reverse=22
+        get get_ServerServiceName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration shape=4
             out string return
     property server_uris
-        get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration2 shape=4 reverse=22
+        get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannelConfiguration2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
 
 enum Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions python_type flags_enum
@@ -1893,12 +1893,12 @@ class Windows.Networking.Vpn.VpnCustomCheckBox activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property initial_check_state
-        get get_InitialCheckState slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4 reverse=43
+        get get_InitialCheckState slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4
             out boolean return
-        put put_InitialCheckState slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4 reverse=22
+        put put_InitialCheckState slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4
             in boolean name=value
     property checked
-        get get_Checked slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4 reverse=62
+        get get_Checked slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomCheckBox shape=4
             out boolean return
     property label
         get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
@@ -1926,12 +1926,12 @@ class Windows.Networking.Vpn.VpnCustomComboBox activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property options_text
-        get get_OptionsText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4 reverse=43
+        get get_OptionsText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
-        put put_OptionsText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4 reverse=22
+        put put_OptionsText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4
             in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=value
     property selected
-        get get_Selected slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4 reverse=62
+        get get_Selected slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomComboBox shape=4
             out uint32 return
     property label
         get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
@@ -1959,17 +1959,17 @@ class Windows.Networking.Vpn.VpnCustomEditBox activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property no_echo
-        get get_NoEcho slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=99
+        get get_NoEcho slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4
             out boolean return
-        put put_NoEcho slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=62
+        put put_NoEcho slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4
             in boolean name=value
     property default_text
-        get get_DefaultText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=43
+        get get_DefaultText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4
             out string return
-        put put_DefaultText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=22
+        put put_DefaultText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4
             in string name=value
     property text
-        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4 reverse=121
+        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomEditBox shape=4
             out string return
     property label
         get get_Label slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=43
@@ -2022,12 +2022,12 @@ class Windows.Networking.Vpn.VpnCustomPromptBooleanInput activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property initial_value
-        get get_InitialValue slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4 reverse=43
+        get get_InitialValue slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4
             out boolean return
-        put put_InitialValue slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4 reverse=22
+        put put_InitialValue slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4
             in boolean name=value
     property value
-        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4 reverse=62
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptBooleanInput shape=4
             out boolean return
     property emphasized
         get get_Emphasized slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=141
@@ -2070,10 +2070,10 @@ class Windows.Networking.Vpn.VpnCustomPromptOptionSelector activatable python_ty
         put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
             in boolean name=value
     property options
-        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptOptionSelector shape=4 reverse=22
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptOptionSelector shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property selected_index
-        get get_SelectedIndex slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptOptionSelector shape=4 reverse=43
+        get get_SelectedIndex slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptOptionSelector shape=4
             out uint32 return
 
 class Windows.Networking.Vpn.VpnCustomPromptText activatable python_type
@@ -2101,9 +2101,9 @@ class Windows.Networking.Vpn.VpnCustomPromptText activatable python_type
         put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
             in boolean name=value
     property text
-        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptText shape=4 reverse=43
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptText shape=4
             out string return
-        put put_Text slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptText shape=4 reverse=22
+        put put_Text slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptText shape=4
             in string name=value
 
 class Windows.Networking.Vpn.VpnCustomPromptTextInput activatable python_type
@@ -2131,17 +2131,17 @@ class Windows.Networking.Vpn.VpnCustomPromptTextInput activatable python_type
         put put_Compulsory slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptElement shape=4 reverse=62
             in boolean name=value
     property placeholder_text
-        get get_PlaceholderText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=43
+        get get_PlaceholderText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4
             out string return
-        put put_PlaceholderText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=22
+        put put_PlaceholderText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4
             in string name=value
     property is_text_hidden
-        get get_IsTextHidden slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=99
+        get get_IsTextHidden slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4
             out boolean return
-        put put_IsTextHidden slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=62
+        put put_IsTextHidden slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4
             in boolean name=value
     property text
-        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4 reverse=121
+        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomPromptTextInput shape=4
             out string return
 
 class Windows.Networking.Vpn.VpnCustomTextBox activatable python_type
@@ -2169,9 +2169,9 @@ class Windows.Networking.Vpn.VpnCustomTextBox activatable python_type
         put put_Bordered slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomPrompt shape=4 reverse=121
             in boolean name=value
     property display_text
-        get get_DisplayText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomTextBox shape=4 reverse=43
+        get get_DisplayText slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnCustomTextBox shape=4
             out string return
-        put put_DisplayText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomTextBox shape=4 reverse=22
+        put put_DisplayText slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnCustomTextBox shape=4
             in string name=value
 
 enum Windows.Networking.Vpn.VpnDataPathType python_type
@@ -2189,12 +2189,12 @@ class Windows.Networking.Vpn.VpnDomainNameAssignment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property proxy_auto_configuration_uri
-        get get_ProxyAutoConfigurationUri slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4 reverse=62
+        get get_ProxyAutoConfigurationUri slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ProxyAutoConfigurationUri slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4 reverse=43
+        put put_ProxyAutoConfigurationUri slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4
             in class type=Windows.Foundation.Uri name=value
     property domain_name_list
-        get get_DomainNameList slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4 reverse=22
+        get get_DomainNameList slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnDomainNameInfo> return
 
 class Windows.Networking.Vpn.VpnDomainNameInfo python_type
@@ -2205,30 +2205,30 @@ class Windows.Networking.Vpn.VpnDomainNameInfo python_type
     requires Windows.Networking.Vpn.IVpnDomainNameInfo2
     factory Windows.Networking.Vpn.IVpnDomainNameInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfoFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfoFactory shape=239
             in string name=name
             in enum32 type=Windows.Networking.Vpn.VpnDomainNameType name=nameType
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=dnsServerList
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.HostName> name=proxyServerList
             out class type=Windows.Networking.Vpn.VpnDomainNameInfo return
     property domain_name_type
-        get get_DomainNameType slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=99
+        get get_DomainNameType slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4
             out enum32 type=Windows.Networking.Vpn.VpnDomainNameType return
-        put put_DomainNameType slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=62
+        put put_DomainNameType slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4
             in enum32 type=Windows.Networking.Vpn.VpnDomainNameType name=value
     property domain_name
-        get get_DomainName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=43
+        get get_DomainName slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4
             out class type=Windows.Networking.HostName return
-        put put_DomainName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=22
+        put put_DomainName slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4
             in class type=Windows.Networking.HostName name=value
     property dns_servers
-        get get_DnsServers slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=121
+        get get_DnsServers slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
     property web_proxy_servers
-        get get_WebProxyServers slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4 reverse=141
+        get get_WebProxyServers slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
     property web_proxy_uris
-        get get_WebProxyUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo2 shape=4 reverse=22
+        get get_WebProxyUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnDomainNameInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
 
 enum Windows.Networking.Vpn.VpnDomainNameType python_type
@@ -2258,13 +2258,13 @@ class Windows.Networking.Vpn.VpnForegroundActivatedEventArgs python_type
         get get_User slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser shape=4 reverse=22
             out class type=Windows.System.User return
     property activation_operation
-        get get_ActivationOperation slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4 reverse=62
+        get get_ActivationOperation slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4
             out class type=Windows.Networking.Vpn.VpnForegroundActivationOperation return
     property profile_name
-        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4 reverse=22
+        get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4
             out string return
     property shared_context
-        get get_SharedContext slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4 reverse=43
+        get get_SharedContext slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnForegroundActivatedEventArgs shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
 
 class Windows.Networking.Vpn.VpnForegroundActivationOperation python_type
@@ -2273,7 +2273,7 @@ class Windows.Networking.Vpn.VpnForegroundActivationOperation python_type
     default Windows.Networking.Vpn.IVpnForegroundActivationOperation
     requires Windows.Networking.Vpn.IVpnForegroundActivationOperation
     method complete
-        method Complete slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnForegroundActivationOperation shape=4 reverse=22
+        method Complete slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnForegroundActivationOperation shape=4
             in class type=Windows.Foundation.Collections.ValueSet name=result
 
 enum Windows.Networking.Vpn.VpnIPProtocol python_type
@@ -2294,11 +2294,11 @@ class Windows.Networking.Vpn.VpnInterfaceId python_type
     requires Windows.Networking.Vpn.IVpnInterfaceId
     factory Windows.Networking.Vpn.IVpnInterfaceIdFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceIdFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceIdFactory shape=117
             pass_array uint8 name=address
             out class type=Windows.Networking.Vpn.VpnInterfaceId return
     method get_address_info
-        method GetAddressInfo slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceId shape=51 reverse=24
+        method GetAddressInfo slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnInterfaceId shape=51
             receive_array uint8 name=id
 
 class Windows.Networking.Vpn.VpnManagementAgent activatable python_type
@@ -2310,39 +2310,39 @@ class Windows.Networking.Vpn.VpnManagementAgent activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method add_profile_from_object_async
-        method AddProfileFromObjectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=44
+        method AddProfileFromObjectAsync slot=7 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method add_profile_from_xml_async
-        method AddProfileFromXmlAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=24
+        method AddProfileFromXmlAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in string name=xml
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method connect_profile_async
-        method ConnectProfileAsync slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=163
+        method ConnectProfileAsync slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method connect_profile_with_password_credential_async
-        method ConnectProfileWithPasswordCredentialAsync slot=13 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=117 reverse=175
+        method ConnectProfileWithPasswordCredentialAsync slot=13 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=117
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             in class type=Windows.Security.Credentials.PasswordCredential name=passwordCredential
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method delete_profile_async
-        method DeleteProfileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=144
+        method DeleteProfileAsync slot=11 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method disconnect_profile_async
-        method DisconnectProfileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=187
+        method DisconnectProfileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method get_profiles_async
-        method GetProfilesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=4 reverse=121
+        method GetProfilesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> return
     method update_profile_from_object_async
-        method UpdateProfileFromObjectAsync slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=100
+        method UpdateProfileFromObjectAsync slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method update_profile_from_xml_async
-        method UpdateProfileFromXmlAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51 reverse=65
+        method UpdateProfileFromXmlAsync slot=8 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in string name=xml
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
 
@@ -2386,14 +2386,14 @@ class Windows.Networking.Vpn.VpnNamespaceAssignment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property proxy_auto_config_uri
-        get get_ProxyAutoConfigUri slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=99
+        get get_ProxyAutoConfigUri slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ProxyAutoConfigUri slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=62
+        put put_ProxyAutoConfigUri slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4
             in class type=Windows.Foundation.Uri name=value
     property namespace_list
-        get get_NamespaceList slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=43
+        get get_NamespaceList slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> return
-        put put_NamespaceList slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4 reverse=22
+        put put_NamespaceList slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceAssignment shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnNamespaceInfo> name=value
 
 class Windows.Networking.Vpn.VpnNamespaceInfo python_type
@@ -2403,25 +2403,25 @@ class Windows.Networking.Vpn.VpnNamespaceInfo python_type
     requires Windows.Networking.Vpn.IVpnNamespaceInfo
     factory Windows.Networking.Vpn.IVpnNamespaceInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfoFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfoFactory shape=195
             in string name=name
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=dnsServerList
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=proxyServerList
             out class type=Windows.Networking.Vpn.VpnNamespaceInfo return
     property web_proxy_servers
-        get get_WebProxyServers slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=141
+        get get_WebProxyServers slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
-        put put_WebProxyServers slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=121
+        put put_WebProxyServers slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=value
     property namespace
-        get get_Namespace slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=43
+        get get_Namespace slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4
             out string return
-        put put_Namespace slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=22
+        put put_Namespace slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4
             in string name=value
     property dns_servers
-        get get_DnsServers slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=99
+        get get_DnsServers slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> return
-        put put_DnsServers slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4 reverse=62
+        put put_DnsServers slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNamespaceInfo shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.HostName> name=value
 
 class Windows.Networking.Vpn.VpnNativeProfile activatable python_type
@@ -2435,40 +2435,40 @@ class Windows.Networking.Vpn.VpnNativeProfile activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property user_authentication_method
-        get get_UserAuthenticationMethod slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=141
+        get get_UserAuthenticationMethod slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             out enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod return
-        put put_UserAuthenticationMethod slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=162
+        put put_UserAuthenticationMethod slot=12 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             in enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod name=value
     property tunnel_authentication_method
-        get get_TunnelAuthenticationMethod slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=173
+        get get_TunnelAuthenticationMethod slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             out enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod return
-        put put_TunnelAuthenticationMethod slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=186
+        put put_TunnelAuthenticationMethod slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             in enum32 type=Windows.Networking.Vpn.VpnAuthenticationMethod name=value
     property routing_policy_type
-        get get_RoutingPolicyType slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=43
+        get get_RoutingPolicyType slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             out enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType return
-        put put_RoutingPolicyType slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=62
+        put put_RoutingPolicyType slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             in enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType name=value
     property eap_configuration
-        get get_EapConfiguration slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=194
+        get get_EapConfiguration slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             out string return
-        put put_EapConfiguration slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=202
+        put put_EapConfiguration slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             in string name=value
     property native_protocol_type
-        get get_NativeProtocolType slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=99
+        get get_NativeProtocolType slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             out enum32 type=Windows.Networking.Vpn.VpnNativeProtocolType return
-        put put_NativeProtocolType slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=121
+        put put_NativeProtocolType slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             in enum32 type=Windows.Networking.Vpn.VpnNativeProtocolType name=value
     property servers
-        get get_Servers slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4 reverse=22
+        get get_Servers slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property require_vpn_client_app_ui
-        get get_RequireVpnClientAppUI slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4 reverse=22
+        get get_RequireVpnClientAppUI slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4
             out boolean return
-        put put_RequireVpnClientAppUI slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4 reverse=43
+        put put_RequireVpnClientAppUI slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4
             in boolean name=value
     property connection_status
-        get get_ConnectionStatus slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4 reverse=62
+        get get_ConnectionStatus slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnNativeProfile2 shape=4
             out enum32 type=Windows.Networking.Vpn.VpnManagementConnectionStatus return
     property profile_name
         get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=22
@@ -2514,31 +2514,31 @@ class Windows.Networking.Vpn.VpnPacketBuffer python_type
     requires Windows.Networking.Vpn.IVpnPacketBuffer3
     factory Windows.Networking.Vpn.IVpnPacketBufferFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferFactory shape=195
             in class type=Windows.Networking.Vpn.VpnPacketBuffer name=parentBuffer
             in uint32 name=offset
             in uint32 name=length
             out class type=Windows.Networking.Vpn.VpnPacketBuffer return
     property transport_affinity
-        get get_TransportAffinity slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=121
+        get get_TransportAffinity slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4
             out uint32 return
-        put put_TransportAffinity slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=99
+        put put_TransportAffinity slot=9 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4
             in uint32 name=value
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4
             out enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus return
-        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=43
+        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4
             in enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus name=value
     property buffer
-        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4 reverse=22
+        get get_Buffer slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer shape=4
             out class type=Windows.Storage.Streams.Buffer return
     property app_id
-        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer2 shape=4 reverse=22
+        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer2 shape=4
             out class type=Windows.Networking.Vpn.VpnAppId return
     property transport_context
-        get get_TransportContext slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer3 shape=4 reverse=43
+        get get_TransportContext slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBuffer3 shape=4
             out object return
-        put put_TransportContext slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer3 shape=4 reverse=22
+        put put_TransportContext slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBuffer3 shape=4
             in object name=value
 
 class Windows.Networking.Vpn.VpnPacketBufferList python_type iterable
@@ -2548,29 +2548,29 @@ class Windows.Networking.Vpn.VpnPacketBufferList python_type iterable
     requires Windows.Networking.Vpn.IVpnPacketBufferList
     requires Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer>
     property status
-        get get_Status slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=162
+        get get_Status slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             out enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus return
-        put put_Status slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=141
+        put put_Status slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             in enum32 type=Windows.Networking.Vpn.VpnPacketBufferStatus name=value
     property size
-        get get_Size slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=173
+        get get_Size slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             out uint32 return
     method add_at_begin
-        method AddAtBegin slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=43
+        method AddAtBegin slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             in class type=Windows.Networking.Vpn.VpnPacketBuffer name=nextVpnPacketBuffer
     method append
-        method Append slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=22
+        method Append slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             in class type=Windows.Networking.Vpn.VpnPacketBuffer name=nextVpnPacketBuffer
     method clear
-        method Clear slot=10 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=0 reverse=117
+        method Clear slot=10 inputs=0 outputs=0 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=0
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Networking.Vpn.VpnPacketBuffer> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Networking.Vpn.VpnPacketBuffer> return
     method remove_at_begin
-        method RemoveAtBegin slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=99
+        method RemoveAtBegin slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             out class type=Windows.Networking.Vpn.VpnPacketBuffer return
     method remove_at_end
-        method RemoveAtEnd slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4 reverse=62
+        method RemoveAtEnd slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPacketBufferList shape=4
             out class type=Windows.Networking.Vpn.VpnPacketBuffer return
 
 enum Windows.Networking.Vpn.VpnPacketBufferStatus python_type
@@ -2585,13 +2585,13 @@ class Windows.Networking.Vpn.VpnPickedCredential python_type
     default Windows.Networking.Vpn.IVpnPickedCredential
     requires Windows.Networking.Vpn.IVpnPickedCredential
     property additional_pin
-        get get_AdditionalPin slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4 reverse=43
+        get get_AdditionalPin slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4
             out string return
     property old_password_credential
-        get get_OldPasswordCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4 reverse=62
+        get get_OldPasswordCredential slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4
             out class type=Windows.Security.Credentials.PasswordCredential return
     property passkey_credential
-        get get_PasskeyCredential slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4 reverse=22
+        get get_PasskeyCredential slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPickedCredential shape=4
             out class type=Windows.Security.Credentials.PasswordCredential return
 
 class Windows.Networking.Vpn.VpnPlugInProfile activatable python_type
@@ -2605,25 +2605,25 @@ class Windows.Networking.Vpn.VpnPlugInProfile activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property vpn_plugin_package_family_name
-        get get_VpnPluginPackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=99
+        get get_VpnPluginPackageFamilyName slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4
             out string return
-        put put_VpnPluginPackageFamilyName slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=121
+        put put_VpnPluginPackageFamilyName slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4
             in string name=value
     property custom_configuration
-        get get_CustomConfiguration slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=43
+        get get_CustomConfiguration slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4
             out string return
-        put put_CustomConfiguration slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=62
+        put put_CustomConfiguration slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4
             in string name=value
     property server_uris
-        get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4 reverse=22
+        get get_ServerUris slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
     property require_vpn_client_app_ui
-        get get_RequireVpnClientAppUI slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4 reverse=22
+        get get_RequireVpnClientAppUI slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4
             out boolean return
-        put put_RequireVpnClientAppUI slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4 reverse=43
+        put put_RequireVpnClientAppUI slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4
             in boolean name=value
     property connection_status
-        get get_ConnectionStatus slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4 reverse=62
+        get get_ConnectionStatus slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnPlugInProfile2 shape=4
             out enum32 type=Windows.Networking.Vpn.VpnManagementConnectionStatus return
     property profile_name
         get get_ProfileName slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnProfile shape=4 reverse=22
@@ -2660,19 +2660,19 @@ class Windows.Networking.Vpn.VpnRoute python_type
     requires Windows.Networking.Vpn.IVpnRoute
     factory Windows.Networking.Vpn.IVpnRouteFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteFactory shape=117
             in class type=Windows.Networking.HostName name=address
             in uint8 name=prefixSize
             out class type=Windows.Networking.Vpn.VpnRoute return
     property prefix_size
-        get get_PrefixSize slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=99
+        get get_PrefixSize slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRoute shape=4
             out uint8 return
-        put put_PrefixSize slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=62
+        put put_PrefixSize slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRoute shape=4
             in uint8 name=value
     property address
-        get get_Address slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=43
+        get get_Address slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRoute shape=4
             out class type=Windows.Networking.HostName return
-        put put_Address slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRoute shape=4 reverse=22
+        put put_Address slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRoute shape=4
             in class type=Windows.Networking.HostName name=value
 
 class Windows.Networking.Vpn.VpnRouteAssignment activatable python_type
@@ -2684,29 +2684,29 @@ class Windows.Networking.Vpn.VpnRouteAssignment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property ipv6_inclusion_routes
-        get get_Ipv6InclusionRoutes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=99
+        get get_Ipv6InclusionRoutes slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
-        put put_Ipv6InclusionRoutes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=43
+        put put_Ipv6InclusionRoutes slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
     property ipv6_exclusion_routes
-        get get_Ipv6ExclusionRoutes slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=173
+        get get_Ipv6ExclusionRoutes slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
-        put put_Ipv6ExclusionRoutes slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=141
+        put put_Ipv6ExclusionRoutes slot=11 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
     property ipv4_inclusion_routes
-        get get_Ipv4InclusionRoutes slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=62
+        get get_Ipv4InclusionRoutes slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
-        put put_Ipv4InclusionRoutes slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=22
+        put put_Ipv4InclusionRoutes slot=6 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
     property ipv4_exclusion_routes
-        get get_Ipv4ExclusionRoutes slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=162
+        get get_Ipv4ExclusionRoutes slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> return
-        put put_Ipv4ExclusionRoutes slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=121
+        put put_Ipv4ExclusionRoutes slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnRoute> name=value
     property exclude_local_subnets
-        get get_ExcludeLocalSubnets slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=194
+        get get_ExcludeLocalSubnets slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             out boolean return
-        put put_ExcludeLocalSubnets slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4 reverse=186
+        put put_ExcludeLocalSubnets slot=14 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnRouteAssignment shape=4
             in boolean name=value
 
 enum Windows.Networking.Vpn.VpnRoutingPolicyType python_type
@@ -2721,7 +2721,7 @@ class Windows.Networking.Vpn.VpnSystemHealth python_type
     default Windows.Networking.Vpn.IVpnSystemHealth
     requires Windows.Networking.Vpn.IVpnSystemHealth
     property statement_of_health
-        get get_StatementOfHealth slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnSystemHealth shape=4 reverse=22
+        get get_StatementOfHealth slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnSystemHealth shape=4
             out class type=Windows.Storage.Streams.Buffer return
 
 class Windows.Networking.Vpn.VpnTrafficFilter python_type
@@ -2731,38 +2731,38 @@ class Windows.Networking.Vpn.VpnTrafficFilter python_type
     requires Windows.Networking.Vpn.IVpnTrafficFilter
     factory Windows.Networking.Vpn.IVpnTrafficFilterFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterFactory shape=51
             in class type=Windows.Networking.Vpn.VpnAppId name=appId
             out class type=Windows.Networking.Vpn.VpnTrafficFilter return
     property routing_policy_type
-        get get_RoutingPolicyType slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=194
+        get get_RoutingPolicyType slot=15 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType return
-        put put_RoutingPolicyType slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=202
+        put put_RoutingPolicyType slot=16 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             in enum32 type=Windows.Networking.Vpn.VpnRoutingPolicyType name=value
     property protocol
-        get get_Protocol slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=99
+        get get_Protocol slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out enum32 type=Windows.Networking.Vpn.VpnIPProtocol return
-        put put_Protocol slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=121
+        put put_Protocol slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             in enum32 type=Windows.Networking.Vpn.VpnIPProtocol name=value
     property app_id
-        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=22
+        get get_AppId slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out class type=Windows.Networking.Vpn.VpnAppId return
-        put put_AppId slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=43
+        put put_AppId slot=7 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             in class type=Windows.Networking.Vpn.VpnAppId name=value
     property app_claims
-        get get_AppClaims slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=62
+        get get_AppClaims slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property local_address_ranges
-        get get_LocalAddressRanges slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=173
+        get get_LocalAddressRanges slot=13 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property local_port_ranges
-        get get_LocalPortRanges slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=141
+        get get_LocalPortRanges slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property remote_address_ranges
-        get get_RemoteAddressRanges slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=186
+        get get_RemoteAddressRanges slot=14 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     property remote_port_ranges
-        get get_RemotePortRanges slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4 reverse=162
+        get get_RemotePortRanges slot=12 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilter shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 class Windows.Networking.Vpn.VpnTrafficFilterAssignment activatable python_type
@@ -2774,17 +2774,17 @@ class Windows.Networking.Vpn.VpnTrafficFilterAssignment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property allow_outbound
-        get get_AllowOutbound slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=43
+        get get_AllowOutbound slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4
             out boolean return
-        put put_AllowOutbound slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=62
+        put put_AllowOutbound slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4
             in boolean name=value
     property allow_inbound
-        get get_AllowInbound slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=99
+        get get_AllowInbound slot=9 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4
             out boolean return
-        put put_AllowInbound slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=121
+        put put_AllowInbound slot=10 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4
             in boolean name=value
     property traffic_filter_list
-        get get_TrafficFilterList slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4 reverse=22
+        get get_TrafficFilterList slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnTrafficFilterAssignment shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Networking.Vpn.VpnTrafficFilter> return
 
 class System.Object external

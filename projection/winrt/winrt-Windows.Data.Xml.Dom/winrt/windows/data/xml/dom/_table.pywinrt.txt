@@ -23,13 +23,13 @@ class Windows.Data.Xml.Dom.DtdEntity python_type
     requires Windows.Data.Xml.Dom.IXmlNodeSelector
     requires Windows.Data.Xml.Dom.IXmlNodeSerializer
     property notation_name
-        get get_NotationName slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4 reverse=62
+        get get_NotationName slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4
             out object return
     property public_id
-        get get_PublicId slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4 reverse=22
+        get get_PublicId slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4
             out object return
     property system_id
-        get get_SystemId slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4 reverse=43
+        get get_SystemId slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdEntity shape=4
             out object return
     property prefix
         get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
@@ -140,10 +140,10 @@ class Windows.Data.Xml.Dom.DtdNotation python_type
     requires Windows.Data.Xml.Dom.IXmlNodeSelector
     requires Windows.Data.Xml.Dom.IXmlNodeSerializer
     property public_id
-        get get_PublicId slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdNotation shape=4 reverse=22
+        get get_PublicId slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdNotation shape=4
             out object return
     property system_id
-        get get_SystemId slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdNotation shape=4 reverse=43
+        get get_SystemId slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IDtdNotation shape=4
             out object return
     property prefix
         get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
@@ -836,15 +836,15 @@ class Windows.Data.Xml.Dom.XmlAttribute python_type
     requires Windows.Data.Xml.Dom.IXmlNodeSelector
     requires Windows.Data.Xml.Dom.IXmlNodeSerializer
     property value
-        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=62
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4
             out string return
-        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=99
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4
             in string name=value
     property specified
-        get get_Specified slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=43
+        get get_Specified slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4
             out boolean return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlAttribute shape=4
             out string return
     property prefix
         get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
@@ -1242,16 +1242,16 @@ class Windows.Data.Xml.Dom.XmlDocument activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property doctype
-        get get_Doctype slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=22
+        get get_Doctype slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocumentType return
     property document_element
-        get get_DocumentElement slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=62
+        get get_DocumentElement slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4
             out class type=Windows.Data.Xml.Dom.XmlElement return
     property document_uri
-        get get_DocumentUri slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=218
+        get get_DocumentUri slot=18 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4
             out string return
     property implementation
-        get get_Implementation slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=43
+        get get_Implementation slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4
             out class type=Windows.Data.Xml.Dom.XmlDomImplementation return
     property prefix
         get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
@@ -1313,53 +1313,53 @@ class Windows.Data.Xml.Dom.XmlDocument activatable python_type
             in boolean name=deep
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method create_attribute
-        method CreateAttribute slot=14 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=187
+        method CreateAttribute slot=14 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=name
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
     method create_attribute_ns
-        method CreateAttributeNS slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=225
+        method CreateAttributeNS slot=19 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117
             in object name=namespaceUri
             in string name=qualifiedName
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
     method create_c_data_section
-        method CreateCDataSection slot=17 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=211
+        method CreateCDataSection slot=17 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=data
             out class type=Windows.Data.Xml.Dom.XmlCDataSection return
     method create_comment
-        method CreateComment slot=12 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=163
+        method CreateComment slot=12 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=data
             out class type=Windows.Data.Xml.Dom.XmlComment return
     method create_document_fragment
-        method CreateDocumentFragment slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4 reverse=121
+        method CreateDocumentFragment slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=4
             out class type=Windows.Data.Xml.Dom.XmlDocumentFragment return
     method create_element
-        method CreateElement slot=9 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=100
+        method CreateElement slot=9 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=tagName
             out class type=Windows.Data.Xml.Dom.XmlElement return
     method create_element_ns
-        method CreateElementNS slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=230
+        method CreateElementNS slot=20 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117
             in object name=namespaceUri
             in string name=qualifiedName
             out class type=Windows.Data.Xml.Dom.XmlElement return
     method create_entity_reference
-        method CreateEntityReference slot=15 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=196
+        method CreateEntityReference slot=15 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=name
             out class type=Windows.Data.Xml.Dom.XmlEntityReference return
     method create_processing_instruction
-        method CreateProcessingInstruction slot=13 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=175
+        method CreateProcessingInstruction slot=13 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117
             in string name=target
             in string name=data
             out class type=Windows.Data.Xml.Dom.XmlProcessingInstruction return
     method create_text_node
-        method CreateTextNode slot=11 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=144
+        method CreateTextNode slot=11 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=data
             out class type=Windows.Data.Xml.Dom.XmlText return
     method get_element_by_id
-        method GetElementById slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=233
+        method GetElementById slot=21 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=elementId
             out class type=Windows.Data.Xml.Dom.XmlElement return
     method get_elements_by_tag_name
-        method GetElementsByTagName slot=16 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51 reverse=203
+        method GetElementsByTagName slot=16 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=51
             in string name=tagName
             out class type=Windows.Data.Xml.Dom.XmlNodeList return
     method get_xml
@@ -1369,7 +1369,7 @@ class Windows.Data.Xml.Dom.XmlDocument activatable python_type
         method HasChildNodes slot=17 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=210
             out boolean return
     method import_node
-        method ImportNode slot=22 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117 reverse=239
+        method ImportNode slot=22 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocument shape=117
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=node
             in boolean name=deep
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
@@ -1379,31 +1379,31 @@ class Windows.Data.Xml.Dom.XmlDocument activatable python_type
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method load_from_file_async static
-        method LoadFromFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=51 reverse=65 static
+        method LoadFromFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
-        method LoadFromFileAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=117 reverse=101 static
+        method LoadFromFileAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
     method load_from_uri_async static
-        method LoadFromUriAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=51 reverse=24 static
+        method LoadFromUriAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
-        method LoadFromUriAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=117 reverse=45 static
+        method LoadFromUriAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentStatics shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> return
     method load_xml
-        method LoadXml slot=6 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=4 reverse=22
+        method LoadXml slot=6 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=4
             in string name=xml
-        method LoadXml slot=7 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=51 reverse=44
+        method LoadXml slot=7 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=51
             in string name=xml
             in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
     method load_xml_from_buffer
-        method LoadXmlFromBuffer slot=6 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO2 shape=4 reverse=22
+        method LoadXmlFromBuffer slot=6 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO2 shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
-        method LoadXmlFromBuffer slot=7 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO2 shape=51 reverse=44
+        method LoadXmlFromBuffer slot=7 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO2 shape=51
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             in class type=Windows.Data.Xml.Dom.XmlLoadSettings name=loadSettings
     method normalize
@@ -1418,7 +1418,7 @@ class Windows.Data.Xml.Dom.XmlDocument activatable python_type
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=referenceChild
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method save_to_file_async
-        method SaveToFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=51 reverse=65
+        method SaveToFileAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentIO shape=51
             in interface type=Windows.Storage.IStorageFile name=file
             out interface type=Windows.Foundation.IAsyncAction return
     method select_nodes
@@ -1557,13 +1557,13 @@ class Windows.Data.Xml.Dom.XmlDocumentType python_type
     requires Windows.Data.Xml.Dom.IXmlNodeSelector
     requires Windows.Data.Xml.Dom.IXmlNodeSerializer
     property entities
-        get get_Entities slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4 reverse=43
+        get get_Entities slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4
             out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4
             out string return
     property notations
-        get get_Notations slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4 reverse=62
+        get get_Notations slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDocumentType shape=4
             out class type=Windows.Data.Xml.Dom.XmlNamedNodeMap return
     property prefix
         get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
@@ -1671,7 +1671,7 @@ class Windows.Data.Xml.Dom.XmlDomImplementation python_type
     default Windows.Data.Xml.Dom.IXmlDomImplementation
     requires Windows.Data.Xml.Dom.IXmlDomImplementation
     method has_feature
-        method HasFeature slot=6 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDomImplementation shape=117 reverse=25
+        method HasFeature slot=6 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlDomImplementation shape=117
             in string name=feature
             in object name=version
             out boolean return
@@ -1685,7 +1685,7 @@ class Windows.Data.Xml.Dom.XmlElement python_type
     requires Windows.Data.Xml.Dom.IXmlNodeSelector
     requires Windows.Data.Xml.Dom.IXmlNodeSerializer
     property tag_name
-        get get_TagName slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=4 reverse=22
+        get get_TagName slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=4
             out string return
     property prefix
         get get_Prefix slot=26 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=4 reverse=255
@@ -1747,25 +1747,25 @@ class Windows.Data.Xml.Dom.XmlElement python_type
             in boolean name=deep
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_attribute
-        method GetAttribute slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=44
+        method GetAttribute slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in string name=attributeName
             out string return
     method get_attribute_ns
-        method GetAttributeNS slot=15 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117 reverse=197
+        method GetAttributeNS slot=15 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117
             in object name=namespaceUri
             in string name=localName
             out string return
     method get_attribute_node
-        method GetAttributeNode slot=10 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=124
+        method GetAttributeNode slot=10 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in string name=attributeName
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
     method get_attribute_node_ns
-        method GetAttributeNodeNS slot=18 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117 reverse=220
+        method GetAttributeNodeNS slot=18 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117
             in object name=namespaceUri
             in string name=localName
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
     method get_elements_by_tag_name
-        method GetElementsByTagName slot=13 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=174
+        method GetElementsByTagName slot=13 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in string name=tagName
             out class type=Windows.Data.Xml.Dom.XmlNodeList return
     method get_xml
@@ -1782,14 +1782,14 @@ class Windows.Data.Xml.Dom.XmlElement python_type
     method normalize
         method Normalize slot=27 inputs=0 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNode shape=0 reverse=258
     method remove_attribute
-        method RemoveAttribute slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=4 reverse=99
+        method RemoveAttribute slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=4
             in string name=attributeName
     method remove_attribute_ns
-        method RemoveAttributeNS slot=16 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=203
+        method RemoveAttributeNS slot=16 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in object name=namespaceUri
             in string name=localName
     method remove_attribute_node
-        method RemoveAttributeNode slot=12 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=163
+        method RemoveAttributeNode slot=12 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in class type=Windows.Data.Xml.Dom.XmlAttribute name=attributeNode
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
     method remove_child
@@ -1820,20 +1820,20 @@ class Windows.Data.Xml.Dom.XmlElement python_type
             in object name=namespaces
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method set_attribute
-        method SetAttribute slot=8 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=65
+        method SetAttribute slot=8 inputs=2 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in string name=attributeName
             in string name=attributeValue
     method set_attribute_ns
-        method SetAttributeNS slot=14 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117 reverse=188
+        method SetAttributeNS slot=14 inputs=3 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlElement shape=117
             in object name=namespaceUri
             in string name=qualifiedName
             in string name=value
     method set_attribute_node
-        method SetAttributeNode slot=11 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=144
+        method SetAttributeNode slot=11 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in class type=Windows.Data.Xml.Dom.XmlAttribute name=newAttribute
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
     method set_attribute_node_ns
-        method SetAttributeNodeNS slot=17 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51 reverse=211
+        method SetAttributeNodeNS slot=17 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlElement shape=51
             in class type=Windows.Data.Xml.Dom.XmlAttribute name=newAttribute
             out class type=Windows.Data.Xml.Dom.XmlAttribute return
 
@@ -1954,29 +1954,29 @@ class Windows.Data.Xml.Dom.XmlLoadSettings activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property validate_on_parse
-        get get_ValidateOnParse slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=162
+        get get_ValidateOnParse slot=12 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             out boolean return
-        put put_ValidateOnParse slot=13 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=173
+        put put_ValidateOnParse slot=13 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             in boolean name=value
     property resolve_externals
-        get get_ResolveExternals slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=121
+        get get_ResolveExternals slot=10 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             out boolean return
-        put put_ResolveExternals slot=11 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=141
+        put put_ResolveExternals slot=11 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             in boolean name=value
     property prohibit_dtd
-        get get_ProhibitDtd slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=62
+        get get_ProhibitDtd slot=8 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             out boolean return
-        put put_ProhibitDtd slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=99
+        put put_ProhibitDtd slot=9 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             in boolean name=value
     property max_element_depth
-        get get_MaxElementDepth slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=22
+        get get_MaxElementDepth slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             out uint32 return
-        put put_MaxElementDepth slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=43
+        put put_MaxElementDepth slot=7 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             in uint32 name=value
     property element_content_white_space
-        get get_ElementContentWhiteSpace slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=186
+        get get_ElementContentWhiteSpace slot=14 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             out boolean return
-        put put_ElementContentWhiteSpace slot=15 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4 reverse=194
+        put put_ElementContentWhiteSpace slot=15 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlLoadSettings shape=4
             in boolean name=value
 
 class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
@@ -1988,7 +1988,7 @@ class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode>
     property length
-        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=4 reverse=22
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=4
             out uint32 return
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=4 reverse=43 role=size
@@ -2006,11 +2006,11 @@ class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
             fill_array interface type=Windows.Data.Xml.Dom.IXmlNode name=items
             out uint32 return
     method get_named_item
-        method GetNamedItem slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=65
+        method GetNamedItem slot=8 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51
             in string name=name
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method get_named_item_ns
-        method GetNamedItemNS slot=11 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=117 reverse=145
+        method GetNamedItemNS slot=11 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=117
             in object name=namespaceUri
             in string name=name
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
@@ -2020,24 +2020,24 @@ class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
             out uint32 name=index
             out boolean return
     method item
-        method Item slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=44
+        method Item slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51
             in uint32 name=index
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method remove_named_item
-        method RemoveNamedItem slot=10 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=124
+        method RemoveNamedItem slot=10 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51
             in string name=name
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method remove_named_item_ns
-        method RemoveNamedItemNS slot=12 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=117 reverse=164
+        method RemoveNamedItemNS slot=12 inputs=2 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=117
             in object name=namespaceUri
             in string name=name
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method set_named_item
-        method SetNamedItem slot=9 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=100
+        method SetNamedItem slot=9 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=node
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
     method set_named_item_ns
-        method SetNamedItemNS slot=13 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51 reverse=174
+        method SetNamedItemNS slot=13 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=51
             in interface type=Windows.Data.Xml.Dom.IXmlNode name=node
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
 
@@ -2050,7 +2050,7 @@ class Windows.Data.Xml.Dom.XmlNodeList python_type iterable sequence
     requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode>
     property length
-        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=4 reverse=22
+        get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=4
             out uint32 return
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode> shape=4 reverse=43 role=size
@@ -2073,7 +2073,7 @@ class Windows.Data.Xml.Dom.XmlNodeList python_type iterable sequence
             out uint32 name=index
             out boolean return
     method item
-        method Item slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=51 reverse=44
+        method Item slot=7 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=51
             in uint32 name=index
             out interface type=Windows.Data.Xml.Dom.IXmlNode return
 
@@ -2137,12 +2137,12 @@ class Windows.Data.Xml.Dom.XmlProcessingInstruction python_type
         put put_InnerText slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlNodeSerializer shape=4 reverse=62
             in string name=value
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4
             out string return
-        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4 reverse=62
+        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4
             in string name=value
     property target
-        get get_Target slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4 reverse=22
+        get get_Target slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlProcessingInstruction shape=4
             out string return
     method append_child
         method AppendChild slot=22 inputs=1 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNode shape=51 reverse=238

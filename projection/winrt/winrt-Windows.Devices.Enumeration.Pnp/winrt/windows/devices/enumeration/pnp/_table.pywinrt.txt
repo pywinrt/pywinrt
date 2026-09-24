@@ -264,42 +264,42 @@ class Windows.Devices.Enumeration.Pnp.PnpObject python_type
     requires Windows.Devices.Enumeration.Pnp.IPnpObject
     factory Windows.Devices.Enumeration.Pnp.IPnpObjectStatics
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4
             out string return
     property properties
-        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4 reverse=62
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4
             out enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType return
     method create_from_id_async static
-        method CreateFromIdAsync slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=195 reverse=26 static
+        method CreateFromIdAsync slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=195 static
             in enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType name=type
             in string name=id
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=requestedProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.Pnp.PnpObject> return
     method create_watcher static
-        method CreateWatcher slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=117 reverse=101 static
+        method CreateWatcher slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=117 static
             in enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType name=type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=requestedProperties
             out class type=Windows.Devices.Enumeration.Pnp.PnpObjectWatcher return
-        method CreateWatcher slot=10 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=195 reverse=126 static
+        method CreateWatcher slot=10 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=195 static
             in enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType name=type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=requestedProperties
             in string name=aqsFilter
             out class type=Windows.Devices.Enumeration.Pnp.PnpObjectWatcher return
     method find_all_async static
-        method FindAllAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=117 reverse=45 static
+        method FindAllAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=117 static
             in enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType name=type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=requestedProperties
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.Pnp.PnpObjectCollection> return
-        method FindAllAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=195 reverse=68 static
+        method FindAllAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectStatics shape=195 static
             in enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType name=type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=requestedProperties
             in string name=aqsFilter
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Enumeration.Pnp.PnpObjectCollection> return
     method update
-        method Update slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4 reverse=99
+        method Update slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObject shape=4
             in class type=Windows.Devices.Enumeration.Pnp.PnpObjectUpdate name=updateInfo
 
 class Windows.Devices.Enumeration.Pnp.PnpObjectCollection python_type iterable sequence
@@ -350,13 +350,13 @@ class Windows.Devices.Enumeration.Pnp.PnpObjectUpdate python_type
     default Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate
     requires Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate shape=4
             out string return
     property properties
-        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate shape=4 reverse=62
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectUpdate shape=4
             out enum32 type=Windows.Devices.Enumeration.Pnp.PnpObjectType return
 
 class Windows.Devices.Enumeration.Pnp.PnpObjectWatcher python_type
@@ -365,42 +365,42 @@ class Windows.Devices.Enumeration.Pnp.PnpObjectWatcher python_type
     default Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher
     requires Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher
     property status
-        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=4 reverse=202
+        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=4
             out enum32 type=Windows.Devices.Enumeration.DeviceWatcherStatus return
     event added
-        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51 reverse=24
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.Pnp.PnpObjectWatcher,Windows.Devices.Enumeration.Pnp.PnpObject> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26 reverse=53
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51 reverse=163
+        add add_EnumerationCompleted slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.Pnp.PnpObjectWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26 reverse=181
+        remove remove_EnumerationCompleted slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51 reverse=124
+        add add_Removed slot=10 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.Pnp.PnpObjectWatcher,Windows.Devices.Enumeration.Pnp.PnpObjectUpdate> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26 reverse=156
+        remove remove_Removed slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51 reverse=187
+        add add_Stopped slot=14 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.Pnp.PnpObjectWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26 reverse=200
+        remove remove_Stopped slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
-        add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51 reverse=65
+        add add_Updated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.Pnp.PnpObjectWatcher,Windows.Devices.Enumeration.Pnp.PnpObjectUpdate> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26 reverse=110
+        remove remove_Updated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=17 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=0 reverse=209
+        method Start slot=17 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=0
     method stop
-        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=0 reverse=217
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=0
 
 enum T parameterized
 

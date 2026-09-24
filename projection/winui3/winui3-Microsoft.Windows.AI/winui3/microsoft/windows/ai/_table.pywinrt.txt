@@ -9,16 +9,16 @@ class Microsoft.Windows.AI.AIFeatureReadyResult python_type
     default Microsoft.Windows.AI.IAIFeatureReadyResult
     requires Microsoft.Windows.AI.IAIFeatureReadyResult
     property error
-        get get_Error slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4 reverse=22
+        get get_Error slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property error_display_text
-        get get_ErrorDisplayText slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4 reverse=43
+        get get_ErrorDisplayText slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4
             out string return
     property extended_error
-        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4 reverse=62
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property status
-        get get_Status slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4 reverse=99
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.IAIFeatureReadyResult shape=4
             out enum32 type=Microsoft.Windows.AI.AIFeatureReadyResultState return
 
 enum Microsoft.Windows.AI.AIFeatureReadyResultState python_type

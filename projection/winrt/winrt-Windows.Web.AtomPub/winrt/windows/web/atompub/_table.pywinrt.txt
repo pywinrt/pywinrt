@@ -155,7 +155,7 @@ class Windows.Web.AtomPub.AtomPubClient activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClientFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClientFactory shape=51
             in class type=Windows.Security.Credentials.PasswordCredential name=serverCredential
             out class type=Windows.Web.AtomPub.AtomPubClient return
     property timeout
@@ -184,7 +184,7 @@ class Windows.Web.AtomPub.AtomPubClient activatable python_type
         put put_BypassCacheOnRetrieve slot=15 inputs=1 outputs=0 declaring=Windows.Web.Syndication.ISyndicationClient shape=4 reverse=194
             in boolean name=value
     method cancel_async_operations
-        method CancelAsyncOperations slot=16 inputs=0 outputs=0 declaring=Windows.Web.AtomPub.IAtomPubClient shape=0 reverse=201
+        method CancelAsyncOperations slot=16 inputs=0 outputs=0 declaring=Windows.Web.AtomPub.IAtomPubClient shape=0
     method create_media_resource_async
         method CreateMediaResourceAsync slot=10 inputs=4 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=239
             in class type=Windows.Foundation.Uri name=uri
@@ -193,17 +193,17 @@ class Windows.Web.AtomPub.AtomPubClient activatable python_type
             in interface type=Windows.Storage.Streams.IInputStream name=mediaStream
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> return
     method create_resource_async
-        method CreateResourceAsync slot=9 inputs=3 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=195 reverse=102
+        method CreateResourceAsync slot=9 inputs=3 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=195
             in class type=Windows.Foundation.Uri name=uri
             in string name=description
             in class type=Windows.Web.Syndication.SyndicationItem name=item
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.TransferProgress> return
     method delete_resource_async
-        method DeleteResourceAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=187
+        method DeleteResourceAsync slot=14 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
     method delete_resource_item_async
-        method DeleteResourceItemAsync slot=15 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=196
+        method DeleteResourceItemAsync slot=15 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51
             in class type=Windows.Web.Syndication.SyndicationItem name=item
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
     method retrieve_feed_async
@@ -211,15 +211,15 @@ class Windows.Web.AtomPub.AtomPubClient activatable python_type
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> return
     method retrieve_media_resource_async
-        method RetrieveMediaResourceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=44
+        method RetrieveMediaResourceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IInputStream,Windows.Web.Syndication.RetrievalProgress> return
     method retrieve_resource_async
-        method RetrieveResourceAsync slot=8 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=65
+        method RetrieveResourceAsync slot=8 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Syndication.SyndicationItem,Windows.Web.Syndication.RetrievalProgress> return
     method retrieve_service_document_async
-        method RetrieveServiceDocumentAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=24
+        method RetrieveServiceDocumentAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.AtomPub.ServiceDocument,Windows.Web.Syndication.RetrievalProgress> return
     method set_request_header
@@ -227,18 +227,18 @@ class Windows.Web.AtomPub.AtomPubClient activatable python_type
             in string name=name
             in string name=value
     method update_media_resource_async
-        method UpdateMediaResourceAsync slot=11 inputs=3 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=195 reverse=146
+        method UpdateMediaResourceAsync slot=11 inputs=3 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=195
             in class type=Windows.Foundation.Uri name=uri
             in string name=mediaType
             in interface type=Windows.Storage.Streams.IInputStream name=mediaStream
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
     method update_resource_async
-        method UpdateResourceAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=117 reverse=164
+        method UpdateResourceAsync slot=12 inputs=2 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=117
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.Web.Syndication.SyndicationItem name=item
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
     method update_resource_item_async
-        method UpdateResourceItemAsync slot=13 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51 reverse=174
+        method UpdateResourceItemAsync slot=13 inputs=1 outputs=1 declaring=Windows.Web.AtomPub.IAtomPubClient shape=51
             in class type=Windows.Web.Syndication.SyndicationItem name=item
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<Windows.Web.Syndication.TransferProgress> return
 
@@ -924,16 +924,16 @@ class Windows.Web.AtomPub.ResourceCollection python_type
     requires Windows.Web.AtomPub.IResourceCollection
     requires Windows.Web.Syndication.ISyndicationNode
     property accepts
-        get get_Accepts slot=9 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=99
+        get get_Accepts slot=9 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property categories
-        get get_Categories slot=8 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=62
+        get get_Categories slot=8 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Syndication.SyndicationCategory> return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4
             out interface type=Windows.Web.Syndication.ISyndicationText return
     property uri
-        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4 reverse=43
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IResourceCollection shape=4
             out class type=Windows.Foundation.Uri return
     property base_uri
         get get_BaseUri slot=14 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=186
@@ -978,7 +978,7 @@ class Windows.Web.AtomPub.ServiceDocument python_type
     requires Windows.Web.AtomPub.IServiceDocument
     requires Windows.Web.Syndication.ISyndicationNode
     property workspaces
-        get get_Workspaces slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IServiceDocument shape=4 reverse=22
+        get get_Workspaces slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IServiceDocument shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.Workspace> return
     property node_value
         get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121
@@ -1023,10 +1023,10 @@ class Windows.Web.AtomPub.Workspace python_type
     requires Windows.Web.AtomPub.IWorkspace
     requires Windows.Web.Syndication.ISyndicationNode
     property collections
-        get get_Collections slot=7 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IWorkspace shape=4 reverse=43
+        get get_Collections slot=7 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IWorkspace shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.AtomPub.ResourceCollection> return
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IWorkspace shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Web.AtomPub.IWorkspace shape=4
             out interface type=Windows.Web.Syndication.ISyndicationText return
     property node_value
         get get_NodeValue slot=10 inputs=0 outputs=1 declaring=Windows.Web.Syndication.ISyndicationNode shape=4 reverse=121

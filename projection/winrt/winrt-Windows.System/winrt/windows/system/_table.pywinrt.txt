@@ -9,10 +9,10 @@ class Windows.System.AppActivationResult python_type
     default Windows.System.IAppActivationResult
     requires Windows.System.IAppActivationResult
     property app_resource_group_info
-        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4 reverse=43
+        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4
             out class type=Windows.System.AppResourceGroupInfo return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppActivationResult shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.System.AppDiagnosticInfo python_type
@@ -25,34 +25,34 @@ class Windows.System.AppDiagnosticInfo python_type
     factory Windows.System.IAppDiagnosticInfoStatics
     factory Windows.System.IAppDiagnosticInfoStatics2
     property app_info
-        get get_AppInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo shape=4 reverse=22
+        get get_AppInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo shape=4
             out class type=Windows.ApplicationModel.AppInfo return
     method create_resource_group_watcher
-        method CreateResourceGroupWatcher slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo2 shape=4 reverse=43
+        method CreateResourceGroupWatcher slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo2 shape=4
             out class type=Windows.System.AppResourceGroupInfoWatcher return
     method create_watcher static
-        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 reverse=22 static
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 static
             out class type=Windows.System.AppDiagnosticInfoWatcher return
     method get_resource_groups
-        method GetResourceGroups slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo2 shape=4 reverse=22
+        method GetResourceGroups slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupInfo> return
     method launch_async
-        method LaunchAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo3 shape=4 reverse=22
+        method LaunchAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfo3 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppActivationResult> return
     method request_access_async static
-        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 reverse=43 static
+        method RequestAccessAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.DiagnosticAccessStatus> return
     method request_info_async static
-        method RequestInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics shape=4 reverse=22 static
+        method RequestInfoAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
     method request_info_for_app_async static
-        method RequestInfoForAppAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 reverse=99 static default_overload
+        method RequestInfoForAppAsync slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=4 static default_overload
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
-        method RequestInfoForAppAsync slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=51 reverse=124 static
+        method RequestInfoForAppAsync slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=51 static
             in string name=appUserModelId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
     method request_info_for_package_async static
-        method RequestInfoForPackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=51 reverse=65 static
+        method RequestInfoForPackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoStatics2 shape=51 static
             in string name=packageFamilyName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo>> return
 
@@ -62,36 +62,36 @@ class Windows.System.AppDiagnosticInfoWatcher python_type
     default Windows.System.IAppDiagnosticInfoWatcher
     requires Windows.System.IAppDiagnosticInfoWatcher
     property status
-        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=4 reverse=186
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=4
             out enum32 type=Windows.System.AppDiagnosticInfoWatcherStatus return
     event added
-        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=24
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=53
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=124
+        add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=156
+        remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=65
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,Windows.System.AppDiagnosticInfoWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=110
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51 reverse=163
+        add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26 reverse=181
+        remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=15 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0 reverse=193
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0
     method stop
-        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0 reverse=201
+        method Stop slot=16 inputs=0 outputs=0 declaring=Windows.System.IAppDiagnosticInfoWatcher shape=0
 
 class Windows.System.AppDiagnosticInfoWatcherEventArgs python_type
     py AppDiagnosticInfoWatcherEventArgs
@@ -99,7 +99,7 @@ class Windows.System.AppDiagnosticInfoWatcherEventArgs python_type
     default Windows.System.IAppDiagnosticInfoWatcherEventArgs
     requires Windows.System.IAppDiagnosticInfoWatcherEventArgs
     property app_diagnostic_info
-        get get_AppDiagnosticInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcherEventArgs shape=4 reverse=22
+        get get_AppDiagnosticInfo slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppDiagnosticInfoWatcherEventArgs shape=4
             out class type=Windows.System.AppDiagnosticInfo return
 
 enum Windows.System.AppDiagnosticInfoWatcherStatus python_type
@@ -118,7 +118,7 @@ class Windows.System.AppExecutionStateChangeResult python_type
     default Windows.System.IAppExecutionStateChangeResult
     requires Windows.System.IAppExecutionStateChangeResult
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppExecutionStateChangeResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppExecutionStateChangeResult shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.System.AppMemoryReport python_type
@@ -128,19 +128,19 @@ class Windows.System.AppMemoryReport python_type
     requires Windows.System.IAppMemoryReport
     requires Windows.System.IAppMemoryReport2
     property peak_private_commit_usage
-        get get_PeakPrivateCommitUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=43
+        get get_PeakPrivateCommitUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4
             out uint64 return
     property private_commit_usage
-        get get_PrivateCommitUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=22
+        get get_PrivateCommitUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4
             out uint64 return
     property total_commit_limit
-        get get_TotalCommitLimit slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=99
+        get get_TotalCommitLimit slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4
             out uint64 return
     property total_commit_usage
-        get get_TotalCommitUsage slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4 reverse=62
+        get get_TotalCommitUsage slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport shape=4
             out uint64 return
     property expected_total_commit_limit
-        get get_ExpectedTotalCommitLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport2 shape=4 reverse=22
+        get get_ExpectedTotalCommitLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryReport2 shape=4
             out uint64 return
 
 enum Windows.System.AppMemoryUsageLevel python_type
@@ -157,10 +157,10 @@ class Windows.System.AppMemoryUsageLimitChangingEventArgs python_type
     default Windows.System.IAppMemoryUsageLimitChangingEventArgs
     requires Windows.System.IAppMemoryUsageLimitChangingEventArgs
     property new_limit
-        get get_NewLimit slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryUsageLimitChangingEventArgs shape=4 reverse=43
+        get get_NewLimit slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryUsageLimitChangingEventArgs shape=4
             out uint64 return
     property old_limit
-        get get_OldLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryUsageLimitChangingEventArgs shape=4 reverse=22
+        get get_OldLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppMemoryUsageLimitChangingEventArgs shape=4
             out uint64 return
 
 class Windows.System.AppResourceGroupBackgroundTaskReport python_type
@@ -169,16 +169,16 @@ class Windows.System.AppResourceGroupBackgroundTaskReport python_type
     default Windows.System.IAppResourceGroupBackgroundTaskReport
     requires Windows.System.IAppResourceGroupBackgroundTaskReport
     property entry_point
-        get get_EntryPoint slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=99
+        get get_EntryPoint slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4
             out string return
     property name
-        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=43
+        get get_Name slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4
             out string return
     property task_id
-        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=22
+        get get_TaskId slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4
             out guid return
     property trigger
-        get get_Trigger slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4 reverse=62
+        get get_Trigger slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupBackgroundTaskReport shape=4
             out string return
 
 enum Windows.System.AppResourceGroupEnergyQuotaState python_type
@@ -204,31 +204,31 @@ class Windows.System.AppResourceGroupInfo python_type
     requires Windows.System.IAppResourceGroupInfo
     requires Windows.System.IAppResourceGroupInfo2
     property instance_id
-        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=22
+        get get_InstanceId slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4
             out guid return
     property is_shared
-        get get_IsShared slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=43
+        get get_IsShared slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4
             out boolean return
     method get_background_task_reports
-        method GetBackgroundTaskReports slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=62
+        method GetBackgroundTaskReports slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppResourceGroupBackgroundTaskReport> return
     method get_memory_report
-        method GetMemoryReport slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=99
+        method GetMemoryReport slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4
             out class type=Windows.System.AppResourceGroupMemoryReport return
     method get_process_diagnostic_infos
-        method GetProcessDiagnosticInfos slot=10 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=121
+        method GetProcessDiagnosticInfos slot=10 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
     method get_state_report
-        method GetStateReport slot=11 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4 reverse=141
+        method GetStateReport slot=11 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo shape=4
             out class type=Windows.System.AppResourceGroupStateReport return
     method start_resume_async
-        method StartResumeAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4 reverse=43
+        method StartResumeAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> return
     method start_suspend_async
-        method StartSuspendAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4 reverse=22
+        method StartSuspendAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> return
     method start_terminate_async
-        method StartTerminateAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4 reverse=62
+        method StartTerminateAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfo2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AppExecutionStateChangeResult> return
 
 class Windows.System.AppResourceGroupInfoWatcher python_type
@@ -237,42 +237,42 @@ class Windows.System.AppResourceGroupInfoWatcher python_type
     default Windows.System.IAppResourceGroupInfoWatcher
     requires Windows.System.IAppResourceGroupInfoWatcher
     property status
-        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=4 reverse=202
+        get get_Status slot=16 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=4
             out enum32 type=Windows.System.AppResourceGroupInfoWatcherStatus return
     event added
-        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=24
+        add add_Added slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=53
+        remove remove_Added slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=124
+        add add_EnumerationCompleted slot=10 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=156
+        remove remove_EnumerationCompleted slot=11 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event execution_state_changed
-        add add_ExecutionStateChanged slot=14 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=187
+        add add_ExecutionStateChanged slot=14 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ExecutionStateChanged slot=15 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=200
+        remove remove_ExecutionStateChanged slot=15 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=65
+        add add_Removed slot=8 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,Windows.System.AppResourceGroupInfoWatcherEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=110
+        remove remove_Removed slot=9 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51 reverse=163
+        add add_Stopped slot=12 inputs=1 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.AppResourceGroupInfoWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26 reverse=181
+        remove remove_Stopped slot=13 inputs=1 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=17 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0 reverse=209
+        method Start slot=17 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0
     method stop
-        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0 reverse=217
+        method Stop slot=18 inputs=0 outputs=0 declaring=Windows.System.IAppResourceGroupInfoWatcher shape=0
 
 class Windows.System.AppResourceGroupInfoWatcherEventArgs python_type
     py AppResourceGroupInfoWatcherEventArgs
@@ -280,10 +280,10 @@ class Windows.System.AppResourceGroupInfoWatcherEventArgs python_type
     default Windows.System.IAppResourceGroupInfoWatcherEventArgs
     requires Windows.System.IAppResourceGroupInfoWatcherEventArgs
     property app_diagnostic_infos
-        get get_AppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherEventArgs shape=4 reverse=22
+        get get_AppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> return
     property app_resource_group_info
-        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherEventArgs shape=4 reverse=43
+        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherEventArgs shape=4
             out class type=Windows.System.AppResourceGroupInfo return
 
 class Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs python_type
@@ -292,10 +292,10 @@ class Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs p
     default Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
     requires Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
     property app_diagnostic_infos
-        get get_AppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs shape=4 reverse=22
+        get get_AppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo> return
     property app_resource_group_info
-        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs shape=4 reverse=43
+        get get_AppResourceGroupInfo slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs shape=4
             out class type=Windows.System.AppResourceGroupInfo return
 
 enum Windows.System.AppResourceGroupInfoWatcherStatus python_type
@@ -314,16 +314,16 @@ class Windows.System.AppResourceGroupMemoryReport python_type
     default Windows.System.IAppResourceGroupMemoryReport
     requires Windows.System.IAppResourceGroupMemoryReport
     property commit_usage_level
-        get get_CommitUsageLevel slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=43
+        get get_CommitUsageLevel slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4
             out enum32 type=Windows.System.AppMemoryUsageLevel return
     property commit_usage_limit
-        get get_CommitUsageLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=22
+        get get_CommitUsageLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4
             out uint64 return
     property private_commit_usage
-        get get_PrivateCommitUsage slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=62
+        get get_PrivateCommitUsage slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4
             out uint64 return
     property total_commit_usage
-        get get_TotalCommitUsage slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4 reverse=99
+        get get_TotalCommitUsage slot=9 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupMemoryReport shape=4
             out uint64 return
 
 class Windows.System.AppResourceGroupStateReport python_type
@@ -332,10 +332,10 @@ class Windows.System.AppResourceGroupStateReport python_type
     default Windows.System.IAppResourceGroupStateReport
     requires Windows.System.IAppResourceGroupStateReport
     property energy_quota_state
-        get get_EnergyQuotaState slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupStateReport shape=4 reverse=43
+        get get_EnergyQuotaState slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupStateReport shape=4
             out enum32 type=Windows.System.AppResourceGroupEnergyQuotaState return
     property execution_state
-        get get_ExecutionState slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupStateReport shape=4 reverse=22
+        get get_ExecutionState slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppResourceGroupStateReport shape=4
             out enum32 type=Windows.System.AppResourceGroupExecutionState return
 
 class Windows.System.AppUriHandlerHost activatable python_type
@@ -348,18 +348,18 @@ class Windows.System.AppUriHandlerHost activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerHostFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerHostFactory shape=51
             in string name=name
             out class type=Windows.System.AppUriHandlerHost return
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHost shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHost shape=4
             out string return
-        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerHost shape=4 reverse=43
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerHost shape=4
             in string name=value
     property is_enabled
-        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHost2 shape=4 reverse=22
+        get get_IsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerHost2 shape=4
             out boolean return
-        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerHost2 shape=4 reverse=43
+        put put_IsEnabled slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerHost2 shape=4
             in boolean name=value
 
 class Windows.System.AppUriHandlerRegistration python_type
@@ -369,26 +369,26 @@ class Windows.System.AppUriHandlerRegistration python_type
     requires Windows.System.IAppUriHandlerRegistration
     requires Windows.System.IAppUriHandlerRegistration2
     property name
-        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4 reverse=22
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4
             out string return
     property user
-        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4 reverse=43
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4
             out class type=Windows.System.User return
     property package_family_name
-        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4 reverse=62
+        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4
             out string return
     method get_all_hosts
-        method GetAllHosts slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4 reverse=22
+        method GetAllHosts slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost> return
     method get_app_added_hosts_async
-        method GetAppAddedHostsAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4 reverse=62
+        method GetAppAddedHostsAsync slot=8 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Windows.System.AppUriHandlerHost>> return
     method set_app_added_hosts_async
-        method SetAppAddedHostsAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=51 reverse=100
+        method SetAppAddedHostsAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistration shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.AppUriHandlerHost> name=hosts
             out interface type=Windows.Foundation.IAsyncAction return
     method update_hosts
-        method UpdateHosts slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4 reverse=43
+        method UpdateHosts slot=7 inputs=1 outputs=0 declaring=Windows.System.IAppUriHandlerRegistration2 shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.System.AppUriHandlerHost> name=hosts
 
 class Windows.System.AppUriHandlerRegistrationManager python_type
@@ -400,29 +400,29 @@ class Windows.System.AppUriHandlerRegistrationManager python_type
     factory Windows.System.IAppUriHandlerRegistrationManagerStatics
     factory Windows.System.IAppUriHandlerRegistrationManagerStatics2
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager shape=4
             out class type=Windows.System.User return
     property package_family_name
-        get get_PackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager2 shape=4 reverse=22
+        get get_PackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager2 shape=4
             out string return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics shape=4 static
             out class type=Windows.System.AppUriHandlerRegistrationManager return
     method get_for_package static
-        method GetForPackage slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics2 shape=51 reverse=24 static
+        method GetForPackage slot=6 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics2 shape=51 static
             in string name=packageFamilyName
             out class type=Windows.System.AppUriHandlerRegistrationManager return
     method get_for_package_for_user static
-        method GetForPackageForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics2 shape=117 reverse=45 static
+        method GetForPackageForUser slot=7 inputs=2 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics2 shape=117 static
             in string name=packageFamilyName
             in class type=Windows.System.User name=user
             out class type=Windows.System.AppUriHandlerRegistrationManager return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManagerStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.System.AppUriHandlerRegistrationManager return
     method try_get_registration
-        method TryGetRegistration slot=7 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager shape=51 reverse=44
+        method TryGetRegistration slot=7 inputs=1 outputs=1 declaring=Windows.System.IAppUriHandlerRegistrationManager shape=51
             in string name=name
             out class type=Windows.System.AppUriHandlerRegistration return
 
@@ -646,7 +646,7 @@ class Windows.System.DateTimeSettings static python_type
     py DateTimeSettings
     factory Windows.System.IDateTimeSettingsStatics
     method set_system_date_time static
-        method SetSystemDateTime slot=6 inputs=1 outputs=0 declaring=Windows.System.IDateTimeSettingsStatics shape=26 reverse=33 static
+        method SetSystemDateTime slot=6 inputs=1 outputs=0 declaring=Windows.System.IDateTimeSettingsStatics shape=26 static
             in datetime name=utcDateTime
 
 enum Windows.System.DiagnosticAccessStatus python_type
@@ -665,31 +665,31 @@ class Windows.System.DispatcherQueue python_type
     requires Windows.System.IDispatcherQueue2
     factory Windows.System.IDispatcherQueueStatics
     property has_thread_access
-        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue2 shape=4 reverse=22
+        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue2 shape=4
             out boolean return
     event shutdown_completed
-        add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=144
+        add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26 reverse=167
+        remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shutdown_starting
-        add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=100
+        add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueue,Windows.System.DispatcherQueueShutdownStartingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26 reverse=134
+        remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueue shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_timer
-        method CreateTimer slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue shape=4 reverse=22
+        method CreateTimer slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueue shape=4
             out class type=Windows.System.DispatcherQueueTimer return
     method get_for_current_thread static
-        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueStatics shape=4 reverse=22 static
+        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueStatics shape=4 static
             out class type=Windows.System.DispatcherQueue return
     method try_enqueue
-        method TryEnqueue slot=7 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51 reverse=44
+        method TryEnqueue slot=7 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueue shape=51
             in delegate type=Windows.System.DispatcherQueueHandler name=callback
             out boolean return
-        method TryEnqueue slot=8 inputs=2 outputs=1 declaring=Windows.System.IDispatcherQueue shape=117 reverse=66
+        method TryEnqueue slot=8 inputs=2 outputs=1 declaring=Windows.System.IDispatcherQueue shape=117
             in enum32 type=Windows.System.DispatcherQueuePriority name=priority
             in delegate type=Windows.System.DispatcherQueueHandler name=callback
             out boolean return
@@ -701,13 +701,13 @@ class Windows.System.DispatcherQueueController python_type
     requires Windows.System.IDispatcherQueueController
     factory Windows.System.IDispatcherQueueControllerStatics
     property dispatcher_queue
-        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueController shape=4 reverse=22
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueController shape=4
             out class type=Windows.System.DispatcherQueue return
     method create_on_dedicated_thread static
-        method CreateOnDedicatedThread slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueControllerStatics shape=4 reverse=22 static
+        method CreateOnDedicatedThread slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueControllerStatics shape=4 static
             out class type=Windows.System.DispatcherQueueController return
     method shutdown_queue_async
-        method ShutdownQueueAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueController shape=4 reverse=43
+        method ShutdownQueueAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueController shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 delegate Windows.System.DispatcherQueueHandler python_type
@@ -730,7 +730,7 @@ class Windows.System.DispatcherQueueShutdownStartingEventArgs python_type
     default Windows.System.IDispatcherQueueShutdownStartingEventArgs
     requires Windows.System.IDispatcherQueueShutdownStartingEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueShutdownStartingEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueShutdownStartingEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.System.DispatcherQueueTimer python_type
@@ -739,28 +739,28 @@ class Windows.System.DispatcherQueueTimer python_type
     default Windows.System.IDispatcherQueueTimer
     requires Windows.System.IDispatcherQueueTimer
     property is_repeating
-        get get_IsRepeating slot=9 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=99
+        get get_IsRepeating slot=9 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4
             out boolean return
-        put put_IsRepeating slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=121
+        put put_IsRepeating slot=10 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=4
             in boolean name=value
     property interval
-        get get_Interval slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=22
+        get get_Interval slot=6 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4
             out timespan return
-        put put_Interval slot=7 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26 reverse=53
+        put put_Interval slot=7 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26
             in timespan name=value
     property is_running
-        get get_IsRunning slot=8 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4 reverse=62
+        get get_IsRunning slot=8 inputs=0 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=4
             out boolean return
     event tick
-        add add_Tick slot=13 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=51 reverse=174
+        add add_Tick slot=13 inputs=1 outputs=1 declaring=Windows.System.IDispatcherQueueTimer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.DispatcherQueueTimer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26 reverse=192
+        remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=11 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0 reverse=137
+        method Start slot=11 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0
     method stop
-        method Stop slot=12 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0 reverse=159
+        method Stop slot=12 inputs=0 outputs=0 declaring=Windows.System.IDispatcherQueueTimer shape=0
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
@@ -805,7 +805,7 @@ class Windows.System.FolderLauncherOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property items_to_select
-        get get_ItemsToSelect slot=6 inputs=0 outputs=1 declaring=Windows.System.IFolderLauncherOptions shape=4 reverse=22
+        get get_ItemsToSelect slot=6 inputs=0 outputs=1 declaring=Windows.System.IFolderLauncherOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.IStorageItem> return
     property desired_remaining_view
         get get_DesiredRemainingView slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=22
@@ -2816,34 +2816,34 @@ class Windows.System.KnownUserProperties static python_type
     factory Windows.System.IKnownUserPropertiesStatics
     factory Windows.System.IKnownUserPropertiesStatics2
     property account_name static
-        get get_AccountName slot=10 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=121 static
+        get get_AccountName slot=10 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property display_name static
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=22 static
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property domain_name static
-        get get_DomainName slot=13 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=173 static
+        get get_DomainName slot=13 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property first_name static
-        get get_FirstName slot=7 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=43 static
+        get get_FirstName slot=7 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property guest_host static
-        get get_GuestHost slot=11 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=141 static
+        get get_GuestHost slot=11 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property last_name static
-        get get_LastName slot=8 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=62 static
+        get get_LastName slot=8 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property principal_name static
-        get get_PrincipalName slot=12 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=162 static
+        get get_PrincipalName slot=12 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property provider_name static
-        get get_ProviderName slot=9 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=99 static
+        get get_ProviderName slot=9 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property session_initiation_protocol_uri static
-        get get_SessionInitiationProtocolUri slot=14 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 reverse=186 static
+        get get_SessionInitiationProtocolUri slot=14 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics shape=4 static
             out string return
     property age_enforcement_region static
-        get get_AgeEnforcementRegion slot=6 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics2 shape=4 reverse=22 static
+        get get_AgeEnforcementRegion slot=6 inputs=0 outputs=1 declaring=Windows.System.IKnownUserPropertiesStatics2 shape=4 static
             out string return
 
 enum Windows.System.LaunchFileStatus python_type
@@ -2876,10 +2876,10 @@ class Windows.System.LaunchUriResult python_type
     default Windows.System.ILaunchUriResult
     requires Windows.System.ILaunchUriResult
     property result
-        get get_Result slot=7 inputs=0 outputs=1 declaring=Windows.System.ILaunchUriResult shape=4 reverse=43
+        get get_Result slot=7 inputs=0 outputs=1 declaring=Windows.System.ILaunchUriResult shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.ILaunchUriResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.ILaunchUriResult shape=4
             out enum32 type=Windows.System.LaunchUriStatus return
 
 enum Windows.System.LaunchUriStatus python_type
@@ -2898,80 +2898,80 @@ class Windows.System.Launcher static python_type
     factory Windows.System.ILauncherStatics4
     factory Windows.System.ILauncherStatics5
     method find_app_uri_handlers_async static
-        method FindAppUriHandlersAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=51 reverse=65 static
+        method FindAppUriHandlersAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
     method find_file_handlers_async static
-        method FindFileHandlersAsync slot=15 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 reverse=196 static
+        method FindFileHandlersAsync slot=15 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 static
             in string name=extension
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
     method find_uri_scheme_handlers_async static
-        method FindUriSchemeHandlersAsync slot=13 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 reverse=174 static
+        method FindUriSchemeHandlersAsync slot=13 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 static
             in string name=scheme
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
-        method FindUriSchemeHandlersAsync slot=14 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=188 static
+        method FindUriSchemeHandlersAsync slot=14 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 static
             in string name=scheme
             in enum32 type=Windows.System.LaunchQuerySupportType name=launchQuerySupportType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.AppInfo>> return
     method launch_file_async static
-        method LaunchFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics shape=51 reverse=24 static
+        method LaunchFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics shape=117 reverse=45 static
+        method LaunchFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in class type=Windows.System.LauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_folder_async static
-        method LaunchFolderAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics3 shape=51 reverse=24 static
+        method LaunchFolderAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics3 shape=51 static
             in interface type=Windows.Storage.IStorageFolder name=folder
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchFolderAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics3 shape=117 reverse=45 static
+        method LaunchFolderAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics3 shape=117 static
             in interface type=Windows.Storage.IStorageFolder name=folder
             in class type=Windows.System.FolderLauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_folder_path_async static
-        method LaunchFolderPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=51 reverse=24 static
+        method LaunchFolderPathAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=51 static
             in string name=path
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchFolderPathAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=117 reverse=45 static
+        method LaunchFolderPathAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=117 static
             in string name=path
             in class type=Windows.System.FolderLauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_folder_path_for_user_async static
-        method LaunchFolderPathForUserAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=117 reverse=66 static
+        method LaunchFolderPathForUserAsync slot=8 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=117 static
             in class type=Windows.System.User name=user
             in string name=path
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchFolderPathForUserAsync slot=9 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=195 reverse=102 static
+        method LaunchFolderPathForUserAsync slot=9 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics5 shape=195 static
             in class type=Windows.System.User name=user
             in string name=path
             in class type=Windows.System.FolderLauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_uri_async static
-        method LaunchUriAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics shape=51 reverse=65 static
+        method LaunchUriAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchUriAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics shape=117 reverse=101 static
+        method LaunchUriAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method LaunchUriAsync slot=8 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=68 static
+        method LaunchUriAsync slot=8 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
             in class type=Windows.Foundation.Collections.ValueSet name=inputData
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_uri_for_results_async static
-        method LaunchUriForResultsAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=25 static
+        method LaunchUriForResultsAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
-        method LaunchUriForResultsAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=46 static
+        method LaunchUriForResultsAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 static
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
             in class type=Windows.Foundation.Collections.ValueSet name=inputData
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
     method launch_uri_for_results_for_user_async static
-        method LaunchUriForResultsForUserAsync slot=12 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=195 reverse=165 static
+        method LaunchUriForResultsForUserAsync slot=12 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=195 static
             in class type=Windows.System.User name=user
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
@@ -2983,43 +2983,43 @@ class Windows.System.Launcher static python_type
             in class type=Windows.Foundation.Collections.ValueSet name=inputData
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriResult> return
     method launch_uri_for_user_async static
-        method LaunchUriForUserAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=117 reverse=101 static
+        method LaunchUriForUserAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=117 static
             in class type=Windows.System.User name=user
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> return
-        method LaunchUriForUserAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=195 reverse=126 static
+        method LaunchUriForUserAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=195 static
             in class type=Windows.System.User name=user
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> return
-        method LaunchUriForUserAsync slot=11 inputs=4 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=239 reverse=521 static
+        method LaunchUriForUserAsync slot=11 inputs=4 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=239 static
             in class type=Windows.System.User name=user
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.LauncherOptions name=options
             in class type=Windows.Foundation.Collections.ValueSet name=inputData
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchUriStatus> return
     method query_app_uri_support_async static
-        method QueryAppUriSupportAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=51 reverse=24 static
+        method QueryAppUriSupportAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
-        method QueryAppUriSupportAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=117 reverse=45 static
+        method QueryAppUriSupportAsync slot=7 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics4 shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in string name=packageFamilyName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
     method query_file_support_async static
-        method QueryFileSupportAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 reverse=144 static
+        method QueryFileSupportAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=51 static
             in class type=Windows.Storage.StorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
-        method QueryFileSupportAsync slot=12 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=164 static
+        method QueryFileSupportAsync slot=12 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 static
             in class type=Windows.Storage.StorageFile name=file
             in string name=packageFamilyName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
     method query_uri_support_async static
-        method QueryUriSupportAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 reverse=101 static
+        method QueryUriSupportAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in enum32 type=Windows.System.LaunchQuerySupportType name=launchQuerySupportType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.LaunchQuerySupportStatus> return
-        method QueryUriSupportAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 reverse=126 static
+        method QueryUriSupportAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.ILauncherStatics2 shape=195 static
             in class type=Windows.Foundation.Uri name=uri
             in enum32 type=Windows.System.LaunchQuerySupportType name=launchQuerySupportType
             in string name=packageFamilyName
@@ -3038,57 +3038,57 @@ class Windows.System.LauncherOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property treat_as_untrusted
-        get get_TreatAsUntrusted slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=22
+        get get_TreatAsUntrusted slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out boolean return
-        put put_TreatAsUntrusted slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=43
+        put put_TreatAsUntrusted slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4
             in boolean name=value
     property preferred_application_package_family_name
-        get get_PreferredApplicationPackageFamilyName slot=11 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=141
+        get get_PreferredApplicationPackageFamilyName slot=11 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out string return
-        put put_PreferredApplicationPackageFamilyName slot=12 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=162
+        put put_PreferredApplicationPackageFamilyName slot=12 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4
             in string name=value
     property preferred_application_display_name
-        get get_PreferredApplicationDisplayName slot=13 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=173
+        get get_PreferredApplicationDisplayName slot=13 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out string return
-        put put_PreferredApplicationDisplayName slot=14 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=186
+        put put_PreferredApplicationDisplayName slot=14 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4
             in string name=value
     property fallback_uri
-        get get_FallbackUri slot=15 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=194
+        get get_FallbackUri slot=15 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_FallbackUri slot=16 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=202
+        put put_FallbackUri slot=16 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property display_application_picker
-        get get_DisplayApplicationPicker slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=62
+        get get_DisplayApplicationPicker slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out boolean return
-        put put_DisplayApplicationPicker slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=99
+        put put_DisplayApplicationPicker slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4
             in boolean name=value
     property content_type
-        get get_ContentType slot=17 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=210
+        get get_ContentType slot=17 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out string return
-        put put_ContentType slot=18 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4 reverse=218
+        put put_ContentType slot=18 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions shape=4
             in string name=value
     property ui
-        get get_UI slot=10 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4 reverse=121
+        get get_UI slot=10 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions shape=4
             out class type=Windows.System.LauncherUIOptions return
     property target_application_package_family_name
-        get get_TargetApplicationPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=22
+        get get_TargetApplicationPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions2 shape=4
             out string return
-        put put_TargetApplicationPackageFamilyName slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=43
+        put put_TargetApplicationPackageFamilyName slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions2 shape=4
             in string name=value
     property neighboring_files_query
-        get get_NeighboringFilesQuery slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=62
+        get get_NeighboringFilesQuery slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions2 shape=4
             out class type=Windows.Storage.Search.StorageFileQueryResult return
-        put put_NeighboringFilesQuery slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions2 shape=4 reverse=99
+        put put_NeighboringFilesQuery slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions2 shape=4
             in class type=Windows.Storage.Search.StorageFileQueryResult name=value
     property ignore_app_uri_handlers
-        get get_IgnoreAppUriHandlers slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions3 shape=4 reverse=22
+        get get_IgnoreAppUriHandlers slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions3 shape=4
             out boolean return
-        put put_IgnoreAppUriHandlers slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions3 shape=4 reverse=43
+        put put_IgnoreAppUriHandlers slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions3 shape=4
             in boolean name=value
     property limit_picker_to_current_app_and_app_uri_handlers
-        get get_LimitPickerToCurrentAppAndAppUriHandlers slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions4 shape=4 reverse=22
+        get get_LimitPickerToCurrentAppAndAppUriHandlers slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherOptions4 shape=4
             out boolean return
-        put put_LimitPickerToCurrentAppAndAppUriHandlers slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions4 shape=4 reverse=43
+        put put_LimitPickerToCurrentAppAndAppUriHandlers slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherOptions4 shape=4
             in boolean name=value
     property desired_remaining_view
         get get_DesiredRemainingView slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherViewOptions shape=4 reverse=22
@@ -3102,19 +3102,19 @@ class Windows.System.LauncherUIOptions python_type
     default Windows.System.ILauncherUIOptions
     requires Windows.System.ILauncherUIOptions
     property selection_rect
-        get get_SelectionRect slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=62
+        get get_SelectionRect slot=8 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> return
-        put put_SelectionRect slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=99
+        put put_SelectionRect slot=9 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.Rect> name=value
     property preferred_placement
-        get get_PreferredPlacement slot=10 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=121
+        get get_PreferredPlacement slot=10 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4
             out enum32 type=Windows.UI.Popups.Placement return
-        put put_PreferredPlacement slot=11 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=141
+        put put_PreferredPlacement slot=11 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4
             in enum32 type=Windows.UI.Popups.Placement name=value
     property invocation_point
-        get get_InvocationPoint slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=22
+        get get_InvocationPoint slot=6 inputs=0 outputs=1 declaring=Windows.System.ILauncherUIOptions shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
-        put put_InvocationPoint slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4 reverse=43
+        put put_InvocationPoint slot=7 inputs=1 outputs=0 declaring=Windows.System.ILauncherUIOptions shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.Point> name=value
 
 class Windows.System.MemoryManager static python_type
@@ -3124,43 +3124,43 @@ class Windows.System.MemoryManager static python_type
     factory Windows.System.IMemoryManagerStatics3
     factory Windows.System.IMemoryManagerStatics4
     property app_memory_usage static
-        get get_AppMemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=22 static
+        get get_AppMemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 static
             out uint64 return
     property app_memory_usage_level static
-        get get_AppMemoryUsageLevel slot=8 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=62 static
+        get get_AppMemoryUsageLevel slot=8 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 static
             out enum32 type=Windows.System.AppMemoryUsageLevel return
     property app_memory_usage_limit static
-        get get_AppMemoryUsageLimit slot=7 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 reverse=43 static
+        get get_AppMemoryUsageLimit slot=7 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=4 static
             out uint64 return
     property expected_app_memory_usage_limit static
-        get get_ExpectedAppMemoryUsageLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics4 shape=4 reverse=22 static
+        get get_ExpectedAppMemoryUsageLimit slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics4 shape=4 static
             out uint64 return
     event app_memory_usage_decreased static
-        add add_AppMemoryUsageDecreased slot=11 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=144 static
+        add add_AppMemoryUsageDecreased slot=11 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AppMemoryUsageDecreased slot=12 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=167 static
+        remove remove_AppMemoryUsageDecreased slot=12 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event app_memory_usage_increased static
-        add add_AppMemoryUsageIncreased slot=9 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=100 static
+        add add_AppMemoryUsageIncreased slot=9 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AppMemoryUsageIncreased slot=10 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=134 static
+        remove remove_AppMemoryUsageIncreased slot=10 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event app_memory_usage_limit_changing static
-        add add_AppMemoryUsageLimitChanging slot=13 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 reverse=174 static
+        add add_AppMemoryUsageLimitChanging slot=13 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.System.AppMemoryUsageLimitChangingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AppMemoryUsageLimitChanging slot=14 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 reverse=192 static
+        remove remove_AppMemoryUsageLimitChanging slot=14 inputs=1 outputs=0 declaring=Windows.System.IMemoryManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_app_memory_report static
-        method GetAppMemoryReport slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 reverse=22 static
+        method GetAppMemoryReport slot=6 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 static
             out class type=Windows.System.AppMemoryReport return
     method get_process_memory_report static
-        method GetProcessMemoryReport slot=7 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 reverse=43 static
+        method GetProcessMemoryReport slot=7 inputs=0 outputs=1 declaring=Windows.System.IMemoryManagerStatics2 shape=4 static
             out class type=Windows.System.ProcessMemoryReport return
     method try_set_app_memory_usage_limit static
-        method TrySetAppMemoryUsageLimit slot=6 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics3 shape=47 reverse=19 static
+        method TrySetAppMemoryUsageLimit slot=6 inputs=1 outputs=1 declaring=Windows.System.IMemoryManagerStatics3 shape=47 static
             in uint64 name=value
             out boolean return
 
@@ -3174,11 +3174,11 @@ class Windows.System.ProcessLauncher static python_type
     py ProcessLauncher
     factory Windows.System.IProcessLauncherStatics
     method run_to_completion_async static
-        method RunToCompletionAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.IProcessLauncherStatics shape=117 reverse=25 static
+        method RunToCompletionAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.IProcessLauncherStatics shape=117 static
             in string name=fileName
             in string name=args
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.ProcessLauncherResult> return
-        method RunToCompletionAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.IProcessLauncherStatics shape=195 reverse=46 static
+        method RunToCompletionAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.IProcessLauncherStatics shape=195 static
             in string name=fileName
             in string name=args
             in class type=Windows.System.ProcessLauncherOptions name=options
@@ -3193,24 +3193,24 @@ class Windows.System.ProcessLauncherOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property working_directory
-        get get_WorkingDirectory slot=12 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=162
+        get get_WorkingDirectory slot=12 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4
             out string return
-        put put_WorkingDirectory slot=13 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=173
+        put put_WorkingDirectory slot=13 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4
             in string name=value
     property standard_output
-        get get_StandardOutput slot=8 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=62
+        get get_StandardOutput slot=8 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4
             out interface type=Windows.Storage.Streams.IOutputStream return
-        put put_StandardOutput slot=9 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=99
+        put put_StandardOutput slot=9 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4
             in interface type=Windows.Storage.Streams.IOutputStream name=value
     property standard_input
-        get get_StandardInput slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=22
+        get get_StandardInput slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4
             out interface type=Windows.Storage.Streams.IInputStream return
-        put put_StandardInput slot=7 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=43
+        put put_StandardInput slot=7 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4
             in interface type=Windows.Storage.Streams.IInputStream name=value
     property standard_error
-        get get_StandardError slot=10 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=121
+        get get_StandardError slot=10 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherOptions shape=4
             out interface type=Windows.Storage.Streams.IOutputStream return
-        put put_StandardError slot=11 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4 reverse=141
+        put put_StandardError slot=11 inputs=1 outputs=0 declaring=Windows.System.IProcessLauncherOptions shape=4
             in interface type=Windows.Storage.Streams.IOutputStream name=value
 
 class Windows.System.ProcessLauncherResult python_type
@@ -3219,7 +3219,7 @@ class Windows.System.ProcessLauncherResult python_type
     default Windows.System.IProcessLauncherResult
     requires Windows.System.IProcessLauncherResult
     property exit_code
-        get get_ExitCode slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherResult shape=4 reverse=22
+        get get_ExitCode slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessLauncherResult shape=4
             out uint32 return
 
 class Windows.System.ProcessMemoryReport python_type
@@ -3228,10 +3228,10 @@ class Windows.System.ProcessMemoryReport python_type
     default Windows.System.IProcessMemoryReport
     requires Windows.System.IProcessMemoryReport
     property private_working_set_usage
-        get get_PrivateWorkingSetUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessMemoryReport shape=4 reverse=22
+        get get_PrivateWorkingSetUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.IProcessMemoryReport shape=4
             out uint64 return
     property total_working_set_usage
-        get get_TotalWorkingSetUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.IProcessMemoryReport shape=4 reverse=43
+        get get_TotalWorkingSetUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.IProcessMemoryReport shape=4
             out uint64 return
 
 enum Windows.System.ProcessorArchitecture python_type
@@ -3251,7 +3251,7 @@ class Windows.System.ProtocolForResultsOperation python_type
     default Windows.System.IProtocolForResultsOperation
     requires Windows.System.IProtocolForResultsOperation
     method report_completed
-        method ReportCompleted slot=6 inputs=1 outputs=0 declaring=Windows.System.IProtocolForResultsOperation shape=4 reverse=22
+        method ReportCompleted slot=6 inputs=1 outputs=0 declaring=Windows.System.IProtocolForResultsOperation shape=4
             in class type=Windows.Foundation.Collections.ValueSet name=data
 
 enum Windows.System.RemoteLaunchUriStatus python_type
@@ -3270,16 +3270,16 @@ class Windows.System.RemoteLauncher static python_type
     py RemoteLauncher
     factory Windows.System.IRemoteLauncherStatics
     method launch_uri_async static
-        method LaunchUriAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=117 reverse=25 static
+        method LaunchUriAsync slot=6 inputs=2 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=117 static
             in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatus> return
-        method LaunchUriAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=195 reverse=46 static
+        method LaunchUriAsync slot=7 inputs=3 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=195 static
             in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.RemoteLauncherOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.RemoteLaunchUriStatus> return
-        method LaunchUriAsync slot=8 inputs=4 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=239 reverse=69 static
+        method LaunchUriAsync slot=8 inputs=4 outputs=1 declaring=Windows.System.IRemoteLauncherStatics shape=239 static
             in class type=Windows.System.RemoteSystems.RemoteSystemConnectionRequest name=remoteSystemConnectionRequest
             in class type=Windows.Foundation.Uri name=uri
             in class type=Windows.System.RemoteLauncherOptions name=options
@@ -3295,12 +3295,12 @@ class Windows.System.RemoteLauncherOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property fallback_uri
-        get get_FallbackUri slot=6 inputs=0 outputs=1 declaring=Windows.System.IRemoteLauncherOptions shape=4 reverse=22
+        get get_FallbackUri slot=6 inputs=0 outputs=1 declaring=Windows.System.IRemoteLauncherOptions shape=4
             out class type=Windows.Foundation.Uri return
-        put put_FallbackUri slot=7 inputs=1 outputs=0 declaring=Windows.System.IRemoteLauncherOptions shape=4 reverse=43
+        put put_FallbackUri slot=7 inputs=1 outputs=0 declaring=Windows.System.IRemoteLauncherOptions shape=4
             in class type=Windows.Foundation.Uri name=value
     property preferred_app_ids
-        get get_PreferredAppIds slot=8 inputs=0 outputs=1 declaring=Windows.System.IRemoteLauncherOptions shape=4 reverse=62
+        get get_PreferredAppIds slot=8 inputs=0 outputs=1 declaring=Windows.System.IRemoteLauncherOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
 
 enum Windows.System.ShutdownKind python_type
@@ -3318,15 +3318,15 @@ class Windows.System.ShutdownManager static python_type
             in enum32 type=Windows.System.ShutdownKind name=shutdownKind
             in timespan name=timeout
     method cancel_shutdown static
-        method CancelShutdown slot=7 inputs=0 outputs=0 declaring=Windows.System.IShutdownManagerStatics shape=0 reverse=37 static
+        method CancelShutdown slot=7 inputs=0 outputs=0 declaring=Windows.System.IShutdownManagerStatics shape=0 static
     method enter_power_state static
-        method EnterPowerState slot=7 inputs=1 outputs=0 declaring=Windows.System.IShutdownManagerStatics2 shape=4 reverse=43 static
+        method EnterPowerState slot=7 inputs=1 outputs=0 declaring=Windows.System.IShutdownManagerStatics2 shape=4 static
             in enum32 type=Windows.System.PowerState name=powerState
         method EnterPowerState slot=8 inputs=2 outputs=0 declaring=Windows.System.IShutdownManagerStatics2 shape=64 static
             in enum32 type=Windows.System.PowerState name=powerState
             in timespan name=wakeUpAfter
     method is_power_state_supported static
-        method IsPowerStateSupported slot=6 inputs=1 outputs=1 declaring=Windows.System.IShutdownManagerStatics2 shape=51 reverse=24 static
+        method IsPowerStateSupported slot=6 inputs=1 outputs=1 declaring=Windows.System.IShutdownManagerStatics2 shape=51 static
             in enum32 type=Windows.System.PowerState name=powerState
             out boolean return
 
@@ -3335,20 +3335,20 @@ class Windows.System.TimeZoneSettings static python_type
     factory Windows.System.ITimeZoneSettingsStatics
     factory Windows.System.ITimeZoneSettingsStatics2
     property can_change_time_zone static
-        get get_CanChangeTimeZone slot=8 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=62 static
+        get get_CanChangeTimeZone slot=8 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 static
             out boolean return
     property current_time_zone_display_name static
-        get get_CurrentTimeZoneDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=22 static
+        get get_CurrentTimeZoneDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 static
             out string return
     property supported_time_zone_display_names static
-        get get_SupportedTimeZoneDisplayNames slot=7 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=43 static
+        get get_SupportedTimeZoneDisplayNames slot=7 inputs=0 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method auto_update_time_zone_async static
         method AutoUpdateTimeZoneAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.ITimeZoneSettingsStatics2 shape=89 static
             in timespan name=timeout
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.AutoUpdateTimeZoneStatus> return
     method change_time_zone_by_display_name static
-        method ChangeTimeZoneByDisplayName slot=9 inputs=1 outputs=0 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 reverse=99 static
+        method ChangeTimeZoneByDisplayName slot=9 inputs=1 outputs=0 declaring=Windows.System.ITimeZoneSettingsStatics shape=4 static
             in string name=timeZoneDisplayName
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.AppDiagnosticInfoWatcher,System.Object> concrete
@@ -3492,48 +3492,48 @@ class Windows.System.User python_type
     factory Windows.System.IUserStatics
     factory Windows.System.IUserStatics2
     property authentication_status
-        get get_AuthenticationStatus slot=7 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=43
+        get get_AuthenticationStatus slot=7 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4
             out enum32 type=Windows.System.UserAuthenticationStatus return
     property non_roamable_id
-        get get_NonRoamableId slot=6 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=22
+        get get_NonRoamableId slot=6 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4
             out string return
     property type
-        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4 reverse=62
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.System.IUser shape=4
             out enum32 type=Windows.System.UserType return
     method check_user_age_consent_group_async
-        method CheckUserAgeConsentGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.IUser2 shape=51 reverse=24
+        method CheckUserAgeConsentGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.IUser2 shape=51
             in enum32 type=Windows.System.UserAgeConsentGroup name=consentGroup
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult> return
     method create_watcher static
-        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics shape=4 reverse=22 static
+        method CreateWatcher slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics shape=4 static
             out class type=Windows.System.UserWatcher return
     method find_all_async static
-        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserStatics shape=4 reverse=43 static default_overload
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserStatics shape=4 static default_overload
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
-        method FindAllAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.IUserStatics shape=51 reverse=65 static deprecated
+        method FindAllAsync slot=8 inputs=1 outputs=1 declaring=Windows.System.IUserStatics shape=51 static deprecated
             in enum32 type=Windows.System.UserType name=type
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
-        method FindAllAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.IUserStatics shape=117 reverse=101 static deprecated
+        method FindAllAsync slot=9 inputs=2 outputs=1 declaring=Windows.System.IUserStatics shape=117 static deprecated
             in enum32 type=Windows.System.UserType name=type
             in enum32 type=Windows.System.UserAuthenticationStatus name=status
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics2 shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics2 shape=4 static
             out class type=Windows.System.User return
     method get_from_id static
-        method GetFromId slot=10 inputs=1 outputs=1 declaring=Windows.System.IUserStatics shape=51 reverse=124 static
+        method GetFromId slot=10 inputs=1 outputs=1 declaring=Windows.System.IUserStatics shape=51 static
             in string name=nonRoamableId
             out class type=Windows.System.User return
     method get_picture_async
-        method GetPictureAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51 reverse=144
+        method GetPictureAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51
             in enum32 type=Windows.System.UserPictureSize name=desiredSize
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> return
     method get_properties_async
-        method GetPropertiesAsync slot=10 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51 reverse=124
+        method GetPropertiesAsync slot=10 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51
             in parameterized type=Windows.Foundation.Collections.IVectorView<System.String> name=values
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> return
     method get_property_async
-        method GetPropertyAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51 reverse=100
+        method GetPropertyAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51
             in string name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Object> return
 
@@ -3566,7 +3566,7 @@ class Windows.System.UserAuthenticationStatusChangeDeferral python_type
     default Windows.System.IUserAuthenticationStatusChangeDeferral
     requires Windows.System.IUserAuthenticationStatusChangeDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.System.IUserAuthenticationStatusChangeDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.System.IUserAuthenticationStatusChangeDeferral shape=0
 
 class Windows.System.UserAuthenticationStatusChangingEventArgs python_type
     py UserAuthenticationStatusChangingEventArgs
@@ -3574,16 +3574,16 @@ class Windows.System.UserAuthenticationStatusChangingEventArgs python_type
     default Windows.System.IUserAuthenticationStatusChangingEventArgs
     requires Windows.System.IUserAuthenticationStatusChangingEventArgs
     property current_status
-        get get_CurrentStatus slot=9 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=99
+        get get_CurrentStatus slot=9 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4
             out enum32 type=Windows.System.UserAuthenticationStatus return
     property new_status
-        get get_NewStatus slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=62
+        get get_NewStatus slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4
             out enum32 type=Windows.System.UserAuthenticationStatus return
     property user
-        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=43
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4
             out class type=Windows.System.User return
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserAuthenticationStatusChangingEventArgs shape=4
             out class type=Windows.System.UserAuthenticationStatusChangeDeferral return
 
 class Windows.System.UserChangedEventArgs python_type
@@ -3593,23 +3593,23 @@ class Windows.System.UserChangedEventArgs python_type
     requires Windows.System.IUserChangedEventArgs
     requires Windows.System.IUserChangedEventArgs2
     property user
-        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserChangedEventArgs shape=4 reverse=22
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserChangedEventArgs shape=4
             out class type=Windows.System.User return
     property changed_property_kinds
-        get get_ChangedPropertyKinds slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserChangedEventArgs2 shape=4 reverse=22
+        get get_ChangedPropertyKinds slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserChangedEventArgs2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind> return
 
 class Windows.System.UserDeviceAssociation static python_type
     py UserDeviceAssociation
     factory Windows.System.IUserDeviceAssociationStatics
     event user_device_association_changed static
-        add add_UserDeviceAssociationChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 reverse=44 static
+        add add_UserDeviceAssociationChanged slot=7 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.System.UserDeviceAssociationChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UserDeviceAssociationChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.IUserDeviceAssociationStatics shape=26 reverse=82 static
+        remove remove_UserDeviceAssociationChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.IUserDeviceAssociationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_user_from_device_id static
-        method FindUserFromDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 reverse=24 static
+        method FindUserFromDeviceId slot=6 inputs=1 outputs=1 declaring=Windows.System.IUserDeviceAssociationStatics shape=51 static
             in string name=deviceId
             out class type=Windows.System.User return
 
@@ -3619,13 +3619,13 @@ class Windows.System.UserDeviceAssociationChangedEventArgs python_type
     default Windows.System.IUserDeviceAssociationChangedEventArgs
     requires Windows.System.IUserDeviceAssociationChangedEventArgs
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4
             out string return
     property new_user
-        get get_NewUser slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4 reverse=43
+        get get_NewUser slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4
             out class type=Windows.System.User return
     property old_user
-        get get_OldUser slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4 reverse=62
+        get get_OldUser slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserDeviceAssociationChangedEventArgs shape=4
             out class type=Windows.System.User return
 
 class Windows.System.UserPicker activatable python_type
@@ -3638,20 +3638,20 @@ class Windows.System.UserPicker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property suggested_selected_user
-        get get_SuggestedSelectedUser slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4 reverse=62
+        get get_SuggestedSelectedUser slot=8 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4
             out class type=Windows.System.User return
-        put put_SuggestedSelectedUser slot=9 inputs=1 outputs=0 declaring=Windows.System.IUserPicker shape=4 reverse=99
+        put put_SuggestedSelectedUser slot=9 inputs=1 outputs=0 declaring=Windows.System.IUserPicker shape=4
             in class type=Windows.System.User name=value
     property allow_guest_accounts
-        get get_AllowGuestAccounts slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4 reverse=22
+        get get_AllowGuestAccounts slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4
             out boolean return
-        put put_AllowGuestAccounts slot=7 inputs=1 outputs=0 declaring=Windows.System.IUserPicker shape=4 reverse=43
+        put put_AllowGuestAccounts slot=7 inputs=1 outputs=0 declaring=Windows.System.IUserPicker shape=4
             in boolean name=value
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserPickerStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserPickerStatics shape=4 static
             out boolean return
     method pick_single_user_async
-        method PickSingleUserAsync slot=10 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4 reverse=121
+        method PickSingleUserAsync slot=10 inputs=0 outputs=1 declaring=Windows.System.IUserPicker shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.User> return
 
 enum Windows.System.UserPictureSize python_type
@@ -3677,54 +3677,54 @@ class Windows.System.UserWatcher python_type
     default Windows.System.IUserWatcher
     requires Windows.System.IUserWatcher
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserWatcher shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserWatcher shape=4
             out enum32 type=Windows.System.UserWatcherStatus return
     event added
-        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=100
+        add add_Added slot=9 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=134
+        remove remove_Added slot=10 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event authentication_status_changed
-        add add_AuthenticationStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=196
+        add add_AuthenticationStatusChanged slot=15 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AuthenticationStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=397
+        remove remove_AuthenticationStatusChanged slot=16 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event authentication_status_changing
-        add add_AuthenticationStatusChanging slot=17 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=211
+        add add_AuthenticationStatusChanging slot=17 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserAuthenticationStatusChangingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AuthenticationStatusChanging slot=18 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=398
+        remove remove_AuthenticationStatusChanging slot=18 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enumeration_completed
-        add add_EnumerationCompleted slot=19 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=224
+        add add_EnumerationCompleted slot=19 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnumerationCompleted slot=20 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=399
+        remove remove_EnumerationCompleted slot=20 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event removed
-        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=144
+        add add_Removed slot=11 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=167
+        remove remove_Removed slot=12 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stopped
-        add add_Stopped slot=21 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=233
+        add add_Stopped slot=21 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Stopped slot=22 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=400
+        remove remove_Stopped slot=22 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event updated
-        add add_Updated slot=13 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51 reverse=174
+        add add_Updated slot=13 inputs=1 outputs=1 declaring=Windows.System.IUserWatcher shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.UserWatcher,Windows.System.UserChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Updated slot=14 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26 reverse=192
+        remove remove_Updated slot=14 inputs=1 outputs=0 declaring=Windows.System.IUserWatcher shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=7 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0 reverse=37
+        method Start slot=7 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0
     method stop
-        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0 reverse=55
+        method Stop slot=8 inputs=0 outputs=0 declaring=Windows.System.IUserWatcher shape=0
 
 enum Windows.System.UserWatcherStatus python_type
     py UserWatcherStatus

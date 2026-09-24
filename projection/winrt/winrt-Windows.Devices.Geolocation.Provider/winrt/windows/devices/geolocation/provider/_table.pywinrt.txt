@@ -23,16 +23,16 @@ class Windows.Devices.Geolocation.Provider.GeolocationProvider activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_overridden
-        get get_IsOverridden slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=4 reverse=22
+        get get_IsOverridden slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=4
             out boolean return
     event is_overridden_changed
-        add add_IsOverriddenChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=51 reverse=100
+        add add_IsOverriddenChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=51
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsOverriddenChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=26 reverse=134
+        remove remove_IsOverriddenChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_override_position
-        method ClearOverridePosition slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=0 reverse=55
+        method ClearOverridePosition slot=8 inputs=0 outputs=0 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=0
     method set_override_position
         method SetOverridePosition slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Geolocation.Provider.IGeolocationProvider shape=223
             in struct type=Windows.Devices.Geolocation.BasicGeoposition name=newPosition

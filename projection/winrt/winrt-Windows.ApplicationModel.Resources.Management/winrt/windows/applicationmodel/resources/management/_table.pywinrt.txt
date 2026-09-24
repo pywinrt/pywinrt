@@ -251,22 +251,22 @@ class Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate pyt
     default Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate
     requires Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate
     property metadata
-        get get_Metadata slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=62
+        get get_Metadata slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     property qualifiers
-        get get_Qualifiers slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=99
+        get get_Qualifiers slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier> return
     property type
-        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=22
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4
             out enum32 type=Windows.ApplicationModel.Resources.Management.IndexedResourceType return
     property uri
-        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=43
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4
             out class type=Windows.Foundation.Uri return
     property value_as_string
-        get get_ValueAsString slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4 reverse=121
+        get get_ValueAsString slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=4
             out string return
     method get_qualifier_value
-        method GetQualifierValue slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=51 reverse=144
+        method GetQualifierValue slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceCandidate shape=51
             in string name=qualifierName
             out string return
 
@@ -276,10 +276,10 @@ class Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier pyt
     default Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier
     requires Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier
     property qualifier_name
-        get get_QualifierName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier shape=4 reverse=22
+        get get_QualifierName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier shape=4
             out string return
     property qualifier_value
-        get get_QualifierValue slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier shape=4 reverse=43
+        get get_QualifierValue slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IIndexedResourceQualifier shape=4
             out string return
 
 enum Windows.ApplicationModel.Resources.Management.IndexedResourceType python_type
@@ -297,19 +297,19 @@ class Windows.ApplicationModel.Resources.Management.ResourceIndexer python_type
     factory Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory
     factory Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory shape=51 reverse=24 deprecated
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory shape=51 deprecated
             in class type=Windows.Foundation.Uri name=projectRoot
             out class type=Windows.ApplicationModel.Resources.Management.ResourceIndexer return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2 shape=117 reverse=25 deprecated
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexerFactory2 shape=117 deprecated
             in class type=Windows.Foundation.Uri name=projectRoot
             in class type=Windows.Foundation.Uri name=extensionDllPath
             out class type=Windows.ApplicationModel.Resources.Management.ResourceIndexer return
     method index_file_contents_async deprecated
-        method IndexFileContentsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 reverse=44 deprecated
+        method IndexFileContentsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 deprecated
             in class type=Windows.Foundation.Uri name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> return
     method index_file_path deprecated
-        method IndexFilePath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 reverse=24 deprecated
+        method IndexFilePath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 deprecated
             in class type=Windows.Foundation.Uri name=filePath
             out class type=Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate return
 

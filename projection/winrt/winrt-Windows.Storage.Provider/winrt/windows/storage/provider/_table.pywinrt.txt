@@ -54,7 +54,7 @@ class Windows.Storage.Provider.CachedFileUpdater static python_type
     py CachedFileUpdater
     factory Windows.Storage.Provider.ICachedFileUpdaterStatics
     method set_update_information static
-        method SetUpdateInformation slot=6 inputs=5 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterStatics shape=239 reverse=27 static
+        method SetUpdateInformation slot=6 inputs=5 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterStatics shape=239 static
             in interface type=Windows.Storage.IStorageFile name=file
             in string name=contentId
             in enum32 type=Windows.Storage.Provider.ReadActivationMode name=readMode
@@ -68,33 +68,33 @@ class Windows.Storage.Provider.CachedFileUpdaterUI python_type
     requires Windows.Storage.Provider.ICachedFileUpdaterUI
     requires Windows.Storage.Provider.ICachedFileUpdaterUI2
     property title
-        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4 reverse=22
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4
             out string return
-        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4 reverse=43
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4
             in string name=value
     property ui_status
-        get get_UIStatus slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4 reverse=173
+        get get_UIStatus slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4
             out enum32 type=Windows.Storage.Provider.UIStatus return
     property update_target
-        get get_UpdateTarget slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4 reverse=62
+        get get_UpdateTarget slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=4
             out enum32 type=Windows.Storage.Provider.CachedFileTarget return
     property update_request
-        get get_UpdateRequest slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI2 shape=4 reverse=22
+        get get_UpdateRequest slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI2 shape=4
             out class type=Windows.Storage.Provider.FileUpdateRequest return
     event file_update_requested
-        add add_FileUpdateRequested slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=51 reverse=100
+        add add_FileUpdateRequested slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.CachedFileUpdaterUI,Windows.Storage.Provider.FileUpdateRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FileUpdateRequested slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=26 reverse=134
+        remove remove_FileUpdateRequested slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event ui_requested
-        add add_UIRequested slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=51 reverse=144
+        add add_UIRequested slot=11 inputs=1 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Storage.Provider.CachedFileUpdaterUI,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UIRequested slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=26 reverse=167
+        remove remove_UIRequested slot=12 inputs=1 outputs=0 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI2 shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.ICachedFileUpdaterUI2 shape=4
             out class type=Windows.Storage.Provider.FileUpdateRequestDeferral return
 
 class Windows.Storage.Provider.FileUpdateRequest python_type
@@ -104,26 +104,26 @@ class Windows.Storage.Provider.FileUpdateRequest python_type
     requires Windows.Storage.Provider.IFileUpdateRequest
     requires Windows.Storage.Provider.IFileUpdateRequest2
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4
             out enum32 type=Windows.Storage.Provider.FileUpdateStatus return
-        put put_Status slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4 reverse=99
+        put put_Status slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4
             in enum32 type=Windows.Storage.Provider.FileUpdateStatus name=value
     property content_id
-        get get_ContentId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4 reverse=22
+        get get_ContentId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4
             out string return
     property file
-        get get_File slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4 reverse=43
+        get get_File slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4
             out class type=Windows.Storage.StorageFile return
     property user_input_needed_message
-        get get_UserInputNeededMessage slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest2 shape=4 reverse=22
+        get get_UserInputNeededMessage slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest2 shape=4
             out string return
-        put put_UserInputNeededMessage slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequest2 shape=4 reverse=43
+        put put_UserInputNeededMessage slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequest2 shape=4
             in string name=value
     method get_deferral
-        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4 reverse=121
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4
             out class type=Windows.Storage.Provider.FileUpdateRequestDeferral return
     method update_local_file
-        method UpdateLocalFile slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4 reverse=141
+        method UpdateLocalFile slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequest shape=4
             in interface type=Windows.Storage.IStorageFile name=value
 
 class Windows.Storage.Provider.FileUpdateRequestDeferral python_type
@@ -132,7 +132,7 @@ class Windows.Storage.Provider.FileUpdateRequestDeferral python_type
     default Windows.Storage.Provider.IFileUpdateRequestDeferral
     requires Windows.Storage.Provider.IFileUpdateRequestDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequestDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Storage.Provider.IFileUpdateRequestDeferral shape=0
 
 class Windows.Storage.Provider.FileUpdateRequestedEventArgs python_type
     py FileUpdateRequestedEventArgs
@@ -140,7 +140,7 @@ class Windows.Storage.Provider.FileUpdateRequestedEventArgs python_type
     default Windows.Storage.Provider.IFileUpdateRequestedEventArgs
     requires Windows.Storage.Provider.IFileUpdateRequestedEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequestedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IFileUpdateRequestedEventArgs shape=4
             out class type=Windows.Storage.Provider.FileUpdateRequest return
 
 enum Windows.Storage.Provider.FileUpdateStatus python_type
@@ -1433,15 +1433,15 @@ class Windows.Storage.Provider.StorageProviderFileTypeInfo python_type
     requires Windows.Storage.Provider.IStorageProviderFileTypeInfo
     factory Windows.Storage.Provider.IStorageProviderFileTypeInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderFileTypeInfoFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderFileTypeInfoFactory shape=117
             in string name=fileExtension
             in string name=iconResource
             out class type=Windows.Storage.Provider.StorageProviderFileTypeInfo return
     property file_extension
-        get get_FileExtension slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderFileTypeInfo shape=4 reverse=22
+        get get_FileExtension slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderFileTypeInfo shape=4
             out string return
     property icon_resource
-        get get_IconResource slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderFileTypeInfo shape=4 reverse=43
+        get get_IconResource slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderFileTypeInfo shape=4
             out string return
 
 class Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult activatable python_type
@@ -1453,19 +1453,19 @@ class Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult activa
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderUriSourceStatus return
-        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4 reverse=43
+        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderUriSourceStatus name=value
     property content_uri
-        get get_ContentUri slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4 reverse=62
+        get get_ContentUri slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4
             out string return
-        put put_ContentUri slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4 reverse=99
+        put put_ContentUri slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4
             in string name=value
     property content_id
-        get get_ContentId slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4 reverse=121
+        get get_ContentId slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4
             out string return
-        put put_ContentId slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4 reverse=141
+        put put_ContentId slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetContentInfoForPathResult shape=4
             in string name=value
 
 class Windows.Storage.Provider.StorageProviderGetPathForContentUriResult activatable python_type
@@ -1477,14 +1477,14 @@ class Windows.Storage.Provider.StorageProviderGetPathForContentUriResult activat
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderUriSourceStatus return
-        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4 reverse=43
+        put put_Status slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderUriSourceStatus name=value
     property path
-        get get_Path slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4 reverse=62
+        get get_Path slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4
             out string return
-        put put_Path slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4 reverse=99
+        put put_Path slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderGetPathForContentUriResult shape=4
             in string name=value
 
 enum Windows.Storage.Provider.StorageProviderHardlinkPolicy python_type flags_enum
@@ -1530,7 +1530,7 @@ class Windows.Storage.Provider.StorageProviderItemProperties static python_type
     py StorageProviderItemProperties
     factory Windows.Storage.Provider.IStorageProviderItemPropertiesStatics
     method set_async static
-        method SetAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemPropertiesStatics shape=117 reverse=25 static
+        method SetAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemPropertiesStatics shape=117 static
             in interface type=Windows.Storage.IStorageItem name=item
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Storage.Provider.StorageProviderItemProperty> name=itemProperties
             out interface type=Windows.Foundation.IAsyncAction return
@@ -1544,19 +1544,19 @@ class Windows.Storage.Provider.StorageProviderItemProperty activatable python_ty
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property value
-        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4 reverse=99
+        get get_Value slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4
             out string return
-        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4 reverse=62
+        put put_Value slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4
             in string name=value
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4
             out int32 return
-        put put_Id slot=6 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4 reverse=22
+        put put_Id slot=6 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4
             in int32 name=value
     property icon_resource
-        get get_IconResource slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4 reverse=141
+        get get_IconResource slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4
             out string return
-        put put_IconResource slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4 reverse=121
+        put put_IconResource slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemProperty shape=4
             in string name=value
 
 class Windows.Storage.Provider.StorageProviderItemPropertyDefinition activatable python_type
@@ -1568,14 +1568,14 @@ class Windows.Storage.Provider.StorageProviderItemPropertyDefinition activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4
             out int32 return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4
             in int32 name=value
     property display_name_resource
-        get get_DisplayNameResource slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4 reverse=62
+        get get_DisplayNameResource slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4
             out string return
-        put put_DisplayNameResource slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4 reverse=99
+        put put_DisplayNameResource slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderItemPropertyDefinition shape=4
             in string name=value
 
 class Windows.Storage.Provider.StorageProviderKnownFolderEntry activatable python_type
@@ -1587,12 +1587,12 @@ class Windows.Storage.Provider.StorageProviderKnownFolderEntry activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property status
-        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=4 reverse=62
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus return
-        put put_Status slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=4 reverse=99
+        put put_Status slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus name=value
     property known_folder_id
-        get get_KnownFolderId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=4 reverse=22
+        get get_KnownFolderId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=4
             out guid return
         put put_KnownFolderId slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderEntry shape=33
             in guid name=value
@@ -1606,17 +1606,17 @@ class Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property sync_requested
-        get get_SyncRequested slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4 reverse=99
+        get get_SyncRequested slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4
             out delegate type=Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler return
-        put put_SyncRequested slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4 reverse=121
+        put put_SyncRequested slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4
             in delegate type=Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler name=value
     property provider_display_name
-        get get_ProviderDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4 reverse=22
+        get get_ProviderDisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4
             out string return
-        put put_ProviderDisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4 reverse=43
+        put put_ProviderDisplayName slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4
             in string name=value
     property known_folder_entries
-        get get_KnownFolderEntries slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4 reverse=62
+        get get_KnownFolderEntries slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderKnownFolderEntry> return
 
 class Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs python_type
@@ -1625,10 +1625,10 @@ class Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs python_
     default Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs
     requires Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs
     property known_folders
-        get get_KnownFolders slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs shape=4 reverse=22
+        get get_KnownFolders slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Guid> return
     property source
-        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs shape=4 reverse=43
+        get get_Source slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs shape=4
             out class type=Windows.Storage.StorageFolder return
 
 delegate Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestedHandler python_type
@@ -1655,14 +1655,14 @@ class Windows.Storage.Provider.StorageProviderMoreInfoUI activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property message
-        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4 reverse=22
+        get get_Message slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4
             out string return
-        put put_Message slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4 reverse=43
+        put put_Message slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4
             in string name=value
     property command
-        get get_Command slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4 reverse=62
+        get get_Command slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4
             out interface type=Windows.Storage.Provider.IStorageProviderUICommand return
-        put put_Command slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4 reverse=99
+        put put_Command slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderMoreInfoUI shape=4
             in interface type=Windows.Storage.Provider.IStorageProviderUICommand name=value
 
 enum Windows.Storage.Provider.StorageProviderPopulationPolicy python_type
@@ -1684,21 +1684,21 @@ class Windows.Storage.Provider.StorageProviderQueryResultSet python_type
     requires Windows.Storage.Provider.IStorageProviderQueryResultSet
     factory Windows.Storage.Provider.IStorageProviderQueryResultSetFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSetFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSetFactory shape=117
             pass_array interface type=Windows.Storage.Provider.IStorageProviderQueryResult name=results
             out class type=Windows.Storage.Provider.StorageProviderQueryResultSet return
     property status
-        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4 reverse=99
+        get get_Status slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderSearchQueryStatus return
-        put put_Status slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4 reverse=121
+        put put_Status slot=10 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderSearchQueryStatus name=value
     property query_result_id
-        get get_QueryResultId slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4 reverse=43
+        get get_QueryResultId slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4
             out string return
-        put put_QueryResultId slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4 reverse=62
+        put put_QueryResultId slot=8 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=4
             in string name=value
     method get_results
-        method GetResults slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=51 reverse=24
+        method GetResults slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResultSet shape=51
             receive_array interface type=Windows.Storage.Provider.IStorageProviderQueryResult return
 
 class Windows.Storage.Provider.StorageProviderQuotaUI activatable python_type
@@ -1710,24 +1710,24 @@ class Windows.Storage.Provider.StorageProviderQuotaUI activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property quota_used_label
-        get get_QuotaUsedLabel slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4 reverse=121
+        get get_QuotaUsedLabel slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4
             out string return
-        put put_QuotaUsedLabel slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4 reverse=141
+        put put_QuotaUsedLabel slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4
             in string name=value
     property quota_used_in_bytes
-        get get_QuotaUsedInBytes slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4 reverse=62
+        get get_QuotaUsedInBytes slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4
             out uint64 return
         put put_QuotaUsedInBytes slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=3
             in uint64 name=value
     property quota_used_color
-        get get_QuotaUsedColor slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4 reverse=162
+        get get_QuotaUsedColor slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_QuotaUsedColor slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4 reverse=173
+        put put_QuotaUsedColor slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property quota_total_in_bytes
-        get get_QuotaTotalInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4 reverse=22
+        get get_QuotaTotalInBytes slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=4
             out uint64 return
-        put put_QuotaTotalInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=3 reverse=40
+        put put_QuotaTotalInBytes slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQuotaUI shape=3
             in uint64 name=value
 
 enum Windows.Storage.Provider.StorageProviderResultKind python_type
@@ -1760,28 +1760,28 @@ class Windows.Storage.Provider.StorageProviderSearchQueryOptions python_type
     default Windows.Storage.Provider.IStorageProviderSearchQueryOptions
     requires Windows.Storage.Provider.IStorageProviderSearchQueryOptions
     property folder_scope
-        get get_FolderScope slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=141
+        get get_FolderScope slot=11 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out string return
     property language
-        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=43
+        get get_Language slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out string return
     property max_results
-        get get_MaxResults slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=121
+        get get_MaxResults slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out uint32 return
     property programmatic_query
-        get get_ProgrammaticQuery slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=99
+        get get_ProgrammaticQuery slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out string return
     property properties_to_fetch
-        get get_PropertiesToFetch slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=173
+        get get_PropertiesToFetch slot=13 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property query_id
-        get get_QueryId slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=162
+        get get_QueryId slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out string return
     property sort_order
-        get get_SortOrder slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=62
+        get get_SortOrder slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Search.SortEntry> return
     property user_query
-        get get_UserQuery slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4 reverse=22
+        get get_UserQuery slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchQueryOptions shape=4
             out string return
 
 enum Windows.Storage.Provider.StorageProviderSearchQueryStatus python_type
@@ -1829,19 +1829,19 @@ class Windows.Storage.Provider.StorageProviderSearchResult activatable python_ty
         get get_RequestedProperties slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=186
             out class type=Windows.Foundation.Collections.PropertySet return
     property matched_property_name
-        get get_MatchedPropertyName slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4 reverse=121
+        get get_MatchedPropertyName slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4
             out string return
-        put put_MatchedPropertyName slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4 reverse=141
+        put put_MatchedPropertyName slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4
             in string name=value
     property match_score
-        get get_MatchScore slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4 reverse=22
+        get get_MatchScore slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4
             out double return
-        put put_MatchScore slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=2 reverse=38
+        put put_MatchScore slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=2
             in double name=value
     property match_kind
-        get get_MatchKind slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4 reverse=62
+        get get_MatchKind slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderSearchMatchKind return
-        put put_MatchKind slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4 reverse=99
+        put put_MatchKind slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSearchResult shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderSearchMatchKind name=value
 
 enum Windows.Storage.Provider.StorageProviderShareLinkState python_type
@@ -1869,44 +1869,44 @@ class Windows.Storage.Provider.StorageProviderStatusUI activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property sync_status_command
-        get get_SyncStatusCommand slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=162
+        get get_SyncStatusCommand slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out interface type=Windows.Storage.Provider.IStorageProviderUICommand return
-        put put_SyncStatusCommand slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=173
+        put put_SyncStatusCommand slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in interface type=Windows.Storage.Provider.IStorageProviderUICommand name=value
     property quota_ui
-        get get_QuotaUI slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=186
+        get get_QuotaUI slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out class type=Windows.Storage.Provider.StorageProviderQuotaUI return
-        put put_QuotaUI slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=194
+        put put_QuotaUI slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in class type=Windows.Storage.Provider.StorageProviderQuotaUI name=value
     property provider_state_label
-        get get_ProviderStateLabel slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=62
+        get get_ProviderStateLabel slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out string return
-        put put_ProviderStateLabel slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=99
+        put put_ProviderStateLabel slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in string name=value
     property provider_state_icon
-        get get_ProviderStateIcon slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=121
+        get get_ProviderStateIcon slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out class type=Windows.Foundation.Uri return
-        put put_ProviderStateIcon slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=141
+        put put_ProviderStateIcon slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in class type=Windows.Foundation.Uri name=value
     property provider_state
-        get get_ProviderState slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=22
+        get get_ProviderState slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderState return
-        put put_ProviderState slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=43
+        put put_ProviderState slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderState name=value
     property provider_secondary_commands
-        get get_ProviderSecondaryCommands slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=228
+        get get_ProviderSecondaryCommands slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.IStorageProviderUICommand> return
-        put put_ProviderSecondaryCommands slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=232
+        put put_ProviderSecondaryCommands slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.IStorageProviderUICommand> name=value
     property provider_primary_command
-        get get_ProviderPrimaryCommand slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=218
+        get get_ProviderPrimaryCommand slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out interface type=Windows.Storage.Provider.IStorageProviderUICommand return
-        put put_ProviderPrimaryCommand slot=19 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=223
+        put put_ProviderPrimaryCommand slot=19 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in interface type=Windows.Storage.Provider.IStorageProviderUICommand name=value
     property more_info_ui
-        get get_MoreInfoUI slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=202
+        get get_MoreInfoUI slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             out class type=Windows.Storage.Provider.StorageProviderMoreInfoUI return
-        put put_MoreInfoUI slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=210
+        put put_MoreInfoUI slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4
             in class type=Windows.Storage.Provider.StorageProviderMoreInfoUI name=value
 
 class Windows.Storage.Provider.StorageProviderSuggestionResult activatable python_type
@@ -1947,19 +1947,19 @@ class Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions python_typ
     default Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions
     requires Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions
     property max_results
-        get get_MaxResults slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=62
+        get get_MaxResults slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4
             out uint32 return
     property properties_to_fetch
-        get get_PropertiesToFetch slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=121
+        get get_PropertiesToFetch slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property query_id
-        get get_QueryId slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=99
+        get get_QueryId slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4
             out string return
     property remote_file_id
-        get get_RemoteFileId slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=43
+        get get_RemoteFileId slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4
             out string return
     property suggestions_kind
-        get get_SuggestionsKind slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=22
+        get get_SuggestionsKind slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderResultKind return
 
 class Windows.Storage.Provider.StorageProviderSyncRootInfo activatable python_type
@@ -1973,90 +1973,90 @@ class Windows.Storage.Provider.StorageProviderSyncRootInfo activatable python_ty
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property version
-        get get_Version slot=28 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=263
+        get get_Version slot=28 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out string return
-        put put_Version slot=29 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=266
+        put put_Version slot=29 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in string name=value
     property show_siblings_as_group
-        get get_ShowSiblingsAsGroup slot=26 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=255
+        get get_ShowSiblingsAsGroup slot=26 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out boolean return
-        put put_ShowSiblingsAsGroup slot=27 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=259
+        put put_ShowSiblingsAsGroup slot=27 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in boolean name=value
     property recycle_bin_uri
-        get get_RecycleBinUri slot=35 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=292
+        get get_RecycleBinUri slot=35 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out class type=Windows.Foundation.Uri return
-        put put_RecycleBinUri slot=36 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=296
+        put put_RecycleBinUri slot=36 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in class type=Windows.Foundation.Uri name=value
     property protection_mode
-        get get_ProtectionMode slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=270
+        get get_ProtectionMode slot=30 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderProtectionMode return
-        put put_ProtectionMode slot=31 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=273
+        put put_ProtectionMode slot=31 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderProtectionMode name=value
     property population_policy
-        get get_PopulationPolicy slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=228
+        get get_PopulationPolicy slot=20 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderPopulationPolicy return
-        put put_PopulationPolicy slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=232
+        put put_PopulationPolicy slot=21 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderPopulationPolicy name=value
     property path
-        get get_Path slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=121
+        get get_Path slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out interface type=Windows.Storage.IStorageFolder return
-        put put_Path slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=141
+        put put_Path slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in interface type=Windows.Storage.IStorageFolder name=value
     property in_sync_policy
-        get get_InSyncPolicy slot=22 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=237
+        get get_InSyncPolicy slot=22 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out enum_u32 type=Windows.Storage.Provider.StorageProviderInSyncPolicy return
-        put put_InSyncPolicy slot=23 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=242
+        put put_InSyncPolicy slot=23 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in enum_u32 type=Windows.Storage.Provider.StorageProviderInSyncPolicy name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out string return
-        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=43
+        put put_Id slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in string name=value
     property icon_resource
-        get get_IconResource slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=186
+        get get_IconResource slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out string return
-        put put_IconResource slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=194
+        put put_IconResource slot=15 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in string name=value
     property hydration_policy_modifier
-        get get_HydrationPolicyModifier slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=218
+        get get_HydrationPolicyModifier slot=18 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out enum_u32 type=Windows.Storage.Provider.StorageProviderHydrationPolicyModifier return
-        put put_HydrationPolicyModifier slot=19 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=223
+        put put_HydrationPolicyModifier slot=19 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in enum_u32 type=Windows.Storage.Provider.StorageProviderHydrationPolicyModifier name=value
     property hydration_policy
-        get get_HydrationPolicy slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=202
+        get get_HydrationPolicy slot=16 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out enum32 type=Windows.Storage.Provider.StorageProviderHydrationPolicy return
-        put put_HydrationPolicy slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=210
+        put put_HydrationPolicy slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in enum32 type=Windows.Storage.Provider.StorageProviderHydrationPolicy name=value
     property hardlink_policy
-        get get_HardlinkPolicy slot=24 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=247
+        get get_HardlinkPolicy slot=24 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out enum_u32 type=Windows.Storage.Provider.StorageProviderHardlinkPolicy return
-        put put_HardlinkPolicy slot=25 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=252
+        put put_HardlinkPolicy slot=25 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in enum_u32 type=Windows.Storage.Provider.StorageProviderHardlinkPolicy name=value
     property display_name_resource
-        get get_DisplayNameResource slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=162
+        get get_DisplayNameResource slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out string return
-        put put_DisplayNameResource slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=173
+        put put_DisplayNameResource slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in string name=value
     property context
-        get get_Context slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=62
+        get get_Context slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Context slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=99
+        put put_Context slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property allow_pinning
-        get get_AllowPinning slot=32 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=280
+        get get_AllowPinning slot=32 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out boolean return
-        put put_AllowPinning slot=33 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=285
+        put put_AllowPinning slot=33 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             in boolean name=value
     property storage_provider_item_property_definitions
-        get get_StorageProviderItemPropertyDefinitions slot=34 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4 reverse=288
+        get get_StorageProviderItemPropertyDefinitions slot=34 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderItemPropertyDefinition> return
     property provider_id
-        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo2 shape=4 reverse=22
+        get get_ProviderId slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo2 shape=4
             out guid return
         put put_ProviderId slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo2 shape=33
             in guid name=value
     property fallback_file_type_info
-        get get_FallbackFileTypeInfo slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo3 shape=4 reverse=22
+        get get_FallbackFileTypeInfo slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootInfo3 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderFileTypeInfo> return
 
 class Windows.Storage.Provider.StorageProviderSyncRootManager static python_type
@@ -2064,24 +2064,24 @@ class Windows.Storage.Provider.StorageProviderSyncRootManager static python_type
     factory Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics
     factory Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics2
     method get_current_sync_roots static
-        method GetCurrentSyncRoots slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=4 reverse=121 static
+        method GetCurrentSyncRoots slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderSyncRootInfo> return
     method get_sync_root_information_for_folder static
-        method GetSyncRootInformationForFolder slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=51 reverse=65 static
+        method GetSyncRootInformationForFolder slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=51 static
             in interface type=Windows.Storage.IStorageFolder name=folder
             out class type=Windows.Storage.Provider.StorageProviderSyncRootInfo return
     method get_sync_root_information_for_id static
-        method GetSyncRootInformationForId slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=51 reverse=100 static
+        method GetSyncRootInformationForId slot=9 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=51 static
             in string name=id
             out class type=Windows.Storage.Provider.StorageProviderSyncRootInfo return
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics2 shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics2 shape=4 static
             out boolean return
     method register static
-        method Register slot=6 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=4 reverse=22 static
+        method Register slot=6 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=4 static
             in class type=Windows.Storage.Provider.StorageProviderSyncRootInfo name=syncRootInformation
     method unregister static
-        method Unregister slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=4 reverse=43 static
+        method Unregister slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics shape=4 static
             in string name=id
 
 enum Windows.Storage.Provider.StorageProviderUICommandState python_type

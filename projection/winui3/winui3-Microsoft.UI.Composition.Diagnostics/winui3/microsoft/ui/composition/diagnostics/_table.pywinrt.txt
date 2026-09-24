@@ -9,17 +9,17 @@ class Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps python_type
     default Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps
     requires Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps
     method hide
-        method Hide slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=22
+        method Hide slot=6 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4
             in class type=Microsoft.UI.Composition.Visual name=subtree
     method show_memory_usage
-        method ShowMemoryUsage slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=43
+        method ShowMemoryUsage slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4
             in class type=Microsoft.UI.Composition.Visual name=subtree
     method show_overdraw
-        method ShowOverdraw slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=51 reverse=65
+        method ShowOverdraw slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=51
             in class type=Microsoft.UI.Composition.Visual name=subtree
             in enum_u32 type=Microsoft.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds name=contentKinds
     method show_redraw
-        method ShowRedraw slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4 reverse=99
+        method ShowRedraw slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugHeatMaps shape=4
             in class type=Microsoft.UI.Composition.Visual name=subtree
 
 enum Microsoft.UI.Composition.Diagnostics.CompositionDebugOverdrawContentKinds python_type flags_enum
@@ -42,10 +42,10 @@ class Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings python_type
     requires Microsoft.UI.Composition.Diagnostics.ICompositionDebugSettings
     factory Microsoft.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics
     property heat_maps
-        get get_HeatMaps slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugSettings shape=4 reverse=22
+        get get_HeatMaps slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugSettings shape=4
             out class type=Microsoft.UI.Composition.Diagnostics.CompositionDebugHeatMaps return
     method try_get_settings static
-        method TryGetSettings slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics shape=51 reverse=24 static
+        method TryGetSettings slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.Diagnostics.ICompositionDebugSettingsStatics shape=51 static
             in class type=Microsoft.UI.Composition.Compositor name=compositor
             out class type=Microsoft.UI.Composition.Diagnostics.CompositionDebugSettings return
 

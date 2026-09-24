@@ -21,26 +21,26 @@ class Windows.Devices.Power.Battery python_type
     requires Windows.Devices.Power.IBattery
     factory Windows.Devices.Power.IBatteryStatics
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBattery shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBattery shape=4
             out string return
     property aggregate_battery static
-        get get_AggregateBattery slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryStatics shape=4 reverse=22 static
+        get get_AggregateBattery slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryStatics shape=4 static
             out class type=Windows.Devices.Power.Battery return
     event report_updated
-        add add_ReportUpdated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Power.IBattery shape=51 reverse=65
+        add add_ReportUpdated slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Power.IBattery shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Power.Battery,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ReportUpdated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Power.IBattery shape=26 reverse=110
+        remove remove_ReportUpdated slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Power.IBattery shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Power.IBatteryStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Power.IBatteryStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Power.Battery> return
     method get_device_selector static
-        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryStatics shape=4 reverse=62 static
+        method GetDeviceSelector slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryStatics shape=4 static
             out string return
     method get_report
-        method GetReport slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBattery shape=4 reverse=43
+        method GetReport slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBattery shape=4
             out class type=Windows.Devices.Power.BatteryReport return
 
 class Windows.Devices.Power.BatteryReport python_type
@@ -49,19 +49,19 @@ class Windows.Devices.Power.BatteryReport python_type
     default Windows.Devices.Power.IBatteryReport
     requires Windows.Devices.Power.IBatteryReport
     property charge_rate_in_milliwatts
-        get get_ChargeRateInMilliwatts slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4 reverse=22
+        get get_ChargeRateInMilliwatts slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
     property design_capacity_in_milliwatt_hours
-        get get_DesignCapacityInMilliwattHours slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4 reverse=43
+        get get_DesignCapacityInMilliwattHours slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
     property full_charge_capacity_in_milliwatt_hours
-        get get_FullChargeCapacityInMilliwattHours slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4 reverse=62
+        get get_FullChargeCapacityInMilliwattHours slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
     property remaining_capacity_in_milliwatt_hours
-        get get_RemainingCapacityInMilliwattHours slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4 reverse=99
+        get get_RemainingCapacityInMilliwattHours slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
     property status
-        get get_Status slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4 reverse=121
+        get get_Status slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Power.IBatteryReport shape=4
             out enum32 type=Windows.System.Power.BatteryStatus return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
@@ -314,10 +314,10 @@ class Windows.Devices.Power.PowerGridData python_type
     default Windows.Devices.Power.IPowerGridData
     requires Windows.Devices.Power.IPowerGridData
     property is_low_user_experience_impact
-        get get_IsLowUserExperienceImpact slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridData shape=4 reverse=43
+        get get_IsLowUserExperienceImpact slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridData shape=4
             out boolean return
     property severity
-        get get_Severity slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridData shape=4 reverse=22
+        get get_Severity slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridData shape=4
             out double return
 
 class Windows.Devices.Power.PowerGridForecast python_type
@@ -327,22 +327,22 @@ class Windows.Devices.Power.PowerGridForecast python_type
     requires Windows.Devices.Power.IPowerGridForecast
     factory Windows.Devices.Power.IPowerGridForecastStatics
     property block_duration
-        get get_BlockDuration slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecast shape=4 reverse=43
+        get get_BlockDuration slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecast shape=4
             out timespan return
     property forecast
-        get get_Forecast slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecast shape=4 reverse=62
+        get get_Forecast slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecast shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Power.PowerGridData> return
     property start_time
-        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecast shape=4 reverse=22
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecast shape=4
             out datetime return
     event forecast_updated static
-        add add_ForecastUpdated slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecastStatics shape=51 reverse=44 static
+        add add_ForecastUpdated slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecastStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ForecastUpdated slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Power.IPowerGridForecastStatics shape=26 reverse=82 static
+        remove remove_ForecastUpdated slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Power.IPowerGridForecastStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_forecast static
-        method GetForecast slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecastStatics shape=4 reverse=22 static
+        method GetForecast slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Power.IPowerGridForecastStatics shape=4 static
             out class type=Windows.Devices.Power.PowerGridForecast return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Power.Battery,System.Object> concrete

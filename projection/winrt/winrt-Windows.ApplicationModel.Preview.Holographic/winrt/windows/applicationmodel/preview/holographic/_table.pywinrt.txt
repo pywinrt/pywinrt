@@ -7,10 +7,10 @@ class Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview
     py HolographicApplicationPreview
     factory Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics
     method is_current_view_presented_on_holographic_display static
-        method IsCurrentViewPresentedOnHolographicDisplay slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics shape=4 reverse=22 static
+        method IsCurrentViewPresentedOnHolographicDisplay slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics shape=4 static
             out boolean return
     method is_holographic_activation static
-        method IsHolographicActivation slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics shape=51 reverse=44 static
+        method IsHolographicActivation slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicApplicationPreviewStatics shape=51 static
             in interface type=Windows.ApplicationModel.Activation.IActivatedEventArgs name=activatedEventArgs
             out boolean return
 
@@ -21,10 +21,10 @@ class Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementO
     requires Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview
     factory Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics
     method get_for_current_view static deprecated
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics shape=4 reverse=22 static deprecated
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics shape=4 static deprecated
             out class type=Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview return
     method reset_placement_override deprecated
-        method ResetPlacementOverride slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview shape=0 reverse=55 deprecated
+        method ResetPlacementOverride slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview shape=0 deprecated
     method set_placement_override deprecated
         method SetPlacementOverride slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview shape=133 deprecated
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem

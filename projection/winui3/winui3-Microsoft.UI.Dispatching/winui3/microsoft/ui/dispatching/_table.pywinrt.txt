@@ -12,7 +12,7 @@ class Microsoft.UI.Dispatching.DispatcherExitDeferral activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherExitDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherExitDeferral shape=0
 
 class Microsoft.UI.Dispatching.DispatcherQueue python_type
     py DispatcherQueue
@@ -23,52 +23,52 @@ class Microsoft.UI.Dispatching.DispatcherQueue python_type
     requires Microsoft.UI.Dispatching.IDispatcherQueue3
     factory Microsoft.UI.Dispatching.IDispatcherQueueStatics
     property has_thread_access
-        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue2 shape=4 reverse=22
+        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue2 shape=4
             out boolean return
     event shutdown_completed
-        add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=144
+        add add_ShutdownCompleted slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26 reverse=167
+        remove remove_ShutdownCompleted slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event shutdown_starting
-        add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=100
+        add add_ShutdownStarting slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26 reverse=134
+        remove remove_ShutdownStarting slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_shutdown_completed
-        add add_FrameworkShutdownCompleted slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=163
+        add add_FrameworkShutdownCompleted slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FrameworkShutdownCompleted slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26 reverse=181
+        remove remove_FrameworkShutdownCompleted slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event framework_shutdown_starting
-        add add_FrameworkShutdownStarting slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=124
+        add add_FrameworkShutdownStarting slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FrameworkShutdownStarting slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26 reverse=156
+        remove remove_FrameworkShutdownStarting slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_timer
-        method CreateTimer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=4 reverse=22
+        method CreateTimer slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueueTimer return
     method enqueue_event_loop_exit
-        method EnqueueEventLoopExit slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0 reverse=16
+        method EnqueueEventLoopExit slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0
     method ensure_system_dispatcher_queue
-        method EnsureSystemDispatcherQueue slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0 reverse=37
+        method EnsureSystemDispatcherQueue slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0
     method get_for_current_thread static
-        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueStatics shape=4 reverse=22 static
+        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueStatics shape=4 static
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     method run_event_loop
-        method RunEventLoop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0 reverse=55
-        method RunEventLoop slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51 reverse=100
+        method RunEventLoop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=0
+        method RunEventLoop slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueue3 shape=51
             in enum_u32 type=Microsoft.UI.Dispatching.DispatcherRunOptions name=options
             in class type=Microsoft.UI.Dispatching.DispatcherExitDeferral name=deferral
     method try_enqueue
-        method TryEnqueue slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51 reverse=44
+        method TryEnqueue slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=51
             in delegate type=Microsoft.UI.Dispatching.DispatcherQueueHandler name=callback
             out boolean return
-        method TryEnqueue slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=117 reverse=66
+        method TryEnqueue slot=8 inputs=2 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueue shape=117
             in enum32 type=Microsoft.UI.Dispatching.DispatcherQueuePriority name=priority
             in delegate type=Microsoft.UI.Dispatching.DispatcherQueueHandler name=callback
             out boolean return
@@ -81,18 +81,18 @@ class Microsoft.UI.Dispatching.DispatcherQueueController python_type
     requires Microsoft.UI.Dispatching.IDispatcherQueueController2
     factory Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics
     property dispatcher_queue
-        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController shape=4 reverse=22
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController shape=4
             out class type=Microsoft.UI.Dispatching.DispatcherQueue return
     method create_on_current_thread static
-        method CreateOnCurrentThread slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics shape=4 reverse=43 static
+        method CreateOnCurrentThread slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics shape=4 static
             out class type=Microsoft.UI.Dispatching.DispatcherQueueController return
     method create_on_dedicated_thread static
-        method CreateOnDedicatedThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics shape=4 reverse=22 static
+        method CreateOnDedicatedThread slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueControllerStatics shape=4 static
             out class type=Microsoft.UI.Dispatching.DispatcherQueueController return
     method shutdown_queue
-        method ShutdownQueue slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController2 shape=0 reverse=16
+        method ShutdownQueue slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController2 shape=0
     method shutdown_queue_async
-        method ShutdownQueueAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController shape=4 reverse=43
+        method ShutdownQueueAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueController shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 delegate Microsoft.UI.Dispatching.DispatcherQueueHandler python_type
@@ -115,7 +115,7 @@ class Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs python_t
     default Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs
     requires Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueShutdownStartingEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Microsoft.UI.Dispatching.DispatcherQueueTimer python_type
@@ -124,28 +124,28 @@ class Microsoft.UI.Dispatching.DispatcherQueueTimer python_type
     default Microsoft.UI.Dispatching.IDispatcherQueueTimer
     requires Microsoft.UI.Dispatching.IDispatcherQueueTimer
     property is_repeating
-        get get_IsRepeating slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=99
+        get get_IsRepeating slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4
             out boolean return
-        put put_IsRepeating slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=121
+        put put_IsRepeating slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4
             in boolean name=value
     property interval
-        get get_Interval slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=22
+        get get_Interval slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4
             out timespan return
-        put put_Interval slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26 reverse=53
+        put put_Interval slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26
             in timespan name=value
     property is_running
-        get get_IsRunning slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4 reverse=62
+        get get_IsRunning slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=4
             out boolean return
     event tick
-        add add_Tick slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=51 reverse=174
+        add add_Tick slot=13 inputs=1 outputs=1 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Dispatching.DispatcherQueueTimer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26 reverse=192
+        remove remove_Tick slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0 reverse=137
+        method Start slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0
     method stop
-        method Stop slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0 reverse=159
+        method Stop slot=12 inputs=0 outputs=0 declaring=Microsoft.UI.Dispatching.IDispatcherQueueTimer shape=0
 
 enum Microsoft.UI.Dispatching.DispatcherRunOptions python_type flags_enum
     py DispatcherRunOptions

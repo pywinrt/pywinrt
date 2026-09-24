@@ -16,10 +16,10 @@ class Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
     requires Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager
     factory Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics
     method get_for_current_app static
-        method GetForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics shape=4 reverse=22 static
+        method GetForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics shape=4 static
             out class type=Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager return
     method set_thumbnail_async
-        method SetThumbnailAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager shape=51 reverse=24
+        method SetThumbnailAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager shape=51
             in class type=Windows.Graphics.Imaging.SoftwareBitmap name=bitmap
             out interface type=Windows.Foundation.IAsyncAction return
 
