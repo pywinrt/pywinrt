@@ -1057,8 +1057,8 @@ enum Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds pytho
 
 class Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager static python_type
     py UserDataAccountManager
-    factory Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2
     factory Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics
+    factory Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2
     method get_for_user static
         method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataAccounts.IUserDataAccountManagerStatics2 shape=51 reverse=24 static
             in class type=Windows.System.User name=user

@@ -1357,8 +1357,8 @@ class Windows.AI.MachineLearning.LearningModelDevice python_type
     signature rc(Windows.AI.MachineLearning.LearningModelDevice;{f5c2c8fe-3f56-4a8c-ac5f-fdb92d8b8252})
     default Windows.AI.MachineLearning.ILearningModelDevice
     requires Windows.AI.MachineLearning.ILearningModelDevice
-    factory Windows.AI.MachineLearning.ILearningModelDeviceStatics
     factory Windows.AI.MachineLearning.ILearningModelDeviceFactory
+    factory Windows.AI.MachineLearning.ILearningModelDeviceStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelDeviceFactory shape=51 reverse=24
             in enum32 type=Windows.AI.MachineLearning.LearningModelDeviceKind name=deviceKind
@@ -1422,8 +1422,8 @@ class Windows.AI.MachineLearning.LearningModelSession python_type closeable
     default Windows.AI.MachineLearning.ILearningModelSession
     requires Windows.AI.MachineLearning.ILearningModelSession
     requires Windows.Foundation.IClosable
-    factory Windows.AI.MachineLearning.ILearningModelSessionFactory2
     factory Windows.AI.MachineLearning.ILearningModelSessionFactory
+    factory Windows.AI.MachineLearning.ILearningModelSessionFactory2
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelSessionFactory shape=51 reverse=24
             in class type=Windows.AI.MachineLearning.LearningModel name=model
@@ -1550,8 +1550,8 @@ class Windows.AI.MachineLearning.TensorBoolean python_type closeable
     requires Windows.AI.MachineLearning.ILearningModelFeatureValue
     requires Windows.Foundation.IMemoryBuffer
     requires Windows.Foundation.IClosable
-    factory Windows.AI.MachineLearning.ITensorBooleanStatics2
     factory Windows.AI.MachineLearning.ITensorBooleanStatics
+    factory Windows.AI.MachineLearning.ITensorBooleanStatics2
     property kind
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
             out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
@@ -1740,8 +1740,8 @@ class Windows.AI.MachineLearning.TensorFloat16Bit python_type closeable
     requires Windows.AI.MachineLearning.ILearningModelFeatureValue
     requires Windows.Foundation.IMemoryBuffer
     requires Windows.Foundation.IClosable
-    factory Windows.AI.MachineLearning.ITensorFloat16BitStatics2
     factory Windows.AI.MachineLearning.ITensorFloat16BitStatics
+    factory Windows.AI.MachineLearning.ITensorFloat16BitStatics2
     property kind
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
             out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
@@ -1960,8 +1960,8 @@ class Windows.AI.MachineLearning.TensorInt8Bit python_type closeable
     requires Windows.AI.MachineLearning.ILearningModelFeatureValue
     requires Windows.Foundation.IMemoryBuffer
     requires Windows.Foundation.IClosable
-    factory Windows.AI.MachineLearning.ITensorInt8BitStatics2
     factory Windows.AI.MachineLearning.ITensorInt8BitStatics
+    factory Windows.AI.MachineLearning.ITensorInt8BitStatics2
     property kind
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
             out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return
@@ -2250,8 +2250,8 @@ class Windows.AI.MachineLearning.TensorUInt8Bit python_type closeable
     requires Windows.AI.MachineLearning.ILearningModelFeatureValue
     requires Windows.Foundation.IMemoryBuffer
     requires Windows.Foundation.IClosable
-    factory Windows.AI.MachineLearning.ITensorUInt8BitStatics2
     factory Windows.AI.MachineLearning.ITensorUInt8BitStatics
+    factory Windows.AI.MachineLearning.ITensorUInt8BitStatics2
     property kind
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ILearningModelFeatureValue shape=4 reverse=22
             out enum32 type=Windows.AI.MachineLearning.LearningModelFeatureKind return

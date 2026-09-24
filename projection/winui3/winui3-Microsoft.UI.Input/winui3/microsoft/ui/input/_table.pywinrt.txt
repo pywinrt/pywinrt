@@ -1029,8 +1029,8 @@ class Microsoft.UI.Input.InputFocusNavigationHost python_type
     base Microsoft.UI.Input.InputObject
     default Microsoft.UI.Input.IInputFocusNavigationHost
     requires Microsoft.UI.Input.IInputFocusNavigationHost
-    factory Microsoft.UI.Input.IInputFocusNavigationHostStatics2
     factory Microsoft.UI.Input.IInputFocusNavigationHostStatics
+    factory Microsoft.UI.Input.IInputFocusNavigationHostStatics2
     property contains_focus
         get get_ContainsFocus slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Input.IInputFocusNavigationHost shape=4 reverse=22
             out boolean return
@@ -1060,8 +1060,8 @@ class Microsoft.UI.Input.InputKeyboardSource python_type
     default Microsoft.UI.Input.IInputKeyboardSource
     requires Microsoft.UI.Input.IInputKeyboardSource
     requires Microsoft.UI.Input.IInputKeyboardSource2
-    factory Microsoft.UI.Input.IInputKeyboardSourceStatics2
     factory Microsoft.UI.Input.IInputKeyboardSourceStatics
+    factory Microsoft.UI.Input.IInputKeyboardSourceStatics2
     event character_received
         add add_CharacterReceived slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Input.IInputKeyboardSource2 shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Input.InputKeyboardSource,Microsoft.UI.Input.CharacterReceivedEventArgs> name=handler

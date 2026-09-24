@@ -325,8 +325,8 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.A
 
 class Windows.ApplicationModel.DesignMode static python_type
     py DesignMode
-    factory Windows.ApplicationModel.IDesignModeStatics2
     factory Windows.ApplicationModel.IDesignModeStatics
+    factory Windows.ApplicationModel.IDesignModeStatics2
     property design_mode_enabled static
         get get_DesignModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IDesignModeStatics shape=4 reverse=22 static
             out boolean return
@@ -401,8 +401,8 @@ class Windows.ApplicationModel.FullTrustProcessLaunchResult python_type
 
 class Windows.ApplicationModel.FullTrustProcessLauncher static python_type
     py FullTrustProcessLauncher
-    factory Windows.ApplicationModel.IFullTrustProcessLauncherStatics2
     factory Windows.ApplicationModel.IFullTrustProcessLauncherStatics
+    factory Windows.ApplicationModel.IFullTrustProcessLauncherStatics2
     method launch_full_trust_process_for_app_async static
         method LaunchFullTrustProcessForAppAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IFullTrustProcessLauncherStatics shape=51 reverse=65 static
             in string name=fullTrustPackageRelativeAppId
@@ -1889,8 +1889,8 @@ class Windows.ApplicationModel.PackageCatalog python_type
     requires Windows.ApplicationModel.IPackageCatalog2
     requires Windows.ApplicationModel.IPackageCatalog3
     requires Windows.ApplicationModel.IPackageCatalog4
-    factory Windows.ApplicationModel.IPackageCatalogStatics2
     factory Windows.ApplicationModel.IPackageCatalogStatics
+    factory Windows.ApplicationModel.IPackageCatalogStatics2
     event package_installing
         add add_PackageInstalling slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.IPackageCatalog shape=51 reverse=65
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageCatalog,Windows.ApplicationModel.PackageInstallingEventArgs> name=handler

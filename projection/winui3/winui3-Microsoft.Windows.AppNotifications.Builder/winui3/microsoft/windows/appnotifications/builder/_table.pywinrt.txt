@@ -145,8 +145,8 @@ class Microsoft.Windows.AppNotifications.Builder.AppNotificationButton activatab
     signature rc(Microsoft.Windows.AppNotifications.Builder.AppNotificationButton;{a7c03031-5634-5098-aec9-47ecb60c3499})
     default Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton
     requires Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton
-    factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics
     factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory
+    factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

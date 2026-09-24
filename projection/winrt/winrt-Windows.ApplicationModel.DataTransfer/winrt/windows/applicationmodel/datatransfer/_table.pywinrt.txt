@@ -104,8 +104,8 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Strea
 
 class Windows.ApplicationModel.DataTransfer.Clipboard static python_type
     py Clipboard
-    factory Windows.ApplicationModel.DataTransfer.IClipboardStatics2
     factory Windows.ApplicationModel.DataTransfer.IClipboardStatics
+    factory Windows.ApplicationModel.DataTransfer.IClipboardStatics2
     event history_changed static
         add add_HistoryChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IClipboardStatics2 shape=51 reverse=174 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.DataTransfer.ClipboardHistoryChangedEventArgs> name=handler
@@ -647,9 +647,9 @@ class Windows.ApplicationModel.DataTransfer.DataTransferManager python_type
     default Windows.ApplicationModel.DataTransfer.IDataTransferManager
     requires Windows.ApplicationModel.DataTransfer.IDataTransferManager
     requires Windows.ApplicationModel.DataTransfer.IDataTransferManager2
-    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3
-    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2
     factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics
+    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics2
+    factory Windows.ApplicationModel.DataTransfer.IDataTransferManagerStatics3
     event data_requested
         add add_DataRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataTransferManager shape=51 reverse=24
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs> name=handler
@@ -1954,9 +1954,9 @@ class Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager static py
 
 class Windows.ApplicationModel.DataTransfer.StandardDataFormats static python_type
     py StandardDataFormats
-    factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3
     factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics
     factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics2
+    factory Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics3
     property bitmap static
         get get_Bitmap slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IStandardDataFormatsStatics shape=4 reverse=121 static
             out string return

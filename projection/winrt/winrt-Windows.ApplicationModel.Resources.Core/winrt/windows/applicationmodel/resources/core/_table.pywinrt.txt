@@ -878,9 +878,9 @@ class Windows.ApplicationModel.Resources.Core.ResourceContext activatable python
     signature rc(Windows.ApplicationModel.Resources.Core.ResourceContext;{2fa22f4b-707e-4b27-ad0d-d0d8cd468fd2})
     default Windows.ApplicationModel.Resources.Core.IResourceContext
     requires Windows.ApplicationModel.Resources.Core.IResourceContext
+    factory Windows.ApplicationModel.Resources.Core.IResourceContextStatics
     factory Windows.ApplicationModel.Resources.Core.IResourceContextStatics2
     factory Windows.ApplicationModel.Resources.Core.IResourceContextStatics3
-    factory Windows.ApplicationModel.Resources.Core.IResourceContextStatics
     factory Windows.ApplicationModel.Resources.Core.IResourceContextStatics4
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4

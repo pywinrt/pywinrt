@@ -206,8 +206,8 @@ class Windows.Graphics.Imaging.BitmapDecoder python_type
     requires Windows.Graphics.Imaging.IBitmapDecoder
     requires Windows.Graphics.Imaging.IBitmapFrame
     requires Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap
-    factory Windows.Graphics.Imaging.IBitmapDecoderStatics2
     factory Windows.Graphics.Imaging.IBitmapDecoderStatics
+    factory Windows.Graphics.Imaging.IBitmapDecoderStatics2
     property bitmap_container_properties
         get get_BitmapContainerProperties slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoder shape=4 reverse=22
             out class type=Windows.Graphics.Imaging.BitmapPropertiesView return
@@ -323,8 +323,8 @@ class Windows.Graphics.Imaging.BitmapEncoder python_type
     default Windows.Graphics.Imaging.IBitmapEncoder
     requires Windows.Graphics.Imaging.IBitmapEncoder
     requires Windows.Graphics.Imaging.IBitmapEncoderWithSoftwareBitmap
-    factory Windows.Graphics.Imaging.IBitmapEncoderStatics2
     factory Windows.Graphics.Imaging.IBitmapEncoderStatics
+    factory Windows.Graphics.Imaging.IBitmapEncoderStatics2
     property is_thumbnail_generated
         get get_IsThumbnailGenerated slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoder shape=4 reverse=99
             out boolean return

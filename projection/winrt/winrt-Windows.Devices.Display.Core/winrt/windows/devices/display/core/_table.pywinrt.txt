@@ -511,8 +511,8 @@ class Windows.Devices.Display.Core.DisplayPrimaryDescription python_type
     signature rc(Windows.Devices.Display.Core.DisplayPrimaryDescription;{872591d2-d533-50ff-a85e-06696194b77c})
     default Windows.Devices.Display.Core.IDisplayPrimaryDescription
     requires Windows.Devices.Display.Core.IDisplayPrimaryDescription
-    factory Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics
     factory Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory
+    factory Windows.Devices.Display.Core.IDisplayPrimaryDescriptionStatics
     constructor -
         ctor .ctor slot=6 inputs=6 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory shape=279
             in uint32 name=width

@@ -625,11 +625,11 @@ enum Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountStatus 
 
 class Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager static python_type
     py WebAuthenticationCoreManager
-    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5
-    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2
-    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4
-    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3
     factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics2
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics3
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics4
+    factory Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5
     method add_account_with_transfer_token_async static
         method AddAccountWithTransferTokenAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Core.IWebAuthenticationCoreManagerStatics5 shape=51 reverse=24 static
             in class type=Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest name=request

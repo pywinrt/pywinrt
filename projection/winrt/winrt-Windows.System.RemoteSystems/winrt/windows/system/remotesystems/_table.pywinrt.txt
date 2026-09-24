@@ -776,9 +776,9 @@ class Windows.System.RemoteSystems.RemoteSystem python_type
     requires Windows.System.RemoteSystems.IRemoteSystem4
     requires Windows.System.RemoteSystems.IRemoteSystem5
     requires Windows.System.RemoteSystems.IRemoteSystem6
-    factory Windows.System.RemoteSystems.IRemoteSystemStatics3
-    factory Windows.System.RemoteSystems.IRemoteSystemStatics2
     factory Windows.System.RemoteSystems.IRemoteSystemStatics
+    factory Windows.System.RemoteSystems.IRemoteSystemStatics2
+    factory Windows.System.RemoteSystems.IRemoteSystemStatics3
     property display_name
         get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystem shape=4 reverse=22
             out string return
@@ -952,9 +952,9 @@ class Windows.System.RemoteSystems.RemoteSystemConnectionRequest python_type
     requires Windows.System.RemoteSystems.IRemoteSystemConnectionRequest
     requires Windows.System.RemoteSystems.IRemoteSystemConnectionRequest2
     requires Windows.System.RemoteSystems.IRemoteSystemConnectionRequest3
-    factory Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2
     factory Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory
     factory Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics
+    factory Windows.System.RemoteSystems.IRemoteSystemConnectionRequestStatics2
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteSystems.IRemoteSystemConnectionRequestFactory shape=51 reverse=24
             in class type=Windows.System.RemoteSystems.RemoteSystem name=remoteSystem

@@ -1945,11 +1945,11 @@ class Windows.UI.Xaml.Controls.Maps.MapControl activatable python_type
     requires Windows.UI.Xaml.Controls.Maps.IMapControl7
     requires Windows.UI.Xaml.Controls.Maps.IMapControl8
     factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics
-    factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics6
     factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics2
-    factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics7
-    factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics5
     factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics4
+    factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics5
+    factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics6
+    factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics7
     factory Windows.UI.Xaml.Controls.Maps.IMapControlStatics8
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -2728,10 +2728,10 @@ class Windows.UI.Xaml.Controls.Maps.MapElement composable python_type
     requires Windows.UI.Xaml.Controls.Maps.IMapElement2
     requires Windows.UI.Xaml.Controls.Maps.IMapElement3
     requires Windows.UI.Xaml.Controls.Maps.IMapElement4
-    factory Windows.UI.Xaml.Controls.Maps.IMapElementStatics4
+    factory Windows.UI.Xaml.Controls.Maps.IMapElementStatics
     factory Windows.UI.Xaml.Controls.Maps.IMapElementStatics2
     factory Windows.UI.Xaml.Controls.Maps.IMapElementStatics3
-    factory Windows.UI.Xaml.Controls.Maps.IMapElementStatics
+    factory Windows.UI.Xaml.Controls.Maps.IMapElementStatics4
     composable Windows.UI.Xaml.Controls.Maps.IMapElementFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapElementFactory shape=117 reverse=25
@@ -3776,8 +3776,8 @@ class Windows.UI.Xaml.Controls.Maps.MapTileSource composable python_type
     default Windows.UI.Xaml.Controls.Maps.IMapTileSource
     requires Windows.UI.Xaml.Controls.Maps.IMapTileSource
     requires Windows.UI.Xaml.Controls.Maps.IMapTileSource2
-    factory Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2
     factory Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics
+    factory Windows.UI.Xaml.Controls.Maps.IMapTileSourceStatics2
     composable Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Maps.IMapTileSourceFactory shape=117 reverse=25

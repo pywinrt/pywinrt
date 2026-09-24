@@ -1979,8 +1979,8 @@ class Windows.Devices.SmartCards.SmartCardAppletIdGroup activatable python_type
     default Windows.Devices.SmartCards.ISmartCardAppletIdGroup
     requires Windows.Devices.SmartCards.ISmartCardAppletIdGroup
     requires Windows.Devices.SmartCards.ISmartCardAppletIdGroup2
-    factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics
     factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory
+    factory Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -2197,8 +2197,8 @@ class Windows.Devices.SmartCards.SmartCardCryptogramGenerator python_type
     default Windows.Devices.SmartCards.ISmartCardCryptogramGenerator
     requires Windows.Devices.SmartCards.ISmartCardCryptogramGenerator
     requires Windows.Devices.SmartCards.ISmartCardCryptogramGenerator2
-    factory Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2
     factory Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics
+    factory Windows.Devices.SmartCards.ISmartCardCryptogramGeneratorStatics2
     property supported_cryptogram_algorithms
         get get_SupportedCryptogramAlgorithms slot=7 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardCryptogramGenerator shape=4 reverse=43
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm> return
@@ -2594,9 +2594,9 @@ class Windows.Devices.SmartCards.SmartCardEmulator python_type
     default Windows.Devices.SmartCards.ISmartCardEmulator
     requires Windows.Devices.SmartCards.ISmartCardEmulator
     requires Windows.Devices.SmartCards.ISmartCardEmulator2
-    factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics3
     factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics
     factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics2
+    factory Windows.Devices.SmartCards.ISmartCardEmulatorStatics3
     property enablement_policy
         get get_EnablementPolicy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.SmartCards.ISmartCardEmulator shape=4 reverse=22
             out enum32 type=Windows.Devices.SmartCards.SmartCardEmulatorEnablementPolicy return

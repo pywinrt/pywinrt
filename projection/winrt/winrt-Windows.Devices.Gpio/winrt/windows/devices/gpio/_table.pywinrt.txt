@@ -138,8 +138,8 @@ class Windows.Devices.Gpio.GpioController python_type
     signature rc(Windows.Devices.Gpio.GpioController;{284012e3-7461-469c-a8bc-61d69d08a53c})
     default Windows.Devices.Gpio.IGpioController
     requires Windows.Devices.Gpio.IGpioController
-    factory Windows.Devices.Gpio.IGpioControllerStatics2
     factory Windows.Devices.Gpio.IGpioControllerStatics
+    factory Windows.Devices.Gpio.IGpioControllerStatics2
     property pin_count
         get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.IGpioController shape=4 reverse=22
             out int32 return

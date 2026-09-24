@@ -202,8 +202,8 @@ class Windows.ApplicationModel.Chat.ChatCapabilities python_type
 
 class Windows.ApplicationModel.Chat.ChatCapabilitiesManager static python_type
     py ChatCapabilitiesManager
-    factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2
     factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics
+    factory Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics2
     method get_cached_capabilities_async static
         method GetCachedCapabilitiesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IChatCapabilitiesManagerStatics shape=51 reverse=24 static
             in string name=address
@@ -2925,8 +2925,8 @@ class Windows.ApplicationModel.Chat.RcsEndUserMessageManager python_type
 
 class Windows.ApplicationModel.Chat.RcsManager static python_type
     py RcsManager
-    factory Windows.ApplicationModel.Chat.IRcsManagerStatics2
     factory Windows.ApplicationModel.Chat.IRcsManagerStatics
+    factory Windows.ApplicationModel.Chat.IRcsManagerStatics2
     event transport_list_changed static
         add add_TransportListChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Chat.IRcsManagerStatics2 shape=51 reverse=24 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler

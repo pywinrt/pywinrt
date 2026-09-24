@@ -435,8 +435,8 @@ class Windows.UI.Input.Preview.Injection.InputInjector python_type
     default Windows.UI.Input.Preview.Injection.IInputInjector
     requires Windows.UI.Input.Preview.Injection.IInputInjector
     requires Windows.UI.Input.Preview.Injection.IInputInjector2
-    factory Windows.UI.Input.Preview.Injection.IInputInjectorStatics2
     factory Windows.UI.Input.Preview.Injection.IInputInjectorStatics
+    factory Windows.UI.Input.Preview.Injection.IInputInjectorStatics2
     method initialize_gamepad_injection
         method InitializeGamepadInjection slot=6 inputs=0 outputs=0 declaring=Windows.UI.Input.Preview.Injection.IInputInjector2 shape=0 reverse=16
     method initialize_pen_injection

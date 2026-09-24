@@ -38,8 +38,8 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Previe
 
 class Windows.Gaming.Preview.GamesEnumeration.GameList static python_type
     py GameList
-    factory Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2
     factory Windows.Gaming.Preview.GamesEnumeration.IGameListStatics
+    factory Windows.Gaming.Preview.GamesEnumeration.IGameListStatics2
     event game_added static
         add add_GameAdded slot=8 inputs=1 outputs=1 declaring=Windows.Gaming.Preview.GamesEnumeration.IGameListStatics shape=51 reverse=65 static
             in delegate type=Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler name=handler

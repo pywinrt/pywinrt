@@ -176,9 +176,9 @@ class Windows.System.UserProfile.FirstSignInSettings python_type iterable mappin
 
 class Windows.System.UserProfile.GlobalizationPreferences static python_type
     py GlobalizationPreferences
-    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics3
-    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics2
     factory Windows.System.UserProfile.IGlobalizationPreferencesStatics
+    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics2
+    factory Windows.System.UserProfile.IGlobalizationPreferencesStatics3
     property calendars static
         get get_Calendars slot=6 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IGlobalizationPreferencesStatics shape=4 reverse=22 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return

@@ -2426,8 +2426,8 @@ enum Windows.Networking.Connectivity.NetworkEncryptionType python_type
 
 class Windows.Networking.Connectivity.NetworkInformation static python_type
     py NetworkInformation
-    factory Windows.Networking.Connectivity.INetworkInformationStatics2
     factory Windows.Networking.Connectivity.INetworkInformationStatics
+    factory Windows.Networking.Connectivity.INetworkInformationStatics2
     event network_status_changed static
         add add_NetworkStatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Networking.Connectivity.INetworkInformationStatics shape=51 reverse=163 static
             in delegate type=Windows.Networking.Connectivity.NetworkStatusChangedEventHandler name=networkStatusHandler

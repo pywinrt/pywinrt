@@ -40,9 +40,9 @@ class Windows.UI.Xaml.Media.Imaging.BitmapImage activatable python_type
     requires Windows.UI.Xaml.Media.Imaging.IBitmapImage2
     requires Windows.UI.Xaml.Media.Imaging.IBitmapImage3
     factory Windows.UI.Xaml.Media.Imaging.IBitmapImageFactory
-    factory Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3
     factory Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics
     factory Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics2
+    factory Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return

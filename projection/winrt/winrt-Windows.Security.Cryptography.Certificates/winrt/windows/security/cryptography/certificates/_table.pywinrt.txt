@@ -181,9 +181,9 @@ enum Windows.Security.Cryptography.Certificates.CertificateChainPolicy python_ty
 
 class Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager static python_type
     py CertificateEnrollmentManager
-    factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3
-    factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2
     factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics
+    factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2
+    factory Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics3
     property user_certificate_enrollment_manager static
         get get_UserCertificateEnrollmentManager slot=6 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICertificateEnrollmentManagerStatics2 shape=4 reverse=22 static
             out class type=Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager return
@@ -573,8 +573,8 @@ class Windows.Security.Cryptography.Certificates.CmsAttachedSignature python_typ
     signature rc(Windows.Security.Cryptography.Certificates.CmsAttachedSignature;{61899d9d-3757-4ecb-bddc-0ca357d7a936})
     default Windows.Security.Cryptography.Certificates.ICmsAttachedSignature
     requires Windows.Security.Cryptography.Certificates.ICmsAttachedSignature
-    factory Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics
     factory Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory
+    factory Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.ICmsAttachedSignatureFactory shape=51 reverse=24
             in interface type=Windows.Storage.Streams.IBuffer name=inputBlob
@@ -1377,8 +1377,8 @@ enum Windows.Security.Cryptography.Certificates.InstallOptions python_type flags
 
 class Windows.Security.Cryptography.Certificates.KeyAlgorithmNames static python_type
     py KeyAlgorithmNames
-    factory Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2
     factory Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics
+    factory Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics2
     property dsa static
         get get_Dsa slot=7 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAlgorithmNamesStatics shape=4 reverse=43 static
             out string return
@@ -1412,8 +1412,8 @@ class Windows.Security.Cryptography.Certificates.KeyAlgorithmNames static python
 
 class Windows.Security.Cryptography.Certificates.KeyAttestationHelper static python_type
     py KeyAttestationHelper
-    factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2
     factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics
+    factory Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics2
     method decrypt_tpm_attestation_credential_async static
         method DecryptTpmAttestationCredentialAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.Certificates.IKeyAttestationHelperStatics shape=51 reverse=24 static
             in string name=credential

@@ -204,8 +204,8 @@ class Microsoft.UI.Content.ContentIsland composable python_type closeable
     requires Windows.Foundation.IClosable
     requires Microsoft.UI.IClosableNotifier
     requires Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop
-    factory Microsoft.UI.Content.IContentIslandStatics2
     factory Microsoft.UI.Content.IContentIslandStatics
+    factory Microsoft.UI.Content.IContentIslandStatics2
     composable Microsoft.UI.Content.IContentIslandFactory
     property system_backdrop
         get get_SystemBackdrop slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop shape=4 reverse=22

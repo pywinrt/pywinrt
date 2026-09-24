@@ -1609,8 +1609,8 @@ class Windows.Devices.Sms.SmsDevice python_type
     signature rc(Windows.Devices.Sms.SmsDevice;{091791ed-872b-4eec-9c72-ab11627b34ec})
     default Windows.Devices.Sms.ISmsDevice
     requires Windows.Devices.Sms.ISmsDevice
-    factory Windows.Devices.Sms.ISmsDeviceStatics2
     factory Windows.Devices.Sms.ISmsDeviceStatics
+    factory Windows.Devices.Sms.ISmsDeviceStatics2
     property account_phone_number
         get get_AccountPhoneNumber slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=4 reverse=62 deprecated
             out string return
