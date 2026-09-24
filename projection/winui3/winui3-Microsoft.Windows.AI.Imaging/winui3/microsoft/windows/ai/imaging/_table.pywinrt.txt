@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Windows.AI.Imaging
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator> concrete
@@ -23,6 +23,17 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.
     method -
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageObjectRemover> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ImageObjectRemover]
+    guid 0e698b30-7d04-518e-8570-56f2eae55173
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Microsoft.Windows.AI.Imaging.ImageObjectRemover;{cfa20faf-5ae1-5b8c-b0d8-e7c64db59d26}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.Windows.AI.Imaging.ImageObjectRemover
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectRemover> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageScaler> concrete
@@ -163,6 +174,35 @@ interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageO
     method get_results
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> shape=4 reverse=62 role=get_results
             out class type=Microsoft.Windows.AI.Imaging.ImageObjectExtractor return
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectRemover> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ImageObjectRemover]
+    guid 2ae992c6-ca47-51bc-8a4d-65fd3b2a2ec2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Imaging.ImageObjectRemover;{cfa20faf-5ae1-5b8c-b0d8-e7c64db59d26}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.Imaging.ImageObjectRemover
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectRemover> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageObjectRemover> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectRemover> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Imaging.ImageObjectRemover> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectRemover> shape=4 reverse=62 role=get_results
+            out class type=Microsoft.Windows.AI.Imaging.ImageObjectRemover return
 
 interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageScaler> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[ImageScaler]
@@ -341,6 +381,12 @@ interface Microsoft.Windows.AI.Imaging.IImageObjectExtractorHintFactory
 
 interface Microsoft.Windows.AI.Imaging.IImageObjectExtractorStatics
     guid 38fa261e-2c33-54cb-9e10-98d50685743d
+
+interface Microsoft.Windows.AI.Imaging.IImageObjectRemover
+    guid cfa20faf-5ae1-5b8c-b0d8-e7c64db59d26
+
+interface Microsoft.Windows.AI.Imaging.IImageObjectRemoverStatics
+    guid cbcbd7e1-5b81-503f-8fcb-66ae1d6e5b9c
 
 interface Microsoft.Windows.AI.Imaging.IImageScaler
     guid 06eec88e-91c5-5326-8128-2807faafa571
@@ -693,6 +739,35 @@ class Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint python_type
     property include_rects
         get get_IncludeRects slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectExtractorHint shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
+
+class Microsoft.Windows.AI.Imaging.ImageObjectRemover python_type closeable
+    py ImageObjectRemover
+    signature rc(Microsoft.Windows.AI.Imaging.ImageObjectRemover;{cfa20faf-5ae1-5b8c-b0d8-e7c64db59d26})
+    default Microsoft.Windows.AI.Imaging.IImageObjectRemover
+    requires Microsoft.Windows.AI.Imaging.IImageObjectRemover
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Imaging.IImageObjectRemoverStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method create_async static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectRemoverStatics shape=4 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Imaging.ImageObjectRemover> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectRemoverStatics shape=4 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_ready_state static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectRemoverStatics shape=4 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+    method remove_from_image_buffer
+        method RemoveFromImageBuffer slot=7 inputs=2 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectRemover shape=117
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBuffer
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=imageBufferMask
+            out class type=Microsoft.Graphics.Imaging.ImageBuffer return
+    method remove_from_software_bitmap
+        method RemoveFromSoftwareBitmap slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.AI.Imaging.IImageObjectRemover shape=117
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmap
+            in class type=Windows.Graphics.Imaging.SoftwareBitmap name=softwareBitmapMask
+            out class type=Windows.Graphics.Imaging.SoftwareBitmap return
 
 class Microsoft.Windows.AI.Imaging.ImageScaler python_type closeable
     py ImageScaler

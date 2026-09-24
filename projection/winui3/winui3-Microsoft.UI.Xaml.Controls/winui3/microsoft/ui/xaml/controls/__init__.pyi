@@ -389,6 +389,7 @@ __all__ = [
     "Slider",
     "SplitButton",
     "SplitButtonClickEventArgs",
+    "SplitMenuFlyoutItem",
     "SplitView",
     "SplitViewPaneClosingEventArgs",
     "StackLayout",
@@ -402,6 +403,7 @@ __all__ = [
     "SwipeItems",
     "SymbolIcon",
     "SymbolIconSource",
+    "SystemBackdropElement",
     "TabView",
     "TabViewExternalTornOutTabsDroppedEventArgs",
     "TabViewExternalTornOutTabsDroppingEventArgs",
@@ -14485,6 +14487,37 @@ class SplitButton(ContentControl, metaclass=SplitButton_Static):
 class SplitButtonClickEventArgs(winrt.system.Object):
     ...
 
+class SplitMenuFlyoutItem_Static(MenuFlyoutItem_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::get_SubMenuItemStyleProperty()
+    @_property
+    @typing.final
+    def sub_menu_item_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::get_SubMenuPresenterStyleProperty()
+    @_property
+    @typing.final
+    def sub_menu_presenter_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+
+class SplitMenuFlyoutItem(MenuFlyoutItem, metaclass=SplitMenuFlyoutItem_Static):
+    def __new__(cls) -> typing.Self: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::get_SubMenuPresenterStyle()
+    @_property
+    def sub_menu_presenter_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::put_SubMenuPresenterStyle(Microsoft.UI.Xaml.Style)
+    @sub_menu_presenter_style.setter
+    @typing.final
+    def sub_menu_presenter_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::get_SubMenuItemStyle()
+    @_property
+    def sub_menu_item_style(self) -> microsoft_ui_xaml.Style: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::put_SubMenuItemStyle(Microsoft.UI.Xaml.Style)
+    @sub_menu_item_style.setter
+    @typing.final
+    def sub_menu_item_style(self, value: microsoft_ui_xaml.Style) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase> Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::get_Items()
+    @_property
+    @typing.final
+    def items(self) -> _cabc.MutableSequence[MenuFlyoutItemBase]: ...
+
 class SplitView_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitView::get_CompactPaneLengthProperty()
     @_property
@@ -15061,6 +15094,33 @@ class SymbolIconSource(IconSource, metaclass=SymbolIconSource_Static):
     @symbol.setter
     @typing.final
     def symbol(self, value: Symbol) -> None: ...
+
+class SystemBackdropElement_Static(microsoft_ui_xaml.FrameworkElement_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SystemBackdropElement::get_CornerRadiusProperty()
+    @_property
+    @typing.final
+    def corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SystemBackdropElement::get_SystemBackdropProperty()
+    @_property
+    @typing.final
+    def system_backdrop_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+
+class SystemBackdropElement(microsoft_ui_xaml.FrameworkElement, metaclass=SystemBackdropElement_Static):
+    def __new__(cls) -> typing.Self: ...
+    # Microsoft.UI.Xaml.Media.SystemBackdrop Microsoft.UI.Xaml.Controls.SystemBackdropElement::get_SystemBackdrop()
+    @_property
+    def system_backdrop(self) -> microsoft_ui_xaml_media.SystemBackdrop: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SystemBackdropElement::put_SystemBackdrop(Microsoft.UI.Xaml.Media.SystemBackdrop)
+    @system_backdrop.setter
+    @typing.final
+    def system_backdrop(self, value: microsoft_ui_xaml_media.SystemBackdrop) -> None: ...
+    # Microsoft.UI.Xaml.CornerRadius Microsoft.UI.Xaml.Controls.SystemBackdropElement::get_CornerRadius()
+    @_property
+    def corner_radius(self) -> microsoft_ui_xaml.CornerRadius: ...
+    # System.Void Microsoft.UI.Xaml.Controls.SystemBackdropElement::put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
+    @corner_radius.setter
+    @typing.final
+    def corner_radius(self, value: microsoft_ui_xaml.CornerRadius | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double, winrt.system.Double]) -> None: ...
 
 class TabView_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TabView::get_AddTabButtonCommandParameterProperty()
@@ -16846,6 +16906,10 @@ class TimePickerValueChangedEventArgs(winrt.system.Object):
     def old_time(self) -> datetime.timedelta: ...
 
 class TitleBar_Static(Control_Static):
+    # Windows.Foundation.IReference`1<System.Boolean> Microsoft.UI.Xaml.Controls.TitleBar::GetIsDragRegion(Microsoft.UI.Xaml.UIElement)
+    def get_is_drag_region(cls, element: microsoft_ui_xaml.UIElement, /) -> bool | None: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::SetIsDragRegion(Microsoft.UI.Xaml.UIElement,Windows.Foundation.IReference`1<System.Boolean>)
+    def set_is_drag_region(cls, element: microsoft_ui_xaml.UIElement, value: bool | None, /) -> None: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_ContentProperty()
     @_property
     @typing.final
@@ -16886,9 +16950,20 @@ class TitleBar_Static(Control_Static):
     @_property
     @typing.final
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_AutoRefreshDragRegionsProperty()
+    @_property
+    @typing.final
+    def auto_refresh_drag_regions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TitleBar::get_IsDragRegionProperty()
+    @_property
+    @typing.final
+    def is_drag_region_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TitleBar(Control, metaclass=TitleBar_Static):
     def __new__(cls) -> typing.Self: ...
+    @typing.final
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::RecomputeDragRegions()
+    def recompute_drag_regions(self) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.TitleBar::add_BackRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.TitleBar,System.Object>)
     def add_back_requested(self, handler: windows_foundation.TypedEventHandler[TitleBar, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -16968,6 +17043,13 @@ class TitleBar(Control, metaclass=TitleBar_Static):
     @_property
     @typing.final
     def template_settings(self) -> TitleBarTemplateSettings: ...
+    # System.Boolean Microsoft.UI.Xaml.Controls.TitleBar::get_AutoRefreshDragRegions()
+    @_property
+    def auto_refresh_drag_regions(self) -> bool: ...
+    # System.Void Microsoft.UI.Xaml.Controls.TitleBar::put_AutoRefreshDragRegions(System.Boolean)
+    @auto_refresh_drag_regions.setter
+    @typing.final
+    def auto_refresh_drag_regions(self, value: bool) -> None: ...
 
 class TitleBarAutomationPeer_Static(microsoft_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static):
     ...

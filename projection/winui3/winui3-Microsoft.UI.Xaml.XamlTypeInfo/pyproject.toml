@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winui3-Microsoft.UI.Xaml.XamlTypeInfo"
-version = "4!1.7.250513003"
+version = "4!2.5.1"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -24,7 +24,7 @@ dependencies = [
 [project.optional-dependencies]
 all = [
     "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.28000.2705",
-    "winui3-Microsoft.UI.Xaml.Markup[all]>=4!1.7.250513003",
+    "winui3-Microsoft.UI.Xaml.Markup[all]>=4!2.5.1",
 ]
 
 [project.urls]

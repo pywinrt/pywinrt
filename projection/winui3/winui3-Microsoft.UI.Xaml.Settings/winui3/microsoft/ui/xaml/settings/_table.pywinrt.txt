@@ -1,0 +1,44 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.UI.Xaml.Settings
+
+interface Microsoft.UI.Xaml.Settings.IXamlOptionalChanges
+    guid 387572ae-ac51-5cb0-8317-2d6e118bea6a
+
+interface Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics
+    guid edb65323-1884-51c9-8b79-719554de4dd9
+
+enum Microsoft.UI.Xaml.Settings.XamlChangeId python_type
+    py XamlChangeId
+    signature enum(Microsoft.UI.Xaml.Settings.XamlChangeId;i4)
+    constant _RESERVED 0
+    constant ICON_NO_GRID_OPTIMIZATION 61276805
+    constant OPTIMIZE_APPLY_STYLES 61697456
+    constant DEFAULT_STYLE_OPTIMIZATIONS 60995620
+    constant DEFER_CONTEXT_FLYOUT_INIT 61098986
+
+class Microsoft.UI.Xaml.Settings.XamlOptionalChanges python_type
+    py XamlOptionalChanges
+    signature rc(Microsoft.UI.Xaml.Settings.XamlOptionalChanges;{387572ae-ac51-5cb0-8317-2d6e118bea6a})
+    default Microsoft.UI.Xaml.Settings.IXamlOptionalChanges
+    requires Microsoft.UI.Xaml.Settings.IXamlOptionalChanges
+    factory Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics
+    method disable_change static
+        method DisableChange slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics shape=51 static
+            in enum32 type=Microsoft.UI.Xaml.Settings.XamlChangeId name=changeId
+            out boolean return
+    method enable_change static
+        method EnableChange slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics shape=51 static
+            in enum32 type=Microsoft.UI.Xaml.Settings.XamlChangeId name=changeId
+            out boolean return
+    method is_change_enabled static
+        method IsChangeEnabled slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics shape=51 static
+            in enum32 type=Microsoft.UI.Xaml.Settings.XamlChangeId name=changeId
+            out boolean return
+    method is_locked static
+        method IsLocked slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics shape=4 static
+            out boolean return
+    method lock static
+        method Lock slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Settings.IXamlOptionalChangesStatics shape=4 static
+            out boolean return

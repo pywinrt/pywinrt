@@ -23,6 +23,7 @@ __all__ = [
     "IFeedAnnouncementInvokedTarget",
     "IFeedManager",
     "IFeedManager2",
+    "IFeedManager3",
     "IFeedProvider",
     "IFeedProviderAnalytics",
     "IFeedProviderErrors",

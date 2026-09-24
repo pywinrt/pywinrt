@@ -1,0 +1,230 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.Windows.Foundation
+
+class Microsoft.Windows.Foundation.DecimalHelper static python_type
+    py DecimalHelper
+    factory Microsoft.Windows.Foundation.IDecimalHelperStatics
+    method abs static
+        method Abs slot=45 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method add static
+        method Add slot=51 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method ceiling static
+        method Ceiling slot=48 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method clamp static
+        method Clamp slot=50 inputs=3 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=352 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=min
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=max
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method compare static
+        method Compare slot=36 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out int32 return
+    method divide static
+        method Divide slot=54 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method equals static
+        method Equals slot=35 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out boolean return
+    method floor static
+        method Floor slot=47 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_boolean static
+        method FromBoolean slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in boolean name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_double static
+        method FromDouble slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=46 static
+            in double name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_int16 static
+        method FromInt16 slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in int16 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_int32 static
+        method FromInt32 slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in int32 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_int64 static
+        method FromInt64 slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=47 static
+            in int64 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_single static
+        method FromSingle slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=40 static
+            in single name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_string static
+        method FromString slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in string name=source
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+        method FromString slot=18 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=117 static
+            in string name=source
+            in string name=localeName
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_string_invariant static
+        method FromStringInvariant slot=17 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in string name=source
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_uint16 static
+        method FromUInt16 slot=11 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in uint16 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_uint32 static
+        method FromUInt32 slot=12 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in uint32 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_uint64 static
+        method FromUInt64 slot=13 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=47 static
+            in uint64 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method from_uint8 static
+        method FromUInt8 slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=51 static
+            in uint8 name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method is_integer static
+        method IsInteger slot=38 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out boolean return
+    method is_valid static
+        method IsValid slot=37 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out boolean return
+    method max_scale static
+        method MaxScale slot=41 inputs=0 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=4 static
+            out uint8 return
+    method max_value static
+        method MaxValue slot=42 inputs=0 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=4 static
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method min_value static
+        method MinValue slot=43 inputs=0 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=4 static
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method modulo static
+        method Modulo slot=55 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method multiply static
+        method Multiply slot=53 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method negate static
+        method Negate slot=44 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method round static
+        method Round slot=49 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=350 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            in int32 name=decimalPlaces
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method scale static
+        method Scale slot=39 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out uint8 return
+    method sign static
+        method Sign slot=40 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out int32 return
+    method subtract static
+        method Subtract slot=52 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=351 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=left
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=right
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method to_boolean static
+        method ToBoolean slot=22 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out boolean return
+    method to_double static
+        method ToDouble slot=31 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out double return
+    method to_int16 static
+        method ToInt16 slot=23 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out int16 return
+    method to_int32 static
+        method ToInt32 slot=24 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out int32 return
+    method to_int64 static
+        method ToInt64 slot=25 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out int64 return
+    method to_single static
+        method ToSingle slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out single return
+    method to_string static
+        method ToString slot=32 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out string return
+        method ToString slot=34 inputs=2 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=350 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            in string name=localeName
+            out string return
+    method to_string_invariant static
+        method ToStringInvariant slot=33 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out string return
+    method to_uint16 static
+        method ToUInt16 slot=27 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out uint16 return
+    method to_uint32 static
+        method ToUInt32 slot=28 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out uint32 return
+    method to_uint64 static
+        method ToUInt64 slot=29 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out uint64 return
+    method to_uint8 static
+        method ToUInt8 slot=26 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out uint8 return
+    method truncate static
+        method Truncate slot=46 inputs=1 outputs=1 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=348 static
+            in struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out struct type=Microsoft.Windows.Foundation.DecimalValue return
+    method try_from_string static
+        method TryFromString slot=19 inputs=1 outputs=2 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=117 static
+            in string name=source
+            out struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out boolean return
+        method TryFromString slot=21 inputs=2 outputs=2 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=195 static
+            in string name=source
+            in string name=localeName
+            out struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out boolean return
+    method try_from_string_invariant static
+        method TryFromStringInvariant slot=20 inputs=1 outputs=2 declaring=Microsoft.Windows.Foundation.IDecimalHelperStatics shape=117 static
+            in string name=source
+            out struct type=Microsoft.Windows.Foundation.DecimalValue name=value
+            out boolean return
+
+struct Microsoft.Windows.Foundation.DecimalValue python_type
+    py DecimalValue
+    signature struct(Microsoft.Windows.Foundation.DecimalValue;u2;u1;u1;u4;u8)
+    field reserved Reserved uint16
+    field scale Scale uint8
+    field sign Sign uint8
+    field hi32 Hi32 uint32
+    field lo64 Lo64 uint64
+
+interface Microsoft.Windows.Foundation.IDecimalHelperStatics
+    guid ba09a415-e26c-55b3-9b76-b3affd556a7f

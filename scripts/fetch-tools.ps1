@@ -17,7 +17,15 @@ $toolsJson = Get-Content $toolsJsonPath | ConvertFrom-Json
 $CppWinRTVersion = $toolsJson."Microsoft.Windows.CppWinRT"
 $WindowsSdkVersion = $toolsJson."Microsoft.Windows.SDK.CPP"
 $MicrosoftUiXaml = $toolsJson."Microsoft.UI.Xaml"
-$WindowsAppSDKVersion = $toolsJson."Microsoft.WindowsAppSDK"
+# The Windows App SDK is a metapackage over components that are versioned and
+# published separately, and _tools.json records the set scripts/resolve-wasdk.py
+# derived, so the family is fetched by name from there. The Runtime component is
+# left out: the one file PyWinRT reads from it is not worth 161 MB of MSIX, so
+# scripts/app_sdk.py takes that file out of the package instead.
+$WindowsAppSDKPackages = $toolsJson.PSObject.Properties.Name | Where-Object {
+    ($_ -like "Microsoft.WindowsAppSDK*" -or $_ -eq "Microsoft.Windows.AI.MachineLearning") -and
+    $_ -ne "Microsoft.WindowsAppSDK.Runtime"
+}
 $WebView2Version = $toolsJson."Microsoft.Web.WebView2"
 $TestWinRTVersion = $toolsJson."PyWinRT.TestWinRT"
 
@@ -50,7 +58,16 @@ if (!$noMicrosoftUiXaml) {
 }
 
 if (!$noWindowsAppSDK) {
-    & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
+    foreach ($package in $WindowsAppSDKPackages) {
+        & nuget install $package -Version $toolsJson.$package -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools" -NoHttpCache
+        if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+        }
+    }
+
+    # WindowsAppSDK-VersionInfo.h, which the bootstrap interop module includes,
+    # into the place an installed Runtime component would have put it
+    & py "$repoRootPath/scripts/app_sdk.py"
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }

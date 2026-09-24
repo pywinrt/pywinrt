@@ -120,6 +120,9 @@ class WidgetInfo(winrt.system.Object):
     # System.Boolean Microsoft.Windows.Widgets.Providers.WidgetInfo::get_IsPlaceholderContent()
     @_property
     def is_placeholder_content(self) -> bool: ...
+    # System.Int32 Microsoft.Windows.Widgets.Providers.WidgetInfo::get_Rank()
+    @_property
+    def rank(self) -> winrt.system.Int32: ...
 
 @typing.final
 class WidgetManager_Static(winrt._winrt.IInspectable_Static):
@@ -240,6 +243,12 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
     # System.Void Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::put_IsPlaceholderContent(Windows.Foundation.IReference`1<System.Boolean>)
     @is_placeholder_content.setter
     def is_placeholder_content(self, value: bool | None) -> None: ...
+    # Windows.Foundation.IReference`1<System.Int32> Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_Rank()
+    @_property
+    def rank(self) -> winrt.system.Int32 | None: ...
+    # System.Void Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::put_Rank(Windows.Foundation.IReference`1<System.Int32>)
+    @rank.setter
+    def rank(self, value: winrt.system.Int32 | None) -> None: ...
 
 @typing.final
 class _IWidgetManager: ...

@@ -32,7 +32,7 @@ wheel_dir = glob.glob(
 )[0]
 
 bootstrap_dll = os.fspath(
-    pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"])
+    pathlib.Path(os.environ["WASDK_FOUNDATION_PATH"])
     / "runtimes"
     / f"win-{ARCH_MAP[wheel_arch]}"
     / "native"

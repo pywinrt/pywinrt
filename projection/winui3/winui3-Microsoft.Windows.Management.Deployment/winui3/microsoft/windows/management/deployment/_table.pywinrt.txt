@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Windows.Management.Deployment
 
 class Microsoft.Windows.Management.Deployment.AddPackageOptions activatable python_type
@@ -8,6 +8,7 @@ class Microsoft.Windows.Management.Deployment.AddPackageOptions activatable pyth
     signature rc(Microsoft.Windows.Management.Deployment.AddPackageOptions;{e3db7f39-f9d0-5884-bdef-6153b54574a3})
     default Microsoft.Windows.Management.Deployment.IAddPackageOptions
     requires Microsoft.Windows.Management.Deployment.IAddPackageOptions
+    requires Microsoft.Windows.Management.Deployment.IAddPackageOptions2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -102,6 +103,38 @@ class Microsoft.Windows.Management.Deployment.AddPackageOptions activatable pyth
     property related_package_uris
         get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property is_package_validation_supported
+        get get_IsPackageValidationSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions2 shape=4
+            out boolean return
+    property package_validators
+        get get_PackageValidators slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> return
+    method get_validation_event_source_for_uri
+        method GetValidationEventSourceForUri slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IAddPackageOptions2 shape=51
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Microsoft.Windows.Management.Deployment.PackageValidationEventSource return
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.Management.Deployment.PackageVolume> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageVolume]
+    guid ff5a18b8-67be-5926-abd2-0f8ae3484d56
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.Windows.Management.Deployment.PackageVolume
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.Management.Deployment.PackageVolume> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt64]
+    guid ee8aeb02-fb00-51fa-8f57-32583ea241f9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u8)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete
     py winrt.windows.foundation.AsyncOperationProgressHandler[PackageDeploymentResult, PackageDeploymentProgress]
@@ -147,6 +180,67 @@ class Microsoft.Windows.Management.Deployment.EnsureReadyOptions activatable pyt
 
 interface Microsoft.Windows.Management.Deployment.IAddPackageOptions
     guid e3db7f39-f9d0-5884-bdef-6153b54574a3
+
+interface Microsoft.Windows.Management.Deployment.IAddPackageOptions2
+    guid 39474c93-69ed-57ff-a515-9bc3110b7ecc
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.Management.Deployment.PackageVolume> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageVolume]
+    guid 4ceb2537-3c9c-5007-8c51-6085fc5965b2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.Management.Deployment.PackageVolume
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.Management.Deployment.PackageVolume> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.Management.Deployment.PackageVolume> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.Management.Deployment.PackageVolume> shape=4 reverse=62 role=get_results
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+
+interface Windows.Foundation.IAsyncOperation<System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt64]
+    guid 2a70d630-0767-5f0a-a1c2-deb08126e26e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u8)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.UInt64
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt64> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt64> shape=4 reverse=62 role=get_results
+            out uint64 return
 
 interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> concrete awaitable
     py winrt.windows.foundation._IAsyncOperationWithProgress[PackageDeploymentResult, PackageDeploymentProgress]
@@ -211,8 +305,8 @@ interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.
 
 interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable
     py winrt.windows.foundation.collections._IIterable[PackageVolume]
-    guid 4b7be9cc-af65-50c9-9679-6dedd2ae9e4d
-    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    guid 94c2aeaf-c7ff-5b90-99a2-d0407852880b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5}))
     base Windows.Foundation.Collections.IIterable
     argument Microsoft.Windows.Management.Deployment.PackageVolume
     method first
@@ -228,6 +322,16 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Uri, PackageValidationEventSource]]
+    guid c0a8ec4e-90ad-5e90-9a1f-6c94a37b903a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});rc(Microsoft.Windows.Management.Deployment.PackageValidationEventSource;{1a88e8dc-c2e3-5058-9dc0-4662622e2165})))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> return
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Uri, String]]
@@ -291,8 +395,8 @@ interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.
 
 interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable iterator
     py winrt.windows.foundation.collections._IIterator[PackageVolume]
-    guid 9d883a1c-5ffa-5699-8327-ef5cd96c0291
-    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    guid f4c3ba48-ad22-5996-a162-8bd805811d2e
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5}))
     base Windows.Foundation.Collections.IIterator
     argument Microsoft.Windows.Management.Deployment.PackageVolume
     property current
@@ -327,6 +431,26 @@ interface Windows.Foundation.Collections.IIterator<System.String> concrete itera
             out uint32 return
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Uri, PackageValidationEventSource]]
+    guid aa70c39d-b1d5-5b3b-bd97-b9d9d26697b0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});rc(Microsoft.Windows.Management.Deployment.PackageValidationEventSource;{1a88e8dc-c2e3-5058-9dc0-4662622e2165})))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> shape=4 reverse=62 role=move_next
             out boolean return
 
 interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> concrete iterable iterator
@@ -368,6 +492,20 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concr
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=62 role=move_next
             out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Uri, PackageValidationEventSource]
+    guid 9815350e-edc3-5ec7-9e81-826b9c7c3af6
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});rc(Microsoft.Windows.Management.Deployment.PackageValidationEventSource;{1a88e8dc-c2e3-5058-9dc0-4662622e2165}))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.Foundation.Uri
+    argument Microsoft.Windows.Management.Deployment.PackageValidationEventSource
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> shape=4 reverse=22 role=pair_key
+            out class type=Windows.Foundation.Uri return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> shape=4 reverse=43 role=pair_value
+            out class type=Microsoft.Windows.Management.Deployment.PackageValidationEventSource return
 
 interface Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[Uri, String]
@@ -419,6 +557,33 @@ interface Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.Stri
         method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=141 role=remove
             in class type=Windows.Foundation.Uri name=key
 
+interface Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Uri, PackageValidationEventSource]
+    guid d02cd67e-7cb0-530d-91b2-0397032282bd
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});rc(Microsoft.Windows.Management.Deployment.PackageValidationEventSource;{1a88e8dc-c2e3-5058-9dc0-4662622e2165}))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>>
+    argument Windows.Foundation.Uri
+    argument Microsoft.Windows.Management.Deployment.PackageValidationEventSource
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> shape=51 reverse=65 role=has_key
+            in class type=Windows.Foundation.Uri name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> shape=51 reverse=24 role=lookup
+            in class type=Windows.Foundation.Uri name=key
+            out class type=Microsoft.Windows.Management.Deployment.PackageValidationEventSource return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> name=second
+
 interface Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> concrete iterable mapping
     py winrt.windows.foundation.collections._IMapView[Uri, String]
     guid 87530605-8bd4-5f0a-85f1-751e8bd20446
@@ -446,6 +611,9 @@ interface Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.
             out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> name=second
 
+interface Microsoft.Windows.Management.Deployment.IPackageCertificateEkuValidatorFactory
+    guid be81c291-e48c-5e67-b2ae-19ced4d71c2c
+
 interface Microsoft.Windows.Management.Deployment.IPackageDeploymentManager
     guid f41717d8-5ab2-57ac-83cd-d0c48cc784cd
 
@@ -460,6 +628,12 @@ interface Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStati
 
 interface Microsoft.Windows.Management.Deployment.IPackageDeploymentResult
     guid d6b99601-18c2-599e-8bd1-40a9310ad263
+
+interface Microsoft.Windows.Management.Deployment.IPackageFamilyNameValidatorFactory
+    guid 293ecd7f-1bba-5d0e-8ed0-6d9fb3ad9c9d
+
+interface Microsoft.Windows.Management.Deployment.IPackageMinimumVersionValidatorFactory
+    guid bbc4f879-a5fd-55b4-9672-f774cf56d567
 
 interface Microsoft.Windows.Management.Deployment.IPackageRuntimeManager
     guid 6bf0fd29-6c2a-58d1-af0c-abd2eac45e29
@@ -479,11 +653,38 @@ interface Microsoft.Windows.Management.Deployment.IPackageSetItemRuntimeDisposit
 interface Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition
     guid c13f1088-ea36-5db3-bcdd-e6d59e6c9b71
 
+interface Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs
+    guid 4a6bf418-8341-51c9-b05f-3a3c04926c64
+
+interface Microsoft.Windows.Management.Deployment.IPackageValidationEventSource
+    guid 1a88e8dc-c2e3-5058-9dc0-4662622e2165
+
+interface Microsoft.Windows.Management.Deployment.IPackageValidationHandler
+    guid 1b82b55d-525f-5153-b76d-22ce509de96f
+
+interface Microsoft.Windows.Management.Deployment.IPackageValidationHandlerFactory
+    guid ff589117-a855-57eb-9bae-060f76f01c7c
+
+interface Microsoft.Windows.Management.Deployment.IPackageValidator python_type
+    py _IPackageValidator
+    guid 05575ac0-ef27-562b-a8eb-664e38803fae
+    signature {05575ac0-ef27-562b-a8eb-664e38803fae}
+    method is_package_valid
+        method IsPackageValid slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidator shape=51 reverse=24
+            in object name=appxPackagingObject
+            out boolean return
+
 interface Microsoft.Windows.Management.Deployment.IPackageVolume
-    guid 9c9710f4-795a-58b3-93f4-c991c4329c49
+    guid 27d8ee90-3542-5831-92cb-a186a0c39af5
+
+interface Microsoft.Windows.Management.Deployment.IPackageVolume2
+    guid 6a5fd539-e244-51cc-959c-a6b60c680ec8
 
 interface Microsoft.Windows.Management.Deployment.IPackageVolumeStatics
     guid 4c731835-8bc0-5313-9b56-8a4100eaea01
+
+interface Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2
+    guid 82c081f0-f902-58c8-a040-19ca6f38da0c
 
 interface Microsoft.Windows.Management.Deployment.IProvisionPackageOptions
     guid 415e300f-d1e3-581e-a114-76d277b06136
@@ -496,6 +697,9 @@ interface Microsoft.Windows.Management.Deployment.IRemovePackageOptions
 
 interface Microsoft.Windows.Management.Deployment.IStagePackageOptions
     guid 9b6b3203-fd7c-5ead-a9d6-ab2e8566be5e
+
+interface Microsoft.Windows.Management.Deployment.IStagePackageOptions2
+    guid 192f8e4a-f0f3-55d2-b057-d0189062b9ca
 
 interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItem> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IVector[PackageSetItem]
@@ -603,8 +807,8 @@ interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.De
 
 interface Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IVector[PackageVolume]
-    guid 2662562c-57ff-5dc0-af01-0e484793c9cc
-    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    guid 83d86012-3bb4-5aca-b1ff-e21e83321c0a
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5}))
     base Windows.Foundation.Collections.IVector
     requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume>
     argument Microsoft.Windows.Management.Deployment.PackageVolume
@@ -815,8 +1019,8 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Managemen
 
 interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.Management.Deployment.PackageVolume> concrete iterable sequence
     py winrt.windows.foundation.collections._IVectorView[PackageVolume]
-    guid 5368a870-6748-50bd-b2bd-e401ebb50bd8
-    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49}))
+    guid 9794d073-de98-5af3-842e-d0e5f7cba043
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5}))
     base Windows.Foundation.Collections.IVectorView
     requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.Management.Deployment.PackageVolume>
     argument Microsoft.Windows.Management.Deployment.PackageVolume
@@ -895,6 +1099,21 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> con
         method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66 role=index_of
             in class type=Windows.Foundation.Uri name=value
             out uint32 name=index
+            out boolean return
+
+class Microsoft.Windows.Management.Deployment.PackageCertificateEkuValidator python_type
+    py PackageCertificateEkuValidator
+    signature rc(Microsoft.Windows.Management.Deployment.PackageCertificateEkuValidator;{05575ac0-ef27-562b-a8eb-664e38803fae})
+    default Microsoft.Windows.Management.Deployment.IPackageValidator
+    requires Microsoft.Windows.Management.Deployment.IPackageValidator
+    factory Microsoft.Windows.Management.Deployment.IPackageCertificateEkuValidatorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageCertificateEkuValidatorFactory shape=51
+            in string name=expectedCertificateEku
+            out class type=Microsoft.Windows.Management.Deployment.PackageCertificateEkuValidator return
+    method is_package_valid
+        method IsPackageValid slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidator shape=51 reverse=24
+            in object name=appxPackagingObject
             out boolean return
 
 enum Microsoft.Windows.Management.Deployment.PackageDeploymentFeature python_type
@@ -1146,6 +1365,36 @@ enum Microsoft.Windows.Management.Deployment.PackageDeploymentStatus python_type
     constant COMPLETED_SUCCESS 1
     constant COMPLETED_FAILURE 2
 
+class Microsoft.Windows.Management.Deployment.PackageFamilyNameValidator python_type
+    py PackageFamilyNameValidator
+    signature rc(Microsoft.Windows.Management.Deployment.PackageFamilyNameValidator;{05575ac0-ef27-562b-a8eb-664e38803fae})
+    default Microsoft.Windows.Management.Deployment.IPackageValidator
+    requires Microsoft.Windows.Management.Deployment.IPackageValidator
+    factory Microsoft.Windows.Management.Deployment.IPackageFamilyNameValidatorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageFamilyNameValidatorFactory shape=51
+            in string name=expectedPackageFamilyName
+            out class type=Microsoft.Windows.Management.Deployment.PackageFamilyNameValidator return
+    method is_package_valid
+        method IsPackageValid slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidator shape=51 reverse=24
+            in object name=appxPackagingObject
+            out boolean return
+
+class Microsoft.Windows.Management.Deployment.PackageMinimumVersionValidator python_type
+    py PackageMinimumVersionValidator
+    signature rc(Microsoft.Windows.Management.Deployment.PackageMinimumVersionValidator;{05575ac0-ef27-562b-a8eb-664e38803fae})
+    default Microsoft.Windows.Management.Deployment.IPackageValidator
+    requires Microsoft.Windows.Management.Deployment.IPackageValidator
+    factory Microsoft.Windows.Management.Deployment.IPackageMinimumVersionValidatorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageMinimumVersionValidatorFactory shape=349
+            in struct type=Windows.ApplicationModel.PackageVersion name=minimumVersion
+            out class type=Microsoft.Windows.Management.Deployment.PackageMinimumVersionValidator return
+    method is_package_valid
+        method IsPackageValid slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidator shape=51 reverse=24
+            in object name=appxPackagingObject
+            out boolean return
+
 enum Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus python_type
     py PackageReadyOrNewerAvailableStatus
     signature enum(Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus;i4)
@@ -1269,17 +1518,65 @@ class Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition activ
         get get_PackageSetItemRuntimeDispositions slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageSetRuntimeDisposition shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageSetItemRuntimeDisposition> return
 
+class Microsoft.Windows.Management.Deployment.PackageValidationEventArgs python_type
+    py PackageValidationEventArgs
+    signature rc(Microsoft.Windows.Management.Deployment.PackageValidationEventArgs;{4a6bf418-8341-51c9-b05f-3a3c04926c64})
+    default Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs
+    requires Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs
+    property cancel
+        get get_Cancel slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs shape=4
+            out boolean return
+        put put_Cancel slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs shape=4
+            in boolean name=value
+    property appx_packaging_object
+        get get_AppxPackagingObject slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs shape=4
+            out object return
+    property package_uri
+        get get_PackageUri slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs shape=4
+            out class type=Windows.Foundation.Uri return
+    method get_deferral
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class Microsoft.Windows.Management.Deployment.PackageValidationEventSource python_type
+    py PackageValidationEventSource
+    signature rc(Microsoft.Windows.Management.Deployment.PackageValidationEventSource;{1a88e8dc-c2e3-5058-9dc0-4662622e2165})
+    default Microsoft.Windows.Management.Deployment.IPackageValidationEventSource
+    requires Microsoft.Windows.Management.Deployment.IPackageValidationEventSource
+    event validation_requested
+        add add_ValidationRequested slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventSource shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Management.Deployment.PackageValidationEventSource,Microsoft.Windows.Management.Deployment.PackageValidationEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ValidationRequested slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationEventSource shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+
+class Microsoft.Windows.Management.Deployment.PackageValidationHandler python_type
+    py PackageValidationHandler
+    signature rc(Microsoft.Windows.Management.Deployment.PackageValidationHandler;{1b82b55d-525f-5153-b76d-22ce509de96f})
+    default Microsoft.Windows.Management.Deployment.IPackageValidationHandler
+    requires Microsoft.Windows.Management.Deployment.IPackageValidationHandler
+    factory Microsoft.Windows.Management.Deployment.IPackageValidationHandlerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationHandlerFactory shape=51
+            in interface type=Microsoft.Windows.Management.Deployment.IPackageValidator name=validator
+            out class type=Microsoft.Windows.Management.Deployment.PackageValidationHandler return
+    property handler
+        get get_Handler slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageValidationHandler shape=4
+            out delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.Management.Deployment.PackageValidationEventSource,Microsoft.Windows.Management.Deployment.PackageValidationEventArgs> return
+
 class Microsoft.Windows.Management.Deployment.PackageVolume python_type
     py PackageVolume
-    signature rc(Microsoft.Windows.Management.Deployment.PackageVolume;{9c9710f4-795a-58b3-93f4-c991c4329c49})
+    signature rc(Microsoft.Windows.Management.Deployment.PackageVolume;{27d8ee90-3542-5831-92cb-a186a0c39af5})
     default Microsoft.Windows.Management.Deployment.IPackageVolume
     requires Microsoft.Windows.Management.Deployment.IPackageVolume
+    requires Microsoft.Windows.Management.Deployment.IPackageVolume2
     factory Microsoft.Windows.Management.Deployment.IPackageVolumeStatics
+    factory Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2
     property is_appx_install_supported
-        get get_IsAppxInstallSupported slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
+        get get_IsAppxInstallSupported slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     property is_full_trust_package_supported
-        get get_IsFullTrustPackageSupported slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
+        get get_IsFullTrustPackageSupported slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
     property is_system_volume
         get get_IsSystemVolume slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
@@ -1296,6 +1593,10 @@ class Microsoft.Windows.Management.Deployment.PackageVolume python_type
     property supports_hard_links
         get get_SupportsHardLinks slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
+    method add_async static
+        method AddAsync slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2 shape=51 static
+            in string name=packageStorePath
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.Management.Deployment.PackageVolume> return
     method find_package_volume_by_name static
         method FindPackageVolumeByName slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=51 static
             in string name=name
@@ -1307,11 +1608,54 @@ class Microsoft.Windows.Management.Deployment.PackageVolume python_type
     method find_package_volumes static
         method FindPackageVolumes slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.Management.Deployment.PackageVolume> return
+    method get_available_space_async
+        method GetAvailableSpaceAsync slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume2 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt64> return
+    method get_default static
+        method GetDefault slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2 shape=4 static
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+    method get_package_volume_by_name static
+        method GetPackageVolumeByName slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2 shape=51 static
+            in string name=name
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+    method get_package_volume_by_path static
+        method GetPackageVolumeByPath slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2 shape=51 static
+            in string name=path
+            out class type=Microsoft.Windows.Management.Deployment.PackageVolume return
+    method is_feature_supported static
+        method IsFeatureSupported slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolumeStatics2 shape=51 static
+            in enum32 type=Microsoft.Windows.Management.Deployment.PackageVolumeFeature name=feature
+            out boolean return
+    method is_offline
+        method IsOffline slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume2 shape=4
+            out boolean return
     method is_repair_needed
         method IsRepairNeeded slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=4
             out boolean return
+    method remove_async
+        method RemoveAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume2 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
     method repair
         method Repair slot=14 inputs=0 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume shape=0
+    method set_default
+        method SetDefault slot=7 inputs=0 outputs=0 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume2 shape=0
+    method set_offline_async
+        method SetOfflineAsync slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume2 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
+    method set_online_async
+        method SetOnlineAsync slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IPackageVolume2 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> return
+
+enum Microsoft.Windows.Management.Deployment.PackageVolumeFeature python_type
+    py PackageVolumeFeature
+    signature enum(Microsoft.Windows.Management.Deployment.PackageVolumeFeature;i4)
+    constant GET_DEFAULT 1
+    constant SET_DEFAULT 2
+    constant ADD 3
+    constant REMOVE 4
+    constant SET_OFFLINE 5
+    constant SET_ONLINE 6
+    constant GET_AVAILABLE_SPACE 7
 
 class Microsoft.Windows.Management.Deployment.ProvisionPackageOptions activatable python_type
     py ProvisionPackageOptions
@@ -1442,6 +1786,7 @@ class Microsoft.Windows.Management.Deployment.StagePackageOptions activatable py
     signature rc(Microsoft.Windows.Management.Deployment.StagePackageOptions;{9b6b3203-fd7c-5ead-a9d6-ab2e8566be5e})
     default Microsoft.Windows.Management.Deployment.IStagePackageOptions
     requires Microsoft.Windows.Management.Deployment.IStagePackageOptions
+    requires Microsoft.Windows.Management.Deployment.IStagePackageOptions2
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -1508,6 +1853,16 @@ class Microsoft.Windows.Management.Deployment.StagePackageOptions activatable py
     property related_package_uris
         get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property is_package_validation_supported
+        get get_IsPackageValidationSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions2 shape=4
+            out boolean return
+    property package_validators
+        get get_PackageValidators slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> return
+    method get_validation_event_source_for_uri
+        method GetValidationEventSourceForUri slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.Management.Deployment.IStagePackageOptions2 shape=51
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Microsoft.Windows.Management.Deployment.PackageValidationEventSource return
 
 enum Microsoft.Windows.Management.Deployment.StubPackageOption python_type
     py StubPackageOption
@@ -1516,6 +1871,18 @@ enum Microsoft.Windows.Management.Deployment.StubPackageOption python_type
     constant INSTALL_FULL 1
     constant INSTALL_STUB 2
     constant USE_PREFERENCE 3
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.Management.Deployment.PackageValidationEventSource,Microsoft.Windows.Management.Deployment.PackageValidationEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[PackageValidationEventSource, PackageValidationEventArgs]
+    guid cbb14f60-7389-51ac-bfd3-9c3bacd7c925
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.Management.Deployment.PackageValidationEventSource;{1a88e8dc-c2e3-5058-9dc0-4662622e2165});rc(Microsoft.Windows.Management.Deployment.PackageValidationEventArgs;{4a6bf418-8341-51c9-b05f-3a3c04926c64}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.Management.Deployment.PackageValidationEventSource
+    argument Microsoft.Windows.Management.Deployment.PackageValidationEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.Management.Deployment.PackageValidationEventSource name=sender
+            in class type=Microsoft.Windows.Management.Deployment.PackageValidationEventArgs name=args
 
 class Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions external
     py winui3.microsoft.windows.applicationmodel.dynamicdependency.AddPackageDependencyOptions
@@ -1532,8 +1899,15 @@ enum Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyProce
 class System.String external
     py winrt.system.String
 
+class System.UInt64 external
+    py winrt.system.UInt64
+
 struct Windows.ApplicationModel.PackageVersion external
     py winrt.windows.applicationmodel.PackageVersion
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
 
 delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
     py winrt.windows.foundation.AsyncOperationProgressHandler
@@ -1546,6 +1920,12 @@ delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external 
 enum Windows.Foundation.AsyncStatus external
     py winrt.windows.foundation.AsyncStatus
 
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
 struct Windows.Foundation.HResult external
     py winrt.windows.foundation.HResult
 
@@ -1553,9 +1933,17 @@ interface Windows.Foundation.IAsyncInfo external
     py winrt.windows.foundation._IAsyncInfo
     guid 00000036-0000-0000-c000-000000000046
 
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
 interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
     py winrt.windows.foundation._IAsyncOperationWithProgress
     guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri

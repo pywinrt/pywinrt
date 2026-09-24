@@ -379,6 +379,7 @@ class FocusManager_Static(winrt._winrt.IInspectable_Static):
     def find_next_focusable_element_with_hint(cls, focus_navigation_direction: FocusNavigationDirection, hint_rect: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> microsoft_ui_xaml.UIElement: ...
     @typing.overload
     # System.Object Microsoft.UI.Xaml.Input.FocusManager::GetFocusedElement()
+    # @deprecated("GetFocusedElement() is deprecated. Use GetFocusedElement(XamlRoot) instead to ensure correct behavior in multi-window scenarios.")
     def get_focused_element(cls) -> winrt.system.Object: ...
     @typing.overload
     # System.Object Microsoft.UI.Xaml.Input.FocusManager::GetFocusedElement(Microsoft.UI.Xaml.XamlRoot)

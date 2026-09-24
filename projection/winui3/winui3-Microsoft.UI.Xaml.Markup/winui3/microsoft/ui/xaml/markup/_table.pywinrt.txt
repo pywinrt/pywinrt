@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.UI.Xaml.Markup
 
 interface Microsoft.UI.Xaml.Markup.IComponentConnector python_type
@@ -199,6 +199,18 @@ interface Microsoft.UI.Xaml.Markup.IXamlBindingHelper
 
 interface Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics
     guid 93c7dad3-f9c2-5372-84dc-9e9c4661d083
+
+interface Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics2
+    guid c02650dc-4da5-5ddf-aae2-8445e987f4c4
+
+interface Microsoft.UI.Xaml.Markup.IXamlCondition python_type
+    py _IXamlCondition
+    guid 9124118d-cdfa-545f-8c12-4cf7bcc5fffa
+    signature {9124118d-cdfa-545f-8c12-4cf7bcc5fffa}
+    method evaluate
+        method Evaluate slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlCondition shape=51 reverse=24
+            in string name=argument
+            out boolean return
 
 interface Microsoft.UI.Xaml.Markup.IXamlMarkupHelper
     guid cd677310-3b06-5a13-b31a-401849570858
@@ -399,6 +411,7 @@ class Microsoft.UI.Xaml.Markup.XamlBindingHelper python_type
     default Microsoft.UI.Xaml.Markup.IXamlBindingHelper
     requires Microsoft.UI.Xaml.Markup.IXamlBindingHelper
     factory Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics
+    factory Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics2
     property data_template_component_property static
         get get_DataTemplateComponentProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
@@ -433,6 +446,16 @@ class Microsoft.UI.Xaml.Markup.XamlBindingHelper python_type
             in object name=dependencyObject
             in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
             in char16 name=value
+    method set_property_from_color static
+        method SetPropertyFromColor slot=8 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics2 shape=126 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in struct type=Windows.UI.Color name=value
+    method set_property_from_corner_radius static
+        method SetPropertyFromCornerRadius slot=7 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics2 shape=122 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in struct type=Microsoft.UI.Xaml.CornerRadius name=value
     method set_property_from_date_time static
         method SetPropertyFromDateTime slot=15 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=125 static
             in object name=dependencyObject
@@ -483,6 +506,11 @@ class Microsoft.UI.Xaml.Markup.XamlBindingHelper python_type
             in object name=dependencyObject
             in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
             in string name=value
+    method set_property_from_thickness static
+        method SetPropertyFromThickness slot=6 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics2 shape=122 static
+            in object name=dependencyObject
+            in class type=Microsoft.UI.Xaml.DependencyProperty name=propertyToSet
+            in struct type=Microsoft.UI.Xaml.Thickness name=value
     method set_property_from_time_span static
         method SetPropertyFromTimeSpan slot=25 inputs=3 outputs=0 declaring=Microsoft.UI.Xaml.Markup.IXamlBindingHelperStatics shape=125 static
             in object name=dependencyObject
@@ -538,6 +566,9 @@ struct Microsoft.UI.Xaml.Markup.XmlnsDefinition python_type
     field xml_namespace XmlNamespace string
     field namespace Namespace string
 
+struct Microsoft.UI.Xaml.CornerRadius external
+    py winui3.microsoft.ui.xaml.CornerRadius
+
 class Microsoft.UI.Xaml.DependencyObject external
     py winui3.microsoft.ui.xaml.DependencyObject
 
@@ -547,6 +578,9 @@ class Microsoft.UI.Xaml.DependencyProperty external
 interface Microsoft.UI.Xaml.IXamlServiceProvider external
     py winui3.microsoft.ui.xaml._IXamlServiceProvider
     guid 68b3a2df-8173-539f-b524-c8a2348f5afb
+
+struct Microsoft.UI.Xaml.Thickness external
+    py winui3.microsoft.ui.xaml.Thickness
 
 class Microsoft.UI.Xaml.UIElement external
     py winui3.microsoft.ui.xaml.UIElement
@@ -582,6 +616,9 @@ interface Windows.Foundation.Collections.IVectorView external parameterized
 interface Windows.Storage.Streams.IRandomAccessStream external
     py winrt.windows.storage.streams._IRandomAccessStream
     guid 905a0fe1-bc53-11df-8c49-001e4fc686da
+
+struct Windows.UI.Color external
+    py winrt.windows.ui.Color
 
 struct Windows.UI.Xaml.Interop.TypeName external
     py winrt.windows.ui.xaml.interop.TypeName

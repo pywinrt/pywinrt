@@ -31,6 +31,8 @@ import tempfile
 from collections import deque
 from collections.abc import Iterable
 
+import app_sdk
+
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 
 TOOLS_JSON_PATH = REPO_ROOT_PATH / ".config" / "_tools.json"
@@ -72,7 +74,6 @@ WINDOWS_SDK_METADATA = (
     / "10.0.28000.0"
 )
 
-WINDOWS_APP_SDK_PATH = TOOLS_PATH / versioned_package("Microsoft.WindowsAppSDK")
 WEBVIEW2_METADATA = (
     TOOLS_PATH
     / versioned_package("Microsoft.Web.WebView2")
@@ -198,14 +199,15 @@ with tempfile.TemporaryDirectory(prefix="pywinrt-cppwinrt-") as temp_dir:
 
     # The Windows App SDK projection has no base.h and no Windows.* headers of
     # its own: it includes the Windows SDK's, so the two are generated from the
-    # same version of cppwinrt.exe and used together.
+    # same version of cppwinrt.exe and used together. Every component is an
+    # input, because a header of the one namespace taken from here may name a
+    # type from any of them.
     subprocess.check_call(
         [
             CPPWINRT_EXE,
-            "-input",
-            WINDOWS_APP_SDK_PATH / "lib" / "uap10.0",
-            "-input",
-            WINDOWS_APP_SDK_PATH / "lib" / "uap10.0.18362",
+        ]
+        + [arg for path in app_sdk.metadata_paths() for arg in ("-input", path)]
+        + [
             "-reference",
             WEBVIEW2_METADATA,
             "-reference",

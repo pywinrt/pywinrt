@@ -300,16 +300,21 @@ OWN_HEADERS = """
 INCLUDE_DIRS.append(os.fspath(pathlib.Path(__file__).parent / "cppwinrt"))"""
 
 # The Windows App SDK is redistributed with an app rather than part of Windows,
-# so its own headers and import libraries come from the NuGet package that
-# scripts/fetch-tools.ps1 downloads.
+# so its own headers and import libraries come from the NuGet packages that
+# scripts/fetch-tools.ps1 downloads. It is a metapackage over components that
+# are published separately, so each module names the component that ships what
+# it includes.
 APP_SDK_INIT = """
-try:
-    WINDOWS_APP_SDK_PATH = pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"]).resolve()
-    print(f"Using Windows App SDK from {WINDOWS_APP_SDK_PATH}")
-except KeyError:
-    raise RuntimeError("Please set the WINDOWS_APP_SDK_PATH environment variable")
+WINDOWS_APP_SDK_PATHS = {{}}
 
-INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATH / "include"))
+for name in [{envs}]:
+    try:
+        WINDOWS_APP_SDK_PATHS[name] = pathlib.Path(os.environ[name]).resolve()
+    except KeyError:
+        raise RuntimeError(f"Please set the {{name}} environment variable")
+
+    print(f"Using {{name}} from {{WINDOWS_APP_SDK_PATHS[name]}}")
+    INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
 """
 
 # An interop package's own headers are not package data - nothing installs
@@ -319,9 +324,13 @@ INTEROP_MANIFEST_IN = """# WARNING: Please don't edit this file. It was automati
 recursive-include cppwinrt *.h
 """
 
+# The bootstrapper is the only App SDK import library anything here links, and
+# it is in the Foundation component.
 APP_SDK_EXTRA_BUILD = """
-        target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
-        ext.library_dirs = [os.fspath(WINDOWS_APP_SDK_PATH / "lib" / target)]
+        arch = {"win32": "x86", "win-amd64": "x64", "win-arm64": "arm64"}[self.plat_name]
+        ext.library_dirs = [
+            os.fspath(WINDOWS_APP_SDK_PATHS["WASDK_FOUNDATION_PATH"] / "lib" / "native" / arch)
+        ]
 """
 
 README_TEMPLATE = """\
@@ -504,11 +513,23 @@ def avoid_keyword(name: str) -> str:
     return name
 
 
+# The Windows App SDK components each hand-written module compiles against,
+# named by the environment variable that says where fetch-tools.ps1 unpacked
+# each one. The App SDK is a metapackage, so what a module includes is spread
+# over several of them.
+APP_SDK_INTEROP_COMPONENTS = {
+    # Microsoft.UI.Interop.h
+    "winui3-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
+    # MddBootstrap.h and its import library, and WindowsAppSDK-VersionInfo.h
+    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [
+        "WASDK_FOUNDATION_PATH",
+        "WASDK_RUNTIME_PATH",
+    ],
+}
+
+
 def is_app_sdk_interop_package(name: str) -> bool:
-    return name in [
-        "winui3-Microsoft.UI.Interop",
-        "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap",
-    ]
+    return name in APP_SDK_INTEROP_COMPONENTS
 
 
 def is_app_sdk_bootstrap_package(name: str) -> bool:
@@ -677,11 +698,24 @@ def write_compiled_project_files(
                     if is_runtime
                     else HEADERS + (OWN_HEADERS if own_headers else "")
                 ),
-                extra_init=APP_SDK_INIT if needs_app_sdk else "",
+                extra_init=(
+                    APP_SDK_INIT.format(
+                        envs=", ".join(
+                            f'"{name}"'
+                            for name in APP_SDK_INTEROP_COMPONENTS[package_name]
+                        )
+                    )
+                    if needs_app_sdk
+                    else ""
+                ),
                 root_package=root_package,
                 ext_module=ext_module_name,
                 sources=format_sources(sources),
-                extra_build=APP_SDK_EXTRA_BUILD if needs_app_sdk else "",
+                extra_build=(
+                    APP_SDK_EXTRA_BUILD
+                    if is_app_sdk_bootstrap_package(package_name)
+                    else ""
+                ),
                 extra_libraries=(
                     ', "Microsoft.WindowsAppRuntime.Bootstrap"'
                     if is_app_sdk_bootstrap_package(package_name)

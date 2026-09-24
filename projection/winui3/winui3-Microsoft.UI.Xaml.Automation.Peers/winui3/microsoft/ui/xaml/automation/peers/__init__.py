@@ -108,6 +108,7 @@ __all__ = [
     "SemanticZoomAutomationPeer",
     "SliderAutomationPeer",
     "SplitButtonAutomationPeer",
+    "SplitMenuFlyoutItemAutomationPeer",
     "TabViewAutomationPeer",
     "TabViewItemAutomationPeer",
     "TeachingTipAutomationPeer",

@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Graphics.DirectX
 
 enum Microsoft.Graphics.DirectX.DirectXAlphaMode python_type
@@ -39,6 +39,9 @@ enum Microsoft.Graphics.DirectX.DirectXColorSpace python_type
     constant YCC_STUDIO_G24_LEFT_P709 22
     constant YCC_STUDIO_G24_LEFT_P2020 23
     constant YCC_STUDIO_G24_TOP_LEFT_P2020 24
+    constant RGB_FULL_G10_NONE_P2020 25
+    constant RGB_FULL_G22_EXT_NONE_P709 26
+    constant RGB_FULL_G22_NONE_P3 27
 
 enum Microsoft.Graphics.DirectX.DirectXPixelFormat python_type
     py DirectXPixelFormat

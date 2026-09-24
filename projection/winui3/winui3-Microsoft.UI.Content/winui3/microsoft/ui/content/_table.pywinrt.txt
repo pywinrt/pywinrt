@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.UI.Content
 
 class Microsoft.UI.Content.ChildSiteLink python_type closeable
@@ -804,6 +804,7 @@ class Microsoft.UI.Content.DesktopPopupSiteBridge python_type closeable
     signature rc(Microsoft.UI.Content.DesktopPopupSiteBridge;{84eaab23-f716-5ad8-ac00-3d77c01d42cc})
     default Microsoft.UI.Content.IDesktopPopupSiteBridge
     requires Microsoft.UI.Content.IDesktopPopupSiteBridge
+    requires Microsoft.UI.Content.IDesktopPopupSiteBridge2
     requires Windows.Foundation.IClosable
     requires Microsoft.UI.IClosableNotifier
     requires Microsoft.UI.Content.IContentSiteAutomation
@@ -846,6 +847,16 @@ class Microsoft.UI.Content.DesktopPopupSiteBridge python_type closeable
     property window_id
         get get_WindowId slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge shape=4
             out struct type=Microsoft.UI.WindowId return
+    property anchoring_pixel_alignment
+        get get_AnchoringPixelAlignment slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge2 shape=4
+            out enum32 type=Microsoft.UI.Content.ContentCoordinateRoundingMode return
+        put put_AnchoringPixelAlignment slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge2 shape=4
+            in enum32 type=Microsoft.UI.Content.ContentCoordinateRoundingMode name=value
+    property anchoring_behavior
+        get get_AnchoringBehavior slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge2 shape=4
+            out enum32 type=Microsoft.UI.Content.PopupAnchor return
+        put put_AnchoringBehavior slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Content.IDesktopPopupSiteBridge2 shape=4
+            in enum32 type=Microsoft.UI.Content.PopupAnchor name=value
     property is_closed
         get get_IsClosed slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.IClosableNotifier shape=4 reverse=22
             out boolean return
@@ -1194,6 +1205,9 @@ interface Microsoft.UI.Content.IDesktopChildSiteBridgeStatics2
 interface Microsoft.UI.Content.IDesktopPopupSiteBridge
     guid 84eaab23-f716-5ad8-ac00-3d77c01d42cc
 
+interface Microsoft.UI.Content.IDesktopPopupSiteBridge2
+    guid 4559ff0e-4326-5038-b18d-37b66b242eb3
+
 interface Microsoft.UI.Content.IDesktopPopupSiteBridgeStatics
     guid 4ea2b77b-3177-5e5b-8d0d-a76e15c6d080
 
@@ -1393,6 +1407,13 @@ interface Windows.Foundation.IReference<Microsoft.UI.Content.ContentLayoutDirect
     method get_uint8_array
         method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
             receive_array uint8 name=value
+
+enum Microsoft.UI.Content.PopupAnchor python_type
+    py PopupAnchor
+    signature enum(Microsoft.UI.Content.PopupAnchor;i4)
+    constant NONE 0
+    constant TOP_LEVEL_WINDOW 1
+    constant PARENT_ISLAND 2
 
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Content.ContentIsland,Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[ContentIsland, ContentIslandAutomationProviderRequestedEventArgs]

@@ -10,13 +10,16 @@ from winrt._include import get_cppwinrt_include, get_include
 
 INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]
 
-try:
-    WINDOWS_APP_SDK_PATH = pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"]).resolve()
-    print(f"Using Windows App SDK from {WINDOWS_APP_SDK_PATH}")
-except KeyError:
-    raise RuntimeError("Please set the WINDOWS_APP_SDK_PATH environment variable")
+WINDOWS_APP_SDK_PATHS = {}
 
-INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATH / "include"))
+for name in ["WASDK_FOUNDATION_PATH", "WASDK_RUNTIME_PATH"]:
+    try:
+        WINDOWS_APP_SDK_PATHS[name] = pathlib.Path(os.environ[name]).resolve()
+    except KeyError:
+        raise RuntimeError(f"Please set the {name} environment variable")
+
+    print(f"Using {name} from {WINDOWS_APP_SDK_PATHS[name]}")
+    INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
 
 
 class build_ext_ex(build_ext):
@@ -37,8 +40,10 @@ class build_ext_ex(build_ext):
         else:
             raise ValueError(f"Unsupported compiler: {self.compiler.compiler_type}")
 
-        target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
-        ext.library_dirs = [os.fspath(WINDOWS_APP_SDK_PATH / "lib" / target)]
+        arch = {"win32": "x86", "win-amd64": "x64", "win-arm64": "arm64"}[self.plat_name]
+        ext.library_dirs = [
+            os.fspath(WINDOWS_APP_SDK_PATHS["WASDK_FOUNDATION_PATH"] / "lib" / "native" / arch)
+        ]
 
         build_ext.build_extension(self, ext)
 

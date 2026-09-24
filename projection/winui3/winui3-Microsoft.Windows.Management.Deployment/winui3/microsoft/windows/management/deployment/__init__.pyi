@@ -5,6 +5,7 @@ import enum
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from abc import abstractmethod
 from typing_extensions import deprecated
 
 import winrt._winrt
@@ -19,22 +20,30 @@ __all__ = [
     "PackageDeploymentProgressStatus",
     "PackageDeploymentStatus",
     "PackageReadyOrNewerAvailableStatus",
+    "PackageVolumeFeature",
     "StubPackageOption",
     "PackageDeploymentProgress",
     "AddPackageOptions",
     "EnsureReadyOptions",
+    "PackageCertificateEkuValidator",
     "PackageDeploymentManager",
     "PackageDeploymentResult",
+    "PackageFamilyNameValidator",
+    "PackageMinimumVersionValidator",
     "PackageRuntimeManager",
     "PackageSet",
     "PackageSetItem",
     "PackageSetItemRuntimeDisposition",
     "PackageSetRuntimeDisposition",
+    "PackageValidationEventArgs",
+    "PackageValidationEventSource",
+    "PackageValidationHandler",
     "PackageVolume",
     "ProvisionPackageOptions",
     "RegisterPackageOptions",
     "RemovePackageOptions",
     "StagePackageOptions",
+    "IPackageValidator",
 ]
 
 class PackageDeploymentFeature(enum.IntEnum):
@@ -61,6 +70,15 @@ class PackageReadyOrNewerAvailableStatus(enum.IntEnum):
     READY = 1
     NEWER_AVAILABLE = 2
 
+class PackageVolumeFeature(enum.IntEnum):
+    GET_DEFAULT = 1
+    SET_DEFAULT = 2
+    ADD = 3
+    REMOVE = 4
+    SET_OFFLINE = 5
+    SET_ONLINE = 6
+    GET_AVAILABLE_SPACE = 7
+
 class StubPackageOption(enum.IntEnum):
     DEFAULT = 0
     INSTALL_FULL = 1
@@ -80,6 +98,8 @@ class PackageDeploymentProgress:
 @typing.final
 class AddPackageOptions(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
+    # Microsoft.Windows.Management.Deployment.PackageValidationEventSource Microsoft.Windows.Management.Deployment.AddPackageOptions::GetValidationEventSourceForUri(Windows.Foundation.Uri)
+    def get_validation_event_source_for_uri(self, uri: windows_foundation.Uri, /) -> PackageValidationEventSource: ...
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.AddPackageOptions::get_TargetVolume()
     @_property
     def target_volume(self) -> PackageVolume: ...
@@ -185,6 +205,12 @@ class AddPackageOptions(winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Windows.Foundation.Uri> Microsoft.Windows.Management.Deployment.AddPackageOptions::get_RelatedPackageUris()
     @_property
     def related_package_uris(self) -> _cabc.MutableSequence[windows_foundation.Uri]: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.AddPackageOptions::get_IsPackageValidationSupported()
+    @_property
+    def is_package_validation_supported(self) -> bool: ...
+    # Windows.Foundation.Collections.IMapView`2<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> Microsoft.Windows.Management.Deployment.AddPackageOptions::get_PackageValidators()
+    @_property
+    def package_validators(self) -> _cabc.Mapping[windows_foundation.Uri, PackageValidationEventSource]: ...
 
 @typing.final
 class EnsureReadyOptions(winrt.system.Object):
@@ -198,6 +224,12 @@ class EnsureReadyOptions(winrt.system.Object):
     # System.Void Microsoft.Windows.Management.Deployment.EnsureReadyOptions::put_RegisterNewerIfAvailable(System.Boolean)
     @register_newer_if_available.setter
     def register_newer_if_available(self, value: bool) -> None: ...
+
+@typing.final
+class PackageCertificateEkuValidator(winrt.system.Object, IPackageValidator):
+    def __new__(cls, expected_certificate_eku: str) -> typing.Self: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.PackageCertificateEkuValidator::IsPackageValid(System.Object)
+    def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
 
 @typing.final
 class PackageDeploymentManager_Static(winrt._winrt.IInspectable_Static):
@@ -308,6 +340,18 @@ class PackageDeploymentResult(winrt.system.Object):
     def status(self) -> PackageDeploymentStatus: ...
 
 @typing.final
+class PackageFamilyNameValidator(winrt.system.Object, IPackageValidator):
+    def __new__(cls, expected_package_family_name: str) -> typing.Self: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.PackageFamilyNameValidator::IsPackageValid(System.Object)
+    def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
+
+@typing.final
+class PackageMinimumVersionValidator(winrt.system.Object, IPackageValidator):
+    def __new__(cls, minimum_version: windows_applicationmodel.PackageVersion | tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16]) -> typing.Self: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.PackageMinimumVersionValidator::IsPackageValid(System.Object)
+    def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
+
+@typing.final
 class PackageRuntimeManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.Management.Deployment.PackageRuntimeManager Microsoft.Windows.Management.Deployment.PackageRuntimeManager::GetDefault()
     def get_default(cls) -> PackageRuntimeManager: ...
@@ -410,20 +454,73 @@ class PackageSetRuntimeDisposition(winrt.system.Object):
     def package_set_item_runtime_dispositions(self) -> _cabc.MutableSequence[PackageSetItemRuntimeDisposition]: ...
 
 @typing.final
+class PackageValidationEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::GetDeferral()
+    def get_deferral(self) -> windows_foundation.Deferral: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::get_Cancel()
+    @_property
+    def cancel(self) -> bool: ...
+    # System.Void Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::put_Cancel(System.Boolean)
+    @cancel.setter
+    def cancel(self, value: bool) -> None: ...
+    # System.Object Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::get_AppxPackagingObject()
+    @_property
+    def appx_packaging_object(self) -> winrt.system.Object: ...
+    # Windows.Foundation.Uri Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::get_PackageUri()
+    @_property
+    def package_uri(self) -> windows_foundation.Uri: ...
+
+@typing.final
+class PackageValidationEventSource(winrt.system.Object):
+    # Windows.Foundation.EventRegistrationToken Microsoft.Windows.Management.Deployment.PackageValidationEventSource::add_ValidationRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.Management.Deployment.PackageValidationEventSource,Microsoft.Windows.Management.Deployment.PackageValidationEventArgs>)
+    def add_validation_requested(self, handler: windows_foundation.TypedEventHandler[PackageValidationEventSource, PackageValidationEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Windows.Management.Deployment.PackageValidationEventSource::remove_ValidationRequested(Windows.Foundation.EventRegistrationToken)
+    def remove_validation_requested(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+
+@typing.final
+class PackageValidationHandler(winrt.system.Object):
+    def __new__(cls, validator: IPackageValidator) -> typing.Self: ...
+    # Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.Management.Deployment.PackageValidationEventSource,Microsoft.Windows.Management.Deployment.PackageValidationEventArgs> Microsoft.Windows.Management.Deployment.PackageValidationHandler::get_Handler()
+    @_property
+    def handler(self) -> windows_foundation.TypedEventHandler[PackageValidationEventSource, PackageValidationEventArgs]: ...
+
+@typing.final
 class PackageVolume_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.Management.Deployment.PackageVolume> Microsoft.Windows.Management.Deployment.PackageVolume::AddAsync(System.String)
+    def add_async(cls, package_store_path: str, /) -> windows_foundation.IAsyncOperation[PackageVolume]: ...
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::FindPackageVolumeByName(System.String)
     def find_package_volume_by_name(cls, name: str, /) -> PackageVolume: ...
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::FindPackageVolumeByPath(System.String)
     def find_package_volume_by_path(cls, package_store_path: str, /) -> PackageVolume: ...
     # Windows.Foundation.Collections.IVector`1<Microsoft.Windows.Management.Deployment.PackageVolume> Microsoft.Windows.Management.Deployment.PackageVolume::FindPackageVolumes()
     def find_package_volumes(cls) -> _cabc.MutableSequence[PackageVolume]: ...
+    # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::GetDefault()
+    def get_default(cls) -> PackageVolume: ...
+    # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::GetPackageVolumeByName(System.String)
+    def get_package_volume_by_name(cls, name: str, /) -> PackageVolume: ...
+    # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::GetPackageVolumeByPath(System.String)
+    def get_package_volume_by_path(cls, path: str, /) -> PackageVolume: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.PackageVolume::IsFeatureSupported(Microsoft.Windows.Management.Deployment.PackageVolumeFeature)
+    def is_feature_supported(cls, feature: PackageVolumeFeature, /) -> bool: ...
 
 @typing.final
 class PackageVolume(winrt.system.Object, metaclass=PackageVolume_Static):
+    # Windows.Foundation.IAsyncOperation`1<System.UInt64> Microsoft.Windows.Management.Deployment.PackageVolume::GetAvailableSpaceAsync()
+    def get_available_space_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt64]: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.PackageVolume::IsOffline()
+    def is_offline(self) -> bool: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageVolume::IsRepairNeeded()
     def is_repair_needed(self) -> bool: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> Microsoft.Windows.Management.Deployment.PackageVolume::RemoveAsync()
+    def remove_async(self) -> windows_foundation.IAsyncOperationWithProgress[PackageDeploymentResult, PackageDeploymentProgress]: ...
     # System.Void Microsoft.Windows.Management.Deployment.PackageVolume::Repair()
     def repair(self) -> None: ...
+    # System.Void Microsoft.Windows.Management.Deployment.PackageVolume::SetDefault()
+    def set_default(self) -> None: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> Microsoft.Windows.Management.Deployment.PackageVolume::SetOfflineAsync()
+    def set_offline_async(self) -> windows_foundation.IAsyncOperationWithProgress[PackageDeploymentResult, PackageDeploymentProgress]: ...
+    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> Microsoft.Windows.Management.Deployment.PackageVolume::SetOnlineAsync()
+    def set_online_async(self) -> windows_foundation.IAsyncOperationWithProgress[PackageDeploymentResult, PackageDeploymentProgress]: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageVolume::get_IsAppxInstallSupported()
     @_property
     def is_appx_install_supported(self) -> bool: ...
@@ -572,6 +669,8 @@ class RemovePackageOptions(winrt.system.Object):
 @typing.final
 class StagePackageOptions(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
+    # Microsoft.Windows.Management.Deployment.PackageValidationEventSource Microsoft.Windows.Management.Deployment.StagePackageOptions::GetValidationEventSourceForUri(Windows.Foundation.Uri)
+    def get_validation_event_source_for_uri(self, uri: windows_foundation.Uri, /) -> PackageValidationEventSource: ...
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.StagePackageOptions::get_TargetVolume()
     @_property
     def target_volume(self) -> PackageVolume: ...
@@ -644,4 +743,18 @@ class StagePackageOptions(winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Windows.Foundation.Uri> Microsoft.Windows.Management.Deployment.StagePackageOptions::get_RelatedPackageUris()
     @_property
     def related_package_uris(self) -> _cabc.MutableSequence[windows_foundation.Uri]: ...
+    # System.Boolean Microsoft.Windows.Management.Deployment.StagePackageOptions::get_IsPackageValidationSupported()
+    @_property
+    def is_package_validation_supported(self) -> bool: ...
+    # Windows.Foundation.Collections.IMapView`2<Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.PackageValidationEventSource> Microsoft.Windows.Management.Deployment.StagePackageOptions::get_PackageValidators()
+    @_property
+    def package_validators(self) -> _cabc.Mapping[windows_foundation.Uri, PackageValidationEventSource]: ...
+
+@typing.final
+class _IPackageValidator: ...
+
+class IPackageValidator(winrt._winrt.IInspectable):
+    # System.Boolean Microsoft.Windows.Management.Deployment.IPackageValidator::IsPackageValid(System.Object)
+    @abstractmethod
+    def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
 

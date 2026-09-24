@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winui3-Microsoft.Windows.AI.Imaging"
-version = "4!1.7.250513003"
+version = "4!2.5.1"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -29,9 +29,9 @@ all = [
     "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
     "winrt-Windows.Graphics[all]>=4!10.0.28000.2705",
     "winrt-Windows.Graphics.Imaging[all]>=4!10.0.28000.2705",
-    "winui3-Microsoft.Graphics.Imaging[all]>=4!1.7.250513003",
-    "winui3-Microsoft.Windows.AI[all]>=4!1.7.250513003",
-    "winui3-Microsoft.Windows.AI.ContentSafety[all]>=4!1.7.250513003",
+    "winui3-Microsoft.Graphics.Imaging[all]>=4!2.5.1",
+    "winui3-Microsoft.Windows.AI[all]>=4!2.5.1",
+    "winui3-Microsoft.Windows.AI.ContentSafety[all]>=4!2.5.1",
 ]
 
 [project.urls]

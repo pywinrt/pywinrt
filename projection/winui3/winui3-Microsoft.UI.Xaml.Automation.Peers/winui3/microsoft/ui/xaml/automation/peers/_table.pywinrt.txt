@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.UI.Xaml.Automation.Peers
 
 enum Microsoft.UI.Xaml.Automation.Peers.AccessibilityView python_type
@@ -1760,6 +1760,12 @@ interface Microsoft.UI.Xaml.Automation.Peers.ISplitButtonAutomationPeer
 interface Microsoft.UI.Xaml.Automation.Peers.ISplitButtonAutomationPeerFactory
     guid e82ddc93-780e-5000-981e-9be10eedeb1f
 
+interface Microsoft.UI.Xaml.Automation.Peers.ISplitMenuFlyoutItemAutomationPeer
+    guid 4c7668c9-a044-5b14-b239-16bea83aa8de
+
+interface Microsoft.UI.Xaml.Automation.Peers.ISplitMenuFlyoutItemAutomationPeerFactory
+    guid 04914f22-1358-54fb-99ea-8c08d4b67456
+
 interface Microsoft.UI.Xaml.Automation.Peers.ITabViewAutomationPeer
     guid efb3f05b-2a25-5266-a1cb-5a0aa451ca32
 
@@ -3146,6 +3152,31 @@ class Microsoft.UI.Xaml.Automation.Peers.SplitButtonAutomationPeer composable py
     method invoke
         method Invoke slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
 
+class Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer composable python_type
+    py SplitMenuFlyoutItemAutomationPeer
+    signature rc(Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer;{4c7668c9-a044-5b14-b239-16bea83aa8de})
+    base Microsoft.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer
+    default Microsoft.UI.Xaml.Automation.Peers.ISplitMenuFlyoutItemAutomationPeer
+    requires Microsoft.UI.Xaml.Automation.Peers.ISplitMenuFlyoutItemAutomationPeer
+    requires Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider
+    requires Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider
+    composable Microsoft.UI.Xaml.Automation.Peers.ISplitMenuFlyoutItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.ISplitMenuFlyoutItemAutomationPeerFactory shape=195
+            in class type=Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Automation.Peers.SplitMenuFlyoutItemAutomationPeer return
+    property expand_collapse_state
+        get get_ExpandCollapseState slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=4 reverse=22
+            out enum32 type=Microsoft.UI.Xaml.Automation.ExpandCollapseState return
+    method collapse
+        method Collapse slot=7 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=37
+    method expand
+        method Expand slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider shape=0 reverse=55
+    method invoke
+        method Invoke slot=6 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider shape=0 reverse=16
+
 class Microsoft.UI.Xaml.Automation.Peers.TabViewAutomationPeer composable python_type
     py TabViewAutomationPeer
     signature rc(Microsoft.UI.Xaml.Automation.Peers.TabViewAutomationPeer;{efb3f05b-2a25-5266-a1cb-5a0aa451ca32})
@@ -3691,6 +3722,9 @@ class Microsoft.UI.Xaml.Controls.Slider external
 
 class Microsoft.UI.Xaml.Controls.SplitButton external
     py winui3.microsoft.ui.xaml.controls.SplitButton
+
+class Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem external
+    py winui3.microsoft.ui.xaml.controls.SplitMenuFlyoutItem
 
 class Microsoft.UI.Xaml.Controls.TabView external
     py winui3.microsoft.ui.xaml.controls.TabView

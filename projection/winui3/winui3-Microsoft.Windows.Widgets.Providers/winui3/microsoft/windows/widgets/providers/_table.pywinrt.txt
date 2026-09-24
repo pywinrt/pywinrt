@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.Windows.Widgets.Providers
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
@@ -238,6 +238,134 @@ interface Windows.Foundation.IReference<System.Boolean> concrete
         method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
             receive_array uint8 name=value
 
+interface Windows.Foundation.IReference<System.Int32> concrete
+    py winrt.windows.foundation._IReference[Int32]
+    guid 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};i4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.Int32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Int32> shape=4 reverse=22 role=value
+            out int32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
 interface Microsoft.Windows.Widgets.Providers.IWidgetActionInvokedArgs
     guid c593cc57-04b9-52ca-88ad-46fea21ea340
 
@@ -261,6 +389,9 @@ interface Microsoft.Windows.Widgets.Providers.IWidgetInfo
 
 interface Microsoft.Windows.Widgets.Providers.IWidgetInfo2
     guid 081b0a6f-d784-5408-bb29-252fef2926d4
+
+interface Microsoft.Windows.Widgets.Providers.IWidgetInfo3
+    guid 965538cd-289d-54ab-916e-9315ebf97ea4
 
 interface Microsoft.Windows.Widgets.Providers.IWidgetManager python_type
     py _IWidgetManager
@@ -380,6 +511,9 @@ interface Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions
 interface Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2
     guid 77c4efc4-38f3-57a5-aba1-f83f257b899e
 
+interface Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions3
+    guid a78e2a8b-a26c-596a-ade3-db8f4c72fe02
+
 interface Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory
     guid e0e00af8-1d10-57a8-9419-3f568e854daa
 
@@ -473,6 +607,7 @@ class Microsoft.Windows.Widgets.Providers.WidgetInfo python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetInfo
     requires Microsoft.Windows.Widgets.Providers.IWidgetInfo
     requires Microsoft.Windows.Widgets.Providers.IWidgetInfo2
+    requires Microsoft.Windows.Widgets.Providers.IWidgetInfo3
     property custom_state
         get get_CustomState slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo shape=4
             out string return
@@ -491,6 +626,9 @@ class Microsoft.Windows.Widgets.Providers.WidgetInfo python_type
     property is_placeholder_content
         get get_IsPlaceholderContent slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo2 shape=4
             out boolean return
+    property rank
+        get get_Rank slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetInfo3 shape=4
+            out int32 return
 
 class Microsoft.Windows.Widgets.Providers.WidgetManager python_type
     py WidgetManager
@@ -608,6 +746,7 @@ class Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions python_type
     default Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions
     requires Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions
     requires Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2
+    requires Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions3
     factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsFactory
     factory Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics
     constructor -
@@ -637,6 +776,11 @@ class Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions python_type
             out reference type=Windows.Foundation.IReference<System.Boolean> return
         put put_IsPlaceholderContent slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions2 shape=4
             in reference type=Windows.Foundation.IReference<System.Boolean> name=value
+    property rank
+        get get_Rank slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions3 shape=4
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+        put put_Rank slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptions3 shape=4
+            in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property unset_value static
         get get_UnsetValue slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Providers.IWidgetUpdateRequestOptionsStatics shape=4 static
             out string return
@@ -646,6 +790,9 @@ enum Microsoft.Windows.Widgets.WidgetSize external
 
 class System.Boolean external
     py winrt.system.Boolean
+
+class System.Int32 external
+    py winrt.system.Int32
 
 class System.String external
     py winrt.system.String

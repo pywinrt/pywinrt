@@ -1,0 +1,31 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.Windows.SemanticSearch
+
+class Microsoft.Windows.SemanticSearch.EmbeddingVector python_type
+    py EmbeddingVector
+    signature rc(Microsoft.Windows.SemanticSearch.EmbeddingVector;{f80248aa-68e7-5de0-9166-b26e58935d34})
+    default Microsoft.Windows.SemanticSearch.IEmbeddingVector
+    requires Microsoft.Windows.SemanticSearch.IEmbeddingVector
+    factory Microsoft.Windows.SemanticSearch.IEmbeddingVectorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.SemanticSearch.IEmbeddingVectorFactory shape=202
+            pass_array single name=data
+            in guid name=vectorSpaceID
+            out class type=Microsoft.Windows.SemanticSearch.EmbeddingVector return
+    property count
+        get get_Count slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.SemanticSearch.IEmbeddingVector shape=4
+            out uint32 return
+    property vector_space_id
+        get get_VectorSpaceId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.SemanticSearch.IEmbeddingVector shape=4
+            out guid return
+    method get_values
+        method GetValues slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.SemanticSearch.IEmbeddingVector shape=51
+            fill_array single name=values
+
+interface Microsoft.Windows.SemanticSearch.IEmbeddingVector
+    guid f80248aa-68e7-5de0-9166-b26e58935d34
+
+interface Microsoft.Windows.SemanticSearch.IEmbeddingVectorFactory
+    guid 3a31ead7-1f01-5a4c-9c2e-9acfa6495cdd

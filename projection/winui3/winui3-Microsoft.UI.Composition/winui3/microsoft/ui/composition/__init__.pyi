@@ -37,6 +37,7 @@ __all__ = [
     "CompositionDropShadowSourcePolicy",
     "CompositionEasingFunctionMode",
     "CompositionEffectFactoryLoadStatus",
+    "CompositionEngineType",
     "CompositionGetValueStatus",
     "CompositionGradientExtendMode",
     "CompositionMappingMode",
@@ -73,6 +74,7 @@ __all__ = [
     "CompositionEffectFactory",
     "CompositionEffectSourceParameter",
     "CompositionEllipseGeometry",
+    "CompositionEngine",
     "CompositionGeometricClip",
     "CompositionGeometry",
     "CompositionGradientBrush",
@@ -240,6 +242,10 @@ class CompositionEffectFactoryLoadStatus(enum.IntEnum):
     EFFECT_TOO_COMPLEX = 1
     PENDING = 2
     OTHER = -1
+
+class CompositionEngineType(enum.IntEnum):
+    SYSTEM = 0
+    IN_PROCESS = 1
 
 class CompositionGetValueStatus(enum.IntEnum):
     SUCCEEDED = 0
@@ -798,6 +804,19 @@ class CompositionEllipseGeometry(CompositionGeometry):
     # System.Void Microsoft.UI.Composition.CompositionEllipseGeometry::put_Center(Windows.Foundation.Numerics.Vector2)
     @center.setter
     def center(self, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
+
+@typing.final
+class CompositionEngine_Static(winrt._winrt.IInspectable_Static):
+    # System.Object Microsoft.UI.Composition.CompositionEngine::GetForInProcessEngine(System.Object)
+    def get_for_in_process_engine(cls, composition_object: winrt.system.Object, /) -> winrt.system.Object: ...
+    # System.Object Microsoft.UI.Composition.CompositionEngine::GetForSystemEngine(System.Object)
+    def get_for_system_engine(cls, composition_object: winrt.system.Object, /) -> winrt.system.Object: ...
+    # System.Boolean Microsoft.UI.Composition.CompositionEngine::TrySetProcessEngine(Microsoft.UI.Composition.CompositionEngineType)
+    def try_set_process_engine(cls, requested: CompositionEngineType, /) -> bool: ...
+
+@typing.final
+class CompositionEngine(winrt.system.Object, metaclass=CompositionEngine_Static):
+    ...
 
 @typing.final
 class CompositionGeometricClip(CompositionClip):
