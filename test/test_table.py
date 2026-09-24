@@ -248,14 +248,18 @@ class TestTableFormat(unittest.TestCase):
         self.assertGreater(table["reverse_shape_limit"], 0)
 
         # the census the shape ids were assigned by: one lineage for the
-        # whole tree, since one winrt-runtime resolves every table in it
+        # whole tree, since one winrt-runtime resolves every table in it. The
+        # revision is the oldest one that has the ids this table names, so two
+        # namespaces share the lineage and each carries a revision of its own.
         lineage, revision = table["census"]
 
         self.assertEqual(uuid.UUID(lineage).version, 4)
         self.assertGreater(revision, 0)
-        self.assertEqual(
-            read("winrt", "windows", "foundation")["census"], (lineage, revision)
-        )
+
+        other_lineage, other_revision = read("winrt", "windows", "foundation")["census"]
+
+        self.assertEqual(other_lineage, lineage)
+        self.assertGreater(other_revision, 0)
 
     def test_rejects_what_is_not_a_table(self) -> None:
         for name, data in (

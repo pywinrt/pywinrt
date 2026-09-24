@@ -1686,7 +1686,7 @@ sealed class TableWriter
     {
         sink.Line($"format {FormatMajor}.{FormatMinor}");
         sink.Line($"generator {PyWinRT.VersionString}");
-        sink.Line($"census {census.Lineage} {census.Revision}");
+        sink.Line($"census {census.Lineage} {CensusRevisionFor(sorted)}");
         sink.Line($"namespace {ns.Namespace}");
 
         foreach (var type in sorted)
@@ -1695,6 +1695,38 @@ sealed class TableWriter
 
             WriteType(sink, type);
         }
+    }
+
+    /// <summary>
+    /// The revision of the census this table needs, which is the oldest one
+    /// that has every shape id it names.
+    /// </summary>
+    /// <remarks>
+    /// A table is written against the census as it stands, but what it
+    /// depends on is only the ids it uses. Saying the oldest revision that
+    /// covers them keeps the namespace readable by every runtime that could
+    /// run it, and keeps the file from changing when the census grows for
+    /// some other namespace.
+    /// </remarks>
+    private int CensusRevisionFor(IReadOnlyList<TableType> sorted)
+    {
+        var shapes = 0;
+        var reverseShapes = 0;
+
+        foreach (var member in sorted.SelectMany(t => t.Groups).SelectMany(g => g.Members))
+        {
+            if (member.ForwardShape != NoRef)
+            {
+                shapes = Math.Max(shapes, (int)member.ForwardShape + 1);
+            }
+
+            if (member.ReverseShape != NoRef)
+            {
+                reverseShapes = Math.Max(reverseShapes, (int)member.ReverseShape + 1);
+            }
+        }
+
+        return census.RevisionFor(shapes, reverseShapes);
     }
 
     private static void WriteType(TextSink sink, TableType type)

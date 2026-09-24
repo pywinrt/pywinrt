@@ -36,6 +36,18 @@ sealed class CensusFragment
 }
 
 /// <summary>
+/// How far the census had grown at the end of one revision.
+/// </summary>
+sealed class CensusRevision
+{
+    [JsonPropertyName("shapes")]
+    public int Shapes { get; set; }
+
+    [JsonPropertyName("reverse_shapes")]
+    public int ReverseShapes { get; set; }
+}
+
+/// <summary>
 /// The shape census merged over every generator run, and the source of
 /// <c>shapes-generated.h</c>.
 /// </summary>
@@ -81,13 +93,27 @@ sealed class Census
     /// This is what the lineage on its own misses. Someone who starts from
     /// this census and lets a run of their own extend it keeps the lineage,
     /// and every id appended past the highest one a given runtime knows would
-    /// mis-dispatch. A table records the revision it was generated against and
-    /// the runtime refuses anything ahead of its own, which costs none of the
-    /// forward compatibility above because a lower revision is still a prefix
-    /// of the higher one.
+    /// mis-dispatch. A table records the revision it needs and the runtime
+    /// refuses anything ahead of its own, which costs none of the forward
+    /// compatibility above because a lower revision is still a prefix of the
+    /// higher one.
     /// </remarks>
     [JsonPropertyName("revision")]
     public int Revision { get; set; }
+
+    /// <summary>
+    /// How many ids the census had at the end of each revision, oldest first.
+    /// </summary>
+    /// <remarks>
+    /// A table needs the ids it names and nothing else, so this is what lets
+    /// it say the oldest revision that has them rather than whichever one the
+    /// census happened to stand at when it was written. Without it a
+    /// namespace that has not changed in years would be renumbered, and would
+    /// claim to need a newer runtime, every time some unrelated namespace
+    /// contributed a shape.
+    /// </remarks>
+    [JsonPropertyName("revisions")]
+    public List<CensusRevision> Revisions { get; set; } = [];
 
     /// <summary>
     /// The id of each forward shape. Append-only: an id is never reused and
@@ -117,6 +143,31 @@ sealed class Census
         NewLine = "\n",
     };
 
+    /// <summary>
+    /// The oldest revision of this census that has every id below
+    /// <paramref name="shapes"/> and <paramref name="reverseShapes"/>.
+    /// </summary>
+    /// <remarks>
+    /// Ids are append-only and handed out in order, so how many there were at
+    /// the end of a revision is all it takes to say whether that revision had
+    /// a given one. A table that names none is readable by any runtime of
+    /// this lineage and gets the first revision.
+    /// </remarks>
+    public int RevisionFor(int shapes, int reverseShapes)
+    {
+        for (var i = 0; i < Revisions.Count; i++)
+        {
+            if (Revisions[i].Shapes >= shapes && Revisions[i].ReverseShapes >= reverseShapes)
+            {
+                return i + 1;
+            }
+        }
+
+        throw new InvalidOperationException(
+            $"no revision of census {Lineage} has {shapes} shapes and {reverseShapes} reverse shapes"
+        );
+    }
+
     public static string ToReverseKey(int slot, string shapeKey) => $"{slot}:{shapeKey}";
 
     public static (int Slot, string ShapeKey) FromReverseKey(string key)
@@ -143,6 +194,17 @@ sealed class Census
         if (census.Lineage.Length == 0)
         {
             throw new FormatException($"{file.FullName} does not say which census it is");
+        }
+
+        // A table says which revision it needs by looking its ids up in this
+        // list, so a census that has not kept one for every revision cannot
+        // be written against.
+        if (census.Revisions.Count != census.Revision)
+        {
+            throw new FormatException(
+                $"{file.FullName} is revision {census.Revision} and records how far"
+                    + $" {census.Revisions.Count} of them got"
+            );
         }
 
         return census;
@@ -232,6 +294,9 @@ sealed class Census
         if (assignedForward || assignedReverse)
         {
             Revision++;
+            Revisions.Add(
+                new CensusRevision { Shapes = ShapeIds.Count, ReverseShapes = ReverseIds.Count }
+            );
         }
     }
 
