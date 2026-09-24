@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "webview2-Microsoft.Web.WebView2.Core"
-version = "4!1.0.3240.44"
+version = "4!1.0.4191.47"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"

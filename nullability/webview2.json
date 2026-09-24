@@ -965,6 +965,32 @@
             ]
           },
           {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2::add_DedicatedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs>)",
+            "name": "add_DedicatedWorkerCreated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
             "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2::add_DocumentTitleChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2,System.Object>)",
             "name": "add_DocumentTitleChanged",
             "return": {
@@ -1793,6 +1819,16 @@
             "parameters": []
           },
           {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2Find Microsoft.Web.WebView2.Core.CoreWebView2::get_Find()",
+            "name": "get_Find",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2Find"
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2::get_FrameId()",
             "name": "get_FrameId",
             "return": {
@@ -2057,6 +2093,24 @@
           {
             "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2::remove_DOMContentLoaded(Windows.Foundation.EventRegistrationToken)",
             "name": "remove_DOMContentLoaded",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2::remove_DedicatedWorkerCreated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_DedicatedWorkerCreated",
             "return": {
               "type": {
                 "name": "System.Void"
@@ -4638,6 +4692,26 @@
         "name": "CoreWebView2ControllerOptions",
         "methods": [
           {
+            "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::get_AllowHostInputProcessing()",
+            "name": "get_AllowHostInputProcessing",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.UI.Color Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::get_DefaultBackgroundColor()",
+            "name": "get_DefaultBackgroundColor",
+            "return": {
+              "type": {
+                "name": "Windows.UI.Color"
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::get_IsInPrivateModeEnabled()",
             "name": "get_IsInPrivateModeEnabled",
             "return": {
@@ -4666,6 +4740,42 @@
               }
             },
             "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::put_AllowHostInputProcessing(System.Boolean)",
+            "name": "put_AllowHostInputProcessing",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::put_DefaultBackgroundColor(Windows.UI.Color)",
+            "name": "put_DefaultBackgroundColor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.UI.Color"
+                }
+              }
+            ]
           },
           {
             "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::put_IsInPrivateModeEnabled(System.Boolean)",
@@ -5275,6 +5385,214 @@
             "return": {
               "type": {
                 "name": "System.UInt64"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2DedicatedWorker",
+        "methods": [
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::PostWebMessageAsJson(System.String)",
+            "name": "PostWebMessageAsJson",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "webMessageAsJson",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::PostWebMessageAsString(System.String)",
+            "name": "PostWebMessageAsString",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "webMessageAsString",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::add_DedicatedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs>)",
+            "name": "add_DedicatedWorkerCreated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,System.Object>)",
+            "name": "add_Destroying",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker"
+                    },
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::add_WebMessageReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>)",
+            "name": "add_WebMessageReceived",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::get_ScriptUri()",
+            "name": "get_ScriptUri",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::remove_DedicatedWorkerCreated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_DedicatedWorkerCreated",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Destroying",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::remove_WebMessageReceived(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_WebMessageReceived",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2DedicatedWorkerCreatedEventArgs",
+        "methods": [
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs::get_OriginalSourceFrameInfo()",
+            "name": "get_OriginalSourceFrameInfo",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs::get_Worker()",
+            "name": "get_Worker",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker"
               }
             },
             "parameters": []
@@ -5928,6 +6246,16 @@
             "return": {
               "type": {
                 "name": "Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2FindOptions Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateFindOptions()",
+            "name": "CreateFindOptions",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2FindOptions"
               }
             },
             "parameters": []
@@ -6843,6 +7171,312 @@
         ]
       },
       {
+        "name": "CoreWebView2Find",
+        "methods": [
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::FindNext()",
+            "name": "FindNext",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::FindPrevious()",
+            "name": "FindPrevious",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction Microsoft.Web.WebView2.Core.CoreWebView2Find::StartAsync(Microsoft.Web.WebView2.Core.CoreWebView2FindOptions)",
+            "name": "StartAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": [
+              {
+                "name": "options",
+                "kind": "in",
+                "type": {
+                  "name": "Microsoft.Web.WebView2.Core.CoreWebView2FindOptions"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::Stop()",
+            "name": "Stop",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Find::add_ActiveMatchIndexChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object>)",
+            "name": "add_ActiveMatchIndexChanged",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2Find"
+                    },
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Find::add_MatchCountChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object>)",
+            "name": "add_MatchCountChanged",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2Find"
+                    },
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Find::get_ActiveMatchIndex()",
+            "name": "get_ActiveMatchIndex",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Find::get_MatchCount()",
+            "name": "get_MatchCount",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::remove_ActiveMatchIndexChanged(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_ActiveMatchIndexChanged",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::remove_MatchCountChanged(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_MatchCountChanged",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2FindOptions",
+        "methods": [
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_FindTerm()",
+            "name": "get_FindTerm",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_IsCaseSensitive()",
+            "name": "get_IsCaseSensitive",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_ShouldHighlightAllMatches()",
+            "name": "get_ShouldHighlightAllMatches",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_ShouldMatchWord()",
+            "name": "get_ShouldMatchWord",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_SuppressDefaultFindDialog()",
+            "name": "get_SuppressDefaultFindDialog",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_FindTerm(System.String)",
+            "name": "put_FindTerm",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_IsCaseSensitive(System.Boolean)",
+            "name": "put_IsCaseSensitive",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_ShouldHighlightAllMatches(System.Boolean)",
+            "name": "put_ShouldHighlightAllMatches",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_ShouldMatchWord(System.Boolean)",
+            "name": "put_ShouldMatchWord",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_SuppressDefaultFindDialog(System.Boolean)",
+            "name": "put_SuppressDefaultFindDialog",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "CoreWebView2Frame",
         "methods": [
           {
@@ -7010,6 +7644,32 @@
                     },
                     {
                       "name": "Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Frame::add_DedicatedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs>)",
+            "name": "add_DedicatedWorkerCreated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2Frame"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs"
                     }
                   ]
                 }
@@ -7265,6 +7925,24 @@
           {
             "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_DOMContentLoaded(Windows.Foundation.EventRegistrationToken)",
             "name": "remove_DOMContentLoaded",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_DedicatedWorkerCreated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_DedicatedWorkerCreated",
             "return": {
               "type": {
                 "name": "System.Void"
@@ -10358,6 +11036,16 @@
             ]
           },
           {
+            "signature": "System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_AreWebViewScriptApisEnabledForServiceWorkers()",
+            "name": "get_AreWebViewScriptApisEnabledForServiceWorkers",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "Microsoft.Web.WebView2.Core.CoreWebView2CookieManager Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_CookieManager()",
             "name": "get_CookieManager",
             "return": {
@@ -10446,6 +11134,44 @@
               }
             },
             "parameters": []
+          },
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_ServiceWorkerManager()",
+            "name": "get_ServiceWorkerManager",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_SharedWorkerManager()",
+            "name": "get_SharedWorkerManager",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Profile::put_AreWebViewScriptApisEnabledForServiceWorkers(System.Boolean)",
+            "name": "put_AreWebViewScriptApisEnabledForServiceWorkers",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
           },
           {
             "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2Profile::put_DefaultDownloadFolderPath(System.String)",
@@ -11126,6 +11852,405 @@
         ]
       },
       {
+        "name": "CoreWebView2ServiceWorker",
+        "methods": [
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::PostWebMessageAsJson(System.String)",
+            "name": "PostWebMessageAsJson",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "webMessageAsJson",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::PostWebMessageAsString(System.String)",
+            "name": "PostWebMessageAsString",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "webMessageAsString",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,System.Object>)",
+            "name": "add_Destroying",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker"
+                    },
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::add_WebMessageReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>)",
+            "name": "add_WebMessageReceived",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::get_ScriptUri()",
+            "name": "get_ScriptUri",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Destroying",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::remove_WebMessageReceived(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_WebMessageReceived",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2ServiceWorkerActivatedEventArgs",
+        "methods": [
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs::get_ActiveServiceWorker()",
+            "name": "get_ActiveServiceWorker",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2ServiceWorkerManager",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::GetServiceWorkerRegistrationsAsync()",
+            "name": "GetServiceWorkerRegistrationsAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.Foundation.Collections.IVectorView`1",
+                    "args": [
+                      {
+                        "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::GetServiceWorkerRegistrationsAsync(System.String)",
+            "name": "GetServiceWorkerRegistrationsAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.Foundation.Collections.IVectorView`1",
+                    "args": [
+                      {
+                        "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "scope",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::add_ServiceWorkerRegistered(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs>)",
+            "name": "add_ServiceWorkerRegistered",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::remove_ServiceWorkerRegistered(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_ServiceWorkerRegistered",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2ServiceWorkerRegisteredEventArgs",
+        "methods": [
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs::get_ServiceWorkerRegistration()",
+            "name": "get_ServiceWorkerRegistration",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2ServiceWorkerRegistration",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::add_ServiceWorkerActivated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs>)",
+            "name": "add_ServiceWorkerActivated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::add_Unregistering(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,System.Object>)",
+            "name": "add_Unregistering",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration"
+                    },
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_ActiveServiceWorker()",
+            "name": "get_ActiveServiceWorker",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_Origin()",
+            "name": "get_Origin",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_ScopeUri()",
+            "name": "get_ScopeUri",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_TopLevelOrigin()",
+            "name": "get_TopLevelOrigin",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::remove_ServiceWorkerActivated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_ServiceWorkerActivated",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::remove_Unregistering(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Unregistering",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "CoreWebView2Settings",
         "methods": [
           {
@@ -11704,6 +12829,169 @@
               }
             },
             "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2SharedWorker",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker,System.Object>)",
+            "name": "add_Destroying",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker"
+                    },
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::get_Origin()",
+            "name": "get_Origin",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::get_ScriptUri()",
+            "name": "get_ScriptUri",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::get_TopLevelOrigin()",
+            "name": "get_TopLevelOrigin",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Destroying",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2SharedWorkerCreatedEventArgs",
+        "methods": [
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs::get_Worker()",
+            "name": "get_Worker",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "CoreWebView2SharedWorkerManager",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::GetSharedWorkersAsync()",
+            "name": "GetSharedWorkersAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.Foundation.Collections.IVectorView`1",
+                    "args": [
+                      {
+                        "name": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::add_SharedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs>)",
+            "name": "add_SharedWorkerCreated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.TypedEventHandler`2",
+                  "args": [
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager"
+                    },
+                    {
+                      "name": "Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::remove_SharedWorkerCreated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_SharedWorkerCreated",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
           }
         ]
       },

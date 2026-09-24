@@ -94,6 +94,8 @@ __all__ = [
     "CoreWebView2CookieManager",
     "CoreWebView2CustomSchemeRegistration",
     "CoreWebView2DOMContentLoadedEventArgs",
+    "CoreWebView2DedicatedWorker",
+    "CoreWebView2DedicatedWorkerCreatedEventArgs",
     "CoreWebView2DevToolsProtocolEventReceivedEventArgs",
     "CoreWebView2DevToolsProtocolEventReceiver",
     "CoreWebView2DownloadOperation",
@@ -103,6 +105,8 @@ __all__ = [
     "CoreWebView2ExecuteScriptResult",
     "CoreWebView2File",
     "CoreWebView2FileSystemHandle",
+    "CoreWebView2Find",
+    "CoreWebView2FindOptions",
     "CoreWebView2Frame",
     "CoreWebView2FrameCreatedEventArgs",
     "CoreWebView2FrameInfo",
@@ -131,8 +135,16 @@ __all__ = [
     "CoreWebView2ScriptDialogOpeningEventArgs",
     "CoreWebView2ScriptException",
     "CoreWebView2ServerCertificateErrorDetectedEventArgs",
+    "CoreWebView2ServiceWorker",
+    "CoreWebView2ServiceWorkerActivatedEventArgs",
+    "CoreWebView2ServiceWorkerManager",
+    "CoreWebView2ServiceWorkerRegisteredEventArgs",
+    "CoreWebView2ServiceWorkerRegistration",
     "CoreWebView2Settings",
     "CoreWebView2SharedBuffer",
+    "CoreWebView2SharedWorker",
+    "CoreWebView2SharedWorkerCreatedEventArgs",
+    "CoreWebView2SharedWorkerManager",
     "CoreWebView2SourceChangedEventArgs",
     "CoreWebView2WebMessageReceivedEventArgs",
     "CoreWebView2WebResourceRequest",
@@ -357,6 +369,7 @@ class CoreWebView2PermissionKind(enum.IntEnum):
     LOCAL_FONTS = 10
     MIDI_SYSTEM_EXCLUSIVE_MESSAGES = 11
     WINDOW_MANAGEMENT = 12
+    PERSISTENT_STORAGE = 13
 
 class CoreWebView2PermissionState(enum.IntEnum):
     DEFAULT = 0
@@ -429,6 +442,9 @@ class CoreWebView2ProcessFailedReason(enum.IntEnum):
     LAUNCH_FAILED = 4
     OUT_OF_MEMORY = 5
     PROFILE_DELETED = 6
+    NORMAL_EXIT = 7
+    ABNORMAL_EXIT = 8
+    INTEGRITY_FAILURE = 9
 
 class CoreWebView2ProcessKind(enum.IntEnum):
     BROWSER = 0
@@ -690,6 +706,10 @@ class CoreWebView2(winrt.system.Object):
     def add_screen_capture_starting(self, handler: windows_foundation.TypedEventHandler[CoreWebView2, CoreWebView2ScreenCaptureStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2::remove_ScreenCaptureStarting(Windows.Foundation.EventRegistrationToken)
     def remove_screen_capture_starting(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2::add_DedicatedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs>)
+    def add_dedicated_worker_created(self, handler: windows_foundation.TypedEventHandler[CoreWebView2, CoreWebView2DedicatedWorkerCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2::remove_DedicatedWorkerCreated(Windows.Foundation.EventRegistrationToken)
+    def remove_dedicated_worker_created(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2::add_DownloadStarting(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs>)
     def add_download_starting(self, handler: windows_foundation.TypedEventHandler[CoreWebView2, CoreWebView2DownloadStartingEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2::remove_DownloadStarting(Windows.Foundation.EventRegistrationToken)
@@ -823,6 +843,9 @@ class CoreWebView2(winrt.system.Object):
     # System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2::get_FrameId()
     @_property
     def frame_id(self) -> winrt.system.UInt32: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2Find Microsoft.Web.WebView2.Core.CoreWebView2::get_Find()
+    @_property
+    def find(self) -> CoreWebView2Find: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2::get_IsSuspended()
     @_property
     def is_suspended(self) -> bool: ...
@@ -1332,6 +1355,18 @@ class CoreWebView2ControllerOptions(winrt.system.Object):
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::put_ScriptLocale(System.String)
     @script_locale.setter
     def script_locale(self, value: str) -> None: ...
+    # Windows.UI.Color Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::get_DefaultBackgroundColor()
+    @_property
+    def default_background_color(self) -> windows_ui.Color: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::put_DefaultBackgroundColor(Windows.UI.Color)
+    @default_background_color.setter
+    def default_background_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::get_AllowHostInputProcessing()
+    @_property
+    def allow_host_input_processing(self) -> bool: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::put_AllowHostInputProcessing(System.Boolean)
+    @allow_host_input_processing.setter
+    def allow_host_input_processing(self, value: bool) -> None: ...
 
 @typing.final
 class CoreWebView2ControllerWindowReference_Static(winrt._winrt.IInspectable_Static):
@@ -1440,6 +1475,37 @@ class CoreWebView2DOMContentLoadedEventArgs(winrt.system.Object):
     # System.UInt64 Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs::get_NavigationId()
     @_property
     def navigation_id(self) -> winrt.system.UInt64: ...
+
+@typing.final
+class CoreWebView2DedicatedWorker(winrt.system.Object):
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::PostWebMessageAsJson(System.String)
+    def post_web_message_as_json(self, web_message_as_json: str, /) -> None: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::PostWebMessageAsString(System.String)
+    def post_web_message_as_string(self, web_message_as_string: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::add_DedicatedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs>)
+    def add_dedicated_worker_created(self, handler: windows_foundation.TypedEventHandler[CoreWebView2DedicatedWorker, CoreWebView2DedicatedWorkerCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::remove_DedicatedWorkerCreated(Windows.Foundation.EventRegistrationToken)
+    def remove_dedicated_worker_created(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,System.Object>)
+    def add_destroying(self, handler: windows_foundation.TypedEventHandler[CoreWebView2DedicatedWorker, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)
+    def remove_destroying(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::add_WebMessageReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>)
+    def add_web_message_received(self, handler: windows_foundation.TypedEventHandler[CoreWebView2DedicatedWorker, CoreWebView2WebMessageReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::remove_WebMessageReceived(Windows.Foundation.EventRegistrationToken)
+    def remove_web_message_received(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::get_ScriptUri()
+    @_property
+    def script_uri(self) -> str: ...
+
+@typing.final
+class CoreWebView2DedicatedWorkerCreatedEventArgs(winrt.system.Object):
+    # Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs::get_OriginalSourceFrameInfo()
+    @_property
+    def original_source_frame_info(self) -> CoreWebView2FrameInfo: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs::get_Worker()
+    @_property
+    def worker(self) -> CoreWebView2DedicatedWorker: ...
 
 @typing.final
 class CoreWebView2DevToolsProtocolEventReceivedEventArgs(winrt.system.Object):
@@ -1580,6 +1646,8 @@ class CoreWebView2Environment(winrt.system.Object, metaclass=CoreWebView2Environ
     def create_core_webview2_controller_options(self) -> CoreWebView2ControllerOptions: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateCoreWebView2PointerInfo()
     def create_core_webview2_pointer_info(self) -> CoreWebView2PointerInfo: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2FindOptions Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateFindOptions()
+    def create_find_options(self) -> CoreWebView2FindOptions: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreatePrintSettings()
     def create_print_settings(self) -> CoreWebView2PrintSettings: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateSharedBuffer(System.UInt64)
@@ -1727,6 +1795,64 @@ class CoreWebView2FileSystemHandle(winrt.system.Object):
     def permission(self) -> CoreWebView2FileSystemHandlePermission: ...
 
 @typing.final
+class CoreWebView2Find(winrt.system.Object):
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::FindNext()
+    def find_next(self) -> None: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::FindPrevious()
+    def find_previous(self) -> None: ...
+    # Windows.Foundation.IAsyncAction Microsoft.Web.WebView2.Core.CoreWebView2Find::StartAsync(Microsoft.Web.WebView2.Core.CoreWebView2FindOptions)
+    def start_async(self, options: CoreWebView2FindOptions, /) -> windows_foundation.IAsyncAction: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::Stop()
+    def stop(self) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Find::add_ActiveMatchIndexChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object>)
+    def add_active_match_index_changed(self, handler: windows_foundation.TypedEventHandler[CoreWebView2Find, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::remove_ActiveMatchIndexChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_active_match_index_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Find::add_MatchCountChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Find,System.Object>)
+    def add_match_count_changed(self, handler: windows_foundation.TypedEventHandler[CoreWebView2Find, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::remove_MatchCountChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_match_count_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Find::get_ActiveMatchIndex()
+    @_property
+    def active_match_index(self) -> winrt.system.Int32: ...
+    # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Find::get_MatchCount()
+    @_property
+    def match_count(self) -> winrt.system.Int32: ...
+
+@typing.final
+class CoreWebView2FindOptions(winrt.system.Object):
+    # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_SuppressDefaultFindDialog()
+    @_property
+    def suppress_default_find_dialog(self) -> bool: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_SuppressDefaultFindDialog(System.Boolean)
+    @suppress_default_find_dialog.setter
+    def suppress_default_find_dialog(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_ShouldMatchWord()
+    @_property
+    def should_match_word(self) -> bool: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_ShouldMatchWord(System.Boolean)
+    @should_match_word.setter
+    def should_match_word(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_ShouldHighlightAllMatches()
+    @_property
+    def should_highlight_all_matches(self) -> bool: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_ShouldHighlightAllMatches(System.Boolean)
+    @should_highlight_all_matches.setter
+    def should_highlight_all_matches(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_IsCaseSensitive()
+    @_property
+    def is_case_sensitive(self) -> bool: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_IsCaseSensitive(System.Boolean)
+    @is_case_sensitive.setter
+    def is_case_sensitive(self, value: bool) -> None: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_FindTerm()
+    @_property
+    def find_term(self) -> str: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::put_FindTerm(System.String)
+    @find_term.setter
+    def find_term(self, value: str) -> None: ...
+
+@typing.final
 class CoreWebView2Frame(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.String> Microsoft.Web.WebView2.Core.CoreWebView2Frame::ExecuteScriptAsync(System.String)
     def execute_script_async(self, java_script: str, /) -> windows_foundation.IAsyncOperation[str]: ...
@@ -1772,6 +1898,10 @@ class CoreWebView2Frame(winrt.system.Object):
     def add_frame_created(self, handler: windows_foundation.TypedEventHandler[CoreWebView2Frame, CoreWebView2FrameCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_FrameCreated(Windows.Foundation.EventRegistrationToken)
     def remove_frame_created(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Frame::add_DedicatedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Frame,Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs>)
+    def add_dedicated_worker_created(self, handler: windows_foundation.TypedEventHandler[CoreWebView2Frame, CoreWebView2DedicatedWorkerCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_DedicatedWorkerCreated(Windows.Foundation.EventRegistrationToken)
+    def remove_dedicated_worker_created(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2Frame::add_Destroyed(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2Frame,System.Object>)
     def add_destroyed(self, handler: windows_foundation.TypedEventHandler[CoreWebView2Frame, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Frame::remove_Destroyed(Windows.Foundation.EventRegistrationToken)
@@ -2497,6 +2627,18 @@ class CoreWebView2Profile(winrt.system.Object):
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Profile::put_IsGeneralAutofillEnabled(System.Boolean)
     @is_general_autofill_enabled.setter
     def is_general_autofill_enabled(self, value: bool) -> None: ...
+    # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_AreWebViewScriptApisEnabledForServiceWorkers()
+    @_property
+    def are_web_view_script_apis_enabled_for_service_workers(self) -> bool: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Profile::put_AreWebViewScriptApisEnabledForServiceWorkers(System.Boolean)
+    @are_web_view_script_apis_enabled_for_service_workers.setter
+    def are_web_view_script_apis_enabled_for_service_workers(self, value: bool) -> None: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_ServiceWorkerManager()
+    @_property
+    def service_worker_manager(self) -> CoreWebView2ServiceWorkerManager: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager Microsoft.Web.WebView2.Core.CoreWebView2Profile::get_SharedWorkerManager()
+    @_property
+    def shared_worker_manager(self) -> CoreWebView2SharedWorkerManager: ...
 
 @typing.final
 class CoreWebView2SaveAsUIShowingEventArgs(winrt.system.Object):
@@ -2646,6 +2788,72 @@ class CoreWebView2ServerCertificateErrorDetectedEventArgs(winrt.system.Object):
     def server_certificate(self) -> CoreWebView2Certificate: ...
 
 @typing.final
+class CoreWebView2ServiceWorker(winrt.system.Object):
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::PostWebMessageAsJson(System.String)
+    def post_web_message_as_json(self, web_message_as_json: str, /) -> None: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::PostWebMessageAsString(System.String)
+    def post_web_message_as_string(self, web_message_as_string: str, /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,System.Object>)
+    def add_destroying(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ServiceWorker, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)
+    def remove_destroying(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::add_WebMessageReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker,Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>)
+    def add_web_message_received(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ServiceWorker, CoreWebView2WebMessageReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::remove_WebMessageReceived(Windows.Foundation.EventRegistrationToken)
+    def remove_web_message_received(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::get_ScriptUri()
+    @_property
+    def script_uri(self) -> str: ...
+
+@typing.final
+class CoreWebView2ServiceWorkerActivatedEventArgs(winrt.system.Object):
+    # Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs::get_ActiveServiceWorker()
+    @_property
+    def active_service_worker(self) -> CoreWebView2ServiceWorker: ...
+
+@typing.final
+class CoreWebView2ServiceWorkerManager(winrt.system.Object):
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::GetServiceWorkerRegistrationsAsync()
+    def get_service_worker_registrations_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CoreWebView2ServiceWorkerRegistration]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::GetServiceWorkerRegistrationsAsync(System.String)
+    def get_service_worker_registrations_async(self, scope: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CoreWebView2ServiceWorkerRegistration]]: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::add_ServiceWorkerRegistered(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs>)
+    def add_service_worker_registered(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ServiceWorkerManager, CoreWebView2ServiceWorkerRegisteredEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::remove_ServiceWorkerRegistered(Windows.Foundation.EventRegistrationToken)
+    def remove_service_worker_registered(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+
+@typing.final
+class CoreWebView2ServiceWorkerRegisteredEventArgs(winrt.system.Object):
+    # Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs::get_ServiceWorkerRegistration()
+    @_property
+    def service_worker_registration(self) -> CoreWebView2ServiceWorkerRegistration: ...
+
+@typing.final
+class CoreWebView2ServiceWorkerRegistration(winrt.system.Object):
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::add_ServiceWorkerActivated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs>)
+    def add_service_worker_activated(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ServiceWorkerRegistration, CoreWebView2ServiceWorkerActivatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::remove_ServiceWorkerActivated(Windows.Foundation.EventRegistrationToken)
+    def remove_service_worker_activated(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::add_Unregistering(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,System.Object>)
+    def add_unregistering(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ServiceWorkerRegistration, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::remove_Unregistering(Windows.Foundation.EventRegistrationToken)
+    def remove_unregistering(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_ActiveServiceWorker()
+    @_property
+    def active_service_worker(self) -> CoreWebView2ServiceWorker: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_Origin()
+    @_property
+    def origin(self) -> str: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_ScopeUri()
+    @_property
+    def scope_uri(self) -> str: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::get_TopLevelOrigin()
+    @_property
+    def top_level_origin(self) -> str: ...
+
+@typing.final
 class CoreWebView2Settings(winrt.system.Object):
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2Settings::get_IsZoomControlEnabled()
     @_property
@@ -2776,6 +2984,37 @@ class CoreWebView2SharedBuffer(winrt.system.Object, windows_foundation.IClosable
     # Windows.Foundation.IMemoryBufferReference Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer::get_Buffer()
     @_property
     def buffer(self) -> windows_foundation.IMemoryBufferReference: ...
+
+@typing.final
+class CoreWebView2SharedWorker(winrt.system.Object):
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker,System.Object>)
+    def add_destroying(self, handler: windows_foundation.TypedEventHandler[CoreWebView2SharedWorker, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)
+    def remove_destroying(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::get_Origin()
+    @_property
+    def origin(self) -> str: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::get_ScriptUri()
+    @_property
+    def script_uri(self) -> str: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::get_TopLevelOrigin()
+    @_property
+    def top_level_origin(self) -> str: ...
+
+@typing.final
+class CoreWebView2SharedWorkerCreatedEventArgs(winrt.system.Object):
+    # Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs::get_Worker()
+    @_property
+    def worker(self) -> CoreWebView2SharedWorker: ...
+
+@typing.final
+class CoreWebView2SharedWorkerManager(winrt.system.Object):
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::GetSharedWorkersAsync()
+    def get_shared_workers_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CoreWebView2SharedWorker]]: ...
+    # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::add_SharedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs>)
+    def add_shared_worker_created(self, handler: windows_foundation.TypedEventHandler[CoreWebView2SharedWorkerManager, CoreWebView2SharedWorkerCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::remove_SharedWorkerCreated(Windows.Foundation.EventRegistrationToken)
+    def remove_shared_worker_created(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 @typing.final
 class CoreWebView2SourceChangedEventArgs(winrt.system.Object):
