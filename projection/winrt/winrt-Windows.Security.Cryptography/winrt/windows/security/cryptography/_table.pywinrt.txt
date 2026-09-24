@@ -14,50 +14,50 @@ class Windows.Security.Cryptography.CryptographicBuffer static python_type
     py CryptographicBuffer
     factory Windows.Security.Cryptography.ICryptographicBufferStatics
     method compare static
-        method Compare slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 reverse=25 static
+        method Compare slot=6 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 static
             in interface type=Windows.Storage.Streams.IBuffer name=object1
             in interface type=Windows.Storage.Streams.IBuffer name=object2
             out boolean return
     method convert_binary_to_string static
-        method ConvertBinaryToString slot=16 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 reverse=204 static
+        method ConvertBinaryToString slot=16 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 static
             in enum32 type=Windows.Security.Cryptography.BinaryStringEncoding name=encoding
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out string return
     method convert_string_to_binary static
-        method ConvertStringToBinary slot=15 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 reverse=197 static
+        method ConvertStringToBinary slot=15 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 static
             in string name=value
             in enum32 type=Windows.Security.Cryptography.BinaryStringEncoding name=encoding
             out interface type=Windows.Storage.Streams.IBuffer return
     method copy_to_byte_array static
-        method CopyToByteArray slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 reverse=125 static
+        method CopyToByteArray slot=10 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             receive_array uint8 name=value
     method create_from_byte_array static
-        method CreateFromByteArray slot=9 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 reverse=101 static
+        method CreateFromByteArray slot=9 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=117 static
             pass_array uint8 name=value
             out interface type=Windows.Storage.Streams.IBuffer return
     method decode_from_base64_string static
-        method DecodeFromBase64String slot=13 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 reverse=174 static
+        method DecodeFromBase64String slot=13 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 static
             in string name=value
             out interface type=Windows.Storage.Streams.IBuffer return
     method decode_from_hex_string static
-        method DecodeFromHexString slot=11 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 reverse=144 static
+        method DecodeFromHexString slot=11 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 static
             in string name=value
             out interface type=Windows.Storage.Streams.IBuffer return
     method encode_to_base64_string static
-        method EncodeToBase64String slot=14 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 reverse=187 static
+        method EncodeToBase64String slot=14 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out string return
     method encode_to_hex_string static
-        method EncodeToHexString slot=12 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 reverse=163 static
+        method EncodeToHexString slot=12 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out string return
     method generate_random static
-        method GenerateRandom slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 reverse=44 static
+        method GenerateRandom slot=7 inputs=1 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=51 static
             in uint32 name=length
             out interface type=Windows.Storage.Streams.IBuffer return
     method generate_random_number static
-        method GenerateRandomNumber slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=4 reverse=62 static
+        method GenerateRandomNumber slot=8 inputs=0 outputs=1 declaring=Windows.Security.Cryptography.ICryptographicBufferStatics shape=4 static
             out uint32 return
 
 interface Windows.Security.Cryptography.ICryptographicBufferStatics

@@ -12,19 +12,19 @@ class Windows.ApplicationModel.Core.AppListEntry python_type
     requires Windows.ApplicationModel.Core.IAppListEntry3
     requires Windows.ApplicationModel.Core.IAppListEntry4
     property display_info
-        get get_DisplayInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry shape=4 reverse=22
+        get get_DisplayInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry shape=4
             out class type=Windows.ApplicationModel.AppDisplayInfo return
     property app_user_model_id
-        get get_AppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry2 shape=4 reverse=22
+        get get_AppUserModelId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry2 shape=4
             out string return
     property app_info
-        get get_AppInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry4 shape=4 reverse=22
+        get get_AppInfo slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry4 shape=4
             out class type=Windows.ApplicationModel.AppInfo return
     method launch_async
-        method LaunchAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry shape=4 reverse=43
+        method LaunchAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method launch_for_user_async
-        method LaunchForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry3 shape=51 reverse=24
+        method LaunchForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.IAppListEntry3 shape=51
             in class type=Windows.System.User name=user
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -70,95 +70,95 @@ class Windows.ApplicationModel.Core.CoreApplication static python_type
     factory Windows.ApplicationModel.Core.ICoreImmersiveApplication2
     factory Windows.ApplicationModel.Core.ICoreImmersiveApplication3
     property id static
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 reverse=22 static
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 static
             out string return
     property properties static
-        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 reverse=141 static
+        get get_Properties slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 static
             out interface type=Windows.Foundation.Collections.IPropertySet return
     property main_view static
-        get get_MainView slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication shape=4 reverse=62 static
+        get get_MainView slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication shape=4 static
             out class type=Windows.ApplicationModel.Core.CoreApplicationView return
     property views static
-        get get_Views slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication shape=4 reverse=22 static
+        get get_Views slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Core.CoreApplicationView> return
     event unhandled_error_detected static
-        add add_UnhandledErrorDetected slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationUnhandledError shape=51 reverse=24 static
+        add add_UnhandledErrorDetected slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationUnhandledError shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UnhandledErrorDetected slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationUnhandledError shape=26 reverse=53 static
+        remove remove_UnhandledErrorDetected slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationUnhandledError shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event exiting static
-        add add_Exiting slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationExit shape=51 reverse=44 static
+        add add_Exiting slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationExit shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Exiting slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationExit shape=26 reverse=82 static
+        remove remove_Exiting slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationExit shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event background_activated static
-        add add_BackgroundActivated slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=51 reverse=24 static
+        add add_BackgroundActivated slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BackgroundActivated slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=26 reverse=53 static
+        remove remove_BackgroundActivated slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event entered_background static
-        add add_EnteredBackground slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=51 reverse=124 static
+        add add_EnteredBackground slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.EnteredBackgroundEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnteredBackground slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=26 reverse=156 static
+        remove remove_EnteredBackground slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event leaving_background static
-        add add_LeavingBackground slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=51 reverse=65 static
+        add add_LeavingBackground slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.LeavingBackgroundEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LeavingBackground slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=26 reverse=110 static
+        remove remove_LeavingBackground slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event resuming static
-        add add_Resuming slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=51 reverse=100 static
+        add add_Resuming slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Resuming slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=26 reverse=134 static
+        remove remove_Resuming slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event suspending static
-        add add_Suspending slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=51 reverse=44 static
+        add add_Suspending slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.SuspendingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Suspending slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=26 reverse=82 static
+        remove remove_Suspending slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method create_new_view static
-        method CreateNewView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication2 shape=4 reverse=22 static
+        method CreateNewView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication2 shape=4 static
             out class type=Windows.ApplicationModel.Core.CoreApplicationView return
-        method CreateNewView slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication3 shape=51 reverse=24 static
+        method CreateNewView slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication3 shape=51 static
             in interface type=Windows.ApplicationModel.Core.IFrameworkViewSource name=viewSource
             out class type=Windows.ApplicationModel.Core.CoreApplicationView return
-        method CreateNewView slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication shape=117 reverse=45 static default_overload
+        method CreateNewView slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreImmersiveApplication shape=117 static default_overload
             in string name=runtimeType
             in string name=entryPoint
             out class type=Windows.ApplicationModel.Core.CoreApplicationView return
     method decrement_application_use_count static
-        method DecrementApplicationUseCount slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationUseCount shape=0 reverse=37 static
+        method DecrementApplicationUseCount slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationUseCount shape=0 static
     method enable_prelaunch static
-        method EnablePrelaunch slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=4 reverse=162 static
+        method EnablePrelaunch slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication2 shape=4 static
             in boolean name=value
     method exit static
-        method Exit slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationExit shape=0 reverse=16 static
+        method Exit slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationExit shape=0 static
     method get_current_view static
-        method GetCurrentView slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 reverse=162 static
+        method GetCurrentView slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 static
             out class type=Windows.ApplicationModel.Core.CoreApplicationView return
     method increment_application_use_count static
-        method IncrementApplicationUseCount slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationUseCount shape=0 reverse=16 static
+        method IncrementApplicationUseCount slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationUseCount shape=0 static
     method request_restart_async static
-        method RequestRestartAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication3 shape=51 reverse=24 static
+        method RequestRestartAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication3 shape=51 static
             in string name=launchArguments
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> return
     method request_restart_for_user_async static
-        method RequestRestartForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication3 shape=117 reverse=45 static
+        method RequestRestartForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplication3 shape=117 static
             in class type=Windows.System.User name=user
             in string name=launchArguments
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> return
     method run static
-        method Run slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 reverse=173 static
+        method Run slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 static
             in interface type=Windows.ApplicationModel.Core.IFrameworkViewSource name=viewSource
     method run_with_activation_factories static
-        method RunWithActivationFactories slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 reverse=186 static
+        method RunWithActivationFactories slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplication shape=4 static
             in interface type=Windows.Foundation.IGetActivationFactory name=activationFactoryCallback
 
 class Windows.ApplicationModel.Core.CoreApplicationView python_type
@@ -171,40 +171,40 @@ class Windows.ApplicationModel.Core.CoreApplicationView python_type
     requires Windows.ApplicationModel.Core.ICoreApplicationView5
     requires Windows.ApplicationModel.Core.ICoreApplicationView6
     property core_window
-        get get_CoreWindow slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=4 reverse=22
+        get get_CoreWindow slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=4
             out class type=Windows.UI.Core.CoreWindow return
     property is_hosted
-        get get_IsHosted slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=4 reverse=121
+        get get_IsHosted slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=4
             out boolean return
     property is_main
-        get get_IsMain slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=4 reverse=99
+        get get_IsMain slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=4
             out boolean return
     property dispatcher
-        get get_Dispatcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView2 shape=4 reverse=22
+        get get_Dispatcher slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView2 shape=4
             out class type=Windows.UI.Core.CoreDispatcher return
     property is_component
-        get get_IsComponent slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=4 reverse=22
+        get get_IsComponent slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=4
             out boolean return
     property title_bar
-        get get_TitleBar slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=4 reverse=43
+        get get_TitleBar slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=4
             out class type=Windows.ApplicationModel.Core.CoreApplicationViewTitleBar return
     property properties
-        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView5 shape=4 reverse=22
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView5 shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     property dispatcher_queue
-        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView6 shape=4 reverse=22
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView6 shape=4
             out class type=Windows.System.DispatcherQueue return
     event activated
-        add add_Activated slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=51 reverse=44
+        add add_Activated slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationView,Windows.ApplicationModel.Activation.IActivatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Activated slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=26 reverse=82
+        remove remove_Activated slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationView shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hosted_view_closing
-        add add_HostedViewClosing slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=51 reverse=65
+        add add_HostedViewClosing slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationView,Windows.ApplicationModel.Core.HostedViewClosingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HostedViewClosing slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=26 reverse=110
+        remove remove_HostedViewClosing slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationView3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.ApplicationModel.Core.CoreApplicationViewTitleBar python_type
@@ -213,33 +213,33 @@ class Windows.ApplicationModel.Core.CoreApplicationViewTitleBar python_type
     default Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar
     requires Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar
     property extend_view_into_title_bar
-        get get_ExtendViewIntoTitleBar slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4 reverse=43
+        get get_ExtendViewIntoTitleBar slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4
             out boolean return
-        put put_ExtendViewIntoTitleBar slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4 reverse=22
+        put put_ExtendViewIntoTitleBar slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4
             in boolean name=value
     property height
-        get get_Height slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4 reverse=121
+        get get_Height slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4
             out double return
     property is_visible
-        get get_IsVisible slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4 reverse=173
+        get get_IsVisible slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4
             out boolean return
     property system_overlay_left_inset
-        get get_SystemOverlayLeftInset slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4 reverse=62
+        get get_SystemOverlayLeftInset slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4
             out double return
     property system_overlay_right_inset
-        get get_SystemOverlayRightInset slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4 reverse=99
+        get get_SystemOverlayRightInset slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=4
             out double return
     event is_visible_changed
-        add add_IsVisibleChanged slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=51 reverse=187
+        add add_IsVisibleChanged slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationViewTitleBar,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_IsVisibleChanged slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=26 reverse=200
+        remove remove_IsVisibleChanged slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event layout_metrics_changed
-        add add_LayoutMetricsChanged slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=51 reverse=144
+        add add_LayoutMetricsChanged slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Core.CoreApplicationViewTitleBar,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LayoutMetricsChanged slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=26 reverse=167
+        remove remove_LayoutMetricsChanged slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
@@ -314,7 +314,7 @@ class Windows.ApplicationModel.Core.HostedViewClosingEventArgs python_type
     default Windows.ApplicationModel.Core.IHostedViewClosingEventArgs
     requires Windows.ApplicationModel.Core.IHostedViewClosingEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IHostedViewClosingEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IHostedViewClosingEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 interface Windows.ApplicationModel.Core.IAppListEntry
@@ -575,10 +575,10 @@ class Windows.ApplicationModel.Core.UnhandledError python_type
     default Windows.ApplicationModel.Core.IUnhandledError
     requires Windows.ApplicationModel.Core.IUnhandledError
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IUnhandledError shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IUnhandledError shape=4
             out boolean return
     method propagate
-        method Propagate slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.IUnhandledError shape=0 reverse=37
+        method Propagate slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Core.IUnhandledError shape=0
 
 class Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs python_type
     py UnhandledErrorDetectedEventArgs
@@ -586,7 +586,7 @@ class Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs python_type
     default Windows.ApplicationModel.Core.IUnhandledErrorDetectedEventArgs
     requires Windows.ApplicationModel.Core.IUnhandledErrorDetectedEventArgs
     property unhandled_error
-        get get_UnhandledError slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IUnhandledErrorDetectedEventArgs shape=4 reverse=22
+        get get_UnhandledError slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Core.IUnhandledErrorDetectedEventArgs shape=4
             out class type=Windows.ApplicationModel.Core.UnhandledError return
 
 class System.Boolean external

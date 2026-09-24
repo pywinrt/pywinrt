@@ -115,19 +115,19 @@ class Windows.System.Inventory.InstalledDesktopApp python_type stringable
     requires Windows.Foundation.IStringable
     factory Windows.System.Inventory.IInstalledDesktopAppStatics
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4
             out string return
     property display_version
-        get get_DisplayVersion slot=9 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=99
+        get get_DisplayVersion slot=9 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4
             out string return
     property publisher
-        get get_Publisher slot=8 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4 reverse=62
+        get get_Publisher slot=8 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopApp shape=4
             out string return
     method get_inventory_async static
-        method GetInventoryAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopAppStatics shape=4 reverse=22 static
+        method GetInventoryAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Inventory.IInstalledDesktopAppStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.Inventory.InstalledDesktopApp>> return
     method to_string
         method ToString slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IStringable shape=4 reverse=22 role=to_string

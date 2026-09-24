@@ -64,36 +64,36 @@ class Windows.Security.Authentication.Web.WebAuthenticationBroker static python_
     factory Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics
     factory Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2
     method authenticate_and_continue static
-        method AuthenticateAndContinue slot=6 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=4 reverse=22 static
+        method AuthenticateAndContinue slot=6 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=4 static
             in class type=Windows.Foundation.Uri name=requestUri
-        method AuthenticateAndContinue slot=7 inputs=2 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=51 reverse=44 static
+        method AuthenticateAndContinue slot=7 inputs=2 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=51 static
             in class type=Windows.Foundation.Uri name=requestUri
             in class type=Windows.Foundation.Uri name=callbackUri
-        method AuthenticateAndContinue slot=8 inputs=4 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=195 reverse=68 static
+        method AuthenticateAndContinue slot=8 inputs=4 outputs=0 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=195 static
             in class type=Windows.Foundation.Uri name=requestUri
             in class type=Windows.Foundation.Uri name=callbackUri
             in class type=Windows.Foundation.Collections.ValueSet name=continuationData
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
     method authenticate_async static
-        method AuthenticateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=117 reverse=45 static
+        method AuthenticateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=117 static
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
             in class type=Windows.Foundation.Uri name=requestUri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
-        method AuthenticateAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=195 reverse=26 static
+        method AuthenticateAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=195 static
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
             in class type=Windows.Foundation.Uri name=requestUri
             in class type=Windows.Foundation.Uri name=callbackUri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
     method authenticate_silently_async static
-        method AuthenticateSilentlyAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=51 reverse=100 static
+        method AuthenticateSilentlyAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=51 static
             in class type=Windows.Foundation.Uri name=requestUri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
-        method AuthenticateSilentlyAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=117 reverse=125 static
+        method AuthenticateSilentlyAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics2 shape=117 static
             in class type=Windows.Foundation.Uri name=requestUri
             in enum_u32 type=Windows.Security.Authentication.Web.WebAuthenticationOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.WebAuthenticationResult> return
     method get_current_application_callback_uri static
-        method GetCurrentApplicationCallbackUri slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=4 reverse=62 static
+        method GetCurrentApplicationCallbackUri slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationBrokerStatics shape=4 static
             out class type=Windows.Foundation.Uri return
 
 enum Windows.Security.Authentication.Web.WebAuthenticationOptions python_type flags_enum
@@ -111,13 +111,13 @@ class Windows.Security.Authentication.Web.WebAuthenticationResult python_type
     default Windows.Security.Authentication.Web.IWebAuthenticationResult
     requires Windows.Security.Authentication.Web.IWebAuthenticationResult
     property response_data
-        get get_ResponseData slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4 reverse=22
+        get get_ResponseData slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4
             out string return
     property response_error_detail
-        get get_ResponseErrorDetail slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4 reverse=62
+        get get_ResponseErrorDetail slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4
             out uint32 return
     property response_status
-        get get_ResponseStatus slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4 reverse=43
+        get get_ResponseStatus slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.IWebAuthenticationResult shape=4
             out enum32 type=Windows.Security.Authentication.Web.WebAuthenticationStatus return
 
 enum Windows.Security.Authentication.Web.WebAuthenticationStatus python_type

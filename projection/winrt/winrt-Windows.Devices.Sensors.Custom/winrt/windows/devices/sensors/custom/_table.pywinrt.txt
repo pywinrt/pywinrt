@@ -22,39 +22,39 @@ class Windows.Devices.Sensors.Custom.CustomSensor python_type
     requires Windows.Devices.Sensors.Custom.ICustomSensor2
     factory Windows.Devices.Sensors.Custom.ICustomSensorStatics
     property report_interval
-        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4 reverse=99
+        get get_ReportInterval slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4
             out uint32 return
-        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4 reverse=62
+        put put_ReportInterval slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4
             in uint32 name=value
     property device_id
-        get get_DeviceId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4 reverse=121
+        get get_DeviceId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4
             out string return
     property minimum_report_interval
-        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4 reverse=43
+        get get_MinimumReportInterval slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4
             out uint32 return
     property report_latency
-        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor2 shape=4 reverse=43
+        get get_ReportLatency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor2 shape=4
             out uint32 return
-        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.Custom.ICustomSensor2 shape=4 reverse=22
+        put put_ReportLatency slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.Custom.ICustomSensor2 shape=4
             in uint32 name=value
     property max_batch_size
-        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor2 shape=4 reverse=62
+        get get_MaxBatchSize slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor2 shape=4
             out uint32 return
     event reading_changed
-        add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=51 reverse=144
+        add add_ReadingChanged slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Custom.CustomSensor,Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=26 reverse=167
+        remove remove_ReadingChanged slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method from_id_async static
-        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorStatics shape=51 reverse=44 static
+        method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorStatics shape=51 static
             in string name=sensorId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Custom.CustomSensor> return
     method get_current_reading
-        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4 reverse=22
+        method GetCurrentReading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensor shape=4
             out class type=Windows.Devices.Sensors.Custom.CustomSensorReading return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorStatics shape=94 reverse=35 static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorStatics shape=94 static
             in guid name=interfaceId
             out string return
 
@@ -65,13 +65,13 @@ class Windows.Devices.Sensors.Custom.CustomSensorReading python_type
     requires Windows.Devices.Sensors.Custom.ICustomSensorReading
     requires Windows.Devices.Sensors.Custom.ICustomSensorReading2
     property properties
-        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReading shape=4 reverse=43
+        get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReading shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     property timestamp
-        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReading shape=4 reverse=22
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReading shape=4
             out datetime return
     property performance_count
-        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReading2 shape=4 reverse=22
+        get get_PerformanceCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReading2 shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
 
 class Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs python_type
@@ -80,7 +80,7 @@ class Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs python_
     default Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs
     requires Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs
     property reading
-        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs shape=4 reverse=22
+        get get_Reading slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs shape=4
             out class type=Windows.Devices.Sensors.Custom.CustomSensorReading return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Custom.CustomSensor> concrete awaitable

@@ -81,13 +81,13 @@ class Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings python
     requires Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings
     factory Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics
     property download_mode
-        get get_DownloadMode slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings shape=4 reverse=22
+        get get_DownloadMode slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings shape=4
             out enum32 type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode return
     property download_mode_source
-        get get_DownloadModeSource slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings shape=4 reverse=43
+        get get_DownloadModeSource slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings shape=4
             out enum32 type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource return
     method get_current_settings static
-        method GetCurrentSettings slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics shape=4 reverse=22 static
+        method GetCurrentSettings slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics shape=4 static
             out class type=Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings return
 
 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> concrete awaitable
@@ -584,92 +584,92 @@ class Windows.ApplicationModel.Store.Preview.StoreConfiguration static python_ty
     factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4
     factory Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5
     property hardware_manufacturer_info static
-        get get_HardwareManufacturerInfo slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 reverse=121 static
+        get get_HardwareManufacturerInfo slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 static
             out class type=Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo return
     property purchase_prompting_policy static
-        get get_PurchasePromptingPolicy slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 shape=4 reverse=22 static
+        get get_PurchasePromptingPolicy slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 shape=4 static
             out reference type=Windows.Foundation.IReference<System.UInt32> return
-        put put_PurchasePromptingPolicy slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 shape=4 reverse=43 static
+        put put_PurchasePromptingPolicy slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 shape=4 static
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
     method filter_unsupported_system_features_async static
-        method FilterUnsupportedSystemFeaturesAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=51 reverse=144 static
+        method FilterUnsupportedSystemFeaturesAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=51 static
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Store.Preview.StoreSystemFeature> name=systemFeatures
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> return
     method get_enterprise_store_web_account_id static
-        method GetEnterpriseStoreWebAccountId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=121 static
+        method GetEnterpriseStoreWebAccountId slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 static
             out string return
     method get_enterprise_store_web_account_id_for_user static
-        method GetEnterpriseStoreWebAccountIdForUser slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=144 static
+        method GetEnterpriseStoreWebAccountIdForUser slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 static
             in class type=Windows.System.User name=user
             out string return
     method get_purchase_prompting_policy_for_user static
-        method GetPurchasePromptingPolicyForUser slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=144 static
+        method GetPurchasePromptingPolicyForUser slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     method get_store_log_data_async static
-        method GetStoreLogDataAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=65 static
+        method GetStoreLogDataAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 static
             in enum_u32 type=Windows.ApplicationModel.Store.Preview.StoreLogOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> return
     method get_store_web_account_id static
-        method GetStoreWebAccountId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=22 static
+        method GetStoreWebAccountId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 static
             out string return
     method get_store_web_account_id_for_user static
-        method GetStoreWebAccountIdForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=44 static
+        method GetStoreWebAccountIdForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 static
             in class type=Windows.System.User name=user
             out string return
     method has_store_web_account static
-        method HasStoreWebAccount slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=4 reverse=22 static
+        method HasStoreWebAccount slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=4 static
             out boolean return
     method has_store_web_account_for_user static
-        method HasStoreWebAccountForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=44 static
+        method HasStoreWebAccountForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out boolean return
     method is_pin_to_desktop_supported static
-        method IsPinToDesktopSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=22 static
+        method IsPinToDesktopSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 static
             out boolean return
     method is_pin_to_start_supported static
-        method IsPinToStartSupported slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=62 static
+        method IsPinToStartSupported slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 static
             out boolean return
     method is_pin_to_taskbar_supported static
-        method IsPinToTaskbarSupported slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=43 static
+        method IsPinToTaskbarSupported slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 static
             out boolean return
     method is_store_web_account_id static
-        method IsStoreWebAccountId slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=51 reverse=100 static
+        method IsStoreWebAccountId slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=51 static
             in string name=webAccountId
             out boolean return
     method is_store_web_account_id_for_user static
-        method IsStoreWebAccountIdForUser slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=117 reverse=125 static
+        method IsStoreWebAccountIdForUser slot=10 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=117 static
             in class type=Windows.System.User name=user
             in string name=webAccountId
             out boolean return
     method pin_to_desktop static
-        method PinToDesktop slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 reverse=99 static
+        method PinToDesktop slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=4 static
             in string name=appPackageFamilyName
     method pin_to_desktop_for_user static
-        method PinToDesktopForUser slot=10 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=51 reverse=124 static
+        method PinToDesktopForUser slot=10 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 shape=51 static
             in class type=Windows.System.User name=user
             in string name=appPackageFamilyName
     method set_enterprise_store_web_account_id static
-        method SetEnterpriseStoreWebAccountId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=62 static
+        method SetEnterpriseStoreWebAccountId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 static
             in string name=webAccountId
     method set_enterprise_store_web_account_id_for_user static
-        method SetEnterpriseStoreWebAccountIdForUser slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=100 static
+        method SetEnterpriseStoreWebAccountIdForUser slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 static
             in class type=Windows.System.User name=user
             in string name=webAccountId
     method set_mobile_operator_configuration static
-        method SetMobileOperatorConfiguration slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=117 reverse=45 static
+        method SetMobileOperatorConfiguration slot=7 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=117 static
             in string name=mobileOperatorId
             in uint32 name=appDownloadLimitInMegabytes
             in uint32 name=updateDownloadLimitInMegabytes
     method set_purchase_prompting_policy_for_user static
-        method SetPurchasePromptingPolicyForUser slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=163 static
+        method SetPurchasePromptingPolicyForUser slot=12 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 static
             in class type=Windows.System.User name=user
             in reference type=Windows.Foundation.IReference<System.UInt32> name=value
     method set_store_web_account_id static
-        method SetStoreWebAccountId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 reverse=62 static
+        method SetStoreWebAccountId slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics shape=4 static
             in string name=webAccountId
     method set_store_web_account_id_for_user static
-        method SetStoreWebAccountIdForUser slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 reverse=100 static
+        method SetStoreWebAccountIdForUser slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 shape=51 static
             in class type=Windows.System.User name=user
             in string name=webAccountId
     method set_system_configuration static
@@ -679,10 +679,10 @@ class Windows.ApplicationModel.Store.Preview.StoreConfiguration static python_ty
             in datetime name=systemConfigurationExpiration
             in string name=catalogHardwareDescriptor
     method should_restrict_to_enterprise_store_only static
-        method ShouldRestrictToEnterpriseStoreOnly slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 reverse=162 static
+        method ShouldRestrictToEnterpriseStoreOnly slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=4 static
             out boolean return
     method should_restrict_to_enterprise_store_only_for_user static
-        method ShouldRestrictToEnterpriseStoreOnlyForUser slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 reverse=174 static
+        method ShouldRestrictToEnterpriseStoreOnlyForUser slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 shape=51 static
             in class type=Windows.System.User name=user
             out boolean return
 
@@ -692,16 +692,16 @@ class Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo pytho
     default Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo
     requires Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo
     property hardware_manufacturer_id
-        get get_HardwareManufacturerId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=22
+        get get_HardwareManufacturerId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4
             out string return
     property manufacturer_name
-        get get_ManufacturerName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=99
+        get get_ManufacturerName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4
             out string return
     property model_name
-        get get_ModelName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=62
+        get get_ModelName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4
             out string return
     property store_content_modifier_id
-        get get_StoreContentModifierId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4 reverse=43
+        get get_StoreContentModifierId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo shape=4
             out string return
 
 enum Windows.ApplicationModel.Store.Preview.StoreLogOptions python_type flags_enum
@@ -714,10 +714,10 @@ class Windows.ApplicationModel.Store.Preview.StorePreview static python_type
     py StorePreview
     factory Windows.ApplicationModel.Store.Preview.IStorePreview
     method load_add_on_product_infos_async static
-        method LoadAddOnProductInfosAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreview shape=4 reverse=43 static
+        method LoadAddOnProductInfosAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreview shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> return
     method request_product_purchase_by_product_id_and_sku_id_async static
-        method RequestProductPurchaseByProductIdAndSkuIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreview shape=117 reverse=25 static
+        method RequestProductPurchaseByProductIdAndSkuIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreview shape=117 static
             in string name=productId
             in string name=skuId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> return
@@ -728,19 +728,19 @@ class Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo python_type
     default Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo
     requires Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4
             out string return
     property product_id
-        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=22
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4
             out string return
     property product_type
-        get get_ProductType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=43
+        get get_ProductType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4
             out string return
     property sku_info_list
-        get get_SkuInfoList slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=121
+        get get_SkuInfoList slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo> return
     property title
-        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4 reverse=62
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo shape=4
             out string return
 
 enum Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus python_type
@@ -757,7 +757,7 @@ class Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults python_
     default Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults
     requires Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults
     property product_purchase_status
-        get get_ProductPurchaseStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults shape=4 reverse=22
+        get get_ProductPurchaseStatus slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults shape=4
             out enum32 type=Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus return
 
 class Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo python_type
@@ -766,31 +766,31 @@ class Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo python_type
     default Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo
     requires Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo
     property currency_code
-        get get_CurrencyCode slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=162
+        get get_CurrencyCode slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property custom_developer_data
-        get get_CustomDeveloperData slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=141
+        get get_CustomDeveloperData slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property description
-        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=121
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property extended_data
-        get get_ExtendedData slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=186
+        get get_ExtendedData slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property formatted_list_price
-        get get_FormattedListPrice slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=173
+        get get_FormattedListPrice slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property product_id
-        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=22
+        get get_ProductId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property sku_id
-        get get_SkuId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=43
+        get get_SkuId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property sku_type
-        get get_SkuType slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=62
+        get get_SkuType slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
     property title
-        get get_Title slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4 reverse=99
+        get get_Title slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo shape=4
             out string return
 
 enum Windows.ApplicationModel.Store.Preview.StoreSystemFeature python_type
@@ -836,11 +836,11 @@ class Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper 
     py WebAuthenticationCoreManagerHelper
     factory Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper
     method request_token_with_ui_element_hosting_async static
-        method RequestTokenWithUIElementHostingAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper shape=117 reverse=25 static
+        method RequestTokenWithUIElementHostingAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper shape=117 static
             in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
             in class type=Windows.UI.Xaml.UIElement name=uiElement
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> return
-        method RequestTokenWithUIElementHostingAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper shape=195 reverse=46 static
+        method RequestTokenWithUIElementHostingAsync slot=7 inputs=3 outputs=1 declaring=Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper shape=195 static
             in class type=Windows.Security.Authentication.Web.Core.WebTokenRequest name=request
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in class type=Windows.UI.Xaml.UIElement name=uiElement

@@ -10,10 +10,10 @@ class Windows.ApplicationModel.Holographic.HolographicKeyboard python_type
     requires Windows.ApplicationModel.Holographic.IHolographicKeyboard
     factory Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboardStatics shape=4 static
             out class type=Windows.ApplicationModel.Holographic.HolographicKeyboard return
     method reset_placement_override
-        method ResetPlacementOverride slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboard shape=0 reverse=55
+        method ResetPlacementOverride slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboard shape=0
     method set_placement_override
         method SetPlacementOverride slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Holographic.IHolographicKeyboard shape=132
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem

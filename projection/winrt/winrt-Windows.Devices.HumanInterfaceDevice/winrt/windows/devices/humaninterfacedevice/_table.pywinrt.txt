@@ -53,21 +53,21 @@ class Windows.Devices.HumanInterfaceDevice.HidBooleanControl python_type
     default Windows.Devices.HumanInterfaceDevice.IHidBooleanControl
     requires Windows.Devices.HumanInterfaceDevice.IHidBooleanControl
     property is_active
-        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4 reverse=99
+        get get_IsActive slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4
             out boolean return
-        put put_IsActive slot=10 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4 reverse=121
+        put put_IsActive slot=10 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4
             in boolean name=value
     property control_description
-        get get_ControlDescription slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4 reverse=141
+        get get_ControlDescription slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4
             out uint32 return
     property usage_id
-        get get_UsageId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4 reverse=62
+        get get_UsageId slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4
             out uint16 return
     property usage_page
-        get get_UsagePage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4 reverse=43
+        get get_UsagePage slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControl shape=4
             out uint16 return
 
 class Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription python_type
@@ -77,25 +77,25 @@ class Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription python_t
     requires Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription
     requires Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription2
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4
             out uint32 return
     property parent_collections
-        get get_ParentCollections slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4 reverse=141
+        get get_ParentCollections slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidCollection> return
     property report_id
-        get get_ReportId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4 reverse=43
+        get get_ReportId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4
             out uint16 return
     property report_type
-        get get_ReportType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4 reverse=62
+        get get_ReportType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4
             out enum32 type=Windows.Devices.HumanInterfaceDevice.HidReportType return
     property usage_id
-        get get_UsageId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4 reverse=121
+        get get_UsageId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4
             out uint16 return
     property usage_page
-        get get_UsagePage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4 reverse=99
+        get get_UsagePage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription shape=4
             out uint16 return
     property is_absolute
-        get get_IsAbsolute slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription2 shape=4 reverse=22
+        get get_IsAbsolute slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidBooleanControlDescription2 shape=4
             out boolean return
 
 class Windows.Devices.HumanInterfaceDevice.HidCollection python_type
@@ -104,16 +104,16 @@ class Windows.Devices.HumanInterfaceDevice.HidCollection python_type
     default Windows.Devices.HumanInterfaceDevice.IHidCollection
     requires Windows.Devices.HumanInterfaceDevice.IHidCollection
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4
             out uint32 return
     property type
-        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4 reverse=43
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4
             out enum32 type=Windows.Devices.HumanInterfaceDevice.HidCollectionType return
     property usage_id
-        get get_UsageId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4 reverse=99
+        get get_UsageId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4
             out uint32 return
     property usage_page
-        get get_UsagePage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4 reverse=62
+        get get_UsagePage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidCollection shape=4
             out uint32 return
 
 enum Windows.Devices.HumanInterfaceDevice.HidCollectionType python_type
@@ -136,22 +136,22 @@ class Windows.Devices.HumanInterfaceDevice.HidDevice python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics
     property product_id
-        get get_ProductId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=43
+        get get_ProductId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out uint16 return
     property usage_id
-        get get_UsageId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=121
+        get get_UsageId slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out uint16 return
     property usage_page
-        get get_UsagePage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=99
+        get get_UsagePage slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out uint16 return
     property vendor_id
-        get get_VendorId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=22
+        get get_VendorId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out uint16 return
     property version
-        get get_Version slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=62
+        get get_Version slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out uint16 return
     event input_report_received
-        add add_InputReportReceived slot=23 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=243
+        add add_InputReportReceived slot=23 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.HumanInterfaceDevice.HidDevice,Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs> name=reportHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_InputReportReceived slot=24 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=26
@@ -159,19 +159,19 @@ class Windows.Devices.HumanInterfaceDevice.HidDevice python_type closeable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_feature_report
-        method CreateFeatureReport slot=17 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=210
+        method CreateFeatureReport slot=17 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out class type=Windows.Devices.HumanInterfaceDevice.HidFeatureReport return
-        method CreateFeatureReport slot=18 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=219
+        method CreateFeatureReport slot=18 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in uint16 name=reportId
             out class type=Windows.Devices.HumanInterfaceDevice.HidFeatureReport return
     method create_output_report
-        method CreateOutputReport slot=15 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=194
+        method CreateOutputReport slot=15 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out class type=Windows.Devices.HumanInterfaceDevice.HidOutputReport return
-        method CreateOutputReport slot=16 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=203
+        method CreateOutputReport slot=16 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in uint16 name=reportId
             out class type=Windows.Devices.HumanInterfaceDevice.HidOutputReport return
     method from_id_async static
-        method FromIdAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics shape=117 reverse=66 static
+        method FromIdAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics shape=117 static
             in string name=deviceId
             in enum32 type=Windows.Storage.FileAccessMode name=accessMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.HumanInterfaceDevice.HidDevice> return
@@ -182,7 +182,7 @@ class Windows.Devices.HumanInterfaceDevice.HidDevice python_type closeable
             in uint16 name=usageId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics shape=117 reverse=25 static
+        method GetDeviceSelector slot=6 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDeviceStatics shape=117 static
             in uint16 name=usagePage
             in uint16 name=usageId
             out string return
@@ -193,15 +193,15 @@ class Windows.Devices.HumanInterfaceDevice.HidDevice python_type closeable
             in uint16 name=productId
             out string return
     method get_feature_report_async
-        method GetFeatureReportAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=173
+        method GetFeatureReportAsync slot=13 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.HumanInterfaceDevice.HidFeatureReport> return
-        method GetFeatureReportAsync slot=14 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=187
+        method GetFeatureReportAsync slot=14 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in uint16 name=reportId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.HumanInterfaceDevice.HidFeatureReport> return
     method get_input_report_async
-        method GetInputReportAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4 reverse=141
+        method GetInputReportAsync slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.HumanInterfaceDevice.HidInputReport> return
-        method GetInputReportAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=163
+        method GetInputReportAsync slot=12 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in uint16 name=reportId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.HumanInterfaceDevice.HidInputReport> return
     method get_numeric_control_descriptions
@@ -211,11 +211,11 @@ class Windows.Devices.HumanInterfaceDevice.HidDevice python_type closeable
             in uint16 name=usageId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> return
     method send_feature_report_async
-        method SendFeatureReportAsync slot=20 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=229
+        method SendFeatureReportAsync slot=20 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidFeatureReport name=featureReport
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
     method send_output_report_async
-        method SendOutputReportAsync slot=19 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51 reverse=224
+        method SendOutputReportAsync slot=19 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidDevice shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidOutputReport name=outputReport
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
 
@@ -225,29 +225,29 @@ class Windows.Devices.HumanInterfaceDevice.HidFeatureReport python_type
     default Windows.Devices.HumanInterfaceDevice.IHidFeatureReport
     requires Windows.Devices.HumanInterfaceDevice.IHidFeatureReport
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=4 reverse=62
+        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=4
             out uint16 return
     method get_boolean_control
-        method GetBooleanControl slot=9 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=117 reverse=101
+        method GetBooleanControl slot=9 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_boolean_control_by_description
-        method GetBooleanControlByDescription slot=10 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=51 reverse=124
+        method GetBooleanControlByDescription slot=10 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=controlDescription
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_numeric_control
-        method GetNumericControl slot=11 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=117 reverse=145
+        method GetNumericControl slot=11 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControl return
     method get_numeric_control_by_description
-        method GetNumericControlByDescription slot=12 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=51 reverse=163
+        method GetNumericControlByDescription slot=12 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidFeatureReport shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=controlDescription
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControl return
 
@@ -257,33 +257,33 @@ class Windows.Devices.HumanInterfaceDevice.HidInputReport python_type
     default Windows.Devices.HumanInterfaceDevice.IHidInputReport
     requires Windows.Devices.HumanInterfaceDevice.IHidInputReport
     property activated_boolean_controls
-        get get_ActivatedBooleanControls slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4 reverse=62
+        get get_ActivatedBooleanControls slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> return
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4
             out uint16 return
     property transitioned_boolean_controls
-        get get_TransitionedBooleanControls slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4 reverse=99
+        get get_TransitionedBooleanControls slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidBooleanControl> return
     method get_boolean_control
-        method GetBooleanControl slot=10 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=117 reverse=125
+        method GetBooleanControl slot=10 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_boolean_control_by_description
-        method GetBooleanControlByDescription slot=11 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=51 reverse=144
+        method GetBooleanControlByDescription slot=11 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=controlDescription
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_numeric_control
-        method GetNumericControl slot=12 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=117 reverse=164
+        method GetNumericControl slot=12 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControl return
     method get_numeric_control_by_description
-        method GetNumericControlByDescription slot=13 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=51 reverse=174
+        method GetNumericControlByDescription slot=13 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReport shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=controlDescription
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControl return
 
@@ -293,7 +293,7 @@ class Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs pytho
     default Windows.Devices.HumanInterfaceDevice.IHidInputReportReceivedEventArgs
     requires Windows.Devices.HumanInterfaceDevice.IHidInputReportReceivedEventArgs
     property report
-        get get_Report slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReportReceivedEventArgs shape=4 reverse=22
+        get get_Report slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidInputReportReceivedEventArgs shape=4
             out class type=Windows.Devices.HumanInterfaceDevice.HidInputReport return
 
 class Windows.Devices.HumanInterfaceDevice.HidNumericControl python_type
@@ -302,29 +302,29 @@ class Windows.Devices.HumanInterfaceDevice.HidNumericControl python_type
     default Windows.Devices.HumanInterfaceDevice.IHidNumericControl
     requires Windows.Devices.HumanInterfaceDevice.IHidNumericControl
     property value
-        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=121
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out int64 return
-        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=3 reverse=140
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=3
             in int64 name=value
     property scaled_value
-        get get_ScaledValue slot=12 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=162
+        get get_ScaledValue slot=12 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out int64 return
         put put_ScaledValue slot=13 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=3
             in int64 name=value
     property control_description
-        get get_ControlDescription slot=14 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=186
+        get get_ControlDescription slot=14 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out uint32 return
     property is_grouped
-        get get_IsGrouped slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=43
+        get get_IsGrouped slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out boolean return
     property usage_id
-        get get_UsageId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=99
+        get get_UsageId slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out uint16 return
     property usage_page
-        get get_UsagePage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4 reverse=62
+        get get_UsagePage slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControl shape=4
             out uint16 return
 
 class Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription python_type
@@ -333,52 +333,52 @@ class Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription python_t
     default Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription
     requires Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription
     property has_null
-        get get_HasNull slot=20 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=228
+        get get_HasNull slot=20 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out boolean return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint32 return
     property is_absolute
-        get get_IsAbsolute slot=19 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=223
+        get get_IsAbsolute slot=19 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out boolean return
     property logical_maximum
-        get get_LogicalMaximum slot=14 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=186
+        get get_LogicalMaximum slot=14 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out int32 return
     property logical_minimum
-        get get_LogicalMinimum slot=13 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=173
+        get get_LogicalMinimum slot=13 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out int32 return
     property parent_collections
-        get get_ParentCollections slot=21 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=232
+        get get_ParentCollections slot=21 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.HumanInterfaceDevice.HidCollection> return
     property physical_maximum
-        get get_PhysicalMaximum slot=16 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=202
+        get get_PhysicalMaximum slot=16 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out int32 return
     property physical_minimum
-        get get_PhysicalMinimum slot=15 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=194
+        get get_PhysicalMinimum slot=15 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out int32 return
     property report_count
-        get get_ReportCount slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=121
+        get get_ReportCount slot=10 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint32 return
     property report_id
-        get get_ReportId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=43
+        get get_ReportId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint16 return
     property report_size
-        get get_ReportSize slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=99
+        get get_ReportSize slot=9 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint32 return
     property report_type
-        get get_ReportType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=62
+        get get_ReportType slot=8 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out enum32 type=Windows.Devices.HumanInterfaceDevice.HidReportType return
     property unit
-        get get_Unit slot=18 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=218
+        get get_Unit slot=18 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint32 return
     property unit_exponent
-        get get_UnitExponent slot=17 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=210
+        get get_UnitExponent slot=17 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint32 return
     property usage_id
-        get get_UsageId slot=12 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=162
+        get get_UsageId slot=12 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint16 return
     property usage_page
-        get get_UsagePage slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4 reverse=141
+        get get_UsagePage slot=11 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidNumericControlDescription shape=4
             out uint16 return
 
 class Windows.Devices.HumanInterfaceDevice.HidOutputReport python_type
@@ -387,29 +387,29 @@ class Windows.Devices.HumanInterfaceDevice.HidOutputReport python_type
     default Windows.Devices.HumanInterfaceDevice.IHidOutputReport
     requires Windows.Devices.HumanInterfaceDevice.IHidOutputReport
     property data
-        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=4 reverse=43
+        get get_Data slot=7 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
-        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=4 reverse=62
+        put put_Data slot=8 inputs=1 outputs=0 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=4
             out uint16 return
     method get_boolean_control
-        method GetBooleanControl slot=9 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=117 reverse=101
+        method GetBooleanControl slot=9 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_boolean_control_by_description
-        method GetBooleanControlByDescription slot=10 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=51 reverse=124
+        method GetBooleanControlByDescription slot=10 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription name=controlDescription
             out class type=Windows.Devices.HumanInterfaceDevice.HidBooleanControl return
     method get_numeric_control
-        method GetNumericControl slot=11 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=117 reverse=145
+        method GetNumericControl slot=11 inputs=2 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=117
             in uint16 name=usagePage
             in uint16 name=usageId
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControl return
     method get_numeric_control_by_description
-        method GetNumericControlByDescription slot=12 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=51 reverse=163
+        method GetNumericControlByDescription slot=12 inputs=1 outputs=1 declaring=Windows.Devices.HumanInterfaceDevice.IHidOutputReport shape=51
             in class type=Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription name=controlDescription
             out class type=Windows.Devices.HumanInterfaceDevice.HidNumericControl return
 

@@ -59,7 +59,7 @@ class Windows.Web.WebError static python_type
     py WebError
     factory Windows.Web.IWebErrorStatics
     method get_status static
-        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Web.IWebErrorStatics shape=51 reverse=24 static
+        method GetStatus slot=6 inputs=1 outputs=1 declaring=Windows.Web.IWebErrorStatics shape=51 static
             in int32 name=hresult
             out enum32 type=Windows.Web.WebErrorStatus return
 

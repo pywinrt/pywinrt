@@ -9,97 +9,97 @@ class Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection py
     default Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection
     requires Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection
     event create_folder_requested
-        add add_CreateFolderRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=163
+        add add_CreateFolderRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CreateFolderRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=181
+        remove remove_CreateFolderRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event delete_folder_requested
-        add add_DeleteFolderRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=187
+        add add_DeleteFolderRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DeleteFolderRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=200
+        remove remove_DeleteFolderRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_attachment_requested
-        add add_DownloadAttachmentRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=124
+        add add_DownloadAttachmentRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DownloadAttachmentRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=156
+        remove remove_DownloadAttachmentRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event download_message_requested
-        add add_DownloadMessageRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=65
+        add add_DownloadMessageRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DownloadMessageRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=110
+        remove remove_DownloadMessageRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event empty_folder_requested
-        add add_EmptyFolderRequested slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=203
+        add add_EmptyFolderRequested slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EmptyFolderRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=215
+        remove remove_EmptyFolderRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event forward_meeting_requested
-        add add_ForwardMeetingRequested slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=238
+        add add_ForwardMeetingRequested slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ForwardMeetingRequested slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=245
+        remove remove_ForwardMeetingRequested slot=23 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event get_auto_reply_settings_requested
-        add add_GetAutoReplySettingsRequested slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=264
+        add add_GetAutoReplySettingsRequested slot=28 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GetAutoReplySettingsRequested slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=268
+        remove remove_GetAutoReplySettingsRequested slot=29 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event mailbox_sync_requested
-        add add_MailboxSyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=24
+        add add_MailboxSyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MailboxSyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=53
+        remove remove_MailboxSyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event move_folder_requested
-        add add_MoveFolderRequested slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=219
+        add add_MoveFolderRequested slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MoveFolderRequested slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=226
+        remove remove_MoveFolderRequested slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event propose_new_time_for_meeting_requested
-        add add_ProposeNewTimeForMeetingRequested slot=24 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=248
+        add add_ProposeNewTimeForMeetingRequested slot=24 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProposeNewTimeForMeetingRequested slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=254
+        remove remove_ProposeNewTimeForMeetingRequested slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event resolve_recipients_requested
-        add add_ResolveRecipientsRequested slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=271
+        add add_ResolveRecipientsRequested slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ResolveRecipientsRequested slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=277
+        remove remove_ResolveRecipientsRequested slot=31 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event server_search_read_batch_requested
-        add add_ServerSearchReadBatchRequested slot=34 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=289
+        add add_ServerSearchReadBatchRequested slot=34 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ServerSearchReadBatchRequested slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=294
+        remove remove_ServerSearchReadBatchRequested slot=35 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event set_auto_reply_settings_requested
-        add add_SetAutoReplySettingsRequested slot=26 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=256
+        add add_SetAutoReplySettingsRequested slot=26 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SetAutoReplySettingsRequested slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=262
+        remove remove_SetAutoReplySettingsRequested slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_meeting_response_requested
-        add add_UpdateMeetingResponseRequested slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=229
+        add add_UpdateMeetingResponseRequested slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UpdateMeetingResponseRequested slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=234
+        remove remove_UpdateMeetingResponseRequested slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event validate_certificates_requested
-        add add_ValidateCertificatesRequested slot=32 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51 reverse=281
+        add add_ValidateCertificatesRequested slot=32 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ValidateCertificatesRequested slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26 reverse=287
+        remove remove_ValidateCertificatesRequested slot=33 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=36 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=0 reverse=405
+        method Start slot=36 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection shape=0
 
 class Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails python_type
     py EmailDataProviderTriggerDetails
@@ -107,7 +107,7 @@ class Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetail
     default Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderTriggerDetails
     requires Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderTriggerDetails
     property connection
-        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderTriggerDetails shape=4 reverse=22
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderTriggerDetails shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest python_type
@@ -116,20 +116,20 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderReques
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=4
             out string return
     property name
-        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=4 reverse=62
+        get get_Name slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=4
             out string return
     property parent_folder_id
-        get get_ParentFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=4 reverse=43
+        get get_ParentFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=51 reverse=100
+        method ReportCompletedAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=51
             in class type=Windows.ApplicationModel.Email.EmailFolder name=folder
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=51 reverse=124
+        method ReportFailedAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequest shape=51
             in enum32 type=Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus name=status
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -139,10 +139,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderReques
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxCreateFolderRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest python_type
@@ -151,16 +151,16 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderReques
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest
     property email_folder_id
-        get get_EmailFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=4 reverse=43
+        get get_EmailFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=51 reverse=100
+        method ReportFailedAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequest shape=51
             in enum32 type=Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus name=status
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -170,10 +170,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderReques
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDeleteFolderRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest python_type
@@ -182,19 +182,19 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachment
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest
     property email_attachment_id
-        get get_EmailAttachmentId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4 reverse=62
+        get get_EmailAttachmentId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4
             out string return
     property email_message_id
-        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4 reverse=43
+        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4 reverse=99
+        method ReportCompletedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4 reverse=121
+        method ReportFailedAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs python_type
@@ -203,10 +203,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachment
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadAttachmentRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest python_type
@@ -215,16 +215,16 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageReq
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4
             out string return
     property email_message_id
-        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4 reverse=43
+        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs python_type
@@ -233,10 +233,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageReq
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxDownloadMessageRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest python_type
@@ -245,16 +245,16 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest
     property email_folder_id
-        get get_EmailFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=4 reverse=43
+        get get_EmailFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=51 reverse=100
+        method ReportFailedAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequest shape=51
             in enum32 type=Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus name=status
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -264,10 +264,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxEmptyFolderRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest python_type
@@ -276,31 +276,31 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequ
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest
     property comment
-        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=162
+        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out string return
     property email_message_id
-        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=43
+        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out string return
     property forward_header
-        get get_ForwardHeader slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=141
+        get get_ForwardHeader slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out string return
     property forward_header_type
-        get get_ForwardHeaderType slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=121
+        get get_ForwardHeaderType slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out enum32 type=Windows.ApplicationModel.Email.EmailMessageBodyKind return
     property recipients
-        get get_Recipients slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=62
+        get get_Recipients slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Email.EmailRecipient> return
     property subject
-        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=99
+        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=173
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4 reverse=186
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs python_type
@@ -309,10 +309,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequ
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxForwardMeetingRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest python_type
@@ -321,17 +321,17 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettin
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=4
             out string return
     property requested_format
-        get get_RequestedFormat slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=4 reverse=43
+        get get_RequestedFormat slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=4
             out enum32 type=Windows.ApplicationModel.Email.EmailMailboxAutoReplyMessageResponseKind return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=51 reverse=65
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=51
             in class type=Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings name=autoReplySettings
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs python_type
@@ -340,10 +340,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettin
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxGetAutoReplySettingsRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest python_type
@@ -352,22 +352,22 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest 
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest
     property email_folder_id
-        get get_EmailFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4 reverse=43
+        get get_EmailFolderId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4
             out string return
     property new_folder_name
-        get get_NewFolderName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4 reverse=99
+        get get_NewFolderName slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4
             out string return
     property new_parent_folder_id
-        get get_NewParentFolderId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4 reverse=62
+        get get_NewParentFolderId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4 reverse=121
+        method ReportCompletedAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4 reverse=141
+        method ReportFailedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs python_type
@@ -376,10 +376,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestE
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxMoveFolderRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest python_type
@@ -388,28 +388,28 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForM
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest
     property comment
-        get get_Comment slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=141
+        get get_Comment slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out string return
     property email_message_id
-        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=43
+        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out string return
     property new_duration
-        get get_NewDuration slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=99
+        get get_NewDuration slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out timespan return
     property new_start_time
-        get get_NewStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=62
+        get get_NewStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out datetime return
     property subject
-        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=121
+        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=162
+        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4 reverse=173
+        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs python_type
@@ -418,10 +418,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForM
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxProposeNewTimeForMeetingRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest python_type
@@ -430,17 +430,17 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsR
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=4
             out string return
     property recipients
-        get get_Recipients slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=4 reverse=43
+        get get_Recipients slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=51 reverse=65
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailRecipientResolutionResult> name=resolutionResults
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs python_type
@@ -449,10 +449,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsR
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxResolveRecipientsRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest python_type
@@ -461,29 +461,29 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBa
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest
     property email_folder_id
-        get get_EmailFolderId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4 reverse=62
+        get get_EmailFolderId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4 reverse=43
+        get get_EmailMailboxId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4
             out string return
     property options
-        get get_Options slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4 reverse=99
+        get get_Options slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4
             out class type=Windows.ApplicationModel.Email.EmailQueryOptions return
     property session_id
-        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4 reverse=22
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4
             out string return
     property suggested_batch_size
-        get get_SuggestedBatchSize slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4 reverse=121
+        get get_SuggestedBatchSize slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4
             out uint32 return
     method report_completed_async
-        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4 reverse=162
+        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=51 reverse=174
+        method ReportFailedAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=51
             in enum32 type=Windows.ApplicationModel.Email.EmailBatchStatus name=batchStatus
             out interface type=Windows.Foundation.IAsyncAction return
     method save_message_async
-        method SaveMessageAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=51 reverse=144
+        method SaveMessageAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequest shape=51
             in class type=Windows.ApplicationModel.Email.EmailMessage name=message
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -493,10 +493,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBa
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxServerSearchReadBatchRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest python_type
@@ -505,16 +505,16 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettin
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest
     property auto_reply_settings
-        get get_AutoReplySettings slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4 reverse=43
+        get get_AutoReplySettings slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4
             out class type=Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs python_type
@@ -523,10 +523,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettin
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSetAutoReplySettingsRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest python_type
@@ -535,13 +535,13 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncReq
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest shape=4 reverse=43
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest shape=4 reverse=62
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs python_type
@@ -550,10 +550,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncReq
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest python_type
@@ -562,28 +562,28 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingRespo
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest
     property comment
-        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=121
+        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out string return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out string return
     property email_message_id
-        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=43
+        get get_EmailMessageId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out string return
     property response
-        get get_Response slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=62
+        get get_Response slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out enum32 type=Windows.ApplicationModel.Email.EmailMeetingResponseType return
     property send_update
-        get get_SendUpdate slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=141
+        get get_SendUpdate slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out boolean return
     property subject
-        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=99
+        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=162
+        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4 reverse=173
+        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs python_type
@@ -592,10 +592,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingRespo
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxUpdateMeetingResponseRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest python_type
@@ -604,17 +604,17 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificat
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest
     property certificates
-        get get_Certificates slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=4 reverse=43
+        get get_Certificates slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
     property email_mailbox_id
-        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=4 reverse=22
+        get get_EmailMailboxId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=51 reverse=65
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=51
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Email.EmailCertificateValidationStatus> name=validationStatuses
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs python_type
@@ -623,10 +623,10 @@ class Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificat
     default Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs
     requires Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Email.DataProvider.IEmailMailboxValidateCertificatesRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 interface Windows.ApplicationModel.Email.DataProvider.IEmailDataProviderConnection

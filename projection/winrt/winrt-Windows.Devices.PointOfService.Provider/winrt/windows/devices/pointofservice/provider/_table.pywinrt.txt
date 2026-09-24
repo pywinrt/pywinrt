@@ -43,15 +43,15 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerReques
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2
     method report_completed_async
-        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest shape=4 reverse=22
+        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest shape=4 reverse=43
+        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -62,10 +62,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerReques
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerDisableScannerRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest python_type
@@ -75,15 +75,15 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2
     method report_completed_async
-        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest shape=4 reverse=22
+        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest shape=4 reverse=43
+        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -94,10 +94,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerEnableScannerRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader python_type closeable
@@ -107,24 +107,24 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader python_t
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader
     requires Windows.Foundation.IClosable
     property connection
-        get get_Connection slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4 reverse=99
+        get get_Connection slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection return
     event frame_arrived
-        add add_FrameArrived slot=10 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=51 reverse=124
+        add add_FrameArrived slot=10 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader,Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_FrameArrived slot=11 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=26 reverse=156
+        remove remove_FrameArrived slot=11 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_async
-        method StartAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4 reverse=22
+        method StartAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method stop_async
-        method StopAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4 reverse=43
+        method StopAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method try_acquire_latest_frame_async
-        method TryAcquireLatestFrameAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4 reverse=62
+        method TryAcquireLatestFrameAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReader shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame> return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs python_type
@@ -133,7 +133,7 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArri
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerFrameReaderFrameArrivedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest python_type
@@ -143,19 +143,19 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttribut
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2
     property symbology
-        get get_Symbology slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest shape=4 reverse=22
+        get get_Symbology slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest shape=4
             out uint32 return
     method report_completed_async
-        method ReportCompletedAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest shape=51 reverse=44
+        method ReportCompletedAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest shape=51
             in class type=Windows.Devices.PointOfService.BarcodeSymbologyAttributes name=attributes
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest shape=4 reverse=62
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -166,10 +166,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttribut
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerGetSymbologyAttributesRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest python_type
@@ -179,15 +179,15 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequ
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2
     method report_completed_async
-        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest shape=4 reverse=22
+        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest shape=4 reverse=43
+        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -198,10 +198,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequ
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerHideVideoPreviewRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection python_type closeable
@@ -212,83 +212,83 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection p
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2
     requires Windows.Foundation.IClosable
     property version
-        get get_Version slot=13 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=173
+        get get_Version slot=13 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             out string return
-        put put_Version slot=14 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=186
+        put put_Version slot=14 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             in string name=value
     property name
-        get get_Name slot=11 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=141
+        get get_Name slot=11 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             out string return
-        put put_Name slot=12 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=162
+        put put_Name slot=12 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             in string name=value
     property company_name
-        get get_CompanyName slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=99
+        get get_CompanyName slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             out string return
-        put put_CompanyName slot=10 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=121
+        put put_CompanyName slot=10 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             in string name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             out string return
     property supported_symbologies
-        get get_SupportedSymbologies slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=62
+        get get_SupportedSymbologies slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<System.UInt32> return
     property video_device_id
-        get get_VideoDeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4 reverse=43
+        get get_VideoDeviceId slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=4
             out string return
     event disable_scanner_requested
-        add add_DisableScannerRequested slot=22 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=238
+        add add_DisableScannerRequested slot=22 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DisableScannerRequested slot=23 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=245
+        remove remove_DisableScannerRequested slot=23 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event enable_scanner_requested
-        add add_EnableScannerRequested slot=20 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=229
+        add add_EnableScannerRequested slot=20 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnableScannerRequested slot=21 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=234
+        remove remove_EnableScannerRequested slot=21 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event get_barcode_symbology_attributes_requested
-        add add_GetBarcodeSymbologyAttributesRequested slot=30 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=271
+        add add_GetBarcodeSymbologyAttributesRequested slot=30 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GetBarcodeSymbologyAttributesRequested slot=31 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=277
+        remove remove_GetBarcodeSymbologyAttributesRequested slot=31 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event hide_video_preview_requested
-        add add_HideVideoPreviewRequested slot=34 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=289
+        add add_HideVideoPreviewRequested slot=34 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HideVideoPreviewRequested slot=35 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=294
+        remove remove_HideVideoPreviewRequested slot=35 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event set_active_symbologies_requested
-        add add_SetActiveSymbologiesRequested slot=24 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=248
+        add add_SetActiveSymbologiesRequested slot=24 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SetActiveSymbologiesRequested slot=25 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=254
+        remove remove_SetActiveSymbologiesRequested slot=25 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event set_barcode_symbology_attributes_requested
-        add add_SetBarcodeSymbologyAttributesRequested slot=32 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=281
+        add add_SetBarcodeSymbologyAttributesRequested slot=32 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SetBarcodeSymbologyAttributesRequested slot=33 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=287
+        remove remove_SetBarcodeSymbologyAttributesRequested slot=33 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event start_software_trigger_requested
-        add add_StartSoftwareTriggerRequested slot=26 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=256
+        add add_StartSoftwareTriggerRequested slot=26 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StartSoftwareTriggerRequested slot=27 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=262
+        remove remove_StartSoftwareTriggerRequested slot=27 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stop_software_trigger_requested
-        add add_StopSoftwareTriggerRequested slot=28 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=264
+        add add_StopSoftwareTriggerRequested slot=28 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection,Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StopSoftwareTriggerRequested slot=29 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26 reverse=268
+        remove remove_StopSoftwareTriggerRequested slot=29 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_frame_reader_async
-        method CreateFrameReaderAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2 shape=4 reverse=22
+        method CreateFrameReaderAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> return
-        method CreateFrameReaderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2 shape=51 reverse=44
+        method CreateFrameReaderAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2 shape=51
             in enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat name=preferredFormat
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> return
         method CreateFrameReaderAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection2 shape=141
@@ -296,7 +296,7 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection p
             in struct type=Windows.Graphics.Imaging.BitmapSize name=preferredSize
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader> return
     method report_error_async
-        method ReportErrorAsync slot=18 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=219
+        method ReportErrorAsync slot=18 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in class type=Windows.Devices.PointOfService.UnifiedPosErrorData name=errorData
             out interface type=Windows.Foundation.IAsyncAction return
         method ReportErrorAsync slot=19 inputs=3 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=195
@@ -305,15 +305,15 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection p
             in class type=Windows.Devices.PointOfService.BarcodeScannerReport name=scanReport
             out interface type=Windows.Foundation.IAsyncAction return
     method report_scanned_data_async
-        method ReportScannedDataAsync slot=16 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=203
+        method ReportScannedDataAsync slot=16 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in class type=Windows.Devices.PointOfService.BarcodeScannerReport name=report
             out interface type=Windows.Foundation.IAsyncAction return
     method report_trigger_state_async
-        method ReportTriggerStateAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51 reverse=211
+        method ReportTriggerStateAsync slot=17 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=51
             in enum32 type=Windows.Devices.PointOfService.Provider.BarcodeScannerTriggerState name=state
             out interface type=Windows.Foundation.IAsyncAction return
     method start
-        method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=0 reverse=193
+        method Start slot=15 inputs=0 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderConnection shape=0
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails python_type
     py BarcodeScannerProviderTriggerDetails
@@ -321,7 +321,7 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetai
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails
     property connection
-        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails shape=4 reverse=22
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerProviderTriggerDetails shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest python_type
@@ -331,18 +331,18 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologies
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2
     property symbologies
-        get get_Symbologies slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest shape=4 reverse=22
+        get get_Symbologies slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     method report_completed_async
-        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest shape=4 reverse=43
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest shape=4 reverse=62
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -353,10 +353,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologies
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetActiveSymbologiesRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest python_type
@@ -366,21 +366,21 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttribut
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2
     property attributes
-        get get_Attributes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4 reverse=43
+        get get_Attributes slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4
             out class type=Windows.Devices.PointOfService.BarcodeSymbologyAttributes return
     property symbology
-        get get_Symbology slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4 reverse=22
+        get get_Symbology slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4
             out uint32 return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -391,10 +391,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttribut
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerSetSymbologyAttributesRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest python_type
@@ -404,15 +404,15 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTrigger
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2
     method report_completed_async
-        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest shape=4 reverse=22
+        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest shape=4 reverse=43
+        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -423,10 +423,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTrigger
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStartSoftwareTriggerRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest python_type
@@ -436,15 +436,15 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerR
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2
     method report_completed_async
-        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest shape=4 reverse=22
+        method ReportCompletedAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest shape=4 reverse=43
+        method ReportFailedAsync slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2 shape=51 reverse=24
+        method ReportFailedAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2 shape=51
             in int32 name=reason
             out interface type=Windows.Foundation.IAsyncAction return
-        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2 shape=117 reverse=45
+        method ReportFailedAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequest2 shape=117
             in int32 name=reason
             in string name=failedReasonDescription
             out interface type=Windows.Foundation.IAsyncAction return
@@ -455,10 +455,10 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerR
     default Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs shape=4
             out class type=Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerStopSoftwareTriggerRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 enum Windows.Devices.PointOfService.Provider.BarcodeScannerTriggerState python_type
@@ -474,16 +474,16 @@ class Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame python_ty
     requires Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame
     requires Windows.Foundation.IClosable
     property format
-        get get_Format slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4 reverse=22
+        get get_Format slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4
             out enum32 type=Windows.Graphics.Imaging.BitmapPixelFormat return
     property height
-        get get_Height slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4 reverse=62
+        get get_Height slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4
             out uint32 return
     property pixel_data
-        get get_PixelData slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4 reverse=99
+        get get_PixelData slot=9 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4
             out interface type=Windows.Storage.Streams.IBuffer return
     property width
-        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4 reverse=43
+        get get_Width slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeScannerVideoFrame shape=4
             out uint32 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -497,22 +497,22 @@ class Windows.Devices.PointOfService.Provider.BarcodeSymbologyAttributesBuilder 
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_decode_length_supported
-        get get_IsDecodeLengthSupported slot=10 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=121
+        get get_IsDecodeLengthSupported slot=10 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             out boolean return
-        put put_IsDecodeLengthSupported slot=11 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=141
+        put put_IsDecodeLengthSupported slot=11 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             in boolean name=value
     property is_check_digit_validation_supported
-        get get_IsCheckDigitValidationSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=22
+        get get_IsCheckDigitValidationSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             out boolean return
-        put put_IsCheckDigitValidationSupported slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=43
+        put put_IsCheckDigitValidationSupported slot=7 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             in boolean name=value
     property is_check_digit_transmission_supported
-        get get_IsCheckDigitTransmissionSupported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=62
+        get get_IsCheckDigitTransmissionSupported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             out boolean return
-        put put_IsCheckDigitTransmissionSupported slot=9 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=99
+        put put_IsCheckDigitTransmissionSupported slot=9 inputs=1 outputs=0 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             in boolean name=value
     method create_attributes
-        method CreateAttributes slot=12 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4 reverse=162
+        method CreateAttributes slot=12 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.Provider.IBarcodeSymbologyAttributesBuilder shape=4
             out class type=Windows.Devices.PointOfService.BarcodeSymbologyAttributes return
 
 interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable

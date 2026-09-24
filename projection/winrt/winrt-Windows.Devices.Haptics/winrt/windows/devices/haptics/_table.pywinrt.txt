@@ -287,37 +287,37 @@ class Windows.Devices.Haptics.InputHapticsManager python_type
     requires Windows.Devices.Haptics.IInputHapticsManager
     factory Windows.Devices.Haptics.IInputHapticsManagerStatics
     property current_haptics_controller
-        get get_CurrentHapticsController slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4 reverse=62
+        get get_CurrentHapticsController slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4
             out class type=Windows.Devices.Haptics.SimpleHapticsController return
     property current_haptics_controller_device_type
-        get get_CurrentHapticsControllerDeviceType slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4 reverse=43
+        get get_CurrentHapticsControllerDeviceType slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4
             out enum32 type=Windows.Devices.Haptics.HapticDeviceType return
     property thread_id
-        get get_ThreadId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4 reverse=22
+        get get_ThreadId slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4
             out uint32 return
     method clear_override_haptics_controller
-        method ClearOverrideHapticsController slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=26 reverse=200
+        method ClearOverrideHapticsController slot=15 inputs=1 outputs=0 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=26
             in struct type=Windows.Devices.Haptics.HapticsControllerOverrideToken name=token
     method get_for_current_thread static
-        method GetForCurrentThread slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=4 reverse=62 static
+        method GetForCurrentThread slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=4 static
             out class type=Windows.Devices.Haptics.InputHapticsManager return
     method is_haptic_device_present static
-        method IsHapticDevicePresent slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=4 reverse=43 static
+        method IsHapticDevicePresent slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=4 static
             out boolean return
     method is_supported static
-        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=4 reverse=22 static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=4 static
             out boolean return
     method set_override_haptics_controller
-        method SetOverrideHapticsController slot=14 inputs=2 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=117 reverse=188
+        method SetOverrideHapticsController slot=14 inputs=2 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=117
             in enum32 type=Windows.Devices.Haptics.HapticDeviceType name=deviceType
             in class type=Windows.Devices.Haptics.SimpleHapticsController name=controller
             out struct type=Windows.Devices.Haptics.HapticsControllerOverrideToken return
     method try_get_for_thread static
-        method TryGetForThread slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=51 reverse=100 static
+        method TryGetForThread slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManagerStatics shape=51 static
             in uint32 name=ThreadId
             out class type=Windows.Devices.Haptics.InputHapticsManager return
     method try_send_haptic_waveform
-        method TrySendHapticWaveform slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=117 reverse=101
+        method TrySendHapticWaveform slot=9 inputs=2 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=117
             in uint16 name=waveform
             in uint16 name=waveformFallback
             out boolean return
@@ -342,7 +342,7 @@ class Windows.Devices.Haptics.InputHapticsManager python_type
             in timespan name=replayPauseInterval
             out boolean return
     method try_stop_feedback
-        method TryStopFeedback slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4 reverse=173
+        method TryStopFeedback slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IInputHapticsManager shape=4
             out boolean return
 
 class Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms static python_type
@@ -351,61 +351,61 @@ class Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms static pytho
     factory Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2
     factory Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3
     property buzz_continuous static
-        get get_BuzzContinuous slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 reverse=43 static
+        get get_BuzzContinuous slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 static
             out uint16 return
     property click static
-        get get_Click slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 reverse=22 static
+        get get_Click slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 static
             out uint16 return
     property press static
-        get get_Press slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 reverse=99 static
+        get get_Press slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 static
             out uint16 return
     property release static
-        get get_Release slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 reverse=121 static
+        get get_Release slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 static
             out uint16 return
     property rumble_continuous static
-        get get_RumbleContinuous slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 reverse=62 static
+        get get_RumbleContinuous slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics shape=4 static
             out uint16 return
     property brush_continuous static
-        get get_BrushContinuous slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=22 static
+        get get_BrushContinuous slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property chisel_marker_continuous static
-        get get_ChiselMarkerContinuous slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=43 static
+        get get_ChiselMarkerContinuous slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property eraser_continuous static
-        get get_EraserContinuous slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=62 static
+        get get_EraserContinuous slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property error static
-        get get_Error slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=99 static
+        get get_Error slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property galaxy_pen_continuous static
-        get get_GalaxyPenContinuous slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=121 static
+        get get_GalaxyPenContinuous slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property hover static
-        get get_Hover slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=141 static
+        get get_Hover slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property ink_continuous static
-        get get_InkContinuous slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=162 static
+        get get_InkContinuous slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property marker_continuous static
-        get get_MarkerContinuous slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=173 static
+        get get_MarkerContinuous slot=13 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property pencil_continuous static
-        get get_PencilContinuous slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=186 static
+        get get_PencilContinuous slot=14 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property success static
-        get get_Success slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 reverse=194 static
+        get get_Success slot=15 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2 shape=4 static
             out uint16 return
     property align static
-        get get_Align slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 reverse=43 static
+        get get_Align slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 static
             out uint16 return
     property collide static
-        get get_Collide slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 reverse=22 static
+        get get_Collide slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 static
             out uint16 return
     property grow static
-        get get_Grow slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 reverse=99 static
+        get get_Grow slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 static
             out uint16 return
     property step static
-        get get_Step slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 reverse=62 static
+        get get_Step slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics3 shape=4 static
             out uint16 return
 
 class Windows.Devices.Haptics.SimpleHapticsController python_type
@@ -414,25 +414,25 @@ class Windows.Devices.Haptics.SimpleHapticsController python_type
     default Windows.Devices.Haptics.ISimpleHapticsController
     requires Windows.Devices.Haptics.ISimpleHapticsController
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             out string return
     property is_intensity_supported
-        get get_IsIntensitySupported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=62
+        get get_IsIntensitySupported slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             out boolean return
     property is_play_count_supported
-        get get_IsPlayCountSupported slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=99
+        get get_IsPlayCountSupported slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             out boolean return
     property is_play_duration_supported
-        get get_IsPlayDurationSupported slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=121
+        get get_IsPlayDurationSupported slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             out boolean return
     property is_replay_pause_interval_supported
-        get get_IsReplayPauseIntervalSupported slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=141
+        get get_IsReplayPauseIntervalSupported slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             out boolean return
     property supported_feedback
-        get get_SupportedFeedback slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=43
+        get get_SupportedFeedback slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.SimpleHapticsControllerFeedback> return
     method send_haptic_feedback
-        method SendHapticFeedback slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4 reverse=173
+        method SendHapticFeedback slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=4
             in class type=Windows.Devices.Haptics.SimpleHapticsControllerFeedback name=feedback
         method SendHapticFeedback slot=14 inputs=2 outputs=0 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=49
             in class type=Windows.Devices.Haptics.SimpleHapticsControllerFeedback name=feedback
@@ -449,7 +449,7 @@ class Windows.Devices.Haptics.SimpleHapticsController python_type
             in int32 name=playCount
             in timespan name=replayPauseInterval
     method stop_feedback
-        method StopFeedback slot=12 inputs=0 outputs=0 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=0 reverse=159
+        method StopFeedback slot=12 inputs=0 outputs=0 declaring=Windows.Devices.Haptics.ISimpleHapticsController shape=0
 
 class Windows.Devices.Haptics.SimpleHapticsControllerFeedback python_type
     py SimpleHapticsControllerFeedback
@@ -457,10 +457,10 @@ class Windows.Devices.Haptics.SimpleHapticsControllerFeedback python_type
     default Windows.Devices.Haptics.ISimpleHapticsControllerFeedback
     requires Windows.Devices.Haptics.ISimpleHapticsControllerFeedback
     property duration
-        get get_Duration slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsControllerFeedback shape=4 reverse=43
+        get get_Duration slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsControllerFeedback shape=4
             out timespan return
     property waveform
-        get get_Waveform slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsControllerFeedback shape=4 reverse=22
+        get get_Waveform slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.ISimpleHapticsControllerFeedback shape=4
             out uint16 return
 
 enum Windows.Devices.Haptics.VibrationAccessStatus python_type
@@ -478,26 +478,26 @@ class Windows.Devices.Haptics.VibrationDevice python_type
     requires Windows.Devices.Haptics.IVibrationDevice
     factory Windows.Devices.Haptics.IVibrationDeviceStatics
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDevice shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDevice shape=4
             out string return
     property simple_haptics_controller
-        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDevice shape=4 reverse=43
+        get get_SimpleHapticsController slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDevice shape=4
             out class type=Windows.Devices.Haptics.SimpleHapticsController return
     method find_all_async static
-        method FindAllAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 reverse=121 static
+        method FindAllAsync slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Haptics.VibrationDevice>> return
     method from_id_async static
-        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=51 reverse=65 static
+        method FromIdAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=51 static
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Haptics.VibrationDevice> return
     method get_default_async static
-        method GetDefaultAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 reverse=99 static
+        method GetDefaultAsync slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Haptics.VibrationDevice> return
     method get_device_selector static
-        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 reverse=43 static
+        method GetDeviceSelector slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 static
             out string return
     method request_access_async static
-        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 reverse=22 static
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Haptics.IVibrationDeviceStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Haptics.VibrationAccessStatus> return
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized

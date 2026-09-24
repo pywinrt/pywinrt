@@ -44,10 +44,10 @@ class Windows.Media.Protection.ComponentLoadFailedEventArgs python_type
     default Windows.Media.Protection.IComponentLoadFailedEventArgs
     requires Windows.Media.Protection.IComponentLoadFailedEventArgs
     property completion
-        get get_Completion slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IComponentLoadFailedEventArgs shape=4 reverse=43
+        get get_Completion slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IComponentLoadFailedEventArgs shape=4
             out class type=Windows.Media.Protection.MediaProtectionServiceCompletion return
     property information
-        get get_Information slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IComponentLoadFailedEventArgs shape=4 reverse=22
+        get get_Information slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IComponentLoadFailedEventArgs shape=4
             out class type=Windows.Media.Protection.RevocationAndRenewalInformation return
 
 delegate Windows.Media.Protection.ComponentLoadFailedEventHandler python_type
@@ -63,7 +63,7 @@ class Windows.Media.Protection.ComponentRenewal static python_type
     py ComponentRenewal
     factory Windows.Media.Protection.IComponentRenewalStatics
     method renew_system_components_async static
-        method RenewSystemComponentsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IComponentRenewalStatics shape=51 reverse=24 static
+        method RenewSystemComponentsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IComponentRenewalStatics shape=51 static
             in class type=Windows.Media.Protection.RevocationAndRenewalInformation name=information
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Protection.RenewalStatus,System.UInt32> return
 
@@ -94,22 +94,22 @@ class Windows.Media.Protection.HdcpSession activatable python_type closeable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     event protection_changed
-        add add_ProtectionChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=51 reverse=100
+        add add_ProtectionChanged slot=9 inputs=1 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.HdcpSession,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProtectionChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.Protection.IHdcpSession shape=26 reverse=134
+        remove remove_ProtectionChanged slot=10 inputs=1 outputs=0 declaring=Windows.Media.Protection.IHdcpSession shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_effective_protection
-        method GetEffectiveProtection slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=4 reverse=43
+        method GetEffectiveProtection slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=4
             out reference type=Windows.Foundation.IReference<Windows.Media.Protection.HdcpProtection> return
     method is_effective_protection_at_least
-        method IsEffectiveProtectionAtLeast slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=51 reverse=24
+        method IsEffectiveProtectionAtLeast slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=51
             in enum32 type=Windows.Media.Protection.HdcpProtection name=protection
             out boolean return
     method set_desired_min_protection_async
-        method SetDesiredMinProtectionAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=51 reverse=65
+        method SetDesiredMinProtectionAsync slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.IHdcpSession shape=51
             in enum32 type=Windows.Media.Protection.HdcpProtection name=protection
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.HdcpSetProtectionResult> return
 
@@ -479,25 +479,25 @@ class Windows.Media.Protection.MediaProtectionManager activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property properties
-        get get_Properties slot=12 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=4 reverse=162
+        get get_Properties slot=12 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     event component_load_failed
-        add add_ComponentLoadFailed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=51 reverse=124
+        add add_ComponentLoadFailed slot=10 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=51
             in delegate type=Windows.Media.Protection.ComponentLoadFailedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ComponentLoadFailed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionManager shape=26 reverse=156
+        remove remove_ComponentLoadFailed slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event reboot_needed
-        add add_RebootNeeded slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=51 reverse=65
+        add add_RebootNeeded slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=51
             in delegate type=Windows.Media.Protection.RebootNeededEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RebootNeeded slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionManager shape=26 reverse=110
+        remove remove_RebootNeeded slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event service_requested
-        add add_ServiceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=51 reverse=24
+        add add_ServiceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionManager shape=51
             in delegate type=Windows.Media.Protection.ServiceRequestedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ServiceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionManager shape=26 reverse=53
+        remove remove_ServiceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.Media.Protection.MediaProtectionPMPServer python_type
@@ -507,11 +507,11 @@ class Windows.Media.Protection.MediaProtectionPMPServer python_type
     requires Windows.Media.Protection.IMediaProtectionPMPServer
     factory Windows.Media.Protection.IMediaProtectionPMPServerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionPMPServerFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionPMPServerFactory shape=51
             in interface type=Windows.Foundation.Collections.IPropertySet name=pProperties
             out class type=Windows.Media.Protection.MediaProtectionPMPServer return
     property properties
-        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionPMPServer shape=4 reverse=22
+        get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionPMPServer shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
 
 class Windows.Media.Protection.MediaProtectionServiceCompletion python_type
@@ -520,7 +520,7 @@ class Windows.Media.Protection.MediaProtectionServiceCompletion python_type
     default Windows.Media.Protection.IMediaProtectionServiceCompletion
     requires Windows.Media.Protection.IMediaProtectionServiceCompletion
     method complete
-        method Complete slot=6 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionServiceCompletion shape=4 reverse=22
+        method Complete slot=6 inputs=1 outputs=0 declaring=Windows.Media.Protection.IMediaProtectionServiceCompletion shape=4
             in boolean name=success
 
 class Windows.Media.Protection.ProtectionCapabilities activatable python_type
@@ -532,7 +532,7 @@ class Windows.Media.Protection.ProtectionCapabilities activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     method is_type_supported
-        method IsTypeSupported slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.IProtectionCapabilities shape=117 reverse=25
+        method IsTypeSupported slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.IProtectionCapabilities shape=117
             in string name=type
             in string name=keySystem
             out enum32 type=Windows.Media.Protection.ProtectionCapabilityResult return
@@ -567,7 +567,7 @@ class Windows.Media.Protection.RevocationAndRenewalInformation python_type
     default Windows.Media.Protection.IRevocationAndRenewalInformation
     requires Windows.Media.Protection.IRevocationAndRenewalInformation
     property items
-        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalInformation shape=4 reverse=22
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalInformation shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Protection.RevocationAndRenewalItem> return
 
 class Windows.Media.Protection.RevocationAndRenewalItem python_type
@@ -576,19 +576,19 @@ class Windows.Media.Protection.RevocationAndRenewalItem python_type
     default Windows.Media.Protection.IRevocationAndRenewalItem
     requires Windows.Media.Protection.IRevocationAndRenewalItem
     property header_hash
-        get get_HeaderHash slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4 reverse=43
+        get get_HeaderHash slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4
             out string return
     property name
-        get get_Name slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4 reverse=99
+        get get_Name slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4
             out string return
     property public_key_hash
-        get get_PublicKeyHash slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4 reverse=62
+        get get_PublicKeyHash slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4
             out string return
     property reasons
-        get get_Reasons slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4 reverse=22
+        get get_Reasons slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4
             out enum_u32 type=Windows.Media.Protection.RevocationAndRenewalReasons return
     property renewal_id
-        get get_RenewalId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4 reverse=121
+        get get_RenewalId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.IRevocationAndRenewalItem shape=4
             out string return
 
 enum Windows.Media.Protection.RevocationAndRenewalReasons python_type flags_enum
@@ -617,13 +617,13 @@ class Windows.Media.Protection.ServiceRequestedEventArgs python_type
     requires Windows.Media.Protection.IServiceRequestedEventArgs
     requires Windows.Media.Protection.IServiceRequestedEventArgs2
     property completion
-        get get_Completion slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IServiceRequestedEventArgs shape=4 reverse=43
+        get get_Completion slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IServiceRequestedEventArgs shape=4
             out class type=Windows.Media.Protection.MediaProtectionServiceCompletion return
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IServiceRequestedEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IServiceRequestedEventArgs shape=4
             out interface type=Windows.Media.Protection.IMediaProtectionServiceRequest return
     property media_playback_item
-        get get_MediaPlaybackItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IServiceRequestedEventArgs2 shape=4 reverse=22
+        get get_MediaPlaybackItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.IServiceRequestedEventArgs2 shape=4
             out class type=Windows.Media.Playback.MediaPlaybackItem return
 
 delegate Windows.Media.Protection.ServiceRequestedEventHandler python_type

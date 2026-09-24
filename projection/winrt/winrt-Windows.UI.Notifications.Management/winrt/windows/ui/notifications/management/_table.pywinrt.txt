@@ -166,32 +166,32 @@ class Windows.UI.Notifications.Management.UserNotificationListener python_type
     requires Windows.UI.Notifications.Management.IUserNotificationListener
     factory Windows.UI.Notifications.Management.IUserNotificationListenerStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListenerStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListenerStatics shape=4 static
             out class type=Windows.UI.Notifications.Management.UserNotificationListener return
     event notification_changed
-        add add_NotificationChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=51 reverse=65
+        add add_NotificationChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.Management.UserNotificationListener,Windows.UI.Notifications.UserNotificationChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NotificationChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=26 reverse=110
+        remove remove_NotificationChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_notifications
-        method ClearNotifications slot=12 inputs=0 outputs=0 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=0 reverse=159
+        method ClearNotifications slot=12 inputs=0 outputs=0 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=0
     method get_access_status
-        method GetAccessStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=4 reverse=43
+        method GetAccessStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=4
             out enum32 type=Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus return
     method get_notification
-        method GetNotification slot=11 inputs=1 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=51 reverse=144
+        method GetNotification slot=11 inputs=1 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=51
             in uint32 name=notificationId
             out class type=Windows.UI.Notifications.UserNotification return
     method get_notifications_async
-        method GetNotificationsAsync slot=10 inputs=1 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=51 reverse=124
+        method GetNotificationsAsync slot=10 inputs=1 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=51
             in enum_u32 type=Windows.UI.Notifications.NotificationKinds name=kinds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.UserNotification>> return
     method remove_notification
-        method RemoveNotification slot=13 inputs=1 outputs=0 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=4 reverse=173
+        method RemoveNotification slot=13 inputs=1 outputs=0 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=4
             in uint32 name=notificationId
     method request_access_async
-        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=4 reverse=22
+        method RequestAccessAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.Management.IUserNotificationListener shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus> return
 
 enum Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus python_type

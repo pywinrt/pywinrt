@@ -10,11 +10,11 @@ class Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs python_
     requires Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs
     factory Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgsFactory shape=51
             in enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinEdge name=edge
             out class type=Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs return
     property edge
-        get get_Edge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs shape=4 reverse=22
+        get get_Edge slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Gpio.Provider.IGpioPinProviderValueChangedEventArgs shape=4
             out enum32 type=Windows.Devices.Gpio.Provider.ProviderGpioPinEdge return
 
 interface Windows.Devices.Gpio.Provider.IGpioControllerProvider python_type

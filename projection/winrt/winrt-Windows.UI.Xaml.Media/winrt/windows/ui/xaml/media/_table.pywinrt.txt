@@ -20,57 +20,57 @@ class Windows.UI.Xaml.Media.AcrylicBrush composable python_type
     factory Windows.UI.Xaml.Media.IAcrylicBrushStatics2
     composable Windows.UI.Xaml.Media.IAcrylicBrushFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Media.AcrylicBrush return
     property tint_transition_duration
-        get get_TintTransitionDuration slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=162
+        get get_TintTransitionDuration slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             out timespan return
-        put put_TintTransitionDuration slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=26 reverse=181
+        put put_TintTransitionDuration slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=26
             in timespan name=value
     property tint_opacity
-        get get_TintOpacity slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=121
+        get get_TintOpacity slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             out double return
-        put put_TintOpacity slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=2 reverse=138
+        put put_TintOpacity slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=2
             in double name=value
     property tint_color
-        get get_TintColor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=62
+        get get_TintColor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             out struct type=Windows.UI.Color return
-        put put_TintColor slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=29 reverse=113
+        put put_TintColor slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=29
             in struct type=Windows.UI.Color name=value
     property background_source
-        get get_BackgroundSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=22
+        get get_BackgroundSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.AcrylicBackgroundSource return
-        put put_BackgroundSource slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=43
+        put put_BackgroundSource slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.AcrylicBackgroundSource name=value
     property always_use_fallback
-        get get_AlwaysUseFallback slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=186
+        get get_AlwaysUseFallback slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             out boolean return
-        put put_AlwaysUseFallback slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4 reverse=194
+        put put_AlwaysUseFallback slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush shape=4
             in boolean name=value
     property tint_luminosity_opacity
-        get get_TintLuminosityOpacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush2 shape=4 reverse=22
+        get get_TintLuminosityOpacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrush2 shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-        put put_TintLuminosityOpacity slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush2 shape=4 reverse=43
+        put put_TintLuminosityOpacity slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IAcrylicBrush2 shape=4
             in reference type=Windows.Foundation.IReference<System.Double> name=value
     property always_use_fallback_property static
-        get get_AlwaysUseFallbackProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=121 static
+        get get_AlwaysUseFallbackProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property background_source_property static
-        get get_BackgroundSourceProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=22 static
+        get get_BackgroundSourceProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property tint_color_property static
-        get get_TintColorProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=43 static
+        get get_TintColorProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property tint_opacity_property static
-        get get_TintOpacityProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=62 static
+        get get_TintOpacityProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property tint_transition_duration_property static
-        get get_TintTransitionDurationProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 reverse=99 static
+        get get_TintTransitionDurationProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property tint_luminosity_opacity_property static
-        get get_TintLuminosityOpacityProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics2 shape=4 reverse=22 static
+        get get_TintLuminosityOpacityProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IAcrylicBrushStatics2 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 enum Windows.UI.Xaml.Media.AlignmentX python_type
@@ -98,44 +98,44 @@ class Windows.UI.Xaml.Media.ArcSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property sweep_direction
-        get get_SweepDirection slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=186
+        get get_SweepDirection slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             out enum32 type=Windows.UI.Xaml.Media.SweepDirection return
-        put put_SweepDirection slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=194
+        put put_SweepDirection slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             in enum32 type=Windows.UI.Xaml.Media.SweepDirection name=value
     property size
-        get get_Size slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=62
+        get get_Size slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             out struct type=Windows.Foundation.Size return
         put put_Size slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=10
             in struct type=Windows.Foundation.Size name=value
     property rotation_angle
-        get get_RotationAngle slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=121
+        get get_RotationAngle slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             out double return
-        put put_RotationAngle slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=2 reverse=138
+        put put_RotationAngle slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=2
             in double name=value
     property point
-        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=22
+        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property is_large_arc
-        get get_IsLargeArc slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=162
+        get get_IsLargeArc slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             out boolean return
-        put put_IsLargeArc slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4 reverse=173
+        put put_IsLargeArc slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IArcSegment shape=4
             in boolean name=value
     property is_large_arc_property static
-        get get_IsLargeArcProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 reverse=99 static
+        get get_IsLargeArcProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property point_property static
-        get get_PointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 reverse=22 static
+        get get_PointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property rotation_angle_property static
-        get get_RotationAngleProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 reverse=62 static
+        get get_RotationAngleProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property size_property static
-        get get_SizeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 reverse=43 static
+        get get_SizeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property sweep_direction_property static
-        get get_SweepDirectionProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 reverse=121 static
+        get get_SweepDirectionProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IArcSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 enum Windows.UI.Xaml.Media.AudioCategory python_type
@@ -172,28 +172,28 @@ class Windows.UI.Xaml.Media.BezierSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property point3
-        get get_Point3 slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=4 reverse=121
+        get get_Point3 slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point3 slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property point2
-        get get_Point2 slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=4 reverse=62
+        get get_Point2 slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point2 slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property point1
-        get get_Point1 slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=4 reverse=22
+        get get_Point1 slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point1 slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBezierSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property point1_property static
-        get get_Point1Property slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegmentStatics shape=4 reverse=22 static
+        get get_Point1Property slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property point2_property static
-        get get_Point2Property slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegmentStatics shape=4 reverse=43 static
+        get get_Point2Property slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property point3_property static
-        get get_Point3Property slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegmentStatics shape=4 reverse=62 static
+        get get_Point3Property slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.BitmapCache activatable python_type
@@ -218,28 +218,28 @@ class Windows.UI.Xaml.Media.Brush composable python_type
     composable Windows.UI.Xaml.Media.IBrushFactory
     overridable Windows.UI.Xaml.Media.IBrushOverrides2
     property transform
-        get get_Transform slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4 reverse=62
+        get get_Transform slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4
             out class type=Windows.UI.Xaml.Media.Transform return
-        put put_Transform slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBrush shape=4 reverse=99
+        put put_Transform slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBrush shape=4
             in class type=Windows.UI.Xaml.Media.Transform name=value
     property relative_transform
-        get get_RelativeTransform slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4 reverse=121
+        get get_RelativeTransform slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4
             out class type=Windows.UI.Xaml.Media.Transform return
-        put put_RelativeTransform slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBrush shape=4 reverse=141
+        put put_RelativeTransform slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBrush shape=4
             in class type=Windows.UI.Xaml.Media.Transform name=value
     property opacity
-        get get_Opacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4 reverse=22
+        get get_Opacity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4
             out double return
-        put put_Opacity slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBrush shape=2 reverse=38
+        put put_Opacity slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IBrush shape=2
             in double name=value
     property opacity_property static
-        get get_OpacityProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushStatics shape=4 reverse=22 static
+        get get_OpacityProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property relative_transform_property static
-        get get_RelativeTransformProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushStatics shape=4 reverse=62 static
+        get get_RelativeTransformProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property transform_property static
-        get get_TransformProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushStatics shape=4 reverse=43 static
+        get get_TransformProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method populate_property_info
         method PopulatePropertyInfo slot=6 inputs=2 outputs=0 declaring=Windows.UI.Composition.IAnimationObject shape=51 reverse=24
@@ -336,76 +336,76 @@ class Windows.UI.Xaml.Media.CompositeTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property translate_y
-        get get_TranslateY slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=237
+        get get_TranslateY slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
         put put_TranslateY slot=23 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property translate_x
-        get get_TranslateX slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=228
+        get get_TranslateX slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
         put put_TranslateX slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property skew_y
-        get get_SkewY slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=202
+        get get_SkewY slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
         put put_SkewY slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property skew_x
-        get get_SkewX slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=186
+        get get_SkewX slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
         put put_SkewX slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property scale_y
-        get get_ScaleY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=162
+        get get_ScaleY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
-        put put_ScaleY slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2 reverse=171
+        put put_ScaleY slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property scale_x
-        get get_ScaleX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=121
+        get get_ScaleX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
-        put put_ScaleX slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2 reverse=138
+        put put_ScaleX slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property rotation
-        get get_Rotation slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=218
+        get get_Rotation slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
         put put_Rotation slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property center_y
-        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=62
+        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
         put put_CenterY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property center_x
-        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4 reverse=22
+        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=4
             out double return
-        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2 reverse=38
+        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositeTransform shape=2
             in double name=value
     property center_x_property static
-        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=22 static
+        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_y_property static
-        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=43 static
+        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property rotation_property static
-        get get_RotationProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=162 static
+        get get_RotationProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property scale_x_property static
-        get get_ScaleXProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=62 static
+        get get_ScaleXProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property scale_y_property static
-        get get_ScaleYProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=99 static
+        get get_ScaleYProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property skew_x_property static
-        get get_SkewXProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=121 static
+        get get_SkewXProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property skew_y_property static
-        get get_SkewYProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=141 static
+        get get_SkewYProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property translate_x_property static
-        get get_TranslateXProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=173 static
+        get get_TranslateXProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property translate_y_property static
-        get get_TranslateYProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 reverse=186 static
+        get get_TranslateYProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositeTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.CompositionTarget python_type
@@ -416,22 +416,22 @@ class Windows.UI.Xaml.Media.CompositionTarget python_type
     factory Windows.UI.Xaml.Media.ICompositionTargetStatics
     factory Windows.UI.Xaml.Media.ICompositionTargetStatics3
     event rendered static
-        add add_Rendered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics3 shape=51 reverse=24 static
+        add add_Rendered slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics3 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Xaml.Media.RenderedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Rendered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics3 shape=26 reverse=53 static
+        remove remove_Rendered slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics3 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event rendering static
-        add add_Rendering slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=51 reverse=24 static
+        add add_Rendering slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Rendering slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=26 reverse=53 static
+        remove remove_Rendering slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event surface_contents_lost static
-        add add_SurfaceContentsLost slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=51 reverse=65 static
+        add add_SurfaceContentsLost slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SurfaceContentsLost slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=26 reverse=110 static
+        remove remove_SurfaceContentsLost slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ICompositionTargetStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Media.DoubleCollection activatable python_type iterable sequence mutable_sequence
@@ -507,28 +507,28 @@ class Windows.UI.Xaml.Media.EllipseGeometry activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property radius_y
-        get get_RadiusY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=4 reverse=121
+        get get_RadiusY slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=4
             out double return
-        put put_RadiusY slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=2 reverse=138
+        put put_RadiusY slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=2
             in double name=value
     property radius_x
-        get get_RadiusX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=4 reverse=62
+        get get_RadiusX slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=4
             out double return
         put put_RadiusX slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=2
             in double name=value
     property center
-        get get_Center slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=4 reverse=22
+        get get_Center slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=4
             out struct type=Windows.Foundation.Point return
         put put_Center slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IEllipseGeometry shape=10
             in struct type=Windows.Foundation.Point name=value
     property center_property static
-        get get_CenterProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometryStatics shape=4 reverse=22 static
+        get get_CenterProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property radius_x_property static
-        get get_RadiusXProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometryStatics shape=4 reverse=43 static
+        get get_RadiusXProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property radius_y_property static
-        get get_RadiusYProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometryStatics shape=4 reverse=62 static
+        get get_RadiusYProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IEllipseGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
@@ -574,16 +574,16 @@ class Windows.UI.Xaml.Media.FontFamily composable python_type
     factory Windows.UI.Xaml.Media.IFontFamilyStatics2
     composable Windows.UI.Xaml.Media.IFontFamilyFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IFontFamilyFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IFontFamilyFactory shape=195
             in string name=familyName
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Media.FontFamily return
     property source
-        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IFontFamily shape=4 reverse=22
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IFontFamily shape=4
             out string return
     property xaml_auto_font_family static
-        get get_XamlAutoFontFamily slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IFontFamilyStatics2 shape=4 reverse=22 static
+        get get_XamlAutoFontFamily slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IFontFamilyStatics2 shape=4 static
             out class type=Windows.UI.Xaml.Media.FontFamily return
 
 class Windows.UI.Xaml.Media.GeneralTransform composable python_type
@@ -596,7 +596,7 @@ class Windows.UI.Xaml.Media.GeneralTransform composable python_type
     composable Windows.UI.Xaml.Media.IGeneralTransformFactory
     overridable Windows.UI.Xaml.Media.IGeneralTransformOverrides
     property inverse
-        get get_Inverse slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=4 reverse=22
+        get get_Inverse slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=4
             out class type=Windows.UI.Xaml.Media.GeneralTransform return
     method transform_bounds
         method TransformBounds slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=74
@@ -607,11 +607,11 @@ class Windows.UI.Xaml.Media.GeneralTransform composable python_type
             in struct type=Windows.Foundation.Rect name=rect
             out struct type=Windows.Foundation.Rect return
     method transform_point
-        method TransformPoint slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=79 reverse=51
+        method TransformPoint slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=79
             in struct type=Windows.Foundation.Point name=point
             out struct type=Windows.Foundation.Point return
     method try_transform
-        method TryTransform slot=8 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=151 reverse=75
+        method TryTransform slot=8 inputs=1 outputs=2 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=151
             in struct type=Windows.Foundation.Point name=inPoint
             out struct type=Windows.Foundation.Point name=outPoint
             out boolean return
@@ -630,21 +630,21 @@ class Windows.UI.Xaml.Media.Geometry composable python_type
     factory Windows.UI.Xaml.Media.IGeometryStatics
     composable Windows.UI.Xaml.Media.IGeometryFactory
     property transform
-        get get_Transform slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometry shape=4 reverse=22
+        get get_Transform slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometry shape=4
             out class type=Windows.UI.Xaml.Media.Transform return
-        put put_Transform slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGeometry shape=4 reverse=43
+        put put_Transform slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGeometry shape=4
             in class type=Windows.UI.Xaml.Media.Transform name=value
     property bounds
-        get get_Bounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometry shape=4 reverse=62
+        get get_Bounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometry shape=4
             out struct type=Windows.Foundation.Rect return
     property empty static
-        get get_Empty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryStatics shape=4 reverse=22 static
+        get get_Empty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.Media.Geometry return
     property standard_flattening_tolerance static
-        get get_StandardFlatteningTolerance slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryStatics shape=4 reverse=43 static
+        get get_StandardFlatteningTolerance slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryStatics shape=4 static
             out double return
     property transform_property static
-        get get_TransformProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryStatics shape=4 reverse=62 static
+        get get_TransformProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.GeometryCollection activatable python_type iterable sequence mutable_sequence
@@ -713,20 +713,20 @@ class Windows.UI.Xaml.Media.GeometryGroup activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property fill_rule
-        get get_FillRule slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4 reverse=22
+        get get_FillRule slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4
             out enum32 type=Windows.UI.Xaml.Media.FillRule return
-        put put_FillRule slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4 reverse=43
+        put put_FillRule slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4
             in enum32 type=Windows.UI.Xaml.Media.FillRule name=value
     property children
-        get get_Children slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4 reverse=62
+        get get_Children slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4
             out class type=Windows.UI.Xaml.Media.GeometryCollection return
-        put put_Children slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4 reverse=99
+        put put_Children slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGeometryGroup shape=4
             in class type=Windows.UI.Xaml.Media.GeometryCollection name=value
     property children_property static
-        get get_ChildrenProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroupStatics shape=4 reverse=43 static
+        get get_ChildrenProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroupStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property fill_rule_property static
-        get get_FillRuleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroupStatics shape=4 reverse=22 static
+        get get_FillRuleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeometryGroupStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.GradientBrush composable python_type
@@ -738,36 +738,36 @@ class Windows.UI.Xaml.Media.GradientBrush composable python_type
     factory Windows.UI.Xaml.Media.IGradientBrushStatics
     composable Windows.UI.Xaml.Media.IGradientBrushFactory
     property spread_method
-        get get_SpreadMethod slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=22
+        get get_SpreadMethod slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.GradientSpreadMethod return
-        put put_SpreadMethod slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=43
+        put put_SpreadMethod slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.GradientSpreadMethod name=value
     property mapping_mode
-        get get_MappingMode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=62
+        get get_MappingMode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.BrushMappingMode return
-        put put_MappingMode slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=99
+        put put_MappingMode slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.BrushMappingMode name=value
     property gradient_stops
-        get get_GradientStops slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=162
+        get get_GradientStops slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             out class type=Windows.UI.Xaml.Media.GradientStopCollection return
-        put put_GradientStops slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=173
+        put put_GradientStops slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             in class type=Windows.UI.Xaml.Media.GradientStopCollection name=value
     property color_interpolation_mode
-        get get_ColorInterpolationMode slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=121
+        get get_ColorInterpolationMode slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.ColorInterpolationMode return
-        put put_ColorInterpolationMode slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4 reverse=141
+        put put_ColorInterpolationMode slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.ColorInterpolationMode name=value
     property color_interpolation_mode_property static
-        get get_ColorInterpolationModeProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 reverse=62 static
+        get get_ColorInterpolationModeProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property gradient_stops_property static
-        get get_GradientStopsProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 reverse=99 static
+        get get_GradientStopsProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property mapping_mode_property static
-        get get_MappingModeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 reverse=43 static
+        get get_MappingModeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property spread_method_property static
-        get get_SpreadMethodProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 reverse=22 static
+        get get_SpreadMethodProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 enum Windows.UI.Xaml.Media.GradientSpreadMethod python_type
@@ -788,20 +788,20 @@ class Windows.UI.Xaml.Media.GradientStop activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property offset
-        get get_Offset slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStop shape=4 reverse=62
+        get get_Offset slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStop shape=4
             out double return
         put put_Offset slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientStop shape=2
             in double name=value
     property color
-        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStop shape=4 reverse=22
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStop shape=4
             out struct type=Windows.UI.Color return
         put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IGradientStop shape=29
             in struct type=Windows.UI.Color name=value
     property color_property static
-        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStopStatics shape=4 reverse=22 static
+        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStopStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property offset_property static
-        get get_OffsetProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStopStatics shape=4 reverse=43 static
+        get get_OffsetProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientStopStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.GradientStopCollection activatable python_type iterable sequence mutable_sequence
@@ -2472,24 +2472,24 @@ class Windows.UI.Xaml.Media.ImageBrush activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property image_source
-        get get_ImageSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=4 reverse=22
+        get get_ImageSource slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=4
             out class type=Windows.UI.Xaml.Media.ImageSource return
-        put put_ImageSource slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=4 reverse=43
+        put put_ImageSource slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=4
             in class type=Windows.UI.Xaml.Media.ImageSource name=value
     property image_source_property static
-        get get_ImageSourceProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrushStatics shape=4 reverse=22 static
+        get get_ImageSourceProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     event image_failed
-        add add_ImageFailed slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=51 reverse=65
+        add add_ImageFailed slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=51
             in delegate type=Windows.UI.Xaml.ExceptionRoutedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ImageFailed slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=26 reverse=110
+        remove remove_ImageFailed slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event image_opened
-        add add_ImageOpened slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=51 reverse=124
+        add add_ImageOpened slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IImageBrush shape=51
             in delegate type=Windows.UI.Xaml.RoutedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ImageOpened slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=26 reverse=156
+        remove remove_ImageOpened slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IImageBrush shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Windows.UI.Xaml.Media.ImageSource composable python_type
@@ -2511,20 +2511,20 @@ class Windows.UI.Xaml.Media.LineGeometry activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property start_point
-        get get_StartPoint slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometry shape=4 reverse=22
+        get get_StartPoint slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometry shape=4
             out struct type=Windows.Foundation.Point return
         put put_StartPoint slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILineGeometry shape=10
             in struct type=Windows.Foundation.Point name=value
     property end_point
-        get get_EndPoint slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometry shape=4 reverse=62
+        get get_EndPoint slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometry shape=4
             out struct type=Windows.Foundation.Point return
         put put_EndPoint slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILineGeometry shape=10
             in struct type=Windows.Foundation.Point name=value
     property end_point_property static
-        get get_EndPointProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometryStatics shape=4 reverse=43 static
+        get get_EndPointProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property start_point_property static
-        get get_StartPointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometryStatics shape=4 reverse=22 static
+        get get_StartPointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.LineSegment activatable python_type
@@ -2538,12 +2538,12 @@ class Windows.UI.Xaml.Media.LineSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property point
-        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineSegment shape=4 reverse=22
+        get get_Point slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILineSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property point_property static
-        get get_PointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineSegmentStatics shape=4 reverse=22 static
+        get get_PointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILineSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.LinearGradientBrush activatable python_type
@@ -2557,25 +2557,25 @@ class Windows.UI.Xaml.Media.LinearGradientBrush activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushFactory shape=111 reverse=23
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushFactory shape=111
             in class type=Windows.UI.Xaml.Media.GradientStopCollection name=gradientStopCollection
             in double name=angle
             out class type=Windows.UI.Xaml.Media.LinearGradientBrush return
     property start_point
-        get get_StartPoint slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrush shape=4 reverse=22
+        get get_StartPoint slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrush shape=4
             out struct type=Windows.Foundation.Point return
         put put_StartPoint slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILinearGradientBrush shape=10
             in struct type=Windows.Foundation.Point name=value
     property end_point
-        get get_EndPoint slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrush shape=4 reverse=62
+        get get_EndPoint slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrush shape=4
             out struct type=Windows.Foundation.Point return
         put put_EndPoint slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILinearGradientBrush shape=10
             in struct type=Windows.Foundation.Point name=value
     property end_point_property static
-        get get_EndPointProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushStatics shape=4 reverse=43 static
+        get get_EndPointProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property start_point_property static
-        get get_StartPointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushStatics shape=4 reverse=22 static
+        get get_StartPointProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILinearGradientBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs python_type
@@ -2584,7 +2584,7 @@ class Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs python_type
     default Windows.UI.Xaml.Media.ILoadedImageSourceLoadCompletedEventArgs
     requires Windows.UI.Xaml.Media.ILoadedImageSourceLoadCompletedEventArgs
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSourceLoadCompletedEventArgs shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSourceLoadCompletedEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Media.LoadedImageSourceLoadStatus return
 
 enum Windows.UI.Xaml.Media.LoadedImageSourceLoadStatus python_type
@@ -2604,32 +2604,32 @@ class Windows.UI.Xaml.Media.LoadedImageSurface python_type closeable
     requires Windows.UI.Composition.ICompositionSurface
     factory Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics
     property decoded_physical_size
-        get get_DecodedPhysicalSize slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=4 reverse=22
+        get get_DecodedPhysicalSize slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=4
             out struct type=Windows.Foundation.Size return
     property decoded_size
-        get get_DecodedSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=4 reverse=43
+        get get_DecodedSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=4
             out struct type=Windows.Foundation.Size return
     property natural_size
-        get get_NaturalSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=4 reverse=62
+        get get_NaturalSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=4
             out struct type=Windows.Foundation.Size return
     event load_completed
-        add add_LoadCompleted slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=51 reverse=100
+        add add_LoadCompleted slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Media.LoadedImageSurface,Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LoadCompleted slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=26 reverse=134
+        remove remove_LoadCompleted slot=10 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ILoadedImageSurface shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method start_load_from_stream static
-        method StartLoadFromStream slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=51 reverse=100 static
+        method StartLoadFromStream slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=51 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             out class type=Windows.UI.Xaml.Media.LoadedImageSurface return
-        method StartLoadFromStream slot=8 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 reverse=385 static
+        method StartLoadFromStream slot=8 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             in struct type=Windows.Foundation.Size name=desiredMaxSize
             out class type=Windows.UI.Xaml.Media.LoadedImageSurface return
     method start_load_from_uri static
-        method StartLoadFromUri slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=51 reverse=44 static
+        method StartLoadFromUri slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.UI.Xaml.Media.LoadedImageSurface return
         method StartLoadFromUri slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.ILoadedImageSurfaceStatics shape=134 static
@@ -2658,12 +2658,12 @@ class Windows.UI.Xaml.Media.Matrix3DProjection activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property projection_matrix
-        get get_ProjectionMatrix slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrix3DProjection shape=4 reverse=22
+        get get_ProjectionMatrix slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrix3DProjection shape=4
             out struct type=Windows.UI.Xaml.Media.Media3D.Matrix3D return
         put put_ProjectionMatrix slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IMatrix3DProjection shape=11
             in struct type=Windows.UI.Xaml.Media.Media3D.Matrix3D name=value
     property projection_matrix_property static
-        get get_ProjectionMatrixProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrix3DProjectionStatics shape=4 reverse=22 static
+        get get_ProjectionMatrixProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrix3DProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.MatrixHelper python_type
@@ -2673,7 +2673,7 @@ class Windows.UI.Xaml.Media.MatrixHelper python_type
     requires Windows.UI.Xaml.Media.IMatrixHelper
     factory Windows.UI.Xaml.Media.IMatrixHelperStatics
     property identity static
-        get get_Identity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixHelperStatics shape=4 reverse=22 static
+        get get_Identity slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixHelperStatics shape=4 static
             out struct type=Windows.UI.Xaml.Media.Matrix return
     method from_elements static
         method FromElements slot=7 inputs=6 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixHelperStatics shape=276 static
@@ -2705,12 +2705,12 @@ class Windows.UI.Xaml.Media.MatrixTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property matrix
-        get get_Matrix slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixTransform shape=4 reverse=22
+        get get_Matrix slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixTransform shape=4
             out struct type=Windows.UI.Xaml.Media.Matrix return
         put put_Matrix slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IMatrixTransform shape=12
             in struct type=Windows.UI.Xaml.Media.Matrix name=value
     property matrix_property static
-        get get_MatrixProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixTransformStatics shape=4 reverse=22 static
+        get get_MatrixProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMatrixTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 enum Windows.UI.Xaml.Media.MediaCanPlayResponse python_type
@@ -2736,10 +2736,10 @@ class Windows.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs py
     default Windows.UI.Xaml.Media.IMediaTransportControlsThumbnailRequestedEventArgs
     requires Windows.UI.Xaml.Media.IMediaTransportControlsThumbnailRequestedEventArgs
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMediaTransportControlsThumbnailRequestedEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IMediaTransportControlsThumbnailRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
     method set_thumbnail_image
-        method SetThumbnailImage slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IMediaTransportControlsThumbnailRequestedEventArgs shape=4 reverse=22
+        method SetThumbnailImage slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IMediaTransportControlsThumbnailRequestedEventArgs shape=4
             in interface type=Windows.Storage.Streams.IInputStream name=source
 
 class Windows.UI.Xaml.Media.PartialMediaFailureDetectedEventArgs activatable python_type
@@ -2752,10 +2752,10 @@ class Windows.UI.Xaml.Media.PartialMediaFailureDetectedEventArgs activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property stream_kind
-        get get_StreamKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPartialMediaFailureDetectedEventArgs shape=4 reverse=22
+        get get_StreamKind slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPartialMediaFailureDetectedEventArgs shape=4
             out enum32 type=Windows.Media.Playback.FailedMediaStreamKind return
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPartialMediaFailureDetectedEventArgs2 shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPartialMediaFailureDetectedEventArgs2 shape=4
             out hresult type=Windows.Foundation.HResult return
 
 class Windows.UI.Xaml.Media.PathFigure activatable python_type
@@ -2769,36 +2769,36 @@ class Windows.UI.Xaml.Media.PathFigure activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property start_point
-        get get_StartPoint slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=62
+        get get_StartPoint slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             out struct type=Windows.Foundation.Point return
         put put_StartPoint slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=10
             in struct type=Windows.Foundation.Point name=value
     property segments
-        get get_Segments slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=22
+        get get_Segments slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             out class type=Windows.UI.Xaml.Media.PathSegmentCollection return
-        put put_Segments slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=43
+        put put_Segments slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             in class type=Windows.UI.Xaml.Media.PathSegmentCollection name=value
     property is_filled
-        get get_IsFilled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=162
+        get get_IsFilled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             out boolean return
-        put put_IsFilled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=173
+        put put_IsFilled slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             in boolean name=value
     property is_closed
-        get get_IsClosed slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=121
+        get get_IsClosed slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             out boolean return
-        put put_IsClosed slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4 reverse=141
+        put put_IsClosed slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathFigure shape=4
             in boolean name=value
     property is_closed_property static
-        get get_IsClosedProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 reverse=62 static
+        get get_IsClosedProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property is_filled_property static
-        get get_IsFilledProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 reverse=99 static
+        get get_IsFilledProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property segments_property static
-        get get_SegmentsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 reverse=22 static
+        get get_SegmentsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property start_point_property static
-        get get_StartPointProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 reverse=43 static
+        get get_StartPointProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathFigureStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.PathFigureCollection activatable python_type iterable sequence mutable_sequence
@@ -2867,20 +2867,20 @@ class Windows.UI.Xaml.Media.PathGeometry activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property fill_rule
-        get get_FillRule slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4 reverse=22
+        get get_FillRule slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4
             out enum32 type=Windows.UI.Xaml.Media.FillRule return
-        put put_FillRule slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4 reverse=43
+        put put_FillRule slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4
             in enum32 type=Windows.UI.Xaml.Media.FillRule name=value
     property figures
-        get get_Figures slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4 reverse=62
+        get get_Figures slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4
             out class type=Windows.UI.Xaml.Media.PathFigureCollection return
-        put put_Figures slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4 reverse=99
+        put put_Figures slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPathGeometry shape=4
             in class type=Windows.UI.Xaml.Media.PathFigureCollection name=value
     property figures_property static
-        get get_FiguresProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometryStatics shape=4 reverse=43 static
+        get get_FiguresProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property fill_rule_property static
-        get get_FillRuleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometryStatics shape=4 reverse=22 static
+        get get_FillRuleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPathGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.PathSegment composable python_type
@@ -2972,106 +2972,106 @@ class Windows.UI.Xaml.Media.PlaneProjection activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property rotation_z
-        get get_RotationZ slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=202
+        get get_RotationZ slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_RotationZ slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property rotation_y
-        get get_RotationY slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=186
+        get get_RotationY slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_RotationY slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property rotation_x
-        get get_RotationX slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=162
+        get get_RotationX slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
-        put put_RotationX slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2 reverse=171
+        put put_RotationX slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property local_offset_z
-        get get_LocalOffsetZ slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=121
+        get get_LocalOffsetZ slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
-        put put_LocalOffsetZ slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2 reverse=138
+        put put_LocalOffsetZ slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property local_offset_y
-        get get_LocalOffsetY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=62
+        get get_LocalOffsetY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_LocalOffsetY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property local_offset_x
-        get get_LocalOffsetX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=22
+        get get_LocalOffsetX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
-        put put_LocalOffsetX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2 reverse=38
+        put put_LocalOffsetX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property global_offset_z
-        get get_GlobalOffsetZ slot=28 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=263
+        get get_GlobalOffsetZ slot=28 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_GlobalOffsetZ slot=29 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property global_offset_y
-        get get_GlobalOffsetY slot=26 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=255
+        get get_GlobalOffsetY slot=26 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_GlobalOffsetY slot=27 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property global_offset_x
-        get get_GlobalOffsetX slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=247
+        get get_GlobalOffsetX slot=24 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_GlobalOffsetX slot=25 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property center_of_rotation_z
-        get get_CenterOfRotationZ slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=237
+        get get_CenterOfRotationZ slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_CenterOfRotationZ slot=23 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property center_of_rotation_y
-        get get_CenterOfRotationY slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=228
+        get get_CenterOfRotationY slot=20 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_CenterOfRotationY slot=21 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property center_of_rotation_x
-        get get_CenterOfRotationX slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=218
+        get get_CenterOfRotationX slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out double return
         put put_CenterOfRotationX slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=2
             in double name=value
     property projection_matrix
-        get get_ProjectionMatrix slot=30 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4 reverse=270
+        get get_ProjectionMatrix slot=30 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjection shape=4
             out struct type=Windows.UI.Xaml.Media.Media3D.Matrix3D return
     property center_of_rotation_x_property static
-        get get_CenterOfRotationXProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=162 static
+        get get_CenterOfRotationXProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_of_rotation_y_property static
-        get get_CenterOfRotationYProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=173 static
+        get get_CenterOfRotationYProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_of_rotation_z_property static
-        get get_CenterOfRotationZProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=186 static
+        get get_CenterOfRotationZProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property global_offset_x_property static
-        get get_GlobalOffsetXProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=194 static
+        get get_GlobalOffsetXProperty slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property global_offset_y_property static
-        get get_GlobalOffsetYProperty slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=202 static
+        get get_GlobalOffsetYProperty slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property global_offset_z_property static
-        get get_GlobalOffsetZProperty slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=210 static
+        get get_GlobalOffsetZProperty slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property local_offset_x_property static
-        get get_LocalOffsetXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=22 static
+        get get_LocalOffsetXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property local_offset_y_property static
-        get get_LocalOffsetYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=43 static
+        get get_LocalOffsetYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property local_offset_z_property static
-        get get_LocalOffsetZProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=62 static
+        get get_LocalOffsetZProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property projection_matrix_property static
-        get get_ProjectionMatrixProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=218 static
+        get get_ProjectionMatrixProperty slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property rotation_x_property static
-        get get_RotationXProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=99 static
+        get get_RotationXProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property rotation_y_property static
-        get get_RotationYProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=121 static
+        get get_RotationYProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property rotation_z_property static
-        get get_RotationZProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 reverse=141 static
+        get get_RotationZProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPlaneProjectionStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.PointCollection activatable python_type iterable sequence mutable_sequence
@@ -3140,12 +3140,12 @@ class Windows.UI.Xaml.Media.PolyBezierSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property points
-        get get_Points slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyBezierSegment shape=4 reverse=22
+        get get_Points slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyBezierSegment shape=4
             out class type=Windows.UI.Xaml.Media.PointCollection return
-        put put_Points slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPolyBezierSegment shape=4 reverse=43
+        put put_Points slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPolyBezierSegment shape=4
             in class type=Windows.UI.Xaml.Media.PointCollection name=value
     property points_property static
-        get get_PointsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyBezierSegmentStatics shape=4 reverse=22 static
+        get get_PointsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.PolyLineSegment activatable python_type
@@ -3159,12 +3159,12 @@ class Windows.UI.Xaml.Media.PolyLineSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property points
-        get get_Points slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyLineSegment shape=4 reverse=22
+        get get_Points slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyLineSegment shape=4
             out class type=Windows.UI.Xaml.Media.PointCollection return
-        put put_Points slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPolyLineSegment shape=4 reverse=43
+        put put_Points slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPolyLineSegment shape=4
             in class type=Windows.UI.Xaml.Media.PointCollection name=value
     property points_property static
-        get get_PointsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyLineSegmentStatics shape=4 reverse=22 static
+        get get_PointsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyLineSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.PolyQuadraticBezierSegment activatable python_type
@@ -3178,12 +3178,12 @@ class Windows.UI.Xaml.Media.PolyQuadraticBezierSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property points
-        get get_Points slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyQuadraticBezierSegment shape=4 reverse=22
+        get get_Points slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyQuadraticBezierSegment shape=4
             out class type=Windows.UI.Xaml.Media.PointCollection return
-        put put_Points slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPolyQuadraticBezierSegment shape=4 reverse=43
+        put put_Points slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IPolyQuadraticBezierSegment shape=4
             in class type=Windows.UI.Xaml.Media.PointCollection name=value
     property points_property static
-        get get_PointsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyQuadraticBezierSegmentStatics shape=4 reverse=22 static
+        get get_PointsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IPolyQuadraticBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.Projection composable python_type
@@ -3205,20 +3205,20 @@ class Windows.UI.Xaml.Media.QuadraticBezierSegment activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property point2
-        get get_Point2 slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegment shape=4 reverse=62
+        get get_Point2 slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point2 slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property point1
-        get get_Point1 slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegment shape=4 reverse=22
+        get get_Point1 slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegment shape=4
             out struct type=Windows.Foundation.Point return
         put put_Point1 slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegment shape=10
             in struct type=Windows.Foundation.Point name=value
     property point1_property static
-        get get_Point1Property slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegmentStatics shape=4 reverse=22 static
+        get get_Point1Property slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property point2_property static
-        get get_Point2Property slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegmentStatics shape=4 reverse=43 static
+        get get_Point2Property slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IQuadraticBezierSegmentStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.RateChangedRoutedEventArgs activatable python_type
@@ -3251,12 +3251,12 @@ class Windows.UI.Xaml.Media.RectangleGeometry activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property rect
-        get get_Rect slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRectangleGeometry shape=4 reverse=22
+        get get_Rect slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRectangleGeometry shape=4
             out struct type=Windows.Foundation.Rect return
         put put_Rect slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRectangleGeometry shape=8
             in struct type=Windows.Foundation.Rect name=value
     property rect_property static
-        get get_RectProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRectangleGeometryStatics shape=4 reverse=22 static
+        get get_RectProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRectangleGeometryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.RenderedEventArgs python_type
@@ -3265,7 +3265,7 @@ class Windows.UI.Xaml.Media.RenderedEventArgs python_type
     default Windows.UI.Xaml.Media.IRenderedEventArgs
     requires Windows.UI.Xaml.Media.IRenderedEventArgs
     property frame_duration
-        get get_FrameDuration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRenderedEventArgs shape=4 reverse=22
+        get get_FrameDuration slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRenderedEventArgs shape=4
             out timespan return
 
 class Windows.UI.Xaml.Media.RenderingEventArgs python_type
@@ -3274,7 +3274,7 @@ class Windows.UI.Xaml.Media.RenderingEventArgs python_type
     default Windows.UI.Xaml.Media.IRenderingEventArgs
     requires Windows.UI.Xaml.Media.IRenderingEventArgs
     property rendering_time
-        get get_RenderingTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRenderingEventArgs shape=4 reverse=22
+        get get_RenderingTime slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRenderingEventArgs shape=4
             out timespan return
 
 class Windows.UI.Xaml.Media.RevealBackgroundBrush composable python_type
@@ -3285,7 +3285,7 @@ class Windows.UI.Xaml.Media.RevealBackgroundBrush composable python_type
     requires Windows.UI.Xaml.Media.IRevealBackgroundBrush
     composable Windows.UI.Xaml.Media.IRevealBackgroundBrushFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBackgroundBrushFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBackgroundBrushFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Media.RevealBackgroundBrush return
@@ -3298,7 +3298,7 @@ class Windows.UI.Xaml.Media.RevealBorderBrush composable python_type
     requires Windows.UI.Xaml.Media.IRevealBorderBrush
     composable Windows.UI.Xaml.Media.IRevealBorderBrushFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBorderBrushFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBorderBrushFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Media.RevealBorderBrush return
@@ -3312,38 +3312,38 @@ class Windows.UI.Xaml.Media.RevealBrush composable python_type
     factory Windows.UI.Xaml.Media.IRevealBrushStatics
     composable Windows.UI.Xaml.Media.IRevealBrushFactory
     property target_theme
-        get get_TargetTheme slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4 reverse=62
+        get get_TargetTheme slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4
             out enum32 type=Windows.UI.Xaml.ApplicationTheme return
-        put put_TargetTheme slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4 reverse=99
+        put put_TargetTheme slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4
             in enum32 type=Windows.UI.Xaml.ApplicationTheme name=value
     property color
-        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4 reverse=22
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4
             out struct type=Windows.UI.Color return
         put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=29
             in struct type=Windows.UI.Color name=value
     property always_use_fallback
-        get get_AlwaysUseFallback slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4 reverse=121
+        get get_AlwaysUseFallback slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4
             out boolean return
-        put put_AlwaysUseFallback slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4 reverse=141
+        put put_AlwaysUseFallback slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4
             in boolean name=value
     property always_use_fallback_property static
-        get get_AlwaysUseFallbackProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=62 static
+        get get_AlwaysUseFallbackProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property color_property static
-        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=22 static
+        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property state_property static
-        get get_StateProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=99 static
+        get get_StateProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property target_theme_property static
-        get get_TargetThemeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 reverse=43 static
+        get get_TargetThemeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method get_state static
-        method GetState slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=51 reverse=144 static
+        method GetState slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=51 static
             in class type=Windows.UI.Xaml.UIElement name=element
             out enum32 type=Windows.UI.Xaml.Media.RevealBrushState return
     method set_state static
-        method SetState slot=10 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=51 reverse=124 static
+        method SetState slot=10 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IRevealBrushStatics shape=51 static
             in class type=Windows.UI.Xaml.UIElement name=element
             in enum32 type=Windows.UI.Xaml.Media.RevealBrushState name=value
 
@@ -3365,28 +3365,28 @@ class Windows.UI.Xaml.Media.RotateTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property center_y
-        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=4 reverse=62
+        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=4
             out double return
         put put_CenterY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=2
             in double name=value
     property center_x
-        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=4 reverse=22
+        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=4
             out double return
-        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=2 reverse=38
+        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=2
             in double name=value
     property angle
-        get get_Angle slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=4 reverse=121
+        get get_Angle slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=4
             out double return
-        put put_Angle slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=2 reverse=138
+        put put_Angle slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IRotateTransform shape=2
             in double name=value
     property angle_property static
-        get get_AngleProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransformStatics shape=4 reverse=62 static
+        get get_AngleProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_x_property static
-        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransformStatics shape=4 reverse=22 static
+        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_y_property static
-        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransformStatics shape=4 reverse=43 static
+        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRotateTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.ScaleTransform activatable python_type
@@ -3400,36 +3400,36 @@ class Windows.UI.Xaml.Media.ScaleTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property scale_y
-        get get_ScaleY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4 reverse=162
+        get get_ScaleY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4
             out double return
-        put put_ScaleY slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2 reverse=171
+        put put_ScaleY slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2
             in double name=value
     property scale_x
-        get get_ScaleX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4 reverse=121
+        get get_ScaleX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4
             out double return
-        put put_ScaleX slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2 reverse=138
+        put put_ScaleX slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2
             in double name=value
     property center_y
-        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4 reverse=62
+        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4
             out double return
         put put_CenterY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2
             in double name=value
     property center_x
-        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4 reverse=22
+        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=4
             out double return
-        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2 reverse=38
+        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IScaleTransform shape=2
             in double name=value
     property center_x_property static
-        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 reverse=22 static
+        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_y_property static
-        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 reverse=43 static
+        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property scale_x_property static
-        get get_ScaleXProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 reverse=62 static
+        get get_ScaleXProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property scale_y_property static
-        get get_ScaleYProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 reverse=99 static
+        get get_ScaleYProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IScaleTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.Shadow composable python_type
@@ -3451,36 +3451,36 @@ class Windows.UI.Xaml.Media.SkewTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property center_y
-        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4 reverse=62
+        get get_CenterY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4
             out double return
         put put_CenterY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2
             in double name=value
     property center_x
-        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4 reverse=22
+        get get_CenterX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4
             out double return
-        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2 reverse=38
+        put put_CenterX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2
             in double name=value
     property angle_y
-        get get_AngleY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4 reverse=162
+        get get_AngleY slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4
             out double return
-        put put_AngleY slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2 reverse=171
+        put put_AngleY slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2
             in double name=value
     property angle_x
-        get get_AngleX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4 reverse=121
+        get get_AngleX slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=4
             out double return
-        put put_AngleX slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2 reverse=138
+        put put_AngleX slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISkewTransform shape=2
             in double name=value
     property angle_x_property static
-        get get_AngleXProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 reverse=62 static
+        get get_AngleXProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property angle_y_property static
-        get get_AngleYProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 reverse=99 static
+        get get_AngleYProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_x_property static
-        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 reverse=22 static
+        get get_CenterXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property center_y_property static
-        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 reverse=43 static
+        get get_CenterYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISkewTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.SolidColorBrush activatable python_type
@@ -3498,12 +3498,12 @@ class Windows.UI.Xaml.Media.SolidColorBrush activatable python_type
             in struct type=Windows.UI.Color name=color
             out class type=Windows.UI.Xaml.Media.SolidColorBrush return
     property color
-        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISolidColorBrush shape=4 reverse=22
+        get get_Color slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISolidColorBrush shape=4
             out struct type=Windows.UI.Color return
         put put_Color slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ISolidColorBrush shape=29
             in struct type=Windows.UI.Color name=value
     property color_property static
-        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISolidColorBrushStatics shape=4 reverse=22 static
+        get get_ColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ISolidColorBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 enum Windows.UI.Xaml.Media.Stereo3DVideoPackingMode python_type
@@ -3551,12 +3551,12 @@ class Windows.UI.Xaml.Media.ThemeShadow composable python_type
     requires Windows.UI.Xaml.Media.IThemeShadow
     composable Windows.UI.Xaml.Media.IThemeShadowFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IThemeShadowFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IThemeShadowFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Media.ThemeShadow return
     property receivers
-        get get_Receivers slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IThemeShadow shape=4 reverse=22
+        get get_Receivers slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IThemeShadow shape=4
             out class type=Windows.UI.Xaml.UIElementWeakCollection return
 
 class Windows.UI.Xaml.Media.TileBrush composable python_type
@@ -3568,28 +3568,28 @@ class Windows.UI.Xaml.Media.TileBrush composable python_type
     factory Windows.UI.Xaml.Media.ITileBrushStatics
     composable Windows.UI.Xaml.Media.ITileBrushFactory
     property stretch
-        get get_Stretch slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4 reverse=121
+        get get_Stretch slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.Stretch return
-        put put_Stretch slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4 reverse=141
+        put put_Stretch slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.Stretch name=value
     property alignment_y
-        get get_AlignmentY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4 reverse=62
+        get get_AlignmentY slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.AlignmentY return
-        put put_AlignmentY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4 reverse=99
+        put put_AlignmentY slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.AlignmentY name=value
     property alignment_x
-        get get_AlignmentX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4 reverse=22
+        get get_AlignmentX slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.AlignmentX return
-        put put_AlignmentX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4 reverse=43
+        put put_AlignmentX slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             in enum32 type=Windows.UI.Xaml.Media.AlignmentX name=value
     property alignment_x_property static
-        get get_AlignmentXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushStatics shape=4 reverse=22 static
+        get get_AlignmentXProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property alignment_y_property static
-        get get_AlignmentYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushStatics shape=4 reverse=43 static
+        get get_AlignmentYProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property stretch_property static
-        get get_StretchProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushStatics shape=4 reverse=62 static
+        get get_StretchProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.TimelineMarker activatable python_type
@@ -3603,28 +3603,28 @@ class Windows.UI.Xaml.Media.TimelineMarker activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property type
-        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4 reverse=62
+        get get_Type slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4
             out string return
-        put put_Type slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4 reverse=99
+        put put_Type slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4
             in string name=value
     property time
-        get get_Time slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4 reverse=22
+        get get_Time slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4
             out timespan return
-        put put_Time slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=26 reverse=53
+        put put_Time slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=26
             in timespan name=value
     property text
-        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4 reverse=121
+        get get_Text slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4
             out string return
-        put put_Text slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4 reverse=141
+        put put_Text slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarker shape=4
             in string name=value
     property text_property static
-        get get_TextProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerStatics shape=4 reverse=62 static
+        get get_TextProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property time_property static
-        get get_TimeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerStatics shape=4 reverse=22 static
+        get get_TimeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property type_property static
-        get get_TypeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerStatics shape=4 reverse=43 static
+        get get_TypeProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.TimelineMarkerCollection activatable python_type iterable sequence mutable_sequence
@@ -3692,9 +3692,9 @@ class Windows.UI.Xaml.Media.TimelineMarkerRoutedEventArgs activatable python_typ
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property marker
-        get get_Marker slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerRoutedEventArgs shape=4 reverse=22
+        get get_Marker slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITimelineMarkerRoutedEventArgs shape=4
             out class type=Windows.UI.Xaml.Media.TimelineMarker return
-        put put_Marker slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarkerRoutedEventArgs shape=4 reverse=43
+        put put_Marker slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITimelineMarkerRoutedEventArgs shape=4
             in class type=Windows.UI.Xaml.Media.TimelineMarker name=value
 
 delegate Windows.UI.Xaml.Media.TimelineMarkerRoutedEventHandler python_type
@@ -3780,15 +3780,15 @@ class Windows.UI.Xaml.Media.TransformGroup activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property children
-        get get_Children slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITransformGroup shape=4 reverse=22
+        get get_Children slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITransformGroup shape=4
             out class type=Windows.UI.Xaml.Media.TransformCollection return
-        put put_Children slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITransformGroup shape=4 reverse=43
+        put put_Children slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITransformGroup shape=4
             in class type=Windows.UI.Xaml.Media.TransformCollection name=value
     property value
-        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITransformGroup shape=4 reverse=62
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITransformGroup shape=4
             out struct type=Windows.UI.Xaml.Media.Matrix return
     property children_property static
-        get get_ChildrenProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITransformGroupStatics shape=4 reverse=22 static
+        get get_ChildrenProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITransformGroupStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 class Windows.UI.Xaml.Media.TranslateTransform activatable python_type
@@ -3802,20 +3802,20 @@ class Windows.UI.Xaml.Media.TranslateTransform activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property y
-        get get_Y slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=4 reverse=62
+        get get_Y slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=4
             out double return
         put put_Y slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=2
             in double name=value
     property x
-        get get_X slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=4 reverse=22
+        get get_X slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=4
             out double return
-        put put_X slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=2 reverse=38
+        put put_X slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.ITranslateTransform shape=2
             in double name=value
     property x_property static
-        get get_XProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransformStatics shape=4 reverse=22 static
+        get get_XProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property y_property static
-        get get_YProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransformStatics shape=4 reverse=43 static
+        get get_YProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITranslateTransformStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.UI.Xaml.Media.LoadedImageSurface,Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs> concrete
@@ -3839,7 +3839,7 @@ class Windows.UI.Xaml.Media.VisualTreeHelper python_type
     factory Windows.UI.Xaml.Media.IVisualTreeHelperStatics2
     factory Windows.UI.Xaml.Media.IVisualTreeHelperStatics3
     method disconnect_children_recursive static
-        method DisconnectChildrenRecursive slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=4 reverse=173 static
+        method DisconnectChildrenRecursive slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=4 static
             in class type=Windows.UI.Xaml.UIElement name=element
     method find_all_elements_in_host_coordinates_rect static
         method FindElementsInHostCoordinates slot=9 inputs=3 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=218 static
@@ -3848,7 +3848,7 @@ class Windows.UI.Xaml.Media.VisualTreeHelper python_type
             in boolean name=includeAllElements
             out parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement> return
     method find_elements_in_host_coordinates static
-        method FindElementsInHostCoordinates slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=151 reverse=32 static default_overload
+        method FindElementsInHostCoordinates slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=151 static default_overload
             in struct type=Windows.Foundation.Point name=intersectingPoint
             in class type=Windows.UI.Xaml.UIElement name=subtree
             out parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement> return
@@ -3863,24 +3863,24 @@ class Windows.UI.Xaml.Media.VisualTreeHelper python_type
             in class type=Windows.UI.Xaml.UIElement name=subtree
             out parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement> return
     method get_child static
-        method GetChild slot=10 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=117 reverse=125 static
+        method GetChild slot=10 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=117 static
             in class type=Windows.UI.Xaml.DependencyObject name=reference
             in int32 name=childIndex
             out class type=Windows.UI.Xaml.DependencyObject return
     method get_children_count static
-        method GetChildrenCount slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=51 reverse=144 static
+        method GetChildrenCount slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=51 static
             in class type=Windows.UI.Xaml.DependencyObject name=reference
             out int32 return
     method get_open_popups static
-        method GetOpenPopups slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics2 shape=51 reverse=24 static
+        method GetOpenPopups slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics2 shape=51 static
             in class type=Windows.UI.Xaml.Window name=window
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Primitives.Popup> return
     method get_open_popups_for_xaml_root static
-        method GetOpenPopupsForXamlRoot slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics3 shape=51 reverse=24 static
+        method GetOpenPopupsForXamlRoot slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics3 shape=51 static
             in class type=Windows.UI.Xaml.XamlRoot name=xamlRoot
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Xaml.Controls.Primitives.Popup> return
     method get_parent static
-        method GetParent slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=51 reverse=163 static
+        method GetParent slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Media.IVisualTreeHelperStatics shape=51 static
             in class type=Windows.UI.Xaml.DependencyObject name=reference
             out class type=Windows.UI.Xaml.DependencyObject return
 
@@ -3896,12 +3896,12 @@ class Windows.UI.Xaml.Media.XamlCompositionBrushBase composable python_type
     composable Windows.UI.Xaml.Media.IXamlCompositionBrushBaseFactory
     overridable Windows.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides
     property fallback_color
-        get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBase shape=4 reverse=22
+        get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBase shape=4
             out struct type=Windows.UI.Color return
         put put_FallbackColor slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBase shape=29
             in struct type=Windows.UI.Color name=value
     property fallback_color_property static
-        get get_FallbackColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBaseStatics shape=4 reverse=22 static
+        get get_FallbackColorProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBaseStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     method _on_connected
         method OnConnected slot=6 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides shape=0 reverse=16 overridable
@@ -3920,16 +3920,16 @@ class Windows.UI.Xaml.Media.XamlLight composable python_type
     composable Windows.UI.Xaml.Media.IXamlLightFactory
     overridable Windows.UI.Xaml.Media.IXamlLightOverrides
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlLightFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlLightFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Media.XamlLight return
     method add_target_brush static
-        method AddTargetBrush slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 reverse=65 static
+        method AddTargetBrush slot=8 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 static
             in string name=lightId
             in class type=Windows.UI.Xaml.Media.Brush name=brush
     method add_target_element static
-        method AddTargetElement slot=6 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 reverse=24 static
+        method AddTargetElement slot=6 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 static
             in string name=lightId
             in class type=Windows.UI.Xaml.UIElement name=element
     method _get_id
@@ -3942,11 +3942,11 @@ class Windows.UI.Xaml.Media.XamlLight composable python_type
         method OnDisconnected slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightOverrides shape=4 reverse=62 overridable
             in class type=Windows.UI.Xaml.UIElement name=oldElement
     method remove_target_brush static
-        method RemoveTargetBrush slot=9 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 reverse=100 static
+        method RemoveTargetBrush slot=9 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 static
             in string name=lightId
             in class type=Windows.UI.Xaml.Media.Brush name=brush
     method remove_target_element static
-        method RemoveTargetElement slot=7 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 reverse=44 static
+        method RemoveTargetElement slot=7 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Media.IXamlLightStatics shape=51 static
             in string name=lightId
             in class type=Windows.UI.Xaml.UIElement name=element
 

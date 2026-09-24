@@ -20,19 +20,19 @@ class Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrati
     default Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo
     requires Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo
     property key_id
-        get get_KeyId slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4 reverse=99
+        get get_KeyId slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4
             out string return
     property key_name
-        get get_KeyName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4 reverse=121
+        get get_KeyName slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4
             out string return
     property subject
-        get get_Subject slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4 reverse=62
+        get get_Subject slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4
             out string return
     property tenant_id
-        get get_TenantId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4 reverse=22
+        get get_TenantId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4
             out string return
     property tenant_name
-        get get_TenantName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4 reverse=43
+        get get_TenantName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationInfo shape=4
             out string return
 
 class Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager python_type
@@ -42,10 +42,10 @@ class Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrati
     requires Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManager
     factory Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManagerStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManagerStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManagerStatics shape=4 static
             out class type=Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager return
     method get_registrations_async
-        method GetRegistrationsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManager shape=4 reverse=22
+        method GetRegistrationsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.IEnterpriseKeyCredentialRegistrationManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo>> return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo>> concrete awaitable

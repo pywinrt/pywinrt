@@ -113,13 +113,13 @@ class Windows.System.Power.Thermal.PowerThermalChannelConfiguration python_type
     default Windows.System.Power.Thermal.IPowerThermalChannelConfiguration
     requires Windows.System.Power.Thermal.IPowerThermalChannelConfiguration
     property configuration_string
-        get get_ConfigurationString slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=4 reverse=43
+        get get_ConfigurationString slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=4
             out struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
     method get_configuration_numeric_parameters
-        method GetConfigurationNumericParameters slot=8 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=51 reverse=65
+        method GetConfigurationNumericParameters slot=8 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelConfiguration shape=51
             receive_array int32 return
 
 struct Windows.System.Power.Thermal.PowerThermalChannelData python_type
@@ -136,36 +136,36 @@ class Windows.System.Power.Thermal.PowerThermalChannelDataConsumer python_type c
     requires Windows.Foundation.IClosable
     factory Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumerFactory shape=117
             pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelIds
             out class type=Windows.System.Power.Thermal.PowerThermalChannelDataConsumer return
     property back_end_status
-        get get_BackEndStatus slot=12 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=4 reverse=162
+        get get_BackEndStatus slot=12 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=4
             out enum32 type=Windows.System.Power.Thermal.PowerThermalBackEndStatus return
     event back_end_status_changed
-        add add_BackEndStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51 reverse=174
+        add add_BackEndStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataConsumer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BackEndStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=26 reverse=192
+        remove remove_BackEndStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event channel_data_received
-        add add_ChannelDataReceived slot=10 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51 reverse=124
+        add add_ChannelDataReceived slot=10 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataConsumer,Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ChannelDataReceived slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=26 reverse=156
+        remove remove_ChannelDataReceived slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_channel_configurations
-        method GetChannelConfigurations slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=4 reverse=43
+        method GetChannelConfigurations slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> return
     method get_channel_ids
-        method GetChannelIds slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51 reverse=24
+        method GetChannelIds slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=51
             receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
     method start
-        method Start slot=8 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=0 reverse=55
+        method Start slot=8 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=0
     method stop
-        method Stop slot=9 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=0 reverse=93
+        method Stop slot=9 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataConsumer shape=0
 
 class Windows.System.Power.Thermal.PowerThermalChannelDataProducer python_type closeable
     py PowerThermalChannelDataProducer
@@ -175,17 +175,17 @@ class Windows.System.Power.Thermal.PowerThermalChannelDataProducer python_type c
     requires Windows.Foundation.IClosable
     factory Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducerFactory shape=117
             pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelIds
             out class type=Windows.System.Power.Thermal.PowerThermalChannelDataProducer return
     property back_end_status
-        get get_BackEndStatus slot=12 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=4 reverse=162
+        get get_BackEndStatus slot=12 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=4
             out enum32 type=Windows.System.Power.Thermal.PowerThermalBackEndStatus return
     event back_end_status_changed
-        add add_BackEndStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51 reverse=174
+        add add_BackEndStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Power.Thermal.PowerThermalChannelDataProducer,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BackEndStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=26 reverse=192
+        remove remove_BackEndStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
@@ -193,18 +193,18 @@ class Windows.System.Power.Thermal.PowerThermalChannelDataProducer python_type c
         method DisableChannel slot=8 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=339
             in struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelId
     method get_channel_configurations
-        method GetChannelConfigurations slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=4 reverse=43
+        method GetChannelConfigurations slot=7 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<Windows.System.Power.Thermal.PowerThermalChannelId,Windows.System.Power.Thermal.PowerThermalChannelConfiguration> return
     method get_channel_ids
-        method GetChannelIds slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51 reverse=24
+        method GetChannelIds slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51
             receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId return
     method publish_input_channel_data
-        method PublishInputChannelData slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51 reverse=144
+        method PublishInputChannelData slot=11 inputs=1 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=51
             pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelData name=data
     method start
-        method Start slot=9 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=0 reverse=93
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=0
     method stop
-        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=0 reverse=117
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataProducer shape=0
 
 class Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs python_type
     py PowerThermalChannelDataReceivedEventArgs
@@ -212,7 +212,7 @@ class Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs pyth
     default Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs
     requires Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs
     method get_data
-        method GetData slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs shape=51 reverse=24
+        method GetData slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDataReceivedEventArgs shape=51
             receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelData return
 
 class Windows.System.Power.Thermal.PowerThermalChannelDiagnostics python_type
@@ -222,10 +222,10 @@ class Windows.System.Power.Thermal.PowerThermalChannelDiagnostics python_type
     requires Windows.System.Power.Thermal.IPowerThermalChannelDiagnostics
     factory Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics shape=4 static
             out class type=Windows.System.Power.Thermal.PowerThermalChannelDiagnostics return
     method get_data_for_channels static
-        method GetDataForChannels slot=7 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics shape=195 reverse=46 static
+        method GetDataForChannels slot=7 inputs=1 outputs=1 declaring=Windows.System.Power.Thermal.IPowerThermalChannelDiagnosticsStatics shape=195 static
             pass_array struct type=Windows.System.Power.Thermal.PowerThermalChannelId name=channelIds
             receive_array struct type=Windows.System.Power.Thermal.PowerThermalChannelData return
 

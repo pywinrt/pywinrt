@@ -379,38 +379,38 @@ class TestComponent.Composable composable python_type
     factory TestComponent.IComposableStatics
     composable TestComponent.IComposableFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IComposableFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IComposableFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=TestComponent.Composable return
-        ctor .ctor slot=7 inputs=1 outputs=1 declaring=TestComponent.IComposableFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=TestComponent.IComposableFactory shape=195
             in int32 name=init
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=TestComponent.Composable return
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=TestComponent.IComposable shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=TestComponent.IComposable shape=4
             out int32 return
-        put put_Value slot=7 inputs=1 outputs=0 declaring=TestComponent.IComposable shape=4 reverse=43
+        put put_Value slot=7 inputs=1 outputs=0 declaring=TestComponent.IComposable shape=4
             in int32 name=value
     method expect_composable static
-        method ExpectComposable slot=6 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=24 static
+        method ExpectComposable slot=6 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 static
             in class type=TestComponent.Composable name=t
             out int32 return
     method expect_required_four static
-        method ExpectRequiredFour slot=10 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=124 static
+        method ExpectRequiredFour slot=10 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 static
             in interface type=TestComponent.IRequiredFour name=t
             out int32 return
     method expect_required_one static
-        method ExpectRequiredOne slot=7 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=44 static
+        method ExpectRequiredOne slot=7 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 static
             in interface type=TestComponent.IRequiredOne name=t
             out int32 return
     method expect_required_three static
-        method ExpectRequiredThree slot=9 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=100 static
+        method ExpectRequiredThree slot=9 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 static
             in interface type=TestComponent.IRequiredThree name=t
             out int32 return
     method expect_required_two static
-        method ExpectRequiredTwo slot=8 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 reverse=65 static
+        method ExpectRequiredTwo slot=8 inputs=1 outputs=1 declaring=TestComponent.IComposableStatics shape=51 static
             in interface type=TestComponent.IRequiredTwo name=t
             out int32 return
     method four
@@ -434,7 +434,7 @@ class TestComponent.Derived composable python_type
     requires TestComponent.IDerived
     composable TestComponent.IDerivedFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IDerivedFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IDerivedFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=TestComponent.Derived return
@@ -2183,7 +2183,7 @@ class TestComponent.OverloadClass composable python_type
     overridable TestComponent.IOverloadClassOverrides
     overridable TestComponent.IOverloadClassOverrides2
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverloadClassFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverloadClassFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=TestComponent.OverloadClass return
@@ -2193,7 +2193,7 @@ class TestComponent.OverloadClass composable python_type
             in int32 name=b
             in int32 name=c
     method overload
-        method Overload slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverloadClass shape=0 reverse=16
+        method Overload slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverloadClass shape=0
     method _overload_with_one
         method Overload slot=6 inputs=1 outputs=0 declaring=TestComponent.IOverloadClassOverrides shape=4 reverse=22 overridable
             in int32 name=a
@@ -2212,26 +2212,26 @@ class TestComponent.Override composable python_type
     composable TestComponent.IOverrideFactory
     overridable TestComponent.IOverrideOverrides
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverrideFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IOverrideFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=TestComponent.Override return
     event overridable_called
-        add add_OverridableCalled slot=10 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51 reverse=124
+        add add_OverridableCalled slot=10 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_OverridableCalled slot=11 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26 reverse=156
+        remove remove_OverridableCalled slot=11 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event protected_called
-        add add_ProtectedCalled slot=7 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51 reverse=44
+        add add_ProtectedCalled slot=7 inputs=1 outputs=1 declaring=TestComponent.IOverride shape=51
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProtectedCalled slot=8 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26 reverse=82
+        remove remove_ProtectedCalled slot=8 inputs=1 outputs=0 declaring=TestComponent.IOverride shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method call_overridable
-        method CallOverridable slot=9 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0 reverse=93
+        method CallOverridable slot=9 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0
     method call_protected
-        method CallProtected slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0 reverse=16
+        method CallProtected slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverride shape=0
     method _on_overridable
         method OnOverridable slot=6 inputs=0 outputs=0 declaring=TestComponent.IOverrideOverrides shape=0 reverse=16 overridable
     method _on_protected
@@ -2402,16 +2402,16 @@ class TestComponent.TestRunner static python_type
     py TestRunner
     factory TestComponent.ITestRunnerStatics
     method create_async_action static
-        method CreateAsyncAction slot=14 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=187 static
+        method CreateAsyncAction slot=14 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 static
             in uint32 name=milliseconds
             out interface type=Windows.Foundation.IAsyncAction return
     method create_async_action_with_error static
-        method CreateAsyncActionWithError slot=15 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 reverse=197 static
+        method CreateAsyncActionWithError slot=15 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 static
             in uint32 name=milliseconds
             in int32 name=error
             out interface type=Windows.Foundation.IAsyncAction return
     method create_async_action_with_progress static
-        method CreateAsyncActionWithProgress slot=18 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 reverse=220 static
+        method CreateAsyncActionWithProgress slot=18 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 static
             in uint32 name=milliseconds
             in parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> name=items
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> return
@@ -2422,12 +2422,12 @@ class TestComponent.TestRunner static python_type
             in int32 name=error
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> return
     method create_async_operation static
-        method CreateAsyncOperation slot=16 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 reverse=204 static
+        method CreateAsyncOperation slot=16 inputs=2 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=117 static
             in uint32 name=milliseconds
             in int32 name=result
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
     method create_async_operation_with_error static
-        method CreateAsyncOperationWithError slot=17 inputs=3 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=195 reverse=212 static
+        method CreateAsyncOperationWithError slot=17 inputs=3 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=195 static
             in uint32 name=milliseconds
             in int32 name=result
             in int32 name=error
@@ -2446,34 +2446,34 @@ class TestComponent.TestRunner static python_type
             in int32 name=error
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> return
     method create_int32_vector static
-        method CreateInt32Vector slot=10 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=121 static
+        method CreateInt32Vector slot=10 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<System.Int32> return
     method create_string_vector static
-        method CreateStringVector slot=11 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=141 static
+        method CreateStringVector slot=11 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
     method create_stringable_vector static
-        method CreateStringableVector slot=12 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=162 static
+        method CreateStringableVector slot=12 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.IStringable> return
     method create_time_span static
-        method CreateTimeSpan slot=13 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=174 static
+        method CreateTimeSpan slot=13 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 static
             in uint32 name=milliseconds
             out timespan return
     method expect_object static
-        method ExpectObject slot=22 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=238 static
+        method ExpectObject slot=22 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 static
             in object name=value
             out string return
     method make_tests static
-        method MakeTests slot=9 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=99 static
+        method MakeTests slot=9 inputs=0 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=4 static
             out interface type=TestComponent.ITests return
     method test_consumer static
-        method TestConsumer slot=7 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 reverse=44 static
+        method TestConsumer slot=7 inputs=1 outputs=1 declaring=TestComponent.ITestRunnerStatics shape=51 static
             in delegate type=TestComponent.TestHandler name=caller
             out uint32 return
     method test_producer static
-        method TestProducer slot=6 inputs=1 outputs=0 declaring=TestComponent.ITestRunnerStatics shape=4 reverse=22 static
+        method TestProducer slot=6 inputs=1 outputs=0 declaring=TestComponent.ITestRunnerStatics shape=4 static
             in interface type=TestComponent.ITests name=callee
     method test_self static
-        method TestSelf slot=8 inputs=0 outputs=0 declaring=TestComponent.ITestRunnerStatics shape=0 reverse=55 static
+        method TestSelf slot=8 inputs=0 outputs=0 declaring=TestComponent.ITestRunnerStatics shape=0 static
 
 delegate Windows.Foundation.TypedEventHandler<TestComponent.ITests,System.Int32> concrete
     py winrt.windows.foundation.TypedEventHandler[ITests, Int32]

@@ -11,16 +11,16 @@ class Windows.UI.Core.AcceleratorKeyEventArgs python_type
     requires Windows.UI.Core.ICoreWindowEventArgs
     requires Windows.UI.Core.IAcceleratorKeyEventArgs2
     property event_type
-        get get_EventType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs shape=4 reverse=22
+        get get_EventType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs shape=4
             out enum32 type=Windows.UI.Core.CoreAcceleratorKeyEventType return
     property key_status
-        get get_KeyStatus slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs shape=4 reverse=62
+        get get_KeyStatus slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
     property virtual_key
-        get get_VirtualKey slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs shape=4 reverse=43
+        get get_VirtualKey slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs shape=4
             out enum32 type=Windows.System.VirtualKey return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs2 shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IAcceleratorKeyEventArgs2 shape=4
             out string return
     property handled
         get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=22
@@ -64,9 +64,9 @@ class Windows.UI.Core.AutomationProviderRequestedEventArgs python_type
     requires Windows.UI.Core.IAutomationProviderRequestedEventArgs
     requires Windows.UI.Core.ICoreWindowEventArgs
     property automation_provider
-        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IAutomationProviderRequestedEventArgs shape=4 reverse=22
+        get get_AutomationProvider slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IAutomationProviderRequestedEventArgs shape=4
             out object return
-        put put_AutomationProvider slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.IAutomationProviderRequestedEventArgs shape=4 reverse=43
+        put put_AutomationProvider slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.IAutomationProviderRequestedEventArgs shape=4
             in object name=value
     property handled
         get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=22
@@ -80,9 +80,9 @@ class Windows.UI.Core.BackRequestedEventArgs python_type
     default Windows.UI.Core.IBackRequestedEventArgs
     requires Windows.UI.Core.IBackRequestedEventArgs
     property handled
-        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IBackRequestedEventArgs shape=4 reverse=22
+        get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IBackRequestedEventArgs shape=4
             out boolean return
-        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.IBackRequestedEventArgs shape=4 reverse=43
+        put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.IBackRequestedEventArgs shape=4
             in boolean name=value
 
 class Windows.UI.Core.CharacterReceivedEventArgs python_type
@@ -92,10 +92,10 @@ class Windows.UI.Core.CharacterReceivedEventArgs python_type
     requires Windows.UI.Core.ICharacterReceivedEventArgs
     requires Windows.UI.Core.ICoreWindowEventArgs
     property key_code
-        get get_KeyCode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICharacterReceivedEventArgs shape=4 reverse=22
+        get get_KeyCode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICharacterReceivedEventArgs shape=4
             out uint32 return
     property key_status
-        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICharacterReceivedEventArgs shape=4 reverse=43
+        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICharacterReceivedEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
     property handled
         get get_Handled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=22
@@ -109,15 +109,15 @@ class Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs python_type
     default Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs
     requires Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs
     property closest_interactive_bounds
-        get get_ClosestInteractiveBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=4 reverse=62
+        get get_ClosestInteractiveBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=4
             out struct type=Windows.Foundation.Rect return
-        put put_ClosestInteractiveBounds slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=8 reverse=105
+        put put_ClosestInteractiveBounds slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=8
             in struct type=Windows.Foundation.Rect name=value
     property pointer_position
-        get get_PointerPosition slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=4 reverse=22
+        get get_PointerPosition slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=4
             out struct type=Windows.Foundation.Point return
     property search_bounds
-        get get_SearchBounds slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=4 reverse=43
+        get get_SearchBounds slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IClosestInteractiveBoundsRequestedEventArgs shape=4
             out struct type=Windows.Foundation.Rect return
 
 enum Windows.UI.Core.CoreAcceleratorKeyEventType python_type
@@ -158,7 +158,7 @@ class Windows.UI.Core.CoreComponentInputSource python_type
     requires Windows.UI.Core.ICoreKeyboardInputSource2
     requires Windows.UI.Core.ICorePointerInputSource2
     property has_focus
-        get get_HasFocus slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreComponentFocusable shape=4 reverse=22
+        get get_HasFocus slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreComponentFocusable shape=4
             out boolean return
     property is_input_enabled
         get get_IsInputEnabled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreInputSourceBase shape=4 reverse=43
@@ -231,52 +231,52 @@ class Windows.UI.Core.CoreComponentInputSource python_type
         remove remove_PointerWheelChanged slot=25 inputs=1 outputs=0 declaring=Windows.UI.Core.ICorePointerInputSource shape=26 reverse=254
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event character_received
-        add add_CharacterReceived slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51 reverse=44
+        add add_CharacterReceived slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.CharacterReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CharacterReceived slot=8 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=26 reverse=82
+        remove remove_CharacterReceived slot=8 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event key_down
-        add add_KeyDown slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51 reverse=100
+        add add_KeyDown slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.KeyEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_KeyDown slot=10 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=26 reverse=134
+        remove remove_KeyDown slot=10 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event key_up
-        add add_KeyUp slot=11 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51 reverse=144
+        add add_KeyUp slot=11 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.KeyEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_KeyUp slot=12 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=26 reverse=167
+        remove remove_KeyUp slot=12 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event got_focus
-        add add_GotFocus slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreComponentFocusable shape=51 reverse=44
+        add add_GotFocus slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreComponentFocusable shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.CoreWindowEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GotFocus slot=8 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreComponentFocusable shape=26 reverse=82
+        remove remove_GotFocus slot=8 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreComponentFocusable shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event lost_focus
-        add add_LostFocus slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreComponentFocusable shape=51 reverse=100
+        add add_LostFocus slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreComponentFocusable shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.CoreWindowEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LostFocus slot=10 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreComponentFocusable shape=26 reverse=134
+        remove remove_LostFocus slot=10 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreComponentFocusable shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event touch_hit_testing
-        add add_TouchHitTesting slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreTouchHitTesting shape=51 reverse=24
+        add add_TouchHitTesting slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreTouchHitTesting shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<System.Object,Windows.UI.Core.TouchHitTestingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TouchHitTesting slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreTouchHitTesting shape=26 reverse=53
+        remove remove_TouchHitTesting slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreTouchHitTesting shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event closest_interactive_bounds_requested
-        add add_ClosestInteractiveBoundsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreClosestInteractiveBoundsRequested shape=51 reverse=24
+        add add_ClosestInteractiveBoundsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreClosestInteractiveBoundsRequested shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreComponentInputSource,Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ClosestInteractiveBoundsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreClosestInteractiveBoundsRequested shape=26 reverse=53
+        remove remove_ClosestInteractiveBoundsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreClosestInteractiveBoundsRequested shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method get_current_key_event_device_id
-        method GetCurrentKeyEventDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource2 shape=4 reverse=22
+        method GetCurrentKeyEventDeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource2 shape=4
             out string return
     method get_current_key_state
-        method GetCurrentKeyState slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51 reverse=24
+        method GetCurrentKeyState slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreKeyboardInputSource shape=51
             in enum32 type=Windows.System.VirtualKey name=virtualKey
             out enum_u32 type=Windows.UI.Core.CoreVirtualKeyStates return
     method release_pointer_capture
@@ -291,15 +291,15 @@ class Windows.UI.Core.CoreCursor python_type
     requires Windows.UI.Core.ICoreCursor
     factory Windows.UI.Core.ICoreCursorFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreCursorFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreCursorFactory shape=117
             in enum32 type=Windows.UI.Core.CoreCursorType name=type
             in uint32 name=id
             out class type=Windows.UI.Core.CoreCursor return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreCursor shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreCursor shape=4
             out uint32 return
     property type
-        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreCursor shape=4 reverse=43
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreCursor shape=4
             out enum32 type=Windows.UI.Core.CoreCursorType return
 
 enum Windows.UI.Core.CoreCursorType python_type
@@ -331,12 +331,12 @@ class Windows.UI.Core.CoreDispatcher python_type
     requires Windows.UI.Core.ICoreDispatcherWithTaskPriority
     requires Windows.UI.Core.ICoreDispatcher2
     property has_thread_access
-        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher shape=4 reverse=22
+        get get_HasThreadAccess slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher shape=4
             out boolean return
     property current_priority
-        get get_CurrentPriority slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=4 reverse=22
+        get get_CurrentPriority slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=4
             out enum32 type=Windows.UI.Core.CoreDispatcherPriority return
-        put put_CurrentPriority slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=4 reverse=43
+        put put_CurrentPriority slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=4
             in enum32 type=Windows.UI.Core.CoreDispatcherPriority name=value
     event accelerator_key_activated
         add add_AcceleratorKeyActivated slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreAcceleratorKeys shape=51 reverse=24
@@ -345,32 +345,32 @@ class Windows.UI.Core.CoreDispatcher python_type
         remove remove_AcceleratorKeyActivated slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreAcceleratorKeys shape=26 reverse=53
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method process_events
-        method ProcessEvents slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreDispatcher shape=4 reverse=43
+        method ProcessEvents slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreDispatcher shape=4
             in enum32 type=Windows.UI.Core.CoreProcessEventsOption name=options
     method run_async
-        method RunAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher shape=117 reverse=66
+        method RunAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher shape=117
             in enum32 type=Windows.UI.Core.CoreDispatcherPriority name=priority
             in delegate type=Windows.UI.Core.DispatchedHandler name=agileCallback
             out interface type=Windows.Foundation.IAsyncAction return
     method run_idle_async
-        method RunIdleAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher shape=51 reverse=100
+        method RunIdleAsync slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher shape=51
             in delegate type=Windows.UI.Core.IdleDispatchedHandler name=agileCallback
             out interface type=Windows.Foundation.IAsyncAction return
     method should_yield
-        method ShouldYield slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=4 reverse=62
+        method ShouldYield slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=4
             out boolean return
-        method ShouldYield slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=51 reverse=100
+        method ShouldYield slot=9 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=51
             in enum32 type=Windows.UI.Core.CoreDispatcherPriority name=priority
             out boolean return
     method stop_process_events
-        method StopProcessEvents slot=10 inputs=0 outputs=0 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=0 reverse=117
+        method StopProcessEvents slot=10 inputs=0 outputs=0 declaring=Windows.UI.Core.ICoreDispatcherWithTaskPriority shape=0
     method try_run_async
-        method TryRunAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher2 shape=117 reverse=25
+        method TryRunAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher2 shape=117
             in enum32 type=Windows.UI.Core.CoreDispatcherPriority name=priority
             in delegate type=Windows.UI.Core.DispatchedHandler name=agileCallback
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_run_idle_async
-        method TryRunIdleAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher2 shape=51 reverse=44
+        method TryRunIdleAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreDispatcher2 shape=51
             in delegate type=Windows.UI.Core.IdleDispatchedHandler name=agileCallback
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -501,32 +501,32 @@ class Windows.UI.Core.CoreIndependentInputSourceController python_type closeable
     requires Windows.Foundation.IClosable
     factory Windows.UI.Core.ICoreIndependentInputSourceControllerStatics
     property is_transparent_for_uncontrolled_input
-        get get_IsTransparentForUncontrolledInput slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=22
+        get get_IsTransparentForUncontrolledInput slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4
             out boolean return
-        put put_IsTransparentForUncontrolledInput slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=43
+        put put_IsTransparentForUncontrolledInput slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4
             in boolean name=value
     property is_palm_rejection_enabled
-        get get_IsPalmRejectionEnabled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=62
+        get get_IsPalmRejectionEnabled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4
             out boolean return
-        put put_IsPalmRejectionEnabled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=99
+        put put_IsPalmRejectionEnabled slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4
             in boolean name=value
     property source
-        get get_Source slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=121
+        get get_Source slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4
             out class type=Windows.UI.Core.CoreIndependentInputSource return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_for_ivisual_element static
-        method CreateForIVisualElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceControllerStatics shape=51 reverse=44 static
+        method CreateForIVisualElement slot=7 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceControllerStatics shape=51 static
             in interface type=Windows.UI.Composition.IVisualElement name=visualElement
             out class type=Windows.UI.Core.CoreIndependentInputSourceController return
     method create_for_visual static
-        method CreateForVisual slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceControllerStatics shape=51 reverse=24 static
+        method CreateForVisual slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreIndependentInputSourceControllerStatics shape=51 static
             in class type=Windows.UI.Composition.Visual name=visual
             out class type=Windows.UI.Core.CoreIndependentInputSourceController return
     method set_controlled_input
-        method SetControlledInput slot=11 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4 reverse=141
+        method SetControlledInput slot=11 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=4
             in enum_u32 type=Windows.UI.Core.CoreInputDeviceTypes name=inputTypes
-        method SetControlledInput slot=12 inputs=3 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=117 reverse=164
+        method SetControlledInput slot=12 inputs=3 outputs=0 declaring=Windows.UI.Core.ICoreIndependentInputSourceController shape=117
             in enum_u32 type=Windows.UI.Core.CoreInputDeviceTypes name=inputTypes
             in enum_u32 type=Windows.UI.Core.CoreIndependentInputFilters name=required
             in enum_u32 type=Windows.UI.Core.CoreIndependentInputFilters name=excluded
@@ -624,13 +624,13 @@ class Windows.UI.Core.CoreWindow python_type
         get get_Visible slot=17 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow shape=4 reverse=210
             out boolean return
     property activation_mode
-        get get_ActivationMode slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow5 shape=4 reverse=43
+        get get_ActivationMode slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow5 shape=4
             out enum32 type=Windows.UI.Core.CoreWindowActivationMode return
     property dispatcher_queue
-        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow5 shape=4 reverse=22
+        get get_DispatcherQueue slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow5 shape=4
             out class type=Windows.System.DispatcherQueue return
     property ui_context
-        get get_UIContext slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowWithContext shape=4 reverse=22
+        get get_UIContext slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowWithContext shape=4
             out class type=Windows.UI.UIContext return
     event activated
         add add_Activated slot=24 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow shape=51 reverse=248
@@ -753,22 +753,22 @@ class Windows.UI.Core.CoreWindow python_type
         remove remove_PointerRoutedTo slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.ICorePointerRedirector shape=26 reverse=110
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event closest_interactive_bounds_requested
-        add add_ClosestInteractiveBoundsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow3 shape=51 reverse=24
+        add add_ClosestInteractiveBoundsRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ClosestInteractiveBoundsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindow3 shape=26 reverse=53
+        remove remove_ClosestInteractiveBoundsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindow3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event resize_completed
-        add add_ResizeCompleted slot=8 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow4 shape=51 reverse=65
+        add add_ResizeCompleted slot=8 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow4 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ResizeCompleted slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindow4 shape=26 reverse=110
+        remove remove_ResizeCompleted slot=9 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindow4 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event resize_started
-        add add_ResizeStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow4 shape=51 reverse=24
+        add add_ResizeStarted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow4 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ResizeStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindow4 shape=26 reverse=53
+        remove remove_ResizeStarted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindow4 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method activate
         method Activate slot=18 inputs=0 outputs=0 declaring=Windows.UI.Core.ICoreWindow shape=0 reverse=217
@@ -779,10 +779,10 @@ class Windows.UI.Core.CoreWindow python_type
             in enum32 type=Windows.System.VirtualKey name=virtualKey
             out enum_u32 type=Windows.UI.Core.CoreVirtualKeyStates return
     method get_current_key_event_device_id
-        method GetCurrentKeyEventDeviceId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow3 shape=4 reverse=62
+        method GetCurrentKeyEventDeviceId slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindow3 shape=4
             out string return
     method get_for_current_thread static
-        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowStatic shape=4 reverse=22 static
+        method GetForCurrentThread slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowStatic shape=4 static
             out class type=Windows.UI.Core.CoreWindow return
     method get_key_state
         method GetKeyState slot=21 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindow shape=51 reverse=233
@@ -817,51 +817,51 @@ class Windows.UI.Core.CoreWindowDialog activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialogFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialogFactory shape=51
             in string name=title
             out class type=Windows.UI.Core.CoreWindowDialog return
     property title
-        get get_Title slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=121
+        get get_Title slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out string return
-        put put_Title slot=11 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=141
+        put put_Title slot=11 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             in string name=value
     property is_interaction_delayed
-        get get_IsInteractionDelayed slot=12 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=162
+        get get_IsInteractionDelayed slot=12 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out int32 return
-        put put_IsInteractionDelayed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=173
+        put put_IsInteractionDelayed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             in int32 name=value
     property default_command_index
-        get get_DefaultCommandIndex slot=15 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=194
+        get get_DefaultCommandIndex slot=15 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out uint32 return
-        put put_DefaultCommandIndex slot=16 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=202
+        put put_DefaultCommandIndex slot=16 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             in uint32 name=value
     property cancel_command_index
-        get get_CancelCommandIndex slot=17 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=210
+        get get_CancelCommandIndex slot=17 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out uint32 return
-        put put_CancelCommandIndex slot=18 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=218
+        put put_CancelCommandIndex slot=18 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             in uint32 name=value
     property back_button_command
-        get get_BackButtonCommand slot=19 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=223
+        get get_BackButtonCommand slot=19 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out delegate type=Windows.UI.Popups.UICommandInvokedHandler return
-        put put_BackButtonCommand slot=20 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=228
+        put put_BackButtonCommand slot=20 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=value
     property commands
-        get get_Commands slot=14 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=186
+        get get_Commands slot=14 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> return
     property max_size
-        get get_MaxSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=62
+        get get_MaxSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out struct type=Windows.Foundation.Size return
     property min_size
-        get get_MinSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=99
+        get get_MinSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out struct type=Windows.Foundation.Size return
     event showing
-        add add_Showing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=51 reverse=24
+        add add_Showing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.CoreWindowPopupShowingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Showing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=26 reverse=53
+        remove remove_Showing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowDialog shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method show_async
-        method ShowAsync slot=21 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4 reverse=232
+        method ShowAsync slot=21 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowDialog shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> return
 
 class Windows.UI.Core.CoreWindowEventArgs python_type
@@ -888,50 +888,50 @@ class Windows.UI.Core.CoreWindowFlyout python_type
     requires Windows.UI.Core.ICoreWindowFlyout
     factory Windows.UI.Core.ICoreWindowFlyoutFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyoutFactory shape=79 reverse=31
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyoutFactory shape=79
             in struct type=Windows.Foundation.Point name=position
             out class type=Windows.UI.Core.CoreWindowFlyout return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyoutFactory shape=151 reverse=52
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyoutFactory shape=151
             in struct type=Windows.Foundation.Point name=position
             in string name=title
             out class type=Windows.UI.Core.CoreWindowFlyout return
     property title
-        get get_Title slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=121
+        get get_Title slot=10 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out string return
-        put put_Title slot=11 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=141
+        put put_Title slot=11 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             in string name=value
     property is_interaction_delayed
-        get get_IsInteractionDelayed slot=12 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=162
+        get get_IsInteractionDelayed slot=12 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out int32 return
-        put put_IsInteractionDelayed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=173
+        put put_IsInteractionDelayed slot=13 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             in int32 name=value
     property default_command_index
-        get get_DefaultCommandIndex slot=15 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=194
+        get get_DefaultCommandIndex slot=15 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out uint32 return
-        put put_DefaultCommandIndex slot=16 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=202
+        put put_DefaultCommandIndex slot=16 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             in uint32 name=value
     property back_button_command
-        get get_BackButtonCommand slot=17 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=210
+        get get_BackButtonCommand slot=17 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out delegate type=Windows.UI.Popups.UICommandInvokedHandler return
-        put put_BackButtonCommand slot=18 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=218
+        put put_BackButtonCommand slot=18 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             in delegate type=Windows.UI.Popups.UICommandInvokedHandler name=value
     property commands
-        get get_Commands slot=14 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=186
+        get get_Commands slot=14 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Popups.IUICommand> return
     property max_size
-        get get_MaxSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=62
+        get get_MaxSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out struct type=Windows.Foundation.Size return
     property min_size
-        get get_MinSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=99
+        get get_MinSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out struct type=Windows.Foundation.Size return
     event showing
-        add add_Showing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=51 reverse=24
+        add add_Showing slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Core.CoreWindow,Windows.UI.Core.CoreWindowPopupShowingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Showing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=26 reverse=53
+        remove remove_Showing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowFlyout shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method show_async
-        method ShowAsync slot=19 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4 reverse=223
+        method ShowAsync slot=19 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowFlyout shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.Popups.IUICommand> return
 
 class Windows.UI.Core.CoreWindowPopupShowingEventArgs python_type
@@ -951,15 +951,15 @@ class Windows.UI.Core.CoreWindowResizeManager python_type
     requires Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability
     factory Windows.UI.Core.ICoreWindowResizeManagerStatics
     property should_wait_for_layout_completion
-        get get_ShouldWaitForLayoutCompletion slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability shape=4 reverse=43
+        get get_ShouldWaitForLayoutCompletion slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability shape=4
             out boolean return
-        put put_ShouldWaitForLayoutCompletion slot=6 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability shape=4 reverse=22
+        put put_ShouldWaitForLayoutCompletion slot=6 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowResizeManagerLayoutCapability shape=4
             in boolean name=value
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowResizeManagerStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ICoreWindowResizeManagerStatics shape=4 static
             out class type=Windows.UI.Core.CoreWindowResizeManager return
     method notify_layout_completed
-        method NotifyLayoutCompleted slot=6 inputs=0 outputs=0 declaring=Windows.UI.Core.ICoreWindowResizeManager shape=0 reverse=16
+        method NotifyLayoutCompleted slot=6 inputs=0 outputs=0 declaring=Windows.UI.Core.ICoreWindowResizeManager shape=0
 
 delegate Windows.UI.Core.DispatchedHandler python_type
     py DispatchedHandler
@@ -1758,7 +1758,7 @@ class Windows.UI.Core.IdleDispatchedHandlerArgs python_type
     default Windows.UI.Core.IIdleDispatchedHandlerArgs
     requires Windows.UI.Core.IIdleDispatchedHandlerArgs
     property is_dispatcher_idle
-        get get_IsDispatcherIdle slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IIdleDispatchedHandlerArgs shape=4 reverse=22
+        get get_IsDispatcherIdle slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IIdleDispatchedHandlerArgs shape=4
             out boolean return
 
 class Windows.UI.Core.InputEnabledEventArgs python_type
@@ -1773,7 +1773,7 @@ class Windows.UI.Core.InputEnabledEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property input_enabled
-        get get_InputEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IInputEnabledEventArgs shape=4 reverse=22
+        get get_InputEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IInputEnabledEventArgs shape=4
             out boolean return
 
 class Windows.UI.Core.KeyEventArgs python_type
@@ -1789,13 +1789,13 @@ class Windows.UI.Core.KeyEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property key_status
-        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IKeyEventArgs shape=4 reverse=43
+        get get_KeyStatus slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IKeyEventArgs shape=4
             out struct type=Windows.UI.Core.CorePhysicalKeyStatus return
     property virtual_key
-        get get_VirtualKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IKeyEventArgs shape=4 reverse=22
+        get get_VirtualKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IKeyEventArgs shape=4
             out enum32 type=Windows.System.VirtualKey return
     property device_id
-        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IKeyEventArgs2 shape=4 reverse=22
+        get get_DeviceId slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IKeyEventArgs2 shape=4
             out string return
 
 class Windows.UI.Core.PointerEventArgs python_type
@@ -1810,13 +1810,13 @@ class Windows.UI.Core.PointerEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property current_point
-        get get_CurrentPoint slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IPointerEventArgs shape=4 reverse=22
+        get get_CurrentPoint slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IPointerEventArgs shape=4
             out class type=Windows.UI.Input.PointerPoint return
     property key_modifiers
-        get get_KeyModifiers slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IPointerEventArgs shape=4 reverse=43
+        get get_KeyModifiers slot=7 inputs=0 outputs=1 declaring=Windows.UI.Core.IPointerEventArgs shape=4
             out enum_u32 type=Windows.System.VirtualKeyModifiers return
     method get_intermediate_points
-        method GetIntermediatePoints slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.IPointerEventArgs shape=4 reverse=62
+        method GetIntermediatePoints slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.IPointerEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint> return
 
 class Windows.UI.Core.SystemNavigationManager python_type
@@ -1827,18 +1827,18 @@ class Windows.UI.Core.SystemNavigationManager python_type
     requires Windows.UI.Core.ISystemNavigationManager2
     factory Windows.UI.Core.ISystemNavigationManagerStatics
     property app_view_back_button_visibility
-        get get_AppViewBackButtonVisibility slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ISystemNavigationManager2 shape=4 reverse=22
+        get get_AppViewBackButtonVisibility slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ISystemNavigationManager2 shape=4
             out enum32 type=Windows.UI.Core.AppViewBackButtonVisibility return
-        put put_AppViewBackButtonVisibility slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ISystemNavigationManager2 shape=4 reverse=43
+        put put_AppViewBackButtonVisibility slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ISystemNavigationManager2 shape=4
             in enum32 type=Windows.UI.Core.AppViewBackButtonVisibility name=value
     event back_requested
-        add add_BackRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ISystemNavigationManager shape=51 reverse=24
+        add add_BackRequested slot=6 inputs=1 outputs=1 declaring=Windows.UI.Core.ISystemNavigationManager shape=51
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.Core.BackRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BackRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ISystemNavigationManager shape=26 reverse=53
+        remove remove_BackRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ISystemNavigationManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ISystemNavigationManagerStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ISystemNavigationManagerStatics shape=4 static
             out class type=Windows.UI.Core.SystemNavigationManager return
 
 class Windows.UI.Core.TouchHitTestingEventArgs python_type
@@ -1853,22 +1853,22 @@ class Windows.UI.Core.TouchHitTestingEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property proximity_evaluation
-        get get_ProximityEvaluation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=4 reverse=22
+        get get_ProximityEvaluation slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=4
             out struct type=Windows.UI.Core.CoreProximityEvaluation return
         put put_ProximityEvaluation slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=20
             in struct type=Windows.UI.Core.CoreProximityEvaluation name=value
     property bounding_box
-        get get_BoundingBox slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=4 reverse=99
+        get get_BoundingBox slot=9 inputs=0 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=4
             out struct type=Windows.Foundation.Rect return
     property point
-        get get_Point slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=4 reverse=62
+        get get_Point slot=8 inputs=0 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=4
             out struct type=Windows.Foundation.Point return
     method evaluate_proximity
         method EvaluateProximity slot=10 inputs=1 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=74 default_overload
             in struct type=Windows.Foundation.Rect name=controlBoundingBox
             out struct type=Windows.UI.Core.CoreProximityEvaluation return
     method evaluate_proximity_to_polygon
-        method EvaluateProximity slot=11 inputs=1 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=117 reverse=145
+        method EvaluateProximity slot=11 inputs=1 outputs=1 declaring=Windows.UI.Core.ITouchHitTestingEventArgs shape=117
             pass_array struct type=Windows.Foundation.Point name=controlVertices
             out struct type=Windows.UI.Core.CoreProximityEvaluation return
 
@@ -2148,7 +2148,7 @@ class Windows.UI.Core.VisibilityChangedEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property visible
-        get get_Visible slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IVisibilityChangedEventArgs shape=4 reverse=22
+        get get_Visible slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IVisibilityChangedEventArgs shape=4
             out boolean return
 
 class Windows.UI.Core.WindowActivatedEventArgs python_type
@@ -2163,7 +2163,7 @@ class Windows.UI.Core.WindowActivatedEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property window_activation_state
-        get get_WindowActivationState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IWindowActivatedEventArgs shape=4 reverse=22
+        get get_WindowActivationState slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IWindowActivatedEventArgs shape=4
             out enum32 type=Windows.UI.Core.CoreWindowActivationState return
 
 class Windows.UI.Core.WindowSizeChangedEventArgs python_type
@@ -2178,7 +2178,7 @@ class Windows.UI.Core.WindowSizeChangedEventArgs python_type
         put put_Handled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Core.ICoreWindowEventArgs shape=4 reverse=43
             in boolean name=value
     property size
-        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IWindowSizeChangedEventArgs shape=4 reverse=22
+        get get_Size slot=6 inputs=0 outputs=1 declaring=Windows.UI.Core.IWindowSizeChangedEventArgs shape=4
             out struct type=Windows.Foundation.Size return
 
 class System.Boolean external

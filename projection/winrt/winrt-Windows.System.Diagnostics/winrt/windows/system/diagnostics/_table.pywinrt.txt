@@ -33,10 +33,10 @@ class Windows.System.Diagnostics.DiagnosticActionResult python_type
     default Windows.System.Diagnostics.IDiagnosticActionResult
     requires Windows.System.Diagnostics.IDiagnosticActionResult
     property extended_error
-        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticActionResult shape=4 reverse=22
+        get get_ExtendedError slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticActionResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property results
-        get get_Results slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticActionResult shape=4 reverse=43
+        get get_Results slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticActionResult shape=4
             out class type=Windows.Foundation.Collections.ValueSet return
 
 enum Windows.System.Diagnostics.DiagnosticActionState python_type
@@ -58,21 +58,21 @@ class Windows.System.Diagnostics.DiagnosticInvoker python_type
     requires Windows.System.Diagnostics.IDiagnosticInvoker2
     factory Windows.System.Diagnostics.IDiagnosticInvokerStatics
     property is_supported static
-        get get_IsSupported slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=4 reverse=62 static
+        get get_IsSupported slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=4 static
             out boolean return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=4 static
             out class type=Windows.System.Diagnostics.DiagnosticInvoker return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvokerStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.System.Diagnostics.DiagnosticInvoker return
     method run_diagnostic_action_async
-        method RunDiagnosticActionAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvoker shape=51 reverse=24
+        method RunDiagnosticActionAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvoker shape=51
             in class type=Windows.Data.Json.JsonObject name=context
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
     method run_diagnostic_action_from_string_async
-        method RunDiagnosticActionFromStringAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvoker2 shape=51 reverse=24
+        method RunDiagnosticActionFromStringAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IDiagnosticInvoker2 shape=51
             in string name=context
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> return
 
@@ -348,7 +348,7 @@ class Windows.System.Diagnostics.ProcessCpuUsage python_type
     default Windows.System.Diagnostics.IProcessCpuUsage
     requires Windows.System.Diagnostics.IProcessCpuUsage
     method get_report
-        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsage shape=4 reverse=22
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsage shape=4
             out class type=Windows.System.Diagnostics.ProcessCpuUsageReport return
 
 class Windows.System.Diagnostics.ProcessCpuUsageReport python_type
@@ -357,10 +357,10 @@ class Windows.System.Diagnostics.ProcessCpuUsageReport python_type
     default Windows.System.Diagnostics.IProcessCpuUsageReport
     requires Windows.System.Diagnostics.IProcessCpuUsageReport
     property kernel_time
-        get get_KernelTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsageReport shape=4 reverse=22
+        get get_KernelTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsageReport shape=4
             out timespan return
     property user_time
-        get get_UserTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsageReport shape=4 reverse=43
+        get get_UserTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessCpuUsageReport shape=4
             out timespan return
 
 class Windows.System.Diagnostics.ProcessDiagnosticInfo python_type
@@ -372,40 +372,40 @@ class Windows.System.Diagnostics.ProcessDiagnosticInfo python_type
     factory Windows.System.Diagnostics.IProcessDiagnosticInfoStatics
     factory Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2
     property cpu_usage
-        get get_CpuUsage slot=12 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=162
+        get get_CpuUsage slot=12 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out class type=Windows.System.Diagnostics.ProcessCpuUsage return
     property disk_usage
-        get get_DiskUsage slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=121
+        get get_DiskUsage slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out class type=Windows.System.Diagnostics.ProcessDiskUsage return
     property executable_file_name
-        get get_ExecutableFileName slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=43
+        get get_ExecutableFileName slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out string return
     property memory_usage
-        get get_MemoryUsage slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=141
+        get get_MemoryUsage slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out class type=Windows.System.Diagnostics.ProcessMemoryUsage return
     property parent
-        get get_Parent slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=62
+        get get_Parent slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
     property process_id
-        get get_ProcessId slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=22
+        get get_ProcessId slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out uint32 return
     property process_start_time
-        get get_ProcessStartTime slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4 reverse=99
+        get get_ProcessStartTime slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo shape=4
             out datetime return
     property is_packaged
-        get get_IsPackaged slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo2 shape=4 reverse=43
+        get get_IsPackaged slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo2 shape=4
             out boolean return
     method get_app_diagnostic_infos
-        method GetAppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo2 shape=4 reverse=22
+        method GetAppDiagnosticInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo> return
     method get_for_current_process static
-        method GetForCurrentProcess slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics shape=4 reverse=43 static
+        method GetForCurrentProcess slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics shape=4 static
             out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
     method get_for_processes static
-        method GetForProcesses slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics shape=4 reverse=22 static
+        method GetForProcesses slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.System.Diagnostics.ProcessDiagnosticInfo> return
     method try_get_for_process_id static
-        method TryGetForProcessId slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2 shape=51 reverse=24 static
+        method TryGetForProcessId slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiagnosticInfoStatics2 shape=51 static
             in uint32 name=processId
             out class type=Windows.System.Diagnostics.ProcessDiagnosticInfo return
 
@@ -415,7 +415,7 @@ class Windows.System.Diagnostics.ProcessDiskUsage python_type
     default Windows.System.Diagnostics.IProcessDiskUsage
     requires Windows.System.Diagnostics.IProcessDiskUsage
     method get_report
-        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsage shape=4 reverse=22
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsage shape=4
             out class type=Windows.System.Diagnostics.ProcessDiskUsageReport return
 
 class Windows.System.Diagnostics.ProcessDiskUsageReport python_type
@@ -424,22 +424,22 @@ class Windows.System.Diagnostics.ProcessDiskUsageReport python_type
     default Windows.System.Diagnostics.IProcessDiskUsageReport
     requires Windows.System.Diagnostics.IProcessDiskUsageReport
     property bytes_read_count
-        get get_BytesReadCount slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=99
+        get get_BytesReadCount slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4
             out int64 return
     property bytes_written_count
-        get get_BytesWrittenCount slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=121
+        get get_BytesWrittenCount slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4
             out int64 return
     property other_bytes_count
-        get get_OtherBytesCount slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=141
+        get get_OtherBytesCount slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4
             out int64 return
     property other_operation_count
-        get get_OtherOperationCount slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=62
+        get get_OtherOperationCount slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4
             out int64 return
     property read_operation_count
-        get get_ReadOperationCount slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=22
+        get get_ReadOperationCount slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4
             out int64 return
     property write_operation_count
-        get get_WriteOperationCount slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4 reverse=43
+        get get_WriteOperationCount slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessDiskUsageReport shape=4
             out int64 return
 
 class Windows.System.Diagnostics.ProcessMemoryUsage python_type
@@ -448,7 +448,7 @@ class Windows.System.Diagnostics.ProcessMemoryUsage python_type
     default Windows.System.Diagnostics.IProcessMemoryUsage
     requires Windows.System.Diagnostics.IProcessMemoryUsage
     method get_report
-        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsage shape=4 reverse=22
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsage shape=4
             out class type=Windows.System.Diagnostics.ProcessMemoryUsageReport return
 
 class Windows.System.Diagnostics.ProcessMemoryUsageReport python_type
@@ -457,40 +457,40 @@ class Windows.System.Diagnostics.ProcessMemoryUsageReport python_type
     default Windows.System.Diagnostics.IProcessMemoryUsageReport
     requires Windows.System.Diagnostics.IProcessMemoryUsageReport
     property non_paged_pool_size_in_bytes
-        get get_NonPagedPoolSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=22
+        get get_NonPagedPoolSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property page_fault_count
-        get get_PageFaultCount slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=43
+        get get_PageFaultCount slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint32 return
     property page_file_size_in_bytes
-        get get_PageFileSizeInBytes slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=62
+        get get_PageFileSizeInBytes slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property paged_pool_size_in_bytes
-        get get_PagedPoolSizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=99
+        get get_PagedPoolSizeInBytes slot=9 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property peak_non_paged_pool_size_in_bytes
-        get get_PeakNonPagedPoolSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=121
+        get get_PeakNonPagedPoolSizeInBytes slot=10 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property peak_page_file_size_in_bytes
-        get get_PeakPageFileSizeInBytes slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=141
+        get get_PeakPageFileSizeInBytes slot=11 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property peak_paged_pool_size_in_bytes
-        get get_PeakPagedPoolSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=162
+        get get_PeakPagedPoolSizeInBytes slot=12 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property peak_virtual_memory_size_in_bytes
-        get get_PeakVirtualMemorySizeInBytes slot=13 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=173
+        get get_PeakVirtualMemorySizeInBytes slot=13 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property peak_working_set_size_in_bytes
-        get get_PeakWorkingSetSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=186
+        get get_PeakWorkingSetSizeInBytes slot=14 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property private_page_count
-        get get_PrivatePageCount slot=15 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=194
+        get get_PrivatePageCount slot=15 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property virtual_memory_size_in_bytes
-        get get_VirtualMemorySizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=202
+        get get_VirtualMemorySizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
     property working_set_size_in_bytes
-        get get_WorkingSetSizeInBytes slot=17 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4 reverse=210
+        get get_WorkingSetSizeInBytes slot=17 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.IProcessMemoryUsageReport shape=4
             out uint64 return
 
 class Windows.System.Diagnostics.SystemCpuUsage python_type
@@ -499,7 +499,7 @@ class Windows.System.Diagnostics.SystemCpuUsage python_type
     default Windows.System.Diagnostics.ISystemCpuUsage
     requires Windows.System.Diagnostics.ISystemCpuUsage
     method get_report
-        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsage shape=4 reverse=22
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsage shape=4
             out class type=Windows.System.Diagnostics.SystemCpuUsageReport return
 
 class Windows.System.Diagnostics.SystemCpuUsageReport python_type
@@ -508,13 +508,13 @@ class Windows.System.Diagnostics.SystemCpuUsageReport python_type
     default Windows.System.Diagnostics.ISystemCpuUsageReport
     requires Windows.System.Diagnostics.ISystemCpuUsageReport
     property idle_time
-        get get_IdleTime slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4 reverse=62
+        get get_IdleTime slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4
             out timespan return
     property kernel_time
-        get get_KernelTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4 reverse=22
+        get get_KernelTime slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4
             out timespan return
     property user_time
-        get get_UserTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4 reverse=43
+        get get_UserTime slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemCpuUsageReport shape=4
             out timespan return
 
 class Windows.System.Diagnostics.SystemDiagnosticInfo python_type
@@ -525,19 +525,19 @@ class Windows.System.Diagnostics.SystemDiagnosticInfo python_type
     factory Windows.System.Diagnostics.ISystemDiagnosticInfoStatics
     factory Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2
     property cpu_usage
-        get get_CpuUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfo shape=4 reverse=43
+        get get_CpuUsage slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfo shape=4
             out class type=Windows.System.Diagnostics.SystemCpuUsage return
     property memory_usage
-        get get_MemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfo shape=4 reverse=22
+        get get_MemoryUsage slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfo shape=4
             out class type=Windows.System.Diagnostics.SystemMemoryUsage return
     property preferred_architecture static
-        get get_PreferredArchitecture slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 shape=4 reverse=43 static
+        get get_PreferredArchitecture slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 shape=4 static
             out enum32 type=Windows.System.ProcessorArchitecture return
     method get_for_current_system static
-        method GetForCurrentSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics shape=4 reverse=22 static
+        method GetForCurrentSystem slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics shape=4 static
             out class type=Windows.System.Diagnostics.SystemDiagnosticInfo return
     method is_architecture_supported static
-        method IsArchitectureSupported slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 shape=51 reverse=24 static
+        method IsArchitectureSupported slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.ISystemDiagnosticInfoStatics2 shape=51 static
             in enum32 type=Windows.System.ProcessorArchitecture name=type
             out boolean return
 
@@ -547,7 +547,7 @@ class Windows.System.Diagnostics.SystemMemoryUsage python_type
     default Windows.System.Diagnostics.ISystemMemoryUsage
     requires Windows.System.Diagnostics.ISystemMemoryUsage
     method get_report
-        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsage shape=4 reverse=22
+        method GetReport slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsage shape=4
             out class type=Windows.System.Diagnostics.SystemMemoryUsageReport return
 
 class Windows.System.Diagnostics.SystemMemoryUsageReport python_type
@@ -556,13 +556,13 @@ class Windows.System.Diagnostics.SystemMemoryUsageReport python_type
     default Windows.System.Diagnostics.ISystemMemoryUsageReport
     requires Windows.System.Diagnostics.ISystemMemoryUsageReport
     property available_size_in_bytes
-        get get_AvailableSizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4 reverse=43
+        get get_AvailableSizeInBytes slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4
             out uint64 return
     property committed_size_in_bytes
-        get get_CommittedSizeInBytes slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4 reverse=62
+        get get_CommittedSizeInBytes slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4
             out uint64 return
     property total_physical_size_in_bytes
-        get get_TotalPhysicalSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4 reverse=22
+        get get_TotalPhysicalSizeInBytes slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.ISystemMemoryUsageReport shape=4
             out uint64 return
 
 class Windows.Data.Json.JsonObject external

@@ -90,11 +90,11 @@ class Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceived
     requires Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
     factory Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory shape=51
             in string name=json
             out class type=Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs return
     property json
-        get get_Json slot=6 inputs=0 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs shape=4 reverse=22
+        get get_Json slot=6 inputs=0 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs shape=4
             out string return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs> concrete

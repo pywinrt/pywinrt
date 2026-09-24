@@ -12,16 +12,16 @@ class Windows.UI.ViewManagement.AccessibilitySettings activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property high_contrast
-        get get_HighContrast slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=4 reverse=22
+        get get_HighContrast slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=4
             out boolean return
     property high_contrast_scheme
-        get get_HighContrastScheme slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=4 reverse=43
+        get get_HighContrastScheme slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=4
             out string return
     event high_contrast_changed
-        add add_HighContrastChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=51 reverse=65
+        add add_HighContrastChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.AccessibilitySettings,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_HighContrastChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=26 reverse=110
+        remove remove_HighContrastChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IAccessibilitySettings shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
 
 class Windows.UI.ViewManagement.ActivationViewSwitcher python_type
@@ -30,14 +30,14 @@ class Windows.UI.ViewManagement.ActivationViewSwitcher python_type
     default Windows.UI.ViewManagement.IActivationViewSwitcher
     requires Windows.UI.ViewManagement.IActivationViewSwitcher
     method is_view_presented_on_activation_virtual_desktop
-        method IsViewPresentedOnActivationVirtualDesktop slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IActivationViewSwitcher shape=51 reverse=65
+        method IsViewPresentedOnActivationVirtualDesktop slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IActivationViewSwitcher shape=51
             in int32 name=viewId
             out boolean return
     method show_as_standalone_async
-        method ShowAsStandaloneAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IActivationViewSwitcher shape=51 reverse=24
+        method ShowAsStandaloneAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IActivationViewSwitcher shape=51
             in int32 name=viewId
             out interface type=Windows.Foundation.IAsyncAction return
-        method ShowAsStandaloneAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IActivationViewSwitcher shape=117 reverse=45
+        method ShowAsStandaloneAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IActivationViewSwitcher shape=117
             in int32 name=viewId
             in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=sizePreference
             out interface type=Windows.Foundation.IAsyncAction return
@@ -60,152 +60,152 @@ class Windows.UI.ViewManagement.ApplicationView python_type
     factory Windows.UI.ViewManagement.IApplicationViewStatics3
     factory Windows.UI.ViewManagement.IApplicationViewStatics4
     property is_screen_capture_enabled
-        get get_IsScreenCaptureEnabled slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=141
+        get get_IsScreenCaptureEnabled slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out boolean return
-        put put_IsScreenCaptureEnabled slot=12 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=162
+        put put_IsScreenCaptureEnabled slot=12 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             in boolean name=value
     property title
-        get get_Title slot=14 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=186
+        get get_Title slot=14 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out string return
-        put put_Title slot=13 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=173
+        put put_Title slot=13 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             in string name=value
     property adjacent_to_left_display_edge
-        get get_AdjacentToLeftDisplayEdge slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=43
+        get get_AdjacentToLeftDisplayEdge slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out boolean return
     property adjacent_to_right_display_edge
-        get get_AdjacentToRightDisplayEdge slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=62
+        get get_AdjacentToRightDisplayEdge slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out boolean return
     property id
-        get get_Id slot=15 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=194
+        get get_Id slot=15 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out int32 return
     property is_full_screen
-        get get_IsFullScreen slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=99 deprecated
+        get get_IsFullScreen slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 deprecated
             out boolean return
     property is_on_lock_screen
-        get get_IsOnLockScreen slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=121
+        get get_IsOnLockScreen slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out boolean return
     property orientation
-        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4 reverse=22
+        get get_Orientation slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=4
             out enum32 type=Windows.UI.ViewManagement.ApplicationViewOrientation return
     property suppress_system_overlays
-        get get_SuppressSystemOverlays slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4 reverse=22 deprecated
+        get get_SuppressSystemOverlays slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4 deprecated
             out boolean return
-        put put_SuppressSystemOverlays slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4 reverse=43 deprecated
+        put put_SuppressSystemOverlays slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4 deprecated
             in boolean name=value
     property desired_bounds_mode
-        get get_DesiredBoundsMode slot=12 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4 reverse=162
+        get get_DesiredBoundsMode slot=12 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4
             out enum32 type=Windows.UI.ViewManagement.ApplicationViewBoundsMode return
     property visible_bounds
-        get get_VisibleBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4 reverse=62
+        get get_VisibleBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=4
             out struct type=Windows.Foundation.Rect return
     property full_screen_system_overlay_mode
-        get get_FullScreenSystemOverlayMode slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4 reverse=43
+        get get_FullScreenSystemOverlayMode slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4
             out enum32 type=Windows.UI.ViewManagement.FullScreenSystemOverlayMode return
-        put put_FullScreenSystemOverlayMode slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4 reverse=62
+        put put_FullScreenSystemOverlayMode slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4
             in enum32 type=Windows.UI.ViewManagement.FullScreenSystemOverlayMode name=value
     property title_bar
-        get get_TitleBar slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4 reverse=22
+        get get_TitleBar slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4
             out class type=Windows.UI.ViewManagement.ApplicationViewTitleBar return
     property is_full_screen_mode
-        get get_IsFullScreenMode slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4 reverse=99
+        get get_IsFullScreenMode slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4
             out boolean return
     property view_mode
-        get get_ViewMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=4 reverse=22
+        get get_ViewMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=4
             out enum32 type=Windows.UI.ViewManagement.ApplicationViewMode return
     property persisted_state_id
-        get get_PersistedStateId slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView7 shape=4 reverse=22
+        get get_PersistedStateId slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView7 shape=4
             out string return
-        put put_PersistedStateId slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView7 shape=4 reverse=43
+        put put_PersistedStateId slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView7 shape=4
             in string name=value
     property windowing_environment
-        get get_WindowingEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView9 shape=4 reverse=22
+        get get_WindowingEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView9 shape=4
             out class type=Windows.UI.WindowManagement.WindowingEnvironment return
     property ui_context
-        get get_UIContext slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewWithContext shape=4 reverse=22
+        get get_UIContext slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewWithContext shape=4
             out class type=Windows.UI.UIContext return
     property value static
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics shape=4 reverse=22 static deprecated
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics shape=4 static deprecated
             out enum32 type=Windows.UI.ViewManagement.ApplicationViewState return
     property terminate_app_on_final_view_close static
-        get get_TerminateAppOnFinalViewClose slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics2 shape=4 reverse=43 static
+        get get_TerminateAppOnFinalViewClose slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics2 shape=4 static
             out boolean return
-        put put_TerminateAppOnFinalViewClose slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics2 shape=4 reverse=62 static
+        put put_TerminateAppOnFinalViewClose slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics2 shape=4 static
             in boolean name=value
     property preferred_launch_windowing_mode static
-        get get_PreferredLaunchWindowingMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=4 reverse=22 static
+        get get_PreferredLaunchWindowingMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=4 static
             out enum32 type=Windows.UI.ViewManagement.ApplicationViewWindowingMode return
-        put put_PreferredLaunchWindowingMode slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=4 reverse=43 static
+        put put_PreferredLaunchWindowingMode slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=4 static
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewWindowingMode name=value
     property preferred_launch_view_size static
-        get get_PreferredLaunchViewSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=4 reverse=62 static
+        get get_PreferredLaunchViewSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=4 static
             out struct type=Windows.Foundation.Size return
         put put_PreferredLaunchViewSize slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics3 shape=10 static
             in struct type=Windows.Foundation.Size name=value
     event consolidated
-        add add_Consolidated slot=16 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=51 reverse=203
+        add add_Consolidated slot=16 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.ApplicationView,Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Consolidated slot=17 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView shape=26 reverse=215
+        remove remove_Consolidated slot=17 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event visible_bounds_changed
-        add add_VisibleBoundsChanged slot=9 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=51 reverse=100
+        add add_VisibleBoundsChanged slot=9 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.ApplicationView,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_VisibleBoundsChanged slot=10 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=26 reverse=134
+        remove remove_VisibleBoundsChanged slot=10 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method clear_all_persisted_state static
-        method ClearAllPersistedState slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics4 shape=0 reverse=16 static
+        method ClearAllPersistedState slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics4 shape=0 static
     method clear_persisted_state static
-        method ClearPersistedState slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics4 shape=4 reverse=43 static
+        method ClearPersistedState slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewStatics4 shape=4 static
             in string name=key
     method exit_full_screen_mode
-        method ExitFullScreenMode slot=11 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=0 reverse=137
+        method ExitFullScreenMode slot=11 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=0
     method get_application_view_id_for_window static
-        method GetApplicationViewIdForWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewInteropStatics shape=51 reverse=24 static
+        method GetApplicationViewIdForWindow slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewInteropStatics shape=51 static
             in interface type=Windows.UI.Core.ICoreWindow name=window
             out int32 return
     method get_display_regions
-        method GetDisplayRegions slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView9 shape=4 reverse=43
+        method GetDisplayRegions slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView9 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowManagement.DisplayRegion> return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics2 shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics2 shape=4 static
             out class type=Windows.UI.ViewManagement.ApplicationView return
     method is_view_mode_supported
-        method IsViewModeSupported slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=51 reverse=44
+        method IsViewModeSupported slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=51
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewMode name=viewMode
             out boolean return
     method set_desired_bounds_mode
-        method SetDesiredBoundsMode slot=11 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=51 reverse=144
+        method SetDesiredBoundsMode slot=11 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView2 shape=51
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewBoundsMode name=boundsMode
             out boolean return
     method set_preferred_min_size
         method SetPreferredMinSize slot=14 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=10
             in struct type=Windows.Foundation.Size name=minSize
     method show_standard_system_overlays
-        method ShowStandardSystemOverlays slot=12 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=0 reverse=159
+        method ShowStandardSystemOverlays slot=12 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=0
     method try_consolidate_async
-        method TryConsolidateAsync slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=4 reverse=121
+        method TryConsolidateAsync slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_enter_full_screen_mode
-        method TryEnterFullScreenMode slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4 reverse=121
+        method TryEnterFullScreenMode slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=4
             out boolean return
     method try_enter_view_mode_async
-        method TryEnterViewModeAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=51 reverse=65
+        method TryEnterViewModeAsync slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=51
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewMode name=viewMode
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method TryEnterViewModeAsync slot=9 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=117 reverse=101
+        method TryEnterViewModeAsync slot=9 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView4 shape=117
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewMode name=viewMode
             in class type=Windows.UI.ViewManagement.ViewModePreferences name=viewModePreferences
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_resize_view
-        method TryResizeView slot=13 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=79 reverse=178
+        method TryResizeView slot=13 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=79
             in struct type=Windows.Foundation.Size name=value
             out boolean return
     method try_unsnap static deprecated
-        method TryUnsnap slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics shape=4 reverse=43 static deprecated
+        method TryUnsnap slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics shape=4 static deprecated
             out boolean return
     method try_unsnap_to_fullscreen static deprecated
-        method TryUnsnapToFullscreen slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewFullscreenStatics shape=4 reverse=22 static deprecated
+        method TryUnsnapToFullscreen slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewFullscreenStatics shape=4 static deprecated
             out boolean return
 
 enum Windows.UI.ViewManagement.ApplicationViewBoundsMode python_type
@@ -221,10 +221,10 @@ class Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs python_type
     requires Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs
     requires Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs2
     property is_user_initiated
-        get get_IsUserInitiated slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs shape=4 reverse=22
+        get get_IsUserInitiated slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs shape=4
             out boolean return
     property is_app_initiated
-        get get_IsAppInitiated slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs2 shape=4 reverse=22
+        get get_IsAppInitiated slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewConsolidatedEventArgs2 shape=4
             out boolean return
 
 enum Windows.UI.ViewManagement.ApplicationViewMode python_type
@@ -246,10 +246,10 @@ class Windows.UI.ViewManagement.ApplicationViewScaling python_type
     requires Windows.UI.ViewManagement.IApplicationViewScaling
     factory Windows.UI.ViewManagement.IApplicationViewScalingStatics
     property disable_layout_scaling static
-        get get_DisableLayoutScaling slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewScalingStatics shape=4 reverse=22 static
+        get get_DisableLayoutScaling slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewScalingStatics shape=4 static
             out boolean return
     method try_set_disable_layout_scaling static
-        method TrySetDisableLayoutScaling slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewScalingStatics shape=51 reverse=44 static
+        method TrySetDisableLayoutScaling slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewScalingStatics shape=51 static
             in boolean name=disableLayoutScaling
             out boolean return
 
@@ -267,48 +267,48 @@ class Windows.UI.ViewManagement.ApplicationViewSwitcher static python_type
     factory Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2
     factory Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3
     method disable_showing_main_view_on_activation static
-        method DisableShowingMainViewOnActivation slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=0 reverse=16 static
+        method DisableShowingMainViewOnActivation slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=0 static
     method disable_system_view_activation_policy static
-        method DisableSystemViewActivationPolicy slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2 shape=0 reverse=16 static
+        method DisableSystemViewActivationPolicy slot=6 inputs=0 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2 shape=0 static
     method prepare_for_custom_animated_switch_async static
-        method PrepareForCustomAnimatedSwitchAsync slot=13 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=195 reverse=176 static
+        method PrepareForCustomAnimatedSwitchAsync slot=13 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=195 static
             in int32 name=toViewId
             in int32 name=fromViewId
             in enum_u32 type=Windows.UI.ViewManagement.ApplicationViewSwitchingOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method switch_async static
-        method SwitchAsync slot=10 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=51 reverse=124 static
+        method SwitchAsync slot=10 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=51 static
             in int32 name=viewId
             out interface type=Windows.Foundation.IAsyncAction return
-        method SwitchAsync slot=11 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=117 reverse=145 static
+        method SwitchAsync slot=11 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=117 static
             in int32 name=toViewId
             in int32 name=fromViewId
             out interface type=Windows.Foundation.IAsyncAction return
-        method SwitchAsync slot=12 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=195 reverse=165 static
+        method SwitchAsync slot=12 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=195 static
             in int32 name=toViewId
             in int32 name=fromViewId
             in enum_u32 type=Windows.UI.ViewManagement.ApplicationViewSwitchingOptions name=options
             out interface type=Windows.Foundation.IAsyncAction return
     method try_show_as_standalone_async static
-        method TryShowAsStandaloneAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=51 reverse=44 static
+        method TryShowAsStandaloneAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=51 static
             in int32 name=viewId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method TryShowAsStandaloneAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=117 reverse=66 static
+        method TryShowAsStandaloneAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=117 static
             in int32 name=viewId
             in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=sizePreference
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method TryShowAsStandaloneAsync slot=9 inputs=4 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=239 reverse=103 static
+        method TryShowAsStandaloneAsync slot=9 inputs=4 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics shape=239 static
             in int32 name=viewId
             in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=sizePreference
             in int32 name=anchorViewId
             in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=anchorSizePreference
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_show_as_view_mode_async static
-        method TryShowAsViewModeAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 shape=117 reverse=25 static
+        method TryShowAsViewModeAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 shape=117 static
             in int32 name=viewId
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewMode name=viewMode
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method TryShowAsViewModeAsync slot=7 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 shape=195 reverse=46 static
+        method TryShowAsViewModeAsync slot=7 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 shape=195 static
             in int32 name=viewId
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewMode name=viewMode
             in class type=Windows.UI.ViewManagement.ViewModePreferences name=viewModePreferences
@@ -327,64 +327,64 @@ class Windows.UI.ViewManagement.ApplicationViewTitleBar python_type
     default Windows.UI.ViewManagement.IApplicationViewTitleBar
     requires Windows.UI.ViewManagement.IApplicationViewTitleBar
     property inactive_foreground_color
-        get get_InactiveForegroundColor slot=23 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=242
+        get get_InactiveForegroundColor slot=23 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_InactiveForegroundColor slot=22 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=237
+        put put_InactiveForegroundColor slot=22 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property inactive_background_color
-        get get_InactiveBackgroundColor slot=25 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=252
+        get get_InactiveBackgroundColor slot=25 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_InactiveBackgroundColor slot=24 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=247
+        put put_InactiveBackgroundColor slot=24 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property foreground_color
-        get get_ForegroundColor slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=43
+        get get_ForegroundColor slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ForegroundColor slot=6 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=22
+        put put_ForegroundColor slot=6 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_pressed_foreground_color
-        get get_ButtonPressedForegroundColor slot=19 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=223
+        get get_ButtonPressedForegroundColor slot=19 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonPressedForegroundColor slot=18 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=218
+        put put_ButtonPressedForegroundColor slot=18 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_pressed_background_color
-        get get_ButtonPressedBackgroundColor slot=21 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=232
+        get get_ButtonPressedBackgroundColor slot=21 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonPressedBackgroundColor slot=20 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=228
+        put put_ButtonPressedBackgroundColor slot=20 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_inactive_foreground_color
-        get get_ButtonInactiveForegroundColor slot=27 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=259
+        get get_ButtonInactiveForegroundColor slot=27 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonInactiveForegroundColor slot=26 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=255
+        put put_ButtonInactiveForegroundColor slot=26 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_inactive_background_color
-        get get_ButtonInactiveBackgroundColor slot=29 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=266
+        get get_ButtonInactiveBackgroundColor slot=29 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonInactiveBackgroundColor slot=28 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=263
+        put put_ButtonInactiveBackgroundColor slot=28 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_hover_foreground_color
-        get get_ButtonHoverForegroundColor slot=15 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=194
+        get get_ButtonHoverForegroundColor slot=15 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonHoverForegroundColor slot=14 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=186
+        put put_ButtonHoverForegroundColor slot=14 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_hover_background_color
-        get get_ButtonHoverBackgroundColor slot=17 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=210
+        get get_ButtonHoverBackgroundColor slot=17 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonHoverBackgroundColor slot=16 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=202
+        put put_ButtonHoverBackgroundColor slot=16 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_foreground_color
-        get get_ButtonForegroundColor slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=141
+        get get_ButtonForegroundColor slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonForegroundColor slot=10 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=121
+        put put_ButtonForegroundColor slot=10 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property button_background_color
-        get get_ButtonBackgroundColor slot=13 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=173
+        get get_ButtonBackgroundColor slot=13 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_ButtonBackgroundColor slot=12 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=162
+        put put_ButtonBackgroundColor slot=12 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property background_color
-        get get_BackgroundColor slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=99
+        get get_BackgroundColor slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_BackgroundColor slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4 reverse=62
+        put put_BackgroundColor slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTitleBar shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
 
 class Windows.UI.ViewManagement.ApplicationViewTransferContext activatable python_type
@@ -397,12 +397,12 @@ class Windows.UI.ViewManagement.ApplicationViewTransferContext activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property view_id
-        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTransferContext shape=4 reverse=22
+        get get_ViewId slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTransferContext shape=4
             out int32 return
-        put put_ViewId slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTransferContext shape=4 reverse=43
+        put put_ViewId slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IApplicationViewTransferContext shape=4
             in int32 name=value
     property data_package_format_id static
-        get get_DataPackageFormatId slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTransferContextStatics shape=4 reverse=22 static
+        get get_DataPackageFormatId slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewTransferContextStatics shape=4 static
             out string return
 
 enum Windows.UI.ViewManagement.ApplicationViewWindowingMode python_type
@@ -814,37 +814,37 @@ class Windows.UI.ViewManagement.InputPane python_type
     factory Windows.UI.ViewManagement.IInputPaneStatics
     factory Windows.UI.ViewManagement.IInputPaneStatics2
     property occluded_rect
-        get get_OccludedRect slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane shape=4 reverse=121
+        get get_OccludedRect slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane shape=4
             out struct type=Windows.Foundation.Rect return
     property visible
-        get get_Visible slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneControl shape=4 reverse=22
+        get get_Visible slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneControl shape=4
             out boolean return
-        put put_Visible slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPaneControl shape=4 reverse=43
+        put put_Visible slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPaneControl shape=4
             in boolean name=value
     event hiding
-        add add_Hiding slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane shape=51 reverse=65
+        add add_Hiding slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.InputPane,Windows.UI.ViewManagement.InputPaneVisibilityEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Hiding slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPane shape=26 reverse=110
+        remove remove_Hiding slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPane shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event showing
-        add add_Showing slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane shape=51 reverse=24
+        add add_Showing slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.InputPane,Windows.UI.ViewManagement.InputPaneVisibilityEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Showing slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPane shape=26 reverse=53
+        remove remove_Showing slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPane shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneStatics shape=4 static
             out class type=Windows.UI.ViewManagement.InputPane return
     method get_for_ui_context static
-        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneStatics2 shape=51 reverse=24 static
+        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneStatics2 shape=51 static
             in class type=Windows.UI.UIContext name=context
             out class type=Windows.UI.ViewManagement.InputPane return
     method try_hide
-        method TryHide slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane2 shape=4 reverse=43
+        method TryHide slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane2 shape=4
             out boolean return
     method try_show
-        method TryShow slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane2 shape=4 reverse=22
+        method TryShow slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPane2 shape=4
             out boolean return
 
 class Windows.UI.ViewManagement.InputPaneVisibilityEventArgs python_type
@@ -853,12 +853,12 @@ class Windows.UI.ViewManagement.InputPaneVisibilityEventArgs python_type
     default Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs
     requires Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs
     property ensured_focused_element_in_view
-        get get_EnsuredFocusedElementInView slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs shape=4 reverse=62
+        get get_EnsuredFocusedElementInView slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs shape=4
             out boolean return
-        put put_EnsuredFocusedElementInView slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs shape=4 reverse=43
+        put put_EnsuredFocusedElementInView slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs shape=4
             in boolean name=value
     property occluded_rect
-        get get_OccludedRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs shape=4 reverse=22
+        get get_OccludedRect slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IInputPaneVisibilityEventArgs shape=4
             out struct type=Windows.Foundation.Rect return
 
 class Windows.UI.ViewManagement.ProjectionManager static python_type
@@ -866,16 +866,16 @@ class Windows.UI.ViewManagement.ProjectionManager static python_type
     factory Windows.UI.ViewManagement.IProjectionManagerStatics
     factory Windows.UI.ViewManagement.IProjectionManagerStatics2
     property projection_display_available static
-        get get_ProjectionDisplayAvailable slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=4 reverse=99 static
+        get get_ProjectionDisplayAvailable slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=4 static
             out boolean return
     event projection_display_available_changed static
-        add add_ProjectionDisplayAvailableChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=51 reverse=124 static
+        add add_ProjectionDisplayAvailableChanged slot=10 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProjectionDisplayAvailableChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=26 reverse=156 static
+        remove remove_ProjectionDisplayAvailableChanged slot=11 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_device_selector static
-        method GetDeviceSelector slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics2 shape=4 reverse=99 static
+        method GetDeviceSelector slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics2 shape=4 static
             out string return
     method request_start_projecting_async static
         method RequestStartProjectingAsync slot=7 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics2 shape=198 static
@@ -890,22 +890,22 @@ class Windows.UI.ViewManagement.ProjectionManager static python_type
             in enum32 type=Windows.UI.Popups.Placement name=prefferedPlacement
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method start_projecting_async static
-        method StartProjectingAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=117 reverse=25 static
+        method StartProjectingAsync slot=6 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=117 static
             in int32 name=projectionViewId
             in int32 name=anchorViewId
             out interface type=Windows.Foundation.IAsyncAction return
-        method StartProjectingAsync slot=6 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics2 shape=195 reverse=26 static
+        method StartProjectingAsync slot=6 inputs=3 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics2 shape=195 static
             in int32 name=projectionViewId
             in int32 name=anchorViewId
             in class type=Windows.Devices.Enumeration.DeviceInformation name=displayDeviceInfo
             out interface type=Windows.Foundation.IAsyncAction return
     method stop_projecting_async static
-        method StopProjectingAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=117 reverse=66 static
+        method StopProjectingAsync slot=8 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=117 static
             in int32 name=projectionViewId
             in int32 name=anchorViewId
             out interface type=Windows.Foundation.IAsyncAction return
     method swap_displays_for_views_async static
-        method SwapDisplaysForViewsAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=117 reverse=45 static
+        method SwapDisplaysForViewsAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.IProjectionManagerStatics shape=117 static
             in int32 name=projectionViewId
             in int32 name=anchorViewId
             out interface type=Windows.Foundation.IAsyncAction return
@@ -1082,92 +1082,92 @@ class Windows.UI.ViewManagement.UISettings activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property animations_enabled
-        get get_AnimationsEnabled slot=12 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=162
+        get get_AnimationsEnabled slot=12 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out boolean return
     property caret_blink_rate
-        get get_CaretBlinkRate slot=14 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=186
+        get get_CaretBlinkRate slot=14 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out uint32 return
     property caret_browsing_enabled
-        get get_CaretBrowsingEnabled slot=13 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=173
+        get get_CaretBrowsingEnabled slot=13 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out boolean return
     property caret_width
-        get get_CaretWidth slot=15 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=194
+        get get_CaretWidth slot=15 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out uint32 return
     property cursor_size
-        get get_CursorSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=43
+        get get_CursorSize slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out struct type=Windows.Foundation.Size return
     property double_click_time
-        get get_DoubleClickTime slot=16 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=202
+        get get_DoubleClickTime slot=16 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out uint32 return
     property hand_preference
-        get get_HandPreference slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=22
+        get get_HandPreference slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out enum32 type=Windows.UI.ViewManagement.HandPreference return
     property message_duration
-        get get_MessageDuration slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=141
+        get get_MessageDuration slot=11 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out uint32 return
     property mouse_hover_time
-        get get_MouseHoverTime slot=17 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=210
+        get get_MouseHoverTime slot=17 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out uint32 return
     property scroll_bar_arrow_size
-        get get_ScrollBarArrowSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=99
+        get get_ScrollBarArrowSize slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out struct type=Windows.Foundation.Size return
     property scroll_bar_size
-        get get_ScrollBarSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=62
+        get get_ScrollBarSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out struct type=Windows.Foundation.Size return
     property scroll_bar_thumb_box_size
-        get get_ScrollBarThumbBoxSize slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4 reverse=121
+        get get_ScrollBarThumbBoxSize slot=10 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=4
             out struct type=Windows.Foundation.Size return
     property text_scale_factor
-        get get_TextScaleFactor slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings2 shape=4 reverse=22
+        get get_TextScaleFactor slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings2 shape=4
             out double return
     property advanced_effects_enabled
-        get get_AdvancedEffectsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings4 shape=4 reverse=22
+        get get_AdvancedEffectsEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings4 shape=4
             out boolean return
     property auto_hide_scroll_bars
-        get get_AutoHideScrollBars slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings5 shape=4 reverse=22
+        get get_AutoHideScrollBars slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings5 shape=4
             out boolean return
     event text_scale_factor_changed
-        add add_TextScaleFactorChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings2 shape=51 reverse=44
+        add add_TextScaleFactorChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TextScaleFactorChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings2 shape=26 reverse=82
+        remove remove_TextScaleFactorChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event color_values_changed
-        add add_ColorValuesChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings3 shape=51 reverse=44
+        add add_ColorValuesChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings3 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ColorValuesChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings3 shape=26 reverse=82
+        remove remove_ColorValuesChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings3 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event advanced_effects_enabled_changed
-        add add_AdvancedEffectsEnabledChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings4 shape=51 reverse=44
+        add add_AdvancedEffectsEnabledChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings4 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AdvancedEffectsEnabledChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings4 shape=26 reverse=82
+        remove remove_AdvancedEffectsEnabledChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings4 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     event auto_hide_scroll_bars_changed
-        add add_AutoHideScrollBarsChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings5 shape=51 reverse=44
+        add add_AutoHideScrollBarsChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings5 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings,Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AutoHideScrollBarsChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings5 shape=26 reverse=82
+        remove remove_AutoHideScrollBarsChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings5 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event animations_enabled_changed
-        add add_AnimationsEnabledChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings6 shape=51 reverse=24
+        add add_AnimationsEnabledChanged slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings6 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings,Windows.UI.ViewManagement.UISettingsAnimationsEnabledChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_AnimationsEnabledChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings6 shape=26 reverse=53
+        remove remove_AnimationsEnabledChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings6 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event message_duration_changed
-        add add_MessageDurationChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings6 shape=51 reverse=65
+        add add_MessageDurationChanged slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings6 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings,Windows.UI.ViewManagement.UISettingsMessageDurationChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MessageDurationChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings6 shape=26 reverse=110
+        remove remove_MessageDurationChanged slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUISettings6 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_color_value
-        method GetColorValue slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings3 shape=51 reverse=24
+        method GetColorValue slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings3 shape=51
             in enum32 type=Windows.UI.ViewManagement.UIColorType name=desiredColor
             out struct type=Windows.UI.Color return
     method ui_element_color
-        method UIElementColor slot=18 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=51 reverse=219
+        method UIElementColor slot=18 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUISettings shape=51
             in enum32 type=Windows.UI.ViewManagement.UIElementType name=desiredElement
             out struct type=Windows.UI.Color return
 
@@ -1197,19 +1197,19 @@ class Windows.UI.ViewManagement.UIViewSettings python_type
     requires Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode
     factory Windows.UI.ViewManagement.IUIViewSettingsStatics
     property user_interaction_mode
-        get get_UserInteractionMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettings shape=4 reverse=22
+        get get_UserInteractionMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettings shape=4
             out enum32 type=Windows.UI.ViewManagement.UserInteractionMode return
     event preferred_interaction_mode_changed
-        add add_PreferredInteractionModeChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode shape=51 reverse=44
+        add add_PreferredInteractionModeChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UIViewSettings,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PreferredInteractionModeChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode shape=26 reverse=82
+        remove remove_PreferredInteractionModeChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettingsStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettingsStatics shape=4 static
             out class type=Windows.UI.ViewManagement.UIViewSettings return
     method get_preferred_interaction_mode
-        method GetPreferredInteractionMode slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode shape=117 reverse=25
+        method GetPreferredInteractionMode slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IUIViewSettingsPreferredInteractionMode shape=117
             pass_array enum32 type=Windows.UI.ViewManagement.UserInteractionMode name=supportedModes
             out enum32 type=Windows.UI.ViewManagement.UserInteractionMode return
 
@@ -1226,17 +1226,17 @@ class Windows.UI.ViewManagement.ViewModePreferences python_type
     requires Windows.UI.ViewManagement.IViewModePreferences
     factory Windows.UI.ViewManagement.IViewModePreferencesStatics
     property view_size_preference
-        get get_ViewSizePreference slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=4 reverse=22
+        get get_ViewSizePreference slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=4
             out enum32 type=Windows.UI.ViewManagement.ViewSizePreference return
-        put put_ViewSizePreference slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=4 reverse=43
+        put put_ViewSizePreference slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=4
             in enum32 type=Windows.UI.ViewManagement.ViewSizePreference name=value
     property custom_size
-        get get_CustomSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=4 reverse=62
+        get get_CustomSize slot=8 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=4
             out struct type=Windows.Foundation.Size return
         put put_CustomSize slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.IViewModePreferences shape=10
             in struct type=Windows.Foundation.Size name=value
     method create_default static
-        method CreateDefault slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IViewModePreferencesStatics shape=51 reverse=24 static
+        method CreateDefault slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IViewModePreferencesStatics shape=51 static
             in enum32 type=Windows.UI.ViewManagement.ApplicationViewMode name=mode
             out class type=Windows.UI.ViewManagement.ViewModePreferences return
 

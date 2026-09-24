@@ -9,28 +9,28 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCanc
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest
     property appointment_calendar_local_id
-        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=22
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out string return
     property appointment_local_id
-        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=43
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out string return
     property appointment_original_start_time
-        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=62
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property comment
-        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=121
+        get get_Comment slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out string return
     property notify_invitees
-        get get_NotifyInvitees slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=141
+        get get_NotifyInvitees slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out boolean return
     property subject
-        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=99
+        get get_Subject slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=162
+        method ReportCompletedAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4 reverse=173
+        method ReportFailedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs python_type
@@ -39,10 +39,10 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCanc
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest python_type
@@ -51,23 +51,23 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCrea
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest
     property appointment
-        get get_Appointment slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=43
+        get get_Appointment slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4
             out class type=Windows.ApplicationModel.Appointments.Appointment return
     property appointment_calendar_local_id
-        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=22
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4
             out string return
     property changed_properties
-        get get_ChangedProperties slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=99
+        get get_ChangedProperties slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property notify_invitees
-        get get_NotifyInvitees slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=62
+        get get_NotifyInvitees slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4
             out boolean return
     method report_completed_async
-        method ReportCompletedAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=51 reverse=124
+        method ReportCompletedAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=51
             in class type=Windows.ApplicationModel.Appointments.Appointment name=createdOrUpdatedAppointment
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4 reverse=141
+        method ReportFailedAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs python_type
@@ -76,10 +76,10 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCrea
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest python_type
@@ -88,31 +88,31 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForw
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest
     property appointment_calendar_local_id
-        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=22
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out string return
     property appointment_local_id
-        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=43
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out string return
     property appointment_original_start_time
-        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=62
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property comment
-        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=162
+        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out string return
     property forward_header
-        get get_ForwardHeader slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=141
+        get get_ForwardHeader slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out string return
     property invitees
-        get get_Invitees slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=99
+        get get_Invitees slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Appointments.AppointmentInvitee> return
     property subject
-        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=121
+        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=173
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4 reverse=186
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs python_type
@@ -121,10 +121,10 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForw
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarForwardMeetingRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest python_type
@@ -133,31 +133,31 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProp
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest
     property appointment_calendar_local_id
-        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=22
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out string return
     property appointment_local_id
-        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=43
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out string return
     property appointment_original_start_time
-        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=62
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property comment
-        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=162
+        get get_Comment slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out string return
     property new_duration
-        get get_NewDuration slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=121
+        get get_NewDuration slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out timespan return
     property new_start_time
-        get get_NewStartTime slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=99
+        get get_NewStartTime slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out datetime return
     property subject
-        get get_Subject slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=141
+        get get_Subject slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=173
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4 reverse=186
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs python_type
@@ -166,10 +166,10 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProp
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarProposeNewTimeForMeetingRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest python_type
@@ -178,13 +178,13 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSync
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest
     property appointment_calendar_local_id
-        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4 reverse=22
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4 reverse=43
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4 reverse=62
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs python_type
@@ -193,10 +193,10 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSync
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest python_type
@@ -205,31 +205,31 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpda
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest
     property appointment_calendar_local_id
-        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=22
+        get get_AppointmentCalendarLocalId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out string return
     property appointment_local_id
-        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=43
+        get get_AppointmentLocalId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out string return
     property appointment_original_start_time
-        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=62
+        get get_AppointmentOriginalStartTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property comment
-        get get_Comment slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=141
+        get get_Comment slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out string return
     property response
-        get get_Response slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=99
+        get get_Response slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out enum32 type=Windows.ApplicationModel.Appointments.AppointmentParticipantResponse return
     property send_update
-        get get_SendUpdate slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=162
+        get get_SendUpdate slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out boolean return
     property subject
-        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=121
+        get get_Subject slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=173
+        method ReportCompletedAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4 reverse=186
+        method ReportFailedAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs python_type
@@ -238,10 +238,10 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpda
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarUpdateMeetingResponseRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection python_type
@@ -250,43 +250,43 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProvider
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection
     event cancel_meeting_requested
-        add add_CancelMeetingRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=124
+        add add_CancelMeetingRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CancelMeetingRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=156
+        remove remove_CancelMeetingRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event create_or_update_appointment_requested
-        add add_CreateOrUpdateAppointmentRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=65
+        add add_CreateOrUpdateAppointmentRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CreateOrUpdateAppointmentRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=110
+        remove remove_CreateOrUpdateAppointmentRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event forward_meeting_requested
-        add add_ForwardMeetingRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=163
+        add add_ForwardMeetingRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ForwardMeetingRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=181
+        remove remove_ForwardMeetingRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event propose_new_time_for_meeting_requested
-        add add_ProposeNewTimeForMeetingRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=187
+        add add_ProposeNewTimeForMeetingRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProposeNewTimeForMeetingRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=200
+        remove remove_ProposeNewTimeForMeetingRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sync_requested
-        add add_SyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=24
+        add add_SyncRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=53
+        remove remove_SyncRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event update_meeting_response_requested
-        add add_UpdateMeetingResponseRequested slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51 reverse=203
+        add add_UpdateMeetingResponseRequested slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_UpdateMeetingResponseRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26 reverse=215
+        remove remove_UpdateMeetingResponseRequested slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=18 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=0 reverse=217
+        method Start slot=18 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderConnection shape=0
 
 class Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails python_type
     py AppointmentDataProviderTriggerDetails
@@ -294,7 +294,7 @@ class Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProvider
     default Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails
     requires Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails
     property connection
-        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails shape=4 reverse=22
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Appointments.DataProvider.IAppointmentDataProviderTriggerDetails shape=4
             out class type=Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection return
 
 interface Windows.ApplicationModel.Appointments.DataProvider.IAppointmentCalendarCancelMeetingRequest

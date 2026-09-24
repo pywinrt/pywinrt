@@ -149,7 +149,7 @@ class Windows.Storage.Streams.Buffer python_type buffer buffer_length
     factory Windows.Storage.Streams.IBufferFactory
     factory Windows.Storage.Streams.IBufferStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferFactory shape=51
             in uint32 name=capacity
             out class type=Windows.Storage.Streams.Buffer return
     property length
@@ -161,11 +161,11 @@ class Windows.Storage.Streams.Buffer python_type buffer buffer_length
         get get_Capacity slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IBuffer shape=4 reverse=22
             out uint32 return
     method create_copy_from_memory_buffer static
-        method CreateCopyFromMemoryBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferStatics shape=51 reverse=24 static
+        method CreateCopyFromMemoryBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferStatics shape=51 static
             in interface type=Windows.Foundation.IMemoryBuffer name=input
             out class type=Windows.Storage.Streams.Buffer return
     method create_memory_buffer_over_ibuffer static
-        method CreateMemoryBufferOverIBuffer slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferStatics shape=51 reverse=44 static
+        method CreateMemoryBufferOverIBuffer slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IBufferStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=input
             out class type=Windows.Foundation.MemoryBuffer return
 
@@ -184,7 +184,7 @@ class Windows.Storage.Streams.DataReader python_type closeable
     factory Windows.Storage.Streams.IDataReaderFactory
     factory Windows.Storage.Streams.IDataReaderStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReaderFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReaderFactory shape=51
             in interface type=Windows.Storage.Streams.IInputStream name=inputStream
             out class type=Windows.Storage.Streams.DataReader return
     property unicode_encoding
@@ -214,7 +214,7 @@ class Windows.Storage.Streams.DataReader python_type closeable
         method DetachStream slot=31 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IDataReader shape=4 reverse=273
             out interface type=Windows.Storage.Streams.IInputStream return
     method from_buffer static
-        method FromBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReaderStatics shape=51 reverse=24 static
+        method FromBuffer slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataReaderStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=buffer
             out class type=Windows.Storage.Streams.DataReader return
     method load_async
@@ -310,7 +310,7 @@ class Windows.Storage.Streams.DataWriter activatable python_type closeable
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IDataWriterFactory shape=51
             in interface type=Windows.Storage.Streams.IOutputStream name=outputStream
             out class type=Windows.Storage.Streams.DataWriter return
     property unicode_encoding
@@ -506,7 +506,7 @@ class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
             in uint64 name=position
             out interface type=Windows.Storage.Streams.IOutputStream return
     method open_async static
-        method OpenAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=117 reverse=25 static
+        method OpenAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=117 static
             in string name=filePath
             in enum32 type=Windows.Storage.FileAccessMode name=accessMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
@@ -517,7 +517,7 @@ class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
             in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
     method open_for_user_async static
-        method OpenForUserAsync slot=10 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=195 reverse=126 static
+        method OpenForUserAsync slot=10 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=195 static
             in class type=Windows.System.User name=user
             in string name=filePath
             in enum32 type=Windows.Storage.FileAccessMode name=accessMode
@@ -530,16 +530,16 @@ class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
             in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
     method open_transacted_write_async static
-        method OpenTransactedWriteAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=51 reverse=65 static
+        method OpenTransactedWriteAsync slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=51 static
             in string name=filePath
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
-        method OpenTransactedWriteAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=195 reverse=102 static
+        method OpenTransactedWriteAsync slot=9 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=195 static
             in string name=filePath
             in enum_u32 type=Windows.Storage.StorageOpenOptions name=openOptions
             in enum32 type=Windows.Storage.Streams.FileOpenDisposition name=openDisposition
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
     method open_transacted_write_for_user_async static
-        method OpenTransactedWriteForUserAsync slot=12 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=117 reverse=164 static
+        method OpenTransactedWriteForUserAsync slot=12 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IFileRandomAccessStreamStatics shape=117 static
             in class type=Windows.System.User name=user
             in string name=filePath
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
@@ -1319,12 +1319,12 @@ class Windows.Storage.Streams.RandomAccessStream static python_type
     py RandomAccessStream
     factory Windows.Storage.Streams.IRandomAccessStreamStatics
     method copy_and_close_async static
-        method CopyAndCloseAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=117 reverse=66 static
+        method CopyAndCloseAsync slot=8 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=117 static
             in interface type=Windows.Storage.Streams.IInputStream name=source
             in interface type=Windows.Storage.Streams.IOutputStream name=destination
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
     method copy_async static
-        method CopyAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=117 reverse=25 static
+        method CopyAsync slot=6 inputs=2 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamStatics shape=117 static
             in interface type=Windows.Storage.Streams.IInputStream name=source
             in interface type=Windows.Storage.Streams.IOutputStream name=destination
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> return
@@ -1393,15 +1393,15 @@ class Windows.Storage.Streams.RandomAccessStreamReference python_type
     requires Windows.Storage.Streams.IRandomAccessStreamReference
     factory Windows.Storage.Streams.IRandomAccessStreamReferenceStatics
     method create_from_file static
-        method CreateFromFile slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 reverse=24 static
+        method CreateFromFile slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out class type=Windows.Storage.Streams.RandomAccessStreamReference return
     method create_from_stream static
-        method CreateFromStream slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 reverse=65 static
+        method CreateFromStream slot=8 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
             out class type=Windows.Storage.Streams.RandomAccessStreamReference return
     method create_from_uri static
-        method CreateFromUri slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 reverse=44 static
+        method CreateFromUri slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Streams.IRandomAccessStreamReferenceStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out class type=Windows.Storage.Streams.RandomAccessStreamReference return
     method open_read_async

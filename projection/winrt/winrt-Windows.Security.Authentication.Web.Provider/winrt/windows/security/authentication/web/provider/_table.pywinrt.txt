@@ -797,23 +797,23 @@ class Windows.Security.Authentication.Web.Provider.WebAccountClientView python_t
     requires Windows.Security.Authentication.Web.Provider.IWebAccountClientView
     factory Windows.Security.Authentication.Web.Provider.IWebAccountClientViewFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientViewFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientViewFactory shape=117
             in enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountClientViewType name=viewType
             in class type=Windows.Foundation.Uri name=applicationCallbackUri
             out class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView return
-        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientViewFactory shape=195 reverse=46
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientViewFactory shape=195
             in enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountClientViewType name=viewType
             in class type=Windows.Foundation.Uri name=applicationCallbackUri
             in string name=accountPairwiseId
             out class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView return
     property account_pairwise_id
-        get get_AccountPairwiseId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientView shape=4 reverse=62
+        get get_AccountPairwiseId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientView shape=4
             out string return
     property application_callback_uri
-        get get_ApplicationCallbackUri slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientView shape=4 reverse=22
+        get get_ApplicationCallbackUri slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientView shape=4
             out class type=Windows.Foundation.Uri return
     property type
-        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientView shape=4 reverse=43
+        get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountClientView shape=4
             out enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountClientViewType return
 
 enum Windows.Security.Authentication.Web.Provider.WebAccountClientViewType python_type
@@ -831,18 +831,18 @@ class Windows.Security.Authentication.Web.Provider.WebAccountManager static pyth
     factory Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics
     factory Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics
     method add_web_account_async static
-        method AddWebAccountAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=195 reverse=46 static
+        method AddWebAccountAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=195 static
             in string name=webAccountId
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
-        method AddWebAccountAsync slot=6 inputs=4 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=239 reverse=27 static
+        method AddWebAccountAsync slot=6 inputs=4 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=239 static
             in string name=webAccountId
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props
             in enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountScope name=scope
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
-        method AddWebAccountAsync slot=6 inputs=5 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=267 reverse=516 static
+        method AddWebAccountAsync slot=6 inputs=5 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=267 static
             in string name=webAccountId
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props
@@ -856,7 +856,7 @@ class Windows.Security.Authentication.Web.Provider.WebAccountManager static pyth
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
-        method AddWebAccountForUserAsync slot=8 inputs=5 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics3 shape=267 reverse=70 static
+        method AddWebAccountForUserAsync slot=8 inputs=5 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics3 shape=267 static
             in class type=Windows.System.User name=user
             in string name=webAccountId
             in string name=webAccountUserName
@@ -872,80 +872,80 @@ class Windows.Security.Authentication.Web.Provider.WebAccountManager static pyth
             in string name=perUserWebAccountId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
     method clear_per_user_from_per_app_account_async static
-        method ClearPerUserFromPerAppAccountAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=51 reverse=100 static
+        method ClearPerUserFromPerAppAccountAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=perAppAccount
             out interface type=Windows.Foundation.IAsyncAction return
     method clear_view_async static
-        method ClearViewAsync slot=12 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 reverse=164 static
+        method ClearViewAsync slot=12 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in class type=Windows.Foundation.Uri name=applicationCallbackUri
             out interface type=Windows.Foundation.IAsyncAction return
     method clear_web_account_picture_async static
-        method ClearWebAccountPictureAsync slot=15 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=51 reverse=196 static
+        method ClearWebAccountPictureAsync slot=15 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             out interface type=Windows.Foundation.IAsyncAction return
     method delete_web_account_async static
-        method DeleteWebAccountAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=51 reverse=65 static
+        method DeleteWebAccountAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             out interface type=Windows.Foundation.IAsyncAction return
     method find_all_provider_web_accounts_async static
-        method FindAllProviderWebAccountsAsync slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=4 reverse=99 static
+        method FindAllProviderWebAccountsAsync slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount>> return
     method find_all_provider_web_accounts_for_user_async static
-        method FindAllProviderWebAccountsForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics3 shape=51 reverse=24 static
+        method FindAllProviderWebAccountsForUserAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics3 shape=51 static
             in class type=Windows.System.User name=user
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount>> return
     method get_per_user_from_per_app_account_async static
-        method GetPerUserFromPerAppAccountAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=51 reverse=65 static
+        method GetPerUserFromPerAppAccountAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=perAppAccount
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
     method get_scope static
-        method GetScope slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=51 reverse=65 static
+        method GetScope slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             out enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountScope return
     method get_views_async static
-        method GetViewsAsync slot=13 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=51 reverse=174 static
+        method GetViewsAsync slot=13 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Web.Provider.WebAccountClientView>> return
     method invalidate_app_cache_for_account_async static
-        method InvalidateAppCacheForAccountAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics4 shape=51 reverse=44 static
+        method InvalidateAppCacheForAccountAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics4 shape=51 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             out interface type=Windows.Foundation.IAsyncAction return
     method invalidate_app_cache_for_all_accounts_async static
-        method InvalidateAppCacheForAllAccountsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics4 shape=4 reverse=22 static
+        method InvalidateAppCacheForAllAccountsAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics4 shape=4 static
             out interface type=Windows.Foundation.IAsyncAction return
     method pull_cookies_async static
-        method PullCookiesAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics2 shape=117 reverse=25 static
+        method PullCookiesAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics2 shape=117 static
             in string name=uriString
             in string name=callerPFN
             out interface type=Windows.Foundation.IAsyncAction return
     method push_cookies_async static
-        method PushCookiesAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 reverse=125 static
+        method PushCookiesAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 static
             in class type=Windows.Foundation.Uri name=uri
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> name=cookies
             out interface type=Windows.Foundation.IAsyncAction return
     method set_per_app_to_per_user_account_async static
-        method SetPerAppToPerUserAccountAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=117 reverse=45 static
+        method SetPerAppToPerUserAccountAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=117 static
             in class type=Windows.Security.Credentials.WebAccount name=perAppAccount
             in string name=perUserWebAccountId
             out interface type=Windows.Foundation.IAsyncAction return
     method set_scope_async static
-        method SetScopeAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=117 reverse=45 static
+        method SetScopeAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountScopeManagerStatics shape=117 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountScope name=scope
             out interface type=Windows.Foundation.IAsyncAction return
     method set_view_async static
-        method SetViewAsync slot=11 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 reverse=145 static
+        method SetViewAsync slot=11 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in class type=Windows.Security.Authentication.Web.Provider.WebAccountClientView name=view
             out interface type=Windows.Foundation.IAsyncAction return
     method set_web_account_picture_async static
-        method SetWebAccountPictureAsync slot=14 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 reverse=188 static
+        method SetWebAccountPictureAsync slot=14 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=117 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=webAccountPicture
             out interface type=Windows.Foundation.IAsyncAction return
     method update_web_account_properties_async static
-        method UpdateWebAccountPropertiesAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=195 reverse=26 static
+        method UpdateWebAccountPropertiesAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountManagerStatics shape=195 static
             in class type=Windows.Security.Credentials.WebAccount name=webAccount
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=additionalProperties
@@ -961,7 +961,7 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountO
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation shape=4 reverse=22
             out enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind return
     method report_completed
-        method ReportCompleted slot=6 inputs=0 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderAddAccountOperation shape=0 reverse=16
+        method ReportCompleted slot=6 inputs=0 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderAddAccountOperation shape=0
 
 class Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation python_type
     py WebAccountProviderDeleteAccountOperation
@@ -971,7 +971,7 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccou
     requires Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation
     requires Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation
     property web_account
-        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderDeleteAccountOperation shape=4 reverse=22
+        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderDeleteAccountOperation shape=4
             out class type=Windows.Security.Credentials.WebAccount return
     property kind
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation shape=4 reverse=22
@@ -1021,13 +1021,13 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccou
     requires Windows.Security.Authentication.Web.Provider.IWebAccountProviderManageAccountOperation
     requires Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation
     property web_account
-        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderManageAccountOperation shape=4 reverse=22
+        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderManageAccountOperation shape=4
             out class type=Windows.Security.Credentials.WebAccount return
     property kind
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation shape=4 reverse=22
             out enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind return
     method report_completed
-        method ReportCompleted slot=7 inputs=0 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderManageAccountOperation shape=0 reverse=37
+        method ReportCompleted slot=7 inputs=0 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderManageAccountOperation shape=0
 
 enum Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind python_type
     py WebAccountProviderOperationKind
@@ -1081,18 +1081,18 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCoo
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation shape=4 reverse=22
             out enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind return
     property uri
-        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4 reverse=99
+        get get_Uri slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Uri slot=8 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4 reverse=62
+        put put_Uri slot=8 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4
             in class type=Windows.Foundation.Uri name=uri
     property application_callback_uri
-        get get_ApplicationCallbackUri slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4 reverse=121
+        get get_ApplicationCallbackUri slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4
             out class type=Windows.Foundation.Uri return
     property context
-        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4 reverse=22
+        get get_Context slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4
             out class type=Windows.Foundation.Uri return
     property cookies
-        get get_Cookies slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4 reverse=43
+        get get_Cookies slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderRetrieveCookiesOperation shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpCookie> return
     method report_completed
         method ReportCompleted slot=6 inputs=0 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation shape=0 reverse=16
@@ -1111,13 +1111,13 @@ class Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAcco
         get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation shape=4 reverse=22
             out enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind return
     property application_callback_uri
-        get get_ApplicationCallbackUri slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderSignOutAccountOperation shape=4 reverse=43
+        get get_ApplicationCallbackUri slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderSignOutAccountOperation shape=4
             out class type=Windows.Foundation.Uri return
     property client_id
-        get get_ClientId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderSignOutAccountOperation shape=4 reverse=62
+        get get_ClientId slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderSignOutAccountOperation shape=4
             out string return
     property web_account
-        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderSignOutAccountOperation shape=4 reverse=22
+        get get_WebAccount slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderSignOutAccountOperation shape=4
             out class type=Windows.Security.Credentials.WebAccount return
     method report_completed
         method ReportCompleted slot=6 inputs=0 outputs=0 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountProviderBaseReportOperation shape=0 reverse=16
@@ -1158,34 +1158,34 @@ class Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest pytho
     requires Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest2
     requires Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3
     property application_callback_uri
-        get get_ApplicationCallbackUri slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4 reverse=99
+        get get_ApplicationCallbackUri slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4
             out class type=Windows.Foundation.Uri return
     property client_request
-        get get_ClientRequest slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4 reverse=22
+        get get_ClientRequest slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4
             out class type=Windows.Security.Authentication.Web.Core.WebTokenRequest return
     property web_account_selection_options
-        get get_WebAccountSelectionOptions slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4 reverse=62
+        get get_WebAccountSelectionOptions slot=8 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4
             out enum_u32 type=Windows.Security.Authentication.Web.Provider.WebAccountSelectionOptions return
     property web_accounts
-        get get_WebAccounts slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4 reverse=43
+        get get_WebAccounts slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Credentials.WebAccount> return
     property application_package_family_name
-        get get_ApplicationPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3 shape=4 reverse=22
+        get get_ApplicationPackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3 shape=4
             out string return
     property application_process_name
-        get get_ApplicationProcessName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3 shape=4 reverse=43
+        get get_ApplicationProcessName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3 shape=4
             out string return
     method check_application_for_capability_async
-        method CheckApplicationForCapabilityAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3 shape=51 reverse=65
+        method CheckApplicationForCapabilityAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest3 shape=51
             in string name=capabilityName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method get_application_token_binding_key_async
-        method GetApplicationTokenBindingKeyAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=117 reverse=125
+        method GetApplicationTokenBindingKeyAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest shape=117
             in enum32 type=Windows.Security.Authentication.Web.TokenBindingKeyType name=keyType
             in class type=Windows.Foundation.Uri name=target
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Cryptography.Core.CryptographicKey> return
     method get_application_token_binding_key_id_async
-        method GetApplicationTokenBindingKeyIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest2 shape=117 reverse=25
+        method GetApplicationTokenBindingKeyIdAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenRequest2 shape=117
             in enum32 type=Windows.Security.Authentication.Web.TokenBindingKeyType name=keyType
             in class type=Windows.Foundation.Uri name=target
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
@@ -1197,11 +1197,11 @@ class Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse pyth
     requires Windows.Security.Authentication.Web.Provider.IWebProviderTokenResponse
     factory Windows.Security.Authentication.Web.Provider.IWebProviderTokenResponseFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenResponseFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenResponseFactory shape=51
             in class type=Windows.Security.Authentication.Web.Core.WebTokenResponse name=webTokenResponse
             out class type=Windows.Security.Authentication.Web.Provider.WebProviderTokenResponse return
     property client_response
-        get get_ClientResponse slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenResponse shape=4 reverse=22
+        get get_ClientResponse slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebProviderTokenResponse shape=4
             out class type=Windows.Security.Authentication.Web.Core.WebTokenResponse return
 
 class System.Boolean external

@@ -33,11 +33,11 @@ class Windows.Gaming.Input.ForceFeedback.ConditionForceEffect python_type
     requires Windows.Gaming.Input.ForceFeedback.IConditionForceEffect
     factory Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory shape=51
             in enum32 type=Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind name=effectKind
             out class type=Windows.Gaming.Input.ForceFeedback.ConditionForceEffect return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffect shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffect shape=4
             out enum32 type=Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind return
     property gain
         get get_Gain slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=22
@@ -135,40 +135,40 @@ class Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor python_type
     default Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor
     requires Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor
     property master_gain
-        get get_MasterGain slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=43
+        get get_MasterGain slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out double return
         put put_MasterGain slot=8 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=2
             in double name=value
     property are_effects_paused
-        get get_AreEffectsPaused slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=22
+        get get_AreEffectsPaused slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out boolean return
     property is_enabled
-        get get_IsEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=99
+        get get_IsEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out boolean return
     property supported_axes
-        get get_SupportedAxes slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=121
+        get get_SupportedAxes slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out enum_u32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes return
     method load_effect_async
-        method LoadEffectAsync slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=51 reverse=144
+        method LoadEffectAsync slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=51
             in interface type=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect name=effect
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> return
     method pause_all_effects
-        method PauseAllEffects slot=12 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0 reverse=159
+        method PauseAllEffects slot=12 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0
     method resume_all_effects
-        method ResumeAllEffects slot=13 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0 reverse=169
+        method ResumeAllEffects slot=13 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0
     method stop_all_effects
-        method StopAllEffects slot=14 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0 reverse=185
+        method StopAllEffects slot=14 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0
     method try_disable_async
-        method TryDisableAsync slot=15 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=194
+        method TryDisableAsync slot=15 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_enable_async
-        method TryEnableAsync slot=16 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=202
+        method TryEnableAsync slot=16 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_reset_async
-        method TryResetAsync slot=17 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4 reverse=210
+        method TryResetAsync slot=17 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_unload_effect_async
-        method TryUnloadEffectAsync slot=18 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=51 reverse=219
+        method TryUnloadEffectAsync slot=18 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=51
             in interface type=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect name=effect
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -276,7 +276,7 @@ class Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect python_type
     requires Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect
     factory Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory shape=51
             in enum32 type=Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind name=effectKind
             out class type=Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect return
     property gain
@@ -288,7 +288,7 @@ class Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect python_type
         get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=62
             out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState return
     property kind
-        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect shape=4 reverse=22
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect shape=4
             out enum32 type=Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind return
     method set_parameters
         method SetParameters slot=7 inputs=5 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect shape=257

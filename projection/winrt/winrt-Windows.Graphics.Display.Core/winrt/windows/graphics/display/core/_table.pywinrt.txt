@@ -53,25 +53,25 @@ class Windows.Graphics.Display.Core.HdmiDisplayInformation python_type
     requires Windows.Graphics.Display.Core.IHdmiDisplayInformation
     factory Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics
     event display_modes_changed
-        add add_DisplayModesChanged slot=12 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=51 reverse=163
+        add add_DisplayModesChanged slot=12 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.Core.HdmiDisplayInformation,System.Object> name=value
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DisplayModesChanged slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=26 reverse=181
+        remove remove_DisplayModesChanged slot=13 inputs=1 outputs=0 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_current_display_mode
-        method GetCurrentDisplayMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4 reverse=43
+        method GetCurrentDisplayMode slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4
             out class type=Windows.Graphics.Display.Core.HdmiDisplayMode return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformationStatics shape=4 static
             out class type=Windows.Graphics.Display.Core.HdmiDisplayInformation return
     method get_supported_display_modes
-        method GetSupportedDisplayModes slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4 reverse=22
+        method GetSupportedDisplayModes slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.Core.HdmiDisplayMode> return
     method request_set_current_display_mode_async
-        method RequestSetCurrentDisplayModeAsync slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=51 reverse=100
+        method RequestSetCurrentDisplayModeAsync slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=51
             in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-        method RequestSetCurrentDisplayModeAsync slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=117 reverse=125
+        method RequestSetCurrentDisplayModeAsync slot=10 inputs=2 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=117
             in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
             in enum32 type=Windows.Graphics.Display.Core.HdmiDisplayHdrOption name=hdrOption
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
@@ -81,7 +81,7 @@ class Windows.Graphics.Display.Core.HdmiDisplayInformation python_type
             in struct type=Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata name=hdrMetadata
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method set_default_display_mode_async
-        method SetDefaultDisplayModeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4 reverse=62
+        method SetDefaultDisplayModeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayInformation shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.Graphics.Display.Core.HdmiDisplayMode python_type
@@ -91,40 +91,40 @@ class Windows.Graphics.Display.Core.HdmiDisplayMode python_type
     requires Windows.Graphics.Display.Core.IHdmiDisplayMode
     requires Windows.Graphics.Display.Core.IHdmiDisplayMode2
     property bits_per_pixel
-        get get_BitsPerPixel slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=121
+        get get_BitsPerPixel slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out uint16 return
     property color_space
-        get get_ColorSpace slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=162
+        get get_ColorSpace slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out enum32 type=Windows.Graphics.Display.Core.HdmiDisplayColorSpace return
     property is2086_metadata_supported
-        get get_Is2086MetadataSupported slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=202
+        get get_Is2086MetadataSupported slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out boolean return
     property is_sdr_luminance_supported
-        get get_IsSdrLuminanceSupported slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=186
+        get get_IsSdrLuminanceSupported slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out boolean return
     property is_smpte2084_supported
-        get get_IsSmpte2084Supported slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=194
+        get get_IsSmpte2084Supported slot=15 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out boolean return
     property pixel_encoding
-        get get_PixelEncoding slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=173
+        get get_PixelEncoding slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out enum32 type=Windows.Graphics.Display.Core.HdmiDisplayPixelEncoding return
     property refresh_rate
-        get get_RefreshRate slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=62
+        get get_RefreshRate slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out double return
     property resolution_height_in_raw_pixels
-        get get_ResolutionHeightInRawPixels slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=43
+        get get_ResolutionHeightInRawPixels slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out uint32 return
     property resolution_width_in_raw_pixels
-        get get_ResolutionWidthInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=22
+        get get_ResolutionWidthInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out uint32 return
     property stereo_enabled
-        get get_StereoEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4 reverse=99
+        get get_StereoEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=4
             out boolean return
     property is_dolby_vision_low_latency_supported
-        get get_IsDolbyVisionLowLatencySupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode2 shape=4 reverse=22
+        get get_IsDolbyVisionLowLatencySupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode2 shape=4
             out boolean return
     method is_equal
-        method IsEqual slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=51 reverse=144
+        method IsEqual slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Display.Core.IHdmiDisplayMode shape=51
             in class type=Windows.Graphics.Display.Core.HdmiDisplayMode name=mode
             out boolean return
 

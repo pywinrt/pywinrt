@@ -89,50 +89,50 @@ class Windows.Media.Editing.BackgroundAudioTrack python_type
     requires Windows.Media.Editing.IBackgroundAudioTrack
     factory Windows.Media.Editing.IBackgroundAudioTrackStatics
     property volume
-        get get_Volume slot=16 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=202
+        get get_Volume slot=16 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out double return
         put put_Volume slot=15 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=2
             in double name=value
     property trim_time_from_start
-        get get_TrimTimeFromStart slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=22
+        get get_TrimTimeFromStart slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out timespan return
-        put put_TrimTimeFromStart slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26 reverse=53
+        put put_TrimTimeFromStart slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26
             in timespan name=value
     property trim_time_from_end
-        get get_TrimTimeFromEnd slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=62
+        get get_TrimTimeFromEnd slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out timespan return
-        put put_TrimTimeFromEnd slot=9 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26 reverse=110
+        put put_TrimTimeFromEnd slot=9 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26
             in timespan name=value
     property delay
-        get get_Delay slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=186
+        get get_Delay slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out timespan return
-        put put_Delay slot=13 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26 reverse=181
+        put put_Delay slot=13 inputs=1 outputs=0 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=26
             in timespan name=value
     property audio_effect_definitions
-        get get_AudioEffectDefinitions slot=19 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=223
+        get get_AudioEffectDefinitions slot=19 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> return
     property original_duration
-        get get_OriginalDuration slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=121
+        get get_OriginalDuration slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out timespan return
     property trimmed_duration
-        get get_TrimmedDuration slot=11 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=141
+        get get_TrimmedDuration slot=11 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out timespan return
     property user_data
-        get get_UserData slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=162
+        get get_UserData slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     method clone
-        method Clone slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=210
+        method Clone slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out class type=Windows.Media.Editing.BackgroundAudioTrack return
     method create_from_embedded_audio_track static
-        method CreateFromEmbeddedAudioTrack slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrackStatics shape=51 reverse=24 static
+        method CreateFromEmbeddedAudioTrack slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrackStatics shape=51 static
             in class type=Windows.Media.Editing.EmbeddedAudioTrack name=embeddedAudioTrack
             out class type=Windows.Media.Editing.BackgroundAudioTrack return
     method create_from_file_async static
-        method CreateFromFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrackStatics shape=51 reverse=44 static
+        method CreateFromFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrackStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.BackgroundAudioTrack> return
     method get_audio_encoding_properties
-        method GetAudioEncodingProperties slot=18 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4 reverse=218
+        method GetAudioEncodingProperties slot=18 inputs=0 outputs=1 declaring=Windows.Media.Editing.IBackgroundAudioTrack shape=4
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
 
 class Windows.Media.Editing.EmbeddedAudioTrack python_type
@@ -141,7 +141,7 @@ class Windows.Media.Editing.EmbeddedAudioTrack python_type
     default Windows.Media.Editing.IEmbeddedAudioTrack
     requires Windows.Media.Editing.IEmbeddedAudioTrack
     method get_audio_encoding_properties
-        method GetAudioEncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IEmbeddedAudioTrack shape=4 reverse=22
+        method GetAudioEncodingProperties slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IEmbeddedAudioTrack shape=4
             out class type=Windows.Media.MediaProperties.AudioEncodingProperties return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> concrete awaitable
@@ -1284,51 +1284,51 @@ class Windows.Media.Editing.MediaClip python_type
     factory Windows.Media.Editing.IMediaClipStatics
     factory Windows.Media.Editing.IMediaClipStatics2
     property selected_embedded_audio_track_index
-        get get_SelectedEmbeddedAudioTrackIndex slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=210
+        get get_SelectedEmbeddedAudioTrackIndex slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out uint32 return
-        put put_SelectedEmbeddedAudioTrackIndex slot=18 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=218
+        put put_SelectedEmbeddedAudioTrackIndex slot=18 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=4
             in uint32 name=value
     property trim_time_from_end
-        get get_TrimTimeFromEnd slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=62
+        get get_TrimTimeFromEnd slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out timespan return
-        put put_TrimTimeFromEnd slot=9 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=26 reverse=110
+        put put_TrimTimeFromEnd slot=9 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=26
             in timespan name=value
     property volume
-        get get_Volume slot=20 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=228
+        get get_Volume slot=20 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out double return
         put put_Volume slot=19 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=2
             in double name=value
     property trim_time_from_start
-        get get_TrimTimeFromStart slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=22
+        get get_TrimTimeFromStart slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out timespan return
-        put put_TrimTimeFromStart slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=26 reverse=53
+        put put_TrimTimeFromStart slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaClip shape=26
             in timespan name=value
     property embedded_audio_tracks
-        get get_EmbeddedAudioTracks slot=16 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=202
+        get get_EmbeddedAudioTracks slot=16 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Editing.EmbeddedAudioTrack> return
     property end_time_in_composition
-        get get_EndTimeInComposition slot=15 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=194
+        get get_EndTimeInComposition slot=15 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out timespan return
     property original_duration
-        get get_OriginalDuration slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=121
+        get get_OriginalDuration slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out timespan return
     property start_time_in_composition
-        get get_StartTimeInComposition slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=186
+        get get_StartTimeInComposition slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out timespan return
     property trimmed_duration
-        get get_TrimmedDuration slot=11 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=141
+        get get_TrimmedDuration slot=11 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out timespan return
     property user_data
-        get get_UserData slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=162
+        get get_UserData slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property video_effect_definitions
-        get get_VideoEffectDefinitions slot=23 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=242
+        get get_VideoEffectDefinitions slot=23 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IVideoEffectDefinition> return
     property audio_effect_definitions
-        get get_AudioEffectDefinitions slot=22 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=237
+        get get_AudioEffectDefinitions slot=22 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Effects.IAudioEffectDefinition> return
     method clone
-        method Clone slot=13 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=173
+        method Clone slot=13 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out class type=Windows.Media.Editing.MediaClip return
     method create_from_color static
         method CreateFromColor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics shape=176 static
@@ -1336,7 +1336,7 @@ class Windows.Media.Editing.MediaClip python_type
             in timespan name=originalDuration
             out class type=Windows.Media.Editing.MediaClip return
     method create_from_file_async static
-        method CreateFromFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics shape=51 reverse=44 static
+        method CreateFromFileAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaClipStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaClip> return
     method create_from_image_file_async static
@@ -1350,7 +1350,7 @@ class Windows.Media.Editing.MediaClip python_type
             in timespan name=originalDuration
             out class type=Windows.Media.Editing.MediaClip return
     method get_video_encoding_properties
-        method GetVideoEncodingProperties slot=21 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4 reverse=232
+        method GetVideoEncodingProperties slot=21 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaClip shape=4
             out class type=Windows.Media.MediaProperties.VideoEncodingProperties return
 
 class Windows.Media.Editing.MediaComposition activatable python_type
@@ -1364,34 +1364,34 @@ class Windows.Media.Editing.MediaComposition activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property background_audio_tracks
-        get get_BackgroundAudioTracks slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=62
+        get get_BackgroundAudioTracks slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.BackgroundAudioTrack> return
     property clips
-        get get_Clips slot=7 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=43
+        get get_Clips slot=7 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaClip> return
     property duration
-        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=22
+        get get_Duration slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out timespan return
     property user_data
-        get get_UserData slot=9 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=99
+        get get_UserData slot=9 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
     property overlay_layers
-        get get_OverlayLayers slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition2 shape=4 reverse=22
+        get get_OverlayLayers slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlayLayer> return
     method clone
-        method Clone slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=121
+        method Clone slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out class type=Windows.Media.Editing.MediaComposition return
     method create_default_encoding_profile
-        method CreateDefaultEncodingProfile slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=210
+        method CreateDefaultEncodingProfile slot=17 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out class type=Windows.Media.MediaProperties.MediaEncodingProfile return
     method generate_media_stream_source
-        method GenerateMediaStreamSource slot=18 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4 reverse=218
+        method GenerateMediaStreamSource slot=18 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=4
             out class type=Windows.Media.Core.MediaStreamSource return
-        method GenerateMediaStreamSource slot=19 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51 reverse=224
+        method GenerateMediaStreamSource slot=19 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51
             in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=encodingProfile
             out class type=Windows.Media.Core.MediaStreamSource return
     method generate_preview_media_stream_source
-        method GeneratePreviewMediaStreamSource slot=20 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=117 reverse=230
+        method GeneratePreviewMediaStreamSource slot=20 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=117
             in int32 name=scaledWidth
             in int32 name=scaledHeight
             out class type=Windows.Media.Core.MediaStreamSource return
@@ -1410,24 +1410,24 @@ class Windows.Media.Editing.MediaComposition activatable python_type
             in enum32 type=Windows.Media.Editing.VideoFramePrecision name=framePrecision
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Graphics.Imaging.ImageStream>> return
     method load_async static
-        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaCompositionStatics shape=51 reverse=24 static
+        method LoadAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaCompositionStatics shape=51 static
             in class type=Windows.Storage.StorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Editing.MediaComposition> return
     method render_to_file_async
-        method RenderToFileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51 reverse=187
+        method RenderToFileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51
             in interface type=Windows.Storage.IStorageFile name=destination
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
-        method RenderToFileAsync slot=15 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=117 reverse=197
+        method RenderToFileAsync slot=15 inputs=2 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=117
             in interface type=Windows.Storage.IStorageFile name=destination
             in enum32 type=Windows.Media.Editing.MediaTrimmingPreference name=trimmingPreference
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
-        method RenderToFileAsync slot=16 inputs=3 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=195 reverse=205
+        method RenderToFileAsync slot=16 inputs=3 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=195
             in interface type=Windows.Storage.IStorageFile name=destination
             in enum32 type=Windows.Media.Editing.MediaTrimmingPreference name=trimmingPreference
             in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=encodingProfile
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Media.Transcoding.TranscodeFailureReason,System.Double> return
     method save_async
-        method SaveAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51 reverse=144
+        method SaveAsync slot=11 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaComposition shape=51
             in interface type=Windows.Storage.IStorageFile name=file
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -1438,7 +1438,7 @@ class Windows.Media.Editing.MediaOverlay python_type
     requires Windows.Media.Editing.IMediaOverlay
     factory Windows.Media.Editing.IMediaOverlayFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayFactory shape=51
             in class type=Windows.Media.Editing.MediaClip name=clip
             out class type=Windows.Media.Editing.MediaOverlay return
         ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayFactory shape=204
@@ -1447,30 +1447,30 @@ class Windows.Media.Editing.MediaOverlay python_type
             in double name=opacity
             out class type=Windows.Media.Editing.MediaOverlay return
     property position
-        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=22
+        get get_Position slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             out struct type=Windows.Foundation.Rect return
         put put_Position slot=7 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=8
             in struct type=Windows.Foundation.Rect name=value
     property opacity
-        get get_Opacity slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=121
+        get get_Opacity slot=10 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             out double return
-        put put_Opacity slot=11 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=2 reverse=138
+        put put_Opacity slot=11 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=2
             in double name=value
     property delay
-        get get_Delay slot=9 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=99
+        get get_Delay slot=9 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             out timespan return
-        put put_Delay slot=8 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=26 reverse=82
+        put put_Delay slot=8 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=26
             in timespan name=value
     property audio_enabled
-        get get_AudioEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=186
+        get get_AudioEnabled slot=14 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             out boolean return
-        put put_AudioEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=194
+        put put_AudioEnabled slot=15 inputs=1 outputs=0 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             in boolean name=value
     property clip
-        get get_Clip slot=13 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=173
+        get get_Clip slot=13 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             out class type=Windows.Media.Editing.MediaClip return
     method clone
-        method Clone slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4 reverse=162
+        method Clone slot=12 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlay shape=4
             out class type=Windows.Media.Editing.MediaOverlay return
 
 class Windows.Media.Editing.MediaOverlayLayer activatable python_type
@@ -1482,17 +1482,17 @@ class Windows.Media.Editing.MediaOverlayLayer activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayerFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayerFactory shape=51
             in interface type=Windows.Media.Effects.IVideoCompositorDefinition name=compositorDefinition
             out class type=Windows.Media.Editing.MediaOverlayLayer return
     property custom_compositor_definition
-        get get_CustomCompositorDefinition slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4 reverse=62
+        get get_CustomCompositorDefinition slot=8 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4
             out interface type=Windows.Media.Effects.IVideoCompositorDefinition return
     property overlays
-        get get_Overlays slot=7 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4 reverse=43
+        get get_Overlays slot=7 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Editing.MediaOverlay> return
     method clone
-        method Clone slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4 reverse=22
+        method Clone slot=6 inputs=0 outputs=1 declaring=Windows.Media.Editing.IMediaOverlayLayer shape=4
             out class type=Windows.Media.Editing.MediaOverlayLayer return
 
 enum Windows.Media.Editing.MediaTrimmingPreference python_type

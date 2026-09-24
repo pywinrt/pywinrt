@@ -161,16 +161,16 @@ class Windows.ApplicationModel.Store.LicenseManagement.LicenseManager static pyt
     factory Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics
     factory Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2
     method add_license_async static
-        method AddLicenseAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics shape=51 reverse=24 static
+        method AddLicenseAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics shape=51 static
             in interface type=Windows.Storage.Streams.IBuffer name=license
             out interface type=Windows.Foundation.IAsyncAction return
     method get_satisfaction_infos_async static
-        method GetSatisfactionInfosAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics shape=117 reverse=45 static
+        method GetSatisfactionInfosAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics shape=117 static
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=contentIds
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=keyIds
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> return
     method refresh_licenses_async static
-        method RefreshLicensesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2 shape=51 reverse=24 static
+        method RefreshLicensesAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseManagerStatics2 shape=51 static
             in enum32 type=Windows.ApplicationModel.Store.LicenseManagement.LicenseRefreshOption name=refreshOption
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -186,25 +186,25 @@ class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo p
     default Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo
     requires Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo
     property is_satisfied
-        get get_IsSatisfied slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=162
+        get get_IsSatisfied slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
     property satisfied_by_device
-        get get_SatisfiedByDevice slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=22
+        get get_SatisfiedByDevice slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
     property satisfied_by_install_media
-        get get_SatisfiedByInstallMedia slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=121
+        get get_SatisfiedByInstallMedia slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
     property satisfied_by_open_license
-        get get_SatisfiedByOpenLicense slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=43
+        get get_SatisfiedByOpenLicense slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
     property satisfied_by_pass
-        get get_SatisfiedByPass slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=99
+        get get_SatisfiedByPass slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
     property satisfied_by_signed_in_user
-        get get_SatisfiedBySignedInUser slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=141
+        get get_SatisfiedBySignedInUser slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
     property satisfied_by_trial
-        get get_SatisfiedByTrial slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4 reverse=62
+        get get_SatisfiedByTrial slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionInfo shape=4
             out boolean return
 
 class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult python_type
@@ -213,10 +213,10 @@ class Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult
     default Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult
     requires Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult
     property extended_error
-        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4 reverse=43
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property license_satisfaction_infos
-        get get_LicenseSatisfactionInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4 reverse=22
+        get get_LicenseSatisfactionInfos slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Store.LicenseManagement.ILicenseSatisfactionResult shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo> return
 
 class System.String external

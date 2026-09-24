@@ -10,7 +10,7 @@ class Windows.UI.Composition.Desktop.DesktopWindowTarget python_type
     default Windows.UI.Composition.Desktop.IDesktopWindowTarget
     requires Windows.UI.Composition.Desktop.IDesktopWindowTarget
     property is_topmost
-        get get_IsTopmost slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Desktop.IDesktopWindowTarget shape=4 reverse=22
+        get get_IsTopmost slot=6 inputs=0 outputs=1 declaring=Windows.UI.Composition.Desktop.IDesktopWindowTarget shape=4
             out boolean return
 
 interface Windows.UI.Composition.Desktop.IDesktopWindowTarget

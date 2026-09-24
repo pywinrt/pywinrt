@@ -9,7 +9,7 @@ class Windows.UI.WebUI.ActivatedDeferral python_type
     default Windows.UI.WebUI.IActivatedDeferral
     requires Windows.UI.WebUI.IActivatedDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.WebUI.IActivatedDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.WebUI.IActivatedDeferral shape=0
 
 delegate Windows.UI.WebUI.ActivatedEventHandler python_type
     py ActivatedEventHandler
@@ -26,7 +26,7 @@ class Windows.UI.WebUI.ActivatedOperation python_type
     default Windows.UI.WebUI.IActivatedOperation
     requires Windows.UI.WebUI.IActivatedOperation
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IActivatedOperation shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IActivatedOperation shape=4
             out class type=Windows.UI.WebUI.ActivatedDeferral return
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
@@ -128,52 +128,52 @@ class Windows.UI.WebUI.HtmlPrintDocumentSource python_type closeable
     requires Windows.Graphics.Printing.IPrintDocumentSource
     requires Windows.Foundation.IClosable
     property top_margin
-        get get_TopMargin slot=10 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=121
+        get get_TopMargin slot=10 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out single return
         put put_TopMargin slot=11 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1
             in single name=value
     property shrink_to_fit
-        get get_ShrinkToFit slot=18 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=218
+        get get_ShrinkToFit slot=18 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out boolean return
-        put put_ShrinkToFit slot=19 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=223
+        put put_ShrinkToFit slot=19 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             in boolean name=value
     property right_margin
-        get get_RightMargin slot=12 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=162
+        get get_RightMargin slot=12 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out single return
-        put put_RightMargin slot=13 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1 reverse=170
+        put put_RightMargin slot=13 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1
             in single name=value
     property percent_scale
-        get get_PercentScale slot=20 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=228
+        get get_PercentScale slot=20 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out single return
         put put_PercentScale slot=21 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1
             in single name=scalePercent
     property left_margin
-        get get_LeftMargin slot=8 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=62
+        get get_LeftMargin slot=8 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out single return
-        put put_LeftMargin slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1 reverse=94
+        put put_LeftMargin slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1
             in single name=value
     property enable_header_footer
-        get get_EnableHeaderFooter slot=16 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=202
+        get get_EnableHeaderFooter slot=16 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out boolean return
-        put put_EnableHeaderFooter slot=17 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=210
+        put put_EnableHeaderFooter slot=17 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             in boolean name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out enum32 type=Windows.UI.WebUI.PrintContent return
-        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=43
+        put put_Content slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             in enum32 type=Windows.UI.WebUI.PrintContent name=value
     property bottom_margin
-        get get_BottomMargin slot=14 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=186
+        get get_BottomMargin slot=14 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out single return
         put put_BottomMargin slot=15 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=1
             in single name=value
     property page_range
-        get get_PageRange slot=22 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4 reverse=237
+        get get_PageRange slot=22 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=4
             out string return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method try_set_page_range
-        method TrySetPageRange slot=23 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=51 reverse=243
+        method TrySetPageRange slot=23 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IHtmlPrintDocumentSource shape=51
             in string name=strPageRange
             out boolean return
 
@@ -723,16 +723,16 @@ class Windows.UI.WebUI.NewWebUIViewCreatedEventArgs python_type
     default Windows.UI.WebUI.INewWebUIViewCreatedEventArgs
     requires Windows.UI.WebUI.INewWebUIViewCreatedEventArgs
     property activated_event_args
-        get get_ActivatedEventArgs slot=7 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4 reverse=43
+        get get_ActivatedEventArgs slot=7 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4
             out interface type=Windows.ApplicationModel.Activation.IActivatedEventArgs return
     property has_pending_navigate
-        get get_HasPendingNavigate slot=8 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4 reverse=62
+        get get_HasPendingNavigate slot=8 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4
             out boolean return
     property web_ui_view
-        get get_WebUIView slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4 reverse=22
+        get get_WebUIView slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4
             out class type=Windows.UI.WebUI.WebUIView return
     method get_deferral
-        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4 reverse=99
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.WebUI.INewWebUIViewCreatedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 enum Windows.UI.WebUI.PrintContent python_type
@@ -964,62 +964,62 @@ class Windows.UI.WebUI.WebUIApplication static python_type
     factory Windows.UI.WebUI.IWebUIActivationStatics3
     factory Windows.UI.WebUI.IWebUIActivationStatics4
     event background_activated static
-        add add_BackgroundActivated slot=8 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=51 reverse=65 static
+        add add_BackgroundActivated slot=8 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=51 static
             in delegate type=Windows.UI.WebUI.BackgroundActivatedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_BackgroundActivated slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=26 reverse=110 static
+        remove remove_BackgroundActivated slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event new_web_ui_view_created static
-        add add_NewWebUIViewCreated slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=51 reverse=24 static
+        add add_NewWebUIViewCreated slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<Windows.UI.WebUI.NewWebUIViewCreatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_NewWebUIViewCreated slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=26 reverse=53 static
+        remove remove_NewWebUIViewCreated slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics4 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event entered_background static
-        add add_EnteredBackground slot=8 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=51 reverse=65 static
+        add add_EnteredBackground slot=8 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=51 static
             in delegate type=Windows.UI.WebUI.EnteredBackgroundEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_EnteredBackground slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=26 reverse=110 static
+        remove remove_EnteredBackground slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event leaving_background static
-        add add_LeavingBackground slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=51 reverse=24 static
+        add add_LeavingBackground slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=51 static
             in delegate type=Windows.UI.WebUI.LeavingBackgroundEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LeavingBackground slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=26 reverse=53 static
+        remove remove_LeavingBackground slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event activated static
-        add add_Activated slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 reverse=24 static
+        add add_Activated slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 static
             in delegate type=Windows.UI.WebUI.ActivatedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Activated slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 reverse=53 static
+        remove remove_Activated slot=7 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event navigated static
-        add add_Navigated slot=12 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 reverse=163 static
+        add add_Navigated slot=12 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 static
             in delegate type=Windows.UI.WebUI.NavigatedEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Navigated slot=13 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 reverse=181 static
+        remove remove_Navigated slot=13 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event resuming static
-        add add_Resuming slot=10 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 reverse=124 static
+        add add_Resuming slot=10 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 static
             in delegate type=Windows.UI.WebUI.ResumingEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Resuming slot=11 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 reverse=156 static
+        remove remove_Resuming slot=11 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event suspending static
-        add add_Suspending slot=8 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 reverse=65 static
+        add add_Suspending slot=8 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=51 static
             in delegate type=Windows.UI.WebUI.SuspendingEventHandler name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Suspending slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 reverse=110 static
+        remove remove_Suspending slot=9 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method enable_prelaunch static
-        method EnablePrelaunch slot=10 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=4 reverse=121 static
+        method EnablePrelaunch slot=10 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIActivationStatics2 shape=4 static
             in boolean name=value
     method request_restart_async static
-        method RequestRestartAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics3 shape=51 reverse=24 static
+        method RequestRestartAsync slot=6 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics3 shape=51 static
             in string name=launchArguments
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> return
     method request_restart_for_user_async static
-        method RequestRestartForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics3 shape=117 reverse=45 static
+        method RequestRestartForUserAsync slot=7 inputs=2 outputs=1 declaring=Windows.UI.WebUI.IWebUIActivationStatics3 shape=117 static
             in class type=Windows.System.User name=user
             in string name=launchArguments
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Core.AppRestartFailureReason> return
@@ -1192,7 +1192,7 @@ class Windows.UI.WebUI.WebUIBackgroundTaskInstance static python_type
     py WebUIBackgroundTaskInstance
     factory Windows.UI.WebUI.IWebUIBackgroundTaskInstanceStatics
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIBackgroundTaskInstanceStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIBackgroundTaskInstanceStatics shape=4 static
             out interface type=Windows.UI.WebUI.IWebUIBackgroundTaskInstance return
 
 class Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass python_type
@@ -1982,7 +1982,7 @@ class Windows.UI.WebUI.WebUINavigatedDeferral python_type
     default Windows.UI.WebUI.IWebUINavigatedDeferral
     requires Windows.UI.WebUI.IWebUINavigatedDeferral
     method complete
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.WebUI.IWebUINavigatedDeferral shape=0 reverse=16
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.UI.WebUI.IWebUINavigatedDeferral shape=0
 
 class Windows.UI.WebUI.WebUINavigatedEventArgs python_type
     py WebUINavigatedEventArgs
@@ -1999,7 +1999,7 @@ class Windows.UI.WebUI.WebUINavigatedOperation python_type
     default Windows.UI.WebUI.IWebUINavigatedOperation
     requires Windows.UI.WebUI.IWebUINavigatedOperation
     method get_deferral
-        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUINavigatedOperation shape=4 reverse=22
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUINavigatedOperation shape=4
             out class type=Windows.UI.WebUI.WebUINavigatedDeferral return
 
 class Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs python_type
@@ -2351,12 +2351,12 @@ class Windows.UI.WebUI.WebUIView python_type
     requires Windows.Web.UI.IWebViewControl2
     factory Windows.UI.WebUI.IWebUIViewStatics
     property ignore_application_content_uri_rules_navigation_restrictions
-        get get_IgnoreApplicationContentUriRulesNavigationRestrictions slot=11 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=4 reverse=141
+        get get_IgnoreApplicationContentUriRulesNavigationRestrictions slot=11 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=4
             out boolean return
-        put put_IgnoreApplicationContentUriRulesNavigationRestrictions slot=12 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIView shape=4 reverse=162
+        put put_IgnoreApplicationContentUriRulesNavigationRestrictions slot=12 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIView shape=4
             in boolean name=value
     property application_view_id
-        get get_ApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=4 reverse=22
+        get get_ApplicationViewId slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=4
             out int32 return
     property source
         get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=22
@@ -2387,16 +2387,16 @@ class Windows.UI.WebUI.WebUIView python_type
         get get_Settings slot=14 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=186
             out class type=Windows.Web.UI.WebViewControlSettings return
     event activated
-        add add_Activated slot=9 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=51 reverse=100
+        add add_Activated slot=9 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WebUI.WebUIView,Windows.ApplicationModel.Activation.IActivatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Activated slot=10 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIView shape=26 reverse=134
+        remove remove_Activated slot=10 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIView shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event closed
-        add add_Closed slot=7 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=51 reverse=44
+        add add_Closed slot=7 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIView shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.WebUI.WebUIView,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIView shape=26 reverse=82
+        remove remove_Closed slot=8 inputs=1 outputs=0 declaring=Windows.UI.WebUI.IWebUIView shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event contains_full_screen_element_changed
         add add_ContainsFullScreenElementChanged slot=59 inputs=1 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=51 reverse=379
@@ -2516,9 +2516,9 @@ class Windows.UI.WebUI.WebUIView python_type
         method CaptureSelectedContentToDataPackageAsync slot=26 inputs=0 outputs=1 declaring=Windows.Web.UI.IWebViewControl shape=4 reverse=255
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackage> return
     method create_async static
-        method CreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIViewStatics shape=4 reverse=22 static
+        method CreateAsync slot=6 inputs=0 outputs=1 declaring=Windows.UI.WebUI.IWebUIViewStatics shape=4 static
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.WebUI.WebUIView> return
-        method CreateAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIViewStatics shape=51 reverse=44 static
+        method CreateAsync slot=7 inputs=1 outputs=1 declaring=Windows.UI.WebUI.IWebUIViewStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.UI.WebUI.WebUIView> return
     method get_deferred_permission_request_by_id

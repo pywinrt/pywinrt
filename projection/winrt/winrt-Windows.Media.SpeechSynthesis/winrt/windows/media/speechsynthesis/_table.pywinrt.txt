@@ -430,7 +430,7 @@ class Windows.Media.SpeechSynthesis.SpeechSynthesisStream python_type closeable
         get get_TimedMetadataTracks slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ITimedMetadataTrackProvider shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Core.TimedMetadataTrack> return
     property markers
-        get get_Markers slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesisStream shape=4 reverse=22
+        get get_Markers slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesisStream shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.IMediaMarker> return
     property content_type
         get get_ContentType slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Streams.IContentTypeProvider shape=4 reverse=22
@@ -492,31 +492,31 @@ class Windows.Media.SpeechSynthesis.SpeechSynthesizer activatable python_type cl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property voice
-        get get_Voice slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=4 reverse=99
+        get get_Voice slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=4
             out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
-        put put_Voice slot=8 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=4 reverse=62
+        put put_Voice slot=8 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=4
             in class type=Windows.Media.SpeechSynthesis.VoiceInformation name=value
     property options
-        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer2 shape=4 reverse=22
+        get get_Options slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer2 shape=4
             out class type=Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions return
     property all_voices static
-        get get_AllVoices slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 reverse=22 static
+        get get_AllVoices slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.SpeechSynthesis.VoiceInformation> return
     property default_voice static
-        get get_DefaultVoice slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 reverse=43 static
+        get get_DefaultVoice slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic shape=4 static
             out class type=Windows.Media.SpeechSynthesis.VoiceInformation return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method synthesize_ssml_to_stream_async
-        method SynthesizeSsmlToStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51 reverse=44
+        method SynthesizeSsmlToStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51
             in string name=Ssml
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> return
     method synthesize_text_to_stream_async
-        method SynthesizeTextToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51 reverse=24
+        method SynthesizeTextToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizer shape=51
             in string name=text
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.SpeechSynthesis.SpeechSynthesisStream> return
     method try_set_default_voice_async static
-        method TrySetDefaultVoiceAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2 shape=51 reverse=24 static
+        method TrySetDefaultVoiceAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.SpeechSynthesis.IInstalledVoicesStatic2 shape=51 static
             in class type=Windows.Media.SpeechSynthesis.VoiceInformation name=voice
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -528,39 +528,39 @@ class Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions python_type
     requires Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2
     requires Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3
     property include_word_boundary_metadata
-        get get_IncludeWordBoundaryMetadata slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=22
+        get get_IncludeWordBoundaryMetadata slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4
             out boolean return
-        put put_IncludeWordBoundaryMetadata slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=43
+        put put_IncludeWordBoundaryMetadata slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4
             in boolean name=value
     property include_sentence_boundary_metadata
-        get get_IncludeSentenceBoundaryMetadata slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=62
+        get get_IncludeSentenceBoundaryMetadata slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4
             out boolean return
-        put put_IncludeSentenceBoundaryMetadata slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4 reverse=99
+        put put_IncludeSentenceBoundaryMetadata slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions shape=4
             in boolean name=value
     property speaking_rate
-        get get_SpeakingRate slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4 reverse=62
+        get get_SpeakingRate slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4
             out double return
         put put_SpeakingRate slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2
             in double name=value
     property audio_volume
-        get get_AudioVolume slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4 reverse=22
+        get get_AudioVolume slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4
             out double return
-        put put_AudioVolume slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2 reverse=38
+        put put_AudioVolume slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2
             in double name=value
     property audio_pitch
-        get get_AudioPitch slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4 reverse=121
+        get get_AudioPitch slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=4
             out double return
-        put put_AudioPitch slot=11 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2 reverse=138
+        put put_AudioPitch slot=11 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions2 shape=2
             in double name=value
     property punctuation_silence
-        get get_PunctuationSilence slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=62
+        get get_PunctuationSilence slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4
             out enum32 type=Windows.Media.SpeechSynthesis.SpeechPunctuationSilence return
-        put put_PunctuationSilence slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=99
+        put put_PunctuationSilence slot=9 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4
             in enum32 type=Windows.Media.SpeechSynthesis.SpeechPunctuationSilence name=value
     property appended_silence
-        get get_AppendedSilence slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=22
+        get get_AppendedSilence slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4
             out enum32 type=Windows.Media.SpeechSynthesis.SpeechAppendedSilence return
-        put put_AppendedSilence slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4 reverse=43
+        put put_AppendedSilence slot=7 inputs=1 outputs=0 declaring=Windows.Media.SpeechSynthesis.ISpeechSynthesizerOptions3 shape=4
             in enum32 type=Windows.Media.SpeechSynthesis.SpeechAppendedSilence name=value
 
 enum Windows.Media.SpeechSynthesis.VoiceGender python_type
@@ -575,19 +575,19 @@ class Windows.Media.SpeechSynthesis.VoiceInformation python_type
     default Windows.Media.SpeechSynthesis.IVoiceInformation
     requires Windows.Media.SpeechSynthesis.IVoiceInformation
     property description
-        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=99
+        get get_Description slot=9 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4
             out string return
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=22
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4
             out string return
     property gender
-        get get_Gender slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=121
+        get get_Gender slot=10 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4
             out enum32 type=Windows.Media.SpeechSynthesis.VoiceGender return
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4
             out string return
     property language
-        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4 reverse=62
+        get get_Language slot=8 inputs=0 outputs=1 declaring=Windows.Media.SpeechSynthesis.IVoiceInformation shape=4
             out string return
 
 class System.Boolean external

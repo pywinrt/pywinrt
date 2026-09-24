@@ -968,73 +968,73 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTask activatable python_typ
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property regeneration_properties
-        get get_RegenerationProperties slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=242
+        get get_RegenerationProperties slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties return
-        put put_RegenerationProperties slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=247
+        put put_RegenerationProperties slot=24 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties name=value
     property priority
-        get get_Priority slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=223
+        get get_Priority slot=19 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskPriority return
-        put put_Priority slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=228
+        put put_Priority slot=20 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskPriority name=value
     property completed_date
-        get get_CompletedDate slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=121
+        get get_CompletedDate slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_CompletedDate slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=141
+        put put_CompletedDate slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property due_date
-        get get_DueDate slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=202
+        get get_DueDate slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_DueDate slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=210
+        put put_DueDate slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property details_kind
-        get get_DetailsKind slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=186
+        get get_DetailsKind slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskDetailsKind return
-        put put_DetailsKind slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=194
+        put put_DetailsKind slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskDetailsKind name=value
     property start_date
-        get get_StartDate slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=273
+        get get_StartDate slot=31 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_StartDate slot=32 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=280
+        put put_StartDate slot=32 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property details
-        get get_Details slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=162
+        get get_Details slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out string return
-        put put_Details slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=173
+        put put_Details slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in string name=value
     property subject
-        get get_Subject slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=266
+        get get_Subject slot=29 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out string return
-        put put_Subject slot=30 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=270
+        put put_Subject slot=30 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in string name=value
     property sensitivity
-        get get_Sensitivity slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=259
+        get get_Sensitivity slot=27 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskSensitivity return
-        put put_Sensitivity slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=263
+        put put_Sensitivity slot=28 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskSensitivity name=value
     property remote_id
-        get get_RemoteId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=62
+        get get_RemoteId slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out string return
-        put put_RemoteId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=99
+        put put_RemoteId slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in string name=value
     property reminder
-        get get_Reminder slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=252
+        get get_Reminder slot=25 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Reminder slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=255
+        put put_Reminder slot=26 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property recurrence_properties
-        get get_RecurrenceProperties slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=232
+        get get_RecurrenceProperties slot=21 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties return
-        put put_RecurrenceProperties slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=237
+        put put_RecurrenceProperties slot=22 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out string return
     property kind
-        get get_Kind slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=218
+        get get_Kind slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskKind return
     property list_id
-        get get_ListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4 reverse=43
+        get get_ListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTask shape=4
             out string return
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch python_type
@@ -1043,7 +1043,7 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch python_type
     default Windows.ApplicationModel.UserDataTasks.IUserDataTaskBatch
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskBatch
     property tasks
-        get get_Tasks slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskBatch shape=4 reverse=22
+        get get_Tasks slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskBatch shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTask> return
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskDaysOfWeek python_type flags_enum
@@ -1077,60 +1077,60 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskList python_type
     default Windows.ApplicationModel.UserDataTasks.IUserDataTaskList
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskList
     property other_app_write_access
-        get get_OtherAppWriteAccess slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=173
+        get get_OtherAppWriteAccess slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppWriteAccess return
-        put put_OtherAppWriteAccess slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=186
+        put put_OtherAppWriteAccess slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppWriteAccess name=value
     property other_app_read_access
-        get get_OtherAppReadAccess slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=141
+        get get_OtherAppReadAccess slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppReadAccess return
-        put put_OtherAppReadAccess slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=162
+        put put_OtherAppReadAccess slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListOtherAppReadAccess name=value
     property display_name
-        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=62
+        get get_DisplayName slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out string return
-        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=99
+        put put_DisplayName slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             in string name=value
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out string return
     property limited_write_operations
-        get get_LimitedWriteOperations slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=194
+        get get_LimitedWriteOperations slot=15 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations return
     property source_display_name
-        get get_SourceDisplayName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=121
+        get get_SourceDisplayName slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out string return
     property sync_manager
-        get get_SyncManager slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=202
+        get get_SyncManager slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager return
     property user_data_account_id
-        get get_UserDataAccountId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=43
+        get get_UserDataAccountId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out string return
     method delete_async
-        method DeleteAsync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=242
+        method DeleteAsync slot=23 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method delete_task_async
-        method DeleteTaskAsync slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51 reverse=238
+        method DeleteTaskAsync slot=22 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51
             in string name=userDataTaskId
             out interface type=Windows.Foundation.IAsyncAction return
     method get_task_async
-        method GetTaskAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51 reverse=229
+        method GetTaskAsync slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51
             in string name=userDataTask
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataTasks.UserDataTask> return
     method get_task_reader
-        method GetTaskReader slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=218
+        method GetTaskReader slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskReader return
-        method GetTaskReader slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51 reverse=224
+        method GetTaskReader slot=19 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions name=options
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskReader return
     method register_sync_manager_async
-        method RegisterSyncManagerAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=210
+        method RegisterSyncManagerAsync slot=17 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method save_async
-        method SaveAsync slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4 reverse=247
+        method SaveAsync slot=24 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method save_task_async
-        method SaveTaskAsync slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51 reverse=233
+        method SaveTaskAsync slot=21 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskList shape=51
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=userDataTask
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -1140,19 +1140,19 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperati
     default Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations
     method try_complete_task_async
-        method TryCompleteTaskAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51 reverse=24
+        method TryCompleteTaskAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51
             in string name=userDataTaskId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
     method try_create_or_update_task_async
-        method TryCreateOrUpdateTaskAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51 reverse=44
+        method TryCreateOrUpdateTaskAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=userDataTask
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_delete_task_async
-        method TryDeleteTaskAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51 reverse=65
+        method TryDeleteTaskAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51
             in string name=userDataTaskId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
     method try_skip_occurrence_async
-        method TrySkipOccurrenceAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51 reverse=100
+        method TrySkipOccurrenceAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListLimitedWriteOperations shape=51
             in string name=userDataTaskId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -1175,28 +1175,28 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager python_
     default Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager
     property status
-        get get_Status slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4 reverse=121
+        get get_Status slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncStatus return
-        put put_Status slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4 reverse=141
+        put put_Status slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncStatus name=value
     property last_successful_sync_time
-        get get_LastSuccessfulSyncTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4 reverse=62
+        get get_LastSuccessfulSyncTime slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4
             out datetime return
-        put put_LastSuccessfulSyncTime slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=26 reverse=110
+        put put_LastSuccessfulSyncTime slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=26
             in datetime name=value
     property last_attempted_sync_time
-        get get_LastAttemptedSyncTime slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4 reverse=22
+        get get_LastAttemptedSyncTime slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4
             out datetime return
-        put put_LastAttemptedSyncTime slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=26 reverse=53
+        put put_LastAttemptedSyncTime slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=26
             in datetime name=value
     event sync_status_changed
-        add add_SyncStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=51 reverse=174
+        add add_SyncStatusChanged slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SyncStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=26 reverse=192
+        remove remove_SyncStatusChanged slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method sync_async
-        method SyncAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4 reverse=162
+        method SyncAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskListSyncManager shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncStatus python_type
@@ -1216,17 +1216,17 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskManager python_type
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskManager
     factory Windows.ApplicationModel.UserDataTasks.IUserDataTaskManagerStatics
     property user
-        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManager shape=4 reverse=43
+        get get_User slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManager shape=4
             out class type=Windows.System.User return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManagerStatics shape=4 static
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskManager return
     method get_for_user static
-        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManagerStatics shape=51 reverse=44 static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManagerStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTaskManager return
     method request_store_async
-        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManager shape=51 reverse=24
+        method RequestStoreAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskManager shape=51
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskStoreAccessType name=accessType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataTasks.UserDataTaskStore> return
 
@@ -1253,14 +1253,14 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property sort_property
-        get get_SortProperty slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4 reverse=22
+        get get_SortProperty slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskQuerySortProperty return
-        put put_SortProperty slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4 reverse=43
+        put put_SortProperty slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskQuerySortProperty name=value
     property kind
-        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4 reverse=62
+        get get_Kind slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryKind return
-        put put_Kind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4 reverse=99
+        put put_Kind slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskQueryOptions shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryKind name=value
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskQuerySortProperty python_type
@@ -1274,7 +1274,7 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskReader python_type
     default Windows.ApplicationModel.UserDataTasks.IUserDataTaskReader
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskReader
     method read_batch_async
-        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskReader shape=4 reverse=22
+        method ReadBatchAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskReader shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch> return
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties activatable python_type
@@ -1286,44 +1286,44 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties ac
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property week_of_month
-        get get_WeekOfMonth slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=202
+        get get_WeekOfMonth slot=16 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out reference type=Windows.Foundation.IReference<Windows.ApplicationModel.UserDataTasks.UserDataTaskWeekOfMonth> return
-        put put_WeekOfMonth slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=210
+        put put_WeekOfMonth slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in reference type=Windows.Foundation.IReference<Windows.ApplicationModel.UserDataTasks.UserDataTaskWeekOfMonth> name=value
     property until
-        get get_Until slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=121
+        get get_Until slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Until slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=141
+        put put_Until slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property unit
-        get get_Unit slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=22
+        get get_Unit slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceUnit return
-        put put_Unit slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=43
+        put put_Unit slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceUnit name=value
     property occurrences
-        get get_Occurrences slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=62
+        get get_Occurrences slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_Occurrences slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=99
+        put put_Occurrences slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property month
-        get get_Month slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=218
+        get get_Month slot=18 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_Month slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=223
+        put put_Month slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property interval
-        get get_Interval slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=162
+        get get_Interval slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out int32 return
-        put put_Interval slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=173
+        put put_Interval slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in int32 name=value
     property days_of_week
-        get get_DaysOfWeek slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=186
+        get get_DaysOfWeek slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out reference type=Windows.Foundation.IReference<Windows.ApplicationModel.UserDataTasks.UserDataTaskDaysOfWeek> return
-        put put_DaysOfWeek slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=194
+        put put_DaysOfWeek slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in reference type=Windows.Foundation.IReference<Windows.ApplicationModel.UserDataTasks.UserDataTaskDaysOfWeek> name=value
     property day
-        get get_Day slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=228
+        get get_Day slot=20 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_Day slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4 reverse=232
+        put put_Day slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRecurrenceProperties shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceUnit python_type
@@ -1345,24 +1345,24 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties 
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property until
-        get get_Until slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=121
+        get get_Until slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
-        put put_Until slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=141
+        put put_Until slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
     property unit
-        get get_Unit slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=22
+        get get_Unit slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             out enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationUnit return
-        put put_Unit slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=43
+        put put_Unit slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             in enum32 type=Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationUnit name=value
     property occurrences
-        get get_Occurrences slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=62
+        get get_Occurrences slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
-        put put_Occurrences slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=99
+        put put_Occurrences slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
     property interval
-        get get_Interval slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=162
+        get get_Interval slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             out int32 return
-        put put_Interval slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4 reverse=173
+        put put_Interval slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskRegenerationProperties shape=4
             in int32 name=value
 
 enum Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationUnit python_type
@@ -1385,18 +1385,18 @@ class Windows.ApplicationModel.UserDataTasks.UserDataTaskStore python_type
     default Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore
     requires Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore
     method create_list_async
-        method CreateListAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=51 reverse=24
+        method CreateListAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=51
             in string name=name
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> return
-        method CreateListAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=117 reverse=45
+        method CreateListAsync slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=117
             in string name=name
             in string name=userDataAccountId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> return
     method find_lists_async
-        method FindListsAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=4 reverse=62
+        method FindListsAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.UserDataTasks.UserDataTaskList>> return
     method get_list_async
-        method GetListAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=51 reverse=100
+        method GetListAsync slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.IUserDataTaskStore shape=51
             in string name=taskListId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> return
 

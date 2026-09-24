@@ -9,7 +9,7 @@ class Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs python_type
     default Windows.Media.PlayTo.ICurrentTimeChangeRequestedEventArgs
     requires Windows.Media.PlayTo.ICurrentTimeChangeRequestedEventArgs
     property time
-        get get_Time slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ICurrentTimeChangeRequestedEventArgs shape=4 reverse=22
+        get get_Time slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ICurrentTimeChangeRequestedEventArgs shape=4
             out timespan return
 
 interface Windows.Media.PlayTo.ICurrentTimeChangeRequestedEventArgs
@@ -399,7 +399,7 @@ class Windows.Media.PlayTo.MuteChangeRequestedEventArgs python_type
     default Windows.Media.PlayTo.IMuteChangeRequestedEventArgs
     requires Windows.Media.PlayTo.IMuteChangeRequestedEventArgs
     property mute
-        get get_Mute slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IMuteChangeRequestedEventArgs shape=4 reverse=22
+        get get_Mute slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IMuteChangeRequestedEventArgs shape=4
             out boolean return
 
 class Windows.Media.PlayTo.PlayToConnection python_type
@@ -408,25 +408,25 @@ class Windows.Media.PlayTo.PlayToConnection python_type
     default Windows.Media.PlayTo.IPlayToConnection
     requires Windows.Media.PlayTo.IPlayToConnection
     property state
-        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=4 reverse=22 deprecated
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=4 deprecated
             out enum32 type=Windows.Media.PlayTo.PlayToConnectionState return
     event error
-        add add_Error slot=11 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 reverse=144 deprecated
+        add add_Error slot=11 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionErrorEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Error slot=12 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 reverse=167 deprecated
+        remove remove_Error slot=12 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event state_changed
-        add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 reverse=44 deprecated
+        add add_StateChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 reverse=82 deprecated
+        remove remove_StateChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event transferred
-        add add_Transferred slot=9 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 reverse=100 deprecated
+        add add_Transferred slot=9 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnection shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Transferred slot=10 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 reverse=134 deprecated
+        remove remove_Transferred slot=10 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToConnection shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 enum Windows.Media.PlayTo.PlayToConnectionError python_type
@@ -444,10 +444,10 @@ class Windows.Media.PlayTo.PlayToConnectionErrorEventArgs python_type
     default Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs
     requires Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs
     property code
-        get get_Code slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs shape=4 reverse=22 deprecated
+        get get_Code slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs shape=4 deprecated
             out enum32 type=Windows.Media.PlayTo.PlayToConnectionError return
     property message
-        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs shape=4 reverse=43 deprecated
+        get get_Message slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionErrorEventArgs shape=4 deprecated
             out string return
 
 enum Windows.Media.PlayTo.PlayToConnectionState python_type
@@ -463,10 +463,10 @@ class Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs python_type
     default Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs
     requires Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs
     property current_state
-        get get_CurrentState slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs shape=4 reverse=43 deprecated
+        get get_CurrentState slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs shape=4 deprecated
             out enum32 type=Windows.Media.PlayTo.PlayToConnectionState return
     property previous_state
-        get get_PreviousState slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs shape=4 reverse=22 deprecated
+        get get_PreviousState slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionStateChangedEventArgs shape=4 deprecated
             out enum32 type=Windows.Media.PlayTo.PlayToConnectionState return
 
 class Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs python_type
@@ -475,10 +475,10 @@ class Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs python_type
     default Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs
     requires Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs
     property current_source
-        get get_CurrentSource slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs shape=4 reverse=43 deprecated
+        get get_CurrentSource slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToSource return
     property previous_source
-        get get_PreviousSource slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs shape=4 reverse=22 deprecated
+        get get_PreviousSource slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToConnectionTransferredEventArgs shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToSource return
 
 class Windows.Media.PlayTo.PlayToManager python_type
@@ -488,27 +488,27 @@ class Windows.Media.PlayTo.PlayToManager python_type
     requires Windows.Media.PlayTo.IPlayToManager
     factory Windows.Media.PlayTo.IPlayToManagerStatics
     property default_source_selection
-        get get_DefaultSourceSelection slot=11 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=4 reverse=141 deprecated
+        get get_DefaultSourceSelection slot=11 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=4 deprecated
             out boolean return
-        put put_DefaultSourceSelection slot=10 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=4 reverse=121 deprecated
+        put put_DefaultSourceSelection slot=10 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=4 deprecated
             in boolean name=value
     event source_requested
-        add add_SourceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=51 reverse=24 deprecated
+        add add_SourceRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 reverse=53 deprecated
+        remove remove_SourceRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_selected
-        add add_SourceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=51 reverse=65 deprecated
+        add add_SourceSelected slot=8 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManager shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceSelectedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 reverse=110 deprecated
+        remove remove_SourceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method get_for_current_view static deprecated
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=4 reverse=22 static deprecated
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=4 static deprecated
             out class type=Windows.Media.PlayTo.PlayToManager return
     method show_play_to_ui static deprecated
-        method ShowPlayToUI slot=7 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=0 reverse=37 static deprecated
+        method ShowPlayToUI slot=7 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=0 static deprecated
 
 class Windows.Media.PlayTo.PlayToReceiver activatable python_type
     py PlayToReceiver
@@ -519,81 +519,81 @@ class Windows.Media.PlayTo.PlayToReceiver activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property supports_video
-        get get_SupportsVideo slot=43 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=322
+        get get_SupportsVideo slot=43 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out boolean return
-        put put_SupportsVideo slot=42 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=319
+        put put_SupportsVideo slot=42 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             in boolean name=value
     property supports_image
-        get get_SupportsImage slot=39 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=307
+        get get_SupportsImage slot=39 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out boolean return
-        put put_SupportsImage slot=38 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=302
+        put put_SupportsImage slot=38 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             in boolean name=value
     property supports_audio
-        get get_SupportsAudio slot=41 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=316
+        get get_SupportsAudio slot=41 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out boolean return
-        put put_SupportsAudio slot=40 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=312
+        put put_SupportsAudio slot=40 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             in boolean name=value
     property friendly_name
-        get get_FriendlyName slot=36 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=296
+        get get_FriendlyName slot=36 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out string return
-        put put_FriendlyName slot=37 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=299
+        put put_FriendlyName slot=37 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             in string name=value
     property properties
-        get get_Properties slot=44 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=326
+        get get_Properties slot=44 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     event current_time_change_requested
-        add add_CurrentTimeChangeRequested slot=14 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=187
+        add add_CurrentTimeChangeRequested slot=14 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CurrentTimeChangeRequested slot=15 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=200
+        remove remove_CurrentTimeChangeRequested slot=15 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event mute_change_requested
-        add add_MuteChangeRequested slot=16 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=203
+        add add_MuteChangeRequested slot=16 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.MuteChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_MuteChangeRequested slot=17 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=215
+        remove remove_MuteChangeRequested slot=17 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event pause_requested
-        add add_PauseRequested slot=8 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=65
+        add add_PauseRequested slot=8 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PauseRequested slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=110
+        remove remove_PauseRequested slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event play_requested
-        add add_PlayRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=24
+        add add_PlayRequested slot=6 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PlayRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=53
+        remove remove_PlayRequested slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event playback_rate_change_requested
-        add add_PlaybackRateChangeRequested slot=12 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=163
+        add add_PlaybackRateChangeRequested slot=12 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PlaybackRateChangeRequested slot=13 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=181
+        remove remove_PlaybackRateChangeRequested slot=13 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event source_change_requested
-        add add_SourceChangeRequested slot=10 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=124
+        add add_SourceChangeRequested slot=10 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.SourceChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SourceChangeRequested slot=11 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=156
+        remove remove_SourceChangeRequested slot=11 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event stop_requested
-        add add_StopRequested slot=22 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=238
+        add add_StopRequested slot=22 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StopRequested slot=23 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=245
+        remove remove_StopRequested slot=23 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event time_update_requested
-        add add_TimeUpdateRequested slot=20 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=229
+        add add_TimeUpdateRequested slot=20 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_TimeUpdateRequested slot=21 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=234
+        remove remove_TimeUpdateRequested slot=21 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event volume_change_requested
-        add add_VolumeChangeRequested slot=18 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51 reverse=219
+        add add_VolumeChangeRequested slot=18 inputs=1 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToReceiver,Windows.Media.PlayTo.VolumeChangeRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_VolumeChangeRequested slot=19 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=226
+        remove remove_VolumeChangeRequested slot=19 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method notify_duration_change
         method NotifyDurationChange slot=28 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
@@ -605,30 +605,30 @@ class Windows.Media.PlayTo.PlayToReceiver activatable python_type
     method notify_loaded_metadata
         method NotifyLoadedMetadata slot=26 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0
     method notify_paused
-        method NotifyPaused slot=31 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0 reverse=402
+        method NotifyPaused slot=31 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0
     method notify_playing
-        method NotifyPlaying slot=32 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0 reverse=278
+        method NotifyPlaying slot=32 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0
     method notify_rate_change
         method NotifyRateChange slot=25 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=2
             in double name=rate
     method notify_seeked
-        method NotifySeeked slot=30 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0 reverse=269
+        method NotifySeeked slot=30 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0
     method notify_seeking
-        method NotifySeeking slot=29 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0 reverse=265
+        method NotifySeeking slot=29 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0
     method notify_stopped
         method NotifyStopped slot=35 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=0
     method notify_time_update
-        method NotifyTimeUpdate slot=27 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26 reverse=262
+        method NotifyTimeUpdate slot=27 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=26
             in timespan name=currentTime
     method notify_volume_change
         method NotifyVolumeChange slot=24 inputs=2 outputs=0 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=46
             in double name=volume
             in boolean name=mute
     method start_async
-        method StartAsync slot=45 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=330
+        method StartAsync slot=45 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method stop_async
-        method StopAsync slot=46 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4 reverse=334
+        method StopAsync slot=46 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToReceiver shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.Media.PlayTo.PlayToSource python_type
@@ -638,20 +638,20 @@ class Windows.Media.PlayTo.PlayToSource python_type
     requires Windows.Media.PlayTo.IPlayToSource
     requires Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri
     property next
-        get get_Next slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSource shape=4 reverse=43 deprecated
+        get get_Next slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSource shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToSource return
-        put put_Next slot=8 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSource shape=4 reverse=62 deprecated
+        put put_Next slot=8 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSource shape=4 deprecated
             in class type=Windows.Media.PlayTo.PlayToSource name=value
     property connection
-        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSource shape=4 reverse=22 deprecated
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSource shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToConnection return
     property preferred_source_uri
-        get get_PreferredSourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri shape=4 reverse=22 deprecated
+        get get_PreferredSourceUri slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri shape=4 deprecated
             out class type=Windows.Foundation.Uri return
-        put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri shape=4 reverse=43 deprecated
+        put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     method play_next deprecated
-        method PlayNext slot=9 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSource shape=0 reverse=93 deprecated
+        method PlayNext slot=9 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSource shape=0 deprecated
 
 class Windows.Media.PlayTo.PlayToSourceDeferral python_type
     py PlayToSourceDeferral
@@ -659,7 +659,7 @@ class Windows.Media.PlayTo.PlayToSourceDeferral python_type
     default Windows.Media.PlayTo.IPlayToSourceDeferral
     requires Windows.Media.PlayTo.IPlayToSourceDeferral
     method complete deprecated
-        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceDeferral shape=0 reverse=16 deprecated
+        method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceDeferral shape=0 deprecated
 
 class Windows.Media.PlayTo.PlayToSourceRequest python_type
     py PlayToSourceRequest
@@ -667,16 +667,16 @@ class Windows.Media.PlayTo.PlayToSourceRequest python_type
     default Windows.Media.PlayTo.IPlayToSourceRequest
     requires Windows.Media.PlayTo.IPlayToSourceRequest
     property deadline
-        get get_Deadline slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 reverse=22 deprecated
+        get get_Deadline slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             out datetime return
     method display_error_string deprecated
-        method DisplayErrorString slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 reverse=43 deprecated
+        method DisplayErrorString slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             in string name=errorString
     method get_deferral deprecated
-        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 reverse=62 deprecated
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToSourceDeferral return
     method set_source deprecated
-        method SetSource slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 reverse=99 deprecated
+        method SetSource slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             in class type=Windows.Media.PlayTo.PlayToSource name=value
 
 class Windows.Media.PlayTo.PlayToSourceRequestedEventArgs python_type
@@ -685,7 +685,7 @@ class Windows.Media.PlayTo.PlayToSourceRequestedEventArgs python_type
     default Windows.Media.PlayTo.IPlayToSourceRequestedEventArgs
     requires Windows.Media.PlayTo.IPlayToSourceRequestedEventArgs
     property source_request
-        get get_SourceRequest slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequestedEventArgs shape=4 reverse=22 deprecated
+        get get_SourceRequest slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequestedEventArgs shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToSourceRequest return
 
 class Windows.Media.PlayTo.PlayToSourceSelectedEventArgs python_type
@@ -694,19 +694,19 @@ class Windows.Media.PlayTo.PlayToSourceSelectedEventArgs python_type
     default Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs
     requires Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs
     property friendly_name
-        get get_FriendlyName slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 reverse=22 deprecated
+        get get_FriendlyName slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 deprecated
             out string return
     property icon
-        get get_Icon slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 reverse=43 deprecated
+        get get_Icon slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 deprecated
             out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
     property supports_audio
-        get get_SupportsAudio slot=9 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 reverse=99 deprecated
+        get get_SupportsAudio slot=9 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 deprecated
             out boolean return
     property supports_image
-        get get_SupportsImage slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 reverse=62 deprecated
+        get get_SupportsImage slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 deprecated
             out boolean return
     property supports_video
-        get get_SupportsVideo slot=10 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 reverse=121 deprecated
+        get get_SupportsVideo slot=10 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceSelectedEventArgs shape=4 deprecated
             out boolean return
 
 class Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs python_type
@@ -715,7 +715,7 @@ class Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs python_type
     default Windows.Media.PlayTo.IPlaybackRateChangeRequestedEventArgs
     requires Windows.Media.PlayTo.IPlaybackRateChangeRequestedEventArgs
     property rate
-        get get_Rate slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlaybackRateChangeRequestedEventArgs shape=4 reverse=22
+        get get_Rate slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlaybackRateChangeRequestedEventArgs shape=4
             out double return
 
 class Windows.Media.PlayTo.SourceChangeRequestedEventArgs python_type
@@ -724,34 +724,34 @@ class Windows.Media.PlayTo.SourceChangeRequestedEventArgs python_type
     default Windows.Media.PlayTo.ISourceChangeRequestedEventArgs
     requires Windows.Media.PlayTo.ISourceChangeRequestedEventArgs
     property album
-        get get_Album slot=9 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=99
+        get get_Album slot=9 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out string return
     property author
-        get get_Author slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=62
+        get get_Author slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out string return
     property date
-        get get_Date slot=12 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=162
+        get get_Date slot=12 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property description
-        get get_Description slot=11 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=141
+        get get_Description slot=11 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out string return
     property genre
-        get get_Genre slot=10 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=121
+        get get_Genre slot=10 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out string return
     property properties
-        get get_Properties slot=15 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=194
+        get get_Properties slot=15 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
     property rating
-        get get_Rating slot=14 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=186
+        get get_Rating slot=14 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out reference type=Windows.Foundation.IReference<System.UInt32> return
     property stream
-        get get_Stream slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=22
+        get get_Stream slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
     property thumbnail
-        get get_Thumbnail slot=13 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=173
+        get get_Thumbnail slot=13 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property title
-        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4 reverse=43
+        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.ISourceChangeRequestedEventArgs shape=4
             out string return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionErrorEventArgs> concrete
@@ -892,7 +892,7 @@ class Windows.Media.PlayTo.VolumeChangeRequestedEventArgs python_type
     default Windows.Media.PlayTo.IVolumeChangeRequestedEventArgs
     requires Windows.Media.PlayTo.IVolumeChangeRequestedEventArgs
     property volume
-        get get_Volume slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IVolumeChangeRequestedEventArgs shape=4 reverse=22
+        get get_Volume slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IVolumeChangeRequestedEventArgs shape=4
             out double return
 
 class System.Object external

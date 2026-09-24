@@ -728,7 +728,7 @@ sealed class TableWriter
         member.InCount = (uint)invoke.Parameters.Count(p => p.IsPythonInParam);
 
         AddParams(member, invoke, map);
-        SetShapes(member, invoke, map);
+        SetShapes(member, invoke, map, implementable: true);
 
         group.Members.Add(member);
         record.Groups.Add(group);
@@ -909,7 +909,13 @@ sealed class TableWriter
         var implicitFrom = method.IsConstructor ? method.Method.Parameters.Count : int.MaxValue;
 
         AddParams(member, abiMethod, map, implicitFrom);
-        SetShapes(member, abiMethod, map);
+        SetShapes(
+            member,
+            abiMethod,
+            map,
+            implementable: !isFactoryCall
+                && (!method.IsExclusiveTo || method.IsOverridable || method.IsProtected)
+        );
 
         if (method.IsConstructor)
         {
@@ -1020,7 +1026,8 @@ sealed class TableWriter
     private void SetShapes(
         TableMember member,
         MethodDefinition method,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? map
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map,
+        bool implementable
     )
     {
         var shape = shapes.GetShape(method, map);
@@ -1033,6 +1040,19 @@ sealed class TableWriter
         }
 
         member.ForwardShape = GetShapeId(shape.Key);
+
+        // A reverse id is read only where the runtime builds a vtable for an
+        // interface that Python implements, and a reverse trampoline is taken
+        // for exactly that set of interfaces (see ShapeCensus). A member of
+        // one that cannot be implemented would still find an id here, because
+        // the id names a slot and a shape rather than a member, and some other
+        // interface has minted the pair - so it would say a callback exists
+        // where none is ever asked for, and move whenever that other
+        // interface appears.
+        if (!implementable)
+        {
+            return;
+        }
 
         if (
             census.ReverseIds.TryGetValue(

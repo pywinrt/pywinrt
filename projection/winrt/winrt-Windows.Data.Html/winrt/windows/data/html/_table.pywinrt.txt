@@ -7,7 +7,7 @@ class Windows.Data.Html.HtmlUtilities static python_type
     py HtmlUtilities
     factory Windows.Data.Html.IHtmlUtilities
     method convert_to_text static
-        method ConvertToText slot=6 inputs=1 outputs=1 declaring=Windows.Data.Html.IHtmlUtilities shape=51 reverse=24 static
+        method ConvertToText slot=6 inputs=1 outputs=1 declaring=Windows.Data.Html.IHtmlUtilities shape=51 static
             in string name=html
             out string return
 

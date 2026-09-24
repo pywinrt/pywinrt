@@ -65,28 +65,28 @@ class Windows.Data.Pdf.PdfDocument python_type
     requires Windows.Data.Pdf.IPdfDocument
     factory Windows.Data.Pdf.IPdfDocumentStatics
     property is_password_protected
-        get get_IsPasswordProtected slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=4 reverse=62
+        get get_IsPasswordProtected slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=4
             out boolean return
     property page_count
-        get get_PageCount slot=7 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=4 reverse=43
+        get get_PageCount slot=7 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=4
             out uint32 return
     method get_page
-        method GetPage slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=51 reverse=24
+        method GetPage slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocument shape=51
             in uint32 name=pageIndex
             out class type=Windows.Data.Pdf.PdfPage return
     method load_from_file_async static
-        method LoadFromFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=51 reverse=24 static
+        method LoadFromFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=51 static
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
-        method LoadFromFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=117 reverse=45 static
+        method LoadFromFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=117 static
             in interface type=Windows.Storage.IStorageFile name=file
             in string name=password
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
     method load_from_stream_async static
-        method LoadFromStreamAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=51 reverse=65 static
+        method LoadFromStreamAsync slot=8 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=51 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=inputStream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
-        method LoadFromStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=117 reverse=101 static
+        method LoadFromStreamAsync slot=9 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfDocumentStatics shape=117 static
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=inputStream
             in string name=password
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Data.Pdf.PdfDocument> return
@@ -98,30 +98,30 @@ class Windows.Data.Pdf.PdfPage python_type closeable
     requires Windows.Data.Pdf.IPdfPage
     requires Windows.Foundation.IClosable
     property dimensions
-        get get_Dimensions slot=11 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=141
+        get get_Dimensions slot=11 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4
             out class type=Windows.Data.Pdf.PdfPageDimensions return
     property index
-        get get_Index slot=9 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=99
+        get get_Index slot=9 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4
             out uint32 return
     property preferred_zoom
-        get get_PreferredZoom slot=13 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=173
+        get get_PreferredZoom slot=13 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4
             out single return
     property rotation
-        get get_Rotation slot=12 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=162
+        get get_Rotation slot=12 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4
             out enum32 type=Windows.Data.Pdf.PdfPageRotation return
     property size
-        get get_Size slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=121
+        get get_Size slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4
             out struct type=Windows.Foundation.Size return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method prepare_page_async
-        method PreparePageAsync slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4 reverse=62
+        method PreparePageAsync slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method render_to_stream_async
-        method RenderToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=51 reverse=24
+        method RenderToStreamAsync slot=6 inputs=1 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=51
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=outputStream
             out interface type=Windows.Foundation.IAsyncAction return
-        method RenderToStreamAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=117 reverse=45
+        method RenderToStreamAsync slot=7 inputs=2 outputs=1 declaring=Windows.Data.Pdf.IPdfPage shape=117
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=outputStream
             in class type=Windows.Data.Pdf.PdfPageRenderOptions name=options
             out interface type=Windows.Foundation.IAsyncAction return
@@ -132,19 +132,19 @@ class Windows.Data.Pdf.PdfPageDimensions python_type
     default Windows.Data.Pdf.IPdfPageDimensions
     requires Windows.Data.Pdf.IPdfPageDimensions
     property art_box
-        get get_ArtBox slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=121
+        get get_ArtBox slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4
             out struct type=Windows.Foundation.Rect return
     property bleed_box
-        get get_BleedBox slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=62
+        get get_BleedBox slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4
             out struct type=Windows.Foundation.Rect return
     property crop_box
-        get get_CropBox slot=7 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=43
+        get get_CropBox slot=7 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4
             out struct type=Windows.Foundation.Rect return
     property media_box
-        get get_MediaBox slot=6 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=22
+        get get_MediaBox slot=6 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4
             out struct type=Windows.Foundation.Rect return
     property trim_box
-        get get_TrimBox slot=9 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4 reverse=99
+        get get_TrimBox slot=9 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageDimensions shape=4
             out struct type=Windows.Foundation.Rect return
 
 class Windows.Data.Pdf.PdfPageRenderOptions activatable python_type
@@ -156,32 +156,32 @@ class Windows.Data.Pdf.PdfPageRenderOptions activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property source_rect
-        get get_SourceRect slot=6 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=22
+        get get_SourceRect slot=6 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             out struct type=Windows.Foundation.Rect return
         put put_SourceRect slot=7 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=8
             in struct type=Windows.Foundation.Rect name=value
     property is_ignoring_high_contrast
-        get get_IsIgnoringHighContrast slot=14 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=186
+        get get_IsIgnoringHighContrast slot=14 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             out boolean return
-        put put_IsIgnoringHighContrast slot=15 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=194
+        put put_IsIgnoringHighContrast slot=15 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             in boolean name=value
     property destination_width
-        get get_DestinationWidth slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=62
+        get get_DestinationWidth slot=8 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             out uint32 return
-        put put_DestinationWidth slot=9 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=99
+        put put_DestinationWidth slot=9 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             in uint32 name=value
     property destination_height
-        get get_DestinationHeight slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=121
+        get get_DestinationHeight slot=10 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             out uint32 return
-        put put_DestinationHeight slot=11 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=141
+        put put_DestinationHeight slot=11 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             in uint32 name=value
     property bitmap_encoder_id
-        get get_BitmapEncoderId slot=16 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=202
+        get get_BitmapEncoderId slot=16 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             out guid return
         put put_BitmapEncoderId slot=17 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=33
             in guid name=value
     property background_color
-        get get_BackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4 reverse=162
+        get get_BackgroundColor slot=12 inputs=0 outputs=1 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=4
             out struct type=Windows.UI.Color return
         put put_BackgroundColor slot=13 inputs=1 outputs=0 declaring=Windows.Data.Pdf.IPdfPageRenderOptions shape=29
             in struct type=Windows.UI.Color name=value

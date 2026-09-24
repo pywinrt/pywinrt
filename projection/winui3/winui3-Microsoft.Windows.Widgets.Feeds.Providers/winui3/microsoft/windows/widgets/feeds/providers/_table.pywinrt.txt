@@ -9,7 +9,7 @@ class Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersRequestedAr
     default Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersRequestedArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersRequestedArgs
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersRequestedArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersRequestedArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions python_type
@@ -19,15 +19,15 @@ class Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptio
     requires Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptions
     factory Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptionsFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptionsFactory shape=117
             in string name=feedProviderDefinitionId
             in string name=customQueryParameters
             out class type=Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersUpdateOptions return
     property custom_query_parameters
-        get get_CustomQueryParameters slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptions shape=4 reverse=43
+        get get_CustomQueryParameters slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptions shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptions shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersUpdateOptions shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs python_type
@@ -36,13 +36,13 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs py
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs
     property analytics_json
-        get get_AnalyticsJson slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs shape=4 reverse=62
+        get get_AnalyticsJson slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs shape=4
             out string return
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnalyticsInfoReportedArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs python_type
@@ -51,10 +51,10 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs python_type
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedDisabledArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedDisabledArgs
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedDisabledArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedDisabledArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedDisabledArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedDisabledArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs python_type
@@ -63,10 +63,10 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs python_type
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedEnabledArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedEnabledArgs
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedEnabledArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedEnabledArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedEnabledArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedEnabledArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs python_type
@@ -75,13 +75,13 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs python
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs
     property error_json
-        get get_ErrorJson slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs shape=4 reverse=62
+        get get_ErrorJson slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs shape=4
             out string return
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedErrorInfoReportedArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedManager python_type
@@ -92,7 +92,7 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedManager python_type
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2
     factory Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManagerStatics shape=4 static
             out class type=Microsoft.Windows.Widgets.Feeds.Providers.FeedManager return
     method get_enabled_feed_providers
         method GetEnabledFeedProviders slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager shape=51 reverse=24
@@ -117,13 +117,13 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedMessageReceivedArgs python_t
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs shape=4
             out string return
     property message
-        get get_Message slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs shape=4 reverse=62
+        get get_Message slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedMessageReceivedArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderDisabledArgs python_type
@@ -132,7 +132,7 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderDisabledArgs python_
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderDisabledArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderDisabledArgs
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderDisabledArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderDisabledArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderEnabledArgs python_type
@@ -141,7 +141,7 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderEnabledArgs python_t
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderEnabledArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderEnabledArgs
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderEnabledArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderEnabledArgs shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo python_type
@@ -150,10 +150,10 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo python_type
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderInfo
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderInfo
     property enabled_feed_definition_ids
-        get get_EnabledFeedDefinitionIds slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderInfo shape=51 reverse=44
+        get get_EnabledFeedDefinitionIds slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderInfo shape=51
             receive_array string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderInfo shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderInfo shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest python_type
@@ -162,22 +162,22 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest python_type
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest
     property method
-        get get_Method slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=43
+        get get_Method slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             out string return
-        put put_Method slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=62
+        put put_Method slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             in string name=value
     property headers
-        get get_Headers slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=141
+        get get_Headers slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             out class type=Windows.Foundation.Collections.StringMap return
-        put put_Headers slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=162
+        put put_Headers slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             in class type=Windows.Foundation.Collections.StringMap name=value
     property content
-        get get_Content slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=99
+        get get_Content slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
-        put put_Content slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=121
+        put put_Content slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=value
     property uri
-        get get_Uri slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4 reverse=22
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequest shape=4
             out string return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs python_type
@@ -186,21 +186,21 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs python
     default Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs
     property response
-        get get_Response slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4 reverse=99
+        get get_Response slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse return
-        put put_Response slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4 reverse=121
+        put put_Response slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4
             in class type=Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse name=value
     property feed_definition_id
-        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4 reverse=43
+        get get_FeedDefinitionId slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4
             out string return
     property feed_provider_definition_id
-        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4 reverse=22
+        get get_FeedProviderDefinitionId slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4
             out string return
     property request
-        get get_Request slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4 reverse=62
+        get get_Request slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4
             out class type=Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest return
     method get_deferral
-        method GetDeferral slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4 reverse=141
+        method GetDeferral slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceRequestedArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse python_type
@@ -210,24 +210,24 @@ class Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse python_type
     requires Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse
     factory Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponseFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponseFactory shape=195 reverse=26
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponseFactory shape=195
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=content
             in string name=reasonPhrase
             in int32 name=statusCode
             out class type=Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse return
     property headers
-        get get_Headers slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4 reverse=43
+        get get_Headers slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4
             out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
-        put put_Headers slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4 reverse=62
+        put put_Headers slot=8 inputs=1 outputs=0 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4
             out interface type=Windows.Storage.Streams.IRandomAccessStreamReference return
     property reason_phrase
-        get get_ReasonPhrase slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4 reverse=99
+        get get_ReasonPhrase slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4
             out string return
     property status_code
-        get get_StatusCode slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4 reverse=121
+        get get_StatusCode slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceResponse shape=4
             out int32 return
 
 interface Microsoft.Windows.Widgets.Feeds.Providers.ICustomQueryParametersRequestedArgs

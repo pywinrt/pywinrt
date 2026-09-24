@@ -38,39 +38,39 @@ class Windows.ApplicationModel.Resources.ResourceLoader activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderFactory shape=51
             in string name=name
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return
     method get_default_pri_path static
-        method GetDefaultPriPath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics4 shape=51 reverse=24 static
+        method GetDefaultPriPath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics4 shape=51 static
             in string name=packageFullName
             out string return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=4 static
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return
-        method GetForCurrentView slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=51 reverse=44 static
+        method GetForCurrentView slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=51 static
             in string name=name
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return
     method get_for_ui_context static
-        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics3 shape=51 reverse=24 static
+        method GetForUIContext slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics3 shape=51 static
             in class type=Windows.UI.UIContext name=context
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return
     method get_for_view_independent_use static
-        method GetForViewIndependentUse slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=4 reverse=62 static
+        method GetForViewIndependentUse slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=4 static
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return
-        method GetForViewIndependentUse slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=51 reverse=100 static
+        method GetForViewIndependentUse slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics2 shape=51 static
             in string name=name
             out class type=Windows.ApplicationModel.Resources.ResourceLoader return
     method get_string
-        method GetString slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoader shape=51 reverse=24
+        method GetString slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoader shape=51
             in string name=resource
             out string return
     method get_string_for_reference static
-        method GetStringForReference slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics shape=51 reverse=24 static
+        method GetStringForReference slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoaderStatics shape=51 static
             in class type=Windows.Foundation.Uri name=uri
             out string return
     method get_string_for_uri
-        method GetStringForUri slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoader2 shape=51 reverse=24
+        method GetStringForUri slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.IResourceLoader2 shape=51
             in class type=Windows.Foundation.Uri name=uri
             out string return
 

@@ -24,12 +24,12 @@ class Microsoft.UI.Xaml.Media.Animation.BackEase activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property amplitude
-        get get_Amplitude slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBackEase shape=4 reverse=22
+        get get_Amplitude slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBackEase shape=4
             out double return
-        put put_Amplitude slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBackEase shape=2 reverse=38
+        put put_Amplitude slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBackEase shape=2
             in double name=value
     property amplitude_property static
-        get get_AmplitudeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBackEaseStatics shape=4 reverse=22 static
+        get get_AmplitudeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBackEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.BasicConnectedAnimationConfiguration composable python_type
@@ -40,7 +40,7 @@ class Microsoft.UI.Xaml.Media.Animation.BasicConnectedAnimationConfiguration com
     requires Microsoft.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfiguration
     composable Microsoft.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfigurationFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfigurationFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBasicConnectedAnimationConfigurationFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Media.Animation.BasicConnectedAnimationConfiguration return
@@ -56,12 +56,12 @@ class Microsoft.UI.Xaml.Media.Animation.BeginStoryboard activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property storyboard
-        get get_Storyboard slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBeginStoryboard shape=4 reverse=22
+        get get_Storyboard slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBeginStoryboard shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.Storyboard return
-        put put_Storyboard slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBeginStoryboard shape=4 reverse=43
+        put put_Storyboard slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBeginStoryboard shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.Storyboard name=value
     property storyboard_property static
-        get get_StoryboardProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBeginStoryboardStatics shape=4 reverse=22 static
+        get get_StoryboardProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBeginStoryboardStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.BounceEase activatable python_type
@@ -75,20 +75,20 @@ class Microsoft.UI.Xaml.Media.Animation.BounceEase activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property bounciness
-        get get_Bounciness slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=4 reverse=62
+        get get_Bounciness slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=4
             out double return
         put put_Bounciness slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=2
             in double name=value
     property bounces
-        get get_Bounces slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=4 reverse=22
+        get get_Bounces slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=4
             out int32 return
-        put put_Bounces slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=4 reverse=43
+        put put_Bounces slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEase shape=4
             in int32 name=value
     property bounces_property static
-        get get_BouncesProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEaseStatics shape=4 reverse=22 static
+        get get_BouncesProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property bounciness_property static
-        get get_BouncinessProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEaseStatics shape=4 reverse=43 static
+        get get_BouncinessProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IBounceEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.CircleEase activatable python_type
@@ -119,44 +119,44 @@ class Microsoft.UI.Xaml.Media.Animation.ColorAnimation activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property to
-        get get_To slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=62
+        get get_To slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_To slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=99
+        put put_To slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property from_
-        get get_From slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=22
+        get get_From slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_From slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=43
+        put put_From slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=186
+        get get_EnableDependentAnimation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=194
+        put put_EnableDependentAnimation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             in boolean name=value
     property easing_function
-        get get_EasingFunction slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=162
+        get get_EasingFunction slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase return
-        put put_EasingFunction slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=173
+        put put_EasingFunction slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase name=value
     property by
-        get get_By slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=121
+        get get_By slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             out reference type=Windows.Foundation.IReference<Windows.UI.Color> return
-        put put_By slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4 reverse=141
+        put put_By slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimation shape=4
             in reference type=Windows.Foundation.IReference<Windows.UI.Color> name=value
     property by_property static
-        get get_ByProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 reverse=62 static
+        get get_ByProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property easing_function_property static
-        get get_EasingFunctionProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 reverse=99 static
+        get get_EasingFunctionProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 reverse=121 static
+        get get_EnableDependentAnimationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_property static
-        get get_FromProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 reverse=22 static
+        get get_FromProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property to_property static
-        get get_ToProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 reverse=43 static
+        get get_ToProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames activatable python_type
@@ -170,15 +170,15 @@ class Microsoft.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames shape=4 reverse=43
+        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames shape=4 reverse=62
+        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames shape=4
             in boolean name=value
     property key_frames
-        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames shape=4 reverse=22
+        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFrames shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFramesStatics shape=4 reverse=22 static
+        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorAnimationUsingKeyFramesStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame composable python_type
@@ -190,20 +190,20 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame composable python_type
     factory Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameFactory
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=4
             out struct type=Windows.UI.Color return
         put put_Value slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=29
             in struct type=Windows.UI.Color name=value
     property key_time
-        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=4 reverse=62
+        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=4
             out struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime return
-        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=26 reverse=110
+        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=26
             in struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime name=value
     property key_time_property static
-        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameStatics shape=4 reverse=43 static
+        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property value_property static
-        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameStatics shape=4 reverse=22 static
+        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable python_type iterable sequence mutable_sequence
@@ -272,22 +272,22 @@ class Microsoft.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo activatab
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_staggering_enabled
-        get get_IsStaggeringEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfo shape=4 reverse=22
+        get get_IsStaggeringEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfo shape=4
             out boolean return
-        put put_IsStaggeringEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfo shape=4 reverse=43
+        put put_IsStaggeringEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfo shape=4
             in boolean name=value
     property is_stagger_element_property static
-        get get_IsStaggerElementProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=4 reverse=43 static
+        get get_IsStaggerElementProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property is_staggering_enabled_property static
-        get get_IsStaggeringEnabledProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=4 reverse=22 static
+        get get_IsStaggeringEnabledProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method get_is_stagger_element static
-        method GetIsStaggerElement slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=51 reverse=65 static
+        method GetIsStaggerElement slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             out boolean return
     method set_is_stagger_element static
-        method SetIsStaggerElement slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=51 reverse=100 static
+        method SetIsStaggerElement slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ICommonNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             in boolean name=value
 
@@ -297,32 +297,32 @@ class Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation python_type
     default Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation
     requires Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation
     property is_scale_animation_enabled
-        get get_IsScaleAnimationEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4 reverse=22
+        get get_IsScaleAnimationEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4
             out boolean return
-        put put_IsScaleAnimationEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4 reverse=43
+        put put_IsScaleAnimationEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4
             in boolean name=value
     property configuration
-        get get_Configuration slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4 reverse=62
+        get get_Configuration slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationConfiguration return
-        put put_Configuration slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4 reverse=99
+        put put_Configuration slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationConfiguration name=value
     event completed
-        add add_Completed slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51 reverse=124
+        add add_Completed slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=26 reverse=156
+        remove remove_Completed slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method cancel
-        method Cancel slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=0 reverse=185
+        method Cancel slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=0
     method set_animation_component
-        method SetAnimationComponent slot=15 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51 reverse=196
+        method SetAnimationComponent slot=15 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51
             in enum32 type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationComponent name=component
             in interface type=Microsoft.UI.Composition.ICompositionAnimationBase name=animation
     method try_start
-        method TryStart slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51 reverse=163
+        method TryStart slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=51
             in class type=Microsoft.UI.Xaml.UIElement name=destination
             out boolean return
-        method TryStart slot=13 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=117 reverse=175
+        method TryStart slot=13 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation shape=117
             in class type=Microsoft.UI.Xaml.UIElement name=destination
             in parameterized type=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement> name=coordinatedElements
             out boolean return
@@ -349,24 +349,24 @@ class Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationService python_type
     requires Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService
     factory Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationServiceStatics
     property default_easing_function
-        get get_DefaultEasingFunction slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=4 reverse=62
+        get get_DefaultEasingFunction slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=4
             out class type=Microsoft.UI.Composition.CompositionEasingFunction return
-        put put_DefaultEasingFunction slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=4 reverse=99
+        put put_DefaultEasingFunction slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=4
             in class type=Microsoft.UI.Composition.CompositionEasingFunction name=value
     property default_duration
-        get get_DefaultDuration slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=4 reverse=22
+        get get_DefaultDuration slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=4
             out timespan return
-        put put_DefaultDuration slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=26 reverse=53
+        put put_DefaultDuration slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=26
             in timespan name=value
     method get_animation
-        method GetAnimation slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=51 reverse=144
+        method GetAnimation slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=51
             in string name=key
             out class type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation return
     method get_for_current_view static
-        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationServiceStatics shape=4 reverse=22 static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationServiceStatics shape=4 static
             out class type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationService return
     method prepare_to_animate
-        method PrepareToAnimate slot=10 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=117 reverse=125
+        method PrepareToAnimate slot=10 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IConnectedAnimationService shape=117
             in string name=key
             in class type=Microsoft.UI.Xaml.UIElement name=source
             out class type=Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation return
@@ -382,20 +382,20 @@ class Microsoft.UI.Xaml.Media.Animation.ContentThemeTransition activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property vertical_offset
-        get get_VerticalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=4 reverse=62
+        get get_VerticalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=4
             out double return
         put put_VerticalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=2
             in double name=value
     property horizontal_offset
-        get get_HorizontalOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=4 reverse=22
+        get get_HorizontalOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=4
             out double return
-        put put_HorizontalOffset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=2 reverse=38
+        put put_HorizontalOffset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransition shape=2
             in double name=value
     property horizontal_offset_property static
-        get get_HorizontalOffsetProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransitionStatics shape=4 reverse=22 static
+        get get_HorizontalOffsetProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property vertical_offset_property static
-        get get_VerticalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransitionStatics shape=4 reverse=43 static
+        get get_VerticalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContentThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo activatable python_type
@@ -409,44 +409,44 @@ class Microsoft.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo activa
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property exit_element
-        get get_ExitElement slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfo shape=4 reverse=22
+        get get_ExitElement slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfo shape=4
             out class type=Microsoft.UI.Xaml.UIElement return
-        put put_ExitElement slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfo shape=4 reverse=43
+        put put_ExitElement slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfo shape=4
             in class type=Microsoft.UI.Xaml.UIElement name=value
     property exit_element_container_property static
-        get get_ExitElementContainerProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 reverse=173 static
+        get get_ExitElementContainerProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property exit_element_property static
-        get get_ExitElementProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 reverse=22 static
+        get get_ExitElementProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property is_entrance_element_property static
-        get get_IsEntranceElementProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 reverse=43 static
+        get get_IsEntranceElementProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property is_exit_element_property static
-        get get_IsExitElementProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 reverse=121 static
+        get get_IsExitElementProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method get_exit_element_container static
-        method GetExitElementContainer slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 reverse=187 static
+        method GetExitElementContainer slot=14 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Controls.ListViewBase name=element
             out boolean return
     method get_is_entrance_element static
-        method GetIsEntranceElement slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 reverse=65 static
+        method GetIsEntranceElement slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             out boolean return
     method get_is_exit_element static
-        method GetIsExitElement slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 reverse=144 static
+        method GetIsExitElement slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             out boolean return
     method set_exit_element_container static
-        method SetExitElementContainer slot=15 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 reverse=196 static
+        method SetExitElementContainer slot=15 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Controls.ListViewBase name=element
             in boolean name=value
     method set_is_entrance_element static
-        method SetIsEntranceElement slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 reverse=100 static
+        method SetIsEntranceElement slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             in boolean name=value
     method set_is_exit_element static
-        method SetIsExitElement slot=12 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 reverse=163 static
+        method SetIsExitElement slot=12 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IContinuumNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             in boolean name=value
 
@@ -468,7 +468,7 @@ class Microsoft.UI.Xaml.Media.Animation.DirectConnectedAnimationConfiguration co
     requires Microsoft.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfiguration
     composable Microsoft.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfigurationFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfigurationFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDirectConnectedAnimationConfigurationFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Media.Animation.DirectConnectedAnimationConfiguration return
@@ -524,44 +524,44 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleAnimation activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property to
-        get get_To slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=62
+        get get_To slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-        put put_To slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=99
+        put put_To slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             in reference type=Windows.Foundation.IReference<System.Double> name=value
     property from_
-        get get_From slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=22
+        get get_From slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-        put put_From slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=43
+        put put_From slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             in reference type=Windows.Foundation.IReference<System.Double> name=value
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=186
+        get get_EnableDependentAnimation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=194
+        put put_EnableDependentAnimation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             in boolean name=value
     property easing_function
-        get get_EasingFunction slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=162
+        get get_EasingFunction slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase return
-        put put_EasingFunction slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=173
+        put put_EasingFunction slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase name=value
     property by
-        get get_By slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=121
+        get get_By slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-        put put_By slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4 reverse=141
+        put put_By slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimation shape=4
             in reference type=Windows.Foundation.IReference<System.Double> name=value
     property by_property static
-        get get_ByProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 reverse=62 static
+        get get_ByProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property easing_function_property static
-        get get_EasingFunctionProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 reverse=99 static
+        get get_EasingFunctionProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 reverse=121 static
+        get get_EnableDependentAnimationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_property static
-        get get_FromProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 reverse=22 static
+        get get_FromProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property to_property static
-        get get_ToProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 reverse=43 static
+        get get_ToProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames activatable python_type
@@ -575,15 +575,15 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames shape=4 reverse=43
+        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames shape=4 reverse=62
+        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames shape=4
             in boolean name=value
     property key_frames
-        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames shape=4 reverse=22
+        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFrames shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFramesStatics shape=4 reverse=22 static
+        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleAnimationUsingKeyFramesStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame composable python_type
@@ -595,20 +595,20 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame composable python_type
     factory Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameFactory
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=4
             out double return
-        put put_Value slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=2 reverse=38
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=2
             in double name=value
     property key_time
-        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=4 reverse=62
+        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=4
             out struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime return
-        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=26 reverse=110
+        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=26
             in struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime name=value
     property key_time_property static
-        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics shape=4 reverse=43 static
+        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property value_property static
-        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics shape=4 reverse=22 static
+        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable python_type iterable sequence mutable_sequence
@@ -677,12 +677,12 @@ class Microsoft.UI.Xaml.Media.Animation.DragItemThemeAnimation activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragItemThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragItemThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragItemThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragItemThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragItemThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragItemThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DragOverThemeAnimation activatable python_type
@@ -696,28 +696,28 @@ class Microsoft.UI.Xaml.Media.Animation.DragOverThemeAnimation activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property to_offset
-        get get_ToOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4 reverse=62
+        get get_ToOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4
             out double return
         put put_ToOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=2
             in double name=value
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4
             in string name=value
     property direction
-        get get_Direction slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4 reverse=121
+        get get_Direction slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.AnimationDirection return
-        put put_Direction slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4 reverse=141
+        put put_Direction slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimation shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.AnimationDirection name=value
     property direction_property static
-        get get_DirectionProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics shape=4 reverse=62 static
+        get get_DirectionProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property to_offset_property static
-        get get_ToOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics shape=4 reverse=43 static
+        get get_ToOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDragOverThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DrillInNavigationTransitionInfo activatable python_type
@@ -741,36 +741,36 @@ class Microsoft.UI.Xaml.Media.Animation.DrillInThemeAnimation activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property exit_target_name
-        get get_ExitTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=121
+        get get_ExitTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             out string return
-        put put_ExitTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=141
+        put put_ExitTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             in string name=value
     property exit_target
-        get get_ExitTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=162
+        get get_ExitTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_ExitTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=173
+        put put_ExitTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property entrance_target_name
-        get get_EntranceTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=22
+        get get_EntranceTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             out string return
-        put put_EntranceTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=43
+        put put_EntranceTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             in string name=value
     property entrance_target
-        get get_EntranceTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=62
+        get get_EntranceTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_EntranceTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4 reverse=99
+        put put_EntranceTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property entrance_target_name_property static
-        get get_EntranceTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 reverse=22 static
+        get get_EntranceTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property entrance_target_property static
-        get get_EntranceTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 reverse=43 static
+        get get_EntranceTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property exit_target_name_property static
-        get get_ExitTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 reverse=62 static
+        get get_ExitTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property exit_target_property static
-        get get_ExitTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 reverse=99 static
+        get get_ExitTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DrillOutThemeAnimation activatable python_type
@@ -784,36 +784,36 @@ class Microsoft.UI.Xaml.Media.Animation.DrillOutThemeAnimation activatable pytho
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property exit_target_name
-        get get_ExitTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=121
+        get get_ExitTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             out string return
-        put put_ExitTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=141
+        put put_ExitTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             in string name=value
     property exit_target
-        get get_ExitTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=162
+        get get_ExitTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_ExitTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=173
+        put put_ExitTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property entrance_target_name
-        get get_EntranceTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=22
+        get get_EntranceTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             out string return
-        put put_EntranceTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=43
+        put put_EntranceTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             in string name=value
     property entrance_target
-        get get_EntranceTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=62
+        get get_EntranceTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_EntranceTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4 reverse=99
+        put put_EntranceTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property entrance_target_name_property static
-        get get_EntranceTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 reverse=22 static
+        get get_EntranceTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property entrance_target_property static
-        get get_EntranceTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 reverse=43 static
+        get get_EntranceTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property exit_target_name_property static
-        get get_ExitTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 reverse=62 static
+        get get_ExitTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property exit_target_property static
-        get get_ExitTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 reverse=99 static
+        get get_ExitTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDrillOutThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation activatable python_type
@@ -827,12 +827,12 @@ class Microsoft.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDropTargetItemThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.EasingColorKeyFrame activatable python_type
@@ -846,12 +846,12 @@ class Microsoft.UI.Xaml.Media.Animation.EasingColorKeyFrame activatable python_t
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property easing_function
-        get get_EasingFunction slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingColorKeyFrame shape=4 reverse=22
+        get get_EasingFunction slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingColorKeyFrame shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase return
-        put put_EasingFunction slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingColorKeyFrame shape=4 reverse=43
+        put put_EasingFunction slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingColorKeyFrame shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase name=value
     property easing_function_property static
-        get get_EasingFunctionProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingColorKeyFrameStatics shape=4 reverse=22 static
+        get get_EasingFunctionProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingColorKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.EasingDoubleKeyFrame activatable python_type
@@ -865,12 +865,12 @@ class Microsoft.UI.Xaml.Media.Animation.EasingDoubleKeyFrame activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property easing_function
-        get get_EasingFunction slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingDoubleKeyFrame shape=4 reverse=22
+        get get_EasingFunction slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingDoubleKeyFrame shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase return
-        put put_EasingFunction slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingDoubleKeyFrame shape=4 reverse=43
+        put put_EasingFunction slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingDoubleKeyFrame shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase name=value
     property easing_function_property static
-        get get_EasingFunctionProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingDoubleKeyFrameStatics shape=4 reverse=22 static
+        get get_EasingFunctionProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingDoubleKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase composable python_type
@@ -882,15 +882,15 @@ class Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase composable python_typ
     factory Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBaseStatics
     composable Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBaseFactory
     property easing_mode
-        get get_EasingMode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBase shape=4 reverse=22
+        get get_EasingMode slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBase shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Animation.EasingMode return
-        put put_EasingMode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBase shape=4 reverse=43
+        put put_EasingMode slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBase shape=4
             in enum32 type=Microsoft.UI.Xaml.Media.Animation.EasingMode name=value
     property easing_mode_property static
-        get get_EasingModeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBaseStatics shape=4 reverse=22 static
+        get get_EasingModeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method ease
-        method Ease slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBase shape=46 reverse=58
+        method Ease slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingFunctionBase shape=46
             in double name=normalizedTime
             out double return
 
@@ -912,12 +912,12 @@ class Microsoft.UI.Xaml.Media.Animation.EasingPointKeyFrame activatable python_t
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property easing_function
-        get get_EasingFunction slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingPointKeyFrame shape=4 reverse=22
+        get get_EasingFunction slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingPointKeyFrame shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase return
-        put put_EasingFunction slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingPointKeyFrame shape=4 reverse=43
+        put put_EasingFunction slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingPointKeyFrame shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase name=value
     property easing_function_property static
-        get get_EasingFunctionProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingPointKeyFrameStatics shape=4 reverse=22 static
+        get get_EasingFunctionProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEasingPointKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.EdgeUIThemeTransition activatable python_type
@@ -931,12 +931,12 @@ class Microsoft.UI.Xaml.Media.Animation.EdgeUIThemeTransition activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property edge
-        get get_Edge slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEdgeUIThemeTransition shape=4 reverse=22
+        get get_Edge slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEdgeUIThemeTransition shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.EdgeTransitionLocation return
-        put put_Edge slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEdgeUIThemeTransition shape=4 reverse=43
+        put put_Edge slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEdgeUIThemeTransition shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.EdgeTransitionLocation name=value
     property edge_property static
-        get get_EdgeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEdgeUIThemeTransitionStatics shape=4 reverse=22 static
+        get get_EdgeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEdgeUIThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ElasticEase activatable python_type
@@ -950,20 +950,20 @@ class Microsoft.UI.Xaml.Media.Animation.ElasticEase activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property springiness
-        get get_Springiness slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=4 reverse=62
+        get get_Springiness slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=4
             out double return
         put put_Springiness slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=2
             in double name=value
     property oscillations
-        get get_Oscillations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=4 reverse=22
+        get get_Oscillations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=4
             out int32 return
-        put put_Oscillations slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=4 reverse=43
+        put put_Oscillations slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEase shape=4
             in int32 name=value
     property oscillations_property static
-        get get_OscillationsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEaseStatics shape=4 reverse=22 static
+        get get_OscillationsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property springiness_property static
-        get get_SpringinessProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEaseStatics shape=4 reverse=43 static
+        get get_SpringinessProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IElasticEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo activatable python_type
@@ -977,14 +977,14 @@ class Microsoft.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo activat
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_target_element_property static
-        get get_IsTargetElementProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics shape=4 reverse=22 static
+        get get_IsTargetElementProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method get_is_target_element static
-        method GetIsTargetElement slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics shape=51 reverse=44 static
+        method GetIsTargetElement slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             out boolean return
     method set_is_target_element static
-        method SetIsTargetElement slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics shape=51 reverse=65 static
+        method SetIsTargetElement slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceNavigationTransitionInfoStatics shape=51 static
             in class type=Microsoft.UI.Xaml.UIElement name=element
             in boolean name=value
 
@@ -999,28 +999,28 @@ class Microsoft.UI.Xaml.Media.Animation.EntranceThemeTransition activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_staggering_enabled
-        get get_IsStaggeringEnabled slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4 reverse=121
+        get get_IsStaggeringEnabled slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4
             out boolean return
-        put put_IsStaggeringEnabled slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4 reverse=141
+        put put_IsStaggeringEnabled slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4
             in boolean name=value
     property from_vertical_offset
-        get get_FromVerticalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4 reverse=62
+        get get_FromVerticalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4
             out double return
         put put_FromVerticalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=2
             in double name=value
     property from_horizontal_offset
-        get get_FromHorizontalOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4 reverse=22
+        get get_FromHorizontalOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=4
             out double return
-        put put_FromHorizontalOffset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=2 reverse=38
+        put put_FromHorizontalOffset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransition shape=2
             in double name=value
     property from_horizontal_offset_property static
-        get get_FromHorizontalOffsetProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics shape=4 reverse=22 static
+        get get_FromHorizontalOffsetProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_vertical_offset_property static
-        get get_FromVerticalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics shape=4 reverse=43 static
+        get get_FromVerticalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property is_staggering_enabled_property static
-        get get_IsStaggeringEnabledProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics shape=4 reverse=62 static
+        get get_IsStaggeringEnabledProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IEntranceThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 delegate Windows.Foundation.EventHandler<System.Object> concrete
@@ -1045,12 +1045,12 @@ class Microsoft.UI.Xaml.Media.Animation.ExponentialEase activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property exponent
-        get get_Exponent slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IExponentialEase shape=4 reverse=22
+        get get_Exponent slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IExponentialEase shape=4
             out double return
-        put put_Exponent slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IExponentialEase shape=2 reverse=38
+        put put_Exponent slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IExponentialEase shape=2
             in double name=value
     property exponent_property static
-        get get_ExponentProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IExponentialEaseStatics shape=4 reverse=22 static
+        get get_ExponentProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IExponentialEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.FadeInThemeAnimation activatable python_type
@@ -1064,12 +1064,12 @@ class Microsoft.UI.Xaml.Media.Animation.FadeInThemeAnimation activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeInThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeInThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeInThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeInThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeInThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.FadeOutThemeAnimation activatable python_type
@@ -1083,12 +1083,12 @@ class Microsoft.UI.Xaml.Media.Animation.FadeOutThemeAnimation activatable python
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeOutThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeOutThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeOutThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeOutThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeOutThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IFadeOutThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 enum Microsoft.UI.Xaml.Media.Animation.FillBehavior python_type
@@ -1105,14 +1105,14 @@ class Microsoft.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration c
     requires Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration
     composable Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfigurationFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration return
     property is_shadow_enabled
-        get get_IsShadowEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration shape=4 reverse=22
+        get get_IsShadowEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration shape=4
             out boolean return
-        put put_IsShadowEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration shape=4 reverse=43
+        put put_IsShadowEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IGravityConnectedAnimationConfiguration shape=4
             in boolean name=value
 
 interface Microsoft.UI.Xaml.Media.Animation.IAddDeleteThemeTransition
@@ -2780,12 +2780,12 @@ class Microsoft.UI.Xaml.Media.Animation.KeySpline activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property control_point2
-        get get_ControlPoint2 slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IKeySpline shape=4 reverse=62
+        get get_ControlPoint2 slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IKeySpline shape=4
             out struct type=Windows.Foundation.Point return
         put put_ControlPoint2 slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IKeySpline shape=10
             in struct type=Windows.Foundation.Point name=value
     property control_point1
-        get get_ControlPoint1 slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IKeySpline shape=4 reverse=22
+        get get_ControlPoint1 slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IKeySpline shape=4
             out struct type=Windows.Foundation.Point return
         put put_ControlPoint1 slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IKeySpline shape=10
             in struct type=Windows.Foundation.Point name=value
@@ -2847,12 +2847,12 @@ class Microsoft.UI.Xaml.Media.Animation.NavigationThemeTransition activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property default_navigation_transition_info
-        get get_DefaultNavigationTransitionInfo slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationThemeTransition shape=4 reverse=22
+        get get_DefaultNavigationTransitionInfo slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationThemeTransition shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo return
-        put put_DefaultNavigationTransitionInfo slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationThemeTransition shape=4 reverse=43
+        put put_DefaultNavigationTransitionInfo slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationThemeTransition shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo name=value
     property default_navigation_transition_info_property static
-        get get_DefaultNavigationTransitionInfoProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationThemeTransitionStatics shape=4 reverse=22 static
+        get get_DefaultNavigationTransitionInfoProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo composable python_type
@@ -2882,15 +2882,15 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames shape=4 reverse=43
+        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames shape=4 reverse=62
+        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames shape=4
             in boolean name=value
     property key_frames
-        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames shape=4 reverse=22
+        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFramesStatics shape=4 reverse=22 static
+        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFramesStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame composable python_type
@@ -2902,20 +2902,20 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame composable python_type
     factory Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameFactory
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4
             out object return
-        put put_Value slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4 reverse=43
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4
             in object name=value
     property key_time
-        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4 reverse=62
+        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4
             out struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime return
-        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=26 reverse=110
+        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=26
             in struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime name=value
     property key_time_property static
-        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameStatics shape=4 reverse=43 static
+        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property value_property static
-        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameStatics shape=4 reverse=22 static
+        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable python_type iterable sequence mutable_sequence
@@ -2984,12 +2984,12 @@ class Microsoft.UI.Xaml.Media.Animation.PaneThemeTransition activatable python_t
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property edge
-        get get_Edge slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPaneThemeTransition shape=4 reverse=22
+        get get_Edge slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPaneThemeTransition shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.EdgeTransitionLocation return
-        put put_Edge slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPaneThemeTransition shape=4 reverse=43
+        put put_Edge slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPaneThemeTransition shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.EdgeTransitionLocation name=value
     property edge_property static
-        get get_EdgeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPaneThemeTransitionStatics shape=4 reverse=22 static
+        get get_EdgeProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPaneThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PointAnimation activatable python_type
@@ -3003,44 +3003,44 @@ class Microsoft.UI.Xaml.Media.Animation.PointAnimation activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property to
-        get get_To slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=62
+        get get_To slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
-        put put_To slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=99
+        put put_To slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.Point> name=value
     property from_
-        get get_From slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=22
+        get get_From slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
-        put put_From slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=43
+        put put_From slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.Point> name=value
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=186
+        get get_EnableDependentAnimation slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=194
+        put put_EnableDependentAnimation slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             in boolean name=value
     property easing_function
-        get get_EasingFunction slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=162
+        get get_EasingFunction slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase return
-        put put_EasingFunction slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=173
+        put put_EasingFunction slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.EasingFunctionBase name=value
     property by
-        get get_By slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=121
+        get get_By slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.Point> return
-        put put_By slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4 reverse=141
+        put put_By slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimation shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.Point> name=value
     property by_property static
-        get get_ByProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 reverse=62 static
+        get get_ByProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property easing_function_property static
-        get get_EasingFunctionProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 reverse=99 static
+        get get_EasingFunctionProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 reverse=121 static
+        get get_EnableDependentAnimationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_property static
-        get get_FromProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 reverse=22 static
+        get get_FromProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property to_property static
-        get get_ToProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 reverse=43 static
+        get get_ToProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames activatable python_type
@@ -3054,15 +3054,15 @@ class Microsoft.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames activatable
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property enable_dependent_animation
-        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames shape=4 reverse=43
+        get get_EnableDependentAnimation slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames shape=4
             out boolean return
-        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames shape=4 reverse=62
+        put put_EnableDependentAnimation slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames shape=4
             in boolean name=value
     property key_frames
-        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames shape=4 reverse=22
+        get get_KeyFrames slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFrames shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection return
     property enable_dependent_animation_property static
-        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFramesStatics shape=4 reverse=22 static
+        get get_EnableDependentAnimationProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointAnimationUsingKeyFramesStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PointKeyFrame composable python_type
@@ -3074,20 +3074,20 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrame composable python_type
     factory Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameFactory
     property value
-        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=4 reverse=22
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=4
             out struct type=Windows.Foundation.Point return
         put put_Value slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=10
             in struct type=Windows.Foundation.Point name=value
     property key_time
-        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=4 reverse=62
+        get get_KeyTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=4
             out struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime return
-        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=26 reverse=110
+        put put_KeyTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=26
             in struct type=Microsoft.UI.Xaml.Media.Animation.KeyTime name=value
     property key_time_property static
-        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameStatics shape=4 reverse=43 static
+        get get_KeyTimeProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property value_property static
-        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameStatics shape=4 reverse=22 static
+        get get_ValueProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable python_type iterable sequence mutable_sequence
@@ -3156,12 +3156,12 @@ class Microsoft.UI.Xaml.Media.Animation.PointerDownThemeAnimation activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerDownThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerDownThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerDownThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerDownThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerDownThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerDownThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PointerUpThemeAnimation activatable python_type
@@ -3175,12 +3175,12 @@ class Microsoft.UI.Xaml.Media.Animation.PointerUpThemeAnimation activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerUpThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerUpThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerUpThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerUpThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerUpThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointerUpThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PopInThemeAnimation activatable python_type
@@ -3194,28 +3194,28 @@ class Microsoft.UI.Xaml.Media.Animation.PopInThemeAnimation activatable python_t
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4
             in string name=value
     property from_vertical_offset
-        get get_FromVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4 reverse=121
+        get get_FromVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4
             out double return
-        put put_FromVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=2 reverse=138
+        put put_FromVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=2
             in double name=value
     property from_horizontal_offset
-        get get_FromHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4 reverse=62
+        get get_FromHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=4
             out double return
         put put_FromHorizontalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimation shape=2
             in double name=value
     property from_horizontal_offset_property static
-        get get_FromHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics shape=4 reverse=43 static
+        get get_FromHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_vertical_offset_property static
-        get get_FromVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics shape=4 reverse=62 static
+        get get_FromVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopInThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PopOutThemeAnimation activatable python_type
@@ -3229,12 +3229,12 @@ class Microsoft.UI.Xaml.Media.Animation.PopOutThemeAnimation activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopOutThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopOutThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopOutThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopOutThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopOutThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopOutThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PopupThemeTransition activatable python_type
@@ -3248,20 +3248,20 @@ class Microsoft.UI.Xaml.Media.Animation.PopupThemeTransition activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property from_vertical_offset
-        get get_FromVerticalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=4 reverse=62
+        get get_FromVerticalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=4
             out double return
         put put_FromVerticalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=2
             in double name=value
     property from_horizontal_offset
-        get get_FromHorizontalOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=4 reverse=22
+        get get_FromHorizontalOffset slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=4
             out double return
-        put put_FromHorizontalOffset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=2 reverse=38
+        put put_FromHorizontalOffset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransition shape=2
             in double name=value
     property from_horizontal_offset_property static
-        get get_FromHorizontalOffsetProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics shape=4 reverse=22 static
+        get get_FromHorizontalOffsetProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_vertical_offset_property static
-        get get_FromVerticalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics shape=4 reverse=43 static
+        get get_FromVerticalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPopupThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.PowerEase activatable python_type
@@ -3275,12 +3275,12 @@ class Microsoft.UI.Xaml.Media.Animation.PowerEase activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property power
-        get get_Power slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPowerEase shape=4 reverse=22
+        get get_Power slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPowerEase shape=4
             out double return
-        put put_Power slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPowerEase shape=2 reverse=38
+        put put_Power slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IPowerEase shape=2
             in double name=value
     property power_property static
-        get get_PowerProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPowerEaseStatics shape=4 reverse=22 static
+        get get_PowerProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPowerEaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.QuadraticEase activatable python_type
@@ -3337,7 +3337,7 @@ class Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorHelper python_type
     requires Microsoft.UI.Xaml.Media.Animation.IRepeatBehaviorHelper
     factory Microsoft.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics
     property forever static
-        get get_Forever slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics shape=4 reverse=22 static
+        get get_Forever slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics shape=4 static
             out struct type=Microsoft.UI.Xaml.Media.Animation.RepeatBehavior return
     method equals static
         method Equals slot=11 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepeatBehaviorHelperStatics shape=160 static
@@ -3379,28 +3379,28 @@ class Microsoft.UI.Xaml.Media.Animation.RepositionThemeAnimation activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4
             in string name=value
     property from_vertical_offset
-        get get_FromVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4 reverse=121
+        get get_FromVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4
             out double return
-        put put_FromVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=2 reverse=138
+        put put_FromVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=2
             in double name=value
     property from_horizontal_offset
-        get get_FromHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4 reverse=62
+        get get_FromHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=4
             out double return
         put put_FromHorizontalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimation shape=2
             in double name=value
     property from_horizontal_offset_property static
-        get get_FromHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics shape=4 reverse=43 static
+        get get_FromHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_vertical_offset_property static
-        get get_FromVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics shape=4 reverse=62 static
+        get get_FromVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.RepositionThemeTransition activatable python_type
@@ -3414,12 +3414,12 @@ class Microsoft.UI.Xaml.Media.Animation.RepositionThemeTransition activatable py
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property is_staggering_enabled
-        get get_IsStaggeringEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeTransition shape=4 reverse=22
+        get get_IsStaggeringEnabled slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeTransition shape=4
             out boolean return
-        put put_IsStaggeringEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeTransition shape=4 reverse=43
+        put put_IsStaggeringEnabled slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeTransition shape=4
             in boolean name=value
     property is_staggering_enabled_property static
-        get get_IsStaggeringEnabledProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeTransitionStatics shape=4 reverse=22 static
+        get get_IsStaggeringEnabledProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IRepositionThemeTransitionStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SineEase activatable python_type
@@ -3450,12 +3450,12 @@ class Microsoft.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo activatabl
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property effect
-        get get_Effect slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo shape=4 reverse=22
+        get get_Effect slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Animation.SlideNavigationTransitionEffect return
-        put put_Effect slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo shape=4 reverse=43
+        put put_Effect slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfo shape=4
             in enum32 type=Microsoft.UI.Xaml.Media.Animation.SlideNavigationTransitionEffect name=value
     property effect_property static
-        get get_EffectProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfoStatics shape=4 reverse=22 static
+        get get_EffectProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISlideNavigationTransitionInfoStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SplineColorKeyFrame activatable python_type
@@ -3469,12 +3469,12 @@ class Microsoft.UI.Xaml.Media.Animation.SplineColorKeyFrame activatable python_t
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property key_spline
-        get get_KeySpline slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineColorKeyFrame shape=4 reverse=22
+        get get_KeySpline slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineColorKeyFrame shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.KeySpline return
-        put put_KeySpline slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineColorKeyFrame shape=4 reverse=43
+        put put_KeySpline slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineColorKeyFrame shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.KeySpline name=value
     property key_spline_property static
-        get get_KeySplineProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineColorKeyFrameStatics shape=4 reverse=22 static
+        get get_KeySplineProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineColorKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SplineDoubleKeyFrame activatable python_type
@@ -3488,12 +3488,12 @@ class Microsoft.UI.Xaml.Media.Animation.SplineDoubleKeyFrame activatable python_
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property key_spline
-        get get_KeySpline slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineDoubleKeyFrame shape=4 reverse=22
+        get get_KeySpline slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineDoubleKeyFrame shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.KeySpline return
-        put put_KeySpline slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineDoubleKeyFrame shape=4 reverse=43
+        put put_KeySpline slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineDoubleKeyFrame shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.KeySpline name=value
     property key_spline_property static
-        get get_KeySplineProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineDoubleKeyFrameStatics shape=4 reverse=22 static
+        get get_KeySplineProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplineDoubleKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SplinePointKeyFrame activatable python_type
@@ -3507,12 +3507,12 @@ class Microsoft.UI.Xaml.Media.Animation.SplinePointKeyFrame activatable python_t
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property key_spline
-        get get_KeySpline slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplinePointKeyFrame shape=4 reverse=22
+        get get_KeySpline slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplinePointKeyFrame shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.KeySpline return
-        put put_KeySpline slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplinePointKeyFrame shape=4 reverse=43
+        put put_KeySpline slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplinePointKeyFrame shape=4
             in class type=Microsoft.UI.Xaml.Media.Animation.KeySpline name=value
     property key_spline_property static
-        get get_KeySplineProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplinePointKeyFrameStatics shape=4 reverse=22 static
+        get get_KeySplineProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplinePointKeyFrameStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SplitCloseThemeAnimation activatable python_type
@@ -3526,92 +3526,92 @@ class Microsoft.UI.Xaml.Media.Animation.SplitCloseThemeAnimation activatable pyt
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property opened_target_name
-        get get_OpenedTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=22
+        get get_OpenedTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out string return
-        put put_OpenedTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=43
+        put put_OpenedTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in string name=value
     property opened_target
-        get get_OpenedTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=62
+        get get_OpenedTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_OpenedTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=99
+        put put_OpenedTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property opened_length
-        get get_OpenedLength slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=218
+        get get_OpenedLength slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out double return
         put put_OpenedLength slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=2
             in double name=value
     property offset_from_center
-        get get_OffsetFromCenter slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=237
+        get get_OffsetFromCenter slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out double return
         put put_OffsetFromCenter slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=2
             in double name=value
     property content_translation_offset
-        get get_ContentTranslationOffset slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=255
+        get get_ContentTranslationOffset slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out double return
         put put_ContentTranslationOffset slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=2
             in double name=value
     property content_translation_direction
-        get get_ContentTranslationDirection slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=247
+        get get_ContentTranslationDirection slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.AnimationDirection return
-        put put_ContentTranslationDirection slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=252
+        put put_ContentTranslationDirection slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.AnimationDirection name=value
     property content_target_name
-        get get_ContentTargetName slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=186
+        get get_ContentTargetName slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out string return
-        put put_ContentTargetName slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=194
+        put put_ContentTargetName slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in string name=value
     property content_target
-        get get_ContentTarget slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=202
+        get get_ContentTarget slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_ContentTarget slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=210
+        put put_ContentTarget slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property closed_target_name
-        get get_ClosedTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=121
+        get get_ClosedTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out string return
-        put put_ClosedTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=141
+        put put_ClosedTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in string name=value
     property closed_target
-        get get_ClosedTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=162
+        get get_ClosedTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_ClosedTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=173
+        put put_ClosedTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property closed_length
-        get get_ClosedLength slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4 reverse=228
+        get get_ClosedLength slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=4
             out double return
         put put_ClosedLength slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation shape=2
             in double name=value
     property closed_length_property static
-        get get_ClosedLengthProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=173 static
+        get get_ClosedLengthProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property closed_target_name_property static
-        get get_ClosedTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=62 static
+        get get_ClosedTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property closed_target_property static
-        get get_ClosedTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=99 static
+        get get_ClosedTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_target_name_property static
-        get get_ContentTargetNameProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=121 static
+        get get_ContentTargetNameProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_target_property static
-        get get_ContentTargetProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=141 static
+        get get_ContentTargetProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_translation_direction_property static
-        get get_ContentTranslationDirectionProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=194 static
+        get get_ContentTranslationDirectionProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_translation_offset_property static
-        get get_ContentTranslationOffsetProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=202 static
+        get get_ContentTranslationOffsetProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property offset_from_center_property static
-        get get_OffsetFromCenterProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=186 static
+        get get_OffsetFromCenterProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property opened_length_property static
-        get get_OpenedLengthProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=162 static
+        get get_OpenedLengthProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property opened_target_name_property static
-        get get_OpenedTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=22 static
+        get get_OpenedTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property opened_target_property static
-        get get_OpenedTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 reverse=43 static
+        get get_OpenedTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitCloseThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SplitOpenThemeAnimation activatable python_type
@@ -3625,92 +3625,92 @@ class Microsoft.UI.Xaml.Media.Animation.SplitOpenThemeAnimation activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property opened_target_name
-        get get_OpenedTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=22
+        get get_OpenedTargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out string return
-        put put_OpenedTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=43
+        put put_OpenedTargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in string name=value
     property opened_target
-        get get_OpenedTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=62
+        get get_OpenedTarget slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_OpenedTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=99
+        put put_OpenedTarget slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property opened_length
-        get get_OpenedLength slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=218
+        get get_OpenedLength slot=18 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out double return
         put put_OpenedLength slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=2
             in double name=value
     property offset_from_center
-        get get_OffsetFromCenter slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=237
+        get get_OffsetFromCenter slot=22 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out double return
         put put_OffsetFromCenter slot=23 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=2
             in double name=value
     property content_translation_offset
-        get get_ContentTranslationOffset slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=255
+        get get_ContentTranslationOffset slot=26 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out double return
         put put_ContentTranslationOffset slot=27 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=2
             in double name=value
     property content_translation_direction
-        get get_ContentTranslationDirection slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=247
+        get get_ContentTranslationDirection slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out enum32 type=Microsoft.UI.Xaml.Controls.Primitives.AnimationDirection return
-        put put_ContentTranslationDirection slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=252
+        put put_ContentTranslationDirection slot=25 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in enum32 type=Microsoft.UI.Xaml.Controls.Primitives.AnimationDirection name=value
     property content_target_name
-        get get_ContentTargetName slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=186
+        get get_ContentTargetName slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out string return
-        put put_ContentTargetName slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=194
+        put put_ContentTargetName slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in string name=value
     property content_target
-        get get_ContentTarget slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=202
+        get get_ContentTarget slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_ContentTarget slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=210
+        put put_ContentTarget slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property closed_target_name
-        get get_ClosedTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=121
+        get get_ClosedTargetName slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out string return
-        put put_ClosedTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=141
+        put put_ClosedTargetName slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in string name=value
     property closed_target
-        get get_ClosedTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=162
+        get get_ClosedTarget slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
-        put put_ClosedTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=173
+        put put_ClosedTarget slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
     property closed_length
-        get get_ClosedLength slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4 reverse=228
+        get get_ClosedLength slot=20 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=4
             out double return
         put put_ClosedLength slot=21 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation shape=2
             in double name=value
     property closed_length_property static
-        get get_ClosedLengthProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=173 static
+        get get_ClosedLengthProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property closed_target_name_property static
-        get get_ClosedTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=62 static
+        get get_ClosedTargetNameProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property closed_target_property static
-        get get_ClosedTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=99 static
+        get get_ClosedTargetProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_target_name_property static
-        get get_ContentTargetNameProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=121 static
+        get get_ContentTargetNameProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_target_property static
-        get get_ContentTargetProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=141 static
+        get get_ContentTargetProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_translation_direction_property static
-        get get_ContentTranslationDirectionProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=194 static
+        get get_ContentTranslationDirectionProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property content_translation_offset_property static
-        get get_ContentTranslationOffsetProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=202 static
+        get get_ContentTranslationOffsetProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property offset_from_center_property static
-        get get_OffsetFromCenterProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=186 static
+        get get_OffsetFromCenterProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property opened_length_property static
-        get get_OpenedLengthProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=162 static
+        get get_OpenedLengthProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property opened_target_name_property static
-        get get_OpenedTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=22 static
+        get get_OpenedTargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property opened_target_property static
-        get get_OpenedTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 reverse=43 static
+        get get_OpenedTargetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISplitOpenThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.Storyboard activatable python_type
@@ -3724,56 +3724,56 @@ class Microsoft.UI.Xaml.Media.Animation.Storyboard activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property children
-        get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=4 reverse=22
+        get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.TimelineCollection return
     property target_name_property static
-        get get_TargetNameProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=4 reverse=99 static
+        get get_TargetNameProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property target_property_property static
-        get get_TargetPropertyProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=4 reverse=22 static
+        get get_TargetPropertyProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     method begin
-        method Begin slot=9 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0 reverse=93
+        method Begin slot=9 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0
     method get_current_state
-        method GetCurrentState slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=4 reverse=162
+        method GetCurrentState slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Animation.ClockState return
     method get_current_time
-        method GetCurrentTime slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=4 reverse=173
+        method GetCurrentTime slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=4
             out timespan return
     method get_target_name static
-        method GetTargetName slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 reverse=124 static
+        method GetTargetName slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=element
             out string return
     method get_target_property static
-        method GetTargetProperty slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 reverse=44 static
+        method GetTargetProperty slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=element
             out string return
     method pause
-        method Pause slot=10 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0 reverse=117
+        method Pause slot=10 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0
     method resume
-        method Resume slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0 reverse=137
+        method Resume slot=11 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0
     method seek
-        method Seek slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=26 reverse=53
+        method Seek slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=26
             in timespan name=offset
     method seek_aligned_to_last_tick
-        method SeekAlignedToLastTick slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=26 reverse=192
+        method SeekAlignedToLastTick slot=14 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=26
             in timespan name=offset
     method set_target static
-        method SetTarget slot=12 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 reverse=163 static
+        method SetTarget slot=12 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=timeline
             in class type=Microsoft.UI.Xaml.DependencyObject name=target
     method set_target_name static
-        method SetTargetName slot=11 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 reverse=144 static
+        method SetTargetName slot=11 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=element
             in string name=name
     method set_target_property static
-        method SetTargetProperty slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 reverse=65 static
+        method SetTargetProperty slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboardStatics shape=51 static
             in class type=Microsoft.UI.Xaml.Media.Animation.Timeline name=element
             in string name=path
     method skip_to_fill
-        method SkipToFill slot=15 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0 reverse=193
+        method SkipToFill slot=15 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0
     method stop
-        method Stop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0 reverse=55
+        method Stop slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.IStoryboard shape=0
 
 class Microsoft.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo activatable python_type
     py SuppressNavigationTransitionInfo
@@ -3796,28 +3796,28 @@ class Microsoft.UI.Xaml.Media.Animation.SwipeBackThemeAnimation activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4
             in string name=value
     property from_vertical_offset
-        get get_FromVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4 reverse=121
+        get get_FromVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4
             out double return
-        put put_FromVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=2 reverse=138
+        put put_FromVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=2
             in double name=value
     property from_horizontal_offset
-        get get_FromHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4 reverse=62
+        get get_FromHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=4
             out double return
         put put_FromHorizontalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimation shape=2
             in double name=value
     property from_horizontal_offset_property static
-        get get_FromHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics shape=4 reverse=43 static
+        get get_FromHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property from_vertical_offset_property static
-        get get_FromVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics shape=4 reverse=62 static
+        get get_FromVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeBackThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 class Microsoft.UI.Xaml.Media.Animation.SwipeHintThemeAnimation activatable python_type
@@ -3831,28 +3831,28 @@ class Microsoft.UI.Xaml.Media.Animation.SwipeHintThemeAnimation activatable pyth
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property to_vertical_offset
-        get get_ToVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4 reverse=121
+        get get_ToVerticalOffset slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4
             out double return
-        put put_ToVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=2 reverse=138
+        put put_ToVerticalOffset slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=2
             in double name=value
     property to_horizontal_offset
-        get get_ToHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4 reverse=62
+        get get_ToHorizontalOffset slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4
             out double return
         put put_ToHorizontalOffset slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=2
             in double name=value
     property target_name
-        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4 reverse=22
+        get get_TargetName slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4
             out string return
-        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4 reverse=43
+        put put_TargetName slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimation shape=4
             in string name=value
     property target_name_property static
-        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 reverse=22 static
+        get get_TargetNameProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property to_horizontal_offset_property static
-        get get_ToHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 reverse=43 static
+        get get_ToHorizontalOffsetProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property to_vertical_offset_property static
-        get get_ToVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 reverse=62 static
+        get get_ToVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 enum T parameterized
@@ -3866,63 +3866,63 @@ class Microsoft.UI.Xaml.Media.Animation.Timeline composable python_type
     factory Microsoft.UI.Xaml.Media.Animation.ITimelineStatics
     composable Microsoft.UI.Xaml.Media.Animation.ITimelineFactory
     property speed_ratio
-        get get_SpeedRatio slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=162
+        get get_SpeedRatio slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out double return
-        put put_SpeedRatio slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=2 reverse=171
+        put put_SpeedRatio slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=2
             in double name=value
     property repeat_behavior
-        get get_RepeatBehavior slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=202
+        get get_RepeatBehavior slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out struct type=Microsoft.UI.Xaml.Media.Animation.RepeatBehavior return
         put put_RepeatBehavior slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=19
             in struct type=Microsoft.UI.Xaml.Media.Animation.RepeatBehavior name=value
     property fill_behavior
-        get get_FillBehavior slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=186
+        get get_FillBehavior slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Animation.FillBehavior return
-        put put_FillBehavior slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=194
+        put put_FillBehavior slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             in enum32 type=Microsoft.UI.Xaml.Media.Animation.FillBehavior name=value
     property duration
-        get get_Duration slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=121
+        get get_Duration slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out struct type=Microsoft.UI.Xaml.Duration return
         put put_Duration slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=25
             in struct type=Microsoft.UI.Xaml.Duration name=value
     property begin_time
-        get get_BeginTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=62
+        get get_BeginTime slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
-        put put_BeginTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=99
+        put put_BeginTime slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
     property auto_reverse
-        get get_AutoReverse slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=22
+        get get_AutoReverse slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out boolean return
-        put put_AutoReverse slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4 reverse=43
+        put put_AutoReverse slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             in boolean name=value
     property allow_dependent_animations static
-        get get_AllowDependentAnimations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=22 static
+        get get_AllowDependentAnimations slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out boolean return
-        put put_AllowDependentAnimations slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=43 static
+        put put_AllowDependentAnimations slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             in boolean name=value
     property auto_reverse_property static
-        get get_AutoReverseProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=62 static
+        get get_AutoReverseProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property begin_time_property static
-        get get_BeginTimeProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=99 static
+        get get_BeginTimeProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property duration_property static
-        get get_DurationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=121 static
+        get get_DurationProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property fill_behavior_property static
-        get get_FillBehaviorProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=162 static
+        get get_FillBehaviorProperty slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property repeat_behavior_property static
-        get get_RepeatBehaviorProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=173 static
+        get get_RepeatBehaviorProperty slot=13 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     property speed_ratio_property static
-        get get_SpeedRatioProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 reverse=141 static
+        get get_SpeedRatioProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     event completed
-        add add_Completed slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=51 reverse=219
+        add add_Completed slot=18 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=51
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_Completed slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=26 reverse=226
+        remove remove_Completed slot=19 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
 
 class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_type iterable sequence mutable_sequence

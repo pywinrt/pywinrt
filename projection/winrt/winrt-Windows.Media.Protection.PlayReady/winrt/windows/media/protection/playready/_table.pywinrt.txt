@@ -1300,53 +1300,53 @@ class Windows.Media.Protection.PlayReady.NDClient python_type
     requires Windows.Media.Protection.PlayReady.INDClient
     factory Windows.Media.Protection.PlayReady.INDClientFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClientFactory shape=195 reverse=26 deprecated
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClientFactory shape=195 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDDownloadEngine name=downloadEngine
             in interface type=Windows.Media.Protection.PlayReady.INDStreamParser name=streamParser
             in interface type=Windows.Media.Protection.PlayReady.INDMessenger name=pMessenger
             out class type=Windows.Media.Protection.PlayReady.NDClient return
     event closed_caption_data_received
-        add add_ClosedCaptionDataReceived slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=187 deprecated
+        add add_ClosedCaptionDataReceived slot=14 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ClosedCaptionDataReceived slot=15 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=200 deprecated
+        remove remove_ClosedCaptionDataReceived slot=15 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event license_fetch_completed
-        add add_LicenseFetchCompleted slot=10 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=124 deprecated
+        add add_LicenseFetchCompleted slot=10 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_LicenseFetchCompleted slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=156 deprecated
+        remove remove_LicenseFetchCompleted slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event proximity_detection_completed
-        add add_ProximityDetectionCompleted slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=65 deprecated
+        add add_ProximityDetectionCompleted slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDProximityDetectionCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ProximityDetectionCompleted slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=110 deprecated
+        remove remove_ProximityDetectionCompleted slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event re_registration_needed
-        add add_ReRegistrationNeeded slot=12 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=163 deprecated
+        add add_ReRegistrationNeeded slot=12 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ReRegistrationNeeded slot=13 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=181 deprecated
+        remove remove_ReRegistrationNeeded slot=13 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event registration_completed
-        add add_RegistrationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=24 deprecated
+        add add_RegistrationCompleted slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,Windows.Media.Protection.PlayReady.INDRegistrationCompletedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_RegistrationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 reverse=53 deprecated
+        remove remove_RegistrationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close deprecated
-        method Close slot=19 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=0 reverse=221 deprecated
+        method Close slot=19 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=0 deprecated
     method license_fetch_async deprecated
-        method LicenseFetchAsync slot=17 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=211 deprecated
+        method LicenseFetchAsync slot=17 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor name=licenseFetchDescriptor
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDLicenseFetchResult> return
     method re_registration_async deprecated
-        method ReRegistrationAsync slot=18 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 reverse=219 deprecated
+        method ReRegistrationAsync slot=18 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDCustomData name=registrationCustomData
             out interface type=Windows.Foundation.IAsyncAction return
     method start_async deprecated
-        method StartAsync slot=16 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=239 reverse=206 deprecated
+        method StartAsync slot=16 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=239 deprecated
             in class type=Windows.Foundation.Uri name=contentUrl
             in uint32 name=startAsyncOptions
             in interface type=Windows.Media.Protection.PlayReady.INDCustomData name=registrationCustomData
@@ -1374,7 +1374,7 @@ class Windows.Media.Protection.PlayReady.NDCustomData python_type
     requires Windows.Media.Protection.PlayReady.INDCustomData
     factory Windows.Media.Protection.PlayReady.INDCustomDataFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDCustomDataFactory shape=239 reverse=27 deprecated
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDCustomDataFactory shape=239 deprecated
             pass_array uint8 name=customDataTypeIDBytes
             pass_array uint8 name=customDataBytes
             out class type=Windows.Media.Protection.PlayReady.NDCustomData return
@@ -1417,7 +1417,7 @@ class Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor python_type
     requires Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor
     factory Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptorFactory
     constructor -
-        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptorFactory shape=239 reverse=27 deprecated
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptorFactory shape=239 deprecated
             in enum32 type=Windows.Media.Protection.PlayReady.NDContentIDType name=contentIDType
             pass_array uint8 name=contentIDBytes
             in interface type=Windows.Media.Protection.PlayReady.INDCustomData name=licenseFetchChallengeCustomData
@@ -1502,7 +1502,7 @@ class Windows.Media.Protection.PlayReady.NDTCPMessenger python_type
     requires Windows.Media.Protection.PlayReady.INDMessenger
     factory Windows.Media.Protection.PlayReady.INDTCPMessengerFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDTCPMessengerFactory shape=117 reverse=25 deprecated
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDTCPMessengerFactory shape=117 deprecated
             in string name=remoteHostName
             in uint32 name=remoteHostPort
             out class type=Windows.Media.Protection.PlayReady.NDTCPMessenger return
@@ -1540,7 +1540,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyContentHeader python_type
     factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory
     factory Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory2
     constructor -
-        ctor .ctor slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=117 reverse=66
+        ctor .ctor slot=8 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=117
             pass_array uint8 name=headerBytes
             out class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader return
         ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeaderFactory shape=280
@@ -1570,47 +1570,47 @@ class Windows.Media.Protection.PlayReady.PlayReadyContentHeader python_type
             in guid name=domainServiceId
             out class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader return
     property custom_attributes
-        get get_CustomAttributes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=162
+        get get_CustomAttributes slot=12 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out string return
     property decryptor_setup
-        get get_DecryptorSetup slot=13 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=173
+        get get_DecryptorSetup slot=13 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out enum32 type=Windows.Media.Protection.PlayReady.PlayReadyDecryptorSetup return
     property domain_service_id
-        get get_DomainServiceId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=121
+        get get_DomainServiceId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out guid return
     property encryption_type
-        get get_EncryptionType slot=11 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=141
+        get get_EncryptionType slot=11 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out enum32 type=Windows.Media.Protection.PlayReady.PlayReadyEncryptionAlgorithm return
     property header_with_embedded_updates
-        get get_HeaderWithEmbeddedUpdates slot=15 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=194
+        get get_HeaderWithEmbeddedUpdates slot=15 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader return
     property key_id
-        get get_KeyId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=22
+        get get_KeyId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out guid return
     property key_id_string
-        get get_KeyIdString slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=43
+        get get_KeyIdString slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out string return
     property license_acquisition_url
-        get get_LicenseAcquisitionUrl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=62
+        get get_LicenseAcquisitionUrl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out class type=Windows.Foundation.Uri return
     property license_acquisition_user_interface_url
-        get get_LicenseAcquisitionUserInterfaceUrl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4 reverse=99
+        get get_LicenseAcquisitionUserInterfaceUrl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=4
             out class type=Windows.Foundation.Uri return
     property key_id_strings
-        get get_KeyIdStrings slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2 shape=51 reverse=44
+        get get_KeyIdStrings slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2 shape=51
             receive_array string return
     property key_ids
-        get get_KeyIds slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2 shape=51 reverse=24
+        get get_KeyIds slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader2 shape=51
             receive_array guid return
     method get_serialized_header
-        method GetSerializedHeader slot=14 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=51 reverse=187
+        method GetSerializedHeader slot=14 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentHeader shape=51
             receive_array uint8 return
 
 class Windows.Media.Protection.PlayReady.PlayReadyContentResolver static python_type
     py PlayReadyContentResolver
     factory Windows.Media.Protection.PlayReady.IPlayReadyContentResolver
     method service_request static
-        method ServiceRequest slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentResolver shape=51 reverse=24 static
+        method ServiceRequest slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyContentResolver shape=51 static
             in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=contentHeader
             out interface type=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest return
 
@@ -1648,7 +1648,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyDomainIterable python_type ite
     requires Windows.Foundation.Collections.IIterable<Windows.Media.Protection.PlayReady.IPlayReadyDomain>
     factory Windows.Media.Protection.PlayReady.IPlayReadyDomainIterableFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainIterableFactory shape=94 reverse=35
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainIterableFactory shape=94
             in guid name=domainAccountId
             out class type=Windows.Media.Protection.PlayReady.PlayReadyDomainIterable return
     method first
@@ -1691,17 +1691,17 @@ class Windows.Media.Protection.PlayReady.PlayReadyDomainJoinServiceRequest activ
         get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionServiceRequest shape=4 reverse=43
             out guid return
     property domain_service_id
-        get get_DomainServiceId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4 reverse=121
+        get get_DomainServiceId slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4
             out guid return
-        put put_DomainServiceId slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=33 reverse=158
+        put put_DomainServiceId slot=11 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=33
             in guid name=value
     property domain_friendly_name
-        get get_DomainFriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4 reverse=62
+        get get_DomainFriendlyName slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4
             out string return
-        put put_DomainFriendlyName slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4 reverse=99
+        put put_DomainFriendlyName slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4
             in string name=value
     property domain_account_id
-        get get_DomainAccountId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4 reverse=22
+        get get_DomainAccountId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=4
             out guid return
         put put_DomainAccountId slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainJoinServiceRequest shape=33
             in guid name=value
@@ -1749,12 +1749,12 @@ class Windows.Media.Protection.PlayReady.PlayReadyDomainLeaveServiceRequest acti
         get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionServiceRequest shape=4 reverse=43
             out guid return
     property domain_service_id
-        get get_DomainServiceId slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=4 reverse=62
+        get get_DomainServiceId slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=4
             out guid return
-        put put_DomainServiceId slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=33 reverse=114
+        put put_DomainServiceId slot=9 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=33
             in guid name=value
     property domain_account_id
-        get get_DomainAccountId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=4 reverse=22
+        get get_DomainAccountId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=4
             out guid return
         put put_DomainAccountId slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyDomainLeaveServiceRequest shape=33
             in guid name=value
@@ -1892,16 +1892,16 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicense python_type
         get get_UsableForPlay slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense shape=4 reverse=43
             out boolean return
     property expires_in_real_time
-        get get_ExpiresInRealTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4 reverse=99
+        get get_ExpiresInRealTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4
             out boolean return
     property in_memory_only
-        get get_InMemoryOnly slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4 reverse=62
+        get get_InMemoryOnly slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4
             out boolean return
     property secure_stop_id
-        get get_SecureStopId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4 reverse=22
+        get get_SecureStopId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4
             out guid return
     property security_level
-        get get_SecurityLevel slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4 reverse=43
+        get get_SecurityLevel slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4
             out uint32 return
     method get_k_i_d_at_chain_depth
         method GetKIDAtChainDepth slot=12 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense shape=51 reverse=163
@@ -1937,7 +1937,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceReque
         put put_ContentHeader slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest shape=4 reverse=43
             in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=value
     property session_id
-        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest2 shape=4 reverse=22
+        get get_SessionId slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest2 shape=4
             out guid return
     property uri
         get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=4 reverse=22
@@ -1956,7 +1956,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceReque
         method BeginServiceRequest slot=11 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=4 reverse=141
             out interface type=Windows.Foundation.IAsyncAction return
     method create_license_iterable
-        method CreateLicenseIterable slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest3 shape=117 reverse=25
+        method CreateLicenseIterable slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest3 shape=117
             in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=contentHeader
             in boolean name=fullyEvaluated
             out class type=Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable return
@@ -1980,7 +1980,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable activatable py
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseIterableFactory shape=117
             in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=contentHeader
             in boolean name=fullyEvaluated
             out class type=Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable return
@@ -2011,7 +2011,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseManagement static pytho
     py PlayReadyLicenseManagement
     factory Windows.Media.Protection.PlayReady.IPlayReadyLicenseManagement
     method delete_licenses static
-        method DeleteLicenses slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseManagement shape=51 reverse=24 static
+        method DeleteLicenses slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseManagement shape=51 static
             in class type=Windows.Media.Protection.PlayReady.PlayReadyContentHeader name=contentHeader
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -2023,7 +2023,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseSession python_type
     requires Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2
     factory Windows.Media.Protection.PlayReady.IPlayReadyLicenseSessionFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSessionFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSessionFactory shape=51
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
             out class type=Windows.Media.Protection.PlayReady.PlayReadyLicenseSession return
     method configure_media_protection_manager
@@ -2055,9 +2055,9 @@ class Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest a
         get get_Type slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.IMediaProtectionServiceRequest shape=4 reverse=43
             out guid return
     property metering_certificate
-        get get_MeteringCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyMeteringReportServiceRequest shape=51 reverse=24
+        get get_MeteringCertificate slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyMeteringReportServiceRequest shape=51
             receive_array uint8 return
-        put put_MeteringCertificate slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyMeteringReportServiceRequest shape=51 reverse=44
+        put put_MeteringCertificate slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyMeteringReportServiceRequest shape=51
             pass_array uint8 name=meteringCertBytes
     property uri
         get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest shape=4 reverse=22
@@ -2136,7 +2136,7 @@ class Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable python_type
     requires Windows.Foundation.Collections.IIterable<Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest>
     factory Windows.Media.Protection.PlayReady.IPlayReadySecureStopIterableFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySecureStopIterableFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySecureStopIterableFactory shape=117
             pass_array uint8 name=publisherCertBytes
             out class type=Windows.Media.Protection.PlayReady.PlayReadySecureStopIterable return
     method first
@@ -2171,7 +2171,7 @@ class Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest pytho
     requires Windows.Media.Protection.IMediaProtectionServiceRequest
     factory Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory shape=117
             pass_array uint8 name=publisherCertBytes
             out class type=Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest return
         ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequestFactory shape=231
@@ -2232,13 +2232,13 @@ class Windows.Media.Protection.PlayReady.PlayReadySoapMessage python_type
     default Windows.Media.Protection.PlayReady.IPlayReadySoapMessage
     requires Windows.Media.Protection.PlayReady.IPlayReadySoapMessage
     property message_headers
-        get get_MessageHeaders slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySoapMessage shape=4 reverse=43
+        get get_MessageHeaders slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySoapMessage shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     property uri
-        get get_Uri slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySoapMessage shape=4 reverse=62
+        get get_Uri slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySoapMessage shape=4
             out class type=Windows.Foundation.Uri return
     method get_message_body
-        method GetMessageBody slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySoapMessage shape=51 reverse=24
+        method GetMessageBody slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadySoapMessage shape=51
             receive_array uint8 return
 
 class Windows.Media.Protection.PlayReady.PlayReadyStatics static python_type
@@ -2249,53 +2249,53 @@ class Windows.Media.Protection.PlayReady.PlayReadyStatics static python_type
     factory Windows.Media.Protection.PlayReady.IPlayReadyStatics4
     factory Windows.Media.Protection.PlayReady.IPlayReadyStatics5
     property domain_join_service_request_type static
-        get get_DomainJoinServiceRequestType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=22 static
+        get get_DomainJoinServiceRequestType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property domain_leave_service_request_type static
-        get get_DomainLeaveServiceRequestType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=43 static
+        get get_DomainLeaveServiceRequestType slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property individualization_service_request_type static
-        get get_IndividualizationServiceRequestType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=62 static
+        get get_IndividualizationServiceRequestType slot=8 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property license_acquirer_service_request_type static
-        get get_LicenseAcquirerServiceRequestType slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=99 static
+        get get_LicenseAcquirerServiceRequestType slot=9 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property media_protection_system_id static
-        get get_MediaProtectionSystemId slot=12 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=162 static
+        get get_MediaProtectionSystemId slot=12 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property metering_report_service_request_type static
-        get get_MeteringReportServiceRequestType slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=121 static
+        get get_MeteringReportServiceRequestType slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property play_ready_security_version static
-        get get_PlayReadySecurityVersion slot=13 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=173 static
+        get get_PlayReadySecurityVersion slot=13 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out uint32 return
     property revocation_service_request_type static
-        get get_RevocationServiceRequestType slot=11 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 reverse=141 static
+        get get_RevocationServiceRequestType slot=11 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics shape=4 static
             out guid return
     property play_ready_certificate_security_level static
-        get get_PlayReadyCertificateSecurityLevel slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics2 shape=4 reverse=22 static
+        get get_PlayReadyCertificateSecurityLevel slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics2 shape=4 static
             out uint32 return
     property secure_stop_service_request_type static
-        get get_SecureStopServiceRequestType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics3 shape=4 reverse=22 static
+        get get_SecureStopServiceRequestType slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics3 shape=4 static
             out guid return
     property protection_system_id static
-        get get_ProtectionSystemId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics4 shape=4 reverse=43 static
+        get get_ProtectionSystemId slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics4 shape=4 static
             out guid return
     property input_trust_authority_to_create static
-        get get_InputTrustAuthorityToCreate slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics4 shape=4 reverse=22 static
+        get get_InputTrustAuthorityToCreate slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics4 shape=4 static
             out string return
     property hardware_drm_disabled_until_time static
-        get get_HardwareDRMDisabledUntilTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics5 shape=4 reverse=43 static
+        get get_HardwareDRMDisabledUntilTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics5 shape=4 static
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     property hardware_drm_disabled_at_time static
-        get get_HardwareDRMDisabledAtTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics5 shape=4 reverse=22 static
+        get get_HardwareDRMDisabledAtTime slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics5 shape=4 static
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
     method check_supported_hardware static
-        method CheckSupportedHardware slot=7 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics3 shape=51 reverse=44 static
+        method CheckSupportedHardware slot=7 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics3 shape=51 static
             in enum32 type=Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures name=hwdrmFeature
             out boolean return
     method reset_hardware_drm_disabled static
-        method ResetHardwareDRMDisabled slot=8 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics5 shape=0 reverse=55 static
+        method ResetHardwareDRMDisabled slot=8 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyStatics5 shape=0 static
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Media.Protection.PlayReady.NDClient,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[NDClient, Object]

@@ -256,28 +256,28 @@ class Windows.ApplicationModel.Wallet.System.WalletItemSystemStore python_type
     requires Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore
     requires Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2
     event items_changed
-        add add_ItemsChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 shape=51 reverse=24 deprecated
+        add add_ItemsChanged slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 shape=51 deprecated
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ItemsChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 shape=26 reverse=53 deprecated
+        remove remove_ItemsChanged slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore2 shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
     method delete_async deprecated
-        method DeleteAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=44 deprecated
+        method DeleteAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 deprecated
             in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
             out interface type=Windows.Foundation.IAsyncAction return
     method get_app_status_for_item deprecated
-        method GetAppStatusForItem slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=100 deprecated
+        method GetAppStatusForItem slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 deprecated
             in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
             out enum32 type=Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation return
     method get_items_async deprecated
-        method GetItemsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=4 reverse=22 deprecated
+        method GetItemsAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> return
     method import_item_async deprecated
-        method ImportItemAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=65 deprecated
+        method ImportItemAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> return
     method launch_app_for_item_async deprecated
-        method LaunchAppForItemAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 reverse=124 deprecated
+        method LaunchAppForItemAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletItemSystemStore shape=51 deprecated
             in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -285,7 +285,7 @@ class Windows.ApplicationModel.Wallet.System.WalletManagerSystem static python_t
     py WalletManagerSystem
     factory Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics
     method request_store_async static deprecated
-        method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics shape=4 reverse=22 static deprecated
+        method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.System.IWalletManagerSystemStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore> return
 
 class System.Boolean external

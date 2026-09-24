@@ -10,19 +10,19 @@ class Windows.UI.Xaml.Navigation.FrameNavigationOptions composable python_type
     requires Windows.UI.Xaml.Navigation.IFrameNavigationOptions
     composable Windows.UI.Xaml.Navigation.IFrameNavigationOptionsFactory
     constructor -
-        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptionsFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptionsFactory shape=117
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Windows.UI.Xaml.Navigation.FrameNavigationOptions return
     property transition_info_override
-        get get_TransitionInfoOverride slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=62
+        get get_TransitionInfoOverride slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4
             out class type=Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo return
-        put put_TransitionInfoOverride slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=99
+        put put_TransitionInfoOverride slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4
             in class type=Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo name=value
     property is_navigation_stack_enabled
-        get get_IsNavigationStackEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=22
+        get get_IsNavigationStackEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4
             out boolean return
-        put put_IsNavigationStackEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4 reverse=43
+        put put_IsNavigationStackEnabled slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.IFrameNavigationOptions shape=4
             in boolean name=value
 
 interface Windows.UI.Xaml.Navigation.IFrameNavigationOptions
@@ -80,21 +80,21 @@ class Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs python_type
     requires Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs
     requires Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2
     property cancel
-        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=22
+        get get_Cancel slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4
             out boolean return
-        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=43
+        put put_Cancel slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4
             in boolean name=value
     property navigation_mode
-        get get_NavigationMode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=62
+        get get_NavigationMode slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Navigation.NavigationMode return
     property source_page_type
-        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4 reverse=99
+        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs shape=4
             out struct type=Windows.UI.Xaml.Interop.TypeName return
     property navigation_transition_info
-        get get_NavigationTransitionInfo slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2 shape=4 reverse=43
+        get get_NavigationTransitionInfo slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2 shape=4
             out class type=Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo return
     property parameter
-        get get_Parameter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2 shape=4 reverse=22
+        get get_Parameter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs2 shape=4
             out object return
 
 delegate Windows.UI.Xaml.Navigation.NavigatingCancelEventHandler python_type
@@ -120,24 +120,24 @@ class Windows.UI.Xaml.Navigation.NavigationEventArgs python_type
     requires Windows.UI.Xaml.Navigation.INavigationEventArgs
     requires Windows.UI.Xaml.Navigation.INavigationEventArgs2
     property uri
-        get get_Uri slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=121
+        get get_Uri slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4
             out class type=Windows.Foundation.Uri return
-        put put_Uri slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=141
+        put put_Uri slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4
             in class type=Windows.Foundation.Uri name=value
     property content
-        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=22
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4
             out object return
     property navigation_mode
-        get get_NavigationMode slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=99
+        get get_NavigationMode slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4
             out enum32 type=Windows.UI.Xaml.Navigation.NavigationMode return
     property parameter
-        get get_Parameter slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=43
+        get get_Parameter slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4
             out object return
     property source_page_type
-        get get_SourcePageType slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4 reverse=62
+        get get_SourcePageType slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs shape=4
             out struct type=Windows.UI.Xaml.Interop.TypeName return
     property navigation_transition_info
-        get get_NavigationTransitionInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs2 shape=4 reverse=22
+        get get_NavigationTransitionInfo slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationEventArgs2 shape=4
             out class type=Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo return
 
 class Windows.UI.Xaml.Navigation.NavigationFailedEventArgs python_type
@@ -146,15 +146,15 @@ class Windows.UI.Xaml.Navigation.NavigationFailedEventArgs python_type
     default Windows.UI.Xaml.Navigation.INavigationFailedEventArgs
     requires Windows.UI.Xaml.Navigation.INavigationFailedEventArgs
     property handled
-        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=43
+        get get_Handled slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4
             out boolean return
-        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=62
+        put put_Handled slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4
             in boolean name=value
     property exception
-        get get_Exception slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=22
+        get get_Exception slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4
             out hresult type=Windows.Foundation.HResult return
     property source_page_type
-        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4 reverse=99
+        get get_SourcePageType slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.INavigationFailedEventArgs shape=4
             out struct type=Windows.UI.Xaml.Interop.TypeName return
 
 delegate Windows.UI.Xaml.Navigation.NavigationFailedEventHandler python_type
@@ -198,16 +198,16 @@ class Windows.UI.Xaml.Navigation.PageStackEntry python_type
             in class type=Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo name=navigationTransitionInfo
             out class type=Windows.UI.Xaml.Navigation.PageStackEntry return
     property navigation_transition_info
-        get get_NavigationTransitionInfo slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntry shape=4 reverse=62
+        get get_NavigationTransitionInfo slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntry shape=4
             out class type=Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo return
     property parameter
-        get get_Parameter slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntry shape=4 reverse=43
+        get get_Parameter slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntry shape=4
             out object return
     property source_page_type
-        get get_SourcePageType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntry shape=4 reverse=22
+        get get_SourcePageType slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntry shape=4
             out struct type=Windows.UI.Xaml.Interop.TypeName return
     property source_page_type_property static
-        get get_SourcePageTypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntryStatics shape=4 reverse=22 static
+        get get_SourcePageTypeProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Navigation.IPageStackEntryStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
 
 struct Windows.Foundation.HResult external

@@ -31,18 +31,18 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in object name=handler
             in boolean name=handledEventsToo
     method add_to_collection
-        method AddToCollection slot=50 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=352
+        method AddToCollection slot=50 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
     method clear_collection
-        method ClearCollection slot=54 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=4 reverse=368
+        method ClearCollection slot=54 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=4
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
     method clear_property
-        method ClearProperty slot=47 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=340
+        method ClearProperty slot=47 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
     method create_instance
-        method CreateInstance slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=65
+        method CreateInstance slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlTypeIndex name=typeIndex
             out interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject return
     method get_boolean_property
@@ -51,11 +51,11 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out boolean return
     method get_collection_count
-        method GetCollectionCount slot=48 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=344
+        method GetCollectionCount slot=48 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             out uint32 return
     method get_color_property
-        method GetColorProperty slot=39 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=309
+        method GetColorProperty slot=39 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out struct type=Windows.UI.Color return
@@ -70,10 +70,10 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out datetime return
     method get_default static
-        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirectStatics shape=4 reverse=22 static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirectStatics shape=4 static
             out class type=Windows.UI.Xaml.Core.Direct.XamlDirect return
     method get_double_property
-        method GetDoubleProperty slot=31 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=275
+        method GetDoubleProperty slot=31 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out double return
@@ -83,7 +83,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out struct type=Windows.UI.Xaml.Duration return
     method get_enum_property
-        method GetEnumProperty slot=46 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=336
+        method GetEnumProperty slot=46 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out uint32 return
@@ -93,7 +93,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out struct type=Windows.UI.Xaml.GridLength return
     method get_int32_property
-        method GetInt32Property slot=32 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=282
+        method GetInt32Property slot=32 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out int32 return
@@ -108,7 +108,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out struct type=Windows.UI.Xaml.Media.Matrix return
     method get_object
-        method GetObject slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=24
+        method GetObject slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             out object return
     method get_object_property
@@ -147,7 +147,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             out timespan return
     method get_xaml_direct_object
-        method GetXamlDirectObject slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=44
+        method GetXamlDirectObject slot=7 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in object name=object
             out interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject return
     method get_xaml_direct_object_from_collection_at
@@ -166,21 +166,21 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in uint32 name=index
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
     method remove_event_handler
-        method RemoveEventHandler slot=57 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=376
+        method RemoveEventHandler slot=57 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlEventIndex name=eventIndex
             in object name=handler
     method remove_from_collection
-        method RemoveFromCollection slot=52 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=361
+        method RemoveFromCollection slot=52 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value
             out boolean return
     method remove_from_collection_at
-        method RemoveFromCollectionAt slot=53 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51 reverse=365
+        method RemoveFromCollectionAt slot=53 inputs=2 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=51
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in uint32 name=index
     method set_boolean_property
-        method SetBooleanProperty slot=11 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=145
+        method SetBooleanProperty slot=11 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in boolean name=value
@@ -210,7 +210,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in struct type=Windows.UI.Xaml.Duration name=value
     method set_enum_property
-        method SetEnumProperty slot=27 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=261
+        method SetEnumProperty slot=27 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in uint32 name=value
@@ -220,7 +220,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in struct type=Windows.UI.Xaml.GridLength name=value
     method set_int32_property
-        method SetInt32Property slot=13 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=175
+        method SetInt32Property slot=13 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in int32 name=value
@@ -235,7 +235,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in struct type=Windows.UI.Xaml.Media.Matrix name=value
     method set_object_property
-        method SetObjectProperty slot=9 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=101
+        method SetObjectProperty slot=9 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in object name=value
@@ -255,7 +255,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in struct type=Windows.Foundation.Size name=value
     method set_string_property
-        method SetStringProperty slot=14 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=188
+        method SetStringProperty slot=14 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in string name=value
@@ -270,7 +270,7 @@ class Windows.UI.Xaml.Core.Direct.XamlDirect python_type
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in timespan name=value
     method set_xaml_direct_object_property
-        method SetXamlDirectObjectProperty slot=10 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117 reverse=125
+        method SetXamlDirectObjectProperty slot=10 inputs=3 outputs=0 declaring=Windows.UI.Xaml.Core.Direct.IXamlDirect shape=117
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=xamlDirectObject
             in enum32 type=Windows.UI.Xaml.Core.Direct.XamlPropertyIndex name=propertyIndex
             in interface type=Windows.UI.Xaml.Core.Direct.IXamlDirectObject name=value

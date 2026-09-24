@@ -43,29 +43,29 @@ class Windows.Devices.Custom.CustomDevice python_type
     requires Windows.Devices.Custom.ICustomDevice
     factory Windows.Devices.Custom.ICustomDeviceStatics
     property input_stream
-        get get_InputStream slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=4 reverse=22
+        get get_InputStream slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=4
             out interface type=Windows.Storage.Streams.IInputStream return
     property output_stream
-        get get_OutputStream slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=4 reverse=43
+        get get_OutputStream slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=4
             out interface type=Windows.Storage.Streams.IOutputStream return
     method from_id_async static
-        method FromIdAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDeviceStatics shape=195 reverse=46 static
+        method FromIdAsync slot=7 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDeviceStatics shape=195 static
             in string name=deviceId
             in enum32 type=Windows.Devices.Custom.DeviceAccessMode name=desiredAccess
             in enum32 type=Windows.Devices.Custom.DeviceSharingMode name=sharingMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Custom.CustomDevice> return
     method get_device_selector static
-        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Custom.ICustomDeviceStatics shape=94 reverse=35 static
+        method GetDeviceSelector slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Custom.ICustomDeviceStatics shape=94 static
             in guid name=classGuid
             out string return
     method send_io_control_async
-        method SendIOControlAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195 reverse=68
+        method SendIOControlAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195
             in interface type=Windows.Devices.Custom.IIOControlCode name=ioControlCode
             in interface type=Windows.Storage.Streams.IBuffer name=inputBuffer
             in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
     method try_send_io_control_async
-        method TrySendIOControlAsync slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195 reverse=102
+        method TrySendIOControlAsync slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195
             in interface type=Windows.Devices.Custom.IIOControlCode name=ioControlCode
             in interface type=Windows.Storage.Streams.IBuffer name=inputBuffer
             in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer
@@ -226,7 +226,7 @@ class Windows.Devices.Custom.IOControlCode python_type
     requires Windows.Devices.Custom.IIOControlCode
     factory Windows.Devices.Custom.IIOControlCodeFactory
     constructor -
-        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Devices.Custom.IIOControlCodeFactory shape=239 reverse=27
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Devices.Custom.IIOControlCodeFactory shape=239
             in uint16 name=deviceType
             in uint16 name=function
             in enum32 type=Windows.Devices.Custom.IOControlAccessMode name=accessMode
@@ -252,7 +252,7 @@ class Windows.Devices.Custom.KnownDeviceTypes static python_type
     py KnownDeviceTypes
     factory Windows.Devices.Custom.IKnownDeviceTypesStatics
     property unknown static
-        get get_Unknown slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IKnownDeviceTypesStatics shape=4 reverse=22 static
+        get get_Unknown slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Custom.IKnownDeviceTypesStatics shape=4 static
             out uint16 return
 
 class System.Boolean external

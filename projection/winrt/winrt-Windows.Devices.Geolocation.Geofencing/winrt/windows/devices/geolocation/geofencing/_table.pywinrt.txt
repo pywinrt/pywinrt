@@ -10,7 +10,7 @@ class Windows.Devices.Geolocation.Geofencing.Geofence python_type
     requires Windows.Devices.Geolocation.Geofencing.IGeofence
     factory Windows.Devices.Geolocation.Geofencing.IGeofenceFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceFactory shape=117
             in string name=id
             in interface type=Windows.Devices.Geolocation.IGeoshape name=geoshape
             out class type=Windows.Devices.Geolocation.Geofencing.Geofence return
@@ -37,25 +37,25 @@ class Windows.Devices.Geolocation.Geofencing.Geofence python_type
             in timespan name=duration
             out class type=Windows.Devices.Geolocation.Geofencing.Geofence return
     property duration
-        get get_Duration slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=43
+        get get_Duration slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out timespan return
     property dwell_time
-        get get_DwellTime slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=62
+        get get_DwellTime slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out timespan return
     property geoshape
-        get get_Geoshape slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=141
+        get get_Geoshape slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out interface type=Windows.Devices.Geolocation.IGeoshape return
     property id
-        get get_Id slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=99
+        get get_Id slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out string return
     property monitored_states
-        get get_MonitoredStates slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=121
+        get get_MonitoredStates slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out enum_u32 type=Windows.Devices.Geolocation.Geofencing.MonitoredGeofenceStates return
     property single_use
-        get get_SingleUse slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=162
+        get get_SingleUse slot=12 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out boolean return
     property start_time
-        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4 reverse=22
+        get get_StartTime slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofence shape=4
             out datetime return
 
 class Windows.Devices.Geolocation.Geofencing.GeofenceMonitor python_type
@@ -65,31 +65,31 @@ class Windows.Devices.Geolocation.Geofencing.GeofenceMonitor python_type
     requires Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor
     factory Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics
     property geofences
-        get get_Geofences slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4 reverse=43
+        get get_Geofences slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.Devices.Geolocation.Geofencing.Geofence> return
     property last_known_geoposition
-        get get_LastKnownGeoposition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4 reverse=62
+        get get_LastKnownGeoposition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4
             out class type=Windows.Devices.Geolocation.Geoposition return
     property status
-        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4 reverse=22
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4
             out enum32 type=Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus return
     property current static
-        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics shape=4 reverse=22 static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitorStatics shape=4 static
             out class type=Windows.Devices.Geolocation.Geofencing.GeofenceMonitor return
     event geofence_state_changed
-        add add_GeofenceStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=51 reverse=100
+        add add_GeofenceStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geofencing.GeofenceMonitor,System.Object> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_GeofenceStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=26 reverse=134
+        remove remove_GeofenceStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event status_changed
-        add add_StatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=51 reverse=163
+        add add_StatusChanged slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Devices.Geolocation.Geofencing.GeofenceMonitor,System.Object> name=eventHandler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_StatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=26 reverse=181
+        remove remove_StatusChanged slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method read_reports
-        method ReadReports slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4 reverse=141
+        method ReadReports slot=11 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceMonitor shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> return
 
 enum Windows.Devices.Geolocation.Geofencing.GeofenceMonitorStatus python_type
@@ -122,16 +122,16 @@ class Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport python_ty
     default Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport
     requires Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport
     property geofence
-        get get_Geofence slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4 reverse=43
+        get get_Geofence slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4
             out class type=Windows.Devices.Geolocation.Geofencing.Geofence return
     property geoposition
-        get get_Geoposition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4 reverse=62
+        get get_Geoposition slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4
             out class type=Windows.Devices.Geolocation.Geoposition return
     property new_state
-        get get_NewState slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4 reverse=22
+        get get_NewState slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4
             out enum_u32 type=Windows.Devices.Geolocation.Geofencing.GeofenceState return
     property removal_reason
-        get get_RemovalReason slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4 reverse=99
+        get get_RemovalReason slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Geolocation.Geofencing.IGeofenceStateChangeReport shape=4
             out enum32 type=Windows.Devices.Geolocation.Geofencing.GeofenceRemovalReason return
 
 interface Windows.Devices.Geolocation.Geofencing.IGeofence

@@ -12,25 +12,25 @@ class Windows.Globalization.DateTimeFormatting.DateTimeFormatter python_type
     factory Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory
     factory Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics
     constructor -
-        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=51 reverse=24
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=51
             in string name=formatTemplate
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
-        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=117 reverse=45
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=117
             in string name=formatTemplate
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
-        ctor .ctor slot=10 inputs=3 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=195 reverse=126
+        ctor .ctor slot=10 inputs=3 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=195
             in enum32 type=Windows.Globalization.DateTimeFormatting.HourFormat name=hourFormat
             in enum32 type=Windows.Globalization.DateTimeFormatting.MinuteFormat name=minuteFormat
             in enum32 type=Windows.Globalization.DateTimeFormatting.SecondFormat name=secondFormat
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
-        ctor .ctor slot=9 inputs=4 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=239 reverse=103
+        ctor .ctor slot=9 inputs=4 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=239
             in enum32 type=Windows.Globalization.DateTimeFormatting.YearFormat name=yearFormat
             in enum32 type=Windows.Globalization.DateTimeFormatting.MonthFormat name=monthFormat
             in enum32 type=Windows.Globalization.DateTimeFormatting.DayFormat name=dayFormat
             in enum32 type=Windows.Globalization.DateTimeFormatting.DayOfWeekFormat name=dayOfWeekFormat
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
-        ctor .ctor slot=8 inputs=5 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=267 reverse=70
+        ctor .ctor slot=8 inputs=5 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterFactory shape=267
             in string name=formatTemplate
             in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=languages
             in string name=geographicRegion
@@ -61,66 +61,66 @@ class Windows.Globalization.DateTimeFormatting.DateTimeFormatter python_type
             in string name=clock
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
     property numeral_system
-        get get_NumeralSystem slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=121
+        get get_NumeralSystem slot=10 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
-        put put_NumeralSystem slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=141
+        put put_NumeralSystem slot=11 inputs=1 outputs=0 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             in string name=value
     property clock
-        get get_Clock slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=99
+        get get_Clock slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
     property geographic_region
-        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=43
+        get get_GeographicRegion slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
     property include_day
-        get get_IncludeDay slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=218
+        get get_IncludeDay slot=18 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.DayFormat return
     property include_day_of_week
-        get get_IncludeDayOfWeek slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=210
+        get get_IncludeDayOfWeek slot=17 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.DayOfWeekFormat return
     property include_hour
-        get get_IncludeHour slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=223
+        get get_IncludeHour slot=19 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.HourFormat return
     property include_minute
-        get get_IncludeMinute slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=228
+        get get_IncludeMinute slot=20 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.MinuteFormat return
     property include_month
-        get get_IncludeMonth slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=202
+        get get_IncludeMonth slot=16 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.MonthFormat return
     property include_second
-        get get_IncludeSecond slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=232
+        get get_IncludeSecond slot=21 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.SecondFormat return
     property include_year
-        get get_IncludeYear slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=194
+        get get_IncludeYear slot=15 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out enum32 type=Windows.Globalization.DateTimeFormatting.YearFormat return
     property languages
-        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=22
+        get get_Languages slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property calendar
-        get get_Calendar slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=62
+        get get_Calendar slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
     property patterns
-        get get_Patterns slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=162
+        get get_Patterns slot=12 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
     property resolved_geographic_region
-        get get_ResolvedGeographicRegion slot=23 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=242
+        get get_ResolvedGeographicRegion slot=23 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
     property resolved_language
-        get get_ResolvedLanguage slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=237
+        get get_ResolvedLanguage slot=22 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
     property template
-        get get_Template slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4 reverse=173
+        get get_Template slot=13 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=4
             out string return
     property long_date static
-        get get_LongDate slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 reverse=22 static
+        get get_LongDate slot=6 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 static
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
     property long_time static
-        get get_LongTime slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 reverse=43 static
+        get get_LongTime slot=7 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 static
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
     property short_date static
-        get get_ShortDate slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 reverse=62 static
+        get get_ShortDate slot=8 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 static
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
     property short_time static
-        get get_ShortTime slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 reverse=99 static
+        get get_ShortTime slot=9 inputs=0 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatterStatics shape=4 static
             out class type=Windows.Globalization.DateTimeFormatting.DateTimeFormatter return
     method format
         method Format slot=14 inputs=1 outputs=1 declaring=Windows.Globalization.DateTimeFormatting.IDateTimeFormatter shape=89

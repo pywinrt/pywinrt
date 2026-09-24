@@ -251,31 +251,31 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtension python_type
     default Windows.ApplicationModel.PackageExtensions.IPackageExtension
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtension
     property description
-        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=62
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out string return
     property display_name
-        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=43
+        get get_DisplayName slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out string return
     property id
-        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=22
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out string return
     property package
-        get get_Package slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=99
+        get get_Package slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out class type=Windows.ApplicationModel.Package return
     method get_extension_properties
-        method GetExtensionProperties slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=121
+        method GetExtensionProperties slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out interface type=Windows.Foundation.Collections.IPropertySet return
     method get_extension_properties_async
-        method GetExtensionPropertiesAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=141
+        method GetExtensionPropertiesAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> return
     method get_public_folder
-        method GetPublicFolder slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=173
+        method GetPublicFolder slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out class type=Windows.Storage.StorageFolder return
     method get_public_folder_async
-        method GetPublicFolderAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=186
+        method GetPublicFolderAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> return
     method get_public_path
-        method GetPublicPath slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4 reverse=162
+        method GetPublicPath slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtension shape=4
             out string return
 
 class Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog python_type
@@ -285,47 +285,47 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog python_
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog
     factory Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalogStatics
     event package_installed
-        add add_PackageInstalled slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51 reverse=100
+        add add_PackageInstalled slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PackageInstalled slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26 reverse=134
+        remove remove_PackageInstalled slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_status_changed
-        add add_PackageStatusChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51 reverse=211
+        add add_PackageStatusChanged slot=17 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PackageStatusChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26 reverse=398
+        remove remove_PackageStatusChanged slot=18 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_uninstalling
-        add add_PackageUninstalling slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51 reverse=196
+        add add_PackageUninstalling slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PackageUninstalling slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26 reverse=397
+        remove remove_PackageUninstalling slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_updated
-        add add_PackageUpdated slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51 reverse=174
+        add add_PackageUpdated slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PackageUpdated slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26 reverse=192
+        remove remove_PackageUpdated slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event package_updating
-        add add_PackageUpdating slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51 reverse=144
+        add add_PackageUpdating slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PackageUpdating slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26 reverse=167
+        remove remove_PackageUpdating slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method find_all
-        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=4 reverse=22
+        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> return
     method find_all_async
-        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=4 reverse=43
+        method FindAllAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension>> return
     method open static
-        method Open slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalogStatics shape=51 reverse=24 static
+        method Open slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalogStatics shape=51 static
             in string name=packageExtensionName
             out class type=Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog return
     method request_remove_package_async
-        method RequestRemovePackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51 reverse=65
+        method RequestRemovePackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionCatalog shape=51
             in string name=packageFullName
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
@@ -335,13 +335,13 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalle
     default Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs
     property extensions
-        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs shape=4 reverse=62
+        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> return
     property package
-        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs shape=4 reverse=43
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs shape=4
             out class type=Windows.ApplicationModel.Package return
     property package_extension_name
-        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs shape=4 reverse=22
+        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageInstalledEventArgs shape=4
             out string return
 
 class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs python_type
@@ -350,10 +350,10 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusCh
     default Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs
     property package
-        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs shape=4 reverse=43
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs shape=4
             out class type=Windows.ApplicationModel.Package return
     property package_extension_name
-        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs shape=4 reverse=22
+        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageStatusChangedEventArgs shape=4
             out string return
 
 class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs python_type
@@ -362,10 +362,10 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstal
     default Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs
     property package
-        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs shape=4 reverse=43
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs shape=4
             out class type=Windows.ApplicationModel.Package return
     property package_extension_name
-        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs shape=4 reverse=22
+        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUninstallingEventArgs shape=4
             out string return
 
 class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs python_type
@@ -374,13 +374,13 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedE
     default Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs
     property extensions
-        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs shape=4 reverse=62
+        get get_Extensions slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.PackageExtensions.PackageExtension> return
     property package
-        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs shape=4 reverse=43
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs shape=4
             out class type=Windows.ApplicationModel.Package return
     property package_extension_name
-        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs shape=4 reverse=22
+        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatedEventArgs shape=4
             out string return
 
 class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs python_type
@@ -389,10 +389,10 @@ class Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdating
     default Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs
     requires Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs
     property package
-        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs shape=4 reverse=43
+        get get_Package slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs shape=4
             out class type=Windows.ApplicationModel.Package return
     property package_extension_name
-        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs shape=4 reverse=22
+        get get_PackageExtensionName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.PackageExtensions.IPackageExtensionPackageUpdatingEventArgs shape=4
             out string return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog,Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs> concrete

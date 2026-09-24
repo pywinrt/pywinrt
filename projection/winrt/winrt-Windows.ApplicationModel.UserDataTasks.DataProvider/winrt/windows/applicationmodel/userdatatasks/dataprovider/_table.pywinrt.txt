@@ -105,37 +105,37 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProvid
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection
     event complete_task_requested
-        add add_CompleteTaskRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=163
+        add add_CompleteTaskRequested slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CompleteTaskRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=181
+        remove remove_CompleteTaskRequested slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event create_or_update_task_requested
-        add add_CreateOrUpdateTaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=24
+        add add_CreateOrUpdateTaskRequested slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_CreateOrUpdateTaskRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=53
+        remove remove_CreateOrUpdateTaskRequested slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event delete_task_requested
-        add add_DeleteTaskRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=187
+        add add_DeleteTaskRequested slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_DeleteTaskRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=200
+        remove remove_DeleteTaskRequested slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event skip_occurrence_requested
-        add add_SkipOccurrenceRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=124
+        add add_SkipOccurrenceRequested slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SkipOccurrenceRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=156
+        remove remove_SkipOccurrenceRequested slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event sync_requested
-        add add_SyncRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51 reverse=65
+        add add_SyncRequested slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SyncRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26 reverse=110
+        remove remove_SyncRequested slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method start
-        method Start slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=0 reverse=201
+        method Start slot=16 inputs=0 outputs=0 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderConnection shape=0
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails python_type
     py UserDataTaskDataProviderTriggerDetails
@@ -143,7 +143,7 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProvid
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails
     property connection
-        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails shape=4 reverse=22
+        get get_Connection slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskDataProviderTriggerDetails shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest python_type
@@ -152,17 +152,17 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListComple
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest
     property task_id
-        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4 reverse=43
+        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4
             out string return
     property task_list_id
-        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4 reverse=22
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=51 reverse=65
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=51
             in string name=completedTaskId
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs python_type
@@ -171,10 +171,10 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListComple
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCompleteTaskRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest python_type
@@ -183,17 +183,17 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreate
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest
     property task
-        get get_Task slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4 reverse=43
+        get get_Task slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.UserDataTask return
     property task_list_id
-        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4 reverse=22
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=51 reverse=65
+        method ReportCompletedAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=51
             in class type=Windows.ApplicationModel.UserDataTasks.UserDataTask name=createdOrUpdatedUserDataTask
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs python_type
@@ -202,10 +202,10 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreate
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListCreateOrUpdateTaskRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest python_type
@@ -214,16 +214,16 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDelete
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest
     property task_id
-        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=43
+        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4
             out string return
     property task_list_id
-        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=22
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs python_type
@@ -232,10 +232,10 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDelete
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListDeleteTaskRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest python_type
@@ -244,16 +244,16 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOc
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest
     property task_id
-        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=43
+        get get_TaskId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4
             out string return
     property task_list_id
-        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=22
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=62
+        method ReportCompletedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4 reverse=99
+        method ReportFailedAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs python_type
@@ -262,10 +262,10 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOc
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSkipOccurrenceRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest python_type
@@ -274,13 +274,13 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncMa
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest
     property task_list_id
-        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4 reverse=22
+        get get_TaskListId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4
             out string return
     method report_completed_async
-        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4 reverse=43
+        method ReportCompletedAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
     method report_failed_async
-        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4 reverse=62
+        method ReportFailedAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequest shape=4
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs python_type
@@ -289,10 +289,10 @@ class Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncMa
     default Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs
     requires Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs
     property request
-        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs shape=4 reverse=22
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest return
     method get_deferral
-        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs shape=4 reverse=43
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.UserDataTasks.DataProvider.IUserDataTaskListSyncManagerSyncRequestEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
 class Windows.ApplicationModel.UserDataTasks.UserDataTask external

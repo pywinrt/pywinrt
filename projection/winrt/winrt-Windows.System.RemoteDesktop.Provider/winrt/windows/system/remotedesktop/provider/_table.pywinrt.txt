@@ -160,7 +160,7 @@ class Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs
     default Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs
     requires Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs
     property action
-        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs shape=4 reverse=22
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs shape=4
             out enum32 type=Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction return
 
 class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo python_type
@@ -176,13 +176,13 @@ class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo python_t
             in struct type=Windows.UI.WindowId name=windowId
             out class type=Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo return
     method perform_local_action_from_remote
-        method PerformLocalActionFromRemote slot=6 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2 shape=4 reverse=22
+        method PerformLocalActionFromRemote slot=6 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2 shape=4
             in enum32 type=Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction name=action
     method set_connection_status
-        method SetConnectionStatus slot=6 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo shape=4 reverse=22
+        method SetConnectionStatus slot=6 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo shape=4
             in enum32 type=Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus name=value
     method switch_to_local_session
-        method SwitchToLocalSession slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo shape=0 reverse=37
+        method SwitchToLocalSession slot=7 inputs=0 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo shape=0
 
 class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo python_type closeable
     py RemoteDesktopConnectionRemoteInfo
@@ -192,28 +192,28 @@ class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo py
     requires Windows.Foundation.IClosable
     factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics
     event perform_local_action_requested
-        add add_PerformLocalActionRequested slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=51 reverse=100
+        add add_PerformLocalActionRequested slot=9 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_PerformLocalActionRequested slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=26 reverse=134
+        remove remove_PerformLocalActionRequested slot=10 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     event switch_to_local_session_requested
-        add add_SwitchToLocalSessionRequested slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=51 reverse=44
+        add add_SwitchToLocalSessionRequested slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_SwitchToLocalSessionRequested slot=8 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=26 reverse=82
+        remove remove_SwitchToLocalSessionRequested slot=8 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method get_for_launch_uri static
-        method GetForLaunchUri slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics shape=51 reverse=44 static
+        method GetForLaunchUri slot=7 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics shape=51 static
             in class type=Windows.Foundation.Uri name=launchUri
             out class type=Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo return
     method is_switch_supported static
-        method IsSwitchSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics shape=4 reverse=22 static
+        method IsSwitchSupported slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics shape=4 static
             out boolean return
     method report_switched
-        method ReportSwitched slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=0 reverse=16
+        method ReportSwitched slot=6 inputs=0 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo shape=0
 
 enum Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus python_type
     py RemoteDesktopConnectionStatus
@@ -230,15 +230,15 @@ class Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo python_type
     requires Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo
     factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory
     constructor -
-        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory shape=117 reverse=25
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory shape=117
             in string name=id
             in string name=displayName
             out class type=Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo return
     property display_name
-        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo shape=4 reverse=22
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo shape=4
             out string return
     property id
-        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo shape=4 reverse=43
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo shape=4
             out string return
 
 enum Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction python_type
@@ -255,16 +255,16 @@ class Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar static python
     factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
     factory Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2
     property desktop_infos static
-        get get_DesktopInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 reverse=22 static
+        get get_DesktopInfos slot=6 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo> return
     event connection_center_requested static
-        add add_ConnectionCenterRequested slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2 shape=51 reverse=24 static
+        add add_ConnectionCenterRequested slot=6 inputs=1 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2 shape=51 static
             in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
-        remove remove_ConnectionCenterRequested slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2 shape=26 reverse=53 static
+        remove remove_ConnectionCenterRequested slot=7 inputs=1 outputs=0 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics2 shape=26 static
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method is_switch_to_local_session_enabled static
-        method IsSwitchToLocalSessionEnabled slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 reverse=43 static
+        method IsSwitchToLocalSessionEnabled slot=7 inputs=0 outputs=1 declaring=Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics shape=4 static
             out boolean return
 
 delegate Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo,System.Object> concrete

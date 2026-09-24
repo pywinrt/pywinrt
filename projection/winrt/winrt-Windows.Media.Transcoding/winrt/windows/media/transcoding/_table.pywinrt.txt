@@ -117,46 +117,46 @@ class Windows.Media.Transcoding.MediaTranscoder activatable python_type
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
     property trim_stop_time
-        get get_TrimStopTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=99
+        get get_TrimStopTime slot=9 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             out timespan return
-        put put_TrimStopTime slot=8 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=26 reverse=82
+        put put_TrimStopTime slot=8 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=26
             in timespan name=value
     property trim_start_time
-        get get_TrimStartTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=43
+        get get_TrimStartTime slot=7 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             out timespan return
-        put put_TrimStartTime slot=6 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=26 reverse=33
+        put put_TrimStartTime slot=6 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=26
             in timespan name=value
     property hardware_acceleration_enabled
-        get get_HardwareAccelerationEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=173
+        get get_HardwareAccelerationEnabled slot=13 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             out boolean return
-        put put_HardwareAccelerationEnabled slot=12 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=162
+        put put_HardwareAccelerationEnabled slot=12 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             in boolean name=value
     property always_reencode
-        get get_AlwaysReencode slot=11 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=141
+        get get_AlwaysReencode slot=11 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             out boolean return
-        put put_AlwaysReencode slot=10 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=121
+        put put_AlwaysReencode slot=10 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             in boolean name=value
     property video_processing_algorithm
-        get get_VideoProcessingAlgorithm slot=8 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder2 shape=4 reverse=62
+        get get_VideoProcessingAlgorithm slot=8 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder2 shape=4
             out enum32 type=Windows.Media.Transcoding.MediaVideoProcessingAlgorithm return
-        put put_VideoProcessingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder2 shape=4 reverse=43
+        put put_VideoProcessingAlgorithm slot=7 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder2 shape=4
             in enum32 type=Windows.Media.Transcoding.MediaVideoProcessingAlgorithm name=value
     method add_audio_effect
-        method AddAudioEffect slot=14 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=186
+        method AddAudioEffect slot=14 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             in string name=activatableClassId
-        method AddAudioEffect slot=15 inputs=3 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=117 reverse=197
+        method AddAudioEffect slot=15 inputs=3 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=117
             in string name=activatableClassId
             in boolean name=effectRequired
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
     method add_video_effect
-        method AddVideoEffect slot=16 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4 reverse=202
+        method AddVideoEffect slot=16 inputs=1 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=4
             in string name=activatableClassId
         method AddVideoEffect slot=17 inputs=3 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=117
             in string name=activatableClassId
             in boolean name=effectRequired
             in interface type=Windows.Foundation.Collections.IPropertySet name=configuration
     method clear_effects
-        method ClearEffects slot=18 inputs=0 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=0 reverse=217
+        method ClearEffects slot=18 inputs=0 outputs=0 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=0
     method prepare_file_transcode_async
         method PrepareFileTranscodeAsync slot=19 inputs=3 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder shape=195
             in interface type=Windows.Storage.IStorageFile name=source
@@ -164,7 +164,7 @@ class Windows.Media.Transcoding.MediaTranscoder activatable python_type
             in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Transcoding.PrepareTranscodeResult> return
     method prepare_media_stream_source_transcode_async
-        method PrepareMediaStreamSourceTranscodeAsync slot=6 inputs=3 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder2 shape=195 reverse=26
+        method PrepareMediaStreamSourceTranscodeAsync slot=6 inputs=3 outputs=1 declaring=Windows.Media.Transcoding.IMediaTranscoder2 shape=195
             in interface type=Windows.Media.Core.IMediaSource name=source
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=destination
             in class type=Windows.Media.MediaProperties.MediaEncodingProfile name=profile
@@ -188,13 +188,13 @@ class Windows.Media.Transcoding.PrepareTranscodeResult python_type
     default Windows.Media.Transcoding.IPrepareTranscodeResult
     requires Windows.Media.Transcoding.IPrepareTranscodeResult
     property can_transcode
-        get get_CanTranscode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IPrepareTranscodeResult shape=4 reverse=22
+        get get_CanTranscode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IPrepareTranscodeResult shape=4
             out boolean return
     property failure_reason
-        get get_FailureReason slot=7 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IPrepareTranscodeResult shape=4 reverse=43
+        get get_FailureReason slot=7 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IPrepareTranscodeResult shape=4
             out enum32 type=Windows.Media.Transcoding.TranscodeFailureReason return
     method transcode_async
-        method TranscodeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IPrepareTranscodeResult shape=4 reverse=62
+        method TranscodeAsync slot=8 inputs=0 outputs=1 declaring=Windows.Media.Transcoding.IPrepareTranscodeResult shape=4
             out parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Double> return
 
 enum Windows.Media.Transcoding.TranscodeFailureReason python_type

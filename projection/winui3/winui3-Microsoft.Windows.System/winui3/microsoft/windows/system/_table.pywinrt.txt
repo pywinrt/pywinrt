@@ -11,41 +11,41 @@ class Microsoft.Windows.System.EnvironmentManager python_type
     requires Microsoft.Windows.System.IEnvironmentManager2
     factory Microsoft.Windows.System.IEnvironmentManagerStatics
     property are_changes_tracked
-        get get_AreChangesTracked slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager2 shape=4 reverse=22
+        get get_AreChangesTracked slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager2 shape=4
             out boolean return
     property is_supported static
-        get get_IsSupported slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=99 static
+        get get_IsSupported slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 static
             out boolean return
     method add_executable_file_extension
-        method AddExecutableFileExtension slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=141
+        method AddExecutableFileExtension slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4
             in string name=pathExt
     method append_to_path
-        method AppendToPath slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=99
+        method AppendToPath slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4
             in string name=path
     method get_environment_variable
-        method GetEnvironmentVariable slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager shape=51 reverse=44
+        method GetEnvironmentVariable slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager shape=51
             in string name=name
             out string return
     method get_environment_variables
-        method GetEnvironmentVariables slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=22
+        method GetEnvironmentVariables slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
     method get_for_machine static
-        method GetForMachine slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=62 static
+        method GetForMachine slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 static
             out class type=Microsoft.Windows.System.EnvironmentManager return
     method get_for_process static
-        method GetForProcess slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=22 static
+        method GetForProcess slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 static
             out class type=Microsoft.Windows.System.EnvironmentManager return
     method get_for_user static
-        method GetForUser slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 reverse=43 static
+        method GetForUser slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.System.IEnvironmentManagerStatics shape=4 static
             out class type=Microsoft.Windows.System.EnvironmentManager return
     method remove_executable_file_extension
-        method RemoveExecutableFileExtension slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=162
+        method RemoveExecutableFileExtension slot=12 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4
             in string name=pathExt
     method remove_from_path
-        method RemoveFromPath slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4 reverse=121
+        method RemoveFromPath slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=4
             in string name=path
     method set_environment_variable
-        method SetEnvironmentVariable slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=51 reverse=65
+        method SetEnvironmentVariable slot=8 inputs=2 outputs=0 declaring=Microsoft.Windows.System.IEnvironmentManager shape=51
             in string name=name
             in string name=value
 
