@@ -12,9 +12,13 @@ on:
       - .github/workflows/test.yaml
       - mypy.ini
       - ruff.toml
+      - requirements.txt
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
+      # the version scheme, whose tests are part of the suite
+      - scripts/versions.py
+      - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
@@ -31,6 +35,9 @@ on:
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
       - '!runtime/**/*.txt'
+      # except the version the runtime is published with, which the
+      # version tests read
+      - runtime/version.txt
       - '!runtime/setup.py'
       - table/**
       - '!table/**/*.md'
@@ -42,9 +49,13 @@ on:
       - .github/workflows/test.yaml
       - mypy.ini
       - ruff.toml
+      - requirements.txt
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
+      # the version scheme, whose tests are part of the suite
+      - scripts/versions.py
+      - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
@@ -61,6 +72,9 @@ on:
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
       - '!runtime/**/*.txt'
+      # except the version the runtime is published with, which the
+      # version tests read
+      - runtime/version.txt
       - '!runtime/setup.py'
       - table/**
       - '!table/**/*.md'
@@ -136,6 +150,7 @@ jobs:
             cc:p
             cmake:p
             python:p
+            python-packaging:p
             python-typing_extensions:p
       - name: install nuget packages
         shell: pwsh

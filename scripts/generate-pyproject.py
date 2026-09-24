@@ -2,11 +2,12 @@ from collections.abc import Iterator
 from contextlib import contextmanager
 import io
 from itertools import chain
-import itertools
 import json
 import os
 from pathlib import Path
-import re
+
+# the version scheme, which scripts/tests/test_versions.py covers
+import versions
 
 # A projection package is data - a table, an __init__.py and a type stub - so
 # its metadata is static and its only build step is compiling the table, which
@@ -16,7 +17,7 @@ PROJECTION_PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["hatchling", "winrt-table-compiler"]
+requires = ["hatchling", "{table_compiler_requirement}"]
 build-backend = "hatchling.build"
 
 [project]
@@ -334,6 +335,9 @@ BINARY_README_TEMPLATE = """\
 {important}Windows Runtime (WinRT) APIs for for the `{namespace}` namespace.
 
 This package provides the `{module_name}` module.
+
+The WinRT APIs in it are those of version {nuget_version} of the
+`{nuget_package}` NuGet package.
 """
 
 TABLE_README = """\
@@ -357,7 +361,29 @@ TABLE_PATH = (Path(__file__).parent.parent / "table").resolve()
 RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
 INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
 
-TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
+# The three namespaces that nearly everything in the projection hands a type
+# back from. A package that references one of these is broken without it, so
+# it is a hard dependency rather than something the [all] extra offers; the
+# three together are less than a megabyte and they reference nothing outside
+# the set, so a minimal install grows by them and by nothing else.
+HUBS = frozenset(
+    {
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Storage.Streams",
+    }
+)
+
+# What each package is published with. A version says which metadata the
+# package was generated from rather than which generator read it, so these
+# come from the upstream each family tracks and from the hand-maintained
+# runtime/version.txt, and nothing generated carries the generator's own
+# version any more.
+RUNTIME_REQUIREMENT = versions.runtime_requirement()
+TABLE_COMPILER_REQUIREMENT = versions.table_compiler_requirement()
+RUNTIME_VERSION = versions.runtime_version()
+FAMILY_VERSIONS = versions.family_versions()
+NUGET_VERSIONS = versions.nuget_versions()
 
 # The interop packages are written by hand, so there is no deps.json to derive
 # their requirements from. Every one of them needs winrt-runtime. The ones that
@@ -471,24 +497,6 @@ def remove_if_present(path: Path) -> None:
     path.unlink(missing_ok=True)
 
 
-def read_table_format(header: Path) -> tuple[int, int]:
-    """
-    Reads the table format version the runtime in this tree understands.
-    """
-    text = header.read_text(encoding="utf-8")
-    fields = {}
-
-    for name in ["format_major", "format_minor"]:
-        match = re.search(rf"constexpr uint16_t {name} = (\d+);", text)
-
-        if not match:
-            raise RuntimeError(f"{header} does not declare {name}")
-
-        fields[name] = int(match.group(1))
-
-    return fields["format_major"], fields["format_minor"]
-
-
 def avoid_keyword(name: str) -> str:
     if name in PYTHON_KEYWORDS:
         return f"{name}_"
@@ -548,7 +556,21 @@ def format_dependencies(requirements: list[str]) -> str:
     return "".join(f'    "{requirement}",\n' for requirement in requirements)
 
 
-def write_readme(package_path: Path, package_name: str, module_name: str) -> None:
+def write_readme(
+    package_path: Path,
+    package_name: str,
+    module_name: str,
+    nuget_package: str,
+    nuget_version: str,
+) -> None:
+    """
+    Writes the README that PyPI shows for one package.
+
+    It names the NuGet package the family was generated from and the version
+    of it, because that is what a reader who wants to know which APIs are in
+    here has to look up, and the only other place it appears is folded into
+    the package's own version.
+    """
     with open_if_changed(package_path / "README.md") as f:
         f.write(README_TEMPLATE.format(package_name=package_name))
 
@@ -561,8 +583,26 @@ def write_readme(package_path: Path, package_name: str, module_name: str) -> Non
                 ),
                 namespace=package_name.removeprefix("winrt-"),
                 module_name=module_name,
+                nuget_package=nuget_package,
+                nuget_version=nuget_version,
             )
         )
+
+
+def format_hard_requirement(package: str, version: str, same_family: bool) -> str:
+    """
+    Renders a requirement on another package that this one's types name.
+
+    Within one family the two come from one winmd set and one generator run,
+    so they are released together and ~= is what says so - and unlike the ==
+    that #137 rejected, it still admits a .postN of either one on its own.
+    Across families the other package follows its own upstream on its own
+    schedule, so all that can honestly be said about it is a floor.
+    """
+    if same_family:
+        return f"{package}~={version}.0"
+
+    return f"{package}>={version}"
 
 
 def write_compiled_project_files(
@@ -656,9 +696,6 @@ def write_compiled_project_files(
             )
         )
 
-    if not is_runtime:
-        write_readme(package_path, package_name, module_name)
-
 
 def write_projection_project_files(
     package_path: Path,
@@ -666,6 +703,8 @@ def write_projection_project_files(
     version: str,
     dependencies: list[str],
     optional_dependencies: list[str],
+    nuget_package: str,
+    nuget_version: str,
 ) -> None:
     """
     Writes the packaging of one namespace's projection package.
@@ -683,6 +722,7 @@ def write_projection_project_files(
                 package_name=package_name,
                 version=version,
                 description="Python projection of Windows Runtime (WinRT) APIs",
+                table_compiler_requirement=TABLE_COMPILER_REQUIREMENT,
                 dependencies=format_dependencies(dependencies),
                 optional_dependencies=(
                     "\n[project.optional-dependencies]\nall = [\n"
@@ -698,7 +738,7 @@ def write_projection_project_files(
     with open_if_changed(package_path / Path(*module_name.split(".")) / "py.typed"):
         pass
 
-    write_readme(package_path, package_name, module_name)
+    write_readme(package_path, package_name, module_name, nuget_package, nuget_version)
 
     # what a compiled projection package used to carry
     remove_if_present(package_path / "setup.py")
@@ -707,17 +747,23 @@ def write_projection_project_files(
     remove_if_present(package_path / "all-requirements.txt")
 
 
-# the version the whole tree is stamped with, which PyWinRT.exe writes here
-# when scripts/generate-pywinrt.py runs
+# Which family each package belongs to, so that a requirement on another one
+# can be written with that package's version instead of this one's. A
+# projection package's family is the directory it is generated into, and an
+# interop package is hand-written C++ compiled against one family's headers
+# and named for it.
 
-with open(RUNTIME_PATH / "version.txt", newline="") as version_file:
-    version_txt = version_file.read()
-
-version = version_txt.strip()
+package_families = {
+    deps_path.parent.name: deps_path.parent.parent.name
+    for deps_path in PROJECTION_PATH.glob("**/deps.json")
+} | {
+    path.name: path.name[: path.name.rindex("-")]
+    for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*"))
+}
 
 # create pyproject.toml files for the projection packages
 
-runtime_table_format = read_table_format(TABLE_HEADER_PATH)
+runtime_table_format = versions.runtime_table_format()
 
 for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
     package_path = deps_path.parent
@@ -727,36 +773,67 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 
     # A projection package's only requirement on the runtime is that the
     # runtime reads its table, so the two have to be generated from one tree.
-    # The floor this turns into is the pin below until there is a release
-    # history to derive one from.
     table_format = (deps["table_format"]["major"], deps["table_format"]["minor"])
 
     if table_format != runtime_table_format:
         raise RuntimeError(
             f"{deps_path} is table format {table_format[0]}.{table_format[1]}"
-            f" and {TABLE_HEADER_PATH.name} reads"
+            f" and {versions.TABLE_HEADER_PATH.name} reads"
             f" {runtime_table_format[0]}.{runtime_table_format[1]}"
         )
 
     package_name = package_path.name
+    family = package_families[package_name]
     root_package = package_name[: package_name.rindex("-")]
     namespace = package_name.removeprefix(f"{root_package}-")
     module_name = (
         f"{root_package.replace('-', '_')}.{winrt_ns_to_py_package(namespace)}"
     )
 
+    required = set(deps["required"])
+    referenced = set(deps["referenced"])
+
+    dependencies = [RUNTIME_REQUIREMENT]
+
+    for dep in sorted(required | (HUBS & referenced)):
+        dep_version = FAMILY_VERSIONS[package_families[dep]]
+
+        if dep in HUBS:
+            # A hub is a hard dependency because of how much of the projection
+            # hands one of its types back, not because the two are coupled, so
+            # a floor is all it takes; nothing that already installs is broken
+            # by a later one.
+            dependencies.append(f"{dep}>={dep_version}")
+        else:
+            dependencies.append(
+                format_hard_requirement(
+                    dep, dep_version, package_families[dep] == family
+                )
+            )
+
+    # What the [all] extra offers is the closure of everything a package can
+    # hand back, so it keeps the hubs as well: a hard dependency on one of
+    # them installs that package but not what it in turn references.
+    optional_dependencies = [
+        f"{dep}[all]>={FAMILY_VERSIONS[package_families[dep]]}"
+        for dep in sorted(referenced)
+    ]
+
     write_projection_project_files(
         package_path,
         module_name,
-        version,
-        [f"winrt-runtime~={version}.0"]
-        + [f"{dep}~={version}.0" for dep in deps["required"]],
-        [f"{dep}[all]~={version}.0" for dep in deps["referenced"]],
+        FAMILY_VERSIONS[family],
+        dependencies,
+        optional_dependencies,
+        versions.NUGET_PACKAGES[family],
+        NUGET_VERSIONS[family],
     )
 
 # create requirements.txt for the hand-written interop projects
 
 for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*")):
+    family = package_families[path.name]
+
     # KeyError here means a new interop package needs a row in the table
     interop_deps = INTEROP_DEPENDENCIES[path.name]
 
@@ -765,9 +842,17 @@ for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*")):
             [
                 "# This file is generated by scripts/generate-pyproject.py\n",
                 "\n",
-                f"winrt-runtime~={version}.0\n",
+                f"{RUNTIME_REQUIREMENT}\n",
             ]
-            + [f"{dep}~={version}.0\n" for dep in interop_deps]
+            + [
+                format_hard_requirement(
+                    dep,
+                    FAMILY_VERSIONS[package_families[dep]],
+                    package_families[dep] == family,
+                )
+                + "\n"
+                for dep in interop_deps
+            ]
         )
 
 # create the packaging of the table compiler
@@ -776,7 +861,7 @@ with open_if_changed(TABLE_PATH / "pyproject.toml") as f:
     f.write(
         TABLE_PYPROJECT_TOML_TEMPLATE.format(
             package_name="winrt-table-compiler",
-            version=version,
+            version=RUNTIME_VERSION,
             description="Compiler for the projection tables of PyWinRT",
         )
     )
@@ -828,8 +913,10 @@ for package_path in chain(
     INTEROP_PATH.glob("winrt-*"),
     INTEROP_PATH.glob("winui3-*"),
 ):
-    root_package = package_path.name[: package_path.name.rindex("-")]
-    namespace = package_path.name.removeprefix(f"{root_package}-")
+    package_name = package_path.name
+    family = package_families[package_name]
+    root_package = package_name[: package_name.rindex("-")]
+    namespace = package_name.removeprefix(f"{root_package}-")
     module_name = (
         f"{root_package.replace('-', '_')}.{winrt_ns_to_py_package(namespace)}"
     )
@@ -842,11 +929,17 @@ for package_path in chain(
         [f"py.{namespace}.cpp"],
     )
 
-# create version.txt for the projects that read one
+    write_readme(
+        package_path,
+        package_name,
+        module_name,
+        versions.NUGET_PACKAGES[family],
+        NUGET_VERSIONS[family],
+    )
 
-for path in itertools.chain(
-    INTEROP_PATH.glob("winrt-*"),
-    INTEROP_PATH.glob("winui3-*"),
-):
+# An interop package is still built by setuptools, which reads the version out
+# of a file rather than out of pyproject.toml.
+
+for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*")):
     with open_if_changed(path / "version.txt") as f:
-        f.write(version_txt)
+        f.write(f"{FAMILY_VERSIONS[package_families[path.name]]}\n")

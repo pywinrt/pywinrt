@@ -1,6 +1,5 @@
 import json
 import pathlib
-import re
 import subprocess
 import sys
 
@@ -223,14 +222,3 @@ subprocess.check_call(
         "--component-dlls",
     ]
 )
-
-# create version.txt for winrt-runtime package to keep it in sync with PyWinRT.exe
-
-runtime_version = subprocess.check_output([PYWINRT_EXE, "--version"], text=True).split(
-    "+"
-)[0]  # trim git version suffix
-
-assert re.match(r"^\d+\.\d+\.\d+$", runtime_version)
-
-with open(RUNTIME_PATH / "version.txt", "w", newline="\n") as f:
-    f.write(runtime_version)
