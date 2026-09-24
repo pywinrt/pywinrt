@@ -1078,15 +1078,15 @@
         },
         "webview2": {
             "forward": {
-                "": 28,
+                "": 31,
                 "f8": 10,
                 "i8": 1,
                 "i8p": 2,
                 "i8pp": 1,
-                "p": 673,
-                "pp": 182,
-                "ppp": 47,
-                "pppp": 20,
+                "p": 730,
+                "pp": 215,
+                "ppp": 51,
+                "pppp": 22,
                 "ppppp": 3,
                 "ppp{f4f4}": 1,
                 "p{i8}{i8}p": 1,
@@ -1095,8 +1095,8 @@
                 "{f4f4f4f4}pp": 1,
                 "{f4f4}": 5,
                 "{f4f4}p": 1,
-                "{i8}": 62,
-                "{u1u1u1u1}": 1
+                "{i8}": 76,
+                "{u1u1u1u1}": 2
             },
             "reverse": [
                 "10:pp",
@@ -1137,8 +1137,8 @@
                     "Windows.UI.Color"
                 ]
             },
-            "implementable_interfaces": 60,
-            "delegates": 59
+            "implementable_interfaces": 68,
+            "delegates": 74
         },
         "winrt": {
             "forward": {
