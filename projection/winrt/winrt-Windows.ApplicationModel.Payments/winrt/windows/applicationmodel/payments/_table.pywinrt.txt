@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.ApplicationModel.Payments
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult> concrete
@@ -859,7 +859,7 @@ class Windows.ApplicationModel.Payments.PaymentRequest python_type
             in class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo name=merchantInfo
             in class type=Windows.ApplicationModel.Payments.PaymentOptions name=options
             out class type=Windows.ApplicationModel.Payments.PaymentRequest return
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestFactory2 shape=267
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.ApplicationModel.Payments.IPaymentRequestFactory2 shape=267 reverse=516
             in class type=Windows.ApplicationModel.Payments.PaymentDetails name=details
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Payments.PaymentMethodData> name=methodData
             in class type=Windows.ApplicationModel.Payments.PaymentMerchantInfo name=merchantInfo

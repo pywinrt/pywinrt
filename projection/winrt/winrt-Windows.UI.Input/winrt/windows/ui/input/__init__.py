@@ -26,6 +26,7 @@ __all__ = [
     "DraggingEventArgs",
     "EdgeGesture",
     "EdgeGestureEventArgs",
+    "GamepadNavigationConfiguration",
     "GestureRecognizer",
     "HoldingEventArgs",
     "InputActivationListener",

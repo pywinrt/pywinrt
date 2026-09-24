@@ -9,5 +9,6 @@ __all__ = [
     "AddContactResult",
     "ContactPickerUI",
     "ContactRemovedEventArgs",
+    "IContactProvider",
 ]
 

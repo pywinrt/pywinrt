@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.System.Profile
 
 class Windows.System.Profile.AnalyticsInfo static python_type
@@ -361,6 +361,9 @@ interface Windows.System.Profile.IPlatformDiagnosticsAndUsageDataSettingsStatics
 interface Windows.System.Profile.IRetailInfoStatics
     guid 0712c6b8-8b92-4f2a-8499-031f1798d6ef
 
+interface Windows.System.Profile.IRetailInfoStatics2
+    guid a3b5d762-9e04-4f4c-b8e2-7a3c5d6e8f01
+
 interface Windows.System.Profile.ISharedModeSettingsStatics
     guid 893df40e-cad6-4d50-8c49-6fcfc03edb29
 
@@ -525,12 +528,16 @@ class Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings static pyth
 class Windows.System.Profile.RetailInfo static python_type
     py RetailInfo
     factory Windows.System.Profile.IRetailInfoStatics
+    factory Windows.System.Profile.IRetailInfoStatics2
     property is_demo_mode_enabled static
         get get_IsDemoModeEnabled slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IRetailInfoStatics shape=4 reverse=22 static
             out boolean return
     property properties static
         get get_Properties slot=7 inputs=0 outputs=1 declaring=Windows.System.Profile.IRetailInfoStatics shape=4 reverse=43 static
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property is_demo_mode_enabled_ex static
+        get get_IsDemoModeEnabledEx slot=6 inputs=0 outputs=1 declaring=Windows.System.Profile.IRetailInfoStatics2 shape=4 reverse=22 static
+            out boolean return
 
 class Windows.System.Profile.SharedModeSettings static python_type
     py SharedModeSettings

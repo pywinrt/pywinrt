@@ -19,7 +19,12 @@ __all__ = [
     "ActionInvocationContext",
     "ActionInvocationHelpDetails",
     "ActionRuntime",
+    "AppointmentActionEntity",
+    "ArrayActionEntity",
     "ContactActionEntity",
+    "CustomActionEntityStore",
+    "CustomTextActionEntity",
+    "DateTimeActionEntity",
     "DocumentActionEntity",
     "FileActionEntity",
     "NamedActionEntity",
@@ -30,6 +35,7 @@ __all__ = [
     "StreamingTextActionEntityWriter",
     "TableActionEntity",
     "TextActionEntity",
+    "UriActionEntity",
 ]
 
 winrt.runtime._internals.alias_method(ActionEntityFactory, "create_text_entity_with_text_format", "create_text_entity")

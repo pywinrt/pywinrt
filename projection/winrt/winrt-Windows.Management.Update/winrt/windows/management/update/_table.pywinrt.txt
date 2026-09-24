@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Management.Update
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
@@ -83,6 +83,56 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem>> shape=4 reverse=62 role=get_results
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem> return
 
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WindowsSoftwareUpdate]
+    guid d8f7fafb-5e3e-5121-a46b-e6475eef341e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Update.WindowsSoftwareUpdate;{7bcd30be-0a5e-540f-9bd8-b8b665980b8b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Update.WindowsSoftwareUpdate
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateActionType> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WindowsSoftwareUpdateActionType]
+    guid c7725783-deb5-54c2-b8c8-b3914ed338f1
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Management.Update.WindowsSoftwareUpdateActionType;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Update.WindowsSoftwareUpdateActionType
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WindowsSoftwareUpdateLocalizationInfo]
+    guid 4e478bf8-753f-5845-b744-717055593c23
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo;{adc2de4b-5966-5f9f-ae07-00d4a285d933}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WindowsSoftwareUpdateProviderPayloadFileInfo]
+    guid 56014b75-ed7c-5ed8-a1e1-afd9ec70f7f6
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo;{f1da16da-1b01-5367-b4ae-20db8cae1e9b}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> return
+
 interface Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsUpdate> concrete iterable
     py winrt.windows.foundation.collections._IIterable[WindowsUpdate]
     guid 7adc510b-32d8-5b1d-908a-27ca443a880c
@@ -102,6 +152,106 @@ interface Windows.Foundation.Collections.IIterable<Windows.Management.Update.Win
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsUpdateItem> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsUpdateItem> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WindowsSoftwareUpdate]
+    guid 9505a5d9-faa2-5a48-b000-711c1da73060
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Update.WindowsSoftwareUpdate;{7bcd30be-0a5e-540f-9bd8-b8b665980b8b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Update.WindowsSoftwareUpdate
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Update.WindowsSoftwareUpdate return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Update.WindowsSoftwareUpdate name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WindowsSoftwareUpdateActionType]
+    guid 55a95ee5-4d1d-5e8e-8d54-4254aabeb5fe
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Management.Update.WindowsSoftwareUpdateActionType;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Update.WindowsSoftwareUpdateActionType
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=117 reverse=101 role=get_many
+            fill_array enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WindowsSoftwareUpdateLocalizationInfo]
+    guid 6a80b1ba-f6e3-5762-8efc-c7744d9516a6
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo;{adc2de4b-5966-5f9f-ae07-00d4a285d933}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WindowsSoftwareUpdateProviderPayloadFileInfo]
+    guid 0c386f9d-9e41-59ab-a2f6-8077827df678
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo;{f1da16da-1b01-5367-b4ae-20db8cae1e9b}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=4 reverse=62 role=move_next
+            out boolean return
 
 interface Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsUpdate> concrete iterable iterator
     py winrt.windows.foundation.collections._IIterator[WindowsUpdate]
@@ -142,6 +292,47 @@ interface Windows.Foundation.Collections.IIterator<Windows.Management.Update.Win
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsUpdateItem> shape=4 reverse=62 role=move_next
             out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43 role=pair_value
+            out object return
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    argument System.String
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
 
 interface Windows.Management.Update.IPreviewBuildsManager
     guid fa07dd61-7e4f-59f7-7c9f-def9051c5f62
@@ -536,6 +727,374 @@ interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
         method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
             receive_array uint8 name=value
 
+interface Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateCategory> concrete
+    py winrt.windows.foundation._IReference[WindowsSoftwareUpdateCategory]
+    guid 1d3605e0-713d-531a-b950-b2a540b8b52c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Management.Update.WindowsSoftwareUpdateCategory;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.Management.Update.WindowsSoftwareUpdateCategory
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateCategory> shape=4 reverse=22 role=value
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateCategory return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateRestartReason> concrete
+    py winrt.windows.foundation._IReference[WindowsSoftwareUpdateRestartReason]
+    guid 10a8f99d-91a9-54fc-8757-1af2de2d62b5
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.Management.Update.WindowsSoftwareUpdateRestartReason;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.Management.Update.WindowsSoftwareUpdateRestartReason
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateRestartReason> shape=4 reverse=22 role=value
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateRestartReason return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WindowsSoftwareUpdate]
+    guid b3cde7df-cbc6-59df-a36e-2dba5ca8a684
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Update.WindowsSoftwareUpdate;{7bcd30be-0a5e-540f-9bd8-b8b665980b8b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate>
+    argument Windows.Management.Update.WindowsSoftwareUpdate
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdate> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Update.WindowsSoftwareUpdate return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Update.WindowsSoftwareUpdate name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.Update.WindowsSoftwareUpdate name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateActionType> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WindowsSoftwareUpdateActionType]
+    guid a58d8c71-4c3f-5288-a2eb-7ef1aa326b71
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Management.Update.WindowsSoftwareUpdateActionType;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateActionType>
+    argument Windows.Management.Update.WindowsSoftwareUpdateActionType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateActionType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateActionType> shape=117 reverse=66 role=index_of
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WindowsSoftwareUpdateLocalizationInfo]
+    guid 3145957d-539f-5f3d-8d5d-bc8a95fc9037
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo;{adc2de4b-5966-5f9f-ae07-00d4a285d933}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo>
+    argument Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WindowsSoftwareUpdateProviderPayloadFileInfo]
+    guid bdcc8fff-5e1d-5a57-874d-6910054cc43e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo;{f1da16da-1b01-5367-b4ae-20db8cae1e9b}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo>
+    argument Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo name=value
+            out uint32 name=index
+            out boolean return
+
 interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> concrete iterable sequence
     py winrt.windows.foundation.collections._IVectorView[WindowsUpdate]
     guid 1eef9339-6038-5751-b5ae-bd89c17a8741
@@ -592,6 +1151,105 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Management.Update.W
             out uint32 name=index
             out boolean return
 
+interface Windows.Management.Update.IWindowsSoftwareUpdate
+    guid 7bcd30be-0a5e-540f-9bd8-b8b665980b8b
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateActionInfo
+    guid 2f6723b5-f704-5362-b600-d18808f3973e
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateActionInfoFactory
+    guid 5e83b58e-d982-5d93-a7cb-bf6c9b6ee5a6
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateActionProgress
+    guid 17dc15fd-75f2-522b-b555-359da8de5581
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo
+    guid bcf26fba-98c8-51cb-8b7e-1eedc3d82a69
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo
+    guid a5bd59f4-e624-5552-82f9-267a4574a203
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfoFactory
+    guid a8bda639-a4f6-5a4a-8a54-26c1c508cd0f
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo
+    guid 691e6b9e-80af-5882-9404-25437ecb791b
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfoFactory
+    guid ab291c7c-d29f-5ac5-b447-0bfcabdc2cc3
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo
+    guid 091aea19-9128-5f24-afc1-a62252df55c0
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory
+    guid 88596f7e-b9ef-5583-8135-94d62ed66ed4
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateFactory
+    guid 2a6e4e2d-3627-5943-b0ad-bf0b06ceae4c
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateIdentity
+    guid 6040c757-5447-5c1f-8b25-8976bce12786
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateIdentityFactory
+    guid c84999fc-8ce6-5711-b88c-d5b926e2e5db
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo
+    guid adc2de4b-5966-5f9f-ae07-00d4a285d933
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfoFactory
+    guid 76979b24-f5bd-5c8c-bdb7-a46187374aff
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo
+    guid 4ac035d0-e50e-5ccb-bfd8-a303562891d2
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfoFactory
+    guid 88d2fcc1-4791-51b6-b988-966ef93a180b
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo
+    guid a755841c-ed10-5a3c-8526-3fc1fd969618
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory
+    guid be28a884-5b20-5b8b-96a2-1c528c441acd
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProvider
+    guid fd6f6d8c-c6fd-58e0-949e-a344717a8166
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult
+    guid afd92b50-6bb9-54de-bdda-9dfb6cc17c16
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResultFactory
+    guid 0c002684-30c9-59e9-b53f-8846a85d2dc6
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProviderFactory
+    guid fc0d5fc4-e15e-5116-b2ed-db0a64997ffa
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo
+    guid f1da16da-1b01-5367-b4ae-20db8cae1e9b
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus
+    guid 076741b8-7a8e-53b6-9fb7-e290b13c52e9
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateProviderStatusFactory
+    guid d1e1b416-7dfd-55ef-9e3c-18d1459e3123
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateResult
+    guid a6d7ed98-6212-5ad3-aa9d-15e83bb85ee4
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateResultFactory
+    guid 512ce0bf-9977-5301-9b29-9e5042c8cf7d
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateScanResult
+    guid 43ca6d96-3e6d-56da-a903-65d4ab729299
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory
+    guid 21148e4c-e7ce-574e-bfa7-69dc77457d21
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateVersion
+    guid 215e22e7-6d57-5305-9c79-4ecd4a4d7871
+
+interface Windows.Management.Update.IWindowsSoftwareUpdateVersionFactory
+    guid 650ed994-0858-5528-a1f2-f73ca64dabc9
+
 interface Windows.Management.Update.IWindowsUpdate
     guid c3c88dd7-0ef3-52b2-a9ad-66bfc6bd9582
 
@@ -628,8 +1286,14 @@ interface Windows.Management.Update.IWindowsUpdateItem
 interface Windows.Management.Update.IWindowsUpdateManager
     guid 5dd966c0-a71a-5602-bbd0-09a70e4573fa
 
+interface Windows.Management.Update.IWindowsUpdateManager2
+    guid b8ba4965-423c-5e71-b89e-0b7940e7390f
+
 interface Windows.Management.Update.IWindowsUpdateManagerFactory
     guid 1b394df8-decb-5f44-b47c-6ccf3bcfdb37
+
+interface Windows.Management.Update.IWindowsUpdateManagerFactory2
+    guid ba08d663-d160-59b9-9898-97a186ad52ea
 
 interface Windows.Management.Update.IWindowsUpdateProgressChangedEventArgs
     guid bbfbdeeb-94c8-5aa7-b0fb-66c67c233b0a
@@ -675,6 +1339,18 @@ class Windows.Management.Update.PreviewBuildsState python_type
     property properties
         get get_Properties slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IPreviewBuildsState shape=4 reverse=22
             out class type=Windows.Foundation.Collections.ValueSet return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsSoftwareUpdateProviderStatus,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[WindowsSoftwareUpdateProviderStatus, Object]
+    guid 94ca7cf1-04a6-5f11-81cf-5402d7712713
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Management.Update.WindowsSoftwareUpdateProviderStatus;{076741b8-7a8e-53b6-9fb7-e290b13c52e9});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Management.Update.WindowsSoftwareUpdateProviderStatus
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateProviderStatus name=sender
+            in object name=args
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[WindowsUpdateManager, Object]
@@ -735,6 +1411,655 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsU
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Windows.Management.Update.WindowsUpdateManager name=sender
             in class type=Windows.Management.Update.WindowsUpdateScanCompletedEventArgs name=args
+
+class Windows.Management.Update.WindowsSoftwareUpdate python_type
+    py WindowsSoftwareUpdate
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdate;{7bcd30be-0a5e-540f-9bd8-b8b665980b8b})
+    default Windows.Management.Update.IWindowsSoftwareUpdate
+    requires Windows.Management.Update.IWindowsSoftwareUpdate
+    factory Windows.Management.Update.IWindowsSoftwareUpdateFactory
+    constructor -
+        ctor .ctor slot=6 inputs=14 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateFactory shape=347
+            in string name=providerId
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateInstallationType name=installationType
+            in string name=updateId
+            in string name=title
+            in string name=description
+            in class type=Windows.Foundation.Uri name=moreInfoUrl
+            in uint64 name=downloadSizeInBytes
+            in uint64 name=installSizeInBytes
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateIdentity name=updateIdentity
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateVersion name=sourceVersion
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateVersion name=targetVersion
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo name=appPackageInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo name=executionInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo name=optionalInfo
+            out class type=Windows.Management.Update.WindowsSoftwareUpdate return
+    property action_progress
+        get get_ActionProgress slot=26 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=255
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionProgress return
+    property action_result_info
+        get get_ActionResultInfo slot=22 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=237
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo return
+    property app_package_info
+        get get_AppPackageInfo slot=28 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=263
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo return
+    property approval_info
+        get get_ApprovalInfo slot=23 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=242
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo return
+    property approved_actions
+        get get_ApprovedActions slot=24 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=247
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateActionType> return
+    property attention_required_info
+        get get_AttentionRequiredInfo slot=25 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=252
+            out class type=Windows.Management.Update.WindowsUpdateAttentionRequiredInfo return
+    property current_action
+        get get_CurrentAction slot=21 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=232
+            out string return
+    property description
+        get get_Description slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=121
+            out string return
+    property download_size_in_bytes
+        get get_DownloadSizeInBytes slot=15 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=194
+            out uint64 return
+    property execution_info
+        get get_ExecutionInfo slot=29 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=266
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo return
+    property install_size_in_bytes
+        get get_InstallSizeInBytes slot=16 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=202
+            out uint64 return
+    property installation_type
+        get get_InstallationType slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=22
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateInstallationType return
+    property is_seeker
+        get get_IsSeeker slot=12 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=162
+            out boolean return
+    property more_info_url
+        get get_MoreInfoUrl slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=141
+            out class type=Windows.Foundation.Uri return
+    property optional_info
+        get get_OptionalInfo slot=30 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=270
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo return
+    property properties
+        get get_Properties slot=31 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=273
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property provider_id
+        get get_ProviderId slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=43
+            out string return
+    property restart_reason
+        get get_RestartReason slot=27 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=259
+            out reference type=Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateRestartReason> return
+    property source_version
+        get get_SourceVersion slot=17 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=210
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateVersion return
+    property target_version
+        get get_TargetVersion slot=18 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=218
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateVersion return
+    property title
+        get get_Title slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=99
+            out string return
+    property update_category
+        get get_UpdateCategory slot=13 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=173
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateCategory return
+    property update_id
+        get get_UpdateId slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=62
+            out string return
+    property update_identity
+        get get_UpdateIdentity slot=14 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=4 reverse=186
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateIdentity return
+    method approve
+        method Approve slot=19 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=51 reverse=224
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo name=approvalInfo
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    method approve_current_action
+        method ApproveCurrentAction slot=20 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=51 reverse=229
+            in boolean name=approve
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    method get_property_value
+        method GetPropertyValue slot=32 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdate shape=51 reverse=281
+            in string name=name
+            out object return
+
+class Windows.Management.Update.WindowsSoftwareUpdateActionInfo python_type
+    py WindowsSoftwareUpdateActionInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateActionInfo;{2f6723b5-f704-5362-b600-d18808f3973e})
+    default Windows.Management.Update.IWindowsSoftwareUpdateActionInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateActionInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateActionInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionInfoFactory shape=195 reverse=26
+            in string name=fileName
+            in string name=fileArguments
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType name=actionType
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+    property action_type
+        get get_ActionType slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionInfo shape=4 reverse=62
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionType return
+    property file_arguments
+        get get_FileArguments slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionInfo shape=4 reverse=43
+            out string return
+    property file_name
+        get get_FileName slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionInfo shape=4 reverse=22
+            out string return
+
+class Windows.Management.Update.WindowsSoftwareUpdateActionProgress python_type
+    py WindowsSoftwareUpdateActionProgress
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateActionProgress;{17dc15fd-75f2-522b-b555-359da8de5581})
+    default Windows.Management.Update.IWindowsSoftwareUpdateActionProgress
+    requires Windows.Management.Update.IWindowsSoftwareUpdateActionProgress
+    property action
+        get get_Action slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionProgress shape=4 reverse=22
+            out string return
+    property current_progress
+        get get_CurrentProgress slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionProgress shape=4 reverse=43
+            out uint64 return
+    property total_progress
+        get get_TotalProgress slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionProgress shape=4 reverse=62
+            out uint64 return
+
+enum Windows.Management.Update.WindowsSoftwareUpdateActionResult python_type
+    py WindowsSoftwareUpdateActionResult
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateActionResult;i4)
+    constant SUCCEEDED 0
+    constant CONTINUE 1
+    constant FAILED 2
+    constant CANCELED 3
+    constant REMOVED 4
+
+class Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo python_type
+    py WindowsSoftwareUpdateActionResultInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo;{bcf26fba-98c8-51cb-8b7e-1eedc3d82a69})
+    default Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo
+    property action
+        get get_Action slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo shape=4 reverse=121
+            out string return
+    property extended_error
+        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo shape=4 reverse=99
+            out uint64 return
+    property result_code
+        get get_ResultCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo shape=4 reverse=62
+            out uint32 return
+    property succeeded
+        get get_Succeeded slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo shape=4 reverse=43
+            out boolean return
+    property timestamp
+        get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateActionResultInfo shape=4 reverse=22
+            out datetime return
+
+enum Windows.Management.Update.WindowsSoftwareUpdateActionType python_type
+    py WindowsSoftwareUpdateActionType
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateActionType;i4)
+    constant DOWNLOAD 0
+    constant INSTALL 1
+    constant DEPLOY 2
+    constant REBOOT 3
+    constant APP_RESTART 4
+
+class Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo python_type
+    py WindowsSoftwareUpdateAppPackageInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo;{a5bd59f4-e624-5552-82f9-267a4574a203})
+    default Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfoFactory shape=195 reverse=26
+            in string name=packageFamilyName
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateArchitecture name=packageArchitecture
+            in class type=Windows.Foundation.Uri name=installUri
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateAppPackageInfo return
+    property install_uri
+        get get_InstallUri slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo shape=4 reverse=62
+            out class type=Windows.Foundation.Uri return
+    property package_architecture
+        get get_PackageArchitecture slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo shape=4 reverse=43
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateArchitecture return
+    property package_family_name
+        get get_PackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateAppPackageInfo shape=4 reverse=22
+            out string return
+
+class Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo python_type
+    py WindowsSoftwareUpdateApprovalInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo;{691e6b9e-80af-5882-9404-25437ecb791b})
+    default Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfoFactory shape=239 reverse=27
+            in boolean name=userInitiated
+            in boolean name=appClosure
+            in boolean name=meteredNetwork
+            in boolean name=seeker
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateApprovalInfo return
+    property app_closure
+        get get_AppClosure slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo shape=4 reverse=43
+            out boolean return
+    property metered_network
+        get get_MeteredNetwork slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo shape=4 reverse=62
+            out boolean return
+    property seeker
+        get get_Seeker slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo shape=4 reverse=99
+            out boolean return
+    property user_initiated
+        get get_UserInitiated slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateApprovalInfo shape=4 reverse=22
+            out boolean return
+
+enum Windows.Management.Update.WindowsSoftwareUpdateArchitecture python_type
+    py WindowsSoftwareUpdateArchitecture
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateArchitecture;i4)
+    constant NEUTRAL 0
+    constant X86 1
+    constant X64 2
+    constant ARM 3
+    constant ARM64 4
+
+enum Windows.Management.Update.WindowsSoftwareUpdateCategory python_type
+    py WindowsSoftwareUpdateCategory
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateCategory;i4)
+    constant OTHER 0
+    constant APPLICATION 1
+    constant DRIVER 2
+    constant FIRMWARE 3
+    constant DEFINITION 4
+    constant FEATURE 5
+    constant QUALITY 6
+    constant A_I_COMPONENT 7
+
+class Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo python_type
+    py WindowsSoftwareUpdateExecutionInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo;{091aea19-9128-5f24-afc1-a62252df55c0})
+    default Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory
+    constructor -
+        ctor .ctor slot=7 inputs=2 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory shape=117 reverse=45
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo name=deployInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo name=actions
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo return
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfoFactory shape=195 reverse=26
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo name=downloadInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo name=installInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo name=actions
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo return
+    property deploy_info
+        get get_DeployInfo slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo shape=4 reverse=62
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+    property download_info
+        get get_DownloadInfo slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+    property install_info
+        get get_InstallInfo slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo shape=4 reverse=43
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+    property optional_action_info
+        get get_OptionalActionInfo slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateExecutionInfo shape=4 reverse=99
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo return
+
+class Windows.Management.Update.WindowsSoftwareUpdateIdentity python_type
+    py WindowsSoftwareUpdateIdentity
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateIdentity;{6040c757-5447-5c1f-8b25-8976bce12786})
+    default Windows.Management.Update.IWindowsSoftwareUpdateIdentity
+    requires Windows.Management.Update.IWindowsSoftwareUpdateIdentity
+    factory Windows.Management.Update.IWindowsSoftwareUpdateIdentityFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateIdentityFactory shape=117 reverse=25
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateIdentityType name=type
+            in string name=identity
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateIdentity return
+    property identity
+        get get_Identity slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateIdentity shape=4 reverse=43
+            out string return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateIdentity shape=4 reverse=22
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateIdentityType return
+
+enum Windows.Management.Update.WindowsSoftwareUpdateIdentityType python_type
+    py WindowsSoftwareUpdateIdentityType
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateIdentityType;i4)
+    constant PRODUCT_CODE 0
+    constant PACKAGE_FAMILY_NAME 1
+
+enum Windows.Management.Update.WindowsSoftwareUpdateInstallationType python_type
+    py WindowsSoftwareUpdateInstallationType
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateInstallationType;i4)
+    constant WINDOWS_UPDATE 0
+    constant APP_PACKAGE 1
+    constant EXECUTABLE 2
+    constant POWERSHELL 3
+
+class Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo python_type
+    py WindowsSoftwareUpdateLocalizationInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo;{adc2de4b-5966-5f9f-ae07-00d4a285d933})
+    default Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfoFactory shape=239 reverse=27
+            in uint32 name=languageId
+            in string name=title
+            in string name=description
+            in class type=Windows.Foundation.Uri name=moreInfoUrl
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo return
+    property description
+        get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo shape=4 reverse=62
+            out string return
+    property language_id
+        get get_LanguageId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo shape=4 reverse=22
+            out uint32 return
+    property more_info_url
+        get get_MoreInfoUrl slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo shape=4 reverse=99
+            out class type=Windows.Foundation.Uri return
+    property title
+        get get_Title slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateLocalizationInfo shape=4 reverse=43
+            out string return
+
+class Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo python_type
+    py WindowsSoftwareUpdateOptionalActionInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo;{4ac035d0-e50e-5ccb-bfd8-a303562891d2})
+    default Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfoFactory shape=195 reverse=26
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo name=closeAndDeployInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo name=closeAndInstallInfo
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo name=closeAndRestartInfo
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalActionInfo return
+    property close_and_deploy_info
+        get get_CloseAndDeployInfo slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+    property close_and_install_info
+        get get_CloseAndInstallInfo slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo shape=4 reverse=43
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+    property close_and_restart_info
+        get get_CloseAndRestartInfo slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalActionInfo shape=4 reverse=62
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateActionInfo return
+
+class Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo python_type
+    py WindowsSoftwareUpdateOptionalInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo;{a755841c-ed10-5a3c-8526-3fc1fd969618})
+    default Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo
+    factory Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory shape=239 reverse=27
+            in reference type=Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateCategory> name=category
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> name=localizationInfo
+            in reference type=Windows.Foundation.IReference<System.Int32> name=complianceDeadlineInDays
+            in reference type=Windows.Foundation.IReference<System.Int32> name=complianceGracePeriodInDays
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo return
+    property category
+        get get_Category slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo shape=4 reverse=99
+            out reference type=Windows.Foundation.IReference<Windows.Management.Update.WindowsSoftwareUpdateCategory> return
+    property compliance_deadline_in_days
+        get get_ComplianceDeadlineInDays slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo shape=4 reverse=43
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+    property compliance_grace_period_in_days
+        get get_ComplianceGracePeriodInDays slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo shape=4 reverse=62
+            out reference type=Windows.Foundation.IReference<System.Int32> return
+    property localization_info
+        get get_LocalizationInfo slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfo shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateLocalizationInfo> return
+
+class Windows.Management.Update.WindowsSoftwareUpdateProvider python_type
+    py WindowsSoftwareUpdateProvider
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateProvider;{fd6f6d8c-c6fd-58e0-949e-a344717a8166})
+    default Windows.Management.Update.IWindowsSoftwareUpdateProvider
+    requires Windows.Management.Update.IWindowsSoftwareUpdateProvider
+    factory Windows.Management.Update.IWindowsSoftwareUpdateProviderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderFactory shape=51 reverse=24
+            in string name=folderPath
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateProvider return
+    property catalog_file
+        get get_CatalogFile slot=13 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=173
+            out string return
+    property folder_path
+        get get_FolderPath slot=12 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=162
+            out string return
+    property id
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=121
+            out string return
+    property payload_files
+        get get_PayloadFiles slot=17 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=210
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> return
+    property properties
+        get get_Properties slot=20 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=228
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property registration_type
+        get get_RegistrationType slot=19 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=223
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType return
+    property scan_file_arguments
+        get get_ScanFileArguments slot=15 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=194
+            out string return
+    property scan_file_name
+        get get_ScanFileName slot=14 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=186
+            out string return
+    property schema_version
+        get get_SchemaVersion slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=99
+            out string return
+    property trust_state
+        get get_TrustState slot=18 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=218
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateProviderTrustState return
+    property type
+        get get_Type slot=16 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=202
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateProviderType return
+    property version
+        get get_Version slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=141
+            out string return
+    method get_property_value
+        method GetPropertyValue slot=21 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=51 reverse=233
+            in string name=name
+            out object return
+    method register
+        method Register slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=22
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    method unregister
+        method Unregister slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=43
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    method validate
+        method Validate slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4 reverse=62
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+
+class Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult python_type
+    py WindowsSoftwareUpdateProviderActionResult
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult;{afd92b50-6bb9-54de-bdda-9dfb6cc17c16})
+    default Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult
+    requires Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult
+    factory Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResultFactory shape=344
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionResult name=actionResult
+            in enum32 type=Windows.Management.Update.WindowsSoftwareUpdateRestartReason name=restartReason
+            in uint32 name=resultCode
+            in uint64 name=extendedError
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult return
+    property extended_error
+        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult shape=4 reverse=99
+            out uint64 return
+    property restart_reason
+        get get_RestartReason slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult shape=4 reverse=43
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateRestartReason return
+    property result
+        get get_Result slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult shape=4 reverse=22
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateActionResult return
+    property result_code
+        get get_ResultCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult shape=4 reverse=62
+            out uint32 return
+
+class Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo python_type
+    py WindowsSoftwareUpdateProviderPayloadFileInfo
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo;{f1da16da-1b01-5367-b4ae-20db8cae1e9b})
+    default Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo
+    requires Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo
+    property catalog_file
+        get get_CatalogFile slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo shape=4 reverse=62
+            out string return
+    property file_hash
+        get get_FileHash slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo shape=4 reverse=43
+            out string return
+    property filename
+        get get_Filename slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo shape=4 reverse=22
+            out string return
+    property trust_state
+        get get_TrustState slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderPayloadFileInfo shape=4 reverse=99
+            out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateProviderTrustState return
+
+enum Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType python_type
+    py WindowsSoftwareUpdateProviderRegistrationType
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType;i4)
+    constant NONE 0
+    constant SYSTEM 1
+    constant WINDOWS 2
+    constant PENDING 3
+    constant REGISTERED 4
+    constant UNREGISTERED 5
+
+class Windows.Management.Update.WindowsSoftwareUpdateProviderStatus python_type
+    py WindowsSoftwareUpdateProviderStatus
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateProviderStatus;{076741b8-7a8e-53b6-9fb7-e290b13c52e9})
+    default Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus
+    requires Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus
+    factory Windows.Management.Update.IWindowsSoftwareUpdateProviderStatusFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderStatusFactory shape=51 reverse=24
+            in string name=providerId
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateProviderStatus return
+    event cancel_requested
+        add add_CancelRequested slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsSoftwareUpdateProviderStatus,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_CancelRequested slot=7 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus shape=26 reverse=53
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method set_action_progress
+        method SetActionProgress slot=9 inputs=2 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus shape=107
+            in uint64 name=current
+            in uint64 name=total
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    method set_action_result
+        method SetActionResult slot=10 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus shape=51 reverse=124
+            in class type=Windows.Management.Update.WindowsSoftwareUpdateProviderActionResult name=actionResult
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    method set_scan_result
+        method SetScanResult slot=8 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProviderStatus shape=343
+            in boolean name=succeeded
+            in uint32 name=resultCode
+            in uint64 name=extendedError
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate> name=updates
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+
+enum Windows.Management.Update.WindowsSoftwareUpdateProviderTrustState python_type
+    py WindowsSoftwareUpdateProviderTrustState
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateProviderTrustState;i4)
+    constant SIGNED_TRUSTED 0
+    constant SIGNED_UNTRUSTED 1
+    constant UNSIGNED 2
+
+enum Windows.Management.Update.WindowsSoftwareUpdateProviderType python_type
+    py WindowsSoftwareUpdateProviderType
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateProviderType;i4)
+    constant WINDOWS_UPDATE 0
+    constant EXECUTABLE 1
+    constant POWERSHELL 2
+
+enum Windows.Management.Update.WindowsSoftwareUpdateRestartReason python_type
+    py WindowsSoftwareUpdateRestartReason
+    signature enum(Windows.Management.Update.WindowsSoftwareUpdateRestartReason;i4)
+    constant NONE 0
+    constant SYSTEM 1
+    constant APP_CLOSE 2
+    constant APP_RESTART 3
+
+class Windows.Management.Update.WindowsSoftwareUpdateResult python_type
+    py WindowsSoftwareUpdateResult
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateResult;{a6d7ed98-6212-5ad3-aa9d-15e83bb85ee4})
+    default Windows.Management.Update.IWindowsSoftwareUpdateResult
+    requires Windows.Management.Update.IWindowsSoftwareUpdateResult
+    factory Windows.Management.Update.IWindowsSoftwareUpdateResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResultFactory shape=117 reverse=25
+            in boolean name=succeeded
+            in uint32 name=resultCode
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+        ctor .ctor slot=7 inputs=3 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResultFactory shape=194
+            in boolean name=succeeded
+            in uint32 name=resultCode
+            in uint64 name=extendedError
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+        ctor .ctor slot=8 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResultFactory shape=344
+            in boolean name=succeeded
+            in boolean name=cancelRequested
+            in uint32 name=resultCode
+            in uint64 name=extendedError
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateResult return
+    property cancel_requested
+        get get_CancelRequested slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResult shape=4 reverse=43
+            out boolean return
+    property extended_error
+        get get_ExtendedError slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResult shape=4 reverse=99
+            out uint64 return
+    property result_code
+        get get_ResultCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResult shape=4 reverse=62
+            out uint32 return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateResult shape=4 reverse=22
+            out boolean return
+
+class Windows.Management.Update.WindowsSoftwareUpdateScanResult python_type
+    py WindowsSoftwareUpdateScanResult
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateScanResult;{43ca6d96-3e6d-56da-a903-65d4ab729299})
+    default Windows.Management.Update.IWindowsSoftwareUpdateScanResult
+    requires Windows.Management.Update.IWindowsSoftwareUpdateScanResult
+    factory Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=3 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory shape=195 reverse=26
+            in boolean name=succeeded
+            in uint32 name=resultCode
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate> name=updates
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateScanResult return
+        ctor .ctor slot=7 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateScanResultFactory shape=343
+            in boolean name=succeeded
+            in uint32 name=resultCode
+            in uint64 name=extendedError
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.Update.WindowsSoftwareUpdate> name=updates
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateScanResult return
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateScanResult shape=4 reverse=62
+            out uint64 return
+    property result_code
+        get get_ResultCode slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateScanResult shape=4 reverse=43
+            out uint32 return
+    property succeeded
+        get get_Succeeded slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateScanResult shape=4 reverse=22
+            out boolean return
+    property updates
+        get get_Updates slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateScanResult shape=4 reverse=99
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> return
+
+class Windows.Management.Update.WindowsSoftwareUpdateVersion python_type
+    py WindowsSoftwareUpdateVersion
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateVersion;{215e22e7-6d57-5305-9c79-4ecd4a4d7871})
+    default Windows.Management.Update.IWindowsSoftwareUpdateVersion
+    requires Windows.Management.Update.IWindowsSoftwareUpdateVersion
+    factory Windows.Management.Update.IWindowsSoftwareUpdateVersionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateVersionFactory shape=239 reverse=27
+            in uint32 name=major
+            in uint32 name=minor
+            in uint32 name=revisionMajor
+            in uint32 name=revisionMinor
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateVersion return
+    property major
+        get get_Major slot=6 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateVersion shape=4 reverse=22
+            out uint32 return
+    property minor
+        get get_Minor slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateVersion shape=4 reverse=43
+            out uint32 return
+    property revision_major
+        get get_RevisionMajor slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateVersion shape=4 reverse=62
+            out uint32 return
+    property revision_minor
+        get get_RevisionMinor slot=9 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateVersion shape=4 reverse=99
+            out uint32 return
 
 class Windows.Management.Update.WindowsUpdate python_type
     py WindowsUpdate
@@ -1009,6 +2334,12 @@ enum Windows.Management.Update.WindowsUpdateAttentionRequiredReason python_type
     constant BLOCKED_BY_OOBE 30
     constant DEFERRED_DURING_OOBE 31
     constant DEFERRED_FOR_SUSTAINABLE_TIME 32
+    constant BLOCKED_BY_APP_CLOSE 33
+    constant BLOCKED_BY_APP_RESTART 34
+    constant OTHER_UPDATE_REVERTING 35
+    constant REPAIR_IN_PROGRESS 36
+    constant WAITING_FOR_LEADING_UPDATE 37
+    constant UNDEFINED 38
 
 class Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs python_type
     py WindowsUpdateAttentionRequiredReasonChangedEventArgs
@@ -1069,10 +2400,16 @@ class Windows.Management.Update.WindowsUpdateManager python_type
     signature rc(Windows.Management.Update.WindowsUpdateManager;{5dd966c0-a71a-5602-bbd0-09a70e4573fa})
     default Windows.Management.Update.IWindowsUpdateManager
     requires Windows.Management.Update.IWindowsUpdateManager
+    requires Windows.Management.Update.IWindowsUpdateManager2
     factory Windows.Management.Update.IWindowsUpdateManagerFactory
+    factory Windows.Management.Update.IWindowsUpdateManagerFactory2
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManagerFactory shape=51 reverse=24
             in string name=clientId
+            out class type=Windows.Management.Update.WindowsUpdateManager return
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManagerFactory2 shape=195 reverse=26
+            in string name=clientId
+            pass_array string name=providerIdFilter
             out class type=Windows.Management.Update.WindowsUpdateManager return
     property is_scanning
         get get_IsScanning slot=18 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=218
@@ -1083,6 +2420,9 @@ class Windows.Management.Update.WindowsUpdateManager python_type
     property last_successful_scan_timestamp
         get get_LastSuccessfulScanTimestamp slot=20 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=228
             out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property provider_ids
+        get get_ProviderIds slot=7 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager2 shape=51 reverse=44
+            receive_array string return
     event action_completed
         add add_ActionCompleted slot=14 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=187
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Management.Update.WindowsUpdateManager,Windows.Management.Update.WindowsUpdateActionCompletedEventArgs> name=handler
@@ -1119,6 +2459,9 @@ class Windows.Management.Update.WindowsUpdateManager python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_WorkingStateChanged slot=9 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=26 reverse=110
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_applicable_software_updates
+        method GetApplicableSoftwareUpdates slot=8 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager2 shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdate> return
     method get_applicable_updates
         method GetApplicableUpdates slot=21 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=232
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdate> return
@@ -1130,9 +2473,25 @@ class Windows.Management.Update.WindowsUpdateManager python_type
         method GetMostRecentCompletedUpdatesAsync slot=23 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager shape=51 reverse=243
             in int32 name=count
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsUpdateItem>> return
+    method get_provider
+        method GetProvider slot=6 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager2 shape=51 reverse=24
+            in string name=id
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateProvider return
+    method perform_scan
+        method PerformScan slot=9 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateManager2 shape=51 reverse=100
+            in enum32 type=Windows.Management.Update.WindowsUpdateManagerScanMode name=scanMode
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateScanResult return
     method start_scan
         method StartScan slot=24 inputs=1 outputs=0 declaring=Windows.Management.Update.IWindowsUpdateManager shape=4 reverse=247
             in boolean name=userInitiated
+
+enum Windows.Management.Update.WindowsUpdateManagerScanMode python_type
+    py WindowsUpdateManagerScanMode
+    signature enum(Windows.Management.Update.WindowsUpdateManagerScanMode;i4)
+    constant DEFAULT 0
+    constant BYPASS_SCAN_DEFERRALS 1
+    constant USER_INITIATED 2
+    constant WHAT_IF 100
 
 class Windows.Management.Update.WindowsUpdateProgressChangedEventArgs python_type
     py WindowsUpdateProgressChangedEventArgs
@@ -1155,7 +2514,7 @@ class Windows.Management.Update.WindowsUpdateRestartRequestOptions activatable p
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory shape=267
+        ctor .ctor slot=6 inputs=5 outputs=1 declaring=Windows.Management.Update.IWindowsUpdateRestartRequestOptionsFactory shape=267 reverse=516
             in string name=title
             in string name=description
             in class type=Windows.Foundation.Uri name=moreInfoUrl
@@ -1225,6 +2584,9 @@ class System.Int32 external
 class System.Object external
     py winrt.system.Object
 
+class System.String external
+    py winrt.system.String
+
 delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
     py winrt.windows.foundation.AsyncOperationCompletedHandler
     guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
@@ -1283,6 +2645,14 @@ interface Windows.Foundation.Collections.IIterable external parameterized
 interface Windows.Foundation.Collections.IIterator external parameterized
     py winrt.windows.foundation.collections._IIterator
     guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
 
 interface Windows.Foundation.Collections.IVectorView external parameterized
     py winrt.windows.foundation.collections._IVectorView

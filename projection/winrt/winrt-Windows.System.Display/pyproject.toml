@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.System.Display"
-version = "4!10.0.26100.4188"
+version = "4!10.0.28000.2705"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"

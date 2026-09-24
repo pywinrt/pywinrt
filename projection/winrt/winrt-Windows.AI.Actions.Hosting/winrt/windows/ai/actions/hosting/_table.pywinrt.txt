@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.AI.Actions.Hosting
 
 class Windows.AI.Actions.Hosting.ActionCatalog python_type closeable
@@ -9,6 +9,7 @@ class Windows.AI.Actions.Hosting.ActionCatalog python_type closeable
     default Windows.AI.Actions.Hosting.IActionCatalog
     requires Windows.AI.Actions.Hosting.IActionCatalog
     requires Windows.AI.Actions.Hosting.IActionCatalog2
+    requires Windows.AI.Actions.Hosting.IActionCatalog3
     requires Windows.Foundation.IClosable
     event changed
         add add_Changed slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog shape=51 reverse=44
@@ -18,6 +19,9 @@ class Windows.AI.Actions.Hosting.ActionCatalog python_type closeable
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method get_actions_for_current_app
+        method GetActionsForCurrentApp slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog3 shape=51 reverse=24
+            receive_array class type=Windows.AI.Actions.Hosting.ActionDefinition return
     method get_actions_for_inputs
         method GetActionsForInputs slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionCatalog2 shape=195 reverse=26
             pass_array class type=Windows.AI.Actions.ActionEntity name=inputEntities
@@ -37,6 +41,8 @@ class Windows.AI.Actions.Hosting.ActionDefinition python_type closeable
     requires Windows.AI.Actions.Hosting.IActionDefinition
     requires Windows.AI.Actions.Hosting.IActionDefinition2
     requires Windows.AI.Actions.Hosting.IActionDefinition3
+    requires Windows.AI.Actions.Hosting.IActionDefinition4
+    requires Windows.AI.Actions.Hosting.IActionDefinition5
     requires Windows.Foundation.IClosable
     property description
         get get_Description slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=4 reverse=43
@@ -62,8 +68,15 @@ class Windows.AI.Actions.Hosting.ActionDefinition python_type closeable
     property package_relative_application_id
         get get_PackageRelativeApplicationId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition3 shape=4 reverse=22
             out string return
+    property is_currently_available
+        get get_IsCurrentlyAvailable slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition4 shape=4 reverse=22
+            out boolean return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method get_icon_full_path
+        method GetIconFullPath slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition5 shape=51 reverse=24
+            in class type=Windows.Foundation.Collections.PropertySet name=qualifierValues
+            out string return
     method get_inputs
         method GetInputs slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition shape=51 reverse=124
             receive_array class type=Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo return
@@ -154,6 +167,9 @@ interface Windows.AI.Actions.Hosting.IActionCatalog
 interface Windows.AI.Actions.Hosting.IActionCatalog2
     guid 370360b1-a14b-5ea8-b611-b5f70342ba44
 
+interface Windows.AI.Actions.Hosting.IActionCatalog3
+    guid 2e05d518-8680-55d3-820d-2605adb7d62d
+
 interface Windows.AI.Actions.Hosting.IActionDefinition
     guid fe766add-924d-5231-855e-dac9e82c7e6c
 
@@ -162,6 +178,12 @@ interface Windows.AI.Actions.Hosting.IActionDefinition2
 
 interface Windows.AI.Actions.Hosting.IActionDefinition3
     guid 89c9a7e0-4bfd-55f4-9eed-dce2250114fa
+
+interface Windows.AI.Actions.Hosting.IActionDefinition4
+    guid 6dd91071-8847-55b6-9518-9ff8de421eb7
+
+interface Windows.AI.Actions.Hosting.IActionDefinition5
+    guid 5bea33ef-d325-53a8-8db3-0d771f4d1e54
 
 interface Windows.AI.Actions.Hosting.IActionEntityRegistrationInfo
     guid c3b92bdb-03c3-5a9e-b049-002fa0405699
@@ -219,6 +241,9 @@ interface Windows.Foundation.IClosable external
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler
     guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+class Windows.Foundation.Collections.PropertySet external
+    py winrt.windows.foundation.collections.PropertySet
 
 struct Windows.UI.WindowId external
     py winrt.windows.ui.WindowId

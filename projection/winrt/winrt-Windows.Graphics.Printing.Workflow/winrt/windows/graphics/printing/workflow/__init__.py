@@ -35,6 +35,7 @@ __all__ = [
     "PrintWorkflowPdlSourceContent",
     "PrintWorkflowPdlTargetStream",
     "PrintWorkflowPrinterJob",
+    "PrintWorkflowPrinterJobStatusChangedEventArgs",
     "PrintWorkflowSourceContent",
     "PrintWorkflowSpoolStreamContent",
     "PrintWorkflowStreamTarget",
@@ -49,5 +50,7 @@ __all__ = [
     "PrintWorkflowVirtualPrinterTriggerDetails",
     "PrintWorkflowVirtualPrinterUIEventArgs",
     "PrintWorkflowXpsDataAvailableEventArgs",
+    "PrintWorkflowXpsObjectModelProvider",
+    "IPrintWorkflowObjectModelProvider",
 ]
 

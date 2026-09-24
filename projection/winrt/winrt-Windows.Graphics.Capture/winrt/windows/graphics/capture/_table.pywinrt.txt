@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Graphics.Capture
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Graphics.Capture.GraphicsCaptureItem> concrete
@@ -31,6 +31,7 @@ class Windows.Graphics.Capture.Direct3D11CaptureFrame python_type closeable
     default Windows.Graphics.Capture.IDirect3D11CaptureFrame
     requires Windows.Graphics.Capture.IDirect3D11CaptureFrame
     requires Windows.Graphics.Capture.IDirect3D11CaptureFrame2
+    requires Windows.Graphics.Capture.IDirect3D11CaptureFrame3
     requires Windows.Foundation.IClosable
     property content_size
         get get_ContentSize slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame shape=4 reverse=62
@@ -47,6 +48,9 @@ class Windows.Graphics.Capture.Direct3D11CaptureFrame python_type closeable
     property dirty_regions
         get get_DirtyRegions slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame2 shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
+    property configuration_iteration
+        get get_ConfigurationIteration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDirect3D11CaptureFrame3 shape=4 reverse=22
+            out uint64 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
@@ -171,6 +175,7 @@ class Windows.Graphics.Capture.GraphicsCaptureSession python_type closeable
     requires Windows.Graphics.Capture.IGraphicsCaptureSession4
     requires Windows.Graphics.Capture.IGraphicsCaptureSession5
     requires Windows.Graphics.Capture.IGraphicsCaptureSession6
+    requires Windows.Graphics.Capture.IGraphicsCaptureSession7
     requires Windows.Foundation.IClosable
     factory Windows.Graphics.Capture.IGraphicsCaptureSessionStatics
     property is_cursor_capture_enabled
@@ -198,6 +203,9 @@ class Windows.Graphics.Capture.GraphicsCaptureSession python_type closeable
             out boolean return
         put put_IncludeSecondaryWindows slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession6 shape=4 reverse=43
             in boolean name=value
+    property configuration_iteration
+        get get_ConfigurationIteration slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IGraphicsCaptureSession7 shape=4 reverse=22
+            out uint64 return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method is_supported static
@@ -270,6 +278,9 @@ interface Windows.Graphics.Capture.IDirect3D11CaptureFrame
 interface Windows.Graphics.Capture.IDirect3D11CaptureFrame2
     guid 37869cfa-2b48-5ebf-9afb-dffd805defdb
 
+interface Windows.Graphics.Capture.IDirect3D11CaptureFrame3
+    guid 71616dc8-fea5-5741-a3d8-591acc39a9ee
+
 interface Windows.Graphics.Capture.IDirect3D11CaptureFramePool
     guid 24eb6d22-1975-422e-82e7-780dbd8ddf24
 
@@ -278,6 +289,18 @@ interface Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics
 
 interface Windows.Graphics.Capture.IDirect3D11CaptureFramePoolStatics2
     guid 589b103f-6bbc-5df5-a991-02e28b3b66d5
+
+interface Windows.Graphics.Capture.IDisplayGraphicsCaptureSession python_type
+    py _IDisplayGraphicsCaptureSession
+    guid bb91f61b-218a-587d-8580-2701a74c0525
+    signature {bb91f61b-218a-587d-8580-2701a74c0525}
+    method get_window_exclusion_list
+        method GetWindowExclusionList slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Capture.IDisplayGraphicsCaptureSession shape=4 reverse=43
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> return
+    method set_window_exclusion_list
+        method SetWindowExclusionList slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Capture.IDisplayGraphicsCaptureSession shape=51 reverse=24
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.UI.WindowId> name=excludedWindows
+            out uint64 return
 
 interface Windows.Graphics.Capture.IGraphicsCaptureAccessStatics
     guid 743ed370-06ec-5040-a58a-901f0f757095
@@ -312,6 +335,9 @@ interface Windows.Graphics.Capture.IGraphicsCaptureSession5
 interface Windows.Graphics.Capture.IGraphicsCaptureSession6
     guid d7419236-be20-5e9f-bcd6-c4e98fd6afdc
 
+interface Windows.Graphics.Capture.IGraphicsCaptureSession7
+    guid 82d1aa4d-4366-543e-a6d0-a4805e6bcf2c
+
 interface Windows.Graphics.Capture.IGraphicsCaptureSessionStatics
     guid 2224a540-5974-49aa-b232-0882536f4cb5
 
@@ -324,6 +350,16 @@ interface Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> c
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.WindowId> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[WindowId]
+    guid 745698bf-22ad-5c0d-b0e0-07d35a1c9719
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.UI.WindowId;u8))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.WindowId
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.WindowId> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> return
 
 interface Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> concrete iterable iterator
     py winrt.windows.foundation.collections._IIterator[RectInt32]
@@ -343,6 +379,26 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> c
             out uint32 return
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[WindowId]
+    guid ba0a30a1-c082-5671-ac07-7aaa4f269670
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.UI.WindowId;u8))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.WindowId
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> shape=4 reverse=22 role=current
+            out struct type=Windows.UI.WindowId return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> shape=117 reverse=101 role=get_many
+            fill_array struct type=Windows.UI.WindowId name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> shape=4 reverse=62 role=move_next
             out boolean return
 
 interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> concrete iterable sequence
@@ -370,6 +426,34 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32>
     method index_of
         method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=161 reverse=78 role=index_of
             in struct type=Windows.Graphics.RectInt32 name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[WindowId]
+    guid f49e7371-b31a-5620-a42e-7e969003f0ff
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.UI.WindowId;u8))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.WindowId>
+    argument Windows.UI.WindowId
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.WindowId> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.WindowId> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.UI.WindowId return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array struct type=Windows.UI.WindowId name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.WindowId> shape=183 reverse=92 role=index_of
+            in struct type=Windows.UI.WindowId name=value
             out uint32 name=index
             out boolean return
 

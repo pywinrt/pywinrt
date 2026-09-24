@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Security.Authentication.Web.Provider
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
@@ -842,7 +842,7 @@ class Windows.Security.Authentication.Web.Provider.WebAccountManager static pyth
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props
             in enum32 type=Windows.Security.Authentication.Web.Provider.WebAccountScope name=scope
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Credentials.WebAccount> return
-        method AddWebAccountAsync slot=6 inputs=5 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=267 static
+        method AddWebAccountAsync slot=6 inputs=5 outputs=1 declaring=Windows.Security.Authentication.Web.Provider.IWebAccountMapManagerStatics shape=267 reverse=516 static
             in string name=webAccountId
             in string name=webAccountUserName
             in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=props

@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.UI.Notifications
 
 enum Windows.UI.Notifications.AdaptiveNotificationContentKind python_type
@@ -1046,6 +1046,9 @@ interface Windows.UI.Notifications.IToastNotificationManagerStatics4
 interface Windows.UI.Notifications.IToastNotificationManagerStatics5
     guid d6f5f569-d40d-407c-8989-88cab42cfd14
 
+interface Windows.UI.Notifications.IToastNotificationStatics
+    guid 2aa8f213-d8c9-48fe-b641-4a63d69ce079
+
 interface Windows.UI.Notifications.IToastNotifier
     guid 75927b93-03f3-41ec-91d3-6e5bac1b38e7
 
@@ -2054,6 +2057,7 @@ class Windows.UI.Notifications.ToastNotification python_type
     requires Windows.UI.Notifications.IToastNotification4
     requires Windows.UI.Notifications.IToastNotification6
     factory Windows.UI.Notifications.IToastNotificationFactory
+    factory Windows.UI.Notifications.IToastNotificationStatics
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationFactory shape=51 reverse=24
             in class type=Windows.Data.Xml.Dom.XmlDocument name=content
@@ -2106,6 +2110,9 @@ class Windows.UI.Notifications.ToastNotification python_type
             out boolean return
         put put_ExpiresOnReboot slot=7 inputs=1 outputs=0 declaring=Windows.UI.Notifications.IToastNotification6 shape=4 reverse=43
             in boolean name=value
+    property is_expandable_content_supported static
+        get get_IsExpandableContentSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Notifications.IToastNotificationStatics shape=4 reverse=22 static
+            out boolean return
     event activated
         add add_Activated slot=11 inputs=1 outputs=1 declaring=Windows.UI.Notifications.IToastNotification shape=51 reverse=144
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,System.Object> name=handler

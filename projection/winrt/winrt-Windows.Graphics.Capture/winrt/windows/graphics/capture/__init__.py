@@ -14,5 +14,6 @@ __all__ = [
     "GraphicsCaptureItem",
     "GraphicsCapturePicker",
     "GraphicsCaptureSession",
+    "IDisplayGraphicsCaptureSession",
 ]
 

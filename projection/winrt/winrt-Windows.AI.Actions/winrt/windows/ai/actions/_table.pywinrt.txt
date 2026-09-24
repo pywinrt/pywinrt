@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.AI.Actions
 
 class Windows.AI.Actions.ActionEntity composable python_type closeable
@@ -42,14 +42,44 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
     requires Windows.AI.Actions.IActionEntityFactory2
     requires Windows.AI.Actions.IActionEntityFactory3
     requires Windows.AI.Actions.IActionEntityFactory4
+    requires Windows.AI.Actions.IActionEntityFactory5
+    requires Windows.AI.Actions.IActionEntityFactory6
+    requires Windows.AI.Actions.IActionEntityFactory7
     requires Windows.Foundation.IClosable
     composable Windows.AI.Actions.IActionEntityFactoryFactory
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method create_appointment_entity
+        method CreateAppointmentEntity slot=7 inputs=3 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory6 shape=239
+            in string name=sourceId
+            in class type=Windows.ApplicationModel.Appointments.Appointment name=appointment
+            pass_array class type=Windows.AI.Actions.ContactActionEntity name=attendees
+            out class type=Windows.AI.Actions.AppointmentActionEntity return
+    method create_array_entity
+        method CreateArrayEntity slot=7 inputs=2 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory5 shape=195 reverse=46
+            in enum32 type=Windows.AI.Actions.ActionEntityKind name=kind
+            pass_array class type=Windows.AI.Actions.ActionEntity name=entities
+            out class type=Windows.AI.Actions.ArrayActionEntity return
+    method create_array_entity_with_custom_kind
+        method CreateArrayEntityWithCustomKind slot=7 inputs=3 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory7 shape=239
+            in enum32 type=Windows.AI.Actions.ActionEntityKind name=elementKind
+            in string name=customKind
+            pass_array class type=Windows.AI.Actions.ActionEntity name=entities
+            out class type=Windows.AI.Actions.ArrayActionEntity return
     method create_contact_entity
         method CreateContactEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory4 shape=51 reverse=44
             in class type=Windows.ApplicationModel.Contacts.Contact name=contact
             out class type=Windows.AI.Actions.ContactActionEntity return
+    method create_custom_text_entity
+        method CreateCustomTextEntity slot=6 inputs=3 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory7 shape=195 reverse=26
+            in string name=kind
+            in string name=keyPhrase
+            in parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=props
+            out class type=Windows.AI.Actions.CustomTextActionEntity return
+    method create_date_time_entity
+        method CreateDateTimeEntity slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory6 shape=89
+            in datetime name=dateTime
+            out class type=Windows.AI.Actions.DateTimeActionEntity return
     method create_document_entity
         method CreateDocumentEntity slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory2 shape=51 reverse=44
             in string name=path
@@ -90,6 +120,10 @@ class Windows.AI.Actions.ActionEntityFactory composable python_type closeable
             in string name=text
             in enum32 type=Windows.AI.Actions.ActionEntityTextFormat name=textFormat
             out class type=Windows.AI.Actions.TextActionEntity return
+    method create_uri_entity
+        method CreateUriEntity slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionEntityFactory5 shape=51 reverse=24
+            in class type=Windows.Foundation.Uri name=Uri
+            out class type=Windows.AI.Actions.UriActionEntity return
 
 enum Windows.AI.Actions.ActionEntityKind python_type
     py ActionEntityKind
@@ -103,6 +137,11 @@ enum Windows.AI.Actions.ActionEntityKind python_type
     constant REMOTE_FILE 6
     constant TABLE 7
     constant CONTACT 8
+    constant URI 9
+    constant ARRAY 10
+    constant APPOINTMENT 11
+    constant DATE 12
+    constant CUSTOM_TEXT 13
 
 enum Windows.AI.Actions.ActionEntityTextFormat python_type
     py ActionEntityTextFormat
@@ -182,6 +221,7 @@ class Windows.AI.Actions.ActionInvocationHelpDetails python_type closeable
     signature rc(Windows.AI.Actions.ActionInvocationHelpDetails;{5430f272-078f-5722-8f7d-90cf8ddd595e})
     default Windows.AI.Actions.IActionInvocationHelpDetails
     requires Windows.AI.Actions.IActionInvocationHelpDetails
+    requires Windows.AI.Actions.IActionInvocationHelpDetails2
     requires Windows.Foundation.IClosable
     property title
         get get_Title slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=62
@@ -208,6 +248,12 @@ class Windows.AI.Actions.ActionInvocationHelpDetails python_type closeable
             out string return
         put put_Description slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails shape=4 reverse=141
             in string name=value
+    event changed
+        add add_Changed slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionInvocationHelpDetails2 shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.AI.Actions.ActionInvocationHelpDetails,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Changed slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IActionInvocationHelpDetails2 shape=26 reverse=53
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
 
@@ -233,7 +279,10 @@ class Windows.AI.Actions.ActionRuntime composable python_type closeable
     requires Windows.AI.Actions.IActionRuntime
     requires Windows.AI.Actions.IActionRuntime2
     requires Windows.AI.Actions.IActionRuntime3
+    requires Windows.AI.Actions.IActionRuntime4
+    requires Windows.AI.Actions.IActionRuntime5
     requires Windows.Foundation.IClosable
+    factory Windows.AI.Actions.IActionRuntimeStatics
     composable Windows.AI.Actions.IActionRuntimeFactory
     property action_catalog
         get get_ActionCatalog slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime shape=4 reverse=22
@@ -244,6 +293,9 @@ class Windows.AI.Actions.ActionRuntime composable python_type closeable
     property latest_supported_schema_version
         get get_LatestSupportedSchemaVersion slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=4 reverse=62
             out uint32 return
+    property custom_entity_store
+        get get_CustomEntityStore slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntime5 shape=4 reverse=22
+            out class type=Windows.AI.Actions.CustomActionEntityStore return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_action_feedback
@@ -267,10 +319,62 @@ class Windows.AI.Actions.ActionRuntime composable python_type closeable
         method GetActionEntityById slot=7 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime3 shape=51 reverse=44
             in string name=entityId
             out class type=Windows.AI.Actions.ActionEntity return
+    method get_action_invocation_context_from_token
+        method GetActionInvocationContextFromToken slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.IActionRuntime4 shape=51 reverse=24
+            in string name=token
+            out class type=Windows.AI.Actions.ActionInvocationContext return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IActionRuntimeStatics shape=4 reverse=22 static
+            out class type=Windows.AI.Actions.ActionRuntime return
     method set_action_availability
         method SetActionAvailability slot=7 inputs=2 outputs=0 declaring=Windows.AI.Actions.IActionRuntime2 shape=51 reverse=44
             in string name=actionId
             in boolean name=isAvailable
+
+class Windows.AI.Actions.AppointmentActionEntity python_type
+    py AppointmentActionEntity
+    signature rc(Windows.AI.Actions.AppointmentActionEntity;{29daa00e-b474-581c-b555-6187d1aa8231})
+    base Windows.AI.Actions.ActionEntity
+    default Windows.AI.Actions.IAppointmentActionEntity
+    requires Windows.AI.Actions.IAppointmentActionEntity
+    property appointment
+        get get_Appointment slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=4 reverse=43
+            out class type=Windows.ApplicationModel.Appointments.Appointment return
+    property source_id
+        get get_SourceId slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=4 reverse=22
+            out string return
+    method get_attendees
+        method GetAttendees slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=65
+            receive_array class type=Windows.AI.Actions.ContactActionEntity return
+    method get_presented_files
+        method GetPresentedFiles slot=9 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=100
+            receive_array class type=Windows.AI.Actions.RemoteFileActionEntity return
+    method get_shared_files
+        method GetSharedFiles slot=11 inputs=0 outputs=1 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=144
+            receive_array class type=Windows.AI.Actions.RemoteFileActionEntity return
+    method set_presented_files
+        method SetPresentedFiles slot=10 inputs=1 outputs=0 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=124
+            pass_array class type=Windows.AI.Actions.RemoteFileActionEntity name=files
+    method set_shared_files
+        method SetSharedFiles slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IAppointmentActionEntity shape=51 reverse=163
+            pass_array class type=Windows.AI.Actions.RemoteFileActionEntity name=files
+
+class Windows.AI.Actions.ArrayActionEntity python_type
+    py ArrayActionEntity
+    signature rc(Windows.AI.Actions.ArrayActionEntity;{45798e78-1059-5311-8a1b-de0081a4ca3b})
+    base Windows.AI.Actions.ActionEntity
+    default Windows.AI.Actions.IArrayActionEntity
+    requires Windows.AI.Actions.IArrayActionEntity
+    requires Windows.AI.Actions.IArrayActionEntity2
+    property element_kind
+        get get_ElementKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity shape=4 reverse=22
+            out enum32 type=Windows.AI.Actions.ActionEntityKind return
+    property custom_element_kind
+        get get_CustomElementKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity2 shape=4 reverse=22
+            out string return
+    method get_all
+        method GetAll slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.IArrayActionEntity shape=51 reverse=44
+            receive_array class type=Windows.AI.Actions.ActionEntity return
 
 class Windows.AI.Actions.ContactActionEntity python_type
     py ContactActionEntity
@@ -281,6 +385,55 @@ class Windows.AI.Actions.ContactActionEntity python_type
     property contact
         get get_Contact slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IContactActionEntity shape=4 reverse=22
             out class type=Windows.ApplicationModel.Contacts.Contact return
+
+class Windows.AI.Actions.CustomActionEntityStore composable python_type closeable
+    py CustomActionEntityStore
+    signature rc(Windows.AI.Actions.CustomActionEntityStore;{fa7b44d0-1762-5828-9938-e7cae5199e01})
+    default Windows.AI.Actions.ICustomActionEntityStore
+    requires Windows.AI.Actions.ICustomActionEntityStore
+    requires Windows.Foundation.IClosable
+    composable Windows.AI.Actions.ICustomActionEntityStoreFactory
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method delete
+        method Delete slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=4 reverse=99
+            in string name=kind
+    method get_last_modified_time
+        method GetLastModifiedTime slot=6 inputs=1 outputs=1 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=51 reverse=24
+            in string name=kind
+            out datetime return
+    method insert
+        method Insert slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=4 reverse=43
+            in class type=Windows.AI.Actions.CustomTextActionEntity name=entity
+    method insert_many
+        method InsertMany slot=8 inputs=1 outputs=0 declaring=Windows.AI.Actions.ICustomActionEntityStore shape=51 reverse=65
+            pass_array class type=Windows.AI.Actions.CustomTextActionEntity name=entities
+
+class Windows.AI.Actions.CustomTextActionEntity python_type
+    py CustomTextActionEntity
+    signature rc(Windows.AI.Actions.CustomTextActionEntity;{50eaac95-1d6c-54b0-8963-e38dea3f6aec})
+    base Windows.AI.Actions.ActionEntity
+    default Windows.AI.Actions.ICustomTextActionEntity
+    requires Windows.AI.Actions.ICustomTextActionEntity
+    property custom_text_kind
+        get get_CustomTextKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4 reverse=22
+            out string return
+    property key_phrase
+        get get_KeyPhrase slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4 reverse=43
+            out string return
+    property properties
+        get get_Properties slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.ICustomTextActionEntity shape=4 reverse=62
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+
+class Windows.AI.Actions.DateTimeActionEntity python_type
+    py DateTimeActionEntity
+    signature rc(Windows.AI.Actions.DateTimeActionEntity;{fd5a0880-eeae-553a-bfed-a9229d57447d})
+    base Windows.AI.Actions.ActionEntity
+    default Windows.AI.Actions.IDateTimeActionEntity
+    requires Windows.AI.Actions.IDateTimeActionEntity
+    property date_time
+        get get_DateTime slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IDateTimeActionEntity shape=4 reverse=22
+            out datetime return
 
 class Windows.AI.Actions.DocumentActionEntity python_type
     py DocumentActionEntity
@@ -323,6 +476,15 @@ interface Windows.AI.Actions.IActionEntityFactory3
 interface Windows.AI.Actions.IActionEntityFactory4
     guid 332eda05-de0e-5a58-b318-a2ad771f013d
 
+interface Windows.AI.Actions.IActionEntityFactory5
+    guid b59faab1-cfe4-564a-a5ba-53ad7ff6f924
+
+interface Windows.AI.Actions.IActionEntityFactory6
+    guid da7123da-5639-590f-a2db-c3b5e221f3b6
+
+interface Windows.AI.Actions.IActionEntityFactory7
+    guid b814b8d5-c9b2-51b5-a342-9fe054d8a1eb
+
 interface Windows.AI.Actions.IActionEntityFactoryFactory
     guid c9147d8f-88a0-5ec0-a564-47e2a1081412
 
@@ -338,6 +500,9 @@ interface Windows.AI.Actions.IActionInvocationContext2
 interface Windows.AI.Actions.IActionInvocationHelpDetails
     guid 5430f272-078f-5722-8f7d-90cf8ddd595e
 
+interface Windows.AI.Actions.IActionInvocationHelpDetails2
+    guid 307f6ba5-5fda-59f1-9722-1859801ad550
+
 interface Windows.AI.Actions.IActionRuntime
     guid 206efa2c-c909-508a-b4b0-9482be96db9c
 
@@ -347,11 +512,41 @@ interface Windows.AI.Actions.IActionRuntime2
 interface Windows.AI.Actions.IActionRuntime3
     guid f020c3c0-caec-5928-ad00-81069b80fbc1
 
+interface Windows.AI.Actions.IActionRuntime4
+    guid 06851dcd-c743-5c7f-88a1-bbaeb02f5e28
+
+interface Windows.AI.Actions.IActionRuntime5
+    guid c2e995b1-52a9-5f3a-bebb-a04655e96218
+
 interface Windows.AI.Actions.IActionRuntimeFactory
     guid d3f366e9-8dc9-50a0-8040-e5c14fa609d6
 
+interface Windows.AI.Actions.IActionRuntimeStatics
+    guid 2c697aab-55f2-55aa-9d63-a73ec190cecd
+
+interface Windows.AI.Actions.IAppointmentActionEntity
+    guid 29daa00e-b474-581c-b555-6187d1aa8231
+
+interface Windows.AI.Actions.IArrayActionEntity
+    guid 45798e78-1059-5311-8a1b-de0081a4ca3b
+
+interface Windows.AI.Actions.IArrayActionEntity2
+    guid 7366e049-7fe8-5df9-bbca-cea5c0f3d316
+
 interface Windows.AI.Actions.IContactActionEntity
     guid 458c3e07-5892-5485-bd9b-8f7a540c9501
+
+interface Windows.AI.Actions.ICustomActionEntityStore
+    guid fa7b44d0-1762-5828-9938-e7cae5199e01
+
+interface Windows.AI.Actions.ICustomActionEntityStoreFactory
+    guid d8b46bdb-68a5-5e07-9113-abb9241aaab1
+
+interface Windows.AI.Actions.ICustomTextActionEntity
+    guid 50eaac95-1d6c-54b0-8963-e38dea3f6aec
+
+interface Windows.AI.Actions.IDateTimeActionEntity
+    guid fd5a0880-eeae-553a-bfed-a9229d57447d
 
 interface Windows.AI.Actions.IDocumentActionEntity
     guid 56715297-960b-59ff-af4b-ece1098b2e36
@@ -359,14 +554,216 @@ interface Windows.AI.Actions.IDocumentActionEntity
 interface Windows.AI.Actions.IFileActionEntity
     guid f20ab43f-4c80-5904-bd42-3e6248babfcf
 
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43 role=pair_value
+            out object return
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, Object]
+    guid bb78502a-f79d-54fa-92c9-90c5039fdf7e
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
+    argument System.String
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=24 role=lookup
+            in string name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> name=second
+
 interface Windows.AI.Actions.INamedActionEntity
     guid 1aaebeef-435b-5a0d-8182-05fe4dd47712
 
 interface Windows.AI.Actions.IPhotoActionEntity
     guid 425123b3-20ef-51a6-b35f-8414384765c5
 
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    py winrt.windows.foundation._IReference[DateTime]
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.Foundation.DateTime
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.DateTime> shape=4 reverse=22 role=value
+            out datetime return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
 interface Windows.AI.Actions.IRemoteFileActionEntity
     guid a5d8ec21-a2bd-545a-abfc-d7aa79fd0b81
+
+interface Windows.AI.Actions.IRemoteFileActionEntity2
+    guid 9cc8cc54-77d8-5537-83c4-6f18c1bc9f67
 
 interface Windows.AI.Actions.IStreamingTextActionEntity
     guid 44cd8a16-abc9-5703-b4bf-6fe8b7a802fd
@@ -385,6 +782,9 @@ interface Windows.AI.Actions.ITextActionEntity
 
 interface Windows.AI.Actions.ITextActionEntity2
     guid 7c500889-cf08-51e7-beca-f0bbc7a7486c
+
+interface Windows.AI.Actions.IUriActionEntity
+    guid a81cde77-bc25-532d-905e-b0725c5bcd4e
 
 class Windows.AI.Actions.NamedActionEntity python_type closeable
     py NamedActionEntity
@@ -421,6 +821,7 @@ class Windows.AI.Actions.RemoteFileActionEntity python_type
     base Windows.AI.Actions.ActionEntity
     default Windows.AI.Actions.IRemoteFileActionEntity
     requires Windows.AI.Actions.IRemoteFileActionEntity
+    requires Windows.AI.Actions.IRemoteFileActionEntity2
     property account_id
         get get_AccountId slot=12 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=162
             out string return
@@ -445,6 +846,27 @@ class Windows.AI.Actions.RemoteFileActionEntity python_type
     property source_uri
         get get_SourceUri slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity shape=4 reverse=62
             out class type=Windows.Foundation.Uri return
+    property last_updated_time
+        get get_LastUpdatedTime slot=10 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=121
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+        put put_LastUpdatedTime slot=11 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=141
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> name=value
+    property filename
+        get get_Filename slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=22
+            out string return
+        put put_Filename slot=7 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=43
+            in string name=value
+    property creator
+        get get_Creator slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=62
+            out class type=Windows.AI.Actions.ContactActionEntity return
+        put put_Creator slot=9 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=4 reverse=99
+            in class type=Windows.AI.Actions.ContactActionEntity name=value
+    method get_contributors
+        method GetContributors slot=13 inputs=0 outputs=1 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=51 reverse=174
+            receive_array class type=Windows.AI.Actions.ContactActionEntity return
+    method set_contributors
+        method SetContributors slot=12 inputs=1 outputs=0 declaring=Windows.AI.Actions.IRemoteFileActionEntity2 shape=51 reverse=163
+            pass_array class type=Windows.AI.Actions.ContactActionEntity name=contributors
 
 enum Windows.AI.Actions.RemoteFileKind python_type
     py RemoteFileKind
@@ -535,6 +957,18 @@ class Windows.AI.Actions.TextActionEntity python_type
         get get_TextFormat slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.ITextActionEntity2 shape=4 reverse=22
             out enum32 type=Windows.AI.Actions.ActionEntityTextFormat return
 
+delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.ActionInvocationHelpDetails,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[ActionInvocationHelpDetails, Object]
+    guid b40f316f-ed8e-58ba-9274-7ceec66746b2
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.AI.Actions.ActionInvocationHelpDetails;{5430f272-078f-5722-8f7d-90cf8ddd595e});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.AI.Actions.ActionInvocationHelpDetails
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.AI.Actions.ActionInvocationHelpDetails name=sender
+            in object name=args
+
 delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.StreamingTextActionEntity,Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[StreamingTextActionEntity, StreamingTextActionEntityTextChangedArgs]
     guid 9154a3ed-c383-5bdd-a8ae-fab2c13869d5
@@ -547,11 +981,33 @@ delegate Windows.Foundation.TypedEventHandler<Windows.AI.Actions.StreamingTextAc
             in class type=Windows.AI.Actions.StreamingTextActionEntity name=sender
             in class type=Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs name=args
 
+class Windows.AI.Actions.UriActionEntity python_type
+    py UriActionEntity
+    signature rc(Windows.AI.Actions.UriActionEntity;{a81cde77-bc25-532d-905e-b0725c5bcd4e})
+    base Windows.AI.Actions.ActionEntity
+    default Windows.AI.Actions.IUriActionEntity
+    requires Windows.AI.Actions.IUriActionEntity
+    property uri
+        get get_Uri slot=6 inputs=0 outputs=1 declaring=Windows.AI.Actions.IUriActionEntity shape=4 reverse=22
+            out class type=Windows.Foundation.Uri return
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
 class Windows.AI.Actions.Hosting.ActionCatalog external
     py winrt.windows.ai.actions.hosting.ActionCatalog
 
+class Windows.ApplicationModel.Appointments.Appointment external
+    py winrt.windows.applicationmodel.appointments.Appointment
+
 class Windows.ApplicationModel.Contacts.Contact external
     py winrt.windows.applicationmodel.contacts.Contact
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
 
 struct Windows.Foundation.EventRegistrationToken external
     py winrt.windows.foundation.EventRegistrationToken
@@ -563,12 +1019,48 @@ interface Windows.Foundation.IClosable external
     py winrt.windows.foundation._IClosable
     guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
 
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
 delegate Windows.Foundation.TypedEventHandler external parameterized
     py winrt.windows.foundation.TypedEventHandler
     guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
 
 class Windows.Foundation.Uri external
     py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
 
 struct Windows.UI.WindowId external
     py winrt.windows.ui.WindowId

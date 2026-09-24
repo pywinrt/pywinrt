@@ -12,5 +12,6 @@ __all__ = [
     "ClosedCaptionSize",
     "ClosedCaptionStyle",
     "ClosedCaptionProperties",
+    "ClosedCaptionTheme",
 ]
 

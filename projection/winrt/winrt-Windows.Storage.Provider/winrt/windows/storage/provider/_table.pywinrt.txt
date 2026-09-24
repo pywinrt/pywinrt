@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Storage.Provider
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.String> concrete
@@ -871,6 +871,47 @@ interface Windows.Storage.Provider.IStorageProviderStatusUISourceFactory python_
         method GetStatusUISource slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderStatusUISourceFactory shape=51 reverse=24
             in string name=syncRootId
             out interface type=Windows.Storage.Provider.IStorageProviderStatusUISource return
+
+interface Windows.Storage.Provider.IStorageProviderSuggestionsHandler python_type
+    py _IStorageProviderSuggestionsHandler
+    guid aff493f6-e1fd-5d03-b480-f1849c83ef4a
+    signature {aff493f6-e1fd-5d03-b480-f1849c83ef4a}
+    method add
+        method Add slot=7 inputs=2 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsHandler shape=51 reverse=44
+            in enum32 type=Windows.Storage.Provider.StorageProviderResultKind name=kind
+            in string name=remoteFileId
+    method get_details
+        method GetDetails slot=9 inputs=3 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsHandler shape=239 reverse=103
+            in string name=remoteFileId
+            pass_array string name=propertiesToFetch
+            in string name=queryId
+            out class type=Windows.Storage.Provider.StorageProviderSuggestionResult return
+    method get_suggestions
+        method GetSuggestions slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsHandler shape=51 reverse=24
+            in class type=Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions name=options
+            out class type=Windows.Storage.Provider.StorageProviderQueryResultSet return
+    method remove
+        method Remove slot=8 inputs=2 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsHandler shape=51 reverse=65
+            in enum32 type=Windows.Storage.Provider.StorageProviderResultKind name=kind
+            in string name=remoteFileId
+    method report_usage
+        method ReportUsage slot=10 inputs=4 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsHandler shape=197 reverse=520
+            in enum32 type=Windows.Storage.Provider.StorageProviderResultUsageKind name=resultUsageKind
+            in string name=remoteFileId
+            in string name=resultId
+            in timespan name=latency
+
+interface Windows.Storage.Provider.IStorageProviderSuggestionsHandlerFactory python_type
+    py _IStorageProviderSuggestionsHandlerFactory
+    guid dc7b35d8-a25b-58a3-ace7-b3543106a2aa
+    signature {dc7b35d8-a25b-58a3-ace7-b3543106a2aa}
+    method create_suggestions_handler
+        method CreateSuggestionsHandler slot=6 inputs=1 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsHandlerFactory shape=51 reverse=24
+            in string name=cloudProviderId
+            out interface type=Windows.Storage.Provider.IStorageProviderSuggestionsHandler return
+
+interface Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions
+    guid efb8b74d-0d84-579c-b137-ea730635d9bb
 
 interface Windows.Storage.Provider.IStorageProviderSyncRootInfo
     guid 7c1305c4-99f9-41ac-8904-ab055d654926
@@ -1867,6 +1908,59 @@ class Windows.Storage.Provider.StorageProviderStatusUI activatable python_type
             out class type=Windows.Storage.Provider.StorageProviderMoreInfoUI return
         put put_MoreInfoUI slot=17 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderStatusUI shape=4 reverse=210
             in class type=Windows.Storage.Provider.StorageProviderMoreInfoUI name=value
+
+class Windows.Storage.Provider.StorageProviderSuggestionResult activatable python_type
+    py StorageProviderSuggestionResult
+    signature rc(Windows.Storage.Provider.StorageProviderSuggestionResult;{f1cd00ae-b4a9-5d20-a598-3eb4dd8ff8f4})
+    default Windows.Storage.Provider.IStorageProviderQueryResult
+    requires Windows.Storage.Provider.IStorageProviderQueryResult
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property result_id
+        get get_ResultId slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=62
+            out string return
+        put put_ResultId slot=9 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=99
+            in string name=value
+    property remote_file_id
+        get get_RemoteFileId slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=121
+            out string return
+        put put_RemoteFileId slot=11 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=141
+            in string name=value
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=22
+            out enum32 type=Windows.Storage.Provider.StorageProviderResultKind return
+        put put_Kind slot=7 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=43
+            in enum32 type=Windows.Storage.Provider.StorageProviderResultKind name=value
+    property file_path
+        get get_FilePath slot=12 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=162
+            out string return
+        put put_FilePath slot=13 inputs=1 outputs=0 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=173
+            in string name=value
+    property requested_properties
+        get get_RequestedProperties slot=14 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderQueryResult shape=4 reverse=186
+            out class type=Windows.Foundation.Collections.PropertySet return
+
+class Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions python_type
+    py StorageProviderSuggestionsQueryOptions
+    signature rc(Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions;{efb8b74d-0d84-579c-b137-ea730635d9bb})
+    default Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions
+    requires Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions
+    property max_results
+        get get_MaxResults slot=8 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=62
+            out uint32 return
+    property properties_to_fetch
+        get get_PropertiesToFetch slot=10 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=121
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property query_id
+        get get_QueryId slot=9 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=99
+            out string return
+    property remote_file_id
+        get get_RemoteFileId slot=7 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=43
+            out string return
+    property suggestions_kind
+        get get_SuggestionsKind slot=6 inputs=0 outputs=1 declaring=Windows.Storage.Provider.IStorageProviderSuggestionsQueryOptions shape=4 reverse=22
+            out enum32 type=Windows.Storage.Provider.StorageProviderResultKind return
 
 class Windows.Storage.Provider.StorageProviderSyncRootInfo activatable python_type
     py StorageProviderSyncRootInfo

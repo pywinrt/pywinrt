@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.UI.Input
 
 class Windows.UI.Input.AttachableInputObject composable python_type closeable
@@ -120,6 +120,26 @@ enum Windows.UI.Input.EdgeGestureKind python_type
     constant TOUCH 0
     constant KEYBOARD 1
     constant MOUSE 2
+
+class Windows.UI.Input.GamepadNavigationConfiguration python_type
+    py GamepadNavigationConfiguration
+    signature rc(Windows.UI.Input.GamepadNavigationConfiguration;{b8abab2d-e7f5-59a7-a3d5-9746bfbf224d})
+    default Windows.UI.Input.IGamepadNavigationConfiguration
+    requires Windows.UI.Input.IGamepadNavigationConfiguration
+    factory Windows.UI.Input.IGamepadNavigationConfigurationStatics
+    property navigation_enabled
+        get get_NavigationEnabled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IGamepadNavigationConfiguration shape=4 reverse=22
+            out boolean return
+    property is_supported static
+        get get_IsSupported slot=7 inputs=0 outputs=1 declaring=Windows.UI.Input.IGamepadNavigationConfigurationStatics shape=4 reverse=43 static
+            out boolean return
+    method try_get_for_current_process static
+        method TryGetForCurrentProcess slot=6 inputs=0 outputs=1 declaring=Windows.UI.Input.IGamepadNavigationConfigurationStatics shape=4 reverse=22 static
+            out class type=Windows.UI.Input.GamepadNavigationConfiguration return
+    method try_set_navigation_enabled
+        method TrySetNavigationEnabled slot=7 inputs=1 outputs=1 declaring=Windows.UI.Input.IGamepadNavigationConfiguration shape=51 reverse=44
+            in boolean name=enabled
+            out boolean return
 
 enum Windows.UI.Input.GazeInputAccessStatus python_type
     py GazeInputAccessStatus
@@ -416,6 +436,12 @@ interface Windows.UI.Input.IEdgeGestureEventArgs
 
 interface Windows.UI.Input.IEdgeGestureStatics
     guid bc6a8519-18ee-4043-9839-4fc584d60a14
+
+interface Windows.UI.Input.IGamepadNavigationConfiguration
+    guid b8abab2d-e7f5-59a7-a3d5-9746bfbf224d
+
+interface Windows.UI.Input.IGamepadNavigationConfigurationStatics
+    guid 9c7c3e1d-2aff-5de0-88f1-904acc561f68
 
 interface Windows.UI.Input.IGestureRecognizer
     guid b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0
@@ -2001,12 +2027,12 @@ enum Windows.UI.Input.TouchpadGlobalAction python_type
     constant THREE_FINGER_TAP 0
     constant FOUR_FINGER_TAP 1
     constant FIVE_FINGER_TAP 2
-    constant THREE_FINGER_PRESS_DOWN 3
-    constant FOUR_FINGER_PRESS_DOWN 4
-    constant FIVE_FINGER_PRESS_DOWN 5
-    constant THREE_FINGER_PRESS_UP 6
-    constant FOUR_FINGER_PRESS_UP 7
-    constant FIVE_FINGER_PRESS_UP 8
+    constant THREE_FINGER_PRESS 3
+    constant FOUR_FINGER_PRESS 4
+    constant FIVE_FINGER_PRESS 5
+    constant THREE_FINGER_RELEASE 6
+    constant FOUR_FINGER_RELEASE 7
+    constant FIVE_FINGER_RELEASE 8
 
 class Windows.UI.Input.TouchpadGlobalActionEventArgs python_type
     py TouchpadGlobalActionEventArgs

@@ -868,7 +868,13 @@ class ToastFailedEventArgs(winrt.system.Object):
     def error_code(self) -> windows_foundation.HResult: ...
 
 @typing.final
-class ToastNotification(winrt.system.Object):
+class ToastNotification_Static(winrt._winrt.IInspectable_Static):
+    # System.Boolean Windows.UI.Notifications.ToastNotification::get_IsExpandableContentSupported()
+    @_property
+    def is_expandable_content_supported(cls) -> bool: ...
+
+@typing.final
+class ToastNotification(winrt.system.Object, metaclass=ToastNotification_Static):
     def __new__(cls, content: windows_data_xml_dom.XmlDocument) -> typing.Self: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Notifications.ToastNotification::add_Activated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Notifications.ToastNotification,System.Object>)
     def add_activated(self, handler: windows_foundation.TypedEventHandler[ToastNotification, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

@@ -10,8 +10,10 @@
     ],
     "referenced": [
         "winrt-Windows.AI.Actions.Hosting",
+        "winrt-Windows.ApplicationModel.Appointments",
         "winrt-Windows.ApplicationModel.Contacts",
         "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
         "winrt-Windows.UI"
     ]
 }

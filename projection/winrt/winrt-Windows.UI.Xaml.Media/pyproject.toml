@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.UI.Xaml.Media"
-version = "4!10.0.26100.4188"
+version = "4!10.0.28000.2705"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -19,23 +19,23 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.Foundation>=4!10.0.26100.4188",
-    "winrt-Windows.Foundation.Collections>=4!10.0.26100.4188",
-    "winrt-Windows.Storage.Streams>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Xaml~=4!10.0.26100.4188.0",
+    "winrt-Windows.Foundation>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml~=4!10.0.28000.2705.0",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.Foundation[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Foundation.Collections[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Media.Playback[all]>=4!10.0.26100.4188",
-    "winrt-Windows.Storage.Streams[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Composition[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Xaml[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Xaml.Controls.Primitives[all]>=4!10.0.26100.4188",
-    "winrt-Windows.UI.Xaml.Media.Media3D[all]>=4!10.0.26100.4188",
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Media.Playback[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Composition[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Controls.Primitives[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Media.Media3D[all]>=4!10.0.28000.2705",
 ]
 
 [project.urls]

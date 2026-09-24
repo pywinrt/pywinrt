@@ -1,0 +1,312 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+namespace Windows.UI.Shell.Tasks
+
+class Windows.UI.Shell.Tasks.AppTaskContent python_type
+    py AppTaskContent
+    signature rc(Windows.UI.Shell.Tasks.AppTaskContent;{2411bf59-1b2d-5b63-8181-03d6c2248a68})
+    default Windows.UI.Shell.Tasks.IAppTaskContent
+    requires Windows.UI.Shell.Tasks.IAppTaskContent
+    factory Windows.UI.Shell.Tasks.IAppTaskContentStatics
+    property max_buttons static
+        get get_MaxButtons slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=4 reverse=121 static
+            out uint32 return
+    method add_button
+        method AddButton slot=6 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=51 reverse=24
+            in string name=text
+            in class type=Windows.Foundation.Uri name=actionUri
+    method create_generated_assets_result static
+        method CreateGeneratedAssetsResult slot=9 inputs=1 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=117 reverse=101 static
+            pass_array class type=Windows.UI.Shell.Tasks.AppTaskResultAsset name=assets
+            out class type=Windows.UI.Shell.Tasks.AppTaskContent return
+    method create_preview_thumbnail static
+        method CreatePreviewThumbnail slot=7 inputs=2 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=117 reverse=45 static
+            in class type=Windows.Foundation.Uri name=imageUri
+            in string name=executingStep
+            out class type=Windows.UI.Shell.Tasks.AppTaskContent return
+    method create_sequence_of_steps static
+        method CreateSequenceOfSteps slot=6 inputs=2 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=195 reverse=26 static
+            pass_array string name=completedSteps
+            in string name=executingStep
+            out class type=Windows.UI.Shell.Tasks.AppTaskContent return
+    method create_text_summary_result static
+        method CreateTextSummaryResult slot=8 inputs=1 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskContentStatics shape=51 reverse=65 static
+            in string name=text
+            out class type=Windows.UI.Shell.Tasks.AppTaskContent return
+    method set_question
+        method SetQuestion slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=4 reverse=62
+            in string name=question
+    method set_text_input
+        method SetTextInput slot=7 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskContent shape=51 reverse=44
+            in string name=placeholderText
+            in string name=actionUriTemplate
+
+class Windows.UI.Shell.Tasks.AppTaskInfo python_type
+    py AppTaskInfo
+    signature rc(Windows.UI.Shell.Tasks.AppTaskInfo;{6720eed6-435b-5db9-be66-9343b70654f7})
+    default Windows.UI.Shell.Tasks.IAppTaskInfo
+    requires Windows.UI.Shell.Tasks.IAppTaskInfo
+    requires Windows.UI.Shell.Tasks.IAppTaskInfo2
+    factory Windows.UI.Shell.Tasks.IAppTaskInfoStatics
+    property deep_link
+        get get_DeepLink slot=14 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=186
+            out class type=Windows.Foundation.Uri return
+    property end_time
+        get get_EndTime slot=18 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=218
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.DateTime> return
+    property icon_uri
+        get get_IconUri slot=15 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=194
+            out class type=Windows.Foundation.Uri return
+    property start_time
+        get get_StartTime slot=17 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=210
+            out datetime return
+    property state
+        get get_State slot=16 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=202
+            out enum32 type=Windows.UI.Shell.Tasks.AppTaskState return
+    property subtitle
+        get get_Subtitle slot=13 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=173
+            out string return
+    property title
+        get get_Title slot=12 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=162
+            out string return
+    property hidden_by_user
+        get get_HiddenByUser slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4 reverse=43
+            out boolean return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4 reverse=22
+            out string return
+    method create static
+        method Create slot=8 inputs=5 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=267 reverse=70 static
+            in string name=title
+            in string name=subtitle
+            in class type=Windows.Foundation.Uri name=deepLink
+            in class type=Windows.Foundation.Uri name=iconUri
+            in class type=Windows.UI.Shell.Tasks.AppTaskContent name=content
+            out class type=Windows.UI.Shell.Tasks.AppTaskInfo return
+    method find_all static
+        method FindAll slot=7 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=51 reverse=44 static
+            receive_array class type=Windows.UI.Shell.Tasks.AppTaskInfo return
+    method get_completed_steps
+        method GetCompletedSteps slot=10 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51 reverse=124
+            receive_array string return
+    method get_executing_step
+        method GetExecutingStep slot=11 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=141
+            out string return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskInfoStatics shape=4 reverse=22 static
+            out boolean return
+    method remove
+        method Remove slot=6 inputs=0 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=0 reverse=16
+    method update
+        method Update slot=7 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51 reverse=44
+            in enum32 type=Windows.UI.Shell.Tasks.AppTaskState name=state
+            in class type=Windows.UI.Shell.Tasks.AppTaskContent name=content
+    method update_deep_link
+        method UpdateDeepLink slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo2 shape=4 reverse=62
+            in class type=Windows.Foundation.Uri name=deepLink
+    method update_state
+        method UpdateState slot=8 inputs=1 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=4 reverse=62
+            in enum32 type=Windows.UI.Shell.Tasks.AppTaskState name=state
+    method update_titles
+        method UpdateTitles slot=9 inputs=2 outputs=0 declaring=Windows.UI.Shell.Tasks.IAppTaskInfo shape=51 reverse=100
+            in string name=title
+            in string name=subtitle
+
+class Windows.UI.Shell.Tasks.AppTaskResultAsset python_type
+    py AppTaskResultAsset
+    signature rc(Windows.UI.Shell.Tasks.AppTaskResultAsset;{75d0c2b3-8a31-5f8f-bda4-bdca96e95532})
+    default Windows.UI.Shell.Tasks.IAppTaskResultAsset
+    requires Windows.UI.Shell.Tasks.IAppTaskResultAsset
+    factory Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory
+    constructor -
+        ctor .ctor slot=6 inputs=4 outputs=1 declaring=Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory shape=239 reverse=27
+            in string name=name
+            in string name=context
+            in class type=Windows.Foundation.Uri name=iconUri
+            in class type=Windows.Foundation.Uri name=assetUri
+            out class type=Windows.UI.Shell.Tasks.AppTaskResultAsset return
+
+enum Windows.UI.Shell.Tasks.AppTaskState python_type
+    py AppTaskState
+    signature enum(Windows.UI.Shell.Tasks.AppTaskState;i4)
+    constant RUNNING 0
+    constant COMPLETED 1
+    constant NEEDS_ATTENTION 2
+    constant PAUSED 3
+    constant ERROR 4
+
+interface Windows.UI.Shell.Tasks.IAppTaskContent
+    guid 2411bf59-1b2d-5b63-8181-03d6c2248a68
+
+interface Windows.UI.Shell.Tasks.IAppTaskContentStatics
+    guid aabd19f6-7afc-5b1b-94f6-5dc9dc9af9e7
+
+interface Windows.UI.Shell.Tasks.IAppTaskInfo
+    guid 6720eed6-435b-5db9-be66-9343b70654f7
+
+interface Windows.UI.Shell.Tasks.IAppTaskInfo2
+    guid ad724d71-f137-51c0-8111-3552436bf447
+
+interface Windows.UI.Shell.Tasks.IAppTaskInfoStatics
+    guid a0b0434f-c640-5800-88c9-d7691ac2f48f
+
+interface Windows.UI.Shell.Tasks.IAppTaskResultAsset
+    guid 75d0c2b3-8a31-5f8f-bda4-bdca96e95532
+
+interface Windows.UI.Shell.Tasks.IAppTaskResultAssetFactory
+    guid 0334d9df-0e06-5999-ba41-85d72e980085
+
+interface Windows.Foundation.IReference<Windows.Foundation.DateTime> concrete
+    py winrt.windows.foundation._IReference[DateTime]
+    guid 5541d8a7-497c-5aa4-86fc-7713adbf2a2c
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.DateTime;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.Foundation.DateTime
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.DateTime> shape=4 reverse=22 role=value
+            out datetime return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+struct Windows.Foundation.DateTime external
+    py winrt.windows.foundation.DateTime
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

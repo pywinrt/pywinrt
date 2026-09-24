@@ -8,10 +8,13 @@ winrt.runtime._internals.load_projection(__spec__)
 __all__ = [
     "IppCommunicationErrorKind",
     "IppPrinterCommunicationKind",
+    "PrintSupportAppContracts",
     "SettingsLaunchKind",
     "WorkflowPrintTicketValidationStatus",
     "XpsImageQuality",
+    "PrintSupportAppInfo",
     "PrintSupportCommunicationErrorDetectedEventArgs",
+    "PrintSupportEnterpriseManagementUIEventArgs",
     "PrintSupportExtensionSession",
     "PrintSupportExtensionTriggerDetails",
     "PrintSupportIppCommunicationConfiguration",

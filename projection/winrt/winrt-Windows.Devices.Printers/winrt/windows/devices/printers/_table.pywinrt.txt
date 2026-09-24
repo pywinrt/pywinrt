@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+census 2e30db26-66c8-4551-85b9-a537376d8f99 2
 namespace Windows.Devices.Printers
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
@@ -12,6 +12,17 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concr
     method -
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Printers.IppPrintDeviceInstallationResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IppPrintDeviceInstallationResult]
+    guid d76c8c10-cd9f-5f12-be2b-d4dd5da045c0
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Printers.IppPrintDeviceInstallationResult;{fb102fcc-87be-57ff-a086-92272148a256}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Printers.IppPrintDeviceInstallationResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.IppPrintDeviceInstallationResult> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Printers.Print3DDevice> concrete
@@ -75,6 +86,35 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
     method get_results
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
             out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.IppPrintDeviceInstallationResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IppPrintDeviceInstallationResult]
+    guid 18c9429b-0c8d-565c-b2c5-d61ebde63f31
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Printers.IppPrintDeviceInstallationResult;{fb102fcc-87be-57ff-a086-92272148a256}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Devices.Printers.IppPrintDeviceInstallationResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.IppPrintDeviceInstallationResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Printers.IppPrintDeviceInstallationResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.IppPrintDeviceInstallationResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Printers.IppPrintDeviceInstallationResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.IppPrintDeviceInstallationResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Printers.IppPrintDeviceInstallationResult return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.Print3DDevice> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[Print3DDevice]
@@ -163,6 +203,9 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAcce
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> shape=4 reverse=62 role=get_results
             out interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType return
 
+interface Windows.Devices.Printers.IIppAttributeConverterStatics
+    guid 91e368df-bfa4-5ca1-a92d-0793f988e82d
+
 interface Windows.Devices.Printers.IIppAttributeError
     guid 750feda1-9eef-5c39-93e4-46149bbcef27
 
@@ -189,6 +232,15 @@ interface Windows.Devices.Printers.IIppPrintDevice3
 
 interface Windows.Devices.Printers.IIppPrintDevice4
     guid 8c48247e-e869-59fb-bc6d-daea0614f93e
+
+interface Windows.Devices.Printers.IIppPrintDevice5
+    guid ea927fca-e073-5db4-9aee-13df714e853a
+
+interface Windows.Devices.Printers.IIppPrintDeviceInstallationResult
+    guid fb102fcc-87be-57ff-a086-92272148a256
+
+interface Windows.Devices.Printers.IIppPrintDeviceManagerStatics
+    guid 8f711a45-c1b9-51bb-80c8-38969c81f800
 
 interface Windows.Devices.Printers.IIppPrintDeviceStatics
     guid 7dc19f08-7f20-52ab-94a7-894b83b2a17e
@@ -298,6 +350,16 @@ interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collection
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>> return
 
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
+    guid fe2f3d47-5d47-5499-8374-430c7cda0204
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> return
+
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeError>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IppAttributeError]]
     guid 17f42ebf-08e9-5e26-96ed-513171d2aff2
@@ -317,6 +379,16 @@ interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collection
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[IppAttributeGroupKind, IMap[String, IppAttributeValue]]]
+    guid 13f1a524-2c03-5240-b5b2-7f92056b196a
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Devices.Printers.IppAttributeGroupKind;i4);pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> return
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IMapView[String, IppAttributeValue]]
@@ -538,6 +610,26 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=62 role=move_next
             out boolean return
 
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, Object]]
+    guid 5db5fa32-707c-5849-a06b-91c8eb9d10e8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
 interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeError>> concrete iterable iterator
     py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, IppAttributeError]]
     guid 5f234542-d5b2-5a78-8f40-ced5a3ebb28b
@@ -576,6 +668,26 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
             out uint32 return
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[IppAttributeGroupKind, IMap[String, IppAttributeValue]]]
+    guid 38122298-3ba7-5e06-be80-98256b2e8b0d
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Devices.Printers.IppAttributeGroupKind;i4);pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26}))))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=62 role=move_next
             out boolean return
 
 interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete iterable iterator
@@ -658,6 +770,20 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuff
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.Streams.IBuffer> shape=4 reverse=62 role=move_next
             out boolean return
 
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
+    guid 09335560-6c6b-5a26-9348-97b781132b20
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> shape=4 reverse=43 role=pair_value
+            out object return
+
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeError> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, IppAttributeError]
     guid 22992703-b6a5-57a6-b211-5bf6b8d8f7b1
@@ -685,6 +811,20 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Dev
     property value
         get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=43 role=pair_value
             out class type=Windows.Devices.Printers.IppAttributeValue return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[IppAttributeGroupKind, IMap[String, IppAttributeValue]]
+    guid 0f363f05-ceea-5de9-9b5f-27ee00257898
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Devices.Printers.IppAttributeGroupKind;i4);pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.Devices.Printers.IppAttributeGroupKind
+    argument Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=22 role=pair_key
+            out enum32 type=Windows.Devices.Printers.IppAttributeGroupKind return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=43 role=pair_value
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
 
 interface Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> concrete iterable mapping mutable_mapping
     py winrt.windows.foundation.collections._IMap[String, IppAttributeValue]
@@ -721,6 +861,42 @@ interface Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Prin
     method remove
         method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> shape=4 reverse=141 role=remove
             in string name=key
+
+interface Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[IppAttributeGroupKind, IMap[String, IppAttributeValue]]
+    guid df4a2faa-a987-5e92-87f1-11ed85abc4ec
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};enum(Windows.Devices.Printers.IppAttributeGroupKind;i4);pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>>
+    argument Windows.Devices.Printers.IppAttributeGroupKind
+    argument Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=0 reverse=159 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=99 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=51 reverse=65 role=has_key
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=117 reverse=125 role=insert
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=key
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=51 reverse=24 role=lookup
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=key
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=141 role=remove
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=key
 
 interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeError> concrete iterable mapping
     py winrt.windows.foundation.collections._IMapView[String, IppAttributeError]
@@ -776,11 +952,41 @@ interface Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> name=first
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,Windows.Devices.Printers.IppAttributeValue> name=second
 
+interface Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[IppAttributeGroupKind, IMap[String, IppAttributeValue]]
+    guid c8726f93-15bf-5e96-b744-d595be3b7536
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};enum(Windows.Devices.Printers.IppAttributeGroupKind;i4);pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Devices.Printers.IppAttributeValue;{99407fed-e2bb-59a3-988b-28a974052a26})))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>>
+    argument Windows.Devices.Printers.IppAttributeGroupKind
+    argument Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=51 reverse=65 role=has_key
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=51 reverse=24 role=lookup
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=key
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> name=second
+
 interface Windows.Devices.Printers.IPageConfigurationSettings
     guid b6fc1e02-5331-54ff-95a0-1fcb76bb97a9
 
 interface Windows.Devices.Printers.IPdlPassthroughProvider
     guid 23c71dd2-6117-553f-9378-180af5849a49
+
+interface Windows.Devices.Printers.IPdlPassthroughProvider2
+    guid 7330305c-a17d-52ec-a129-9a4ff9c8f655
 
 interface Windows.Devices.Printers.IPdlPassthroughTarget
     guid 9840be79-67f8-5385-a5b9-e8c96e0fca76
@@ -793,6 +999,9 @@ interface Windows.Devices.Printers.IPrint3DDeviceStatics
 
 interface Windows.Devices.Printers.IPrintSchema
     guid c2b98316-26b8-4bfb-8138-9f962c22a35b
+
+interface Windows.Devices.Printers.IReplaceDevicePropertiesResult
+    guid 12feca4b-d973-57e1-826b-f75b9518a9f1
 
 interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IVector[String]
@@ -1717,6 +1926,25 @@ interface Windows.Devices.Printers.IVirtualPrinterSupportedFormat
 interface Windows.Devices.Printers.IVirtualPrinterSupportedFormatFactory
     guid 6daaed44-97a6-57f4-be8b-9dbabc587f2d
 
+class Windows.Devices.Printers.IppAttributeConverter static python_type
+    py IppAttributeConverter
+    factory Windows.Devices.Printers.IIppAttributeConverterStatics
+    method convert_buffer_to_ipp_attributes static
+        method ConvertBufferToIppAttributes slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeConverterStatics shape=51 reverse=44 static
+            in interface type=Windows.Storage.Streams.IBuffer name=attributesBuffer
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue> return
+    method convert_ipp_attributes_to_buffer static
+        method ConvertIppAttributesToBuffer slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeConverterStatics shape=117 reverse=66 static
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=attributes
+            in enum32 type=Windows.Devices.Printers.IppAttributeGroupKind name=attributeGroupKind
+            out interface type=Windows.Storage.Streams.IBuffer return
+    method convert_print_ticket_to_ipp_attributes_for_printer static
+        method ConvertPrintTicketToIppAttributesForPrinter slot=6 inputs=3 outputs=1 declaring=Windows.Devices.Printers.IIppAttributeConverterStatics shape=195 reverse=26 static
+            in string name=printerName
+            in class type=Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket name=printTicket
+            in string name=targetPdlFormat
+            out parameterized type=Windows.Foundation.Collections.IMap<Windows.Devices.Printers.IppAttributeGroupKind,Windows.Foundation.Collections.IMap<System.String,Windows.Devices.Printers.IppAttributeValue>> return
+
 class Windows.Devices.Printers.IppAttributeError python_type
     py IppAttributeError
     signature rc(Windows.Devices.Printers.IppAttributeError;{750feda1-9eef-5c39-93e4-46149bbcef27})
@@ -1740,6 +1968,13 @@ enum Windows.Devices.Printers.IppAttributeErrorReason python_type
     constant ATTRIBUTE_VALUES_NOT_SUPPORTED 2
     constant ATTRIBUTE_NOT_SETTABLE 3
     constant CONFLICTING_ATTRIBUTES 4
+
+enum Windows.Devices.Printers.IppAttributeGroupKind python_type
+    py IppAttributeGroupKind
+    signature enum(Windows.Devices.Printers.IppAttributeGroupKind;i4)
+    constant PRINTER 0
+    constant JOB 1
+    constant OPERATION 2
 
 class Windows.Devices.Printers.IppAttributeValue python_type
     py IppAttributeValue
@@ -2009,6 +2244,7 @@ class Windows.Devices.Printers.IppPrintDevice python_type
     requires Windows.Devices.Printers.IIppPrintDevice2
     requires Windows.Devices.Printers.IIppPrintDevice3
     requires Windows.Devices.Printers.IIppPrintDevice4
+    requires Windows.Devices.Printers.IIppPrintDevice5
     factory Windows.Devices.Printers.IIppPrintDeviceStatics
     property printer_name
         get get_PrinterName slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=4 reverse=22
@@ -2038,6 +2274,9 @@ class Windows.Devices.Printers.IppPrintDevice python_type
         method FromPrinterName slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceStatics shape=51 reverse=65 static
             in string name=printerName
             out class type=Windows.Devices.Printers.IppPrintDevice return
+    method get_device_properties
+        method GetDeviceProperties slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice5 shape=4 reverse=22
+            out class type=Windows.Foundation.Collections.ValueSet return
     method get_device_selector static
         method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceStatics shape=4 reverse=22 static
             out string return
@@ -2072,6 +2311,10 @@ class Windows.Devices.Printers.IppPrintDevice python_type
             out boolean return
     method refresh_print_device_capabilities
         method RefreshPrintDeviceCapabilities slot=10 inputs=0 outputs=0 declaring=Windows.Devices.Printers.IIppPrintDevice4 shape=0 reverse=117
+    method replace_device_properties
+        method ReplaceDeviceProperties slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice5 shape=51 reverse=44
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> name=deviceProperties
+            out class type=Windows.Devices.Printers.ReplaceDevicePropertiesResult return
     method set_printer_attributes
         method SetPrinterAttributes slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDevice shape=51 reverse=144
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Devices.Printers.IppAttributeValue>> name=printerAttributes
@@ -2081,12 +2324,47 @@ class Windows.Devices.Printers.IppPrintDevice python_type
             in interface type=Windows.Storage.Streams.IBuffer name=printerAttributesBuffer
             out class type=Windows.Devices.Printers.IppSetAttributesResult return
 
+class Windows.Devices.Printers.IppPrintDeviceInstallationResult python_type
+    py IppPrintDeviceInstallationResult
+    signature rc(Windows.Devices.Printers.IppPrintDeviceInstallationResult;{fb102fcc-87be-57ff-a086-92272148a256})
+    default Windows.Devices.Printers.IIppPrintDeviceInstallationResult
+    requires Windows.Devices.Printers.IIppPrintDeviceInstallationResult
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceInstallationResult shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property installed_printer_name
+        get get_InstalledPrinterName slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceInstallationResult shape=4 reverse=43
+            out string return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceInstallationResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.IppPrintDeviceInstallationStatus return
+
+enum Windows.Devices.Printers.IppPrintDeviceInstallationStatus python_type
+    py IppPrintDeviceInstallationStatus
+    signature enum(Windows.Devices.Printers.IppPrintDeviceInstallationStatus;i4)
+    constant INSTALLATION_SUCCEEDED 0
+    constant PRINTER_ALREADY_INSTALLED 1
+    constant COMMUNICATION_ERROR 2
+    constant OTHER_FAILURE 3
+
 enum Windows.Devices.Printers.IppPrintDeviceKind python_type
     py IppPrintDeviceKind
     signature enum(Windows.Devices.Printers.IppPrintDeviceKind;i4)
     constant PRINTER 0
     constant FAX_OUT 1
     constant VIRTUAL_PRINTER 2
+
+class Windows.Devices.Printers.IppPrintDeviceManager static python_type
+    py IppPrintDeviceManager
+    factory Windows.Devices.Printers.IIppPrintDeviceManagerStatics
+    method can_install_ipp_print_device static
+        method CanInstallIppPrintDevice slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceManagerStatics shape=4 reverse=22 static
+            out boolean return
+    method install_ipp_print_device_async static
+        method InstallIppPrintDeviceAsync slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Printers.IIppPrintDeviceManagerStatics shape=117 reverse=45 static
+            in class type=Windows.Foundation.Uri name=printerUri
+            in string name=printerName
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Printers.IppPrintDeviceInstallationResult> return
 
 class Windows.Devices.Printers.IppResolution python_type
     py IppResolution
@@ -2176,9 +2454,20 @@ class Windows.Devices.Printers.PdlPassthroughProvider python_type
     signature rc(Windows.Devices.Printers.PdlPassthroughProvider;{23c71dd2-6117-553f-9378-180af5849a49})
     default Windows.Devices.Printers.IPdlPassthroughProvider
     requires Windows.Devices.Printers.IPdlPassthroughProvider
+    requires Windows.Devices.Printers.IPdlPassthroughProvider2
     property supported_pdl_content_types
         get get_SupportedPdlContentTypes slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider shape=4 reverse=22
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property is_passthrough_with_job_attributes_supported
+        get get_IsPassthroughWithJobAttributesSupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider2 shape=4 reverse=22
+            out boolean return
+    method start_print_job_with_ipp_job_attributes
+        method StartPrintJobWithIppJobAttributes slot=7 inputs=4 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider2 shape=239
+            in string name=jobName
+            in string name=pdlContentType
+            in interface type=Windows.Storage.Streams.IBuffer name=jobAttributes
+            in interface type=Windows.Storage.Streams.IBuffer name=operationAttributes
+            out class type=Windows.Devices.Printers.PdlPassthroughTarget return
     method start_print_job_with_print_ticket
         method StartPrintJobWithPrintTicket slot=8 inputs=4 outputs=1 declaring=Windows.Devices.Printers.IPdlPassthroughProvider shape=239 reverse=69
             in string name=jobName
@@ -2244,6 +2533,25 @@ class Windows.Devices.Printers.PrintSchema python_type
         method MergeAndValidateWithDefaultPrintTicketAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Printers.IPrintSchema shape=51 reverse=65
             in interface type=Windows.Storage.Streams.IRandomAccessStreamWithContentType name=deltaTicket
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> return
+
+class Windows.Devices.Printers.ReplaceDevicePropertiesResult python_type
+    py ReplaceDevicePropertiesResult
+    signature rc(Windows.Devices.Printers.ReplaceDevicePropertiesResult;{12feca4b-d973-57e1-826b-f75b9518a9f1})
+    default Windows.Devices.Printers.IReplaceDevicePropertiesResult
+    requires Windows.Devices.Printers.IReplaceDevicePropertiesResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IReplaceDevicePropertiesResult shape=4 reverse=43
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Printers.IReplaceDevicePropertiesResult shape=4 reverse=22
+            out enum32 type=Windows.Devices.Printers.ReplaceDevicePropertiesStatus return
+
+enum Windows.Devices.Printers.ReplaceDevicePropertiesStatus python_type
+    py ReplaceDevicePropertiesStatus
+    signature enum(Windows.Devices.Printers.ReplaceDevicePropertiesStatus;i4)
+    constant SUCCEEDED 0
+    constant ACCESS_DENIED 1
+    constant OTHER_FAILURE 2
 
 class Windows.Devices.Printers.VirtualPrinterInstallationParameters activatable python_type
     py VirtualPrinterInstallationParameters
@@ -2378,6 +2686,9 @@ class System.Boolean external
 class System.Int32 external
     py winrt.system.Int32
 
+class System.Object external
+    py winrt.system.Object
+
 class System.String external
     py winrt.system.String
 
@@ -2436,6 +2747,9 @@ interface Windows.Foundation.Collections.IVector external parameterized
 interface Windows.Foundation.Collections.IVectorView external parameterized
     py winrt.windows.foundation.collections._IVectorView
     guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+class Windows.Foundation.Collections.ValueSet external
+    py winrt.windows.foundation.collections.ValueSet
 
 class Windows.Graphics.Printing.PrintTaskOptions external
     py winrt.windows.graphics.printing.PrintTaskOptions

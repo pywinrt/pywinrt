@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from abc import abstractmethod
 
 import winrt._winrt
 import winrt.system
@@ -46,6 +47,7 @@ __all__ = [
     "PrintWorkflowPdlSourceContent",
     "PrintWorkflowPdlTargetStream",
     "PrintWorkflowPrinterJob",
+    "PrintWorkflowPrinterJobStatusChangedEventArgs",
     "PrintWorkflowSourceContent",
     "PrintWorkflowSpoolStreamContent",
     "PrintWorkflowStreamTarget",
@@ -60,6 +62,8 @@ __all__ = [
     "PrintWorkflowVirtualPrinterTriggerDetails",
     "PrintWorkflowVirtualPrinterUIEventArgs",
     "PrintWorkflowXpsDataAvailableEventArgs",
+    "PrintWorkflowXpsObjectModelProvider",
+    "IPrintWorkflowObjectModelProvider",
 ]
 
 class PdlConversionHostBasedProcessingOperations(enum.IntFlag):
@@ -224,6 +228,10 @@ class PrintWorkflowJobBackgroundSession(winrt.system.Object):
     def add_job_issue_detected(self, handler: windows_foundation.TypedEventHandler[PrintWorkflowJobBackgroundSession, PrintWorkflowJobIssueDetectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession::remove_JobIssueDetected(Windows.Foundation.EventRegistrationToken)
     def remove_job_issue_detected(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
+    # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession::add_JobStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs>)
+    def add_job_status_changed(self, handler: windows_foundation.TypedEventHandler[PrintWorkflowJobBackgroundSession, PrintWorkflowPrinterJobStatusChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession::remove_JobStatusChanged(Windows.Foundation.EventRegistrationToken)
+    def remove_job_status_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowSessionStatus Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession::get_Status()
     @_property
     def status(self) -> PrintWorkflowSessionStatus: ...
@@ -331,6 +339,8 @@ class PrintWorkflowPdlConverter(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter::ConvertPdlAsync(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket,Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream,Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations)
     def convert_pdl_async(self, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, input_stream: windows_storage_streams.IInputStream, output_stream: windows_storage_streams.IOutputStream, host_based_processing_operations: PdlConversionHostBasedProcessingOperations, /) -> windows_foundation.IAsyncAction: ...
+    # Windows.Foundation.IAsyncAction Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter::ConvertPdlFromObjectModelAsync(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket,Windows.Graphics.Printing.Workflow.IPrintWorkflowObjectModelProvider,Windows.Storage.Streams.IOutputStream,Windows.Graphics.Printing.Workflow.PdlConversionHostBasedProcessingOperations)
+    def convert_pdl_from_object_model_async(self, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, object_model_provider: IPrintWorkflowObjectModelProvider, output_stream: windows_storage_streams.IOutputStream, host_based_processing_operations: PdlConversionHostBasedProcessingOperations, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class PrintWorkflowPdlDataAvailableEventArgs(winrt.system.Object):
@@ -362,6 +372,8 @@ class PrintWorkflowPdlModificationRequestedEventArgs(winrt.system.Object):
     @typing.overload
     # Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs::CreateJobOnPrinterWithAttributesBuffer(Windows.Storage.Streams.IBuffer,System.String,Windows.Storage.Streams.IBuffer,Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy,Windows.Graphics.Printing.Workflow.PrintWorkflowAttributesMergePolicy)
     def create_job_on_printer_with_attributes_buffer(self, job_attributes_buffer: winrt.system.Buffer, target_content_type: str, operation_attributes_buffer: winrt.system.Buffer, job_attributes_merge_policy: PrintWorkflowAttributesMergePolicy, operation_attributes_merge_policy: PrintWorkflowAttributesMergePolicy, /) -> PrintWorkflowPdlTargetStream: ...
+    # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs::DisableIppCompressionForJob()
+    def disable_ipp_compression_for_job(self) -> None: ...
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs::GetPdlConverter(Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConversionType)
@@ -408,6 +420,10 @@ class PrintWorkflowPrinterJob(winrt.system.Object):
     def get_job_print_ticket(self) -> windows_graphics_printing_printticket.WorkflowPrintTicket: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatus Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::GetJobStatus()
     def get_job_status(self) -> PrintWorkflowPrinterJobStatus: ...
+    # Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue> Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::GetPassthroughJobAttributes()
+    def get_passthrough_job_attributes(self) -> _cabc.MutableMapping[str, windows_devices_printers.IppAttributeValue]: ...
+    # Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue> Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::GetPassthroughJobOperationAttributes()
+    def get_passthrough_job_operation_attributes(self) -> _cabc.MutableMapping[str, windows_devices_printers.IppAttributeValue]: ...
     # Windows.Devices.Printers.IppSetAttributesResult Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::SetJobAttributes(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Devices.Printers.IppAttributeValue>>)
     def set_job_attributes(self, job_attributes: _cabc.Mapping[str, windows_devices_printers.IppAttributeValue] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, windows_devices_printers.IppAttributeValue]], /) -> windows_devices_printers.IppSetAttributesResult: ...
     # Windows.Devices.Printers.IppSetAttributesResult Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::SetJobAttributesFromBuffer(Windows.Storage.Streams.IBuffer)
@@ -418,6 +434,20 @@ class PrintWorkflowPrinterJob(winrt.system.Object):
     # Windows.Devices.Printers.IppPrintDevice Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::get_Printer()
     @_property
     def printer(self) -> windows_devices_printers.IppPrintDevice: ...
+    # System.Boolean Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::get_IsPassthroughJobWithAttributes()
+    @_property
+    def is_passthrough_job_with_attributes(self) -> bool: ...
+
+@typing.final
+class PrintWorkflowPrinterJobStatusChangedEventArgs(winrt.system.Object):
+    # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs::GetDeferral()
+    def get_deferral(self) -> windows_foundation.Deferral: ...
+    # Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs::get_Configuration()
+    @_property
+    def configuration(self) -> PrintWorkflowConfiguration: ...
+    # Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs::get_PrinterJob()
+    @_property
+    def printer_job(self) -> PrintWorkflowPrinterJob: ...
 
 @typing.final
 class PrintWorkflowSourceContent(winrt.system.Object):
@@ -563,4 +593,14 @@ class PrintWorkflowXpsDataAvailableEventArgs(winrt.system.Object):
     # Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs::get_Operation()
     @_property
     def operation(self) -> PrintWorkflowSubmittedOperation: ...
+
+@typing.final
+class PrintWorkflowXpsObjectModelProvider(winrt.system.Object, IPrintWorkflowObjectModelProvider):
+    def __new__(cls) -> typing.Self: ...
+
+@typing.final
+class _IPrintWorkflowObjectModelProvider: ...
+
+class IPrintWorkflowObjectModelProvider(winrt._winrt.IInspectable):
+    ...
 

@@ -19,7 +19,7 @@ namespace py::shapes
     // was assigned to mean in the census that issued it.
 
     inline constexpr char census_lineage[] = "2e30db26-66c8-4551-85b9-a537376d8f99";
-    inline constexpr uint32_t census_revision = 1;
+    inline constexpr uint32_t census_revision = 2;
 
     // The struct layouts that appear as by-value arguments. A calling
     // convention looks at the field types and the alignment and not only at
@@ -53,7 +53,7 @@ namespace py::shapes
     struct s_i4i4u4 { int32_t f0; int32_t f1; uint32_t f2; }; // Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus
     struct s_i4u4 { int32_t f0; uint32_t f1; }; // Windows.Graphics.Printing3D.Printing3DBufferDescription, Windows.Management.Deployment.DeploymentProgress, Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress
     struct s_i4u8pu8pu4 { int32_t f0; uint64_t f1; void* f2; uint64_t f3; void* f4; uint32_t f5; }; // Windows.Web.Http.HttpProgress
-    struct s_i8 { int64_t f0; }; // Microsoft.UI.Xaml.Media.Animation.KeyTime, Windows.Foundation.DateTime, Windows.Foundation.EventRegistrationToken, Windows.Foundation.TimeSpan, Windows.UI.Xaml.Media.Animation.KeyTime
+    struct s_i8 { int64_t f0; }; // Microsoft.UI.Xaml.Media.Animation.KeyTime, Windows.Devices.Haptics.HapticsControllerOverrideToken, Windows.Foundation.DateTime, Windows.Foundation.EventRegistrationToken, Windows.Foundation.TimeSpan, Windows.UI.Xaml.Media.Animation.KeyTime
     struct s_i8i4 { int64_t f0; int32_t f1; }; // Microsoft.UI.Xaml.Duration, Windows.Devices.Gpio.GpioChangeRecord, Windows.UI.Xaml.Duration
     struct s_i8i8 { int64_t f0; int64_t f1; }; // Windows.Media.Core.MseTimeRange, Windows.Media.MediaTimeRange
     struct s_pb { void* f0; uint8_t f1; }; // Windows.Storage.Search.SortEntry
@@ -69,8 +69,10 @@ namespace py::shapes
     struct s_u4 { uint32_t f0; }; // Windows.ApplicationModel.PackageInstallProgress
     struct s_u4i4 { uint32_t f0; int32_t f1; }; // Windows.Graphics.DisplayAdapterId
     struct s_u4i8 { uint32_t f0; int64_t f1; }; // Windows.Networking.NetworkOperators.ProfileUsage
+    struct s_u4u1u1u1u1u1u1u1u1u1u1u1u1i4 { uint32_t f0; uint8_t f1; uint8_t f2; uint8_t f3; uint8_t f4; uint8_t f5; uint8_t f6; uint8_t f7; uint8_t f8; uint8_t f9; uint8_t f10; uint8_t f11; uint8_t f12; int32_t f13; }; // Windows.UI.Input.Preview.Text.TextStyle
     struct s_u4u2u2u1u1u1u1u1u1u1u1 { uint32_t f0; uint16_t f1; uint16_t f2; uint8_t f3; uint8_t f4; uint8_t f5; uint8_t f6; uint8_t f7; uint8_t f8; uint8_t f9; uint8_t f10; }; // System.Guid
-    struct s_u4u4 { uint32_t f0; uint32_t f1; }; // Windows.Data.Text.TextSegment, Windows.Devices.PointOfService.SizeUInt32, Windows.Graphics.Imaging.BitmapSize, Windows.Web.Syndication.RetrievalProgress
+    struct s_u4u2u2u1u1u1u1u1u1u1u1u2 { uint32_t f0; uint16_t f1; uint16_t f2; uint8_t f3; uint8_t f4; uint8_t f5; uint8_t f6; uint8_t f7; uint8_t f8; uint8_t f9; uint8_t f10; uint16_t f11; }; // Windows.System.Power.Thermal.PowerThermalChannelId
+    struct s_u4u4 { uint32_t f0; uint32_t f1; }; // Windows.Data.Text.TextSegment, Windows.Devices.PointOfService.SizeUInt32, Windows.Graphics.Imaging.BitmapSize, Windows.UI.Input.Preview.Text.TextInputServiceSubscription, Windows.Web.Syndication.RetrievalProgress
     struct s_u4u4i4i4i4i4u4f4 { uint32_t f0; uint32_t f1; int32_t f2; int32_t f3; int32_t f4; int32_t f5; uint32_t f6; float f7; }; // Windows.Devices.Input.PointerDeviceUsage
     struct s_u4u4i4i4u4u8 { uint32_t f0; uint32_t f1; int32_t f2; int32_t f3; uint32_t f4; uint64_t f5; }; // Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo
     struct s_u4u4u4 { uint32_t f0; uint32_t f1; uint32_t f2; }; // Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion
@@ -422,6 +424,16 @@ namespace py::shapes
         make_shape<s_bc2pp, void*, void*, void*>(), // 335: ({bc2pp}ppp)
         make_shape<s_u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1bc2pp, void*, void*, void*>(), // 336: ({u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1bc2pp}ppp)
         make_shape<s_u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1, void*, void*, void*>(), // 337: ({u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1}ppp)
+        make_shape<s_u4u1u1u1u1u1u1u1u1u1u1u1u1i4>(), // 338: ({u4u1u1u1u1u1u1u1u1u1u1u1u1i4})
+        make_shape<s_u4u2u2u1u1u1u1u1u1u1u1u2>(), // 339: ({u4u2u2u1u1u1u1u1u1u1u1u2})
+        make_shape<s_u4u2u2u1u1u1u1u1u1u1u1u2, void*>(), // 340: ({u4u2u2u1u1u1u1u1u1u1u1u2}p)
+        make_shape<void*, void*, double, void*>(), // 341: (ppf8p)
+        make_shape<void*, void*, double, s_i8, void*>(), // 342: (ppf8{i8}p)
+        make_shape<void*, void*, int64_t, void*, void*>(), // 343: (ppi8pp)
+        make_shape<void*, void*, void*, int64_t, void*>(), // 344: (pppi8p)
+        make_shape<void*, void*, double, void*, s_i8, void*>(), // 345: (ppf8p{i8}p)
+        make_shape<void*, void*, void*, void*, void*, s_u8, void*, void*, void*>(), // 346: (ppppp{u8}ppp)
+        make_shape<void*, void*, void*, void*, void*, void*, int64_t, int64_t, void*, void*, void*, void*, void*, void*, void*>(), // 347: (ppppppi8i8ppppppp)
     };
 
     // Reverse: one entry per (shape, slot), because a vtable entry cannot
@@ -944,6 +956,12 @@ namespace py::shapes
         make_reverse<20, s_u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1, void*, void*, void*>(), // 513: slot 20, ({u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1}ppp)
         make_reverse<21, s_bc2pp, void*, void*, void*>(), // 514: slot 21, ({bc2pp}ppp)
         make_reverse<22, s_u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1bc2pp, void*, void*, void*>(), // 515: slot 22, ({u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1bc2pp}ppp)
+        make_reverse<6, void*, void*, void*, void*, void*, void*>(), // 516: slot 6, (pppppp)
+        make_reverse<6, void*, s_i8, void*, void*>(), // 517: slot 6, (p{i8}pp)
+        make_reverse<6, s_u4u2u2u1u1u1u1u1u1u1u1u2, void*>(), // 518: slot 6, ({u4u2u2u1u1u1u1u1u1u1u1u2}p)
+        make_reverse<8, s_u4u2u2u1u1u1u1u1u1u1u1u2, void*>(), // 519: slot 8, ({u4u2u2u1u1u1u1u1u1u1u1u2}p)
+        make_reverse<10, void*, void*, void*, s_i8>(), // 520: slot 10, (ppp{i8})
+        make_reverse<11, void*, void*, void*, void*, void*>(), // 521: slot 11, (ppppp)
     };
 
 } // namespace py::shapes
