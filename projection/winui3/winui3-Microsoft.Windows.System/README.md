@@ -11,5 +11,5 @@ Windows Runtime (WinRT) APIs for the `winui3-Microsoft.Windows.System` namespace
 
 This package provides the `winui3.microsoft.windows.system` module.
 
-The WinRT APIs in it are those of version 1.7.250513003 of the
+The WinRT APIs in it are those of version 2.5.1 of the
 `Microsoft.WindowsAppSDK` NuGet package.

@@ -1,0 +1,16 @@
+{
+    "pywinrt": {
+        "version": "0.0.0"
+    },
+    "table_format": {
+        "major": 4,
+        "minor": 0
+    },
+    "required": [
+    ],
+    "referenced": [
+        "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
+        "winui3-Microsoft.UI"
+    ]
+}

@@ -1,0 +1,26 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.Windows.Vision
+
+struct Microsoft.Windows.Vision.ScreenRegionBoundingBox python_type
+    py ScreenRegionBoundingBox
+    signature struct(Microsoft.Windows.Vision.ScreenRegionBoundingBox;u4;u4;u4;u4)
+    field left Left uint32
+    field top Top uint32
+    field right Right uint32
+    field bottom Bottom uint32
+
+enum Microsoft.Windows.Vision.ScreenRegionLabel python_type
+    py ScreenRegionLabel
+    signature enum(Microsoft.Windows.Vision.ScreenRegionLabel;i4)
+    constant TEXT 0
+    constant IMAGE 1
+    constant TABLE 2
+    constant CONTAINER 3
+    constant MENU 4
+    constant TOOL_BAR 5
+    constant ADDRESS_BAR 6
+    constant TOOLPANE 7
+    constant TAB_BAR 8
+    constant TITLE_BAR 9

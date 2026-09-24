@@ -6,8 +6,10 @@ import winrt.system
 winrt.runtime._internals.load_projection(__spec__)
 
 __all__ = [
+    "AICapabilityCategory",
     "AIFeatureReadyResultState",
     "AIFeatureReadyState",
+    "AICapabilities",
     "AIFeatureReadyResult",
 ]
 

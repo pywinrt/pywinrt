@@ -26,15 +26,24 @@ def versioned_package(package: str) -> str:
     return f"{package}.{tools_json[package]}"
 
 
-PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
-WINDOWS_APP_SDK_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.WindowsAppSDK")
-).resolve()
+APP_SDK_COMPONENTS = {
+    "WASDK_FOUNDATION_PATH": "Microsoft.WindowsAppSDK.Foundation",
+    "WASDK_INTERACTIVE_EXPERIENCES_PATH": "Microsoft.WindowsAppSDK.InteractiveExperiences",
+    "WASDK_RUNTIME_PATH": "Microsoft.WindowsAppSDK.Runtime",
+}
 
-# the Windows App SDK is redistributed with an app rather than part of
+PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
+
+# The Windows App SDK is redistributed with an app rather than part of
 # Windows, so the two interop modules that call it take its headers and its
-# import libraries from the NuGet package
-os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
+# import libraries from the NuGet packages. It is a metapackage over
+# components published separately, so each module names the one it needs:
+# Microsoft.UI.Interop.h is in InteractiveExperiences and the bootstrapper is
+# in Foundation.
+for env, package in APP_SDK_COMPONENTS.items():
+    os.environ[env] = os.fspath(
+        (PROJECT_DIR / "_tools" / versioned_package(package)).resolve()
+    )
 
 # setup.py imports winrt._include to locate the headers it compiles against,
 # and the runtime is not installed here (its own sdist is one of the things we

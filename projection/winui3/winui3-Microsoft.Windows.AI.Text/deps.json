@@ -10,7 +10,9 @@
     ],
     "referenced": [
         "winrt-Windows.Foundation",
+        "winrt-Windows.Foundation.Collections",
         "winui3-Microsoft.Windows.AI",
-        "winui3-Microsoft.Windows.AI.ContentSafety"
+        "winui3-Microsoft.Windows.AI.ContentSafety",
+        "winui3-Microsoft.Windows.AI.Foundation"
     ]
 }

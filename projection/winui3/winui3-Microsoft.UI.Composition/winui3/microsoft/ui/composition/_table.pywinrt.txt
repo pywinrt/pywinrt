@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.UI.Composition
 
 class Microsoft.UI.Composition.AmbientLight python_type
@@ -788,6 +788,28 @@ class Microsoft.UI.Composition.CompositionEllipseGeometry python_type
             out struct type=Windows.Foundation.Numerics.Vector2 return
         put put_Center slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.ICompositionEllipseGeometry shape=10
             in struct type=Windows.Foundation.Numerics.Vector2 name=value
+
+class Microsoft.UI.Composition.CompositionEngine static python_type
+    py CompositionEngine
+    factory Microsoft.UI.Composition.ICompositionEngineStatics
+    method get_for_in_process_engine static
+        method GetForInProcessEngine slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.ICompositionEngineStatics shape=51 static
+            in object name=compositionObject
+            out object return
+    method get_for_system_engine static
+        method GetForSystemEngine slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.ICompositionEngineStatics shape=51 static
+            in object name=compositionObject
+            out object return
+    method try_set_process_engine static
+        method TrySetProcessEngine slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Composition.ICompositionEngineStatics shape=51 static
+            in enum32 type=Microsoft.UI.Composition.CompositionEngineType name=requested
+            out boolean return
+
+enum Microsoft.UI.Composition.CompositionEngineType python_type
+    py CompositionEngineType
+    signature enum(Microsoft.UI.Composition.CompositionEngineType;i4)
+    constant SYSTEM 0
+    constant IN_PROCESS 1
 
 class Microsoft.UI.Composition.CompositionGeometricClip python_type
     py CompositionGeometricClip
@@ -2496,6 +2518,9 @@ interface Microsoft.UI.Composition.ICompositionEffectSourceParameterFactory
 
 interface Microsoft.UI.Composition.ICompositionEllipseGeometry
     guid f2a21042-7a57-58c1-8b47-8bc8b21d3aa0
+
+interface Microsoft.UI.Composition.ICompositionEngineStatics
+    guid 6ccf1385-c6c7-54d8-aca1-e7d66cfee704
 
 interface Microsoft.UI.Composition.ICompositionGeometricClip
     guid e3c0a8c5-5297-5d69-8b91-f5330bb1cb27

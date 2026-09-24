@@ -1,6 +1,6 @@
 format 4.0
 generator 0.0.0
-census 2e30db26-66c8-4551-85b9-a537376d8f99 2
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
 namespace Microsoft.UI.Xaml.Controls
 
 class Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs python_type
@@ -8219,6 +8219,134 @@ interface Microsoft.UI.Xaml.Controls.IRatingItemInfo
 interface Microsoft.UI.Xaml.Controls.IRatingItemInfoFactory
     guid 61f13480-cd0c-556a-b532-a0cf53e3cda0
 
+interface Windows.Foundation.IReference<System.Boolean> concrete
+    py winrt.windows.foundation._IReference[Boolean]
+    guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.Boolean
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Boolean> shape=4 reverse=22 role=value
+            out boolean return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
 interface Windows.Foundation.IReference<System.Double> concrete
     py winrt.windows.foundation._IReference[Double]
     guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
@@ -9501,6 +9629,15 @@ interface Microsoft.UI.Xaml.Controls.ISplitButtonFactory
 interface Microsoft.UI.Xaml.Controls.ISplitButtonStatics
     guid d54ddd05-73e7-55a1-a119-aa342e5f9feb
 
+interface Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem
+    guid 37a1a0b1-4661-5e17-b456-4feed397c23d
+
+interface Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemFactory
+    guid 3441a0ba-13d5-51b0-b003-560f7d8e6465
+
+interface Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemStatics
+    guid 4913a209-8726-5568-8c32-794277200bd2
+
 interface Microsoft.UI.Xaml.Controls.ISplitView
     guid 10ae18f7-1666-5897-bbce-1e687e7784a8
 
@@ -9602,6 +9739,15 @@ interface Microsoft.UI.Xaml.Controls.ISymbolIconSourceStatics
 
 interface Microsoft.UI.Xaml.Controls.ISymbolIconStatics
     guid ccaa0c34-31f2-50f1-b328-be6edc291aaa
+
+interface Microsoft.UI.Xaml.Controls.ISystemBackdropElement
+    guid 6e741848-7dc4-5fe1-9bfb-942249e62ae1
+
+interface Microsoft.UI.Xaml.Controls.ISystemBackdropElementFactory
+    guid 7937bec0-7c3c-5ba9-9f3c-33cbc7d72fe0
+
+interface Microsoft.UI.Xaml.Controls.ISystemBackdropElementStatics
+    guid 8e5c7dd0-16e8-5c48-bddd-50cd74337cbe
 
 interface Microsoft.UI.Xaml.Controls.ITabView
     guid 07b509e1-1d38-551b-95f4-4732b049f6a6
@@ -9774,6 +9920,9 @@ interface Microsoft.UI.Xaml.Controls.ITimePickerValueChangedEventArgs
 interface Microsoft.UI.Xaml.Controls.ITitleBar
     guid c552714d-5d30-5a2b-9c7a-d68bea3dde8d
 
+interface Microsoft.UI.Xaml.Controls.ITitleBar2
+    guid 55533ac5-80bf-5b29-8be9-4fadb734db0a
+
 interface Microsoft.UI.Xaml.Controls.ITitleBarAutomationPeer
     guid 945f8144-68f1-5731-b850-3d0e664699ea
 
@@ -9785,6 +9934,9 @@ interface Microsoft.UI.Xaml.Controls.ITitleBarFactory
 
 interface Microsoft.UI.Xaml.Controls.ITitleBarStatics
     guid f9ada39b-1f24-5955-9b5c-cacbfe9a41cf
+
+interface Microsoft.UI.Xaml.Controls.ITitleBarStatics2
+    guid cd36d484-36f5-510c-9ecd-7e289c97f263
 
 interface Microsoft.UI.Xaml.Controls.ITitleBarTemplateSettings
     guid be19011a-4957-5332-98b8-1704401b6a0e
@@ -20064,6 +20216,39 @@ class Microsoft.UI.Xaml.Controls.SplitButtonClickEventArgs python_type
     default Microsoft.UI.Xaml.Controls.ISplitButtonClickEventArgs
     requires Microsoft.UI.Xaml.Controls.ISplitButtonClickEventArgs
 
+class Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem composable python_type
+    py SplitMenuFlyoutItem
+    signature rc(Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem;{37a1a0b1-4661-5e17-b456-4feed397c23d})
+    base Microsoft.UI.Xaml.Controls.MenuFlyoutItem
+    default Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem
+    requires Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem
+    factory Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemStatics
+    composable Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemFactory shape=117
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem return
+    property sub_menu_presenter_style
+        get get_SubMenuPresenterStyle slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem shape=4
+            out class type=Microsoft.UI.Xaml.Style return
+        put put_SubMenuPresenterStyle slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem shape=4
+            in class type=Microsoft.UI.Xaml.Style name=value
+    property sub_menu_item_style
+        get get_SubMenuItemStyle slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem shape=4
+            out class type=Microsoft.UI.Xaml.Style return
+        put put_SubMenuItemStyle slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem shape=4
+            in class type=Microsoft.UI.Xaml.Style name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItem shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase> return
+    property sub_menu_item_style_property static
+        get get_SubMenuItemStyleProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemStatics shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property sub_menu_presenter_style_property static
+        get get_SubMenuPresenterStyleProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISplitMenuFlyoutItemStatics shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
 class Microsoft.UI.Xaml.Controls.SplitView composable python_type
     py SplitView
     signature rc(Microsoft.UI.Xaml.Controls.SplitView;{10ae18f7-1666-5897-bbce-1e687e7784a8})
@@ -20888,6 +21073,36 @@ class Microsoft.UI.Xaml.Controls.SymbolIconSource composable python_type
             in enum32 type=Microsoft.UI.Xaml.Controls.Symbol name=value
     property symbol_property static
         get get_SymbolProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISymbolIconSourceStatics shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+
+class Microsoft.UI.Xaml.Controls.SystemBackdropElement composable python_type
+    py SystemBackdropElement
+    signature rc(Microsoft.UI.Xaml.Controls.SystemBackdropElement;{6e741848-7dc4-5fe1-9bfb-942249e62ae1})
+    base Microsoft.UI.Xaml.FrameworkElement
+    default Microsoft.UI.Xaml.Controls.ISystemBackdropElement
+    requires Microsoft.UI.Xaml.Controls.ISystemBackdropElement
+    factory Microsoft.UI.Xaml.Controls.ISystemBackdropElementStatics
+    composable Microsoft.UI.Xaml.Controls.ISystemBackdropElementFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElementFactory shape=117
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Controls.SystemBackdropElement return
+    property system_backdrop
+        get get_SystemBackdrop slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElement shape=4
+            out class type=Microsoft.UI.Xaml.Media.SystemBackdrop return
+        put put_SystemBackdrop slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElement shape=4
+            in class type=Microsoft.UI.Xaml.Media.SystemBackdrop name=value
+    property corner_radius
+        get get_CornerRadius slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElement shape=4
+            out struct type=Microsoft.UI.Xaml.CornerRadius return
+        put put_CornerRadius slot=9 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElement shape=14
+            in struct type=Microsoft.UI.Xaml.CornerRadius name=value
+    property corner_radius_property static
+        get get_CornerRadiusProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElementStatics shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property system_backdrop_property static
+        get get_SystemBackdropProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISystemBackdropElementStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
 enum T parameterized
@@ -22631,7 +22846,9 @@ class Microsoft.UI.Xaml.Controls.TitleBar composable python_type
     base Microsoft.UI.Xaml.Controls.Control
     default Microsoft.UI.Xaml.Controls.ITitleBar
     requires Microsoft.UI.Xaml.Controls.ITitleBar
+    requires Microsoft.UI.Xaml.Controls.ITitleBar2
     factory Microsoft.UI.Xaml.Controls.ITitleBarStatics
+    factory Microsoft.UI.Xaml.Controls.ITitleBarStatics2
     composable Microsoft.UI.Xaml.Controls.ITitleBarFactory
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBarFactory shape=117
@@ -22686,6 +22903,11 @@ class Microsoft.UI.Xaml.Controls.TitleBar composable python_type
     property template_settings
         get get_TemplateSettings slot=24 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBar shape=4
             out class type=Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings return
+    property auto_refresh_drag_regions
+        get get_AutoRefreshDragRegions slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBar2 shape=4
+            out boolean return
+        put put_AutoRefreshDragRegions slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITitleBar2 shape=4
+            in boolean name=value
     property content_property static
         get get_ContentProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBarStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
@@ -22716,6 +22938,12 @@ class Microsoft.UI.Xaml.Controls.TitleBar composable python_type
     property title_property static
         get get_TitleProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBarStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property auto_refresh_drag_regions_property static
+        get get_AutoRefreshDragRegionsProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBarStatics2 shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    property is_drag_region_property static
+        get get_IsDragRegionProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBarStatics2 shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
     event back_requested
         add add_BackRequested slot=25 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBar shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TitleBar,System.Object> name=handler
@@ -22728,6 +22956,16 @@ class Microsoft.UI.Xaml.Controls.TitleBar composable python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PaneToggleRequested slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITitleBar shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_is_drag_region static
+        method GetIsDragRegion slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ITitleBarStatics2 shape=51 static
+            in class type=Microsoft.UI.Xaml.UIElement name=element
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+    method recompute_drag_regions
+        method RecomputeDragRegions slot=8 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITitleBar2 shape=0
+    method set_is_drag_region static
+        method SetIsDragRegion slot=9 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ITitleBarStatics2 shape=51 static
+            in class type=Microsoft.UI.Xaml.UIElement name=element
+            in reference type=Windows.Foundation.IReference<System.Boolean> name=value
 
 class Microsoft.UI.Xaml.Controls.TitleBarAutomationPeer composable python_type
     py TitleBarAutomationPeer

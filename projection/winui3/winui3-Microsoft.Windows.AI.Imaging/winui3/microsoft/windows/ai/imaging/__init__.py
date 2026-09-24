@@ -14,6 +14,7 @@ __all__ = [
     "ImageDescriptionResult",
     "ImageObjectExtractor",
     "ImageObjectExtractorHint",
+    "ImageObjectRemover",
     "ImageScaler",
     "RecognizedLine",
     "RecognizedText",

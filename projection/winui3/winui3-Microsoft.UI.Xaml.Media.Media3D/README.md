@@ -11,5 +11,5 @@ Windows Runtime (WinRT) APIs for the `winui3-Microsoft.UI.Xaml.Media.Media3D` na
 
 This package provides the `winui3.microsoft.ui.xaml.media.media3d` module.
 
-The WinRT APIs in it are those of version 1.7.250513003 of the
+The WinRT APIs in it are those of version 2.5.1 of the
 `Microsoft.WindowsAppSDK` NuGet package.

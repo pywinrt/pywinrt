@@ -19,7 +19,7 @@ namespace py::shapes
     // was assigned to mean in the census that issued it.
 
     inline constexpr char census_lineage[] = "2e30db26-66c8-4551-85b9-a537376d8f99";
-    inline constexpr uint32_t census_revision = 2;
+    inline constexpr uint32_t census_revision = 3;
 
     // The struct layouts that appear as by-value arguments. A calling
     // convention looks at the field types and the alignment and not only at
@@ -64,6 +64,7 @@ namespace py::shapes
     struct s_u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1 { uint8_t f0; uint16_t f1; uint32_t f2; uint64_t f3; int16_t f4; int32_t f5; int64_t f6; float f7; double f8; uint32_t f9; uint16_t f10; uint16_t f11; uint8_t f12; uint8_t f13; uint8_t f14; uint8_t f15; uint8_t f16; uint8_t f17; uint8_t f18; uint8_t f19; }; // TestComponent.Blittable
     struct s_u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1bc2pp { uint8_t f0; uint16_t f1; uint32_t f2; uint64_t f3; int16_t f4; int32_t f5; int64_t f6; float f7; double f8; uint32_t f9; uint16_t f10; uint16_t f11; uint8_t f12; uint8_t f13; uint8_t f14; uint8_t f15; uint8_t f16; uint8_t f17; uint8_t f18; uint8_t f19; uint8_t f20; char16_t f21; void* f22; void* f23; }; // TestComponent.Nested
     struct s_u2 { uint16_t f0; }; // Windows.UI.Text.FontWeight
+    struct s_u2u1u1u4u8 { uint16_t f0; uint8_t f1; uint8_t f2; uint32_t f3; uint64_t f4; }; // Microsoft.Windows.Foundation.DecimalValue
     struct s_u2u2u2u2 { uint16_t f0; uint16_t f1; uint16_t f2; uint16_t f3; }; // Windows.ApplicationModel.PackageVersion
     struct s_u2u2u2u2u2u2u2u2u2u2u2u2 { uint16_t f0; uint16_t f1; uint16_t f2; uint16_t f3; uint16_t f4; uint16_t f5; uint16_t f6; uint16_t f7; uint16_t f8; uint16_t f9; uint16_t f10; uint16_t f11; }; // Windows.Graphics.Display.Core.HdmiDisplayHdr2086Metadata
     struct s_u4 { uint32_t f0; }; // Windows.ApplicationModel.PackageInstallProgress
@@ -434,6 +435,11 @@ namespace py::shapes
         make_shape<void*, void*, double, void*, s_i8, void*>(), // 345: (ppf8p{i8}p)
         make_shape<void*, void*, void*, void*, void*, s_u8, void*, void*, void*>(), // 346: (ppppp{u8}ppp)
         make_shape<void*, void*, void*, void*, void*, void*, int64_t, int64_t, void*, void*, void*, void*, void*, void*, void*>(), // 347: (ppppppi8i8ppppppp)
+        make_shape<s_u2u1u1u4u8, void*>(), // 348: ({u2u1u1u4u8}p)
+        make_shape<s_u2u2u2u2, void*>(), // 349: ({u2u2u2u2}p)
+        make_shape<s_u2u1u1u4u8, void*, void*>(), // 350: ({u2u1u1u4u8}pp)
+        make_shape<s_u2u1u1u4u8, s_u2u1u1u4u8, void*>(), // 351: ({u2u1u1u4u8}{u2u1u1u4u8}p)
+        make_shape<s_u2u1u1u4u8, s_u2u1u1u4u8, s_u2u1u1u4u8, void*>(), // 352: ({u2u1u1u4u8}{u2u1u1u4u8}{u2u1u1u4u8}p)
     };
 
     // Reverse: one entry per (shape, slot), because a vtable entry cannot

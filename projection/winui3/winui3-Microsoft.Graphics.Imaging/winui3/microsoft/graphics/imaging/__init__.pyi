@@ -22,6 +22,7 @@ class ImageBufferPixelFormat(enum.IntEnum):
     ARGB8 = 2498570
     BGRA8 = 87
     GRAY8 = 62
+    BGR8 = 137352
 
 @typing.final
 class ImageBuffer_Static(winrt._winrt.IInspectable_Static):

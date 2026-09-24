@@ -24,6 +24,7 @@ __all__ = [
     "ContentCoordinateRoundingMode",
     "ContentLayoutDirection",
     "ContentSizePolicy",
+    "PopupAnchor",
     "ChildSiteLink",
     "ContentCoordinateConverter",
     "ContentDeferral",
@@ -68,6 +69,11 @@ class ContentSizePolicy(enum.IntEnum):
     NONE = 0
     RESIZE_CONTENT_TO_PARENT_WINDOW = 1
     RESIZE_PARENT_WINDOW_TO_CONTENT = 2
+
+class PopupAnchor(enum.IntEnum):
+    NONE = 0
+    TOP_LEVEL_WINDOW = 1
+    PARENT_ISLAND = 2
 
 @typing.final
 class ChildSiteLink_Static(winrt._winrt.IInspectable_Static):
@@ -936,6 +942,18 @@ class DesktopPopupSiteBridge(winrt.system.Object, IContentSiteLink, IContentSite
     # Microsoft.UI.WindowId Microsoft.UI.Content.DesktopPopupSiteBridge::get_WindowId()
     @_property
     def window_id(self) -> microsoft_ui.WindowId: ...
+    # Microsoft.UI.Content.ContentCoordinateRoundingMode Microsoft.UI.Content.DesktopPopupSiteBridge::get_AnchoringPixelAlignment()
+    @_property
+    def anchoring_pixel_alignment(self) -> ContentCoordinateRoundingMode: ...
+    # System.Void Microsoft.UI.Content.DesktopPopupSiteBridge::put_AnchoringPixelAlignment(Microsoft.UI.Content.ContentCoordinateRoundingMode)
+    @anchoring_pixel_alignment.setter
+    def anchoring_pixel_alignment(self, value: ContentCoordinateRoundingMode) -> None: ...
+    # Microsoft.UI.Content.PopupAnchor Microsoft.UI.Content.DesktopPopupSiteBridge::get_AnchoringBehavior()
+    @_property
+    def anchoring_behavior(self) -> PopupAnchor: ...
+    # System.Void Microsoft.UI.Content.DesktopPopupSiteBridge::put_AnchoringBehavior(Microsoft.UI.Content.PopupAnchor)
+    @anchoring_behavior.setter
+    def anchoring_behavior(self, value: PopupAnchor) -> None: ...
     # System.Boolean Microsoft.UI.Content.DesktopPopupSiteBridge::get_IsClosed()
     @_property
     def is_closed(self) -> bool: ...

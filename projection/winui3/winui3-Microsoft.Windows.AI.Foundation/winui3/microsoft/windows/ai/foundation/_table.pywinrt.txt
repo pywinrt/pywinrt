@@ -1,0 +1,31 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 3
+namespace Microsoft.Windows.AI.Foundation
+
+class Microsoft.Windows.AI.Foundation.EmbeddingVector python_type
+    py EmbeddingVector
+    signature rc(Microsoft.Windows.AI.Foundation.EmbeddingVector;{07bdaa90-b3d2-5701-97d1-c390ec62799c})
+    default Microsoft.Windows.AI.Foundation.IEmbeddingVector
+    requires Microsoft.Windows.AI.Foundation.IEmbeddingVector
+    factory Microsoft.Windows.AI.Foundation.IEmbeddingVectorFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.AI.Foundation.IEmbeddingVectorFactory shape=202
+            pass_array single name=data
+            in guid name=vectorSpaceID
+            out class type=Microsoft.Windows.AI.Foundation.EmbeddingVector return
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Foundation.IEmbeddingVector shape=4
+            out uint32 return
+    property vector_space_id
+        get get_VectorSpaceId slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Foundation.IEmbeddingVector shape=4
+            out guid return
+    method get_values
+        method GetValues slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.AI.Foundation.IEmbeddingVector shape=51
+            fill_array single name=values
+
+interface Microsoft.Windows.AI.Foundation.IEmbeddingVector
+    guid 07bdaa90-b3d2-5701-97d1-c390ec62799c
+
+interface Microsoft.Windows.AI.Foundation.IEmbeddingVectorFactory
+    guid 16b72758-2b69-5e97-b865-6a6a71683dd0

@@ -12,6 +12,7 @@
         "winrt-Windows.Foundation",
         "winrt-Windows.Foundation.Collections",
         "winrt-Windows.Storage.Streams",
+        "winrt-Windows.UI",
         "winrt-Windows.UI.Xaml.Interop",
         "winui3-Microsoft.UI.Xaml"
     ]

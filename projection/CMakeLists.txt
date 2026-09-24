@@ -26,7 +26,11 @@ set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install pre
 # .config/_tools.json is the single source of truth for NuGet package versions
 file(READ "../.config/_tools.json" TOOLS_JSON)
 string(JSON WEBVIEW2_VERSION GET ${TOOLS_JSON} "Microsoft.Web.WebView2")
-string(JSON WINDOWS_APP_SDK_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK")
+# Only the two components the interop modules compile against: the App SDK
+# is a metapackage and nothing else here is built from it.
+string(JSON WASDK_FOUNDATION_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.Foundation")
+string(JSON WASDK_INTERACTIVE_EXPERIENCES_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.InteractiveExperiences")
+string(JSON WASDK_RUNTIME_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.Runtime")
 string(JSON TEST_WINRT_VERSION GET ${TOOLS_JSON} "PyWinRT.TestWinRT")
 
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
@@ -86,7 +90,9 @@ set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_PYTHON_PATH}/include")
 set(CPPWINRT_PATH "${WINRT_RUNTIME_INCLUDE_PATH}/cppwinrt")
 set(PYWINRT_CHECK_DLL_IMPORTS "${CMAKE_CURRENT_SOURCE_DIR}/check-dll-imports.cmake")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
-set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK.${WINDOWS_APP_SDK_VERSION}")
+set(WASDK_FOUNDATION_PATH "../_tools/Microsoft.WindowsAppSDK.Foundation.${WASDK_FOUNDATION_VERSION}")
+set(WASDK_INTERACTIVE_EXPERIENCES_PATH "../_tools/Microsoft.WindowsAppSDK.InteractiveExperiences.${WASDK_INTERACTIVE_EXPERIENCES_VERSION}")
+set(WASDK_RUNTIME_PATH "../_tools/Microsoft.WindowsAppSDK.Runtime.${WASDK_RUNTIME_VERSION}")
 set(PYWINRT_INTEROP_PATH "../interop")
 
 if (MSVC)
@@ -225,13 +231,16 @@ pywinrt_add_interop_module(_winrt_windows_ui_xaml_hosting_interop
 
 # The two Windows App SDK modules take its headers and its import libraries as
 # well, since the App SDK is redistributed with the app rather than part of
-# Windows.
-set(WINDOWS_APP_SDK_LIB_PATH "${WINDOWS_APP_SDK_PATH}/lib/win10-${PYWINRT_TARGET_ARCH}")
+# Windows. Each takes them from the component that ships what it includes:
+# Microsoft.UI.Interop.h from InteractiveExperiences, and the bootstrapper's
+# header, import library and DLL from Foundation. The one header the Runtime
+# component is read for is fetched by scripts/app_sdk.py rather than installed.
+set(WASDK_FOUNDATION_LIB_PATH "${WASDK_FOUNDATION_PATH}/lib/native/${PYWINRT_TARGET_ARCH}")
 
 pywinrt_add_interop_module(_winui3_microsoft_ui_interop
     "winui3-Microsoft.UI.Interop" "py.Microsoft.UI.Interop.cpp" "winui3")
 target_include_directories(_winui3_microsoft_ui_interop PRIVATE
-    "${WINDOWS_APP_SDK_PATH}/include")
+    "${WASDK_INTERACTIVE_EXPERIENCES_PATH}/include")
 if (NOT MSVC)
     # the App SDK's Microsoft.UI.Interop.h uses MSVC-only pragmas
     target_compile_options(_winui3_microsoft_ui_interop PRIVATE -Wno-unknown-pragmas)
@@ -240,15 +249,18 @@ endif()
 pywinrt_add_interop_module(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
     "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winui3")
+# MddBootstrap.h is in Foundation and WindowsAppSDK-VersionInfo.h, which says
+# which Windows App Runtime this release expects, is in Runtime.
 target_include_directories(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
-    "${WINDOWS_APP_SDK_PATH}/include")
+    "${WASDK_FOUNDATION_PATH}/include"
+    "${WASDK_RUNTIME_PATH}/include")
 target_link_directories(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
-    "${WINDOWS_APP_SDK_LIB_PATH}")
+    "${WASDK_FOUNDATION_LIB_PATH}")
 target_link_libraries(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
     "Microsoft.WindowsAppRuntime.Bootstrap.lib")
 # The bootstrapper is what finds the Windows App Runtime, so it is the one App
 # SDK binary that ships with the package rather than being found through it.
-install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
+install(FILES "${WASDK_FOUNDATION_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
     DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winui3")
 
 # projection packages

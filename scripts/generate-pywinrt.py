@@ -3,6 +3,8 @@ import pathlib
 import subprocess
 import sys
 
+import app_sdk
+
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 
 TOOLS_JSON_PATH = REPO_ROOT_PATH / ".config" / "_tools.json"
@@ -153,20 +155,9 @@ subprocess.check_call(
 
 # generate code for windows app sdk (winui3)
 
-WINDOWS_APP_SDK_PACKAGE_METADATA = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.WindowsAppSDK")
-    / "lib"
-    / "uap10.0"
-)
-WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.WindowsAppSDK")
-    / "lib"
-    / "uap10.0.18362"
-)
+WINDOWS_APP_SDK_INPUTS = [
+    arg for path in app_sdk.metadata_paths() for arg in ("--input", f"winui3;{path}")
+]
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
 )
@@ -175,10 +166,9 @@ subprocess.check_call(
     DOTNET
     + [
         PYWINRT_EXE,
-        "--input",
-        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA}",
-        "--input",
-        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA2}",
+    ]
+    + WINDOWS_APP_SDK_INPUTS
+    + [
         "--reference",
         f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",

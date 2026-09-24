@@ -2021,7 +2021,13 @@ class ScalarTransition(winrt.system.Object, metaclass=ScalarTransition_Static):
     def duration(self, value: datetime.timedelta) -> None: ...
 
 @typing.final
-class Setter(SetterBase):
+class Setter_Static(SetterBase_Static):
+    # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Setter::get_ValueProperty()
+    @_property
+    def value_property(cls) -> DependencyProperty: ...
+
+@typing.final
+class Setter(SetterBase, metaclass=Setter_Static):
     @typing.overload
     def __new__(cls, target_property: DependencyProperty, value: winrt.system.Object) -> typing.Self: ...
     @typing.overload

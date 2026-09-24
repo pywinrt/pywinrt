@@ -10,6 +10,7 @@ __all__ = [
     "ContentCoordinateRoundingMode",
     "ContentLayoutDirection",
     "ContentSizePolicy",
+    "PopupAnchor",
     "ChildSiteLink",
     "ContentCoordinateConverter",
     "ContentDeferral",
