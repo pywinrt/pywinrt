@@ -106,6 +106,16 @@ only-include = ["winrt", "LICENSE", "README.md"]
 packages = ["winrt"]
 """
 
+# The version winrt-table-compiler stamps into every binary table it writes.
+# It is the same version the distribution is published with, and it is a module
+# rather than metadata read at build time because the compiler is run straight
+# from this tree - by the CMake build and by the tests - as well as installed.
+TABLE_VERSION_PY = '''# WARNING: Please don't edit this file. It was automatically generated.
+"""The version this compiler is published with."""
+
+VERSION = "{version}"
+'''
+
 COMPILED_PYPROJECT_TOML = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 

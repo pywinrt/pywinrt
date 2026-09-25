@@ -243,7 +243,9 @@ class TestTableFormat(unittest.TestCase):
         # ABI major and the epoch in a projection package's version
         self.assertEqual(table["format"][0], winrt._winrt.abi_version[0])
         self.assertEqual(table["namespace"], "TestComponent")
-        self.assertRegex(table["generator"], r"^\d+\.\d+\.\d+$")
+        # the version of winrt-table-compiler that built this binary, which
+        # the text it was built from does not carry
+        self.assertRegex(table["compiler"], r"^\d+\.\d+\.\d+$")
         self.assertGreater(table["forward_shape_limit"], 0)
         self.assertGreater(table["reverse_shape_limit"], 0)
 

@@ -129,8 +129,6 @@ static class FileWriters
 
         w.WriteBlock(() =>
         {
-            w.Write("\"pywinrt\": ");
-            w.WriteBlock(() => w.WriteLine($"\"version\": \"{PyWinRT.VersionString}\""), ",");
             // The table format the tables are written to, so that packaging
             // tooling can read the runtime requirement without reading one.
             // The same pair heads every table itself.

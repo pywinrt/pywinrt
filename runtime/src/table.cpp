@@ -152,7 +152,7 @@ namespace py::table
                 + std::to_string(size));
         }
 
-        generator_version_ = read_u32(data_ + 24);
+        compiler_version_ = read_u32(data_ + 24);
         namespace_ = read_u32(data_ + 28);
         forward_shape_limit_ = read_u32(data_ + 32);
         reverse_shape_limit_ = read_u32(data_ + 36);
@@ -254,9 +254,9 @@ namespace py::table
         return std::string_view{begin};
     }
 
-    std::string_view file::generator_version() const
+    std::string_view file::compiler_version() const
     {
-        return string(generator_version_);
+        return string(compiler_version_);
     }
 
     std::string_view file::winrt_namespace() const
@@ -1394,10 +1394,10 @@ namespace py::cpp::_winrt
 
             if (!set_item(
                     result.get(),
-                    "generator",
+                    "compiler",
                     PyUnicode_FromStringAndSize(
-                        table.generator_version().data(),
-                        static_cast<Py_ssize_t>(table.generator_version().size()))))
+                        table.compiler_version().data(),
+                        static_cast<Py_ssize_t>(table.compiler_version().size()))))
             {
                 return nullptr;
             }

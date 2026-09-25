@@ -18,12 +18,12 @@ import unittest
 
 import winrt._winrt
 from winrt.table import TableTextError, build, parse
+from winrt.table.version import VERSION
 
 # A table that uses every kind of record, since the point is that nothing the
 # text can say is lost on the way to the binary.
 TABLE = """\
 format 4.0
-generator 1.2.3
 census 6cba0b28-2f9e-4d2a-9f4e-0f0b6a2e4d11 7
 namespace Test.Sample
 
@@ -151,8 +151,15 @@ class TestTextTable(unittest.TestCase):
 
         self.assertEqual(table["format"], (4, 0))
         self.assertEqual(table["namespace"], "Test.Sample")
-        self.assertEqual(table["generator"], "1.2.3")
         self.assertEqual(table["census"], ("6cba0b28-2f9e-4d2a-9f4e-0f0b6a2e4d11", 7))
+
+    def test_the_binary_says_which_compiler_wrote_it(self) -> None:
+        """
+        The text says nothing about a version, because a committed file cannot
+        know which build compiled it. The compiler stamps its own, which is the
+        version of the artifact a bug report would be about.
+        """
+        self.assertEqual(read()["compiler"], VERSION)
 
     def test_the_types_keep_the_order_they_are_written_in(self) -> None:
         table = read()

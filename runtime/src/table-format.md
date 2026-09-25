@@ -24,7 +24,9 @@ an offset or an index.
 The two forms say the same things. The text names its records where the binary
 numbers them, and the order the records are written in is the order they are
 numbered in, so nothing else in the binary - the pools, the offsets, the sizes -
-is a decision the compiler makes.
+is a decision the compiler makes. The one thing the binary says that the text
+does not is which version of the compiler wrote it, which is a fact about the
+build and cannot be known to a file that is committed.
 
 This file is the contract between the three ends: the generator that writes the
 text, `winrt/table.py` that compiles it, and `runtime/src/table.cpp` that reads
@@ -177,7 +179,6 @@ word, so a flag is never mistaken for a name.
 
 ```
 format 4.0
-generator 3.2.1
 census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.Foundation
 
@@ -205,11 +206,11 @@ class Windows.Foundation.Uri python_type stringable
             out string return
 ```
 
-The four lines before the first type are the header: the format version the
-text is written to, the version of the generator that wrote it, the lineage of
-the shape census the members' shape ids were assigned by and the oldest
-revision of it that has them, and the WinRT namespace the table is for. A blank line, and a line whose first
-non-space character is `#`, say nothing.
+The three lines before the first type are the header: the format version the
+text is written to, the lineage of the shape census the members' shape ids
+were assigned by and the oldest revision of it that has them, and the WinRT
+namespace the table is for. A blank line, and a line whose first non-space
+character is `#`, say nothing.
 
 ### How a type is named
 
@@ -280,12 +281,18 @@ arm64 runtime.
 | 12 | `u32` | file size, which must equal the size of the file |
 | 16 | `u32` | section count |
 | 20 | `u32` | offset of the section directory |
-| 24 | `u32` | generator version, a string ref |
+| 24 | `u32` | compiler version, a string ref |
 | 28 | `u32` | WinRT namespace, a string ref, e.g. `Windows.Foundation` |
 | 32 | `u32` | one past the highest forward shape id used |
 | 36 | `u32` | one past the highest reverse shape id used |
 | 40 | `u32` | census lineage, a string ref |
 | 44 | `u32` | census revision |
+
+The compiler version is the version of `winrt-table-compiler` that wrote the
+file, which is the one thing here that is not a translation of something the
+text said. It is the version of the tool that produced the artifact, so a bug
+report about an installed package names something that was true of that build
+rather than of whatever happened to be committed.
 
 ### Section directory
 

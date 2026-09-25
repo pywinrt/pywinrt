@@ -471,7 +471,10 @@ namespace py::table
             return minor_;
         }
 
-        std::string_view generator_version() const;
+        /// The version of winrt-table-compiler that wrote this binary. The
+        /// text the binary was compiled from says nothing about a version,
+        /// since only build output can carry an accurate one.
+        std::string_view compiler_version() const;
         std::string_view winrt_namespace() const;
 
         /// Which census the shape ids in this table were assigned by, which a
@@ -570,7 +573,7 @@ namespace py::table
         uint16_t minor_;
         uint32_t directory_;
         uint32_t section_count_;
-        uint32_t generator_version_;
+        uint32_t compiler_version_;
         uint32_t namespace_;
         uint32_t forward_shape_limit_;
         uint32_t reverse_shape_limit_;

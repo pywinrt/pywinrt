@@ -1685,7 +1685,6 @@ sealed class TableWriter
     private void WriteTable(TextSink sink, IReadOnlyList<TableType> sorted)
     {
         sink.Line($"format {FormatMajor}.{FormatMinor}");
-        sink.Line($"generator {PyWinRT.VersionString}");
         sink.Line($"census {census.Lineage} {CensusRevisionFor(sorted)}");
         sink.Line($"namespace {ns.Namespace}");
 
