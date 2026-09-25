@@ -21,6 +21,7 @@ on:
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
+      - scripts/pyproject_templates.py
       - scripts/versions.py
   pull_request:
     paths:
@@ -36,6 +37,7 @@ on:
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
+      - scripts/pyproject_templates.py
       - scripts/versions.py
 
 jobs:
