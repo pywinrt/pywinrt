@@ -5,7 +5,7 @@ requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
 build-backend = "hatchling.build"
 
 [project]
-name = "winui2-Microsoft.UI.Xaml.Media"
+name = "winui2-Microsoft.UI.Xaml"
 version = "4!2.8.7"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
@@ -27,17 +27,35 @@ dependencies = [
     "winrt-runtime>=4.0.0,<5",
     "winrt-Windows.Foundation>=4!10.0.28000.2705",
     "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Automation.Peers>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Controls>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Controls.Primitives>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml.Media>=4!10.0.28000.2705",
 ]
 
 [project.optional-dependencies]
 all = [
+    "winrt-Microsoft.Web.WebView2[all]>=4!1.0.4191.47",
+    "winrt-Windows.ApplicationModel.Contacts[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.DataTransfer[all]>=4!10.0.28000.2705",
     "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
     "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Numerics[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Globalization.NumberFormatting[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Composition[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Text[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Automation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Automation.Peers[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Controls[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Controls.Primitives[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Input[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Markup[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml.Media[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Media.Animation[all]>=4!10.0.28000.2705",
 ]
 
 [project.urls]
