@@ -22,6 +22,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import NoReturn
 
+from winrt.table.version import VERSION
+
 #: The format this writes. The major is the compatibility generation, so a text
 #: table of another major says something this does not know how to compile.
 FORMAT_MAJOR = 4
@@ -41,8 +43,11 @@ NO_REF = 0xFFFFFFFF
 
 #: The lines before the first type record, each of which is the keyword and
 #: what it says. The census is the identity of the shape census the member
-#: shape ids were assigned by, as a lineage and a revision.
-HEADER_KEYWORDS = ("format", "generator", "census", "namespace")
+#: shape ids were assigned by, as a lineage and a revision. Nothing here says
+#: which version wrote the text: the binary carries the version of the compiler
+#: that wrote *it*, which is build output and so is accurate without the tree
+#: being stamped.
+HEADER_KEYWORDS = ("format", "census", "namespace")
 
 HEADER_SIZE = 48
 SECTION_ENTRY_SIZE = 12
@@ -263,7 +268,6 @@ class Type:
 class Table:
     major: int
     minor: int
-    generator: str
     lineage: str
     revision: int
     namespace: str
@@ -388,7 +392,6 @@ class _Parser:
         self._table = Table(
             major=major,
             minor=minor,
-            generator=self._header["generator"],
             lineage=census[0],
             revision=int(census[1]),
             namespace=self._header["namespace"],
@@ -675,7 +678,7 @@ def build(table: Table) -> bytes:
 
     # Every string, GUID and list is pooled before anything is laid out, so that
     # the sections have their final size when the offsets are computed.
-    strings.add(table.generator)
+    strings.add(VERSION)
     strings.add(table.lineage)
     strings.add(table.namespace)
 
@@ -763,7 +766,7 @@ def build(table: Table) -> bytes:
         "<IIIIII",
         data,
         24,
-        strings.add(table.generator),
+        strings.add(VERSION),
         strings.add(table.namespace),
         max((m.shape + 1 for m in members if m.shape != NO_REF), default=0),
         max((m.reverse + 1 for m in members if m.reverse != NO_REF), default=0),
