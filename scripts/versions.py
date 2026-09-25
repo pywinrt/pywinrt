@@ -16,6 +16,7 @@ from pathlib import Path
 REPO_PATH = Path(__file__).parent.parent
 
 TOOLS_JSON_PATH = REPO_PATH / ".config" / "_tools.json"
+TOOLS_PATH = REPO_PATH / "_tools"
 RUNTIME_PATH = REPO_PATH / "runtime"
 RUNTIME_VERSION_PATH = RUNTIME_PATH / "version.txt"
 ABI_HEADER_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt" / "abi.h"
@@ -32,6 +33,22 @@ NUGET_PACKAGES = {
     "webview2": "Microsoft.Web.WebView2",
     "test-winrt": "PyWinRT.TestWinRT",
 }
+
+# The family that winrt-runtime and winrt-table-compiler are released as. Its
+# version is the hand-maintained one in runtime/version.txt rather than an
+# upstream package's, so it is not one of the families above.
+RUNTIME_FAMILY = "runtime"
+
+# The test component is projected into this tree for the test suite and is
+# never uploaded anywhere, so it is versioned like a family without being one
+# that is released.
+UNPUBLISHED_FAMILIES = frozenset({"test-winrt"})
+
+# The tag that releases one family, which .github/workflows/wheels.yaml
+# builds and publishes that family from. The version in it carries a "v", and
+# an epoch goes in front of that as "e<epoch>", since a literal "!" is a
+# history expansion in an interactive shell and is percent-encoded in a URL.
+TAG_PREFIX = "wheels"
 
 # NuGet spells a prerelease as a label on the end of the version and PyWinRT
 # publishes it as the PEP 440 phase of the same name, in the order upstream
@@ -141,13 +158,28 @@ def compatibility_generation() -> int:
     return abi_major
 
 
+def nuget_package_versions() -> dict[str, str]:
+    """
+    The version of every NuGet package that scripts/fetch-tools.ps1
+    downloads, keyed by package name.
+    """
+    with open(TOOLS_JSON_PATH) as tools_file:
+        return json.load(tools_file)
+
+
+def unpacked_nuget_path(package: str) -> Path:
+    """
+    Where scripts/fetch-tools.ps1 left a NuGet package that it unpacked.
+    """
+    return TOOLS_PATH / f"{package}.{nuget_package_versions()[package]}"
+
+
 def nuget_versions() -> dict[str, str]:
     """
     The upstream version of each family's NuGet package, keyed the way
     NUGET_PACKAGES is.
     """
-    with open(TOOLS_JSON_PATH) as tools_file:
-        tools = json.load(tools_file)
+    tools = nuget_package_versions()
 
     # KeyError here means a family names a NuGet package that fetch-tools.ps1
     # does not download
@@ -165,6 +197,57 @@ def family_versions() -> dict[str, str]:
         family: f"{generation}!{nuget_to_pep440(version)}"
         for family, version in nuget_versions().items()
     }
+
+
+def published_versions() -> dict[str, str]:
+    """
+    The version each family that is released is published with, in the order
+    a release goes in.
+
+    winrt-runtime comes first because every other package requires it, and
+    the Windows SDK comes before the families whose packages depend on one of
+    its: an upload has to be able to resolve what it just published.
+    """
+    return {RUNTIME_FAMILY: runtime_version()} | {
+        family: version
+        for family, version in family_versions().items()
+        if family not in UNPUBLISHED_FAMILIES
+    }
+
+
+def release_tags() -> dict[str, str]:
+    """
+    The tag that releases each family, keyed the way published_versions() is.
+    """
+    tags = {}
+
+    for family, version in published_versions().items():
+        epoch, _, release = version.rpartition("!")
+        spelled = f"e{epoch}v{release}" if epoch else f"v{release}"
+
+        tags[family] = f"{TAG_PREFIX}/{family}/{spelled}"
+
+    return tags
+
+
+def family_of_tag(tag: str) -> str:
+    """
+    The family that a release tag publishes.
+
+    The version in the tag is matched against what this tree publishes rather
+    than parsed out of it, so a tag pushed at the wrong commit - or written
+    with the version of the family it was copied from - fails the release
+    instead of publishing something nobody asked for.
+    """
+    families = {name: family for family, name in release_tags().items()}
+
+    if tag not in families:
+        raise ValueError(
+            f"{tag} releases nothing this tree publishes;"
+            f" the tags it publishes are {', '.join(sorted(families))}"
+        )
+
+    return families[tag]
 
 
 def runtime_requirement() -> str:

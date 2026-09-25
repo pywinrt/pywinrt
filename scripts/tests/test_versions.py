@@ -168,3 +168,66 @@ class FamilyRequirement(unittest.TestCase):
     def test_the_floor_refuses_the_previous_generation(self):
         # an epoch is what keeps the two apart without an upper bound
         self.assertNotIn("3.2.1", self.floor)
+
+
+class ReleaseTags(unittest.TestCase):
+    """
+    The tag that releases one family.
+
+    A release is per family, so the tag has to say which family it releases
+    and at which version, and the workflow has to be able to read the first
+    back out of it and check the second against the tree.
+    """
+
+    def test_every_published_family_has_one(self):
+        self.assertEqual(
+            sorted(versions.release_tags()), sorted(versions.published_versions())
+        )
+
+    def test_the_runtime_is_released_before_anything_that_requires_it(self):
+        # the order published_versions() is in is the order a release goes
+        # in, and every other package depends on winrt-runtime
+        self.assertEqual(
+            next(iter(versions.published_versions())), versions.RUNTIME_FAMILY
+        )
+
+    def test_the_test_component_is_not_released(self):
+        self.assertIn("test-winrt", versions.family_versions())
+        self.assertNotIn("test-winrt", versions.published_versions())
+
+    def test_the_tag_carries_the_version_the_family_is_published_with(self):
+        for family, version in versions.published_versions().items():
+            with self.subTest(family=family):
+                tag = versions.release_tags()[family]
+
+                self.assertTrue(tag.startswith(f"{versions.TAG_PREFIX}/{family}/"))
+                self.assertEqual(Version(self.spelled_version(tag)), Version(version))
+
+    def test_the_epoch_is_spelled_without_a_character_a_shell_would_eat(self):
+        for family, tag in versions.release_tags().items():
+            with self.subTest(family=family):
+                self.assertNotIn("!", tag.rpartition("/")[2])
+
+    @staticmethod
+    def spelled_version(tag: str) -> str:
+        """
+        The PEP 440 version that a release tag spells as [e<epoch>]v<version>.
+        """
+        epoch, _, release = tag.rpartition("/")[2].partition("v")
+
+        return f"{epoch.removeprefix('e')}!{release}" if epoch else release
+
+    def test_a_tag_names_the_family_it_releases(self):
+        for family, tag in versions.release_tags().items():
+            with self.subTest(family=family):
+                self.assertEqual(versions.family_of_tag(tag), family)
+
+    def test_a_tag_at_a_version_this_tree_does_not_publish_is_refused(self):
+        # the point of matching rather than parsing: a tag pushed at the
+        # wrong commit, or copied from another family, releases nothing
+        with self.assertRaises(ValueError):
+            versions.family_of_tag("wheels/runtime/v1.2.3")
+
+    def test_a_tag_that_names_no_family_is_refused(self):
+        with self.assertRaises(ValueError):
+            versions.family_of_tag("wheels/v3.2.1")
