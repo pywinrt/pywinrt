@@ -142,12 +142,16 @@ MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "microsoft.ui.xaml.json"
 )
 
+# The six namespaces here are published in one distribution named after the
+# NuGet package they came from rather than one each, the way the App SDK
+# components are: the package is what the family is versioned by, so they are
+# generated and released together.
 subprocess.check_call(
     DOTNET
     + [
         PYWINRT_EXE,
         "--input",
-        f"winui2;{MICROSOFT_UI_XAML_PACKAGE_METADATA}",
+        f"winui2;Microsoft.UI.Xaml;{MICROSOFT_UI_XAML_PACKAGE_METADATA}",
         "--reference",
         f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",

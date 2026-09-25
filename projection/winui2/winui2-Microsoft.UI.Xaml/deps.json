@@ -7,12 +7,19 @@
         "minor": 0
     },
     "namespaces": [
-        "Microsoft.UI.Xaml.Controls"
+        "Microsoft.UI.Xaml.Automation.Peers",
+        "Microsoft.UI.Xaml.Controls",
+        "Microsoft.UI.Xaml.Controls.AnimatedVisuals",
+        "Microsoft.UI.Xaml.Controls.Primitives",
+        "Microsoft.UI.Xaml.Media",
+        "Microsoft.UI.Xaml.XamlTypeInfo"
     ],
     "required": [
         "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Automation.Peers",
         "winrt-Windows.UI.Xaml.Controls",
-        "winrt-Windows.UI.Xaml.Controls.Primitives"
+        "winrt-Windows.UI.Xaml.Controls.Primitives",
+        "winrt-Windows.UI.Xaml.Media"
     ],
     "referenced": [
         "winrt-Microsoft.Web.WebView2",
@@ -26,10 +33,13 @@
         "winrt-Windows.UI.Composition",
         "winrt-Windows.UI.Text",
         "winrt-Windows.UI.Xaml",
+        "winrt-Windows.UI.Xaml.Automation",
+        "winrt-Windows.UI.Xaml.Automation.Peers",
         "winrt-Windows.UI.Xaml.Controls",
         "winrt-Windows.UI.Xaml.Controls.Primitives",
         "winrt-Windows.UI.Xaml.Input",
         "winrt-Windows.UI.Xaml.Interop",
+        "winrt-Windows.UI.Xaml.Markup",
         "winrt-Windows.UI.Xaml.Media",
         "winrt-Windows.UI.Xaml.Media.Animation"
     ]
