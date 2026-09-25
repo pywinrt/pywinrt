@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       baseline:
-        # the default is the newest wheels/* tag; give a ref here to pair
-        # against something else, e.g. a release candidate against the release
-        # before it
+        # the default is the newest release tag that names a runtime; give
+        # a ref here to pair against something else, e.g. a release candidate
+        # against the release before it
         description: the git ref to build the old half from
         required: false
         type: string
@@ -22,7 +22,7 @@ on:
 jobs:
   compat:
     runs-on: windows-2025-vs2026
-    name: 'ABI compatibility with ${{ inputs.baseline || ''the newest wheels/* tag'' }}'
+    name: 'ABI compatibility with ${{ inputs.baseline || ''the newest runtime release'' }}'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

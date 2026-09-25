@@ -1,10 +1,45 @@
 name: wheels
 concurrency: wheels-${{ github.ref }}
 on:
+  # one tag per family: PyPI refuses a file that already exists, so a release
+  # that rebuilt every family would fail on the families that did not change.
+  # scripts/release-tags.py prints the tag that releases each one.
   push:
       tags: [wheels/*]
-  # allows compile testing all packages on a branch before merging
+  # allows compile testing all packages on a branch before merging, and is
+  # what builds the wheelhouse that a release candidate is tested from
   workflow_dispatch:
+    inputs:
+      family:
+        description: which family to build
+        type: choice
+        default: all
+        options: [all, runtime, winrt, winui2, wasdk, webview2]
+      packages:
+        description: "distributions to build, comma separated; default: all of the family"
+        type: string
+      publish:
+        description: where to upload what was built
+        type: choice
+        default: none
+        options: [none, testpypi, pypi]
+      python:
+        description: "build for this interpreter only, e.g. cp315; default: all of them"
+        type: string
+
+# nothing here writes to the repository, and the upload is authenticated with
+# a token of its own rather than with the workflow's
+permissions:
+  contents: read
+
+env:
+  # What this run builds. A tag releases the one family it names, and a run
+  # started by hand builds what its inputs ask for, which is everything. The
+  # build scripts read an empty value as "not given", which is what an input
+  # that was left blank and an input of an event that has none both arrive as.
+  BUILD_TAG: ${{ github.event_name == 'push' && github.ref_name || '' }}
+  BUILD_FAMILY: ${{ inputs.family }}
+  BUILD_PACKAGES: ${{ inputs.packages }}
 
 jobs:
   sdist:
@@ -18,7 +53,9 @@ jobs:
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml -noTestWinRT
       - name: Build sdists
-        run: python scripts/build-sdist.py
+        run: >-
+          python scripts/build-sdist.py --tag "$env:BUILD_TAG"
+          --family "$env:BUILD_FAMILY" --package "$env:BUILD_PACKAGES"
       - name: Upload wheels
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
@@ -30,6 +67,10 @@ jobs:
   # them is compiled either, and each is three py3-none-win_* wheels.
   pure:
     runs-on: windows-latest
+    outputs:
+      # how many wheels this built, which the compiled half needs because a
+      # release of hand-written packages alone leaves this job nothing to do
+      wheels: ${{ steps.built.outputs.wheels }}
     steps:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -47,31 +88,44 @@ jobs:
           pip install -r requirements-sdist.txt
       # hatchling finds the hook that compiles the tables through the entry
       # point in winrt-table-compiler's metadata, so it has to be installed
-      # rather than merely on the path
+      # rather than merely on the path. Every family's wheels need it, so it
+      # is installed whether or not its own wheel is one of them.
       - name: install winrt-table-compiler
         run: pip install ./table
       - name: Build the pure wheels
-        run: python scripts/build-bdist.py --pure
+        run: >-
+          python scripts/build-bdist.py --pure --tag "$env:BUILD_TAG"
+          --family "$env:BUILD_FAMILY" --package "$env:BUILD_PACKAGES"
+      - name: Count what was built
+        id: built
+        run: |
+          $wheels = @(Get-ChildItem wheelhouse -Filter *.whl -ErrorAction SilentlyContinue).Count
+          "wheels=$wheels" >> $env:GITHUB_OUTPUT
       - name: Check what the wheels carry
+        if: steps.built.outputs.wheels != '0'
         run: python scripts/check-wheel-contents.py
       - name: Upload wheels
+        if: steps.built.outputs.wheels != '0'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: pure_${{ github.run_id }}
           path: wheelhouse/
   # winrt-runtime and the eight interop modules, which are what is left of the
-  # 15-build matrix now that nothing else compiles.
+  # 15-build matrix now that nothing else compiles. It waits for the pure job
+  # because an interop wheel's import test installs the projection packages it
+  # depends on, and those are the other job's output.
   bdist:
+    needs: pure
     runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
-        py:
-          - cp311
-          - cp312
-          - cp313
-          - cp314
-          - cp315
+        # the python input back-fills wheels for one interpreter without a
+        # version change, which is how a new CPython is added to a release
+        # that is already out
+        py: >-
+          ${{ inputs.python && fromJSON(format('["{0}"]', inputs.python))
+              || fromJSON('["cp311", "cp312", "cp313", "cp314", "cp315"]') }}
         arch:
           - win_amd64
           - win32
@@ -87,20 +141,46 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-bdist.txt
+      - name: Download the wheels the pure job built
+        if: needs.pure.outputs.wheels != '0'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: pure_${{ github.run_id }}
+          path: find-links
       - name: Build bdist wheels
-        run: python scripts/build-bdist.py --compiled --only ${{ matrix.py }}-${{ matrix.arch }}
+        env:
+          # what an interop wheel's import test resolves its dependencies
+          # from: the projection packages it names are in the artifact above
+          # and winrt-runtime is built into wheelhouse/ ahead of it, and
+          # neither is on PyPI at the version this release publishes. A run
+          # that built no projection packages downloads nothing, and pip
+          # ignores a directory that is not there and takes them from PyPI,
+          # where a release of hand-written packages alone leaves them.
+          PIP_FIND_LINKS: ${{ github.workspace }}\find-links ${{ github.workspace }}\wheelhouse
+        run: >-
+          python scripts/build-bdist.py --compiled
+          --only ${{ matrix.py }}-${{ matrix.arch }}
+          --tag "$env:BUILD_TAG"
+          --family "$env:BUILD_FAMILY" --package "$env:BUILD_PACKAGES"
+      # a family whose packages are all data has nothing for this job to build
       - name: Check what the wheels carry
+        if: hashFiles('wheelhouse/*.whl') != ''
         run: python scripts/check-wheel-contents.py
       - name: Upload wheels
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
+          if-no-files-found: ignore
   publish:
     needs: [sdist, pure, bdist]
-    # only publish tagged releases, not manually triggered compile tests
-    if: startsWith(github.ref, 'refs/tags/wheels/')
+    # a tag publishes to PyPI; a run started by hand publishes where it was
+    # told to, which is nowhere unless it says otherwise
+    if: ${{ github.event_name == 'push' || inputs.publish != 'none' }}
     runs-on: ubuntu-latest
+    # the upload carries its own credentials, so this job needs nothing that
+    # the workflow token can grant
+    permissions: {}
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
@@ -110,4 +190,9 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:
           user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+          password: >-
+            ${{ inputs.publish == 'testpypi' && secrets.TEST_PYPI_API_TOKEN
+                || secrets.PYPI_API_TOKEN }}
+          repository-url: >-
+            ${{ inputs.publish == 'testpypi' && 'https://test.pypi.org/legacy/'
+                || 'https://upload.pypi.org/legacy/' }}

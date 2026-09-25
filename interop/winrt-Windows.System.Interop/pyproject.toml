@@ -50,6 +50,7 @@ before-build = "uv pip install setuptools"
 skip = "pp* cp*t-*"
 # suppress warnings about ARM64 testing
 test-skip = "*-win_arm64"
+test-command = "python -c \"import winrt._winrt_windows_system_interop\""
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]

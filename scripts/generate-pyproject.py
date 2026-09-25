@@ -11,6 +11,9 @@ from pathlib import Path
 # the version scheme, which scripts/tests/test_versions.py covers
 import versions
 
+# the distributions this repository publishes and the layout they sit in
+import packages
+
 # the text of every file this writes
 import pyproject_templates as templates
 
@@ -19,7 +22,6 @@ TABLE_PATH = (Path(__file__).parent.parent / "table").resolve()
 RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
 INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
 REDIST_PATH = (Path(__file__).parent.parent / "redist").resolve()
-TOOLS_PATH = (Path(__file__).parent.parent / "_tools").resolve()
 
 # PEP 639 has a distribution name its license as an SPDX expression and carry
 # the text of what it names, and a license file is only found beside the
@@ -82,9 +84,7 @@ class DllPayload(NamedTuple):
         """
         The unpacked NuGet package that scripts/fetch-tools.ps1 downloaded.
         """
-        version = NUGET_PACKAGE_VERSIONS[self.nuget_package]
-
-        return TOOLS_PATH / f"{self.nuget_package}.{version}"
+        return versions.unpacked_nuget_path(self.nuget_package)
 
     def nupkg_name(self) -> str:
         version = NUGET_PACKAGE_VERSIONS[self.nuget_package]
@@ -177,7 +177,7 @@ HUBS = frozenset(
 # NuGet package can say which one its metadata came from. That is the Windows
 # App SDK components: the family is versioned by the metapackage, which says
 # nothing about which component a given namespace was generated from.
-NUGET_PACKAGE_VERSIONS = json.loads(versions.TOOLS_JSON_PATH.read_text())
+NUGET_PACKAGE_VERSIONS = versions.nuget_package_versions()
 
 RUNTIME_REQUIREMENT = versions.runtime_requirement()
 TABLE_COMPILER_REQUIREMENT = versions.table_compiler_requirement()
@@ -331,54 +331,15 @@ def avoid_keyword(name: str) -> str:
     return name
 
 
-# The Windows App SDK components each hand-written module compiles against,
-# named by the environment variable that says where fetch-tools.ps1 unpacked
-# each one. The App SDK is a metapackage, so what a module includes is spread
-# over several of them.
-APP_SDK_INTEROP_COMPONENTS = {
-    # Microsoft.UI.Interop.h
-    "winrt-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
-    # MddBootstrap.h and its import library, and WindowsAppSDK-VersionInfo.h
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [
-        "WASDK_FOUNDATION_PATH",
-        "WASDK_RUNTIME_PATH",
-    ],
-}
-
-
 def is_app_sdk_interop_package(name: str) -> bool:
-    return name in APP_SDK_INTEROP_COMPONENTS
-
-
-# The distribution in each interop package's directory. A directory is named
-# after the distribution in it, except where that name is long enough to push
-# a build path past the 260 characters Windows allows by default: this one is
-# 68, and a wheel build puts a .dist-info directory named after it, and a
-# licenses directory inside that, underneath it.
-INTEROP_DISTRIBUTIONS = {
-    "winrt-wasdk-bootstrap": (
-        "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
-    ),
-}
-
-
-def interop_distribution(package_path: Path) -> str:
-    return INTEROP_DISTRIBUTIONS.get(package_path.name, package_path.name)
+    return name in packages.APP_SDK_INTEROP_COMPONENTS
 
 
 # Which family each package belongs to, so that a requirement on another one
 # can be written with that package's version instead of this one's. Every
 # distribution but WinUI 2's is published as winrt-*, so the name says nothing
-# about which upstream a package came from: a projection package's family is
-# the directory it is generated into, and an interop package's is the family
-# whose headers the hand-written C++ compiles against.
-package_families = {
-    deps_path.parent.name: deps_path.parent.parent.name
-    for deps_path in PROJECTION_PATH.glob("**/deps.json")
-} | {
-    distribution: "wasdk" if is_app_sdk_interop_package(distribution) else "winrt"
-    for distribution in map(interop_distribution, INTEROP_PATH.glob("winrt-*"))
-}
+# about which upstream a package came from.
+package_families = packages.distribution_families()
 
 
 def is_app_sdk_bootstrap_package(name: str) -> bool:
@@ -572,7 +533,9 @@ def write_compiled_project_files(
                     else ""
                 ),
                 extra_package_data=', "*.h"' if is_runtime else "",
-                test_command=templates.RUNTIME_TEST_COMMAND if is_runtime else "",
+                test_command=templates.TEST_COMMAND.format(
+                    module=f"{root_package}.{ext_module_name}"
+                ),
                 local_runtime=(
                     ""
                     if is_runtime
@@ -646,7 +609,9 @@ def write_compiled_project_files(
                     templates.APP_SDK_INIT.format(
                         envs=", ".join(
                             f'"{name}"'
-                            for name in APP_SDK_INTEROP_COMPONENTS[package_name]
+                            for name in packages.APP_SDK_INTEROP_COMPONENTS[
+                                package_name
+                            ]
                         )
                     )
                     if needs_app_sdk
@@ -942,10 +907,10 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 # create requirements.txt for the hand-written interop projects
 
 for path in INTEROP_PATH.glob("winrt-*"):
-    family = package_families[interop_distribution(path)]
+    family = package_families[packages.interop_distribution(path)]
 
     # KeyError here means a new interop package needs a row in the table
-    interop_deps = INTEROP_DEPENDENCIES[interop_distribution(path)]
+    interop_deps = INTEROP_DEPENDENCIES[packages.interop_distribution(path)]
 
     with open_if_changed(path / "requirements.txt") as req:
         req.writelines(
@@ -1032,7 +997,7 @@ write_compiled_project_files(
 )
 
 for package_path in INTEROP_PATH.glob("winrt-*"):
-    package_name = interop_distribution(package_path)
+    package_name = packages.interop_distribution(package_path)
     family = package_families[package_name]
     root_package = package_name[: package_name.rindex("-")]
     namespace = package_name.removeprefix(f"{root_package}-")
@@ -1063,6 +1028,6 @@ for package_path in INTEROP_PATH.glob("winrt-*"):
 
 for path in INTEROP_PATH.glob("winrt-*"):
     with open_if_changed(path / "version.txt") as f:
-        family = package_families[interop_distribution(path)]
+        family = package_families[packages.interop_distribution(path)]
 
         f.write(f"{FAMILY_VERSIONS[family]}\n")

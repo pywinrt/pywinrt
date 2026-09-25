@@ -82,12 +82,23 @@ def git(*args: str) -> str:
 
 
 def newest_wheels_tag() -> str:
+    """
+    The newest release tag that names a runtime to compare against.
+
+    A release is per family, so only the runtime family's tags carry one.
+    3.x released every package under a single wheels/<version> tag, and
+    those are what is left to fall back on until the first 4.x runtime is
+    tagged.
+    """
     tags = git("tag", "--list", "wheels/*", "--sort=-creatordate").splitlines()
+    runtime = [tag for tag in tags if tag.startswith("wheels/runtime/")]
+    every_package = [tag for tag in tags if tag.count("/") == 1]
 
-    if not tags:
-        raise SystemExit("no wheels/* tag to use as a baseline; pass --baseline")
+    for candidates in (runtime, every_package):
+        if candidates:
+            return candidates[0]
 
-    return tags[0]
+    raise SystemExit("no wheels/* tag to use as a baseline; pass --baseline")
 
 
 @dataclass
@@ -550,7 +561,7 @@ def main() -> None:
         "--baseline",
         metavar="REF",
         help="the git ref to build the old half from (default: the newest"
-        " wheels/* tag)",
+        " release tag that names a runtime)",
     )
     parser.add_argument(
         "--current-install",
