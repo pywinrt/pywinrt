@@ -5,7 +5,7 @@ import winrt.system
 
 winrt.runtime._internals.load_projection(__spec__)
 
-_dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)
+import winrt.microsoft.web.webview2.dll
 
 __all__ = [
     "CoreWebView2BoundsMode",

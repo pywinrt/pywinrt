@@ -315,6 +315,10 @@ build/
 # built, so the binary is build output wherever it turns up.
 _table.pywinrt
 
+# The .dlls a package redistributes are taken out of a NuGet package as it is
+# built, so they are build output rather than something this repository keeps.
+/redist/*/nuget/
+
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config

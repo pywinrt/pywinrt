@@ -1,0 +1,50 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "winrt-Microsoft.Web.WebView2.Dll"
+version = "4!1.0.4191.47"
+description = "Microsoft.Web.WebView2.Core.dll, redistributed for PyWinRT"
+readme = "README.md"
+# The Python in this package is PyWinRT's and the .dll in it is Microsoft's,
+# so the expression names both and the text of each one is carried.
+license = "MIT AND LicenseRef-Microsoft-Web-WebView2"
+license-files = [
+    "LICENSE",
+    "LICENSE.Microsoft.Web.WebView2.txt",
+    "NOTICE.Microsoft.Web.WebView2.txt",
+]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+]
+requires-python = ">=3.11"
+
+[project.urls]
+Documentation = "https://pywinrt.readthedocs.io"
+Repository = "https://github.com/pywinrt/pywinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/projection/webview2/CHANGELOG.md"
+
+# Nothing prebuilt goes in the source distribution: the .dll the wheel
+# redistributes is fetched by the build, and the bill of materials is written
+# by it.
+[tool.hatch.build.targets.sdist]
+only-include = ["winrt", "hatch_build.py", "LICENSE", "README.md"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["winrt"]
+
+# hatch_build.py, which takes the .dll out of the NuGet package, puts the one
+# this wheel is for beside the module that registers it, tags the wheel for
+# that architecture and writes the bill of materials.
+[tool.hatch.build.hooks.custom]

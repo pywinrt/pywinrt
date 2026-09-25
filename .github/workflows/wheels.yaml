@@ -26,7 +26,8 @@ jobs:
           path: wheelhouse/
   # A projection package is data and winrt-table-compiler is pure Python, so
   # each is one py3-none-any wheel rather than one per interpreter and
-  # architecture.
+  # architecture. The packages under redist/ are built here too: nothing in
+  # them is compiled either, and each is three py3-none-win_* wheels.
   pure:
     runs-on: windows-latest
     steps:
@@ -34,6 +35,12 @@ jobs:
         with:
           python-version: '3.12'
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # only the package the redistributed component .dll comes out of; the
+      # rest of what fetch-tools.ps1 downloads is for the builds that compile
+      - name: install nuget packages
+        run: >-
+          ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSdk
+          -noMicrosoftUiXaml -noWindowsAppSDK -noTestWinRT
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -45,6 +52,8 @@ jobs:
         run: pip install ./table
       - name: Build the pure wheels
         run: python scripts/build-bdist.py --pure
+      - name: Check what the wheels carry
+        run: python scripts/check-wheel-contents.py
       - name: Upload wheels
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
@@ -80,6 +89,8 @@ jobs:
           pip install -r requirements-bdist.txt
       - name: Build bdist wheels
         run: python scripts/build-bdist.py --compiled --only ${{ matrix.py }}-${{ matrix.arch }}
+      - name: Check what the wheels carry
+        run: python scripts/check-wheel-contents.py
       - name: Upload wheels
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:

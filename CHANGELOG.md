@@ -106,9 +106,6 @@
 - Python classes that implement a WinRT interface now implement all overloads of
   a method with a single method. The old names are still called if they are
   defined, so this only shows up as a type checker error.
-- BREAKING: `TileUpdateManagerForUser.create_tile_updater_for_application()` is
-  now `create_tile_updater_for_application_for_user()`. The old name is the
-  overload that takes an application id, so it could not be kept as an alias.
 - Greatly improved the speed of the `PyWinRT` code generation tool.
 - A member is no longer checked against `ApiInformation` before it is called.
   A member that another interface declares is reached by querying that
@@ -219,30 +216,30 @@
   such as `winrt-Microsoft.WindowsAppSDK.WinUI` and
   `winrt-Microsoft.WindowsAppSDK.InteractiveExperiences`, are still pinned to
   each other, because they are generated and released together.
-- Updated Windows SDK to 10.0.28000.2705. Seven namespaces are new and have a
-  package each: `Windows.AI.Agents.Mcp`, `Windows.ApplicationModel.Preview`,
-  `Windows.Management.Update.Cluster`, `Windows.System.Power.Thermal`,
-  `Windows.UI.Input.Preview.Text`, `Windows.UI.Shell.CompanionWindows` and
-  `Windows.UI.Shell.Tasks`.
-- REMOVED: `winrt-Windows.AI.ModelContextProtocol`. The SDK no longer has that
-  namespace. `Windows.AI.Agents.Mcp` covers Model Context Protocol in this
-  release, but it is not the same API: the classes for enumerating and
-  describing servers are gone and what is there now filters messages.
-- Updated WebView2 to 1.0.4191.47. Twelve types are new, covering the worker
-  APIs - `CoreWebView2ServiceWorker`, `CoreWebView2DedicatedWorker`,
-  `CoreWebView2SharedWorker` and the managers and event arguments that go with
-  them - and find-on-page, `CoreWebView2Find` and `CoreWebView2FindOptions`.
-  Nothing was removed.
-- Updated the Windows App SDK to 2.5.1, from 1.7.250513003, whose servicing
-  ended in March. Nine namespaces are new and have a package each:
-  `Microsoft.Windows.AI.Foundation`, `Microsoft.Windows.AI.MachineLearning`,
-  `Microsoft.Windows.AI.Video`, `Microsoft.Windows.Vision`,
-  `Microsoft.Windows.SemanticSearch`, `Microsoft.Windows.Search.AppContentIndex`,
-  `Microsoft.Windows.Storage.Pickers`, `Microsoft.Windows.Foundation` and
-  `Microsoft.UI.Xaml.Settings`. No namespace was removed, so the family goes
-  from 69 packages to 78. Everything in it is now versioned `4!2.5.1`, the
-  version of the `Microsoft.WindowsAppSDK` metapackage, which is the version
-  Microsoft's own release notes and runtime installer speak.
+- Every wheel now carries the text of the license it is published under, in
+  its `.dist-info/licenses/` directory, where before it carried only the name
+  of the license in its metadata. A wheel that redistributes a Microsoft
+  binary carries that binary's license as well, and a CycloneDX bill of
+  materials under `.dist-info/sboms/` naming the binary, the NuGet package and
+  version it came from, and Microsoft as its supplier (PEP 639 and PEP 770).
+  The bill of materials distinguishes the two parties: PyWinRT is an
+  independent project and is the root component, under the MIT license, and
+  each redistributed binary is a component inside it.
+- Each family of packages now has a changelog of its own, which is what a
+  package's `Changelog` link on PyPI points at, so the Windows SDK, the
+  Windows App SDK, WinUI 2 and WebView2 each say what changed in the version
+  you installed. The changelog at the root of the repository is
+  `winrt-runtime`'s and the code generator's, and it keeps everything that
+  affects every package - the versioning scheme, the packaging and the
+  release history before v4.0.
+- No `.dll` is copied into a wheel after it is built any more. The two that
+  PyWinRT redistributes are put there by the build that produces the wheel,
+  which is why a wheel built from a source distribution now carries one too,
+  and a check over every wheel refuses one whose `.dll`s and bill of materials
+  disagree. No source distribution carries a prebuilt binary: the build takes
+  it out of the NuGet package it comes from, downloading that package and
+  checking it against a pinned SHA-256 unless an environment variable names an
+  unpacked copy already on the machine.
 - BREAKING: The Windows App SDK and WebView2 packages carry the `winrt-`
   prefix again and are imported from the `winrt` top-level package, as they
   were before v3.0. `webview2-Microsoft.Web.WebView2.Core` is now
@@ -260,25 +257,6 @@
   namespaces as the App SDK's WinUI component and the two cannot be imported
   from one package; nothing else needed a prefix of its own. See
   the [v3 to v4 migration guide][3to4] for the full list of renames.
-- BREAKING: The Windows App SDK is published as one package per NuGet
-  component instead of one per namespace, so its 78 packages become 7:
-  `winrt-Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`,
-  `.WinUI`, `.Widgets`, `.AI`, `.Search`, and
-  `winrt-Microsoft.Windows.AI.MachineLearning`. A package now carries every
-  namespace its component owns - `.WinUI` has all 25 `Microsoft.UI.Xaml.*`
-  modules and `Microsoft.UI.Text` - and its README lists them and names the
-  component and version its metadata came from. Which module a namespace is
-  imported from is unaffected; what changes is which package to install to
-  get it. The whole family
-  is 1.2 MB of wheels, and a package that hands back a type from another
-  component of the same release requires it outright, since Microsoft's own
-  build refuses a project that mixes component versions.
-- The Windows App SDK is projected from its component packages rather than
-  from the metapackage, which has carried no metadata since 2.0. That is what
-  lets a release be projected at all, and it is also what decides the
-  packages above: a namespace is published in the component that defines it,
-  and one that several components contribute to would be published on its own
-  instead. In this release none is.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a
@@ -326,16 +304,9 @@
 - Fixed replacing an item of a Python list passed to WinRT as an `IVector`. The
   value was released one time too many, which corrupts the interpreter, and it
   only worked at all if the object was a `list` rather than any other sequence.
-- Fixed the type hint of `Matrix4x4.translation()`, which said `Vector2`
-  where the value is a `Vector3`.
 - Fixed `@typing.overload` missing from the type hints of overloaded methods.
 - Fixed methods being silently dropped when two overloads could not be told
   apart.
-- Fixed building the `Windows.Graphics.DirectX.Direct3D11` interop module on
-  MSYS2. mingw-w64 now ships an interop header, so the `__has_include` check
-  stopped selecting our own declarations, but the `.idl` that header is
-  generated from is missing `CreateDirect3D11SurfaceFromDXGISurface`, which is
-  now declared separately there.
 
 [#139]: https://github.com/pywinrt/pywinrt/issues/139
 [3to4]: https://github.com/pywinrt/pywinrt/blob/main/scripts/3to4/README.md
