@@ -145,7 +145,7 @@ class TableCompilerRequirement(unittest.TestCase):
         )
 
     def test_the_compiler_of_this_tree_satisfies_it(self):
-        self.assertIn(versions.runtime_version(), self.specifier)
+        self.assertIn(versions.table_compiler_version(), self.specifier)
 
     def test_the_floor_is_the_generation_and_not_the_runtime_version(self):
         # a compiler writes the table format, which does not move when the
@@ -199,14 +199,15 @@ class FamilyRequirement(unittest.TestCase):
 
 class ReleaseTags(unittest.TestCase):
     """
-    The tag that releases one family.
+    The tag that releases one unit.
 
-    A release is per family, so the tag has to say which family it releases
-    and at which version, and the workflow has to be able to read the first
-    back out of it and check the second against the tree.
+    A unit is a family of generated packages or a single package written by
+    hand, so the tag has to say which one it releases and at which version,
+    and the workflow has to be able to read the first back out of it and
+    check the second against the tree.
     """
 
-    def test_every_published_family_has_one(self):
+    def test_every_published_unit_has_one(self):
         self.assertEqual(
             sorted(versions.release_tags()), sorted(versions.published_versions())
         )
@@ -218,21 +219,39 @@ class ReleaseTags(unittest.TestCase):
             next(iter(versions.published_versions())), versions.RUNTIME_FAMILY
         )
 
+    def test_a_package_written_by_hand_is_versioned_without_an_epoch(self):
+        # its version says what changed in that package rather than which
+        # upstream release it was generated from, so there is no epoch to
+        # sort above - only the 3.x versions it follows on PyPI
+        for path in versions.version_files():
+            with self.subTest(unit=path.parent.name):
+                version = Version(versions.read_version(path))
+
+                self.assertEqual(version.epoch, 0)
+                self.assertGreater(version, Version("3.2.1"))
+
+    def test_every_version_written_by_hand_is_of_this_generation(self):
+        generation = versions.compatibility_generation()
+
+        for path in versions.version_files():
+            with self.subTest(unit=path.parent.name):
+                self.assertEqual(Version(versions.read_version(path)).major, generation)
+
     def test_the_test_component_is_not_released(self):
         self.assertIn("test-winrt", versions.family_versions())
         self.assertNotIn("test-winrt", versions.published_versions())
 
-    def test_the_tag_carries_the_version_the_family_is_published_with(self):
-        for family, version in versions.published_versions().items():
-            with self.subTest(family=family):
-                tag = versions.release_tags()[family]
+    def test_the_tag_carries_the_version_the_unit_is_published_with(self):
+        for unit, version in versions.published_versions().items():
+            with self.subTest(unit=unit):
+                tag = versions.release_tags()[unit]
 
-                self.assertTrue(tag.startswith(f"{versions.TAG_PREFIX}/{family}/"))
+                self.assertTrue(tag.startswith(f"{versions.TAG_PREFIX}/{unit}/"))
                 self.assertEqual(Version(self.spelled_version(tag)), Version(version))
 
     def test_the_epoch_is_spelled_without_a_character_a_shell_would_eat(self):
-        for family, tag in versions.release_tags().items():
-            with self.subTest(family=family):
+        for unit, tag in versions.release_tags().items():
+            with self.subTest(unit=unit):
                 self.assertNotIn("!", tag.rpartition("/")[2])
 
     @staticmethod
@@ -244,17 +263,17 @@ class ReleaseTags(unittest.TestCase):
 
         return f"{epoch.removeprefix('e')}!{release}" if epoch else release
 
-    def test_a_tag_names_the_family_it_releases(self):
-        for family, tag in versions.release_tags().items():
-            with self.subTest(family=family):
-                self.assertEqual(versions.family_of_tag(tag), family)
+    def test_a_tag_names_the_unit_it_releases(self):
+        for unit, tag in versions.release_tags().items():
+            with self.subTest(unit=unit):
+                self.assertEqual(versions.unit_of_tag(tag), unit)
 
     def test_a_tag_at_a_version_this_tree_does_not_publish_is_refused(self):
         # the point of matching rather than parsing: a tag pushed at the
-        # wrong commit, or copied from another family, releases nothing
+        # wrong commit, or copied from another unit, releases nothing
         with self.assertRaises(ValueError):
-            versions.family_of_tag("wheels/runtime/v1.2.3")
+            versions.unit_of_tag("wheels/runtime/v1.2.3")
 
-    def test_a_tag_that_names_no_family_is_refused(self):
+    def test_a_tag_that_names_no_unit_is_refused(self):
         with self.assertRaises(ValueError):
-            versions.family_of_tag("wheels/v3.2.1")
+            versions.unit_of_tag("wheels/v3.2.1")

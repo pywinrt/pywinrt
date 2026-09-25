@@ -1,12 +1,14 @@
 """
 The version that every distribution in this tree is published with.
 
-A package's version says which metadata it was generated from, not which
-generator read that metadata, so the distributions fall into families and each
-family takes its version from its own source: the Windows SDK packages from
-the NuGet package their winmd files come from, winrt-runtime from the file it
-keeps its own version in. scripts/generate-pyproject.py writes what this
-module computes into the packaging of each one.
+A generated package's version says which metadata it was generated from,
+not which generator read that metadata, so the generated distributions fall
+into families and each family takes its version from the NuGet package its
+winmd files come from. A package that is written by hand has no upstream
+release to follow, so it keeps a version.txt of its own and is released on
+its own. Either way the thing a version releases is named after the directory
+its sources are in, and scripts/generate-pyproject.py writes what this module
+computes into the packaging of each package.
 """
 
 import json
@@ -19,13 +21,14 @@ TOOLS_JSON_PATH = REPO_PATH / ".config" / "_tools.json"
 TOOLS_PATH = REPO_PATH / "_tools"
 RUNTIME_PATH = REPO_PATH / "runtime"
 RUNTIME_VERSION_PATH = RUNTIME_PATH / "version.txt"
+TABLE_PATH = REPO_PATH / "table"
+TABLE_VERSION_PATH = TABLE_PATH / "version.txt"
+INTEROP_PATH = REPO_PATH / "interop"
 ABI_HEADER_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt" / "abi.h"
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
 
 # Which NuGet package each family of generated packages takes its version
-# from, keyed by the directory under projection/ that holds the family. Each
-# interop package under interop/ belongs to one of the same families, since it
-# is compiled against that family's headers and released with it.
+# from, keyed by the directory under projection/ that holds the family.
 NUGET_PACKAGES = {
     "winrt": "Microsoft.Windows.SDK.CPP",
     "winui2": "Microsoft.UI.Xaml",
@@ -34,18 +37,19 @@ NUGET_PACKAGES = {
     "test-winrt": "PyWinRT.TestWinRT",
 }
 
-# The family that winrt-runtime and winrt-table-compiler are released as. Its
-# version is the hand-maintained one in runtime/version.txt rather than an
+# The family that winrt-runtime is released as, which is a family of one:
+# its version is the hand-maintained one in runtime/version.txt rather than an
 # upstream package's, so it is not one of the families above.
 RUNTIME_FAMILY = "runtime"
+
 
 # The test component is projected into this tree for the test suite and is
 # never uploaded anywhere, so it is versioned like a family without being one
 # that is released.
 UNPUBLISHED_FAMILIES = frozenset({"test-winrt"})
 
-# The tag that releases one family, which .github/workflows/wheels.yaml
-# builds and publishes that family from. The version in it carries a "v", and
+# The tag that releases one unit, which .github/workflows/wheels.yaml
+# builds and publishes that unit from. The version in it carries a "v", and
 # an epoch goes in front of that as "e<epoch>", since a literal "!" is a
 # history expansion in an interactive shell and is percent-encoded in a URL.
 TAG_PREFIX = "wheels"
@@ -117,12 +121,48 @@ def runtime_table_format() -> tuple[int, int]:
     )
 
 
+def version_files() -> list[Path]:
+    """
+    Every version.txt in the tree, one per package that is written rather
+    than generated.
+
+    There is no upstream release for one of these to follow, so what its
+    version says is what changed in that package: each is semver with the
+    compatibility generation as the major, bumped by hand, and released on
+    its own rather than with anything else. The directory a file sits in is
+    the unit its version releases.
+    """
+    return [
+        RUNTIME_VERSION_PATH,
+        TABLE_VERSION_PATH,
+        *sorted(INTEROP_PATH.glob("winrt-*/version.txt")),
+    ]
+
+
+def read_version(path: Path) -> str:
+    """
+    Reads a hand-maintained version.txt.
+    """
+    return path.read_text(encoding="utf-8").strip()
+
+
 def runtime_version() -> str:
     """
-    Reads the version winrt-runtime and winrt-table-compiler are published
-    with, which is hand-maintained and bumped in the release commit.
+    Reads the version winrt-runtime is published with, which is
+    hand-maintained and bumped in the release commit.
     """
-    return RUNTIME_VERSION_PATH.read_text(encoding="utf-8").strip()
+    return read_version(RUNTIME_VERSION_PATH)
+
+
+def table_compiler_version() -> str:
+    """
+    Reads the version winrt-table-compiler is published with.
+
+    It is the runtime's generation but not the runtime's version: the
+    compiler is released when the compiler changes, and a runtime fix that
+    leaves it alone leaves this alone (see table_compiler_requirement()).
+    """
+    return read_version(TABLE_VERSION_PATH)
 
 
 def compatibility_generation() -> int:
@@ -130,18 +170,20 @@ def compatibility_generation() -> int:
     The one number that says which generation of PyWinRT a package belongs to.
 
     The runtime's C ABI major, the projection table format major and the
-    major of winrt-runtime's own version are the same number, because each of
-    them breaks every projection package at once: a package built for one
-    generation works with no runtime of another. It is the epoch of every
-    upstream-versioned family for the same reason - an epoch sorts above
-    everything published before it, so pip tries the packages of the current
-    generation first - and it is what the runtime requirement is capped at.
+    major of every hand-written package's own version are the same number,
+    because each of them breaks every projection package at once: a package
+    built for one generation works with no runtime of another. It is the
+    epoch of every upstream-versioned family for the same reason - an epoch
+    sorts above everything published before it, so pip tries the packages of
+    the current generation first - and it is what the runtime requirement is
+    capped at.
 
-    Reading all three here is what keeps them from drifting apart.
+    Reading them all here is what keeps them from drifting apart. The
+    hand-written packages are versioned and released one at a time, so the
+    major is the only thing they have to agree on and the only thing checked.
     """
     abi_major = read_uint16_constant(ABI_HEADER_PATH, "runtime_abi_version_major")
     table_major, _ = runtime_table_format()
-    package_major = int(runtime_version().split(".")[0])
 
     if table_major != abi_major:
         raise RuntimeError(
@@ -149,11 +191,14 @@ def compatibility_generation() -> int:
             f" and {ABI_HEADER_PATH.name} is ABI major {abi_major}"
         )
 
-    if package_major != abi_major:
-        raise RuntimeError(
-            f"{RUNTIME_VERSION_PATH.name} is major {package_major}"
-            f" and {ABI_HEADER_PATH.name} is ABI major {abi_major}"
-        )
+    for path in version_files():
+        package_major = int(read_version(path).split(".")[0])
+
+        if package_major != abi_major:
+            raise RuntimeError(
+                f"{path.parent.name} is version major {package_major}"
+                f" and {ABI_HEADER_PATH.name} is ABI major {abi_major}"
+            )
 
     return abi_major
 
@@ -201,23 +246,32 @@ def family_versions() -> dict[str, str]:
 
 def published_versions() -> dict[str, str]:
     """
-    The version each family that is released is published with, in the order
-    a release goes in.
+    The version each release unit is published with, keyed by unit and in the
+    order a release goes in.
 
-    winrt-runtime comes first because every other package requires it, and
-    the Windows SDK comes before the families whose packages depend on one of
-    its: an upload has to be able to resolve what it just published.
+    A unit is named after the directory its sources are in: a family of
+    generated packages under projection/, or one package that is written by
+    hand. The order is what an upload can resolve - winrt-runtime first
+    because everything requires it, then the compiler that builds a
+    projection package, then the generated families, then the interop
+    modules, each of which names a projection package.
     """
-    return {RUNTIME_FAMILY: runtime_version()} | {
-        family: version
-        for family, version in family_versions().items()
-        if family not in UNPUBLISHED_FAMILIES
-    }
+    runtime, table, *interop = version_files()
+
+    return (
+        {path.parent.name: read_version(path) for path in (runtime, table)}
+        | {
+            family: version
+            for family, version in family_versions().items()
+            if family not in UNPUBLISHED_FAMILIES
+        }
+        | {path.parent.name: read_version(path) for path in interop}
+    )
 
 
 def release_tags() -> dict[str, str]:
     """
-    The tag that releases each family, keyed the way published_versions() is.
+    The tag that releases each unit, keyed the way published_versions() is.
     """
     tags = {}
 
@@ -230,24 +284,24 @@ def release_tags() -> dict[str, str]:
     return tags
 
 
-def family_of_tag(tag: str) -> str:
+def unit_of_tag(tag: str) -> str:
     """
-    The family that a release tag publishes.
+    The release unit that a tag publishes.
 
     The version in the tag is matched against what this tree publishes rather
     than parsed out of it, so a tag pushed at the wrong commit - or written
     with the version of the family it was copied from - fails the release
     instead of publishing something nobody asked for.
     """
-    families = {name: family for family, name in release_tags().items()}
+    units = {name: unit for unit, name in release_tags().items()}
 
-    if tag not in families:
+    if tag not in units:
         raise ValueError(
             f"{tag} releases nothing this tree publishes;"
-            f" the tags it publishes are {', '.join(sorted(families))}"
+            f" the tags it publishes are {', '.join(sorted(units))}"
         )
 
-    return families[tag]
+    return units[tag]
 
 
 def runtime_requirement() -> str:

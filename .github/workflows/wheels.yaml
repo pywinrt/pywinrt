@@ -1,8 +1,9 @@
 name: wheels
 concurrency: wheels-${{ github.ref }}
 on:
-  # one tag per family: PyPI refuses a file that already exists, so a release
-  # that rebuilt every family would fail on the families that did not change.
+  # one tag per release unit - a family of generated packages, or one package
+  # that is written by hand: PyPI refuses a file that already exists, so a
+  # release that rebuilt everything would fail on whatever did not change.
   # scripts/release-tags.py prints the tag that releases each one.
   push:
       tags: [wheels/*]
@@ -11,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       family:
-        description: which family to build
+        description: which upstream's packages to build
         type: choice
         default: all
         options: [all, runtime, winrt, winui2, wasdk, webview2]
@@ -33,7 +34,7 @@ permissions:
   contents: read
 
 env:
-  # What this run builds. A tag releases the one family it names, and a run
+  # What this run builds. A tag releases the one unit it names, and a run
   # started by hand builds what its inputs ask for, which is everything. The
   # build scripts read an empty value as "not given", which is what an input
   # that was left blank and an input of an event that has none both arrive as.
