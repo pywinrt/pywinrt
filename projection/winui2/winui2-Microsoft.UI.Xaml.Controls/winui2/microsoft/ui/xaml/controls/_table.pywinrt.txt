@@ -8118,19 +8118,19 @@ class Microsoft.UI.Xaml.Controls.XamlControlsResources activatable python_type
             in class type=Windows.UI.Xaml.UIElement name=element
 
 class Microsoft.Web.WebView2.Core.CoreWebView2 external
-    py webview2.microsoft.web.webview2.core.CoreWebView2
+    py winrt.microsoft.web.webview2.core.CoreWebView2
 
 class Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs external
-    py webview2.microsoft.web.webview2.core.CoreWebView2NavigationCompletedEventArgs
+    py winrt.microsoft.web.webview2.core.CoreWebView2NavigationCompletedEventArgs
 
 class Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs external
-    py webview2.microsoft.web.webview2.core.CoreWebView2NavigationStartingEventArgs
+    py winrt.microsoft.web.webview2.core.CoreWebView2NavigationStartingEventArgs
 
 class Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs external
-    py webview2.microsoft.web.webview2.core.CoreWebView2ProcessFailedEventArgs
+    py winrt.microsoft.web.webview2.core.CoreWebView2ProcessFailedEventArgs
 
 class Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs external
-    py webview2.microsoft.web.webview2.core.CoreWebView2WebMessageReceivedEventArgs
+    py winrt.microsoft.web.webview2.core.CoreWebView2WebMessageReceivedEventArgs
 
 class System.Double external
     py winrt.system.Double

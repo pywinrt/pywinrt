@@ -22,14 +22,13 @@ ABI_HEADER_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt" / "a
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
 
 # Which NuGet package each family of generated packages takes its version
-# from, keyed by the directory under projection/ that holds the family. The
-# interop packages under interop/ are named for the same families and follow
-# them, since each one is compiled against that family's headers and released
-# with it.
+# from, keyed by the directory under projection/ that holds the family. Each
+# interop package under interop/ belongs to one of the same families, since it
+# is compiled against that family's headers and released with it.
 NUGET_PACKAGES = {
     "winrt": "Microsoft.Windows.SDK.CPP",
     "winui2": "Microsoft.UI.Xaml",
-    "winui3": "Microsoft.WindowsAppSDK",
+    "wasdk": "Microsoft.WindowsAppSDK",
     "webview2": "Microsoft.Web.WebView2",
     "test-winrt": "PyWinRT.TestWinRT",
 }
