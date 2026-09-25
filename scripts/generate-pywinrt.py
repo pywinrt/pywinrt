@@ -121,7 +121,11 @@ subprocess.check_call(
         PROJECTION_PATH / "webview2",
         "--nullability-json",
         WEBVIEW2_NULLABILITY_JSON_PATH,
-        "--component-dlls",
+        # Microsoft.Web.WebView2.Core.dll is architecture-specific and the
+        # projection is not, so the .dll is redistributed in a package of its
+        # own that this one imports. See scripts/generate-pyproject.py.
+        "--dll-package",
+        "winrt.microsoft.web.webview2.dll",
     ]
 )
 

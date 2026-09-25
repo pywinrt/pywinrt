@@ -247,7 +247,7 @@ if (NOT MSVC)
 endif()
 
 pywinrt_add_interop_module(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    "winrt-wasdk-bootstrap"
     "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winrt")
 # MddBootstrap.h is in Foundation and WindowsAppSDK-VersionInfo.h, which says
 # which Windows App Runtime this release expects, is in Runtime.
@@ -371,8 +371,11 @@ foreach(package ${packages} ${winui2_packages} ${wasdk_packages} ${webview2_pack
 endforeach()
 
 if (webview2_packages)
+    # the redistribution package and the .dll beside its module
+    install(DIRECTORY "../redist/winrt-Microsoft.Web.WebView2.Dll/winrt/"
+        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     install(FILES "${WEBVIEW2_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
-        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/core")
+        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/dll")
 endif()
 
 # test component package

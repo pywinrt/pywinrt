@@ -108,7 +108,7 @@ INTEROP_NAMESPACES = {
     ],
     "winrt-Windows.UI.Xaml.Hosting.Interop": [],
     "winrt-Microsoft.UI.Interop": ["Microsoft.UI"],
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
+    "winrt-wasdk-bootstrap": [],
 }
 
 INCLUDE_RE = re.compile(r'#include\s+["<](winrt/[^">]+)[">]')

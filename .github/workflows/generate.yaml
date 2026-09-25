@@ -17,6 +17,7 @@ on:
       - runtime/**
       - table/**
       - PyWinRT/**
+      - redist/**
       - scripts/app_sdk.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
@@ -34,6 +35,7 @@ on:
       - runtime/**
       - table/**
       - PyWinRT/**
+      - redist/**
       - scripts/app_sdk.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py

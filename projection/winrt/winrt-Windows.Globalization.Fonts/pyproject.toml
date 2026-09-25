@@ -10,9 +10,15 @@ version = "4!10.0.28000.2705"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
 ]
@@ -27,16 +33,15 @@ all = [
 ]
 
 [project.urls]
-# Homepage = "https://github.com/pywinrt/pywinrt"
 Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywinrt/pywinrt"
-Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/projection/winrt/CHANGELOG.md"
 
 [tool.hatch.build.targets.sdist]
 # The text form of the table is what the source distribution carries, and the
 # compiled form is build output wherever it turns up. Hatchling reads no
 # .gitignore above the package, so it has to be told about the latter.
-only-include = ["winrt", "README.md"]
+only-include = ["winrt", "LICENSE", "README.md"]
 exclude = ["**/_table.pywinrt"]
 
 [tool.hatch.build.targets.wheel]
