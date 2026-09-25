@@ -274,7 +274,18 @@ def table_compiler_requirement() -> str:
     requires cannot read. That is the same known incompatibility the runtime
     requirement is capped for, so it is capped the same way; being a build
     requirement, it never reaches a wheel.
+
+    The floor is the generation rather than this tree's runtime version,
+    because what the compiler has to be able to do is write the table format,
+    and the format does not move when the runtime is patched. Flooring it at
+    the runtime version would mean that a runtime fix could not be released
+    on its own: a package regenerated afterwards would ask for a compiler at
+    the new version, so a winrt-table-compiler with nothing in it changed
+    would have to be published to satisfy it. What the floor gives up is a
+    compiler that is of this generation but too old for the format the table
+    is written in, and that one refuses the table and says so rather than
+    writing something wrong.
     """
-    return (
-        f"winrt-table-compiler>={runtime_version()},<{compatibility_generation() + 1}"
-    )
+    generation = compatibility_generation()
+
+    return f"winrt-table-compiler>={generation}.0.0,<{generation + 1}"
