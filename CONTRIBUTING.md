@@ -162,6 +162,57 @@ A release also needs the source distributions:
 
     py .\scripts\build-sdist.py
 
+Both scripts build every package that is published unless they are told to
+narrow it, which is what a release does. `--family` builds the packages one
+upstream is projected into, and `--package` names distributions outright:
+
+    py .\scripts\build-bdist.py --family webview2
+    py .\scripts\build-sdist.py --package winrt-Windows.Foundation
+
+## Releasing
+
+Each family of packages is released on its own upstream's schedule, so a
+release publishes one family rather than everything: `winrt-runtime` and
+`winrt-table-compiler` are the `runtime` family and take their version from
+`runtime/version.txt`, and `winrt`, `winui2`, `wasdk` and `webview2` take
+theirs from the NuGet package their metadata came from, which
+`.config/_tools.json` pins. Moving a pin is a change of its own, made the way
+the sections above describe; bumping `runtime/version.txt` is an edit. Either
+way, regenerate the packaging afterwards so that every package carries the
+new version:
+
+    py .\scripts\generate-pyproject.py
+
+Then print the tag that releases each family and push the one you mean:
+
+    py .\scripts\release-tags.py
+
+    git push origin wheels/webview2/e4v1.0.4191.47
+
+A version in a tag carries a `v`, and the epoch goes in front of that as
+`e4`, since a literal `!` is a history expansion in a shell. The tag has to
+carry the version the tree already carries: the build refuses a tag that
+names anything else rather than publishing a version nobody asked for.
+
+Pushing the tag runs `.github/workflows/wheels.yaml`, which builds that family
+and uploads it to PyPI. Release the `runtime` family before any projection
+family, and the `winrt` family before the rest, because a compiled wheel's
+import test installs the packages it depends on; `release-tags.py` prints them
+in that order.
+
+The same workflow can be started by hand, which is how everything else is
+done:
+
+- `family` and `packages` are the filters above, so a run can cover one
+  family or a few named distributions of it.
+- `publish` says where the result is uploaded, and is `none` by default. A
+  `none` run is a compile test of a branch, and it is what builds the
+  wheelhouse a release candidate is tested from; `testpypi` is the dry run
+  that proves the token path.
+- `python` builds for one interpreter only, which back-fills wheels for a new
+  CPython without a version change: the packages that are already published
+  keep their versions and only the missing builds are uploaded.
+
 
 ## Profiling
 

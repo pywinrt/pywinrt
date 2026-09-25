@@ -24,6 +24,7 @@ on:
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
       - scripts/nuget.py
+      - scripts/packages.py
       - scripts/pyproject_templates.py
       - scripts/versions.py
   pull_request:
@@ -43,6 +44,7 @@ on:
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
       - scripts/nuget.py
+      - scripts/packages.py
       - scripts/pyproject_templates.py
       - scripts/versions.py
 

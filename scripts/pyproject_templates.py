@@ -161,11 +161,11 @@ archs = ["x86", "AMD64", "ARM64"]{extra_cibuildwheel_windows}
 # even though the builder has it - which is what makes this worth running on the
 # machine that just produced it.
 #
-# Only winrt-runtime can be checked this way. An interop package depends on a
-# projection package as well, and those are built by the other half of
-# scripts/build-bdist.py, so its test environment cannot be resolved from what
-# the compiled half has to hand.
-RUNTIME_TEST_COMMAND = '\ntest-command = "python -c \\"import winrt._winrt\\""'
+# An interop package depends on a projection package as well, and those are
+# built by the other half of scripts/build-bdist.py, so its test environment
+# can only be resolved where that half's wheels are to hand:
+# .github/workflows/wheels.yaml hands them to the job that runs this.
+TEST_COMMAND = '\ntest-command = "python -c \\"import {module}\\""'
 
 # cibuildwheel's Windows default is to run delvewheel, which copies the DLLs an
 # extension links against into the wheel. The one DLL any of these packages
