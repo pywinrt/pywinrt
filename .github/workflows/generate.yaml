@@ -24,6 +24,7 @@ on:
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
       - scripts/nuget.py
+      - scripts/pyproject_templates.py
       - scripts/versions.py
   pull_request:
     paths:
@@ -42,6 +43,7 @@ on:
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
       - scripts/nuget.py
+      - scripts/pyproject_templates.py
       - scripts/versions.py
 
 jobs:
