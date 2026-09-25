@@ -128,11 +128,38 @@ class RuntimeRequirement(unittest.TestCase):
         # without it pip would upgrade the runtime on its own into that error
         self.assertNotIn(f"{self.generation + 1}.0.0", self.specifier)
 
-    def test_the_table_compiler_is_capped_the_same_way(self):
-        self.assertEqual(
-            versions.table_compiler_requirement().removeprefix("winrt-table-compiler"),
-            versions.runtime_requirement().removeprefix("winrt-runtime"),
+
+class TableCompilerRequirement(unittest.TestCase):
+    """
+    What a projection package asks of the compiler that builds its tables.
+
+    It is a build requirement, so it never reaches a wheel, and it is the
+    only requirement in PyWinRT's metadata whose floor is not the version of
+    the thing in this tree.
+    """
+
+    def setUp(self):
+        self.generation = versions.compatibility_generation()
+        self.specifier = SpecifierSet(
+            versions.table_compiler_requirement().removeprefix("winrt-table-compiler")
         )
+
+    def test_the_compiler_of_this_tree_satisfies_it(self):
+        self.assertIn(versions.runtime_version(), self.specifier)
+
+    def test_the_floor_is_the_generation_and_not_the_runtime_version(self):
+        # a compiler writes the table format, which does not move when the
+        # runtime is patched, so a runtime fix must not oblige us to publish
+        # a compiler with nothing in it changed
+        self.assertIn(f"{self.generation}.0.0", self.specifier)
+
+    def test_the_previous_generation_does_not(self):
+        self.assertNotIn(f"{self.generation - 1}.99.99", self.specifier)
+
+    def test_the_next_generation_does_not(self):
+        # the same known incompatibility the runtime requirement is capped
+        # for: that compiler writes a table this generation cannot read
+        self.assertNotIn(f"{self.generation + 1}.0.0", self.specifier)
 
 
 class FamilyRequirement(unittest.TestCase):
