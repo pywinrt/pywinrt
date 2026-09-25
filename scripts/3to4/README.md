@@ -1,7 +1,8 @@
 # PyWinRT v3 to v4 migration guide
 
 PyWinRT v4 renames the packages and the Python modules of the Windows App SDK
-and WebView2 projections. This describes what you need to change in your own
+and WebView2 projections, and publishes the Windows App SDK and WinUI 2 in
+fewer, larger packages. This describes what you need to change in your own
 code and in your dependency lists. Everything else that changed in v4 is in
 [CHANGELOG.md](../../CHANGELOG.md).
 
@@ -21,10 +22,11 @@ in v2:
 The rule is the whole of it: replace the leading `winui3.` or `webview2.` with
 `winrt.` and leave the rest of the module name alone.
 
-`winui2` is unchanged. WinUI 2 defines the same `Microsoft.UI.Xaml.*`
-namespaces as the Windows App SDK's WinUI component, so the two cannot be
-imported from one package, and keeping WinUI 2 apart is the only thing the v3
-prefixes were needed for.
+The `winui2` top-level package stays. WinUI 2 defines the same
+`Microsoft.UI.Xaml.*` namespaces as the Windows App SDK's WinUI component, so
+the two cannot be imported from one package, and keeping WinUI 2 apart is the
+only thing the v3 prefixes were needed for. Its distributions are regrouped
+below.
 
 ## Renamed distributions
 
@@ -76,6 +78,20 @@ component package that carries `<Namespace>`:
 Each package's README lists the namespaces it carries, and a package that
 hands back a type from another component of the same release requires it
 outright, so naming the ones you import from is enough.
+
+WinUI 2 is grouped the same way, into the one `Microsoft.UI.Xaml` NuGet
+package all six of its namespaces come from:
+
+| v3 distribution                                     | v4 distribution            |
+| --------------------------------------------------- | -------------------------- |
+| `winui2-Microsoft.UI.Xaml.Automation.Peers`         | `winui2-Microsoft.UI.Xaml` |
+| `winui2-Microsoft.UI.Xaml.Controls`                 | `winui2-Microsoft.UI.Xaml` |
+| `winui2-Microsoft.UI.Xaml.Controls.AnimatedVisuals` | `winui2-Microsoft.UI.Xaml` |
+| `winui2-Microsoft.UI.Xaml.Controls.Primitives`      | `winui2-Microsoft.UI.Xaml` |
+| `winui2-Microsoft.UI.Xaml.Media`                    | `winui2-Microsoft.UI.Xaml` |
+| `winui2-Microsoft.UI.Xaml.XamlTypeInfo`             | `winui2-Microsoft.UI.Xaml` |
+
+The modules you import from them are unchanged.
 
 The two hand-written modules are renamed but not regrouped:
 
