@@ -1,0 +1,589 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.AppNotifications.Builder
+
+enum Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping python_type
+    py AppNotificationAudioLooping
+    signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping;i4)
+    constant NONE 0
+    constant LOOP 1
+
+class Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder activatable python_type
+    py AppNotificationBuilder
+    signature rc(Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder;{e801d31f-ce03-505c-adec-8a02724ec9de})
+    default Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder
+    requires Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder
+    factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilderStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method add_argument
+        method AddArgument slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in string name=key
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method add_button
+        method AddButton slot=29 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method add_combo_box
+        method AddComboBox slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method add_progress_bar
+        method AddProgressBar slot=31 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method add_text
+        method AddText slot=10 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in string name=text
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method AddText slot=11 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in string name=text
+            in class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties name=properties
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method add_text_box
+        method AddTextBox slot=27 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in string name=id
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method AddTextBox slot=28 inputs=3 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=195
+            in string name=id
+            in string name=placeHolderText
+            in string name=title
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method build_notification
+        method BuildNotification slot=32 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=4
+            out class type=Microsoft.Windows.AppNotifications.AppNotification return
+    method is_urgent_scenario_supported static
+        method IsUrgentScenarioSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilderStatics shape=4 static
+            out boolean return
+    method mute_audio
+        method MuteAudio slot=26 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_app_logo_override
+        method SetAppLogoOverride slot=17 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Windows.Foundation.Uri name=imageUri
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetAppLogoOverride slot=18 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in class type=Windows.Foundation.Uri name=imageUri
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop name=imageCrop
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetAppLogoOverride slot=19 inputs=3 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=195
+            in class type=Windows.Foundation.Uri name=imageUri
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop name=imageCrop
+            in string name=alternateText
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_attribution_text
+        method SetAttributionText slot=12 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in string name=text
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetAttributionText slot=13 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in string name=text
+            in string name=language
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_audio_event
+        method SetAudioEvent slot=24 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent name=appNotificationSoundEvent
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetAudioEvent slot=25 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent name=appNotificationSoundEvent
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping name=loop
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_audio_uri
+        method SetAudioUri slot=22 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Windows.Foundation.Uri name=audioUri
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetAudioUri slot=23 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in class type=Windows.Foundation.Uri name=audioUri
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping name=loop
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_duration
+        method SetDuration slot=8 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration name=duration
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_group
+        method SetGroup slot=34 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in string name=group
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_hero_image
+        method SetHeroImage slot=20 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Windows.Foundation.Uri name=imageUri
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetHeroImage slot=21 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in class type=Windows.Foundation.Uri name=imageUri
+            in string name=alternateText
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_inline_image
+        method SetInlineImage slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in class type=Windows.Foundation.Uri name=imageUri
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetInlineImage slot=15 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=117
+            in class type=Windows.Foundation.Uri name=imageUri
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop name=imageCrop
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+        method SetInlineImage slot=16 inputs=3 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=195
+            in class type=Windows.Foundation.Uri name=imageUri
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop name=imagecrop
+            in string name=alternateText
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_scenario
+        method SetScenario slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_tag
+        method SetTag slot=33 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+    method set_time_stamp
+        method SetTimeStamp slot=7 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder shape=89
+            in datetime name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder return
+
+class Microsoft.Windows.AppNotifications.Builder.AppNotificationButton activatable python_type
+    py AppNotificationButton
+    signature rc(Microsoft.Windows.AppNotifications.Builder.AppNotificationButton;{a7c03031-5634-5098-aec9-47ecb60c3499})
+    default Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton
+    requires Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton
+    factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory
+    factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory shape=51
+            in string name=content
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    property tool_tip
+        get get_ToolTip slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out string return
+        put put_ToolTip slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in string name=value
+    property target_app_id
+        get get_TargetAppId slot=22 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out string return
+        put put_TargetAppId slot=23 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in string name=value
+    property invoke_uri
+        get get_InvokeUri slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out class type=Windows.Foundation.Uri return
+        put put_InvokeUri slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in class type=Windows.Foundation.Uri name=value
+    property input_id
+        get get_InputId slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out string return
+        put put_InputId slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in string name=value
+    property icon
+        get get_Icon slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out class type=Windows.Foundation.Uri return
+        put put_Icon slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in class type=Windows.Foundation.Uri name=value
+    property context_menu_placement
+        get get_ContextMenuPlacement slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out boolean return
+        put put_ContextMenuPlacement slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in boolean name=value
+    property content
+        get get_Content slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out string return
+        put put_Content slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in string name=value
+    property button_style
+        get get_ButtonStyle slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle return
+        put put_ButtonStyle slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle name=value
+    property arguments
+        get get_Arguments slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+        put put_Arguments slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> name=value
+    method add_argument
+        method AddArgument slot=24 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=117
+            in string name=key
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    method is_button_style_supported static
+        method IsButtonStyleSupported slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics shape=4 static
+            out boolean return
+    method is_tool_tip_supported static
+        method IsToolTipSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics shape=4 static
+            out boolean return
+    method set_button_style
+        method SetButtonStyle slot=28 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=51
+            in enum32 type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    method set_context_menu_placement
+        method SetContextMenuPlacement slot=27 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    method set_icon
+        method SetIcon slot=25 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=51
+            in class type=Windows.Foundation.Uri name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    method set_input_id
+        method SetInputId slot=29 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    method set_invoke_uri
+        method SetInvokeUri slot=30 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=51
+            in class type=Windows.Foundation.Uri name=protocolUri
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+        method SetInvokeUri slot=31 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=117
+            in class type=Windows.Foundation.Uri name=protocolUri
+            in string name=targetAppId
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+    method set_tool_tip
+        method SetToolTip slot=26 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationButton return
+
+enum Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle python_type
+    py AppNotificationButtonStyle
+    signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationButtonStyle;i4)
+    constant DEFAULT 0
+    constant SUCCESS 1
+    constant CRITICAL 2
+
+class Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox python_type
+    py AppNotificationComboBox
+    signature rc(Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox;{4547c9e2-4815-538c-be26-040ce17f8b62})
+    default Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox
+    requires Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox
+    factory Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBoxFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBoxFactory shape=51
+            in string name=id
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox return
+    property title
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=4
+            out string return
+        put put_Title slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=4
+            in string name=value
+    property selected_item
+        get get_SelectedItem slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=4
+            out string return
+        put put_SelectedItem slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=4
+            in string name=value
+    property items
+        get get_Items slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+        put put_Items slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=4
+            in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> name=value
+    method add_item
+        method AddItem slot=12 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=117
+            in string name=id
+            in string name=content
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox return
+    method set_selected_item
+        method SetSelectedItem slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=51
+            in string name=id
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox return
+    method set_title
+        method SetTitle slot=13 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationComboBox return
+
+enum Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration python_type
+    py AppNotificationDuration
+    signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration;i4)
+    constant DEFAULT 0
+    constant LONG 1
+
+enum Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop python_type
+    py AppNotificationImageCrop
+    signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop;i4)
+    constant DEFAULT 0
+    constant CIRCLE 1
+
+class Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar activatable python_type
+    py AppNotificationProgressBar
+    signature rc(Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar;{fced62f2-2074-5641-8630-87a14315ac86})
+    default Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar
+    requires Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property value_string_override
+        get get_ValueStringOverride slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out string return
+        put put_ValueStringOverride slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            in string name=value
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out double return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=2
+            in double name=value
+    property title
+        get get_Title slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out string return
+        put put_Title slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            in string name=value
+    property status
+        get get_Status slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out string return
+        put put_Status slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            in string name=value
+    method bind_status
+        method BindStatus slot=17 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method bind_title
+        method BindTitle slot=15 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method bind_value
+        method BindValue slot=19 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method bind_value_string_override
+        method BindValueStringOverride slot=21 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method set_status
+        method SetStatus slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method set_title
+        method SetTitle slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method set_value
+        method SetValue slot=18 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=46
+            in double name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+    method set_value_string_override
+        method SetValueStringOverride slot=20 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationProgressBar return
+
+enum Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario python_type
+    py AppNotificationScenario
+    signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario;i4)
+    constant DEFAULT 0
+    constant REMINDER 1
+    constant ALARM 2
+    constant INCOMING_CALL 3
+    constant URGENT 4
+
+enum Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent python_type
+    py AppNotificationSoundEvent
+    signature enum(Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent;i4)
+    constant DEFAULT 0
+    constant IM 1
+    constant MAIL 2
+    constant REMINDER 3
+    constant SMS 4
+    constant ALARM 5
+    constant ALARM2 6
+    constant ALARM3 7
+    constant ALARM4 8
+    constant ALARM5 9
+    constant ALARM6 10
+    constant ALARM7 11
+    constant ALARM8 12
+    constant ALARM9 13
+    constant ALARM10 14
+    constant CALL 15
+    constant CALL2 16
+    constant CALL3 17
+    constant CALL4 18
+    constant CALL5 19
+    constant CALL6 20
+    constant CALL7 21
+    constant CALL8 22
+    constant CALL9 23
+    constant CALL10 24
+
+class Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties activatable python_type
+    py AppNotificationTextProperties
+    signature rc(Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties;{23a30d0b-5258-5853-932e-9521a3642afb})
+    default Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties
+    requires Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property max_lines
+        get get_MaxLines slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            out int32 return
+        put put_MaxLines slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            in int32 name=value
+    property language
+        get get_Language slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            out string return
+        put put_Language slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            in string name=value
+    property incoming_call_alignment
+        get get_IncomingCallAlignment slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            out boolean return
+        put put_IncomingCallAlignment slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            in boolean name=value
+    method set_incoming_call_alignment
+        method SetIncomingCallAlignment slot=13 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=4
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties return
+    method set_language
+        method SetLanguage slot=12 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=51
+            in string name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties return
+    method set_max_lines
+        method SetMaxLines slot=14 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties shape=51
+            in int32 name=value
+            out class type=Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties return
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilder
+    guid e801d31f-ce03-505c-adec-8a02724ec9de
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationBuilderStatics
+    guid c7042d2a-d319-520e-a314-50081c8888cc
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationButton
+    guid a7c03031-5634-5098-aec9-47ecb60c3499
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonFactory
+    guid 4f109286-0a6d-5a5e-9e8f-9fe31669fbb8
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationButtonStatics
+    guid fead7c18-4144-59a4-9611-86b7e8191853
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBox
+    guid 4547c9e2-4815-538c-be26-040ce17f8b62
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationComboBoxFactory
+    guid 1b31b5b0-9d86-59ed-8629-a79498ab5d4b
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationProgressBar
+    guid fced62f2-2074-5641-8630-87a14315ac86
+
+interface Microsoft.Windows.AppNotifications.Builder.IAppNotificationTextProperties
+    guid 23a30d0b-5258-5853-932e-9521a3642afb
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
+            out string return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
+
+class Microsoft.Windows.AppNotifications.AppNotification external
+    py winrt.microsoft.windows.appnotifications.AppNotification
+
+class System.String external
+    py winrt.system.String
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9

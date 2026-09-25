@@ -91,7 +91,7 @@ RUNTIME_NAMESPACES = [
     "Windows.Storage.Streams",
 ]
 
-# What each interop module includes beyond that. winui3-Microsoft.UI.Interop
+# What each interop module includes beyond that. winrt-Microsoft.UI.Interop
 # includes the Windows App SDK's own <winrt/Microsoft.UI.Interop.h>, which is
 # hand-written and ships in the NuGet package; what it needs from here is the
 # namespace header under it.
@@ -107,8 +107,8 @@ INTEROP_NAMESPACES = {
         "Windows.UI.Composition.Desktop",
     ],
     "winrt-Windows.UI.Xaml.Hosting.Interop": [],
-    "winui3-Microsoft.UI.Interop": ["Microsoft.UI"],
-    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
+    "winrt-Microsoft.UI.Interop": ["Microsoft.UI"],
+    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
 }
 
 INCLUDE_RE = re.compile(r'#include\s+["<](winrt/[^">]+)[">]')

@@ -20,7 +20,7 @@ import unittest
 import winrt._winrt
 
 # Top-level packages that projection packages are installed into.
-PROJECTION_ROOTS = ("winrt", "winui2", "winui3", "webview2", "test_winrt")
+PROJECTION_ROOTS = ("winrt", "winui2", "test_winrt")
 
 
 class TestAbiVersion(unittest.TestCase):

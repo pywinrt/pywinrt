@@ -1,0 +1,78 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
+build-backend = "hatchling.build"
+
+[project]
+name = "winrt-Microsoft.WindowsAppSDK.WinUI"
+version = "4!2.5.1"
+description = "Python projection of Windows Runtime (WinRT) APIs"
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "winrt-runtime>=4.0.0,<5",
+    "winrt-Microsoft.WindowsAppSDK.Foundation~=4!2.5.1.0",
+    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences~=4!2.5.1.0",
+    "winrt-Windows.Foundation>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
+]
+
+[project.optional-dependencies]
+all = [
+    "winrt-Microsoft.Web.WebView2[all]>=4!1.0.4191.47",
+    "winrt-Microsoft.WindowsAppSDK.Foundation[all]>=4!2.5.1",
+    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences[all]>=4!2.5.1",
+    "winrt-Windows.ApplicationModel[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Activation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Background[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Contacts[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.Core[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.DataTransfer[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.DataTransfer.DragDrop[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Devices.Geolocation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Numerics[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Globalization[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Globalization.NumberFormatting[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Graphics.Imaging[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Graphics.Printing[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Media.Casting[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Media.Playback[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
+    "winrt-Windows.System[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Core[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Text[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.28000.2705",
+]
+
+[project.urls]
+# Homepage = "https://github.com/pywinrt/pywinrt"
+Documentation = "https://pywinrt.readthedocs.io"
+Repository = "https://github.com/pywinrt/pywinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.sdist]
+# The text form of the table is what the source distribution carries, and the
+# compiled form is build output wherever it turns up. Hatchling reads no
+# .gitignore above the package, so it has to be told about the latter.
+only-include = ["winrt", "README.md"]
+exclude = ["**/_table.pywinrt"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["winrt"]
+exclude = ["**/_table.pywinrt.txt"]
+
+# winrt.table.build_hooks in winrt-table-compiler, which compiles each table
+# the package carries and puts the result beside the __init__.py that loads it.
+[tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]

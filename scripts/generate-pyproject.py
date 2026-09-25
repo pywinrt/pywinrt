@@ -1,7 +1,6 @@
 from collections.abc import Iterator
 from contextlib import contextmanager
 import io
-from itertools import chain
 import json
 import os
 from pathlib import Path
@@ -357,10 +356,10 @@ This is a build-time dependency of every PyWinRT projection package.
 There is nothing in it to import.
 """
 
-WINUI3_README_IMPORTANT = """\
-**IMPORTANT**: Packages in the `winui3-*` namespace cannot be used without the
-Windows App Runtime. This has to be installed manually by the end user. Read the
-[PyWinRT winui3 documentation](https://pywinrt.readthedocs.io/en/latest/api/winui3/index.html)
+WASDK_README_IMPORTANT = """\
+**IMPORTANT**: Windows App SDK packages cannot be used without the Windows App
+Runtime. This has to be installed manually by the end user. Read the
+[PyWinRT Windows App SDK documentation](https://pywinrt.readthedocs.io/en/latest/api/microsoft.html)
 for more information.
 
 """
@@ -432,13 +431,13 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
     ],
     # only converts to IInspectable
     "winrt-Windows.UI.Xaml.Hosting.Interop": [],
-    "winui3-Microsoft.UI.Interop": [
+    "winrt-Microsoft.UI.Interop": [
         # converts the WindowId, DisplayId and IconId structs, which the
         # InteractiveExperiences component owns
-        "winui3-Microsoft.WindowsAppSDK.InteractiveExperiences",
+        "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences",
     ],
     # only calls the bootstrapper, which has no projected types
-    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
+    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
 }
 
 PYTHON_KEYWORDS = {
@@ -526,9 +525,9 @@ def avoid_keyword(name: str) -> str:
 # over several of them.
 APP_SDK_INTEROP_COMPONENTS = {
     # Microsoft.UI.Interop.h
-    "winui3-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
+    "winrt-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
     # MddBootstrap.h and its import library, and WindowsAppSDK-VersionInfo.h
-    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [
+    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [
         "WASDK_FOUNDATION_PATH",
         "WASDK_RUNTIME_PATH",
     ],
@@ -539,18 +538,29 @@ def is_app_sdk_interop_package(name: str) -> bool:
     return name in APP_SDK_INTEROP_COMPONENTS
 
 
+# Which family each package belongs to, so that a requirement on another one
+# can be written with that package's version instead of this one's. Every
+# distribution but WinUI 2's is published as winrt-*, so the name says nothing
+# about which upstream a package came from: a projection package's family is
+# the directory it is generated into, and an interop package's is the family
+# whose headers the hand-written C++ compiles against.
+package_families = {
+    deps_path.parent.name: deps_path.parent.parent.name
+    for deps_path in PROJECTION_PATH.glob("**/deps.json")
+} | {
+    path.name: "wasdk" if is_app_sdk_interop_package(path.name) else "winrt"
+    for path in INTEROP_PATH.glob("winrt-*")
+}
+
+
 def is_app_sdk_bootstrap_package(name: str) -> bool:
     return (
-        name == "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+        name == "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 
 
-def is_webview2_package(name: str) -> bool:
-    return name.startswith("webview2-Microsoft.Web.WebView2.")
-
-
 def is_windows_app_package(name: str) -> bool:
-    return name.startswith("winui3-Microsoft.") or is_app_sdk_interop_package(name)
+    return package_families[name] == "wasdk"
 
 
 def is_dispatcher_queue_package(name: str) -> bool:
@@ -609,7 +619,7 @@ def write_readme(
         f.write(
             BINARY_README_TEMPLATE.format(
                 important=(
-                    WINUI3_README_IMPORTANT
+                    WASDK_README_IMPORTANT
                     if is_windows_app_package(package_name)
                     else ""
                 ),
@@ -628,11 +638,15 @@ def write_readme(
                 nuget_package=nuget_package,
                 nuget_version=nuget_version,
                 component=(
+                    # Which component of a metapackage family the namespaces
+                    # came from, and at what version, since the family's own
+                    # version is the metapackage's and says neither. A family
+                    # that is one NuGet package has said both already.
                     "\n\n"
                     + f"Its metadata comes from the `{component}` component,"
                     + "\n"
                     + f"version {NUGET_PACKAGE_VERSIONS[component]}."
-                    if component is not None
+                    if component is not None and component != nuget_package
                     else ""
                 ),
             )
@@ -824,20 +838,6 @@ def write_projection_project_files(
     remove_if_present(package_path / "all-requirements.txt")
 
 
-# Which family each package belongs to, so that a requirement on another one
-# can be written with that package's version instead of this one's. A
-# projection package's family is the directory it is generated into, and an
-# interop package is hand-written C++ compiled against one family's headers
-# and named for it.
-
-package_families = {
-    deps_path.parent.name: deps_path.parent.parent.name
-    for deps_path in PROJECTION_PATH.glob("**/deps.json")
-} | {
-    path.name: path.name[: path.name.rindex("-")]
-    for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*"))
-}
-
 # create pyproject.toml files for the projection packages
 
 runtime_table_format = versions.runtime_table_format()
@@ -930,7 +930,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 
 # create requirements.txt for the hand-written interop projects
 
-for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*")):
+for path in INTEROP_PATH.glob("winrt-*"):
     family = package_families[path.name]
 
     # KeyError here means a new interop package needs a row in the table
@@ -1008,10 +1008,7 @@ write_compiled_project_files(
     package_name="winrt-runtime",
 )
 
-for package_path in chain(
-    INTEROP_PATH.glob("winrt-*"),
-    INTEROP_PATH.glob("winui3-*"),
-):
+for package_path in INTEROP_PATH.glob("winrt-*"):
     package_name = package_path.name
     family = package_families[package_name]
     root_package = package_name[: package_name.rindex("-")]
@@ -1040,6 +1037,6 @@ for package_path in chain(
 # An interop package is still built by setuptools, which reads the version out
 # of a file rather than out of pyproject.toml.
 
-for path in chain(INTEROP_PATH.glob("winrt-*"), INTEROP_PATH.glob("winui3-*")):
+for path in INTEROP_PATH.glob("winrt-*"):
     with open_if_changed(path / "version.txt") as f:
         f.write(f"{FAMILY_VERSIONS[package_families[path.name]]}\n")

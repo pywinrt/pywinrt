@@ -237,31 +237,31 @@ pywinrt_add_interop_module(_winrt_windows_ui_xaml_hosting_interop
 # component is read for is fetched by scripts/app_sdk.py rather than installed.
 set(WASDK_FOUNDATION_LIB_PATH "${WASDK_FOUNDATION_PATH}/lib/native/${PYWINRT_TARGET_ARCH}")
 
-pywinrt_add_interop_module(_winui3_microsoft_ui_interop
-    "winui3-Microsoft.UI.Interop" "py.Microsoft.UI.Interop.cpp" "winui3")
-target_include_directories(_winui3_microsoft_ui_interop PRIVATE
+pywinrt_add_interop_module(_winrt_microsoft_ui_interop
+    "winrt-Microsoft.UI.Interop" "py.Microsoft.UI.Interop.cpp" "winrt")
+target_include_directories(_winrt_microsoft_ui_interop PRIVATE
     "${WASDK_INTERACTIVE_EXPERIENCES_PATH}/include")
 if (NOT MSVC)
     # the App SDK's Microsoft.UI.Interop.h uses MSVC-only pragmas
-    target_compile_options(_winui3_microsoft_ui_interop PRIVATE -Wno-unknown-pragmas)
+    target_compile_options(_winrt_microsoft_ui_interop PRIVATE -Wno-unknown-pragmas)
 endif()
 
-pywinrt_add_interop_module(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
-    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
-    "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winui3")
+pywinrt_add_interop_module(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
+    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winrt")
 # MddBootstrap.h is in Foundation and WindowsAppSDK-VersionInfo.h, which says
 # which Windows App Runtime this release expects, is in Runtime.
-target_include_directories(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
+target_include_directories(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
     "${WASDK_FOUNDATION_PATH}/include"
     "${WASDK_RUNTIME_PATH}/include")
-target_link_directories(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
+target_link_directories(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
     "${WASDK_FOUNDATION_LIB_PATH}")
-target_link_libraries(_winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
+target_link_libraries(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
     "Microsoft.WindowsAppRuntime.Bootstrap.lib")
 # The bootstrapper is what finds the Windows App Runtime, so it is the one App
 # SDK binary that ships with the package rather than being found through it.
 install(FILES "${WASDK_FOUNDATION_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
-    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winui3")
+    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 
 # projection packages
 ################################################################################
@@ -329,8 +329,8 @@ endfunction()
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
     file(GLOB winui2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui2/winui2-*")
-    file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winui3-*")
-    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/webview2-*")
+    file(GLOB wasdk_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "wasdk/winrt-*")
+    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
 else()
     # minimum set of packages required for unit tests
     set(packages
@@ -360,19 +360,19 @@ else()
     )
     # The App SDK is published one distribution per NuGet component, so the
     # two namespaces the tests use bring their components with them.
-    set(winui3_packages
-        "winui3/winui3-Microsoft.WindowsAppSDK.InteractiveExperiences"
-        "winui3/winui3-Microsoft.WindowsAppSDK.Foundation"
+    set(wasdk_packages
+        "wasdk/winrt-Microsoft.WindowsAppSDK.InteractiveExperiences"
+        "wasdk/winrt-Microsoft.WindowsAppSDK.Foundation"
     )
 endif()
 
-foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_packages})
+foreach(package ${packages} ${winui2_packages} ${wasdk_packages} ${webview2_packages})
     pywinrt_install_namespace_package(${package})
 endforeach()
 
 if (webview2_packages)
     install(FILES "${WEBVIEW2_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
-        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/webview2/microsoft/web/webview2/core")
+        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/core")
 endif()
 
 # test component package

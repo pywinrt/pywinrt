@@ -10,7 +10,7 @@ from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
-import webview2.microsoft.web.webview2.core as microsoft_web_webview2_core
+import winrt.microsoft.web.webview2.core as microsoft_web_webview2_core
 import winrt.windows.applicationmodel.contacts as windows_applicationmodel_contacts
 import winrt.windows.applicationmodel.datatransfer as windows_applicationmodel_datatransfer
 import winrt.windows.foundation as windows_foundation

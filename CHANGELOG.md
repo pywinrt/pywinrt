@@ -179,7 +179,8 @@
   that is. So a package now says which Windows APIs are in it, an upstream
   release no longer has to wait for a PyWinRT release to be numbered after,
   and the right way to pin one is the way its upstream numbers it -
-  `winui3-Microsoft.UI.Xaml==4!1.7.*` - rather than by a PyWinRT version.
+  `winrt-Microsoft.WindowsAppSDK.WinUI==4!2.5.*` - rather than by a PyWinRT
+  version.
   `winrt-runtime` keeps plain semantic versioning, since its version is its
   own.
 - BREAKING: The `4!` in front of those versions is a PEP 440 epoch and says
@@ -187,11 +188,10 @@
   as `winrt-runtime`'s major version and it changes only when every projection
   package has to be rebuilt anyway, so a `pip freeze` says which runtime a
   package goes with. It is also what makes the new numbering sort above the
-  old: without it, `10.0.26100.4188` would have to sort against the `3.2.1` it
-  replaces, and `winui3-Microsoft.UI.Xaml` would go backwards from `3.2.1` to
-  `1.7.250513003`. Some tools that rewrite dependency constraints have
-  historically mishandled epochs; the spelling is `4!1.7.250513003` wherever
-  one is written out.
+  old: without it, `10.0.28000.2705` would have to sort against the `3.2.1` it
+  replaces, and the Windows App SDK packages would go backwards from `3.2.1`
+  to `2.5.1`. Some tools that rewrite dependency constraints have historically
+  mishandled epochs; the spelling is `4!2.5.1` wherever one is written out.
 - BREAKING: A package now requires `winrt-runtime>=<the version it was
   generated with>,<5` where it used to pin `winrt-runtime~=<version>.0`. Any
   runtime of the same generation can run it, so pip is free to install a newer
@@ -216,9 +216,9 @@
   resolved through WinRT by name - so the pin was protecting nothing, and it
   made installing two packages that were generated from different upstream
   releases fail to resolve. Packages that do come from one set of metadata,
-  such as `winui3-Microsoft.UI.Xaml` and `winui3-Microsoft.UI.Xaml.Controls`,
-  are still pinned to each other, because they are generated and released
-  together.
+  such as `winrt-Microsoft.WindowsAppSDK.WinUI` and
+  `winrt-Microsoft.WindowsAppSDK.InteractiveExperiences`, are still pinned to
+  each other, because they are generated and released together.
 - Updated Windows SDK to 10.0.28000.2705. Seven namespaces are new and have a
   package each: `Windows.AI.Agents.Mcp`, `Windows.ApplicationModel.Preview`,
   `Windows.Management.Update.Cluster`, `Windows.System.Power.Thermal`,
@@ -243,16 +243,33 @@
   from 69 packages to 78. Everything in it is now versioned `4!2.5.1`, the
   version of the `Microsoft.WindowsAppSDK` metapackage, which is the version
   Microsoft's own release notes and runtime installer speak.
+- BREAKING: The Windows App SDK and WebView2 packages carry the `winrt-`
+  prefix again and are imported from the `winrt` top-level package, as they
+  were before v3.0. `webview2-Microsoft.Web.WebView2.Core` is now
+  `winrt-Microsoft.Web.WebView2` - named after the `Microsoft.Web.WebView2`
+  NuGet package it is generated from, the way the Windows App SDK packages
+  below are, rather than after the one namespace in it - the
+  `winui3-Microsoft.*` packages are the `winrt-Microsoft.WindowsAppSDK.*` ones
+  listed below, and the two hand-written modules are
+  `winrt-Microsoft.UI.Interop` and
+  `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`. In
+  Python, `webview2.microsoft.web.webview2.core` becomes
+  `winrt.microsoft.web.webview2.core` and `winui3.microsoft.ui.xaml` becomes
+  `winrt.microsoft.ui.xaml`. `winui2` keeps a prefix and a top-level package
+  of its own, because WinUI 2 defines the same `Microsoft.UI.Xaml.*`
+  namespaces as the App SDK's WinUI component and the two cannot be imported
+  from one package; nothing else needed a prefix of its own. See
+  the [v3 to v4 migration guide][3to4] for the full list of renames.
 - BREAKING: The Windows App SDK is published as one package per NuGet
   component instead of one per namespace, so its 78 packages become 7:
-  `winui3-Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`,
+  `winrt-Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`,
   `.WinUI`, `.Widgets`, `.AI`, `.Search`, and
-  `winui3-Microsoft.Windows.AI.MachineLearning`. A package now carries every
+  `winrt-Microsoft.Windows.AI.MachineLearning`. A package now carries every
   namespace its component owns - `.WinUI` has all 25 `Microsoft.UI.Xaml.*`
   modules and `Microsoft.UI.Text` - and its README lists them and names the
-  component and version its metadata came from. The module names are
-  unchanged, so `from winui3.microsoft.ui.xaml import Application` still
-  works; what changes is which package to install to get it. The whole family
+  component and version its metadata came from. Which module a namespace is
+  imported from is unaffected; what changes is which package to install to
+  get it. The whole family
   is 1.2 MB of wheels, and a package that hands back a type from another
   component of the same release requires it outright, since Microsoft's own
   build refuses a project that mixes component versions.
@@ -321,6 +338,7 @@
   now declared separately there.
 
 [#139]: https://github.com/pywinrt/pywinrt/issues/139
+[3to4]: https://github.com/pywinrt/pywinrt/blob/main/scripts/3to4/README.md
 
 ## [v3.2.1] - 2025-06-06
 

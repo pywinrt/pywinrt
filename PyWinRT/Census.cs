@@ -65,7 +65,13 @@ sealed class CensusRevision
 /// </remarks>
 sealed class Census
 {
-    public const int CurrentVersion = 1;
+    /// <summary>
+    /// The layout of this file. Version 2 keys the fragments by family
+    /// rather than by Python package, and a version 1 census is refused
+    /// rather than read: its fragments would be dropped in silence and the
+    /// trampolines they account for would go missing from the header.
+    /// </summary>
+    public const int CurrentVersion = 2;
 
     [JsonPropertyName("version")]
     public int Version { get; set; } = CurrentVersion;
@@ -129,11 +135,19 @@ sealed class Census
     public SortedDictionary<string, int> ReverseIds { get; set; } = new(StringComparer.Ordinal);
 
     /// <summary>
-    /// What each run contributed, by the Python package its input belongs to.
+    /// What each run contributed, by the family of packages it generates.
     /// Keeping them apart is what makes re-running one of them idempotent.
     /// </summary>
-    [JsonPropertyName("packages")]
-    public SortedDictionary<string, CensusFragment> Packages { get; set; } =
+    /// <remarks>
+    /// A family is one metadata source projected into one directory, which is
+    /// what a run is, so the directory it writes into is what names the
+    /// fragment. The Python package the family publishes into does not: the
+    /// Windows SDK, the Windows App SDK and WebView2 all publish into
+    /// <c>winrt</c>, and keying by that would let one of them overwrite
+    /// another's shapes.
+    /// </remarks>
+    [JsonPropertyName("families")]
+    public SortedDictionary<string, CensusFragment> Families { get; set; } =
         new(StringComparer.Ordinal);
 
     private static readonly JsonSerializerOptions jsonOptions = new()
@@ -254,25 +268,25 @@ sealed class Census
     }
 
     /// <summary>
-    /// Replaces what <paramref name="package"/> contributed with
+    /// Replaces what <paramref name="family"/> contributed with
     /// <paramref name="fragment"/> and gives an id to every shape that does not
     /// have one yet.
     /// </summary>
-    public void Merge(string package, CensusFragment fragment)
+    public void Merge(string family, CensusFragment fragment)
     {
-        Packages[package] = fragment;
+        Families[family] = fragment;
 
         // The all-integer shapes are instantiated for every arity up to the
         // census maximum whether or not the metadata has them, so that a
         // third-party component whose members only pass pointers, integers and
         // enums needs no new trampoline.
-        var maxArity = Packages
+        var maxArity = Families
             .Values.SelectMany(p => p.Forward.Keys)
             .Select(k => AbiShape.Parse(k).Args.Count)
             .DefaultIfEmpty(0)
             .Max();
 
-        var forward = Packages
+        var forward = Families
             .Values.SelectMany(p => p.Forward.Keys)
             .Concat(Enumerable.Range(0, maxArity + 1).Select(n => new string('p', n)))
             .Distinct(StringComparer.Ordinal);
@@ -280,7 +294,7 @@ sealed class Census
         var assignedForward = AssignIds(ShapeIds, forward, k => (AbiShape.Parse(k).Args.Count, k));
         var assignedReverse = AssignIds(
             ReverseIds,
-            Packages.Values.SelectMany(p => p.Reverse),
+            Families.Values.SelectMany(p => p.Reverse),
             k =>
             {
                 var (slot, shapeKey) = FromReverseKey(k);
@@ -387,7 +401,7 @@ sealed class Census
     {
         var names = new SortedDictionary<string, SortedSet<string>>(StringComparer.Ordinal);
 
-        foreach (var (key, winrtNames) in Packages.Values.SelectMany(p => p.Structs))
+        foreach (var (key, winrtNames) in Families.Values.SelectMany(p => p.Structs))
         {
             if (!names.TryGetValue(key, out var merged))
             {
@@ -431,7 +445,7 @@ sealed class Census
         var structs = GetStructs();
         var counts = new SortedDictionary<string, int>(StringComparer.Ordinal);
 
-        foreach (var (key, count) in Packages.Values.SelectMany(p => p.Forward))
+        foreach (var (key, count) in Families.Values.SelectMany(p => p.Forward))
         {
             counts[key] = counts.GetValueOrDefault(key) + count;
         }
@@ -440,7 +454,7 @@ sealed class Census
 
         w.WriteLine("ABI shape census");
         w.WriteLine();
-        w.WriteLine($"  packages                     {Packages.Count, 8}");
+        w.WriteLine($"  families                     {Families.Count, 8}");
         w.WriteLine($"  forward members walked       {members, 8}");
         w.WriteLine($"  distinct forward shapes      {shapes.Count, 8}");
         w.WriteLine(
@@ -448,9 +462,9 @@ sealed class Census
         );
         w.WriteLine($"  struct-by-value layouts      {structs.Count, 8}");
         w.WriteLine(
-            $"  implementable interfaces     {Packages.Values.Sum(p => p.ImplementableInterfaces), 8}"
+            $"  implementable interfaces     {Families.Values.Sum(p => p.ImplementableInterfaces), 8}"
         );
-        w.WriteLine($"  delegates                    {Packages.Values.Sum(p => p.Delegates), 8}");
+        w.WriteLine($"  delegates                    {Families.Values.Sum(p => p.Delegates), 8}");
         w.WriteLine($"  distinct (shape, slot) pairs {reverse.Count, 8}");
         w.WriteLine();
         w.WriteLine("  trampolines left after the linker folds identical bodies:");

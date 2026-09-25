@@ -1,0 +1,358 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.AI.Video
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Video.VideoScaler> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[VideoScaler]
+    guid 5c56f6ea-69f3-58ce-96b2-db6eb973d1e3
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Microsoft.Windows.AI.Video.VideoScaler;{e5abe769-63cc-5498-a5e1-74205106bdfd}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.Windows.AI.Video.VideoScaler
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Video.VideoScaler> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[AIFeatureReadyResult, Double]
+    guid 5b37e602-8caa-581f-9ece-5dc72ab6ae7e
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=49 reverse=2
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=asyncInfo
+            in double name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[AIFeatureReadyResult, Double]
+    guid ceea7604-5166-549f-8844-03192865a975
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Video.VideoScaler> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[VideoScaler]
+    guid 8ac5952e-f02d-5708-9659-f17859e5e31f
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Microsoft.Windows.AI.Video.VideoScaler;{e5abe769-63cc-5498-a5e1-74205106bdfd}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.Video.VideoScaler
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Video.VideoScaler> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Video.VideoScaler> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Video.VideoScaler> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AI.Video.VideoScaler> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Video.VideoScaler> shape=4 reverse=62 role=get_results
+            out class type=Microsoft.Windows.AI.Video.VideoScaler return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[AIFeatureReadyResult, Double]
+    guid 39c32af0-c9b4-595f-9e9b-c6c289ad9ea1
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Microsoft.Windows.AI.AIFeatureReadyResult;{936a78a6-c242-5937-9814-e512d4193a6d});f8)
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AI.AIFeatureReadyResult
+    argument System.Double
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> shape=4 reverse=121 role=get_results
+            out class type=Microsoft.Windows.AI.AIFeatureReadyResult return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RectInt32]
+    guid d6222360-b82e-5eed-9eab-2e275b36e47e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.RectInt32
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RectInt32]
+    guid 1abdf3f6-23f1-55ad-babd-f4cd908406e7
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.RectInt32
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=22 role=current
+            out struct type=Windows.Graphics.RectInt32 return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=117 reverse=101 role=get_many
+            fill_array struct type=Windows.Graphics.RectInt32 name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[RectInt32]
+    guid b4c6b283-6002-5af2-afa2-88a5be7ff16f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32>
+    argument Windows.Graphics.RectInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=21 reverse=396 role=append
+            in struct type=Windows.Graphics.RectInt32 name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Graphics.RectInt32 return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Graphics.RectInt32 name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=161 reverse=390 role=index_of
+            in struct type=Windows.Graphics.RectInt32 name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=315 reverse=395 role=insert_at
+            in uint32 name=index
+            in struct type=Windows.Graphics.RectInt32 name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=51 reverse=211 role=replace_all
+            pass_array struct type=Windows.Graphics.RectInt32 name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> shape=315 reverse=393 role=set_at
+            in uint32 name=index
+            in struct type=Windows.Graphics.RectInt32 name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RectInt32]
+    guid 4f5e243f-3812-5200-b70c-30dcfc61717b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Graphics.RectInt32;i4;i4;i4;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32>
+    argument Windows.Graphics.RectInt32
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.RectInt32> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Graphics.RectInt32 return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Graphics.RectInt32 name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.RectInt32> shape=161 reverse=78 role=index_of
+            in struct type=Windows.Graphics.RectInt32 name=value
+            out uint32 name=index
+            out boolean return
+
+interface Microsoft.Windows.AI.Video.IVideoScaler
+    guid e5abe769-63cc-5498-a5e1-74205106bdfd
+
+interface Microsoft.Windows.AI.Video.IVideoScalerOptions
+    guid 3a1427f8-ddad-519e-a028-7322bde4c4d2
+
+interface Microsoft.Windows.AI.Video.IVideoScalerResult
+    guid 24a228fb-0af2-5a00-bb6d-52946d9460da
+
+interface Microsoft.Windows.AI.Video.IVideoScalerStatics
+    guid 311dd8bb-b7ac-55a7-a3d3-1a6c84430f84
+
+class Microsoft.Windows.AI.Video.VideoScaler python_type closeable
+    py VideoScaler
+    signature rc(Microsoft.Windows.AI.Video.VideoScaler;{e5abe769-63cc-5498-a5e1-74205106bdfd})
+    default Microsoft.Windows.AI.Video.IVideoScaler
+    requires Microsoft.Windows.AI.Video.IVideoScaler
+    requires Windows.Foundation.IClosable
+    factory Microsoft.Windows.AI.Video.IVideoScalerStatics
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method create_async static
+        method CreateAsync slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScalerStatics shape=4 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AI.Video.VideoScaler> return
+    method ensure_ready_async static
+        method EnsureReadyAsync slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScalerStatics shape=4 static
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> return
+    method get_ready_state static
+        method GetReadyState slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScalerStatics shape=4 static
+            out enum32 type=Microsoft.Windows.AI.AIFeatureReadyState return
+    method scale
+        method Scale slot=6 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScaler shape=195
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=input
+            in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=output
+            in class type=Microsoft.Windows.AI.Video.VideoScalerOptions name=options
+            out class type=Microsoft.Windows.AI.Video.VideoScalerResult return
+    method scale_image_buffer
+        method ScaleImageBuffer slot=7 inputs=3 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScaler shape=195
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=input
+            in class type=Microsoft.Graphics.Imaging.ImageBuffer name=output
+            in class type=Microsoft.Windows.AI.Video.VideoScalerOptions name=options
+            out class type=Microsoft.Windows.AI.Video.VideoScalerResult return
+
+class Microsoft.Windows.AI.Video.VideoScalerOptions activatable python_type
+    py VideoScalerOptions
+    signature rc(Microsoft.Windows.AI.Video.VideoScalerOptions;{3a1427f8-ddad-519e-a028-7322bde4c4d2})
+    default Microsoft.Windows.AI.Video.IVideoScalerOptions
+    requires Microsoft.Windows.AI.Video.IVideoScalerOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property regions_of_interest
+        get get_RegionsOfInterest slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScalerOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Graphics.RectInt32> return
+
+class Microsoft.Windows.AI.Video.VideoScalerResult python_type
+    py VideoScalerResult
+    signature rc(Microsoft.Windows.AI.Video.VideoScalerResult;{24a228fb-0af2-5a00-bb6d-52946d9460da})
+    default Microsoft.Windows.AI.Video.IVideoScalerResult
+    requires Microsoft.Windows.AI.Video.IVideoScalerResult
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Video.IVideoScalerResult shape=4
+            out enum32 type=Microsoft.Windows.AI.Video.VideoScalerStatus return
+
+enum Microsoft.Windows.AI.Video.VideoScalerStatus python_type
+    py VideoScalerStatus
+    signature enum(Microsoft.Windows.AI.Video.VideoScalerStatus;i4)
+    constant SUCCESS 0
+    constant INVALID_INPUT_FORMAT 1
+    constant INVALID_OUTPUT_FORMAT 2
+    constant INVALID_PLANE_SIZE 3
+    constant INVALID_FRAME_DATA 4
+    constant MODEL_NOT_AVAILABLE 5
+    constant OUT_OF_MEMORY 6
+    constant FAILURE 7
+
+class Microsoft.Graphics.Imaging.ImageBuffer external
+    py winrt.microsoft.graphics.imaging.ImageBuffer
+
+class Microsoft.Windows.AI.AIFeatureReadyResult external
+    py winrt.microsoft.windows.ai.AIFeatureReadyResult
+
+enum Microsoft.Windows.AI.AIFeatureReadyState external
+    py winrt.microsoft.windows.ai.AIFeatureReadyState
+
+class System.Double external
+    py winrt.system.Double
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+struct Windows.Graphics.RectInt32 external
+    py winrt.windows.graphics.RectInt32
+
+interface Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface external
+    py winrt.windows.graphics.directx.direct3d11._IDirect3DSurface
+    guid 0bf4a146-13c1-4694-bee3-7abf15eaf586

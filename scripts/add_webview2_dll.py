@@ -26,7 +26,7 @@ wheel_arch = wheel.split(".")[-2].split("-")[-1]
 subprocess.check_call(["wheel", "unpack", wheel])
 
 # get name of extracted directory
-wheel_dir = glob.glob("webview2_microsoft_web_webview2_core-*")[0]
+wheel_dir = glob.glob("winrt_microsoft_web_webview2-*")[0]
 
 dll = os.fspath(
     pathlib.Path(os.environ["WEBVIEW2_PATH"])
@@ -38,7 +38,7 @@ dll = os.fspath(
 
 # put .dll in the wheel
 print("Adding", dll)
-shutil.copy(dll, wheel_dir + "/webview2/microsoft/web/webview2/core/")
+shutil.copy(dll, wheel_dir + "/winrt/microsoft/web/webview2/core/")
 
 subprocess.check_call(["wheel", "pack", wheel_dir, "-d", dest_dir])
 

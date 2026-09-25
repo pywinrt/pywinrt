@@ -202,15 +202,23 @@ rootCommand.SetHandler(
         foreach (var (spec, assembly) in reference.Zip(referenceAssemblies))
         {
             resolver.Register(assembly);
-            packageMap.Add(assembly.Modules.Single().Name, spec.Package);
 
-            if (spec.Package == inputPackage)
+            var module = assembly.Modules.Single().Name;
+
+            // A reference names types that someone else projects, so one
+            // metadata file is an input or a reference and never both. The
+            // package it belongs to says nothing about that, and is often
+            // this run's own: every family in the PyWinRT tree but WinUI 2
+            // publishes into winrt.
+            if (packageMap.ContainsKey(module))
             {
                 throw new Exception(
-                    $"Reference package ({spec.Package}) must not match input package"
-                        + $" for {spec.File}"
+                    $"{module} is an input of this run, so it cannot be a reference"
+                        + $" as well ({spec.File})"
                 );
             }
+
+            packageMap.Add(module, spec.Package);
         }
 
         var loadTime = stopwatch.Elapsed;
@@ -287,7 +295,9 @@ rootCommand.SetHandler(
                 new FileInfo(Path.Combine(emitShapes.FullName, "shapes.json"))
             );
 
-            census.Merge(inputPackage, fragment);
+            // The family a fragment belongs to is the directory this run
+            // writes into - see Census.Families for why it is not the package.
+            census.Merge(output.Name, fragment);
             census.Save(emitShapes, "shapes.json");
             census.WriteShapesHeader(emitShapes, "shapes-generated.h");
         }
@@ -345,6 +355,25 @@ rootCommand.SetHandler(
         // being owned by two distributions at once, and it needs no list to
         // maintain: the metadata says which case a namespace is in.
         var distributions = new Dictionary<QualifiedNamespace, string>();
+
+        // A namespace this run only references is published by whoever projects
+        // it, and where that is not one distribution per namespace there is
+        // nothing in the metadata to say so, so the reference has to. Without
+        // it the fall-back below is the Windows SDK's layout, which would name
+        // a distribution that does not exist.
+        foreach (var (spec, assembly) in reference.Zip(referenceAssemblies))
+        {
+            if (spec.Distribution is null)
+            {
+                continue;
+            }
+
+            foreach (var type in assembly.MainModule.Types.Where(t => t.IsWindowsRuntime))
+            {
+                distributions[new QualifiedNamespace(spec.Package, type.Namespace)] =
+                    spec.Distribution;
+            }
+        }
 
         foreach (
             var group in types.GroupBy(t => t.Namespace).OrderBy(g => g.Key, StringComparer.Ordinal)
