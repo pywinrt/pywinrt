@@ -978,6 +978,9 @@ with open_if_changed(TABLE_PATH / "pyproject.toml") as f:
         )
     )
 
+with open_if_changed(TABLE_PATH / "winrt" / "table" / "version.py") as f:
+    f.write(templates.TABLE_VERSION_PY.format(version=RUNTIME_VERSION))
+
 with open_if_changed(TABLE_PATH / "README.md") as f:
     f.write(templates.README.format(package_name="winrt-table-compiler"))
     f.write(templates.TABLE_README)
