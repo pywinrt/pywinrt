@@ -182,6 +182,7 @@ NUGET_PACKAGE_VERSIONS = versions.nuget_package_versions()
 RUNTIME_REQUIREMENT = versions.runtime_requirement()
 TABLE_COMPILER_REQUIREMENT = versions.table_compiler_requirement()
 RUNTIME_VERSION = versions.runtime_version()
+TABLE_COMPILER_VERSION = versions.table_compiler_version()
 FAMILY_VERSIONS = versions.family_versions()
 NUGET_VERSIONS = versions.nuget_versions()
 
@@ -470,6 +471,10 @@ def format_hard_requirement(package: str, version: str, same_family: bool) -> st
     that #137 rejected, it still admits a .postN of either one on its own.
     Across families the other package follows its own upstream on its own
     schedule, so all that can honestly be said about it is a floor.
+
+    A package written by hand is never the first of those, whatever family it
+    was built against: it carries a version of its own and is released when
+    it changes, so it takes the floor even for a package of its own family.
     """
     if same_family:
         return f"{package}~={version}.0"
@@ -907,8 +912,6 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 # create requirements.txt for the hand-written interop projects
 
 for path in INTEROP_PATH.glob("winrt-*"):
-    family = package_families[packages.interop_distribution(path)]
-
     # KeyError here means a new interop package needs a row in the table
     interop_deps = INTEROP_DEPENDENCIES[packages.interop_distribution(path)]
 
@@ -923,7 +926,7 @@ for path in INTEROP_PATH.glob("winrt-*"):
                 format_hard_requirement(
                     dep,
                     FAMILY_VERSIONS[package_families[dep]],
-                    package_families[dep] == family,
+                    same_family=False,
                 )
                 + "\n"
                 for dep in interop_deps
@@ -938,13 +941,13 @@ with open_if_changed(TABLE_PATH / "pyproject.toml") as f:
             classifiers=templates.CLASSIFIERS,
             project_urls=format_project_urls(),
             package_name="winrt-table-compiler",
-            version=RUNTIME_VERSION,
+            version=TABLE_COMPILER_VERSION,
             description="Compiler for the projection tables of PyWinRT",
         )
     )
 
 with open_if_changed(TABLE_PATH / "winrt" / "table" / "version.py") as f:
-    f.write(templates.TABLE_VERSION_PY.format(version=RUNTIME_VERSION))
+    f.write(templates.TABLE_VERSION_PY.format(version=TABLE_COMPILER_VERSION))
 
 with open_if_changed(TABLE_PATH / "README.md") as f:
     f.write(templates.README.format(package_name="winrt-table-compiler"))
@@ -1022,12 +1025,3 @@ for package_path in INTEROP_PATH.glob("winrt-*"):
         versions.NUGET_PACKAGES[family],
         NUGET_VERSIONS[family],
     )
-
-# An interop package is still built by setuptools, which reads the version out
-# of a file rather than out of pyproject.toml.
-
-for path in INTEROP_PATH.glob("winrt-*"):
-    with open_if_changed(path / "version.txt") as f:
-        family = package_families[packages.interop_distribution(path)]
-
-        f.write(f"{FAMILY_VERSIONS[family]}\n")

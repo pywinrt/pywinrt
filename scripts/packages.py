@@ -4,10 +4,11 @@ wheels are built.
 
 scripts/build-sdist.py and scripts/build-bdist.py both walk this list, and a
 release walks part of it: PyPI refuses a file that already exists, so a
-release that rebuilt every family would fail on the families that did not
-change. .github/workflows/wheels.yaml therefore releases one family at a
-time, and the filters below are what both scripts mean by --family and
---package.
+release that rebuilt everything would fail on whatever did not change.
+.github/workflows/wheels.yaml therefore releases one unit at a time - a
+family of generated packages, or one package that is written by hand and
+carries a version of its own - and the filters below are what both scripts
+mean by --family, --package and --tag.
 """
 
 import argparse
@@ -17,7 +18,7 @@ from enum import Enum
 from pathlib import Path
 from typing import NamedTuple
 
-# the family table and the version each family is published with
+# the version each release unit is published with, and the tag that says so
 import versions
 
 REPO_PATH = versions.REPO_PATH
@@ -99,9 +100,13 @@ class Package(NamedTuple):
     # distribution except where INTEROP_DISTRIBUTIONS says otherwise
     path: Path
     distribution: str
-    # the family it is released with, which is what says where its version
-    # comes from and which tag publishes it
+    # the upstream family it belongs to, which says which NuGet package it
+    # was built against; --family groups by this
     family: str
+    # what a tag releases it as, named after the directory its sources are
+    # in: the family for a generated package, and the package itself for one
+    # that is written by hand and so carries a version of its own
+    release: str
     build: Build
 
 
@@ -119,11 +124,14 @@ def generated() -> Iterator[Package]:
     that the suite has something to run against and is published nowhere, so
     it has a family and a directory like the rest without being released.
     """
+    table = REPO_PATH / "table"
+    runtime = REPO_PATH / "runtime"
+
     yield Package(
-        REPO_PATH / "table", "winrt-table-compiler", versions.RUNTIME_FAMILY, Build.ANY
+        table, "winrt-table-compiler", versions.RUNTIME_FAMILY, table.name, Build.ANY
     )
     yield Package(
-        REPO_PATH / "runtime", "winrt-runtime", versions.RUNTIME_FAMILY, Build.COMPILED
+        runtime, "winrt-runtime", versions.RUNTIME_FAMILY, runtime.name, Build.COMPILED
     )
 
     # a projection distribution is a directory with a deps.json in it, and
@@ -131,16 +139,20 @@ def generated() -> Iterator[Package]:
     for deps_path in sorted(PROJECTION_PATH.glob("*/*/deps.json")):
         family = deps_path.parent.parent.name
 
-        yield Package(deps_path.parent, deps_path.parent.name, family, Build.ANY)
+        yield Package(
+            deps_path.parent, deps_path.parent.name, family, family, Build.ANY
+        )
 
     for path in sorted(REDIST_PATH.glob("winrt-*")):
-        yield Package(path, path.name, REDIST_FAMILIES[path.name], Build.REDIST)
+        family = REDIST_FAMILIES[path.name]
+
+        yield Package(path, path.name, family, family, Build.REDIST)
 
     for path in sorted(INTEROP_PATH.glob("winrt-*")):
         distribution = interop_distribution(path)
         family = "wasdk" if distribution in APP_SDK_INTEROP_COMPONENTS else "winrt"
 
-        yield Package(path, distribution, family, Build.COMPILED)
+        yield Package(path, distribution, family, path.name, Build.COMPILED)
 
 
 def published() -> Iterator[Package]:
@@ -183,7 +195,8 @@ def add_arguments(parser: argparse.ArgumentParser) -> None:
         "--family",
         default="",
         metavar="NAME",
-        help="build only this family; 'all' and an empty value build them all",
+        help="build only the packages built against this upstream;"
+        " 'all' and an empty value build them all",
     )
     parser.add_argument(
         "--package",
@@ -196,7 +209,7 @@ def add_arguments(parser: argparse.ArgumentParser) -> None:
         "--tag",
         default="",
         metavar="TAG",
-        help="build the family that this release tag publishes",
+        help="build the one unit that this release tag publishes",
     )
 
 
@@ -212,28 +225,32 @@ def select(args: argparse.Namespace) -> list[Package]:
     """
     The packages that the filters in add_arguments() cover.
 
+    A tag names one release unit, which is a family of generated packages or
+    a single package written by hand. --family groups by the upstream a
+    package was built against instead, so it covers the interop modules built
+    against a family that a release of that family does not.
+
     A name that matches nothing is an error rather than an empty build: a
     release names the packages it means, and a typo that quietly published
     nothing would be found only by looking at what arrived on PyPI.
     """
-    family = args.family
+    selected = list(published())
 
     if args.tag:
-        if family and family != "all":
-            raise SystemExit(f"--tag {args.tag} and --family {family} disagree")
+        if args.family and args.family != "all":
+            raise SystemExit(f"--tag {args.tag} and --family {args.family} disagree")
 
         try:
-            family = versions.family_of_tag(args.tag)
+            unit = versions.unit_of_tag(args.tag)
         except ValueError as error:
             raise SystemExit(error) from error
 
-    selected = list(published())
+        selected = [package for package in selected if package.release == unit]
+    elif args.family and args.family != "all":
+        if args.family not in {package.family for package in selected}:
+            raise SystemExit(f"{args.family} is not a family that this tree publishes")
 
-    if family and family != "all":
-        if family not in versions.published_versions():
-            raise SystemExit(f"{family} is not a family that this tree publishes")
-
-        selected = [package for package in selected if package.family == family]
+        selected = [package for package in selected if package.family == args.family]
 
     names = named_packages(args.package)
 
