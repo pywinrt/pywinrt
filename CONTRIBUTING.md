@@ -163,27 +163,47 @@ A release also needs the source distributions:
     py .\scripts\build-sdist.py
 
 Both scripts build every package that is published unless they are told to
-narrow it, which is what a release does. `--family` builds the packages one
-upstream is projected into, and `--package` names distributions outright:
+narrow it. `--family` builds everything built against one upstream, including
+the interop modules, and `--package` names distributions outright:
 
     py .\scripts\build-bdist.py --family webview2
     py .\scripts\build-sdist.py --package winrt-Windows.Foundation
 
+`--tag` builds what one release tag publishes, which is narrower than
+`--family`: it is how the workflow builds a release, and it fails on a tag
+whose version is not the one the tree carries.
+
+    py .\scripts\build-sdist.py --tag wheels/winrt-Windows.System.Interop/v4.0.0
+
 ## Releasing
 
-Each family of packages is released on its own upstream's schedule, so a
-release publishes one family rather than everything: `winrt-runtime` and
-`winrt-table-compiler` are the `runtime` family and take their version from
-`runtime/version.txt`, and `winrt`, `winui2`, `wasdk` and `webview2` take
-theirs from the NuGet package their metadata came from, which
+A release publishes one *unit* rather than everything, and a unit is named
+after the directory its sources are in. There are two kinds.
+
+A family of generated packages — `winrt`, `winui2`, `wasdk` and `webview2`,
+the directories under `projection/` — is released on its upstream's schedule
+and takes its version from the NuGet package its metadata came from, which
 `.config/_tools.json` pins. Moving a pin is a change of its own, made the way
-the sections above describe; bumping `runtime/version.txt` is an edit. Either
-way, regenerate the packaging afterwards so that every package carries the
-new version:
+the sections above describe.
+
+A package written by hand has no upstream release to follow, so it keeps its
+own `version.txt` and is released on its own: `runtime`, `table` and each
+directory under `interop/`. Bump one when that package changes, in semver,
+keeping the major — it is the compatibility generation, and the build refuses
+a tree whose hand-written versions disagree about it. Moving a pin does *not*
+bump these: a new Windows SDK leaves an interop module alone unless something
+it compiles against actually changed, which the diff shows because those
+packages carry the headers they compile. The exception is
+`interop/winrt-wasdk-bootstrap`, whose wheel carries
+`Microsoft.WindowsAppRuntime.Bootstrap.dll` out of the App SDK pin, so moving
+that pin does change it.
+
+Either way, regenerate the packaging afterwards so that every package carries
+the version it is published with:
 
     py .\scripts\generate-pyproject.py
 
-Then print the tag that releases each family and push the one you mean:
+Then print the tag that releases each unit and push the one you mean:
 
     py .\scripts\release-tags.py
 
@@ -194,17 +214,19 @@ A version in a tag carries a `v`, and the epoch goes in front of that as
 carry the version the tree already carries: the build refuses a tag that
 names anything else rather than publishing a version nobody asked for.
 
-Pushing the tag runs `.github/workflows/wheels.yaml`, which builds that family
-and uploads it to PyPI. Release the `runtime` family before any projection
-family, and the `winrt` family before the rest, because a compiled wheel's
-import test installs the packages it depends on; `release-tags.py` prints them
-in that order.
+Pushing the tag runs `.github/workflows/wheels.yaml`, which builds that unit
+and uploads it to PyPI. Release `runtime` before anything else and `winrt`
+before the units that depend on it, because a compiled wheel's import test
+installs the packages it depends on; `release-tags.py` prints them in that
+order.
 
 The same workflow can be started by hand, which is how everything else is
 done:
 
-- `family` and `packages` are the filters above, so a run can cover one
-  family or a few named distributions of it.
+- `family` and `packages` are the build filters above. `family` groups by the
+  upstream a package was built against, so it is wider than a release: it
+  covers the interop modules built against a family, which a release of that
+  family leaves alone.
 - `publish` says where the result is uploaded, and is `none` by default. A
   `none` run is a compile test of a branch, and it is what builds the
   wheelhouse a release candidate is tested from; `testpypi` is the dry run

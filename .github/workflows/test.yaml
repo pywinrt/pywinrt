@@ -36,6 +36,8 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
+      # except a package's version.txt, which the version tests read
+      - interop/*/version.txt
       - redist/**
       - '!redist/**/*.md'
       - '!redist/**/*.toml'
@@ -82,6 +84,8 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
+      # except a package's version.txt, which the version tests read
+      - interop/*/version.txt
       - redist/**
       - '!redist/**/*.md'
       - '!redist/**/*.toml'
