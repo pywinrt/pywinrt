@@ -9,9 +9,15 @@ name = "winrt-Windows.Media.Interop"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
 ]
@@ -19,10 +25,9 @@ dynamic = ["version", "dependencies"]
 requires-python = ">=3.11"
 
 [project.urls]
-# Homepage = "https://github.com/pywinrt/pywinrt"
 Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywinrt/pywinrt"
-Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/projection/winrt/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
 version = { file = "version.txt" }
@@ -48,5 +53,5 @@ test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
-# this package redistributes no DLL of its own, so there is nothing to copy in
+# nothing here is copied in after the build, so there is no repair step
 repair-wheel-command = ""

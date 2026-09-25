@@ -247,7 +247,7 @@ if (NOT MSVC)
 endif()
 
 pywinrt_add_interop_module(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    "winrt-wasdk-bootstrap"
     "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winrt")
 # MddBootstrap.h is in Foundation and WindowsAppSDK-VersionInfo.h, which says
 # which Windows App Runtime this release expects, is in Runtime.

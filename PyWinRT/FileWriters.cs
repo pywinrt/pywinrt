@@ -13,6 +13,7 @@ static class FileWriters
         IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls,
+        string? dllPackage,
         Census census
     )
     {
@@ -76,7 +77,8 @@ static class FileWriters
                     nullabilityMap,
                     packageMap,
                     members,
-                    componentDlls
+                    componentDlls,
+                    dllPackage
                 ),
             () => WriteNamespacePyi(nsDir, ns, nullabilityMap, packageMap, members),
             () => TableWriter.Write(nsDir, ns, packageMap, members, census)
@@ -467,7 +469,8 @@ static class FileWriters
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         IReadOnlyDictionary<string, string> packageMap,
         Members members,
-        bool componentDlls
+        bool componentDlls,
+        string? dllPackage
     )
     {
         // The stdlib imports depend on what the delegate type aliases below
@@ -517,6 +520,16 @@ static class FileWriters
             w.WriteLine(
                 "_dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)"
             );
+        }
+
+        // The component .dlls are redistributed in a distribution of their
+        // own, which puts them on the DLL search path as it is imported. That
+        // has to happen before the first type here is activated, and this is
+        // the only module the user is expected to import.
+        if (!string.IsNullOrEmpty(dllPackage))
+        {
+            w.WriteBlankLine();
+            w.WriteLine($"import {dllPackage}");
         }
 
         w.WriteBlankLine();

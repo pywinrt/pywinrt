@@ -94,6 +94,14 @@ var componentDllsOption = new Option<bool>(
     "Set this flag when generating projection for user components that will ship with the required .dlls in the Python package"
 );
 
+var dllPackageOption = new Option<string>(
+    "--dll-package",
+    "The Python module of the distribution that redistributes the component .dlls, when they ship in a package of their own rather than in this one"
+)
+{
+    ArgumentHelpName = "module",
+};
+
 var verboseOption = new Option<bool>("--verbose", "Show detailed progress information");
 
 var rootCommand = new RootCommand("Generate Python projection for Windows Runtime types");
@@ -106,6 +114,7 @@ rootCommand.AddOption(nullabilityJsonPathOption);
 rootCommand.AddOption(shapesOption);
 rootCommand.AddOption(emitShapesOption);
 rootCommand.AddOption(componentDllsOption);
+rootCommand.AddOption(dllPackageOption);
 rootCommand.AddOption(verboseOption);
 
 rootCommand.SetHandler(
@@ -131,6 +140,7 @@ rootCommand.SetHandler(
         var shapes = invocationContext.ParseResult.GetValueForOption(shapesOption);
         var emitShapes = invocationContext.ParseResult.GetValueForOption(emitShapesOption);
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
+        var dllPackage = invocationContext.ParseResult.GetValueForOption(dllPackageOption);
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
         var inputPackage = default(string);
@@ -448,6 +458,7 @@ rootCommand.SetHandler(
                         packageMap,
                         group,
                         componentDlls,
+                        dllPackage,
                         census
                     );
 
