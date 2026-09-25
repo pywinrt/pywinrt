@@ -78,6 +78,7 @@ This repository contains:
 - 🗓️ **January 2022 - August 2023**: Community released updates as [winsdk](https://pypi.org/project/winsdk).
 - 🗓️ **Starting September 2023**: Bindings are now modular and published by the community as separate packages, one per Windows SDK namespace. The top-level namespace has reverted from `winsdk` to the original `winrt`.
 - 🗓️ **Starting March 2025**: Additional top-level namespaces `winui2` and `winui3` added for projections of Window UI toolkits.
+- 🗓️ **Starting with v4.0**: The Windows App SDK and WebView2 projections moved back to the `winrt` top-level namespace, leaving `winui2` as the only other one, and the Windows App SDK is published one package per NuGet component.
 
 ## ⚙️ PyWinRT.exe
 

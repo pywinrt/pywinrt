@@ -103,12 +103,16 @@ WEBVIEW2_PACKAGE_METADATA = (
 )
 WEBVIEW2_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "webview2.json"
 
+# The one namespace here is published in a distribution named after the NuGet
+# package it came from rather than after itself, the way the App SDK components
+# are: the package is what the family is versioned by, and a second namespace in
+# a later release would belong to the same distribution.
 subprocess.check_call(
     DOTNET
     + [
         PYWINRT_EXE,
         "--input",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
+        f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
         "--emit-shapes",
@@ -141,7 +145,7 @@ subprocess.check_call(
         "--input",
         f"winui2;{MICROSOFT_UI_XAML_PACKAGE_METADATA}",
         "--reference",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
+        f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
         "--emit-shapes",
@@ -153,7 +157,7 @@ subprocess.check_call(
     ]
 )
 
-# generate code for windows app sdk (winui3)
+# generate code for windows app sdk
 
 # Each component is published as a distribution of its own, so the input says
 # which one a namespace belongs to; the generator groups them and splits out
@@ -161,7 +165,7 @@ subprocess.check_call(
 WINDOWS_APP_SDK_INPUTS = [
     arg
     for distribution, path in app_sdk.metadata_inputs()
-    for arg in ("--input", f"winui3;{distribution};{path}")
+    for arg in ("--input", f"winrt;{distribution};{path}")
 ]
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
@@ -175,13 +179,13 @@ subprocess.check_call(
     + WINDOWS_APP_SDK_INPUTS
     + [
         "--reference",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
+        f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
         "--emit-shapes",
         RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "winui3",
+        PROJECTION_PATH / "wasdk",
         "--nullability-json",
         WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
     ]

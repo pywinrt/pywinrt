@@ -67,8 +67,8 @@ if not args.compiled:
         [PROJECT_DIR / "table"],
         (PROJECTION_PATH / "winrt").glob("winrt-*"),
         (PROJECTION_PATH / "winui2").glob("winui2-*"),
-        (PROJECTION_PATH / "winui3").glob("winui3-*"),
-        (PROJECTION_PATH / "webview2").glob("webview2-*"),
+        (PROJECTION_PATH / "wasdk").glob("winrt-*"),
+        (PROJECTION_PATH / "webview2").glob("winrt-*"),
     ):
         subprocess.check_call(
             [
@@ -97,7 +97,6 @@ if not args.pure:
     for package_path in chain(
         [PROJECT_DIR / "runtime"],
         (PROJECT_DIR / "interop").glob("winrt-*"),
-        (PROJECT_DIR / "interop").glob("winui3-*"),
     ):
         subprocess.check_call(
             ["cibuildwheel", os.fspath(package_path)]

@@ -28,7 +28,7 @@ dependencies = [
 
 [project.optional-dependencies]
 all = [
-    "webview2-Microsoft.Web.WebView2.Core[all]>=4!1.0.4191.47",
+    "winrt-Microsoft.Web.WebView2[all]>=4!1.0.4191.47",
     "winrt-Windows.ApplicationModel.Contacts[all]>=4!10.0.28000.2705",
     "winrt-Windows.ApplicationModel.DataTransfer[all]>=4!10.0.28000.2705",
     "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",

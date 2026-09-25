@@ -15,7 +15,7 @@
         "winrt-Windows.UI.Xaml.Controls.Primitives"
     ],
     "referenced": [
-        "webview2-Microsoft.Web.WebView2.Core",
+        "winrt-Microsoft.Web.WebView2",
         "winrt-Windows.ApplicationModel.Contacts",
         "winrt-Windows.ApplicationModel.DataTransfer",
         "winrt-Windows.Foundation",

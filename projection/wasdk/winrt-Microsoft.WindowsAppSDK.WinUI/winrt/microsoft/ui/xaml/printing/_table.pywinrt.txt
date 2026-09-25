@@ -1,0 +1,166 @@
+format 4.0
+generator 0.0.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.UI.Xaml.Printing
+
+class Microsoft.UI.Xaml.Printing.AddPagesEventArgs activatable python_type
+    py AddPagesEventArgs
+    signature rc(Microsoft.UI.Xaml.Printing.AddPagesEventArgs;{a69f3cb3-6b74-5ee8-b034-188098a98c5d})
+    default Microsoft.UI.Xaml.Printing.IAddPagesEventArgs
+    requires Microsoft.UI.Xaml.Printing.IAddPagesEventArgs
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property print_task_options
+        get get_PrintTaskOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IAddPagesEventArgs shape=4
+            out class type=Windows.Graphics.Printing.PrintTaskOptions return
+
+delegate Microsoft.UI.Xaml.Printing.AddPagesEventHandler python_type
+    py AddPagesEventHandler
+    guid ed77566a-bd03-5118-b7c3-d9cea64307dd
+    signature delegate({ed77566a-bd03-5118-b7c3-d9cea64307dd})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Printing.AddPagesEventArgs name=e
+
+class Microsoft.UI.Xaml.Printing.GetPreviewPageEventArgs activatable python_type
+    py GetPreviewPageEventArgs
+    signature rc(Microsoft.UI.Xaml.Printing.GetPreviewPageEventArgs;{a68fbe17-f577-597f-b3ab-b379447149e6})
+    default Microsoft.UI.Xaml.Printing.IGetPreviewPageEventArgs
+    requires Microsoft.UI.Xaml.Printing.IGetPreviewPageEventArgs
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property page_number
+        get get_PageNumber slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IGetPreviewPageEventArgs shape=4
+            out int32 return
+
+delegate Microsoft.UI.Xaml.Printing.GetPreviewPageEventHandler python_type
+    py GetPreviewPageEventHandler
+    guid 1c801689-a018-5574-9109-bcef62176da2
+    signature delegate({1c801689-a018-5574-9109-bcef62176da2})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Printing.GetPreviewPageEventArgs name=e
+
+interface Microsoft.UI.Xaml.Printing.IAddPagesEventArgs
+    guid a69f3cb3-6b74-5ee8-b034-188098a98c5d
+
+interface Microsoft.UI.Xaml.Printing.IGetPreviewPageEventArgs
+    guid a68fbe17-f577-597f-b3ab-b379447149e6
+
+interface Microsoft.UI.Xaml.Printing.IPaginateEventArgs
+    guid 6499c196-11a9-5ef8-91cb-52fb963bf172
+
+interface Microsoft.UI.Xaml.Printing.IPrintDocument
+    guid 1e40f1fc-5d33-5fe9-ba3e-954c0d161524
+
+interface Microsoft.UI.Xaml.Printing.IPrintDocumentFactory
+    guid c4c1bc12-84d1-539c-b416-d7e54c45ab58
+
+interface Microsoft.UI.Xaml.Printing.IPrintDocumentStatics
+    guid 8975e4bc-8fc8-5e8f-a55a-bf71b9a827b7
+
+class Microsoft.UI.Xaml.Printing.PaginateEventArgs activatable python_type
+    py PaginateEventArgs
+    signature rc(Microsoft.UI.Xaml.Printing.PaginateEventArgs;{6499c196-11a9-5ef8-91cb-52fb963bf172})
+    default Microsoft.UI.Xaml.Printing.IPaginateEventArgs
+    requires Microsoft.UI.Xaml.Printing.IPaginateEventArgs
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property current_preview_page_number
+        get get_CurrentPreviewPageNumber slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPaginateEventArgs shape=4
+            out int32 return
+    property print_task_options
+        get get_PrintTaskOptions slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPaginateEventArgs shape=4
+            out class type=Windows.Graphics.Printing.PrintTaskOptions return
+
+delegate Microsoft.UI.Xaml.Printing.PaginateEventHandler python_type
+    py PaginateEventHandler
+    guid c291876c-343a-5b9b-a36c-8415ba4cd9dd
+    signature delegate({c291876c-343a-5b9b-a36c-8415ba4cd9dd})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Microsoft.UI.Xaml.Printing.PaginateEventArgs name=e
+
+enum Microsoft.UI.Xaml.Printing.PreviewPageCountType python_type
+    py PreviewPageCountType
+    signature enum(Microsoft.UI.Xaml.Printing.PreviewPageCountType;i4)
+    constant FINAL 0
+    constant INTERMEDIATE 1
+
+class Microsoft.UI.Xaml.Printing.PrintDocument composable python_type
+    py PrintDocument
+    signature rc(Microsoft.UI.Xaml.Printing.PrintDocument;{1e40f1fc-5d33-5fe9-ba3e-954c0d161524})
+    base Microsoft.UI.Xaml.DependencyObject
+    default Microsoft.UI.Xaml.Printing.IPrintDocument
+    requires Microsoft.UI.Xaml.Printing.IPrintDocument
+    factory Microsoft.UI.Xaml.Printing.IPrintDocumentStatics
+    composable Microsoft.UI.Xaml.Printing.IPrintDocumentFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocumentFactory shape=117
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Printing.PrintDocument return
+    property document_source
+        get get_DocumentSource slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=4
+            out interface type=Windows.Graphics.Printing.IPrintDocumentSource return
+    property document_source_property static
+        get get_DocumentSourceProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocumentStatics shape=4 static
+            out class type=Microsoft.UI.Xaml.DependencyProperty return
+    event add_pages
+        add add_AddPages slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51
+            in delegate type=Microsoft.UI.Xaml.Printing.AddPagesEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_AddPages slot=12 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event get_preview_page
+        add add_GetPreviewPage slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51
+            in delegate type=Microsoft.UI.Xaml.Printing.GetPreviewPageEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_GetPreviewPage slot=10 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event paginate
+        add add_Paginate slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51
+            in delegate type=Microsoft.UI.Xaml.Printing.PaginateEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Paginate slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method add_page
+        method AddPage slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=4
+            in class type=Microsoft.UI.Xaml.UIElement name=pageVisual
+    method add_pages_complete
+        method AddPagesComplete slot=14 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=0
+    method invalidate_preview
+        method InvalidatePreview slot=17 inputs=0 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=0
+    method set_preview_page
+        method SetPreviewPage slot=16 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51
+            in int32 name=pageNumber
+            in class type=Microsoft.UI.Xaml.UIElement name=pageVisual
+    method set_preview_page_count
+        method SetPreviewPageCount slot=15 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Printing.IPrintDocument shape=51
+            in int32 name=count
+            in enum32 type=Microsoft.UI.Xaml.Printing.PreviewPageCountType name=type
+
+class Microsoft.UI.Xaml.DependencyObject external
+    py winrt.microsoft.ui.xaml.DependencyObject
+
+class Microsoft.UI.Xaml.DependencyProperty external
+    py winrt.microsoft.ui.xaml.DependencyProperty
+
+class Microsoft.UI.Xaml.UIElement external
+    py winrt.microsoft.ui.xaml.UIElement
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+interface Windows.Graphics.Printing.IPrintDocumentSource external
+    py winrt.windows.graphics.printing._IPrintDocumentSource
+    guid dedc0c30-f1eb-47df-aae6-ed5427511f01
+
+class Windows.Graphics.Printing.PrintTaskOptions external
+    py winrt.windows.graphics.printing.PrintTaskOptions
