@@ -162,11 +162,11 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
-    // REVISIT: the module's ABI is checked above, but nothing checks that this
-    // type is the wrapper for the C++ type the caller instantiated
-    // get_python_type_for<T>() with. Both names come from the same generator
-    // run, so they only disagree if the packages are mismatched, which the ABI
-    // check does not catch.
+    // A projected type comes from its package's table above, so what reaches
+    // here is a Python type the runtime did not build, such as one of the
+    // winrt.system names. Only that the name is bound to a type is checked; a
+    // caller that needs a type built from a table looks it up with
+    // py::interp::find_type_entry() and raises if there is none.
 
     return remember_python_type(state, qualified_name, type.get());
 }
