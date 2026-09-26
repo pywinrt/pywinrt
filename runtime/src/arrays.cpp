@@ -1145,7 +1145,7 @@ namespace py::interp
      */
     PyObject* type_assign_array(PyObject* cls, PyObject* arg) noexcept
     {
-        auto const info = get_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+        auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
         if (!info)
         {
             PyErr_Format(

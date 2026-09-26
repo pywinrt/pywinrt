@@ -119,7 +119,7 @@ namespace py::interp
                 return nullptr;
             }
 
-            auto const info = get_type_entry(Py_TYPE(self));
+            auto const info = find_type_entry(Py_TYPE(self));
             if (!info || !info->members)
             {
                 PyErr_Format(

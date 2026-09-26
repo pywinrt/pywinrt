@@ -274,7 +274,7 @@ namespace py::interp
             return &entry;
         }
 
-        auto* const definition = get_type_entry(entry.py_type);
+        auto* const definition = find_type_entry(entry.py_type);
 
         return definition ? definition : &entry;
     }
@@ -404,7 +404,7 @@ namespace py::interp
             }
         }
 
-        if (auto const definition = get_type_entry(py_type))
+        if (auto const definition = find_type_entry(py_type))
         {
             return cache_entry(cache, definition);
         }

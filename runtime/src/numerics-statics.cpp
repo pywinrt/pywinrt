@@ -40,7 +40,7 @@ namespace py::interp::numerics
 
             auto const type = reinterpret_cast<PyTypeObject*>(self);
 
-            auto const entry = get_type_entry(type);
+            auto const entry = find_type_entry(type);
             if (!entry)
             {
                 PyErr_Format(
