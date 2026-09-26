@@ -126,7 +126,7 @@ jobs:
         # that is already out
         py: >-
           ${{ inputs.python && fromJSON(format('["{0}"]', inputs.python))
-              || fromJSON('["cp311", "cp312", "cp313", "cp314", "cp315"]') }}
+              || fromJSON('["cp311", "cp312", "cp313", "cp314", "cp314t", "cp315", "cp315t"]') }}
         arch:
           - win_amd64
           - win32
