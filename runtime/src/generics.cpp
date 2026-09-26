@@ -137,6 +137,39 @@ namespace py::interp
     bool ensure_instance_type(
         projection& proj, type_entry& entry, table::type_view const& record)
     {
+        auto const base = record.base_type();
+        if (base == table::no_ref)
+        {
+            PyErr_Format(
+                PyExc_ImportError,
+                "the table names no definition for '%s'",
+                qualified(record).c_str());
+            return false;
+        }
+
+        // Resolving the base can import the package that defines it, so it is
+        // done before the build lock is taken, which is never held across an
+        // import.
+        auto const base_type = ensure_referenced_type(proj, base);
+        if (!base_type)
+        {
+            return false;
+        }
+
+        auto const s = py::cpp::_winrt::get_module_state();
+        if (!s)
+        {
+            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+            return false;
+        }
+
+        py::cpp::_winrt::build_guard const guard{s->build_lock};
+
+        if (entry.ready)
+        {
+            return true;
+        }
+
         entry.owner = &proj;
         entry.index = record.index();
         entry.category = record.get_category();
@@ -148,24 +181,9 @@ namespace py::interp
         if (auto const built = find_instance_type(record.signature()))
         {
             entry.py_type = reinterpret_cast<PyTypeObject*>(Py_NewRef(built));
+            publish(entry.ready, true);
 
             return true;
-        }
-
-        auto const base = record.base_type();
-        if (base == table::no_ref)
-        {
-            PyErr_Format(
-                PyExc_ImportError,
-                "the table names no definition for '%s'",
-                entry.winrt_name);
-            return false;
-        }
-
-        auto const base_type = ensure_referenced_type(proj, base);
-        if (!base_type)
-        {
-            return false;
         }
 
         type_members collected;
@@ -225,7 +243,14 @@ namespace py::interp
             return false;
         }
 
-        return bind_protocol_methods(record, entry.py_type);
+        if (!bind_protocol_methods(record, entry.py_type))
+        {
+            return false;
+        }
+
+        publish(entry.ready, true);
+
+        return true;
     }
 
     /**

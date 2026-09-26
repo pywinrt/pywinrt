@@ -28,6 +28,7 @@
 #include "structs.h"
 #include "types.h"
 
+#include <optional>
 #include <unordered_map>
 
 namespace py::interp
@@ -127,6 +128,7 @@ namespace py::interp
             return py::cpp::_winrt::get_module_state();
         }
 
+        using py::cpp::_winrt::build_guard;
         using py::cpp::_winrt::state_guard;
     } // namespace
 
@@ -257,12 +259,37 @@ namespace py::interp
     type_entry* ensure_entry(projection& proj, uint32_t index) noexcept
     {
         auto& entry = proj.types[index];
-        if (entry.py_type || entry.reverse)
+        if (load_published(entry.ready))
         {
             return &entry;
         }
 
         auto const record = proj.table->type(index);
+
+        // Every other type is built while the package is imported. Nothing
+        // binds a delegate, so one is built the first time it is passed, by
+        // whichever thread that is.
+        std::optional<build_guard> guard;
+
+        if (record.get_category() == table::category::delegate)
+        {
+            auto const s = state();
+            if (!s)
+            {
+                PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+                return nullptr;
+            }
+
+            guard.emplace(s->build_lock);
+        }
+
+        // Built already, by another thread while this one waited for the lock,
+        // or being built by this one, which asks for a type again when the type
+        // derives from something that names it.
+        if (entry.py_type || entry.reverse)
+        {
+            return &entry;
+        }
 
         entry.owner = &proj;
         entry.index = index;
@@ -332,6 +359,8 @@ namespace py::interp
             return nullptr;
         }
 
+        publish(entry.ready, true);
+
         return &entry;
     }
 
@@ -346,6 +375,17 @@ namespace py::interp
      */
     type_entry* ensure_named_entry(projection& proj, uint32_t index) noexcept
     {
+        auto const s = state();
+        if (!s)
+        {
+            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+            return nullptr;
+        }
+
+        // Asked for whenever a Python subclass of a composable class is
+        // instantiated, which any thread can do.
+        build_guard const guard{s->build_lock};
+
         auto& entry = proj.types[index];
         if (entry.winrt_name)
         {
@@ -426,6 +466,21 @@ namespace py::interp
             }
 
             proj = found->second.get();
+        }
+
+        // The package's __init__.py may still be building the types on another
+        // thread. Importing the package waits for that, as the import system
+        // makes any thread wait that imports a module another thread is
+        // executing. The thread executing it goes on, since what it asks for it
+        // builds itself.
+        if (!load_published(proj->loaded)
+            && proj->loader != PyThread_get_thread_ident())
+        {
+            pyobj_handle module{PyImport_ImportModule(proj->module_name.c_str())};
+            if (!module)
+            {
+                return nullptr;
+            }
         }
 
         auto const index = proj->by_py_name.find(qualified_name.substr(dot + 1));
@@ -616,6 +671,7 @@ namespace py::interp
             owned->table = file;
             owned->module_name = module_name;
             owned->module = module;
+            owned->loader = PyThread_get_thread_ident();
             owned->types.resize(file->type_count());
 
             for (uint32_t i = 0; i < file->type_count(); i++)
@@ -671,6 +727,8 @@ namespace py::interp
                 break;
             }
         }
+
+        publish(proj->loaded, true);
 
         Py_RETURN_NONE;
     }

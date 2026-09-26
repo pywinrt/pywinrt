@@ -26,6 +26,7 @@
 #include "callbacks.h"
 #include "implements.h"
 #include "interp.h"
+#include "module_state.h"
 #include "types.h"
 
 namespace py::interp
@@ -500,6 +501,17 @@ namespace py::interp
      */
     bool ensure_interface_vtable(type_entry& entry, type_entry& source)
     {
+        auto const s = py::cpp::_winrt::get_module_state();
+        if (!s)
+        {
+            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+            return false;
+        }
+
+        // Built the first time a Python object stands in for the interface,
+        // on whichever thread that is.
+        py::cpp::_winrt::build_guard const guard{s->build_lock};
+
         if (entry.reverse)
         {
             return true;

@@ -20,6 +20,7 @@
 #include "delegates.h"
 #include "generics.h"
 #include "interp.h"
+#include "module_state.h"
 #include "objects.h"
 #include "structs.h"
 #include "types.h"
@@ -279,6 +280,20 @@ namespace py::interp
     }
 
     /**
+     * Keeps @p entry in @p cache, where the next call finds it without asking
+     * again, and returns it.
+     */
+    static type_entry* cache_entry(type_entry*& cache, type_entry* entry) noexcept
+    {
+        if (entry)
+        {
+            publish(cache, entry);
+        }
+
+        return entry;
+    }
+
+    /**
      * Reads the type entry that @p arg or @p field names, importing the package
      * that defines it if this is the first time it has been needed.
      *
@@ -286,9 +301,9 @@ namespace py::interp
      */
     type_entry* resolve(projection& owner, uint32_t type, type_entry*& cache) noexcept
     {
-        if (cache)
+        if (auto const cached = load_published(cache))
         {
-            return cache;
+            return cached;
         }
 
         if (type == table::no_ref || type >= owner.types.size())
@@ -298,10 +313,9 @@ namespace py::interp
         }
 
         auto& entry = owner.types[type];
-        if (entry.py_type || entry.reverse)
+        if (load_published(entry.ready))
         {
-            cache = definition_of(entry);
-            return cache;
+            return cache_entry(cache, definition_of(entry));
         }
 
         auto const record = owner.table->type(type);
@@ -314,10 +328,10 @@ namespace py::interp
             // answer. A reference to a delegate of another namespace carries
             // only the name, so it is the defining table that has the Invoke
             // to call.
-            cache = record.is_external() ? find_defining_entry(record.py_name())
-                                         : ensure_entry(owner, type);
-
-            return cache;
+            return cache_entry(
+                cache,
+                record.is_external() ? find_defining_entry(record.py_name())
+                                     : ensure_entry(owner, type));
         }
 
         if (record.flags() & table::type_flags::concrete)
@@ -330,8 +344,7 @@ namespace py::interp
                 return nullptr;
             }
 
-            cache = definition_of(entry);
-            return cache;
+            return cache_entry(cache, definition_of(entry));
         }
 
         if (record.py_name().empty())
@@ -369,8 +382,7 @@ namespace py::interp
                 return nullptr;
             }
 
-            cache = &entry;
-            return cache;
+            return cache_entry(cache, &entry);
         }
 
         // An external reference: the package that defines it knows its layout,
@@ -394,21 +406,36 @@ namespace py::interp
 
         if (auto const definition = get_type_entry(py_type))
         {
-            cache = definition;
-            return cache;
+            return cache_entry(cache, definition);
         }
 
         // One of the winrt.system names: a real Python type that this runtime
-        // did not build, so all that is kept is the type itself.
-        entry.owner = &owner;
-        entry.index = type;
-        entry.py_type = py_type;
-        entry.category = record.get_category();
-        entry.parameterized = (record.flags() & table::type_flags::parameterized) != 0;
-        entry.winrt_name = record.name().data();
+        // did not build, so all that is kept is the type itself. Two threads
+        // can get here for the same entry, and they would write the same
+        // values, but not both at once.
+        auto const s = py::cpp::_winrt::get_module_state();
+        if (!s)
+        {
+            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+            return nullptr;
+        }
 
-        cache = &entry;
-        return cache;
+        py::cpp::_winrt::build_guard const guard{s->build_lock};
+
+        if (!entry.ready)
+        {
+            entry.owner = &owner;
+            entry.index = type;
+            entry.py_type = py_type;
+            entry.category = record.get_category();
+            entry.parameterized
+                = (record.flags() & table::type_flags::parameterized) != 0;
+            entry.winrt_name = record.name().data();
+
+            publish(entry.ready, true);
+        }
+
+        return cache_entry(cache, &entry);
     }
 
     /**
@@ -868,9 +895,52 @@ namespace py::interp
      * An output whose type is a struct from a package that had not been
      * imported when the descriptor was built could not be measured then, so a
      * member with one is measured here instead, once.
+     *
+     * The structs are resolved first, which can import their packages, so
+     * that the layout itself is done holding the build lock and nothing that
+     * waits for another thread: two threads making the first call at once
+     * would otherwise both be writing the offsets.
      */
     static bool prepare_overload(projection& owner, overload_desc& overload) noexcept
     {
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            auto& arg = overload.args[i];
+            if (!needs_storage(arg))
+            {
+                continue;
+            }
+
+            if (arg.category == table::param_category::receive_array)
+            {
+                continue;
+            }
+
+            if (arg.code != table::type_code::struct_)
+            {
+                continue;
+            }
+
+            if (!resolve(owner, arg.type, arg.info))
+            {
+                return false;
+            }
+        }
+
+        auto const s = py::cpp::_winrt::get_module_state();
+        if (!s)
+        {
+            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+            return false;
+        }
+
+        py::cpp::_winrt::build_guard const guard{s->build_lock};
+
+        if (overload.prepared)
+        {
+            return true;
+        }
+
         uint32_t cursor = 0;
         uint32_t widest = 1;
 
@@ -895,12 +965,7 @@ namespace py::interp
             }
             else if (arg.code == table::type_code::struct_)
             {
-                auto const info = resolve(owner, arg.type, arg.info);
-                if (!info)
-                {
-                    return false;
-                }
-
+                auto const info = load_published(arg.info);
                 size = info->size;
                 align = info->align;
             }
@@ -926,7 +991,7 @@ namespace py::interp
         }
 
         overload.out_size = static_cast<uint16_t>(align_up(cursor, widest));
-        overload.prepared = true;
+        publish(overload.prepared, true);
 
         return true;
     }
@@ -960,7 +1025,7 @@ namespace py::interp
      */
     static void* get_factory(type_entry const& type, overload_desc& overload)
     {
-        if (auto const cached = overload.factory)
+        if (auto const cached = load_published(overload.factory))
         {
             static_cast<::IUnknown*>(cached)->AddRef();
             return cached;
@@ -1092,7 +1157,8 @@ namespace py::interp
             return nullptr;
         }
 
-        if (!overload.prepared && !prepare_overload(*member->owner, overload))
+        if (!load_published(overload.prepared)
+            && !prepare_overload(*member->owner, overload))
         {
             PyErr_Clear();
             return nullptr;
@@ -1469,7 +1535,8 @@ namespace py::interp
             return nullptr;
         }
 
-        if (!overload.prepared && !prepare_overload(*member.owner, overload))
+        if (!load_published(overload.prepared)
+            && !prepare_overload(*member.owner, overload))
         {
             return nullptr;
         }
