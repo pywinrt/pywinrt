@@ -178,6 +178,8 @@ namespace py::cpp::_winrt
         /// imported. Taken before the cache lock when both are.
         build_mutex build_lock;
         PyObject* to_uuid_func;
+        /// uuid.UUID, which is what a Guid is in Python.
+        PyTypeObject* uuid_type;
         PyObject* wrap_async_func;
     };
 
