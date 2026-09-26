@@ -1,3 +1,4 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
+include interop.h
 recursive-include cppwinrt *.h

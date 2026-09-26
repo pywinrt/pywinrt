@@ -21,6 +21,10 @@ PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 TABLE_PATH = (Path(__file__).parent.parent / "table").resolve()
 RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
 INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
+# What every interop module includes to exchange objects and errors with the
+# runtime. It is hand-written once and copied into each package, since a
+# source distribution cannot reach outside its own directory.
+INTEROP_HEADER = "interop.h"
 REDIST_PATH = (Path(__file__).parent.parent / "redist").resolve()
 
 # PEP 639 has a distribution name its license as an SPDX expression and carry
@@ -560,11 +564,20 @@ def write_compiled_project_files(
     if is_runtime:
         with open_if_changed(package_path / "MANIFEST.in") as f:
             f.write(templates.RUNTIME_MANIFEST_IN)
-    elif own_headers:
-        with open_if_changed(package_path / "MANIFEST.in") as f:
-            f.write(templates.INTEROP_MANIFEST_IN)
     else:
-        remove_if_present(package_path / "MANIFEST.in")
+        with open_if_changed(package_path / "MANIFEST.in") as f:
+            f.write(templates.INTEROP_MANIFEST_IN.format(interop_header=INTEROP_HEADER))
+
+            if own_headers:
+                f.write(templates.OWN_HEADERS_MANIFEST_IN)
+
+        with open_if_changed(package_path / INTEROP_HEADER) as f:
+            f.write(
+                templates.INTEROP_HEADER.format(
+                    interop_header=INTEROP_HEADER,
+                    text=(INTEROP_PATH / INTEROP_HEADER).read_text(encoding="utf-8"),
+                )
+            )
 
     with open_if_changed(package_path / "setup.py") as f:
         f.write(
@@ -607,8 +620,9 @@ def write_compiled_project_files(
                 headers=(
                     templates.RUNTIME_HEADERS
                     if is_runtime
+                    else templates.CPPWINRT_HEADERS
+                    if own_headers
                     else templates.HEADERS
-                    + (templates.OWN_HEADERS if own_headers else "")
                 ),
                 extra_init=(
                     templates.APP_SDK_INIT.format(

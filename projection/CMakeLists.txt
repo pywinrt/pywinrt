@@ -110,12 +110,8 @@ else()
 endif()
 message(STATUS "Target architecture: ${PYWINRT_TARGET_ARCH}")
 
-function(pywinrt_add_library target sources)
+function(pywinrt_add_module target sources)
     Python3_add_library(${target} MODULE "${sources}")
-    target_include_directories(${target} PRIVATE
-        "${WINRT_RUNTIME_INCLUDE_PATH}"
-        "${CPPWINRT_PATH}"
-    )
 
     if (MSVC)
         target_link_options(${target} PRIVATE $<$<CONFIG:RelWithDebInfo>:/PROFILE /INCREMENTAL:NO>)
@@ -132,6 +128,14 @@ function(pywinrt_add_library target sources)
             VERBATIM
         )
     endif()
+endfunction()
+
+function(pywinrt_add_library target sources)
+    pywinrt_add_module(${target} "${sources}")
+    target_include_directories(${target} PRIVATE
+        "${WINRT_RUNTIME_INCLUDE_PATH}"
+        "${CPPWINRT_PATH}"
+    )
 endfunction()
 
 # main runtime package
@@ -194,13 +198,13 @@ install(DIRECTORY "${WINRT_TABLE_PATH}/winrt/" DESTINATION "${PYWINRT_SITE_PACKA
 # left: each of them calls a plain COM interface or a flat C function that is
 # not in any winmd, so there is nothing for a table to describe. They are
 # hand-written and they name the WinRT types they hand over rather than sharing
-# generated code with the packages that project them.
+# generated code with the packages that project them. They reach the runtime
+# only through Python objects, so they are compiled without its headers.
 
 function(pywinrt_add_interop_module target package source root)
     set(package_path "${PYWINRT_INTEROP_PATH}/${package}")
 
-    pywinrt_add_library(${target} "${package_path}/${source}")
-    target_include_directories(${target} PRIVATE "${package_path}/cppwinrt")
+    pywinrt_add_module(${target} "${package_path}/${source}")
     install(TARGETS ${target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${root}")
     install(DIRECTORY "${package_path}/${root}/"
         DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${root}")
@@ -239,7 +243,11 @@ set(WASDK_FOUNDATION_LIB_PATH "${WASDK_FOUNDATION_PATH}/lib/native/${PYWINRT_TAR
 
 pywinrt_add_interop_module(_winrt_microsoft_ui_interop
     "winrt-Microsoft.UI.Interop" "py.Microsoft.UI.Interop.cpp" "winrt")
+# the one interop module written against C++/WinRT, since that is the only
+# form in which the App SDK ships the functions it calls
 target_include_directories(_winrt_microsoft_ui_interop PRIVATE
+    "${CPPWINRT_PATH}"
+    "${PYWINRT_INTEROP_PATH}/winrt-Microsoft.UI.Interop/cppwinrt"
     "${WASDK_INTERACTIVE_EXPERIENCES_PATH}/include")
 if (NOT MSVC)
     # the App SDK's Microsoft.UI.Interop.h uses MSVC-only pragmas

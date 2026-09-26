@@ -1,49 +1,54 @@
-#include <systemmediatransportcontrolsinterop.h>
+#include "interop.h"
 
-#include <pywinrt/base.h>
-#include <winrt/Windows.Media.h>
+#include <systemmediatransportcontrolsinterop.h>
 
 // https://learn.microsoft.com/en-us/windows/win32/api/systemmediatransportcontrolsinterop/
 
-namespace py::cpp::Windows::Media::Interop
+namespace
 {
-    static PyObject* get_for_window(PyObject* /*unused*/, PyObject* hwnd_obj) noexcept
+    /// ABI::Windows::Media::ISystemMediaTransportControls
+    constexpr IID IID_ISystemMediaTransportControls{
+        0x99FA3FF4, 0x1742, 0x42A6, {0x90, 0x2E, 0x08, 0x7D, 0x41, 0xF9, 0x65, 0xEC}};
+
+    PyObject* get_for_window(PyObject* /*unused*/, PyObject* hwnd_obj) noexcept
     {
-        try
+        auto const hwnd = PyLong_AsVoidPtr(hwnd_obj);
+        if (!hwnd && PyErr_Occurred())
         {
-            auto hwnd = PyLong_AsVoidPtr(hwnd_obj);
-            if (!hwnd && PyErr_Occurred())
-            {
-                return nullptr;
-            }
-
-            auto activation_factory = winrt::get_activation_factory<
-                winrt::Windows::Media::SystemMediaTransportControls>();
-            auto interop_factory
-                = activation_factory.as<ISystemMediaTransportControlsInterop>();
-            winrt::Windows::Media::SystemMediaTransportControls item = {nullptr};
-            winrt::check_hresult(interop_factory->GetForWindow(
-                reinterpret_cast<HWND>(hwnd),
-                winrt::guid_of<winrt::Windows::Media::SystemMediaTransportControls>(),
-                winrt::put_abi(item)));
-
-            return py::wrap_object(
-                item, "winrt.windows.media.SystemMediaTransportControls");
-        }
-        catch (...)
-        {
-            py::to_PyErr();
             return nullptr;
         }
+
+        ISystemMediaTransportControlsInterop* factory{};
+
+        auto hr = interop::get_activation_factory(
+            L"Windows.Media.SystemMediaTransportControls", &factory);
+        if (FAILED(hr))
+        {
+            return interop::set_hresult_error(hr);
+        }
+
+        IUnknown* controls{};
+
+        hr = factory->GetForWindow(
+            static_cast<HWND>(hwnd),
+            IID_ISystemMediaTransportControls,
+            reinterpret_cast<void**>(&controls));
+        factory->Release();
+        if (FAILED(hr))
+        {
+            return interop::set_hresult_error(hr);
+        }
+
+        return interop::new_interface_capsule(controls);
     }
 
-    static PyMethodDef module_methods[]{
+    PyMethodDef module_methods[]{
         {"get_for_window", get_for_window, METH_O, nullptr}, {}};
 
     PyDoc_STRVAR(
         module_doc, "APIs for desktop interop with the Windows.Media namespace.");
 
-    static PyModuleDef module_def
+    PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_windows_media_interop",
            module_doc,
@@ -53,16 +58,9 @@ namespace py::cpp::Windows::Media::Interop
            nullptr,
            nullptr,
            nullptr};
-} // namespace py::cpp::Windows::Media::Interop
+} // namespace
 
 PyMODINIT_FUNC PyInit__winrt_windows_media_interop(void) noexcept
 {
-    using namespace py::cpp::Windows::Media::Interop;
-
-    if (py::import_winrt_runtime() == -1)
-    {
-        return nullptr;
-    }
-
     return PyModule_Create(&module_def);
 }

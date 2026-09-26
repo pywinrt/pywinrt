@@ -1,12 +1,12 @@
 """Generates the C++/WinRT headers that the compiled parts of PyWinRT include.
 
-A projection is a table that ``winrt-runtime`` interprets, so the only things
-here that are compiled against C++/WinRT are the runtime itself and the eight
-interop modules. Between them they include eleven namespace headers, and
-``cppwinrt.exe`` emits one header per namespace in its input whatever it is
-asked for, so the headers are generated in full and then the transitive closure
-of those eleven is copied out. That is about 110 of the 1400 files and 6 MB of
-the 116 MB the three header packages used to carry.
+A projection is a table that ``winrt-runtime`` interprets, and the interop
+modules are written against raw COM where they can be, so the only things here
+that are compiled against C++/WinRT are the runtime itself and
+``winrt-Microsoft.UI.Interop``. Between them they include five namespace
+headers, and ``cppwinrt.exe`` emits one header per namespace in its input
+whatever it is asked for, so the headers are generated in full and then the
+transitive closure of those five is copied out.
 
 Each package carries the headers it includes, rather than one package carrying
 them for everybody: ``winrt-runtime`` carries what ``pywinrt/base.h`` includes,
@@ -91,24 +91,12 @@ RUNTIME_NAMESPACES = [
     "Windows.Storage.Streams",
 ]
 
-# What each interop module includes beyond that. winrt-Microsoft.UI.Interop
-# includes the Windows App SDK's own <winrt/Microsoft.UI.Interop.h>, which is
-# hand-written and ships in the NuGet package; what it needs from here is the
-# namespace header under it.
+# What each interop module includes beyond that. Only winrt-Microsoft.UI.Interop
+# is written against C++/WinRT: it includes the Windows App SDK's own
+# <winrt/Microsoft.UI.Interop.h>, which is hand-written and ships in the NuGet
+# package, and what it needs from here is the namespace header under it.
 INTEROP_NAMESPACES = {
-    "winrt-Windows.Graphics.Capture.Interop": ["Windows.Graphics.Capture"],
-    "winrt-Windows.Graphics.DirectX.Direct3D11.Interop": [
-        "Windows.Graphics.DirectX.Direct3D11"
-    ],
-    "winrt-Windows.Media.Interop": ["Windows.Media"],
-    "winrt-Windows.System.Interop": ["Windows.System"],
-    "winrt-Windows.UI.Composition.Interop": [
-        "Windows.UI.Composition",
-        "Windows.UI.Composition.Desktop",
-    ],
-    "winrt-Windows.UI.Xaml.Hosting.Interop": [],
     "winrt-Microsoft.UI.Interop": ["Microsoft.UI"],
-    "winrt-wasdk-bootstrap": [],
 }
 
 INCLUDE_RE = re.compile(r'#include\s+["<](winrt/[^">]+)[">]')
