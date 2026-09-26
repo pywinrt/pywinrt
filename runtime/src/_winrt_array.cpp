@@ -618,7 +618,25 @@ namespace py::cpp::_winrt
 
     static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
     {
-        view->readonly = 0;
+        // Writing an element that holds references through a buffer would put
+        // a pointer in the array that nothing owns, so those elements are
+        // written by item assignment, which converts the value.
+        auto const readonly = self->array->HoldsReferences();
+
+        if (readonly)
+        {
+            if ((flags & PyBUF_WRITABLE) == PyBUF_WRITABLE)
+            {
+                view->obj = nullptr;
+                PyErr_SetString(
+                    PyExc_BufferError,
+                    "an array whose elements hold references is not writable "
+                    "as a buffer: assign its items instead");
+                return -1;
+            }
+        }
+
+        view->readonly = readonly ? 1 : 0;
 
         // required fields
         view->obj = Py_NewRef(self);

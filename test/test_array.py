@@ -493,6 +493,28 @@ class TestWinRTArray(unittest.TestCase):
                 with self.assertRaisesRegex(TypeError, "hold references"):
                     Array(element, memoryview(source))
 
+    def test_references_are_read_only_as_a_buffer(self):
+        for element, values in (
+            (str, ["a", "b"]),
+            (Uri, [Uri("https://example.com")]),
+            (tc.NonBlittable, [non_blittable(1)]),
+        ):
+            with self.subTest(element=element):
+                with memoryview(Array(element, values)) as m:
+                    self.assertTrue(m.readonly)
+
+                    with m.cast("B") as b, self.assertRaises(TypeError):
+                        b[0] = 1
+
+    def test_values_are_writable_as_a_buffer(self):
+        a = Array(Int32, [1, 2])
+
+        with memoryview(a) as m:
+            self.assertFalse(m.readonly)
+            m[0] = 3
+
+        self.assertEqual(list(a), [3, 2])
+
 
 #: One value of each element type an ArrayN member of the test component
 #: takes, with the winrt.system.Array type argument that spells it. Every

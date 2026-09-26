@@ -727,8 +727,21 @@ namespace py::interp
             return false;
         }
 
-        auto const flags
-            = PyBUF_C_CONTIGUOUS | PyBUF_FORMAT | (writable ? PyBUF_WRITABLE : 0);
+        auto const holds_references = value_owns_resources(element);
+
+        if (holds_references)
+        {
+            if (!is_array_of(owner, element, obj))
+            {
+                return false;
+            }
+        }
+
+        // A winrt.system.Array whose elements hold references exports them
+        // read-only, so that Python cannot write a pointer into it, but the
+        // memory is its own, and a callee fills a lent one all the same.
+        auto const flags = PyBUF_C_CONTIGUOUS | PyBUF_FORMAT
+                           | (writable && !holds_references ? PyBUF_WRITABLE : 0);
 
         if (PyObject_GetBuffer(obj, view, flags) < 0)
         {
@@ -736,17 +749,6 @@ namespace py::interp
         }
 
         if (!is_buffer_compatible(*view, value_size, format.c_str()))
-        {
-            PyBuffer_Release(view);
-            return false;
-        }
-
-        if (!value_owns_resources(element))
-        {
-            return true;
-        }
-
-        if (!is_array_of(owner, element, obj))
         {
             PyBuffer_Release(view);
             return false;
