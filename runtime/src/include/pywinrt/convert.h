@@ -3,9 +3,9 @@
 // py::convert<T>() and py::convert_to<T>() dispatch to py::converter<T>,
 // specialized here for the types the runtime API itself mentions: the
 // fundamental types, strings, GUIDs, DateTime, TimeSpan, IInspectable and
-// IReference<T>. Arrays are specialized in <pywinrt/array.h> and buffers in
-// <pywinrt/buffer.h>; <pywinrt/base.h> pulls in all of them, which is what
-// makes every specialization visible before a module instantiates any of them.
+// IReference<T>. Arrays are specialized in <pywinrt/array.h>; <pywinrt/base.h>
+// pulls in both, which is what makes every specialization visible before a
+// module instantiates any of them.
 //
 // A WinRT class, interface, struct, enum or delegate is not here. Naming one
 // in C++ takes the header C++/WinRT generates for its namespace, and knowing

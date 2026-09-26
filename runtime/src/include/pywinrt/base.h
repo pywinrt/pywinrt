@@ -4,7 +4,7 @@
 // each other.
 //
 // It stays one include rather than ten because the py::converter<T>
-// specializations are spread over convert.h, array.h and buffer.h, and every
+// specializations are spread over convert.h and array.h, and every
 // one of them has to be declared before a module instantiates any of them.
 // Including this header is what guarantees that.
 

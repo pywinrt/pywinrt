@@ -1,32 +1,13 @@
-// The Python buffer protocol: the PEP 3118 format string for each element type,
-// the check that an incoming buffer matches the one WinRT expects, and
-// py::pybuf_view, which presents a buffer to WinRT as a winrt::array_view
-// without copying it.
+// The Python buffer protocol: the PEP 3118 format string for each element type
+// of a py::ComArray<T>.
 
 #pragma once
 
-#include <pywinrt/abi.h>
-#include <pywinrt/convert.h>
-#include <pywinrt/errors.h>
-#include <pywinrt/handles.h>
 #include <pywinrt/prelude.h>
 #include <pywinrt/traits.h>
 
 namespace py
 {
-    template<typename T, typename = void>
-    struct buffer
-    {
-        static bool is_compatible(Py_buffer const& /*unused*/) noexcept
-        {
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::buffer<%s>::is_compatible() is not implemented",
-                type_name<T>());
-            return false;
-        } // namespace py
-    };
-
     // PEP 3118 struct formats
 
     template<typename T, typename = void>
@@ -97,80 +78,4 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Foundation::TimeSpan>
         = "q";
-
-    template<typename T>
-    struct buffer<T>
-    {
-        static bool is_compatible(Py_buffer const& view) noexcept
-        {
-            static_assert(buffer_format<T>);
-            return is_buffer_compatible(view, sizeof(T), buffer_format<T>);
-        }
-    };
-
-    /**
-     * A wrapper around the Python buffer protocol that implements winrt::array_view.
-     */
-    template<typename T, bool writeable>
-    struct pybuf_view : winrt::array_view<T>
-    {
-        using typename winrt::array_view<T>::value_type;
-        using typename winrt::array_view<T>::pointer;
-        using typename winrt::array_view<T>::size_type;
-
-        pybuf_view(pybuf_view const&) = delete;
-        pybuf_view& operator=(pybuf_view const&) = delete;
-
-        pybuf_view() = delete;
-
-        // the flags assume pybuf_view is always treated as read-only
-        pybuf_view(PyObject* obj)
-            : m_buffer{
-                  throw_if_pyobj_null(obj),
-                  PyBUF_C_CONTIGUOUS | PyBUF_FORMAT | (writeable ? PyBUF_WRITABLE : 0)}
-        {
-            if (!m_buffer)
-            {
-                throw python_exception();
-            }
-
-            auto const& view = m_buffer.view();
-
-            // A buffer of pointers is taken as it is: nothing here checks what
-            // they point at. The interpreter borrows the arrays a call passes
-            // through borrow_array(), which does.
-
-            if (!buffer<T>::is_compatible(view))
-            {
-                // m_buffer is a constructed member, so it releases as this throws
-                throw python_exception();
-            }
-
-            this->m_data = reinterpret_cast<pointer>(view.buf);
-            this->m_size = static_cast<size_type>(view.shape[0]);
-        }
-
-      private:
-        buffer_view m_buffer;
-    };
-
-    template<typename T, bool writeable>
-    struct converter<pybuf_view<T, writeable>>
-    {
-        static PyObject* convert(pybuf_view<T, writeable> const& /*unused*/) noexcept
-        {
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::converter<%s>::convert() is not implemented for py::pybuf_view",
-                type_name<T>());
-            return nullptr;
-        }
-
-        static pybuf_view<T, writeable> convert_to(PyObject* obj)
-        {
-            throw_if_pyobj_null(obj);
-
-            return pybuf_view<T, writeable>{obj};
-        }
-    };
 } // namespace py
