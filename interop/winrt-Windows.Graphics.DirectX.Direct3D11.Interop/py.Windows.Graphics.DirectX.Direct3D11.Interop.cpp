@@ -169,7 +169,7 @@ namespace
            module_doc,
            0,
            module_methods,
-           nullptr,
+           interop::module_slots,
            nullptr,
            nullptr,
            nullptr};
@@ -177,5 +177,5 @@ namespace
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11_interop(void) noexcept
 {
-    return PyModule_Create(&module_def);
+    return PyModuleDef_Init(&module_def);
 }
