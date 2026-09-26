@@ -210,7 +210,9 @@ class TestCollectionsVector(unittest.TestCase):
         with self.assertRaisesRegex(IndexError, "index out of range"):
             self.vector[2]
 
-        with self.assertRaisesRegex(IndexError, "index out of range"):
+        # past what a vector can count, and past what a 32-bit Py_ssize_t
+        # holds, which CPython refuses with a message of its own
+        with self.assertRaises(IndexError):
             self.vector[2**32]
 
     def test_view_index(self):
@@ -235,11 +237,18 @@ class TestCollectionsVector(unittest.TestCase):
         self.assertEqual(list(self.vector), ["z"])
 
     def test_assign_and_del_out_of_range(self):
-        for index in (2, -3, 2**32):
+        for index in (2, -3):
             with self.assertRaisesRegex(IndexError, "index out of range"):
                 self.vector[index] = "z"
 
             with self.assertRaisesRegex(IndexError, "index out of range"):
                 del self.vector[index]
+
+        # as in test_index_out_of_range()
+        with self.assertRaises(IndexError):
+            self.vector[2**32] = "z"
+
+        with self.assertRaises(IndexError):
+            del self.vector[2**32]
 
         self.assertEqual(list(self.vector), ["a", "b"])
