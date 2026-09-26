@@ -3,6 +3,7 @@ import collections.abc
 import unittest
 from typing import cast
 
+import test_winrt.testcomponent as tc
 import winrt.windows.foundation.collections as wfc
 from winrt.system import Object, box_string, unbox_string
 
@@ -190,3 +191,64 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
         with self.assertRaises(KeyError):
             m.popitem()
+
+
+class TestCollectionsVector(unittest.TestCase):
+    def setUp(self):
+        self.vector = tc.TestRunner.create_string_vector()
+        self.vector.extend(["a", "b"])
+
+    def test_negative_index_counts_from_the_end(self):
+        self.assertEqual(self.vector[-1], "b")
+        self.assertEqual(self.vector[-2], "a")
+
+    def test_negative_index_out_of_range(self):
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            self.vector[-3]
+
+    def test_index_out_of_range(self):
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            self.vector[2]
+
+        # past what a vector can count, and past what a 32-bit Py_ssize_t
+        # holds, which CPython refuses with a message of its own
+        with self.assertRaises(IndexError):
+            self.vector[2**32]
+
+    def test_view_index(self):
+        view, _ = tc.TestRunner.make_tests().collection6(["a", "b"])
+
+        self.assertEqual(view[-1], "b")
+
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            view[-3]
+
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            view[2]
+
+    def test_reversed(self):
+        self.assertEqual(list(reversed(self.vector)), ["b", "a"])
+
+    def test_negative_index_assign_and_del(self):
+        self.vector[-1] = "z"
+        self.assertEqual(list(self.vector), ["a", "z"])
+
+        del self.vector[-2]
+        self.assertEqual(list(self.vector), ["z"])
+
+    def test_assign_and_del_out_of_range(self):
+        for index in (2, -3):
+            with self.assertRaisesRegex(IndexError, "index out of range"):
+                self.vector[index] = "z"
+
+            with self.assertRaisesRegex(IndexError, "index out of range"):
+                del self.vector[index]
+
+        # as in test_index_out_of_range()
+        with self.assertRaises(IndexError):
+            self.vector[2**32] = "z"
+
+        with self.assertRaises(IndexError):
+            del self.vector[2**32]
+
+        self.assertEqual(list(self.vector), ["a", "b"])
