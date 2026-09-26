@@ -150,10 +150,17 @@ class Tree:
         The directory the runtime's headers are in, or None for a tree that
         predates them moving into winrt-runtime, where they were part of
         winrt-sdk and were included as <pybase.h> instead of <pywinrt/...>.
+        They were inside the runtime's Python package before they moved
+        beside its sources.
         """
-        include_dir = self.runtime_package / "python/winrt/include"
+        for include_dir in (
+            self.runtime_package / "src/include",
+            self.runtime_package / "python/winrt/include",
+        ):
+            if include_dir.is_dir():
+                return include_dir
 
-        return include_dir if include_dir.is_dir() else None
+        return None
 
     @property
     def abi_header(self) -> Path:
