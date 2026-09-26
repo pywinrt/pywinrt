@@ -6,6 +6,16 @@
 
 ### Added
 - Wheels are now published for Python 3.14 and Python 3.15.
+- `winrt-runtime` now ships a PyInstaller hook, so freezing an application
+  that uses PyWinRT needs no configuration. The hook collects the
+  `_table.pywinrt` beside each projection module, which PyInstaller would
+  otherwise leave behind, and every installed projection package rather than
+  only the ones the application imports: the type a call hands back is found
+  by importing the module that owns it while the program runs, so an
+  application that imports one namespace is routinely handed types from
+  others. It also collects a redistributed component `.dll`, which is loaded
+  by bare name and appears in no import table. cx_Freeze and Nuitka take no
+  hook of this shape and are covered in the documentation instead.
 - Added `winrt-table-compiler`, a small pure-Python package that compiles the
   table a projection package carries as text into the binary form that
   `winrt-runtime` reads. It is a build-time dependency of every projection
@@ -36,11 +46,12 @@
   were 49.2 MB for each version of Python and each architecture. The largest
   of them, `winui3-Microsoft.UI.Xaml.Controls`, is 0.28 MB where it was
   3.54 MB.
-- A tool that freezes an application, such as PyInstaller, has to be told to
-  collect each namespace's table, which is the `_table.pywinrt` file beside
-  its `__init__.py`. Collecting the Python modules and the extension modules
-  of a projection package is no longer enough to make it work, since the table
-  is neither.
+- A tool that freezes an application has to collect each namespace's table,
+  which is the `_table.pywinrt` file beside its `__init__.py`. Collecting the
+  Python modules and the extension modules of a projection package is no
+  longer enough to make it work, since the table is neither. PyInstaller is
+  told this by the hook `winrt-runtime` now ships; cx_Freeze and Nuitka take
+  a few options, which the documentation gives.
 - Calling a WinRT member costs more than it did in v3.2.1. A projection
   package used to be C++ compiled for the member being called, and it is now a
   table that the runtime reads at the moment of the call; interpreting it is
