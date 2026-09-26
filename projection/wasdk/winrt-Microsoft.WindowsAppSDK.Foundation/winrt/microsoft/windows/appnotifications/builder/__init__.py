@@ -19,14 +19,3 @@ __all__ = [
     "AppNotificationTextProperties",
 ]
 
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "add_text2", "add_text")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "add_text_box2", "add_text_box")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_app_logo_override2", "set_app_logo_override")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_app_logo_override3", "set_app_logo_override")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_attribution_text2", "set_attribution_text")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_audio_event2", "set_audio_event")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_audio_uri2", "set_audio_uri")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_hero_image2", "set_hero_image")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_inline_image2", "set_inline_image")
-winrt.runtime._internals.alias_method(AppNotificationBuilder, "set_inline_image3", "set_inline_image")
-winrt.runtime._internals.alias_method(AppNotificationButton, "set_invoke_uri2", "set_invoke_uri")

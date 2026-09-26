@@ -27,12 +27,3 @@ __all__ = [
     "TextToTableRow",
 ]
 
-winrt.runtime._internals.alias_method(LanguageModel, "create_context2", "create_context")
-winrt.runtime._internals.alias_method(LanguageModel, "create_context3", "create_context")
-winrt.runtime._internals.alias_method(LanguageModel, "generate_embedding_vectors2", "generate_embedding_vectors")
-winrt.runtime._internals.alias_method(LanguageModel, "generate_response_async2", "generate_response_async")
-winrt.runtime._internals.alias_method(LanguageModel, "generate_response_async3", "generate_response_async")
-winrt.runtime._internals.alias_method(LanguageModel, "generate_response_from_embeddings_async2", "generate_response_from_embeddings_async")
-winrt.runtime._internals.alias_method(LanguageModel, "generate_response_from_embeddings_async3", "generate_response_from_embeddings_async")
-winrt.runtime._internals.alias_method(LanguageModel, "generate_structured_json_response_async2", "generate_structured_json_response_async")
-winrt.runtime._internals.alias_method(LanguageModel, "get_usable_prompt_length2", "get_usable_prompt_length")

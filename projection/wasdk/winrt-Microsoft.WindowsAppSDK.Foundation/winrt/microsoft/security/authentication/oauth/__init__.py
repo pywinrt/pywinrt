@@ -20,5 +20,3 @@ __all__ = [
     "TokenResponse",
 ]
 
-winrt.runtime._internals.alias_static_method(AuthRequestParams, "create_for_authorization_code_request2", "create_for_authorization_code_request")
-winrt.runtime._internals.alias_static_method(OAuth2Manager, "request_token_async2", "request_token_async")

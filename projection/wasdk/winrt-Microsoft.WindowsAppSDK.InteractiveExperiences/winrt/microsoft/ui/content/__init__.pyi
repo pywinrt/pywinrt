@@ -6,7 +6,6 @@ import types
 import typing
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -173,16 +172,6 @@ class ContentCoordinateConverter(winrt.system.Object, metaclass=ContentCoordinat
     # Windows.Graphics.PointInt32[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point[],Microsoft.UI.Content.ContentCoordinateRoundingMode)
     def convert_local_to_screen(self, local_points: winrt.system.Array[windows_foundation.Point] | winrt.system.ReadableBuffer, rounding_mode: ContentCoordinateRoundingMode, /) -> winrt.system.Array[windows_graphics.PointInt32]: ...
     @typing.final
-    # Deprecated alias of convert_local_to_screen() for pywinrt v3.x compatibility.
-    # Windows.Graphics.PointInt32 Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point)
-    @deprecated("Use convert_local_to_screen() instead.")
-    def convert_local_to_screen_with_point(self, local_point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> windows_graphics.PointInt32: ...
-    @typing.final
-    # Deprecated alias of convert_local_to_screen() for pywinrt v3.x compatibility.
-    # Windows.Graphics.PointInt32[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point[],Microsoft.UI.Content.ContentCoordinateRoundingMode)
-    @deprecated("Use convert_local_to_screen() instead.")
-    def convert_local_to_screen_with_points_and_rounding_mode(self, local_points: winrt.system.Array[windows_foundation.Point] | winrt.system.ReadableBuffer, rounding_mode: ContentCoordinateRoundingMode, /) -> winrt.system.Array[windows_graphics.PointInt32]: ...
-    @typing.final
     # Windows.Graphics.PointInt32[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point[])
     def convert_local_to_screen_with_points(self, local_points: winrt.system.Array[windows_foundation.Point] | winrt.system.ReadableBuffer, /) -> winrt.system.Array[windows_graphics.PointInt32]: ...
     @typing.final
@@ -191,11 +180,6 @@ class ContentCoordinateConverter(winrt.system.Object, metaclass=ContentCoordinat
     @typing.final
     # Windows.Foundation.Point Microsoft.UI.Content.ContentCoordinateConverter::ConvertScreenToLocal(Windows.Graphics.PointInt32)
     def convert_screen_to_local(self, screen_point: windows_graphics.PointInt32 | tuple[winrt.system.Int32, winrt.system.Int32], /) -> windows_foundation.Point: ...
-    @typing.final
-    # Deprecated alias of convert_screen_to_local() for pywinrt v3.x compatibility.
-    # Windows.Foundation.Point Microsoft.UI.Content.ContentCoordinateConverter::ConvertScreenToLocal(Windows.Graphics.PointInt32)
-    @deprecated("Use convert_screen_to_local() instead.")
-    def convert_screen_to_local_with_point(self, screen_point: windows_graphics.PointInt32 | tuple[winrt.system.Int32, winrt.system.Int32], /) -> windows_foundation.Point: ...
     @typing.final
     # Windows.Foundation.Point[] Microsoft.UI.Content.ContentCoordinateConverter::ConvertScreenToLocal(Windows.Graphics.PointInt32[])
     def convert_screen_to_local_with_points(self, screen_points: winrt.system.Array[windows_graphics.PointInt32] | winrt.system.ReadableBuffer, /) -> winrt.system.Array[windows_foundation.Point]: ...

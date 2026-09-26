@@ -18,6 +18,4 @@ __all__ = [
     "DispatcherQueueHandler",
 ]
 
-winrt.runtime._internals.alias_method(DispatcherQueue, "run_event_loop_with_options", "run_event_loop")
-winrt.runtime._internals.alias_method(DispatcherQueue, "try_enqueue_with_priority", "try_enqueue")
 DispatcherQueueHandler = typing.Callable[[], None]

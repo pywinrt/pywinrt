@@ -36,4 +36,3 @@ __all__ = [
     "IPackageValidator",
 ]
 
-winrt.runtime._internals.alias_method(PackageRuntimeManager, "add_package_set_with_options", "add_package_set")

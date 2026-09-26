@@ -16,5 +16,3 @@ __all__ = [
     "PackageDependencyRank",
 ]
 
-winrt.runtime._internals.alias_method(PackageDependency, "add2", "add")
-winrt.runtime._internals.alias_static_method(PackageDependency, "create2", "create")

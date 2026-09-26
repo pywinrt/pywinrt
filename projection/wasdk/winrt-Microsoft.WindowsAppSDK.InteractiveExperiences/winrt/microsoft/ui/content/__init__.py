@@ -36,6 +36,3 @@ __all__ = [
     "IContentSiteLink",
 ]
 
-winrt.runtime._internals.alias_method(ContentCoordinateConverter, "convert_local_to_screen_with_point", "convert_local_to_screen")
-winrt.runtime._internals.alias_method(ContentCoordinateConverter, "convert_local_to_screen_with_points_and_rounding_mode", "convert_local_to_screen")
-winrt.runtime._internals.alias_method(ContentCoordinateConverter, "convert_screen_to_local_with_point", "convert_screen_to_local")
