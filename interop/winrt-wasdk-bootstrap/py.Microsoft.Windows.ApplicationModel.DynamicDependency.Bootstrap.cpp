@@ -221,6 +221,9 @@ namespace
         // interpreter but the main one.
         {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
 #endif
+#ifdef Py_mod_gil
+        {Py_mod_gil, Py_MOD_GIL_NOT_USED},
+#endif
         {}};
 
     static PyModuleDef module_def
