@@ -1,7 +1,7 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools>=78", "winrt-runtime"]
+requires = ["setuptools>=78"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -40,11 +40,6 @@ include = ["winrt*"]
 "*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
-# use the local winrt-runtime build dependency
-environment = { PYTHONPATH="../../runtime/python" }
-# don't install winrt-runtime from PyPI
-build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
-before-build = "uv pip install setuptools"
 # don't build for PyPy or for the free-threaded interpreters, which the
 # projection doesn't support yet
 skip = "pp* cp*t-*"

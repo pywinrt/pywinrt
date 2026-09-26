@@ -487,6 +487,17 @@ def format_hard_requirement(package: str, version: str, same_family: bool) -> st
     return f"{package}>={version}"
 
 
+def interop_runtime_requirement(package_path: Path) -> str:
+    """
+    What an interop package requires of winrt-runtime, which is also what one
+    that compiles against the runtime's C++/WinRT headers builds with, so that
+    the headers it compiled against are ones the runtime it installs with has.
+    """
+    return versions.interop_runtime_requirement(
+        versions.runtime_functions_called(package_path)
+    )
+
+
 def write_compiled_project_files(
     package_path: Path,
     module_name: str,
@@ -515,6 +526,9 @@ def write_compiled_project_files(
         BOOTSTRAP_DLL if is_app_sdk_bootstrap_package(package_name) else None
     )
 
+    needs_app_sdk = is_app_sdk_interop_package(package_name)
+    own_headers = not is_runtime and any((package_path / "cppwinrt").glob("**/*.h"))
+
     with open_if_changed(package_path / "pyproject.toml") as f:
         f.write(
             templates.COMPILED_PYPROJECT_TOML.format(
@@ -522,7 +536,11 @@ def write_compiled_project_files(
                 project_urls=format_project_urls(
                     None if is_runtime else package_families[package_name]
                 ),
-                extra_requires="" if is_runtime else ', "winrt-runtime"',
+                extra_requires=(
+                    f', "{interop_runtime_requirement(package_path)}"'
+                    if own_headers
+                    else ""
+                ),
                 package_name=package_name,
                 description="Python projection of Windows Runtime (WinRT) APIs",
                 packages_find=(
@@ -547,20 +565,18 @@ def write_compiled_project_files(
                     module=f"{root_package}.{ext_module_name}"
                 ),
                 local_runtime=(
-                    ""
-                    if is_runtime
-                    else templates.LOCAL_RUNTIME.format(
-                        runtime_relative=runtime_relative
-                    )
+                    templates.LOCAL_RUNTIME.format(runtime_relative=runtime_relative)
+                    if own_headers
+                    else ""
+                ),
+                no_isolation=(
+                    templates.NO_ISOLATION if is_runtime or own_headers else ""
                 ),
                 extra_cibuildwheel_windows=templates.NO_WHEEL_REPAIR,
             )
         )
 
     write_license(package_path, redistributes)
-
-    needs_app_sdk = is_app_sdk_interop_package(package_name)
-    own_headers = not is_runtime and any((package_path / "cppwinrt").glob("**/*.h"))
 
     if is_runtime:
         with open_if_changed(package_path / "MANIFEST.in") as f:
@@ -929,9 +945,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 for path in INTEROP_PATH.glob("winrt-*"):
     # KeyError here means a new interop package needs a row in the table
     interop_deps = INTEROP_DEPENDENCIES[packages.interop_distribution(path)]
-    runtime_requirement = versions.interop_runtime_requirement(
-        versions.runtime_functions_called(path)
-    )
+    runtime_requirement = interop_runtime_requirement(path)
 
     with open_if_changed(path / "requirements.txt") as req:
         req.writelines(
