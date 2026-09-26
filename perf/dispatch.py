@@ -18,7 +18,7 @@ argument without also changing what is called, and ``JsonValue`` because
 The numbers only mean anything from a Release build -- the Debug build of the
 same tree is several times slower and needs ``python_d.exe``::
 
-    cmake -S . -B _build/bench -G Ninja -DPYWINRT_FULL_PROJECTION=OFF -DCMAKE_BUILD_TYPE=Release
+    cmake -S . -B _build/bench -G Ninja -DCMAKE_BUILD_TYPE=Release
     cmake --build _build/bench -j 4
     cmake --install _build/bench --prefix _build/bench-install
     $env:PYTHONPATH = "_build/bench-install"
