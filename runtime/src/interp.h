@@ -20,6 +20,7 @@
 #include "shapes.h"
 #include "table.h"
 
+#include <atomic>
 #include <cstdint>
 #include <deque>
 #include <memory>
@@ -37,6 +38,42 @@ namespace py::interp
 {
     struct projection;
     struct type_entry;
+
+    /**
+     * Reads a first-use cache that another thread may be filling in with
+     * publish() at the same time: an atomic load with acquire ordering.
+     *
+     * A cache such as arg_desc::info is written once, after what it points at
+     * has been built. A thread that reads the pointer with a plain load could
+     * see it before it sees the writes that built the entry behind it, and a
+     * plain read of a field another thread is writing is undefined behavior
+     * besides. With this load and publish()'s store, a thread that sees the
+     * value also sees everything the writer did before storing it. The same
+     * holds for a flag such as type_entry::ready, which stands for a whole
+     * build rather than one pointer.
+     *
+     * On x64 both are ordinary moves - the processor already keeps stores in
+     * order - so all they change is that the compiler may not move the other
+     * writes past them. On ARM64, which does not keep them in order, they are
+     * its load-acquire and store-release instructions.
+     */
+    template<typename T>
+    T load_published(T const& value) noexcept
+    {
+        return std::atomic_ref<T>{const_cast<T&>(value)}.load(
+            std::memory_order_acquire);
+    }
+
+    /**
+     * Stores @p value where load_published() may be reading it: an atomic
+     * store with release ordering, made after everything @p value stands for
+     * has been written.
+     */
+    template<typename T>
+    void publish(T& target, T value) noexcept
+    {
+        std::atomic_ref<T>{target}.store(value, std::memory_order_release);
+    }
 
     /**
      * One field of a WinRT struct, at the offset the reader computed for it.
@@ -305,6 +342,10 @@ namespace py::interp
         /// arithmetic on them that no metadata describes. numerics.h says what
         /// that is and where it comes from instead.
         numerics::kind numerics_kind;
+        /// Set with publish() once the entry has been built, and read with
+        /// load_published() by anything that may be on another thread than
+        /// the one that built it.
+        bool ready;
     };
 
     /**
@@ -344,6 +385,11 @@ namespace py::interp
         std::vector<std::unique_ptr<PyMethodDef[]>> method_defs;
         /// Interned attribute names, kept alive for the descriptors.
         std::vector<PyObject*> names;
+        /// The thread that is executing the package's __init__.py, which
+        /// builds every type the namespace binds.
+        unsigned long loader;
+        /// Set with publish() once it has.
+        bool loaded;
 
         void release_types() noexcept;
 

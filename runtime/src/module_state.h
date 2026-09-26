@@ -4,6 +4,9 @@
 
 #include "interp.h"
 
+#include <atomic>
+#include <cstdint>
+
 // internal implementation details for the winrt-runtime module
 
 namespace py::cpp::_winrt
@@ -63,6 +66,88 @@ namespace py::cpp::_winrt
 #endif
     };
 
+#ifdef Py_GIL_DISABLED
+    /**
+     * A lock that the thread holding it can take again.
+     */
+    struct build_mutex
+    {
+        PyMutex mutex;
+        std::atomic<unsigned long> owner;
+        uint32_t depth;
+    };
+#else
+    /**
+     * Nothing, on a build where only one thread runs Python at a time.
+     */
+    struct build_mutex
+    {
+    };
+#endif
+
+    /**
+     * Holds the lock over building what a projection builds on first use,
+     * for a scope.
+     *
+     * The types a namespace binds are built while its package is imported,
+     * which the import system does on one thread at a time. What is built
+     * later - a delegate, the instance of a parameterized interface, the
+     * vtable Python implements an interface behind, the layout of a call's
+     * outputs - is built by whichever thread needs it first, and this is what
+     * keeps two of them from building the same thing into the same
+     * projection at once.
+     *
+     * Two rules keep it from deadlocking. A build that needs a type from
+     * another package resolves it before taking the lock, so the lock is never
+     * held across an import, which would wait for the thread importing that
+     * package while that thread waited for the lock. And the thread holding
+     * it can take it again, because building a type allocates Python objects,
+     * and a collection that runs a finalizer can come back into the runtime.
+     *
+     * Under the GIL it is nothing, as the state lock is.
+     */
+    class build_guard
+    {
+      public:
+        build_guard(build_guard const&) = delete;
+        build_guard& operator=(build_guard const&) = delete;
+
+#ifdef Py_GIL_DISABLED
+        explicit build_guard(build_mutex& mutex) noexcept : mutex_(&mutex)
+        {
+            auto const self = PyThread_get_thread_ident();
+
+            if (mutex_->owner.load(std::memory_order_relaxed) == self)
+            {
+                mutex_->depth++;
+                return;
+            }
+
+            PyMutex_Lock(&mutex_->mutex);
+            mutex_->owner.store(self, std::memory_order_relaxed);
+            mutex_->depth = 1;
+        }
+
+        ~build_guard()
+        {
+            if (--mutex_->depth != 0)
+            {
+                return;
+            }
+
+            mutex_->owner.store(0, std::memory_order_relaxed);
+            PyMutex_Unlock(&mutex_->mutex);
+        }
+
+      private:
+        build_mutex* mutex_;
+#else
+        explicit build_guard(build_mutex&) noexcept
+        {
+        }
+#endif
+    };
+
     struct module_state
     {
         PyTypeObject* inspectable_meta_type;
@@ -89,6 +174,9 @@ namespace py::cpp::_winrt
         /// WinRT signature of the instance. Borrowed: the entry that built one
         /// owns it, and they are let go of together.
         std::unordered_map<std::string_view, PyTypeObject*> generic_types;
+        /// Guards what the projections build after their packages have been
+        /// imported. Taken before the cache lock when both are.
+        build_mutex build_lock;
         PyObject* to_uuid_func;
         PyObject* wrap_async_func;
     };

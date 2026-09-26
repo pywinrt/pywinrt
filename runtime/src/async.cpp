@@ -199,7 +199,9 @@ PyObject* py::await_async(PyObject* obj) noexcept
     }
 
     // lazy import to avoid circular import issues
-    if (!state->wrap_async_func)
+    auto wrap_async = py::interp::load_published(state->wrap_async_func);
+
+    if (!wrap_async)
     {
         pyobj_handle winrt_system{PyImport_ImportModule("winrt.runtime._internals")};
         if (!winrt_system)
@@ -214,10 +216,22 @@ PyObject* py::await_async(PyObject* obj) noexcept
             return nullptr;
         }
 
-        state->wrap_async_func = wrap_async_func.detach();
+        // Two threads can both have imported it, and the state keeps whichever
+        // got there first.
+        PyObject* expected{};
+
+        if (std::atomic_ref<PyObject*>{state->wrap_async_func}.compare_exchange_strong(
+                expected, wrap_async_func.get(), std::memory_order_acq_rel))
+        {
+            wrap_async = wrap_async_func.detach();
+        }
+        else
+        {
+            wrap_async = expected;
+        }
     }
 
-    pyobj_handle awaitable{PyObject_CallOneArg(state->wrap_async_func, obj)};
+    pyobj_handle awaitable{PyObject_CallOneArg(wrap_async, obj)};
     if (!awaitable)
     {
         return nullptr;
