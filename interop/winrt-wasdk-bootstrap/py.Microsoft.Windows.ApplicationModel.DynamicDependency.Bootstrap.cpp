@@ -199,6 +199,11 @@ PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
     using namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::
         Bootstrap;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (PyModule_AddStringConstant(
