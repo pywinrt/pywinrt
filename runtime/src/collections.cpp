@@ -22,7 +22,6 @@
 //    Python exception, so it is reported with report_unraisable() and returned
 //    as that HRESULT.
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include "collections.h"

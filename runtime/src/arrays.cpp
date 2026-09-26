@@ -19,7 +19,6 @@
 
 #include <Python.h>
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include "_winrt_array.h"

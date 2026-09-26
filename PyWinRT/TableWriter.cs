@@ -285,9 +285,9 @@ sealed class TableWriter
     private const uint NoRef = uint.MaxValue;
 
     /// <summary>
-    /// The compatibility generation, which is the same number as the ABI major
-    /// in pywinrt/abi.h and the epoch in a projection package's version. The
-    /// runtime asserts the two against each other.
+    /// The compatibility generation, which is the same number as the epoch in
+    /// a projection package's version and the major of every hand-written
+    /// package's version. scripts/versions.py checks them against each other.
     /// </summary>
     public const ushort FormatMajor = 4;
 

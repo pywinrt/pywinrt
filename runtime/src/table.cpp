@@ -8,7 +8,6 @@
 // and a runtime that do not belong together should say so rather than read past
 // the end of a mapping.
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include "table.h"
@@ -18,13 +17,6 @@
 
 namespace py::table
 {
-    // Breaking either contract forces every projection package to be
-    // republished, so both breaks are the same event and carry the same
-    // number: the epoch in a package's version.
-    static_assert(
-        format_major == runtime_abi_version_major,
-        "the table format major and the ABI major are one compatibility generation");
-
     namespace
     {
         constexpr uint32_t header_size = 48;

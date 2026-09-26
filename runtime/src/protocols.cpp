@@ -10,7 +10,6 @@
 
 #include <Python.h>
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include "arrays.h"

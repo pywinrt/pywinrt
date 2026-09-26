@@ -29,9 +29,10 @@ namespace py::table
      * something that would otherwise be silently ignored.
      *
      * The major is the compatibility generation, which is the same number as
-     * the ABI major in pywinrt/abi.h and the epoch in a projection package's
-     * version. table.cpp asserts the two against each other. The minors are
-     * unrelated and count additions to their own contract.
+     * the epoch in a projection package's version and the major of every
+     * hand-written package's version. scripts/versions.py checks them against
+     * each other. The minor counts additions to the format within a
+     * generation.
      */
     inline constexpr uint16_t format_major = 4;
     inline constexpr uint16_t format_minor = 0;
