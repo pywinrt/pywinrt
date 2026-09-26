@@ -3,7 +3,6 @@
 import enum
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -93,10 +92,6 @@ class PackageDependency_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Create(System.String,Windows.ApplicationModel.PackageVersion,Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions)
     def create(cls, package_family_name: str, min_version: windows_applicationmodel.PackageVersion | tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16], options: CreatePackageDependencyOptions, /) -> PackageDependency: ...
-    # Deprecated alias of create() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Create(System.String,Windows.ApplicationModel.PackageVersion,Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions)
-    @deprecated("Use create() instead.")
-    def create2(cls, package_family_name: str, min_version: windows_applicationmodel.PackageVersion | tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16], options: CreatePackageDependencyOptions, /) -> PackageDependency: ...
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::CreateForSystem(System.String,Windows.ApplicationModel.PackageVersion,Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions)
     def create_for_system(cls, package_family_name: str, min_version: windows_applicationmodel.PackageVersion | tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16], options: CreatePackageDependencyOptions, /) -> PackageDependency: ...
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::GetFromId(System.String)
@@ -118,10 +113,6 @@ class PackageDependency(winrt.system.Object, metaclass=PackageDependency_Static)
     @typing.overload
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Add(Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions)
     def add(self, options: AddPackageDependencyOptions, /) -> PackageDependencyContext: ...
-    # Deprecated alias of add() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Add(Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions)
-    @deprecated("Use add() instead.")
-    def add2(self, options: AddPackageDependencyOptions, /) -> PackageDependencyContext: ...
     # System.Void Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Delete()
     def delete(self) -> None: ...
     # System.String Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::get_Id()

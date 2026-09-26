@@ -16,5 +16,3 @@ __all__ = [
     "IDropOperationTarget",
 ]
 
-winrt.runtime._internals.alias_method(DragOperation, "set_drag_ui_content_from_software_bitmap2", "set_drag_ui_content_from_software_bitmap")
-winrt.runtime._internals.alias_method(DragUIOverride, "set_content_from_software_bitmap2", "set_content_from_software_bitmap")

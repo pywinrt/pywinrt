@@ -21,5 +21,3 @@ __all__ = [
     "ModelCatalogSource",
 ]
 
-winrt.runtime._internals.alias_method(CatalogModelInfo, "get_instance_async2", "get_instance_async")
-winrt.runtime._internals.alias_static_method(ModelCatalogSource, "create_from_uri_async2", "create_from_uri_async")

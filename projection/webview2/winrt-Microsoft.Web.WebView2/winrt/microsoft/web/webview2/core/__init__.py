@@ -143,6 +143,3 @@ __all__ = [
     "ICoreWebView2DispatchAdapter",
 ]
 
-winrt.runtime._internals.alias_static_method(CoreWebView2Environment, "get_available_browser_version_string2", "get_available_browser_version_string")
-winrt.runtime._internals.alias_static_method(CoreWebView2Environment, "get_available_browser_version_string_with_options", "get_available_browser_version_string")
-winrt.runtime._internals.alias_method(CoreWebView2Profile, "clear_browsing_data_async2", "clear_browsing_data_async")

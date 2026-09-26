@@ -7,7 +7,6 @@ import types
 import typing
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -426,10 +425,6 @@ class ColorKeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.ColorKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.UI.Color,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.ColorKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.UI.Color,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], easing_function: CompositionEasingFunction, /) -> None: ...
     # Microsoft.UI.Composition.CompositionColorSpace Microsoft.UI.Composition.ColorKeyFrameAnimation::get_InterpolationColorSpace()
     @_property
     def interpolation_color_space(self) -> CompositionColorSpace: ...
@@ -698,11 +693,6 @@ class CompositionDrawingSurface(CompositionObject, ICompositionSurface, metaclas
     @typing.overload
     # System.Void Microsoft.UI.Composition.CompositionDrawingSurface::Scroll(Windows.Graphics.PointInt32,Windows.Graphics.RectInt32)
     def scroll(self, offset: windows_graphics.PointInt32 | tuple[winrt.system.Int32, winrt.system.Int32], scroll_rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], /) -> None: ...
-    @typing.final
-    # Deprecated alias of scroll() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.CompositionDrawingSurface::Scroll(Windows.Graphics.PointInt32,Windows.Graphics.RectInt32)
-    @deprecated("Use scroll() instead.")
-    def scroll_rect(self, offset: windows_graphics.PointInt32 | tuple[winrt.system.Int32, winrt.system.Int32], scroll_rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], /) -> None: ...
     @typing.overload
     @typing.final
     # System.Void Microsoft.UI.Composition.CompositionDrawingSurface::ScrollWithClip(Windows.Graphics.PointInt32,Windows.Graphics.RectInt32)
@@ -710,11 +700,6 @@ class CompositionDrawingSurface(CompositionObject, ICompositionSurface, metaclas
     @typing.overload
     # System.Void Microsoft.UI.Composition.CompositionDrawingSurface::ScrollWithClip(Windows.Graphics.PointInt32,Windows.Graphics.RectInt32,Windows.Graphics.RectInt32)
     def scroll_with_clip(self, offset: windows_graphics.PointInt32 | tuple[winrt.system.Int32, winrt.system.Int32], clip_rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], scroll_rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], /) -> None: ...
-    @typing.final
-    # Deprecated alias of scroll_with_clip() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.CompositionDrawingSurface::ScrollWithClip(Windows.Graphics.PointInt32,Windows.Graphics.RectInt32,Windows.Graphics.RectInt32)
-    @deprecated("Use scroll_with_clip() instead.")
-    def scroll_rect_with_clip(self, offset: windows_graphics.PointInt32 | tuple[winrt.system.Int32, winrt.system.Int32], clip_rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], scroll_rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], /) -> None: ...
     # Microsoft.Graphics.DirectX.DirectXAlphaMode Microsoft.UI.Composition.CompositionDrawingSurface::get_AlphaMode()
     @_property
     @typing.final
@@ -757,10 +742,6 @@ class CompositionEasingFunction_Static(CompositionObject_Static):
     @typing.overload
     # Microsoft.UI.Composition.StepEasingFunction Microsoft.UI.Composition.CompositionEasingFunction::CreateStepEasingFunction(Microsoft.UI.Composition.Compositor,System.Int32)
     def create_step_easing_function(cls, owner: Compositor, step_count: winrt.system.Int32, /) -> StepEasingFunction: ...
-    # Deprecated alias of create_step_easing_function() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.StepEasingFunction Microsoft.UI.Composition.CompositionEasingFunction::CreateStepEasingFunction(Microsoft.UI.Composition.Compositor,System.Int32)
-    @deprecated("Use create_step_easing_function() instead.")
-    def create_step_easing_function_with_step_count(cls, owner: Compositor, step_count: winrt.system.Int32, /) -> StepEasingFunction: ...
 
 class CompositionEasingFunction(CompositionObject, metaclass=CompositionEasingFunction_Static):
     ...
@@ -1047,20 +1028,12 @@ class CompositionNineGridBrush(CompositionBrush):
     @typing.overload
     # System.Void Microsoft.UI.Composition.CompositionNineGridBrush::SetInsetScales(System.Single,System.Single,System.Single,System.Single)
     def set_inset_scales(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, /) -> None: ...
-    # Deprecated alias of set_inset_scales() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.CompositionNineGridBrush::SetInsetScales(System.Single,System.Single,System.Single,System.Single)
-    @deprecated("Use set_inset_scales() instead.")
-    def set_inset_scales_with_values(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, /) -> None: ...
     @typing.overload
     # System.Void Microsoft.UI.Composition.CompositionNineGridBrush::SetInsets(System.Single)
     def set_insets(self, inset: winrt.system.Single, /) -> None: ...
     @typing.overload
     # System.Void Microsoft.UI.Composition.CompositionNineGridBrush::SetInsets(System.Single,System.Single,System.Single,System.Single)
     def set_insets(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, /) -> None: ...
-    # Deprecated alias of set_insets() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.CompositionNineGridBrush::SetInsets(System.Single,System.Single,System.Single,System.Single)
-    @deprecated("Use set_insets() instead.")
-    def set_insets_with_values(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, /) -> None: ...
     # System.Single Microsoft.UI.Composition.CompositionNineGridBrush::get_TopInsetScale()
     @_property
     def top_inset_scale(self) -> winrt.system.Single: ...
@@ -1142,11 +1115,6 @@ class CompositionObject(winrt.system.Object, IAnimationObject, windows_foundatio
     @typing.overload
     # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimation(System.String,Microsoft.UI.Composition.CompositionAnimation,Microsoft.UI.Composition.AnimationController)
     def start_animation(self, property_name: str, animation: CompositionAnimation, animation_controller: AnimationController, /) -> None: ...
-    @typing.final
-    # Deprecated alias of start_animation() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimation(System.String,Microsoft.UI.Composition.CompositionAnimation,Microsoft.UI.Composition.AnimationController)
-    @deprecated("Use start_animation() instead.")
-    def start_animation_with_controller(self, property_name: str, animation: CompositionAnimation, animation_controller: AnimationController, /) -> None: ...
     @typing.final
     # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimationGroup(Microsoft.UI.Composition.ICompositionAnimationBase)
     def start_animation_group(self, value: ICompositionAnimationBase, /) -> None: ...
@@ -1815,20 +1783,12 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.CompositionColorBrush Microsoft.UI.Composition.Compositor::CreateColorBrush(Windows.UI.Color)
     def create_color_brush(self, color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> CompositionColorBrush: ...
-    # Deprecated alias of create_color_brush() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionColorBrush Microsoft.UI.Composition.Compositor::CreateColorBrush(Windows.UI.Color)
-    @deprecated("Use create_color_brush() instead.")
-    def create_color_brush_with_color(self, color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> CompositionColorBrush: ...
     @typing.overload
     # Microsoft.UI.Composition.CompositionColorGradientStop Microsoft.UI.Composition.Compositor::CreateColorGradientStop()
     def create_color_gradient_stop(self) -> CompositionColorGradientStop: ...
     @typing.overload
     # Microsoft.UI.Composition.CompositionColorGradientStop Microsoft.UI.Composition.Compositor::CreateColorGradientStop(System.Single,Windows.UI.Color)
     def create_color_gradient_stop(self, offset: winrt.system.Single, color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> CompositionColorGradientStop: ...
-    # Deprecated alias of create_color_gradient_stop() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionColorGradientStop Microsoft.UI.Composition.Compositor::CreateColorGradientStop(System.Single,Windows.UI.Color)
-    @deprecated("Use create_color_gradient_stop() instead.")
-    def create_color_gradient_stop_with_offset_and_color(self, offset: winrt.system.Single, color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> CompositionColorGradientStop: ...
     # Microsoft.UI.Composition.ColorKeyFrameAnimation Microsoft.UI.Composition.Compositor::CreateColorKeyFrameAnimation()
     def create_color_key_frame_animation(self) -> ColorKeyFrameAnimation: ...
     # Microsoft.UI.Composition.CompositionContainerShape Microsoft.UI.Composition.Compositor::CreateContainerShape()
@@ -1847,10 +1807,6 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.CompositionEffectFactory Microsoft.UI.Composition.Compositor::CreateEffectFactory(Windows.Graphics.Effects.IGraphicsEffect,Windows.Foundation.Collections.IIterable`1<System.String>)
     def create_effect_factory(self, graphics_effect: windows_graphics_effects.IGraphicsEffect, animatable_properties: _cabc.Iterable[str], /) -> CompositionEffectFactory: ...
-    # Deprecated alias of create_effect_factory() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionEffectFactory Microsoft.UI.Composition.Compositor::CreateEffectFactory(Windows.Graphics.Effects.IGraphicsEffect,Windows.Foundation.Collections.IIterable`1<System.String>)
-    @deprecated("Use create_effect_factory() instead.")
-    def create_effect_factory_with_properties(self, graphics_effect: windows_graphics_effects.IGraphicsEffect, animatable_properties: _cabc.Iterable[str], /) -> CompositionEffectFactory: ...
     # Microsoft.UI.Composition.CompositionEllipseGeometry Microsoft.UI.Composition.Compositor::CreateEllipseGeometry()
     def create_ellipse_geometry(self) -> CompositionEllipseGeometry: ...
     @typing.overload
@@ -1859,20 +1815,12 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.ExpressionAnimation Microsoft.UI.Composition.Compositor::CreateExpressionAnimation(System.String)
     def create_expression_animation(self, expression: str, /) -> ExpressionAnimation: ...
-    # Deprecated alias of create_expression_animation() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.ExpressionAnimation Microsoft.UI.Composition.Compositor::CreateExpressionAnimation(System.String)
-    @deprecated("Use create_expression_animation() instead.")
-    def create_expression_animation_with_expression(self, expression: str, /) -> ExpressionAnimation: ...
     @typing.overload
     # Microsoft.UI.Composition.CompositionGeometricClip Microsoft.UI.Composition.Compositor::CreateGeometricClip()
     def create_geometric_clip(self) -> CompositionGeometricClip: ...
     @typing.overload
     # Microsoft.UI.Composition.CompositionGeometricClip Microsoft.UI.Composition.Compositor::CreateGeometricClip(Microsoft.UI.Composition.CompositionGeometry)
     def create_geometric_clip(self, geometry: CompositionGeometry, /) -> CompositionGeometricClip: ...
-    # Deprecated alias of create_geometric_clip() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionGeometricClip Microsoft.UI.Composition.Compositor::CreateGeometricClip(Microsoft.UI.Composition.CompositionGeometry)
-    @deprecated("Use create_geometric_clip() instead.")
-    def create_geometric_clip_with_geometry(self, geometry: CompositionGeometry, /) -> CompositionGeometricClip: ...
     # Microsoft.UI.Composition.ImplicitAnimationCollection Microsoft.UI.Composition.Compositor::CreateImplicitAnimationCollection()
     def create_implicit_animation_collection(self) -> ImplicitAnimationCollection: ...
     @typing.overload
@@ -1881,10 +1829,6 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.InsetClip Microsoft.UI.Composition.Compositor::CreateInsetClip(System.Single,System.Single,System.Single,System.Single)
     def create_inset_clip(self, left_inset: winrt.system.Single, top_inset: winrt.system.Single, right_inset: winrt.system.Single, bottom_inset: winrt.system.Single, /) -> InsetClip: ...
-    # Deprecated alias of create_inset_clip() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.InsetClip Microsoft.UI.Composition.Compositor::CreateInsetClip(System.Single,System.Single,System.Single,System.Single)
-    @deprecated("Use create_inset_clip() instead.")
-    def create_inset_clip_with_insets(self, left_inset: winrt.system.Single, top_inset: winrt.system.Single, right_inset: winrt.system.Single, bottom_inset: winrt.system.Single, /) -> InsetClip: ...
     # Microsoft.UI.Composition.LayerVisual Microsoft.UI.Composition.Compositor::CreateLayerVisual()
     def create_layer_visual(self) -> LayerVisual: ...
     # Microsoft.UI.Composition.CompositionLineGeometry Microsoft.UI.Composition.Compositor::CreateLineGeometry()
@@ -1903,10 +1847,6 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.CompositionPathGeometry Microsoft.UI.Composition.Compositor::CreatePathGeometry(Microsoft.UI.Composition.CompositionPath)
     def create_path_geometry(self, path: CompositionPath, /) -> CompositionPathGeometry: ...
-    # Deprecated alias of create_path_geometry() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionPathGeometry Microsoft.UI.Composition.Compositor::CreatePathGeometry(Microsoft.UI.Composition.CompositionPath)
-    @deprecated("Use create_path_geometry() instead.")
-    def create_path_geometry_with_path(self, path: CompositionPath, /) -> CompositionPathGeometry: ...
     # Microsoft.UI.Composition.PathKeyFrameAnimation Microsoft.UI.Composition.Compositor::CreatePathKeyFrameAnimation()
     def create_path_key_frame_animation(self) -> PathKeyFrameAnimation: ...
     # Microsoft.UI.Composition.PointLight Microsoft.UI.Composition.Compositor::CreatePointLight()
@@ -1932,14 +1872,6 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.RectangleClip Microsoft.UI.Composition.Compositor::CreateRectangleClip(System.Single,System.Single,System.Single,System.Single,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2)
     def create_rectangle_clip(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, top_left_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], top_right_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], bottom_right_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], bottom_left_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], /) -> RectangleClip: ...
-    # Deprecated alias of create_rectangle_clip() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.RectangleClip Microsoft.UI.Composition.Compositor::CreateRectangleClip(System.Single,System.Single,System.Single,System.Single)
-    @deprecated("Use create_rectangle_clip() instead.")
-    def create_rectangle_clip_with_sides(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, /) -> RectangleClip: ...
-    # Deprecated alias of create_rectangle_clip() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.RectangleClip Microsoft.UI.Composition.Compositor::CreateRectangleClip(System.Single,System.Single,System.Single,System.Single,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2)
-    @deprecated("Use create_rectangle_clip() instead.")
-    def create_rectangle_clip_with_sides_and_radius(self, left: winrt.system.Single, top: winrt.system.Single, right: winrt.system.Single, bottom: winrt.system.Single, top_left_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], top_right_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], bottom_right_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], bottom_left_radius: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], /) -> RectangleClip: ...
     # Microsoft.UI.Composition.CompositionRectangleGeometry Microsoft.UI.Composition.Compositor::CreateRectangleGeometry()
     def create_rectangle_geometry(self) -> CompositionRectangleGeometry: ...
     @typing.overload
@@ -1948,10 +1880,6 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.RedirectVisual Microsoft.UI.Composition.Compositor::CreateRedirectVisual(Microsoft.UI.Composition.Visual)
     def create_redirect_visual(self, source: Visual, /) -> RedirectVisual: ...
-    # Deprecated alias of create_redirect_visual() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.RedirectVisual Microsoft.UI.Composition.Compositor::CreateRedirectVisual(Microsoft.UI.Composition.Visual)
-    @deprecated("Use create_redirect_visual() instead.")
-    def create_redirect_visual_with_source_visual(self, source: Visual, /) -> RedirectVisual: ...
     # Microsoft.UI.Composition.CompositionRoundedRectangleGeometry Microsoft.UI.Composition.Compositor::CreateRoundedRectangleGeometry()
     def create_rounded_rectangle_geometry(self) -> CompositionRoundedRectangleGeometry: ...
     # Microsoft.UI.Composition.ScalarKeyFrameAnimation Microsoft.UI.Composition.Compositor::CreateScalarKeyFrameAnimation()
@@ -1974,10 +1902,6 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.CompositionSpriteShape Microsoft.UI.Composition.Compositor::CreateSpriteShape(Microsoft.UI.Composition.CompositionGeometry)
     def create_sprite_shape(self, geometry: CompositionGeometry, /) -> CompositionSpriteShape: ...
-    # Deprecated alias of create_sprite_shape() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionSpriteShape Microsoft.UI.Composition.Compositor::CreateSpriteShape(Microsoft.UI.Composition.CompositionGeometry)
-    @deprecated("Use create_sprite_shape() instead.")
-    def create_sprite_shape_with_geometry(self, geometry: CompositionGeometry, /) -> CompositionSpriteShape: ...
     # Microsoft.UI.Composition.SpriteVisual Microsoft.UI.Composition.Compositor::CreateSpriteVisual()
     def create_sprite_visual(self) -> SpriteVisual: ...
     @typing.overload
@@ -1986,20 +1910,12 @@ class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Co
     @typing.overload
     # Microsoft.UI.Composition.StepEasingFunction Microsoft.UI.Composition.Compositor::CreateStepEasingFunction(System.Int32)
     def create_step_easing_function(self, step_count: winrt.system.Int32, /) -> StepEasingFunction: ...
-    # Deprecated alias of create_step_easing_function() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.StepEasingFunction Microsoft.UI.Composition.Compositor::CreateStepEasingFunction(System.Int32)
-    @deprecated("Use create_step_easing_function() instead.")
-    def create_step_easing_function_with_step_count(self, step_count: winrt.system.Int32, /) -> StepEasingFunction: ...
     @typing.overload
     # Microsoft.UI.Composition.CompositionSurfaceBrush Microsoft.UI.Composition.Compositor::CreateSurfaceBrush()
     def create_surface_brush(self) -> CompositionSurfaceBrush: ...
     @typing.overload
     # Microsoft.UI.Composition.CompositionSurfaceBrush Microsoft.UI.Composition.Compositor::CreateSurfaceBrush(Microsoft.UI.Composition.ICompositionSurface)
     def create_surface_brush(self, surface: ICompositionSurface, /) -> CompositionSurfaceBrush: ...
-    # Deprecated alias of create_surface_brush() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Composition.CompositionSurfaceBrush Microsoft.UI.Composition.Compositor::CreateSurfaceBrush(Microsoft.UI.Composition.ICompositionSurface)
-    @deprecated("Use create_surface_brush() instead.")
-    def create_surface_brush_with_surface(self, surface: ICompositionSurface, /) -> CompositionSurfaceBrush: ...
     # Microsoft.UI.Composition.Vector2KeyFrameAnimation Microsoft.UI.Composition.Compositor::CreateVector2KeyFrameAnimation()
     def create_vector2_key_frame_animation(self) -> Vector2KeyFrameAnimation: ...
     # Microsoft.UI.Composition.Vector3KeyFrameAnimation Microsoft.UI.Composition.Compositor::CreateVector3KeyFrameAnimation()
@@ -2234,11 +2150,6 @@ class KeyFrameAnimation(CompositionAnimation, metaclass=KeyFrameAnimation_Static
     @typing.overload
     # System.Void Microsoft.UI.Composition.KeyFrameAnimation::InsertExpressionKeyFrame(System.Single,System.String,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_expression_key_frame(self, normalized_progress_key: winrt.system.Single, value: str, easing_function: CompositionEasingFunction, /) -> None: ...
-    @typing.final
-    # Deprecated alias of insert_expression_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.KeyFrameAnimation::InsertExpressionKeyFrame(System.Single,System.String,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_expression_key_frame() instead.")
-    def insert_expression_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: str, easing_function: CompositionEasingFunction, /) -> None: ...
     # Microsoft.UI.Composition.AnimationStopBehavior Microsoft.UI.Composition.KeyFrameAnimation::get_StopBehavior()
     @_property
     def stop_behavior(self) -> AnimationStopBehavior: ...
@@ -2346,10 +2257,6 @@ class PathKeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.PathKeyFrameAnimation::InsertKeyFrame(System.Single,Microsoft.UI.Composition.CompositionPath,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, path: CompositionPath, easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.PathKeyFrameAnimation::InsertKeyFrame(System.Single,Microsoft.UI.Composition.CompositionPath,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, path: CompositionPath, easing_function: CompositionEasingFunction, /) -> None: ...
 
 @typing.final
 class PointLight(CompositionLight):
@@ -2425,10 +2332,6 @@ class QuaternionKeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.QuaternionKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Quaternion,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.QuaternionKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Quaternion,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 @typing.final
 class RectangleClip(CompositionClip):
@@ -2504,10 +2407,6 @@ class ScalarKeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.ScalarKeyFrameAnimation::InsertKeyFrame(System.Single,System.Single,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.system.Single, easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.ScalarKeyFrameAnimation::InsertKeyFrame(System.Single,System.Single,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: winrt.system.Single, easing_function: CompositionEasingFunction, /) -> None: ...
 
 class ScalarNaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
     ...
@@ -2753,10 +2652,6 @@ class Vector2KeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.Vector2KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector2,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.Vector2KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector2,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 class Vector2NaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
     ...
@@ -2792,10 +2687,6 @@ class Vector3KeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.Vector3KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.Vector3KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 class Vector3NaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
     ...
@@ -2831,10 +2722,6 @@ class Vector4KeyFrameAnimation(KeyFrameAnimation):
     @typing.overload
     # System.Void Microsoft.UI.Composition.Vector4KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector4,Microsoft.UI.Composition.CompositionEasingFunction)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector4 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
-    # Deprecated alias of insert_key_frame() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Composition.Vector4KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector4,Microsoft.UI.Composition.CompositionEasingFunction)
-    @deprecated("Use insert_key_frame() instead.")
-    def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector4 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], easing_function: CompositionEasingFunction, /) -> None: ...
 
 class Visual_Static(CompositionObject_Static):
     ...

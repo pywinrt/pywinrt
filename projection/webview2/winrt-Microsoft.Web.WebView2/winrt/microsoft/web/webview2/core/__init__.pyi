@@ -7,7 +7,6 @@ import types
 import typing
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -1617,14 +1616,6 @@ class CoreWebView2Environment_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2Environment::GetAvailableBrowserVersionString(System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)
     def get_available_browser_version_string(cls, browser_executable_folder: str, options: CoreWebView2EnvironmentOptions, /) -> str: ...
-    # Deprecated alias of get_available_browser_version_string() for pywinrt v3.x compatibility.
-    # System.String Microsoft.Web.WebView2.Core.CoreWebView2Environment::GetAvailableBrowserVersionString(System.String)
-    @deprecated("Use get_available_browser_version_string() instead.")
-    def get_available_browser_version_string2(cls, browser_executable_folder: str, /) -> str: ...
-    # Deprecated alias of get_available_browser_version_string() for pywinrt v3.x compatibility.
-    # System.String Microsoft.Web.WebView2.Core.CoreWebView2Environment::GetAvailableBrowserVersionString(System.String,Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions)
-    @deprecated("Use get_available_browser_version_string() instead.")
-    def get_available_browser_version_string_with_options(cls, browser_executable_folder: str, options: CoreWebView2EnvironmentOptions, /) -> str: ...
 
 @typing.final
 class CoreWebView2Environment(winrt.system.Object, metaclass=CoreWebView2Environment_Static):
@@ -2569,10 +2560,6 @@ class CoreWebView2Profile(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncAction Microsoft.Web.WebView2.Core.CoreWebView2Profile::ClearBrowsingDataAsync(Microsoft.Web.WebView2.Core.CoreWebView2BrowsingDataKinds,Windows.Foundation.DateTime,Windows.Foundation.DateTime)
     def clear_browsing_data_async(self, data_kinds: CoreWebView2BrowsingDataKinds, start_time: datetime.datetime, end_time: datetime.datetime, /) -> windows_foundation.IAsyncAction: ...
-    # Deprecated alias of clear_browsing_data_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncAction Microsoft.Web.WebView2.Core.CoreWebView2Profile::ClearBrowsingDataAsync()
-    @deprecated("Use clear_browsing_data_async() instead.")
-    def clear_browsing_data_async2(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Profile::Delete()
     def delete(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension>> Microsoft.Web.WebView2.Core.CoreWebView2Profile::GetBrowserExtensionsAsync()

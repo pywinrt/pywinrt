@@ -6,7 +6,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -364,10 +363,6 @@ class PackageRuntimeManager(winrt.system.Object, metaclass=PackageRuntimeManager
     @typing.overload
     # Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition Microsoft.Windows.Management.Deployment.PackageRuntimeManager::AddPackageSet(Microsoft.Windows.Management.Deployment.PackageSet,Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions,Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions)
     def add_package_set(self, package_set: PackageSet, create_options: microsoft_windows_applicationmodel_dynamicdependency.CreatePackageDependencyOptions, add_options: microsoft_windows_applicationmodel_dynamicdependency.AddPackageDependencyOptions, /) -> PackageSetRuntimeDisposition: ...
-    # Deprecated alias of add_package_set() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition Microsoft.Windows.Management.Deployment.PackageRuntimeManager::AddPackageSet(Microsoft.Windows.Management.Deployment.PackageSet,Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions,Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions)
-    @deprecated("Use add_package_set() instead.")
-    def add_package_set_with_options(self, package_set: PackageSet, create_options: microsoft_windows_applicationmodel_dynamicdependency.CreatePackageDependencyOptions, add_options: microsoft_windows_applicationmodel_dynamicdependency.AddPackageDependencyOptions, /) -> PackageSetRuntimeDisposition: ...
     # System.Void Microsoft.Windows.Management.Deployment.PackageRuntimeManager::RemovePackageSet(Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition)
     def remove_package_set(self, package_set_runtime_disposition: PackageSetRuntimeDisposition, /) -> None: ...
 

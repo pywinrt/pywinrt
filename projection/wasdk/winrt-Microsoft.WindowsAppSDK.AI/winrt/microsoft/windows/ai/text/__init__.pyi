@@ -6,7 +6,6 @@ import types
 import typing
 import uuid as _uuid
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -157,24 +156,12 @@ class LanguageModel(winrt.system.Object, windows_foundation.IClosable, metaclass
     @typing.overload
     # Microsoft.Windows.AI.Text.LanguageModelContext Microsoft.Windows.AI.Text.LanguageModel::CreateContext(System.String,Microsoft.Windows.AI.ContentSafety.ContentFilterOptions)
     def create_context(self, system_prompt: str, content_filter_options: microsoft_windows_ai_contentsafety.ContentFilterOptions, /) -> LanguageModelContext: ...
-    # Deprecated alias of create_context() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AI.Text.LanguageModelContext Microsoft.Windows.AI.Text.LanguageModel::CreateContext(System.String)
-    @deprecated("Use create_context() instead.")
-    def create_context2(self, system_prompt: str, /) -> LanguageModelContext: ...
-    # Deprecated alias of create_context() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AI.Text.LanguageModelContext Microsoft.Windows.AI.Text.LanguageModel::CreateContext(System.String,Microsoft.Windows.AI.ContentSafety.ContentFilterOptions)
-    @deprecated("Use create_context() instead.")
-    def create_context3(self, system_prompt: str, content_filter_options: microsoft_windows_ai_contentsafety.ContentFilterOptions, /) -> LanguageModelContext: ...
     @typing.overload
     # Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult Microsoft.Windows.AI.Text.LanguageModel::GenerateEmbeddingVectors(System.String)
     def generate_embedding_vectors(self, prompt: str, /) -> LanguageModelEmbeddingVectorResult: ...
     @typing.overload
     # Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult Microsoft.Windows.AI.Text.LanguageModel::GenerateEmbeddingVectors(System.String,Microsoft.Windows.AI.ContentSafety.ContentFilterOptions)
     def generate_embedding_vectors(self, prompt: str, content_filter_options: microsoft_windows_ai_contentsafety.ContentFilterOptions, /) -> LanguageModelEmbeddingVectorResult: ...
-    # Deprecated alias of generate_embedding_vectors() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult Microsoft.Windows.AI.Text.LanguageModel::GenerateEmbeddingVectors(System.String,Microsoft.Windows.AI.ContentSafety.ContentFilterOptions)
-    @deprecated("Use generate_embedding_vectors() instead.")
-    def generate_embedding_vectors2(self, prompt: str, content_filter_options: microsoft_windows_ai_contentsafety.ContentFilterOptions, /) -> LanguageModelEmbeddingVectorResult: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseAsync(System.String)
     def generate_response_async(self, prompt: str, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
@@ -184,14 +171,6 @@ class LanguageModel(winrt.system.Object, windows_foundation.IClosable, metaclass
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseAsync(Microsoft.Windows.AI.Text.LanguageModelContext,System.String,Microsoft.Windows.AI.Text.LanguageModelOptions)
     def generate_response_async(self, context: LanguageModelContext, prompt: str, options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
-    # Deprecated alias of generate_response_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseAsync(System.String,Microsoft.Windows.AI.Text.LanguageModelOptions)
-    @deprecated("Use generate_response_async() instead.")
-    def generate_response_async2(self, prompt: str, options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
-    # Deprecated alias of generate_response_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseAsync(Microsoft.Windows.AI.Text.LanguageModelContext,System.String,Microsoft.Windows.AI.Text.LanguageModelOptions)
-    @deprecated("Use generate_response_async() instead.")
-    def generate_response_async3(self, context: LanguageModelContext, prompt: str, options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseFromEmbeddingsAsync(Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.AI.Foundation.EmbeddingVector>)
     def generate_response_from_embeddings_async(self, prompt_embedding: _cabc.Iterable[microsoft_windows_ai_foundation.EmbeddingVector], /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
@@ -201,34 +180,18 @@ class LanguageModel(winrt.system.Object, windows_foundation.IClosable, metaclass
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseFromEmbeddingsAsync(Microsoft.Windows.AI.Text.LanguageModelContext,Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.AI.Foundation.EmbeddingVector>,Microsoft.Windows.AI.Text.LanguageModelOptions)
     def generate_response_from_embeddings_async(self, context: LanguageModelContext, prompt_embedding: _cabc.Iterable[microsoft_windows_ai_foundation.EmbeddingVector], options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
-    # Deprecated alias of generate_response_from_embeddings_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseFromEmbeddingsAsync(Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.AI.Foundation.EmbeddingVector>,Microsoft.Windows.AI.Text.LanguageModelOptions)
-    @deprecated("Use generate_response_from_embeddings_async() instead.")
-    def generate_response_from_embeddings_async2(self, prompt_embedding: _cabc.Iterable[microsoft_windows_ai_foundation.EmbeddingVector], options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
-    # Deprecated alias of generate_response_from_embeddings_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.LanguageModelResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateResponseFromEmbeddingsAsync(Microsoft.Windows.AI.Text.LanguageModelContext,Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.AI.Foundation.EmbeddingVector>,Microsoft.Windows.AI.Text.LanguageModelOptions)
-    @deprecated("Use generate_response_from_embeddings_async() instead.")
-    def generate_response_from_embeddings_async3(self, context: LanguageModelContext, prompt_embedding: _cabc.Iterable[microsoft_windows_ai_foundation.EmbeddingVector], options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[LanguageModelResponseResult, str]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.GenerateStructuredJsonResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateStructuredJsonResponseAsync(System.String,System.String)
     def generate_structured_json_response_async(self, prompt: str, json_schema: str, /) -> windows_foundation.IAsyncOperationWithProgress[GenerateStructuredJsonResponseResult, str]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.GenerateStructuredJsonResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateStructuredJsonResponseAsync(System.String,System.String,Microsoft.Windows.AI.Text.LanguageModelOptions)
     def generate_structured_json_response_async(self, prompt: str, json_schema: str, options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[GenerateStructuredJsonResponseResult, str]: ...
-    # Deprecated alias of generate_structured_json_response_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Text.GenerateStructuredJsonResponseResult,System.String> Microsoft.Windows.AI.Text.LanguageModel::GenerateStructuredJsonResponseAsync(System.String,System.String,Microsoft.Windows.AI.Text.LanguageModelOptions)
-    @deprecated("Use generate_structured_json_response_async() instead.")
-    def generate_structured_json_response_async2(self, prompt: str, json_schema: str, options: LanguageModelOptions, /) -> windows_foundation.IAsyncOperationWithProgress[GenerateStructuredJsonResponseResult, str]: ...
     @typing.overload
     # System.UInt64 Microsoft.Windows.AI.Text.LanguageModel::GetUsablePromptLength(System.String)
     def get_usable_prompt_length(self, prompt: str, /) -> winrt.system.UInt64: ...
     @typing.overload
     # System.UInt64 Microsoft.Windows.AI.Text.LanguageModel::GetUsablePromptLength(Microsoft.Windows.AI.Text.LanguageModelContext,System.String)
     def get_usable_prompt_length(self, context: LanguageModelContext, prompt: str, /) -> winrt.system.UInt64: ...
-    # Deprecated alias of get_usable_prompt_length() for pywinrt v3.x compatibility.
-    # System.UInt64 Microsoft.Windows.AI.Text.LanguageModel::GetUsablePromptLength(Microsoft.Windows.AI.Text.LanguageModelContext,System.String)
-    @deprecated("Use get_usable_prompt_length() instead.")
-    def get_usable_prompt_length2(self, context: LanguageModelContext, prompt: str, /) -> winrt.system.UInt64: ...
     # System.Guid Microsoft.Windows.AI.Text.LanguageModel::GetVectorSpaceId()
     def get_vector_space_id(self) -> _uuid.UUID: ...
 

@@ -17,7 +17,3 @@ __all__ = [
     "ISystemBackdropControllerWithTargets",
 ]
 
-winrt.runtime._internals.alias_method(DesktopAcrylicController, "set_target_with_window_id", "set_target")
-winrt.runtime._internals.alias_method(MicaController, "set_target_with_window_id", "set_target")
-winrt.runtime._internals.alias_method(_ISystemBackdropController, "set_target_with_window_id", "set_target")
-winrt.runtime._internals.alias_method(_ISystemBackdropControllerWithTargets, "set_target_with_window_id", "set_target")

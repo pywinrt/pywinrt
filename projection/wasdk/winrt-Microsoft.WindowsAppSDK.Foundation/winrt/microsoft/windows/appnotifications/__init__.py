@@ -15,4 +15,3 @@ __all__ = [
     "AppNotificationProgressData",
 ]
 
-winrt.runtime._internals.alias_method(AppNotificationManager, "update_async2", "update_async")
