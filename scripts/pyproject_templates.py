@@ -186,6 +186,14 @@ repair-wheel-command = \"\""""
 RUNTIME_PACKAGE_FIND = """
 [tool.setuptools.packages.find]
 where = ["python"]
+
+# A projection package is a table beside an __init__.py, and the type a call
+# hands back is resolved by importing the module that owns it while the
+# program runs. A freezer sees neither, so winrt-runtime ships the hook that
+# tells PyInstaller about both, and this is how PyInstaller finds it without
+# the application being frozen having to configure anything.
+[project.entry-points.pyinstaller40]
+hook-dirs = "winrt.__pyinstaller:get_hook_dirs"
 """
 
 # These are private to the runtime's own translation units, so they are not
