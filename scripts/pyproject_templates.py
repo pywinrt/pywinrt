@@ -191,46 +191,6 @@ where = ["python"]
 hook-dirs = "winrt.__pyinstaller:get_hook_dirs"
 """
 
-# No header of the runtime's is package data, but the sdist still has to carry
-# them or building winrt-runtime from source fails. src/include holds the
-# PyWinRT and C++/WinRT headers, and the rest are private to the runtime's own
-# translation units. shapes-generated.h is the census of ABI call shapes that
-# the trampolines are instantiated from.
-RUNTIME_MANIFEST_IN = """\
-# WARNING: Please don't edit this file. It was automatically generated.
-
-graft src/include
-include src/_winrt_array.h
-include src/_winrt_buffer.h
-include src/arrays.h
-include src/async.h
-include src/callbacks.h
-include src/collections.h
-include src/compose.h
-include src/delegates.h
-include src/enums.h
-include src/generics.h
-include src/implements.h
-include src/interp.h
-include src/members.h
-include src/metaclass.h
-include src/module_state.h
-include src/numerics-statics.h
-include src/numerics-values.h
-include src/numerics.h
-include src/objects.h
-include src/protocols.h
-include src/runtime.h
-include src/pycollections.h
-include src/pymapping.h
-include src/pysequence.h
-include src/shapes-generated.h
-include src/shapes.h
-include src/structs.h
-include src/table.h
-include src/types.h
-"""
-
 # An interop package's directory holds its C++ source, the C++/WinRT headers it
 # includes and the Python package it installs, so which of those is the Python
 # package has to be said rather than guessed.
