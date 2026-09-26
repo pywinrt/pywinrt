@@ -952,14 +952,34 @@ PyMODINIT_FUNC PyInit__winrt(void) noexcept
     return PyModuleDef_Init(&py::cpp::_winrt::module_def);
 }
 
+/**
+ * The state of the module, or @c nullptr with a Python error set when
+ * winrt._winrt is not loaded.
+ */
 py::cpp::_winrt::module_state* py::cpp::_winrt::get_module_state() noexcept
+{
+    auto const state = try_get_module_state();
+    if (!state)
+    {
+        PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
+    }
+
+    return state;
+}
+
+/**
+ * The state of the module, or @c nullptr with no Python error set when
+ * winrt._winrt is not loaded, for a caller whose own @c nullptr means that it
+ * found nothing.
+ */
+py::cpp::_winrt::module_state* py::cpp::_winrt::try_get_module_state() noexcept
 {
     return py::cpp::_winrt::main_state.load(std::memory_order_acquire);
 }
 
 PyTypeObject* py::get_inspectable_meta_type() noexcept
 {
-    auto state = py::cpp::_winrt::get_module_state();
+    auto state = py::cpp::_winrt::try_get_module_state();
     if (!state)
     {
         return nullptr;
@@ -970,7 +990,7 @@ PyTypeObject* py::get_inspectable_meta_type() noexcept
 
 PyTypeObject* py::get_object_type() noexcept
 {
-    auto state = py::cpp::_winrt::get_module_state();
+    auto state = py::cpp::_winrt::try_get_module_state();
     if (!state)
     {
         return nullptr;

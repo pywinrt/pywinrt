@@ -189,7 +189,6 @@ namespace py::interp
             auto const s = py::cpp::_winrt::get_module_state();
             if (!s)
             {
-                PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
                 return pyobj_handle{};
             }
 

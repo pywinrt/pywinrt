@@ -184,6 +184,7 @@ namespace py::cpp::_winrt
     };
 
     module_state* get_module_state() noexcept;
+    module_state* try_get_module_state() noexcept;
 } // namespace py::cpp::_winrt
 
 namespace py
