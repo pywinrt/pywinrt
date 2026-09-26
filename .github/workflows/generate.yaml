@@ -17,10 +17,14 @@ on:
       - runtime/**
       - table/**
       - PyWinRT/**
+      - redist/**
+      - scripts/app_sdk.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
+      - scripts/nuget.py
+      - scripts/packages.py
       - scripts/pyproject_templates.py
       - scripts/versions.py
   pull_request:
@@ -33,10 +37,14 @@ on:
       - runtime/**
       - table/**
       - PyWinRT/**
+      - redist/**
+      - scripts/app_sdk.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
       - scripts/generate-pyproject.py
+      - scripts/nuget.py
+      - scripts/packages.py
       - scripts/pyproject_templates.py
       - scripts/versions.py
 

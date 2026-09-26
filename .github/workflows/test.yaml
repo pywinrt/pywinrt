@@ -16,6 +16,11 @@ on:
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
+      # what fetch-tools.ps1 runs to fetch the App SDK
+      - scripts/app_sdk.py
+      - scripts/nuget.py
+      # checked by the lint job
+      - scripts/packages.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
@@ -35,6 +40,10 @@ on:
       # its version.txt, which the version tests read
       - interop/*/pyproject.toml
       - interop/*/version.txt
+      - redist/**
+      - '!redist/**/*.md'
+      - '!redist/**/*.toml'
+      - '!redist/**/*.txt'
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
@@ -57,6 +66,11 @@ on:
       - .config/_tools.json
       - patches/**
       - scripts/fetch-tools.ps1
+      # what fetch-tools.ps1 runs to fetch the App SDK
+      - scripts/app_sdk.py
+      - scripts/nuget.py
+      # checked by the lint job
+      - scripts/packages.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
@@ -76,6 +90,10 @@ on:
       # its version.txt, which the version tests read
       - interop/*/pyproject.toml
       - interop/*/version.txt
+      - redist/**
+      - '!redist/**/*.md'
+      - '!redist/**/*.toml'
+      - '!redist/**/*.txt'
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
