@@ -10,6 +10,8 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "objects.h"
+
 namespace
 {
     /**
@@ -132,6 +134,82 @@ namespace
                || hresult == winrt::impl::error_class_not_registered
                || hresult == winrt::impl::error_class_not_available;
     }
+
+    /**
+     * The @c OSError that a failed call with @p hresult raises, saying
+     * @p message, which is @p message_length characters long and not
+     * necessarily null-terminated.
+     */
+    PyObject* new_hresult_error(
+        int32_t hresult, const wchar_t* message, uint32_t message_length) noexcept
+    {
+        py::pyobj_handle strerror{
+            PyUnicode_FromWideChar(message, static_cast<Py_ssize_t>(message_length))};
+        if (!strerror)
+        {
+            return nullptr;
+        }
+
+        return PyObject_CallFunction(
+            PyExc_WindowsError,
+            "iOOi",
+            0,              // errno
+            strerror.get(), // strerror
+            Py_None,        // filename
+            hresult);       // winerror
+    }
+
+    /**
+     * What a C++/WinRT @c hresult_error made from @p hresult and @p info, the
+     * thread's error info right after the call failed, says: the restricted
+     * description when @p info is an @c IRestrictedErrorInfo about this
+     * @c HRESULT, the description when it is an @c IErrorInfo of the older
+     * kind, and the system's message for @p hresult otherwise.
+     */
+    winrt::hstring message_of(
+        int32_t hresult, winrt::com_ptr<winrt::impl::IErrorInfo> const& info) noexcept
+    {
+        if (!info)
+        {
+            return winrt::impl::message_from_hresult(hresult);
+        }
+
+        if (auto const restricted = info.try_as<winrt::impl::IRestrictedErrorInfo>())
+        {
+            int32_t code{};
+            winrt::impl::bstr_handle fallback;
+            winrt::impl::bstr_handle message;
+            winrt::impl::bstr_handle unused;
+
+            auto const hr = restricted->GetErrorDetails(
+                fallback.put(), &code, message.put(), unused.put());
+            if (hr != 0)
+            {
+                return winrt::impl::message_from_hresult(hresult);
+            }
+
+            if (code != hresult)
+            {
+                return winrt::impl::message_from_hresult(hresult);
+            }
+
+            auto const& text = message ? message : fallback;
+
+            return winrt::impl::trim_hresult_message(
+                text.get(), WINRT_IMPL_SysStringLen(text.get()));
+        }
+
+        winrt::impl::bstr_handle legacy;
+        info->GetDescription(legacy.put());
+
+        if (!legacy)
+        {
+            return winrt::impl::message_from_hresult(hresult);
+        }
+
+        return winrt::impl::trim_hresult_message(
+            legacy.get(), WINRT_IMPL_SysStringLen(legacy.get()));
+    }
 } // namespace
 
 void py::set_error(py::error_info const& info) noexcept
@@ -166,21 +244,8 @@ void py::set_error(py::error_info const& info) noexcept
         // The message is an hstring owned by the exception the caller is
         // still handling, so it is not necessarily null-terminated and must
         // be copied before this returns.
-        pyobj_handle message{PyUnicode_FromWideChar(
-            info.message, static_cast<Py_ssize_t>(info.message_length))};
-
-        if (!message)
-        {
-            return;
-        }
-
-        pyobj_handle exc{PyObject_CallFunction(
-            PyExc_WindowsError,
-            "iOOi",
-            0,              // errno
-            message.get(),  // strerror
-            Py_None,        // filename
-            info.hresult)}; // winerror
+        pyobj_handle exc{
+            new_hresult_error(info.hresult, info.message, info.message_length)};
 
         if (!exc)
         {
@@ -278,3 +343,69 @@ int32_t py::report_unraisable() noexcept
 
     return unraisable_python_exception.value;
 }
+
+namespace py::cpp::_winrt
+{
+    /**
+     * hresult_error(hresult, error_info=None) - the exception a call that
+     * failed with @p hresult raises, for compiled code outside the runtime to
+     * raise in turn.
+     *
+     * @p error_info is None or an interface pointer capsule holding the
+     * @c IErrorInfo that @c GetErrorInfo() returned right after the call
+     * failed, on the thread it failed on. It is usually an
+     * @c IRestrictedErrorInfo, whose details make the message, as they do for
+     * a failed projected call.
+     */
+    PyObject* hresult_error(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        long long value;
+        PyObject* capsule = Py_None;
+
+        if (!PyArg_ParseTuple(args, "L|O:hresult_error", &value, &capsule))
+        {
+            return nullptr;
+        }
+
+        // An HRESULT is as often written as the unsigned 0x8XXXXXXX as it is
+        // read back as a negative int32
+        if (value < INT32_MIN || value > UINT32_MAX)
+        {
+            PyErr_SetString(PyExc_OverflowError, "hresult does not fit in 32 bits");
+            return nullptr;
+        }
+
+        auto const hresult = static_cast<int32_t>(static_cast<uint32_t>(value));
+
+        if (hresult >= 0)
+        {
+            PyErr_SetString(PyExc_ValueError, "hresult is not a failure");
+            return nullptr;
+        }
+
+        winrt::com_ptr<winrt::impl::IErrorInfo> info;
+
+        if (!Py_IsNone(capsule))
+        {
+            auto const abi
+                = PyCapsule_GetPointer(capsule, py::interp::interface_capsule_name);
+            if (!abi)
+            {
+                return nullptr;
+            }
+
+            auto const hr = static_cast<::IUnknown*>(abi)->QueryInterface(
+                winrt::guid_of<winrt::impl::IErrorInfo>(), info.put_void());
+            if (hr != 0)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError, "error_info does not hold an IErrorInfo");
+                return nullptr;
+            }
+        }
+
+        auto const message = message_of(hresult, info);
+
+        return new_hresult_error(hresult, message.c_str(), message.size());
+    }
+} // namespace py::cpp::_winrt

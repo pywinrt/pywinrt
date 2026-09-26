@@ -150,6 +150,37 @@ namespace py::interp
         return result;
     }
 
+    namespace
+    {
+        void release_interface_capsule(PyObject* capsule) noexcept
+        {
+            auto const abi = PyCapsule_GetPointer(capsule, interface_capsule_name);
+            if (!abi)
+            {
+                PyErr_WriteUnraisable(capsule);
+                return;
+            }
+
+            static_cast<::IUnknown*>(abi)->Release();
+        }
+    } // namespace
+
+    /**
+     * Hands @p abi, and the reference the caller owns to it, to a new
+     * interface pointer capsule. The reference is released either way.
+     */
+    PyObject* new_interface_capsule(void* abi) noexcept
+    {
+        auto const capsule
+            = PyCapsule_New(abi, interface_capsule_name, release_interface_capsule);
+        if (!capsule)
+        {
+            static_cast<::IUnknown*>(abi)->Release();
+        }
+
+        return capsule;
+    }
+
     /**
      * Wraps @p abi in @p type after querying it for @p iid, which is what an
      * argument marked @c query_interface asks for. Ownership of @p abi moves
@@ -665,3 +696,76 @@ bool py::unwrap_object(PyObject* obj, winrt::guid const& iid, void** result) noe
         return false;
     }
 }
+
+namespace py::cpp::_winrt
+{
+    /**
+     * as_interface(obj, iid) - the @p iid interface of the WinRT object @p obj
+     * wraps, as an interface pointer capsule, or None for None.
+     *
+     * This and wrap_interface() are how compiled code outside the runtime
+     * exchanges WinRT objects with it: through Python objects, so that nothing
+     * but the capsule's name and these two signatures is shared.
+     */
+    PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        PyObject* obj;
+        PyObject* iid_obj;
+
+        if (!PyArg_ParseTuple(args, "OO:as_interface", &obj, &iid_obj))
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            auto const iid = convert_to_guid(iid_obj);
+            auto const abi = py::interp::unwrap_abi(obj, &iid);
+
+            if (!abi)
+            {
+                Py_RETURN_NONE;
+            }
+
+            return py::interp::new_interface_capsule(abi);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+    }
+
+    /**
+     * wrap_interface(capsule, qualified_name) - the WinRT object an interface
+     * pointer capsule holds, as the type @p qualified_name is bound to, or
+     * None for None. The capsule keeps its own reference.
+     */
+    PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        PyObject* capsule;
+        char const* qualified_name;
+
+        if (!PyArg_ParseTuple(args, "Os:wrap_interface", &capsule, &qualified_name))
+        {
+            return nullptr;
+        }
+
+        if (Py_IsNone(capsule))
+        {
+            Py_RETURN_NONE;
+        }
+
+        auto const abi
+            = PyCapsule_GetPointer(capsule, py::interp::interface_capsule_name);
+        if (!abi)
+        {
+            return nullptr;
+        }
+
+        winrt::Windows::Foundation::IInspectable value{nullptr};
+        winrt::copy_from_abi(value, abi);
+
+        return wrap_object(value, qualified_name);
+    }
+} // namespace py::cpp::_winrt

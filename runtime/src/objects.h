@@ -29,6 +29,15 @@ namespace py::interp
         return *reinterpret_cast<void**>(reinterpret_cast<uint8_t*>(self) + abi_offset);
     }
 
+    /**
+     * The name every interface pointer capsule carries. A capsule of this
+     * name holds one reference to a COM interface, which its destructor
+     * releases, and is how compiled code outside the runtime hands one over.
+     */
+    inline constexpr char interface_capsule_name[] = "winrt.interface";
+
+    PyObject* new_interface_capsule(void* abi) noexcept;
+
     PyObject* wrap_abi(PyTypeObject* type, void* abi) noexcept;
 
     PyObject* wrap_activated_abi(PyTypeObject* type, void const* iid, void* abi);

@@ -741,6 +741,9 @@ namespace py::cpp::_winrt
     PyObject* unbox_date_time(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* unbox_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* read_table(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept;
+    PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept;
+    PyObject* hresult_error(PyObject* /*unused*/, PyObject* args) noexcept;
 
     static PyMethodDef module_methods[]{
         {"init_apartment", init_apartment, METH_O, "initialize the apartment"},
@@ -820,6 +823,23 @@ namespace py::cpp::_winrt
              "Reads a projection table and returns its contents as plain Python objects. "
              "This is how test/test_table.py checks that the generator's writer and the "
              "runtime's reader agree on the format.")},
+        {"as_interface",
+         as_interface,
+         METH_VARARGS,
+         PyDoc_STR(
+             "An interface of a WinRT object, as an interface pointer capsule. "
+             "This and wrap_interface() are how the interop packages hand WinRT "
+             "objects to their compiled code and take them back.")},
+        {"wrap_interface",
+         wrap_interface,
+         METH_VARARGS,
+         PyDoc_STR("The WinRT object an interface pointer capsule holds.")},
+        {"hresult_error",
+         hresult_error,
+         METH_VARARGS,
+         PyDoc_STR(
+             "The exception a WinRT call that failed with an HRESULT raises, for "
+             "the interop packages to raise in turn.")},
         {}};
 
     PyDoc_STRVAR(module_doc, "_winrt");
