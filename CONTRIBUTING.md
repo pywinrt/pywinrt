@@ -72,20 +72,20 @@ the result. Then fetch and regenerate as above.
 
 ## Generating the C++/WinRT headers
 
-`winrt-runtime` and the eight interop modules are the only things here that are
-compiled, and they include C++/WinRT headers. They are generated from the NuGet
-packages and committed, like the rest of the generated tree, so this has to be
-run whenever `.config/_tools.json` changes or a module starts including another
-namespace:
+`winrt-runtime` and `winrt-Microsoft.UI.Interop` are the only things here that
+are compiled against C++/WinRT; the other interop modules are written against
+raw COM. The headers are generated from the NuGet packages and committed, like
+the rest of the generated tree, so this has to be run whenever
+`.config/_tools.json` changes or a module starts including another namespace:
 
     py .\scripts\generate-cppwinrt.py
 
 Each package carries the headers it includes. `winrt-runtime` carries what
-`pywinrt/base.h` includes, inside the package beside the PyWinRT headers that
-`winrt._include` hands out, and an interop module carries the namespaces it
-includes beyond those in a `cppwinrt` directory of its own. Either way they are
-found at the same place whether the module is built here or from its source
-distribution.
+`pywinrt/base.h` includes, inside the package where
+`winrt._include.get_cppwinrt_include()` finds them, and an interop module
+carries the namespaces it includes beyond those in a `cppwinrt` directory of
+its own. Either way they are found at the same place whether the module is
+built here or from its source distribution.
 
 ## Regenerating other upstream code
 
