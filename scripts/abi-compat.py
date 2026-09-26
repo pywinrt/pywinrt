@@ -245,15 +245,20 @@ class Tree:
         """
         What a package in this tree needs on PYTHONPATH to be built without
         build isolation: the same directories the generated cibuildwheel
-        configuration puts there. For a 4.x tree that is winrt-runtime's
-        package; for a 3.x one it is winrt-sdk's, which is where the pywinrt
-        headers were before they moved.
+        configuration put there. For a 3.x tree that is winrt-sdk's package,
+        which is where the pywinrt headers were before they moved; for a 4.x
+        tree whose headers are inside winrt-runtime's package, it is that
+        package; and for one whose headers are beside the runtime's sources,
+        nothing builds against an importable package at all.
         """
-        paths = (
-            [self.runtime_package / "python"]
-            if self.include_dir is not None
-            else [self.sdk_package / "src"]
-        )
+        include_dir = self.include_dir
+
+        if include_dir is None:
+            paths = [self.sdk_package / "src"]
+        elif include_dir.is_relative_to(self.runtime_package / "python"):
+            paths = [self.runtime_package / "python"]
+        else:
+            paths = []
 
         return os.pathsep.join(os.fspath(p) for p in paths)
 
