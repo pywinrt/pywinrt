@@ -18,6 +18,3 @@ __all__ = [
     "IResourceManager",
 ]
 
-winrt.runtime._internals.alias_method(ResourceMap, "get_value_with_context", "get_value")
-winrt.runtime._internals.alias_method(ResourceMap, "get_value_by_index_with_context", "get_value_by_index")
-winrt.runtime._internals.alias_method(ResourceMap, "try_get_value_with_context", "try_get_value")

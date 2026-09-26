@@ -5,7 +5,6 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -412,10 +411,6 @@ class ConnectedAnimation(winrt.system.Object):
     @typing.overload
     # System.Boolean Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation::TryStart(Microsoft.UI.Xaml.UIElement,Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement>)
     def try_start(self, destination: microsoft_ui_xaml.UIElement, coordinated_elements: _cabc.Iterable[microsoft_ui_xaml.UIElement], /) -> bool: ...
-    # Deprecated alias of try_start() for pywinrt v3.x compatibility.
-    # System.Boolean Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation::TryStart(Microsoft.UI.Xaml.UIElement,Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Xaml.UIElement>)
-    @deprecated("Use try_start() instead.")
-    def try_start_with_coordinated_elements(self, destination: microsoft_ui_xaml.UIElement, coordinated_elements: _cabc.Iterable[microsoft_ui_xaml.UIElement], /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation::add_Completed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation,System.Object>)
     def add_completed(self, handler: windows_foundation.TypedEventHandler[ConnectedAnimation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation::remove_Completed(Windows.Foundation.EventRegistrationToken)

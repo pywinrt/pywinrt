@@ -5,7 +5,6 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -143,10 +142,6 @@ class AppNotificationManager(winrt.system.Object, metaclass=AppNotificationManag
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> Microsoft.Windows.AppNotifications.AppNotificationManager::UpdateAsync(Microsoft.Windows.AppNotifications.AppNotificationProgressData,System.String,System.String)
     def update_async(self, data: AppNotificationProgressData, tag: str, group: str, /) -> windows_foundation.IAsyncOperation[AppNotificationProgressResult]: ...
-    # Deprecated alias of update_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> Microsoft.Windows.AppNotifications.AppNotificationManager::UpdateAsync(Microsoft.Windows.AppNotifications.AppNotificationProgressData,System.String)
-    @deprecated("Use update_async() instead.")
-    def update_async2(self, data: AppNotificationProgressData, tag: str, /) -> windows_foundation.IAsyncOperation[AppNotificationProgressResult]: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.AppNotifications.AppNotificationManager::add_NotificationInvoked(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.AppNotifications.AppNotificationManager,Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs>)
     def add_notification_invoked(self, handler: windows_foundation.TypedEventHandler[AppNotificationManager, AppNotificationActivatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Windows.AppNotifications.AppNotificationManager::remove_NotificationInvoked(Windows.Foundation.EventRegistrationToken)

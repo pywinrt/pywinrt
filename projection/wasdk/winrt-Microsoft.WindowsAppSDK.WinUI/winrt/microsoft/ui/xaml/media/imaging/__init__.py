@@ -26,5 +26,4 @@ __all__ = [
     "DownloadProgressEventHandler",
 ]
 
-winrt.runtime._internals.alias_method(RenderTargetBitmap, "render_to_size_async", "render_async")
 DownloadProgressEventHandler = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], None]

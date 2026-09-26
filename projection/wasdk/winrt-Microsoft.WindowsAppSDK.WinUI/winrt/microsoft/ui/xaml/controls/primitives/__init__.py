@@ -114,11 +114,6 @@ __all__ = [
     "ScrollEventHandler",
 ]
 
-winrt.runtime._internals.alias_method(FlyoutBase, "show_at_with_options", "show_at")
-winrt.runtime._internals.alias_method(ScrollPresenter, "scroll_by_with_options", "scroll_by")
-winrt.runtime._internals.alias_method(ScrollPresenter, "scroll_to_with_options", "scroll_to")
-winrt.runtime._internals.alias_method(ScrollPresenter, "zoom_by_with_options", "zoom_by")
-winrt.runtime._internals.alias_method(ScrollPresenter, "zoom_to_with_options", "zoom_to")
 DragCompletedEventHandler = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], None]
 DragDeltaEventHandler = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], None]
 DragStartedEventHandler = typing.Callable[[winrt.system.Object, DragStartedEventArgs], None]

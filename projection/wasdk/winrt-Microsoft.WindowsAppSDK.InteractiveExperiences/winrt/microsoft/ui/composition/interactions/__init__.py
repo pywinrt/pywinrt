@@ -34,5 +34,3 @@ __all__ = [
     "IInteractionTrackerOwner",
 ]
 
-winrt.runtime._internals.alias_method(InteractionTracker, "try_update_position_with_option", "try_update_position")
-winrt.runtime._internals.alias_method(InteractionTracker, "try_update_position_by_with_option", "try_update_position_by")

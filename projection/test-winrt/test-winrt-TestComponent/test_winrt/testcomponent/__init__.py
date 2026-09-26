@@ -73,7 +73,6 @@ __all__ = [
     "TestHandler",
 ]
 
-winrt.runtime._internals.alias_method(OverloadClass, "_overload_with_three", "_overload")
 Array10Handler = typing.Callable[[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]], tuple[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]]]
 Array11Handler = typing.Callable[[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]], tuple[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]]]
 Array12Handler = typing.Callable[[winrt.system.Array[str], winrt.system.Array[str]], tuple[winrt.system.Array[str], winrt.system.Array[str]]]

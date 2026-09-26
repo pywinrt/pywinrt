@@ -72,5 +72,3 @@ __all__ = [
     "IPointerPointTransform",
 ]
 
-winrt.runtime._internals.alias_static_method(FocusNavigationRequest, "create_with_hint_rect", "create")
-winrt.runtime._internals.alias_static_method(FocusNavigationRequest, "create_with_hint_rect_and_id", "create")

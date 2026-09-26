@@ -4,7 +4,6 @@ import enum
 import types
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -195,10 +194,6 @@ class RenderTargetBitmap(microsoft_ui_xaml_media.ImageSource, metaclass=RenderTa
     @typing.overload
     # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Media.Imaging.RenderTargetBitmap::RenderAsync(Microsoft.UI.Xaml.UIElement,System.Int32,System.Int32)
     def render_async(self, element: microsoft_ui_xaml.UIElement, scaled_width: winrt.system.Int32, scaled_height: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
-    # Deprecated alias of render_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Media.Imaging.RenderTargetBitmap::RenderAsync(Microsoft.UI.Xaml.UIElement,System.Int32,System.Int32)
-    @deprecated("Use render_async() instead.")
-    def render_to_size_async(self, element: microsoft_ui_xaml.UIElement, scaled_width: winrt.system.Int32, scaled_height: winrt.system.Int32, /) -> windows_foundation.IAsyncAction: ...
     # System.Int32 Microsoft.UI.Xaml.Media.Imaging.RenderTargetBitmap::get_PixelHeight()
     @_property
     def pixel_height(self) -> winrt.system.Int32: ...

@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -66,10 +65,6 @@ class AuthRequestParams_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.Security.Authentication.OAuth.AuthRequestParams Microsoft.Security.Authentication.OAuth.AuthRequestParams::CreateForAuthorizationCodeRequest(System.String,Windows.Foundation.Uri)
     def create_for_authorization_code_request(cls, client_id: str, redirect_uri: windows_foundation.Uri, /) -> AuthRequestParams: ...
-    # Deprecated alias of create_for_authorization_code_request() for pywinrt v3.x compatibility.
-    # Microsoft.Security.Authentication.OAuth.AuthRequestParams Microsoft.Security.Authentication.OAuth.AuthRequestParams::CreateForAuthorizationCodeRequest(System.String,Windows.Foundation.Uri)
-    @deprecated("Use create_for_authorization_code_request() instead.")
-    def create_for_authorization_code_request2(cls, client_id: str, redirect_uri: windows_foundation.Uri, /) -> AuthRequestParams: ...
 
 @typing.final
 class AuthRequestParams(winrt.system.Object, metaclass=AuthRequestParams_Static):
@@ -198,10 +193,6 @@ class OAuth2Manager_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Security.Authentication.OAuth.TokenRequestResult> Microsoft.Security.Authentication.OAuth.OAuth2Manager::RequestTokenAsync(Windows.Foundation.Uri,Microsoft.Security.Authentication.OAuth.TokenRequestParams,Microsoft.Security.Authentication.OAuth.ClientAuthentication)
     def request_token_async(cls, token_endpoint: windows_foundation.Uri, params: TokenRequestParams, client_auth: ClientAuthentication, /) -> windows_foundation.IAsyncOperation[TokenRequestResult]: ...
-    # Deprecated alias of request_token_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperation`1<Microsoft.Security.Authentication.OAuth.TokenRequestResult> Microsoft.Security.Authentication.OAuth.OAuth2Manager::RequestTokenAsync(Windows.Foundation.Uri,Microsoft.Security.Authentication.OAuth.TokenRequestParams,Microsoft.Security.Authentication.OAuth.ClientAuthentication)
-    @deprecated("Use request_token_async() instead.")
-    def request_token_async2(cls, token_endpoint: windows_foundation.Uri, params: TokenRequestParams, client_auth: ClientAuthentication, /) -> windows_foundation.IAsyncOperation[TokenRequestResult]: ...
 
 @typing.final
 class OAuth2Manager(winrt.system.Object, metaclass=OAuth2Manager_Static):

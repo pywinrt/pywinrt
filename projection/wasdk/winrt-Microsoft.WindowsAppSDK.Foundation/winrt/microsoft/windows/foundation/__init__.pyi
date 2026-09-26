@@ -2,7 +2,6 @@
 
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -64,10 +63,6 @@ class DecimalHelper_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::FromString(System.String,System.String)
     def from_string(cls, source: str, locale_name: str, /) -> DecimalValue: ...
-    # Deprecated alias of from_string() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::FromString(System.String,System.String)
-    @deprecated("Use from_string() instead.")
-    def from_string_with_locale(cls, source: str, locale_name: str, /) -> DecimalValue: ...
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::FromStringInvariant(System.String)
     def from_string_invariant(cls, source: str, /) -> DecimalValue: ...
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::FromUInt16(System.UInt16)
@@ -120,10 +115,6 @@ class DecimalHelper_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # System.String Microsoft.Windows.Foundation.DecimalHelper::ToString(Microsoft.Windows.Foundation.DecimalValue,System.String)
     def to_string(cls, value: DecimalValue | tuple[winrt.system.UInt16, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt32, winrt.system.UInt64], locale_name: str, /) -> str: ...
-    # Deprecated alias of to_string() for pywinrt v3.x compatibility.
-    # System.String Microsoft.Windows.Foundation.DecimalHelper::ToString(Microsoft.Windows.Foundation.DecimalValue,System.String)
-    @deprecated("Use to_string() instead.")
-    def to_string_with_locale(cls, value: DecimalValue | tuple[winrt.system.UInt16, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt32, winrt.system.UInt64], locale_name: str, /) -> str: ...
     # System.String Microsoft.Windows.Foundation.DecimalHelper::ToStringInvariant(Microsoft.Windows.Foundation.DecimalValue)
     def to_string_invariant(cls, value: DecimalValue | tuple[winrt.system.UInt16, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt32, winrt.system.UInt64], /) -> str: ...
     # System.UInt16 Microsoft.Windows.Foundation.DecimalHelper::ToUInt16(Microsoft.Windows.Foundation.DecimalValue)
@@ -142,10 +133,6 @@ class DecimalHelper_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # System.Boolean Microsoft.Windows.Foundation.DecimalHelper::TryFromString(System.String,System.String,Microsoft.Windows.Foundation.DecimalValue&)
     def try_from_string(cls, source: str, locale_name: str, /) -> tuple[bool, DecimalValue]: ...
-    # Deprecated alias of try_from_string() for pywinrt v3.x compatibility.
-    # System.Boolean Microsoft.Windows.Foundation.DecimalHelper::TryFromString(System.String,System.String,Microsoft.Windows.Foundation.DecimalValue&)
-    @deprecated("Use try_from_string() instead.")
-    def try_from_string_with_locale(cls, source: str, locale_name: str, /) -> tuple[bool, DecimalValue]: ...
     # System.Boolean Microsoft.Windows.Foundation.DecimalHelper::TryFromStringInvariant(System.String,Microsoft.Windows.Foundation.DecimalValue&)
     def try_from_string_invariant(cls, source: str, /) -> tuple[bool, DecimalValue]: ...
 

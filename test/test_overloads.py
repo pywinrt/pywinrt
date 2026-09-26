@@ -84,7 +84,11 @@ class TestOverloads(unittest.TestCase):
         # the three argument overload is protected but not overridable, so it is
         # called by argument count like a public method
         self.assertTrue(hasattr(tc.OverloadClass, "_overload"))
-        self.assertTrue(_is_alias(tc.OverloadClass, "_overload_with_three"))
+
+    def test_no_deprecated_aliases_outside_the_windows_sdk(self):
+        # only the Windows SDK projection keeps the names methods had in
+        # pywinrt v3.x
+        self.assertFalse(hasattr(tc.OverloadClass, "_overload_with_three"))
 
 
 def _is_alias(typ: type, name: str) -> bool:

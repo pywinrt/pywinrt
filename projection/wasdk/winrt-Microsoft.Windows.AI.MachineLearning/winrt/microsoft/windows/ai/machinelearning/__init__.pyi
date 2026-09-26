@@ -5,7 +5,6 @@ import enum
 import types
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -61,10 +60,6 @@ class CatalogModelInfo(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> Microsoft.Windows.AI.MachineLearning.CatalogModelInfo::GetInstanceAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>)
     def get_instance_async(self, additional_headers: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], /) -> windows_foundation.IAsyncOperationWithProgress[CatalogModelInstanceResult, winrt.system.Double]: ...
-    # Deprecated alias of get_instance_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> Microsoft.Windows.AI.MachineLearning.CatalogModelInfo::GetInstanceAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>)
-    @deprecated("Use get_instance_async() instead.")
-    def get_instance_async2(self, additional_headers: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], /) -> windows_foundation.IAsyncOperationWithProgress[CatalogModelInstanceResult, winrt.system.Double]: ...
     # Microsoft.Windows.AI.MachineLearning.CatalogModelStatus Microsoft.Windows.AI.MachineLearning.CatalogModelInfo::GetStatus()
     def get_status(self) -> CatalogModelStatus: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Microsoft.Windows.AI.MachineLearning.CatalogModelInfo::get_ExecutionProviders()
@@ -202,10 +197,6 @@ class ModelCatalogSource_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> Microsoft.Windows.AI.MachineLearning.ModelCatalogSource::CreateFromUriAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>)
     def create_from_uri_async(cls, location: windows_foundation.Uri, additional_headers: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], /) -> windows_foundation.IAsyncOperation[ModelCatalogSource]: ...
-    # Deprecated alias of create_from_uri_async() for pywinrt v3.x compatibility.
-    # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> Microsoft.Windows.AI.MachineLearning.ModelCatalogSource::CreateFromUriAsync(Windows.Foundation.Uri,Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>>)
-    @deprecated("Use create_from_uri_async() instead.")
-    def create_from_uri_async2(cls, location: windows_foundation.Uri, additional_headers: _cabc.Mapping[str, str] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, str]], /) -> windows_foundation.IAsyncOperation[ModelCatalogSource]: ...
 
 @typing.final
 class ModelCatalogSource(winrt.system.Object, metaclass=ModelCatalogSource_Static):

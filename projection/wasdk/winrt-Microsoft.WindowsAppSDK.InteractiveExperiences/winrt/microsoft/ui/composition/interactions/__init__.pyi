@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -173,25 +172,11 @@ class InteractionTracker(microsoft_ui_composition.CompositionObject, metaclass=I
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption,Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption)
     def try_update_position(self, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], option: InteractionTrackerClampingOption, pos_update_option: InteractionTrackerPositionUpdateOption, /) -> winrt.system.Int32: ...
     @typing.overload
-    # Deprecated alias of try_update_position() for pywinrt v3.x compatibility.
-    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
-    @deprecated("Use try_update_position() instead.")
-    def try_update_position_with_option(self, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
-    @typing.overload
-    # Deprecated alias of try_update_position() for pywinrt v3.x compatibility.
-    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePosition(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption,Microsoft.UI.Composition.Interactions.InteractionTrackerPositionUpdateOption)
-    @deprecated("Use try_update_position() instead.")
-    def try_update_position_with_option(self, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], option: InteractionTrackerClampingOption, pos_update_option: InteractionTrackerPositionUpdateOption, /) -> winrt.system.Int32: ...
-    @typing.overload
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3)
     def try_update_position_by(self, amount: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> winrt.system.Int32: ...
     @typing.overload
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
     def try_update_position_by(self, amount: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
-    # Deprecated alias of try_update_position_by() for pywinrt v3.x compatibility.
-    # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionBy(Windows.Foundation.Numerics.Vector3,Microsoft.UI.Composition.Interactions.InteractionTrackerClampingOption)
-    @deprecated("Use try_update_position_by() instead.")
-    def try_update_position_by_with_option(self, amount: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], option: InteractionTrackerClampingOption, /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionWithAdditionalVelocity(Windows.Foundation.Numerics.Vector3)
     def try_update_position_with_additional_velocity(self, velocity_in_pixels_per_second: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Composition.Interactions.InteractionTracker::TryUpdatePositionWithAnimation(Microsoft.UI.Composition.CompositionAnimation)

@@ -9,4 +9,3 @@ __all__ = [
     "BackgroundTaskBuilder",
 ]
 
-winrt.runtime._internals.alias_method(BackgroundTaskBuilder, "register2", "register")

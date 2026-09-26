@@ -56,21 +56,3 @@ __all__ = [
     "TextQuerySessionResult",
 ]
 
-winrt.runtime._internals.alias_method(AppContentIndexer, "create_image_query_with_options", "create_image_query")
-winrt.runtime._internals.alias_method(AppContentIndexer, "create_text_query_with_options", "create_text_query")
-winrt.runtime._internals.alias_method(AppContentIndexer, "get_content_items_with_filter", "get_content_items")
-winrt.runtime._internals.alias_static_method(AppContentIndexer, "get_or_create_index_with_options", "get_or_create_index")
-winrt.runtime._internals.alias_static_method(AppIndexContentRegion, "create_from_bitmap_with_options", "create_from_bitmap")
-winrt.runtime._internals.alias_static_method(AppIndexContentRegion, "create_from_image_stream_with_options", "create_from_image_stream")
-winrt.runtime._internals.alias_static_method(AppIndexContentRegion, "create_from_string2", "create_from_string")
-winrt.runtime._internals.alias_static_method(AppIndexContentRegion, "create_from_text_stream2", "create_from_text_stream")
-winrt.runtime._internals.alias_method(AppIndexImageQuerySession, "start_with_options", "start")
-winrt.runtime._internals.alias_method(AppIndexImageQuerySession, "start_with_options_and_query", "start")
-winrt.runtime._internals.alias_method(AppIndexImageQuerySession, "stop_with_chosen_match", "stop")
-winrt.runtime._internals.alias_method(AppIndexTextQuerySession, "start_with_options", "start")
-winrt.runtime._internals.alias_method(AppIndexTextQuerySession, "start_with_options_and_query", "start")
-winrt.runtime._internals.alias_method(AppIndexTextQuerySession, "stop_with_chosen_match", "stop")
-winrt.runtime._internals.alias_static_method(AppManagedIndexableAppContent, "create_from_bitmap_with_options", "create_from_bitmap")
-winrt.runtime._internals.alias_static_method(AppManagedIndexableAppContent, "create_from_image_stream_with_options", "create_from_image_stream")
-winrt.runtime._internals.alias_static_method(AppManagedIndexableAppContent, "create_from_string_with_options", "create_from_string")
-winrt.runtime._internals.alias_static_method(AppManagedIndexableAppContent, "create_from_text_stream_with_options", "create_from_text_stream")

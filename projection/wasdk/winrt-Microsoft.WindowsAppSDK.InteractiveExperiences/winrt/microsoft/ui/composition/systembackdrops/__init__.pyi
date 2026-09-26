@@ -5,7 +5,6 @@ import types
 import typing
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -71,10 +70,6 @@ class DesktopAcrylicController(winrt.system.Object, microsoft_ui.IClosableNotifi
     def set_system_backdrop_configuration(self, configuration: SystemBackdropConfiguration, /) -> None: ...
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
     def set_target(self, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
-    # Deprecated alias of set_target() for pywinrt v3.x compatibility.
-    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
-    @deprecated("Use set_target() instead.")
-    def set_target_with_window_id(self, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::SetTarget(Windows.UI.Core.CoreWindow,Windows.UI.Composition.CompositionTarget)
     def set_target_with_core_window(self, core_window: windows_ui_core.CoreWindow, composition_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object>)
@@ -150,10 +145,6 @@ class MicaController(winrt.system.Object, microsoft_ui.IClosableNotifier, ISyste
     def set_system_backdrop_configuration(self, configuration: SystemBackdropConfiguration, /) -> None: ...
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.MicaController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
     def set_target(self, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
-    # Deprecated alias of set_target() for pywinrt v3.x compatibility.
-    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.MicaController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
-    @deprecated("Use set_target() instead.")
-    def set_target_with_window_id(self, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.MicaController::SetTarget(Windows.UI.Core.CoreWindow,Windows.UI.Composition.CompositionTarget)
     def set_target_with_core_window(self, core_window: windows_ui_core.CoreWindow, composition_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Composition.SystemBackdrops.MicaController::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets,System.Object>)
@@ -240,10 +231,6 @@ class ISystemBackdropController(windows_foundation.IClosable, winrt._winrt.IInsp
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
     @abstractmethod
     def set_target(self, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
-    # Deprecated alias of set_target() for pywinrt v3.x compatibility.
-    # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
-    @deprecated("Use set_target() instead.")
-    def set_target_with_window_id(self, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], desktop_window_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Windows.UI.Core.CoreWindow,Windows.UI.Composition.CompositionTarget)
     @abstractmethod
     def set_target_with_core_window(self, core_window: windows_ui_core.CoreWindow, composition_target: windows_ui_composition.CompositionTarget, /) -> bool: ...

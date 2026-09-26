@@ -6,7 +6,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -175,11 +174,6 @@ class OverloadClass(winrt.system.Object, metaclass=OverloadClass_Static):
     @typing.final
     # System.Void TestComponent.OverloadClass::Overload(System.Int32,System.Int32,System.Int32)
     def _overload(self, a: winrt.system.Int32, b: winrt.system.Int32, c: winrt.system.Int32, /) -> None: ...
-    @typing.final
-    # Deprecated alias of _overload() for pywinrt v3.x compatibility.
-    # System.Void TestComponent.OverloadClass::Overload(System.Int32,System.Int32,System.Int32)
-    @deprecated("Use _overload() instead.")
-    def _overload_with_three(self, a: winrt.system.Int32, b: winrt.system.Int32, c: winrt.system.Int32, /) -> None: ...
     @typing.final
     # System.Void TestComponent.OverloadClass::Overload()
     def overload(self) -> None: ...

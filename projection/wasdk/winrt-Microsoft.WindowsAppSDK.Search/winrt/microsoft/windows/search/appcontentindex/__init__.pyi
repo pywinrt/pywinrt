@@ -6,7 +6,6 @@ import enum
 import types
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -213,10 +212,6 @@ class AppContentIndexer_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetOrCreateIndex(System.String,Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexOptions)
     def get_or_create_index(cls, index_name: str, options: GetOrCreateIndexOptions, /) -> GetOrCreateIndexResult: ...
-    # Deprecated alias of get_or_create_index() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetOrCreateIndex(System.String,Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexOptions)
-    @deprecated("Use get_or_create_index() instead.")
-    def get_or_create_index_with_options(cls, index_name: str, options: GetOrCreateIndexOptions, /) -> GetOrCreateIndexResult: ...
 
 @typing.final
 class AppContentIndexer(winrt.system.Object, windows_foundation.IClosable, metaclass=AppContentIndexer_Static):
@@ -232,10 +227,6 @@ class AppContentIndexer(winrt.system.Object, windows_foundation.IClosable, metac
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::CreateImageQuery(System.String,Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions)
     def create_image_query(self, query_phrase: str, options: ImageQueryOptions, /) -> AppIndexImageQuery: ...
-    # Deprecated alias of create_image_query() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::CreateImageQuery(System.String,Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions)
-    @deprecated("Use create_image_query() instead.")
-    def create_image_query_with_options(self, query_phrase: str, options: ImageQueryOptions, /) -> AppIndexImageQuery: ...
     # Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::CreateImageQuerySession()
     def create_image_query_session(self) -> AppIndexImageQuerySession: ...
     @typing.overload
@@ -244,10 +235,6 @@ class AppContentIndexer(winrt.system.Object, windows_foundation.IClosable, metac
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::CreateTextQuery(System.String,Microsoft.Windows.Search.AppContentIndex.TextQueryOptions)
     def create_text_query(self, query_phrase: str, options: TextQueryOptions, /) -> AppIndexTextQuery: ...
-    # Deprecated alias of create_text_query() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::CreateTextQuery(System.String,Microsoft.Windows.Search.AppContentIndex.TextQueryOptions)
-    @deprecated("Use create_text_query() instead.")
-    def create_text_query_with_options(self, query_phrase: str, options: TextQueryOptions, /) -> AppIndexTextQuery: ...
     # Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::CreateTextQuerySession()
     def create_text_query_session(self) -> AppIndexTextQuerySession: ...
     # Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetContentItemStatus(System.String)
@@ -260,10 +247,6 @@ class AppContentIndexer(winrt.system.Object, windows_foundation.IClosable, metac
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.ContentItemReader Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetContentItems(Microsoft.Windows.Search.AppContentIndex.QueryContentItemsFilterFlags)
     def get_content_items(self, filter_flags: QueryContentItemsFilterFlags, /) -> ContentItemReader: ...
-    # Deprecated alias of get_content_items() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.ContentItemReader Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetContentItems(Microsoft.Windows.Search.AppContentIndex.QueryContentItemsFilterFlags)
-    @deprecated("Use get_content_items() instead.")
-    def get_content_items_with_filter(self, filter_flags: QueryContentItemsFilterFlags, /) -> ContentItemReader: ...
     # Microsoft.Windows.Search.AppContentIndex.ContentItemReader Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetContentItemsRequiringReindexing()
     def get_content_items_requiring_reindexing(self) -> ContentItemReader: ...
     # Microsoft.Windows.Search.AppContentIndex.IndexCapabilities Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetIndexCapabilities()
@@ -300,40 +283,24 @@ class AppIndexContentRegion_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromBitmap(System.String,Windows.Graphics.Imaging.SoftwareBitmap,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
     def create_from_bitmap(cls, region_id: str, image: windows_graphics_imaging.SoftwareBitmap, options: ContentRegionImageOptions, /) -> AppIndexContentRegion: ...
-    # Deprecated alias of create_from_bitmap() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromBitmap(System.String,Windows.Graphics.Imaging.SoftwareBitmap,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
-    @deprecated("Use create_from_bitmap() instead.")
-    def create_from_bitmap_with_options(cls, region_id: str, image: windows_graphics_imaging.SoftwareBitmap, options: ContentRegionImageOptions, /) -> AppIndexContentRegion: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromImageStream(System.String,System.Int32,Windows.Storage.Streams.IInputStream)
     def create_from_image_stream(cls, region_id: str, content_byte_count: winrt.system.Int32, image_stream: windows_storage_streams.IInputStream, /) -> AppIndexContentRegion: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromImageStream(System.String,System.Int32,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
     def create_from_image_stream(cls, region_id: str, content_byte_count: winrt.system.Int32, image_stream: windows_storage_streams.IInputStream, options: ContentRegionImageOptions, /) -> AppIndexContentRegion: ...
-    # Deprecated alias of create_from_image_stream() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromImageStream(System.String,System.Int32,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
-    @deprecated("Use create_from_image_stream() instead.")
-    def create_from_image_stream_with_options(cls, region_id: str, content_byte_count: winrt.system.Int32, image_stream: windows_storage_streams.IInputStream, options: ContentRegionImageOptions, /) -> AppIndexContentRegion: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromString(System.String,System.String)
     def create_from_string(cls, region_id: str, text: str, /) -> AppIndexContentRegion: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromString(System.String,System.String,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
     def create_from_string(cls, region_id: str, text: str, options: ContentRegionTextOptions, /) -> AppIndexContentRegion: ...
-    # Deprecated alias of create_from_string() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromString(System.String,System.String,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
-    @deprecated("Use create_from_string() instead.")
-    def create_from_string2(cls, region_id: str, text: str, options: ContentRegionTextOptions, /) -> AppIndexContentRegion: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromTextStream(System.String,System.Int32,Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding,Windows.Storage.Streams.IInputStream)
     def create_from_text_stream(cls, region_id: str, content_byte_count: winrt.system.Int32, encoding: AppIndexTextStreamEncoding, text_stream: windows_storage_streams.IInputStream, /) -> AppIndexContentRegion: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromTextStream(System.String,System.Int32,Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
     def create_from_text_stream(cls, region_id: str, content_byte_count: winrt.system.Int32, encoding: AppIndexTextStreamEncoding, text_stream: windows_storage_streams.IInputStream, options: ContentRegionTextOptions, /) -> AppIndexContentRegion: ...
-    # Deprecated alias of create_from_text_stream() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromTextStream(System.String,System.Int32,Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
-    @deprecated("Use create_from_text_stream() instead.")
-    def create_from_text_stream2(cls, region_id: str, content_byte_count: winrt.system.Int32, encoding: AppIndexTextStreamEncoding, text_stream: windows_storage_streams.IInputStream, options: ContentRegionTextOptions, /) -> AppIndexContentRegion: ...
 
 @typing.final
 class AppIndexContentRegion(winrt.system.Object, metaclass=AppIndexContentRegion_Static):
@@ -378,24 +345,12 @@ class AppIndexImageQuerySession(winrt.system.Object, windows_foundation.IClosabl
     @typing.overload
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Start(Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions,System.String)
     def start(self, options: ImageQueryOptions, first_query_phrase: str, /) -> None: ...
-    # Deprecated alias of start() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Start(Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions)
-    @deprecated("Use start() instead.")
-    def start_with_options(self, options: ImageQueryOptions, /) -> None: ...
-    # Deprecated alias of start() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Start(Microsoft.Windows.Search.AppContentIndex.ImageQueryOptions,System.String)
-    @deprecated("Use start() instead.")
-    def start_with_options_and_query(self, options: ImageQueryOptions, first_query_phrase: str, /) -> None: ...
     @typing.overload
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Stop()
     def stop(self) -> None: ...
     @typing.overload
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Stop(Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch)
     def stop(self, chosen_match: ImageQueryMatch, /) -> None: ...
-    # Deprecated alias of stop() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Stop(Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch)
-    @deprecated("Use stop() instead.")
-    def stop_with_chosen_match(self, chosen_match: ImageQueryMatch, /) -> None: ...
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::UpdateQueryPhrase(System.String)
     def update_query_phrase(self, new_query_phrase: str, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::add_ResultChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession,System.Object>)
@@ -460,24 +415,12 @@ class AppIndexTextQuerySession(winrt.system.Object, windows_foundation.IClosable
     @typing.overload
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Start(Microsoft.Windows.Search.AppContentIndex.TextQueryOptions,System.String)
     def start(self, options: TextQueryOptions, first_query_phrase: str, /) -> None: ...
-    # Deprecated alias of start() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Start(Microsoft.Windows.Search.AppContentIndex.TextQueryOptions)
-    @deprecated("Use start() instead.")
-    def start_with_options(self, options: TextQueryOptions, /) -> None: ...
-    # Deprecated alias of start() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Start(Microsoft.Windows.Search.AppContentIndex.TextQueryOptions,System.String)
-    @deprecated("Use start() instead.")
-    def start_with_options_and_query(self, options: TextQueryOptions, first_query_phrase: str, /) -> None: ...
     @typing.overload
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Stop()
     def stop(self) -> None: ...
     @typing.overload
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Stop(Microsoft.Windows.Search.AppContentIndex.TextQueryMatch)
     def stop(self, chosen_match: TextQueryMatch, /) -> None: ...
-    # Deprecated alias of stop() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Stop(Microsoft.Windows.Search.AppContentIndex.TextQueryMatch)
-    @deprecated("Use stop() instead.")
-    def stop_with_chosen_match(self, chosen_match: TextQueryMatch, /) -> None: ...
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::UpdateQueryPhrase(System.String)
     def update_query_phrase(self, new_query_phrase: str, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::add_ResultChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession,System.Object>)
@@ -505,10 +448,6 @@ class AppManagedIndexableAppContent_Static(IndexableAppContent_Static):
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromBitmap(System.String,Windows.Graphics.Imaging.SoftwareBitmap,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
     def create_from_bitmap(cls, content_id: str, bitmap_content: windows_graphics_imaging.SoftwareBitmap, region_options: ContentRegionImageOptions, /) -> AppManagedIndexableAppContent: ...
-    # Deprecated alias of create_from_bitmap() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromBitmap(System.String,Windows.Graphics.Imaging.SoftwareBitmap,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
-    @deprecated("Use create_from_bitmap() instead.")
-    def create_from_bitmap_with_options(cls, content_id: str, bitmap_content: windows_graphics_imaging.SoftwareBitmap, region_options: ContentRegionImageOptions, /) -> AppManagedIndexableAppContent: ...
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromContentRegions(System.String,Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion>)
     def create_from_content_regions(cls, content_id: str, content_regions: _cabc.Iterable[AppIndexContentRegion], /) -> AppManagedIndexableAppContent: ...
     @typing.overload
@@ -517,30 +456,18 @@ class AppManagedIndexableAppContent_Static(IndexableAppContent_Static):
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromImageStream(System.String,System.Int32,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
     def create_from_image_stream(cls, content_id: str, content_byte_count: winrt.system.Int32, image_stream: windows_storage_streams.IInputStream, region_options: ContentRegionImageOptions, /) -> AppManagedIndexableAppContent: ...
-    # Deprecated alias of create_from_image_stream() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromImageStream(System.String,System.Int32,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionImageOptions)
-    @deprecated("Use create_from_image_stream() instead.")
-    def create_from_image_stream_with_options(cls, content_id: str, content_byte_count: winrt.system.Int32, image_stream: windows_storage_streams.IInputStream, region_options: ContentRegionImageOptions, /) -> AppManagedIndexableAppContent: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromString(System.String,System.String)
     def create_from_string(cls, content_id: str, text: str, /) -> AppManagedIndexableAppContent: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromString(System.String,System.String,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
     def create_from_string(cls, content_id: str, text: str, region_options: ContentRegionTextOptions, /) -> AppManagedIndexableAppContent: ...
-    # Deprecated alias of create_from_string() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromString(System.String,System.String,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
-    @deprecated("Use create_from_string() instead.")
-    def create_from_string_with_options(cls, content_id: str, text: str, region_options: ContentRegionTextOptions, /) -> AppManagedIndexableAppContent: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromTextStream(System.String,System.Int32,Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding,Windows.Storage.Streams.IInputStream)
     def create_from_text_stream(cls, content_id: str, content_byte_count: winrt.system.Int32, encoding: AppIndexTextStreamEncoding, text_stream: windows_storage_streams.IInputStream, /) -> AppManagedIndexableAppContent: ...
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromTextStream(System.String,System.Int32,Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
     def create_from_text_stream(cls, content_id: str, content_byte_count: winrt.system.Int32, encoding: AppIndexTextStreamEncoding, text_stream: windows_storage_streams.IInputStream, region_options: ContentRegionTextOptions, /) -> AppManagedIndexableAppContent: ...
-    # Deprecated alias of create_from_text_stream() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::CreateFromTextStream(System.String,System.Int32,Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding,Windows.Storage.Streams.IInputStream,Microsoft.Windows.Search.AppContentIndex.ContentRegionTextOptions)
-    @deprecated("Use create_from_text_stream() instead.")
-    def create_from_text_stream_with_options(cls, content_id: str, content_byte_count: winrt.system.Int32, encoding: AppIndexTextStreamEncoding, text_stream: windows_storage_streams.IInputStream, region_options: ContentRegionTextOptions, /) -> AppManagedIndexableAppContent: ...
 
 @typing.final
 class AppManagedIndexableAppContent(IndexableAppContent, metaclass=AppManagedIndexableAppContent_Static):

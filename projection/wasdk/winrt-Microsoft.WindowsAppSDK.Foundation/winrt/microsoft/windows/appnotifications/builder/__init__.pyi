@@ -5,7 +5,6 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -100,20 +99,12 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddText(System.String,Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties)
     def add_text(self, text: str, properties: AppNotificationTextProperties, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of add_text() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddText(System.String,Microsoft.Windows.AppNotifications.Builder.AppNotificationTextProperties)
-    @deprecated("Use add_text() instead.")
-    def add_text2(self, text: str, properties: AppNotificationTextProperties, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddTextBox(System.String)
     def add_text_box(self, id: str, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddTextBox(System.String,System.String,System.String)
     def add_text_box(self, id: str, place_holder_text: str, title: str, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of add_text_box() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::AddTextBox(System.String,System.String,System.String)
-    @deprecated("Use add_text_box() instead.")
-    def add_text_box2(self, id: str, place_holder_text: str, title: str, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.AppNotification Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::BuildNotification()
     def build_notification(self) -> microsoft_windows_appnotifications.AppNotification: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::MuteAudio()
@@ -127,44 +118,24 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAppLogoOverride(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop,System.String)
     def set_app_logo_override(self, image_uri: windows_foundation.Uri, image_crop: AppNotificationImageCrop, alternate_text: str, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_app_logo_override() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAppLogoOverride(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop)
-    @deprecated("Use set_app_logo_override() instead.")
-    def set_app_logo_override2(self, image_uri: windows_foundation.Uri, image_crop: AppNotificationImageCrop, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_app_logo_override() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAppLogoOverride(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop,System.String)
-    @deprecated("Use set_app_logo_override() instead.")
-    def set_app_logo_override3(self, image_uri: windows_foundation.Uri, image_crop: AppNotificationImageCrop, alternate_text: str, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAttributionText(System.String)
     def set_attribution_text(self, text: str, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAttributionText(System.String,System.String)
     def set_attribution_text(self, text: str, language: str, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_attribution_text() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAttributionText(System.String,System.String)
-    @deprecated("Use set_attribution_text() instead.")
-    def set_attribution_text2(self, text: str, language: str, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAudioEvent(Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent)
     def set_audio_event(self, app_notification_sound_event: AppNotificationSoundEvent, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAudioEvent(Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent,Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping)
     def set_audio_event(self, app_notification_sound_event: AppNotificationSoundEvent, loop: AppNotificationAudioLooping, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_audio_event() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAudioEvent(Microsoft.Windows.AppNotifications.Builder.AppNotificationSoundEvent,Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping)
-    @deprecated("Use set_audio_event() instead.")
-    def set_audio_event2(self, app_notification_sound_event: AppNotificationSoundEvent, loop: AppNotificationAudioLooping, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAudioUri(Windows.Foundation.Uri)
     def set_audio_uri(self, audio_uri: windows_foundation.Uri, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAudioUri(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping)
     def set_audio_uri(self, audio_uri: windows_foundation.Uri, loop: AppNotificationAudioLooping, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_audio_uri() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetAudioUri(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationAudioLooping)
-    @deprecated("Use set_audio_uri() instead.")
-    def set_audio_uri2(self, audio_uri: windows_foundation.Uri, loop: AppNotificationAudioLooping, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetDuration(Microsoft.Windows.AppNotifications.Builder.AppNotificationDuration)
     def set_duration(self, duration: AppNotificationDuration, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetGroup(System.String)
@@ -175,10 +146,6 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetHeroImage(Windows.Foundation.Uri,System.String)
     def set_hero_image(self, image_uri: windows_foundation.Uri, alternate_text: str, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_hero_image() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetHeroImage(Windows.Foundation.Uri,System.String)
-    @deprecated("Use set_hero_image() instead.")
-    def set_hero_image2(self, image_uri: windows_foundation.Uri, alternate_text: str, /) -> AppNotificationBuilder: ...
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetInlineImage(Windows.Foundation.Uri)
     def set_inline_image(self, image_uri: windows_foundation.Uri, /) -> AppNotificationBuilder: ...
@@ -188,14 +155,6 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetInlineImage(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop,System.String)
     def set_inline_image(self, image_uri: windows_foundation.Uri, imagecrop: AppNotificationImageCrop, alternate_text: str, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_inline_image() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetInlineImage(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop)
-    @deprecated("Use set_inline_image() instead.")
-    def set_inline_image2(self, image_uri: windows_foundation.Uri, image_crop: AppNotificationImageCrop, /) -> AppNotificationBuilder: ...
-    # Deprecated alias of set_inline_image() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetInlineImage(Windows.Foundation.Uri,Microsoft.Windows.AppNotifications.Builder.AppNotificationImageCrop,System.String)
-    @deprecated("Use set_inline_image() instead.")
-    def set_inline_image3(self, image_uri: windows_foundation.Uri, imagecrop: AppNotificationImageCrop, alternate_text: str, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetScenario(Microsoft.Windows.AppNotifications.Builder.AppNotificationScenario)
     def set_scenario(self, value: AppNotificationScenario, /) -> AppNotificationBuilder: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::SetTag(System.String)
@@ -232,10 +191,6 @@ class AppNotificationButton(winrt.system.Object, metaclass=AppNotificationButton
     @typing.overload
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationButton Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::SetInvokeUri(Windows.Foundation.Uri,System.String)
     def set_invoke_uri(self, protocol_uri: windows_foundation.Uri, target_app_id: str, /) -> AppNotificationButton: ...
-    # Deprecated alias of set_invoke_uri() for pywinrt v3.x compatibility.
-    # Microsoft.Windows.AppNotifications.Builder.AppNotificationButton Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::SetInvokeUri(Windows.Foundation.Uri,System.String)
-    @deprecated("Use set_invoke_uri() instead.")
-    def set_invoke_uri2(self, protocol_uri: windows_foundation.Uri, target_app_id: str, /) -> AppNotificationButton: ...
     # Microsoft.Windows.AppNotifications.Builder.AppNotificationButton Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::SetToolTip(System.String)
     def set_tool_tip(self, value: str, /) -> AppNotificationButton: ...
     # System.String Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::get_ToolTip()

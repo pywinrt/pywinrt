@@ -10,6 +10,3 @@ __all__ = [
     "DecimalHelper",
 ]
 
-winrt.runtime._internals.alias_static_method(DecimalHelper, "from_string_with_locale", "from_string")
-winrt.runtime._internals.alias_static_method(DecimalHelper, "to_string_with_locale", "to_string")
-winrt.runtime._internals.alias_static_method(DecimalHelper, "try_from_string_with_locale", "try_from_string")

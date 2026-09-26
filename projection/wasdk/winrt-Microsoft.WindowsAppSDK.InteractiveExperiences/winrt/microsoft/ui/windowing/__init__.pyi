@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
-from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -94,18 +93,6 @@ class AppWindow_Static(winrt._winrt.IInspectable_Static):
     @typing.overload
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create(Microsoft.UI.Windowing.AppWindowPresenter,Microsoft.UI.WindowId,Microsoft.UI.Dispatching.DispatcherQueue)
     def create(cls, app_window_presenter: AppWindowPresenter, owner_window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], dispatcher_queue: microsoft_ui_dispatching.DispatcherQueue, /) -> AppWindow: ...
-    # Deprecated alias of create() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create(Microsoft.UI.Windowing.AppWindowPresenter,Microsoft.UI.WindowId,Microsoft.UI.Dispatching.DispatcherQueue)
-    @deprecated("Use create() instead.")
-    def create_with_dispatcher_queue(cls, app_window_presenter: AppWindowPresenter, owner_window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], dispatcher_queue: microsoft_ui_dispatching.DispatcherQueue, /) -> AppWindow: ...
-    # Deprecated alias of create() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create(Microsoft.UI.Windowing.AppWindowPresenter)
-    @deprecated("Use create() instead.")
-    def create_with_presenter(cls, app_window_presenter: AppWindowPresenter, /) -> AppWindow: ...
-    # Deprecated alias of create() for pywinrt v3.x compatibility.
-    # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create(Microsoft.UI.Windowing.AppWindowPresenter,Microsoft.UI.WindowId)
-    @deprecated("Use create() instead.")
-    def create_with_presenter_and_owner(cls, app_window_presenter: AppWindowPresenter, owner_window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> AppWindow: ...
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::GetFromWindowId(Microsoft.UI.WindowId)
     def get_from_window_id(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> AppWindow: ...
 
@@ -125,10 +112,6 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     @typing.overload
     # System.Void Microsoft.UI.Windowing.AppWindow::MoveAndResize(Windows.Graphics.RectInt32,Microsoft.UI.Windowing.DisplayArea)
     def move_and_resize(self, rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], displayarea: DisplayArea, /) -> None: ...
-    # Deprecated alias of move_and_resize() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Windowing.AppWindow::MoveAndResize(Windows.Graphics.RectInt32,Microsoft.UI.Windowing.DisplayArea)
-    @deprecated("Use move_and_resize() instead.")
-    def move_and_resize_relative_to_display_area(self, rect: windows_graphics.RectInt32 | tuple[winrt.system.Int32, winrt.system.Int32, winrt.system.Int32, winrt.system.Int32], displayarea: DisplayArea, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::MoveInZOrderAtBottom()
     def move_in_z_order_at_bottom(self) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::MoveInZOrderAtTop()
@@ -161,10 +144,6 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
     @typing.overload
     # System.Void Microsoft.UI.Windowing.AppWindow::Show(System.Boolean)
     def show(self, activate_window: bool, /) -> None: ...
-    # Deprecated alias of show() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Windowing.AppWindow::Show(System.Boolean)
-    @deprecated("Use show() instead.")
-    def show_with_activation(self, activate_window: bool, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::ShowOnceWithRequestedStartupState()
     def show_once_with_requested_startup_state(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Windowing.AppWindow::add_Changed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Windowing.AppWindow,Microsoft.UI.Windowing.AppWindowChangedEventArgs>)
@@ -492,20 +471,12 @@ class OverlappedPresenter(AppWindowPresenter, metaclass=OverlappedPresenter_Stat
     @typing.overload
     # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Minimize(System.Boolean)
     def minimize(self, activate_window: bool, /) -> None: ...
-    # Deprecated alias of minimize() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Minimize(System.Boolean)
-    @deprecated("Use minimize() instead.")
-    def minimize_with_activation(self, activate_window: bool, /) -> None: ...
     @typing.overload
     # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Restore()
     def restore(self) -> None: ...
     @typing.overload
     # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Restore(System.Boolean)
     def restore(self, activate_window: bool, /) -> None: ...
-    # Deprecated alias of restore() for pywinrt v3.x compatibility.
-    # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Restore(System.Boolean)
-    @deprecated("Use restore() instead.")
-    def restore_with_activation(self, activate_window: bool, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.OverlappedPresenter::SetBorderAndTitleBar(System.Boolean,System.Boolean)
     def set_border_and_title_bar(self, has_border: bool, has_title_bar: bool, /) -> None: ...
     # System.Boolean Microsoft.UI.Windowing.OverlappedPresenter::get_IsResizable()
