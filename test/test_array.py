@@ -460,6 +460,18 @@ class TestWinRTArray(unittest.TestCase):
         self.assertEqual(a.count(5), 1)
         self.assertEqual(a.index(5), 5)
 
+    def test_guid_is_uuid_itself(self):
+        class UUID:
+            pass
+
+        class Derived(uuid.UUID):
+            pass
+
+        for impostor in (UUID, Derived):
+            with self.subTest(type=impostor):
+                with self.assertRaises(TypeError):
+                    Array(impostor, 1)
+
 
 #: One value of each element type an ArrayN member of the test component
 #: takes, with the winrt.system.Array type argument that spells it. Every

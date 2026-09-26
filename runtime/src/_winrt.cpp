@@ -514,11 +514,9 @@ namespace py::cpp::_winrt
     }
 
     /**
-     * Equivalent to functools.cache(functools.partial(uuid.UUID, None))
-     *
-     * This is a performance optimization since the UUID constructor is expensive.
+     * uuid.UUID.
      */
-    static PyObject* wrap_uuid_constructor() noexcept
+    static PyTypeObject* import_uuid_type() noexcept
     {
         pyobj_handle uuid_module{PyImport_ImportModule("uuid")};
         if (!uuid_module)
@@ -532,6 +530,22 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
+        if (!PyType_Check(uuid_type.get()))
+        {
+            PyErr_SetString(PyExc_TypeError, "uuid.UUID is not a type");
+            return nullptr;
+        }
+
+        return reinterpret_cast<PyTypeObject*>(uuid_type.detach());
+    }
+
+    /**
+     * Equivalent to functools.cache(functools.partial(uuid.UUID, None))
+     *
+     * This is a performance optimization since the UUID constructor is expensive.
+     */
+    static PyObject* wrap_uuid_constructor(PyTypeObject* uuid_type) noexcept
+    {
         pyobj_handle functools_module{PyImport_ImportModule("functools")};
         if (!functools_module)
         {
@@ -546,7 +560,10 @@ namespace py::cpp::_winrt
         }
 
         pyobj_handle partial_uuid_func{PyObject_CallFunctionObjArgs(
-            partial_func.get(), uuid_type.get(), Py_None, nullptr)};
+            partial_func.get(),
+            reinterpret_cast<PyObject*>(uuid_type),
+            Py_None,
+            nullptr)};
         if (!partial_uuid_func)
         {
             return nullptr;
@@ -585,6 +602,7 @@ namespace py::cpp::_winrt
         Py_VISIT(state->mapping_iter_type);
         Py_VISIT(state->projected_method_type);
         Py_VISIT(state->to_uuid_func);
+        Py_VISIT(state->uuid_type);
         Py_VISIT(state->wrap_async_func);
 
         for (const auto& [key, value] : state->type_cache)
@@ -605,6 +623,7 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->mapping_iter_type);
         Py_CLEAR(state->projected_method_type);
         Py_CLEAR(state->to_uuid_func);
+        Py_CLEAR(state->uuid_type);
         Py_CLEAR(state->wrap_async_func);
 
         // Nothing here takes the cache lock, and traverse and free do not
@@ -648,6 +667,7 @@ namespace py::cpp::_winrt
         Py_XDECREF(state->mapping_iter_type);
         Py_XDECREF(state->projected_method_type);
         Py_XDECREF(state->to_uuid_func);
+        Py_XDECREF(state->uuid_type);
         Py_XDECREF(state->wrap_async_func);
 
         for (auto& [key, value] : state->type_cache)
@@ -873,7 +893,13 @@ namespace py::cpp::_winrt
             return -1;
         }
 
-        pyobj_handle to_uuid_func{wrap_uuid_constructor()};
+        py::pytype_handle uuid_type{import_uuid_type()};
+        if (!uuid_type)
+        {
+            return -1;
+        }
+
+        pyobj_handle to_uuid_func{wrap_uuid_constructor(uuid_type.get())};
         if (!to_uuid_func)
         {
             return -1;
@@ -885,6 +911,7 @@ namespace py::cpp::_winrt
         state->mapping_iter_type = mapping_iter_type.detach();
         state->projected_method_type = projected_method_type.detach();
         state->to_uuid_func = to_uuid_func.detach();
+        state->uuid_type = uuid_type.detach();
         state->wrap_async_func = nullptr; // lazy-initialized
 
         main_state.store(state, std::memory_order_release);
