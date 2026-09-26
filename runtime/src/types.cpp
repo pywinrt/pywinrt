@@ -216,7 +216,7 @@ namespace py::interp
      * The type entry of a wrapper type this runtime built, or @c nullptr. An
      * interface is here twice, as the wrapper and as the abstract type.
      */
-    type_entry* get_type_entry(PyTypeObject* type) noexcept
+    type_entry* find_type_entry(PyTypeObject* type) noexcept
     {
         auto const s = try_get_module_state();
         if (!s)

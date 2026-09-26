@@ -566,7 +566,7 @@ namespace py::interp
         PyObject* struct_new(
             PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
         {
-            auto const info = get_type_entry(type);
+            auto const info = find_type_entry(type);
             if (!info)
             {
                 PyErr_Format(PyExc_TypeError, "'%s' cannot be created", type->tp_name);
@@ -611,7 +611,7 @@ namespace py::interp
         {
             auto const tp = Py_TYPE(self);
 
-            if (auto const info = get_type_entry(tp))
+            if (auto const info = find_type_entry(tp))
             {
                 release_struct(
                     *info, reinterpret_cast<uint8_t*>(self) + info->blob_offset);
@@ -664,7 +664,7 @@ namespace py::interp
 
         PyObject* struct_repr(PyObject* self) noexcept
         {
-            auto const info = get_type_entry(Py_TYPE(self));
+            auto const info = find_type_entry(Py_TYPE(self));
             if (!info)
             {
                 return PyObject_Repr(reinterpret_cast<PyObject*>(Py_TYPE(self)));
@@ -722,7 +722,7 @@ namespace py::interp
                 Py_RETURN_NOTIMPLEMENTED;
             }
 
-            auto const info = get_type_entry(Py_TYPE(self));
+            auto const info = find_type_entry(Py_TYPE(self));
             if (!info)
             {
                 Py_RETURN_NOTIMPLEMENTED;
@@ -766,7 +766,7 @@ namespace py::interp
                 return nullptr;
             }
 
-            auto const info = get_type_entry(Py_TYPE(self));
+            auto const info = find_type_entry(Py_TYPE(self));
             if (!info)
             {
                 PyErr_SetString(PyExc_TypeError, "not a projected struct");
@@ -918,7 +918,7 @@ namespace py::interp
          */
         PyObject* struct_unpack(PyObject* self, PyObject* /*unused*/) noexcept
         {
-            auto const info = get_type_entry(Py_TYPE(self));
+            auto const info = find_type_entry(Py_TYPE(self));
             if (!info)
             {
                 PyErr_Format(
@@ -1131,7 +1131,7 @@ namespace
      */
     py::interp::type_entry* struct_entry(PyTypeObject* type) noexcept
     {
-        auto const info = py::interp::get_type_entry(type);
+        auto const info = py::interp::find_type_entry(type);
         if (!info)
         {
             PyErr_Format(

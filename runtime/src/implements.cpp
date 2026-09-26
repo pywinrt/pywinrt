@@ -379,7 +379,7 @@ namespace py::interp
          */
         type_entry* interface_of(PyTypeObject* type) noexcept
         {
-            auto* const entry = get_type_entry(type);
+            auto* const entry = find_type_entry(type);
 
             return entry && entry->implements == type ? entry : nullptr;
         }

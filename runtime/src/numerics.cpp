@@ -35,7 +35,7 @@ namespace py::interp::numerics
          */
         type_entry* instance_entry(PyObject* self) noexcept
         {
-            auto const entry = get_type_entry(Py_TYPE(self));
+            auto const entry = find_type_entry(Py_TYPE(self));
             if (!entry)
             {
                 PyErr_Format(
@@ -62,7 +62,7 @@ namespace py::interp::numerics
         {
             for (auto* const operand : {left, right})
             {
-                auto const entry = get_type_entry(Py_TYPE(operand));
+                auto const entry = find_type_entry(Py_TYPE(operand));
                 if (!entry)
                 {
                     continue;
