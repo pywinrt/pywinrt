@@ -2,9 +2,9 @@
 Checks the runtime ABI promise between two versions of the tree.
 
 The promise is that a projection module compiled against runtime ABI major M
-and minor m loads on any winrt-runtime that declares major M and a minor no
-older than m, and that a runtime which cannot satisfy it refuses the module
-with a RuntimeError rather than crashing. Nothing in the ordinary test suite
+and minor m loads on any winrt-runtime that declares the same runtime_api_guid,
+major M and a minor no older than m, and that a runtime which cannot satisfy
+it refuses the module with a RuntimeError rather than crashing. Nothing in the ordinary test suite
 can check that, because it builds both halves from the same source at the same
 time; this script builds one half from an older commit and pairs the two.
 
@@ -55,9 +55,10 @@ from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent.parent
 
-# The message py::import_winrt_runtime() raises through when the runtime cannot
+# The messages py::import_winrt_runtime() raises through when the runtime cannot
 # satisfy the module. Both halves of the pair have to agree on the wording for
 # this to be checkable, which they have since the check was introduced.
+GUID_REFUSAL = "capsule has invalid data"
 MAJOR_REFUSAL = "ABI major version mismatch"
 MINOR_REFUSAL = "ABI minor version mismatch"
 
@@ -99,6 +100,17 @@ def newest_wheels_tag() -> str:
             return candidates[0]
 
     raise SystemExit("no wheels/* tag to use as a baseline; pass --baseline")
+
+
+@dataclass(frozen=True)
+class Abi:
+    """
+    The C ABI a runtime provides or a module requires: the guid that names the
+    layout of the capsule, and the version within that layout.
+    """
+
+    guid: str
+    version: tuple[int, int]
 
 
 @dataclass
@@ -158,7 +170,7 @@ class Tree:
         return self.sdk_package / "src/winrt_sdk/pywinrt/pybase.h"
 
     @property
-    def abi_version(self) -> tuple[int, int]:
+    def abi(self) -> Abi:
         """
         The ABI the runtime in this tree provides, which is also the ABI a
         module built in this tree requires: the inline wrappers in the headers
@@ -175,8 +187,17 @@ class Tree:
 
             return int(match.group(1))
 
-        return constant("runtime_abi_version_major"), constant(
-            "runtime_abi_version_minor"
+        guid = re.search(r'\bruntime_api_guid\{"([0-9A-Fa-f-]+)"\}', source)
+
+        if not guid:
+            raise SystemExit(f"could not read runtime_api_guid from {self.abi_header}")
+
+        return Abi(
+            guid.group(1).upper(),
+            (
+                constant("runtime_abi_version_major"),
+                constant("runtime_abi_version_minor"),
+            ),
         )
 
     @property
@@ -230,10 +251,12 @@ class Tree:
 
 
 def describe(tree: Tree) -> str:
-    major, minor = tree.abi_version
+    abi = tree.abi
+    major, minor = abi.version
 
     return (
-        f"{tree.name}: ABI {major}.{minor} ({tree.abi_header.relative_to(tree.root)})"
+        f"{tree.name}: ABI {major}.{minor} {{{abi.guid}}}"
+        f" ({tree.abi_header.relative_to(tree.root)})"
     )
 
 
@@ -315,15 +338,33 @@ def unpack_wheel(wheel: Path, dest: Path) -> Path:
 
 def is_satisfied(required: tuple[int, int], provided: tuple[int, int]) -> bool:
     """
-    Whether a module requiring the first ABI version loads against a runtime
-    providing the second. This is the Python-side copy of the check in
-    py::import_winrt_runtime().
+    Whether something requiring the first version is accepted by a runtime
+    providing the second: the same major and a minor no newer. The C ABI and
+    the table format both follow this rule.
     """
     return required[0] == provided[0] and required[1] <= provided[1]
 
 
-def refusal_message(required: tuple[int, int], provided: tuple[int, int]) -> str:
-    return MAJOR_REFUSAL if required[0] != provided[0] else MINOR_REFUSAL
+def abi_is_satisfied(required: Abi, provided: Abi) -> bool:
+    """
+    Whether a module requiring the first ABI loads against a runtime providing
+    the second. This is the Python-side copy of the check in
+    py::import_winrt_runtime(), which compares the guid before it reads
+    anything else out of the capsule.
+    """
+    return required.guid == provided.guid and is_satisfied(
+        required.version, provided.version
+    )
+
+
+def refusal_message(required: Abi, provided: Abi) -> str:
+    if required.guid != provided.guid:
+        return GUID_REFUSAL
+
+    if required.version[0] != provided.version[0]:
+        return MAJOR_REFUSAL
+
+    return MINOR_REFUSAL
 
 
 def table_refusal_message(required: tuple[int, int], provided: tuple[int, int]) -> str:
@@ -487,8 +528,12 @@ def scenario_b(
 ) -> None:
     """
     New module, old runtime. The baseline's runtime comes first on PYTHONPATH,
-    so its winrt._winrt shadows the current one; test_winrt comes from the
-    current install.
+    so its winrt._winrt shadows the current one; test_winrt and the interop
+    modules come from the current install.
+
+    A refusal is looked for in an interop module, because that is compiled
+    code and calls py::import_winrt_runtime() when it is imported. The
+    TestComponent package is a table, which never reaches that check.
     """
     print()
     print("=== scenario B - new module, old runtime ===", flush=True)
@@ -501,14 +546,14 @@ def scenario_b(
     runtime_dir = unpack_wheel(wheel, work / "baseline-runtime")
 
     pythonpath = os.pathsep.join([os.fspath(runtime_dir), os.fspath(current_install)])
-    required = current.abi_version
-    provided = baseline.abi_version
+    required = current.abi
+    provided = baseline.abi
 
-    if is_satisfied(required, provided):
+    if abi_is_satisfied(required, provided):
         run_tests("test.test_test_component", pythonpath=pythonpath, cwd=PROJECT_DIR)
     else:
         expect_import_refusal(
-            "test_winrt.testcomponent",
+            "winrt._winrt_windows_system_interop",
             refusal_message(required, provided),
             pythonpath=pythonpath,
             cwd=PROJECT_DIR,
@@ -533,10 +578,10 @@ def scenario_c(baseline: Tree, current: Tree, work: Path) -> None:
         )
         return
 
-    if baseline.abi_version[0] != current.abi_version[0]:
+    if baseline.abi.guid != current.abi.guid:
         print(
-            "skipped: the ABI major changed, so the current sources are not"
-            " meant to compile against these headers",
+            "skipped: the ABI generation changed, so the current sources are"
+            " not meant to compile against these headers",
             flush=True,
         )
         return

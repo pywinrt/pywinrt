@@ -16,7 +16,7 @@
 //
 // The Python C API calls themselves, and what a Python exception raised during
 // one of them means to WinRT, are the py::pyseq_*, py::pymap_* and py::pyiter_*
-// entries in <pywinrt/abi.h>, implemented in collections.cpp.
+// functions in collections.h.
 
 #pragma once
 
