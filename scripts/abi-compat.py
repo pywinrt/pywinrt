@@ -147,20 +147,13 @@ class Tree:
     @property
     def include_dir(self) -> Path | None:
         """
-        The directory the runtime's headers are in, or None for a tree that
-        predates them moving into winrt-runtime, where they were part of
-        winrt-sdk and were included as <pybase.h> instead of <pywinrt/...>.
-        They were inside the runtime's Python package before they moved
-        beside its sources.
+        The directory the runtime's headers are in, or None for a 3.x tree,
+        where they were part of winrt-sdk and were included as <pybase.h>
+        instead of <pywinrt/...>.
         """
-        for include_dir in (
-            self.runtime_package / "src/include",
-            self.runtime_package / "python/winrt/include",
-        ):
-            if include_dir.is_dir():
-                return include_dir
+        include_dir = self.runtime_package / "src/include"
 
-        return None
+        return include_dir if include_dir.is_dir() else None
 
     @property
     def abi_header(self) -> Path:
@@ -244,18 +237,11 @@ class Tree:
     def build_pythonpath(self) -> str:
         """
         What a package in this tree needs on PYTHONPATH to be built without
-        build isolation: the same directories the generated cibuildwheel
-        configuration puts there. For a 4.x tree that is winrt-runtime's
-        package; for a 3.x one it is winrt-sdk's, which is where the pywinrt
-        headers were before they moved.
+        build isolation: winrt-sdk's package, which is where the pywinrt
+        headers were. Only a 3.x tree has a module to build, since a 4.x one
+        has no capsule for a module to import.
         """
-        paths = (
-            [self.runtime_package / "python"]
-            if self.include_dir is not None
-            else [self.sdk_package / "src"]
-        )
-
-        return os.pathsep.join(os.fspath(p) for p in paths)
+        return os.fspath(self.sdk_package / "src")
 
     @property
     def table_compiler_pythonpath(self) -> str:
@@ -310,9 +296,9 @@ def add_worktree(ref: str, path: Path) -> Tree:
 def build_wheel(package: Path, out_dir: Path, pythonpath: str) -> Path:
     """
     Builds one package into a wheel, without build isolation so that the
-    winrt-runtime build dependency comes from the tree being built rather than
-    from PyPI. The C++/WinRT headers ride inside that same package, so
-    PYTHONPATH decides which tree's headers are compiled against.
+    package carrying the pywinrt and C++/WinRT headers it compiles against -
+    winrt-sdk in 3.x - comes from the tree being built rather than from PyPI,
+    and PYTHONPATH decides which tree's headers are compiled against.
     """
     env = dict(os.environ, PYTHONPATH=pythonpath)
 
