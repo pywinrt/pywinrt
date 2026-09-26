@@ -643,7 +643,7 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(len(kept[0]), 0)
 
     def test_passed_array_must_hold_the_declared_element(self):
-        with self.assertRaises(BufferError):
+        with self.assertRaisesRegex(BufferError, "itemsize == 4, have 2"):
             self.tests.array7(Array(Int16, [1, 2]), Array(Int32, 2))
 
     def test_lent_array_must_be_writable(self):

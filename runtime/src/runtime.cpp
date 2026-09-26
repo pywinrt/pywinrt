@@ -213,7 +213,7 @@ bool py::is_buffer_compatible(
             PyExc_BufferError,
             "requires buffer with itemsize == %zd, have %zd",
             itemsize,
-            view.ndim);
+            view.itemsize);
         return false;
     }
 
@@ -241,8 +241,8 @@ bool py::is_buffer_compatible(
         PyErr_Format(
             PyExc_BufferError,
             "requires buffer with strides[0] == %zd, have %zd",
-            view.strides ? view.strides[0] : 0,
-            itemsize);
+            itemsize,
+            view.strides ? view.strides[0] : 0);
         return false;
     }
 
