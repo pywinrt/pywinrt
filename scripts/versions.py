@@ -11,8 +11,10 @@ its sources are in, and scripts/generate-pyproject.py writes what this module
 computes into the packaging of each package.
 """
 
+import ast
 import json
 import re
+from collections.abc import Iterable
 from pathlib import Path
 
 REPO_PATH = Path(__file__).parent.parent
@@ -25,6 +27,17 @@ TABLE_PATH = REPO_PATH / "table"
 TABLE_VERSION_PATH = TABLE_PATH / "version.txt"
 INTEROP_PATH = REPO_PATH / "interop"
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
+INTEROP_HEADER_PATH = INTEROP_PATH / "interop.h"
+
+# The winrt-runtime version that each winrt._winrt function an interop package
+# calls first shipped in. An interop package requires the newest of the ones it
+# calls rather than the runtime of this tree, so that a fix to one can reach
+# someone who keeps an older runtime (see interop_runtime_requirement()).
+RUNTIME_FUNCTIONS = {
+    "as_interface": "4.0.0",
+    "hresult_error": "4.0.0",
+    "wrap_interface": "4.0.0",
+}
 
 # Which NuGet package each family of generated packages takes its version
 # from, keyed by the directory under projection/ that holds the family.
@@ -334,3 +347,106 @@ def table_compiler_requirement() -> str:
     generation = compatibility_generation()
 
     return f"winrt-table-compiler>={generation}.0.0,<{generation + 1}"
+
+
+def runtime_functions_called(package_path: Path) -> set[str]:
+    """
+    The winrt._winrt functions an interop package calls.
+
+    Its Python code is read for how it imports winrt._winrt and what it takes
+    from it, and interop.h is read for the calls it makes from C, since every
+    interop module compiles a copy of it.
+    """
+    called = set(
+        re.findall(
+            r'PyObject_CallMethod\(\s*runtime,\s*"(\w+)"',
+            INTEROP_HEADER_PATH.read_text(encoding="utf-8"),
+        )
+    )
+
+    for path in package_path.glob("winrt/**/*.py"):
+        tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+        aliases = set()
+
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                aliases.update(
+                    alias.asname for alias in node.names if alias.name == "winrt._winrt"
+                )
+            elif isinstance(node, ast.ImportFrom) and node.module == "winrt":
+                aliases.update(
+                    alias.asname or alias.name
+                    for alias in node.names
+                    if alias.name == "_winrt"
+                )
+            elif isinstance(node, ast.ImportFrom) and node.module == "winrt._winrt":
+                called.update(alias.name for alias in node.names)
+
+        # without an alias, "import winrt._winrt" is reached as
+        # winrt._winrt.name, which the second branch below looks for
+        aliases.discard(None)
+
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Attribute):
+                continue
+
+            owner = node.value
+
+            if isinstance(owner, ast.Name) and owner.id in aliases:
+                called.add(node.attr)
+            elif (
+                isinstance(owner, ast.Attribute)
+                and owner.attr == "_winrt"
+                and isinstance(owner.value, ast.Name)
+                and owner.value.id == "winrt"
+            ):
+                called.add(node.attr)
+
+    return called
+
+
+def release_of(version: str) -> tuple[int, ...]:
+    """
+    A version of the form the hand-written packages carry, as something that
+    compares the way the versions do.
+    """
+    return tuple(int(part) for part in version.split("."))
+
+
+def interop_runtime_requirement(functions: Iterable[str]) -> str:
+    """
+    What an interop package that calls these functions requires of the runtime.
+
+    The floor is the newest runtime that one of them first shipped in, and
+    never below the generation, so a fix to an interop package that calls
+    nothing new can be installed without upgrading the runtime. The cap is the
+    one runtime_requirement() explains.
+
+    A function that is not in RUNTIME_FUNCTIONS stops the generation rather
+    than being assumed old, and so does one listed with a version this tree's
+    runtime has not reached, which is a release that has not happened yet.
+    """
+    generation = compatibility_generation()
+    current = runtime_version()
+    floor = f"{generation}.0.0"
+
+    for function in sorted(functions):
+        if function not in RUNTIME_FUNCTIONS:
+            raise RuntimeError(
+                f"winrt._winrt.{function} is not in RUNTIME_FUNCTIONS in"
+                " scripts/versions.py; add it with the winrt-runtime version"
+                " it first ships in"
+            )
+
+        since = RUNTIME_FUNCTIONS[function]
+
+        if release_of(since) > release_of(current):
+            raise RuntimeError(
+                f"winrt._winrt.{function} is listed as shipping in winrt-runtime"
+                f" {since}, but the runtime of this tree is {current}"
+            )
+
+        if release_of(since) > release_of(floor):
+            floor = since
+
+    return f"winrt-runtime>={floor},<{generation + 1}"

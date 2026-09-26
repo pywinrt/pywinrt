@@ -8,7 +8,12 @@ checked against ``packaging``, which is what pip resolves with, rather than
 against a second copy of the rules written out by hand.
 """
 
+import ast
+import tempfile
+import textwrap
 import unittest
+from pathlib import Path
+from unittest import mock
 
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
@@ -277,3 +282,101 @@ class ReleaseTags(unittest.TestCase):
     def test_a_tag_that_names_no_unit_is_refused(self):
         with self.assertRaises(ValueError):
             versions.unit_of_tag("wheels/v3.2.1")
+
+
+class InteropRuntimeRequirement(unittest.TestCase):
+    """
+    What an interop package requires of the runtime: the newest runtime that a
+    function it calls first shipped in, so that a fix to it does not force a
+    runtime upgrade on someone who keeps an older one.
+    """
+
+    def setUp(self):
+        self.generation = versions.compatibility_generation()
+
+    def test_calling_nothing_new_requires_the_generation(self):
+        self.assertEqual(
+            versions.interop_runtime_requirement(["as_interface"]),
+            f"winrt-runtime>={self.generation}.0.0,<{self.generation + 1}",
+        )
+
+    def test_the_newest_function_it_calls_sets_the_floor(self):
+        functions = {
+            "older": f"{self.generation}.1.0",
+            "newer": f"{self.generation}.2.0",
+        }
+
+        with (
+            mock.patch.dict(versions.RUNTIME_FUNCTIONS, functions),
+            mock.patch.object(
+                versions, "runtime_version", return_value=f"{self.generation}.3.0"
+            ),
+        ):
+            requirement = versions.interop_runtime_requirement(["older", "newer"])
+
+        specifier = SpecifierSet(requirement.removeprefix("winrt-runtime"))
+
+        self.assertIn(f"{self.generation}.2.0", specifier)
+        self.assertNotIn(f"{self.generation}.1.0", specifier)
+
+    def test_an_unlisted_function_is_refused(self):
+        with self.assertRaises(RuntimeError):
+            versions.interop_runtime_requirement(["not_a_runtime_function"])
+
+    def test_a_function_newer_than_this_tree_is_refused(self):
+        # listing it with the version it will ship in, before the runtime
+        # carries that version, would require a runtime nobody can install
+        with mock.patch.dict(
+            versions.RUNTIME_FUNCTIONS, {"unreleased": f"{self.generation}.99.0"}
+        ):
+            with self.assertRaises(RuntimeError):
+                versions.interop_runtime_requirement(["unreleased"])
+
+    def test_every_listed_function_is_one_the_runtime_has(self):
+        stub = versions.RUNTIME_PATH / "python" / "winrt" / "_winrt.pyi"
+        declared = {
+            node.name
+            for node in ast.parse(stub.read_text(encoding="utf-8")).body
+            if isinstance(node, ast.FunctionDef)
+        }
+
+        self.assertLessEqual(set(versions.RUNTIME_FUNCTIONS), declared)
+
+    def test_every_way_of_importing_the_runtime_is_seen(self):
+        with tempfile.TemporaryDirectory() as root:
+            module = Path(root) / "winrt" / "a" / "interop" / "__init__.py"
+            module.parent.mkdir(parents=True)
+            module.write_text(
+                textwrap.dedent(
+                    """
+                    import winrt._winrt
+                    import winrt._winrt as _runtime
+                    from winrt import _winrt
+                    from winrt import _winrt as _other
+                    from winrt._winrt import direct
+
+                    winrt._winrt.plain()
+                    _runtime.aliased()
+                    _winrt.from_winrt()
+                    _other.from_winrt_aliased()
+                    """
+                ),
+                encoding="utf-8",
+            )
+
+            called = versions.runtime_functions_called(Path(root))
+
+        self.assertLessEqual(
+            {"plain", "aliased", "from_winrt", "from_winrt_aliased", "direct"},
+            called,
+        )
+        # interop.h raises through hresult_error() in every module
+        self.assertIn("hresult_error", called)
+
+    def test_every_interop_package_calls_only_listed_functions(self):
+        for package in sorted(versions.INTEROP_PATH.glob("winrt-*")):
+            with self.subTest(package=package.name):
+                self.assertLessEqual(
+                    versions.runtime_functions_called(package),
+                    set(versions.RUNTIME_FUNCTIONS),
+                )

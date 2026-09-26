@@ -198,6 +198,15 @@ packages carry the headers they compile. The exception is
 `Microsoft.WindowsAppRuntime.Bootstrap.dll` out of the App SDK pin, so moving
 that pin does change it.
 
+An interop package requires the newest `winrt-runtime` that one of the
+`winrt._winrt` functions it calls first shipped in, not the runtime of the
+tree, so that a fix to it can be installed without upgrading the runtime.
+`RUNTIME_FUNCTIONS` in `scripts/versions.py` records that version for each
+function. Adding a function for the interop packages to call means listing it
+there with the version it first ships in, and bumping `runtime/version.txt` to
+that version in the same change: `generate-pyproject.py` refuses a call to a
+function that is not listed, and a listed version the runtime has not reached.
+
 Either way, regenerate the packaging afterwards so that every package carries
 the version it is published with:
 
