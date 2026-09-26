@@ -10,12 +10,12 @@ transitive closure of those five is copied out.
 
 Each package carries the headers it includes, rather than one package carrying
 them for everybody: ``winrt-runtime`` carries what ``pywinrt/base.h`` includes,
-which is what every consumer of the PyWinRT headers gets as well, and each
-interop package carries the closure of its own namespace on top of that. So an
-interop module that starts including another namespace is a release of that
-package and not of the runtime, and the runtime knows about the Windows SDK
-only - the Windows App SDK headers belong to the one interop package that
-includes them.
+and each interop package carries the whole closure of its own namespaces,
+``winrt/base.h`` and the ``Windows.Foundation`` headers included, so that it
+builds without ``winrt-runtime`` at all. So an interop module that starts
+including another namespace is a release of that package and not of the
+runtime, and the runtime knows about the Windows SDK only - the Windows App
+SDK headers belong to the one interop package that includes them.
 
 The headers are committed, like the rest of the generated tree, so this has to
 be run when the NuGet packages that ``scripts/fetch-tools.ps1`` downloads move
@@ -81,9 +81,8 @@ WEBVIEW2_METADATA = (
     / "Microsoft.Web.WebView2.Core.winmd"
 )
 
-# What pywinrt/base.h and the runtime's own sources include. Everything that
-# includes the PyWinRT headers gets these, so no interop package carries them
-# again. `winrt/base.h` comes along with them.
+# What pywinrt/base.h and the runtime's own sources include. `winrt/base.h`
+# comes along with them.
 RUNTIME_NAMESPACES = [
     "Windows.Foundation",
     "Windows.Foundation.Collections",
@@ -214,8 +213,6 @@ with tempfile.TemporaryDirectory(prefix="pywinrt-cppwinrt-") as temp_dir:
     for package, namespaces in INTEROP_NAMESPACES.items():
         output_path = INTEROP_PATH / package / INTEROP_OUTPUT_DIR
 
-        # what the package includes that the runtime does not already carry
-        closure = header_closure(namespaces, search_paths) - runtime_closure
-
+        closure = header_closure(namespaces, search_paths)
         count = copy_headers(closure, search_paths, output_path)
         print(f"{count} headers -> {output_path}")

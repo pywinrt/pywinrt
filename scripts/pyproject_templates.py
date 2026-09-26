@@ -120,7 +120,7 @@ COMPILED_PYPROJECT_TOML = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools>=78"{extra_requires}]
+requires = ["setuptools>=78"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -141,7 +141,7 @@ dependencies = {{ file = "requirements.txt" }}
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"{extra_package_data}]
 
-[tool.cibuildwheel]{local_runtime}{no_isolation}
+[tool.cibuildwheel]
 # don't build for PyPy or for the free-threaded interpreters, which the
 # projection doesn't support yet
 skip = "pp* cp*t-*"
@@ -231,19 +231,6 @@ include src/table.h
 include src/types.h
 """
 
-# The runtime carries the C++/WinRT headers that an interop module written
-# against C++/WinRT compiles against, so the build is pointed at the one in this
-# tree rather than at whichever one PyPI would hand it. winrt-runtime's own
-# build and a module written against raw COM need nothing of the sort.
-LOCAL_RUNTIME = """
-# use the local winrt-runtime build dependency
-environment = {{ PYTHONPATH="{runtime_relative}/python" }}"""
-
-NO_ISOLATION = """
-# don't install winrt-runtime from PyPI
-build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
-before-build = "uv pip install setuptools\""""
-
 # An interop package's directory holds its C++ source, the C++/WinRT headers it
 # includes and the Python package it installs, so which of those is the Python
 # package has to be said rather than guessed.
@@ -305,20 +292,16 @@ INCLUDE_DIRS = [
 ]"""
 
 # An interop module reaches the runtime through Python objects only, so it
-# needs none of the PyWinRT headers, and one written against raw COM needs no
-# header from winrt-runtime at all.
+# needs no header from winrt-runtime, and one written against raw COM needs no
+# C++/WinRT header either.
 HEADERS = """INCLUDE_DIRS = []"""
 
-# One written against C++/WinRT carries the headers of the namespaces it
-# includes, written beside its setup.py by scripts/generate-cppwinrt.py, and
-# takes winrt/base.h and the Windows.Foundation headers under it from whichever
-# winrt-runtime the build resolved.
-CPPWINRT_HEADERS = """from winrt._include import get_cppwinrt_include
-
-INCLUDE_DIRS = [get_cppwinrt_include()]
-
-# the namespaces this package includes that the runtime does not carry
-INCLUDE_DIRS.append(os.fspath(pathlib.Path(__file__).parent / "cppwinrt"))"""
+# One written against C++/WinRT carries the whole closure of the namespaces it
+# includes, winrt/base.h among them, written beside its setup.py by
+# scripts/generate-cppwinrt.py.
+CPPWINRT_HEADERS = """INCLUDE_DIRS = [
+    os.fspath(pathlib.Path(__file__).parent / "cppwinrt"),
+]"""
 
 # The Windows App SDK is redistributed with an app rather than part of Windows,
 # so its own headers and import libraries come from the NuGet packages that
