@@ -3,11 +3,11 @@ concurrency:
   group: abi-compat-${{ github.ref }}
   cancel-in-progress: true
 
-# On request only. The answer changes when the ABI is deliberately changed -
-# an entry point added to the capsule, a declared layout moved, the minor
-# bumped - and not otherwise, so running it on every push would rebuild the
-# projection twice over for a result that is the same as the last one. Run it
-# when the ABI moves and before a release.
+# On request only. The answer changes when the table format is deliberately
+# changed - a section added, a record moved, the minor bumped - and not
+# otherwise, so running it on every push would rebuild the projection twice
+# over for a result that is the same as the last one. Run it when the format
+# moves and before a release.
 on:
   workflow_dispatch:
     inputs:

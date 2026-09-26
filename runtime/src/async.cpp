@@ -20,7 +20,6 @@
 // so the caller can release the GIL once around both the wait and the
 // GetResults() that follows it, which is what C++/WinRT's own get() did.
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include "async.h"

@@ -53,13 +53,12 @@ on the second is the major. They are the same number.
 The compatibility generation
 ----------------------------
 
-That number is the compatibility generation. It appears in three places that
-must agree — the epoch of every projection package, the C ABI the compiled
-packages are built against, and the format of the table a projection package
-carries — because a change to any of them breaks every projection package at
-once. Rather than three numbers that have to be reasoned about together, it
-is one number that says: *these packages work with each other, and with no
-runtime of another generation.*
+That number is the compatibility generation. It appears in two places that
+must agree — the epoch of every projection package and the format of the table
+a projection package carries — because a change to the format breaks every
+projection package at once. Rather than two numbers that have to be reasoned
+about together, it is one number that says: *these packages work with each
+other, and with no runtime of another generation.*
 
 An epoch sorts above everything published before it, whatever the release
 segments say, and that is what makes these numbers usable at all. An upstream
@@ -78,18 +77,15 @@ republished.
 What has to be new enough, and why
 ----------------------------------
 
-Two things are checked at run time, and both come out the same way:
-**winrt-runtime has to be at least as new as what it is running.**
+One thing is checked at run time: **winrt-runtime has to be at least as new
+as the tables it reads.** A projection package carries a table describing its
+namespace. The runtime refuses a table whose format minor is higher than the
+one it reads, and reads an older table happily.
 
-- A compiled package — ``winrt-runtime`` itself and the interop modules —
-  reaches the runtime through a C ABI. A module built against ABI *4.m* needs
-  a runtime whose ABI minor is at least *m*; entry points are only ever
-  appended, so an older module keeps working against a newer runtime.
-- A projection package carries a table describing its namespace. The runtime
-  refuses a table whose format minor is higher than the one it reads, and
-  reads an older table happily.
+The interop packages are compiled, but they reach the runtime only through
+Python functions, so there is no C ABI between them and the runtime to check.
 
-In both cases the newer half may be the runtime and never the other side. The
+The newer half may be the runtime and never the projection package. The
 ``>=`` floors in every package's metadata say so, which is why pip normally
 gets this right on its own: installing a newer projection package pulls a
 runtime new enough to read it.
@@ -100,10 +96,9 @@ versions, not a crash:
 
 .. code-block:: text
 
-   RuntimeError: winrt._winrt._C_API ABI minor version mismatch: expected >= 2, got 0
    ImportError: table format version 4.3 is newer than this runtime, which reads 4.0
 
-The fix for both is to upgrade ``winrt-runtime``.
+The fix is to upgrade ``winrt-runtime``.
 
 
 ------------
@@ -209,11 +204,11 @@ segment added to fix one package on its own, and a projection of your own
 components had to use the same scheme. None of that applies now.
 
 The two generations never mix. A 3.x projection package is compiled code
-built for the 3.x runtime, and runtime 4 refuses to load it:
+built for the 3.x runtime, and importing one with runtime 4 fails:
 
 .. code-block:: text
 
-   RuntimeError: winrt._winrt._C_API capsule has invalid data
+   AttributeError: module 'winrt._winrt' has no attribute '_C_API'
 
 This is what you see after upgrading ``winrt-runtime`` on its own, for
 example with ``pip install -U winrt-runtime``. The 3.x packages require
