@@ -410,6 +410,21 @@ namespace py::interp
                 return -1;
             }
 
+            // As in sequence_item(), CPython has already added the length to
+            // a negative index, and a vector has no position outside the range
+            // of a uint32_t.
+            if (index < 0)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return -1;
+            }
+
+            if (static_cast<uint64_t>(index) > UINT32_MAX)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return -1;
+            }
+
             pyobj_handle position{PyLong_FromSsize_t(index)};
             if (!position)
             {
@@ -421,15 +436,25 @@ namespace py::interp
                 PyObject* args[] = {position.get()};
                 pyobj_handle removed{
                     call_protocol(info->protocol.remove_at, "del", self, args, 1)};
+                if (!removed)
+                {
+                    set_index_error();
+                    return -1;
+                }
 
-                return removed ? 0 : -1;
+                return 0;
             }
 
             PyObject* args[] = {position.get(), value};
             pyobj_handle assigned{
                 call_protocol(info->protocol.set_at, "assignment", self, args, 2)};
+            if (!assigned)
+            {
+                set_index_error();
+                return -1;
+            }
 
-            return assigned ? 0 : -1;
+            return 0;
         }
 
         // ----- mappings ---------------------------------------------------
