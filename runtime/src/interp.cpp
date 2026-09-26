@@ -997,6 +997,20 @@ namespace py::interp
     }
 
     /**
+     * Lays out @p overload's outputs if nothing has yet, which is the check
+     * every call makes and the work only the first one does.
+     */
+    static bool ensure_prepared(projection& owner, overload_desc& overload) noexcept
+    {
+        if (load_published(overload.prepared))
+        {
+            return true;
+        }
+
+        return prepare_overload(owner, overload);
+    }
+
+    /**
      * Picks the overload of @p member that takes @p nargs Python arguments.
      *
      * @returns @c nullptr with a Python error set when none does.
@@ -1157,8 +1171,7 @@ namespace py::interp
             return nullptr;
         }
 
-        if (!load_published(overload.prepared)
-            && !prepare_overload(*member->owner, overload))
+        if (!ensure_prepared(*member->owner, overload))
         {
             PyErr_Clear();
             return nullptr;
@@ -1535,8 +1548,7 @@ namespace py::interp
             return nullptr;
         }
 
-        if (!load_published(overload.prepared)
-            && !prepare_overload(*member.owner, overload))
+        if (!ensure_prepared(*member.owner, overload))
         {
             return nullptr;
         }
