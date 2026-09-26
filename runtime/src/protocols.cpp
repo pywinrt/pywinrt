@@ -457,6 +457,88 @@ namespace py::interp
             return 0;
         }
 
+        /**
+         * insert() of a mutable sequence, which InsertAt() does not do by
+         * itself: a negative position counts from the end, and one outside
+         * the sequence inserts at the nearer end.
+         */
+        PyObject* sequence_insert(
+            PyObject* self, PyObject* const* args, Py_ssize_t nargs) noexcept
+        {
+            if (nargs != 2)
+            {
+                PyErr_Format(
+                    PyExc_TypeError, "insert expected 2 arguments, got %zd", nargs);
+                return nullptr;
+            }
+
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle index{PyNumber_Index(args[0])};
+            if (!index)
+            {
+                return nullptr;
+            }
+
+            // With no exception to raise, an index too large for a Py_ssize_t
+            // comes back as the nearer limit, which the clamping below then
+            // brings inside the sequence.
+            auto position = PyNumber_AsSsize_t(index.get(), nullptr);
+            if (position == -1 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            auto const size = protocol_length(self);
+            if (size == -1)
+            {
+                return nullptr;
+            }
+
+            if (position < 0)
+            {
+                position += size;
+            }
+
+            if (position < 0)
+            {
+                position = 0;
+            }
+
+            if (position > size)
+            {
+                position = size;
+            }
+
+            pyobj_handle at{PyLong_FromSsize_t(position)};
+            if (!at)
+            {
+                return nullptr;
+            }
+
+            PyObject* insert_args[] = {at.get(), args[1]};
+            pyobj_handle inserted{call_protocol(
+                info->protocol.insert_at, "insert()", self, insert_args, 2)};
+            if (!inserted)
+            {
+                set_index_error();
+                return nullptr;
+            }
+
+            Py_RETURN_NONE;
+        }
+
+        PyMethodDef mutable_sequence_methods[]
+            = {{"insert",
+                reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(sequence_insert)),
+                METH_FASTCALL,
+                nullptr},
+               {}};
+
         // ----- mappings ---------------------------------------------------
 
         PyObject* mapping_subscript(PyObject* self, PyObject* key) noexcept
@@ -1136,11 +1218,24 @@ namespace py::interp
 
     /**
      * Sets the attributes of the protocols that are methods rather than slots:
-     * get() and wait() on an awaitable, and the context manager that closes an
-     * IClosable at the end of a with statement.
+     * insert() on a mutable sequence, get() and wait() on an awaitable, and the
+     * context manager that closes an IClosable at the end of a with statement.
      */
     bool bind_protocol_methods(table::type_view const& record, PyTypeObject* type)
     {
+        // A mapping takes precedence over a sequence, as in
+        // add_protocol_slots().
+        if (!implements(record, table::type_flags::mapping))
+        {
+            if (implements(record, table::type_flags::mutable_sequence))
+            {
+                if (!add_methods(type, mutable_sequence_methods))
+                {
+                    return false;
+                }
+            }
+        }
+
         if (implements(record, table::type_flags::awaitable))
         {
             if (!add_methods(type, async_methods))
