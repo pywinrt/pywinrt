@@ -88,6 +88,12 @@ subprocess.check_call(
         PROJECTION_PATH / "winrt",
         "--nullability-json",
         WINDOWS_SDK_NULLABILITY_JSON_PATH,
+        # The Windows SDK is the only family that keeps the deprecated names
+        # its methods had in pywinrt v3.x. The Windows App SDK and WebView2
+        # were published under the winui3 and webview2 prefixes then, so code
+        # written for them has to be edited anyway, and WinUI 2 is not expected
+        # to have users.
+        "--legacy-method-aliases",
     ]
     + include_args
 )
