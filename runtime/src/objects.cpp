@@ -220,7 +220,7 @@ namespace py::interp
         {
             for (auto* base = type; base; base = base->tp_base)
             {
-                if (auto* const entry = get_type_entry(base))
+                if (auto* const entry = find_type_entry(base))
                 {
                     return entry;
                 }
@@ -276,7 +276,7 @@ namespace py::interp
          */
         PyObject* type_from(PyObject* cls, PyObject* arg) noexcept
         {
-            auto const info = get_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+            auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
             if (!info || !info->guid)
             {
                 PyErr_Format(
@@ -299,7 +299,7 @@ namespace py::interp
 
         PyObject* type_guid(PyObject* cls, PyObject* /*unused*/) noexcept
         {
-            auto const info = get_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+            auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
             if (!info || !info->guid)
             {
                 PyErr_Format(
@@ -644,7 +644,7 @@ PyObject* py::wrap_object(
         return nullptr;
     }
 
-    auto const info = py::interp::get_type_entry(type);
+    auto const info = py::interp::find_type_entry(type);
     if (!info || !info->guid)
     {
         PyErr_Format(

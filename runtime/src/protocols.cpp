@@ -30,7 +30,7 @@ namespace py::interp
          */
         type_entry* entry_of(PyObject* self) noexcept
         {
-            auto const info = get_type_entry(Py_TYPE(self));
+            auto const info = find_type_entry(Py_TYPE(self));
             if (!info)
             {
                 PyErr_Format(
