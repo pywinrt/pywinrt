@@ -31,7 +31,9 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
-      # except a package's version.txt, which the version tests read
+      # except a package's pyproject.toml, which the packaging tests read, and
+      # its version.txt, which the version tests read
+      - interop/*/pyproject.toml
       - interop/*/version.txt
       - runtime/**
       - '!runtime/**/*.md'
@@ -70,7 +72,9 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
-      # except a package's version.txt, which the version tests read
+      # except a package's pyproject.toml, which the packaging tests read, and
+      # its version.txt, which the version tests read
+      - interop/*/pyproject.toml
       - interop/*/version.txt
       - runtime/**
       - '!runtime/**/*.md'

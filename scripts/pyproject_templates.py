@@ -141,10 +141,7 @@ dependencies = {{ file = "requirements.txt" }}
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"{extra_package_data}]
 
-[tool.cibuildwheel]{local_runtime}
-# don't install winrt-runtime from PyPI
-build-frontend = {{ name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }}
-before-build = "uv pip install setuptools"
+[tool.cibuildwheel]{local_runtime}{no_isolation}
 # don't build for PyPy or for the free-threaded interpreters, which the
 # projection doesn't support yet
 skip = "pp* cp*t-*"
@@ -234,12 +231,18 @@ include src/table.h
 include src/types.h
 """
 
-# The runtime carries the headers an interop module compiles against, so the
-# build is pointed at the one in this tree rather than at whichever one PyPI
-# would hand it. winrt-runtime's own build needs nothing of the sort.
+# The runtime carries the C++/WinRT headers that an interop module written
+# against C++/WinRT compiles against, so the build is pointed at the one in this
+# tree rather than at whichever one PyPI would hand it. winrt-runtime's own
+# build and a module written against raw COM need nothing of the sort.
 LOCAL_RUNTIME = """
 # use the local winrt-runtime build dependency
 environment = {{ PYTHONPATH="{runtime_relative}/python" }}"""
+
+NO_ISOLATION = """
+# don't install winrt-runtime from PyPI
+build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
+before-build = "uv pip install setuptools\""""
 
 # An interop package's directory holds its C++ source, the C++/WinRT headers it
 # includes and the Python package it installs, so which of those is the Python
