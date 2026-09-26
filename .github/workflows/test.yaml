@@ -20,7 +20,7 @@ on:
       - scripts/app_sdk.py
       - scripts/nuget.py
       # checked by the lint job
-      - scripts/packages.py
+      - scripts/**/*.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
@@ -66,7 +66,7 @@ on:
       - scripts/app_sdk.py
       - scripts/nuget.py
       # checked by the lint job
-      - scripts/packages.py
+      - scripts/**/*.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
