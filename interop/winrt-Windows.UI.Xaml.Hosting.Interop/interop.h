@@ -152,4 +152,14 @@ namespace interop
         return RoGetActivationFactory(
             name, __uuidof(I), reinterpret_cast<void**>(factory));
     }
+
+    /// The slots of an interop module that has nothing to set up when it is
+    /// executed. It keeps no state, but it exchanges objects and errors with
+    /// winrt-runtime, which refuses any interpreter but the main one, so it
+    /// says the same.
+    inline PyModuleDef_Slot module_slots[]{
+#ifdef Py_mod_multiple_interpreters
+        {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
+#endif
+        {}};
 } // namespace interop

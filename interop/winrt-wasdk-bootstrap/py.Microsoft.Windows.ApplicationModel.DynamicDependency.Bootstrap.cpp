@@ -86,17 +86,6 @@ namespace
 
     PyDoc_STRVAR(module_doc, "APIs for boostrapping Windows App SDK framework.");
 
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap",
-           module_doc,
-           0,
-           module_methods,
-           nullptr,
-           nullptr,
-           nullptr,
-           nullptr};
-
     static PyObject* shutdown_new(
         PyTypeObject* subtype, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
@@ -188,51 +177,67 @@ namespace
         0,
         Py_TPFLAGS_DEFAULT,
         shutdown_slots};
+
+    static int module_exec(PyObject* module) noexcept
+    {
+        if (PyModule_AddStringConstant(
+                module,
+                "RELEASE_VERSION",
+                std::string_view(WINDOWSAPPSDK_RELEASE_VERSION_TAG).empty()
+                    ? Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
+                          WINDOWSAPPSDK_RELEASE_MINOR)
+                    : Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
+                          WINDOWSAPPSDK_RELEASE_MINOR) "-" WINDOWSAPPSDK_RELEASE_VERSION_TAG)
+            == -1)
+        {
+            return -1;
+        }
+
+        if (PyModule_AddStringConstant(
+                module, "RUNTIME_VERSION", WINDOWSAPPSDK_RUNTIME_VERSION_DOTQUADSTRING)
+            == -1)
+        {
+            return -1;
+        }
+
+        auto const shutdown_type
+            = PyType_FromModuleAndSpec(module, &shutdown_type_spec, nullptr);
+        if (!shutdown_type)
+        {
+            return -1;
+        }
+
+        auto const added
+            = PyModule_AddType(module, reinterpret_cast<PyTypeObject*>(shutdown_type));
+        Py_DECREF(shutdown_type);
+
+        return added;
+    }
+
+    static PyModuleDef_Slot module_slots[]{
+        {Py_mod_exec, reinterpret_cast<void*>(module_exec)},
+#ifdef Py_mod_multiple_interpreters
+        // A failure is raised through winrt-runtime, which refuses any
+        // interpreter but the main one.
+        {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
+#endif
+        {}};
+
+    static PyModuleDef module_def
+        = {PyModuleDef_HEAD_INIT,
+           "_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap",
+           module_doc,
+           0,
+           module_methods,
+           module_slots,
+           nullptr,
+           nullptr,
+           nullptr};
 } // namespace
 
 PyMODINIT_FUNC
 PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
     void) noexcept
 {
-    std::unique_ptr<PyObject, decltype(&Py_DecRef)> module{
-        PyModule_Create(&module_def), &Py_DecRef};
-    if (!module)
-    {
-        return nullptr;
-    }
-
-    if (PyModule_AddStringConstant(
-            module.get(),
-            "RELEASE_VERSION",
-            std::string_view(WINDOWSAPPSDK_RELEASE_VERSION_TAG).empty()
-                ? Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
-                      WINDOWSAPPSDK_RELEASE_MINOR)
-                : Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
-                      WINDOWSAPPSDK_RELEASE_MINOR) "-" WINDOWSAPPSDK_RELEASE_VERSION_TAG)
-        == -1)
-    {
-        return nullptr;
-    }
-
-    if (PyModule_AddStringConstant(
-            module.get(),
-            "RUNTIME_VERSION",
-            WINDOWSAPPSDK_RUNTIME_VERSION_DOTQUADSTRING)
-        == -1)
-    {
-        return nullptr;
-    }
-
-    auto const shutdown_type
-        = PyType_FromModuleAndSpec(module.get(), &shutdown_type_spec, nullptr);
-    if (!shutdown_type)
-        return nullptr;
-
-    auto const added = PyModule_AddType(
-        module.get(), reinterpret_cast<PyTypeObject*>(shutdown_type));
-    Py_DECREF(shutdown_type);
-    if (added == -1)
-        return nullptr;
-
-    return module.release();
+    return PyModuleDef_Init(&module_def);
 }
