@@ -139,7 +139,7 @@ version = {{ file = "version.txt" }}
 dependencies = {{ file = "requirements.txt" }}
 {packages_find}
 [tool.setuptools.package-data]
-"*" = ["*.pyi", "py.typed"{extra_package_data}]
+"*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
 # don't build for PyPy or for the free-threaded interpreters, which the
@@ -176,10 +176,8 @@ NO_WHEEL_REPAIR = """
 repair-wheel-command = \"\""""
 
 # The runtime keeps its Python package tree in python/ so that src/ can hold the
-# C++ sources of the extension module. The C++/WinRT headers that an interop
-# module may compile against live inside the package itself, as numpy and
-# pybind11 ship theirs, so that winrt._include can find them from __file__ both
-# in a wheel and in this source tree.
+# C++ sources of the extension module and the headers they include, none of
+# which is installed.
 RUNTIME_PACKAGE_FIND = """
 [tool.setuptools.packages.find]
 where = ["python"]
@@ -193,13 +191,15 @@ where = ["python"]
 hook-dirs = "winrt.__pyinstaller:get_hook_dirs"
 """
 
-# These are private to the runtime's own translation units, so they are not
-# package data the way the public headers are, but the sdist still has to carry
-# them or building winrt-runtime from source fails. shapes-generated.h is the
-# census of ABI call shapes that the trampolines are instantiated from.
+# No header of the runtime's is package data, but the sdist still has to carry
+# them or building winrt-runtime from source fails. src/include holds the
+# PyWinRT and C++/WinRT headers, and the rest are private to the runtime's own
+# translation units. shapes-generated.h is the census of ABI call shapes that
+# the trampolines are instantiated from.
 RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
+graft src/include
 include src/_winrt_array.h
 include src/_winrt_buffer.h
 include src/arrays.h
@@ -280,15 +280,12 @@ setup(
 )
 """
 
-# winrt-runtime is the package that carries the headers, so it names them by
-# path rather than asking winrt._include for them: the module that would
-# answer is the one being built, and a source distribution has to build
-# without the package it is building being importable.
-RUNTIME_HEADERS = """PACKAGE_PATH = pathlib.Path(__file__).parent / "python" / "winrt"
+# winrt-runtime's headers are beside its sources.
+RUNTIME_HEADERS = """INCLUDE_PATH = pathlib.Path(__file__).parent / "src" / "include"
 
 INCLUDE_DIRS = [
-    os.fspath(PACKAGE_PATH / "include"),
-    os.fspath(PACKAGE_PATH / "include" / "cppwinrt"),
+    os.fspath(INCLUDE_PATH),
+    os.fspath(INCLUDE_PATH / "cppwinrt"),
 ]"""
 
 # An interop module reaches the runtime through Python objects only, so it

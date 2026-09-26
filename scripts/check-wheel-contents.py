@@ -14,6 +14,10 @@ it redistributes, and it has to agree with what is in the wheel: a wheel with
 no bill of materials carries no .dll, and a wheel with one carries exactly the
 .dlls the bill names. That needs no list of package names here, so a new
 package that redistributes something is covered the day it is built.
+
+No wheel carries a C or C++ header either: nothing compiles against an
+installed PyWinRT package, and each package that compiles carries the headers
+it includes in its source distribution rather than as package data.
 """
 
 import json
@@ -62,6 +66,13 @@ def get_binaries(wheel: zipfile.ZipFile) -> set[str]:
     }
 
 
+def get_headers(wheel: zipfile.ZipFile) -> set[str]:
+    """
+    The C and C++ headers in a wheel.
+    """
+    return {name for name in wheel.namelist() if name.lower().endswith(".h")}
+
+
 def get_license_files(wheel: zipfile.ZipFile) -> set[str]:
     """
     The license texts a wheel carries, which PEP 639 puts in the .dist-info.
@@ -82,6 +93,7 @@ def check_wheel(path: Path) -> list[str]:
     with zipfile.ZipFile(path) as wheel:
         binaries = get_binaries(wheel)
         components = get_sbom_components(wheel)
+        headers = get_headers(wheel)
         license_files = get_license_files(wheel)
 
     for name in sorted(binaries - components):
@@ -91,6 +103,9 @@ def check_wheel(path: Path) -> list[str]:
 
     for name in sorted(components - binaries):
         problems.append(f"names {name} in its bill of materials but does not carry it")
+
+    for name in sorted(headers):
+        problems.append(f"carries the header {name}")
 
     # PyWinRT's own license is in every wheel, and a wheel that redistributes
     # something carries that license as well.

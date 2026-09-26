@@ -73,16 +73,16 @@ find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
 # helper functions
 ################################################################################
 
-# The runtime is hand-written, so it lives outside of projection/. Its public
-# C++ headers sit inside its Python package, the way numpy and pybind11 ship
-# theirs, so that they are found at the same place in a wheel and here.
+# The runtime is hand-written, so it lives outside of projection/. Its C++
+# headers are beside its sources rather than in its Python package, since
+# nothing outside the runtime compiles against them.
 set(WINRT_RUNTIME_PATH "../runtime")
 # The table compiler is a package of its own, because it is pure Python and a
 # projection package should not need a compiler to be built.
 set(WINRT_TABLE_PATH "../table")
 set(WINRT_RUNTIME_SRC_PATH "${WINRT_RUNTIME_PATH}/src")
 set(WINRT_RUNTIME_PYTHON_PATH "${WINRT_RUNTIME_PATH}/python/winrt")
-set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_PYTHON_PATH}/include")
+set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_SRC_PATH}/include")
 # The C++/WinRT headers scripts/generate-cppwinrt.py writes. The runtime
 # carries what pywinrt/base.h includes; an interop module carries the whole
 # closure of the namespaces it includes, in a cppwinrt directory of its own.
