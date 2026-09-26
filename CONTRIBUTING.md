@@ -98,7 +98,7 @@ If the pythoncapi compat headers are updated, run:
 
 In a Visual Studio command prompt, run:
 
-    cmake -S projection -B _build/test-projection -G Ninja -DPYWINRT_FULL_PROJECTION=OFF
+    cmake -S . -B _build/test-projection -G Ninja -DPYWINRT_FULL_PROJECTION=OFF
     cmake --build _build/test-projection
     cmake --install _build/test-projection --prefix _install/test
 
@@ -263,7 +263,7 @@ has the commands and the cautions that come with reading a single row.
 It needs a `Release` build, which is compiled with link time optimization, the
 same as the wheels are, so it takes noticeably longer to link than the other
 configurations and it is what users run. Turning that off to compare against is
-an edit to `projection/CMakeLists.txt`: passing
+an edit to the top-level `CMakeLists.txt`: passing
 `-DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=OFF` does nothing, because the
 plain `set()` there shadows the cache variable.
 

@@ -10,6 +10,8 @@ on:
       - next
     paths:
       - .github/workflows/test.yaml
+      - CMakeLists.txt
+      - cmake/**
       - requirements.txt
       - .config/_tools.json
       - patches/**
@@ -32,10 +34,12 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
+      - interop/CMakeLists.txt
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
       - '!runtime/**/*.txt'
+      - runtime/CMakeLists.txt
       # except the version the runtime is published with, which the
       # version tests read
       - runtime/version.txt
@@ -48,6 +52,8 @@ on:
   pull_request:
     paths:
       - .github/workflows/test.yaml
+      - CMakeLists.txt
+      - cmake/**
       - requirements.txt
       - .config/_tools.json
       - patches/**
@@ -70,10 +76,12 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
+      - interop/CMakeLists.txt
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
       - '!runtime/**/*.txt'
+      - runtime/CMakeLists.txt
       # except the version the runtime is published with, which the
       # version tests read
       - runtime/version.txt
@@ -120,7 +128,7 @@ jobs:
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
       - name: configure
-        run: cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A ${{ matrix.vs-arch }}
+        run: cmake -S . -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A ${{ matrix.vs-arch }}
       - name: build
         run: cmake --build _build/projection --config ${{ matrix.release-type }} --parallel --verbose
       - name: install
@@ -158,7 +166,7 @@ jobs:
         shell: pwsh
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
       - name: configure
-        run: ${MINGW_PREFIX}/bin/cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
+        run: ${MINGW_PREFIX}/bin/cmake -S . -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
       - name: build
         run: ${MINGW_PREFIX}/bin/cmake --build _build/projection --verbose
       - name: install

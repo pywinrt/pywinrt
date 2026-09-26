@@ -14,7 +14,7 @@ an older commit and pairs the two.
 It needs the current tree already built and installed with CMake, the way
 test.yaml builds it:
 
-    cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF
+    cmake -S . -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF
     cmake --build _build/projection --config Release
     cmake --install _build/projection --prefix _install/projection
 
