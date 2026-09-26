@@ -126,6 +126,7 @@ namespace py::interp
 
         using py::cpp::_winrt::build_guard;
         using py::cpp::_winrt::state_guard;
+        using py::cpp::_winrt::try_get_module_state;
     } // namespace
 
     /**
@@ -200,7 +201,6 @@ namespace py::interp
         auto const s = state();
         if (!s)
         {
-            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
             return false;
         }
 
@@ -218,7 +218,7 @@ namespace py::interp
      */
     type_entry* get_type_entry(PyTypeObject* type) noexcept
     {
-        auto const s = state();
+        auto const s = try_get_module_state();
         if (!s)
         {
             return nullptr;
@@ -272,7 +272,6 @@ namespace py::interp
             auto const s = state();
             if (!s)
             {
-                PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
                 return nullptr;
             }
 
@@ -374,7 +373,6 @@ namespace py::interp
         auto const s = state();
         if (!s)
         {
-            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
             return nullptr;
         }
 
@@ -433,7 +431,7 @@ namespace py::interp
      */
     type_entry* find_registered_entry(std::string_view qualified_name) noexcept
     {
-        auto const s = state();
+        auto const s = try_get_module_state();
         if (!s)
         {
             return nullptr;
@@ -577,7 +575,6 @@ namespace py::interp
         auto const s = state();
         if (!s)
         {
-            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
             return nullptr;
         }
 

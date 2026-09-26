@@ -40,7 +40,7 @@ namespace py::interp
          */
         PyTypeObject* find_instance_type(std::string_view signature) noexcept
         {
-            auto const s = py::cpp::_winrt::get_module_state();
+            auto const s = py::cpp::_winrt::try_get_module_state();
             if (!s)
             {
                 return nullptr;
@@ -58,7 +58,6 @@ namespace py::interp
             auto const s = py::cpp::_winrt::get_module_state();
             if (!s)
             {
-                PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
                 return false;
             }
 
@@ -159,7 +158,6 @@ namespace py::interp
         auto const s = py::cpp::_winrt::get_module_state();
         if (!s)
         {
-            PyErr_SetString(PyExc_SystemError, "winrt-runtime is not loaded");
             return false;
         }
 
