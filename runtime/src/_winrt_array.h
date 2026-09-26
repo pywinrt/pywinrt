@@ -12,4 +12,6 @@
 namespace py::cpp::_winrt
 {
     bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept;
+
+    py::Array* Array_Get(PyObject* obj) noexcept;
 } // namespace py::cpp::_winrt

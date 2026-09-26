@@ -121,6 +121,11 @@ namespace py
             return buffer_format<T>;
         }
 
+        bool HoldsReferences() noexcept override
+        {
+            return !std::is_trivially_copyable_v<T>;
+        }
+
         uint32_t Size() noexcept override
         {
             return array.size();
