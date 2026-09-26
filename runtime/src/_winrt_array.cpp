@@ -16,8 +16,6 @@ namespace py::cpp::_winrt
 
     PyDoc_STRVAR(Array_doc, "class for wrapped COM array instances");
 
-    static PyTypeObject* get_array_type() noexcept;
-
     /**
      * Allocates memory for a new System.Array object.
      * @param [in]  subtype The type to use for allocation.
@@ -71,7 +69,13 @@ namespace py::cpp::_winrt
      */
     bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept
     {
-        if (!Py_IS_TYPE(obj, get_array_type()))
+        auto const state = get_module_state();
+        if (!state)
+        {
+            return false;
+        }
+
+        if (!Py_IS_TYPE(obj, state->array_type))
         {
             {
                 PyErr_SetString(PyExc_TypeError, "argument must be System.Array");
@@ -90,13 +94,13 @@ namespace py::cpp::_winrt
      */
     py::Array* Array_Get(PyObject* obj) noexcept
     {
-        auto const type = get_array_type();
-        if (!type)
+        auto const state = try_get_module_state();
+        if (!state)
         {
             return nullptr;
         }
 
-        if (!Py_IS_TYPE(obj, type))
+        if (!Py_IS_TYPE(obj, state->array_type))
         {
             return nullptr;
         }
@@ -359,7 +363,7 @@ namespace py::cpp::_winrt
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::TimeSpan>>();
             }
-            else if (type == py::get_object_type())
+            else if (type == state->object_type)
             {
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::IInspectable>>();
@@ -698,16 +702,5 @@ namespace py::cpp::_winrt
 
     PyType_Spec Array_type_spec
         = {"_winrt.Array", sizeof(Array), 0, Py_TPFLAGS_DEFAULT, Array_type_slots};
-
-    static PyTypeObject* get_array_type() noexcept
-    {
-        auto state = py::cpp::_winrt::try_get_module_state();
-        if (!state)
-        {
-            return nullptr;
-        }
-
-        return state->array_type;
-    }
 
 } // namespace py::cpp::_winrt

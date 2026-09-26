@@ -439,8 +439,14 @@ namespace py::interp
             Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
             implements_slots};
 
-        pytype_handle implements{register_python_type(
-            proj.module, &implements_spec, nullptr, get_inspectable_meta_type())};
+        auto const metaclass = get_inspectable_meta_type();
+        if (!metaclass)
+        {
+            return false;
+        }
+
+        pytype_handle implements{
+            register_python_type(proj.module, &implements_spec, nullptr, metaclass)};
         if (!implements)
         {
             return false;

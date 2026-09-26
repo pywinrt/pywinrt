@@ -977,9 +977,13 @@ py::cpp::_winrt::module_state* py::cpp::_winrt::try_get_module_state() noexcept
     return py::cpp::_winrt::main_state.load(std::memory_order_acquire);
 }
 
+/**
+ * The metaclass of the projected types, or @c nullptr with a Python error set
+ * when winrt._winrt is not loaded.
+ */
 PyTypeObject* py::get_inspectable_meta_type() noexcept
 {
-    auto state = py::cpp::_winrt::try_get_module_state();
+    auto state = py::cpp::_winrt::get_module_state();
     if (!state)
     {
         return nullptr;
@@ -988,9 +992,13 @@ PyTypeObject* py::get_inspectable_meta_type() noexcept
     return state->inspectable_meta_type;
 }
 
+/**
+ * winrt.system.Object, or @c nullptr with a Python error set when winrt._winrt
+ * is not loaded.
+ */
 PyTypeObject* py::get_object_type() noexcept
 {
-    auto state = py::cpp::_winrt::try_get_module_state();
+    auto state = py::cpp::_winrt::get_module_state();
     if (!state)
     {
         return nullptr;
