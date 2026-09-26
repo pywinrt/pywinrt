@@ -11,11 +11,13 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "_winrt_buffer.h"
 #include "arrays.h"
 #include "compose.h"
 #include "implements.h"
 #include "interp.h"
 #include "members.h"
+#include "module_state.h"
 #include "objects.h"
 #include "protocols.h"
 #include "pycollections.h"

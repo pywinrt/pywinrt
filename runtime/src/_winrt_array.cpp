@@ -1,5 +1,6 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
+#include "_winrt_array.h"
 #include "module_state.h"
 #include <winrt/base.h>
 

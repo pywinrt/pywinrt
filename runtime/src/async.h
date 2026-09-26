@@ -9,10 +9,20 @@
 //
 // Both go through the same waiter in async.cpp. Nothing here is part of the C
 // ABI: the interpreter and the waiter are compiled into the same module.
+//
+// The hand-off of an async object to asyncio, which is what __await__ is, is
+// here too.
 
 #pragma once
 
+#include <Python.h>
+
 #include <cstdint>
+
+namespace py
+{
+    PyObject* await_async(PyObject* obj) noexcept;
+} // namespace py
 
 namespace py::interp
 {

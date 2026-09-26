@@ -22,6 +22,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
+#include "_winrt_array.h"
 #include "arrays.h"
 #include "callbacks.h"
 #include "interp.h"
