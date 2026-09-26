@@ -10,6 +10,8 @@
 #include <winrt/base.h>
 
 #include <atomic>
+#include <cstddef>
+#include <cstring>
 
 namespace py::cpp::_winrt
 {
@@ -467,6 +469,37 @@ namespace py::cpp::_winrt
         .struct_from_python = py::struct_from_python,
     };
 
+#ifdef Py_DEBUG
+    /// Sets SystemError if a slot of runtime_api is null, which is what a
+    /// member added to the struct but left out of the designated initializer
+    /// above silently becomes. Every member after the version pair is a
+    /// pointer, so they are checked as an array of pointer-sized slots.
+    static int check_runtime_api_slots() noexcept
+    {
+        constexpr auto first_slot = offsetof(py::runtime_api, register_python_type);
+        static_assert((sizeof(py::runtime_api) - first_slot) % sizeof(void*) == 0);
+
+        auto bytes = reinterpret_cast<const std::byte*>(&runtime_api);
+
+        for (auto offset = first_slot; offset < sizeof(py::runtime_api);
+             offset += sizeof(void*))
+        {
+            void* slot;
+            std::memcpy(&slot, bytes + offset, sizeof(slot));
+            if (!slot)
+            {
+                PyErr_Format(
+                    PyExc_SystemError,
+                    "winrt._winrt._C_API slot %zu is not initialized",
+                    (offset - first_slot) / sizeof(void*));
+                return -1;
+            }
+        }
+
+        return 0;
+    }
+#endif
+
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
     {
         auto type = PyLong_AsLong(type_obj);
@@ -895,6 +928,13 @@ namespace py::cpp::_winrt
         {
             return nullptr;
         }
+
+#ifdef Py_DEBUG
+        if (check_runtime_api_slots() == -1)
+        {
+            return nullptr;
+        }
+#endif
 
         pyobj_handle runtime_api_capsule{PyCapsule_New(
             const_cast<py::runtime_api*>(&runtime_api),
