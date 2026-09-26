@@ -136,7 +136,9 @@ namespace py
 
             auto const& view = m_buffer.view();
 
-            // TODO: if view.format == "P", we should try to verify the pointer type
+            // A buffer of pointers is taken as it is: nothing here checks what
+            // they point at. The interpreter borrows the arrays a call passes
+            // through borrow_array(), which does.
 
             if (!buffer<T>::is_compatible(view))
             {

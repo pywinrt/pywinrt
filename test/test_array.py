@@ -37,6 +37,8 @@ from winrt.windows.foundation import (
 )
 from winrt.windows.storage import FileAttributes
 
+from ._util import catch_unraisable
+
 #: Every winrt.system scalar alias with the three formats it is annotated
 #: with - buffer, struct and WinRT signature - and the WinRT type it names.
 SCALAR_ALIASES = [
@@ -472,6 +474,25 @@ class TestWinRTArray(unittest.TestCase):
                 with self.assertRaises(TypeError):
                     Array(impostor, 1)
 
+    def test_copy_from_buffer(self):
+        values = [blittable(1), blittable(2)]
+
+        a = Array(tc.Blittable, memoryview(Array(tc.Blittable, values)))
+
+        self.assertEqual(list(a), values)
+
+    def test_no_copy_of_references_from_buffer(self):
+        for element, values in (
+            (str, ["a", "b"]),
+            (Uri, [Uri("https://example.com")]),
+            (tc.NonBlittable, [non_blittable(1)]),
+        ):
+            with self.subTest(element=element):
+                source = Array(element, values)
+
+                with self.assertRaisesRegex(TypeError, "hold references"):
+                    Array(element, memoryview(source))
+
 
 #: One value of each element type an ArrayN member of the test component
 #: takes, with the winrt.system.Array type argument that spells it. Every
@@ -637,6 +658,41 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(list(lent), [1, 2, 3])
         self.assertEqual(list(received), [1, 2, 3])
         self.assertEqual(list(returned), [1, 2, 3])
+
+    def test_references_only_from_an_array(self):
+        # The same bytes and format as an array of strings, but nothing says
+        # what the pointers point at.
+        pointers = memoryview(bytes(3 * pointer_size)).cast("P")
+
+        with self.assertRaisesRegex(TypeError, "winrt.system.Array"):
+            self.tests.array12(pointers, Array(str, 3))
+
+        with self.assertRaisesRegex(TypeError, "winrt.system.Array"):
+            self.tests.array12(Array(str, 3), memoryview(Array(str, 3)))
+
+        with self.assertRaisesRegex(TypeError, "winrt.system.Array"):
+            self.tests.array14(
+                memoryview(Array(tc.NonBlittable, [non_blittable(1)])),
+                Array(tc.NonBlittable, 1),
+            )
+
+    def test_references_only_from_an_array_of_the_declared_element(self):
+        uris = Array(Uri, [Uri("https://example.com")])
+
+        with self.assertRaisesRegex(TypeError, "IStringable, not of .*Uri"):
+            self.tests.array16(uris, Array(IStringable, 1))
+
+    def test_references_returned_only_in_an_array(self):
+        def handler(passed, lent):
+            return memoryview(Array(str, list(passed))), Array(str, list(passed))
+
+        with (
+            self.assertRaises(OSError),
+            catch_unraisable() as exceptions,
+        ):
+            self.tests.array12_call(handler)
+
+        self.assertIsInstance(exceptions[0].exc_value, TypeError)
 
 
 class TestScalarAliases(unittest.TestCase):
