@@ -252,3 +252,16 @@ class TestCollectionsVector(unittest.TestCase):
             del self.vector[2**32]
 
         self.assertEqual(list(self.vector), ["a", "b"])
+
+    def test_insert(self):
+        self.vector.insert(1, "x")
+        self.assertEqual(list(self.vector), ["a", "x", "b"])
+
+    def test_insert_negative_index_counts_from_the_end(self):
+        self.vector.insert(-1, "x")
+        self.assertEqual(list(self.vector), ["a", "x", "b"])
+
+    def test_insert_out_of_range_inserts_at_the_nearer_end(self):
+        self.vector.insert(-100, "x")
+        self.vector.insert(100, "y")
+        self.assertEqual(list(self.vector), ["x", "a", "b", "y"])
