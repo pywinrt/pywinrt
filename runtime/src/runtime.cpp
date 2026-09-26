@@ -66,7 +66,7 @@ namespace
             py::cpp::_winrt::state_guard guard{state->cache_lock};
 
             auto const [it, inserted] = state->type_cache.try_emplace(
-                qualified_name, reinterpret_cast<PyTypeObject*>(type));
+                std::string{qualified_name}, reinterpret_cast<PyTypeObject*>(type));
 
             if (inserted)
             {
