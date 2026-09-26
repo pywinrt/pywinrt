@@ -1,4 +1,4 @@
-# The lint job in .github/workflows/test.yaml runs a bare `ruff check` from the
+# The lint job in .github/workflows/lint.yaml runs a bare `ruff check` from the
 # repository root, so what CI checks and what an editor checks are the same
 # thing. Only the rules below are selected: the ones ruff enables by default
 # are all about executed code, and the generated __init__.py binds the names it
