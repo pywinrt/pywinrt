@@ -61,55 +61,18 @@ function(pywinrt_install_namespace_package package)
     set(PYWINRT_TABLES "${PYWINRT_TABLES}" PARENT_SCOPE)
 endfunction()
 
-if (PYWINRT_FULL_PROJECTION)
-    file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
-    file(GLOB winui2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui2/winui2-*")
-    file(GLOB wasdk_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "wasdk/winrt-*")
-    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
-else()
-    # minimum set of packages required for unit tests
-    set(packages
-        "winrt/winrt-Windows.ApplicationModel.Core"
-        "winrt/winrt-Windows.Data.Json"
-        "winrt/winrt-Windows.Devices"
-        "winrt/winrt-Windows.Devices.Geolocation"
-        "winrt/winrt-Windows.Foundation"
-        "winrt/winrt-Windows.Foundation.Collections"
-        "winrt/winrt-Windows.Foundation.Metadata"
-        "winrt/winrt-Windows.Foundation.Numerics"
-        "winrt/winrt-Windows.Globalization.NumberFormatting"
-        "winrt/winrt-Windows.Graphics"
-        "winrt/winrt-Windows.Graphics.Capture"
-        "winrt/winrt-Windows.Graphics.DirectX"
-        "winrt/winrt-Windows.Graphics.DirectX.Direct3D11"
-        "winrt/winrt-Windows.Graphics.Imaging"
-        "winrt/winrt-Windows.Media"
-        "winrt/winrt-Windows.Storage"
-        "winrt/winrt-Windows.Storage.Streams"
-        "winrt/winrt-Windows.System"
-        "winrt/winrt-Windows.UI"
-        "winrt/winrt-Windows.UI.Composition"
-        "winrt/winrt-Windows.UI.Composition.Desktop"
-        "winrt/winrt-Windows.UI.WindowManagement"
-        "winrt/winrt-Windows.UI.Xaml.Hosting"
-    )
-    # The App SDK is published one distribution per NuGet component, so the
-    # two namespaces the tests use bring their components with them.
-    set(wasdk_packages
-        "wasdk/winrt-Microsoft.WindowsAppSDK.InteractiveExperiences"
-        "wasdk/winrt-Microsoft.WindowsAppSDK.Foundation"
-    )
-endif()
+file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
+file(GLOB winui2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui2/winui2-*")
+file(GLOB wasdk_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "wasdk/winrt-*")
+file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
 
 foreach(package ${packages} ${winui2_packages} ${wasdk_packages} ${webview2_packages})
     pywinrt_install_namespace_package(${package})
 endforeach()
 
-if (webview2_packages)
-    set(WEBVIEW2_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
-    install(FILES "${WEBVIEW2_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
-        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/core")
-endif()
+set(WEBVIEW2_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
+install(FILES "${WEBVIEW2_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
+    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/core")
 
 # test component package
 ################################################################################

@@ -98,7 +98,7 @@ If the pythoncapi compat headers are updated, run:
 
 In a Visual Studio command prompt, run:
 
-    cmake -S . -B _build/test-projection -G Ninja -DPYWINRT_FULL_PROJECTION=OFF
+    cmake -S . -B _build/test-projection -G Ninja
     cmake --build _build/test-projection
     cmake --install _build/test-projection --prefix _install/test
 

@@ -41,7 +41,7 @@ jobs:
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
       - name: configure
-        run: cmake -S . -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A x64
+        run: cmake -S . -B _build/projection -A x64
       - name: build
         run: cmake --build _build/projection --config Release --parallel --verbose
       - name: install

@@ -20,7 +20,6 @@ set(CMAKE_CXX_SCAN_FOR_MODULES 0)
 # filling up the console buffer with the output.
 set(CMAKE_INSTALL_MESSAGE NEVER)
 
-option(PYWINRT_FULL_PROJECTION "Build full projection" ON)
 set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install prefix")
 
 # .config/_tools.json is the single source of truth for NuGet package versions
