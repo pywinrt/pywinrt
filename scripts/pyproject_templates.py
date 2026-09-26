@@ -142,9 +142,8 @@ dependencies = {{ file = "requirements.txt" }}
 "*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
-# don't build for PyPy or for the free-threaded interpreters, which the
-# projection doesn't support yet
-skip = "pp* cp*t-*"
+# don't build for PyPy
+skip = "pp*"
 # suppress warnings about ARM64 testing
 test-skip = "*-win_arm64"{test_command}
 
