@@ -233,3 +233,13 @@ class TestCollectionsVector(unittest.TestCase):
 
         del self.vector[-2]
         self.assertEqual(list(self.vector), ["z"])
+
+    def test_assign_and_del_out_of_range(self):
+        for index in (2, -3, 2**32):
+            with self.assertRaisesRegex(IndexError, "index out of range"):
+                self.vector[index] = "z"
+
+            with self.assertRaisesRegex(IndexError, "index out of range"):
+                del self.vector[index]
+
+        self.assertEqual(list(self.vector), ["a", "b"])
