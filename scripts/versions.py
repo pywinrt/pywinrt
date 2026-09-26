@@ -24,7 +24,6 @@ RUNTIME_VERSION_PATH = RUNTIME_PATH / "version.txt"
 TABLE_PATH = REPO_PATH / "table"
 TABLE_VERSION_PATH = TABLE_PATH / "version.txt"
 INTEROP_PATH = REPO_PATH / "interop"
-ABI_HEADER_PATH = RUNTIME_PATH / "python" / "winrt" / "include" / "pywinrt" / "abi.h"
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
 
 # Which NuGet package each family of generated packages takes its version
@@ -169,38 +168,30 @@ def compatibility_generation() -> int:
     """
     The one number that says which generation of PyWinRT a package belongs to.
 
-    The runtime's C ABI major, the projection table format major and the
-    major of every hand-written package's own version are the same number,
-    because each of them breaks every projection package at once: a package
-    built for one generation works with no runtime of another. It is the
-    epoch of every upstream-versioned family for the same reason - an epoch
-    sorts above everything published before it, so pip tries the packages of
-    the current generation first - and it is what the runtime requirement is
-    capped at.
+    The projection table format major and the major of every hand-written
+    package's own version are the same number, because each of them breaks
+    every projection package at once: a package built for one generation
+    works with no runtime of another. It is the epoch of every
+    upstream-versioned family for the same reason - an epoch sorts above
+    everything published before it, so pip tries the packages of the current
+    generation first - and it is what the runtime requirement is capped at.
 
     Reading them all here is what keeps them from drifting apart. The
     hand-written packages are versioned and released one at a time, so the
     major is the only thing they have to agree on and the only thing checked.
     """
-    abi_major = read_uint16_constant(ABI_HEADER_PATH, "runtime_abi_version_major")
     table_major, _ = runtime_table_format()
-
-    if table_major != abi_major:
-        raise RuntimeError(
-            f"{TABLE_HEADER_PATH.name} is table format major {table_major}"
-            f" and {ABI_HEADER_PATH.name} is ABI major {abi_major}"
-        )
 
     for path in version_files():
         package_major = int(read_version(path).split(".")[0])
 
-        if package_major != abi_major:
+        if package_major != table_major:
             raise RuntimeError(
                 f"{path.parent.name} is version major {package_major}"
-                f" and {ABI_HEADER_PATH.name} is ABI major {abi_major}"
+                f" and {TABLE_HEADER_PATH.name} is table format major {table_major}"
             )
 
-    return abi_major
+    return table_major
 
 
 def nuget_package_versions() -> dict[str, str]:

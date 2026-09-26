@@ -2,15 +2,11 @@
 #include <Shobjidl.h>
 #include <libloaderapi.h>
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 #include "module_state.h"
 #include "members.h"
 #include "types.h"
 #include <winrt/base.h>
-
-#include <cstddef>
-#include <cstring>
 
 namespace py::cpp::_winrt
 {
@@ -271,10 +267,10 @@ namespace py::cpp::_winrt
            {Py_tp_hash, reinterpret_cast<void*>(Object_hash)},
            {}};
 
-    // Every projection module's wrapper types inherit this one and allocate
-    // themselves as py::winrt_wrapper<T>, so the basic size is ABI. It is taken
-    // from <pywinrt/abi.h> rather than spelled again here so that the asserts
-    // that guard the layout guard this too.
+    // Every wrapper type the runtime builds from a table inherits this one and
+    // is laid out as py::winrt_wrapper<T>. The basic size is taken from
+    // <pywinrt/abi.h> rather than spelled again here so that the asserts that
+    // guard the layout guard this too.
     static PyType_Spec Object_type_spec
         = {"_winrt.Object",
            py::object_basicsize,
@@ -416,62 +412,6 @@ namespace py::cpp::_winrt
            MappingIter_type_slots};
 
     // END: class _winrt.MappingIter:
-
-    static const py::runtime_api runtime_api{
-        .runtime_api_guid = py::runtime_api_guid,
-        .abi_version_major = py::runtime_abi_version_major,
-        .abi_version_minor = py::runtime_abi_version_minor,
-        .register_python_type = py::register_python_type,
-        .get_python_type = py::get_python_type,
-        .is_buffer_compatible = py::is_buffer_compatible,
-        .convert_datetime = py::convert_datetime,
-        .convert_to_datetime = py::convert_to_datetime,
-        .convert_guid = py::convert_guid,
-        .convert_to_guid = py::convert_to_guid,
-        .get_object_type = py::get_object_type,
-        .array_new = py::cpp::_winrt::Array_New,
-        .set_member_not_available_error = py::set_member_not_available_error,
-        .set_error = py::set_error,
-        .set_call_error = py::set_call_error,
-        .report_unraisable = py::report_unraisable,
-        .toggle_python_reference = py::toggle_python_reference,
-        .async_wait = py::async_wait,
-        .wrap_object = py::wrap_object,
-        .unwrap_object = py::unwrap_object,
-        .struct_to_python = py::struct_to_python,
-        .struct_from_python = py::struct_from_python,
-    };
-
-#ifdef Py_DEBUG
-    /// Sets SystemError if a slot of runtime_api is null, which is what a
-    /// member added to the struct but left out of the designated initializer
-    /// above silently becomes. Every member after the version pair is a
-    /// pointer, so they are checked as an array of pointer-sized slots.
-    static int check_runtime_api_slots() noexcept
-    {
-        constexpr auto first_slot = offsetof(py::runtime_api, register_python_type);
-        static_assert((sizeof(py::runtime_api) - first_slot) % sizeof(void*) == 0);
-
-        auto bytes = reinterpret_cast<const std::byte*>(&runtime_api);
-
-        for (auto offset = first_slot; offset < sizeof(py::runtime_api);
-             offset += sizeof(void*))
-        {
-            void* slot;
-            std::memcpy(&slot, bytes + offset, sizeof(slot));
-            if (!slot)
-            {
-                PyErr_Format(
-                    PyExc_SystemError,
-                    "winrt._winrt._C_API slot %zu is not initialized",
-                    (offset - first_slot) / sizeof(void*));
-                return -1;
-            }
-        }
-
-        return 0;
-    }
-#endif
 
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
     {
@@ -907,45 +847,6 @@ namespace py::cpp::_winrt
         py::pytype_handle projected_method_type{reinterpret_cast<PyTypeObject*>(
             PyType_FromSpec(&py::interp::projected_method_type_spec))};
         if (!projected_method_type)
-        {
-            return nullptr;
-        }
-
-#ifdef Py_DEBUG
-        if (check_runtime_api_slots() == -1)
-        {
-            return nullptr;
-        }
-#endif
-
-        pyobj_handle runtime_api_capsule{PyCapsule_New(
-            const_cast<py::runtime_api*>(&runtime_api),
-            "winrt._winrt._C_API",
-            nullptr)};
-
-        if (!runtime_api_capsule)
-        {
-            return nullptr;
-        }
-
-        if (PyModule_AddObjectRef(module.get(), "_C_API", runtime_api_capsule.get())
-            == -1)
-        {
-            return nullptr;
-        }
-
-        // The ABI version this runtime provides. Projection modules check it
-        // through the capsule when they load; this is the same pair as data,
-        // for winrt.doctor and for the compatibility tests.
-        pyobj_handle abi_version{Py_BuildValue(
-            "(HH)", py::runtime_abi_version_major, py::runtime_abi_version_minor)};
-
-        if (!abi_version)
-        {
-            return nullptr;
-        }
-
-        if (PyModule_AddObjectRef(module.get(), "abi_version", abi_version.get()) == -1)
         {
             return nullptr;
         }

@@ -1,12 +1,15 @@
 """
-Checks the runtime ABI promise between two versions of the tree.
+Checks the compatibility promise between two versions of the tree.
 
-The promise is that a projection module compiled against runtime ABI major M
-and minor m loads on any winrt-runtime that declares the same runtime_api_guid,
-major M and a minor no older than m, and that a runtime which cannot satisfy
-it refuses the module with a RuntimeError rather than crashing. Nothing in the ordinary test suite
-can check that, because it builds both halves from the same source at the same
-time; this script builds one half from an older commit and pairs the two.
+The promise has two halves. A projection table is read by any winrt-runtime of
+its format major whose format minor is no older than the table's, and a
+runtime which cannot read it refuses it with an ImportError rather than
+crashing. And a compiled module of 3.x, which reached the runtime through the
+winrt._winrt._C_API capsule, fails to import with an AttributeError, because
+the capsule is gone, rather than calling into a runtime it does not fit.
+Nothing in the ordinary test suite can check either, because it builds both
+halves from the same source at the same time; this script builds one half from
+an older commit and pairs the two.
 
 It needs the current tree already built and installed with CMake, the way
 test.yaml builds it:
@@ -23,23 +26,19 @@ that each scenario can put the two halves on PYTHONPATH in the order it wants.
 Both ``winrt`` and ``test_winrt`` are namespace packages, so when the same
 module exists in both halves the earlier entry on PYTHONPATH wins.
 
-There are two contracts and one rule each: a compiled consumer against the C
-ABI in ``pywinrt/abi.h``, and a projection table against the table format in
-``runtime/src/table-format.md``. The three scenarios cover both.
-
   A. old table, new runtime - the baseline's TestComponent table, compiled by
      the baseline's own table.py, read by the current runtime. Nothing is
      compiled here: a projection package is data.
-  B. new module, old runtime - the current TestComponent against the baseline
-     runtime.
-  C. old headers, new hand-written code - a compile-only build of an interop
-     package against the baseline's copy of the pywinrt headers.
+  B. old compiled module, new runtime - a baseline interop module that imports
+     the capsule, in front of the current runtime, which has none.
 
 What each one expects is computed from the two versions rather than written
-down, so that the same script keeps working as either contract moves: A and B
-either run the tests and require them to pass, or require a refusal that names
-the mismatch, and A and C are skipped when the baseline predates what they
-check.
+down, so that the same script keeps working as the format moves: A either runs
+the tests and requires them to pass, or requires a refusal that names the
+mismatch, and each is skipped when the baseline has nothing it would check.
+
+The interop modules of the current tree share no C ABI with the runtime, so
+nothing compiled in it is checked against an older runtime.
 """
 
 import argparse
@@ -55,12 +54,9 @@ from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent.parent
 
-# The messages py::import_winrt_runtime() raises through when the runtime cannot
-# satisfy the module. Both halves of the pair have to agree on the wording for
-# this to be checkable, which they have since the check was introduced.
-GUID_REFUSAL = "capsule has invalid data"
-MAJOR_REFUSAL = "ABI major version mismatch"
-MINOR_REFUSAL = "ABI minor version mismatch"
+# What a module that imports the capsule fails with against a runtime that
+# does not publish one.
+CAPSULE_MISSING = "has no attribute '_C_API'"
 
 # The messages table.cpp raises through when a runtime will not read a table.
 # Both halves have to agree on the wording for this to be checkable, which they
@@ -105,8 +101,8 @@ def newest_wheels_tag() -> str:
 @dataclass(frozen=True)
 class Abi:
     """
-    The C ABI a runtime provides or a module requires: the guid that names the
-    layout of the capsule, and the version within that layout.
+    What a module that imports the capsule requires of it: the guid that names
+    the layout of the capsule, and the version within that layout.
     """
 
     guid: str
@@ -151,12 +147,9 @@ class Tree:
     @property
     def include_dir(self) -> Path | None:
         """
-        The directory winrt._include.get_include() returns, or None for a tree
-        that predates the headers moving into winrt-runtime, where they were
-        part of winrt-sdk and were included as <pybase.h> instead of
-        <pywinrt/...>. Nothing in the current tree can be compiled against
-        those, which is what makes scenario C unavailable against such a
-        baseline.
+        The directory the runtime's headers are in, or None for a tree that
+        predates them moving into winrt-runtime, where they were part of
+        winrt-sdk and were included as <pybase.h> instead of <pywinrt/...>.
         """
         include_dir = self.runtime_package / "python/winrt/include"
 
@@ -170,14 +163,18 @@ class Tree:
         return self.sdk_package / "src/winrt_sdk/pywinrt/pybase.h"
 
     @property
-    def abi(self) -> Abi:
+    def capsule_abi(self) -> Abi | None:
         """
-        The ABI the runtime in this tree provides, which is also the ABI a
-        module built in this tree requires: the inline wrappers in the headers
-        call the newest entry points, so a module carries the whole of its
-        headers' minor whether the generated code uses it or not.
+        What a module compiled in this tree requires of the capsule, or None
+        for a tree whose modules do not import it. The inline wrappers in the
+        headers called the newest entry points, so a module carried the whole
+        of its headers' minor whether its code used it or not.
         """
         source = self.abi_header.read_text(encoding="utf-8")
+        guid = re.search(r'\bruntime_api_guid\{"([0-9A-Fa-f-]+)"\}', source)
+
+        if not guid:
+            return None
 
         def constant(name: str) -> int:
             match = re.search(rf"\b{name}\s*=\s*(\d+)", source)
@@ -187,17 +184,21 @@ class Tree:
 
             return int(match.group(1))
 
-        guid = re.search(r'\bruntime_api_guid\{"([0-9A-Fa-f-]+)"\}', source)
-
-        if not guid:
-            raise SystemExit(f"could not read runtime_api_guid from {self.abi_header}")
-
         return Abi(
             guid.group(1).upper(),
             (
                 constant("runtime_abi_version_major"),
                 constant("runtime_abi_version_minor"),
             ),
+        )
+
+    def interop_package(self, name: str) -> Path:
+        new_layout = self.root / "interop" / name
+
+        return (
+            new_layout
+            if new_layout.is_dir()
+            else self.root / "projection/interop" / name
         )
 
     @property
@@ -251,13 +252,16 @@ class Tree:
 
 
 def describe(tree: Tree) -> str:
-    abi = tree.abi
-    major, minor = abi.version
+    parts = []
 
-    return (
-        f"{tree.name}: ABI {major}.{minor} {{{abi.guid}}}"
-        f" ({tree.abi_header.relative_to(tree.root)})"
-    )
+    if (table_format := tree.table_format) is not None:
+        parts.append(f"table format {table_format[0]}.{table_format[1]}")
+
+    if (abi := tree.capsule_abi) is not None:
+        major, minor = abi.version
+        parts.append(f"modules require ABI {major}.{minor} {{{abi.guid}}}")
+
+    return f"{tree.name}: {', '.join(parts) or 'nothing to compare'}"
 
 
 def add_worktree(ref: str, path: Path) -> Tree:
@@ -339,32 +343,10 @@ def unpack_wheel(wheel: Path, dest: Path) -> Path:
 def is_satisfied(required: tuple[int, int], provided: tuple[int, int]) -> bool:
     """
     Whether something requiring the first version is accepted by a runtime
-    providing the second: the same major and a minor no newer. The C ABI and
-    the table format both follow this rule.
+    providing the second: the same major and a minor no newer, which is the
+    table format's rule.
     """
     return required[0] == provided[0] and required[1] <= provided[1]
-
-
-def abi_is_satisfied(required: Abi, provided: Abi) -> bool:
-    """
-    Whether a module requiring the first ABI loads against a runtime providing
-    the second. This is the Python-side copy of the check in
-    py::import_winrt_runtime(), which compares the guid before it reads
-    anything else out of the capsule.
-    """
-    return required.guid == provided.guid and is_satisfied(
-        required.version, provided.version
-    )
-
-
-def refusal_message(required: Abi, provided: Abi) -> str:
-    if required.guid != provided.guid:
-        return GUID_REFUSAL
-
-    if required.version[0] != provided.version[0]:
-        return MAJOR_REFUSAL
-
-    return MINOR_REFUSAL
 
 
 def table_refusal_message(required: tuple[int, int], provided: tuple[int, int]) -> str:
@@ -423,14 +405,6 @@ else:
 
     if result.returncode != 0:
         raise SystemExit("scenario failed: no clean refusal")
-
-
-def expect_import_refusal(
-    module: str, message: str, *, pythonpath: str, cwd: Path
-) -> None:
-    expect_refusal(
-        f"import {module}", "RuntimeError", message, pythonpath=pythonpath, cwd=cwd
-    )
 
 
 def run_tests(test: str, *, pythonpath: str, cwd: Path) -> None:
@@ -523,79 +497,39 @@ def scenario_a(
         )
 
 
-def scenario_b(
-    baseline: Tree, current: Tree, current_install: Path, work: Path
-) -> None:
+def scenario_b(baseline: Tree, current_install: Path, work: Path) -> None:
     """
-    New module, old runtime. The baseline's runtime comes first on PYTHONPATH,
-    so its winrt._winrt shadows the current one; test_winrt and the interop
-    modules come from the current install.
-
-    A refusal is looked for in an interop module, because that is compiled
-    code and calls py::import_winrt_runtime() when it is imported. The
-    TestComponent package is a table, which never reaches that check.
+    Old compiled module, new runtime. The baseline's System interop module,
+    built against the baseline's own headers, comes first on PYTHONPATH; the
+    runtime and everything else come from the current install. The module
+    imports the capsule when it is imported, and the current runtime does not
+    publish one.
     """
     print()
-    print("=== scenario B - new module, old runtime ===", flush=True)
+    print("=== scenario B - old compiled module, new runtime ===", flush=True)
+
+    if baseline.capsule_abi is None:
+        print(
+            f"skipped: the compiled modules of {baseline.name} do not import the"
+            " capsule",
+            flush=True,
+        )
+        return
 
     wheel = build_wheel(
-        baseline.runtime_package,
-        work / "wheels/baseline-runtime",
+        baseline.interop_package("winrt-Windows.System.Interop"),
+        work / "wheels/baseline-interop",
         baseline.build_pythonpath,
     )
-    runtime_dir = unpack_wheel(wheel, work / "baseline-runtime")
+    module_dir = unpack_wheel(wheel, work / "baseline-interop")
 
-    pythonpath = os.pathsep.join([os.fspath(runtime_dir), os.fspath(current_install)])
-    required = current.abi
-    provided = baseline.abi
-
-    if abi_is_satisfied(required, provided):
-        run_tests("test.test_test_component", pythonpath=pythonpath, cwd=PROJECT_DIR)
-    else:
-        expect_import_refusal(
-            "winrt._winrt_windows_system_interop",
-            refusal_message(required, provided),
-            pythonpath=pythonpath,
-            cwd=PROJECT_DIR,
-        )
-
-
-def scenario_c(baseline: Tree, current: Tree, work: Path) -> None:
-    """
-    Old headers, new hand-written code. The interop packages are not generated,
-    so nothing bumps their ABI requirement for them; this compiles one of them
-    against the baseline's headers to catch hand-written code that has started
-    using a newer entry point without the ABI minor being bumped.
-    """
-    print()
-    print("=== scenario C - hand-written code against old headers ===", flush=True)
-
-    if baseline.include_dir is None:
-        print(
-            f"skipped: {baseline.name} ships the pywinrt headers in winrt-sdk as"
-            " <pybase.h>, which nothing in the current tree includes",
-            flush=True,
-        )
-        return
-
-    if baseline.abi.guid != current.abi.guid:
-        print(
-            "skipped: the ABI generation changed, so the current sources are"
-            " not meant to compile against these headers",
-            flush=True,
-        )
-        return
-
-    # Only the pywinrt headers come from the baseline.
-    pythonpath = os.fspath(baseline.runtime_package / "python")
-
-    package = PROJECT_DIR / "interop/winrt-Windows.System.Interop"
-
-    build_wheel(package, work / "wheels/current-interop", pythonpath)
-
-    # setuptools leaves its intermediates in the source tree, which is the one
-    # package here that is built where it lives.
-    shutil.rmtree(package / "build", ignore_errors=True)
+    expect_refusal(
+        "import winrt._winrt_windows_system_interop",
+        "AttributeError",
+        CAPSULE_MISSING,
+        pythonpath=os.pathsep.join([os.fspath(module_dir), os.fspath(current_install)]),
+        cwd=PROJECT_DIR,
+    )
 
 
 def main() -> None:
@@ -625,7 +559,7 @@ def main() -> None:
     parser.add_argument(
         "--scenario",
         action="append",
-        choices=["a", "b", "c"],
+        choices=["a", "b"],
         help="run only this scenario; may be given more than once",
     )
     parser.add_argument(
@@ -655,17 +589,14 @@ def main() -> None:
     print(describe(baseline))
     print(flush=True)
 
-    scenarios = args.scenario or ["a", "b", "c"]
+    scenarios = args.scenario or ["a", "b"]
 
     try:
         if "a" in scenarios:
             scenario_a(baseline, current, current_install, work)
 
         if "b" in scenarios:
-            scenario_b(baseline, current, current_install, work)
-
-        if "c" in scenarios:
-            scenario_c(baseline, current, work)
+            scenario_b(baseline, current_install, work)
     finally:
         if args.remove_worktree:
             run(["git", "worktree", "remove", "--force", os.fspath(baseline.root)])

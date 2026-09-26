@@ -16,8 +16,6 @@ from typing_extensions import Buffer, CapsuleType, deprecated
 
 from winrt.runtime import ApartmentType
 
-abi_version: tuple[int, int]
-
 MTA: int
 STA: int
 

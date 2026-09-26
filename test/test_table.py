@@ -241,9 +241,6 @@ class TestTableFormat(unittest.TestCase):
     def test_header(self) -> None:
         table = read("test_winrt", "testcomponent")
 
-        # the major is the compatibility generation, the same number as the
-        # ABI major and the epoch in a projection package's version
-        self.assertEqual(table["format"][0], winrt._winrt.abi_version[0])
         self.assertEqual(table["namespace"], "TestComponent")
         # the version of winrt-table-compiler that built this binary, which
         # the text it was built from does not carry

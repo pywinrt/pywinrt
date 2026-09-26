@@ -7,7 +7,6 @@
 // the HRESULT mapping belong to winrt-runtime and can improve in a runtime
 // release without rebuilding any of the projection packages.
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include "objects.h"

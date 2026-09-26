@@ -30,8 +30,7 @@ build and cannot be known to a file that is committed.
 
 This file is the contract between the three ends: the generator that writes the
 text, `winrt/table.py` that compiles it, and `runtime/src/table.cpp` that reads
-the result. It is the table's equivalent of what `pywinrt/abi.h` is for compiled
-consumers, and it carries a version of its own for the same reason.
+the result, and it carries a version of its own.
 
 ## Versioning
 
@@ -51,27 +50,19 @@ addition to anything and the records simply change at the minor the format
 already has. The history of this file below its first release is therefore not a
 sequence of minor bumps and does not read as one.
 
-The refusal is an `ImportError` that names the package and both versions, the
-same shape as the message a compiled module gets from `import_winrt_runtime()`.
+The refusal is an `ImportError` that names the package and both versions.
 
-The major is the **compatibility generation**. It is the same number as the C
-ABI major in `pywinrt/abi.h` and as the epoch in every projection package's
-version, as in `winrt-Microsoft.UI.Xaml==4!2.4.0`. All three change on one event:
-the one where every projection package has to be republished. Breaking either
-contract is that event, so they move together rather than becoming two
-generations that have to be explained separately. `table.cpp` asserts the two
-majors against each other at compile time.
-
-The minors are independent, and they are checked in opposite directions. The C
-ABI minor counts capsule additions, and a *compiled module* refuses a runtime
-whose minor is lower than the one it was built against. The format minor counts
-additions to a table, and the *runtime* refuses a table whose minor is higher
-than its own. A capsule addition changes nothing in a table and a new table
-section changes nothing in the capsule, so neither minor says anything about the
+The major is the **compatibility generation**. It is the same number as the
+epoch in every projection package's version, as in
+`winrt-Microsoft.UI.Xaml==4!2.4.0`, and as the major of every hand-written
+package's version. They all change on one event: the one where every projection
+package has to be republished. `scripts/versions.py` checks them against each
 other.
 
-A projection package does not report an `_abi_version_` at all. It contains no
-compiled code, so the C ABI is not a contract it is party to.
+The table format is the only contract between the runtime and a projection
+package. A projection package contains no compiled code, and the interop
+packages that do reach the runtime through Python functions, so there is no C
+ABI version beside it.
 
 ## Shape ids are append-only
 

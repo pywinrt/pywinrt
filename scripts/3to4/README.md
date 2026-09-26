@@ -14,7 +14,7 @@ packages behind (pip only warns about their `winrt-runtime~=3.2.1.0`
 requirement), importing one of them fails with:
 
 ```text
-RuntimeError: winrt._winrt._C_API capsule has invalid data
+AttributeError: module 'winrt._winrt' has no attribute '_C_API'
 ```
 
 Upgrade the projection packages as well, under the names below, until no v3

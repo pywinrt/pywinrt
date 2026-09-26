@@ -179,8 +179,8 @@ NO_WHEEL_REPAIR = """
 repair-wheel-command = \"\""""
 
 # The runtime keeps its Python package tree in python/ so that src/ can hold the
-# C++ sources of the extension module. The C++ headers that the rest of the
-# projection compiles against live inside the package itself, as numpy and
+# C++ sources of the extension module. The C++/WinRT headers that an interop
+# module may compile against live inside the package itself, as numpy and
 # pybind11 ship theirs, so that winrt._include can find them from __file__ both
 # in a wheel and in this source tree.
 RUNTIME_PACKAGE_FIND = """

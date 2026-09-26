@@ -1,4 +1,3 @@
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 
 #include <winrt/base.h>

@@ -1,4 +1,3 @@
-#define PYWINRT_RUNTIME_MODULE
 #include <Python.h>
 #include <Robuffer.h>
 #include <pywinrt/base.h>

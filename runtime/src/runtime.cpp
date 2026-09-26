@@ -4,7 +4,6 @@
 #include <Python.h>
 #include <datetime.h>
 
-#define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
 #include "metaclass.h"
 #include "module_state.h"

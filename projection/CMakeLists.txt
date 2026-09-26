@@ -173,13 +173,6 @@ set(WINRT_RUNTIME_SOURCES
 )
 pywinrt_add_library(_winrt "${WINRT_RUNTIME_SOURCES}")
 
-# The sources do the #define themselves because the setuptools build (used for
-# the wheels) has no other way to set it, but the precompiled header is its own
-# translation unit compiled ahead of them, so the target needs the definition
-# too. It has to be defined empty to match the #define in the sources,
-# otherwise MSVC warns about a macro redefinition and /WX turns that into an
-# error.
-target_compile_definitions(_winrt PRIVATE "PYWINRT_RUNTIME_MODULE=")
 # Every translation unit of the runtime parses the same several seconds of
 # pywinrt/base.h and the C++/WinRT headers under it, and those are rebuilt on
 # exactly the edits the iteration loop is made of.
