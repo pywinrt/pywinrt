@@ -118,6 +118,16 @@ If using MSYS2 shell for MINGW, this can be simplified to:
 
     PYTHONPATH=_install/test python -X dev -m unittest
 
+The free-threaded build of Python needs a tree of its own, because its
+extension modules are built against a different ABI. Adding the following to
+the first command picks `python314t.lib` instead:
+
+    -DPython3_FIND_ABI="ANY;ANY;ANY;ON"
+
+Install that tree to its own prefix and run the tests with `python3.14t_d.exe`.
+`test/test_threads.py` is the part of the suite that is written for it: its
+threads run at the same time only when there is no GIL.
+
 ## Linting
 
 The rules and the files they apply to are in `ruff.toml` and `mypy.ini`, so an
