@@ -9,7 +9,6 @@
 #include "types.h"
 #include <winrt/base.h>
 
-#include <atomic>
 #include <cstddef>
 #include <cstring>
 
@@ -424,46 +423,20 @@ namespace py::cpp::_winrt
         .abi_version_minor = py::runtime_abi_version_minor,
         .register_python_type = py::register_python_type,
         .get_python_type = py::get_python_type,
-        .get_struct_from_tuple_func = py::get_struct_from_tuple_func,
-        .wrap_mapping_iter = py::wrap_mapping_iter,
         .is_buffer_compatible = py::is_buffer_compatible,
         .convert_datetime = py::convert_datetime,
         .convert_to_datetime = py::convert_to_datetime,
         .convert_guid = py::convert_guid,
         .convert_to_guid = py::convert_to_guid,
-        .get_inspectable_meta_type = py::get_inspectable_meta_type,
         .get_object_type = py::get_object_type,
         .array_new = py::cpp::_winrt::Array_New,
-        .array_assign = &py::cpp::_winrt::Array_Assign,
-        .await_async = py::await_async,
-        .convert_to_ibuffer = py::convert_to_ibuffer,
         .set_member_not_available_error = py::set_member_not_available_error,
         .set_error = py::set_error,
         .set_call_error = py::set_call_error,
         .report_unraisable = py::report_unraisable,
         .toggle_python_reference = py::toggle_python_reference,
         .async_wait = py::async_wait,
-        .pyseq_size = py::pyseq_size,
-        .pyseq_get_at = py::pyseq_get_at,
-        .pyseq_set_at = py::pyseq_set_at,
-        .pyseq_insert_at = py::pyseq_insert_at,
-        .pyseq_remove_at = py::pyseq_remove_at,
-        .pyseq_append = py::pyseq_append,
-        .pyseq_remove_at_end = py::pyseq_remove_at_end,
-        .pyseq_index_of = py::pyseq_index_of,
-        .pyseq_clear = py::pyseq_clear,
-        .pyiter_first = py::pyiter_first,
-        .pyiter_next = py::pyiter_next,
-        .pymap_size = py::pymap_size,
-        .pymap_lookup = py::pymap_lookup,
-        .pymap_has_key = py::pymap_has_key,
-        .pymap_insert = py::pymap_insert,
-        .pymap_remove = py::pymap_remove,
-        .pymap_clear = py::pymap_clear,
-        .pymap_iter_next = py::pymap_iter_next,
-        .type_registry_epoch = &type_registry_epoch,
         .wrap_object = py::wrap_object,
-        .wrap_by_signature = py::wrap_by_signature,
         .unwrap_object = py::unwrap_object,
         .struct_to_python = py::struct_to_python,
         .struct_from_python = py::struct_from_python,
@@ -705,10 +678,6 @@ namespace py::cpp::_winrt
             Py_XDECREF(value);
         }
 
-        // Modules memoize what they looked up here, and those memos are now
-        // pointers to types nothing holds any more.
-        std::atomic_ref{type_registry_epoch}.fetch_add(1, std::memory_order_relaxed);
-
         return 0;
     }
 
@@ -731,14 +700,10 @@ namespace py::cpp::_winrt
 
         std::destroy_at(&state->type_cache);
 
-        std::destroy_at(&state->struct_from_tuple_cache);
-
         std::destroy_at(&state->type_entries);
         std::destroy_at(&state->generic_types);
 
         std::destroy_at(&state->projections);
-
-        std::atomic_ref{type_registry_epoch}.fetch_add(1, std::memory_order_relaxed);
     }
 
     // Not using a header file for thes because setuptools doesn't have a nice
@@ -885,12 +850,9 @@ namespace py::cpp::_winrt
 
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
         std::construct_at(&state->type_cache);
-        std::construct_at(&state->struct_from_tuple_cache);
         std::construct_at(&state->projections);
         std::construct_at(&state->type_entries);
         std::construct_at(&state->generic_types);
-
-        std::atomic_ref{type_registry_epoch}.fetch_add(1, std::memory_order_relaxed);
 
         py::pytype_handle inspectable_meta_type{py::register_python_type(
             module.get(), &IInspectable_Static_type_spec, nullptr, nullptr)};

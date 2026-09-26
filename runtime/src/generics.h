@@ -20,8 +20,6 @@
 
 #include "interp.h"
 
-#include <string_view>
-
 namespace py::interp
 {
     bool ensure_instance_type(
@@ -30,6 +28,4 @@ namespace py::interp
     PyObject* reference_to_python(type_entry& info, void* abi) noexcept;
 
     void* reference_from_python(type_entry& info, PyObject* value);
-
-    PyTypeObject* find_type_by_signature(std::string_view signature) noexcept;
 } // namespace py::interp

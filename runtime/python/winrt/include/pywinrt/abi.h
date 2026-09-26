@@ -12,8 +12,9 @@
 //
 //   - The struct is append-only. A new entry point goes at the end and bumps
 //     runtime_abi_version_minor; changing, reordering or removing one bumps
-//     runtime_abi_version_major, which every module built against an older
-//     header refuses to load against.
+//     runtime_abi_version_major, resets the minor to 0 and replaces
+//     runtime_api_guid, and every module built against an older header
+//     refuses to load against the result.
 //   - The types that cross the boundary are part of the contract too, even the
 //     ones declared elsewhere. They are listed and, where the compiler can
 //     check it, asserted in "the declared layouts" below.
@@ -212,9 +213,6 @@ namespace py
     //    runtime. It is a captureless lambda in the generated code, so what
     //    crosses is a plain function pointer, but its signature is contract
     //    like everything else here.
-    //  - The type registry epoch, which crosses as an address rather than as a
-    //    call: the runtime owns the counter, every module holds a pointer to
-    //    it for the lifetime of the process, and only the runtime writes it.
     //
     // What does not cross, although it looks like it might: py::delegate_callable
     // is held inside a module's own delegate implementations and never handed to
@@ -325,8 +323,17 @@ namespace py
     static_assert(sizeof(winrt::Windows::Foundation::DateTime) == 8);
     static_assert(sizeof(winrt::Windows::Foundation::TimeSpan) == 8);
 
-    /** Unique identifier for validating runtime API struct pointer. */
-    const winrt::guid runtime_api_guid{"B6C6659B-8458-4D05-AC29-A3886597E7D2"};
+    /**
+     * Identifies the layout of runtime_api, and is checked before anything
+     * else in it is read.
+     *
+     * It changes with every major version, so that a module and a runtime of
+     * different generations never pair. The version pair alone would not be
+     * enough: the 3.x runtimes already declared ABI major 4, with a different
+     * layout, and a newer module would have loaded against them and called
+     * through the wrong slots.
+     */
+    const winrt::guid runtime_api_guid{"F7412A59-7226-4D6D-8BD5-597661C55196"};
 
     /**
      * ABI version for runtime verification.
@@ -342,7 +349,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that adds new
      * APIs but otherwise doesn't break binary compatibility.
      */
-    const uint16_t runtime_abi_version_minor = 8;
+    const uint16_t runtime_abi_version_minor = 0;
 
     PyTypeObject* register_python_type(
         PyObject* module,
@@ -350,39 +357,13 @@ namespace py
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept;
     PyTypeObject* get_python_type(std::string_view qualified_name) noexcept;
-    void* get_struct_from_tuple_func(std::string_view capsule_name) noexcept;
-
-    /**
-     * How many times the type registry that get_python_type() and
-     * get_struct_from_tuple_func() answer from has been created or torn down.
-     *
-     * Both of those look their argument up by string on every call, so
-     * <pywinrt/convert.h> remembers what they said. What a memo is good for is
-     * one registry: the values in it are borrowed from the registry, which
-     * builds its own set of wrapper types for each interpreter that imports
-     * the projection and drops them when that interpreter is finalized. A memo
-     * therefore names the interpreter it was taken in - two live interpreters
-     * have different wrapper types for the same WinRT type - and the value of
-     * this counter, which changes whenever a registry appears or goes away and
-     * so catches the interpreter that was finalized and replaced at the same
-     * address.
-     *
-     * This is a counter rather than a call because it is read on every
-     * conversion, which is what the memo exists to make cheap: the capsule
-     * carries its address and a module reads it directly.
-     */
-    uint64_t get_type_registry_epoch() noexcept;
-    PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
     bool is_buffer_compatible(
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
     PyObject* convert_datetime(winrt::Windows::Foundation::DateTime value) noexcept;
     winrt::Windows::Foundation::DateTime convert_to_datetime(PyObject* obj);
     PyObject* convert_guid(winrt::guid value) noexcept;
     winrt::guid convert_to_guid(PyObject* obj);
-    PyTypeObject* get_inspectable_meta_type() noexcept;
     PyTypeObject* get_object_type() noexcept;
-    PyObject* await_async(PyObject*) noexcept;
-    winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj);
     void set_member_not_available_error(member_not_available const& info) noexcept;
     void set_error(error_info const& info) noexcept;
     void set_call_error(
@@ -400,97 +381,18 @@ namespace py
     // A projection is a table the runtime interprets, so a module that
     // compiles against a WinRT type no longer shares generated code with the
     // package that projects it: it names the type and lets the runtime do the
-    // rest. A type is named by the qualified Python name it is bound to, or,
-    // for a concrete parameterized interface, which is bound to nothing, by
-    // its WinRT signature.
+    // rest. A type is named by the qualified Python name it is bound to.
 
     PyObject* wrap_object(
         winrt::Windows::Foundation::IInspectable const& value,
         char const* qualified_name) noexcept;
-    PyObject* wrap_by_signature(
-        winrt::Windows::Foundation::IInspectable const& value,
-        char const* signature) noexcept;
     bool unwrap_object(PyObject* obj, winrt::guid const& iid, void** result) noexcept;
     PyObject* struct_to_python(PyTypeObject* type, void const* value) noexcept;
     bool struct_from_python(PyTypeObject* type, PyObject* obj, void* out) noexcept;
 
-    // ----- the Python-backed collection callbacks -------------------------
-    //
-    // A Python list or dict passed to a WinRT method that takes an IVector<T>
-    // or an IMap<K, V> is wrapped rather than copied, so WinRT calls back into
-    // Python for every element operation it makes. The COM object that WinRT
-    // sees is assembled by the runtime from the table's record for the
-    // parameterized instance; everything in it that is about the Python object
-    // rather than about T - the Python C API call, the error policy, the
-    // GetMany() loops - is one of the entries below, which is also what a
-    // module that implements a collection of its own calls.
-    //
-    // All of them:
-    //
-    //  - are called with the GIL held. The caller takes it once, because WinRT
-    //    may call on any thread, and nothing here takes it again.
-    //  - borrow the PyObject* they are given and return new references through
-    //    their out parameters, which are written on success only.
-    //  - return an HRESULT, because nothing throws across the boundary. A
-    //    Python IndexError or KeyError means the collection has no such index
-    //    or key and becomes E_BOUNDS, which is what WinRT expects from GetAt()
-    //    or Lookup(). Nothing on the WinRT side could catch any other Python
-    //    exception, so it is reported with report_unraisable() and returned as
-    //    that HRESULT.
-
-    /// Number of items in @p sequence, for IVector<T>::Size().
-    int32_t pyseq_size(PyObject* sequence, uint32_t* size) noexcept;
-    /// The item at @p index, for IVector<T>::GetAt().
-    int32_t pyseq_get_at(PyObject* sequence, uint32_t index, PyObject** item) noexcept;
-    /// Replaces the item at @p index, for IVector<T>::SetAt().
-    int32_t pyseq_set_at(PyObject* sequence, uint32_t index, PyObject* item) noexcept;
-    /// Inserts @p item before @p index, for IVector<T>::InsertAt().
-    int32_t pyseq_insert_at(
-        PyObject* sequence, uint32_t index, PyObject* item) noexcept;
-    /// Removes the item at @p index, for IVector<T>::RemoveAt().
-    int32_t pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept;
-    /// Adds @p item to the end, for IVector<T>::Append().
-    int32_t pyseq_append(PyObject* sequence, PyObject* item) noexcept;
-    /// Removes the last item, for IVector<T>::RemoveAtEnd().
-    int32_t pyseq_remove_at_end(PyObject* sequence) noexcept;
-    /// Finds @p item, for IVector<T>::IndexOf(). Not finding it is a success
-    /// with @p found false, since a WinRT IndexOf() reports it that way.
-    int32_t pyseq_index_of(
-        PyObject* sequence, PyObject* item, uint32_t* index, bool* found) noexcept;
-    /// Removes every item, for IVector<T>::Clear().
-    int32_t pyseq_clear(PyObject* sequence) noexcept;
-    /// Starts an iteration of @p iterable, for IIterable<T>::First().
-    int32_t pyiter_first(PyObject* iterable, PyObject** iterator) noexcept;
-    /// Advances @p iterator, for IIterator<T>::MoveNext(). The end of the
-    /// iteration is a success with a null @p item.
-    int32_t pyiter_next(PyObject* iterator, PyObject** item) noexcept;
-    /// Number of entries in @p mapping, for IMap<K, V>::Size().
-    int32_t pymap_size(PyObject* mapping, uint32_t* size) noexcept;
-    /// The value @p key maps to, for IMap<K, V>::Lookup().
-    int32_t pymap_lookup(PyObject* mapping, PyObject* key, PyObject** value) noexcept;
-    /// Whether @p key is in @p mapping, for IMap<K, V>::HasKey().
-    int32_t pymap_has_key(PyObject* mapping, PyObject* key, bool* has_key) noexcept;
-    /// Maps @p key to @p value, for IMap<K, V>::Insert(), which reports
-    /// through @p replaced whether the key was already there.
-    int32_t pymap_insert(
-        PyObject* mapping, PyObject* key, PyObject* value, bool* replaced) noexcept;
-    /// Removes @p key, for IMap<K, V>::Remove().
-    int32_t pymap_remove(PyObject* mapping, PyObject* key) noexcept;
-    /// Removes every entry, for IMap<K, V>::Clear().
-    int32_t pymap_clear(PyObject* mapping) noexcept;
-    /// Advances @p iterator over the keys of @p mapping and looks the value
-    /// up, for the IKeyValuePair<K, V> iterator of a mapping. The end of the
-    /// iteration is a success with a null @p key and @p value.
-    int32_t pymap_iter_next(
-        PyObject* mapping,
-        PyObject* iterator,
-        PyObject** key,
-        PyObject** value) noexcept;
-
     namespace cpp::_winrt
     {
         PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept;
-        bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept;
     } // namespace cpp::_winrt
 
     struct runtime_api
@@ -500,49 +402,20 @@ namespace py
         uint16_t abi_version_minor;
         decltype(register_python_type)* register_python_type;
         decltype(get_python_type)* get_python_type;
-        decltype(get_struct_from_tuple_func)* get_struct_from_tuple_func;
-        decltype(wrap_mapping_iter)* wrap_mapping_iter;
         decltype(is_buffer_compatible)* is_buffer_compatible;
         decltype(convert_datetime)* convert_datetime;
         decltype(convert_to_datetime)* convert_to_datetime;
         decltype(convert_guid)* convert_guid;
         decltype(convert_to_guid)* convert_to_guid;
-        decltype(get_inspectable_meta_type)* get_inspectable_meta_type;
         decltype(get_object_type)* get_object_type;
         decltype(cpp::_winrt::Array_New)* array_new;
-        decltype(cpp::_winrt::Array_Assign)* array_assign;
-        decltype(await_async)* await_async;
-        decltype(convert_to_ibuffer)* convert_to_ibuffer;
         decltype(set_member_not_available_error)* set_member_not_available_error;
         decltype(set_error)* set_error;
         decltype(set_call_error)* set_call_error;
         decltype(report_unraisable)* report_unraisable;
         decltype(toggle_python_reference)* toggle_python_reference;
         decltype(async_wait)* async_wait;
-        decltype(pyseq_size)* pyseq_size;
-        decltype(pyseq_get_at)* pyseq_get_at;
-        decltype(pyseq_set_at)* pyseq_set_at;
-        decltype(pyseq_insert_at)* pyseq_insert_at;
-        decltype(pyseq_remove_at)* pyseq_remove_at;
-        decltype(pyseq_append)* pyseq_append;
-        decltype(pyseq_remove_at_end)* pyseq_remove_at_end;
-        decltype(pyseq_index_of)* pyseq_index_of;
-        decltype(pyseq_clear)* pyseq_clear;
-        decltype(pyiter_first)* pyiter_first;
-        decltype(pyiter_next)* pyiter_next;
-        decltype(pymap_size)* pymap_size;
-        decltype(pymap_lookup)* pymap_lookup;
-        decltype(pymap_has_key)* pymap_has_key;
-        decltype(pymap_insert)* pymap_insert;
-        decltype(pymap_remove)* pymap_remove;
-        decltype(pymap_clear)* pymap_clear;
-        decltype(pymap_iter_next)* pymap_iter_next;
-        /// The counter behind get_type_registry_epoch(), which a module reads
-        /// rather than calls. It lives in the runtime and is never written by
-        /// a module.
-        const uint64_t* type_registry_epoch;
         decltype(wrap_object)* wrap_object;
-        decltype(wrap_by_signature)* wrap_by_signature;
         decltype(unwrap_object)* unwrap_object;
         decltype(struct_to_python)* struct_to_python;
         decltype(struct_from_python)* struct_from_python;
@@ -635,25 +508,6 @@ namespace py
         return (*PyWinRT_API->get_python_type)(qualified_name);
     }
 
-    inline void* get_struct_from_tuple_func(
-        const std::string_view capsule_name) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->get_struct_from_tuple_func)(capsule_name);
-    }
-
-    inline uint64_t get_type_registry_epoch() noexcept
-    {
-        assert_runtime_imported();
-        return *PyWinRT_API->type_registry_epoch;
-    }
-
-    inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->wrap_mapping_iter)(iter);
-    }
-
     inline void set_member_not_available_error(
         member_not_available const& info) noexcept
     {
@@ -718,22 +572,10 @@ namespace py
         return (*PyWinRT_API->convert_to_guid)(obj);
     }
 
-    inline PyTypeObject* get_inspectable_meta_type() noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->get_inspectable_meta_type)();
-    }
-
     inline PyTypeObject* get_object_type() noexcept
     {
         assert_runtime_imported();
         return (*PyWinRT_API->get_object_type)();
-    }
-
-    inline PyObject* await_async(PyObject* obj) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->await_async)(obj);
     }
 
     inline PyObject* wrap_object(
@@ -742,14 +584,6 @@ namespace py
     {
         assert_runtime_imported();
         return (*PyWinRT_API->wrap_object)(value, qualified_name);
-    }
-
-    inline PyObject* wrap_by_signature(
-        winrt::Windows::Foundation::IInspectable const& value,
-        char const* signature) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->wrap_by_signature)(value, signature);
     }
 
     inline bool unwrap_object(
@@ -772,12 +606,6 @@ namespace py
         return (*PyWinRT_API->struct_from_python)(type, obj, out);
     }
 
-    inline winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj)
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->convert_to_ibuffer)(obj);
-    }
-
     inline int32_t async_wait(
         winrt::Windows::Foundation::IInspectable const& async,
         uint32_t timeout_ms,
@@ -789,138 +617,12 @@ namespace py
             async, timeout_ms, handler_iid, set_completed);
     }
 
-    inline int32_t pyseq_size(PyObject* sequence, uint32_t* size) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_size)(sequence, size);
-    }
-
-    inline int32_t pyseq_get_at(
-        PyObject* sequence, uint32_t index, PyObject** item) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_get_at)(sequence, index, item);
-    }
-
-    inline int32_t pyseq_set_at(
-        PyObject* sequence, uint32_t index, PyObject* item) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_set_at)(sequence, index, item);
-    }
-
-    inline int32_t pyseq_insert_at(
-        PyObject* sequence, uint32_t index, PyObject* item) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_insert_at)(sequence, index, item);
-    }
-
-    inline int32_t pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_remove_at)(sequence, index);
-    }
-
-    inline int32_t pyseq_append(PyObject* sequence, PyObject* item) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_append)(sequence, item);
-    }
-
-    inline int32_t pyseq_remove_at_end(PyObject* sequence) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_remove_at_end)(sequence);
-    }
-
-    inline int32_t pyseq_index_of(
-        PyObject* sequence, PyObject* item, uint32_t* index, bool* found) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_index_of)(sequence, item, index, found);
-    }
-
-    inline int32_t pyseq_clear(PyObject* sequence) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyseq_clear)(sequence);
-    }
-
-    inline int32_t pyiter_first(PyObject* iterable, PyObject** iterator) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyiter_first)(iterable, iterator);
-    }
-
-    inline int32_t pyiter_next(PyObject* iterator, PyObject** item) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pyiter_next)(iterator, item);
-    }
-
-    inline int32_t pymap_size(PyObject* mapping, uint32_t* size) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_size)(mapping, size);
-    }
-
-    inline int32_t pymap_lookup(
-        PyObject* mapping, PyObject* key, PyObject** value) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_lookup)(mapping, key, value);
-    }
-
-    inline int32_t pymap_has_key(
-        PyObject* mapping, PyObject* key, bool* has_key) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_has_key)(mapping, key, has_key);
-    }
-
-    inline int32_t pymap_insert(
-        PyObject* mapping, PyObject* key, PyObject* value, bool* replaced) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_insert)(mapping, key, value, replaced);
-    }
-
-    inline int32_t pymap_remove(PyObject* mapping, PyObject* key) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_remove)(mapping, key);
-    }
-
-    inline int32_t pymap_clear(PyObject* mapping) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_clear)(mapping);
-    }
-
-    inline int32_t pymap_iter_next(
-        PyObject* mapping,
-        PyObject* iterator,
-        PyObject** key,
-        PyObject** value) noexcept
-    {
-        assert_runtime_imported();
-        return (*PyWinRT_API->pymap_iter_next)(mapping, iterator, key, value);
-    }
-
     namespace cpp::_winrt
     {
         inline PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
         {
             assert_runtime_imported();
             return (*PyWinRT_API->array_new)(std::move(array));
-        }
-
-        inline bool Array_Assign(
-            PyObject* obj, std::unique_ptr<py::Array> array) noexcept
-        {
-            assert_runtime_imported();
-            return (*PyWinRT_API->array_assign)(obj, std::move(array));
         }
     } // namespace cpp::_winrt
 #endif

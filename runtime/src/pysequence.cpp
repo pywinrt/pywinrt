@@ -12,6 +12,7 @@
 #include <pywinrt/base.h>
 
 #include "callbacks.h"
+#include "collections.h"
 #include "interp.h"
 #include "pycollections.h"
 #include "pysequence.h"

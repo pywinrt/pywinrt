@@ -3,19 +3,29 @@
 // for something, and what a Python exception raised during one of them means to
 // WinRT.
 //
-// The class templates themselves stay in the calling module
-// (<pywinrt/collections.h>), because the WinRT ABI of IVector<T> passes T by
-// value and a runtime that does not know T cannot pass it. What is here is
-// everything inside them that does not name T, which is all of the Python work
-// and all of the error policy: the module converts one element and calls one
-// entry per operation.
+// A Python list or dict passed to a WinRT method that takes an IVector<T> or an
+// IMap<K, V> is wrapped rather than copied, so WinRT calls back into Python for
+// every element operation it makes. pysequence.cpp and pymapping.cpp convert
+// the elements; what is here is everything that does not name T, which is all
+// of the Python work and all of the error policy, one function per operation.
 //
-// The contract these share - the GIL is held by the caller, references are
-// borrowed in and new out, failure is an HRESULT - is in <pywinrt/abi.h> with
-// the declarations.
+// All of them:
+//
+//  - are called with the GIL held. The caller takes it once, because WinRT may
+//    call on any thread, and nothing here takes it again.
+//  - borrow the PyObject* they are given and return new references through
+//    their out parameters, which are written on success only.
+//  - return an HRESULT, because they are called from COM methods that cannot
+//    throw. A Python IndexError or KeyError means the collection has no such
+//    index or key and becomes E_BOUNDS, which is what WinRT expects from
+//    GetAt() or Lookup(). Nothing on the WinRT side could catch any other
+//    Python exception, so it is reported with report_unraisable() and returned
+//    as that HRESULT.
 
 #define PYWINRT_RUNTIME_MODULE
 #include <pywinrt/base.h>
+
+#include "collections.h"
 
 namespace
 {
@@ -60,6 +70,7 @@ namespace
     }
 } // namespace
 
+/// Number of items in @p sequence, for IVector<T>::Size().
 int32_t py::pyseq_size(PyObject* sequence, uint32_t* size) noexcept
 {
     const auto length = PySequence_Size(sequence);
@@ -74,6 +85,7 @@ int32_t py::pyseq_size(PyObject* sequence, uint32_t* size) noexcept
     return ok;
 }
 
+/// The item at @p index, for IVector<T>::GetAt().
 int32_t py::pyseq_get_at(PyObject* sequence, uint32_t index, PyObject** item) noexcept
 {
     Py_ssize_t i;
@@ -95,6 +107,7 @@ int32_t py::pyseq_get_at(PyObject* sequence, uint32_t index, PyObject** item) no
     return ok;
 }
 
+/// Replaces the item at @p index, for IVector<T>::SetAt().
 int32_t py::pyseq_set_at(PyObject* sequence, uint32_t index, PyObject* item) noexcept
 {
     Py_ssize_t i;
@@ -112,8 +125,8 @@ int32_t py::pyseq_set_at(PyObject* sequence, uint32_t index, PyObject* item) noe
     return ok;
 }
 
-int32_t py::pyseq_insert_at(
-    PyObject* sequence, uint32_t index, PyObject* item) noexcept
+/// Inserts @p item before @p index, for IVector<T>::InsertAt().
+int32_t py::pyseq_insert_at(PyObject* sequence, uint32_t index, PyObject* item) noexcept
 {
     Py_ssize_t i;
 
@@ -136,6 +149,7 @@ int32_t py::pyseq_insert_at(
     return ok;
 }
 
+/// Removes the item at @p index, for IVector<T>::RemoveAt().
 int32_t py::pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept
 {
     Py_ssize_t i;
@@ -153,6 +167,7 @@ int32_t py::pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept
     return ok;
 }
 
+/// Adds @p item to the end, for IVector<T>::Append().
 int32_t py::pyseq_append(PyObject* sequence, PyObject* item) noexcept
 {
     pyobj_handle result{PyObject_CallMethod(sequence, "append", "O", item)};
@@ -165,6 +180,7 @@ int32_t py::pyseq_append(PyObject* sequence, PyObject* item) noexcept
     return ok;
 }
 
+/// Removes the last item, for IVector<T>::RemoveAtEnd().
 int32_t py::pyseq_remove_at_end(PyObject* sequence) noexcept
 {
     const auto length = PySequence_Size(sequence);
@@ -190,6 +206,8 @@ int32_t py::pyseq_remove_at_end(PyObject* sequence) noexcept
     return ok;
 }
 
+/// Finds @p item, for IVector<T>::IndexOf(). Not finding it is a success
+/// with @p found false, since a WinRT IndexOf() reports it that way.
 int32_t py::pyseq_index_of(
     PyObject* sequence, PyObject* item, uint32_t* index, bool* found) noexcept
 {
@@ -217,6 +235,7 @@ int32_t py::pyseq_index_of(
     return ok;
 }
 
+/// Removes every item, for IVector<T>::Clear().
 int32_t py::pyseq_clear(PyObject* sequence) noexcept
 {
     if (PySequence_SetSlice(sequence, 0, PY_SSIZE_T_MAX, nullptr) < 0)
@@ -227,6 +246,7 @@ int32_t py::pyseq_clear(PyObject* sequence) noexcept
     return ok;
 }
 
+/// Starts an iteration of @p iterable, for IIterable<T>::First().
 int32_t py::pyiter_first(PyObject* iterable, PyObject** iterator) noexcept
 {
     auto iter = PyObject_GetIter(iterable);
@@ -241,6 +261,8 @@ int32_t py::pyiter_first(PyObject* iterable, PyObject** iterator) noexcept
     return ok;
 }
 
+/// Advances @p iterator, for IIterator<T>::MoveNext(). The end of the
+/// iteration is a success with a null @p item.
 int32_t py::pyiter_next(PyObject* iterator, PyObject** item) noexcept
 {
     auto next = PyIter_Next(iterator);
@@ -261,6 +283,7 @@ int32_t py::pyiter_next(PyObject* iterator, PyObject** item) noexcept
     return ok;
 }
 
+/// Number of entries in @p mapping, for IMap<K, V>::Size().
 int32_t py::pymap_size(PyObject* mapping, uint32_t* size) noexcept
 {
     const auto length = PyMapping_Size(mapping);
@@ -275,6 +298,7 @@ int32_t py::pymap_size(PyObject* mapping, uint32_t* size) noexcept
     return ok;
 }
 
+/// The value @p key maps to, for IMap<K, V>::Lookup().
 int32_t py::pymap_lookup(PyObject* mapping, PyObject* key, PyObject** value) noexcept
 {
     auto item = PyObject_GetItem(mapping, key);
@@ -289,6 +313,7 @@ int32_t py::pymap_lookup(PyObject* mapping, PyObject* key, PyObject** value) noe
     return ok;
 }
 
+/// Whether @p key is in @p mapping, for IMap<K, V>::HasKey().
 int32_t py::pymap_has_key(PyObject* mapping, PyObject* key, bool* has_key) noexcept
 {
     const auto result = PyMapping_HasKeyWithError(mapping, key);
@@ -303,6 +328,8 @@ int32_t py::pymap_has_key(PyObject* mapping, PyObject* key, bool* has_key) noexc
     return ok;
 }
 
+/// Maps @p key to @p value, for IMap<K, V>::Insert(), which reports
+/// through @p replaced whether the key was already there.
 int32_t py::pymap_insert(
     PyObject* mapping, PyObject* key, PyObject* value, bool* replaced) noexcept
 {
@@ -325,6 +352,7 @@ int32_t py::pymap_insert(
     return ok;
 }
 
+/// Removes @p key, for IMap<K, V>::Remove().
 int32_t py::pymap_remove(PyObject* mapping, PyObject* key) noexcept
 {
     if (PyObject_DelItem(mapping, key) < 0)
@@ -335,6 +363,7 @@ int32_t py::pymap_remove(PyObject* mapping, PyObject* key) noexcept
     return ok;
 }
 
+/// Removes every entry, for IMap<K, V>::Clear().
 int32_t py::pymap_clear(PyObject* mapping) noexcept
 {
     pyobj_handle result{PyObject_CallMethod(mapping, "clear", nullptr)};
@@ -347,6 +376,9 @@ int32_t py::pymap_clear(PyObject* mapping) noexcept
     return ok;
 }
 
+/// Advances @p iterator over the keys of @p mapping and looks the value
+/// up, for the IKeyValuePair<K, V> iterator of a mapping. The end of the
+/// iteration is a success with a null @p key and @p value.
 int32_t py::pymap_iter_next(
     PyObject* mapping, PyObject* iterator, PyObject** key, PyObject** value) noexcept
 {

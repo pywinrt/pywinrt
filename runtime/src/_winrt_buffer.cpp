@@ -2,6 +2,7 @@
 #include <Python.h>
 #include <Robuffer.h>
 #include <pywinrt/base.h>
+#include "_winrt_buffer.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt

@@ -203,9 +203,12 @@ hook-dirs = "winrt.__pyinstaller:get_hook_dirs"
 RUNTIME_MANIFEST_IN = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
+include src/_winrt_array.h
+include src/_winrt_buffer.h
 include src/arrays.h
 include src/async.h
 include src/callbacks.h
+include src/collections.h
 include src/compose.h
 include src/delegates.h
 include src/enums.h
@@ -220,6 +223,7 @@ include src/numerics-values.h
 include src/numerics.h
 include src/objects.h
 include src/protocols.h
+include src/runtime.h
 include src/pycollections.h
 include src/pymapping.h
 include src/pysequence.h

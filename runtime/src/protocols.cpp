@@ -18,6 +18,7 @@
 #include "interp.h"
 #include "objects.h"
 #include "protocols.h"
+#include "runtime.h"
 #include "types.h"
 
 namespace py::interp

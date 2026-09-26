@@ -75,7 +75,6 @@ namespace py::cpp::_winrt
         /// after the state is built.
         state_mutex cache_lock;
         std::unordered_map<std::string_view, PyTypeObject*> type_cache;
-        std::unordered_map<std::string_view, void*> struct_from_tuple_cache;
         /// The projection tables that have been loaded, by the name of the
         /// module each was loaded into.
         std::unordered_map<std::string, std::unique_ptr<py::interp::projection>>
@@ -95,18 +94,9 @@ namespace py::cpp::_winrt
     };
 
     module_state* get_module_state() noexcept;
-
-    /**
-     * The counter behind py::get_type_registry_epoch().
-     *
-     * It is not part of the module state on purpose: what it tells a module is
-     * that the state it memoized something out of is gone, so it has to
-     * outlive every state, and it is bumped whenever one is created or torn
-     * down. Two interpreters starting on two threads is the one way that can
-     * happen at once, so it is written through std::atomic_ref. It stays a
-     * plain @c uint64_t because the capsule hands a module its address and the
-     * module reads it directly, which an aligned 64-bit load does in one
-     * instruction on every architecture this is built for.
-     */
-    extern uint64_t type_registry_epoch;
 } // namespace py::cpp::_winrt
+
+namespace py
+{
+    PyTypeObject* get_inspectable_meta_type() noexcept;
+} // namespace py
