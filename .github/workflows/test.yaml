@@ -10,8 +10,6 @@ on:
       - next
     paths:
       - .github/workflows/test.yaml
-      - mypy.ini
-      - ruff.toml
       - requirements.txt
       - .config/_tools.json
       - patches/**
@@ -19,8 +17,6 @@ on:
       # what fetch-tools.ps1 runs to fetch the App SDK
       - scripts/app_sdk.py
       - scripts/nuget.py
-      # checked by the lint job
-      - scripts/**/*.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
@@ -36,10 +32,6 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
-      - redist/**
-      - '!redist/**/*.md'
-      - '!redist/**/*.toml'
-      - '!redist/**/*.txt'
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
@@ -56,8 +48,6 @@ on:
   pull_request:
     paths:
       - .github/workflows/test.yaml
-      - mypy.ini
-      - ruff.toml
       - requirements.txt
       - .config/_tools.json
       - patches/**
@@ -65,8 +55,6 @@ on:
       # what fetch-tools.ps1 runs to fetch the App SDK
       - scripts/app_sdk.py
       - scripts/nuget.py
-      # checked by the lint job
-      - scripts/**/*.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
       - scripts/tests/**
@@ -82,10 +70,6 @@ on:
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
-      - redist/**
-      - '!redist/**/*.md'
-      - '!redist/**/*.toml'
-      - '!redist/**/*.txt'
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
@@ -183,22 +167,3 @@ jobs:
         env:
           PYTHONPATH: _install/projection
         run: ${MINGW_PREFIX}/bin/python -X dev -m unittest -v
-  lint:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      # the rules and the files they apply to are in ruff.toml, so that the
-      # editor checks the same thing as CI does
-      - name: Run ruff
-        run: pipx run ruff check
-      - name: merge packages
-        run: |
-          mkdir _install/lint -Force
-          # the runtime, the table compiler and the interop packages live
-          # outside of projection/, so winrt.system, winrt.runtime and
-          # winrt._winrt come from runtime/python and winrt.table from table/
-          Get-ChildItem -Path projection/*/*, interop/*, redist/*, runtime/python, table -Directory -Recurse | Where-Object Name -IN "winrt", "winui2", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
-      # the packages and the path to them are in mypy.ini, so that the
-      # editor checks the same thing as CI does
-      - name: Run mypy
-        run: pipx run mypy

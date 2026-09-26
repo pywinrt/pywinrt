@@ -131,7 +131,7 @@ threads run at the same time only when there is no GIL.
 ## Linting
 
 The rules and the files they apply to are in `ruff.toml` and `mypy.ini`, so an
-editor checks the same thing as the `lint` job in `.github/workflows/test.yaml`
+editor checks the same thing as the `lint` job in `.github/workflows/lint.yaml`
 does:
 
     pipx run ruff check
