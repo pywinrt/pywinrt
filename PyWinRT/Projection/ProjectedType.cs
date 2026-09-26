@@ -905,9 +905,8 @@ class ProjectedType
         // below and the Aliases of ProjectedMethodGroup, the alias_method() and
         // alias_static_method() calls in the generated __init__.py, the
         // @deprecated defs in the generated type stubs, the LegacyPyName of
-        // ProjectedMethod and the lookup of the old name in
-        // WriteGetPythonMethod(), the helpers in winrt.runtime._internals, and
-        // the --legacy-method-aliases option and where scripts/generate-pywinrt.py
+        // ProjectedMethod, the helpers in winrt.runtime._internals, and the
+        // --legacy-method-aliases option and where scripts/generate-pywinrt.py
         // passes it. The warning about an old name that can't be kept goes away
         // with them.
 
