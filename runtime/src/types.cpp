@@ -119,12 +119,8 @@ namespace py::interp
             return *it->second;
         }
 
-        py::cpp::_winrt::module_state* state() noexcept
-        {
-            return py::cpp::_winrt::get_module_state();
-        }
-
         using py::cpp::_winrt::build_guard;
+        using py::cpp::_winrt::get_module_state;
         using py::cpp::_winrt::state_guard;
         using py::cpp::_winrt::try_get_module_state;
     } // namespace
@@ -198,7 +194,7 @@ namespace py::interp
      */
     bool remember(type_entry& entry, PyTypeObject* type)
     {
-        auto const s = state();
+        auto const s = get_module_state();
         if (!s)
         {
             return false;
@@ -269,7 +265,7 @@ namespace py::interp
 
         if (record.get_category() == table::category::delegate)
         {
-            auto const s = state();
+            auto const s = get_module_state();
             if (!s)
             {
                 return nullptr;
@@ -370,7 +366,7 @@ namespace py::interp
      */
     type_entry* ensure_named_entry(projection& proj, uint32_t index) noexcept
     {
-        auto const s = state();
+        auto const s = get_module_state();
         if (!s)
         {
             return nullptr;
@@ -572,7 +568,7 @@ namespace py::interp
             return nullptr;
         }
 
-        auto const s = state();
+        auto const s = get_module_state();
         if (!s)
         {
             return nullptr;
