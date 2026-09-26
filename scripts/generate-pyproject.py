@@ -552,10 +552,9 @@ def write_compiled_project_files(
 
     write_license(package_path, redistributes)
 
-    if is_runtime:
-        with open_if_changed(package_path / "MANIFEST.in") as f:
-            f.write(templates.RUNTIME_MANIFEST_IN)
-    else:
+    # winrt-runtime's MANIFEST.in shares nothing with the other packages, so it
+    # is written by hand
+    if not is_runtime:
         with open_if_changed(package_path / "MANIFEST.in") as f:
             f.write(templates.INTEROP_MANIFEST_IN.format(interop_header=INTEROP_HEADER))
 
