@@ -6,9 +6,9 @@ import pathlib
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 
-from winrt._include import get_cppwinrt_include, get_include
+from winrt._include import get_cppwinrt_include
 
-INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]
+INCLUDE_DIRS = [get_cppwinrt_include()]
 
 # the namespaces this package includes that the runtime does not carry
 INCLUDE_DIRS.append(os.fspath(pathlib.Path(__file__).parent / "cppwinrt"))

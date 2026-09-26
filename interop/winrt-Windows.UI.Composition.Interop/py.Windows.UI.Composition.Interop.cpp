@@ -1,3 +1,5 @@
+#include "interop.h"
+
 #include <windows.ui.composition.interop.h>
 
 // MINGW header is missing some interfaces
@@ -22,8 +24,7 @@ namespace ABI::Windows::UI::Composition::Desktop
         virtual HRESULT STDMETHODCALLTYPE CreateDesktopWindowTarget(
             HWND hwndTarget,
             BOOL isTopmost,
-            ABI::Windows::UI::Composition::Desktop::IDesktopWindowTarget * *result)
-            = 0;
+            ABI::Windows::UI::Composition::Desktop::IDesktopWindowTarget * *result) = 0;
 
         virtual HRESULT STDMETHODCALLTYPE EnsureOnThread(DWORD threadId) = 0;
     };
@@ -40,86 +41,53 @@ __CRT_UUID_DECL(
 #endif
 #endif
 
-#include <winrt/base.h>
-#include <winrt/Windows.UI.Composition.h>
-#include <winrt/Windows.UI.Composition.Desktop.h>
-
-#include <Python.h>
-
-#include <pywinrt/base.h>
-
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.ui.composition.interop
 
-namespace py::cpp::Windows::UI::Composition::Interop
+namespace
 {
     // See
     // https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/using-the-visual-layer-with-win32
-    static PyObject* create_desktop_window_target(
-        PyObject* /*unused*/, PyObject* args, PyObject* kw) noexcept
+    PyObject* create_desktop_window_target(
+        PyObject* /*unused*/, PyObject* args) noexcept
     {
         namespace abi = ABI::Windows::UI::Composition::Desktop;
 
-        try
+        PyObject* compositor;
+        Py_ssize_t hwnd_target;
+        int is_topmost;
+
+        if (!PyArg_ParseTuple(args, "Onp", &compositor, &hwnd_target, &is_topmost))
         {
-            PyObject* arg0;
-            Py_ssize_t arg1;
-            int arg2{};
-
-            static const char* const keywords[]
-                = {"compositor", "hwnd_target", "is_topmost", nullptr};
-
-            if (!PyArg_ParseTupleAndKeywords(
-                    args,
-                    kw,
-                    "On|$p",
-                    const_cast<char**>(keywords),
-                    &arg0,
-                    &arg1,
-                    &arg2))
-            {
-                return nullptr;
-            }
-
-            winrt::Windows::UI::Composition::Compositor compositor{nullptr};
-            if (!unwrap_object(
-                    arg0,
-                    winrt::guid_of<winrt::Windows::UI::Composition::Compositor>(),
-                    winrt::put_abi(compositor)))
-            {
-                return nullptr;
-            }
-
-            auto interop = compositor.as<abi::ICompositorDesktopInterop>();
-            auto hwnd_target = reinterpret_cast<HWND>(arg1);
-            bool is_topmost = arg2;
-
-            winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget target{
-                nullptr};
-            winrt::check_hresult(interop->CreateDesktopWindowTarget(
-                hwnd_target,
-                is_topmost,
-                reinterpret_cast<abi::IDesktopWindowTarget**>(winrt::put_abi(target))));
-
-            return wrap_object(
-                target,
-                "winrt.windows.ui.composition.desktop.DesktopWindowTarget");
-        }
-        catch (...)
-        {
-            to_PyErr();
             return nullptr;
         }
+
+        abi::ICompositorDesktopInterop* interop{};
+        if (!interop::query_capsule(compositor, &interop))
+        {
+            return nullptr;
+        }
+
+        abi::IDesktopWindowTarget* target{};
+
+        auto const hr = interop->CreateDesktopWindowTarget(
+            reinterpret_cast<HWND>(hwnd_target), is_topmost, &target);
+        interop->Release();
+        if (FAILED(hr))
+        {
+            return interop::set_hresult_error(hr);
+        }
+
+        return interop::new_interface_capsule(reinterpret_cast<IUnknown*>(target));
     }
 
-    PyMethodDef module_methods[]
-        = {{"create_desktop_window_target",
-            reinterpret_cast<PyCFunction>(
-                reinterpret_cast<void*>(create_desktop_window_target)),
-            METH_VARARGS | METH_KEYWORDS,
-            nullptr},
-           {}};
+    PyMethodDef module_methods[]{
+        {"create_desktop_window_target",
+         create_desktop_window_target,
+         METH_VARARGS,
+         nullptr},
+        {}};
 
-    static PyModuleDef module_def
+    PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_windows_ui_composition_interop",
            nullptr,
@@ -129,16 +97,9 @@ namespace py::cpp::Windows::UI::Composition::Interop
            nullptr,
            nullptr,
            nullptr};
-} // namespace py::cpp::Windows::UI::Composition::Interop
+} // namespace
 
 PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interop(void) noexcept
 {
-    using namespace py::cpp::Windows::UI::Composition::Interop;
-
-    if (py::import_winrt_runtime() == -1)
-    {
-        return nullptr;
-    }
-
     return PyModule_Create(&module_def);
 }

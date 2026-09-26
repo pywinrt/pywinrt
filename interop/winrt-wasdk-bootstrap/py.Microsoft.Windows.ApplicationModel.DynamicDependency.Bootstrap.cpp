@@ -1,22 +1,15 @@
-// windows include must be before winrt
-#include <windows.h>
-// winrt include must be before bootstrap
-#include <winrt\base.h>
+#include "interop.h"
 
-// HACK for non-msvc compilers - MddBootstrap.h only checks _CPPUNWIND
-#if !defined(_CPPUNWIND) && defined(__EXCEPTIONS)
-#define _CPPUNWIND 1
-#endif
+#include <windows.h>
 
 #include <WindowsAppSDK-VersionInfo.h>
 #include <MddBootstrap.h>
 
-#include <Python.h>
-#include <pythoncapi_compat.h>
-#include <pywinrt/base.h>
+#include <memory>
+#include <string_view>
 
 // https://learn.microsoft.com/en-us/windows/apps/api-reference/bootstrapper-cpp-api/microsoft.windows.applicationmodel.dynamicdependency.bootstrap/microsoft.windows.applicationmodel.dynamicdependency.bootstrap#functions-in-themicrosoftwindowsapplicationmodeldynamicdependencybootstrap-namespace
-namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Bootstrap
+namespace
 {
     using namespace ::Microsoft::Windows::ApplicationModel::DynamicDependency::
         Bootstrap;
@@ -30,46 +23,62 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
     static PyObject* initialize(PyObject* module, PyObject* args) noexcept
     {
         uint32_t major_minor_version;
-        const char* version_tag;
+        PyObject* version_tag_obj;
         uint64_t min_version;
         InitializeOptions options;
 
         if (!PyArg_ParseTuple(
                 args,
-                "IzKI:initialize",
+                "IOKI:initialize",
                 &major_minor_version,
-                &version_tag,
+                &version_tag_obj,
                 &min_version,
                 &options))
         {
             return nullptr;
         }
 
-        pyobj_handle shutdown_object{PyObject_GetAttrString(module, "Shutdown")};
-        if (!shutdown_object)
-            return nullptr;
+        wchar_t* version_tag{};
 
-        pyobj_handle shutdown{PyObject_CallObject(shutdown_object.get(), nullptr)};
-        if (!shutdown)
+        if (!Py_IsNone(version_tag_obj))
+        {
+            version_tag = PyUnicode_AsWideCharString(version_tag_obj, nullptr);
+            if (!version_tag)
+            {
+                return nullptr;
+            }
+        }
+
+        std::unique_ptr<wchar_t, decltype(&PyMem_Free)> version_tag_owner{
+            version_tag, &PyMem_Free};
+
+        auto const shutdown_type = PyObject_GetAttrString(module, "Shutdown");
+        if (!shutdown_type)
+        {
             return nullptr;
+        }
+
+        auto const shutdown = PyObject_CallNoArgs(shutdown_type);
+        Py_DECREF(shutdown_type);
+        if (!shutdown)
+        {
+            return nullptr;
+        }
 
         // FIXME: validate type of shutdown before casting to ShutdownObject
 
-        try
+        auto const hr
+            = InitializeNoThrow(major_minor_version, version_tag, min_version, options);
+        if (FAILED(hr))
         {
-            reinterpret_cast<ShutdownObject*>(shutdown.get())->shutdown = Initialize(
-                major_minor_version,
-                version_tag ? winrt::to_hstring(version_tag).c_str() : nullptr,
-                min_version,
-                options);
+            Py_DECREF(shutdown);
+            return interop::set_hresult_error(hr);
+        }
 
-            return shutdown.detach();
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
+        reinterpret_cast<ShutdownObject*>(shutdown)->shutdown.reset(
+            reinterpret_cast<details::mddbootstrapshutdown_t*>(1));
+
+        return shutdown;
     }
 
     static PyMethodDef module_methods[]{
@@ -115,7 +124,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
 
             PyErr_Fetch(&error_type, &error_value, &error_traceback);
 #else
-            pyobj_handle error{PyErr_GetRaisedException()};
+            auto const error = PyErr_GetRaisedException();
 #endif
 
             if (PyErr_WarnEx(
@@ -132,7 +141,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
 #else
             if (error)
             {
-                PyErr_SetRaisedException(error.detach());
+                PyErr_SetRaisedException(error);
             }
 #endif
         }
@@ -144,19 +153,9 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
 
     static PyObject* shutdown_call(PyObject* self, PyObject* /*unused*/) noexcept
     {
-        try
-        {
-            auto shutdown = reinterpret_cast<ShutdownObject*>(self);
+        reinterpret_cast<ShutdownObject*>(self)->shutdown.reset();
 
-            shutdown->shutdown.reset();
-
-            Py_RETURN_NONE;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
+        Py_RETURN_NONE;
     }
 
     static PyObject* shutdown_identity(PyObject* self, PyObject* /*unused*/) noexcept
@@ -190,21 +189,17 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
         Py_TPFLAGS_DEFAULT,
         shutdown_slots};
 } // namespace
-  // py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Bootstrap
 
 PyMODINIT_FUNC
 PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
     void) noexcept
 {
-    using namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::
-        Bootstrap;
-
-    if (py::import_winrt_runtime() == -1)
+    std::unique_ptr<PyObject, decltype(&Py_DecRef)> module{
+        PyModule_Create(&module_def), &Py_DecRef};
+    if (!module)
     {
         return nullptr;
     }
-
-    py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (PyModule_AddStringConstant(
             module.get(),
@@ -228,15 +223,16 @@ PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
         return nullptr;
     }
 
-    py::pyobj_handle shutdown_type{
-        PyType_FromModuleAndSpec(module.get(), &shutdown_type_spec, nullptr)};
+    auto const shutdown_type
+        = PyType_FromModuleAndSpec(module.get(), &shutdown_type_spec, nullptr);
     if (!shutdown_type)
         return nullptr;
 
-    if (PyModule_AddType(
-            module.get(), reinterpret_cast<PyTypeObject*>(shutdown_type.get()))
-        == -1)
+    auto const added = PyModule_AddType(
+        module.get(), reinterpret_cast<PyTypeObject*>(shutdown_type));
+    Py_DECREF(shutdown_type);
+    if (added == -1)
         return nullptr;
 
-    return module.detach();
+    return module.release();
 }
