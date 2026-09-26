@@ -27,19 +27,6 @@ import packages
 
 packages.set_nuget_environment()
 
-# setup.py imports winrt._include to locate the headers it compiles against,
-# and the runtime is not installed here (its own sdist is one of the things we
-# build), so point at its source tree instead
-os.environ["PYTHONPATH"] = os.pathsep.join(
-    filter(
-        None,
-        [
-            os.fspath(packages.REPO_PATH / "runtime" / "python"),
-            os.environ.get("PYTHONPATH"),
-        ],
-    )
-)
-
 parser = argparse.ArgumentParser(
     description="Builds the source distribution of every package that is published."
 )
