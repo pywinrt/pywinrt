@@ -178,17 +178,23 @@
   and the right way to pin one is the way its upstream numbers it -
   `winrt-Microsoft.WindowsAppSDK.WinUI==4!2.5.*` - rather than by a PyWinRT
   version.
-  `winrt-runtime` keeps plain semantic versioning, since its version is its
-  own.
+  The packages that are written by hand rather than generated - `winrt-runtime`,
+  `winrt-table-compiler` and the eight interop modules - keep plain semantic
+  versioning, since there is no upstream release for them to be numbered after,
+  and each is released on its own when it changes. So moving the Windows SDK
+  pin no longer republishes the interop modules that were built against it,
+  and a fix to `winrt-runtime` does not renumber anything else.
 - BREAKING: The `4!` in front of those versions is a PEP 440 epoch and says
   which generation of PyWinRT the package was built for. It is the same number
   as `winrt-runtime`'s major version and it changes only when every projection
   package has to be rebuilt anyway, so a `pip freeze` says which runtime a
   package goes with. It is also what makes the new numbering sort above the
-  old: without it, `10.0.28000.2705` would have to sort against the `3.2.1` it
-  replaces, and the Windows App SDK packages would go backwards from `3.2.1`
-  to `2.5.1`. Some tools that rewrite dependency constraints have historically
-  mishandled epochs; the spelling is `4!2.5.1` wherever one is written out.
+  old: several upstream lines are numbered below the `3.2.1` PyWinRT last
+  published - the Windows App SDK is on 2.x and WebView2 on 1.x - so a bare
+  `2.5.1` would read as older than the release it follows, which an epoch
+  fixes and a rename would only hide. Some tools that rewrite dependency
+  constraints have historically mishandled epochs; the spelling is `4!2.5.1`
+  wherever one is written out.
 - BREAKING: A package now requires `winrt-runtime>=<the version it was
   generated with>,<5` where it used to pin `winrt-runtime~=<version>.0`. Any
   runtime of the same generation can run it, so pip is free to install a newer
@@ -198,7 +204,10 @@
   it pip would upgrade the runtime on its own into an import error. Building a
   package from its source distribution caps `winrt-table-compiler` the same
   way, for the same reason - a compiler of the next generation would write a
-  table that the runtime the wheel then asks for cannot read.
+  table that the runtime the wheel then asks for cannot read. Its floor is the
+  generation rather than a particular version, since what the compiler has to
+  be able to do is write the table format, and that does not move when the
+  runtime is fixed.
 - `winrt-Windows.Foundation`, `winrt-Windows.Foundation.Collections` and
   `winrt-Windows.Storage.Streams` are now installed with any package that
   hands back one of their types, instead of being offered by that package's
@@ -215,7 +224,10 @@
   releases fail to resolve. Packages that do come from one set of metadata,
   such as `winrt-Microsoft.WindowsAppSDK.WinUI` and
   `winrt-Microsoft.WindowsAppSDK.InteractiveExperiences`, are still pinned to
-  each other, because they are generated and released together.
+  each other, because they are generated and released together. The interop
+  modules are not among those: each is written by hand and released on its own,
+  so what one says about the projection package whose types it hands back is a
+  floor as well.
 - Every wheel now carries the text of the license it is published under, in
   its `.dist-info/licenses/` directory, where before it carried only the name
   of the license in its metadata. A wheel that redistributes a Microsoft
