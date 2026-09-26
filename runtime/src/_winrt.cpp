@@ -8,6 +8,8 @@
 #include "types.h"
 #include <winrt/base.h>
 
+#include <atomic>
+
 namespace py::cpp::_winrt
 {
     // BEGIN: class _winrt.IInspectable_Static:
@@ -562,6 +564,17 @@ namespace py::cpp::_winrt
         return PyObject_CallOneArg(cache_func.get(), partial_uuid_func.get());
     }
 
+    /**
+     * The state of the module, for code that is not handed the module.
+     *
+     * The runtime refuses to load into any interpreter but the main one, so
+     * there is one state at a time. Importing the module again after it was
+     * taken out of sys.modules executes a second one, which replaces the
+     * first here, and freeing a state clears this only if it is still that
+     * state.
+     */
+    static std::atomic<module_state*> main_state{};
+
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
@@ -624,6 +637,10 @@ namespace py::cpp::_winrt
     static void module_free(PyObject* module) noexcept
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+
+        auto expected = state;
+        main_state.compare_exchange_strong(
+            expected, nullptr, std::memory_order_acq_rel);
 
         Py_XDECREF(state->inspectable_meta_type);
         Py_XDECREF(state->object_type);
@@ -782,64 +799,59 @@ namespace py::cpp::_winrt
              "the interop packages to raise in turn.")},
         {}};
 
-    PyDoc_STRVAR(module_doc, "_winrt");
-
-    static PyModuleDef module_def
-        = {PyModuleDef_HEAD_INIT,
-           "_winrt",
-           module_doc,
-           sizeof(module_state),
-           module_methods,
-           nullptr,
-           module_traverse,
-           module_clear,
-           reinterpret_cast<freefunc>(module_free)};
-
-    static PyObject* module_init() noexcept
+    static int module_exec(PyObject* module) noexcept
     {
         static const auto kMTA
             = static_cast<long>(winrt::apartment_type::multi_threaded);
         static const auto kSTA
             = static_cast<long>(winrt::apartment_type::single_threaded);
 
-        py::pyobj_handle module{PyModule_Create(&module_def)};
-        if (!module)
-        {
-            return nullptr;
-        }
-
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
+        // CPython allocates the state zeroed just before this runs, and does
+        // not call traverse, clear or free before it has, so constructing the
+        // maps first is what lets those three assume them.
+        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
         std::construct_at(&state->type_cache);
         std::construct_at(&state->projections);
         std::construct_at(&state->type_entries);
         std::construct_at(&state->generic_types);
 
-        py::pytype_handle inspectable_meta_type{py::register_python_type(
-            module.get(), &IInspectable_Static_type_spec, nullptr, nullptr)};
-        if (!inspectable_meta_type)
+        // The slot below says the same, but CPython only enforces it in an
+        // interpreter configured to check, which a legacy subinterpreter on a
+        // build with the GIL is not.
+        if (PyInterpreterState_Get() != PyInterpreterState_Main())
         {
-            return nullptr;
+            PyErr_SetString(
+                PyExc_ImportError,
+                "winrt._winrt can only be imported into the main interpreter");
+            return -1;
         }
 
-        py::pytype_handle object_type{py::register_python_type(
-            module.get(), &Object_type_spec, nullptr, nullptr)};
+        py::pytype_handle inspectable_meta_type{py::register_python_type(
+            module, &IInspectable_Static_type_spec, nullptr, nullptr)};
+        if (!inspectable_meta_type)
+        {
+            return -1;
+        }
+
+        py::pytype_handle object_type{
+            py::register_python_type(module, &Object_type_spec, nullptr, nullptr)};
         if (!object_type)
         {
-            return nullptr;
+            return -1;
         }
 
         py::pytype_handle array_type{
-            py::register_python_type(module.get(), &Array_type_spec, nullptr, nullptr)};
+            py::register_python_type(module, &Array_type_spec, nullptr, nullptr)};
         if (!array_type)
         {
-            return nullptr;
+            return -1;
         }
 
-        py::pytype_handle mapping_iter_type{py::register_python_type(
-            module.get(), &MappingIter_type_spec, nullptr, nullptr)};
+        py::pytype_handle mapping_iter_type{
+            py::register_python_type(module, &MappingIter_type_spec, nullptr, nullptr)};
         if (!mapping_iter_type)
         {
-            return nullptr;
+            return -1;
         }
 
         // Not added to the module: it is what a projected method is bound as,
@@ -848,23 +860,23 @@ namespace py::cpp::_winrt
             PyType_FromSpec(&py::interp::projected_method_type_spec))};
         if (!projected_method_type)
         {
-            return nullptr;
+            return -1;
         }
 
-        if (PyModule_AddIntConstant(module.get(), "MTA", kMTA) == -1)
+        if (PyModule_AddIntConstant(module, "MTA", kMTA) == -1)
         {
-            return nullptr;
+            return -1;
         }
 
-        if (PyModule_AddIntConstant(module.get(), "STA", kSTA) == -1)
+        if (PyModule_AddIntConstant(module, "STA", kSTA) == -1)
         {
-            return nullptr;
+            return -1;
         }
 
         pyobj_handle to_uuid_func{wrap_uuid_constructor()};
         if (!to_uuid_func)
         {
-            return nullptr;
+            return -1;
         }
 
         state->inspectable_meta_type = inspectable_meta_type.detach();
@@ -875,24 +887,44 @@ namespace py::cpp::_winrt
         state->to_uuid_func = to_uuid_func.detach();
         state->wrap_async_func = nullptr; // lazy-initialized
 
-        return module.detach();
+        main_state.store(state, std::memory_order_release);
+
+        return 0;
     }
+
+    static PyModuleDef_Slot module_slots[]{
+        {Py_mod_exec, reinterpret_cast<void*>(module_exec)},
+#ifdef Py_mod_multiple_interpreters
+        // A WinRT callback that arrives on a thread Python has not seen
+        // attaches through PyGILState_Ensure(), which only knows the main
+        // interpreter, so in any other interpreter it would run the Python
+        // code of one interpreter in another.
+        {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
+#endif
+        {}};
+
+    PyDoc_STRVAR(module_doc, "_winrt");
+
+    static PyModuleDef module_def
+        = {PyModuleDef_HEAD_INIT,
+           "_winrt",
+           module_doc,
+           sizeof(module_state),
+           module_methods,
+           module_slots,
+           module_traverse,
+           module_clear,
+           reinterpret_cast<freefunc>(module_free)};
 } // namespace py::cpp::_winrt
 
 PyMODINIT_FUNC PyInit__winrt(void) noexcept
 {
-    return py::cpp::_winrt::module_init();
+    return PyModuleDef_Init(&py::cpp::_winrt::module_def);
 }
 
 py::cpp::_winrt::module_state* py::cpp::_winrt::get_module_state() noexcept
 {
-    auto module = PyState_FindModule(&py::cpp::_winrt::module_def);
-    if (!module)
-    {
-        return nullptr;
-    }
-
-    return reinterpret_cast<py::cpp::_winrt::module_state*>(PyModule_GetState(module));
+    return py::cpp::_winrt::main_state.load(std::memory_order_acquire);
 }
 
 PyTypeObject* py::get_inspectable_meta_type() noexcept
