@@ -543,7 +543,6 @@ def write_compiled_project_files(
                     if redistributes
                     else ""
                 ),
-                extra_package_data=', "*.h"' if is_runtime else "",
                 test_command=templates.TEST_COMMAND.format(
                     module=f"{root_package}.{ext_module_name}"
                 ),

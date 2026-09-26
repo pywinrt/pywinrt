@@ -6,11 +6,11 @@ import pathlib
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 
-PACKAGE_PATH = pathlib.Path(__file__).parent / "python" / "winrt"
+INCLUDE_PATH = pathlib.Path(__file__).parent / "src" / "include"
 
 INCLUDE_DIRS = [
-    os.fspath(PACKAGE_PATH / "include"),
-    os.fspath(PACKAGE_PATH / "include" / "cppwinrt"),
+    os.fspath(INCLUDE_PATH),
+    os.fspath(INCLUDE_PATH / "cppwinrt"),
 ]
 
 

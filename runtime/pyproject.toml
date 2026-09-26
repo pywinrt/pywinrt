@@ -45,7 +45,7 @@ where = ["python"]
 hook-dirs = "winrt.__pyinstaller:get_hook_dirs"
 
 [tool.setuptools.package-data]
-"*" = ["*.pyi", "py.typed", "*.h"]
+"*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
 # don't build for PyPy or for the free-threaded interpreters, which the

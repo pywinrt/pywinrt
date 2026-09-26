@@ -1,5 +1,6 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
+graft src/include
 include src/_winrt_array.h
 include src/_winrt_buffer.h
 include src/arrays.h

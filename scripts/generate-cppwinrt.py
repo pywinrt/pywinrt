@@ -57,12 +57,9 @@ CPPWINRT_EXE = (
 if not CPPWINRT_EXE.exists():
     raise RuntimeError("cppwinrt.exe not found. Please run `./scripts/fetch-tools.ps1`")
 
-# The runtime's own directory, which is the one
-# winrt._include.get_cppwinrt_include() names. An interop package's is
+# The runtime's own directory, beside its sources. An interop package's is
 # "cppwinrt" beside its setup.py.
-RUNTIME_OUTPUT_PATH = (
-    REPO_ROOT_PATH / "runtime" / "python" / "winrt" / "include" / "cppwinrt"
-)
+RUNTIME_OUTPUT_PATH = REPO_ROOT_PATH / "runtime" / "src" / "include" / "cppwinrt"
 INTEROP_PATH = REPO_ROOT_PATH / "interop"
 INTEROP_OUTPUT_DIR = "cppwinrt"
 
