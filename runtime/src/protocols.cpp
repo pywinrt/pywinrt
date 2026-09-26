@@ -76,18 +76,20 @@ namespace py::interp
         }
 
         /**
-         * Replaces the pending exception with the KeyError that a Python
-         * mapping raises for a key it does not have.
+         * Takes the pending exception if it is the E_BOUNDS by which WinRT
+         * reports a key or a position the collection does not have.
          *
-         * WinRT reports one by failing with E_BOUNDS, which is an OSError by
-         * the time it gets here. Anything else really did fail and is left
-         * alone.
+         * That is an OSError by the time it gets here. Anything else really
+         * did fail and is left pending.
+         *
+         * @returns Whether it was E_BOUNDS, in which case no exception is left
+         * pending.
          */
-        void set_key_error(PyObject* key) noexcept
+        bool take_out_of_bounds() noexcept
         {
             if (!PyErr_ExceptionMatches(PyExc_OSError))
             {
-                return;
+                return false;
             }
 
 #if PY_VERSION_HEX < 0x030C0000
@@ -111,8 +113,7 @@ namespace py::interp
 
             if (hresult == winrt::impl::error_out_of_bounds)
             {
-                PyErr_SetObject(PyExc_KeyError, key);
-                return;
+                return true;
             }
 
 #if PY_VERSION_HEX < 0x030C0000
@@ -121,6 +122,34 @@ namespace py::interp
 #else
             PyErr_SetRaisedException(raised.detach());
 #endif
+
+            return false;
+        }
+
+        /**
+         * Replaces the pending exception with the KeyError that a Python
+         * mapping raises for a key it does not have, if it is WinRT's way of
+         * saying so.
+         */
+        void set_key_error(PyObject* key) noexcept
+        {
+            if (take_out_of_bounds())
+            {
+                PyErr_SetObject(PyExc_KeyError, key);
+            }
+        }
+
+        /**
+         * Replaces the pending exception with the IndexError that a Python
+         * sequence raises for a position it does not have, if it is WinRT's
+         * way of saying so.
+         */
+        void set_index_error() noexcept
+        {
+            if (take_out_of_bounds())
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+            }
         }
 
         // ----- sequences --------------------------------------------------
@@ -151,23 +180,41 @@ namespace py::interp
                 return nullptr;
             }
 
-            // An index this slot was given as a number goes to GetAt() as
-            // one; anything the direct path does not describe, including a
-            // negative index, keeps whatever the ordinary path makes of it.
-            if (index >= 0 && static_cast<uint64_t>(index) <= UINT32_MAX)
+            // A WinRT vector counts its elements in a uint32_t, so there is
+            // nothing to ask it for outside that range. CPython has already
+            // added the length to a negative index given to this slot, and
+            // what is still negative is before the first element.
+            if (index < 0)
             {
-                bool direct{};
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return nullptr;
+            }
 
-                auto* const item = call_indexed(
-                    info->protocol.get_at,
-                    abi_of(self),
-                    static_cast<uint32_t>(index),
-                    direct);
+            if (static_cast<uint64_t>(index) > UINT32_MAX)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return nullptr;
+            }
 
-                if (direct)
+            // An index this slot was given as a number goes to GetAt() as
+            // one; a GetAt() the direct path does not describe keeps whatever
+            // the ordinary path makes of it.
+            bool direct{};
+
+            auto* const direct_item = call_indexed(
+                info->protocol.get_at,
+                abi_of(self),
+                static_cast<uint32_t>(index),
+                direct);
+
+            if (direct)
+            {
+                if (!direct_item)
                 {
-                    return item;
+                    set_index_error();
                 }
+
+                return direct_item;
             }
 
             pyobj_handle position{PyLong_FromSsize_t(index)};
@@ -178,7 +225,15 @@ namespace py::interp
 
             PyObject* args[] = {position.get()};
 
-            return call_protocol(info->protocol.get_at, "indexing", self, args, 1);
+            pyobj_handle item{
+                call_protocol(info->protocol.get_at, "indexing", self, args, 1)};
+            if (!item)
+            {
+                set_index_error();
+                return nullptr;
+            }
+
+            return item.detach();
         }
 
         /**
@@ -324,10 +379,24 @@ namespace py::interp
                 return nullptr;
             }
 
-            auto const position = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);
+            auto position = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);
             if (position == -1 && PyErr_Occurred())
             {
                 return nullptr;
+            }
+
+            // CPython counts a negative index from the end only for the
+            // sequence slot, and this is the mapping slot, which is given the
+            // key as it was written.
+            if (position < 0)
+            {
+                auto const size = protocol_length(self);
+                if (size == -1)
+                {
+                    return nullptr;
+                }
+
+                position += size;
             }
 
             return sequence_item(self, position);
