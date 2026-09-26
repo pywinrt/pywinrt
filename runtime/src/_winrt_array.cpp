@@ -44,14 +44,13 @@ namespace py::cpp::_winrt
      */
     PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
     {
-        auto type = get_array_type();
-
-        if (!type)
+        auto const state = get_module_state();
+        if (!state)
         {
             return nullptr;
         }
 
-        auto self = Array_Alloc(type);
+        auto self = Array_Alloc(state->array_type);
 
         if (!self)
         {
@@ -684,7 +683,7 @@ namespace py::cpp::_winrt
 
     static PyTypeObject* get_array_type() noexcept
     {
-        auto state = py::cpp::_winrt::get_module_state();
+        auto state = py::cpp::_winrt::try_get_module_state();
         if (!state)
         {
             return nullptr;
