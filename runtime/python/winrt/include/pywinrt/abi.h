@@ -605,121 +605,134 @@ namespace py
         return 0;
     }
 
+    /// Stops a debug build of Python when a wrapper below is called in a
+    /// module whose init did not call import_winrt_runtime(), which would
+    /// otherwise crash on a null PyWinRT_API. It is empty in a release build.
+    inline void assert_runtime_imported() noexcept
+    {
+#ifdef Py_DEBUG
+        if (!PyWinRT_API)
+        {
+            Py_FatalError("import_winrt_runtime() was not called in module init");
+        }
+#endif
+    }
+
     inline PyTypeObject* register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->register_python_type);
+        assert_runtime_imported();
         return (*PyWinRT_API->register_python_type)(
             module, type_spec, base_type, metaclass);
     }
 
     inline PyTypeObject* get_python_type(std::string_view qualified_name) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_python_type);
+        assert_runtime_imported();
         return (*PyWinRT_API->get_python_type)(qualified_name);
     }
 
     inline void* get_struct_from_tuple_func(
         const std::string_view capsule_name) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_struct_from_tuple_func);
+        assert_runtime_imported();
         return (*PyWinRT_API->get_struct_from_tuple_func)(capsule_name);
     }
 
     inline uint64_t get_type_registry_epoch() noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->type_registry_epoch);
+        assert_runtime_imported();
         return *PyWinRT_API->type_registry_epoch;
     }
 
     inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_mapping_iter);
+        assert_runtime_imported();
         return (*PyWinRT_API->wrap_mapping_iter)(iter);
     }
 
     inline void set_member_not_available_error(
         member_not_available const& info) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_member_not_available_error);
+        assert_runtime_imported();
         (*PyWinRT_API->set_member_not_available_error)(info);
     }
 
     inline void set_error(error_info const& info) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_error);
+        assert_runtime_imported();
         (*PyWinRT_API->set_error)(info);
     }
 
     inline void set_call_error(
         call_error error, member_site const* site, Py_ssize_t arg_count) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->set_call_error);
+        assert_runtime_imported();
         (*PyWinRT_API->set_call_error)(error, site, arg_count);
     }
 
     inline int32_t report_unraisable() noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->report_unraisable);
+        assert_runtime_imported();
         return (*PyWinRT_API->report_unraisable)();
     }
 
     inline void toggle_python_reference(PyObject* obj, bool is_last_reference) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->toggle_python_reference);
+        assert_runtime_imported();
         (*PyWinRT_API->toggle_python_reference)(obj, is_last_reference);
     }
 
     inline bool is_buffer_compatible(
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->is_buffer_compatible);
+        assert_runtime_imported();
         return (*PyWinRT_API->is_buffer_compatible)(view, itemsize, format);
     }
 
     inline PyObject* convert_datetime(
         winrt::Windows::Foundation::DateTime value) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_datetime);
+        assert_runtime_imported();
         return (*PyWinRT_API->convert_datetime)(value);
     }
 
     inline winrt::Windows::Foundation::DateTime convert_to_datetime(PyObject* obj)
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_datetime);
+        assert_runtime_imported();
         return (*PyWinRT_API->convert_to_datetime)(obj);
     }
 
     inline PyObject* convert_guid(winrt::guid value) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_guid);
+        assert_runtime_imported();
         return (*PyWinRT_API->convert_guid)(value);
     }
 
     inline winrt::guid convert_to_guid(PyObject* obj)
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_guid);
+        assert_runtime_imported();
         return (*PyWinRT_API->convert_to_guid)(obj);
     }
 
     inline PyTypeObject* get_inspectable_meta_type() noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_inspectable_meta_type);
+        assert_runtime_imported();
         return (*PyWinRT_API->get_inspectable_meta_type)();
     }
 
     inline PyTypeObject* get_object_type() noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_object_type);
+        assert_runtime_imported();
         return (*PyWinRT_API->get_object_type)();
     }
 
     inline PyObject* await_async(PyObject* obj) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->await_async);
+        assert_runtime_imported();
         return (*PyWinRT_API->await_async)(obj);
     }
 
@@ -727,7 +740,7 @@ namespace py
         winrt::Windows::Foundation::IInspectable const& value,
         char const* qualified_name) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_object);
+        assert_runtime_imported();
         return (*PyWinRT_API->wrap_object)(value, qualified_name);
     }
 
@@ -735,33 +748,33 @@ namespace py
         winrt::Windows::Foundation::IInspectable const& value,
         char const* signature) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_by_signature);
+        assert_runtime_imported();
         return (*PyWinRT_API->wrap_by_signature)(value, signature);
     }
 
     inline bool unwrap_object(
         PyObject* obj, winrt::guid const& iid, void** result) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->unwrap_object);
+        assert_runtime_imported();
         return (*PyWinRT_API->unwrap_object)(obj, iid, result);
     }
 
     inline PyObject* struct_to_python(PyTypeObject* type, void const* value) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->struct_to_python);
+        assert_runtime_imported();
         return (*PyWinRT_API->struct_to_python)(type, value);
     }
 
     inline bool struct_from_python(
         PyTypeObject* type, PyObject* obj, void* out) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->struct_from_python);
+        assert_runtime_imported();
         return (*PyWinRT_API->struct_from_python)(type, obj, out);
     }
 
     inline winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj)
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_ibuffer);
+        assert_runtime_imported();
         return (*PyWinRT_API->convert_to_ibuffer)(obj);
     }
 
@@ -771,117 +784,117 @@ namespace py
         winrt::guid const& handler_iid,
         async_set_completed_fn set_completed) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->async_wait);
+        assert_runtime_imported();
         return (*PyWinRT_API->async_wait)(
             async, timeout_ms, handler_iid, set_completed);
     }
 
     inline int32_t pyseq_size(PyObject* sequence, uint32_t* size) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_size);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_size)(sequence, size);
     }
 
     inline int32_t pyseq_get_at(
         PyObject* sequence, uint32_t index, PyObject** item) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_get_at);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_get_at)(sequence, index, item);
     }
 
     inline int32_t pyseq_set_at(
         PyObject* sequence, uint32_t index, PyObject* item) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_set_at);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_set_at)(sequence, index, item);
     }
 
     inline int32_t pyseq_insert_at(
         PyObject* sequence, uint32_t index, PyObject* item) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_insert_at);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_insert_at)(sequence, index, item);
     }
 
     inline int32_t pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_remove_at);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_remove_at)(sequence, index);
     }
 
     inline int32_t pyseq_append(PyObject* sequence, PyObject* item) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_append);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_append)(sequence, item);
     }
 
     inline int32_t pyseq_remove_at_end(PyObject* sequence) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_remove_at_end);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_remove_at_end)(sequence);
     }
 
     inline int32_t pyseq_index_of(
         PyObject* sequence, PyObject* item, uint32_t* index, bool* found) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_index_of);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_index_of)(sequence, item, index, found);
     }
 
     inline int32_t pyseq_clear(PyObject* sequence) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyseq_clear);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyseq_clear)(sequence);
     }
 
     inline int32_t pyiter_first(PyObject* iterable, PyObject** iterator) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyiter_first);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyiter_first)(iterable, iterator);
     }
 
     inline int32_t pyiter_next(PyObject* iterator, PyObject** item) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pyiter_next);
+        assert_runtime_imported();
         return (*PyWinRT_API->pyiter_next)(iterator, item);
     }
 
     inline int32_t pymap_size(PyObject* mapping, uint32_t* size) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_size);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_size)(mapping, size);
     }
 
     inline int32_t pymap_lookup(
         PyObject* mapping, PyObject* key, PyObject** value) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_lookup);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_lookup)(mapping, key, value);
     }
 
     inline int32_t pymap_has_key(
         PyObject* mapping, PyObject* key, bool* has_key) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_has_key);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_has_key)(mapping, key, has_key);
     }
 
     inline int32_t pymap_insert(
         PyObject* mapping, PyObject* key, PyObject* value, bool* replaced) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_insert);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_insert)(mapping, key, value, replaced);
     }
 
     inline int32_t pymap_remove(PyObject* mapping, PyObject* key) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_remove);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_remove)(mapping, key);
     }
 
     inline int32_t pymap_clear(PyObject* mapping) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_clear);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_clear)(mapping);
     }
 
@@ -891,7 +904,7 @@ namespace py
         PyObject** key,
         PyObject** value) noexcept
     {
-        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->pymap_iter_next);
+        assert_runtime_imported();
         return (*PyWinRT_API->pymap_iter_next)(mapping, iterator, key, value);
     }
 
@@ -899,14 +912,14 @@ namespace py
     {
         inline PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
         {
-            WINRT_ASSERT(PyWinRT_API && PyWinRT_API->array_new);
+            assert_runtime_imported();
             return (*PyWinRT_API->array_new)(std::move(array));
         }
 
         inline bool Array_Assign(
             PyObject* obj, std::unique_ptr<py::Array> array) noexcept
         {
-            WINRT_ASSERT(PyWinRT_API && PyWinRT_API->array_assign);
+            assert_runtime_imported();
             return (*PyWinRT_API->array_assign)(obj, std::move(array));
         }
     } // namespace cpp::_winrt
