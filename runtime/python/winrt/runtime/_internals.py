@@ -53,9 +53,24 @@ def load_projection(spec: ModuleSpec) -> None:
     if not spec.origin:
         raise ImportError(f"{spec.name} was not loaded from a file")
 
-    _load_projection(
-        sys.modules[spec.name], os.fspath(Path(spec.origin).parent / TABLE_NAME)
-    )
+    table = os.fspath(Path(spec.origin).parent / TABLE_NAME)
+
+    try:
+        _load_projection(sys.modules[spec.name], table)
+    except OSError as error:
+        # The table is opened and mapped, so a missing or unreadable one
+        # arrives here as an OSError that says only what the operating system
+        # said - no file name, no module. That is nearly always a package
+        # whose module was copied without the data file beside it, which is
+        # what a freezer does when nothing tells it about the table, so the
+        # message has to name both and say what kind of thing is missing.
+        raise ImportError(
+            f"{spec.name} could not read its projection table, which a"
+            " projection package carries beside the module that loads it."
+            f" Reading {table} failed: {error}",
+            name=spec.name,
+            path=table,
+        ) from error
 
 
 class _DllCookie:

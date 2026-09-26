@@ -20,6 +20,7 @@ interfaces is compared against the published values, which is what
 
 import enum
 import importlib
+import importlib.util
 import pathlib
 import struct
 import sys
@@ -30,6 +31,7 @@ import uuid
 from typing import Any
 
 import winrt._winrt
+import winrt.runtime._internals
 
 # The category in the low bits of a type record's flags.
 CATEGORY_ENUM = 0
@@ -849,3 +851,54 @@ class TestTableGuids(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MissingTable(unittest.TestCase):
+    """
+    What a package whose table did not travel with it says.
+
+    A freezer that collects the module and leaves the data file beside it
+    behind produces exactly this. The table is opened and mapped, so the
+    operating system is what refuses it, and what the operating system says
+    names neither the file nor the module - the import path has to.
+    """
+
+    def load(self, directory: str) -> ImportError:
+        """
+        Loads a projection out of a directory that has no table in it.
+        """
+        origin = pathlib.Path(directory) / "__init__.py"
+        origin.write_bytes(b"")
+
+        name = f"_not_a_projection_{pathlib.Path(directory).name}"
+        spec = importlib.util.spec_from_file_location(name, origin)
+        assert spec is not None
+        sys.modules[name] = types.ModuleType(name)
+
+        try:
+            with self.assertRaises(ImportError) as caught:
+                winrt.runtime._internals.load_projection(spec)
+        finally:
+            del sys.modules[name]
+
+        return caught.exception
+
+    def test_it_names_the_module_and_the_table_it_wanted(self):
+        with tempfile.TemporaryDirectory() as directory:
+            error = self.load(directory)
+            table = pathlib.Path(directory) / "_table.pywinrt"
+
+            self.assertEqual(
+                error.name, f"_not_a_projection_{pathlib.Path(directory).name}"
+            )
+            self.assertEqual(error.path, str(table))
+            self.assertIn(error.name, str(error))
+            self.assertIn(str(table), str(error))
+
+    def test_it_keeps_what_the_operating_system_said(self):
+        # the cause is what says whether the file was missing, locked or
+        # unreadable, which is the part that tells the two apart
+        with tempfile.TemporaryDirectory() as directory:
+            error = self.load(directory)
+
+            self.assertIsInstance(error.__cause__, FileNotFoundError)

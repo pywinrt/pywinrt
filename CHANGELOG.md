@@ -6,6 +6,11 @@
 
 ### Added
 - Wheels are now published for Python 3.14 and Python 3.15.
+- A projection package whose table is missing now raises an `ImportError`
+  that names the module and the table it went looking for, where it used to
+  raise whatever the operating system said about a file it did not name. That
+  is nearly always a build that copied the module without the data file beside
+  it, and the old message gave a reader nothing to go on.
 - `winrt-runtime` now ships a PyInstaller hook, so freezing an application
   that uses PyWinRT needs no configuration. The hook collects the
   `_table.pywinrt` beside each projection module, which PyInstaller would
