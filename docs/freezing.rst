@@ -104,14 +104,12 @@ works in the build environment either way, because the interpreter there can
 still find the installed copy.
 
 A module whose table did not travel with it fails at the import of that
-module::
+module, and says which table it went looking for::
 
-   File "winrt\windows\foundation\__init__.py", line 8, in <module>
-   File "winrt\runtime\_internals.py", line 56, in load_projection
-   FileNotFoundError: [WinError -2147024894] The system cannot find the file specified.
-
-The traceback names the module; the file it could not find is the
-``_table.pywinrt`` that belongs beside it.
+   ImportError: winrt.windows.foundation could not read its projection table,
+   which a projection package carries beside the module that loads it. Reading
+   ...\winrt\windows\foundation\_table.pywinrt failed: [WinError -2147024894]
+   The system cannot find the file specified.
 
 A namespace that was not collected at all fails later and looks like
 something else entirely - at the call that would have returned a type from
