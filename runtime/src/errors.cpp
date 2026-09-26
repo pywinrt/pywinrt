@@ -1,11 +1,13 @@
 // The error policy of the projection: which Python exception a failed call
 // raises, and what it says.
 //
-// A projection module does none of this itself. It catches its own C++
-// exception in py::to_PyErr(), flattens it into one of the PODs in
-// <pywinrt/abi.h>, and calls in here, so the wording, the exception type and
-// the HRESULT mapping belong to winrt-runtime and can improve in a runtime
-// release without rebuilding any of the projection packages.
+// Every failed WinRT call comes through here. The runtime's own code catches
+// the C++ exception in py::to_PyErr(), which flattens it into one of the PODs
+// in <pywinrt/abi.h> and calls in, and an interop package, which is compiled
+// apart from the runtime, gets its exception from
+// winrt._winrt.hresult_error(). So the wording, the exception type and the
+// HRESULT mapping belong to winrt-runtime and can improve in a runtime
+// release without rebuilding any other package.
 
 #include <pywinrt/base.h>
 

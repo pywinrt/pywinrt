@@ -1,12 +1,11 @@
-// The umbrella header for the PyWinRT runtime API. A module that compiles
-// against winrt-runtime includes this one and gets everything; each header
-// below says what it is for, and they are listed in the order they depend on
-// each other.
+// The umbrella header for winrt-runtime's own C++ headers. A source file of
+// the runtime includes this one and gets everything; each header below says
+// what it is for, and they are listed in the order they depend on each other.
 //
 // It stays one include rather than ten because the py::converter<T>
 // specializations are spread over convert.h and array.h, and every
-// one of them has to be declared before a module instantiates any of them.
-// Including this header is what guarantees that.
+// one of them has to be declared before a source file instantiates any of
+// them. Including this header is what guarantees that.
 
 #pragma once
 
