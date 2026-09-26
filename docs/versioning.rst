@@ -100,7 +100,7 @@ versions, not a crash:
 
 .. code-block:: text
 
-   RuntimeError: winrt._winrt._C_API ABI minor version mismatch: expected >= 8, got 3
+   RuntimeError: winrt._winrt._C_API ABI minor version mismatch: expected >= 2, got 0
    ImportError: table format version 4.3 is newer than this runtime, which reads 4.0
 
 The fix for both is to upgrade ``winrt-runtime``.
@@ -208,9 +208,21 @@ Up to 3.2.1 every package carried the code generator's version, with a fourth
 segment added to fix one package on its own, and a projection of your own
 components had to use the same scheme. None of that applies now.
 
-The two generations never mix: a 3.x projection package requires
-``winrt-runtime~=3.2.1.0``, so pip cannot pair one with a 4.x runtime. The
-forward promise above — that a runtime runs anything of its generation that is
-no newer than itself — begins at 4.0 and says nothing about 3.x.
+The two generations never mix. A 3.x projection package is compiled code
+built for the 3.x runtime, and runtime 4 refuses to load it:
+
+.. code-block:: text
+
+   RuntimeError: winrt._winrt._C_API capsule has invalid data
+
+This is what you see after upgrading ``winrt-runtime`` on its own, for
+example with ``pip install -U winrt-runtime``. The 3.x packages require
+``winrt-runtime~=3.2.1.0``, but pip only warns about that conflict and leaves
+them installed. The fix is to upgrade the projection packages too, under
+their 4.x names (see ``scripts/3to4/README.md`` in the repository), so that
+nothing from 3.x is left in the environment.
+
+The forward promise above — that a runtime runs anything of its generation
+that is no newer than itself — begins at 4.0 and says nothing about 3.x.
 
 .. seealso:: :doc:`types`

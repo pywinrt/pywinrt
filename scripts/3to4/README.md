@@ -6,6 +6,20 @@ fewer, larger packages. This describes what you need to change in your own
 code and in your dependency lists. Everything else that changed in v4 is in
 [CHANGELOG.md](../../CHANGELOG.md).
 
+## Upgrade every package, not only the runtime
+
+A v3 projection package does not load with the v4 runtime. If
+`pip install -U winrt-runtime` has upgraded the runtime and left the v3
+packages behind (pip only warns about their `winrt-runtime~=3.2.1.0`
+requirement), importing one of them fails with:
+
+```text
+RuntimeError: winrt._winrt._C_API capsule has invalid data
+```
+
+Upgrade the projection packages as well, under the names below, until no v3
+package is left.
+
 ## The `winui3` and `webview2` top-level packages are gone
 
 v3 gave the Windows App SDK and WebView2 a top-level Python package and a
