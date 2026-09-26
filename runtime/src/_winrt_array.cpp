@@ -284,6 +284,12 @@ namespace py::cpp::_winrt
                 }
             }
 
+            auto const state = get_module_state();
+            if (!state)
+            {
+                return nullptr;
+            }
+
             auto type = reinterpret_cast<PyTypeObject*>(arg0);
 
             // if a type has an _assign_array_ special method, use that to create
@@ -320,8 +326,7 @@ namespace py::cpp::_winrt
             {
                 self->array = std::make_unique<py::ComArray<winrt::hstring>>();
             }
-            else if (std::strcmp(type->tp_name, "UUID") == 0) // TODO: stricter
-                                                              // check
+            else if (type == state->uuid_type)
             {
                 self->array = std::make_unique<py::ComArray<winrt::guid>>();
             }
