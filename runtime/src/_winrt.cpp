@@ -901,6 +901,9 @@ namespace py::cpp::_winrt
         // code of one interpreter in another.
         {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
 #endif
+#ifdef Py_mod_gil
+        {Py_mod_gil, Py_MOD_GIL_NOT_USED},
+#endif
         {}};
 
     PyDoc_STRVAR(module_doc, "_winrt");
