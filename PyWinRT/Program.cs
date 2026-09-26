@@ -102,6 +102,12 @@ var dllPackageOption = new Option<string>(
     ArgumentHelpName = "module",
 };
 
+var legacyMethodAliasesOption = new Option<bool>(
+    "--legacy-method-aliases",
+    "Give each method that pywinrt v3.x projected under another name a deprecated alias with "
+        + "that name. Only a projection that pywinrt v3.x published has code that calls them."
+);
+
 var verboseOption = new Option<bool>("--verbose", "Show detailed progress information");
 
 var rootCommand = new RootCommand("Generate Python projection for Windows Runtime types");
@@ -115,6 +121,7 @@ rootCommand.AddOption(shapesOption);
 rootCommand.AddOption(emitShapesOption);
 rootCommand.AddOption(componentDllsOption);
 rootCommand.AddOption(dllPackageOption);
+rootCommand.AddOption(legacyMethodAliasesOption);
 rootCommand.AddOption(verboseOption);
 
 rootCommand.SetHandler(
@@ -141,6 +148,9 @@ rootCommand.SetHandler(
         var emitShapes = invocationContext.ParseResult.GetValueForOption(emitShapesOption);
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
         var dllPackage = invocationContext.ParseResult.GetValueForOption(dllPackageOption);
+        var legacyMethodAliases = invocationContext.ParseResult.GetValueForOption(
+            legacyMethodAliasesOption
+        );
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
         var inputPackage = default(string);
@@ -459,6 +469,7 @@ rootCommand.SetHandler(
                         group,
                         componentDlls,
                         dllPackage,
+                        legacyMethodAliases,
                         census
                     );
 

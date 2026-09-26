@@ -14,6 +14,7 @@ static class FileWriters
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls,
         string? dllPackage,
+        bool legacyMethodAliases,
         Census census
     )
     {
@@ -28,7 +29,7 @@ static class FileWriters
             nsDir = new DirectoryInfo(Path.Combine(nsDir.FullName, segment));
         }
 
-        var members = new Members(typeDefinitions);
+        var members = new Members(typeDefinitions, legacyMethodAliases);
 
         if (
             !members

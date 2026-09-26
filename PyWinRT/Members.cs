@@ -44,7 +44,10 @@ sealed class Members
     /// Initializes a new instance of the <see cref="Members"/> class.
     /// </summary>
     /// <param name="typeDefinitions">Type definitions to categorize.</param>
-    public Members(IEnumerable<TypeDefinition> typeDefinitions)
+    /// <param name="legacyMethodAliases">
+    /// Whether methods get a deprecated alias under their pywinrt v3.x name.
+    /// </param>
+    public Members(IEnumerable<TypeDefinition> typeDefinitions, bool legacyMethodAliases)
     {
         var enums = new List<TypeDefinition>();
         var structs = new List<TypeDefinition>();
@@ -95,16 +98,16 @@ sealed class Members
             }
         }
 
-        Enums = Project(enums);
-        Structs = Project(structs);
-        Interfaces = Project(interfaces);
-        Classes = Project(classes);
-        Delegates = Project(delegates);
-        Attributes = Project(attributes);
-        Contracts = Project(contracts);
+        Enums = Project(enums, legacyMethodAliases);
+        Structs = Project(structs, legacyMethodAliases);
+        Interfaces = Project(interfaces, legacyMethodAliases);
+        Classes = Project(classes, legacyMethodAliases);
+        Delegates = Project(delegates, legacyMethodAliases);
+        Attributes = Project(attributes, legacyMethodAliases);
+        Contracts = Project(contracts, legacyMethodAliases);
     }
 
-    private static ProjectedType[] Project(List<TypeDefinition> types)
+    private static ProjectedType[] Project(List<TypeDefinition> types, bool legacyMethodAliases)
     {
         // Analyzing a type is relatively expensive and independent of other
         // types, so for large namespaces, do it in parallel. This helps the
@@ -112,10 +115,14 @@ sealed class Members
         // running at the end.
         if (types.Count < 32)
         {
-            return types.Select(t => new ProjectedType(t)).ToArray();
+            return types.Select(t => new ProjectedType(t, legacyMethodAliases)).ToArray();
         }
 
-        return types.AsParallel().AsOrdered().Select(t => new ProjectedType(t)).ToArray();
+        return types
+            .AsParallel()
+            .AsOrdered()
+            .Select(t => new ProjectedType(t, legacyMethodAliases))
+            .ToArray();
     }
 
     private static IEnumerable<TypeReference> RecursiveGetTypes(TypeReference type)

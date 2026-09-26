@@ -1192,7 +1192,8 @@ sealed class TableWriter
             return existing;
         }
 
-        var projected = new ProjectedType(definition);
+        // the aliases are added by the generated __init__.py, not the table
+        var projected = new ProjectedType(definition, legacyMethodAliases: false);
 
         definitions.Add(definition.FullName, projected);
 

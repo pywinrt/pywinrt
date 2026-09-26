@@ -5,7 +5,7 @@ class ProjectedType
     // TODO: eventually, this should be private
     public readonly TypeDefinition Type;
 
-    public ProjectedType(TypeDefinition type)
+    public ProjectedType(TypeDefinition type, bool legacyMethodAliases)
     {
         Type = type;
 
@@ -61,7 +61,13 @@ class ProjectedType
         Constructors = EnumerateConstructors(type).ToArray();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
-        MethodGroups = EnumerateMethodGroups(type, Properties, Events, GetReservedPyNames());
+        MethodGroups = EnumerateMethodGroups(
+            type,
+            Properties,
+            Events,
+            GetReservedPyNames(),
+            legacyMethodAliases
+        );
         Methods = MethodGroups.SelectMany(g => g.Overloads).ToList();
 
         HasComposableFactory = factories.Values.Any(f =>
@@ -690,7 +696,8 @@ class ProjectedType
         TypeDefinition type,
         IEnumerable<ProjectedProperty> properties,
         IEnumerable<ProjectedEvent> events,
-        IEnumerable<string> reservedPyNames
+        IEnumerable<string> reservedPyNames,
+        bool legacyMethodAliases
     )
     {
         var collected = new SortedDictionary<
@@ -889,8 +896,9 @@ class ProjectedType
 
         // Methods that were renamed when the Overload attribute started being
         // used for method names in pywinrt v3.0 get a deprecated alias so that
-        // code written for that version keeps working. A real attribute of the
-        // type always wins over an alias.
+        // code written for that version keeps working, if the projection asks
+        // for them with --legacy-method-aliases. A real attribute of the type
+        // always wins over an alias.
         //
         // NB: This is transitional. When the aliases have been deprecated long
         // enough to be removed, delete everything that goes with them: the code
@@ -898,8 +906,15 @@ class ProjectedType
         // alias_static_method() calls in the generated __init__.py, the
         // @deprecated defs in the generated type stubs, the LegacyPyName of
         // ProjectedMethod and the lookup of the old name in
-        // WriteGetPythonMethod(), and the helpers in winrt.runtime._internals.
-        // The warning about an old name that can't be kept goes away with them.
+        // WriteGetPythonMethod(), the helpers in winrt.runtime._internals, and
+        // the --legacy-method-aliases option and where scripts/generate-pywinrt.py
+        // passes it. The warning about an old name that can't be kept goes away
+        // with them.
+
+        if (!legacyMethodAliases)
+        {
+            return [.. resolved.Values.Select(m => new ProjectedMethodGroup([.. m.Values], []))];
+        }
 
         var reserved = new Dictionary<bool, HashSet<string>>
         {
