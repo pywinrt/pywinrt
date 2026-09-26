@@ -84,9 +84,8 @@ set(WINRT_RUNTIME_SRC_PATH "${WINRT_RUNTIME_PATH}/src")
 set(WINRT_RUNTIME_PYTHON_PATH "${WINRT_RUNTIME_PATH}/python/winrt")
 set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_PYTHON_PATH}/include")
 # The C++/WinRT headers scripts/generate-cppwinrt.py writes. The runtime
-# carries what pywinrt/base.h includes, which is what everything compiled
-# against the PyWinRT headers gets; an interop module carries the namespaces it
-# includes beyond those, in a cppwinrt directory of its own.
+# carries what pywinrt/base.h includes; an interop module carries the whole
+# closure of the namespaces it includes, in a cppwinrt directory of its own.
 set(CPPWINRT_PATH "${WINRT_RUNTIME_INCLUDE_PATH}/cppwinrt")
 set(PYWINRT_CHECK_DLL_IMPORTS "${CMAKE_CURRENT_SOURCE_DIR}/check-dll-imports.cmake")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
@@ -239,7 +238,6 @@ pywinrt_add_interop_module(_winrt_microsoft_ui_interop
 # the one interop module written against C++/WinRT, since that is the only
 # form in which the App SDK ships the functions it calls
 target_include_directories(_winrt_microsoft_ui_interop PRIVATE
-    "${CPPWINRT_PATH}"
     "${PYWINRT_INTEROP_PATH}/winrt-Microsoft.UI.Interop/cppwinrt"
     "${WASDK_INTERACTIVE_EXPERIENCES_PATH}/include")
 if (NOT MSVC)

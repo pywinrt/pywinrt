@@ -48,9 +48,6 @@ hook-dirs = "winrt.__pyinstaller:get_hook_dirs"
 "*" = ["*.pyi", "py.typed", "*.h"]
 
 [tool.cibuildwheel]
-# don't install winrt-runtime from PyPI
-build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
-before-build = "uv pip install setuptools"
 # don't build for PyPy or for the free-threaded interpreters, which the
 # projection doesn't support yet
 skip = "pp* cp*t-*"
