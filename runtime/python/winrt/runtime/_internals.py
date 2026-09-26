@@ -222,16 +222,6 @@ def mixin_mutable_sequence(typ: type) -> None:
     """
     mixin_sequence(typ)
 
-    if not hasattr(typ, "insert") and hasattr(typ, "insert_at"):
-
-        def insert(self: Any, index: int, value: object) -> None:
-            """
-            Alias for ``insert_at`` for compatibility with Python Sequence protocol.
-            """
-            self.insert_at(index, value)
-
-        typ.insert = insert  # type: ignore
-
     # mixin methods
     if not hasattr(typ, "append"):
         typ.append = MutableSequence.append  # type: ignore
