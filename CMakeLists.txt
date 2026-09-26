@@ -25,7 +25,7 @@ set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install pre
 # .config/_tools.json is the single source of truth for NuGet package versions
 file(READ ".config/_tools.json" TOOLS_JSON)
 string(JSON WEBVIEW2_VERSION GET ${TOOLS_JSON} "Microsoft.Web.WebView2")
-# Only the two components the interop modules compile against: the App SDK
+# Only the three components the interop modules compile against: the App SDK
 # is a metapackage and nothing else here is built from it.
 string(JSON WASDK_FOUNDATION_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.Foundation")
 string(JSON WASDK_INTERACTIVE_EXPERIENCES_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.InteractiveExperiences")
