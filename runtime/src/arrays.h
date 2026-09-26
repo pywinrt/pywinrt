@@ -9,9 +9,11 @@
 //
 // That is what is here. Elements a caller passes or lends are borrowed from
 // any Python object that exports a buffer of the right shape, which is what
-// the generated projection did too; elements a call hands back become a
-// winrt.system.Array whose element type is a type code rather than a C++ type,
-// which is the one thing py::ComArray<T> in <pywinrt/array.h> cannot be.
+// the generated projection did too, except that elements holding references
+// are only taken from a winrt.system.Array of the same element type; elements
+// a call hands back become a winrt.system.Array whose element type is a type
+// code rather than a C++ type, which is the one thing py::ComArray<T> in
+// <pywinrt/array.h> cannot be.
 //
 // A parameter's own descriptor is what describes its elements - the type code
 // and type of an array parameter are the element's - so everything below takes

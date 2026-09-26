@@ -108,6 +108,13 @@ namespace py
         virtual std::string_view Format() noexcept = 0;
 
         /**
+         * Whether an element holds references - a string, an object, or a
+         * struct with a field that does - which copying its bytes does not
+         * duplicate.
+         */
+        virtual bool HoldsReferences() noexcept = 0;
+
+        /**
          * Gets the number of elements in the array.
          */
         virtual uint32_t Size() noexcept = 0;

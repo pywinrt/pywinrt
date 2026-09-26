@@ -86,6 +86,26 @@ namespace py::cpp::_winrt
     }
 
     /**
+     * The array behind @p obj, or @c nullptr, with no error set, when @p obj
+     * is not a winrt.system.Array.
+     */
+    py::Array* Array_Get(PyObject* obj) noexcept
+    {
+        auto const type = get_array_type();
+        if (!type)
+        {
+            return nullptr;
+        }
+
+        if (!Py_IS_TYPE(obj, type))
+        {
+            return nullptr;
+        }
+
+        return reinterpret_cast<Array*>(obj)->array.get();
+    }
+
+    /**
      * The PEP 3118 buffer format among @p annotations, which are the
      * __metadata__ of an Annotated alias, or a null handle when there is none.
      *
@@ -459,15 +479,16 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            // TODO: need better parsing since 'P' could be in an identifier
-            // however, since we are only using lower case identifiers, this
-            // shouldn't be a problem in practice.
-            if (format.find('P') != std::string_view::npos)
+            // Copying the bytes of an element that holds references would
+            // give this array references it does not own, and nothing can
+            // tell whether the pointers in someone else's buffer point at
+            // objects of the element type at all.
+            if (self->array->HoldsReferences())
             {
-                // TODO: need a way to validate pointer types before we can do this
                 PyErr_SetString(
-                    PyExc_NotImplementedError,
-                    "copying arrays containing pointers is not implemented");
+                    PyExc_TypeError,
+                    "cannot copy elements that hold references from a buffer: "
+                    "pass a list or a tuple of them instead");
                 return nullptr;
             }
 

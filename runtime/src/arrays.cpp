@@ -443,6 +443,11 @@ namespace py::interp
             return format_;
         }
 
+        bool HoldsReferences() noexcept override
+        {
+            return value_owns_resources(element_);
+        }
+
         uint32_t Size() noexcept override
         {
             return size_;
@@ -627,6 +632,70 @@ namespace py::interp
         }
     } // namespace
 
+    namespace
+    {
+        /**
+         * Checks that @p obj is a winrt.system.Array of @p element's type.
+         *
+         * An element that holds references is a pointer, or a struct with
+         * one, and the buffer format says no more than that, so a buffer of
+         * such elements is only taken from an array whose element type is
+         * the one the parameter is declared with: the pointers in any other
+         * buffer could point at anything.
+         *
+         * @returns @c false with a Python error set.
+         */
+        bool is_array_of(projection& owner, arg_desc& element, PyObject* obj) noexcept
+        {
+            std::wstring name;
+            if (!element_name(owner, element, name))
+            {
+                return false;
+            }
+
+            auto const array = py::cpp::_winrt::Array_Get(obj);
+
+            if (array && array->WinrtElementTypeName() == name)
+            {
+                return true;
+            }
+
+            pyobj_handle expected{PyUnicode_FromWideChar(
+                name.c_str(), static_cast<Py_ssize_t>(name.size()))};
+            if (!expected)
+            {
+                return false;
+            }
+
+            if (!array)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "elements of type %U can only be passed in a "
+                    "winrt.system.Array, not in %s",
+                    expected.get(),
+                    Py_TYPE(obj)->tp_name);
+                return false;
+            }
+
+            auto const actual_name = array->WinrtElementTypeName();
+
+            pyobj_handle actual{PyUnicode_FromWideChar(
+                actual_name.data(), static_cast<Py_ssize_t>(actual_name.size()))};
+            if (!actual)
+            {
+                return false;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "requires a winrt.system.Array of %U, not of %U",
+                expected.get(),
+                actual.get());
+            return false;
+        }
+    } // namespace
+
     /**
      * Borrows the elements an array argument passes or lends from @p obj.
      *
@@ -667,6 +736,17 @@ namespace py::interp
         }
 
         if (!is_buffer_compatible(*view, value_size, format.c_str()))
+        {
+            PyBuffer_Release(view);
+            return false;
+        }
+
+        if (!value_owns_resources(element))
+        {
+            return true;
+        }
+
+        if (!is_array_of(owner, element, obj))
         {
             PyBuffer_Release(view);
             return false;
