@@ -1,3 +1,5 @@
+#include "interop.h"
+
 #if __has_include("windows.graphics.directx.direct3d11.interop.h")
 #include <windows.graphics.directx.direct3d11.interop.h>
 
@@ -39,8 +41,7 @@ namespace Windows::Graphics::DirectX::Direct3D11
     IDirect3DDxgiInterfaceAccess : ::IUnknown
     {
         virtual HRESULT STDMETHODCALLTYPE GetInterface(
-            REFIID riid, _COM_Outptr_ void** p) noexcept
-            = 0;
+            REFIID riid, _COM_Outptr_ void** p) noexcept = 0;
     };
 } // namespace Windows::Graphics::DirectX::Direct3D11
 
@@ -54,143 +55,106 @@ __CRT_UUID_DECL(
 #endif
 #endif
 
-#include <pywinrt/base.h>
-
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/
 
-namespace py::cpp::Windows::Graphics::DirectX::Direct3D11::Interop
+namespace
 {
-    static PyObject* create_direct3d11_device_from_dxgi_device(
+    using ::Windows::Graphics::DirectX::Direct3D11::IDirect3DDxgiInterfaceAccess;
+
+    PyObject* create_direct3d11_device_from_dxgi_device(
         PyObject* /*unused*/, PyObject* dxgi_device_obj) noexcept
     {
-        try
+        auto const dxgi_device
+            = static_cast<IDXGIDevice*>(PyLong_AsVoidPtr(dxgi_device_obj));
+        if (!dxgi_device && PyErr_Occurred())
         {
-            auto dxgi_device
-                = reinterpret_cast<IDXGIDevice*>(PyLong_AsVoidPtr(dxgi_device_obj));
-
-            if (!dxgi_device && PyErr_Occurred())
-            {
-                return nullptr;
-            }
-
-            winrt::com_ptr<::IInspectable> d3d_device;
-            winrt::check_hresult(
-                CreateDirect3D11DeviceFromDXGIDevice(dxgi_device, d3d_device.put()));
-
-            return py::wrap_object(
-                d3d_device.as<winrt::Windows::Foundation::IInspectable>(),
-                "winrt.windows.graphics.directx.direct3d11.IDirect3DDevice");
-        }
-        catch (...)
-        {
-            py::to_PyErr();
             return nullptr;
         }
+
+        ::IInspectable* d3d_device{};
+
+        auto const hr = CreateDirect3D11DeviceFromDXGIDevice(dxgi_device, &d3d_device);
+        if (FAILED(hr))
+        {
+            return interop::set_hresult_error(hr);
+        }
+
+        return interop::new_interface_capsule(d3d_device);
     }
 
-    PyDoc_STRVAR(
-        create_direct3d11_device_from_dxgi_device_doc,
-        R"(Creates an instance of IDirect3DDevice from an IDXGIDevice.
-
-Args:
-    dxgi_device (IDXGIDevice*): The IDXGIDevice to create the Direct3DDevice from.
-
-Returns:
-    A Direct3DDevice instance that wraps the DXGIDevice.
-)");
-
-    static PyObject* create_direct3d11_surface_from_dxgi_surface(
+    PyObject* create_direct3d11_surface_from_dxgi_surface(
         PyObject* /*unused*/, PyObject* dxgi_surface_obj) noexcept
     {
-        try
+        auto const dxgi_surface
+            = static_cast<IDXGISurface*>(PyLong_AsVoidPtr(dxgi_surface_obj));
+        if (!dxgi_surface && PyErr_Occurred())
         {
-            auto dxgi_surface
-                = reinterpret_cast<IDXGISurface*>(PyLong_AsVoidPtr(dxgi_surface_obj));
-
-            if (!dxgi_surface && PyErr_Occurred())
-            {
-                return nullptr;
-            }
-
-            winrt::com_ptr<::IInspectable> d3d_surface;
-            winrt::check_hresult(CreateDirect3D11SurfaceFromDXGISurface(
-                dxgi_surface, d3d_surface.put()));
-
-            return py::wrap_object(
-                d3d_surface.as<winrt::Windows::Foundation::IInspectable>(),
-                "winrt.windows.graphics.directx.direct3d11.IDirect3DSurface");
-        }
-        catch (...)
-        {
-            py::to_PyErr();
             return nullptr;
         }
+
+        ::IInspectable* d3d_surface{};
+
+        auto const hr
+            = CreateDirect3D11SurfaceFromDXGISurface(dxgi_surface, &d3d_surface);
+        if (FAILED(hr))
+        {
+            return interop::set_hresult_error(hr);
+        }
+
+        return interop::new_interface_capsule(d3d_surface);
     }
 
-    PyDoc_STRVAR(
-        create_direct3d11_surface_from_dxgi_surface_doc,
-        R"(Creates an instance of IDirect3DSurface from an IDXGISurface.
-
-Args:
-    dxgi_surface (IDXGISurface*): The IDXGISurface to create the Direct3DSurface from.
-
-Returns:
-    A Direct3DSurface instance that wraps the DXGISurface.
-)");
-
-    static PyObject* get_dxgi_device_from_object(
-        PyObject* /*unused*/, PyObject* py_obj) noexcept
+    /// The @p I interface that the Direct3D object in @p capsule wraps, as an
+    /// integer that owns a reference to it.
+    template<typename I>
+    PyObject* get_dxgi_interface(PyObject* capsule) noexcept
     {
-        try
+        IDirect3DDxgiInterfaceAccess* access{};
+        if (!interop::query_capsule(capsule, &access))
         {
-            auto object
-                = py::convert_to<winrt::Windows::Foundation::IInspectable>(py_obj);
-            auto access = object.as<::Windows::Graphics::DirectX::Direct3D11::
-                                        IDirect3DDxgiInterfaceAccess>();
-            winrt::com_ptr<IDXGIDevice> result;
-            winrt::check_hresult(
-                access->GetInterface(winrt::guid_of<IDXGIDevice>(), result.put_void()));
-
-            return PyLong_FromVoidPtr(result.detach());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
             return nullptr;
         }
+
+        I* result{};
+
+        auto const hr
+            = access->GetInterface(__uuidof(I), reinterpret_cast<void**>(&result));
+        access->Release();
+        if (FAILED(hr))
+        {
+            return interop::set_hresult_error(hr);
+        }
+
+        auto const value = PyLong_FromVoidPtr(result);
+        if (!value)
+        {
+            result->Release();
+        }
+
+        return value;
     }
 
-    static PyObject* get_dxgi_surface_from_object(
-        PyObject* /*unused*/, PyObject* py_obj) noexcept
+    PyObject* get_dxgi_device_from_object(
+        PyObject* /*unused*/, PyObject* capsule) noexcept
     {
-        try
-        {
-            auto object
-                = py::convert_to<winrt::Windows::Foundation::IInspectable>(py_obj);
-            auto access = object.as<::Windows::Graphics::DirectX::Direct3D11::
-                                        IDirect3DDxgiInterfaceAccess>();
-            winrt::com_ptr<IDXGISurface> result;
-            winrt::check_hresult(access->GetInterface(
-                winrt::guid_of<IDXGISurface>(), result.put_void()));
-
-            return PyLong_FromVoidPtr(result.detach());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
+        return get_dxgi_interface<IDXGIDevice>(capsule);
     }
 
-    static PyMethodDef module_methods[]{
+    PyObject* get_dxgi_surface_from_object(
+        PyObject* /*unused*/, PyObject* capsule) noexcept
+    {
+        return get_dxgi_interface<IDXGISurface>(capsule);
+    }
+
+    PyMethodDef module_methods[]{
         {"create_direct3d11_device_from_dxgi_device",
          create_direct3d11_device_from_dxgi_device,
          METH_O,
-         create_direct3d11_device_from_dxgi_device_doc},
+         nullptr},
         {"create_direct3d11_surface_from_dxgi_surface",
          create_direct3d11_surface_from_dxgi_surface,
          METH_O,
-         create_direct3d11_surface_from_dxgi_surface_doc},
+         nullptr},
         {"get_dxgi_device_from_object", get_dxgi_device_from_object, METH_O, nullptr},
         {"get_dxgi_surface_from_object", get_dxgi_surface_from_object, METH_O, nullptr},
         {}};
@@ -199,7 +163,7 @@ Returns:
         module_doc,
         "Interop functions for use with IDirect3DDevice and IDirect3DSurface.");
 
-    static PyModuleDef module_def
+    PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
            "_winrt_windows_graphics_directx_direct3d11_interop",
            module_doc,
@@ -209,16 +173,9 @@ Returns:
            nullptr,
            nullptr,
            nullptr};
-} // namespace py::cpp::Windows::Graphics::DirectX::Direct3D11::Interop
+} // namespace
 
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11_interop(void) noexcept
 {
-    using namespace py::cpp::Windows::Graphics::DirectX::Direct3D11::Interop;
-
-    if (py::import_winrt_runtime() == -1)
-    {
-        return nullptr;
-    }
-
     return PyModule_Create(&module_def);
 }

@@ -301,18 +301,18 @@ INCLUDE_DIRS = [
     os.fspath(PACKAGE_PATH / "include" / "cppwinrt"),
 ]"""
 
-# Everything else build-depends on winrt-runtime, so the PyWinRT headers and
-# the C++/WinRT headers that pywinrt/base.h includes come from whichever
+# An interop module reaches the runtime through Python objects only, so it
+# needs none of the PyWinRT headers, and one written against raw COM needs no
+# header from winrt-runtime at all.
+HEADERS = """INCLUDE_DIRS = []"""
+
+# One written against C++/WinRT carries the headers of the namespaces it
+# includes, written beside its setup.py by scripts/generate-cppwinrt.py, and
+# takes winrt/base.h and the Windows.Foundation headers under it from whichever
 # winrt-runtime the build resolved.
-HEADERS = """from winrt._include import get_cppwinrt_include, get_include
+CPPWINRT_HEADERS = """from winrt._include import get_cppwinrt_include
 
-INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]"""
-
-# The headers of the namespaces a package includes that the runtime does not
-# carry are its own, written beside its setup.py by
-# scripts/generate-cppwinrt.py, so that including another namespace is a
-# release of this package rather than of the runtime.
-OWN_HEADERS = """
+INCLUDE_DIRS = [get_cppwinrt_include()]
 
 # the namespaces this package includes that the runtime does not carry
 INCLUDE_DIRS.append(os.fspath(pathlib.Path(__file__).parent / "cppwinrt"))"""
@@ -335,12 +335,21 @@ for name in [{envs}]:
     INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
 """
 
-# An interop package's own headers are not package data - nothing installs
-# them - but the source distribution has to carry them or it cannot be built.
+# An interop package's headers are not package data - nothing installs them -
+# but the source distribution has to carry them or it cannot be built.
 INTEROP_MANIFEST_IN = """# WARNING: Please don't edit this file. It was automatically generated.
 
-recursive-include cppwinrt *.h
+include {interop_header}
 """
+
+OWN_HEADERS_MANIFEST_IN = """recursive-include cppwinrt *.h
+"""
+
+# The copy of interop/interop.h that each interop package builds with.
+INTEROP_HEADER = """// WARNING: Please don't edit this file. It was copied from interop/{interop_header}
+// by scripts/generate-pyproject.py.
+
+{text}"""
 
 # The bootstrapper is the only App SDK import library anything here links, and
 # it is in the Foundation component.

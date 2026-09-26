@@ -9,9 +9,7 @@ from setuptools.command.bdist_wheel import bdist_wheel
 from setuptools.command.build_ext import build_ext
 from setuptools.command.build_py import build_py
 
-from winrt._include import get_cppwinrt_include, get_include
-
-INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]
+INCLUDE_DIRS = []
 
 WINDOWS_APP_SDK_PATHS = {}
 

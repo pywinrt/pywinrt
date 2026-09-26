@@ -3,9 +3,7 @@
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 
-from winrt._include import get_cppwinrt_include, get_include
-
-INCLUDE_DIRS = [get_include(), get_cppwinrt_include()]
+INCLUDE_DIRS = []
 
 
 class build_ext_ex(build_ext):
