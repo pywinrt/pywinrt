@@ -10,9 +10,8 @@
 //
 // A table is mapped once per process and never unmapped, because the names and
 // descriptors built from it point into it and a type outlives the import that
-// made it. Everything built from those bytes is a Python object, so it belongs
-// to the interpreter that built it and lives in that interpreter's module
-// state.
+// made it. Everything built from those bytes is a Python object, so it lives
+// in the module state.
 
 #include <Windows.h>
 
@@ -40,10 +39,7 @@ namespace py::interp
          *
          * A table is mapped once per process and never unmapped: the names and
          * descriptors built from it point into it, and a type outlives the
-         * import that made it. The map is process wide rather than per
-         * interpreter for the same reason - two interpreters that import the
-         * same package read the same bytes - while everything built from those
-         * bytes belongs to the interpreter that built it.
+         * import that made it.
          */
         struct table_store
         {

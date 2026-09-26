@@ -349,12 +349,11 @@ namespace py::interp
     };
 
     /**
-     * One namespace's table and everything built from it, for one interpreter.
+     * One namespace's table and everything built from it.
      *
      * The table is mapped once per process and never unmapped, so the views
      * into it are good for the life of the process. Everything else here is a
-     * Python object or points at one, so it belongs to the interpreter that
-     * imported the package.
+     * Python object or points at one, so it goes with the module state.
      */
     struct projection
     {
