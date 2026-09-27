@@ -314,6 +314,11 @@ static class NullabilityJson
             writer.WriteBoolean("maybeNull"u8, true);
         }
 
+        if (type.Evidence is not null)
+        {
+            writer.WriteString("evidence"u8, type.Evidence);
+        }
+
         writer.WriteEndObject();
     }
 
@@ -507,6 +512,7 @@ static class NullabilityJson
         var args = default(List<TypeRefNullabilityInfo>);
         var allowNull = false;
         var maybeNull = false;
+        var evidence = default(string);
 
         ExpectStartObject(ref reader);
 
@@ -530,13 +536,17 @@ static class NullabilityJson
                 reader.Read();
                 maybeNull = reader.GetBoolean();
             }
+            else if (reader.ValueTextEquals("evidence"u8))
+            {
+                evidence = ReadString(ref reader);
+            }
             else
             {
                 reader.Skip();
             }
         }
 
-        return new TypeRefNullabilityInfo(name!, args, allowNull, maybeNull);
+        return new TypeRefNullabilityInfo(name!, args, allowNull, maybeNull, evidence);
     }
 
     /// <summary>
