@@ -123,6 +123,63 @@ namespace py::interp
         using py::cpp::_winrt::get_module_state;
         using py::cpp::_winrt::state_guard;
         using py::cpp::_winrt::try_get_module_state;
+
+        /**
+         * Keeps the exception that is set, which is what building the types of
+         * @p proj failed with, for every later load of it to raise, and leaves
+         * it set.
+         */
+        void remember_failure(
+            py::cpp::_winrt::module_state* s, projection& proj) noexcept
+        {
+            pyobj_handle failure{take_raised_exception()};
+
+            {
+                state_guard guard{s->cache_lock};
+                proj.failure.attach(Py_NewRef(failure.get()));
+            }
+
+            auto const type = Py_NewRef(Py_TYPE(failure.get()));
+            auto const trace = PyException_GetTraceback(failure.get());
+            PyErr_Restore(type, failure.detach(), trace);
+        }
+
+        /**
+         * Raises what loading @p module_name again raises once building its
+         * types has failed: an ImportError whose cause is @p failure.
+         *
+         * A namespace's types are built once, by the import that registered
+         * its table, and whatever another package resolved of them before the
+         * failure stays resolved, so a second attempt would make a second
+         * Python type for a WinRT type that already has one.
+         */
+        void raise_failed_load(char const* module_name, PyObject* failure) noexcept
+        {
+            pyobj_handle message{PyUnicode_FromFormat(
+                "'%s' could not be imported earlier in this process, and its types "
+                "are built only once; import it in a new process once the cause "
+                "is fixed",
+                module_name)};
+            if (!message)
+            {
+                return;
+            }
+
+            pyobj_handle name{PyUnicode_FromString(module_name)};
+            if (!name)
+            {
+                return;
+            }
+
+            PyErr_SetImportError(message.get(), name.get(), nullptr);
+            pyobj_handle error{take_raised_exception()};
+
+            // steals the reference to the cause
+            PyException_SetCause(error.get(), Py_NewRef(failure));
+
+            auto const type = Py_NewRef(Py_TYPE(error.get()));
+            PyErr_Restore(type, error.detach(), nullptr);
+        }
     } // namespace
 
     /**
@@ -441,9 +498,11 @@ namespace py::interp
 
         // A loaded projection is never let go of before the state itself is,
         // and what a table says never changes, so the lock is over finding it
-        // and nothing else. Building the type is not done holding a lock: it
-        // imports the modules of every type it names, which comes back here.
+        // and whether building its types failed. Building the type is not done
+        // holding a lock: it imports the modules of every type it names, which
+        // comes back here.
         projection* proj{};
+        pyobj_handle failure;
 
         {
             state_guard guard{s->cache_lock};
@@ -456,6 +515,13 @@ namespace py::interp
             }
 
             proj = found->second.get();
+            failure.attach(Py_XNewRef(proj->failure.get()));
+        }
+
+        if (failure)
+        {
+            raise_failed_load(proj->module_name.c_str(), failure.get());
+            return nullptr;
         }
 
         // The package's __init__.py may still be building the types on another
@@ -580,15 +646,29 @@ namespace py::interp
             return nullptr;
         }
 
+        pyobj_handle failure;
+
         {
             state_guard guard{s->cache_lock};
+            auto const found = s->projections.find(module_name);
 
-            if (s->projections.find(module_name) != s->projections.end())
+            if (found != s->projections.end())
             {
-                // A reload re-runs __init__.py, and the types it made the
-                // first time are still the ones in it.
-                Py_RETURN_NONE;
+                if (!found->second->failure)
+                {
+                    // A reload re-runs __init__.py, and the types it made the
+                    // first time are still the ones in it.
+                    Py_RETURN_NONE;
+                }
+
+                failure.attach(Py_NewRef(found->second->failure.get()));
             }
+        }
+
+        if (failure)
+        {
+            raise_failed_load(module_name, failure.get());
+            return nullptr;
         }
 
         table::file const* file{};
@@ -708,6 +788,7 @@ namespace py::interp
             case table::category::class_:
                 if (!ensure_type(*proj, i))
                 {
+                    remember_failure(s, *proj);
                     return nullptr;
                 }
 

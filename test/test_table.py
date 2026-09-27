@@ -32,6 +32,7 @@ from typing import Any
 
 import winrt._winrt
 import winrt.runtime._internals
+from winrt.table import build, parse
 
 # The category in the low bits of a type record's flags.
 CATEGORY_ENUM = 0
@@ -899,3 +900,52 @@ class MissingTable(unittest.TestCase):
             error = self.load(directory)
 
             self.assertIsInstance(error.__cause__, FileNotFoundError)
+
+
+class FailedLoad(unittest.TestCase):
+    """
+    What importing a package again says after building its types failed.
+
+    The table is registered before a single type is built, and a namespace's
+    types are built only once, so the next import cannot try again. It has to
+    say why rather than find the table registered and return a module with no
+    types in it.
+    """
+
+    # A struct whose field is a struct of a package that does not exist, which
+    # the table reads and the runtime cannot build.
+    TABLE = """\
+format 4.0
+census {census}
+namespace Test.FailedLoad
+
+struct Test.FailedLoad.Outer python_type
+    signature struct(Test.FailedLoad.Outer;struct(Test.Missing.Inner;i4))
+    field inner Inner struct type=Test.Missing.Inner
+
+struct Test.Missing.Inner external
+    py winrt._no_such_package.Inner
+"""
+
+    def test_a_second_import_raises_with_the_first_error_as_its_cause(self) -> None:
+        lineage, revision = read("winrt", "windows", "foundation")["census"]
+        data = build(parse(self.TABLE.format(census=f"{lineage} {revision}")))
+
+        # Left to the operating system to clean up, as refuse() says.
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as directory:
+            path = pathlib.Path(directory) / "_table.pywinrt"
+            path.write_bytes(data)
+            name = f"_failed_projection_{path.parent.name}"
+
+            errors = []
+
+            for _ in range(2):
+                with self.assertRaises(ImportError) as caught:
+                    winrt._winrt.load_projection(types.ModuleType(name), str(path))
+
+                errors.append(caught.exception)
+
+        self.assertEqual(errors[0].name, "winrt._no_such_package")
+        self.assertEqual(errors[1].name, name)
+        self.assertIn("new process", str(errors[1]))
+        self.assertIs(errors[1].__cause__, errors[0])
