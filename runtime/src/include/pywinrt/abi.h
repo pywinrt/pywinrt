@@ -183,6 +183,7 @@ namespace py
     void set_member_not_available_error(member_not_available const& info) noexcept;
     void set_error(error_info const& info) noexcept;
     PyObject* take_raised_exception() noexcept;
+    void restore_raised_exception(PyObject* exception) noexcept;
     void set_call_error(
         call_error error, member_site const* site, Py_ssize_t arg_count) noexcept;
     int32_t report_unraisable() noexcept;
