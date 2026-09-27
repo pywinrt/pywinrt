@@ -92,16 +92,7 @@ namespace py::interp
                 return false;
             }
 
-#if PY_VERSION_HEX < 0x030C0000
-            PyObject *type, *value, *trace;
-            PyErr_Fetch(&type, &value, &trace);
-            PyErr_NormalizeException(&type, &value, &trace);
-            pyobj_handle raised{value};
-            Py_XDECREF(type);
-            Py_XDECREF(trace);
-#else
-            pyobj_handle raised{PyErr_GetRaisedException()};
-#endif
+            pyobj_handle raised{take_raised_exception()};
 
             pyobj_handle winerror{PyObject_GetAttrString(raised.get(), "winerror")};
             if (!winerror)
@@ -116,12 +107,7 @@ namespace py::interp
                 return true;
             }
 
-#if PY_VERSION_HEX < 0x030C0000
-            PyErr_SetObject(
-                reinterpret_cast<PyObject*>(Py_TYPE(raised.get())), raised.get());
-#else
-            PyErr_SetRaisedException(raised.detach());
-#endif
+            restore_raised_exception(raised.detach());
 
             return false;
         }

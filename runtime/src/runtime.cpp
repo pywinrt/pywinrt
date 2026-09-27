@@ -428,37 +428,15 @@ winrt::guid py::convert_to_guid(PyObject* obj)
         // Convert any Python exception to a TypeError with cause set to the
         // original exception.
 
-#if PY_VERSION_HEX < 0x030C0000
-        PyObject *type, *value, *trace;
-        PyErr_Fetch(&type, &value, &trace);
-        PyErr_NormalizeException(&type, &value, &trace);
-        pyobj_handle old_value{value};
-        Py_XDECREF(type);
-        Py_XDECREF(trace);
-#else
-        pyobj_handle old_value{PyErr_GetRaisedException()};
-#endif
+        pyobj_handle old_value{take_raised_exception()};
 
         PyErr_SetString(PyExc_TypeError, "requires uuid.UUID object");
-
-#if PY_VERSION_HEX < 0x030C0000
-        PyErr_Fetch(&type, &value, &trace);
-        PyErr_NormalizeException(&type, &value, &trace);
-        pyobj_handle new_value{value};
-#else
-        pyobj_handle new_value{PyErr_GetRaisedException()};
-#endif
+        pyobj_handle new_value{take_raised_exception()};
 
         // steals reference to cause
         PyException_SetCause(new_value.get(), old_value.detach());
 
-#if PY_VERSION_HEX < 0x030C0000
-        // steals references to args
-        PyErr_Restore(type, new_value.detach(), trace);
-#else
-        // steals reference to exception
-        PyErr_SetRaisedException(new_value.detach());
-#endif
+        restore_raised_exception(new_value.detach());
 
         throw python_exception();
     }
