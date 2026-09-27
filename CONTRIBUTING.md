@@ -142,6 +142,21 @@ generated into several, so the lint job copies them together first with the
 
     pipx run mypy
 
+## Building the documentation
+
+The documentation in `docs/` is built by [Zensical](https://zensical.org/),
+configured by `zensical.toml`, at the version pinned in `docs/requirements.txt`,
+which is the one Read the Docs installs:
+
+    py -m venv .venv
+    .venv\Scripts\python -m pip install -r docs/requirements.txt
+    .venv\Scripts\zensical build --strict
+
+The site is written to `_site/`. `--strict` fails the build on a link to a page
+or an anchor that does not exist, as the Read the Docs build does.
+`zensical serve` serves it at <http://localhost:8000/> and rebuilds it on
+every change.
+
 ## Building the Nuget package
 
 To build the nuget package for the `PyWinRT.exe` tool.

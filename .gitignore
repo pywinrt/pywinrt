@@ -37,6 +37,9 @@ bld/
 # Build tools
 /_tools/
 
+# Documentation build output
+/_site/
+
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 

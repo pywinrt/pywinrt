@@ -1,0 +1,88 @@
+/*
+ * Admonition types for the Sphinx directives that have no Material
+ * equivalent: versionadded, versionchanged, deprecated, seealso and todo.
+ * https://zensical.org/docs/authoring/admonitions/#custom-admonitions
+ */
+
+:root {
+  --md-admonition-icon--version-added: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z"/></svg>');
+  --md-admonition-icon--version-changed: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 8H12v5l4.28 2.54.72-1.21-3.5-2.08V8M13 3a9 9 0 0 0-9 9H1l3.96 4.03L9 12H6a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.896 8.896 0 0 0 13 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9"/></svg>');
+  --md-admonition-icon--deprecated: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2M7 13h10v-2H7"/></svg>');
+  --md-admonition-icon--seealso: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>');
+  --md-admonition-icon--todo: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>');
+}
+
+.md-typeset .admonition.version-added,
+.md-typeset details.version-added {
+  border-color: rgb(0, 200, 83);
+}
+.md-typeset .version-added > .admonition-title,
+.md-typeset .version-added > summary {
+  background-color: rgba(0, 200, 83, 0.1);
+}
+.md-typeset .version-added > .admonition-title::before,
+.md-typeset .version-added > summary::before {
+  background-color: rgb(0, 200, 83);
+  -webkit-mask-image: var(--md-admonition-icon--version-added);
+  mask-image: var(--md-admonition-icon--version-added);
+}
+
+.md-typeset .admonition.version-changed,
+.md-typeset details.version-changed {
+  border-color: rgb(255, 145, 0);
+}
+.md-typeset .version-changed > .admonition-title,
+.md-typeset .version-changed > summary {
+  background-color: rgba(255, 145, 0, 0.1);
+}
+.md-typeset .version-changed > .admonition-title::before,
+.md-typeset .version-changed > summary::before {
+  background-color: rgb(255, 145, 0);
+  -webkit-mask-image: var(--md-admonition-icon--version-changed);
+  mask-image: var(--md-admonition-icon--version-changed);
+}
+
+.md-typeset .admonition.deprecated,
+.md-typeset details.deprecated {
+  border-color: rgb(255, 23, 68);
+}
+.md-typeset .deprecated > .admonition-title,
+.md-typeset .deprecated > summary {
+  background-color: rgba(255, 23, 68, 0.1);
+}
+.md-typeset .deprecated > .admonition-title::before,
+.md-typeset .deprecated > summary::before {
+  background-color: rgb(255, 23, 68);
+  -webkit-mask-image: var(--md-admonition-icon--deprecated);
+  mask-image: var(--md-admonition-icon--deprecated);
+}
+
+.md-typeset .admonition.seealso,
+.md-typeset details.seealso {
+  border-color: rgb(68, 138, 255);
+}
+.md-typeset .seealso > .admonition-title,
+.md-typeset .seealso > summary {
+  background-color: rgba(68, 138, 255, 0.1);
+}
+.md-typeset .seealso > .admonition-title::before,
+.md-typeset .seealso > summary::before {
+  background-color: rgb(68, 138, 255);
+  -webkit-mask-image: var(--md-admonition-icon--seealso);
+  mask-image: var(--md-admonition-icon--seealso);
+}
+
+.md-typeset .admonition.todo,
+.md-typeset details.todo {
+  border-color: rgb(124, 77, 255);
+}
+.md-typeset .todo > .admonition-title,
+.md-typeset .todo > summary {
+  background-color: rgba(124, 77, 255, 0.1);
+}
+.md-typeset .todo > .admonition-title::before,
+.md-typeset .todo > summary::before {
+  background-color: rgb(124, 77, 255);
+  -webkit-mask-image: var(--md-admonition-icon--todo);
+  mask-image: var(--md-admonition-icon--todo);
+}
