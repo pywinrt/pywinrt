@@ -48,7 +48,7 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        auto self = Array_Alloc(state->array_type);
+        auto self = Array_Alloc(state->array_type.get());
 
         if (!self)
         {
@@ -75,7 +75,7 @@ namespace py::cpp::_winrt
             return false;
         }
 
-        if (!Py_IS_TYPE(obj, state->array_type))
+        if (!Py_IS_TYPE(obj, state->array_type.get()))
         {
             {
                 PyErr_SetString(PyExc_TypeError, "argument must be System.Array");
@@ -100,7 +100,7 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        if (!Py_IS_TYPE(obj, state->array_type))
+        if (!Py_IS_TYPE(obj, state->array_type.get()))
         {
             return nullptr;
         }
@@ -349,7 +349,7 @@ namespace py::cpp::_winrt
             {
                 self->array = std::make_unique<py::ComArray<winrt::hstring>>();
             }
-            else if (type == state->uuid_type)
+            else if (type == state->uuid_type.get())
             {
                 self->array = std::make_unique<py::ComArray<winrt::guid>>();
             }
@@ -363,7 +363,7 @@ namespace py::cpp::_winrt
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::TimeSpan>>();
             }
-            else if (type == state->object_type)
+            else if (type == state->object_type.get())
             {
                 self->array = std::make_unique<
                     py::ComArray<winrt::Windows::Foundation::IInspectable>>();

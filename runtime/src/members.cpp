@@ -192,8 +192,8 @@ namespace py::interp
                 return pyobj_handle{};
             }
 
-            pyobj_handle self{
-                s->projected_method_type->tp_alloc(s->projected_method_type, 0)};
+            pyobj_handle self{s->projected_method_type.get()->tp_alloc(
+                s->projected_method_type.get(), 0)};
             if (!self)
             {
                 return self;
