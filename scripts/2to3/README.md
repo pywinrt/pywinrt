@@ -78,12 +78,12 @@ type hints, so linters may flag it as a missing attribute.
 
 The only breaking change is that `winrt.windows.foundation.interop` was removed.
 If you were using the `box()` and `unbox()` methods from this module, they are
-replaced by <https://pywinrt.readthedocs.io/en/latest/api/system.html#boxing>.
+replaced by <https://pywinrt.readthedocs.io/en/latest/api/system/#boxing>.
 
 Additionally, some methods that were previous undocumented and only available
 from the `_winrt` module are now documented and can be imported from a
 "non-private" module. The old imports will continue to work for now but it is
 recommended to switch to the documented imports in
-<https://pywinrt.readthedocs.io/en/latest/api/runtime.html> and
-<https://pywinrt.readthedocs.io/en/latest/api/runtime.interop.html> in case the
+<https://pywinrt.readthedocs.io/en/latest/api/runtime/> and
+<https://pywinrt.readthedocs.io/en/latest/api/runtime.interop/> in case the
 implementation details change in a future release.

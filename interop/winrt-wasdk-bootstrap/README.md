@@ -4,7 +4,7 @@
 
 **IMPORTANT**: Windows App SDK packages cannot be used without the Windows App
 Runtime. This has to be installed manually by the end user. Read the
-[PyWinRT Windows App SDK documentation](https://pywinrt.readthedocs.io/en/latest/api/microsoft.html)
+[PyWinRT Windows App SDK documentation](https://pywinrt.readthedocs.io/en/latest/api/microsoft/)
 for more information.
 
 Windows Runtime (WinRT) APIs for the `Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` namespace.
