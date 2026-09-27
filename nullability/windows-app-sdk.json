@@ -7555,7 +7555,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Composition.AnimationController",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An instance of AnimationController for the specified animation, or null if the animation is not found' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionobject.trygetanimationcontroller)"
               }
             },
             "parameters": [
@@ -86063,7 +86064,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -86142,7 +86144,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual2",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; IAnimatedVisualSource.TryCreateAnimatedVisual, which it extends, returns 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -90548,7 +90551,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.UIElement",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The UIElement that corresponds to the item at the specified index if the item is realized, or null if the item is not realized' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.itemsrepeater.trygetelement)"
               }
             },
             "parameters": [
@@ -135398,7 +135402,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedacceptvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135482,7 +135487,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedbackvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135566,7 +135572,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedchevrondownsmallvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135650,7 +135657,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedchevronrightdownsmallvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135734,7 +135742,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedchevronupdownsmallvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135818,7 +135827,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedfindvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135902,7 +135912,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedglobalnavigationbuttonvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -135986,7 +135997,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.UI.Xaml.Controls.IAnimatedVisual",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An IAnimatedVisual, or null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.animatedvisuals.animatedsettingsvisualsource.trycreateanimatedvisual)"
               }
             },
             "parameters": [
@@ -192622,7 +192634,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.Windows.ApplicationModel.Resources.ResourceMap",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the specified resource map identifier is not found, this method returns null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcemap.trygetsubtree)"
               }
             },
             "parameters": [
@@ -192641,7 +192654,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the specified resource identifier is not found, this method returns null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcemap.trygetvalue)"
               }
             },
             "parameters": [
@@ -192660,7 +192674,8 @@
             "return": {
               "type": {
                 "name": "Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the specified resource identifier is not found, this method returns null' (https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcemap.trygetvalue)"
               }
             },
             "parameters": [

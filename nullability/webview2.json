@@ -6449,7 +6449,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Microsoft.Web.WebView2.Core.CoreWebView2EnvironmentOptions",
-                  "allowNull": true
+                  "allowNull": true,
+                  "evidence": "Found empirically (92eedb8192): there is no overload without options, so None has to be accepted here; the docs do not say"
                 }
               }
             ]
