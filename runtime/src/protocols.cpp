@@ -718,13 +718,17 @@ namespace py::interp
 
         // ----- awaitables -------------------------------------------------
 
+        /// The argument buffer set_completed() passes the handler in.
+        constexpr size_t completed_buffer_size = sizeof(void*);
+
         /**
          * Hands an async object the completed handler that the waiter is
          * about to wait on.
          *
          * The GIL is not held, so nothing here may touch Python: the argument
          * is one interface pointer, which goes into the buffer by hand rather
-         * than through a conversion.
+         * than through a conversion. Nor can it raise, so the setter was
+         * checked by can_set_completed() before the wait began.
          */
         int32_t set_completed(void* context, void* async, void* handler) noexcept
         {
@@ -749,12 +753,52 @@ namespace py::interp
             auto const instance
                 = queried ? queried.get() : static_cast<::IUnknown*>(async);
 
-            alignas(std::max_align_t) uint8_t args[sizeof(void*)]{};
+            alignas(std::max_align_t) uint8_t args[completed_buffer_size]{};
+            WINRT_ASSERT(overload->args[0].offset + sizeof(handler) <= sizeof(args));
             std::memcpy(args + overload->args[0].offset, &handler, sizeof(handler));
 
             auto const vtable = *reinterpret_cast<void* const* const*>(instance);
 
             return overload->shape->invoke(vtable[overload->slot], instance, args);
+        }
+
+        /**
+         * Whether the setter of @p completed is the call set_completed() makes:
+         * one delegate, in a buffer no larger than the one it passes.
+         *
+         * A table generated against a census with no trampoline for the
+         * setter's shape leaves it with none.
+         */
+        bool can_set_completed(member_desc const& completed) noexcept
+        {
+            auto const& setter = completed.overloads[completed.count - 1];
+
+            if (!setter.shape)
+            {
+                return false;
+            }
+
+            if (setter.arg_count != 1)
+            {
+                return false;
+            }
+
+            if (setter.args[0].code != table::type_code::delegate)
+            {
+                return false;
+            }
+
+            if (setter.args[0].category != table::param_category::in)
+            {
+                return false;
+            }
+
+            if (setter.shape->buffer_size > completed_buffer_size)
+            {
+                return false;
+            }
+
+            return setter.args[0].offset + sizeof(void*) <= setter.shape->buffer_size;
         }
 
         /**
@@ -802,6 +846,16 @@ namespace py::interp
                 PyErr_Format(
                     PyExc_TypeError,
                     "the table names no completed handler for '%s'",
+                    Py_TYPE(self)->tp_name);
+                return false;
+            }
+
+            if (!can_set_completed(*completed))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' cannot be waited for, because this winrt-runtime cannot "
+                    "call the setter of its Completed property",
                     Py_TYPE(self)->tp_name);
                 return false;
             }
