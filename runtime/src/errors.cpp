@@ -160,35 +160,6 @@ namespace
     }
 
     /**
-     * Takes the exception that is set, which must be one.
-     */
-    PyObject* take_raised_exception() noexcept
-    {
-#if PY_VERSION_HEX < 0x030C0000
-        py::pyobj_handle type;
-        py::pyobj_handle value;
-        py::pyobj_handle trace;
-
-        // Normalizing replaces the three in place, so it is handed the same
-        // addresses that fetching filled in.
-        auto const type_at = type.put();
-        auto const value_at = value.put();
-        auto const trace_at = trace.put();
-        PyErr_Fetch(type_at, value_at, trace_at);
-        PyErr_NormalizeException(type_at, value_at, trace_at);
-
-        if (trace)
-        {
-            PyException_SetTraceback(value.get(), trace.get());
-        }
-
-        return value.detach();
-#else
-        return PyErr_GetRaisedException();
-#endif
-    }
-
-    /**
      * The @c OSError that a failed call with @p hresult raises, saying
      * @p message, which is @p message_length characters long and not
      * necessarily null-terminated.
@@ -211,7 +182,7 @@ namespace
             return exc.detach();
         }
 
-        py::pyobj_handle failure{take_raised_exception()};
+        py::pyobj_handle failure{py::take_raised_exception()};
 
         py::pyobj_handle bare{PyObject_CallFunction(
             PyExc_WindowsError,
@@ -283,6 +254,35 @@ namespace
             legacy.get(), WINRT_IMPL_SysStringLen(legacy.get()));
     }
 } // namespace
+
+/**
+ * Takes the exception that is set, which must be one.
+ */
+PyObject* py::take_raised_exception() noexcept
+{
+#if PY_VERSION_HEX < 0x030C0000
+    py::pyobj_handle type;
+    py::pyobj_handle value;
+    py::pyobj_handle trace;
+
+    // Normalizing replaces the three in place, so it is handed the same
+    // addresses that fetching filled in.
+    auto const type_at = type.put();
+    auto const value_at = value.put();
+    auto const trace_at = trace.put();
+    PyErr_Fetch(type_at, value_at, trace_at);
+    PyErr_NormalizeException(type_at, value_at, trace_at);
+
+    if (trace)
+    {
+        PyException_SetTraceback(value.get(), trace.get());
+    }
+
+    return value.detach();
+#else
+    return PyErr_GetRaisedException();
+#endif
+}
 
 void py::set_error(py::error_info const& info) noexcept
 {
