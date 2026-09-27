@@ -76553,7 +76553,8 @@
             "return": {
               "type": {
                 "name": "Windows.ApplicationModel.UserActivities.UserActivityChannel",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -95954,7 +95955,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Devices.Bluetooth.BluetoothAdapter"
+                    "name": "Windows.Devices.Bluetooth.BluetoothAdapter",
+                    "maybeNull": true,
+                    "evidence": "bleak checks the result for None and reports 'No Bluetooth adapter found' (bleak/backends/winrt/scanner.py, BleakScannerWinRT.start)"
                   }
                 ]
               }
@@ -96235,7 +96238,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Bluetooth.BluetoothDevice",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'After the asynchronous operation completes, returns the BluetoothDevice object with the given BluetoothAddress or null if the address does not resolve to a valid device' (https://learn.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothdevice.frombluetoothaddressasync)"
                   }
                 ]
               }
@@ -96281,7 +96285,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Devices.Bluetooth.BluetoothDevice"
+                    "name": "Windows.Devices.Bluetooth.BluetoothDevice",
+                    "maybeNull": true,
+                    "evidence": "Microsoft's BluetoothRfcommChat sample checks the result for null: 'If we were unable to get a valid Bluetooth device object, it's most likely because the user has specified that all unpaired devices should not be interacted with' (microsoft/Windows-universal-samples, Samples/BluetoothRfcommChat/cs/Scenario1_ChatClient.xaml.cs)"
                   }
                 ]
               }
@@ -97524,7 +97530,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Bluetooth.BluetoothLEDevice",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'The returned BluetoothLEDevice is set to null if FromBluetoothAddressAsync can't find the device identified by *bluetoothAddress*' (https://learn.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.frombluetoothaddressasync); a Microsoft engineer: 'When your app gets a non-null BluetoothLEDevice ...' (https://github.com/microsoft/Windows-universal-samples/issues/1089#issuecomment-487586755); bleak checks it for None"
                   }
                 ]
               }
@@ -97548,7 +97555,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Bluetooth.BluetoothLEDevice",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'The returned BluetoothLEDevice is set to null if FromBluetoothAddressAsync can't find the device identified by *bluetoothAddress*' (https://learn.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.frombluetoothaddressasync); a Microsoft engineer: 'When your app gets a non-null BluetoothLEDevice ...' (https://github.com/microsoft/Windows-universal-samples/issues/1089#issuecomment-487586755); bleak checks it for None"
                   }
                 ]
               }
@@ -97578,7 +97586,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Devices.Bluetooth.BluetoothLEDevice"
+                    "name": "Windows.Devices.Bluetooth.BluetoothLEDevice",
+                    "maybeNull": true,
+                    "evidence": "Microsoft's BluetoothLE sample checks the result for null (microsoft/Windows-universal-samples, Samples/BluetoothLE/cs/Scenario2_Client.xaml.cs); a Microsoft engineer on FromBluetoothAddressAsync and FromIdAsync: 'When your app gets a non-null BluetoothLEDevice ...' (https://github.com/microsoft/Windows-universal-samples/issues/1089#issuecomment-487586755)"
                   }
                 ]
               }
@@ -102374,7 +102384,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService"
+                    "name": "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'If a store app has not declared the right capabilities or the user does not grant consent, the method returns a null object' (https://learn.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattdeviceservice.fromidasync)"
                   }
                 ]
               }
@@ -102397,7 +102409,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService"
+                    "name": "Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService",
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the other overload, FromIdAsync(String): 'If a store app has not declared the right capabilities or the user does not grant consent, the method returns a null object' (https://learn.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattdeviceservice.fromidasync)"
                   }
                 ]
               }
@@ -105820,7 +105834,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService"
+                    "name": "Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'If a store app has not declared the right capabilities or the user does not grant consent, the method returns a null object' (https://learn.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.fromidasync)"
                   }
                 ]
               }
@@ -109346,7 +109362,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Display.DisplayMonitor",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A DisplayMonitor representing the monitor connected to this target, if one is connected, or else null if nothing is connected' (https://learn.microsoft.com/uwp/api/windows.devices.display.core.displaytarget.trygetmonitor)"
               }
             },
             "parameters": []
@@ -110502,7 +110519,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "The docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); passing None is tested in test/test_nullability.py"
                 }
               }
             ]
@@ -110669,7 +110688,9 @@
             "name": "get_EnclosureLocation",
             "return": {
               "type": {
-                "name": "Windows.Devices.Enumeration.EnclosureLocation"
+                "name": "Windows.Devices.Enumeration.EnclosureLocation",
+                "maybeNull": true,
+                "evidence": "The docs: 'If no enclosure location information is available, the property will be null' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.enclosurelocation)"
               }
             },
             "parameters": []
@@ -125310,7 +125331,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Perception.PerceptionColorFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the attempt was not successful, this method returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptioncolorframereader.tryreadlatestframe)"
               }
             },
             "parameters": []
@@ -125535,7 +125557,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Otherwise, this returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptioncolorframesource.trygetdepthcorrelatedcameraintrinsicsasync)"
                   }
                 ]
               }
@@ -125559,7 +125582,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Otherwise, it returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptioncolorframesource.trygetdepthcorrelatedcoordinatemapperasync)"
                   }
                 ]
               }
@@ -126633,7 +126657,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Perception.PerceptionDepthFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the attempt was not successful, this method returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptiondepthframereader.tryreadlatestframe)"
               }
             },
             "parameters": []
@@ -126858,7 +126883,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Otherwise, this returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptiondepthframesource.trygetdepthcorrelatedcameraintrinsicsasync)"
                   }
                 ]
               }
@@ -126882,7 +126908,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Otherwise, it returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptiondepthframesource.trygetdepthcorrelatedcoordinatemapperasync)"
                   }
                 ]
               }
@@ -127679,7 +127706,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Perception.PerceptionInfraredFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the attempt was not successful, this method returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptioninfraredframereader.tryreadlatestframe)"
               }
             },
             "parameters": []
@@ -127904,7 +127932,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Otherwise, this returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptioninfraredframesource.trygetdepthcorrelatedcameraintrinsicsasync)"
                   }
                 ]
               }
@@ -127928,7 +127957,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Otherwise, it returns null' (https://learn.microsoft.com/uwp/api/windows.devices.perception.perceptioninfraredframesource.trygetdepthcorrelatedcoordinatemapperasync)"
                   }
                 ]
               }
@@ -133389,7 +133419,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.PointOfService.LineDisplayStoredBitmap",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
                   }
                 ]
               }
@@ -133413,7 +133444,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.PointOfService.LineDisplayStoredBitmap",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
                   }
                 ]
               }
@@ -133451,7 +133483,8 @@
                 "args": [
                   {
                     "name": "Windows.Devices.PointOfService.LineDisplayStoredBitmap",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
                   }
                 ]
               }
@@ -181377,7 +181410,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -181698,7 +181732,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -182029,7 +182064,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -182332,7 +182368,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -182535,7 +182572,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -182597,7 +182635,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -183018,7 +183057,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -183457,7 +183497,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -183826,7 +183867,8 @@
             "return": {
               "type": {
                 "name": "Windows.Gaming.Input.IGameController",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If found, a game controller that belongs to the specified factory and references the same underlying device as the specified game controller; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.gaming.input.custom.gamecontrollerfactorymanager.trygetfactorycontrollerfromgamecontroller)"
               }
             },
             "parameters": [
@@ -197063,7 +197105,8 @@
             "return": {
               "type": {
                 "name": "Windows.Graphics.Capture.Direct3D11CaptureFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The next captured frame in the frame pool; if the pool is empty, this method returns null' (https://learn.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool.trygetnextframe)"
               }
             },
             "parameters": []
@@ -197179,7 +197222,8 @@
             "return": {
               "type": {
                 "name": "Windows.Graphics.Capture.GraphicsCaptureItem",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -197198,7 +197242,8 @@
             "return": {
               "type": {
                 "name": "Windows.Graphics.Capture.GraphicsCaptureItem",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -200259,7 +200304,8 @@
             "return": {
               "type": {
                 "name": "Windows.Graphics.Holographic.HolographicViewConfiguration",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A HolographicViewConfiguration object of the indicated kind, or null if the HolographicDisplay does not support the indicated HolographicViewConfigurationKind' (https://learn.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)"
               }
             },
             "parameters": [
@@ -238595,7 +238641,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Audio.AudioPlaybackConnection",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the specified device does not have support for audio streaming, the return value is null' (https://learn.microsoft.com/uwp/api/windows.media.audio.audioplaybackconnection.trycreatefromid)"
               }
             },
             "parameters": [
@@ -243336,7 +243383,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -244561,7 +244609,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Capture.AppBroadcastStreamAudioFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If successful, the latest audio frame from the broadcast stream; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.media.capture.appbroadcaststreamreader.trygetnextaudioframe)"
               }
             },
             "parameters": []
@@ -244572,7 +244621,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Capture.AppBroadcastStreamVideoFrame",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If successful, the latest video frame from the broadcast stream; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.media.capture.appbroadcaststreamreader.trygetnextvideoframe)"
               }
             },
             "parameters": []
@@ -251479,7 +251529,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A DepthCorrelatedCoordinateMapper if the operation was successful; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.media.capture.frames.depthmediaframe.trycreatecoordinatemapper)"
               }
             },
             "parameters": [
@@ -251732,7 +251783,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Capture.Frames.MediaFrameReference",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the method fails, the returned MediaFrameReference will be null, so you should always test to see if the returned object is null before trying to use it' (https://learn.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.tryacquirelatestframe)"
               }
             },
             "parameters": []
@@ -251956,7 +252008,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Devices.Core.CameraIntrinsics",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An object representing the camera intrinsics for the frame source, if they can be retrieved; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource.trygetcameraintrinsics)"
               }
             },
             "parameters": [
@@ -252505,7 +252558,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Capture.Frames.MultiSourceMediaFrameReference",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -252603,7 +252657,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Capture.Frames.MediaFrameReference",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -254428,7 +254483,8 @@
                 "args": [
                   {
                     "name": "Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT; downstream SMTC code checks it for None, e.g. Eclassic32/WindowsMedia-widget, uspraveen/Cosmic-light (resources/media_bridge.py)"
                   }
                 ]
               }
@@ -254707,7 +254763,9 @@
             "name": "GetCurrentSession",
             "return": {
               "type": {
-                "name": "Windows.Media.Control.GlobalSystemMediaTransportControlsSession"
+                "name": "Windows.Media.Control.GlobalSystemMediaTransportControlsSession",
+                "maybeNull": true,
+                "evidence": "The docs do not say; downstream SMTC code checks it for None almost everywhere, e.g. amnweb/yasb (src/core/widgets/services/media/media.py), shadowash8/yasb (src/core/utils/win32/media.py: 'If no music is playing, return None'), Minlor/LumiSync, sleepy-project/sleepy, milo0622/Piston-AI, FozerG/WinYandexMusicRPC"
               }
             },
             "parameters": []
@@ -254920,7 +254978,9 @@
             "name": "get_Thumbnail",
             "return": {
               "type": {
-                "name": "Windows.Storage.Streams.IRandomAccessStreamReference"
+                "name": "Windows.Storage.Streams.IRandomAccessStreamReference",
+                "maybeNull": true,
+                "evidence": "The docs do not say; downstream SMTC code checks it for None, e.g. Eclassic32/WindowsMedia-widget (workspace/code/media_manager.py), Minlor/LumiSync (lumisync/sync/artwork.py), uspraveen/Cosmic-light (resources/media_bridge.py, resources/thumb_reader.py)"
               }
             },
             "parameters": []
@@ -280920,7 +280980,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Ocr.OcrEngine",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the specified language can be resolved to any of the OCR languages available on the device, returns new instance of OcrEngine class, otherwise returns null' (https://learn.microsoft.com/uwp/api/windows.media.ocr.ocrengine.trycreatefromlanguage)"
               }
             },
             "parameters": [
@@ -280939,7 +281000,8 @@
             "return": {
               "type": {
                 "name": "Windows.Media.Ocr.OcrEngine",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If any language from GlobalizationPreferences.Languages can be resolved to any of the available OCR languages returns new instance of OcrEngine class, otherwise returns null' (https://learn.microsoft.com/uwp/api/windows.media.ocr.ocrengine.trycreatefromuserprofilelanguages)"
               }
             },
             "parameters": []
@@ -305084,7 +305146,8 @@
             "return": {
               "type": {
                 "name": "Windows.Networking.NetworkOperators.ESimWatcher",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A new instance of the ESimWatcher class, or null if the caller's user security identifier (SID) is not authorized by the Windows service that handles eSIM-related operation requests' (https://learn.microsoft.com/uwp/api/windows.networking.networkoperators.esimmanager.trycreateesimwatcher)"
               }
             },
             "parameters": []
@@ -308658,7 +308721,8 @@
                 "args": [
                   {
                     "name": "Windows.Networking.NetworkOperators.MobileBroadbandPco",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
                   }
                 ]
               }
@@ -325918,7 +325982,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.SpatialAnchor",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The new anchor, if the creation attempt is successful; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.trycreaterelativeto)"
               }
             },
             "parameters": [
@@ -325937,7 +326002,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.SpatialAnchor",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The new anchor, if the creation attempt is successful; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.trycreaterelativeto)"
               }
             },
             "parameters": [
@@ -325963,7 +326029,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.SpatialAnchor",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The new anchor, if the creation attempt is successful; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.trycreaterelativeto)"
               }
             },
             "parameters": [
@@ -326699,7 +326766,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.SpatialEntityStore",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -327224,7 +327292,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.SpatialLocation",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'If the device cannot be located in that coordinate system at the specified timestamp, the return value will be null' (https://learn.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator.trylocateattimestamp)"
               }
             },
             "parameters": [
@@ -327791,7 +327860,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -327810,7 +327880,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -327836,7 +327907,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.Spatial.Preview.SpatialGraphInteropFrameOfReferencePreview",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -327882,7 +327954,8 @@
                 "args": [
                   {
                     "name": "Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'This method may return null if the mesh now contains no triangles or if the surface has since been removed' (https://learn.microsoft.com/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceinfo.trycomputelatestmeshasync)"
                   }
                 ]
               }
@@ -327906,7 +327979,8 @@
                 "args": [
                   {
                     "name": "Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs of the other overload, TryComputeLatestMeshAsync(Double): 'This method may return null if the mesh now contains no triangles or if the surface has since been removed' (https://learn.microsoft.com/uwp/api/windows.perception.spatial.surfaces.spatialsurfaceinfo.trycomputelatestmeshasync)"
                   }
                 ]
               }
@@ -348847,7 +348921,8 @@
             "return": {
               "type": {
                 "name": "Windows.Security.DataProtection.UserDataProtectionManager",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'Caller must check if the returned object is null' (https://learn.microsoft.com/uwp/api/windows.security.dataprotection.userdataprotectionmanager.trygetdefault)"
               }
             },
             "parameters": []
@@ -348858,7 +348933,8 @@
             "return": {
               "type": {
                 "name": "Windows.Security.DataProtection.UserDataProtectionManager",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'Caller must check if the returned object is null' (https://learn.microsoft.com/uwp/api/windows.security.dataprotection.userdataprotectionmanager.trygetforuser)"
               }
             },
             "parameters": [
@@ -356932,7 +357008,8 @@
             "return": {
               "type": {
                 "name": "Windows.Services.Maps.Guidance.GuidanceRoute",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A GuidanceRoute object that's based on the specified MapRoute object; otherwise, if the *mapRoute* cannot be converted, null' (https://learn.microsoft.com/uwp/api/windows.services.maps.guidance.guidanceroute.trycreatefrommaproute)"
               }
             },
             "parameters": [
@@ -364259,7 +364336,8 @@
                 "args": [
                   {
                     "name": "Windows.Storage.IStorageItem",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs of StorageFolder.TryGetItemAsync, which implements it: 'If the specified file or folder is not found, this method returns null instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.trygetitemasync)"
                   }
                 ]
               }
@@ -364436,7 +364514,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync)"
                   }
                 ]
               }
@@ -364474,7 +364554,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -364497,7 +364579,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -364527,7 +364611,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -364609,7 +364695,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties2.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -364632,7 +364720,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties2.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -364662,7 +364752,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties2.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -365776,7 +365868,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItem2.GetParentAsync. The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync)"
                   }
                 ]
               }
@@ -365791,7 +365885,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.storagefile.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -365814,7 +365910,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.storagefile.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -365844,7 +365942,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.storagefile.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -365881,7 +365981,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the file' (https://learn.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync)"
                   }
                 ]
               }
@@ -365904,7 +366006,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the file' (https://learn.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync)"
                   }
                 ]
               }
@@ -365934,7 +366038,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the file' (https://learn.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync)"
                   }
                 ]
               }
@@ -367122,7 +367228,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItem2.GetParentAsync. The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync); the parent of a drive root is None, tested in test/test_nullability.py"
                   }
                 ]
               }
@@ -367137,7 +367245,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -367160,7 +367270,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -367190,7 +367302,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.getscaledimageasthumbnailasync)"
                   }
                 ]
               }
@@ -367227,7 +367341,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image, or null if there is no thumbnail image associated with the folder' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.getthumbnailasync)"
                   }
                 ]
               }
@@ -367250,7 +367366,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image, or null if there is no thumbnail image associated with the folder' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.getthumbnailasync)"
                   }
                 ]
               }
@@ -367280,7 +367398,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'When this method completes successfully, it returns a StorageItemThumbnail that represents the thumbnail image, or null if there is no thumbnail image associated with the folder' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.getthumbnailasync)"
                   }
                 ]
               }
@@ -367430,7 +367550,8 @@
             "return": {
               "type": {
                 "name": "Windows.Storage.StorageLibraryChangeTracker",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT; the docs' own examples check the result for null (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.trygetchangetracker)"
               }
             },
             "parameters": []
@@ -367444,7 +367565,8 @@
                 "args": [
                   {
                     "name": "Windows.Storage.IStorageItem",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'If the specified file or folder is not found, this method returns null instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.trygetitemasync); tested in test/test_nullability.py"
                   }
                 ]
               }
@@ -367630,7 +367752,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "The docs: 'If the user cancels the operation and doesn't pick a folder, the method returns null' (https://learn.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync)"
                   }
                 ]
               }
@@ -370518,7 +370642,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItem2.GetParentAsync. The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync)"
                   }
                 ]
               }
@@ -370533,7 +370659,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItemProperties.GetThumbnailAsync. The docs of IStorageItemProperties.GetThumbnailAsync: 'returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -370556,7 +370684,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItemProperties.GetThumbnailAsync. The docs of IStorageItemProperties.GetThumbnailAsync: 'returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -370586,7 +370716,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItemProperties.GetThumbnailAsync. The docs of IStorageItemProperties.GetThumbnailAsync: 'returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -372137,7 +372269,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItem2.GetParentAsync. The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync)"
                   }
                 ]
               }
@@ -372152,7 +372286,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItemProperties.GetThumbnailAsync. The docs of IStorageItemProperties.GetThumbnailAsync: 'returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -372175,7 +372311,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItemProperties.GetThumbnailAsync. The docs of IStorageItemProperties.GetThumbnailAsync: 'returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -372205,7 +372343,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail"
+                    "name": "Windows.Storage.FileProperties.StorageItemThumbnail",
+                    "maybeNull": true,
+                    "evidence": "Implements IStorageItemProperties.GetThumbnailAsync. The docs of IStorageItemProperties.GetThumbnailAsync: 'returns a StorageItemThumbnail that represents the thumbnail image or null if there is no thumbnail image associated with the item' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitemproperties.getthumbnailasync)"
                   }
                 ]
               }
@@ -372358,7 +372498,8 @@
                 "args": [
                   {
                     "name": "Windows.Storage.IStorageItem",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs of StorageFolder.TryGetItemAsync, the same IStorageFolder2 method: 'If the specified file or folder is not found, this method returns null instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.trygetitemasync)"
                   }
                 ]
               }
@@ -373024,7 +373165,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync)"
                 }
               }
             ]
@@ -373136,7 +373279,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync)"
                 }
               }
             ]
@@ -373382,7 +373527,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync)"
                 }
               }
             ]
@@ -373464,7 +373611,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync)"
                 }
               }
             ]
@@ -373776,7 +373925,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync)"
                 }
               }
             ]
@@ -374265,7 +374416,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync); passing None is tested in test/test_nullability.py"
                 }
               }
             ]
@@ -374615,7 +374768,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync)"
                 }
               }
             ]
@@ -375264,7 +375419,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFile"
+                    "name": "Windows.Storage.StorageFile",
+                    "maybeNull": true,
+                    "evidence": "Microsoft's FilePicker sample treats a null result as 'Operation cancelled.' (MicrosoftDocs/winrt-api, windows.storage.pickers/code/FilePicker/CS/Scenario1.xaml.cs)"
                   }
                 ]
               }
@@ -375279,7 +375436,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFile"
+                    "name": "Windows.Storage.StorageFile",
+                    "maybeNull": true,
+                    "evidence": "Microsoft's FilePicker sample treats a null result as 'Operation cancelled.' (MicrosoftDocs/winrt-api, windows.storage.pickers/code/FilePicker/CS/Scenario1.xaml.cs)"
                   }
                 ]
               }
@@ -375302,7 +375461,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFile"
+                    "name": "Windows.Storage.StorageFile",
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; it resumes PickSingleFileAsync, which Microsoft's FilePicker sample treats as null when cancelled: 'Operation cancelled.' (MicrosoftDocs/winrt-api, windows.storage.pickers/code/FilePicker/CS/Scenario1.xaml.cs)"
                   }
                 ]
               }
@@ -375770,7 +375931,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFile"
+                    "name": "Windows.Storage.StorageFile",
+                    "maybeNull": true,
+                    "evidence": "Microsoft's FilePicker sample treats a null result as 'Operation cancelled.' (MicrosoftDocs/winrt-api, windows.storage.pickers/code/FilePicker/CS/Scenario4.xaml.cs)"
                   }
                 ]
               }
@@ -376067,7 +376230,9 @@
                 "name": "Windows.Foundation.IAsyncOperation`1",
                 "args": [
                   {
-                    "name": "Windows.Storage.StorageFolder"
+                    "name": "Windows.Storage.StorageFolder",
+                    "maybeNull": true,
+                    "evidence": "Microsoft's FilePicker sample treats a null result as 'Operation cancelled.' (MicrosoftDocs/winrt-api, windows.storage.pickers/code/FilePicker/CS/Scenario3.xaml.cs)"
                   }
                 ]
               }
@@ -376753,7 +376918,9 @@
                 "name": "value",
                 "kind": "in",
                 "type": {
-                  "name": "Windows.Storage.IStorageFile"
+                  "name": "Windows.Storage.IStorageFile",
+                  "allowNull": true,
+                  "evidence": "The docs of TargetFile: 'If your app (as the provider of the save location) can't provide an object for the file to save, set this property to null' (https://learn.microsoft.com/uwp/api/windows.storage.pickers.provider.targetfilerequest.targetfile)"
                 }
               }
             ]
@@ -381493,7 +381660,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "The docs of the fileTypeFilter parameter: 'To include all file types, supply null, an empty array, or an array containing a single entry of \"*\"' (https://learn.microsoft.com/uwp/api/windows.storage.search.queryoptions.-ctor); passing None is tested in test/test_nullability.py"
                 }
               }
             ]
@@ -387959,7 +388128,8 @@
             "return": {
               "type": {
                 "name": "Windows.System.AppUriHandlerRegistration",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'Null if there is no corresponding entry in the caller's AppxManifest' (https://learn.microsoft.com/uwp/api/windows.system.appurihandlerregistrationmanager.trygetregistration)"
               }
             },
             "parameters": [
@@ -391837,7 +392007,8 @@
             "return": {
               "type": {
                 "name": "Windows.System.Diagnostics.ProcessDiagnosticInfo",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT; None for a process id that does not exist, tested in test/test_nullability.py"
               }
             },
             "parameters": [
@@ -396943,7 +397114,8 @@
             "return": {
               "type": {
                 "name": "Windows.System.RemoteSystems.RemoteSystemConnectionInfo",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -407256,7 +407428,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Composition.AnimationController",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An instance of AnimationController for the specified animation, or null if the animation is not found' (https://learn.microsoft.com/uwp/api/windows.ui.composition.compositionobject.trygetanimationcontroller)"
               }
             },
             "parameters": [
@@ -411435,7 +411608,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Composition.CompositionBackdropBrush",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": []
@@ -416215,7 +416389,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Composition.Diagnostics.CompositionDebugSettings",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'An instance of composition debug settings, or null (see Remarks)' (https://learn.microsoft.com/uwp/api/windows.ui.composition.diagnostics.compositiondebugsettings.trygetsettings)"
               }
             },
             "parameters": [
@@ -440346,7 +440521,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Preview.Injection.InputInjector",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'Otherwise, returns null' (https://learn.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate)"
               }
             },
             "parameters": []
@@ -440357,7 +440533,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Preview.Injection.InputInjector",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'Otherwise, returns null' (https://learn.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreateforappbroadcastonly)"
               }
             },
             "parameters": []
@@ -442968,7 +443145,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialholdstartedeventargs.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -443017,7 +443195,8 @@
             "return": {
               "type": {
                 "name": "Windows.Devices.Power.BatteryReport",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'Information about the motion controller's current battery state, if available; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractioncontroller.trygetbatteryreport)"
               }
             },
             "parameters": []
@@ -443031,7 +443210,8 @@
                 "args": [
                   {
                     "name": "Windows.Storage.Streams.IRandomAccessStreamWithContentType",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'Operation that triggers once the renderable model stream is loaded, yielding the stream or null if there is no model available' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractioncontroller.trygetrenderablemodelasync)"
                   }
                 ]
               }
@@ -443184,7 +443364,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractiondetectedeventargs.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -443558,7 +443739,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.People.HandMeshObserver",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A hand mesh observer if this source supports hand meshes; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserver)"
               }
             },
             "parameters": []
@@ -443572,7 +443754,8 @@
                 "args": [
                   {
                     "name": "Windows.Perception.People.HandMeshObserver",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs: 'An operation that triggers with a hand mesh observer (if this source supports hand meshes); otherwise, an operation that returns null' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserverasync)"
                   }
                 ]
               }
@@ -443585,7 +443768,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialInteractionSourceState",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
               }
             },
             "parameters": [
@@ -443789,7 +443973,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialInteractionSourceLocation",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourceproperties.trygetlocation)"
               }
             },
             "parameters": [
@@ -443846,7 +444031,8 @@
             "return": {
               "type": {
                 "name": "Windows.Perception.People.HandPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The poses of the user's hand joints if supported for this source; otherwise null' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygethandpose)"
               }
             },
             "parameters": []
@@ -443857,7 +444043,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -443986,7 +444173,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialManipulationDelta",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialmanipulationcompletedeventargs.trygetcumulativedelta)"
               }
             },
             "parameters": [
@@ -444035,7 +444223,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialmanipulationstartedeventargs.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -444069,7 +444258,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialManipulationDelta",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialmanipulationupdatedeventargs.trygetcumulativedelta)"
               }
             },
             "parameters": [
@@ -444143,7 +444333,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialnavigationstartedeventargs.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -444287,7 +444478,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'The pointer poses, or null if the specified coordinate system cannot be located' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp)"
               }
             },
             "parameters": [
@@ -444313,7 +444505,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified spatial interaction source does not support pointing (IsPointingSupported is false) or if the source did not have positional tracking at that moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetinteractionsourcepose)"
               }
             },
             "parameters": [
@@ -444410,7 +444603,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialrecognitionstartedeventargs.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -444444,7 +444638,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.Spatial.SpatialPointerPose",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'This method will return null if the specified coordinate system cannot be located at the moment' (https://learn.microsoft.com/uwp/api/windows.ui.input.spatial.spatialtappedeventargs.trygetpointerpose)"
               }
             },
             "parameters": [
@@ -445523,7 +445718,9 @@
             "name": "GetBinding",
             "return": {
               "type": {
-                "name": "Windows.UI.Notifications.NotificationBinding"
+                "name": "Windows.UI.Notifications.NotificationBinding",
+                "maybeNull": true,
+                "evidence": "The docs: 'The binding with the specified template, if it exists; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.ui.notifications.notificationvisual.getbinding)"
               }
             },
             "parameters": [
@@ -448487,7 +448684,9 @@
             "name": "GetNotification",
             "return": {
               "type": {
-                "name": "Windows.UI.Notifications.UserNotification"
+                "name": "Windows.UI.Notifications.UserNotification",
+                "maybeNull": true,
+                "evidence": "The docs: 'The notification if it exists; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.getnotification)"
               }
             },
             "parameters": [
@@ -449466,7 +449665,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Shell.FocusSession",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A FocusSession object if a focus session was successfully started; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.ui.shell.focussessionmanager.trystartfocussession)"
               }
             },
             "parameters": []
@@ -449477,7 +449677,8 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Shell.FocusSession",
-                "maybeNull": true
+                "maybeNull": true,
+                "evidence": "The docs: 'A FocusSession object if a focus session was successfully started; otherwise, null' (https://learn.microsoft.com/uwp/api/windows.ui.shell.focussessionmanager.trystartfocussession)"
               }
             },
             "parameters": [
@@ -472070,7 +472271,8 @@
                 "args": [
                   {
                     "name": "Windows.UI.WindowManagement.AppWindow",
-                    "maybeNull": true
+                    "maybeNull": true,
+                    "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT"
                   }
                 ]
               }
