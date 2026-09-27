@@ -6,6 +6,10 @@
 
 #include <atomic>
 #include <cstdint>
+#include <functional>
+#include <string>
+#include <string_view>
+#include <unordered_map>
 
 // internal implementation details for the winrt-runtime module
 
@@ -148,6 +152,21 @@ namespace py::cpp::_winrt
 #endif
     };
 
+    /**
+     * Hashes a std::string key and a std::string_view the same way, so that a
+     * map keyed by std::string can be searched with a view without making a
+     * string of it.
+     */
+    struct string_hash
+    {
+        using is_transparent = void;
+
+        std::size_t operator()(std::string_view value) const noexcept
+        {
+            return std::hash<std::string_view>{}(value);
+        }
+    };
+
     struct module_state
     {
         PyTypeObject* inspectable_meta_type;
@@ -159,7 +178,10 @@ namespace py::cpp::_winrt
         /// Guards every map below, which are the only members that are written
         /// after the state is built.
         state_mutex cache_lock;
-        std::unordered_map<std::string_view, PyTypeObject*> type_cache;
+        /// The Python type of each qualified name that has been resolved. The
+        /// key is a copy, because a caller's name need not outlive the call.
+        std::unordered_map<std::string, PyTypeObject*, string_hash, std::equal_to<>>
+            type_cache;
         /// The projection tables that have been loaded, by the name of the
         /// module each was loaded into.
         std::unordered_map<std::string, std::unique_ptr<py::interp::projection>>
