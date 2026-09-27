@@ -987,8 +987,8 @@ namespace py::interp
                 return false;
             }
 
-            proj.names.push_back(interned.get());
-            field.name = interned.detach();
+            proj.names.push_back(std::move(interned));
+            field.name = proj.names.back().get();
 
             switch (field.code)
             {

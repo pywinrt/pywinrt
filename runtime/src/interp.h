@@ -385,7 +385,7 @@ namespace py::interp
         /// requires to outlive them in the same way.
         std::vector<std::unique_ptr<PyMethodDef[]>> method_defs;
         /// Interned attribute names, kept alive for the descriptors.
-        std::vector<PyObject*> names;
+        std::vector<py::pyobj_handle> names;
         /// The thread that is executing the package's __init__.py, which
         /// builds every type the namespace binds.
         unsigned long loader;
@@ -397,8 +397,6 @@ namespace py::interp
         py::pyobj_handle failure;
 
         void release_types() noexcept;
-
-        ~projection();
     };
 
     // ----- interp.cpp -----------------------------------------------------

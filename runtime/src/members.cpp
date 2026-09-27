@@ -583,7 +583,7 @@ namespace py::interp
                         return false;
                     }
 
-                    proj.names.push_back(interned.get());
+                    proj.names.push_back(std::move(interned));
 
                     if (!build_member(
                             proj,
@@ -592,7 +592,7 @@ namespace py::interp
                             group,
                             half,
                             1,
-                            interned.detach(),
+                            proj.names.back().get(),
                             *member,
                             overload,
                             argument))
@@ -614,7 +614,7 @@ namespace py::interp
                 return false;
             }
 
-            proj.names.push_back(interned.get());
+            proj.names.push_back(std::move(interned));
 
             if (!build_member(
                     proj,
@@ -623,7 +623,7 @@ namespace py::interp
                     group,
                     0,
                     group.member_count(),
-                    interned.detach(),
+                    proj.names.back().get(),
                     *member,
                     overload,
                     argument))
