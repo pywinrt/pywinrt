@@ -284,6 +284,20 @@ PyObject* py::take_raised_exception() noexcept
 #endif
 }
 
+/**
+ * Sets @p exception, with its traceback, as the exception that is raised. The
+ * reference to it moves in.
+ */
+void py::restore_raised_exception(PyObject* exception) noexcept
+{
+#if PY_VERSION_HEX < 0x030C0000
+    PyErr_Restore(
+        Py_NewRef(Py_TYPE(exception)), exception, PyException_GetTraceback(exception));
+#else
+    PyErr_SetRaisedException(exception);
+#endif
+}
+
 void py::set_error(py::error_info const& info) noexcept
 {
     switch (info.kind)

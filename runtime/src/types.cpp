@@ -139,9 +139,7 @@ namespace py::interp
                 proj.failure.attach(Py_NewRef(failure.get()));
             }
 
-            auto const type = Py_NewRef(Py_TYPE(failure.get()));
-            auto const trace = PyException_GetTraceback(failure.get());
-            PyErr_Restore(type, failure.detach(), trace);
+            restore_raised_exception(failure.detach());
         }
 
         /**
@@ -177,8 +175,7 @@ namespace py::interp
             // steals the reference to the cause
             PyException_SetCause(error.get(), Py_NewRef(failure));
 
-            auto const type = Py_NewRef(Py_TYPE(error.get()));
-            PyErr_Restore(type, error.detach(), nullptr);
+            restore_raised_exception(error.detach());
         }
     } // namespace
 
