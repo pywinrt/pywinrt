@@ -819,12 +819,4 @@ namespace py::interp
             Py_CLEAR(entry.implements);
         }
     }
-
-    projection::~projection()
-    {
-        for (auto& name : names)
-        {
-            Py_XDECREF(name);
-        }
-    }
 } // namespace py::interp
