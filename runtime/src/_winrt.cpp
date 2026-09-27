@@ -641,6 +641,7 @@ namespace py::cpp::_winrt
         for (auto& [name, projection] : state->projections)
         {
             projection->release_types();
+            projection->failure.close();
         }
 
         auto type_cache = std::move(state->type_cache);
