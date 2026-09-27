@@ -30,6 +30,7 @@ import unittest
 import uuid
 from typing import Any
 
+import test_winrt.testcomponent as tc
 import winrt._winrt
 import winrt.runtime._internals
 from winrt.table import build, parse
@@ -949,3 +950,56 @@ struct Test.Missing.Inner external
         self.assertEqual(errors[1].name, name)
         self.assertIn("new process", str(errors[1]))
         self.assertIs(errors[1].__cause__, errors[0])
+
+
+class UncallableCompletedSetter(unittest.TestCase):
+    """
+    What waiting says for an async object whose Completed setter this runtime
+    cannot call.
+
+    The handler is handed over without the GIL, where nothing can be raised,
+    so the setter is checked before the wait begins.
+    """
+
+    # IAsyncAction under another name, with no trampoline for either half of
+    # its Completed property.
+    TABLE = """\
+format 4.0
+census {census}
+namespace Test.Waitable
+
+interface Test.Waitable.IWaitable python_type awaitable
+    py _IWaitable
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+    signature {{5a648006-843a-4da9-865b-9d26e5dfad7b}}
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Test.Waitable.IWaitable role=completed
+            out delegate type=Windows.Foundation.AsyncActionCompletedHandler return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Test.Waitable.IWaitable
+            in delegate type=Windows.Foundation.AsyncActionCompletedHandler name=handler
+
+delegate Windows.Foundation.AsyncActionCompletedHandler external
+    py winrt.windows.foundation.AsyncActionCompletedHandler
+    guid a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7
+"""
+
+    def test_waiting_raises_instead_of_calling_it(self) -> None:
+        lineage, revision = read("winrt", "windows", "foundation")["census"]
+        data = build(parse(self.TABLE.format(census=f"{lineage} {revision}")))
+
+        # Left to the operating system to clean up, as refuse() says.
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as directory:
+            path = pathlib.Path(directory) / "_table.pywinrt"
+            path.write_bytes(data)
+            name = f"_waitable_{path.parent.name}"
+            winrt._winrt.load_projection(types.ModuleType(name), str(path))
+
+        action = tc.TestRunner.create_async_action(0)
+        capsule = winrt._winrt.as_interface(
+            action,  # type: ignore[call-overload]
+            uuid.UUID("5a648006-843a-4da9-865b-9d26e5dfad7b"),
+        )
+        waitable = winrt._winrt.wrap_interface(capsule, f"{name}._IWaitable")
+
+        with self.assertRaisesRegex(TypeError, "Completed"):
+            waitable.get()
