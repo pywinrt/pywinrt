@@ -262,13 +262,15 @@ class TypeRefNullabilityInfo
         string name,
         IList<TypeRefNullabilityInfo>? args = default,
         bool allowNull = false,
-        bool maybeNull = false
+        bool maybeNull = false,
+        string? evidence = default
     )
     {
         Name = name;
         Args = args;
         AllowNull = allowNull;
         MaybeNull = maybeNull;
+        Evidence = evidence;
     }
 
     public TypeRefNullabilityInfo(TypeReference type)
@@ -302,6 +304,7 @@ class TypeRefNullabilityInfo
 
         AllowNull = old.AllowNull;
         MaybeNull = old.MaybeNull;
+        Evidence = old.Evidence;
     }
 
     public string Name { get; }
@@ -314,4 +317,11 @@ class TypeRefNullabilityInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public bool MaybeNull { get; }
+
+    /// <summary>
+    /// Why <see cref="AllowNull"/> or <see cref="MaybeNull"/> is set: where
+    /// the documentation or a caller shows that null is accepted or returned.
+    /// </summary>
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public string? Evidence { get; }
 }
