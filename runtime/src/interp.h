@@ -17,6 +17,8 @@
 
 #include <Python.h>
 
+#include <pywinrt/handles.h>
+
 #include "shapes.h"
 #include "table.h"
 
@@ -389,6 +391,10 @@ namespace py::interp
         unsigned long loader;
         /// Set with publish() once it has.
         bool loaded;
+        /// The exception that building the types failed with, which every
+        /// later load raises as its cause, since the types are built only
+        /// once. Guarded by the cache lock.
+        py::pyobj_handle failure;
 
         void release_types() noexcept;
 
