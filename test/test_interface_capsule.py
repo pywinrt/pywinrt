@@ -9,11 +9,12 @@ projected object, and raises what ``hresult_error()`` builds for a failed call.
 
 import ctypes
 import datetime
+import gc
 import unittest
 import uuid
 
 import winrt._winrt as runtime
-from winrt.windows.foundation import Uri
+from winrt.windows.foundation import Uri, WwwFormUrlDecoder
 
 IID_IINSPECTABLE = uuid.UUID("AF86E2E0-B12D-4C6A-9C5A-D7AA65101E90")
 IID_IUNKNOWN = uuid.UUID("00000000-0000-0000-C000-000000000046")
@@ -79,6 +80,32 @@ class TestInterfaceCapsule(unittest.TestCase):
         del capsule
 
         self.assertEqual(wrapped.absolute_uri, "https://example.com/")
+
+    def test_name_built_at_run_time(self) -> None:
+        # A type that nothing else wraps by name, so that the name built here
+        # is the one the runtime first resolves it by.
+        capsule = runtime.as_interface(WwwFormUrlDecoder("a=1"), IID_IINSPECTABLE)
+
+        def wrap() -> None:
+            name = "winrt.windows.foundation." + "".join(["Www", "Form", "UrlDecoder"])
+            self.assertIsInstance(
+                runtime.wrap_interface(capsule, name), WwwFormUrlDecoder
+            )
+
+        def cached() -> int:
+            # The runtime module's state visits the type once for each name the
+            # cache has it under.
+            return gc.get_referents(runtime).count(WwwFormUrlDecoder)
+
+        wrap()
+        garbage = [str(i) * 16 for i in range(1000)]
+        entries = cached()
+
+        # A lookup that no longer finds the first name adds a second entry.
+        wrap()
+
+        self.assertEqual(cached(), entries)
+        del garbage
 
     def test_none(self) -> None:
         self.assertIsNone(runtime.as_interface(None, IID_IINSPECTABLE))
