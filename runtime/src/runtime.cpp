@@ -64,15 +64,15 @@ namespace
         {
             py::cpp::_winrt::state_guard guard{state->cache_lock};
 
-            auto const [it, inserted] = state->type_cache.try_emplace(
-                std::string{qualified_name}, reinterpret_cast<PyTypeObject*>(type));
+            auto const [it, inserted]
+                = state->type_cache.try_emplace(std::string{qualified_name});
 
             if (inserted)
             {
-                Py_INCREF(type);
+                it->second.attach(reinterpret_cast<PyTypeObject*>(Py_NewRef(type)));
             }
 
-            return it->second;
+            return it->second.get();
         }
         catch (...)
         {
@@ -96,7 +96,7 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         auto it = state->type_cache.find(qualified_name);
         if (it != state->type_cache.end())
         {
-            return it->second;
+            return it->second.get();
         }
     }
 
@@ -186,7 +186,7 @@ PyObject* py::wrap_mapping_iter(PyObject* iter) noexcept
     }
 
     py::pyobj_handle wrapper{PyObject_CallOneArg(
-        reinterpret_cast<PyObject*>(state->mapping_iter_type), iter)};
+        reinterpret_cast<PyObject*>(state->mapping_iter_type.get()), iter)};
 
     if (!wrapper)
     {
@@ -385,7 +385,7 @@ PyObject* py::convert_guid(winrt::guid value) noexcept
         return nullptr;
     }
 
-    return PyObject_CallOneArg(state->to_uuid_func, value_as_bytes.get());
+    return PyObject_CallOneArg(state->to_uuid_func.get(), value_as_bytes.get());
 }
 
 winrt::guid py::convert_to_guid(PyObject* obj)

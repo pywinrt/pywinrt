@@ -2,6 +2,8 @@
 
 #include <Python.h>
 
+#include <pywinrt/handles.h>
+
 #include "interp.h"
 
 #include <atomic>
@@ -169,18 +171,18 @@ namespace py::cpp::_winrt
 
     struct module_state
     {
-        PyTypeObject* inspectable_meta_type;
-        PyTypeObject* object_type;
-        PyTypeObject* array_type;
-        PyTypeObject* mapping_iter_type;
+        py::pytype_handle inspectable_meta_type;
+        py::pytype_handle object_type;
+        py::pytype_handle array_type;
+        py::pytype_handle mapping_iter_type;
         /// The descriptor that a projected method is bound as.
-        PyTypeObject* projected_method_type;
+        py::pytype_handle projected_method_type;
         /// Guards every map below, which are the only members that are written
         /// after the state is built.
         state_mutex cache_lock;
         /// The Python type of each qualified name that has been resolved. The
         /// key is a copy, because a caller's name need not outlive the call.
-        std::unordered_map<std::string, PyTypeObject*, string_hash, std::equal_to<>>
+        std::unordered_map<std::string, py::pytype_handle, string_hash, std::equal_to<>>
             type_cache;
         /// The projection tables that have been loaded, by the name of the
         /// module each was loaded into.
@@ -199,9 +201,11 @@ namespace py::cpp::_winrt
         /// Guards what the projections build after their packages have been
         /// imported. Taken before the cache lock when both are.
         build_mutex build_lock;
-        PyObject* to_uuid_func;
+        py::pyobj_handle to_uuid_func;
         /// uuid.UUID, which is what a Guid is in Python.
-        PyTypeObject* uuid_type;
+        py::pytype_handle uuid_type;
+        /// Owned, and not a handle, because the first thread to import it
+        /// publishes it with a compare-exchange on the pointer itself.
         PyObject* wrap_async_func;
     };
 

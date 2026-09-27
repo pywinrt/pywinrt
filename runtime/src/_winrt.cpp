@@ -596,18 +596,18 @@ namespace py::cpp::_winrt
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
 
-        Py_VISIT(state->inspectable_meta_type);
-        Py_VISIT(state->object_type);
-        Py_VISIT(state->array_type);
-        Py_VISIT(state->mapping_iter_type);
-        Py_VISIT(state->projected_method_type);
-        Py_VISIT(state->to_uuid_func);
-        Py_VISIT(state->uuid_type);
+        Py_VISIT(state->inspectable_meta_type.get());
+        Py_VISIT(state->object_type.get());
+        Py_VISIT(state->array_type.get());
+        Py_VISIT(state->mapping_iter_type.get());
+        Py_VISIT(state->projected_method_type.get());
+        Py_VISIT(state->to_uuid_func.get());
+        Py_VISIT(state->uuid_type.get());
         Py_VISIT(state->wrap_async_func);
 
         for (const auto& [key, value] : state->type_cache)
         {
-            Py_VISIT(value);
+            Py_VISIT(value.get());
         }
 
         return 0;
@@ -617,13 +617,13 @@ namespace py::cpp::_winrt
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
 
-        Py_CLEAR(state->inspectable_meta_type);
-        Py_CLEAR(state->object_type);
-        Py_CLEAR(state->array_type);
-        Py_CLEAR(state->mapping_iter_type);
-        Py_CLEAR(state->projected_method_type);
-        Py_CLEAR(state->to_uuid_func);
-        Py_CLEAR(state->uuid_type);
+        state->inspectable_meta_type.close();
+        state->object_type.close();
+        state->array_type.close();
+        state->mapping_iter_type.close();
+        state->projected_method_type.close();
+        state->to_uuid_func.close();
+        state->uuid_type.close();
         Py_CLEAR(state->wrap_async_func);
 
         // Nothing here takes the cache lock, and traverse and free do not
@@ -644,12 +644,9 @@ namespace py::cpp::_winrt
             projection->failure.close();
         }
 
+        // Its references are released as it goes out of scope, with the map
+        // in the state already empty.
         auto type_cache = std::move(state->type_cache);
-
-        for (auto& [key, value] : type_cache)
-        {
-            Py_XDECREF(value);
-        }
 
         return 0;
     }
@@ -662,19 +659,14 @@ namespace py::cpp::_winrt
         main_state.compare_exchange_strong(
             expected, nullptr, std::memory_order_acq_rel);
 
-        Py_XDECREF(state->inspectable_meta_type);
-        Py_XDECREF(state->object_type);
-        Py_XDECREF(state->array_type);
-        Py_XDECREF(state->mapping_iter_type);
-        Py_XDECREF(state->projected_method_type);
-        Py_XDECREF(state->to_uuid_func);
-        Py_XDECREF(state->uuid_type);
+        std::destroy_at(&state->inspectable_meta_type);
+        std::destroy_at(&state->object_type);
+        std::destroy_at(&state->array_type);
+        std::destroy_at(&state->mapping_iter_type);
+        std::destroy_at(&state->projected_method_type);
+        std::destroy_at(&state->to_uuid_func);
+        std::destroy_at(&state->uuid_type);
         Py_XDECREF(state->wrap_async_func);
-
-        for (auto& [key, value] : state->type_cache)
-        {
-            Py_XDECREF(value);
-        }
 
         std::destroy_at(&state->type_cache);
 
@@ -829,8 +821,15 @@ namespace py::cpp::_winrt
 
         // CPython allocates the state zeroed just before this runs, and does
         // not call traverse, clear or free before it has, so constructing the
-        // maps first is what lets those three assume them.
+        // handles and maps first is what lets those three assume them.
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
+        std::construct_at(&state->inspectable_meta_type);
+        std::construct_at(&state->object_type);
+        std::construct_at(&state->array_type);
+        std::construct_at(&state->mapping_iter_type);
+        std::construct_at(&state->projected_method_type);
+        std::construct_at(&state->to_uuid_func);
+        std::construct_at(&state->uuid_type);
         std::construct_at(&state->type_cache);
         std::construct_at(&state->projections);
         std::construct_at(&state->type_entries);
@@ -906,13 +905,13 @@ namespace py::cpp::_winrt
             return -1;
         }
 
-        state->inspectable_meta_type = inspectable_meta_type.detach();
-        state->object_type = object_type.detach();
-        state->array_type = array_type.detach();
-        state->mapping_iter_type = mapping_iter_type.detach();
-        state->projected_method_type = projected_method_type.detach();
-        state->to_uuid_func = to_uuid_func.detach();
-        state->uuid_type = uuid_type.detach();
+        state->inspectable_meta_type = std::move(inspectable_meta_type);
+        state->object_type = std::move(object_type);
+        state->array_type = std::move(array_type);
+        state->mapping_iter_type = std::move(mapping_iter_type);
+        state->projected_method_type = std::move(projected_method_type);
+        state->to_uuid_func = std::move(to_uuid_func);
+        state->uuid_type = std::move(uuid_type);
         state->wrap_async_func = nullptr; // lazy-initialized
 
         main_state.store(state, std::memory_order_release);
@@ -990,7 +989,7 @@ PyTypeObject* py::get_inspectable_meta_type() noexcept
         return nullptr;
     }
 
-    return state->inspectable_meta_type;
+    return state->inspectable_meta_type.get();
 }
 
 /**
@@ -1005,5 +1004,5 @@ PyTypeObject* py::get_object_type() noexcept
         return nullptr;
     }
 
-    return state->object_type;
+    return state->object_type.get();
 }
