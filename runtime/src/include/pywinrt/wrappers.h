@@ -151,7 +151,9 @@ namespace py
          * the same element type.
          * @param [in]  start   The index of the first element to copy.
          * @param [in]  count   The number of elements to copy, which the
-         * caller has checked fit in the array.
+         * caller has checked fit in the array. If they no longer do when they
+         * are copied - a lent array taken back meanwhile - the new array is
+         * empty.
          * @returns The new array or sets Python error and returns @c nullptr
          * on failure.
          */
@@ -160,6 +162,60 @@ namespace py
 
         // needed to avoid leaks with derived types when used with std::unique_ptr
         virtual ~Array() = default;
+
+      protected:
+        /**
+         * Holds the lock over an array's elements for a scope.
+         *
+         * Free-threading is what this is for: assigning an element that holds
+         * a reference releases the one it replaces, so a thread still reading
+         * that one would read freed memory. Under the GIL only one thread
+         * touches an array at a time, and the guard compiles away.
+         *
+         * The lock covers copying an element's bytes and duplicating what
+         * they refer to, and never a conversion, which can run Python: a
+         * PyMutex is not recursive, and Python run under it could come back to
+         * the same array. So an element is copied out under the lock and
+         * converted after it, and a value is converted first and swapped in
+         * under it, with the element it replaces released afterwards. Nor is
+         * a Python error set under it, since making the exception can run a
+         * collection and with it a finalizer.
+         *
+         * The buffer protocol is not locked. An array whose elements hold
+         * references exports them read-only, so the worst a write racing an
+         * assignment can do is tear a value that has no references in it, as
+         * with a bytearray.
+         */
+        class guard
+        {
+          public:
+            guard(guard const&) = delete;
+            guard& operator=(guard const&) = delete;
+
+#ifdef Py_GIL_DISABLED
+            explicit guard(Array& array) noexcept : mutex_(&array.mutex_)
+            {
+                PyMutex_Lock(mutex_);
+            }
+
+            ~guard()
+            {
+                PyMutex_Unlock(mutex_);
+            }
+
+          private:
+            PyMutex* mutex_;
+#else
+            explicit guard(Array&) noexcept
+            {
+            }
+#endif
+        };
+
+#ifdef Py_GIL_DISABLED
+      private:
+        PyMutex mutex_{};
+#endif
     };
 
     struct

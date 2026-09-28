@@ -91,6 +91,12 @@ namespace py
         }
     };
 
+    /**
+     * A WinRT array of @p T.
+     *
+     * Its size is fixed once it is shared - only its constructor allocates -
+     * so a bounds check needs no lock; reading and writing an element do.
+     */
     template<typename T>
     struct ComArray : Array
     {
@@ -143,9 +149,21 @@ namespace py
 
         PyObject* At(uint32_t index) noexcept override
         {
+            if (index >= array.size())
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return nullptr;
+            }
+
             try
             {
-                return convert<T>(array.at(index));
+                auto const value = [&]
+                {
+                    guard lock{*this};
+                    return array[index];
+                }();
+
+                return convert<T>(value);
             }
             catch (...)
             {
@@ -169,8 +187,17 @@ namespace py
 
             try
             {
-                array[static_cast<winrt::array_view<T>::size_type>(index)]
-                    = convert_to<T>(item);
+                auto value = convert_to<T>(item);
+
+                {
+                    guard lock{*this};
+                    std::swap(
+                        array[static_cast<winrt::array_view<T>::size_type>(index)],
+                        value);
+                }
+
+                // value is the element it replaced, released here, after the
+                // lock.
                 return true;
             }
             catch (...)
@@ -185,8 +212,13 @@ namespace py
             try
             {
                 auto copy = std::make_unique<ComArray<T>>();
-                auto const first = array.begin() + start;
-                copy->array = winrt::com_array<T>(first, first + count);
+
+                {
+                    guard lock{*this};
+                    auto const first = array.begin() + start;
+                    copy->array = winrt::com_array<T>(first, first + count);
+                }
+
                 return copy;
             }
             catch (...)

@@ -28,7 +28,10 @@
 #include "structs.h"
 #include "types.h"
 
+#include <algorithm>
+#include <cstddef>
 #include <memory>
+#include <new>
 #include <string>
 
 namespace py::interp
@@ -345,39 +348,68 @@ namespace py::interp
          * owns.
          *
          * A failure part way through leaves the rest of @p destination zeroed,
-         * so that it holds exactly what has been duplicated.
+         * so that it holds exactly what has been duplicated. It sets no Python
+         * error, so that an array can copy under its lock.
          *
-         * @returns @c false with a Python error set.
+         * @throws what duplicating a string throws.
          */
-        bool copy_values(
+        void copy_values(
             arg_desc const& value,
             uint8_t* destination,
             uint8_t const* source,
             uint32_t count,
-            size_t width) noexcept
+            size_t width)
         {
             if (!value_owns_resources(value))
             {
                 std::memcpy(destination, source, count * width);
-                return true;
+                return;
             }
 
-            try
+            for (uint32_t i = 0; i < count; i++)
             {
-                for (uint32_t i = 0; i < count; i++)
+                std::memcpy(destination + i * width, source + i * width, width);
+                copy_value_resources(value, destination + i * width);
+            }
+        }
+
+        /**
+         * Room for one element outside an array, zeroed, and on the stack
+         * when the element is small enough.
+         */
+        class element_storage
+        {
+          public:
+            element_storage(element_storage const&) = delete;
+            element_storage& operator=(element_storage const&) = delete;
+
+            explicit element_storage(size_t size) noexcept
+            {
+                if (size > sizeof(inline_))
                 {
-                    std::memcpy(destination + i * width, source + i * width, width);
-                    copy_value_resources(value, destination + i * width);
+                    heap_.reset(new (std::nothrow) uint8_t[size]);
+                    data_ = heap_.get();
+                }
+
+                if (data_)
+                {
+                    std::memset(data_, 0, size);
                 }
             }
-            catch (...)
+
+            /**
+             * The storage, or @c nullptr when it could not be allocated.
+             */
+            uint8_t* get() const noexcept
             {
-                to_PyErr();
-                return false;
+                return data_;
             }
 
-            return true;
-        }
+          private:
+            alignas(std::max_align_t) uint8_t inline_[64];
+            std::unique_ptr<uint8_t[]> heap_;
+            uint8_t* data_{inline_};
+        };
 
     } // namespace
 
@@ -443,6 +475,7 @@ namespace py::interp
          */
         void take_back() noexcept
         {
+            guard lock{*this};
             size_ = 0;
             data_ = nullptr;
             owns_ = true;
@@ -490,6 +523,7 @@ namespace py::interp
 
         uint32_t Size() noexcept override
         {
+            guard lock{*this};
             return size_;
         }
 
@@ -505,44 +539,103 @@ namespace py::interp
 
         PyObject* At(uint32_t index) noexcept override
         {
-            if (index >= size_)
+            // The element is converted from a copy of it, so that another
+            // thread assigning it cannot release it under the conversion.
+            element_storage value{value_size_};
+            if (!value.get())
+            {
+                PyErr_NoMemory();
+                return nullptr;
+            }
+
+            auto copied = false;
+
+            try
+            {
+                guard lock{*this};
+
+                if (auto const source = slot(index))
+                {
+                    copy_values(element_, value.get(), source, 1, value_size_);
+                    copied = true;
+                }
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+
+            if (!copied)
             {
                 PyErr_SetString(PyExc_IndexError, "index out of range");
                 return nullptr;
             }
 
-            // The array goes on holding the element, so the conversion that
-            // borrows is the right one here.
-            return convert_borrowed(*owner_, element_, at(index));
+            auto const result = convert_borrowed(*owner_, element_, value.get());
+            release_value(element_, value.get());
+
+            return result;
         }
 
         bool Set(Py_ssize_t index, PyObject* item) noexcept override
         {
-            if (index < 0)
+            // Checked before the conversion as well as after it, so that an
+            // index out of range is reported as one whatever the value is.
+            auto present = false;
+
             {
-                index += size_;
+                guard lock{*this};
+                present = slot(index) != nullptr;
             }
 
-            if (index < 0 || static_cast<uint32_t>(index) >= size_)
+            if (!present)
             {
                 PyErr_SetString(PyExc_IndexError, "index out of range");
                 return false;
             }
 
-            auto* const slot = at(static_cast<uint32_t>(index));
+            element_storage value{value_size_};
+            if (!value.get())
+            {
+                PyErr_NoMemory();
+                return false;
+            }
 
             try
             {
-                release_value(element_, slot);
-                std::memset(slot, 0, value_size_);
-                convert_to_abi(*owner_, element_, item, slot);
-                return true;
+                convert_to_abi(*owner_, element_, item, value.get());
             }
             catch (...)
             {
+                release_value(element_, value.get());
                 to_PyErr();
                 return false;
             }
+
+            auto stored = false;
+
+            {
+                guard lock{*this};
+
+                if (auto const target = slot(index))
+                {
+                    std::swap_ranges(value.get(), value.get() + value_size_, target);
+                    stored = true;
+                }
+            }
+
+            // What value holds now is the element it replaced, or, when a lent
+            // array was taken back meanwhile, the one there was nowhere to put.
+            release_value(element_, value.get());
+
+            if (!stored)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return false;
+            }
+
+            return true;
         }
 
         std::unique_ptr<py::Array> Slice(
@@ -571,9 +664,32 @@ namespace py::interp
                 return copy;
             }
 
-            if (!copy_values(element_, copy->at(0), at(start), count, value_size_))
+            auto copied = false;
+
+            try
             {
+                guard lock{*this};
+
+                // A lent array that was taken back since the caller measured
+                // it has nothing left to copy.
+                if (static_cast<uint64_t>(start) + count <= size_)
+                {
+                    copy_values(element_, copy->at(0), at(start), count, value_size_);
+                    copied = true;
+                }
+            }
+            catch (...)
+            {
+                to_PyErr();
                 return nullptr;
+            }
+
+            if (!copied)
+            {
+                if (!copy->Alloc(0))
+                {
+                    return nullptr;
+                }
             }
 
             return copy;
@@ -584,6 +700,31 @@ namespace py::interp
         {
             return static_cast<uint8_t*>(data_)
                    + static_cast<size_t>(index) * value_size_;
+        }
+
+        /**
+         * The element @p index names, counted from the end when it is
+         * negative, or @c nullptr when there is none. The caller holds the
+         * lock.
+         */
+        uint8_t* slot(Py_ssize_t index) const noexcept
+        {
+            if (index < 0)
+            {
+                index += size_;
+            }
+
+            if (index < 0)
+            {
+                return nullptr;
+            }
+
+            if (static_cast<size_t>(index) >= size_)
+            {
+                return nullptr;
+            }
+
+            return at(static_cast<uint32_t>(index));
         }
 
         void clear() noexcept
@@ -931,13 +1072,18 @@ namespace py::interp
             return cpp::_winrt::Array_New(std::move(array));
         }
 
-        if (!copy_values(
+        try
+        {
+            copy_values(
                 element,
                 static_cast<uint8_t*>(array->Data()),
                 static_cast<uint8_t const*>(data),
                 count,
-                array->ValueSize()))
+                array->ValueSize());
+        }
+        catch (...)
         {
+            to_PyErr();
             return nullptr;
         }
 
