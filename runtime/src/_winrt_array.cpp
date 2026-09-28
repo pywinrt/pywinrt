@@ -853,7 +853,14 @@ namespace py::cpp::_winrt
 
         view->suboffsets = nullptr;
 
+        self->array->AddExport();
+
         return 0;
+    }
+
+    static void Array_bf_releasebuffer(Array* self, Py_buffer* /*unused*/) noexcept
+    {
+        self->array->RemoveExport();
     }
 
     static PyType_Slot Array_type_slots[] = {
@@ -869,6 +876,7 @@ namespace py::cpp::_winrt
         {Py_sq_item, reinterpret_cast<void*>(Array_sq_item)},
         {Py_sq_ass_item, reinterpret_cast<void*>(Array_sq_ass_item)},
         {Py_bf_getbuffer, reinterpret_cast<void*>(Array_bf_getbuffer)},
+        {Py_bf_releasebuffer, reinterpret_cast<void*>(Array_bf_releasebuffer)},
         {},
     };
 

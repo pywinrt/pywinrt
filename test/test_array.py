@@ -507,6 +507,33 @@ class TestWinRTArray(unittest.TestCase):
                     with m.cast("B") as b, self.assertRaises(TypeError):
                         b[0] = 1
 
+    def test_references_are_not_replaced_while_exported(self):
+        for element, values, value in (
+            (str, ["a"], "b"),
+            (Uri, [Uri("https://example.com")], Uri("https://example.org")),
+            (tc.NonBlittable, [non_blittable(1)], non_blittable(2)),
+        ):
+            with self.subTest(element=element):
+                a = Array(element, values)
+
+                with memoryview(a):
+                    with self.assertRaises(BufferError):
+                        a[0] = value
+
+                    self.assertEqual([str(item) for item in a], [str(values[0])])
+
+                a[0] = value
+
+                self.assertEqual(str(a[0]), str(value))
+
+    def test_values_are_replaced_while_exported(self):
+        a = Array(Int32, [1, 2])
+
+        with memoryview(a) as m:
+            a[0] = 3
+
+            self.assertEqual(m[0], 3)
+
     def test_values_are_writable_as_a_buffer(self):
         a = Array(Int32, [1, 2])
 
