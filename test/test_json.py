@@ -5,7 +5,6 @@ import winrt.windows.data.json as wdj
 from winrt.system import Array
 
 
-
 class TestJson(unittest.TestCase):
     def test_activate_JsonArray(self):
         a = wdj.JsonArray()
