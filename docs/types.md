@@ -470,6 +470,8 @@ these interfaces are also extended to support the Pythonic APIs.
 behave very much like Python lists, so you can iterate them with a `for` loop, index
 them `seq[0]`, slice them `seq[:3]` use them with `len(seq)` and search with
 `value in seq`.
+A slice is a [`winrt.system.Array`](#arrays), which is a `Sequence` as well, so
+it can be indexed, sliced and searched the same way.
 
 For mutable sequences, items can be modified with `seq[0] = value`, deleted
 with `del seq[0]`, appended with `seq.append(value)` or `seq.extend(seq2)`,

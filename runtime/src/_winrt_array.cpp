@@ -612,6 +612,171 @@ namespace py::cpp::_winrt
         return 0;
     }
 
+    /**
+     * __getitem__, which is an index or a slice.
+     *
+     * A slice is a new array of the same element type holding copies of the
+     * elements it names, which is what slicing a projected vector gives too.
+     */
+    static PyObject* Array_mp_subscript(Array* self, PyObject* key) noexcept
+    {
+        auto const size = static_cast<Py_ssize_t>(self->array->Size());
+
+        if (PySlice_Check(key))
+        {
+            Py_ssize_t start{};
+            Py_ssize_t stop{};
+            Py_ssize_t step{};
+
+            if (PySlice_Unpack(key, &start, &stop, &step) < 0)
+            {
+                return nullptr;
+            }
+
+            auto const length = PySlice_AdjustIndices(size, &start, &stop, step);
+
+            if (step != 1)
+            {
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "slices with step other than 1 are not implemented");
+                return nullptr;
+            }
+
+            auto slice = self->array->Slice(
+                static_cast<uint32_t>(start), static_cast<uint32_t>(length));
+            if (!slice)
+            {
+                return nullptr;
+            }
+
+            return Array_New(std::move(slice));
+        }
+
+        if (!PyIndex_Check(key))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "indices must be integers or slices, not '%s'",
+                Py_TYPE(key)->tp_name);
+            return nullptr;
+        }
+
+        auto index = PyNumber_AsSsize_t(key, PyExc_IndexError);
+        if (index == -1 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        if (index < 0)
+        {
+            index += size;
+        }
+
+        if (index < 0)
+        {
+            PyErr_SetString(PyExc_IndexError, "index out of range");
+            return nullptr;
+        }
+
+        if (index >= size)
+        {
+            PyErr_SetString(PyExc_IndexError, "index out of range");
+            return nullptr;
+        }
+
+        return self->array->At(static_cast<uint32_t>(index));
+    }
+
+    /**
+     * Whether @p self and @p other hold equal elements in the same order.
+     *
+     * The element types do not have to match, as with array.array: an array
+     * of Int32 equals an array of Int64 that holds the same numbers.
+     *
+     * @returns -1 with a Python error set.
+     */
+    static int Array_equal(py::Array& self, py::Array& other) noexcept
+    {
+        auto const size = self.Size();
+
+        if (other.Size() != size)
+        {
+            return 0;
+        }
+
+        for (uint32_t i = 0; i < size; i++)
+        {
+            pyobj_handle item{self.At(i)};
+            if (!item)
+            {
+                return -1;
+            }
+
+            pyobj_handle other_item{other.At(i)};
+            if (!other_item)
+            {
+                return -1;
+            }
+
+            auto const equal
+                = PyObject_RichCompareBool(item.get(), other_item.get(), Py_EQ);
+            if (equal != 1)
+            {
+                return equal;
+            }
+        }
+
+        return 1;
+    }
+
+    /**
+     * == and != against another array, which is the only thing an array
+     * equals, as a list equals only a list: an array and a list of the same
+     * elements compare unequal, and list(array) is the spelling that compares
+     * the elements with a list's.
+     */
+    static PyObject* Array_tp_richcompare(Array* self, PyObject* other, int op) noexcept
+    {
+        if (op != Py_EQ && op != Py_NE)
+        {
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+
+        auto const other_array = Array_Get(other);
+        if (!other_array)
+        {
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+
+        auto const equal = Array_equal(*self->array, *other_array);
+        if (equal == -1)
+        {
+            return nullptr;
+        }
+
+        return PyBool_FromLong(op == Py_EQ ? equal : !equal);
+    }
+
+    static PyObject* Array_tp_repr(Array* self) noexcept
+    {
+        auto const type = self->array->WinrtElementTypeName();
+
+        pyobj_handle name{PyUnicode_FromWideChar(type.data(), type.size())};
+        if (!name)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle items{PySequence_List(reinterpret_cast<PyObject*>(self))};
+        if (!items)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Array(%U, %R)", name.get(), items.get());
+    }
+
     static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
     {
         // Writing an element that holds references through a buffer would put
@@ -685,6 +850,9 @@ namespace py::cpp::_winrt
         {Py_tp_dealloc, reinterpret_cast<void*>(Array_tp_dealloc)},
         {Py_tp_getset, reinterpret_cast<void*>(Array_tp_getset)},
         {Py_tp_methods, reinterpret_cast<void*>(Array_tp_methods)},
+        {Py_tp_repr, reinterpret_cast<void*>(Array_tp_repr)},
+        {Py_tp_richcompare, reinterpret_cast<void*>(Array_tp_richcompare)},
+        {Py_mp_subscript, reinterpret_cast<void*>(Array_mp_subscript)},
         {Py_sq_length, reinterpret_cast<void*>(Array_sq_length)},
         {Py_sq_item, reinterpret_cast<void*>(Array_sq_item)},
         {Py_sq_ass_item, reinterpret_cast<void*>(Array_sq_ass_item)},
