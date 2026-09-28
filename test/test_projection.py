@@ -181,6 +181,39 @@ class TestStructs(unittest.TestCase):
     def test_repr(self) -> None:
         self.assertTrue(repr(tc.Blittable()).startswith("Blittable(a=0, "))
 
+    def test_hash(self) -> None:
+        value = tc.Blittable(*BLITTABLE_FIELDS)
+
+        # a struct equals the tuple of its fields, so it hashes as that tuple
+        self.assertEqual(hash(value), hash(tc.Blittable(*BLITTABLE_FIELDS)))
+        self.assertEqual(hash(value), hash(BLITTABLE_FIELDS))
+        self.assertEqual(len({value, tc.Blittable(*BLITTABLE_FIELDS)}), 1)
+        self.assertEqual({value: "one"}[tc.Blittable(*BLITTABLE_FIELDS)], "one")
+
+    def test_hash_of_a_nested_struct(self) -> None:
+        value = tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))
+
+        self.assertEqual(
+            hash(value),
+            hash(tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))),
+        )
+
+    def test_match_by_keyword(self) -> None:
+        match tc.NonBlittable(a=True, c="hi"):
+            case tc.NonBlittable(a=True, c=c):
+                self.assertEqual(c, "hi")
+            case _:
+                self.fail("the pattern should match")
+
+    def test_match_by_position(self) -> None:
+        self.assertEqual(tc.NonBlittable.__match_args__, ("a", "b", "c", "d"))
+
+        match tc.NonBlittable(True, "x", "hi"):
+            case tc.NonBlittable(True, b, "hi"):
+                self.assertEqual(b, "x")
+            case _:
+                self.fail("the pattern should match")
+
     def test_replace(self) -> None:
         value = tc.Blittable(*BLITTABLE_FIELDS)
         replaced = value.__replace__(a=99)

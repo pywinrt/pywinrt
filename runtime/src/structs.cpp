@@ -756,6 +756,31 @@ namespace py::interp
             return PyObject_RichCompare(mine.get(), theirs.get(), op);
         }
 
+        /**
+         * The hash of a struct is the hash of its fields as a tuple, since a
+         * struct is immutable and compares equal to that tuple.
+         */
+        Py_hash_t struct_hash(PyObject* self) noexcept
+        {
+            auto const info = find_type_entry(Py_TYPE(self));
+            if (!info)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' is not a struct this runtime built",
+                    Py_TYPE(self)->tp_name);
+                return -1;
+            }
+
+            pyobj_handle values{struct_as_tuple(self, *info)};
+            if (!values)
+            {
+                return -1;
+            }
+
+            return PyObject_Hash(values.get());
+        }
+
         PyObject* struct_replace(
             PyObject* self, PyObject* args, PyObject* kwds) noexcept
         {
@@ -1048,6 +1073,7 @@ namespace py::interp
                  entry.owns_resources ? struct_dealloc_release : struct_dealloc)},
             {Py_tp_repr, reinterpret_cast<void*>(struct_repr)},
             {Py_tp_richcompare, reinterpret_cast<void*>(struct_richcompare)},
+            {Py_tp_hash, reinterpret_cast<void*>(struct_hash)},
             {Py_tp_methods, reinterpret_cast<void*>(keep_methods(proj, methods))},
             {Py_tp_getset, reinterpret_cast<void*>(keep_getsets(proj, getsets))}};
 
@@ -1078,6 +1104,32 @@ namespace py::interp
         pytype_handle type{
             register_python_type(proj.module, &spec, nullptr, statics.get())};
         if (!type)
+        {
+            return false;
+        }
+
+        // A class pattern matches the fields positionally in the order they
+        // are declared, which is also the order the constructor takes them.
+        pyobj_handle match_args{
+            PyTuple_New(static_cast<Py_ssize_t>(entry.fields.size()))};
+        if (!match_args)
+        {
+            return false;
+        }
+
+        for (size_t i = 0; i < entry.fields.size(); i++)
+        {
+            PyTuple_SET_ITEM(
+                match_args.get(),
+                static_cast<Py_ssize_t>(i),
+                Py_NewRef(entry.fields[i].name));
+        }
+
+        if (PyObject_SetAttrString(
+                reinterpret_cast<PyObject*>(type.get()),
+                "__match_args__",
+                match_args.get())
+            == -1)
         {
             return false;
         }
