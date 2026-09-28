@@ -47,6 +47,10 @@ static class StructWriterExtensions
         w.WriteLine($"class {type.Name}{metaclass}:");
         w.Indent++;
 
+        var matchArgs = type.Type.Fields.Select(f => $"\"{f.Name.ToPythonIdentifier()}\"").ToList();
+        var trailingComma = matchArgs.Count == 1 ? "," : "";
+        w.WriteLine($"__match_args__ = ({string.Join(", ", matchArgs)}{trailingComma})");
+
         foreach (var field in type.Type.Fields)
         {
             w.WriteLine("@_property");
