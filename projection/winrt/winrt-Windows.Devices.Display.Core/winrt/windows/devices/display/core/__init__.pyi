@@ -192,6 +192,7 @@ class DisplayWireFormatPixelEncoding(enum.IntEnum):
 
 @typing.final
 class DisplayPresentationRate:
+    __match_args__ = ("vertical_sync_rate", "vertical_syncs_per_presentation")
     @_property
     def vertical_sync_rate(self) -> windows_foundation_numerics.Rational: ...
     @_property

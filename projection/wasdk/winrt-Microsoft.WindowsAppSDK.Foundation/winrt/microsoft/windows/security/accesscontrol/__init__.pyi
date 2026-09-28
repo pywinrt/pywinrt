@@ -13,6 +13,7 @@ __all__ = [
 
 @typing.final
 class AppContainerNameAndAccess:
+    __match_args__ = ("app_container_name", "access_mask")
     @_property
     def app_container_name(self) -> str: ...
     @_property

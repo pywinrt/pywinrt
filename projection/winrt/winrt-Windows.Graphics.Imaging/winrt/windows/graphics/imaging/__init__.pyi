@@ -122,6 +122,7 @@ class TiffCompressionMode(enum.IntEnum):
 
 @typing.final
 class BitmapBounds:
+    __match_args__ = ("x", "y", "width", "height")
     @_property
     def x(self) -> winrt.system.UInt32: ...
     @_property
@@ -136,6 +137,7 @@ class BitmapBounds:
 
 @typing.final
 class BitmapPlaneDescription:
+    __match_args__ = ("start_index", "width", "height", "stride")
     @_property
     def start_index(self) -> winrt.system.Int32: ...
     @_property
@@ -150,6 +152,7 @@ class BitmapPlaneDescription:
 
 @typing.final
 class BitmapSize:
+    __match_args__ = ("width", "height")
     @_property
     def width(self) -> winrt.system.UInt32: ...
     @_property

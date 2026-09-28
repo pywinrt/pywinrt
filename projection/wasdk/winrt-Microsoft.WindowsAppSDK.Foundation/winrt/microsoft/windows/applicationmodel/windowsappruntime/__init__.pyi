@@ -115,6 +115,7 @@ class RuntimeCompatibilityChange(enum.IntEnum):
 
 @typing.final
 class WindowsAppRuntimeVersion:
+    __match_args__ = ("major", "minor", "patch")
     @_property
     def major(self) -> winrt.system.UInt32: ...
     @_property

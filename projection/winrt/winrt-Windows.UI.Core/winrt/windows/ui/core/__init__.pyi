@@ -157,6 +157,7 @@ class CoreWindowFlowDirection(enum.IntEnum):
 
 @typing.final
 class CorePhysicalKeyStatus:
+    __match_args__ = ("repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released")
     @_property
     def repeat_count(self) -> winrt.system.UInt32: ...
     @_property
@@ -175,6 +176,7 @@ class CorePhysicalKeyStatus:
 
 @typing.final
 class CoreProximityEvaluation:
+    __match_args__ = ("score", "adjusted_point")
     @_property
     def score(self) -> winrt.system.Int32: ...
     @_property

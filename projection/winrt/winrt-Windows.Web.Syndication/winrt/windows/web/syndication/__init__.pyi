@@ -60,6 +60,7 @@ class SyndicationTextType(enum.IntEnum):
 
 @typing.final
 class RetrievalProgress:
+    __match_args__ = ("bytes_retrieved", "total_bytes_to_retrieve")
     @_property
     def bytes_retrieved(self) -> winrt.system.UInt32: ...
     @_property
@@ -70,6 +71,7 @@ class RetrievalProgress:
 
 @typing.final
 class TransferProgress:
+    __match_args__ = ("bytes_sent", "total_bytes_to_send", "bytes_retrieved", "total_bytes_to_retrieve")
     @_property
     def bytes_sent(self) -> winrt.system.UInt32: ...
     @_property

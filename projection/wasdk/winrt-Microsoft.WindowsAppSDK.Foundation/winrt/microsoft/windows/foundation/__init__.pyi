@@ -13,6 +13,7 @@ __all__ = [
 
 @typing.final
 class DecimalValue:
+    __match_args__ = ("reserved", "scale", "sign", "hi32", "lo64")
     @_property
     def reserved(self) -> winrt.system.UInt16: ...
     @_property

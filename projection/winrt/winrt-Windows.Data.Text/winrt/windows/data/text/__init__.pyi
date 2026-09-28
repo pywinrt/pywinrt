@@ -85,6 +85,7 @@ class UnicodeNumericType(enum.IntEnum):
 
 @typing.final
 class TextSegment:
+    __match_args__ = ("start_position", "length")
     @_property
     def start_position(self) -> winrt.system.UInt32: ...
     @_property

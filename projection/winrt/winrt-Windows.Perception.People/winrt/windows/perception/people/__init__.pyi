@@ -59,6 +59,7 @@ class JointPoseAccuracy(enum.IntEnum):
 
 @typing.final
 class HandMeshVertex:
+    __match_args__ = ("position", "normal")
     @_property
     def position(self) -> windows_foundation_numerics.Vector3: ...
     @_property
@@ -69,6 +70,7 @@ class HandMeshVertex:
 
 @typing.final
 class JointPose:
+    __match_args__ = ("orientation", "position", "radius", "accuracy")
     @_property
     def orientation(self) -> windows_foundation_numerics.Quaternion: ...
     @_property

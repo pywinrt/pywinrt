@@ -39,6 +39,7 @@ class Direct3DUsage(enum.IntEnum):
 
 @typing.final
 class Direct3DMultisampleDescription:
+    __match_args__ = ("count", "quality")
     @_property
     def count(self) -> winrt.system.Int32: ...
     @_property
@@ -49,6 +50,7 @@ class Direct3DMultisampleDescription:
 
 @typing.final
 class Direct3DSurfaceDescription:
+    __match_args__ = ("width", "height", "format", "multisample_description")
     @_property
     def width(self) -> winrt.system.Int32: ...
     @_property

@@ -37,6 +37,7 @@ class ProviderI2cTransferStatus(enum.IntEnum):
 
 @typing.final
 class ProviderI2cTransferResult:
+    __match_args__ = ("status", "bytes_transferred")
     @_property
     def status(self) -> ProviderI2cTransferStatus: ...
     @_property

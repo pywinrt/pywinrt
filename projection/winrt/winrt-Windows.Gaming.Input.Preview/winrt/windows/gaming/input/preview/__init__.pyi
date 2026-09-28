@@ -88,6 +88,7 @@ class RemappingButtonCategory(enum.IntEnum):
 
 @typing.final
 class HeadsetGeqGains:
+    __match_args__ = ("band1_gain", "band2_gain", "band3_gain", "band4_gain", "band5_gain")
     @_property
     def band1_gain(self) -> winrt.system.Int32: ...
     @_property

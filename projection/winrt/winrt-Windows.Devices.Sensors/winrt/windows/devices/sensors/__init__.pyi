@@ -189,6 +189,7 @@ class SimpleOrientation(enum.IntEnum):
 
 @typing.final
 class LightSensorChromaticity:
+    __match_args__ = ("x", "y")
     @_property
     def x(self) -> winrt.system.Double: ...
     @_property

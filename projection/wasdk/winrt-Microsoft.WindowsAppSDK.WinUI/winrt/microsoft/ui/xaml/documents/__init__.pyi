@@ -50,6 +50,7 @@ class UnderlineStyle(enum.IntEnum):
 
 @typing.final
 class TextRange:
+    __match_args__ = ("start_index", "length")
     @_property
     def start_index(self) -> winrt.system.Int32: ...
     @_property

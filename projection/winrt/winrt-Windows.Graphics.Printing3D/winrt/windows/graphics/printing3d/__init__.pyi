@@ -110,6 +110,7 @@ class Printing3DTextureEdgeBehavior(enum.IntEnum):
 
 @typing.final
 class Printing3DBufferDescription:
+    __match_args__ = ("format", "stride")
     @_property
     def format(self) -> Printing3DBufferFormat: ...
     @_property

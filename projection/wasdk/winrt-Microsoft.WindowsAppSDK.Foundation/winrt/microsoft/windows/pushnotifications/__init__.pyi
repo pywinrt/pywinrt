@@ -28,6 +28,7 @@ class PushNotificationChannelStatus(enum.IntEnum):
 
 @typing.final
 class PushNotificationCreateChannelStatus:
+    __match_args__ = ("status", "extended_error", "retry_count")
     @_property
     def status(self) -> PushNotificationChannelStatus: ...
     @_property

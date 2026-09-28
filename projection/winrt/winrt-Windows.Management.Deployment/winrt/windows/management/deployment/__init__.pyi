@@ -141,6 +141,7 @@ class StubPackageOption(enum.IntEnum):
 
 @typing.final
 class DeploymentProgress:
+    __match_args__ = ("state", "percentage")
     @_property
     def state(self) -> DeploymentProgressState: ...
     @_property

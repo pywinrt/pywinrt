@@ -109,6 +109,7 @@ class TextStyleAttributes(enum.IntFlag):
 
 @typing.final
 class TextBoxId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.UInt32: ...
     def __new__(cls, value: winrt.system.UInt32 = 0) -> TextBoxId: ...
@@ -116,6 +117,7 @@ class TextBoxId:
 
 @typing.final
 class TextInputServiceSubscription:
+    __match_args__ = ("required_enabled_features", "required_disabled_features")
     @_property
     def required_enabled_features(self) -> TextBoxFeatures: ...
     @_property
@@ -126,6 +128,7 @@ class TextInputServiceSubscription:
 
 @typing.final
 class TextStyle:
+    __match_args__ = ("mask", "text_color", "background_color", "underline_color", "underline_type")
     @_property
     def mask(self) -> TextStyleAttributes: ...
     @_property

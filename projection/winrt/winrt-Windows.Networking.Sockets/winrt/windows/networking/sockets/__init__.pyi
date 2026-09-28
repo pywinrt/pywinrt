@@ -179,6 +179,7 @@ class SocketSslErrorSeverity(enum.IntEnum):
 
 @typing.final
 class BandwidthStatistics:
+    __match_args__ = ("outbound_bits_per_second", "inbound_bits_per_second", "outbound_bits_per_second_instability", "inbound_bits_per_second_instability", "outbound_bandwidth_peaked", "inbound_bandwidth_peaked")
     @_property
     def outbound_bits_per_second(self) -> winrt.system.UInt64: ...
     @_property
@@ -197,6 +198,7 @@ class BandwidthStatistics:
 
 @typing.final
 class RoundTripTimeStatistics:
+    __match_args__ = ("variance", "max", "min", "sum")
     @_property
     def variance(self) -> winrt.system.UInt32: ...
     @_property

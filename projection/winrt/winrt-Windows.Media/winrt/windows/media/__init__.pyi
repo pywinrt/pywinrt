@@ -115,6 +115,7 @@ class SystemMediaTransportControlsProperty(enum.IntEnum):
 
 @typing.final
 class MediaTimeRange:
+    __match_args__ = ("start", "end")
     @_property
     def start(self) -> datetime.timedelta: ...
     @_property
