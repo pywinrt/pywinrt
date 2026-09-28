@@ -1,9 +1,9 @@
 from typing import Any, NoReturn, Self, final
 from uuid import UUID
 
-from typing_extensions import Buffer, CapsuleType
+from typing_extensions import Buffer
 
-import winrt._winrt as _runtime
+import winrt.runtime.interop as _runtime
 import winrt._winrt_windows_ui_xaml_hosting_interop as _native
 from winrt.system import Object
 
@@ -24,7 +24,7 @@ class DesktopWindowXamlSourceNative:
     # instance dictionary.
     __slots__ = ("_native",)
 
-    _native: CapsuleType
+    _native: _runtime.InterfaceCapsule
 
     def __new__(cls, *args: Any, **kwargs: Any) -> Self:
         raise TypeError(f"cannot create '{__name__}.{cls.__qualname__}' instances")

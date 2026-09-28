@@ -5,7 +5,7 @@
 // the C++ exception in py::to_PyErr(), which flattens it into one of the PODs
 // in <pywinrt/abi.h> and calls in, and an interop package, which is compiled
 // apart from the runtime, gets its exception from
-// winrt._winrt.hresult_error(). So the wording, the exception type and the
+// winrt.runtime.interop.hresult_error(). So the wording, the exception type and the
 // HRESULT mapping belong to winrt-runtime and can improve in a runtime
 // release without rebuilding any other package.
 
