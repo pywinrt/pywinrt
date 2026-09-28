@@ -31,6 +31,8 @@ jobs:
       # editor checks the same thing as CI does
       - name: Run ruff
         run: pipx run ruff check
+      - name: Check formatting
+        run: pipx run ruff format --check
       - name: merge packages
         run: |
           mkdir _install/lint -Force
