@@ -23,6 +23,7 @@ import test_winrt.testcomponent as tc
 import winrt._winrt as runtime
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
+from winrt.system import Array
 
 THREADS = 8
 
@@ -251,6 +252,92 @@ class TestThreads(unittest.TestCase):
                 self.assertEqual(value.get_string(), f"{i}-{n}")
 
         run_together(work)
+
+    def test_one_array(self) -> None:
+        # Every thread assigns elements that hold references - each one new,
+        # so that the one it replaces is freed - while the others read, slice,
+        # compare and print the same array. A string is one kind of array
+        # storage, and a runtime class and a struct with a string field are
+        # the other.
+        def string(i: int, n: int) -> str:
+            return f"{i}-{n}"
+
+        def uri(i: int, n: int) -> wf.Uri:
+            return wf.Uri(f"https://example.com/{i}/{n}")
+
+        def struct(i: int, n: int) -> tc.NonBlittable:
+            return tc.NonBlittable(True, "a", f"{i}-{n}", n)
+
+        for element, make in ((str, string), (wf.Uri, uri), (tc.NonBlittable, struct)):
+            with self.subTest(element=element):
+                shared = Array(element, [make(0, n) for n in range(4)])
+
+                def work(i: int) -> None:
+                    for n in range(50):
+                        shared[n % 4] = make(i, n)
+                        self.assertIsInstance(shared[(n + 1) % 4], element)
+                        self.assertEqual(len(shared[1:3]), 2)
+                        # What these answer depends on what the other
+                        # threads assigned meanwhile, so only that they answer
+                        # is checked.
+                        self.assertIsInstance(shared == shared, bool)
+                        self.assertIsInstance(repr(shared), str)
+
+                run_together(work)
+
+    def test_lent_array_taken_back_while_read(self) -> None:
+        # The array a WinRT caller lends a Python handler is taken back when
+        # the call returns, whichever thread is reading it at that moment.
+        tests = tc.TestRunner.make_tests()
+        lent: list[Array[str]] = []
+        stop = threading.Event()
+
+        def read(i: int) -> None:
+            while not stop.is_set():
+                # Under the GIL, a reader that never lets go of it starves
+                # the thread making the calls.
+                time.sleep(0)
+
+                if not lent:
+                    continue
+
+                array = lent[-1]
+
+                try:
+                    self.assertIsInstance(array[0], str)
+                except IndexError:
+                    pass
+
+                self.assertLessEqual(len(array[:]), 3)
+
+        def handler(
+            passed: Array[str], filled: Array[str]
+        ) -> tuple[Array[str], Array[str]]:
+            lent.append(filled)
+
+            for index, value in enumerate(passed):
+                filled[index] = value
+
+            return Array(str, list(passed)), Array(str, list(passed))
+
+        readers = [
+            threading.Thread(target=read, args=(i,)) for i in range(THREADS // 2)
+        ]
+
+        for t in readers:
+            t.start()
+
+        try:
+            for _ in range(50):
+                tests.array12_call(handler)
+        finally:
+            stop.set()
+
+            for t in readers:
+                t.join()
+
+        self.assertEqual(len(lent), 50)
+        self.assertEqual(len(lent[0]), 0)
 
     def test_first_use(self) -> None:
         # A process of its own, because this one has built most of it already.
