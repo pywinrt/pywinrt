@@ -98,7 +98,7 @@ Single = Annotated[float, BufferFormat("f"), StructFormat("f"), WinrtSignature("
 Double = Annotated[float, BufferFormat("d"), StructFormat("d"), WinrtSignature("f8")]
 Char16 = Annotated[str, BufferFormat("u"), StructFormat("H"), WinrtSignature("c2")]
 
-winrt.runtime._internals.mixin_mutable_sequence(Array)
+winrt.runtime._internals.mixin_sequence(Array)
 
 # Type hints for Python buffer protocol - can use standard Python types in
 # addition to the WinRT Array.

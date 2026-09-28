@@ -577,20 +577,12 @@ namespace py::cpp::_winrt
             nullptr},
            {}};
 
-    // needed for collections.abc.MutableSequence
-    static PyObject* Array_insert(PyObject* /*unused*/, PyObject* /*unused*/)
-    {
-        PyErr_SetString(PyExc_TypeError, "'Array' type does not support inserting");
-        return nullptr;
-    }
-
-    static PyMethodDef Array_tp_methods[] = {
-        {"__class_getitem__",
-         Py_GenericAlias,
-         METH_O | METH_CLASS,
-         PyDoc_STR("See PEP 585")},
-        {"insert", Array_insert, METH_VARARGS, PyDoc_STR("inserting is not supported")},
-        {}};
+    static PyMethodDef Array_tp_methods[]
+        = {{"__class_getitem__",
+            Py_GenericAlias,
+            METH_O | METH_CLASS,
+            PyDoc_STR("See PEP 585")},
+           {}};
 
     static Py_ssize_t Array_sq_length(Array* self) noexcept
     {
