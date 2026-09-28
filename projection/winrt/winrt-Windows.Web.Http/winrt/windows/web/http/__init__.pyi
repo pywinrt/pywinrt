@@ -136,6 +136,7 @@ class HttpVersion(enum.IntEnum):
 
 @typing.final
 class HttpProgress:
+    __match_args__ = ("stage", "bytes_sent", "total_bytes_to_send", "bytes_received", "total_bytes_to_receive", "retries")
     @_property
     def stage(self) -> HttpProgressStage: ...
     @_property

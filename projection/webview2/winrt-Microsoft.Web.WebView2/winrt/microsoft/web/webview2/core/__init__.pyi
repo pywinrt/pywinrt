@@ -553,6 +553,7 @@ class CoreWebView2WebResourceRequestSourceKinds(enum.IntFlag):
 
 @typing.final
 class CoreWebView2PhysicalKeyStatus:
+    __match_args__ = ("repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released")
     @_property
     def repeat_count(self) -> winrt.system.UInt32: ...
     @_property

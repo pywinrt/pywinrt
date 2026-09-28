@@ -77,6 +77,7 @@ class HolographicViewConfigurationKind(enum.IntEnum):
 
 @typing.final
 class HolographicAdapterId:
+    __match_args__ = ("low_part", "high_part")
     @_property
     def low_part(self) -> winrt.system.UInt32: ...
     @_property
@@ -87,6 +88,7 @@ class HolographicAdapterId:
 
 @typing.final
 class HolographicFrameId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.UInt64: ...
     def __new__(cls, value: winrt.system.UInt64 = 0) -> HolographicFrameId: ...
@@ -94,6 +96,7 @@ class HolographicFrameId:
 
 @typing.final
 class HolographicStereoTransform:
+    __match_args__ = ("left", "right")
     @_property
     def left(self) -> windows_foundation_numerics.Matrix4x4: ...
     @_property

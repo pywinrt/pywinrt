@@ -121,6 +121,7 @@ class HResult(int):
 
 @typing.final
 class Point:
+    __match_args__ = ("x", "y")
     @_property
     def x(self) -> winrt.system.Single: ...
     @_property
@@ -131,6 +132,7 @@ class Point:
 
 @typing.final
 class Rect:
+    __match_args__ = ("x", "y", "width", "height")
     @_property
     def x(self) -> winrt.system.Single: ...
     @_property
@@ -145,6 +147,7 @@ class Rect:
 
 @typing.final
 class Size:
+    __match_args__ = ("width", "height")
     @_property
     def width(self) -> winrt.system.Single: ...
     @_property

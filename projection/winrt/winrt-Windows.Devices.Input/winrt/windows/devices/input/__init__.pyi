@@ -40,6 +40,7 @@ class PointerDeviceType(enum.IntEnum):
 
 @typing.final
 class MouseDelta:
+    __match_args__ = ("x", "y")
     @_property
     def x(self) -> winrt.system.Int32: ...
     @_property
@@ -50,6 +51,7 @@ class MouseDelta:
 
 @typing.final
 class PointerDeviceUsage:
+    __match_args__ = ("usage_page", "usage", "min_logical", "max_logical", "min_physical", "max_physical", "unit", "physical_multiplier")
     @_property
     def usage_page(self) -> winrt.system.UInt32: ...
     @_property

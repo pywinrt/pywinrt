@@ -85,6 +85,7 @@ class SpatialPerceptionAccessStatus(enum.IntEnum):
 
 @typing.final
 class SpatialBoundingBox:
+    __match_args__ = ("center", "extents")
     @_property
     def center(self) -> windows_foundation_numerics.Vector3: ...
     @_property
@@ -95,6 +96,7 @@ class SpatialBoundingBox:
 
 @typing.final
 class SpatialBoundingFrustum:
+    __match_args__ = ("near", "far", "right", "left", "top", "bottom")
     @_property
     def near(self) -> windows_foundation_numerics.Plane: ...
     @_property
@@ -113,6 +115,7 @@ class SpatialBoundingFrustum:
 
 @typing.final
 class SpatialBoundingOrientedBox:
+    __match_args__ = ("center", "extents", "orientation")
     @_property
     def center(self) -> windows_foundation_numerics.Vector3: ...
     @_property
@@ -125,6 +128,7 @@ class SpatialBoundingOrientedBox:
 
 @typing.final
 class SpatialBoundingSphere:
+    __match_args__ = ("center", "radius")
     @_property
     def center(self) -> windows_foundation_numerics.Vector3: ...
     @_property
@@ -135,6 +139,7 @@ class SpatialBoundingSphere:
 
 @typing.final
 class SpatialRay:
+    __match_args__ = ("origin", "direction")
     @_property
     def origin(self) -> windows_foundation_numerics.Vector3: ...
     @_property

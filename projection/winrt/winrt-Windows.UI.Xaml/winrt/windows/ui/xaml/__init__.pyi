@@ -395,6 +395,7 @@ class Visibility(enum.IntEnum):
 
 @typing.final
 class CornerRadius:
+    __match_args__ = ("top_left", "top_right", "bottom_right", "bottom_left")
     @_property
     def top_left(self) -> winrt.system.Double: ...
     @_property
@@ -409,6 +410,7 @@ class CornerRadius:
 
 @typing.final
 class Duration:
+    __match_args__ = ("time_span", "type")
     @_property
     def time_span(self) -> datetime.timedelta: ...
     @_property
@@ -419,6 +421,7 @@ class Duration:
 
 @typing.final
 class GridLength:
+    __match_args__ = ("value", "grid_unit_type")
     @_property
     def value(self) -> winrt.system.Double: ...
     @_property
@@ -429,6 +432,7 @@ class GridLength:
 
 @typing.final
 class Thickness:
+    __match_args__ = ("left", "top", "right", "bottom")
     @_property
     def left(self) -> winrt.system.Double: ...
     @_property

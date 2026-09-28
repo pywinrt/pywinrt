@@ -54,6 +54,7 @@ class RecognizedLineStyle(enum.IntEnum):
 
 @typing.final
 class RecognizedTextBoundingBox:
+    __match_args__ = ("bottom_left", "bottom_right", "top_left", "top_right")
     @_property
     def bottom_left(self) -> windows_foundation.Point: ...
     @_property

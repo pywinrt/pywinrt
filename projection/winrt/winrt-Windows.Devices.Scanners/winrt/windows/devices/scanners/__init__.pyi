@@ -58,6 +58,7 @@ class ImageScannerScanSource(enum.IntEnum):
 
 @typing.final
 class ImageScannerResolution:
+    __match_args__ = ("dpi_x", "dpi_y")
     @_property
     def dpi_x(self) -> winrt.system.Single: ...
     @_property

@@ -42,6 +42,7 @@ class I2cTransferStatus(enum.IntEnum):
 
 @typing.final
 class I2cTransferResult:
+    __match_args__ = ("status", "bytes_transferred")
     @_property
     def status(self) -> I2cTransferStatus: ...
     @_property

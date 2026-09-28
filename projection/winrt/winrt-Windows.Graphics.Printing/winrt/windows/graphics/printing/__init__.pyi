@@ -362,6 +362,7 @@ class PrintTaskCompletion(enum.IntEnum):
 
 @typing.final
 class PrintPageDescription:
+    __match_args__ = ("page_size", "imageable_rect", "dpi_x", "dpi_y")
     @_property
     def page_size(self) -> windows_foundation.Size: ...
     @_property

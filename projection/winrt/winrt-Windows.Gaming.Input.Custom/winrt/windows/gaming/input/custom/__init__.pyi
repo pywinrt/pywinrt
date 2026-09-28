@@ -61,6 +61,7 @@ class XusbDeviceType(enum.IntEnum):
 
 @typing.final
 class GameControllerVersionInfo:
+    __match_args__ = ("major", "minor", "build", "revision")
     @_property
     def major(self) -> winrt.system.UInt16: ...
     @_property
@@ -75,6 +76,7 @@ class GameControllerVersionInfo:
 
 @typing.final
 class GipFirmwareUpdateProgress:
+    __match_args__ = ("percent_completed", "current_component_id")
     @_property
     def percent_completed(self) -> winrt.system.Double: ...
     @_property

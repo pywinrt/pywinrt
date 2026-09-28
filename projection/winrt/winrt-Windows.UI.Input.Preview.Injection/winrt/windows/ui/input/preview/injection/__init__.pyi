@@ -114,6 +114,7 @@ class InjectedInputVisualizationMode(enum.IntEnum):
 
 @typing.final
 class InjectedInputPoint:
+    __match_args__ = ("position_x", "position_y")
     @_property
     def position_x(self) -> winrt.system.Int32: ...
     @_property
@@ -124,6 +125,7 @@ class InjectedInputPoint:
 
 @typing.final
 class InjectedInputPointerInfo:
+    __match_args__ = ("pointer_id", "pointer_options", "pixel_location", "time_offset_in_milliseconds", "performance_count")
     @_property
     def pointer_id(self) -> winrt.system.UInt32: ...
     @_property
@@ -140,6 +142,7 @@ class InjectedInputPointerInfo:
 
 @typing.final
 class InjectedInputRectangle:
+    __match_args__ = ("left", "top", "bottom", "right")
     @_property
     def left(self) -> winrt.system.Int32: ...
     @_property

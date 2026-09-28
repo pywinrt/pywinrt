@@ -21,6 +21,7 @@ __all__ = [
 
 @typing.final
 class DisplayId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.UInt64: ...
     def __new__(cls, value: winrt.system.UInt64 = 0) -> DisplayId: ...
@@ -28,6 +29,7 @@ class DisplayId:
 
 @typing.final
 class IconId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.UInt64: ...
     def __new__(cls, value: winrt.system.UInt64 = 0) -> IconId: ...
@@ -35,6 +37,7 @@ class IconId:
 
 @typing.final
 class WindowId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.UInt64: ...
     def __new__(cls, value: winrt.system.UInt64 = 0) -> WindowId: ...

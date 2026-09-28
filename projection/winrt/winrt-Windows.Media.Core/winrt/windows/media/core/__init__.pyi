@@ -339,6 +339,7 @@ class VideoStabilizationEffectEnabledChangedReason(enum.IntEnum):
 
 @typing.final
 class MseTimeRange:
+    __match_args__ = ("start", "end")
     @_property
     def start(self) -> datetime.timedelta: ...
     @_property
@@ -349,6 +350,7 @@ class MseTimeRange:
 
 @typing.final
 class TimedTextDouble:
+    __match_args__ = ("value", "unit")
     @_property
     def value(self) -> winrt.system.Double: ...
     @_property
@@ -359,6 +361,7 @@ class TimedTextDouble:
 
 @typing.final
 class TimedTextPadding:
+    __match_args__ = ("before", "after", "start", "end", "unit")
     @_property
     def before(self) -> winrt.system.Double: ...
     @_property
@@ -375,6 +378,7 @@ class TimedTextPadding:
 
 @typing.final
 class TimedTextPoint:
+    __match_args__ = ("x", "y", "unit")
     @_property
     def x(self) -> winrt.system.Double: ...
     @_property
@@ -387,6 +391,7 @@ class TimedTextPoint:
 
 @typing.final
 class TimedTextSize:
+    __match_args__ = ("height", "width", "unit")
     @_property
     def height(self) -> winrt.system.Double: ...
     @_property

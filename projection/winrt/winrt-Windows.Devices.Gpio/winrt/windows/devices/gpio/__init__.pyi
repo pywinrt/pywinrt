@@ -66,6 +66,7 @@ class GpioSharingMode(enum.IntEnum):
 
 @typing.final
 class GpioChangeCount:
+    __match_args__ = ("count", "relative_time")
     @_property
     def count(self) -> winrt.system.UInt64: ...
     @_property
@@ -76,6 +77,7 @@ class GpioChangeCount:
 
 @typing.final
 class GpioChangeRecord:
+    __match_args__ = ("relative_time", "edge")
     @_property
     def relative_time(self) -> datetime.timedelta: ...
     @_property

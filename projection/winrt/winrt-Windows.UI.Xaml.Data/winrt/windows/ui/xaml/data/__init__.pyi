@@ -60,6 +60,7 @@ class UpdateSourceTrigger(enum.IntEnum):
 
 @typing.final
 class LoadMoreItemsResult:
+    __match_args__ = ("count",)
     @_property
     def count(self) -> winrt.system.UInt32: ...
     def __new__(cls, count: winrt.system.UInt32 = 0) -> LoadMoreItemsResult: ...

@@ -30,6 +30,7 @@ class PowerThermalBackEndStatus(enum.IntEnum):
 
 @typing.final
 class PowerThermalChannelData:
+    __match_args__ = ("id", "value")
     @_property
     def id(self) -> PowerThermalChannelId: ...
     @_property
@@ -40,6 +41,7 @@ class PowerThermalChannelData:
 
 @typing.final
 class PowerThermalChannelId:
+    __match_args__ = ("interface_type", "instance_id")
     @_property
     def interface_type(self) -> _uuid.UUID: ...
     @_property

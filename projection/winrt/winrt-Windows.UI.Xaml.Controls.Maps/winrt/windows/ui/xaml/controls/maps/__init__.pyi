@@ -172,6 +172,7 @@ class MapWatermarkMode(enum.IntEnum):
 
 @typing.final
 class MapZoomLevelRange:
+    __match_args__ = ("min", "max")
     @_property
     def min(self) -> winrt.system.Double: ...
     @_property

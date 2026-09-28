@@ -75,6 +75,7 @@ class BackgroundTransferStatus(enum.IntEnum):
 
 @typing.final
 class BackgroundDownloadProgress:
+    __match_args__ = ("bytes_received", "total_bytes_to_receive", "status", "has_response_changed", "has_restarted")
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
     @_property
@@ -91,6 +92,7 @@ class BackgroundDownloadProgress:
 
 @typing.final
 class BackgroundTransferFileRange:
+    __match_args__ = ("offset", "length")
     @_property
     def offset(self) -> winrt.system.UInt64: ...
     @_property
@@ -101,6 +103,7 @@ class BackgroundTransferFileRange:
 
 @typing.final
 class BackgroundUploadProgress:
+    __match_args__ = ("bytes_received", "bytes_sent", "total_bytes_to_receive", "total_bytes_to_send", "status", "has_response_changed", "has_restarted")
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
     @_property

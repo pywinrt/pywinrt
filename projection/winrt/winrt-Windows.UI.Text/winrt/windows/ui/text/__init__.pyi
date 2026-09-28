@@ -383,6 +383,7 @@ class VerticalCharacterAlignment(enum.IntEnum):
 
 @typing.final
 class FontWeight:
+    __match_args__ = ("weight",)
     @_property
     def weight(self) -> winrt.system.UInt16: ...
     def __new__(cls, weight: winrt.system.UInt16 = 0) -> FontWeight: ...

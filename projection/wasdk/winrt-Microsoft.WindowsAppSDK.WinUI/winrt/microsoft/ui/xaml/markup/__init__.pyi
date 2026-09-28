@@ -39,6 +39,7 @@ __all__ = [
 
 @typing.final
 class XamlBinaryWriterErrorInformation:
+    __match_args__ = ("input_stream_index", "line_number", "line_position")
     @_property
     def input_stream_index(self) -> winrt.system.UInt32: ...
     @_property
@@ -51,6 +52,7 @@ class XamlBinaryWriterErrorInformation:
 
 @typing.final
 class XmlnsDefinition:
+    __match_args__ = ("xml_namespace", "namespace")
     @_property
     def xml_namespace(self) -> str: ...
     @_property

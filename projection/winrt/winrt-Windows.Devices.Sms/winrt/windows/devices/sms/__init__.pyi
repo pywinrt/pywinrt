@@ -163,6 +163,7 @@ class SmsModemErrorCode(enum.IntEnum):
 
 @typing.final
 class SmsEncodedLength:
+    __match_args__ = ("segment_count", "character_count_last_segment", "characters_per_segment", "byte_count_last_segment", "bytes_per_segment")
     @_property
     def segment_count(self) -> winrt.system.UInt32: ...
     @_property

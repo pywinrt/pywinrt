@@ -278,6 +278,7 @@ class CompositionStrokeLineJoin(enum.IntEnum):
 
 @typing.final
 class InkTrailPoint:
+    __match_args__ = ("point", "radius")
     @_property
     def point(self) -> windows_foundation.Point: ...
     @_property

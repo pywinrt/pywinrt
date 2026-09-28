@@ -93,6 +93,7 @@ class VisitStateChange(enum.IntEnum):
 
 @typing.final
 class BasicGeoposition:
+    __match_args__ = ("latitude", "longitude", "altitude")
     @_property
     def latitude(self) -> winrt.system.Double: ...
     @_property

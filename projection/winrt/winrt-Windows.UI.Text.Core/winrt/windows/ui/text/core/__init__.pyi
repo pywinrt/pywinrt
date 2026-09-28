@@ -133,6 +133,7 @@ class CoreTextTextUpdatingResult(enum.IntEnum):
 
 @typing.final
 class CoreTextRange:
+    __match_args__ = ("start_caret_position", "end_caret_position")
     @_property
     def start_caret_position(self) -> winrt.system.Int32: ...
     @_property

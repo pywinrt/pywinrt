@@ -184,6 +184,7 @@ class WwanNetworkRegistrationState(enum.IntEnum):
 
 @typing.final
 class NetworkUsageStates:
+    __match_args__ = ("roaming", "shared")
     @_property
     def roaming(self) -> TriStates: ...
     @_property

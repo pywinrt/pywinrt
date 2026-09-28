@@ -45,6 +45,7 @@ class ResourceQualifierPersistence(enum.IntEnum):
 
 @typing.final
 class ResourceLayoutInfo:
+    __match_args__ = ("major_version", "minor_version", "resource_subtree_count", "named_resource_count", "checksum")
     @_property
     def major_version(self) -> winrt.system.UInt32: ...
     @_property

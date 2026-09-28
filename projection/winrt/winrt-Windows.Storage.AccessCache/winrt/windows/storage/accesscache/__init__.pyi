@@ -39,6 +39,7 @@ class RecentStorageItemVisibility(enum.IntEnum):
 
 @typing.final
 class AccessListEntry:
+    __match_args__ = ("token", "metadata")
     @_property
     def token(self) -> str: ...
     @_property

@@ -26,6 +26,7 @@ class ScreenRegionLabel(enum.IntEnum):
 
 @typing.final
 class ScreenRegionBoundingBox:
+    __match_args__ = ("left", "top", "right", "bottom")
     @_property
     def left(self) -> winrt.system.UInt32: ...
     @_property

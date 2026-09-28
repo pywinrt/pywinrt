@@ -18,6 +18,7 @@ __all__ = [
 
 @typing.final
 class DisplayAdapterId:
+    __match_args__ = ("low_part", "high_part")
     @_property
     def low_part(self) -> winrt.system.UInt32: ...
     @_property
@@ -28,6 +29,7 @@ class DisplayAdapterId:
 
 @typing.final
 class DisplayId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.UInt64: ...
     def __new__(cls, value: winrt.system.UInt64 = 0) -> DisplayId: ...
@@ -35,6 +37,7 @@ class DisplayId:
 
 @typing.final
 class PointInt32:
+    __match_args__ = ("x", "y")
     @_property
     def x(self) -> winrt.system.Int32: ...
     @_property
@@ -45,6 +48,7 @@ class PointInt32:
 
 @typing.final
 class RectInt32:
+    __match_args__ = ("x", "y", "width", "height")
     @_property
     def x(self) -> winrt.system.Int32: ...
     @_property
@@ -59,6 +63,7 @@ class RectInt32:
 
 @typing.final
 class SizeInt32:
+    __match_args__ = ("width", "height")
     @_property
     def width(self) -> winrt.system.Int32: ...
     @_property

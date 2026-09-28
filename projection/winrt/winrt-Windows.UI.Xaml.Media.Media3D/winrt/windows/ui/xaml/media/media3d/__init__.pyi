@@ -17,6 +17,7 @@ __all__ = [
 
 @typing.final
 class Matrix3D:
+    __match_args__ = ("m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "offset_x", "offset_y", "offset_z", "m44")
     @_property
     def m11(self) -> winrt.system.Double: ...
     @_property

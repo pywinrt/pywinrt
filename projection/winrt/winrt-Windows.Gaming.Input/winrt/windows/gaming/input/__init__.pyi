@@ -223,6 +223,7 @@ class RequiredUINavigationButtons(enum.IntFlag):
 
 @typing.final
 class ArcadeStickReading:
+    __match_args__ = ("timestamp", "buttons")
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
     @_property
@@ -233,6 +234,7 @@ class ArcadeStickReading:
 
 @typing.final
 class FlightStickReading:
+    __match_args__ = ("timestamp", "buttons", "hat_switch", "roll", "pitch", "yaw", "throttle")
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
     @_property
@@ -253,6 +255,7 @@ class FlightStickReading:
 
 @typing.final
 class GamepadReading:
+    __match_args__ = ("timestamp", "buttons", "left_trigger", "right_trigger", "left_thumbstick_x", "left_thumbstick_y", "right_thumbstick_x", "right_thumbstick_y")
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
     @_property
@@ -275,6 +278,7 @@ class GamepadReading:
 
 @typing.final
 class GamepadVibration:
+    __match_args__ = ("left_motor", "right_motor", "left_trigger", "right_trigger")
     @_property
     def left_motor(self) -> winrt.system.Double: ...
     @_property
@@ -289,6 +293,7 @@ class GamepadVibration:
 
 @typing.final
 class RacingWheelReading:
+    __match_args__ = ("timestamp", "buttons", "pattern_shifter_gear", "wheel", "throttle", "brake", "clutch", "handbrake")
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
     @_property
@@ -311,6 +316,7 @@ class RacingWheelReading:
 
 @typing.final
 class UINavigationReading:
+    __match_args__ = ("timestamp", "required_buttons", "optional_buttons")
     @_property
     def timestamp(self) -> winrt.system.UInt64: ...
     @_property

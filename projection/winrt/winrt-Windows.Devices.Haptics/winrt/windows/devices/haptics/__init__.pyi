@@ -38,6 +38,7 @@ class VibrationAccessStatus(enum.IntEnum):
 
 @typing.final
 class HapticsControllerOverrideToken:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.Int64: ...
     def __new__(cls, value: winrt.system.Int64 = 0) -> HapticsControllerOverrideToken: ...

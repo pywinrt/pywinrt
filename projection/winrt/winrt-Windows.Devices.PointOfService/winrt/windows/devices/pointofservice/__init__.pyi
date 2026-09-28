@@ -371,6 +371,7 @@ class UnifiedPosPowerReportingType(enum.IntEnum):
 
 @typing.final
 class SizeUInt32:
+    __match_args__ = ("width", "height")
     @_property
     def width(self) -> winrt.system.UInt32: ...
     @_property

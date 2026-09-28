@@ -132,6 +132,7 @@ class StartupTaskState(enum.IntEnum):
 
 @typing.final
 class PackageInstallProgress:
+    __match_args__ = ("percent_complete",)
     @_property
     def percent_complete(self) -> winrt.system.UInt32: ...
     def __new__(cls, percent_complete: winrt.system.UInt32 = 0) -> PackageInstallProgress: ...
@@ -139,6 +140,7 @@ class PackageInstallProgress:
 
 @typing.final
 class PackageVersion:
+    __match_args__ = ("major", "minor", "build", "revision")
     @_property
     def major(self) -> winrt.system.UInt16: ...
     @_property

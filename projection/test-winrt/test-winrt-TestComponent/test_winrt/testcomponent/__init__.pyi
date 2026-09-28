@@ -73,6 +73,7 @@ __all__ = [
 
 @typing.final
 class Blittable:
+    __match_args__ = ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")
     @_property
     def a(self) -> winrt.system.UInt8: ...
     @_property
@@ -99,6 +100,7 @@ class Blittable:
 
 @typing.final
 class Nested:
+    __match_args__ = ("blittable", "non_blittable")
     @_property
     def blittable(self) -> Blittable: ...
     @_property
@@ -109,6 +111,7 @@ class Nested:
 
 @typing.final
 class NonBlittable:
+    __match_args__ = ("a", "b", "c", "d")
     @_property
     def a(self) -> bool: ...
     @_property

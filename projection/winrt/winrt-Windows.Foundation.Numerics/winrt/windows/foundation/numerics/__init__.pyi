@@ -48,6 +48,7 @@ class Matrix3x2_Static(type):
 
 @typing.final
 class Matrix3x2(metaclass=Matrix3x2_Static):
+    __match_args__ = ("m11", "m12", "m21", "m22", "m31", "m32")
     @_property
     def m11(self) -> winrt.system.Single: ...
     @_property
@@ -131,6 +132,7 @@ class Matrix4x4_Static(type):
 
 @typing.final
 class Matrix4x4(metaclass=Matrix4x4_Static):
+    __match_args__ = ("m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "m41", "m42", "m43", "m44")
     @_property
     def m11(self) -> winrt.system.Single: ...
     @_property
@@ -194,6 +196,7 @@ class Plane_Static(type):
 
 @typing.final
 class Plane(metaclass=Plane_Static):
+    __match_args__ = ("normal", "d")
     @_property
     def normal(self) -> Vector3: ...
     @_property
@@ -220,6 +223,7 @@ class Quaternion_Static(type):
 
 @typing.final
 class Quaternion(metaclass=Quaternion_Static):
+    __match_args__ = ("x", "y", "z", "w")
     @_property
     def x(self) -> winrt.system.Single: ...
     @_property
@@ -260,6 +264,7 @@ class Quaternion(metaclass=Quaternion_Static):
 
 @typing.final
 class Rational:
+    __match_args__ = ("numerator", "denominator")
     @_property
     def numerator(self) -> winrt.system.UInt32: ...
     @_property
@@ -281,6 +286,7 @@ class Vector2_Static(type):
 
 @typing.final
 class Vector2(metaclass=Vector2_Static):
+    __match_args__ = ("x", "y")
     @_property
     def x(self) -> winrt.system.Single: ...
     @_property
@@ -352,6 +358,7 @@ class Vector3_Static(type):
 
 @typing.final
 class Vector3(metaclass=Vector3_Static):
+    __match_args__ = ("x", "y", "z")
     @_property
     def x(self) -> winrt.system.Single: ...
     @_property
@@ -423,6 +430,7 @@ class Vector4_Static(type):
 
 @typing.final
 class Vector4(metaclass=Vector4_Static):
+    __match_args__ = ("x", "y", "z", "w")
     @_property
     def x(self) -> winrt.system.Single: ...
     @_property
