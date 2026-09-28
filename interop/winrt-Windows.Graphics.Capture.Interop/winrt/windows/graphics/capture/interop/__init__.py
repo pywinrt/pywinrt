@@ -1,4 +1,4 @@
-import winrt._winrt as _runtime
+import winrt.runtime.interop as _runtime
 import winrt._winrt_windows_graphics_capture_interop as _native
 from winrt.windows.graphics.capture import GraphicsCaptureItem
 
@@ -21,7 +21,7 @@ def create_for_monitor(monitor: int) -> GraphicsCaptureItem:
     """
     return _runtime.wrap_interface(
         _native.create_for_monitor(monitor),
-        "winrt.windows.graphics.capture.GraphicsCaptureItem",
+        GraphicsCaptureItem,
     )
 
 
@@ -40,5 +40,5 @@ def create_for_window(window: int) -> GraphicsCaptureItem:
     """
     return _runtime.wrap_interface(
         _native.create_for_window(window),
-        "winrt.windows.graphics.capture.GraphicsCaptureItem",
+        GraphicsCaptureItem,
     )

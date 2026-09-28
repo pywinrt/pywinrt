@@ -12,9 +12,9 @@
 
 namespace
 {
-    /// Raises what winrt._winrt.hresult_error() makes of the C++/WinRT
-    /// exception being handled, which carries the error info of the call that
-    /// failed. Must only be called from a catch block.
+    /// Raises what winrt.runtime.interop.hresult_error() makes of the
+    /// C++/WinRT exception being handled, which carries the error info of the
+    /// call that failed. Must only be called from a catch block.
     /// @returns nullptr, for the caller to return.
     PyObject* set_hresult_error() noexcept
     {
