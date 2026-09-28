@@ -33,6 +33,10 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(v.y, 2.0)
         self.assertEqual(v.z, 3.0)
 
+    def test_hash(self):
+        self.assertEqual(hash(wfn.Vector2(1, 2)), hash(wfn.Vector2(1, 2)))
+        self.assertEqual(len({wfn.Vector2(1, 2), wfn.Vector2(1, 2)}), 1)
+
     def test_plane(self):
         v = wfn.Vector3(1.0, 2.0, 3.0)
         p = wfn.Plane(v, 4.0)

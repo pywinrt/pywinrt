@@ -317,9 +317,7 @@ class TestTestComponent(unittest.TestCase):
     def test_struct_hashable(self):
         b = tc.Blittable()
 
-        # structs are currently not hashable because they are mutable
-        with self.assertRaisesRegex(TypeError, "unhashable type"):
-            hash(b)
+        self.assertEqual(hash(b), hash(tc.Blittable()))
 
     def test_struct_equality(self):
         b1 = tc.Blittable()
