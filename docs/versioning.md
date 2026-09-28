@@ -72,7 +72,9 @@ namespace. The runtime refuses a table whose format minor is higher than the
 one it reads, and reads an older table happily.
 
 The interop packages are compiled, but they reach the runtime only through
-Python functions, so there is no C ABI between them and the runtime to check.
+the Python functions of [`winrt.runtime.interop`](api/runtime.interop.md), so
+there is no C ABI between them and the runtime to check. A third-party interop
+module uses the same functions.
 
 The newer half may be the runtime and never the projection package. The
 `>=` floors in every package's metadata say so, which is why pip normally
