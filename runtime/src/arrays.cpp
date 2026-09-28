@@ -339,6 +339,46 @@ namespace py::interp
             }
         }
 
+        /**
+         * Copies @p count values of @p value's type, each @p width bytes, from
+         * @p source into @p destination, which is zeroed storage the caller
+         * owns.
+         *
+         * A failure part way through leaves the rest of @p destination zeroed,
+         * so that it holds exactly what has been duplicated.
+         *
+         * @returns @c false with a Python error set.
+         */
+        bool copy_values(
+            arg_desc const& value,
+            uint8_t* destination,
+            uint8_t const* source,
+            uint32_t count,
+            size_t width) noexcept
+        {
+            if (!value_owns_resources(value))
+            {
+                std::memcpy(destination, source, count * width);
+                return true;
+            }
+
+            try
+            {
+                for (uint32_t i = 0; i < count; i++)
+                {
+                    std::memcpy(destination + i * width, source + i * width, width);
+                    copy_value_resources(value, destination + i * width);
+                }
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return false;
+            }
+
+            return true;
+        }
+
     } // namespace
 
     /**
@@ -503,6 +543,40 @@ namespace py::interp
                 to_PyErr();
                 return false;
             }
+        }
+
+        std::unique_ptr<py::Array> Slice(
+            uint32_t start, uint32_t count) noexcept override
+        {
+            std::unique_ptr<table_array> copy;
+
+            try
+            {
+                copy = std::make_unique<table_array>(
+                    *owner_, element_, value_size_, format_, name_);
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+
+            if (!copy->Alloc(count))
+            {
+                return nullptr;
+            }
+
+            if (count == 0)
+            {
+                return copy;
+            }
+
+            if (!copy_values(element_, copy->at(0), at(start), count, value_size_))
+            {
+                return nullptr;
+            }
+
+            return copy;
         }
 
       private:
@@ -857,33 +931,14 @@ namespace py::interp
             return cpp::_winrt::Array_New(std::move(array));
         }
 
-        auto* const bytes = static_cast<uint8_t*>(array->Data());
-        auto const width = array->ValueSize();
-
-        if (!value_owns_resources(element))
+        if (!copy_values(
+                element,
+                static_cast<uint8_t*>(array->Data()),
+                static_cast<uint8_t const*>(data),
+                count,
+                array->ValueSize()))
         {
-            std::memcpy(bytes, data, count * width);
-        }
-        else
-        {
-            // One element at a time, so that a failure part way through
-            // leaves the rest of the array as Alloc() zeroed it and the
-            // array owns exactly what has been duplicated.
-            auto const* const source = static_cast<uint8_t const*>(data);
-
-            try
-            {
-                for (uint32_t i = 0; i < count; i++)
-                {
-                    std::memcpy(bytes + i * width, source + i * width, width);
-                    copy_value_resources(element, bytes + i * width);
-                }
-            }
-            catch (...)
-            {
-                to_PyErr();
-                return nullptr;
-            }
+            return nullptr;
         }
 
         return cpp::_winrt::Array_New(std::move(array));

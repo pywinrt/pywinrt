@@ -146,6 +146,18 @@ namespace py
          */
         virtual bool Set(Py_ssize_t index, PyObject* item) noexcept = 0;
 
+        /**
+         * Copies @p count elements starting at @p start into a new array of
+         * the same element type.
+         * @param [in]  start   The index of the first element to copy.
+         * @param [in]  count   The number of elements to copy, which the
+         * caller has checked fit in the array.
+         * @returns The new array or sets Python error and returns @c nullptr
+         * on failure.
+         */
+        virtual std::unique_ptr<Array> Slice(uint32_t start, uint32_t count) noexcept
+            = 0;
+
         // needed to avoid leaks with derived types when used with std::unique_ptr
         virtual ~Array() = default;
     };
