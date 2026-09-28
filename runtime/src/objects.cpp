@@ -312,6 +312,63 @@ namespace py::interp
             return convert_guid(*static_cast<winrt::guid const*>(info->guid));
         }
 
+        /**
+         * The abstract type an interface's public name is bound to stands for
+         * an implementation it does not have, so only a subclass of it can be
+         * instantiated. What a subclass gets is what object() would give it.
+         */
+        PyObject* implements_new(
+            PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+        {
+            // The abstract type is made with no bases, so its base is object,
+            // and a class deriving from it has the abstract type or something
+            // below it as its base instead: object before it in the bases is
+            // an MRO conflict.
+            if (type->tp_base == &PyBaseObject_Type)
+            {
+                WINRT_ASSERT(
+                    find_type_entry(type) && find_type_entry(type)->implements == type);
+
+                pyobj_handle name{PyType_GetName(type)};
+                if (!name)
+                {
+                    return nullptr;
+                }
+
+                PyErr_Format(
+                    PyExc_TypeError, "Can't instantiate abstract class %U", name.get());
+                return nullptr;
+            }
+
+            // object.__new__() refuses arguments only for a type whose
+            // __new__ it is, so the check it makes for a type that has no
+            // __init__ of its own is made here instead.
+            if (type->tp_init == PyBaseObject_Type.tp_init)
+            {
+                if (PyTuple_GET_SIZE(args) != 0)
+                {
+                    PyErr_Format(
+                        PyExc_TypeError, "%s() takes no arguments", type->tp_name);
+                    return nullptr;
+                }
+
+                if (kwds && PyDict_GET_SIZE(kwds) != 0)
+                {
+                    PyErr_Format(
+                        PyExc_TypeError, "%s() takes no arguments", type->tp_name);
+                    return nullptr;
+                }
+            }
+
+            pyobj_handle no_args{PyTuple_New(0)};
+            if (!no_args)
+            {
+                return nullptr;
+            }
+
+            return PyBaseObject_Type.tp_new(type, no_args.get(), nullptr);
+        }
+
         PyMethodDef class_methods[]
             = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
@@ -427,7 +484,8 @@ namespace py::interp
             = keep(proj, proj.module_name + "." + std::string{record.name()});
 
         PyType_Slot implements_slots[]
-            = {{Py_tp_methods,
+            = {{Py_tp_new, reinterpret_cast<void*>(implements_new)},
+               {Py_tp_methods,
                 reinterpret_cast<void*>(
                     generic ? generic_implements_methods : implements_methods)},
                {}};
