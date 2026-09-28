@@ -1,4 +1,5 @@
 import array as stdlib_array
+import collections.abc
 import datetime
 import struct
 import sys
@@ -514,6 +515,38 @@ class TestWinRTArray(unittest.TestCase):
             m[0] = 3
 
         self.assertEqual(list(a), [3, 2])
+
+    def test_is_a_sequence_but_not_a_mutable_sequence(self):
+        a = Array(Int32, [1, 2, 3])
+
+        self.assertIsInstance(a, collections.abc.Sequence)
+        self.assertNotIsInstance(a, collections.abc.MutableSequence)
+
+    def test_item_assignment(self):
+        a = Array(Int32, [1, 2, 3])
+
+        a[0] = 4
+        a[-1] = 6
+
+        self.assertEqual(list(a), [4, 2, 6])
+
+        with self.assertRaises(IndexError):
+            a[3] = 7
+
+    def test_size_is_fixed(self):
+        a = Array(Int32, [1, 2, 3])
+
+        with self.assertRaises(TypeError):
+            del a[0]  # type: ignore
+
+        with self.assertRaises(TypeError):
+            a[0:1] = [4]  # type: ignore
+
+        for name in ("insert", "append", "extend", "pop", "remove", "clear"):
+            with self.subTest(name=name):
+                self.assertFalse(hasattr(a, name))
+
+        self.assertEqual(list(a), [1, 2, 3])
 
 
 #: One value of each element type an ArrayN member of the test component
