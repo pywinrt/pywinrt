@@ -29,15 +29,22 @@ INTEROP_PATH = REPO_PATH / "interop"
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
 INTEROP_HEADER_PATH = INTEROP_PATH / "interop.h"
 
-# The winrt-runtime version that each winrt._winrt function an interop package
-# calls first shipped in. An interop package requires the newest of the ones it
-# calls rather than the runtime of this tree, so that a fix to one can reach
-# someone who keeps an older runtime (see interop_runtime_requirement()).
+# The winrt-runtime version that each winrt.runtime.interop function an interop
+# package calls first shipped in. An interop package requires the newest of the
+# ones it calls rather than the runtime of this tree, so that a fix to one can
+# reach someone who keeps an older runtime (see interop_runtime_requirement()).
+# InterfaceCapsule is not a function, but an annotation that names it needs it
+# at run time just the same.
 RUNTIME_FUNCTIONS = {
+    "InterfaceCapsule": "4.0.0",
     "as_interface": "4.0.0",
     "hresult_error": "4.0.0",
     "wrap_interface": "4.0.0",
 }
+
+# The modules an interop package reaches those functions through: the public
+# one, and the extension module that implements them.
+RUNTIME_MODULES = {"winrt.runtime.interop", "winrt._winrt"}
 
 # Which NuGet package each family of generated packages takes its version
 # from, keyed by the directory under projection/ that holds the family.
@@ -351,11 +358,11 @@ def table_compiler_requirement() -> str:
 
 def runtime_functions_called(package_path: Path) -> set[str]:
     """
-    The winrt._winrt functions an interop package calls.
+    The runtime functions an interop package calls.
 
-    Its Python code is read for how it imports winrt._winrt and what it takes
-    from it, and interop.h is read for the calls it makes from C, since every
-    interop module compiles a copy of it.
+    Its Python code is read for how it imports one of RUNTIME_MODULES and what
+    it takes from it, and interop.h is read for the calls it makes from C,
+    since every interop module compiles a copy of it.
     """
     called = set(
         re.findall(
@@ -370,39 +377,48 @@ def runtime_functions_called(package_path: Path) -> set[str]:
 
         for node in ast.walk(tree):
             if isinstance(node, ast.Import):
+                # without an alias, "import winrt.runtime.interop" is reached
+                # as winrt.runtime.interop.name, which the loop below looks for
                 aliases.update(
-                    alias.asname for alias in node.names if alias.name == "winrt._winrt"
+                    alias.asname
+                    for alias in node.names
+                    if alias.asname and alias.name in RUNTIME_MODULES
                 )
-            elif isinstance(node, ast.ImportFrom) and node.module == "winrt":
+            elif isinstance(node, ast.ImportFrom) and node.module in RUNTIME_MODULES:
+                called.update(alias.name for alias in node.names)
+            elif isinstance(node, ast.ImportFrom):
                 aliases.update(
                     alias.asname or alias.name
                     for alias in node.names
-                    if alias.name == "_winrt"
+                    if f"{node.module}.{alias.name}" in RUNTIME_MODULES
                 )
-            elif isinstance(node, ast.ImportFrom) and node.module == "winrt._winrt":
-                called.update(alias.name for alias in node.names)
-
-        # without an alias, "import winrt._winrt" is reached as
-        # winrt._winrt.name, which the second branch below looks for
-        aliases.discard(None)
 
         for node in ast.walk(tree):
             if not isinstance(node, ast.Attribute):
                 continue
 
-            owner = node.value
+            owner = dotted_name(node.value)
 
-            if isinstance(owner, ast.Name) and owner.id in aliases:
-                called.add(node.attr)
-            elif (
-                isinstance(owner, ast.Attribute)
-                and owner.attr == "_winrt"
-                and isinstance(owner.value, ast.Name)
-                and owner.value.id == "winrt"
-            ):
+            if owner in aliases or owner in RUNTIME_MODULES:
                 called.add(node.attr)
 
     return called
+
+
+def dotted_name(node: ast.expr) -> str | None:
+    """
+    The dotted name that an expression such as ``winrt.runtime.interop``
+    spells, or None for an expression that is not one.
+    """
+    if isinstance(node, ast.Name):
+        return node.id
+
+    if isinstance(node, ast.Attribute):
+        owner = dotted_name(node.value)
+
+        return None if owner is None else f"{owner}.{node.attr}"
+
+    return None
 
 
 def release_of(version: str) -> tuple[int, ...]:
@@ -433,7 +449,7 @@ def interop_runtime_requirement(functions: Iterable[str]) -> str:
     for function in sorted(functions):
         if function not in RUNTIME_FUNCTIONS:
             raise RuntimeError(
-                f"winrt._winrt.{function} is not in RUNTIME_FUNCTIONS in"
+                f"winrt.runtime.interop.{function} is not in RUNTIME_FUNCTIONS in"
                 " scripts/versions.py; add it with the winrt-runtime version"
                 " it first ships in"
             )
@@ -442,8 +458,8 @@ def interop_runtime_requirement(functions: Iterable[str]) -> str:
 
         if release_of(since) > release_of(current):
             raise RuntimeError(
-                f"winrt._winrt.{function} is listed as shipping in winrt-runtime"
-                f" {since}, but the runtime of this tree is {current}"
+                f"winrt.runtime.interop.{function} is listed as shipping in"
+                f" winrt-runtime {since}, but the runtime of this tree is {current}"
             )
 
         if release_of(since) > release_of(floor):

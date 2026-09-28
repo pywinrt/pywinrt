@@ -1,6 +1,6 @@
 from uuid import UUID
 
-import winrt._winrt as _runtime
+import winrt.runtime.interop as _runtime
 import winrt._winrt_windows_graphics_directx_direct3d11_interop as _native
 from winrt.system import Object
 from winrt.windows.graphics.directx.direct3d11 import IDirect3DDevice, IDirect3DSurface
@@ -28,7 +28,7 @@ def create_direct3d11_device_from_dxgi_device(dxgi_device: int) -> IDirect3DDevi
     """
     return _runtime.wrap_interface(
         _native.create_direct3d11_device_from_dxgi_device(dxgi_device),
-        "winrt.windows.graphics.directx.direct3d11.IDirect3DDevice",
+        IDirect3DDevice,
     )
 
 
@@ -45,7 +45,7 @@ def create_direct3d11_surface_from_dxgi_surface(dxgi_surface: int) -> IDirect3DS
     """
     return _runtime.wrap_interface(
         _native.create_direct3d11_surface_from_dxgi_surface(dxgi_surface),
-        "winrt.windows.graphics.directx.direct3d11.IDirect3DSurface",
+        IDirect3DSurface,
     )
 
 
