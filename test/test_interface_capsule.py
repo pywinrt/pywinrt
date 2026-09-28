@@ -13,8 +13,10 @@ import gc
 import unittest
 import uuid
 
-import winrt._winrt as runtime
-from winrt.windows.foundation import Uri, WwwFormUrlDecoder
+import winrt._winrt
+from winrt.runtime import interop
+from winrt.windows.foundation import IStringable, Point, Uri, WwwFormUrlDecoder
+from winrt.windows.foundation.collections import IIterable
 
 IID_IINSPECTABLE = uuid.UUID("AF86E2E0-B12D-4C6A-9C5A-D7AA65101E90")
 IID_IUNKNOWN = uuid.UUID("00000000-0000-0000-C000-000000000046")
@@ -66,17 +68,17 @@ class TestInterfaceCapsule(unittest.TestCase):
     def test_round_trip(self) -> None:
         uri = Uri("https://example.com/")
 
-        capsule = runtime.as_interface(uri, IID_IINSPECTABLE)
-        wrapped = runtime.wrap_interface(capsule, "winrt.windows.foundation.Uri")
+        capsule = interop.as_interface(uri, IID_IINSPECTABLE)
+        wrapped = interop.wrap_interface(capsule, "winrt.windows.foundation.Uri")
 
         self.assertIsInstance(wrapped, Uri)
         self.assertEqual(wrapped, uri)
         self.assertEqual(wrapped.absolute_uri, "https://example.com/")
 
     def test_capsule_holds_its_own_reference(self) -> None:
-        capsule = runtime.as_interface(Uri("https://example.com/"), IID_IUNKNOWN)
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IUNKNOWN)
 
-        wrapped = runtime.wrap_interface(capsule, "winrt.windows.foundation.Uri")
+        wrapped = interop.wrap_interface(capsule, "winrt.windows.foundation.Uri")
         del capsule
 
         self.assertEqual(wrapped.absolute_uri, "https://example.com/")
@@ -84,18 +86,18 @@ class TestInterfaceCapsule(unittest.TestCase):
     def test_name_built_at_run_time(self) -> None:
         # A type that nothing else wraps by name, so that the name built here
         # is the one the runtime first resolves it by.
-        capsule = runtime.as_interface(WwwFormUrlDecoder("a=1"), IID_IINSPECTABLE)
+        capsule = interop.as_interface(WwwFormUrlDecoder("a=1"), IID_IINSPECTABLE)
 
         def wrap() -> None:
             name = "winrt.windows.foundation." + "".join(["Www", "Form", "UrlDecoder"])
             self.assertIsInstance(
-                runtime.wrap_interface(capsule, name), WwwFormUrlDecoder
+                interop.wrap_interface(capsule, name), WwwFormUrlDecoder
             )
 
         def cached() -> int:
             # The runtime module's state visits the type once for each name the
             # cache has it under.
-            return gc.get_referents(runtime).count(WwwFormUrlDecoder)
+            return gc.get_referents(winrt._winrt).count(WwwFormUrlDecoder)
 
         wrap()
         garbage = [str(i) * 16 for i in range(1000)]
@@ -108,53 +110,116 @@ class TestInterfaceCapsule(unittest.TestCase):
         del garbage
 
     def test_none(self) -> None:
-        self.assertIsNone(runtime.as_interface(None, IID_IINSPECTABLE))
-        self.assertIsNone(runtime.wrap_interface(None, "winrt.windows.foundation.Uri"))
+        self.assertIsNone(interop.as_interface(None, IID_IINSPECTABLE))
+        self.assertIsNone(interop.wrap_interface(None, "winrt.windows.foundation.Uri"))
 
     def test_not_a_winrt_object(self) -> None:
         with self.assertRaisesRegex(TypeError, "expected a WinRT object"):
-            runtime.as_interface(object(), IID_IINSPECTABLE)  # type: ignore[call-overload]
+            interop.as_interface(object(), IID_IINSPECTABLE)  # type: ignore[call-overload]
 
     def test_interface_not_implemented(self) -> None:
-        boxed = runtime.box_int32(1)
+        boxed = winrt._winrt.box_int32(1)
 
         with self.assertRaises(OSError) as cm:
-            runtime.as_interface(boxed, IID_ISTRINGABLE)
+            interop.as_interface(boxed, IID_ISTRINGABLE)
 
         self.assertEqual(cm.exception.winerror, -2147467262)  # E_NOINTERFACE
 
+    def test_round_trip_by_class(self) -> None:
+        uri = Uri("https://example.com/")
+
+        capsule = interop.as_interface(uri, Uri)
+        wrapped = interop.wrap_interface(capsule, Uri)
+
+        self.assertIsInstance(wrapped, Uri)
+        self.assertEqual(wrapped, uri)
+
+    def test_round_trip_by_interface(self) -> None:
+        uri = Uri("https://example.com/")
+
+        capsule = interop.as_interface(uri, IStringable)
+        wrapped = interop.wrap_interface(capsule, IStringable)
+
+        self.assertIsInstance(wrapped, IStringable)
+        self.assertEqual(wrapped.to_string(), "https://example.com/")
+
+    def test_interface_class_not_implemented(self) -> None:
+        boxed = winrt._winrt.box_int32(1)
+
+        with self.assertRaises(OSError) as cm:
+            interop.as_interface(boxed, IStringable)
+
+        self.assertEqual(cm.exception.winerror, -2147467262)  # E_NOINTERFACE
+
+    def test_none_by_type(self) -> None:
+        self.assertIsNone(interop.as_interface(None, IStringable))
+        self.assertIsNone(interop.wrap_interface(None, Uri))
+
+    def test_not_a_projected_type(self) -> None:
+        uri = Uri("https://example.com/")
+        capsule = interop.as_interface(uri, IID_IINSPECTABLE)
+
+        # a struct, the metaclass that carries a class's statics, and a type
+        # that is not projected at all
+        for type_ in (Point, type(Uri), int):
+            with self.subTest(type=type_):
+                with self.assertRaisesRegex(TypeError, "not a type a projection"):
+                    interop.as_interface(uri, type_)  # type: ignore[arg-type]
+
+                with self.assertRaisesRegex(TypeError, "not a type a projection"):
+                    interop.wrap_interface(capsule, type_)  # type: ignore[type-var]
+
+    def test_parameterized_interface(self) -> None:
+        uri = Uri("https://example.com/")
+
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            interop.as_interface(uri, IIterable)
+
+    def test_neither_type_nor_name(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+
+        with self.assertRaisesRegex(TypeError, "must be a type or str"):
+            interop.wrap_interface(capsule, 42)  # type: ignore[call-overload]
+
     def test_wrong_capsule_name(self) -> None:
         with self.assertRaises(ValueError):
-            runtime.wrap_interface(
-                datetime.datetime_CAPI,  # type: ignore[attr-defined]
+            interop.wrap_interface(
+                datetime.datetime_CAPI,  # type: ignore[call-overload]
                 "winrt.windows.foundation.Uri",
             )
 
 
+class TestPublicModule(unittest.TestCase):
+    def test_same_functions(self) -> None:
+        self.assertIs(interop.as_interface, winrt._winrt.as_interface)
+        self.assertIs(interop.wrap_interface, winrt._winrt.wrap_interface)
+        self.assertIs(interop.hresult_error, winrt._winrt.hresult_error)
+
+
 class TestHresultError(unittest.TestCase):
     def test_hresult(self) -> None:
-        error = runtime.hresult_error(E_INVALIDARG)
+        error = interop.hresult_error(E_INVALIDARG)
 
         self.assertIs(type(error), OSError)
         self.assertEqual(error.winerror, E_INVALIDARG)
         self.assertEqual(error.strerror, "The parameter is incorrect.")
 
     def test_unsigned_hresult(self) -> None:
-        error = runtime.hresult_error(0x80070057)
+        error = interop.hresult_error(0x80070057)
 
         self.assertEqual(error.winerror, E_INVALIDARG)
 
     def test_not_a_failure(self) -> None:
         with self.assertRaises(ValueError):
-            runtime.hresult_error(0)
+            interop.hresult_error(0)
 
         with self.assertRaises(OverflowError):
-            runtime.hresult_error(1 << 32)
+            interop.hresult_error(1 << 32)
 
     def test_error_info(self) -> None:
         info = ErrorInfo(E_FAIL, "the details")
         try:
-            error = runtime.hresult_error(E_FAIL, info.capsule)
+            error = interop.hresult_error(E_FAIL, info.capsule)
         finally:
             info.release()
 
@@ -164,7 +229,7 @@ class TestHresultError(unittest.TestCase):
     def test_error_info_about_another_hresult(self) -> None:
         info = ErrorInfo(E_FAIL, "the details")
         try:
-            error = runtime.hresult_error(E_INVALIDARG, info.capsule)
+            error = interop.hresult_error(E_INVALIDARG, info.capsule)
         finally:
             info.release()
 
@@ -172,7 +237,7 @@ class TestHresultError(unittest.TestCase):
         self.assertEqual(error.strerror, "The parameter is incorrect.")
 
     def test_not_error_info(self) -> None:
-        capsule = runtime.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
 
         with self.assertRaises(TypeError):
-            runtime.hresult_error(E_FAIL, capsule)
+            interop.hresult_error(E_FAIL, capsule)

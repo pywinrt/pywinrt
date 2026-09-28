@@ -996,8 +996,7 @@ delegate Windows.Foundation.AsyncActionCompletedHandler external
 
         action = tc.TestRunner.create_async_action(0)
         capsule = winrt._winrt.as_interface(
-            action,  # type: ignore[call-overload]
-            uuid.UUID("5a648006-843a-4da9-865b-9d26e5dfad7b"),
+            action, uuid.UUID("5a648006-843a-4da9-865b-9d26e5dfad7b")
         )
         waitable = winrt._winrt.wrap_interface(capsule, f"{name}._IWaitable")
 
