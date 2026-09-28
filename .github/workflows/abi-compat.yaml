@@ -34,9 +34,10 @@ jobs:
           python-version: '3.12'
           architecture: x64
       - run: python -m pip install -r requirements.txt
-      # the wheels are built with --no-build-isolation so that the
-      # winrt-runtime build dependency comes from the tree being built rather
-      # than from PyPI, which means the build backend has to be here
+      # the baseline's interop module is built with --no-build-isolation so
+      # that the package carrying the headers it compiles against (winrt-sdk
+      # in 3.x) comes from the baseline's tree rather than from PyPI, which
+      # means the build backend has to be here
       - run: python -m pip install "setuptools>=78" wheel
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
