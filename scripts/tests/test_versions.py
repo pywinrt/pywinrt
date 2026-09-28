@@ -332,15 +332,19 @@ class InteropRuntimeRequirement(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 versions.interop_runtime_requirement(["unreleased"])
 
-    def test_every_listed_function_is_one_the_runtime_has(self):
-        stub = versions.RUNTIME_PATH / "python" / "winrt" / "_winrt.pyi"
-        declared = {
-            node.name
-            for node in ast.parse(stub.read_text(encoding="utf-8")).body
-            if isinstance(node, ast.FunctionDef)
-        }
+    def test_every_listed_function_is_one_the_runtime_exports(self):
+        interop = versions.RUNTIME_PATH / "python" / "winrt" / "runtime" / "interop.py"
+        exported = next(
+            ast.literal_eval(node.value)
+            for node in ast.parse(interop.read_text(encoding="utf-8")).body
+            if isinstance(node, ast.Assign)
+            and any(
+                isinstance(target, ast.Name) and target.id == "__all__"
+                for target in node.targets
+            )
+        )
 
-        self.assertLessEqual(set(versions.RUNTIME_FUNCTIONS), declared)
+        self.assertLessEqual(set(versions.RUNTIME_FUNCTIONS), set(exported))
 
     def test_every_way_of_importing_the_runtime_is_seen(self):
         with tempfile.TemporaryDirectory() as root:
@@ -354,11 +358,20 @@ class InteropRuntimeRequirement(unittest.TestCase):
                     from winrt import _winrt
                     from winrt import _winrt as _other
                     from winrt._winrt import direct
+                    import winrt.runtime.interop
+                    import winrt.runtime.interop as _interop
+                    from winrt.runtime import interop
+                    from winrt.runtime import interop as _public
+                    from winrt.runtime.interop import public_direct
 
                     winrt._winrt.plain()
                     _runtime.aliased()
                     _winrt.from_winrt()
                     _other.from_winrt_aliased()
+                    winrt.runtime.interop.public_plain()
+                    _interop.public_aliased()
+                    interop.from_runtime()
+                    _public.from_runtime_aliased()
                     """
                 ),
                 encoding="utf-8",
@@ -367,7 +380,18 @@ class InteropRuntimeRequirement(unittest.TestCase):
             called = versions.runtime_functions_called(Path(root))
 
         self.assertLessEqual(
-            {"plain", "aliased", "from_winrt", "from_winrt_aliased", "direct"},
+            {
+                "plain",
+                "aliased",
+                "from_winrt",
+                "from_winrt_aliased",
+                "direct",
+                "public_plain",
+                "public_aliased",
+                "from_runtime",
+                "from_runtime_aliased",
+                "public_direct",
+            },
             called,
         )
         # interop.h raises through hresult_error() in every module

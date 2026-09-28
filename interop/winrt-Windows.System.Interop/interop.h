@@ -6,11 +6,11 @@
 //
 // An interop module shares no C ABI with the runtime and includes none of its
 // headers. A WinRT object crosses as an interface pointer capsule, which
-// winrt._winrt.as_interface() makes from a projected object and
-// winrt._winrt.wrap_interface() makes a projected object from, and a failed
-// call raises the exception that winrt._winrt.hresult_error() builds. The
-// capsule's name and those three functions are the whole contract, so this
-// header can change freely.
+// winrt.runtime.interop.as_interface() makes from a projected object and
+// winrt.runtime.interop.wrap_interface() makes a projected object from, and a
+// failed call raises the exception that winrt.runtime.interop.hresult_error()
+// builds. The capsule's name and those three functions are the whole
+// contract, so this header can change freely.
 //
 // scripts/generate-pyproject.py copies this file into each interop package,
 // so that its source distribution builds on its own.
@@ -61,8 +61,8 @@ namespace interop
         return capsule;
     }
 
-    /// Raises what winrt._winrt.hresult_error() makes of @p hr and @p info,
-    /// the error info of the call that failed with it, which may be
+    /// Raises what winrt.runtime.interop.hresult_error() makes of @p hr and
+    /// @p info, the error info of the call that failed with it, which may be
     /// @c nullptr. The reference to @p info moves in.
     /// @returns nullptr, for the caller to return.
     inline PyObject* set_hresult_error(HRESULT hr, IErrorInfo* info) noexcept
@@ -73,7 +73,7 @@ namespace interop
             return nullptr;
         }
 
-        auto const runtime = PyImport_ImportModule("winrt._winrt");
+        auto const runtime = PyImport_ImportModule("winrt.runtime.interop");
         if (!runtime)
         {
             Py_DECREF(capsule);
@@ -95,8 +95,9 @@ namespace interop
         return nullptr;
     }
 
-    /// Raises what winrt._winrt.hresult_error() makes of @p hr and of the error
-    /// info that the call that just failed with it left on this thread.
+    /// Raises what winrt.runtime.interop.hresult_error() makes of @p hr and of
+    /// the error info that the call that just failed with it left on this
+    /// thread.
     /// @returns nullptr, for the caller to return.
     inline PyObject* set_hresult_error(HRESULT hr) noexcept
     {

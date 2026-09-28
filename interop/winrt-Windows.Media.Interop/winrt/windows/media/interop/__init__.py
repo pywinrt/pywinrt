@@ -1,4 +1,4 @@
-import winrt._winrt as _runtime
+import winrt.runtime.interop as _runtime
 import winrt._winrt_windows_media_interop as _native
 from winrt.windows.media import SystemMediaTransportControls
 
@@ -20,5 +20,5 @@ def get_for_window(window: int) -> SystemMediaTransportControls:
     """
     return _runtime.wrap_interface(
         _native.get_for_window(window),
-        "winrt.windows.media.SystemMediaTransportControls",
+        SystemMediaTransportControls,
     )
