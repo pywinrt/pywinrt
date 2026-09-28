@@ -14,7 +14,7 @@ from typing import (
 from collections.abc import ItemsView, Iterable, Iterator, KeysView, ValuesView
 from uuid import UUID
 
-from typing_extensions import Buffer, CapsuleType, deprecated
+from typing_extensions import Buffer, CapsuleType, TypeForm, deprecated
 
 from winrt.runtime import ApartmentType
 
@@ -170,28 +170,30 @@ class Array(collections.abc.Sequence[_T]):
     _winrt_element_type_name_: str
     def __class_getitem__(cls, key: Any) -> types.GenericAlias: ...
     @overload
+    def __init__(self, type: TypeForm[_T], /) -> None: ...
+    @overload
     def __init__(
         self,
-        type: type[_T],
+        type: TypeForm[_T],
         size: int,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: type[_T],
+        type: TypeForm[_T],
         initializer: Buffer,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: type[_T],
+        type: TypeForm[_T],
         initializer: list[_T],
         /,
     ) -> None: ...
     @overload
     def __init__(
         self,
-        type: type[_T],
+        type: TypeForm[_T],
         initializer: tuple[_T],
         /,
     ) -> None: ...
