@@ -613,21 +613,38 @@ namespace py::interp
                 return false;
             }
 
+            auto refused = false;
             auto stored = false;
 
             {
                 guard lock{*this};
 
-                if (auto const target = slot(index))
+                if (HoldsReferences())
                 {
-                    std::swap_ranges(value.get(), value.get() + value_size_, target);
-                    stored = true;
+                    refused = Exported();
+                }
+
+                if (!refused)
+                {
+                    if (auto const target = slot(index))
+                    {
+                        std::swap_ranges(
+                            value.get(), value.get() + value_size_, target);
+                        stored = true;
+                    }
                 }
             }
 
-            // What value holds now is the element it replaced, or, when a lent
-            // array was taken back meanwhile, the one there was nowhere to put.
+            // What value holds now is the element it replaced, or the one
+            // refused, or, when a lent array was taken back meanwhile, the one
+            // there was nowhere to put.
             release_value(element_, value.get());
+
+            if (refused)
+            {
+                SetExportedError();
+                return false;
+            }
 
             if (!stored)
             {

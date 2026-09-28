@@ -160,10 +160,56 @@ namespace py
         virtual std::unique_ptr<Array> Slice(uint32_t start, uint32_t count) noexcept
             = 0;
 
+        /**
+         * Counts an export of the elements through the buffer protocol, which
+         * lasts until RemoveExport().
+         *
+         * An element that holds a reference cannot be replaced while there is
+         * one, as a bytearray cannot be resized: whoever has the buffer - a
+         * WinRT call it was passed to, which runs without the GIL, or a
+         * memoryview - reads the reference, and replacing the element would
+         * release it.
+         */
+        void AddExport() noexcept
+        {
+            guard lock{*this};
+            export_count_++;
+        }
+
+        /**
+         * Counts the end of an export that AddExport() counted.
+         */
+        void RemoveExport() noexcept
+        {
+            guard lock{*this};
+            export_count_--;
+        }
+
         // needed to avoid leaks with derived types when used with std::unique_ptr
         virtual ~Array() = default;
 
       protected:
+        /**
+         * Whether the elements are exported through the buffer protocol. The
+         * caller holds the lock.
+         */
+        bool Exported() const noexcept
+        {
+            return export_count_ != 0;
+        }
+
+        /**
+         * Sets the error for an element that holds a reference and was not
+         * replaced because the elements are exported.
+         */
+        static void SetExportedError() noexcept
+        {
+            PyErr_SetString(
+                PyExc_BufferError,
+                "Existing exports of data: an element that holds a reference "
+                "cannot be replaced");
+        }
+
         /**
          * Holds the lock over an array's elements for a scope.
          *
@@ -184,7 +230,8 @@ namespace py
          * The buffer protocol is not locked. An array whose elements hold
          * references exports them read-only, so the worst a write racing an
          * assignment can do is tear a value that has no references in it, as
-         * with a bytearray.
+         * with a bytearray; and such an element is not replaced while it is
+         * exported (AddExport()).
          */
         class guard
         {
@@ -212,10 +259,11 @@ namespace py
 #endif
         };
 
-#ifdef Py_GIL_DISABLED
       private:
+#ifdef Py_GIL_DISABLED
         PyMutex mutex_{};
 #endif
+        uint32_t export_count_{};
     };
 
     struct
