@@ -83,7 +83,19 @@ namespace py::cpp::_winrt
             }
         }
 
-        reinterpret_cast<Array*>(obj)->array = std::move(array);
+        auto const self = reinterpret_cast<Array*>(obj);
+
+        // Elements are only given to an array as it is made. One that has
+        // them could be in use on another thread, which replacing them would
+        // leave reading freed memory.
+        if (self->array)
+        {
+            PyErr_SetString(
+                PyExc_TypeError, "the elements of an Array cannot be replaced");
+            return false;
+        }
+
+        self->array = std::move(array);
 
         return true;
     }
