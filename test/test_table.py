@@ -753,7 +753,10 @@ class TestTableEnums(unittest.TestCase):
                     )
                     self.assertEqual(built.__module__, module_name)
                     self.assertEqual(
-                        [(name, int(member)) for name, member in built.__members__.items()],
+                        [
+                            (name, int(member))
+                            for name, member in built.__members__.items()
+                        ],
                         [
                             (
                                 c["py_name"],

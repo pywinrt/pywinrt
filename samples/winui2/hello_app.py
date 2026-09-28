@@ -1,4 +1,3 @@
-
 from typing_extensions import override
 
 from winrt.runtime import init_apartment, ApartmentType

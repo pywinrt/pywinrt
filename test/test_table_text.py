@@ -181,7 +181,9 @@ class TestTextTable(unittest.TestCase):
 
     def test_a_reference_becomes_the_index_of_what_it_names(self) -> None:
         table = read()
-        index = {f"{t['namespace']}.{t['name']}": i for i, t in enumerate(table["types"])}
+        index = {
+            f"{t['namespace']}.{t['name']}": i for i, t in enumerate(table["types"])
+        }
         thing = table["types"][index["Test.Sample.Thing"]]
 
         self.assertEqual(thing["default_interface"], index["Test.Sample.IThing"])
@@ -233,7 +235,10 @@ class TestTextTable(unittest.TestCase):
         extent = types(read())["Test.Sample.Extent"]
 
         self.assertEqual(
-            [(f["py_name"], f["winrt_name"], f["code"], f["offset"]) for f in extent["fields"]],
+            [
+                (f["py_name"], f["winrt_name"], f["code"], f["offset"])
+                for f in extent["fields"]
+            ],
             [("width", "Width", 6, 0), ("weight", "Weight", CODE_DOUBLE, 8)],
         )
         self.assertEqual(extent["size"], 16)
@@ -279,13 +284,17 @@ class TestTextTable(unittest.TestCase):
         # projected collection calls, so a table that lost them would still
         # read - and a Python list handed to WinRT as an IVector<T> would have
         # a vtable slot with nothing behind it.
-        groups = {g["py_name"]: g for g in types(read())["Test.Sample.IThing"]["groups"]}
+        groups = {
+            g["py_name"]: g for g in types(read())["Test.Sample.IThing"]["groups"]
+        }
 
         self.assertEqual(groups["clear"]["members"][0]["role"], MEMBER_ROLE_CLEAR)
 
     def test_a_parameter_keeps_what_it_is_and_how_it_travels(self) -> None:
         table = read()
-        index = {f"{t['namespace']}.{t['name']}": i for i, t in enumerate(table["types"])}
+        index = {
+            f"{t['namespace']}.{t['name']}": i for i, t in enumerate(table["types"])
+        }
         thing = table["types"][index["Test.Sample.IThing"]]
         groups = {g["py_name"]: g for g in thing["groups"]}
         params = groups["measure"]["members"][0]["params"]
@@ -302,7 +311,9 @@ class TestTextTable(unittest.TestCase):
         # An array is two ABI arguments and one parameter record, and which of
         # the three array categories it is decides who owns the elements, so it
         # is the one thing about a parameter that the code does not say.
-        groups = {g["py_name"]: g for g in types(read())["Test.Sample.IThing"]["groups"]}
+        groups = {
+            g["py_name"]: g for g in types(read())["Test.Sample.IThing"]["groups"]
+        }
 
         many = groups["get_many"]["members"][0]
 
@@ -329,12 +340,16 @@ class TestTextTable(unittest.TestCase):
 
     def test_an_instance_carries_its_arguments(self) -> None:
         table = read()
-        index = {f"{t['namespace']}.{t['name']}": i for i, t in enumerate(table["types"])}
+        index = {
+            f"{t['namespace']}.{t['name']}": i for i, t in enumerate(table["types"])
+        }
         vector = table["types"][index["Windows.Foundation.Collections.IVector"]]
 
         self.assertTrue(vector["flags"] & TYPE_CONCRETE)
         self.assertEqual(vector["generic_args"], [index["Test.Sample.Thing"]])
-        self.assertEqual(vector["py_name"], "winrt.windows.foundation.collections._IVector[Thing]")
+        self.assertEqual(
+            vector["py_name"], "winrt.windows.foundation.collections._IVector[Thing]"
+        )
 
     def test_the_shape_limits_are_one_past_the_highest_used(self) -> None:
         table = read()
@@ -355,7 +370,9 @@ class TestTextErrors(unittest.TestCase):
         return str(caught.exception)
 
     def test_an_unknown_flag(self) -> None:
-        self.assertIn("'sortable' is not a type flag", self.compile_with("class A sortable"))
+        self.assertIn(
+            "'sortable' is not a type flag", self.compile_with("class A sortable")
+        )
 
     def test_an_unknown_keyword(self) -> None:
         message = self.compile_with("class Test.Sample.Other", "    colour blue")
@@ -394,12 +411,17 @@ class TestTextErrors(unittest.TestCase):
         self.assertIn("'decimal' is not a type code", message)
 
     def test_a_reference_to_a_type_that_is_not_there(self) -> None:
-        message = self.compile_with("class Test.Sample.Other", "    base Test.Sample.Missing")
+        message = self.compile_with(
+            "class Test.Sample.Other", "    base Test.Sample.Missing"
+        )
 
         self.assertIn("'Test.Sample.Missing' is named but never written", message)
 
     def test_a_type_that_is_written_twice(self) -> None:
-        self.assertIn("'Test.Sample.Thing' is written twice", self.compile_with("class Test.Sample.Thing"))
+        self.assertIn(
+            "'Test.Sample.Thing' is written twice",
+            self.compile_with("class Test.Sample.Thing"),
+        )
 
     def test_a_line_that_is_indented_by_something_else(self) -> None:
         message = self.compile_with("class Test.Sample.Other", "  py Other")
