@@ -67,4 +67,4 @@ There are also special modules that provide extra functionality
 to bridge between WinRT and other interfaces.
 
 - [`winrt.microsoft.ui.interop` module](microsoft/ui/interop.md)
-- [`winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap` module](microsoft/windows/applicationmodel/dynamicdepedency/bootstrap.md)
+- [`winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap` module](microsoft/windows/applicationmodel/dynamicdependency/bootstrap.md)
