@@ -170,8 +170,7 @@ namespace py
     {
         virtual int32_t __stdcall GetPyObject(PyObject*&) = 0;
         virtual int32_t __stdcall GetComposableInner(
-            winrt::Windows::Foundation::IInspectable&)
-            = 0;
+            winrt::Windows::Foundation::IInspectable&) = 0;
     };
 
     /**
@@ -200,7 +199,6 @@ namespace py
         return self;
     }
 } // namespace py
-
 
 #if !WINRT_IMPL_HAS_DECLSPEC_UUID
 __CRT_UUID_DECL(
