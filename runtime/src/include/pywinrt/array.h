@@ -188,16 +188,32 @@ namespace py
             try
             {
                 auto value = convert_to<T>(item);
+                auto refused = false;
 
                 {
                     guard lock{*this};
-                    std::swap(
-                        array[static_cast<winrt::array_view<T>::size_type>(index)],
-                        value);
+
+                    if (HoldsReferences())
+                    {
+                        refused = Exported();
+                    }
+
+                    if (!refused)
+                    {
+                        std::swap(
+                            array[static_cast<winrt::array_view<T>::size_type>(index)],
+                            value);
+                    }
                 }
 
-                // value is the element it replaced, released here, after the
-                // lock.
+                // value is the element it replaced, or the one refused,
+                // released here, after the lock.
+                if (refused)
+                {
+                    SetExportedError();
+                    return false;
+                }
+
                 return true;
             }
             catch (...)
