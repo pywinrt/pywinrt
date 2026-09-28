@@ -179,6 +179,28 @@ class TestImplements(unittest.TestCase):
         gc.collect()
         self.assertIsNone(ref())
 
+    def test_abstract_type_is_not_instantiable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "abstract class IStringable"):
+            wf.IStringable()  # type: ignore[abstract]
+
+    def test_abstract_parameterized_type_is_not_instantiable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "abstract class IIterable"):
+            wfc.IIterable[int]()  # type: ignore[abstract]
+
+    def test_subclass_takes_no_arguments_without_init(self) -> None:
+        with self.assertRaisesRegex(TypeError, "takes no arguments"):
+            One(1)  # type: ignore[call-arg]
+
+    def test_subclass_with_init_takes_its_arguments(self) -> None:
+        class Named(wf.IStringable):
+            def __init__(self, name: str) -> None:
+                self.name = name
+
+            def to_string(self) -> str:
+                return self.name
+
+        self.assertEqual(Named("hi").to_string(), "hi")
+
     def test_not_an_interface(self) -> None:
         with self.assertRaisesRegex(TypeError, "expected a WinRT object"):
             tc.Composable.expect_required_one(object())  # type: ignore
