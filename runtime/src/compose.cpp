@@ -108,6 +108,10 @@ namespace py::interp
             /// Weak references, plus one the object holds itself for as long
             /// as it has any strong ones.
             std::atomic<uint32_t> weak_references{1};
+            /// Held over every change of the count that crosses between one
+            /// and two or reaches zero, together with what that change does
+            /// to the Python object.
+            winrt::slim_mutex lock;
 
             composed_calls calls;
             /// The object the class was composed over, which answers
@@ -136,44 +140,105 @@ namespace py::interp
         uint32_t __stdcall object_release(void* self) noexcept;
 
         // ----- the reference count and the toggle --------------------------
+        //
+        // The count moves on its own while it stays at two or more, where the
+        // pair holds the Python object and one reference more or less changes
+        // nothing else. A move between one and two, or down to zero, changes
+        // what the pair holds as well, so it is made with the GIL held, which
+        // the Python object needs, and under the object's lock, so that no
+        // other thread's move lands between the count and the toggle; on a
+        // free-threaded build the lock is all that keeps them apart. The GIL
+        // is always taken first and nothing under the lock runs Python,
+        // because a thread holding the GIL and waiting for the lock would
+        // otherwise wait on one holding the lock and waiting for the GIL.
 
         /**
-         * What taking a reference on @p owner comes to once the count has been
-         * raised to @p references.
+         * Adds a reference to @p owner if its count is two or more.
          *
-         * At two the pair has a holder that is not the Python wrapper, so the
-         * WinRT object takes the Python one rather than only pointing at it,
-         * and the pair stops being something the garbage collector may take.
+         * @returns The count it was raised to, or zero if it is below two and
+         * was left alone.
          */
-        void reference_taken(compose_object* owner, uint32_t references) noexcept
-        {
-            if (references == 2)
-            {
-                toggle_python_reference(owner->calls.obj, false);
-            }
-        }
-
-        /**
-         * Takes a reference on @p owner unless it has none left, which is what
-         * tells a weak reference that the object it points at is gone.
-         */
-        bool take_reference(compose_object* owner) noexcept
+        uint32_t add_while_held(compose_object* owner) noexcept
         {
             auto references = owner->references.load(std::memory_order_relaxed);
 
-            do
+            while (references >= 2)
             {
-                if (references == 0)
+                if (owner->references.compare_exchange_weak(
+                        references, references + 1, std::memory_order_relaxed))
+                {
+                    return references + 1;
+                }
+            }
+
+            return 0;
+        }
+
+        /**
+         * Gives up a reference to @p owner if its count is three or more.
+         *
+         * @returns The count it was lowered to, or zero if it is below three
+         * and was left alone.
+         */
+        uint32_t release_while_held(compose_object* owner) noexcept
+        {
+            auto references = owner->references.load(std::memory_order_relaxed);
+
+            while (references >= 3)
+            {
+                if (owner->references.compare_exchange_weak(
+                        references,
+                        references - 1,
+                        std::memory_order_release,
+                        std::memory_order_relaxed))
+                {
+                    return references - 1;
+                }
+            }
+
+            return 0;
+        }
+
+        /**
+         * Takes a reference on @p owner unless the Python object is gone or
+         * going, which is what tells a weak reference that the object it
+         * points at is gone.
+         */
+        bool take_reference(compose_object* owner) noexcept
+        {
+            if (add_while_held(owner) != 0)
+            {
+                return true;
+            }
+
+            auto gil = ensure_gil();
+            winrt::slim_lock_guard const guard{owner->lock};
+
+            auto const references = owner->references.load(std::memory_order_relaxed);
+
+            if (references == 0)
+            {
+                return false;
+            }
+
+            if (references == 1)
+            {
+                // A weak reference holds nothing on the Python object, and
+                // neither does the pair while the Python wrapper's is its only
+                // reference, so Python may be letting go of the object on
+                // another thread; it is taken only if its own count has not
+                // already reached zero. The wrapper's reference is what keeps
+                // the object's memory there to be looked at, and the wrapper
+                // gives it up under this lock.
+                if (!PyUnstable_TryIncRef(owner->calls.obj))
                 {
                     return false;
                 }
-            } while (!owner->references.compare_exchange_weak(
-                references,
-                references + 1,
-                std::memory_order_acquire,
-                std::memory_order_relaxed));
 
-            reference_taken(owner, references + 1);
+                PyObject_GC_UnTrack(owner->calls.obj);
+            }
+
+            owner->references++;
 
             return true;
         }
@@ -209,9 +274,29 @@ namespace py::interp
         {
             auto* const owner = object_of(self);
 
-            auto const references = ++owner->references;
+            auto references = add_while_held(owner);
+            if (references != 0)
+            {
+                return references;
+            }
 
-            reference_taken(owner, references);
+            // The caller holds the one reference there is, which is the
+            // Python wrapper's, so the Python object is alive and is Python's
+            // to hand on.
+            auto gil = ensure_gil();
+            winrt::slim_lock_guard const guard{owner->lock};
+
+            references = ++owner->references;
+
+            if (references == 2)
+            {
+                // The pair has a holder that is not the Python wrapper, so the
+                // WinRT object takes the Python one rather than only pointing
+                // at it, and the pair stops being something the garbage
+                // collector may take.
+                Py_INCREF(owner->calls.obj);
+                PyObject_GC_UnTrack(owner->calls.obj);
+            }
 
             return references;
         }
@@ -220,16 +305,35 @@ namespace py::interp
         {
             auto* const owner = object_of(self);
 
-            auto const references = --owner->references;
-
-            if (references == 1)
+            auto references = release_while_held(owner);
+            if (references != 0)
             {
-                // The Python wrapper holds the only reference left, so the
-                // WinRT object goes back to pointing at the Python one. That
-                // may have been the last reference to the Python object, in
-                // which case the pair is gone by the time this returns and
+                return references;
+            }
+
+            auto gil = ensure_gil();
+            PyObject* dropped{};
+
+            {
+                winrt::slim_lock_guard const guard{owner->lock};
+
+                references = --owner->references;
+
+                if (references == 1)
+                {
+                    // The Python wrapper holds the only reference left, so the
+                    // WinRT object goes back to pointing at the Python one.
+                    dropped = owner->calls.obj;
+                    PyObject_GC_Track(dropped);
+                }
+            }
+
+            if (dropped)
+            {
+                // That may have been the last reference to the Python object,
+                // in which case the pair is gone by the time this returns and
                 // nothing here may touch it again.
-                toggle_python_reference(owner->calls.obj, true);
+                Py_DECREF(dropped);
 
                 return 1;
             }
@@ -682,6 +786,11 @@ namespace py::interp
         {
             return nullptr;
         }
+
+        // A weak reference to the pair takes the Python object from whatever
+        // thread resolves it, which a free-threaded build only allows for an
+        // object that has been told to expect it.
+        PyUnstable_EnableTryIncRef(self.get());
 
         auto outer = std::make_unique<compose_object>();
 
