@@ -298,6 +298,7 @@ class PatternInterface(enum.IntEnum):
 
 @typing.final
 class RawElementProviderRuntimeId:
+    __match_args__ = ("part1", "part2")
     @_property
     def part1(self) -> winrt.system.UInt32: ...
     @_property

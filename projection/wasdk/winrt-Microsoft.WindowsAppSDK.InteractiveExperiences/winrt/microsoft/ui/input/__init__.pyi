@@ -219,6 +219,7 @@ class VirtualKeyStates(enum.IntFlag):
 
 @typing.final
 class CrossSlideThresholds:
+    __match_args__ = ("selection_start", "speed_bump_start", "speed_bump_end", "rearrange_start")
     @_property
     def selection_start(self) -> winrt.system.Single: ...
     @_property
@@ -233,6 +234,7 @@ class CrossSlideThresholds:
 
 @typing.final
 class ManipulationDelta:
+    __match_args__ = ("translation", "scale", "rotation", "expansion")
     @_property
     def translation(self) -> windows_foundation.Point: ...
     @_property
@@ -247,6 +249,7 @@ class ManipulationDelta:
 
 @typing.final
 class ManipulationVelocities:
+    __match_args__ = ("linear", "angular", "expansion")
     @_property
     def linear(self) -> windows_foundation.Point: ...
     @_property
@@ -259,6 +262,7 @@ class ManipulationVelocities:
 
 @typing.final
 class PhysicalKeyStatus:
+    __match_args__ = ("repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released")
     @_property
     def repeat_count(self) -> winrt.system.UInt32: ...
     @_property

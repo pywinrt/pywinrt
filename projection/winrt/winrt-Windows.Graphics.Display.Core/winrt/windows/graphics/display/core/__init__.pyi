@@ -40,6 +40,7 @@ class HdmiDisplayPixelEncoding(enum.IntEnum):
 
 @typing.final
 class HdmiDisplayHdr2086Metadata:
+    __match_args__ = ("red_primary_x", "red_primary_y", "green_primary_x", "green_primary_y", "blue_primary_x", "blue_primary_y", "white_point_x", "white_point_y", "max_mastering_luminance", "min_mastering_luminance", "max_content_light_level", "max_frame_average_light_level")
     @_property
     def red_primary_x(self) -> winrt.system.UInt16: ...
     @_property

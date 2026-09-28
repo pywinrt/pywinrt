@@ -87,6 +87,7 @@ class IndexerOption(enum.IntEnum):
 
 @typing.final
 class SortEntry:
+    __match_args__ = ("property_name", "ascending_order")
     @_property
     def property_name(self) -> str: ...
     @_property

@@ -115,6 +115,7 @@ class PhotoImportSubfolderDateFormat(enum.IntEnum):
 
 @typing.final
 class PhotoImportProgress:
+    __match_args__ = ("items_imported", "total_items_to_import", "bytes_imported", "total_bytes_to_import", "import_progress")
     @_property
     def items_imported(self) -> winrt.system.UInt32: ...
     @_property

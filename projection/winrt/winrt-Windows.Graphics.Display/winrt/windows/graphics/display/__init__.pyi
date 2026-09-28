@@ -90,6 +90,7 @@ class ResolutionScale(enum.IntEnum):
 
 @typing.final
 class NitRange:
+    __match_args__ = ("min_nits", "max_nits", "step_size_nits")
     @_property
     def min_nits(self) -> winrt.system.Single: ...
     @_property

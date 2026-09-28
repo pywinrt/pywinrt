@@ -146,6 +146,7 @@ class SlideNavigationTransitionEffect(enum.IntEnum):
 
 @typing.final
 class KeyTime:
+    __match_args__ = ("time_span",)
     @_property
     def time_span(self) -> datetime.timedelta: ...
     def __new__(cls, time_span: datetime.timedelta = ...) -> KeyTime: ...
@@ -153,6 +154,7 @@ class KeyTime:
 
 @typing.final
 class RepeatBehavior:
+    __match_args__ = ("count", "duration", "type")
     @_property
     def count(self) -> winrt.system.Double: ...
     @_property

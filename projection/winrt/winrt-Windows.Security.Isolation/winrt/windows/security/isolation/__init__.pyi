@@ -157,6 +157,7 @@ class IsolatedWindowsEnvironmentStartProcessStatus(enum.IntEnum):
 
 @typing.final
 class IsolatedWindowsEnvironmentCreateProgress:
+    __match_args__ = ("state", "percent_complete")
     @_property
     def state(self) -> IsolatedWindowsEnvironmentProgressState: ...
     @_property

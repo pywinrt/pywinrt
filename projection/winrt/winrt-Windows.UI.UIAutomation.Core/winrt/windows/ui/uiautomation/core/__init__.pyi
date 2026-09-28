@@ -38,6 +38,7 @@ class AutomationRemoteOperationStatus(enum.IntEnum):
 
 @typing.final
 class AutomationAnnotationTypeRegistration:
+    __match_args__ = ("local_id",)
     @_property
     def local_id(self) -> winrt.system.Int32: ...
     def __new__(cls, local_id: winrt.system.Int32 = 0) -> AutomationAnnotationTypeRegistration: ...
@@ -45,6 +46,7 @@ class AutomationAnnotationTypeRegistration:
 
 @typing.final
 class AutomationRemoteOperationOperandId:
+    __match_args__ = ("value",)
     @_property
     def value(self) -> winrt.system.Int32: ...
     def __new__(cls, value: winrt.system.Int32 = 0) -> AutomationRemoteOperationOperandId: ...

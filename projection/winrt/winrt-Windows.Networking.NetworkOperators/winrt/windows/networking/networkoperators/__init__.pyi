@@ -428,6 +428,7 @@ class UssdResultCode(enum.IntEnum):
 
 @typing.final
 class ESimProfileInstallProgress:
+    __match_args__ = ("total_size_in_bytes", "installed_size_in_bytes")
     @_property
     def total_size_in_bytes(self) -> winrt.system.Int32: ...
     @_property
@@ -438,6 +439,7 @@ class ESimProfileInstallProgress:
 
 @typing.final
 class ProfileUsage:
+    __match_args__ = ("usage_in_megabytes", "last_sync_time")
     @_property
     def usage_in_megabytes(self) -> winrt.system.UInt32: ...
     @_property

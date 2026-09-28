@@ -38,6 +38,7 @@ class TypeKind(enum.IntEnum):
 
 @typing.final
 class TypeName:
+    __match_args__ = ("name", "kind")
     @_property
     def name(self) -> str: ...
     @_property

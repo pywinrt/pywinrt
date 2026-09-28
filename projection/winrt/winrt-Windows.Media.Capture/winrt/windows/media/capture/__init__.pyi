@@ -420,6 +420,7 @@ class VideoRotation(enum.IntEnum):
 
 @typing.final
 class WhiteBalanceGain:
+    __match_args__ = ("r", "g", "b")
     @_property
     def r(self) -> winrt.system.Double: ...
     @_property

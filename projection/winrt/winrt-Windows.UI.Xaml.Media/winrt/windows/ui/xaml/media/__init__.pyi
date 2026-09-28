@@ -237,6 +237,7 @@ class SweepDirection(enum.IntEnum):
 
 @typing.final
 class Matrix:
+    __match_args__ = ("m11", "m12", "m21", "m22", "offset_x", "offset_y")
     @_property
     def m11(self) -> winrt.system.Double: ...
     @_property

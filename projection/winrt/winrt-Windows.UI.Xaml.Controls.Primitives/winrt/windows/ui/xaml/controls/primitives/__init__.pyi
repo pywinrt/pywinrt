@@ -213,6 +213,7 @@ class TickPlacement(enum.IntEnum):
 
 @typing.final
 class GeneratorPosition:
+    __match_args__ = ("index", "offset")
     @_property
     def index(self) -> winrt.system.Int32: ...
     @_property

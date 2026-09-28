@@ -35,6 +35,7 @@ class PackageDependencyProcessorArchitectures(enum.IntFlag):
 
 @typing.final
 class PackageDependencyContextId:
+    __match_args__ = ("id",)
     @_property
     def id(self) -> winrt.system.UInt64: ...
     def __new__(cls, id: winrt.system.UInt64 = 0) -> PackageDependencyContextId: ...

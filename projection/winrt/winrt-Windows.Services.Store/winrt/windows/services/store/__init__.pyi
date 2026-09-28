@@ -145,6 +145,7 @@ class StoreUninstallStorePackageStatus(enum.IntEnum):
 
 @typing.final
 class StorePackageUpdateStatus:
+    __match_args__ = ("package_family_name", "package_download_size_in_bytes", "package_bytes_downloaded", "package_download_progress", "total_download_progress", "package_update_state")
     @_property
     def package_family_name(self) -> str: ...
     @_property
