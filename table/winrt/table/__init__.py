@@ -387,7 +387,9 @@ class _Parser:
         census = self._header["census"].split(" ")
 
         if len(census) != 2 or not census[1].isdigit():
-            self._fail(f"'{self._header['census']}' is not a census lineage and revision")
+            self._fail(
+                f"'{self._header['census']}' is not a census lineage and revision"
+            )
 
         self._table = Table(
             major=major,
