@@ -685,6 +685,115 @@ namespace py::interp
     }
 } // namespace py::interp
 
+namespace
+{
+    /**
+     * Refuses @p name as a type whose values are wrapped WinRT objects.
+     * @returns nullptr, for the caller to return.
+     */
+    py::interp::type_entry* not_an_object_type(char const* name) noexcept
+    {
+        PyErr_Format(
+            PyExc_TypeError,
+            "'%s' is not a type a projection table gives values of",
+            name);
+        return nullptr;
+    }
+
+    /**
+     * The type entry of @p type when its values are wrapped WinRT objects: a
+     * runtime class, or an interface by either of the types its names are
+     * bound to. @p name is what the caller named the type by.
+     *
+     * @returns @c nullptr with a @c TypeError set for any other type.
+     */
+    py::interp::type_entry* find_object_entry(
+        PyTypeObject* type, char const* name) noexcept
+    {
+        auto const info = py::interp::find_type_entry(type);
+        if (!info)
+        {
+            return not_an_object_type(name);
+        }
+
+        if (info->parameterized)
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' takes type arguments, so it names no one interface",
+                name);
+            return nullptr;
+        }
+
+        if (!info->guid)
+        {
+            return not_an_object_type(name);
+        }
+
+        // The metaclass that carries a class's statics is remembered with the
+        // class's entry, and no value is of it.
+        if (type == info->statics)
+        {
+            return not_an_object_type(name);
+        }
+
+        return info;
+    }
+
+    /**
+     * Wraps @p value as the type of @p info, queried for the interface that
+     * an instance of that type holds.
+     */
+    PyObject* wrap_as(
+        winrt::Windows::Foundation::IInspectable const& value,
+        py::interp::type_entry const& info) noexcept
+    {
+        void* abi{};
+
+        auto const hr
+            = static_cast<::IUnknown*>(winrt::get_abi(value))
+                  ->QueryInterface(*static_cast<winrt::guid const*>(info.guid), &abi);
+        if (hr != 0)
+        {
+            try
+            {
+                winrt::check_hresult(hr);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+
+        return py::interp::wrap_abi(info.py_type, abi);
+    }
+
+    /**
+     * The IID that @p obj names: a @c uuid.UUID, or a projected class or
+     * interface, which names the interface an instance of it holds.
+     *
+     * @throws python_exception if @p obj is neither.
+     */
+    winrt::guid iid_named_by(PyObject* obj)
+    {
+        if (!PyType_Check(obj))
+        {
+            return py::convert_to_guid(obj);
+        }
+
+        auto const type = reinterpret_cast<PyTypeObject*>(obj);
+
+        auto const info = find_object_entry(type, type->tp_name);
+        if (!info)
+        {
+            throw py::python_exception();
+        }
+
+        return *static_cast<winrt::guid const*>(info->guid);
+    }
+} // namespace
+
 /**
  * Wraps @p value as the type that @p qualified_name is bound to.
  *
@@ -708,35 +817,13 @@ PyObject* py::wrap_object(
         return nullptr;
     }
 
-    auto const info = py::interp::find_type_entry(type);
-    if (!info || !info->guid)
+    auto const info = find_object_entry(type, qualified_name);
+    if (!info)
     {
-        PyErr_Format(
-            PyExc_TypeError,
-            "'%s' is not a type a projection table gives values of",
-            qualified_name);
         return nullptr;
     }
 
-    void* abi{};
-
-    auto const hr
-        = static_cast<::IUnknown*>(winrt::get_abi(value))
-              ->QueryInterface(*static_cast<winrt::guid const*>(info->guid), &abi);
-    if (hr != 0)
-    {
-        try
-        {
-            winrt::check_hresult(hr);
-        }
-        catch (...)
-        {
-            to_PyErr();
-            return nullptr;
-        }
-    }
-
-    return py::interp::wrap_abi(info->py_type, abi);
+    return wrap_as(value, *info);
 }
 
 /**
@@ -764,7 +851,9 @@ namespace py::cpp::_winrt
 {
     /**
      * as_interface(obj, iid) - the @p iid interface of the WinRT object @p obj
-     * wraps, as an interface pointer capsule, or None for None.
+     * wraps, as an interface pointer capsule, or None for None. @p iid is a
+     * uuid.UUID, or a projected class or interface, which stands for the
+     * interface an instance of it holds.
      *
      * This and wrap_interface() are how compiled code outside the runtime
      * exchanges WinRT objects with it: through Python objects, so that nothing
@@ -782,7 +871,7 @@ namespace py::cpp::_winrt
 
         try
         {
-            auto const iid = convert_to_guid(iid_obj);
+            auto const iid = iid_named_by(iid_obj);
             auto const abi = py::interp::unwrap_abi(obj, &iid);
 
             if (!abi)
@@ -800,17 +889,37 @@ namespace py::cpp::_winrt
     }
 
     /**
-     * wrap_interface(capsule, qualified_name) - the WinRT object an interface
-     * pointer capsule holds, as the type @p qualified_name is bound to, or
-     * None for None. The capsule keeps its own reference.
+     * wrap_interface(capsule, type) - the WinRT object an interface pointer
+     * capsule holds, as @p type, or None for None. @p type is a projected class
+     * or interface, or the qualified name it is bound to. The capsule keeps its
+     * own reference.
      */
     PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept
     {
         PyObject* capsule;
-        char const* qualified_name;
+        PyObject* type_obj;
 
-        if (!PyArg_ParseTuple(args, "Os:wrap_interface", &capsule, &qualified_name))
+        if (!PyArg_ParseTuple(args, "OO:wrap_interface", &capsule, &type_obj))
         {
+            return nullptr;
+        }
+
+        char const* qualified_name{};
+
+        if (PyUnicode_Check(type_obj))
+        {
+            qualified_name = PyUnicode_AsUTF8(type_obj);
+            if (!qualified_name)
+            {
+                return nullptr;
+            }
+        }
+        else if (!PyType_Check(type_obj))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "wrap_interface() argument 2 must be a type or str, not %s",
+                Py_TYPE(type_obj)->tp_name);
             return nullptr;
         }
 
@@ -829,6 +938,19 @@ namespace py::cpp::_winrt
         winrt::Windows::Foundation::IInspectable value{nullptr};
         winrt::copy_from_abi(value, abi);
 
-        return wrap_object(value, qualified_name);
+        if (qualified_name)
+        {
+            return wrap_object(value, qualified_name);
+        }
+
+        auto const type = reinterpret_cast<PyTypeObject*>(type_obj);
+
+        auto const info = find_object_entry(type, type->tp_name);
+        if (!info)
+        {
+            return nullptr;
+        }
+
+        return wrap_as(value, *info);
     }
 } // namespace py::cpp::_winrt
