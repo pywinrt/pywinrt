@@ -179,5 +179,21 @@ namespace py
                 return false;
             }
         }
+
+        std::unique_ptr<Array> Slice(uint32_t start, uint32_t count) noexcept override
+        {
+            try
+            {
+                auto copy = std::make_unique<ComArray<T>>();
+                auto const first = array.begin() + start;
+                copy->array = winrt::com_array<T>(first, first + count);
+                return copy;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
     };
 } // namespace py

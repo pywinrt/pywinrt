@@ -548,6 +548,121 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(list(a), [1, 2, 3])
 
+    def test_index_out_of_range(self):
+        a = Array(Int32, [1, 2, 3])
+
+        for index in (3, -4):
+            with self.subTest(index=index):
+                with self.assertRaises(IndexError):
+                    a[index]
+
+        with self.assertRaises(TypeError):
+            a["0"]  # type: ignore
+
+    def test_slice(self):
+        for element, values in (
+            (Int32, [1, 2, 3, 4]),
+            (str, ["a", "b", "c", "d"]),
+            (Uri, [Uri(f"https://example.com/{i}") for i in range(4)]),
+            (tc.Blittable, [blittable(i) for i in range(4)]),
+            (tc.NonBlittable, [non_blittable(i) for i in range(4)]),
+        ):
+            with self.subTest(element=element):
+                a = Array(element, values)
+
+                for key in (
+                    slice(1, 3),
+                    slice(None, 2),
+                    slice(-2, None),
+                    slice(None),
+                    slice(3, 1),
+                    slice(10, 20),
+                ):
+                    with self.subTest(key=key):
+                        b = a[key]
+
+                        self.assertIsInstance(b, Array)
+                        self.assertEqual(
+                            b._winrt_element_type_name_, a._winrt_element_type_name_
+                        )
+                        self.assertEqual(list(b), values[key])
+
+    def test_slice_is_a_copy(self):
+        a = Array(Int32, [1, 2, 3])
+
+        b = a[:2]
+        b[0] = 4
+
+        self.assertEqual(list(a), [1, 2, 3])
+
+        # the references a slice holds are its own
+        uris = Array(Uri, [Uri("https://example.com")])
+        c = uris[:]
+        del uris
+
+        self.assertEqual(str(c[0]), "https://example.com/")
+
+    def test_slice_step(self):
+        a = Array(Int32, [1, 2, 3])
+
+        with self.assertRaises(NotImplementedError):
+            a[::2]
+
+    def test_equality(self):
+        a = Array(Int32, [1, 2, 3])
+
+        self.assertEqual(a, Array(Int32, [1, 2, 3]))
+        self.assertNotEqual(a, Array(Int32, [1, 2]))
+        self.assertNotEqual(a, Array(Int32, [1, 2, 4]))
+        self.assertEqual(Array(str, ["a", "b"]), Array(str, ["a", "b"]))
+        self.assertEqual(
+            Array(tc.Blittable, [blittable(1)]), Array(tc.Blittable, [blittable(1)])
+        )
+
+    def test_equality_across_element_types(self):
+        # as with array.array, it is the values that compare
+        self.assertEqual(Array(Int32, [1, 2]), Array(Int64, [1, 2]))
+        self.assertNotEqual(Array(Int32, [1, 2]), Array(Int64, [1, 3]))
+
+    def test_equals_only_an_array(self):
+        a = Array(Int32, [1, 2, 3])
+
+        # as a list equals only a list
+        for other in ([1, 2, 3], (1, 2, 3), stdlib_array.array("i", [1, 2, 3]), 1):
+            with self.subTest(other=other):
+                self.assertFalse(a == other)
+                self.assertFalse(other == a)
+                self.assertTrue(a != other)
+
+        self.assertFalse(Array(Char16, ["a", "b"]) == "ab")
+        self.assertEqual(list(a), [1, 2, 3])
+
+    def test_equality_propagates_errors(self):
+        class Unequal(IStringable):
+            def to_string(self) -> str:
+                return "unequal"
+
+            def __eq__(self, other):
+                raise ZeroDivisionError
+
+        a = Array(IStringable, [Unequal()])
+
+        with self.assertRaises(ZeroDivisionError):
+            _ = a == Array(IStringable, [Unequal()])
+
+    def test_not_hashable(self):
+        with self.assertRaises(TypeError):
+            hash(Array(Int32, [1]))
+
+    def test_repr(self):
+        self.assertEqual(repr(Array(Int32, [1, 2, 3])), "Array(Int32, [1, 2, 3])")
+        self.assertEqual(repr(Array(str, ["a"])), "Array(String, ['a'])")
+        self.assertEqual(repr(Array(Int32)), "Array(Int32, [])")
+        self.assertEqual(
+            repr(Array(FileAttributes, [FileAttributes.READ_ONLY])),
+            f"Array(Windows.Storage.FileAttributes, [{FileAttributes.READ_ONLY!r}])",
+        )
+
 
 #: One value of each element type an ArrayN member of the test component
 #: takes, with the winrt.system.Array type argument that spells it. Every
