@@ -31,7 +31,7 @@ nav = [
     { "winrt.microsoft namespace" = [
       "api/microsoft.md",
       "api/microsoft/ui/interop.md",
-      "api/microsoft/windows/applicationmodel/dynamicdepedency/bootstrap.md",
+      "api/microsoft/windows/applicationmodel/dynamicdependency/bootstrap.md",
     ] },
   ] },
   "versioning.md",
