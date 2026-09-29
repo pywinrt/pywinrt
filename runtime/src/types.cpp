@@ -126,17 +126,29 @@ namespace py::interp
 
         /**
          * Keeps the exception that is set, which is what building the types of
-         * @p proj failed with, for every later load of it to raise, and leaves
-         * it set.
+         * @p proj failed with at @p record, for every later load of it to
+         * raise, and leaves it set.
          */
         void remember_failure(
-            py::cpp::_winrt::module_state* s, projection& proj) noexcept
+            py::cpp::_winrt::module_state* s,
+            projection& proj,
+            table::type_view const& record) noexcept
         {
+            // A builder that fails without an exception is a bug of its own,
+            // and the load still has to be remembered as failed.
+            if (!PyErr_Occurred())
+            {
+                PyErr_Format(
+                    PyExc_SystemError,
+                    "building '%s' failed without setting an exception",
+                    qualified(record).c_str());
+            }
+
             pyobj_handle failure{take_raised_exception()};
 
             {
                 state_guard guard{s->cache_lock};
-                proj.failure.attach(Py_NewRef(failure.get()));
+                proj.failure.attach(Py_XNewRef(failure.get()));
             }
 
             restore_raised_exception(failure.detach());
@@ -785,7 +797,7 @@ namespace py::interp
             case table::category::class_:
                 if (!ensure_type(*proj, i))
                 {
-                    remember_failure(s, *proj);
+                    remember_failure(s, *proj, record);
                     return nullptr;
                 }
 
