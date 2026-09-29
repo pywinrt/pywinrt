@@ -2,8 +2,6 @@
 
 #include <windows.ui.xaml.hosting.desktopwindowxamlsource.h>
 
-#include <cstring>
-
 // https://learn.microsoft.com/en-us/windows/win32/api/windows.ui.xaml.hosting.desktopwindowxamlsource/
 
 namespace
@@ -60,65 +58,18 @@ namespace
         return PyLong_FromVoidPtr(hwnd);
     }
 
-    /// The format of a Python buffer that holds MSG structures.
-    constexpr char msg_format[]
-        = "T{P:hwnd:I:message:P:wParam:P:lParam:L:time:T{l:x:l:y:}:point:L:lPrivate:}";
-
-    /// Sets BufferError unless @p view is a one-dimensional array of MSG.
+    /// Sets BufferError unless @p view is the size of a MSG. Its format is not
+    /// checked, because the field names in it are the exporter's own choice, so
+    /// a ctypes.wintypes.MSG and a structure of the same layout both pass.
     bool check_msg_buffer(Py_buffer const& view) noexcept
     {
-        if (view.itemsize != sizeof(MSG))
+        if (view.len != static_cast<Py_ssize_t>(sizeof(MSG)))
         {
             PyErr_Format(
                 PyExc_BufferError,
-                "requires buffer with itemsize == %zu, have %zd",
+                "requires buffer of %zu bytes (a MSG), have %zd",
                 sizeof(MSG),
-                view.itemsize);
-            return false;
-        }
-
-        if (!view.format)
-        {
-            PyErr_Format(
-                PyExc_BufferError, "requires buffer with format == \"%s\"", msg_format);
-            return false;
-        }
-
-        if (std::strcmp(view.format, msg_format) != 0)
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with format == \"%s\", have \"%s\"",
-                msg_format,
-                view.format);
-            return false;
-        }
-
-        if (view.ndim != 1)
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with ndim == 1, have %d",
-                view.ndim);
-            return false;
-        }
-
-        if (!view.strides)
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with strides[0] == %zu",
-                sizeof(MSG));
-            return false;
-        }
-
-        if (view.strides[0] != static_cast<Py_ssize_t>(sizeof(MSG)))
-        {
-            PyErr_Format(
-                PyExc_BufferError,
-                "requires buffer with strides[0] == %zu, have %zd",
-                sizeof(MSG),
-                view.strides[0]);
+                view.len);
             return false;
         }
 
@@ -136,7 +87,7 @@ namespace
         }
 
         Py_buffer view;
-        if (PyObject_GetBuffer(msg, &view, PyBUF_C_CONTIGUOUS | PyBUF_FORMAT) == -1)
+        if (PyObject_GetBuffer(msg, &view, PyBUF_SIMPLE) == -1)
         {
             return nullptr;
         }
