@@ -35,29 +35,6 @@
 #include <memory>
 #include <vector>
 
-void py::toggle_python_reference(PyObject* obj, bool is_last_reference) noexcept
-{
-    auto state = PyGILState_Ensure();
-
-    if (is_last_reference)
-    {
-        // We hold the only WinRT reference - allow the Python object to be GC'd
-        PyObject_GC_Track(obj);
-        // This might be the last reference to the Python object, so obj may be
-        // destroyed after this call and no longer valid!
-        Py_DECREF(obj);
-    }
-    else
-    {
-        // external WinRT code has a reference - don't allow Python object to be
-        // GC'd
-        Py_INCREF(obj);
-        PyObject_GC_UnTrack(obj);
-    }
-
-    PyGILState_Release(state);
-}
-
 namespace py::interp
 {
     namespace

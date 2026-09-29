@@ -6,7 +6,7 @@
 //
 // This is only the storage. Creating these objects (py::wrap) and converting
 // their contents (py::converter) are in <pywinrt/convert.h>, and the WinRT side
-// of a Python subclass of a composable type is in <pywinrt/compose.h>.
+// of a Python subclass of a composable type is in the runtime's compose.cpp.
 
 #pragma once
 
