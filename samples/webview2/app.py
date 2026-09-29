@@ -49,8 +49,8 @@ from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
     # This can be useful debugging issues when the WebView2 control fails to
     # initialize (in which case, it will appear as empty black box).
-    if args.exception.value:
-        print("Initialization failed", WinError(args.exception.value))
+    if args.exception:
+        print("Initialization failed", WinError(args.exception))
 
 
 _XAML = """
