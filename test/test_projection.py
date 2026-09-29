@@ -68,6 +68,27 @@ class TestClasses(unittest.TestCase):
         self.assertIsInstance(instance, tc.IRequiredOne)
         self.assertNotIsInstance(instance, tc.IRequiredTwo)
 
+    def test_isinstance_agrees_with_as(self) -> None:
+        # A class does not derive from its interfaces, so isinstance() asks the
+        # object, and it has to give the answer as_() gets.
+        for instance in (tc.Class(), tc.Composable()):
+            for interface in (
+                tc.IRequiredOne,
+                tc.IRequiredTwo,
+                tc.IRequiredThree,
+                tc.IRequiredFour,
+                wf.IStringable,
+            ):
+                with self.subTest(instance=type(instance), interface=interface):
+                    try:
+                        instance.as_(interface)  # type: ignore[type-abstract]
+                    except OSError:
+                        implemented = False
+                    else:
+                        implemented = True
+
+                    self.assertEqual(isinstance(instance, interface), implemented)
+
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
             tc.Class().as_(tc.IRequiredTwo)  # type: ignore[type-abstract]

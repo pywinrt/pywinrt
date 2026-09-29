@@ -75,11 +75,23 @@ namespace py::cpp::_winrt
             auto guid = py::convert_to<winrt::guid>(guid_obj.get());
             auto instance
                 = py::convert_to<winrt::Windows::Foundation::IInspectable>(obj);
-            auto interfaces = winrt::get_interfaces(instance);
+            if (!instance)
+            {
+                Py_RETURN_FALSE;
+            }
 
-            return PyBool_FromLong(
-                std::find(interfaces.begin(), interfaces.end(), guid)
-                != interfaces.end());
+            // The question as_() asks, rather than GetIids, whose list an
+            // implementation may leave incomplete.
+            winrt::com_ptr<::IUnknown> queried;
+            auto const hr = instance.as(guid, queried.put_void());
+            if (hr == winrt::impl::error_no_interface)
+            {
+                Py_RETURN_FALSE;
+            }
+
+            winrt::check_hresult(hr);
+
+            Py_RETURN_TRUE;
         }
         catch (...)
         {
