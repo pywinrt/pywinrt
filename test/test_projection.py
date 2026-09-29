@@ -60,11 +60,7 @@ class TestClasses(unittest.TestCase):
     def test_as_and_isinstance(self) -> None:
         instance = tc.Class()
 
-        # as_() always names an interface, and an interface is abstract
-        self.assertIsInstance(
-            instance.as_(tc.IRequiredOne),  # type: ignore[type-abstract]
-            tc._IRequiredOne,
-        )
+        self.assertIsInstance(instance.as_(tc.IRequiredOne), tc._IRequiredOne)
         self.assertIsInstance(instance, tc.IRequiredOne)
         self.assertNotIsInstance(instance, tc.IRequiredTwo)
 
@@ -81,7 +77,7 @@ class TestClasses(unittest.TestCase):
             ):
                 with self.subTest(instance=type(instance), interface=interface):
                     try:
-                        instance.as_(interface)  # type: ignore[type-abstract]
+                        instance.as_(interface)
                     except OSError:
                         implemented = False
                     else:
@@ -91,7 +87,7 @@ class TestClasses(unittest.TestCase):
 
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
-            tc.Class().as_(tc.IRequiredTwo)  # type: ignore[type-abstract]
+            tc.Class().as_(tc.IRequiredTwo)
 
     def test_an_interface_carries_its_iid(self) -> None:
         # _guid_() is internal to the runtime, so no stub declares it
