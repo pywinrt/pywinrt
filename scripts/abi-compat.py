@@ -147,20 +147,13 @@ class Tree:
     @property
     def include_dir(self) -> Path | None:
         """
-        The directory the runtime's headers are in, or None for a tree that
-        predates them moving into winrt-runtime, where they were part of
-        winrt-sdk and were included as <pybase.h> instead of <pywinrt/...>.
-        They were inside the runtime's Python package before they moved
-        beside its sources.
+        The directory the runtime's headers are in, or None for a 3.x tree,
+        where they were part of winrt-sdk and were included as <pybase.h>
+        instead of <pywinrt/...>.
         """
-        for include_dir in (
-            self.runtime_package / "src/include",
-            self.runtime_package / "python/winrt/include",
-        ):
-            if include_dir.is_dir():
-                return include_dir
+        include_dir = self.runtime_package / "src/include"
 
-        return None
+        return include_dir if include_dir.is_dir() else None
 
     @property
     def abi_header(self) -> Path:
@@ -244,24 +237,11 @@ class Tree:
     def build_pythonpath(self) -> str:
         """
         What a package in this tree needs on PYTHONPATH to be built without
-        build isolation: the same directories the generated cibuildwheel
-        configuration put there. For a 3.x tree that is winrt-sdk's package,
-        which is where the pywinrt headers were before they moved; for a
-        development tree between 3.x and 4.0 whose headers are inside
-        winrt-runtime's package, it is that package; and for one whose headers
-        are beside the runtime's sources, as in 4.0, nothing builds against an
-        importable package at all.
+        build isolation: winrt-sdk's package, which is where the pywinrt
+        headers were. Only a 3.x tree has a module to build, since a 4.x one
+        has no capsule for a module to import.
         """
-        include_dir = self.include_dir
-
-        if include_dir is None:
-            paths = [self.sdk_package / "src"]
-        elif include_dir.is_relative_to(self.runtime_package / "python"):
-            paths = [self.runtime_package / "python"]
-        else:
-            paths = []
-
-        return os.pathsep.join(os.fspath(p) for p in paths)
+        return os.fspath(self.sdk_package / "src")
 
     @property
     def table_compiler_pythonpath(self) -> str:
