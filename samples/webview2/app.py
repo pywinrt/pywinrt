@@ -66,8 +66,7 @@ _XAML = """
         </Grid.ColumnDefinitions>
 
         <WebView2 Name="webview" Grid.Row="1" Grid.ColumnSpan="2"
-            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-            Source="https://pywinrt.readthedocs.io/en/latest/"/>
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
 """
@@ -123,6 +122,12 @@ class App(Application, IXamlMetadataProvider):
 
                 if status != AsyncStatus.COMPLETED:
                     return
+
+                # Setting Source before this point would have initialized the
+                # control with the default environment instead of this one.
+                webview.core_webview2.navigate(
+                    "https://pywinrt.readthedocs.io/en/latest/"
+                )
 
                 # Don't show the window until ready to avoid black box
                 window.activate()
