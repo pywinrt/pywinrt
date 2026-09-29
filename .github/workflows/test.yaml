@@ -20,6 +20,8 @@ on:
       - scripts/nuget.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
+      # the migration script, whose tests are part of the suite
+      - scripts/3to4/**
       - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
@@ -61,6 +63,8 @@ on:
       - scripts/nuget.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
+      # the migration script, whose tests are part of the suite
+      - scripts/3to4/**
       - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
