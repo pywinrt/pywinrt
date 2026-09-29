@@ -352,6 +352,19 @@ namespace py::cpp::_winrt
                 {
                     return nullptr;
                 }
+
+                // A type from outside the projection can define an
+                // _assign_array_ that returns without assigning, and every
+                // other method assumes an array has its storage.
+                if (!self->array)
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "cannot use %.100s as type for WinRT array: its "
+                        "_assign_array_ did not assign one",
+                        type->tp_name);
+                    return nullptr;
+                }
             }
             else if (type == &PyBool_Type)
             {

@@ -475,6 +475,17 @@ class TestWinRTArray(unittest.TestCase):
                 with self.assertRaises(TypeError):
                     Array(impostor, 1)
 
+    def test_assign_array_that_assigns_nothing(self):
+        class Foo:
+            @classmethod
+            def _assign_array_(cls, a: object) -> None:
+                pass
+
+        for args in ((), (1,)):
+            with self.subTest(args=args):
+                with self.assertRaisesRegex(TypeError, "Foo"):
+                    Array(Foo, *args)
+
     def test_copy_from_buffer(self):
         values = [blittable(1), blittable(2)]
 
