@@ -2,7 +2,7 @@
     "Microsoft.UI.Xaml": "2.8.7",
     "Microsoft.Web.WebView2": "1.0.4191.47",
     "Microsoft.Windows.AI.MachineLearning": "2.1.74",
-    "Microsoft.Windows.CppWinRT": "2.0.250303.1",
+    "Microsoft.Windows.CppWinRT": "3.0.260818.1",
     "Microsoft.Windows.SDK.CPP": "10.0.28000.2705",
     "Microsoft.WindowsAppSDK": "2.5.1",
     "Microsoft.WindowsAppSDK.AI": "2.5.5",
