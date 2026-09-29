@@ -168,19 +168,6 @@ with tempfile.TemporaryDirectory(prefix="pywinrt-cppwinrt-") as temp_dir:
         [CPPWINRT_EXE, "-input", WINDOWS_SDK_METADATA, "-output", windows_sdk_path]
     )
 
-    # The reference toggles a Python object between strong and weak when WinRT
-    # takes or drops the last reference to it, which C++/WinRT's own
-    # implements<> has no hook for.
-    subprocess.check_call(
-        [
-            "git",
-            "apply",
-            "--quiet",
-            REPO_ROOT_PATH / "patches" / "cppwinrt-windows-sdk.diff",
-        ],
-        cwd=windows_sdk_path,
-    )
-
     # The Windows App SDK projection has no base.h and no Windows.* headers of
     # its own: it includes the Windows SDK's, so the two are generated from the
     # same version of cppwinrt.exe and used together. Every component is an
