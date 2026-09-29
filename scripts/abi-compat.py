@@ -27,7 +27,7 @@ Both ``winrt`` and ``test_winrt`` are namespace packages, so when the same
 module exists in both halves the earlier entry on PYTHONPATH wins.
 
   A. old table, new runtime - the baseline's TestComponent table, compiled by
-     the baseline's own table.py, read by the current runtime. Nothing is
+     the baseline's own winrt.table, read by the current runtime. Nothing is
      compiled here: a projection package is data.
   B. old compiled module, new runtime - a baseline interop module that imports
      the capsule, in front of the current runtime, which has none.
@@ -263,6 +263,14 @@ class Tree:
 
         return os.pathsep.join(os.fspath(p) for p in paths)
 
+    @property
+    def table_compiler_pythonpath(self) -> str:
+        """
+        What this tree's winrt.table needs on PYTHONPATH: the directory of
+        winrt-table-compiler.
+        """
+        return os.fspath(self.root / "table")
+
 
 def describe(tree: Tree) -> str:
     parts = []
@@ -438,7 +446,7 @@ def scenario_a(
 
     Nothing is built here. A projection package is a table and an __init__.py,
     so the old half is a copy of the baseline's package with its table
-    compiled by the baseline's own winrt/table.py - the writer that wrote the
+    compiled by the baseline's own winrt.table - the writer that wrote the
     text, paired with the reader being checked.
     """
     print()
@@ -478,7 +486,7 @@ def scenario_a(
             os.fspath(table),
             os.fspath(table.with_suffix("")),
         ],
-        env=dict(os.environ, PYTHONPATH=baseline.build_pythonpath),
+        env=dict(os.environ, PYTHONPATH=baseline.table_compiler_pythonpath),
     )
     table.unlink()
 
