@@ -308,6 +308,8 @@
   Python 3.10 reaches its own in October 2026.
 
 ### Fixed
+- `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
+  `ctypes.wintypes.MSG`, or any other buffer the size of a `MSG`.
 - Fixed a Python thread state leaking every time the projection took the GIL on
   a thread that already held it. `PyGILState_Ensure()` reports whether the
   caller already had the GIL, and the RAII wrapper used that answer as its
