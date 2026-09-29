@@ -7533,11 +7533,6 @@ namespace winrt::impl
             return error_no_interface;
         }
 
-        virtual std::vector<guid> get_iids_tearoff() const noexcept
-        {
-            return {};
-        }
-
         root_implements() noexcept
         {
         }
@@ -7588,62 +7583,26 @@ namespace winrt::impl
                 {
                     if (is_weak_ref(count_or_pointer))
                     {
-                        auto target = decode_weak_ref(count_or_pointer)->increment_strong();
-
-                        if constexpr (has_toggle_reference::value)
-                        {
-                            if (target == 2)
-                            {
-                                D::toggle_reference(static_cast<D*>(this), false);
-                            }
-                        }
-
-                        return target;
+                        return decode_weak_ref(count_or_pointer)->increment_strong();
                     }
 
                     uintptr_t const target = count_or_pointer + 1;
 
                     if (m_references.compare_exchange_weak(count_or_pointer, target, std::memory_order_relaxed))
                     {
-                        if constexpr (has_toggle_reference::value)
-                        {
-                            if (target == 2)
-                            {
-                                D::toggle_reference(static_cast<D*>(this), false);
-                            }
-                        }
-
                         return static_cast<uint32_t>(target);
                     }
                 }
             }
             else
             {
-                auto target = 1 + m_references.fetch_add(1, std::memory_order_relaxed);
-
-                if constexpr (has_toggle_reference::value)
-                {
-                    if (target == 2)
-                    {
-                        D::toggle_reference(static_cast<D*>(this), false);
-                    }
-                }
-
-                return target;
+                return 1 + m_references.fetch_add(1, std::memory_order_relaxed);
             }
         }
 
         uint32_t __stdcall NonDelegatingRelease() noexcept
         {
             uint32_t const target = subtract_reference();
-
-            if constexpr (has_toggle_reference::value)
-            {
-                if (target == 1)
-                {
-                    D::toggle_reference(static_cast<D*>(this), true);
-                }
-            }
 
             if (target == 0)
             {
@@ -7683,8 +7642,7 @@ namespace winrt::impl
         int32_t __stdcall NonDelegatingGetIids(uint32_t* count, guid** array) noexcept
         {
             auto const& local_iids = static_cast<D*>(this)->get_local_iids();
-            auto tearoff_uuids = get_iids_tearoff();
-            auto local_count = local_iids.first + static_cast<uint32_t>(tearoff_uuids.size());
+            uint32_t const& local_count = local_iids.first;
             if constexpr (root_implements_type::is_composing)
             {
                 if (local_count > 0)
@@ -7696,8 +7654,7 @@ namespace winrt::impl
                     {
                         return error_bad_alloc;
                     }
-                    auto next = std::copy(local_iids.second, local_iids.second + local_iids.first, *array);
-                    next = std::copy(tearoff_uuids.cbegin(), tearoff_uuids.cend(), next);
+                    auto next = std::copy(local_iids.second, local_iids.second + local_count, *array);
                     std::copy(inner_iids.cbegin(), inner_iids.cend(), next);
                 }
                 else
@@ -7715,8 +7672,7 @@ namespace winrt::impl
                     {
                         return error_bad_alloc;
                     }
-                    auto next = std::copy(local_iids.second, local_iids.second + local_iids.first, *array);
-                    std::copy(tearoff_uuids.cbegin(), tearoff_uuids.cend(), next);
+                    std::copy(local_iids.second, local_iids.second + local_count, *array);
                 }
                 else
                 {
@@ -7808,18 +7764,6 @@ namespace winrt::impl
         {
             template <typename U, typename = decltype(std::declval<U>().final_release(0))> static constexpr bool get_value(int) { return true; }
             template <typename> static constexpr bool get_value(...) { return false; }
-
-        public:
-
-            static constexpr bool value = get_value<D>(0);
-        };
-
-        class has_toggle_reference
-        {
-            template <typename U, typename = decltype(std::declval<U>().toggle_reference(0, false))>
-            static constexpr bool get_value(int) { return true; }
-            template <typename>
-            static constexpr bool get_value(...) { return false; }
 
         public:
 

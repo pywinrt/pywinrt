@@ -22,4 +22,3 @@
 #include <pywinrt/convert.h>
 #include <pywinrt/buffer.h>
 #include <pywinrt/array.h>
-#include <pywinrt/compose.h>
