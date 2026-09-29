@@ -94,8 +94,10 @@ message(STATUS "Target architecture: ${PYWINRT_TARGET_ARCH}")
 
 include(cmake/add-module.cmake)
 
-# the hand-written runtime, the hand-written interop modules, and the generated
-# projection packages with the test component
+# the hand-written runtime, the hand-written interop modules, the generated
+# projection packages with the test component, and the packages that
+# redistribute a third-party .dll
 add_subdirectory(runtime)
 add_subdirectory(interop)
 add_subdirectory(projection)
+add_subdirectory(redist)
