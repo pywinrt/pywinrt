@@ -9,6 +9,7 @@ from typing import (
     Self,
     SupportsIndex,
     TypeVar,
+    final,
     overload,
 )
 from collections.abc import ItemsView, Iterable, Iterator, KeysView, ValuesView
@@ -173,6 +174,7 @@ class Object(IInspectable):
 
 # The real ABC rather than the Sequence above, because an Array is registered
 # as one and is accepted wherever a collections.abc.Sequence is.
+@final
 class Array(collections.abc.Sequence[_T]):
     _winrt_element_type_name_: str
     def __class_getitem__(cls, key: Any) -> types.GenericAlias: ...
