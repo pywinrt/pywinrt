@@ -3,6 +3,7 @@
 import collections.abc as _cabc
 import enum
 import typing
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -17,42 +18,45 @@ __all__ = [
     "WalletManagerSystem",
 ]
 
+@deprecated("WalletItemAppAssociation is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemAppAssociation(enum.IntEnum):
     NONE = 0
     APP_INSTALLED = 1
     APP_NOT_INSTALLED = 2
 
 @typing.final
+@deprecated("WalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemSystemStore(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::DeleteAsync(Windows.ApplicationModel.Wallet.WalletItem)
-    # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def delete_async(self, item: windows_applicationmodel_wallet.WalletItem, /) -> windows_foundation.IAsyncAction: ...
     # Windows.ApplicationModel.Wallet.System.WalletItemAppAssociation Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::GetAppStatusForItem(Windows.ApplicationModel.Wallet.WalletItem)
-    # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_app_status_for_item(self, item: windows_applicationmodel_wallet.WalletItem, /) -> WalletItemAppAssociation: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::GetItemsAsync()
-    # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_items_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[windows_applicationmodel_wallet.WalletItem]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItem> Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::ImportItemAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
-    # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def import_item_async(self, stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_wallet.WalletItem]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::LaunchAppForItemAsync(Windows.ApplicationModel.Wallet.WalletItem)
-    # @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def launch_app_for_item_async(self, item: windows_applicationmodel_wallet.WalletItem, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::add_ItemsChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore,System.Object>)
-    # @deprecated("IWalletItemSystemStore2 is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore2 is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_items_changed(self, handler: windows_foundation.TypedEventHandler[WalletItemSystemStore, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::remove_ItemsChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("IWalletItemSystemStore2 is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemSystemStore2 is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_items_changed(self, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 @typing.final
 class WalletManagerSystem_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore> Windows.ApplicationModel.Wallet.System.WalletManagerSystem::RequestStoreAsync()
-    # @deprecated("IWalletManagerSystemStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletManagerSystemStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[WalletItemSystemStore]: ...
 
 @typing.final
+@deprecated("WalletManagerSystem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletManagerSystem(winrt.system.Object, metaclass=WalletManagerSystem_Static):
     ...
 

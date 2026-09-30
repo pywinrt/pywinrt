@@ -56,112 +56,126 @@ class LocalContentSuggestionSettings(winrt.system.Object):
 @typing.final
 class SearchPane_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Search.SearchPane Windows.ApplicationModel.Search.SearchPane::GetForCurrentView()
-    # @deprecated("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
     def get_for_current_view(cls) -> SearchPane: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::HideThisApplication()
-    # @deprecated("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
     def hide_this_application(cls) -> None: ...
 
 @typing.final
+@deprecated("SearchPane may be altered or unavailable for releases after Windows 10.")
 class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
     # System.Void Windows.ApplicationModel.Search.SearchPane::SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def set_local_content_suggestion_settings(self, settings: LocalContentSuggestionSettings, /) -> None: ...
     @typing.overload
     # System.Void Windows.ApplicationModel.Search.SearchPane::Show()
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def show(self) -> None: ...
     @typing.overload
     # System.Void Windows.ApplicationModel.Search.SearchPane::Show(System.String)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def show(self, query: str, /) -> None: ...
     # Deprecated alias of show() for pywinrt v3.x compatibility.
     # System.Void Windows.ApplicationModel.Search.SearchPane::Show()
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     @deprecated("Use show() instead.")
     def show_overload_default(self) -> None: ...
     # Deprecated alias of show() for pywinrt v3.x compatibility.
     # System.Void Windows.ApplicationModel.Search.SearchPane::Show(System.String)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     @deprecated("Use show() instead.")
     def show_overload_with_query(self, query: str, /) -> None: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchPane::TrySetQueryText(System.String)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def try_set_query_text(self, query: str, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Search.SearchPane::add_QueryChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs>)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def add_query_changed(self, handler: windows_foundation.TypedEventHandler[SearchPane, SearchPaneQueryChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::remove_QueryChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def remove_query_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Search.SearchPane::add_QuerySubmitted(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs>)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def add_query_submitted(self, handler: windows_foundation.TypedEventHandler[SearchPane, SearchPaneQuerySubmittedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::remove_QuerySubmitted(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def remove_query_submitted(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Search.SearchPane::add_ResultSuggestionChosen(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs>)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def add_result_suggestion_chosen(self, handler: windows_foundation.TypedEventHandler[SearchPane, SearchPaneResultSuggestionChosenEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::remove_ResultSuggestionChosen(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def remove_result_suggestion_chosen(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Search.SearchPane::add_SuggestionsRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs>)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def add_suggestions_requested(self, handler: windows_foundation.TypedEventHandler[SearchPane, SearchPaneSuggestionsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::remove_SuggestionsRequested(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def remove_suggestions_requested(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Search.SearchPane::add_VisibilityChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane,Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs>)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def add_visibility_changed(self, handler: windows_foundation.TypedEventHandler[SearchPane, SearchPaneVisibilityChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::remove_VisibilityChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def remove_visibility_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchPane::get_ShowOnKeyboardInput()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def show_on_keyboard_input(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::put_ShowOnKeyboardInput(System.Boolean)
     @show_on_keyboard_input.setter
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def show_on_keyboard_input(self, value: bool) -> None: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchPane::get_SearchHistoryEnabled()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def search_history_enabled(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::put_SearchHistoryEnabled(System.Boolean)
     @search_history_enabled.setter
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def search_history_enabled(self, value: bool) -> None: ...
     # System.String Windows.ApplicationModel.Search.SearchPane::get_SearchHistoryContext()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def search_history_context(self) -> str: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::put_SearchHistoryContext(System.String)
     @search_history_context.setter
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def search_history_context(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.Search.SearchPane::get_PlaceholderText()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def placeholder_text(self) -> str: ...
     # System.Void Windows.ApplicationModel.Search.SearchPane::put_PlaceholderText(System.String)
     @placeholder_text.setter
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def placeholder_text(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.Search.SearchPane::get_Language()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def language(self) -> str: ...
     # System.String Windows.ApplicationModel.Search.SearchPane::get_QueryText()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def query_text(self) -> str: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchPane::get_Visible()
     @_property
+    @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def visible(self) -> bool: ...
 
 @typing.final
+@deprecated("SearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneQueryChangedEventArgs(winrt.system.Object, ISearchPaneQueryChangedEventArgs):
     # System.String Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs::get_Language()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def language(self) -> str: ...
     # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs::get_LinguisticDetails()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def linguistic_details(self) -> SearchPaneQueryLinguisticDetails: ...
     # System.String Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs::get_QueryText()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def query_text(self) -> str: ...
 
 @typing.final
@@ -177,60 +191,77 @@ class SearchPaneQueryLinguisticDetails(winrt.system.Object):
     def query_text_composition_start(self) -> winrt.system.UInt32: ...
 
 @typing.final
+@deprecated("SearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
     # System.String Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs::get_Language()
     @_property
+    @deprecated("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
     def language(self) -> str: ...
     # System.String Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs::get_QueryText()
     @_property
+    @deprecated("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
     def query_text(self) -> str: ...
     # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs::get_LinguisticDetails()
     @_property
+    @deprecated("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
     def linguistic_details(self) -> SearchPaneQueryLinguisticDetails: ...
 
 @typing.final
+@deprecated("SearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneResultSuggestionChosenEventArgs(winrt.system.Object):
     # System.String Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs::get_Tag()
     @_property
+    @deprecated("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
     def tag(self) -> str: ...
 
 @typing.final
+@deprecated("SearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 class SearchPaneSuggestionsRequest(winrt.system.Object):
     # Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest::GetDeferral()
-    # @deprecated("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
     def get_deferral(self) -> SearchPaneSuggestionsRequestDeferral: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest::get_IsCanceled()
     @_property
+    @deprecated("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
     def is_canceled(self) -> bool: ...
     # Windows.ApplicationModel.Search.SearchSuggestionCollection Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest::get_SearchSuggestionCollection()
     @_property
+    @deprecated("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
     def search_suggestion_collection(self) -> SearchSuggestionCollection: ...
 
 @typing.final
+@deprecated("SearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
 class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral::Complete()
-    # @deprecated("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
     def complete(self) -> None: ...
 
 @typing.final
+@deprecated("SearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object, ISearchPaneQueryChangedEventArgs):
     # System.String Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_Language()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def language(self) -> str: ...
     # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_LinguisticDetails()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def linguistic_details(self) -> SearchPaneQueryLinguisticDetails: ...
     # System.String Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_QueryText()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def query_text(self) -> str: ...
     # Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_Request()
     @_property
+    @deprecated("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
     def request(self) -> SearchPaneSuggestionsRequest: ...
 
 @typing.final
+@deprecated("SearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneVisibilityChangedEventArgs(winrt.system.Object):
     # System.Boolean Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs::get_Visible()
     @_property
+    @deprecated("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def visible(self) -> bool: ...
 
 @typing.final
@@ -279,17 +310,21 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
 @typing.final
 class _ISearchPaneQueryChangedEventArgs: ...
 
+@deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class ISearchPaneQueryChangedEventArgs(winrt._winrt.IInspectable):
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     @abstractmethod
     def language(self) -> str: ...
     # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_LinguisticDetails()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     @abstractmethod
     def linguistic_details(self) -> SearchPaneQueryLinguisticDetails: ...
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_QueryText()
     @_property
+    @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     @abstractmethod
     def query_text(self) -> str: ...
 

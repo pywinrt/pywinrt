@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -253,7 +254,7 @@ class AppWindowTitleBar(winrt.system.Object, metaclass=AppWindowTitleBar_Static)
     # System.Void Microsoft.UI.Windowing.AppWindowTitleBar::ResetToDefault()
     def reset_to_default(self) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindowTitleBar::SetDragRectangles(Windows.Graphics.RectInt32[])
-    # @deprecated("Use Microsoft.UI.Input.InputNonClientPointerSource.ConfigureRegion instead of SetDragRectangles.  For more info, see MSDN.")
+    @deprecated("Use Microsoft.UI.Input.InputNonClientPointerSource.ConfigureRegion instead of SetDragRectangles.  For more info, see MSDN.")
     def set_drag_rectangles(self, value: winrt.system.Array[windows_graphics.RectInt32] | winrt.system.ReadableBuffer, /) -> None: ...
     # Windows.Foundation.IReference`1<Windows.UI.Color> Microsoft.UI.Windowing.AppWindowTitleBar::get_InactiveForegroundColor()
     @_property

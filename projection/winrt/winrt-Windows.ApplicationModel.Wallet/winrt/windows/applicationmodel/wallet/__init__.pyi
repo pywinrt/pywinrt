@@ -31,6 +31,7 @@ __all__ = [
     "WalletVerb",
 ]
 
+@deprecated("WalletActionKind is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletActionKind(enum.IntEnum):
     OPEN_ITEM = 0
     TRANSACTION = 1
@@ -38,6 +39,7 @@ class WalletActionKind(enum.IntEnum):
     MESSAGE = 3
     VERB = 4
 
+@deprecated("WalletBarcodeSymbology is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletBarcodeSymbology(enum.IntEnum):
     INVALID = 0
     UPCA = 1
@@ -52,6 +54,7 @@ class WalletBarcodeSymbology(enum.IntEnum):
     AZTEC = 10
     CUSTOM = 100000
 
+@deprecated("WalletDetailViewPosition is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletDetailViewPosition(enum.IntEnum):
     HIDDEN = 0
     HEADER_FIELD1 = 1
@@ -69,6 +72,7 @@ class WalletDetailViewPosition(enum.IntEnum):
     FOOTER_FIELD3 = 13
     FOOTER_FIELD4 = 14
 
+@deprecated("WalletItemKind is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemKind(enum.IntEnum):
     INVALID = 0
     DEAL = 1
@@ -78,341 +82,430 @@ class WalletItemKind(enum.IntEnum):
     BOARDING_PASS = 5
     MEMBERSHIP_CARD = 6
 
+@deprecated("WalletSummaryViewPosition is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletSummaryViewPosition(enum.IntEnum):
     HIDDEN = 0
     FIELD1 = 1
     FIELD2 = 2
 
 @typing.final
+@deprecated("WalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletBarcode(winrt.system.Object):
     @typing.overload
     def __new__(cls, symbology: WalletBarcodeSymbology, value: str) -> typing.Self: ...
     @typing.overload
     def __new__(cls, stream_to_barcode_image: windows_storage_streams.IRandomAccessStreamReference) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference> Windows.ApplicationModel.Wallet.WalletBarcode::GetImageAsync()
-    # @deprecated("IWalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_image_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamReference]: ...
     # Windows.ApplicationModel.Wallet.WalletBarcodeSymbology Windows.ApplicationModel.Wallet.WalletBarcode::get_Symbology()
     @_property
+    @deprecated("IWalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
     def symbology(self) -> WalletBarcodeSymbology: ...
     # System.String Windows.ApplicationModel.Wallet.WalletBarcode::get_Value()
     @_property
+    @deprecated("IWalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
     def value(self) -> str: ...
 
 @typing.final
+@deprecated("WalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItem(winrt.system.Object):
     def __new__(cls, kind: WalletItemKind, display_name: str) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_DisplayName()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_name(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_DisplayName(System.String)
     @display_name.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_name(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_DisplayMessage()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_message(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_DisplayMessage(System.String)
     @display_message.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_message(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_LogoText()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo_text(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_LogoText(System.String)
     @logo_text.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo_text(self, value: str) -> None: ...
     # Windows.UI.Color Windows.ApplicationModel.Wallet.WalletItem::get_BodyFontColor()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def body_font_color(self) -> windows_ui.Color: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_BodyFontColor(Windows.UI.Color)
     @body_font_color.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def body_font_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
     # Windows.UI.Color Windows.ApplicationModel.Wallet.WalletItem::get_BodyColor()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def body_color(self) -> windows_ui.Color: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_BodyColor(Windows.UI.Color)
     @body_color.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def body_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_BodyBackgroundImage()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def body_background_image(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_BodyBackgroundImage(Windows.Storage.Streams.IRandomAccessStreamReference)
     @body_background_image.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def body_background_image(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # System.Boolean Windows.ApplicationModel.Wallet.WalletItem::get_IsDisplayMessageLaunchable()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_display_message_launchable(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_IsDisplayMessageLaunchable(System.Boolean)
     @is_display_message_launchable.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_display_message_launchable(self, value: bool) -> None: ...
     # System.Boolean Windows.ApplicationModel.Wallet.WalletItem::get_IsAcknowledged()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_acknowledged(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_IsAcknowledged(System.Boolean)
     @is_acknowledged.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_acknowledged(self, value: bool) -> None: ...
     # System.Boolean Windows.ApplicationModel.Wallet.WalletItem::get_IsMoreTransactionHistoryLaunchable()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_more_transaction_history_launchable(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_IsMoreTransactionHistoryLaunchable(System.Boolean)
     @is_more_transaction_history_launchable.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_more_transaction_history_launchable(self, value: bool) -> None: ...
     # Windows.UI.Color Windows.ApplicationModel.Wallet.WalletItem::get_HeaderFontColor()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def header_font_color(self) -> windows_ui.Color: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_HeaderFontColor(Windows.UI.Color)
     @header_font_color.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def header_font_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
     # Windows.UI.Color Windows.ApplicationModel.Wallet.WalletItem::get_HeaderColor()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def header_color(self) -> windows_ui.Color: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_HeaderColor(Windows.UI.Color)
     @header_color.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def header_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_HeaderBackgroundImage()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def header_background_image(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_HeaderBackgroundImage(Windows.Storage.Streams.IRandomAccessStreamReference)
     @header_background_image.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def header_background_image(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Wallet.WalletItem::get_ExpirationDate()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def expiration_date(self) -> datetime.datetime | None: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_ExpirationDate(Windows.Foundation.IReference`1<Windows.Foundation.DateTime>)
     @expiration_date.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def expiration_date(self, value: datetime.datetime | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_Logo99x99()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo99x99(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_Logo99x99(Windows.Storage.Streams.IRandomAccessStreamReference)
     @logo99x99.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo99x99(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_LogoImage()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo_image(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_LogoImage(Windows.Storage.Streams.IRandomAccessStreamReference)
     @logo_image.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo_image(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_PromotionalImage()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def promotional_image(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_PromotionalImage(Windows.Storage.Streams.IRandomAccessStreamReference)
     @promotional_image.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def promotional_image(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_Logo159x159()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo159x159(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_Logo159x159(Windows.Storage.Streams.IRandomAccessStreamReference)
     @logo159x159.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo159x159(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Wallet.WalletItem::get_LastUpdated()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def last_updated(self) -> datetime.datetime | None: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_LastUpdated(Windows.Foundation.IReference`1<Windows.Foundation.DateTime>)
     @last_updated.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def last_updated(self, value: datetime.datetime | None) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_IssuerDisplayName()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def issuer_display_name(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_IssuerDisplayName(System.String)
     @issuer_display_name.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def issuer_display_name(self, value: str) -> None: ...
     # Windows.ApplicationModel.Wallet.WalletBarcode Windows.ApplicationModel.Wallet.WalletItem::get_Barcode()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def barcode(self) -> WalletBarcode: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_Barcode(Windows.ApplicationModel.Wallet.WalletBarcode)
     @barcode.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def barcode(self, value: WalletBarcode) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_RelevantDateDisplayMessage()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def relevant_date_display_message(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_RelevantDateDisplayMessage(System.String)
     @relevant_date_display_message.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def relevant_date_display_message(self, value: str) -> None: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Wallet.WalletItem::get_RelevantDate()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def relevant_date(self) -> datetime.datetime | None: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_RelevantDate(Windows.Foundation.IReference`1<Windows.Foundation.DateTime>)
     @relevant_date.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def relevant_date(self, value: datetime.datetime | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_Logo336x336()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo336x336(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_Logo336x336(Windows.Storage.Streams.IRandomAccessStreamReference)
     @logo336x336.setter
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def logo336x336(self, value: windows_storage_streams.IRandomAccessStreamReference) -> None: ...
     # Windows.ApplicationModel.Wallet.WalletItemKind Windows.ApplicationModel.Wallet.WalletItem::get_Kind()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def kind(self) -> WalletItemKind: ...
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.ApplicationModel.Wallet.WalletItemCustomProperty> Windows.ApplicationModel.Wallet.WalletItem::get_DisplayProperties()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_properties(self) -> _cabc.MutableMapping[str, WalletItemCustomProperty]: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_Id()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def id(self) -> str: ...
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.ApplicationModel.Wallet.WalletRelevantLocation> Windows.ApplicationModel.Wallet.WalletItem::get_RelevantLocations()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def relevant_locations(self) -> _cabc.MutableMapping[str, WalletRelevantLocation]: ...
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.ApplicationModel.Wallet.WalletTransaction> Windows.ApplicationModel.Wallet.WalletItem::get_TransactionHistory()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def transaction_history(self) -> _cabc.MutableMapping[str, WalletTransaction]: ...
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.ApplicationModel.Wallet.WalletVerb> Windows.ApplicationModel.Wallet.WalletItem::get_Verbs()
     @_property
+    @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def verbs(self) -> _cabc.MutableMapping[str, WalletVerb]: ...
 
 @typing.final
+@deprecated("WalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemCustomProperty(winrt.system.Object):
     def __new__(cls, name: str, value: str) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_Value()
     @_property
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def value(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItemCustomProperty::put_Value(System.String)
     @value.setter
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def value(self, value: str) -> None: ...
     # Windows.ApplicationModel.Wallet.WalletSummaryViewPosition Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_SummaryViewPosition()
     @_property
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def summary_view_position(self) -> WalletSummaryViewPosition: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItemCustomProperty::put_SummaryViewPosition(Windows.ApplicationModel.Wallet.WalletSummaryViewPosition)
     @summary_view_position.setter
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def summary_view_position(self, value: WalletSummaryViewPosition) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_Name()
     @_property
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def name(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItemCustomProperty::put_Name(System.String)
     @name.setter
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def name(self, value: str) -> None: ...
     # Windows.ApplicationModel.Wallet.WalletDetailViewPosition Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_DetailViewPosition()
     @_property
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def detail_view_position(self) -> WalletDetailViewPosition: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItemCustomProperty::put_DetailViewPosition(Windows.ApplicationModel.Wallet.WalletDetailViewPosition)
     @detail_view_position.setter
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def detail_view_position(self, value: WalletDetailViewPosition) -> None: ...
     # System.Boolean Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_AutoDetectLinks()
     @_property
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def auto_detect_links(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletItemCustomProperty::put_AutoDetectLinks(System.Boolean)
     @auto_detect_links.setter
+    @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
     def auto_detect_links(self, value: bool) -> None: ...
 
 @typing.final
+@deprecated("WalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemStore(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::AddAsync(System.String,Windows.ApplicationModel.Wallet.WalletItem)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_async(self, id: str, item: WalletItem, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ClearAsync()
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def clear_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::DeleteAsync(System.String)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def delete_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.WalletItemStore::GetItemsAsync()
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_items_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[WalletItem]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.WalletItemStore::GetItemsAsync(Windows.ApplicationModel.Wallet.WalletItemKind)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_items_async(self, kind: WalletItemKind, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[WalletItem]]: ...
     # Deprecated alias of get_items_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Wallet.WalletItem>> Windows.ApplicationModel.Wallet.WalletItemStore::GetItemsAsync(Windows.ApplicationModel.Wallet.WalletItemKind)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     @deprecated("Use get_items_async() instead.")
     def get_items_with_kind_async(self, kind: WalletItemKind, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[WalletItem]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItem> Windows.ApplicationModel.Wallet.WalletItemStore::GetWalletItemAsync(System.String)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_wallet_item_async(self, id: str, /) -> windows_foundation.IAsyncOperation[WalletItem]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItem> Windows.ApplicationModel.Wallet.WalletItemStore::ImportItemAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def import_item_async(self, stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[WalletItem]: ...
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ShowAsync()
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ShowAsync(System.String)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
     # Deprecated alias of show_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::ShowAsync(System.String)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     @deprecated("Use show_async() instead.")
     def show_item_async(self, id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::UpdateAsync(Windows.ApplicationModel.Wallet.WalletItem)
-    # @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def update_async(self, item: WalletItem, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class WalletManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItemStore> Windows.ApplicationModel.Wallet.WalletManager::RequestStoreAsync()
-    # @deprecated("IWalletManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("IWalletManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[WalletItemStore]: ...
 
 @typing.final
+@deprecated("WalletManager is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletManager(winrt.system.Object, metaclass=WalletManager_Static):
     ...
 
 @typing.final
+@deprecated("WalletRelevantLocation is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletRelevantLocation(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Geolocation.BasicGeoposition Windows.ApplicationModel.Wallet.WalletRelevantLocation::get_Position()
     @_property
+    @deprecated("IWalletRelevantLocation is deprecated and might not work on all platforms. For more info, see MSDN.")
     def position(self) -> windows_devices_geolocation.BasicGeoposition: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletRelevantLocation::put_Position(Windows.Devices.Geolocation.BasicGeoposition)
     @position.setter
+    @deprecated("IWalletRelevantLocation is deprecated and might not work on all platforms. For more info, see MSDN.")
     def position(self, value: windows_devices_geolocation.BasicGeoposition | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double]) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletRelevantLocation::get_DisplayMessage()
     @_property
+    @deprecated("IWalletRelevantLocation is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_message(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletRelevantLocation::put_DisplayMessage(System.String)
     @display_message.setter
+    @deprecated("IWalletRelevantLocation is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_message(self, value: str) -> None: ...
 
 @typing.final
+@deprecated("WalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletTransaction(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Wallet.WalletTransaction::get_TransactionDate()
     @_property
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def transaction_date(self) -> datetime.datetime | None: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletTransaction::put_TransactionDate(Windows.Foundation.IReference`1<Windows.Foundation.DateTime>)
     @transaction_date.setter
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def transaction_date(self, value: datetime.datetime | None) -> None: ...
     # System.Boolean Windows.ApplicationModel.Wallet.WalletTransaction::get_IsLaunchable()
     @_property
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_launchable(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletTransaction::put_IsLaunchable(System.Boolean)
     @is_launchable.setter
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_launchable(self, value: bool) -> None: ...
     # System.Boolean Windows.ApplicationModel.Wallet.WalletTransaction::get_IgnoreTimeOfDay()
     @_property
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def ignore_time_of_day(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletTransaction::put_IgnoreTimeOfDay(System.Boolean)
     @ignore_time_of_day.setter
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def ignore_time_of_day(self, value: bool) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletTransaction::get_DisplayLocation()
     @_property
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_location(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletTransaction::put_DisplayLocation(System.String)
     @display_location.setter
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_location(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletTransaction::get_DisplayAmount()
     @_property
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_amount(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletTransaction::put_DisplayAmount(System.String)
     @display_amount.setter
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_amount(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.Wallet.WalletTransaction::get_Description()
     @_property
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletTransaction::put_Description(System.String)
     @description.setter
+    @deprecated("IWalletTransaction is deprecated and might not work on all platforms. For more info, see MSDN.")
     def description(self, value: str) -> None: ...
 
 @typing.final
+@deprecated("WalletVerb is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletVerb(winrt.system.Object):
     def __new__(cls, name: str) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletVerb::get_Name()
     @_property
+    @deprecated("IWalletVerb is deprecated and might not work on all platforms. For more info, see MSDN.")
     def name(self) -> str: ...
     # System.Void Windows.ApplicationModel.Wallet.WalletVerb::put_Name(System.String)
     @name.setter
+    @deprecated("IWalletVerb is deprecated and might not work on all platforms. For more info, see MSDN.")
     def name(self, value: str) -> None: ...
 

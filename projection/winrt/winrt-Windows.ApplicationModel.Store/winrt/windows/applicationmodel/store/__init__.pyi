@@ -79,7 +79,7 @@ class CurrentApp_Static(winrt._winrt.IInspectable_Static):
     def request_product_purchase_async(cls, product_id: str, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String,System.Boolean)
-    # @deprecated("RequestProductPurchaseAsync(productId, includeReceipt) may be altered or unavailable for releases after Windows 8.1. Instead, use RequestProductPurchaseAsync(productId).")
+    @deprecated("RequestProductPurchaseAsync(productId, includeReceipt) may be altered or unavailable for releases after Windows 8.1. Instead, use RequestProductPurchaseAsync(productId).")
     def request_product_purchase_async(cls, product_id: str, include_receipt: bool, /) -> windows_foundation.IAsyncOperation[str]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentApp::RequestProductPurchaseAsync(System.String,System.String,Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties)
@@ -133,7 +133,7 @@ class CurrentAppSimulator_Static(winrt._winrt.IInspectable_Static):
     def request_product_purchase_async(cls, product_id: str, /) -> windows_foundation.IAsyncOperation[PurchaseResults]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String,System.Boolean)
-    # @deprecated("RequestProductPurchaseAsync(productId, includeReceipt) may be altered or unavailable for releases after Windows 8.1. Instead, use RequestProductPurchaseAsync(productId).")
+    @deprecated("RequestProductPurchaseAsync(productId, includeReceipt) may be altered or unavailable for releases after Windows 8.1. Instead, use RequestProductPurchaseAsync(productId).")
     def request_product_purchase_async(cls, product_id: str, include_receipt: bool, /) -> windows_foundation.IAsyncOperation[str]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.PurchaseResults> Windows.ApplicationModel.Store.CurrentAppSimulator::RequestProductPurchaseAsync(System.String,System.String,Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties)

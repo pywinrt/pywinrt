@@ -146,8 +146,11 @@ class BackgroundAccessRequestKind(enum.IntEnum):
 class BackgroundAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED_WITH_ALWAYS_ON_REAL_TIME_CONNECTIVITY = 1
+    """Deprecated: Use AlwaysAllowed or AllowedSubjectToSystemPolicy instead of AllowedWithAlwaysOnRealTimeConnectivity. For more info, see MSDN."""
     ALLOWED_MAY_USE_ACTIVE_REAL_TIME_CONNECTIVITY = 2
+    """Deprecated: Use AlwaysAllowed or AllowedSubjectToSystemPolicy instead of AllowedMayUseActiveRealTimeConnectivity. For more info, see MSDN."""
     DENIED = 3
+    """Deprecated: Use DeniedByUser or DeniedBySystemPolicy instead of Denied. For more info, see MSDN."""
     ALWAYS_ALLOWED = 4
     ALLOWED_SUBJECT_TO_SYSTEM_POLICY = 5
     DENIED_BY_SYSTEM_POLICY = 6
@@ -163,6 +166,7 @@ class BackgroundTaskCancellationReason(enum.IntEnum):
     CONDITION_LOSS = 6
     SYSTEM_POLICY = 7
     QUIET_HOURS_ENTERED = 8
+    """Deprecated: QuietHoursEntered is deprecated after Windows 8.1"""
     EXECUTION_TIME_EXCEEDED = 9
     RESOURCE_REVOCATION = 10
     ENERGY_SAVER = 11
@@ -717,13 +721,16 @@ class DeviceConnectionChangeTrigger(winrt.system.Object, IBackgroundTrigger, met
     def device_id(self) -> str: ...
 
 @typing.final
+@deprecated("DeviceManufacturerNotificationTrigger is deprecated and might not work on all platforms")
 class DeviceManufacturerNotificationTrigger(winrt.system.Object, IBackgroundTrigger):
     def __new__(cls, trigger_qualifier: str, one_shot: bool) -> typing.Self: ...
     # System.Boolean Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger::get_OneShot()
     @_property
+    @deprecated("DeviceManufacturerNotificationTrigger is deprecated and might not work on all platforms")
     def one_shot(self) -> bool: ...
     # System.String Windows.ApplicationModel.Background.DeviceManufacturerNotificationTrigger::get_TriggerQualifier()
     @_property
+    @deprecated("DeviceManufacturerNotificationTrigger is deprecated and might not work on all platforms")
     def trigger_qualifier(self) -> str: ...
 
 @typing.final
@@ -942,6 +949,7 @@ class RfcommConnectionTrigger(winrt.system.Object, IBackgroundTrigger):
     def outbound_connection(self) -> windows_devices_bluetooth_background.RfcommOutboundConnectionInformation: ...
 
 @typing.final
+@deprecated("SecondaryAuthenticationFactorAuthenticationTrigger is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorAuthenticationTrigger(winrt.system.Object, IBackgroundTrigger):
     def __new__(cls) -> typing.Self: ...
 

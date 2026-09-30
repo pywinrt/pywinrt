@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -528,7 +529,7 @@ class AutomationPeer(windows_ui_xaml.DependencyObject, metaclass=AutomationPeer_
     def _get_orientation_core(self) -> AutomationOrientation: ...
     @typing.final
     # Windows.UI.Xaml.Automation.Peers.AutomationPeer Windows.UI.Xaml.Automation.Peers.AutomationPeer::GetParent()
-    # @deprecated("Consider using Navigate with AutomationNavigationDirection::Parent, which is an improved version of GetParent. For more info, see MSDN.")
+    @deprecated("Consider using Navigate with AutomationNavigationDirection::Parent, which is an improved version of GetParent. For more info, see MSDN.")
     def get_parent(self) -> AutomationPeer: ...
     @typing.final
     # System.Object Windows.UI.Xaml.Automation.Peers.AutomationPeer::GetPattern(Windows.UI.Xaml.Automation.Peers.PatternInterface)
@@ -537,7 +538,7 @@ class AutomationPeer(windows_ui_xaml.DependencyObject, metaclass=AutomationPeer_
     def _get_pattern_core(self, pattern_interface: PatternInterface, /) -> winrt.system.Object: ...
     @typing.final
     # Windows.UI.Xaml.Automation.Peers.AutomationPeer Windows.UI.Xaml.Automation.Peers.AutomationPeer::GetPeerFromPoint(Windows.Foundation.Point)
-    # @deprecated("Consider using GetElementFromPoint, which is an improved version of GetPeerFromPoint. For more info, see MSDN.")
+    @deprecated("Consider using GetElementFromPoint, which is an improved version of GetPeerFromPoint. For more info, see MSDN.")
     def get_peer_from_point(self, point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> AutomationPeer: ...
     # Windows.UI.Xaml.Automation.Peers.AutomationPeer Windows.UI.Xaml.Automation.Peers.AutomationPeer::GetPeerFromPointCore(Windows.Foundation.Point)
     def _get_peer_from_point_core(self, point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> AutomationPeer: ...

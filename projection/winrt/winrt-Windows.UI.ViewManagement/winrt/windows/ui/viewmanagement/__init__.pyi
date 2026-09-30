@@ -61,6 +61,7 @@ class ApplicationViewOrientation(enum.IntEnum):
     LANDSCAPE = 0
     PORTRAIT = 1
 
+@deprecated("ApplicationViewState may be altered or unavailable for releases after Windows 8.1. Instead, query for window layout sizes directly.")
 class ApplicationViewState(enum.IntEnum):
     FULL_SCREEN_LANDSCAPE = 0
     FILLED = 1
@@ -184,13 +185,14 @@ class ApplicationView_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.ViewManagement.ApplicationView Windows.UI.ViewManagement.ApplicationView::GetForCurrentView()
     def get_for_current_view(cls) -> ApplicationView: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::TryUnsnap()
-    # @deprecated("TryUnsnap may be altered or unavailable for releases after Windows 8.1. Apps can be continuously resized, but cannot be snapped, starting in Windows 8.1.")
+    @deprecated("TryUnsnap may be altered or unavailable for releases after Windows 8.1. Apps can be continuously resized, but cannot be snapped, starting in Windows 8.1.")
     def try_unsnap(cls) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::TryUnsnapToFullscreen()
-    # @deprecated("IApplicationViewFullscreenStatics is deprecated after Windows 8. Please use other resize APIs.")
+    @deprecated("IApplicationViewFullscreenStatics is deprecated after Windows 8. Please use other resize APIs.")
     def try_unsnap_to_fullscreen(cls) -> bool: ...
     # Windows.UI.ViewManagement.ApplicationViewState Windows.UI.ViewManagement.ApplicationView::get_Value()
     @_property
+    @deprecated("Value may be altered or unavailable for releases after Windows 8.1. Instead, query for window layout sizes directly.")
     def value(cls) -> ApplicationViewState: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::get_TerminateAppOnFinalViewClose()
     @_property
@@ -272,6 +274,7 @@ class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
     def id(self) -> winrt.system.Int32: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::get_IsFullScreen()
     @_property
+    @deprecated("To check full screen mode, use IsFullScreenMode. To check if the view is adjacent to both edges, use AdjacentToLeftDisplayEdge and AdjacentToRightDisplayEdge. For more info, see MSDN.")
     def is_full_screen(self) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::get_IsOnLockScreen()
     @_property
@@ -281,9 +284,11 @@ class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
     def orientation(self) -> ApplicationViewOrientation: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationView::get_SuppressSystemOverlays()
     @_property
+    @deprecated("Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.")
     def suppress_system_overlays(self) -> bool: ...
     # System.Void Windows.UI.ViewManagement.ApplicationView::put_SuppressSystemOverlays(System.Boolean)
     @suppress_system_overlays.setter
+    @deprecated("Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.")
     def suppress_system_overlays(self, value: bool) -> None: ...
     # Windows.UI.ViewManagement.ApplicationViewBoundsMode Windows.UI.ViewManagement.ApplicationView::get_DesiredBoundsMode()
     @_property

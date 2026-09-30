@@ -132,7 +132,9 @@ class AlignmentY(enum.IntEnum):
 class AudioCategory(enum.IntEnum):
     OTHER = 0
     FOREGROUND_ONLY_MEDIA = 1
+    """Deprecated: ForegroundOnlyMedia is deprecated and might not work on all platforms. For more info, see MSDN."""
     BACKGROUND_CAPABLE_MEDIA = 2
+    """Deprecated: BackgroundCapableMedia is deprecated and might not work on all platforms. For more info, see MSDN."""
     COMMUNICATIONS = 3
     ALERTS = 4
     SOUND_EFFECTS = 5

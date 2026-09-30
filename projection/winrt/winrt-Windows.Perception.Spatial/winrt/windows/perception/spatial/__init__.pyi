@@ -239,16 +239,17 @@ class SpatialAnchorStore(winrt.system.Object):
 @typing.final
 class SpatialAnchorTransferManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> Windows.Perception.Spatial.SpatialAnchorTransferManager::RequestAccessAsync()
-    # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
+    @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[SpatialPerceptionAccessStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Perception.Spatial.SpatialAnchorTransferManager::TryExportAnchorsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Perception.Spatial.SpatialAnchor>>,Windows.Storage.Streams.IOutputStream)
-    # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
+    @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def try_export_anchors_async(cls, anchors: _cabc.Mapping[str, SpatialAnchor] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, SpatialAnchor]], stream: windows_storage_streams.IOutputStream, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMapView`2<System.String,Windows.Perception.Spatial.SpatialAnchor>> Windows.Perception.Spatial.SpatialAnchorTransferManager::TryImportAnchorsAsync(Windows.Storage.Streams.IInputStream)
-    # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
+    @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def try_import_anchors_async(cls, stream: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[_cabc.Mapping[str, SpatialAnchor]]: ...
 
 @typing.final
+@deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
 class SpatialAnchorTransferManager(winrt.system.Object, metaclass=SpatialAnchorTransferManager_Static):
     ...
 
@@ -357,9 +358,11 @@ class SpatialEntityWatcher(winrt.system.Object):
 class SpatialLocation(winrt.system.Object):
     # Windows.Foundation.Numerics.Quaternion Windows.Perception.Spatial.SpatialLocation::get_AbsoluteAngularAcceleration()
     @_property
+    @deprecated("Use AbsoluteAngularAccelerationAxisAngle instead of AbsoluteAngularAcceleration. For more info, see MSDN.")
     def absolute_angular_acceleration(self) -> windows_foundation_numerics.Quaternion: ...
     # Windows.Foundation.Numerics.Quaternion Windows.Perception.Spatial.SpatialLocation::get_AbsoluteAngularVelocity()
     @_property
+    @deprecated("Use AbsoluteAngularVelocityAxisAngle instead of AbsoluteAngularVelocity. For more info, see MSDN.")
     def absolute_angular_velocity(self) -> windows_foundation_numerics.Quaternion: ...
     # Windows.Foundation.Numerics.Vector3 Windows.Perception.Spatial.SpatialLocation::get_AbsoluteLinearAcceleration()
     @_property

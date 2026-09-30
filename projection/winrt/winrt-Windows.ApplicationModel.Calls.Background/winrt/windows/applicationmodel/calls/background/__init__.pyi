@@ -5,6 +5,7 @@ import enum
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -29,6 +30,7 @@ class PhoneCallBlockedReason(enum.IntEnum):
     PRIVATE_NUMBER = 1
     UNKNOWN_NUMBER = 2
 
+@deprecated("PhoneIncomingCallDismissedReason is deprecated and might not work for all platforms. For more info, see MSDN.")
 class PhoneIncomingCallDismissedReason(enum.IntEnum):
     UNKNOWN = 0
     CALL_REJECTED = 1
@@ -58,8 +60,10 @@ class PhoneTriggerType(enum.IntEnum):
     LINE_CHANGED = 2
     AIRPLANE_MODE_DISABLED_FOR_EMERGENCY_CALL = 3
     CALL_ORIGIN_DATA_REQUEST = 4
+    """Deprecated: CallOriginDataRequest is deprecated and might not work for all platforms. For more info, see MSDN."""
     CALL_BLOCKED = 5
     INCOMING_CALL_DISMISSED = 6
+    """Deprecated: IncomingCallDismissed is deprecated and might not work for all platforms. For more info, see MSDN."""
     INCOMING_CALL_NOTIFICATION = 7
 
 @typing.final
@@ -75,33 +79,43 @@ class PhoneCallBlockedTriggerDetails(winrt.system.Object):
     def phone_number(self) -> str: ...
 
 @typing.final
+@deprecated("PhoneCallOriginDataRequestTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
     # System.String Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails::get_PhoneNumber()
     @_property
+    @deprecated("PhoneCallOriginDataRequestTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def phone_number(self) -> str: ...
     # System.Guid Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails::get_RequestId()
     @_property
+    @deprecated("PhoneCallOriginDataRequestTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def request_id(self) -> _uuid.UUID: ...
 
 @typing.final
+@deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
     # Windows.Foundation.DateTime Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_DismissalTime()
     @_property
+    @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def dismissal_time(self) -> datetime.datetime: ...
     # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_DisplayName()
     @_property
+    @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def display_name(self) -> str: ...
     # System.Guid Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_LineId()
     @_property
+    @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def line_id(self) -> _uuid.UUID: ...
     # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_PhoneNumber()
     @_property
+    @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def phone_number(self) -> str: ...
     # Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_Reason()
     @_property
+    @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def reason(self) -> PhoneIncomingCallDismissedReason: ...
     # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_TextReplyMessage()
     @_property
+    @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
     def text_reply_message(self) -> str: ...
 
 @typing.final

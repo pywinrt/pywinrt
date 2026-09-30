@@ -158,10 +158,12 @@ class SocketMessageType(enum.IntEnum):
 class SocketProtectionLevel(enum.IntEnum):
     PLAIN_SOCKET = 0
     SSL = 1
+    """Deprecated: Ssl may result in insecure connections and may be altered or unavailable for releases after Windows 8.1. Instead, use one of the TLS SocketProtectionLevel values."""
     SSL_ALLOW_NULL_ENCRYPTION = 2
     BLUETOOTH_ENCRYPTION_ALLOW_NULL_AUTHENTICATION = 3
     BLUETOOTH_ENCRYPTION_WITH_AUTHENTICATION = 4
     SSL3_ALLOW_WEAK_ENCRYPTION = 5
+    """Deprecated: Ssl3AllowWeakEncryption may result in insecure connections and may be altered or unavailable for releases after Windows 8.1. Instead, use one of the TLS SocketProtectionLevel values."""
     TLS10 = 6
     TLS11 = 7
     TLS12 = 8

@@ -4,6 +4,7 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -17,6 +18,7 @@ __all__ = [
     "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
 ]
 
+@deprecated("HingeState is deprecated and might not work on all platforms. For more info, see MSDN.")
 class HingeState(enum.IntEnum):
     UNKNOWN = 0
     CLOSED = 1
@@ -28,45 +30,55 @@ class HingeState(enum.IntEnum):
 @typing.final
 class TwoPanelHingedDevicePosturePreview_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.System.Preview.TwoPanelHingedDevicePosturePreview> Windows.System.Preview.TwoPanelHingedDevicePosturePreview::GetDefaultAsync()
-    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreview]: ...
 
 @typing.final
+@deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
 class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanelHingedDevicePosturePreview_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading> Windows.System.Preview.TwoPanelHingedDevicePosturePreview::GetCurrentPostureAsync()
-    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_current_posture_async(self) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreviewReading]: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.Preview.TwoPanelHingedDevicePosturePreview::add_PostureChanged(Windows.Foundation.TypedEventHandler`2<Windows.System.Preview.TwoPanelHingedDevicePosturePreview,Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>)
-    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_posture_changed(self, handler: windows_foundation.TypedEventHandler[TwoPanelHingedDevicePosturePreview, TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Preview.TwoPanelHingedDevicePosturePreview::remove_PostureChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_posture_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 @typing.final
+@deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
 class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
     # Windows.System.Preview.HingeState Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_HingeState()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
     def hinge_state(self) -> HingeState: ...
     # System.String Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_Panel1Id()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
     def panel1_id(self) -> str: ...
     # Windows.Devices.Sensors.SimpleOrientation Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_Panel1Orientation()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
     def panel1_orientation(self) -> windows_devices_sensors.SimpleOrientation: ...
     # System.String Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_Panel2Id()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
     def panel2_id(self) -> str: ...
     # Windows.Devices.Sensors.SimpleOrientation Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_Panel2Orientation()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
     def panel2_orientation(self) -> windows_devices_sensors.SimpleOrientation: ...
     # Windows.Foundation.DateTime Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_Timestamp()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
+@deprecated("TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(winrt.system.Object):
     # Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs::get_Reading()
     @_property
+    @deprecated("TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def reading(self) -> TwoPanelHingedDevicePosturePreviewReading: ...
 
