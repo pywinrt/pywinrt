@@ -44,6 +44,12 @@ static class StructWriterExtensions
         }
 
         w.WriteLine("@typing.final");
+
+        if (type.IsDeprecated)
+        {
+            w.WriteDeprecated(type.DeprecatedMessage);
+        }
+
         w.WriteLine($"class {type.Name}{metaclass}:");
         w.Indent++;
 
@@ -94,6 +100,12 @@ static class StructWriterExtensions
     private static void WritePythonIntegerTyping(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteLine("@typing.final");
+
+        if (type.IsDeprecated)
+        {
+            w.WriteDeprecated(type.DeprecatedMessage);
+        }
+
         w.WriteLine($"class {type.Name}(int):");
         w.Indent++;
 

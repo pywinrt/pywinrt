@@ -17,6 +17,11 @@ class ProjectedType
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
         );
+
+        var deprecated = type.GetDeprecatedAttribute();
+        IsDeprecated = deprecated is not null;
+        DeprecatedMessage = deprecated?.ConstructorArguments[0].Value as string;
+
         PyWrapperTypeName = Category == Category.Interface ? $"_{Name}" : Name;
 
         PyRequiresMetaclass =
@@ -157,6 +162,16 @@ class ProjectedType
     /// True if the type is a composable WinRT runtime class.
     /// </summary>
     public bool IsComposable { get; }
+
+    /// <summary>
+    /// True if WinRT marks the type deprecated.
+    /// </summary>
+    public bool IsDeprecated { get; }
+
+    /// <summary>
+    /// The message of the WinRT deprecation, if <see cref="IsDeprecated"/>.
+    /// </summary>
+    public string? DeprecatedMessage { get; }
 
     /// <summary>
     /// Gets the Python type name for the wrapper class.

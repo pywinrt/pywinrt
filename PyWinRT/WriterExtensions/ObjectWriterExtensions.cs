@@ -231,6 +231,11 @@ static class ObjectWriterExtensions
             w.WriteLine("@typing.final");
         }
 
+        if (type.IsDeprecated)
+        {
+            w.WriteDeprecated(type.DeprecatedMessage);
+        }
+
         w.WriteLine(
             $"class {type.Name}({type.Type.BaseType?.ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.BaseType), packageMap) ?? "winrt.system.Object"}{interfaces}{collection}{generic}{metaclass}):"
         );
@@ -357,6 +362,12 @@ static class ObjectWriterExtensions
             if (type.Constructors.Count(m => m.Name == ctor.Name) > 1)
             {
                 w.WriteLine("@typing.overload");
+            }
+
+            // a deprecated class already reports its instantiation
+            if (ctor.IsDeprecated && !type.IsDeprecated)
+            {
+                w.WriteDeprecated(ctor.DeprecatedMessage);
             }
 
             w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
