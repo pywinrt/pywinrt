@@ -130,6 +130,16 @@ namespace py
             = 0;
 
         /**
+         * Whether this is the fill array of a call that is still running: the
+         * elements are the WinRT caller's own, written by the callee, and go
+         * back to the caller when the call returns.
+         */
+        virtual bool IsFillArray() noexcept
+        {
+            return false;
+        }
+
+        /**
          * Counts an export of the elements through the buffer protocol, which
          * lasts until RemoveExport().
          *
