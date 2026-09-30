@@ -630,32 +630,45 @@ sealed class TableWriter
     /// through another interface, which is the set an instance can be queried
     /// for.
     /// </summary>
+    /// <remarks>
+    /// What a generic instance requires is written in terms of its definition's
+    /// type parameters - <c>IVector&lt;T&gt;</c> requires
+    /// <c>IIterable&lt;T&gt;</c> - so the instance's own type arguments are
+    /// filled in before going on, and <c>IVector&lt;IJsonValue&gt;</c> requires
+    /// <c>IIterable&lt;IJsonValue&gt;</c>. For a parameterized
+    /// <paramref name="type"/> the result is in terms of its own parameters.
+    /// </remarks>
     private static IEnumerable<TypeReference> GetRequiredInterfaces(TypeDefinition type)
     {
         var seen = new HashSet<string>(StringComparer.Ordinal);
         var result = new List<TypeReference>();
 
-        void visit(TypeDefinition current)
+        void visit(
+            TypeDefinition current,
+            IReadOnlyDictionary<GenericParameter, TypeReference>? map
+        )
         {
             foreach (var iface in current.Interfaces)
             {
-                if (!seen.Add(iface.InterfaceType.FullName))
+                var required = Substitute(iface.InterfaceType, map);
+
+                if (!seen.Add(required.FullName))
                 {
                     continue;
                 }
 
-                result.Add(iface.InterfaceType);
+                result.Add(required);
 
-                var definition = iface.InterfaceType.TryResolve();
+                var definition = required.TryResolve();
 
                 if (definition is not null)
                 {
-                    visit(definition);
+                    visit(definition, GenericArguments(required));
                 }
             }
         }
 
-        visit(type);
+        visit(type, null);
 
         return result;
     }
