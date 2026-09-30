@@ -73,6 +73,11 @@ namespace py::interp
                 // be on, and letting go of the callable can run a Python
                 // finalizer.
                 auto gil = ensure_gil();
+                if (!gil)
+                {
+                    return 0;
+                }
+
                 Py_CLEAR(obj->callable);
             }
 
@@ -155,6 +160,10 @@ namespace py::interp
             }
 
             auto gil = ensure_gil();
+            if (!gil)
+            {
+                return RPC_E_DISCONNECTED;
+            }
 
             return call_python(
                 *entry.member, *entry.overload, callable, python_op::invoke, args);

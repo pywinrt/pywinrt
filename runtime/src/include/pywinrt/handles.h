@@ -11,21 +11,28 @@
 namespace py
 {
     /**
-     * Holds the Python GIL for as long as it is in scope.
+     * Holds the Python GIL for as long as it is in scope, unless the
+     * interpreter is being finalized or already has been, in which case it
+     * holds nothing and converts to false.
      *
-     * This one is not a winrt::handle_type like the rest of the file. That
-     * model needs one value of the handle type to stand for "holding nothing",
-     * and PyGILState_STATE has none to spare: PyGILState_Ensure() returns
-     * whether the calling thread already held the GIL, and both answers have to
-     * be handed back to PyGILState_Release(). PyGILState_LOCKED does not unlock
-     * anything, but it still balances the counter on the thread state, which is
-     * what decides when the state of a thread Python did not create is
-     * destroyed. Since PyGILState_LOCKED is zero, spelling it as the empty
-     * value is also spelling it as the one case that must not be skipped.
+     * WinRT calls back and lets go of objects whenever it likes, and that
+     * includes after Python is gone: a DLL that is unloaded when the process
+     * exits lets go of whatever it still holds, and Windows.UI.Xaml holds the
+     * Application until then. PyGILState_Ensure() on a finalized interpreter
+     * crashes, and on a thread other than the finalizing one it may never
+     * return, so every caller checks the guard and leaves Python alone when it
+     * is empty: a release leaks what it would have let go of, since the
+     * process is ending, and a call fails.
+     *
+     * From Python 3.15, PyThreadState_EnsureFromView() (PEP 788) makes the
+     * check and the attach one step. Before that they are two, so a thread
+     * that passes the check just as another starts finalizing still attaches
+     * to an interpreter that is going away.
      */
     struct gil_guard
     {
-        gil_guard() noexcept : m_state{PyGILState_Ensure()}
+#if PY_VERSION_HEX >= 0x030F0000
+        gil_guard() noexcept : m_token{attach()}
         {
         }
 
@@ -34,15 +41,74 @@ namespace py
 
         ~gil_guard() noexcept
         {
-            PyGILState_Release(m_state);
+            if (m_token)
+            {
+                PyThreadState_Release(m_token);
+            }
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return m_token != nullptr;
         }
 
       private:
-        PyGILState_STATE m_state;
+        static PyThreadStateToken* attach() noexcept
+        {
+            // A view does not keep the interpreter from finalizing, so the one
+            // taken on first use serves for as long as the process runs.
+            static PyInterpreterView* const view = PyInterpreterView_FromMain();
+
+            if (!view)
+            {
+                return nullptr;
+            }
+
+            return PyThreadState_EnsureFromView(view);
+        }
+
+        PyThreadStateToken* m_token;
+#else
+        // PyGILState_STATE has no value to spare for "holding nothing":
+        // PyGILState_Ensure() returns whether the calling thread already held
+        // the GIL, and both answers have to be handed back to
+        // PyGILState_Release(). PyGILState_LOCKED does not unlock anything,
+        // but it still balances the counter on the thread state, which is what
+        // decides when the state of a thread Python did not create is
+        // destroyed. So whether anything is held is kept apart from it.
+        gil_guard() noexcept : m_held{Py_IsInitialized() && !Py_IsFinalizing()}
+        {
+            if (m_held)
+            {
+                m_state = PyGILState_Ensure();
+            }
+        }
+
+        gil_guard(gil_guard const&) = delete;
+        gil_guard& operator=(gil_guard const&) = delete;
+
+        ~gil_guard() noexcept
+        {
+            if (m_held)
+            {
+                PyGILState_Release(m_state);
+            }
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return m_held;
+        }
+
+      private:
+        bool m_held;
+        PyGILState_STATE m_state{};
+#endif
     };
 
     /**
-     * Helper function for ensuring a block of code runs with the Python GIL held.
+     * Helper function for ensuring a block of code runs with the Python GIL
+     * held, which the caller checks: see gil_guard.
      */
     [[nodiscard]] static inline gil_guard ensure_gil()
     {
