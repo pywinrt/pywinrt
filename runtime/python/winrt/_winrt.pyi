@@ -96,6 +96,7 @@ _TObject = TypeVar("_TObject", bound=IInspectable)
 
 class IInspectable_Static(type):
     def __instancecheck__(self, instance: Any) -> bool: ...
+    def __subclasscheck__(self, subclass: type) -> bool: ...
 
 # A Python class that implements a WinRT interface derives from the projected
 # name of that interface, and therefore from this, without being a wrapper

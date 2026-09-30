@@ -242,8 +242,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_composable_issubclass(self):
         self.assertTrue(issubclass(tc.Derived, tc.Composable))  # type: ignore
-        # FIXME: runtime subclass checking for interfaces is not implemented
-        # self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))  # type: ignore
+        self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))  # type: ignore
 
     def test_object_equality(self):
         c1 = tc.Derived()
