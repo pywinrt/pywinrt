@@ -1,8 +1,7 @@
 // The objects that carry a value across the language boundary: the PyObject
 // layouts that hold a WinRT object, struct or parameterized interface, the
-// Python callable a delegate calls back into, the array interface the runtime
-// allocates through, and py::IPywinrtObject, which finds the Python object
-// behind a WinRT one.
+// array interface the runtime allocates through, and py::IPywinrtObject, which
+// finds the Python object behind a WinRT one.
 //
 // This is only the storage. Creating these objects (py::wrap) and converting
 // their contents (py::converter) are in <pywinrt/convert.h>, and the WinRT side
@@ -10,43 +9,10 @@
 
 #pragma once
 
-#include <pywinrt/handles.h>
 #include <pywinrt/prelude.h>
 
 namespace py
 {
-    struct delegate_callable
-    {
-        delegate_callable() noexcept = default;
-
-        explicit delegate_callable(PyObject* callable) : _callable(callable)
-        {
-            Py_INCREF(_callable);
-        }
-
-        delegate_callable(delegate_callable&& other) noexcept
-        {
-            std::swap(_callable, other._callable);
-        }
-
-        ~delegate_callable()
-        {
-            auto gil = ensure_gil();
-            if (gil)
-            {
-                Py_CLEAR(_callable);
-            }
-        }
-
-        PyObject* callable() const noexcept
-        {
-            return _callable;
-        }
-
-      private:
-        PyObject* _callable{};
-    };
-
     /**
      * Python PyObject struct for wrapping WinRT structs.
      */
