@@ -106,6 +106,10 @@ namespace py::interp
             // on, and letting go of the Python state in it can run a
             // finalizer.
             auto gil = ensure_gil();
+            if (!gil)
+            {
+                return 0;
+            }
 
             delete owner;
 
@@ -227,6 +231,10 @@ namespace py::interp
         int32_t __stdcall object_get_py_object(void* self, PyObject*& result) noexcept
         {
             auto gil = ensure_gil();
+            if (!gil)
+            {
+                return RPC_E_DISCONNECTED;
+            }
 
             result = Py_NewRef(object_of(self)->calls->target());
 
@@ -395,6 +403,10 @@ namespace py::interp
         }
 
         auto gil = ensure_gil();
+        if (!gil)
+        {
+            return RPC_E_DISCONNECTED;
+        }
 
         return calls->run(entry, args);
     }

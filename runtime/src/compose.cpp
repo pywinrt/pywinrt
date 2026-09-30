@@ -189,6 +189,11 @@ namespace py::interp
             }
 
             auto gil = ensure_gil();
+            if (!gil)
+            {
+                return false;
+            }
+
             winrt::slim_lock_guard const guard{owner->lock};
 
             auto const references = owner->references.load(std::memory_order_relaxed);
@@ -234,6 +239,10 @@ namespace py::interp
                 // be on, and letting go of the Python state in it can run a
                 // finalizer.
                 auto gil = ensure_gil();
+                if (!gil)
+                {
+                    return;
+                }
 
                 owner->calls.obj = nullptr;
                 owner->tearoffs.clear();
@@ -263,6 +272,11 @@ namespace py::interp
             auto gil = ensure_gil();
             winrt::slim_lock_guard const guard{owner->lock};
 
+            if (!gil)
+            {
+                return ++owner->references;
+            }
+
             references = ++owner->references;
 
             if (references == 2)
@@ -289,6 +303,14 @@ namespace py::interp
             }
 
             auto gil = ensure_gil();
+            if (!gil)
+            {
+                // Without release_object(), the pair is never deleted either.
+                winrt::slim_lock_guard const guard{owner->lock};
+
+                return --owner->references;
+            }
+
             PyObject* dropped{};
 
             {
@@ -469,6 +491,10 @@ namespace py::interp
         int32_t __stdcall object_get_py_object(void* self, PyObject*& result) noexcept
         {
             auto gil = ensure_gil();
+            if (!gil)
+            {
+                return RPC_E_DISCONNECTED;
+            }
 
             result = Py_NewRef(object_of(self)->calls.obj);
 

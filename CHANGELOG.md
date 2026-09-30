@@ -308,6 +308,8 @@
   Python 3.10 reaches its own in October 2026.
 
 ### Fixed
+- Fixed a crash at exit when WinRT releases a Python object after the
+  interpreter has finalized.
 - `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
   `ctypes.wintypes.MSG`, or any other buffer the size of a `MSG`.
 - Fixed a Python thread state leaking every time the projection took the GIL on
