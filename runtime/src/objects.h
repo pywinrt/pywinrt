@@ -49,4 +49,6 @@ namespace py::interp
 
     bool make_class_type(
         projection& proj, type_entry& entry, table::type_view const& record);
+
+    void set_parameterized_type_error(char const* name) noexcept;
 } // namespace py::interp

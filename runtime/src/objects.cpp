@@ -683,6 +683,18 @@ namespace py::interp
 
         return bind_protocol_methods(record, entry.py_type);
     }
+
+    /**
+     * Refuses @p name, a parameterized interface named without its type
+     * arguments, where one interface is meant.
+     */
+    void set_parameterized_type_error(char const* name) noexcept
+    {
+        PyErr_Format(
+            PyExc_TypeError,
+            "'%s' takes type arguments, so it names no one interface",
+            name);
+    }
 } // namespace py::interp
 
 namespace
@@ -718,10 +730,7 @@ namespace
 
         if (info->parameterized)
         {
-            PyErr_Format(
-                PyExc_TypeError,
-                "'%s' takes type arguments, so it names no one interface",
-                name);
+            py::interp::set_parameterized_type_error(name);
             return nullptr;
         }
 

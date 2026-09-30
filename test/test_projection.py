@@ -19,6 +19,7 @@ import uuid
 import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
+import winrt.windows.foundation.collections as wfc
 from winrt.system.hresult import E_FAIL
 
 BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
@@ -84,6 +85,22 @@ class TestClasses(unittest.TestCase):
                         implemented = True
 
                     self.assertEqual(isinstance(instance, interface), implemented)
+
+    def test_isinstance_with_a_bare_generic_interface(self) -> None:
+        # Only an instance of a parameterized interface has an IID to ask for.
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            isinstance(wdj.JsonArray(), wfc.IVector)
+
+        with self.assertRaisesRegex(TypeError, "parameterized generic"):
+            isinstance(wdj.JsonArray(), wfc.IIterable[int])  # type: ignore[misc]
+
+    def test_isinstance_with_a_python_implementation(self) -> None:
+        class Impl(wf.IStringable):
+            def to_string(self) -> str:
+                return "impl"
+
+        self.assertIsInstance(Impl(), Impl)
+        self.assertNotIsInstance(wf.Uri("http://example.com"), Impl)
 
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
