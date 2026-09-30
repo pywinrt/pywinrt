@@ -3,6 +3,7 @@ import ast
 import csv
 import io
 import pathlib
+import re
 import tokenize
 from collections.abc import Iterator
 from typing import NamedTuple
@@ -48,6 +49,44 @@ ARRAY_FORMATS = {
 PACKAGES = {"winui3", "webview2"}
 
 
+def normalize(name: str) -> str:
+    """
+    A distribution name the way pip compares it (PEP 503).
+    """
+    return re.sub(r"[-_.]+", "-", name).lower()
+
+
+# each distribution v3.2.1 published: (its v4 distribution, the floor to
+# require it at), both empty if v4 has none
+DISTRIBUTIONS = {
+    normalize(item["distribution"]): (item["new_distribution"], item["floor"])
+    for item in read_table("distributions.csv")
+}
+
+_CLAUSE = r"(?:===|[<>=!~]=|[<>])[ \t]*[\w.*!+-]+"
+
+REQUIREMENT = re.compile(
+    rf"""
+    (?<![\w.-])
+    (?P<name>(?:winrt|winui2|winui3|webview2)[-_.][A-Za-z0-9](?:[\w.-]*[A-Za-z0-9])?)
+    (?P<extras>[ \t]*\[[^\]\n]*\])?
+    (?P<specifier>[ \t]*{_CLAUSE}(?:[ \t]*,[ \t]*{_CLAUSE})*)?
+    """,
+    re.VERBOSE,
+)
+
+# a line that holds one requirement and nothing else, as a requirements file,
+# a TOML array or a Python list writes it
+REQUIREMENT_LINE = re.compile(
+    r"""
+    ^\s*
+    (?:"(?P<double>[^"]+)"|'(?P<single>[^']+)'|(?P<bare>[^"'\#\s][^\#]*?))
+    \s*,?\s*(?:\#.*)?$
+    """,
+    re.VERBOSE,
+)
+
+
 class Match(NamedTuple):
     line: int
     column: int
@@ -60,6 +99,12 @@ class Edit(NamedTuple):
     column: int
     old: str
     new: str
+
+
+class Requirement(NamedTuple):
+    match: Match
+    # None for a distribution that v4 does not have, which has no fix
+    edit: Edit | None
 
 
 def column(lines: list[str], line: int, offset: int) -> int:
@@ -184,6 +229,123 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
                 )
 
 
+def version_key(version: str) -> tuple[int, tuple[int, ...]]:
+    """
+    The epoch and the release numbers of @p version, which is all it takes to
+    tell a v4 version from a v3 one.
+    """
+    epoch, bang, release = version.partition("!")
+
+    if not bang:
+        epoch, release = "0", version
+
+    numbers = re.findall(r"\d+", re.split(r"[^\d.]", release, maxsplit=1)[0])
+    return int(epoch), tuple(int(n) for n in numbers)
+
+
+def excludes(specifier: str, floor: str) -> bool:
+    """
+    Whether @p specifier refuses @p floor, the first v4 version.
+    """
+    floor_epoch, floor_release = version_key(floor)
+
+    for clause in specifier.split(","):
+        operator, version = re.split(
+            r"(?<=[<>=!~])(?=[^<>=!~])", clause.strip(), maxsplit=1
+        )
+        epoch, release = version_key(version.strip())
+        width = max(len(release), len(floor_release))
+        pad = (0,) * width
+        key = (epoch, (release + pad)[:width])
+        floor_key = (floor_epoch, (floor_release + pad)[:width])
+
+        if operator == "<" and not floor_key < key:
+            return True
+
+        if operator == "<=" and floor_key > key:
+            return True
+
+        # a pin to a version of the previous generation; a pin to a v4 version
+        # is left alone, since it is deliberate
+        if operator in ("==", "===", "~=") and (epoch, release[:1]) < (
+            floor_epoch,
+            floor_release[:1],
+        ):
+            return True
+
+    return False
+
+
+def string_spans(source: str) -> list[tuple[tuple[int, int], tuple[int, int]]]:
+    """
+    Where the string literals of the Python code @p source are.
+    """
+    return [
+        (token.start, token.end)
+        for token in tokenize.generate_tokens(io.StringIO(source).readline)
+        if token.type == tokenize.STRING
+    ]
+
+
+def find_requirements(
+    source: str, lines: list[str], python: bool
+) -> Iterator[Requirement]:
+    """
+    The requirements on a v3 distribution that v4 renamed or removed, or that
+    a specifier keeps at v3. In Python code, only string literals are looked
+    at; elsewhere, everything but comments.
+    """
+    spans = string_spans(source) if python else []
+
+    for number, text in enumerate(lines, 1):
+        for found in REQUIREMENT.finditer(text):
+            start = (number, found.start())
+
+            if python:
+                if not any(begin <= start < end for begin, end in spans):
+                    continue
+            elif "#" in text[: found.start()]:
+                continue
+
+            entry = DISTRIBUTIONS.get(normalize(found["name"]))
+
+            if entry is None:
+                continue
+
+            new_name, floor = entry
+            match_text = found.group().strip()
+
+            if not new_name:
+                yield Requirement(
+                    Match(
+                        number,
+                        found.start(),
+                        match_text,
+                        "nothing: there is no v4 distribution, see scripts/3to4/README.md",
+                    ),
+                    None,
+                )
+                continue
+
+            specifier = found["specifier"] or ""
+            renamed = normalize(new_name) != normalize(found["name"])
+            excluded = bool(specifier) and excludes(specifier, floor[2:])
+
+            if not renamed and not excluded:
+                continue
+
+            new_text = new_name if renamed else found["name"]
+            new_text += found["extras"] or ""
+
+            if specifier:
+                new_text += floor if excluded or renamed else specifier
+
+            yield Requirement(
+                Match(number, found.start(), match_text, new_text),
+                Edit(number, found.start(), found.group(), new_text),
+            )
+
+
 def package_edits(source: str, tree: ast.AST, lines: list[str]) -> list[Edit]:
     """
     The edits that turn the winui3 and webview2 packages into winrt: the
@@ -242,7 +404,29 @@ def package_edits(source: str, tree: ast.AST, lines: list[str]) -> list[Edit]:
     return edits
 
 
-def fix(path: pathlib.Path, source: str, edits: list[Edit]) -> None:
+def requirement_of(line: str) -> str | None:
+    """
+    The requirement on @p line, if that is all the line holds.
+    """
+    found = REQUIREMENT_LINE.match(line)
+
+    if found is None:
+        return None
+
+    requirement = found["double"] or found["single"] or found["bare"]
+    return " ".join(requirement.split())
+
+
+def fix(
+    path: pathlib.Path, source: str, edits: list[Edit], requirement_lines: set[int]
+) -> int:
+    """
+    Applies @p edits to @p source and writes it to @p path. Of the lines in
+    @p requirement_lines, one with no comment that now repeats a requirement
+    listed above it, in the same run of lines that each hold one requirement,
+    is dropped; several v3 names often became one v4 distribution. Returns how
+    many were dropped.
+    """
     lines = source.splitlines(keepends=True)
 
     for edit in sorted(edits, reverse=True):
@@ -252,7 +436,31 @@ def fix(path: pathlib.Path, source: str, edits: list[Edit]) -> None:
             text[: edit.column] + edit.new + text[edit.column + len(edit.old) :]
         )
 
-    path.write_bytes("".join(lines).encode())
+    dropped = set()
+
+    for number in sorted(requirement_lines):
+        requirement = requirement_of(lines[number - 1])
+
+        if requirement is None:
+            continue
+
+        # dropping the line would drop what the comment on it says
+        if "#" in lines[number - 1]:
+            continue
+
+        above = number - 1
+
+        while above >= 1 and (earlier := requirement_of(lines[above - 1])) is not None:
+            if above not in dropped and earlier == requirement:
+                dropped.add(number)
+                break
+
+            above -= 1
+
+    kept = [line for number, line in enumerate(lines, 1) if number not in dropped]
+    path.write_bytes("".join(kept).encode())
+
+    return len(dropped)
 
 
 if __name__ == "__main__":
@@ -264,24 +472,43 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--fix",
-        help="Rewrite the winui3 and webview2 packages to winrt in place",
+        help="Rewrite the winui3 and webview2 packages to winrt, and the "
+        "requirements on v3 distributions to v4 ones, in place",
         action="store_true",
     )
     args = parser.parse_args()
 
     for path in args.files:
         source = path.read_bytes().decode()
-        tree = ast.parse(source, path)
         lines = source.splitlines()
+        python = path.suffix == ".py"
+        tree = ast.parse(source, path) if python else None
+        requirements = list(find_requirements(source, lines, python))
+        matches = list(find(tree, lines)) if tree else []
+        matches += [requirement.match for requirement in requirements]
 
-        for match in sorted(find(tree, lines)):
+        for match in sorted(matches):
             print(f"{path}:{match.line}:{match.column + 1}")
             print("possible match:", match.name)
             print("rename to:", match.rename_to)
 
         if args.fix:
-            edits = package_edits(source, tree, lines)
+            edits = package_edits(source, tree, lines) if tree else []
+            requirement_edits = [r.edit for r in requirements if r.edit is not None]
 
-            if edits:
-                fix(path, source, edits)
-                print(f"{path}: rewrote {len(edits)} package names")
+            if edits or requirement_edits:
+                dropped = fix(
+                    path,
+                    source,
+                    edits + requirement_edits,
+                    {edit.line for edit in requirement_edits},
+                )
+
+                if edits:
+                    print(f"{path}: rewrote {len(edits)} package names")
+
+                if requirement_edits:
+                    print(
+                        f"{path}: rewrote {len(requirement_edits)} requirements, "
+                        f"dropped {dropped} that became duplicates"
+                    )
