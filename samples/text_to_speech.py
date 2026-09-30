@@ -3,6 +3,7 @@
 # dependencies = [
 #   "winrt-runtime",
 #   "winrt-Windows.Foundation",
+#   "winrt-Windows.Media.Core",
 #   "winrt-Windows.Media.SpeechSynthesis",
 #   "winrt-Windows.Media.Playback",
 #   "winrt-Windows.Storage",
@@ -13,6 +14,7 @@
 import asyncio
 
 from winrt.system import Object
+from winrt.windows.media.core import MediaSource
 from winrt.windows.media.speechsynthesis import SpeechSynthesizer
 from winrt.windows.media.playback import MediaPlayer, MediaPlayerAudioCategory
 
@@ -30,7 +32,7 @@ async def main():
     player = MediaPlayer()
     player.audio_category = MediaPlayerAudioCategory.SPEECH
 
-    player.set_stream_source(stream)
+    player.source = MediaSource.create_from_stream(stream, stream.content_type)
     player.add_media_ended(on_media_ended)
     player.play()
 
