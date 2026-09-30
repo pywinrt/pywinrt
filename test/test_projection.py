@@ -102,6 +102,65 @@ class TestClasses(unittest.TestCase):
         self.assertIsInstance(Impl(), Impl)
         self.assertNotIsInstance(wf.Uri("http://example.com"), Impl)
 
+    def test_issubclass_of_an_interface(self) -> None:
+        # A class does not derive from its interfaces in Python either, so the
+        # table answers, the way the stubs spell the bases.
+        self.assertTrue(issubclass(wf.Uri, wf.IStringable))
+        self.assertTrue(issubclass(tc.Class, tc.IRequiredOne))
+        self.assertFalse(issubclass(tc.Class, tc.IRequiredTwo))
+        self.assertFalse(issubclass(tc.Class, wf.IStringable))
+
+    def test_issubclass_through_a_base_class(self) -> None:
+        # Derived lists only its own interface; the rest are Composable's.
+        self.assertTrue(issubclass(tc.Derived, tc.IRequiredFour))
+        self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))
+
+    def test_issubclass_of_a_required_interface(self) -> None:
+        self.assertTrue(issubclass(tc.IRequiredTwo, tc.IRequiredOne))
+        self.assertFalse(issubclass(tc.IRequiredOne, tc.IRequiredTwo))
+
+    def test_issubclass_of_the_wrapper_type(self) -> None:
+        # The underscored type an instance is returned as is the interface.
+        self.assertTrue(issubclass(tc._IRequiredOne, tc.IRequiredOne))
+        self.assertTrue(issubclass(tc._IRequiredTwo, tc.IRequiredOne))
+
+    def test_issubclass_of_something_else(self) -> None:
+        self.assertFalse(issubclass(tc.Blittable, tc.IRequiredOne))
+        self.assertFalse(issubclass(int, tc.IRequiredOne))
+        # The metaclass that carries the statics implements nothing.
+        self.assertFalse(issubclass(type(wf.Uri), wf.IStringable))
+
+    def test_issubclass_with_a_python_implementation(self) -> None:
+        class Impl(wf.IStringable):
+            def to_string(self) -> str:
+                return "impl"
+
+        self.assertTrue(issubclass(Impl, wf.IStringable))
+        self.assertFalse(issubclass(Impl, wf.IClosable))
+        self.assertFalse(issubclass(wf.Uri, Impl))
+
+    def test_issubclass_with_a_bare_generic_interface(self) -> None:
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            issubclass(wdj.JsonArray, wfc.IIterable)
+
+        with self.assertRaisesRegex(TypeError, "parameterized generic"):
+            issubclass(wdj.JsonArray, wfc.IVector[wdj.IJsonValue])  # type: ignore[misc]
+
+    def test_issubclass_agrees_with_isinstance(self) -> None:
+        instance = tc.Class()
+
+        for interface in (
+            tc.IRequiredOne,
+            tc.IRequiredTwo,
+            tc.IRequiredThree,
+            tc.IRequiredFour,
+        ):
+            with self.subTest(interface=interface):
+                self.assertEqual(
+                    issubclass(type(instance), interface),
+                    isinstance(instance, interface),
+                )
+
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
             tc.Class().as_(tc.IRequiredTwo)

@@ -103,9 +103,148 @@ namespace py::cpp::_winrt
         }
     }
 
+    /**
+     * Whether @p type is a projected class or interface that implements the
+     * interface whose IID is @p iid, or derives from one that does. A class
+     * lists every interface it implements, and an interface every one it
+     * requires, so nothing past the table records of @p type's bases needs to
+     * be read, and nothing needs to be imported.
+     */
+    static bool implements_interface(PyTypeObject* type, winrt::guid const& iid)
+    {
+        auto const matches = [&iid](void const* guid)
+        {
+            return guid && *static_cast<winrt::guid const*>(guid) == iid;
+        };
+
+        auto* const mro = type->tp_mro;
+        if (!mro)
+        {
+            return false;
+        }
+
+        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
+        {
+            auto* const base = PyTuple_GET_ITEM(mro, i);
+            if (!PyType_Check(base))
+            {
+                continue;
+            }
+
+            auto* const entry
+                = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(base));
+            if (!entry)
+            {
+                continue;
+            }
+
+            // The metaclass that carries a class's statics is remembered with
+            // the class's entry, and it implements nothing.
+            if (reinterpret_cast<PyTypeObject*>(base) == entry->statics)
+            {
+                continue;
+            }
+
+            if (matches(entry->guid))
+            {
+                return true;
+            }
+
+            auto const& table = *entry->owner->table;
+            auto const interfaces = table.type(entry->index).interfaces();
+
+            for (uint32_t j = 0; j < interfaces.size(); j++)
+            {
+                auto const record = table.type(interfaces[j]);
+                if (record.flags() & py::table::type_flags::parameterized)
+                {
+                    continue;
+                }
+
+                if (matches(record.guid()))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    static PyObject* IInspectable_Static_subclasscheck(
+        PyObject* cls, PyObject* subclass) noexcept
+    {
+        try
+        {
+            // A Python class that derives from this one, or this one itself.
+            py::pyobj_handle derived{PyObject_CallMethod(
+                reinterpret_cast<PyObject*>(&PyType_Type),
+                "__subclasscheck__",
+                "OO",
+                cls,
+                subclass)};
+            if (!derived)
+            {
+                return nullptr;
+            }
+
+            if (PyObject_IsTrue(derived.get()))
+            {
+                return derived.detach();
+            }
+
+            auto const info
+                = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+            if (!info)
+            {
+                return derived.detach();
+            }
+
+            if (info->parameterized)
+            {
+                py::interp::set_parameterized_type_error(
+                    reinterpret_cast<PyTypeObject*>(cls)->tp_name);
+                return nullptr;
+            }
+
+            // A projected class does not derive from its interfaces in Python,
+            // which is the one relation the table has to answer for. Between
+            // classes, deriving is what a composable class's subclass does.
+            if (info->category != py::table::category::interface_)
+            {
+                return derived.detach();
+            }
+
+            if (!info->guid)
+            {
+                return derived.detach();
+            }
+
+            // type.__subclasscheck__() has refused anything that is not a
+            // class, but a class need not be a type object.
+            if (!PyType_Check(subclass))
+            {
+                return derived.detach();
+            }
+
+            return PyBool_FromLong(implements_interface(
+                reinterpret_cast<PyTypeObject*>(subclass),
+                *static_cast<winrt::guid const*>(info->guid)));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef IInspectable_Static_methods[]
         = {{"__instancecheck__",
             reinterpret_cast<PyCFunction>(IInspectable_Static_instancecheck),
+            METH_O,
+            nullptr},
+           {"__subclasscheck__",
+            reinterpret_cast<PyCFunction>(IInspectable_Static_subclasscheck),
             METH_O,
             nullptr},
            {}};
