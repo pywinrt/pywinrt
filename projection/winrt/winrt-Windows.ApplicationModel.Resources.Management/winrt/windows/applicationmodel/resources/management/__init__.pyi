@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -52,15 +53,16 @@ class IndexedResourceQualifier(winrt.system.Object):
     def qualifier_value(self) -> str: ...
 
 @typing.final
+@deprecated("Use CreateResourceIndexer in mrmsupport.dll instead of ResourceIndexer.  For more info, see MSDN.")
 class ResourceIndexer(winrt.system.Object):
     @typing.overload
     def __new__(cls, project_root: windows_foundation.Uri, extension_dll_path: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
     def __new__(cls, project_root: windows_foundation.Uri) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> Windows.ApplicationModel.Resources.Management.ResourceIndexer::IndexFileContentsAsync(Windows.Foundation.Uri)
-    # @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
+    @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
     def index_file_contents_async(self, file: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[IndexedResourceCandidate]]: ...
     # Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate Windows.ApplicationModel.Resources.Management.ResourceIndexer::IndexFilePath(Windows.Foundation.Uri)
-    # @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
+    @deprecated("Use IndexFilePath in mrmsupport.dll instead of IResourceIndexer.  For more info, see MSDN.")
     def index_file_path(self, file_path: windows_foundation.Uri, /) -> IndexedResourceCandidate: ...
 

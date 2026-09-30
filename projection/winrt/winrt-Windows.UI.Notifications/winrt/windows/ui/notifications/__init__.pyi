@@ -111,51 +111,97 @@ class TileFlyoutTemplateType(enum.IntEnum):
 
 class TileTemplateType(enum.IntEnum):
     TILE_SQUARE_IMAGE = 0
+    """Deprecated: TileSquareImage may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150Image."""
     TILE_SQUARE_BLOCK = 1
+    """Deprecated: TileSquareBlock may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150Block."""
     TILE_SQUARE_TEXT01 = 2
+    """Deprecated: TileSquareText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150Text01."""
     TILE_SQUARE_TEXT02 = 3
+    """Deprecated: TileSquareText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150Text02."""
     TILE_SQUARE_TEXT03 = 4
+    """Deprecated: TileSquareText03 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150Text03."""
     TILE_SQUARE_TEXT04 = 5
+    """Deprecated: TileSquareText04 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150Text04."""
     TILE_SQUARE_PEEK_IMAGE_AND_TEXT01 = 6
+    """Deprecated: TileSquarePeekImageAndText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150PeekImageAndText01."""
     TILE_SQUARE_PEEK_IMAGE_AND_TEXT02 = 7
+    """Deprecated: TileSquarePeekImageAndText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150PeekImageAndText02."""
     TILE_SQUARE_PEEK_IMAGE_AND_TEXT03 = 8
+    """Deprecated: TileSquarePeekImageAndText03 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150PeekImageAndText03."""
     TILE_SQUARE_PEEK_IMAGE_AND_TEXT04 = 9
+    """Deprecated: TileSquarePeekImageAndText04 may be altered or unavailable for releases after Windows 8.1. Instead, use TileSquare150x150PeekImageAndText04."""
     TILE_WIDE_IMAGE = 10
+    """Deprecated: TileWideImage may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Image."""
     TILE_WIDE_IMAGE_COLLECTION = 11
+    """Deprecated: TileWideImageCollection may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150ImageCollection."""
     TILE_WIDE_IMAGE_AND_TEXT01 = 12
+    """Deprecated: TileWideImageAndText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150ImageAndText01."""
     TILE_WIDE_IMAGE_AND_TEXT02 = 13
+    """Deprecated: TileWideImageAndText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150ImageAndText02."""
     TILE_WIDE_BLOCK_AND_TEXT01 = 14
+    """Deprecated: TileWideBlockAndText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150BlockAndText01."""
     TILE_WIDE_BLOCK_AND_TEXT02 = 15
+    """Deprecated: TileWideBlockAndText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150BlockAndText02."""
     TILE_WIDE_PEEK_IMAGE_COLLECTION01 = 16
+    """Deprecated: TileWidePeekImageCollection01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageCollection01."""
     TILE_WIDE_PEEK_IMAGE_COLLECTION02 = 17
+    """Deprecated: TileWidePeekImageCollection02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageCollection02."""
     TILE_WIDE_PEEK_IMAGE_COLLECTION03 = 18
+    """Deprecated: TileWidePeekImageCollection03 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageCollection03."""
     TILE_WIDE_PEEK_IMAGE_COLLECTION04 = 19
+    """Deprecated: TileWidePeekImageCollection04 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageCollection04."""
     TILE_WIDE_PEEK_IMAGE_COLLECTION05 = 20
+    """Deprecated: TileWidePeekImageCollection05 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageCollection05."""
     TILE_WIDE_PEEK_IMAGE_COLLECTION06 = 21
+    """Deprecated: TileWidePeekImageCollection06 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageCollection06."""
     TILE_WIDE_PEEK_IMAGE_AND_TEXT01 = 22
+    """Deprecated: TileWidePeekImageAndText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageAndText01."""
     TILE_WIDE_PEEK_IMAGE_AND_TEXT02 = 23
+    """Deprecated: TileWidePeekImageAndText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImageAndText02."""
     TILE_WIDE_PEEK_IMAGE01 = 24
+    """Deprecated: TileWidePeekImage01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImage01."""
     TILE_WIDE_PEEK_IMAGE02 = 25
+    """Deprecated: TileWidePeekImage02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImage02."""
     TILE_WIDE_PEEK_IMAGE03 = 26
+    """Deprecated: TileWidePeekImage03 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImage03."""
     TILE_WIDE_PEEK_IMAGE04 = 27
+    """Deprecated: TileWidePeekImage04 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImage04."""
     TILE_WIDE_PEEK_IMAGE05 = 28
+    """Deprecated: TileWidePeekImage05 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImage05."""
     TILE_WIDE_PEEK_IMAGE06 = 29
+    """Deprecated: TileWidePeekImage06 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150PeekImage06."""
     TILE_WIDE_SMALL_IMAGE_AND_TEXT01 = 30
+    """Deprecated: TileWideSmallImageAndText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150SmallImageAndText01."""
     TILE_WIDE_SMALL_IMAGE_AND_TEXT02 = 31
+    """Deprecated: TileWideSmallImageAndText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150SmallImageAndText02."""
     TILE_WIDE_SMALL_IMAGE_AND_TEXT03 = 32
+    """Deprecated: TileWideSmallImageAndText03 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150SmallImageAndText03."""
     TILE_WIDE_SMALL_IMAGE_AND_TEXT04 = 33
+    """Deprecated: TileWideSmallImageAndText04 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150SmallImageAndText04."""
     TILE_WIDE_SMALL_IMAGE_AND_TEXT05 = 34
+    """Deprecated: TileWideSmallImageAndText05 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150SmallImageAndText05."""
     TILE_WIDE_TEXT01 = 35
+    """Deprecated: TileWideText01 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text01."""
     TILE_WIDE_TEXT02 = 36
+    """Deprecated: TileWideText02 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text02."""
     TILE_WIDE_TEXT03 = 37
+    """Deprecated: TileWideText03 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text03."""
     TILE_WIDE_TEXT04 = 38
+    """Deprecated: TileWideText04 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text04."""
     TILE_WIDE_TEXT05 = 39
+    """Deprecated: TileWideText05 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text05."""
     TILE_WIDE_TEXT06 = 40
+    """Deprecated: TileWideText06 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text06."""
     TILE_WIDE_TEXT07 = 41
+    """Deprecated: TileWideText07 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text07."""
     TILE_WIDE_TEXT08 = 42
+    """Deprecated: TileWideText08 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text08."""
     TILE_WIDE_TEXT09 = 43
+    """Deprecated: TileWideText09 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text09."""
     TILE_WIDE_TEXT10 = 44
+    """Deprecated: TileWideText10 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text10."""
     TILE_WIDE_TEXT11 = 45
+    """Deprecated: TileWideText11 may be altered or unavailable for releases after Windows 8.1. Instead, use TileWide310x150Text11."""
     TILE_SQUARE150X150_IMAGE = 0
     TILE_SQUARE150X150_BLOCK = 1
     TILE_SQUARE150X150_TEXT01 = 2

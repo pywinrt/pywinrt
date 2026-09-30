@@ -163,8 +163,11 @@ class ContactFieldType(enum.IntEnum):
     EMAIL = 0
     PHONE_NUMBER = 1
     LOCATION = 2
+    """Deprecated: Location  may be altered or unavailable for releases after Windows 8.1. Instead, use Address."""
     INSTANT_MESSAGE = 3
+    """Deprecated: InstantMessage  may be altered or unavailable for releases after Windows 8.1. Instead, use ConnectedServiceAccount."""
     CUSTOM = 4
+    """Deprecated: Custom may be altered or unavailable for releases after Windows 8.1. Instead, use one of the specific types."""
     CONNECTED_SERVICE_ACCOUNT = 5
     IMPORTANT_DATE = 6
     ADDRESS = 7
@@ -1693,25 +1696,30 @@ class FullContactCardOptions(winrt.system.Object):
 @typing.final
 class KnownContactField_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Contacts.ContactFieldType Windows.ApplicationModel.Contacts.KnownContactField::ConvertNameToType(System.String)
-    # @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
+    @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def convert_name_to_type(cls, name: str, /) -> ContactFieldType: ...
     # System.String Windows.ApplicationModel.Contacts.KnownContactField::ConvertTypeToName(Windows.ApplicationModel.Contacts.ContactFieldType)
-    # @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
+    @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def convert_type_to_name(cls, type: ContactFieldType, /) -> str: ...
     # System.String Windows.ApplicationModel.Contacts.KnownContactField::get_Email()
     @_property
+    @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def email(cls) -> str: ...
     # System.String Windows.ApplicationModel.Contacts.KnownContactField::get_InstantMessage()
     @_property
+    @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def instant_message(cls) -> str: ...
     # System.String Windows.ApplicationModel.Contacts.KnownContactField::get_Location()
     @_property
+    @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def location(cls) -> str: ...
     # System.String Windows.ApplicationModel.Contacts.KnownContactField::get_PhoneNumber()
     @_property
+    @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def phone_number(cls) -> str: ...
 
 @typing.final
+@deprecated("KnownContactField  may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
 class KnownContactField(winrt.system.Object, metaclass=KnownContactField_Static):
     ...
 

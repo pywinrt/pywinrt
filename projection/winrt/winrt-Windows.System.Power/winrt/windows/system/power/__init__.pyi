@@ -4,6 +4,7 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -44,80 +45,96 @@ class PowerSupplyStatus(enum.IntEnum):
 @typing.final
 class BackgroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.BackgroundEnergyManager::add_RecentEnergyUsageIncreased(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_increased(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.BackgroundEnergyManager::remove_RecentEnergyUsageIncreased(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def remove_recent_energy_usage_increased(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.BackgroundEnergyManager::add_RecentEnergyUsageReturnedToLow(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_returned_to_low(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.BackgroundEnergyManager::remove_RecentEnergyUsageReturnedToLow(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def remove_recent_energy_usage_returned_to_low(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_ExcessiveUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def excessive_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_LowUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def low_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_MaxAcceptableUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def max_acceptable_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_NearMaxAcceptableUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def near_max_acceptable_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_NearTerminationUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def near_termination_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_RecentEnergyUsage()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def recent_energy_usage(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_RecentEnergyUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def recent_energy_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.BackgroundEnergyManager::get_TerminationUsageLevel()
     @_property
+    @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def termination_usage_level(cls) -> winrt.system.UInt32: ...
 
 @typing.final
+@deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
 class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyManager_Static):
     ...
 
 @typing.final
 class ForegroundEnergyManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.ForegroundEnergyManager::add_RecentEnergyUsageIncreased(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_increased(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.ForegroundEnergyManager::remove_RecentEnergyUsageIncreased(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def remove_recent_energy_usage_increased(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.ForegroundEnergyManager::add_RecentEnergyUsageReturnedToLow(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_returned_to_low(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.ForegroundEnergyManager::remove_RecentEnergyUsageReturnedToLow(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def remove_recent_energy_usage_returned_to_low(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.UInt32 Windows.System.Power.ForegroundEnergyManager::get_ExcessiveUsageLevel()
     @_property
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def excessive_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.ForegroundEnergyManager::get_LowUsageLevel()
     @_property
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def low_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.ForegroundEnergyManager::get_MaxAcceptableUsageLevel()
     @_property
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def max_acceptable_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.ForegroundEnergyManager::get_NearMaxAcceptableUsageLevel()
     @_property
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def near_max_acceptable_usage_level(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.ForegroundEnergyManager::get_RecentEnergyUsage()
     @_property
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def recent_energy_usage(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.System.Power.ForegroundEnergyManager::get_RecentEnergyUsageLevel()
     @_property
+    @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def recent_energy_usage_level(cls) -> winrt.system.UInt32: ...
 
 @typing.final
+@deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
 class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyManager_Static):
     ...
 

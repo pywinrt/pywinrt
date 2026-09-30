@@ -6,6 +6,7 @@ import types
 import typing
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -37,205 +38,247 @@ __all__ = [
 class KnownPerceptionFrameKind_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.Provider.KnownPerceptionFrameKind::get_Color()
     @_property
+    @deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def color(cls) -> str: ...
     # System.String Windows.Devices.Perception.Provider.KnownPerceptionFrameKind::get_Depth()
     @_property
+    @deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def depth(cls) -> str: ...
     # System.String Windows.Devices.Perception.Provider.KnownPerceptionFrameKind::get_Infrared()
     @_property
+    @deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def infrared(cls) -> str: ...
 
 @typing.final
+@deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class KnownPerceptionFrameKind(winrt.system.Object, metaclass=KnownPerceptionFrameKind_Static):
     ...
 
 @typing.final
+@deprecated("PerceptionControlGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionControlGroup(winrt.system.Object):
     def __new__(cls, ids: _cabc.Iterable[str]) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Perception.Provider.PerceptionControlGroup::get_FrameProviderIds()
     @_property
+    @deprecated("PerceptionControlGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def frame_provider_ids(self) -> _cabc.Sequence[str]: ...
 
 @typing.final
+@deprecated("PerceptionCorrelation may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionCorrelation(winrt.system.Object):
     def __new__(cls, target_id: str, position: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], orientation: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> typing.Self: ...
     # Windows.Foundation.Numerics.Quaternion Windows.Devices.Perception.Provider.PerceptionCorrelation::get_Orientation()
     @_property
+    @deprecated("PerceptionCorrelation may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def orientation(self) -> windows_foundation_numerics.Quaternion: ...
     # Windows.Foundation.Numerics.Vector3 Windows.Devices.Perception.Provider.PerceptionCorrelation::get_Position()
     @_property
+    @deprecated("PerceptionCorrelation may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def position(self) -> windows_foundation_numerics.Vector3: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionCorrelation::get_TargetId()
     @_property
+    @deprecated("PerceptionCorrelation may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def target_id(self) -> str: ...
 
 @typing.final
+@deprecated("PerceptionCorrelationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionCorrelationGroup(winrt.system.Object):
     def __new__(cls, relative_locations: _cabc.Iterable[PerceptionCorrelation]) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.Provider.PerceptionCorrelation> Windows.Devices.Perception.Provider.PerceptionCorrelationGroup::get_RelativeLocations()
     @_property
+    @deprecated("PerceptionCorrelationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def relative_locations(self) -> _cabc.Sequence[PerceptionCorrelation]: ...
 
 @typing.final
+@deprecated("PerceptionFaceAuthenticationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFaceAuthenticationGroup(winrt.system.Object):
     def __new__(cls, ids: _cabc.Iterable[str], start_handler: PerceptionStartFaceAuthenticationHandler, stop_handler: PerceptionStopFaceAuthenticationHandler) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup::get_FrameProviderIds()
     @_property
+    @deprecated("PerceptionFaceAuthenticationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def frame_provider_ids(self) -> _cabc.Sequence[str]: ...
 
 @typing.final
+@deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFrame(winrt.system.Object):
     # Windows.Foundation.TimeSpan Windows.Devices.Perception.Provider.PerceptionFrame::get_RelativeTime()
     @_property
+    @deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def relative_time(self) -> datetime.timedelta: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrame::put_RelativeTime(Windows.Foundation.TimeSpan)
     @relative_time.setter
+    @deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def relative_time(self, value: datetime.timedelta) -> None: ...
     # Windows.Foundation.IMemoryBuffer Windows.Devices.Perception.Provider.PerceptionFrame::get_FrameData()
     @_property
+    @deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def frame_data(self) -> windows_foundation.IMemoryBuffer: ...
     # Windows.Foundation.Collections.ValueSet Windows.Devices.Perception.Provider.PerceptionFrame::get_Properties()
     @_property
+    @deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def properties(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
+@deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFrameProviderInfo(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::get_Id()
     @_property
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def id(self) -> str: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::put_Id(System.String)
     @id.setter
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def id(self, value: str) -> None: ...
     # System.Boolean Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::get_Hidden()
     @_property
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def hidden(self) -> bool: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::put_Hidden(System.Boolean)
     @hidden.setter
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def hidden(self, value: bool) -> None: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::get_FrameKind()
     @_property
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def frame_kind(self) -> str: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::put_FrameKind(System.String)
     @frame_kind.setter
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def frame_kind(self, value: str) -> None: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::get_DisplayName()
     @_property
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def display_name(self) -> str: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::put_DisplayName(System.String)
     @display_name.setter
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def display_name(self, value: str) -> None: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::get_DeviceKind()
     @_property
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def device_kind(self) -> str: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo::put_DeviceKind(System.String)
     @device_kind.setter
+    @deprecated("PerceptionFrameProviderInfo may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def device_kind(self, value: str) -> None: ...
 
 @typing.final
 class PerceptionFrameProviderManagerService_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::PublishFrameForProvider(Windows.Devices.Perception.Provider.IPerceptionFrameProvider,Windows.Devices.Perception.Provider.PerceptionFrame)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def publish_frame_for_provider(cls, provider: IPerceptionFrameProvider, frame: PerceptionFrame, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::RegisterControlGroup(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionControlGroup)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def register_control_group(cls, manager: IPerceptionFrameProviderManager, control_group: PerceptionControlGroup, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::RegisterCorrelationGroup(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionCorrelationGroup)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def register_correlation_group(cls, manager: IPerceptionFrameProviderManager, correlation_group: PerceptionCorrelationGroup, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::RegisterFaceAuthenticationGroup(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def register_face_authentication_group(cls, manager: IPerceptionFrameProviderManager, face_authentication_group: PerceptionFaceAuthenticationGroup, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::RegisterFrameProviderInfo(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def register_frame_provider_info(cls, manager: IPerceptionFrameProviderManager, frame_provider_info: PerceptionFrameProviderInfo, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::UnregisterControlGroup(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionControlGroup)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def unregister_control_group(cls, manager: IPerceptionFrameProviderManager, control_group: PerceptionControlGroup, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::UnregisterCorrelationGroup(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionCorrelationGroup)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def unregister_correlation_group(cls, manager: IPerceptionFrameProviderManager, correlation_group: PerceptionCorrelationGroup, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::UnregisterFaceAuthenticationGroup(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def unregister_face_authentication_group(cls, manager: IPerceptionFrameProviderManager, face_authentication_group: PerceptionFaceAuthenticationGroup, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::UnregisterFrameProviderInfo(Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager,Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def unregister_frame_provider_info(cls, manager: IPerceptionFrameProviderManager, frame_provider_info: PerceptionFrameProviderInfo, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::UpdateAvailabilityForProvider(Windows.Devices.Perception.Provider.IPerceptionFrameProvider,System.Boolean)
-    # @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def update_availability_for_provider(cls, provider: IPerceptionFrameProvider, available: bool, /) -> None: ...
 
 @typing.final
+@deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFrameProviderManagerService(winrt.system.Object, metaclass=PerceptionFrameProviderManagerService_Static):
     ...
 
 @typing.final
+@deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionPropertyChangeRequest(winrt.system.Object):
     # Windows.Foundation.Deferral Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest::GetDeferral()
-    # @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest::get_Status()
     @_property
+    @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def status(self) -> windows_devices_perception.PerceptionFrameSourcePropertyChangeStatus: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest::put_Status(Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeStatus)
     @status.setter
+    @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def status(self, value: windows_devices_perception.PerceptionFrameSourcePropertyChangeStatus) -> None: ...
     # System.String Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest::get_Name()
     @_property
+    @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def name(self) -> str: ...
     # System.Object Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest::get_Value()
     @_property
+    @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
+@deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.IClosable):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, max_outstanding_frame_count_for_write: winrt.system.UInt32, format: windows_graphics_imaging.BitmapPixelFormat, resolution: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], alpha: windows_graphics_imaging.BitmapAlphaMode) -> typing.Self: ...
     # Windows.Devices.Perception.Provider.PerceptionFrame Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator::AllocateFrame()
-    # @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def allocate_frame(self) -> PerceptionFrame: ...
     # System.Void Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator::Close()
     def close(self) -> None: ...
     # Windows.Devices.Perception.Provider.PerceptionFrame Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator::CopyFromVideoFrame(Windows.Media.VideoFrame)
-    # @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def copy_from_video_frame(self, frame: windows_media.VideoFrame, /) -> PerceptionFrame: ...
 
 @typing.final
 class _IPerceptionFrameProvider: ...
 
+@deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class IPerceptionFrameProvider(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::SetProperty(Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest)
-    # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def set_property(self, value: PerceptionPropertyChangeRequest, /) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::Start()
-    # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def start(self) -> None: ...
     # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::Stop()
-    # @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def stop(self) -> None: ...
     # System.Boolean Windows.Devices.Perception.Provider.IPerceptionFrameProvider::get_Available()
     @_property
+    @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def available(self) -> bool: ...
     # Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo Windows.Devices.Perception.Provider.IPerceptionFrameProvider::get_FrameProviderInfo()
     @_property
+    @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def frame_provider_info(self) -> PerceptionFrameProviderInfo: ...
     # Windows.Foundation.Collections.IPropertySet Windows.Devices.Perception.Provider.IPerceptionFrameProvider::get_Properties()
     @_property
+    @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
 class _IPerceptionFrameProviderManager: ...
 
+@deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class IPerceptionFrameProviderManager(windows_foundation.IClosable, winrt._winrt.IInspectable):
     # Windows.Devices.Perception.Provider.IPerceptionFrameProvider Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager::GetFrameProvider(Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo)
-    # @deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
+    @deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
     def get_frame_provider(self, frame_provider_info: PerceptionFrameProviderInfo, /) -> IPerceptionFrameProvider: ...
 

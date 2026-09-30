@@ -134,16 +134,16 @@ class GattWriteOption(enum.IntEnum):
 @typing.final
 class GattCharacteristic_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::ConvertShortIdToUuid(System.UInt16)
-    # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
+    @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
 
 @typing.final
 class GattCharacteristic(winrt.system.Object, metaclass=GattCharacteristic_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetAllDescriptors()
-    # @deprecated("Use GetDescriptorsAsync instead of GetAllDescriptors.  For more information, see MSDN.")
+    @deprecated("Use GetDescriptorsAsync instead of GetAllDescriptors.  For more information, see MSDN.")
     def get_all_descriptors(self) -> _cabc.Sequence[GattDescriptor]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptors(System.Guid)
-    # @deprecated("Use GetDescriptorsForUuidAsync instead of GetDescriptors.  For more information, see MSDN.")
+    @deprecated("Use GetDescriptorsForUuidAsync instead of GetDescriptors.  For more information, see MSDN.")
     def get_descriptors(self, descriptor_uuid: _uuid.UUID, /) -> _cabc.Sequence[GattDescriptor]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetDescriptorsAsync()
@@ -510,7 +510,7 @@ class GattClientNotificationResult(winrt.system.Object):
 @typing.final
 class GattDescriptor_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::ConvertShortIdToUuid(System.UInt16)
-    # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
+    @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
 
 @typing.final
@@ -582,7 +582,7 @@ class GattDescriptorsResult(winrt.system.Object):
 @typing.final
 class GattDeviceService_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::ConvertShortIdToUuid(System.UInt16)
-    # @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
+    @deprecated("Use BluetoothUuidHelper instead of ConvertShortIdToUuid.  For more information, see MSDN.")
     def convert_short_id_to_uuid(cls, short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::FromIdAsync(System.String)
@@ -615,7 +615,7 @@ class GattDeviceService_Static(winrt._winrt.IInspectable_Static):
     @deprecated("Use get_device_selector_for_bluetooth_device_id_and_uuid() instead.")
     def get_device_selector_for_bluetooth_device_id_and_uuid_with_cache_mode(cls, bluetooth_device_id: windows_devices_bluetooth.BluetoothDeviceId, service_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> str: ...
     # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorFromShortId(System.UInt16)
-    # @deprecated("Use GetDeviceSelectorFromUuid instead of GetDeviceSelectorFromShortId.  For more information, see MSDN.")
+    @deprecated("Use GetDeviceSelectorFromUuid instead of GetDeviceSelectorFromShortId.  For more information, see MSDN.")
     def get_device_selector_from_short_id(cls, service_short_id: winrt.system.UInt16, /) -> str: ...
     # System.String Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetDeviceSelectorFromUuid(System.Guid)
     def get_device_selector_from_uuid(cls, service_uuid: _uuid.UUID, /) -> str: ...
@@ -627,13 +627,13 @@ class GattDeviceService(winrt.system.Object, windows_foundation.IClosable, metac
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetAllCharacteristics()
-    # @deprecated("Use GetCharacteristicsAsync instead of GetAllCharacteristics.  For more information, see MSDN.")
+    @deprecated("Use GetCharacteristicsAsync instead of GetAllCharacteristics.  For more information, see MSDN.")
     def get_all_characteristics(self) -> _cabc.Sequence[GattCharacteristic]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetAllIncludedServices()
-    # @deprecated("Use GetIncludedServicesAsync instead of GetAllIncludedServices.  For more information, see MSDN.")
+    @deprecated("Use GetIncludedServicesAsync instead of GetAllIncludedServices.  For more information, see MSDN.")
     def get_all_included_services(self) -> _cabc.Sequence[GattDeviceService]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristics(System.Guid)
-    # @deprecated("Use GetCharacteristicsForUuidAsync instead of GetCharacteristics.  For more information, see MSDN.")
+    @deprecated("Use GetCharacteristicsForUuidAsync instead of GetCharacteristics.  For more information, see MSDN.")
     def get_characteristics(self, characteristic_uuid: _uuid.UUID, /) -> _cabc.Sequence[GattCharacteristic]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetCharacteristicsAsync()
@@ -656,7 +656,7 @@ class GattDeviceService(winrt.system.Object, windows_foundation.IClosable, metac
     @deprecated("Use get_characteristics_for_uuid_async() instead.")
     def get_characteristics_for_uuid_with_cache_mode_async(self, characteristic_uuid: _uuid.UUID, cache_mode: windows_devices_bluetooth.BluetoothCacheMode, /) -> windows_foundation.IAsyncOperation[GattCharacteristicsResult]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServices(System.Guid)
-    # @deprecated("Use GetIncludedServicesForUuidAsync instead of GetIncludedServices.  For more information, see MSDN.")
+    @deprecated("Use GetIncludedServicesForUuidAsync instead of GetIncludedServices.  For more information, see MSDN.")
     def get_included_services(self, service_uuid: _uuid.UUID, /) -> _cabc.Sequence[GattDeviceService]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetIncludedServicesAsync()
@@ -693,9 +693,11 @@ class GattDeviceService(winrt.system.Object, windows_foundation.IClosable, metac
     def uuid(self) -> _uuid.UUID: ...
     # Windows.Devices.Bluetooth.BluetoothLEDevice Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::get_Device()
     @_property
+    @deprecated("Use Session instead of Device property.  For more information, see MSDN.")
     def device(self) -> windows_devices_bluetooth.BluetoothLEDevice: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::get_ParentServices()
     @_property
+    @deprecated("ParentServices may be altered or unavailable in future releases.  For more information, see MSDN.")
     def parent_services(self) -> _cabc.Sequence[GattDeviceService]: ...
     # Windows.Devices.Enumeration.DeviceAccessInformation Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::get_DeviceAccessInformation()
     @_property

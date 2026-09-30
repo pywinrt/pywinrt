@@ -108,16 +108,22 @@ class EasRequireEncryptionResult(enum.IntEnum):
     CAN_BE_COMPLIANT = 2
     NOT_PROVISIONED_ON_ALL_VOLUMES = 3
     DE_FIXED_DATA_NOT_SUPPORTED = 4
+    """Deprecated: DeFixedDataNotSupported may be altered or unavailable for releases after Windows 8.1. Instead, use FixedDataNotSupported."""
     FIXED_DATA_NOT_SUPPORTED = 4
     DE_HARDWARE_NOT_COMPLIANT = 5
+    """Deprecated: DeHardwareNotCompliant may be altered or unavailable for releases after Windows 8.1. Instead, use HardwareNotCompliant."""
     HARDWARE_NOT_COMPLIANT = 5
     DE_WIN_RE_NOT_CONFIGURED = 6
+    """Deprecated: DeWinReNotConfigured may be altered or unavailable for releases after Windows 8.1. Instead, use LockNotConfigured."""
     LOCK_NOT_CONFIGURED = 6
     DE_PROTECTION_SUSPENDED = 7
+    """Deprecated: DeProtectionSuspended may be altered or unavailable for releases after Windows 8.1. Instead, use ProtectionSuspended."""
     PROTECTION_SUSPENDED = 7
     DE_OS_VOLUME_NOT_PROTECTED = 8
+    """Deprecated: DeOsVolumeNotProtected may be altered or unavailable for releases after Windows 8.1. Instead, use OsVolumeNotProtected."""
     OS_VOLUME_NOT_PROTECTED = 8
     DE_PROTECTION_NOT_YET_ENABLED = 9
+    """Deprecated: DeProtectionNotYetEnabled may be altered or unavailable for releases after Windows 8.1. Instead, use ProtectionNotYetEnabled."""
     PROTECTION_NOT_YET_ENABLED = 9
     NO_FEATURE_LICENSE = 10
     OS_NOT_PROTECTED = 11

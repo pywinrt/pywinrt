@@ -5,6 +5,7 @@ import enum
 import typing
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -31,7 +32,7 @@ class ContactPickerUI(winrt.system.Object):
     def add_contact(self, contact: windows_applicationmodel_contacts.Contact, /) -> AddContactResult: ...
     @typing.overload
     # Windows.ApplicationModel.Contacts.Provider.AddContactResult Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::AddContact(System.String,Windows.ApplicationModel.Contacts.Contact)
-    # @deprecated("AddContact may be altered or unavailable for releases after Windows 8.1. Instead, use AddContact without the ID.")
+    @deprecated("AddContact may be altered or unavailable for releases after Windows 8.1. Instead, use AddContact without the ID.")
     def add_contact(self, id: str, contact: windows_applicationmodel_contacts.Contact, /) -> AddContactResult: ...
     # System.Boolean Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::ContainsContact(System.String)
     def contains_contact(self, id: str, /) -> bool: ...
@@ -43,6 +44,7 @@ class ContactPickerUI(winrt.system.Object):
     def remove_contact_removed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::get_DesiredFields()
     @_property
+    @deprecated("DesiredFields may be altered or unavailable for releases after Windows 8.1. Instead, use DesiredFieldsWithContactFieldType.")
     def desired_fields(self) -> _cabc.Sequence[str]: ...
     # Windows.ApplicationModel.Contacts.ContactSelectionMode Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::get_SelectionMode()
     @_property

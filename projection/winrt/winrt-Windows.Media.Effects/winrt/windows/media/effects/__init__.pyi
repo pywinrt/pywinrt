@@ -162,7 +162,7 @@ class AudioRenderEffectsManager(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Effects.AudioEffect> Windows.Media.Effects.AudioRenderEffectsManager::GetAudioRenderEffects()
     def get_audio_render_effects(self) -> _cabc.Sequence[AudioEffect]: ...
     # System.Void Windows.Media.Effects.AudioRenderEffectsManager::ShowSettingsUI()
-    # @deprecated("Not supported starting in windows 10")
+    @deprecated("Not supported starting in windows 10")
     def show_settings_ui(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Effects.AudioRenderEffectsManager::add_AudioRenderEffectsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Effects.AudioRenderEffectsManager,System.Object>)
     def add_audio_render_effects_changed(self, handler: windows_foundation.TypedEventHandler[AudioRenderEffectsManager, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -170,9 +170,11 @@ class AudioRenderEffectsManager(winrt.system.Object):
     def remove_audio_render_effects_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.String Windows.Media.Effects.AudioRenderEffectsManager::get_EffectsProviderSettingsLabel()
     @_property
+    @deprecated("Not supported starting in windows 10")
     def effects_provider_settings_label(self) -> str: ...
     # Windows.Storage.Streams.IRandomAccessStreamWithContentType Windows.Media.Effects.AudioRenderEffectsManager::get_EffectsProviderThumbnail()
     @_property
+    @deprecated("Not supported starting in windows 10")
     def effects_provider_thumbnail(self) -> windows_storage_streams.IRandomAccessStreamWithContentType: ...
 
 @typing.final

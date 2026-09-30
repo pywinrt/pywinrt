@@ -6,6 +6,7 @@ import enum
 import typing
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -131,6 +132,7 @@ class SmsMessageClass(enum.IntEnum):
     CLASS2 = 3
     CLASS3 = 4
 
+@deprecated("SmsMessageFilter may be altered or unavailable for releases after Windows 10.")
 class SmsMessageFilter(enum.IntEnum):
     ALL = 0
     UNREAD = 1
@@ -179,6 +181,7 @@ class SmsEncodedLength:
     def unpack(self) -> tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
+@deprecated("DeleteSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
 class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
@@ -203,6 +206,7 @@ class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAc
     def completed(self, value: windows_foundation.AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
+@deprecated("DeleteSmsMessagesOperation may be altered or unavailable for releases after Windows 10.")
 class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
@@ -227,6 +231,7 @@ class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncA
     def completed(self, value: windows_foundation.AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
+@deprecated("GetSmsDeviceOperation may be altered or unavailable for releases after Windows 10.")
 class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.IAsyncOperation[SmsDevice], windows_foundation.IAsyncInfo):
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Cancel()
     def cancel(self) -> None: ...
@@ -251,6 +256,7 @@ class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.IAsyncOperat
     def completed(self, value: windows_foundation.AsyncOperationCompletedHandler[SmsDevice]) -> None: ...
 
 @typing.final
+@deprecated("GetSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
 class GetSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncOperation[ISmsMessage], windows_foundation.IAsyncInfo):
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
@@ -275,6 +281,7 @@ class GetSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncOpera
     def completed(self, value: windows_foundation.AsyncOperationCompletedHandler[ISmsMessage]) -> None: ...
 
 @typing.final
+@deprecated("GetSmsMessagesOperation may be altered or unavailable for releases after Windows 10.")
 class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncOperationWithProgress[_cabc.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.IAsyncInfo):
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
@@ -305,6 +312,7 @@ class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncOper
     def completed(self, value: windows_foundation.AsyncOperationWithProgressCompletedHandler[_cabc.Sequence[ISmsMessage], winrt.system.Int32]) -> None: ...
 
 @typing.final
+@deprecated("SendSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
 class SendSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
@@ -414,19 +422,22 @@ class SmsAppMessage(winrt.system.Object, ISmsMessageBase):
     def sim_icc_id(self) -> str: ...
 
 @typing.final
+@deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
 class SmsBinaryMessage(winrt.system.Object, ISmsBinaryMessage, ISmsMessage):
     def __new__(cls) -> typing.Self: ...
     # System.Byte[] Windows.Devices.Sms.SmsBinaryMessage::GetData()
-    # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     def get_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Void Windows.Devices.Sms.SmsBinaryMessage::SetData(System.Byte[])
-    # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     def set_data(self, value: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> None: ...
     # Windows.Devices.Sms.SmsDataFormat Windows.Devices.Sms.SmsBinaryMessage::get_Format()
     @_property
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     def format(self) -> SmsDataFormat: ...
     # System.Void Windows.Devices.Sms.SmsBinaryMessage::put_Format(Windows.Devices.Sms.SmsDataFormat)
     @format.setter
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     def format(self, value: SmsDataFormat) -> None: ...
     # System.UInt32 Windows.Devices.Sms.SmsBinaryMessage::get_Id()
     @_property
@@ -486,49 +497,54 @@ class SmsBroadcastMessage(winrt.system.Object, ISmsMessageBase):
 @typing.final
 class SmsDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sms.SmsDevice> Windows.Devices.Sms.SmsDevice::FromIdAsync(System.String)
-    # @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SmsDevice]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sms.SmsDevice> Windows.Devices.Sms.SmsDevice::FromNetworkAccountIdAsync(System.String)
-    # @deprecated("ISmsDeviceStatics2 may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISmsDeviceStatics2 may be altered or unavailable for releases after Windows 10.")
     def from_network_account_id_async(cls, network_account_id: str, /) -> windows_foundation.IAsyncOperation[SmsDevice]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sms.SmsDevice> Windows.Devices.Sms.SmsDevice::GetDefaultAsync()
-    # @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[SmsDevice]: ...
     # System.String Windows.Devices.Sms.SmsDevice::GetDeviceSelector()
-    # @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
     def get_device_selector(cls) -> str: ...
 
 @typing.final
+@deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
 class SmsDevice(winrt.system.Object, ISmsDevice, metaclass=SmsDevice_Static):
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.SmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
     # Windows.Devices.Sms.SendSmsMessageOperation Windows.Devices.Sms.SmsDevice::SendMessageAsync(Windows.Devices.Sms.ISmsMessage)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def send_message_async(self, message: ISmsMessage, /) -> SendSmsMessageOperation: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.SmsDevice::add_SmsDeviceStatusChanged(Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def add_sms_device_status_changed(self, event_handler: SmsDeviceStatusChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Sms.SmsDevice::remove_SmsDeviceStatusChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def remove_sms_device_status_changed(self, event_cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.SmsDevice::add_SmsMessageReceived(Windows.Devices.Sms.SmsMessageReceivedEventHandler)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def add_sms_message_received(self, event_handler: SmsMessageReceivedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Sms.SmsDevice::remove_SmsMessageReceived(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def remove_sms_message_received(self, event_cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.String Windows.Devices.Sms.SmsDevice::get_AccountPhoneNumber()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def account_phone_number(self) -> str: ...
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsDevice::get_CellularClass()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def cellular_class(self) -> CellularClass: ...
     # Windows.Devices.Sms.SmsDeviceStatus Windows.Devices.Sms.SmsDevice::get_DeviceStatus()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def device_status(self) -> SmsDeviceStatus: ...
     # Windows.Devices.Sms.SmsDeviceMessageStore Windows.Devices.Sms.SmsDevice::get_MessageStore()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def message_store(self) -> SmsDeviceMessageStore: ...
 
 @typing.final
@@ -575,21 +591,23 @@ class SmsDevice2(winrt.system.Object, metaclass=SmsDevice2_Static):
     def parent_device_id(self) -> str: ...
 
 @typing.final
+@deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
 class SmsDeviceMessageStore(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Devices.Sms.SmsDeviceMessageStore::DeleteMessageAsync(System.UInt32)
-    # @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
+    @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
     def delete_message_async(self, message_id: winrt.system.UInt32, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.Sms.SmsDeviceMessageStore::DeleteMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)
-    # @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
+    @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
     def delete_messages_async(self, message_filter: SmsMessageFilter, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sms.ISmsMessage> Windows.Devices.Sms.SmsDeviceMessageStore::GetMessageAsync(System.UInt32)
-    # @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
+    @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
     def get_message_async(self, message_id: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[ISmsMessage]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsMessage>,System.Int32> Windows.Devices.Sms.SmsDeviceMessageStore::GetMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)
-    # @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
+    @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
     def get_messages_async(self, message_filter: SmsMessageFilter, /) -> windows_foundation.IAsyncOperationWithProgress[_cabc.Sequence[ISmsMessage], winrt.system.Int32]: ...
     # System.UInt32 Windows.Devices.Sms.SmsDeviceMessageStore::get_MaxMessages()
     @_property
+    @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
     def max_messages(self) -> winrt.system.UInt32: ...
 
 @typing.final
@@ -649,12 +667,15 @@ class SmsFilterRules(winrt.system.Object):
     def rules(self) -> _cabc.MutableSequence[SmsFilterRule]: ...
 
 @typing.final
+@deprecated("SmsMessageReceivedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SmsMessageReceivedEventArgs(winrt.system.Object):
     # Windows.Devices.Sms.SmsBinaryMessage Windows.Devices.Sms.SmsMessageReceivedEventArgs::get_BinaryMessage()
     @_property
+    @deprecated("SmsMessageReceivedEventArgs may be altered or unavailable for releases after Windows 10.")
     def binary_message(self) -> SmsBinaryMessage: ...
     # Windows.Devices.Sms.SmsTextMessage Windows.Devices.Sms.SmsMessageReceivedEventArgs::get_TextMessage()
     @_property
+    @deprecated("SmsMessageReceivedEventArgs may be altered or unavailable for releases after Windows 10.")
     def text_message(self) -> SmsTextMessage: ...
 
 @typing.final
@@ -706,18 +727,23 @@ class SmsMessageRegistration(winrt.system.Object, metaclass=SmsMessageRegistrati
     def id(self) -> str: ...
 
 @typing.final
+@deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
 class SmsReceivedEventDetails(winrt.system.Object):
     # System.String Windows.Devices.Sms.SmsReceivedEventDetails::get_DeviceId()
     @_property
+    @deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
     def device_id(self) -> str: ...
     # System.UInt32 Windows.Devices.Sms.SmsReceivedEventDetails::get_MessageIndex()
     @_property
+    @deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
     def message_index(self) -> winrt.system.UInt32: ...
     # Windows.Devices.Sms.SmsBinaryMessage Windows.Devices.Sms.SmsReceivedEventDetails::get_BinaryMessage()
     @_property
+    @deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
     def binary_message(self) -> SmsBinaryMessage: ...
     # Windows.Devices.Sms.SmsMessageClass Windows.Devices.Sms.SmsReceivedEventDetails::get_MessageClass()
     @_property
+    @deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
     def message_class(self) -> SmsMessageClass: ...
 
 @typing.final
@@ -786,17 +812,18 @@ class SmsStatusMessage(winrt.system.Object, ISmsMessageBase):
 @typing.final
 class SmsTextMessage_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Sms.SmsTextMessage Windows.Devices.Sms.SmsTextMessage::FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])
-    # @deprecated("ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.")
     def from_binary_data(cls, format: SmsDataFormat, value: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> SmsTextMessage: ...
     # Windows.Devices.Sms.SmsTextMessage Windows.Devices.Sms.SmsTextMessage::FromBinaryMessage(Windows.Devices.Sms.SmsBinaryMessage)
-    # @deprecated("ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.")
+    @deprecated("ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.")
     def from_binary_message(cls, binary_message: SmsBinaryMessage, /) -> SmsTextMessage: ...
 
 @typing.final
+@deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
 class SmsTextMessage(winrt.system.Object, ISmsTextMessage, ISmsMessage, metaclass=SmsTextMessage_Static):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.SmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
-    # @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def to_binary_messages(self, format: SmsDataFormat, /) -> _cabc.Sequence[ISmsBinaryMessage]: ...
     # System.UInt32 Windows.Devices.Sms.SmsTextMessage::get_Id()
     @_property
@@ -806,39 +833,51 @@ class SmsTextMessage(winrt.system.Object, ISmsTextMessage, ISmsMessage, metaclas
     def message_class(self) -> SmsMessageClass: ...
     # System.String Windows.Devices.Sms.SmsTextMessage::get_To()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def to(self) -> str: ...
     # System.Void Windows.Devices.Sms.SmsTextMessage::put_To(System.String)
     @to.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def to(self, value: str) -> None: ...
     # System.String Windows.Devices.Sms.SmsTextMessage::get_From()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def from_(self) -> str: ...
     # System.Void Windows.Devices.Sms.SmsTextMessage::put_From(System.String)
     @from_.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def from_(self, value: str) -> None: ...
     # Windows.Devices.Sms.SmsEncoding Windows.Devices.Sms.SmsTextMessage::get_Encoding()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def encoding(self) -> SmsEncoding: ...
     # System.Void Windows.Devices.Sms.SmsTextMessage::put_Encoding(Windows.Devices.Sms.SmsEncoding)
     @encoding.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def encoding(self, value: SmsEncoding) -> None: ...
     # System.String Windows.Devices.Sms.SmsTextMessage::get_Body()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def body(self) -> str: ...
     # System.Void Windows.Devices.Sms.SmsTextMessage::put_Body(System.String)
     @body.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def body(self, value: str) -> None: ...
     # System.UInt32 Windows.Devices.Sms.SmsTextMessage::get_PartCount()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def part_count(self) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Devices.Sms.SmsTextMessage::get_PartNumber()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def part_number(self) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Devices.Sms.SmsTextMessage::get_PartReferenceId()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def part_reference_id(self) -> winrt.system.UInt32: ...
     # Windows.Foundation.DateTime Windows.Devices.Sms.SmsTextMessage::get_Timestamp()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
@@ -980,66 +1019,74 @@ class SmsWapMessage(winrt.system.Object, ISmsMessageBase):
 @typing.final
 class _ISmsBinaryMessage: ...
 
+@deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
 class ISmsBinaryMessage(ISmsMessage, winrt._winrt.IInspectable):
     # System.Byte[] Windows.Devices.Sms.ISmsBinaryMessage::GetData()
-    # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     @abstractmethod
     def get_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Void Windows.Devices.Sms.ISmsBinaryMessage::SetData(System.Byte[])
-    # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     @abstractmethod
     def set_data(self, value: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> None: ...
     # Windows.Devices.Sms.SmsDataFormat Windows.Devices.Sms.ISmsBinaryMessage::get_Format()
     @_property
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     @abstractmethod
     def format(self) -> SmsDataFormat: ...
     # System.Void Windows.Devices.Sms.ISmsBinaryMessage::put_Format(Windows.Devices.Sms.SmsDataFormat)
     @format.setter
+    @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     @abstractmethod
     def format(self, value: SmsDataFormat) -> None: ...
 
 @typing.final
 class _ISmsDevice: ...
 
+@deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
 class ISmsDevice(winrt._winrt.IInspectable):
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.ISmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
     # Windows.Devices.Sms.SendSmsMessageOperation Windows.Devices.Sms.ISmsDevice::SendMessageAsync(Windows.Devices.Sms.ISmsMessage)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def send_message_async(self, message: ISmsMessage, /) -> SendSmsMessageOperation: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.ISmsDevice::add_SmsDeviceStatusChanged(Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def add_sms_device_status_changed(self, event_handler: SmsDeviceStatusChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Sms.ISmsDevice::remove_SmsDeviceStatusChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def remove_sms_device_status_changed(self, event_cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.ISmsDevice::add_SmsMessageReceived(Windows.Devices.Sms.SmsMessageReceivedEventHandler)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def add_sms_message_received(self, event_handler: SmsMessageReceivedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Sms.ISmsDevice::remove_SmsMessageReceived(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def remove_sms_message_received(self, event_cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.String Windows.Devices.Sms.ISmsDevice::get_AccountPhoneNumber()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def account_phone_number(self) -> str: ...
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.ISmsDevice::get_CellularClass()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def cellular_class(self) -> CellularClass: ...
     # Windows.Devices.Sms.SmsDeviceStatus Windows.Devices.Sms.ISmsDevice::get_DeviceStatus()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def device_status(self) -> SmsDeviceStatus: ...
     # Windows.Devices.Sms.SmsDeviceMessageStore Windows.Devices.Sms.ISmsDevice::get_MessageStore()
     @_property
+    @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
     def message_store(self) -> SmsDeviceMessageStore: ...
 
@@ -1084,57 +1131,70 @@ class ISmsMessageBase(winrt._winrt.IInspectable):
 @typing.final
 class _ISmsTextMessage: ...
 
+@deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
 class ISmsTextMessage(ISmsMessage, winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.ISmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
-    # @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def to_binary_messages(self, format: SmsDataFormat, /) -> _cabc.Sequence[ISmsBinaryMessage]: ...
     # System.String Windows.Devices.Sms.ISmsTextMessage::get_Body()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def body(self) -> str: ...
     # System.Void Windows.Devices.Sms.ISmsTextMessage::put_Body(System.String)
     @body.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def body(self, value: str) -> None: ...
     # Windows.Devices.Sms.SmsEncoding Windows.Devices.Sms.ISmsTextMessage::get_Encoding()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def encoding(self) -> SmsEncoding: ...
     # System.Void Windows.Devices.Sms.ISmsTextMessage::put_Encoding(Windows.Devices.Sms.SmsEncoding)
     @encoding.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def encoding(self, value: SmsEncoding) -> None: ...
     # System.String Windows.Devices.Sms.ISmsTextMessage::get_From()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def from_(self) -> str: ...
     # System.Void Windows.Devices.Sms.ISmsTextMessage::put_From(System.String)
     @from_.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def from_(self, value: str) -> None: ...
     # System.UInt32 Windows.Devices.Sms.ISmsTextMessage::get_PartCount()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def part_count(self) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Devices.Sms.ISmsTextMessage::get_PartNumber()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def part_number(self) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Devices.Sms.ISmsTextMessage::get_PartReferenceId()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def part_reference_id(self) -> winrt.system.UInt32: ...
     # Windows.Foundation.DateTime Windows.Devices.Sms.ISmsTextMessage::get_Timestamp()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def timestamp(self) -> datetime.datetime: ...
     # System.String Windows.Devices.Sms.ISmsTextMessage::get_To()
     @_property
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def to(self) -> str: ...
     # System.Void Windows.Devices.Sms.ISmsTextMessage::put_To(System.String)
     @to.setter
+    @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod
     def to(self, value: str) -> None: ...
 

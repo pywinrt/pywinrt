@@ -364,6 +364,7 @@ class TextLineBounds(enum.IntEnum):
 
 class TextReadingOrder(enum.IntEnum):
     DEFAULT = 0
+    """Deprecated: Consider using UseFlowDirection, which is an improved version of Default. For more info, see MSDN."""
     USE_FLOW_DIRECTION = 0
     DETECT_FROM_CONTENT = 1
 

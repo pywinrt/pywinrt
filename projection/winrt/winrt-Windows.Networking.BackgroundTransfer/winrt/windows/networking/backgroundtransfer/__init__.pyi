@@ -129,17 +129,16 @@ class BackgroundDownloader_Static(winrt._winrt.IInspectable_Static):
     def get_current_downloads_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[DownloadOperation]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsAsync(System.String)
-    # @deprecated("GetCurrentDownloadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentDownloadsForTransferGroupAsync.")
+    @deprecated("GetCurrentDownloadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentDownloadsForTransferGroupAsync.")
     def get_current_downloads_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[DownloadOperation]]: ...
     # Deprecated alias of get_current_downloads_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsAsync(System.String)
-    # @deprecated("GetCurrentDownloadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentDownloadsForTransferGroupAsync.")
     @deprecated("Use get_current_downloads_async() instead.")
     def get_current_downloads_for_group_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[DownloadOperation]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsForTransferGroupAsync(Windows.Networking.BackgroundTransfer.BackgroundTransferGroup)
     def get_current_downloads_for_transfer_group_async(cls, group: BackgroundTransferGroup, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[DownloadOperation]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> Windows.Networking.BackgroundTransfer.BackgroundDownloader::RequestUnconstrainedDownloadsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.DownloadOperation>)
-    # @deprecated("RequestUnconstrainedDownloadsAsync is deprecated and may not work on all platforms. For more info, see MSDN.")
+    @deprecated("RequestUnconstrainedDownloadsAsync is deprecated and may not work on all platforms. For more info, see MSDN.")
     def request_unconstrained_downloads_async(cls, operations: _cabc.Iterable[DownloadOperation], /) -> windows_foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
 @typing.final
@@ -203,9 +202,11 @@ class BackgroundDownloader(winrt.system.Object, IBackgroundTransferBase, metacla
     def cost_policy(self, value: BackgroundTransferCostPolicy) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.BackgroundDownloader::get_Group()
     @_property
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     def group(self) -> str: ...
     # System.Void Windows.Networking.BackgroundTransfer.BackgroundDownloader::put_Group(System.String)
     @group.setter
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     def group(self, value: str) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.BackgroundDownloader::get_Method()
     @_property
@@ -306,17 +307,16 @@ class BackgroundUploader_Static(winrt._winrt.IInspectable_Static):
     def get_current_uploads_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[UploadOperation]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsAsync(System.String)
-    # @deprecated("GetCurrentUploadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentUploadsForTransferGroupAsync.")
+    @deprecated("GetCurrentUploadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentUploadsForTransferGroupAsync.")
     def get_current_uploads_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[UploadOperation]]: ...
     # Deprecated alias of get_current_uploads_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsAsync(System.String)
-    # @deprecated("GetCurrentUploadsAsync(group) may be altered or unavailable for releases after Windows 8.1. Instead, use GetCurrentUploadsForTransferGroupAsync.")
     @deprecated("Use get_current_uploads_async() instead.")
     def get_current_uploads_for_group_async(cls, group: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[UploadOperation]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsForTransferGroupAsync(Windows.Networking.BackgroundTransfer.BackgroundTransferGroup)
     def get_current_uploads_for_transfer_group_async(cls, group: BackgroundTransferGroup, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[UploadOperation]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> Windows.Networking.BackgroundTransfer.BackgroundUploader::RequestUnconstrainedUploadsAsync(Windows.Foundation.Collections.IIterable`1<Windows.Networking.BackgroundTransfer.UploadOperation>)
-    # @deprecated("RequestUnconstrainedUploadsAsync is deprecated and may not work on all platforms. For more info, see MSDN.")
+    @deprecated("RequestUnconstrainedUploadsAsync is deprecated and may not work on all platforms. For more info, see MSDN.")
     def request_unconstrained_uploads_async(cls, operations: _cabc.Iterable[UploadOperation], /) -> windows_foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
 @typing.final
@@ -372,9 +372,11 @@ class BackgroundUploader(winrt.system.Object, IBackgroundTransferBase, metaclass
     def method(self, value: str) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.BackgroundUploader::get_Group()
     @_property
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     def group(self) -> str: ...
     # System.Void Windows.Networking.BackgroundTransfer.BackgroundUploader::put_Group(System.String)
     @group.setter
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     def group(self, value: str) -> None: ...
     # Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy Windows.Networking.BackgroundTransfer.BackgroundUploader::get_CostPolicy()
     @_property
@@ -480,6 +482,7 @@ class DownloadOperation(winrt.system.Object, IBackgroundTransferOperationPriorit
     def method(self) -> str: ...
     # System.String Windows.Networking.BackgroundTransfer.DownloadOperation::get_Group()
     @_property
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     def group(self) -> str: ...
     # System.Guid Windows.Networking.BackgroundTransfer.DownloadOperation::get_Guid()
     @_property
@@ -528,9 +531,11 @@ class ResponseInformation(winrt.system.Object):
     def status_code(self) -> winrt.system.UInt32: ...
 
 @typing.final
+@deprecated("UnconstrainedTransferRequestResult is deprecated and may not work on all platforms. For more info, see MSDN.")
 class UnconstrainedTransferRequestResult(winrt.system.Object):
     # System.Boolean Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult::get_IsUnconstrained()
     @_property
+    @deprecated("IsUnconstrained is deprecated and may not work on all platforms. For more info, see MSDN.")
     def is_unconstrained(self) -> bool: ...
 
 @typing.final
@@ -557,6 +562,7 @@ class UploadOperation(winrt.system.Object, IBackgroundTransferOperationPriority,
     def cost_policy(self, value: BackgroundTransferCostPolicy) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.UploadOperation::get_Group()
     @_property
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     def group(self) -> str: ...
     # System.Guid Windows.Networking.BackgroundTransfer.UploadOperation::get_Guid()
     @_property
@@ -600,10 +606,12 @@ class IBackgroundTransferBase(winrt._winrt.IInspectable):
     def cost_policy(self, value: BackgroundTransferCostPolicy) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_Group()
     @_property
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     @abstractmethod
     def group(self) -> str: ...
     # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::put_Group(System.String)
     @group.setter
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     @abstractmethod
     def group(self, value: str) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::get_Method()
@@ -662,6 +670,7 @@ class IBackgroundTransferOperation(winrt._winrt.IInspectable):
     def cost_policy(self, value: BackgroundTransferCostPolicy) -> None: ...
     # System.String Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_Group()
     @_property
+    @deprecated("Group may be altered or unavailable for releases after Windows 8.1. Instead, use TransferGroup.")
     @abstractmethod
     def group(self) -> str: ...
     # System.Guid Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::get_Guid()

@@ -297,6 +297,7 @@ class WebAccountProvider(winrt.system.Object):
     def display_name(self) -> str: ...
     # Windows.Foundation.Uri Windows.Security.Credentials.WebAccountProvider::get_IconUri()
     @_property
+    @deprecated("IconUri may be altered or unavailable for releases after Windows 8.2. Instead, use Icon.")
     def icon_uri(self) -> windows_foundation.Uri: ...
     # System.String Windows.Security.Credentials.WebAccountProvider::get_Id()
     @_property

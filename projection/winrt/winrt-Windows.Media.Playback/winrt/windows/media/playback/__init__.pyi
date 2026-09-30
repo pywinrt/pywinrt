@@ -163,6 +163,7 @@ class MediaPlayerError(enum.IntEnum):
     DECODING_ERROR = 3
     SOURCE_NOT_SUPPORTED = 4
 
+@deprecated("Use MediaPlaybackState instead of MediaPlayerState.  For more info, see MSDN.")
 class MediaPlayerState(enum.IntEnum):
     CLOSED = 0
     OPENING = 1
@@ -188,34 +189,36 @@ class TimedMetadataTrackPresentationMode(enum.IntEnum):
 @typing.final
 class BackgroundMediaPlayer_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Media.Playback.BackgroundMediaPlayer::IsMediaPlaying()
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def is_media_playing(cls) -> bool: ...
     # System.Void Windows.Media.Playback.BackgroundMediaPlayer::SendMessageToBackground(Windows.Foundation.Collections.ValueSet)
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def send_message_to_background(cls, value: windows_foundation_collections.ValueSet, /) -> None: ...
     # System.Void Windows.Media.Playback.BackgroundMediaPlayer::SendMessageToForeground(Windows.Foundation.Collections.ValueSet)
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def send_message_to_foreground(cls, value: windows_foundation_collections.ValueSet, /) -> None: ...
     # System.Void Windows.Media.Playback.BackgroundMediaPlayer::Shutdown()
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def shutdown(cls) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.BackgroundMediaPlayer::add_MessageReceivedFromBackground(Windows.Foundation.EventHandler`1<Windows.Media.Playback.MediaPlayerDataReceivedEventArgs>)
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def add_message_received_from_background(cls, value: windows_foundation.EventHandler[MediaPlayerDataReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.BackgroundMediaPlayer::remove_MessageReceivedFromBackground(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def remove_message_received_from_background(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.BackgroundMediaPlayer::add_MessageReceivedFromForeground(Windows.Foundation.EventHandler`1<Windows.Media.Playback.MediaPlayerDataReceivedEventArgs>)
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def add_message_received_from_foreground(cls, value: windows_foundation.EventHandler[MediaPlayerDataReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.BackgroundMediaPlayer::remove_MessageReceivedFromForeground(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def remove_message_received_from_foreground(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Media.Playback.MediaPlayer Windows.Media.Playback.BackgroundMediaPlayer::get_Current()
     @_property
+    @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def current(cls) -> MediaPlayer: ...
 
 @typing.final
+@deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
 class BackgroundMediaPlayer(winrt.system.Object, metaclass=BackgroundMediaPlayer_Static):
     ...
 
@@ -1067,40 +1070,40 @@ class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
     @deprecated("Use render_subtitles_to_surface() instead.")
     def render_subtitles_to_surface_with_target_rectangle(self, destination: windows_graphics_directx_direct3d11.IDirect3DSurface, target_rectangle: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> bool: ...
     # System.Void Windows.Media.Playback.MediaPlayer::SetFileSource(Windows.Storage.IStorageFile)
-    # @deprecated("Use Source instead of SetFileSource.  For more info, see MSDN.")
+    @deprecated("Use Source instead of SetFileSource.  For more info, see MSDN.")
     def set_file_source(self, file: windows_storage.IStorageFile, /) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::SetMediaSource(Windows.Media.Core.IMediaSource)
-    # @deprecated("Use Source instead of SetMediaSource.  For more info, see MSDN.")
+    @deprecated("Use Source instead of SetMediaSource.  For more info, see MSDN.")
     def set_media_source(self, source: windows_media_core.IMediaSource, /) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::SetStreamSource(Windows.Storage.Streams.IRandomAccessStream)
-    # @deprecated("Use Source instead of SetStreamSource.  For more info, see MSDN.")
+    @deprecated("Use Source instead of SetStreamSource.  For more info, see MSDN.")
     def set_stream_source(self, stream: windows_storage_streams.IRandomAccessStream, /) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::SetSurfaceSize(Windows.Foundation.Size)
     def set_surface_size(self, size: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::SetUriSource(Windows.Foundation.Uri)
-    # @deprecated("Use Source instead of SetUriSource.  For more info, see MSDN.")
+    @deprecated("Use Source instead of SetUriSource.  For more info, see MSDN.")
     def set_uri_source(self, value: windows_foundation.Uri, /) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::StepBackwardOneFrame()
     def step_backward_one_frame(self) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayer::StepForwardOneFrame()
     def step_forward_one_frame(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_BufferingEnded(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,System.Object>)
-    # @deprecated("Use PlaybackSession.BufferingEnded instead of BufferingEnded.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.BufferingEnded instead of BufferingEnded.  For more info, see MSDN.")
     def add_buffering_ended(self, value: windows_foundation.TypedEventHandler[MediaPlayer, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlayer::remove_BufferingEnded(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use PlaybackSession.BufferingEnded instead of BufferingEnded.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.BufferingEnded instead of BufferingEnded.  For more info, see MSDN.")
     def remove_buffering_ended(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_BufferingStarted(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,System.Object>)
-    # @deprecated("Use PlaybackSession.BufferingStarted instead of BufferingStarted.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.BufferingStarted instead of BufferingStarted.  For more info, see MSDN.")
     def add_buffering_started(self, value: windows_foundation.TypedEventHandler[MediaPlayer, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlayer::remove_BufferingStarted(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use PlaybackSession.BufferingStarted instead of BufferingStarted.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.BufferingStarted instead of BufferingStarted.  For more info, see MSDN.")
     def remove_buffering_started(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_CurrentStateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,System.Object>)
-    # @deprecated("Use PlaybackSession.PlaybackStateChanged instead of CurrentStateChanged.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.PlaybackStateChanged instead of CurrentStateChanged.  For more info, see MSDN.")
     def add_current_state_changed(self, value: windows_foundation.TypedEventHandler[MediaPlayer, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlayer::remove_CurrentStateChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use PlaybackSession.PlaybackStateChanged instead of CurrentStateChanged.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.PlaybackStateChanged instead of CurrentStateChanged.  For more info, see MSDN.")
     def remove_current_state_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_MediaEnded(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,System.Object>)
     def add_media_ended(self, value: windows_foundation.TypedEventHandler[MediaPlayer, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -1115,22 +1118,22 @@ class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
     # System.Void Windows.Media.Playback.MediaPlayer::remove_MediaOpened(Windows.Foundation.EventRegistrationToken)
     def remove_media_opened(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_MediaPlayerRateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.MediaPlayerRateChangedEventArgs>)
-    # @deprecated("Use PlaybackSession.PlaybackRateChanged instead of MediaPlayerRateChanged.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.PlaybackRateChanged instead of MediaPlayerRateChanged.  For more info, see MSDN.")
     def add_media_player_rate_changed(self, value: windows_foundation.TypedEventHandler[MediaPlayer, MediaPlayerRateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlayer::remove_MediaPlayerRateChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use PlaybackSession.PlaybackRateChanged instead of MediaPlayerRateChanged.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.PlaybackRateChanged instead of MediaPlayerRateChanged.  For more info, see MSDN.")
     def remove_media_player_rate_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_PlaybackMediaMarkerReached(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs>)
-    # @deprecated("Use media tracks on MediaPlaybackItem instead of PlaybackMediaMarkers.  For more info, see MSDN.")
+    @deprecated("Use media tracks on MediaPlaybackItem instead of PlaybackMediaMarkers.  For more info, see MSDN.")
     def add_playback_media_marker_reached(self, value: windows_foundation.TypedEventHandler[MediaPlayer, PlaybackMediaMarkerReachedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlayer::remove_PlaybackMediaMarkerReached(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use media tracks on MediaPlaybackItem instead of PlaybackMediaMarkers.  For more info, see MSDN.")
+    @deprecated("Use media tracks on MediaPlaybackItem instead of PlaybackMediaMarkers.  For more info, see MSDN.")
     def remove_playback_media_marker_reached(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_SeekCompleted(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,System.Object>)
-    # @deprecated("Use PlaybackSession.SeekCompleted instead of SeekCompleted.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.SeekCompleted instead of SeekCompleted.  For more info, see MSDN.")
     def add_seek_completed(self, value: windows_foundation.TypedEventHandler[MediaPlayer, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlayer::remove_SeekCompleted(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use PlaybackSession.SeekCompleted instead of SeekCompleted.  For more info, see MSDN.")
+    @deprecated("Use PlaybackSession.SeekCompleted instead of SeekCompleted.  For more info, see MSDN.")
     def remove_seek_completed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlayer::add_VolumeChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlayer,System.Object>)
     def add_volume_changed(self, value: windows_foundation.TypedEventHandler[MediaPlayer, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -1160,15 +1163,19 @@ class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
     def volume(self, value: winrt.system.Double) -> None: ...
     # Windows.Foundation.TimeSpan Windows.Media.Playback.MediaPlayer::get_Position()
     @_property
+    @deprecated("Use PlaybackSession.Position instead of Position.  For more info, see MSDN.")
     def position(self) -> datetime.timedelta: ...
     # System.Void Windows.Media.Playback.MediaPlayer::put_Position(Windows.Foundation.TimeSpan)
     @position.setter
+    @deprecated("Use PlaybackSession.Position instead of Position.  For more info, see MSDN.")
     def position(self, value: datetime.timedelta) -> None: ...
     # System.Double Windows.Media.Playback.MediaPlayer::get_PlaybackRate()
     @_property
+    @deprecated("Use PlaybackSession.PlaybackRate instead of PlaybackRate.  For more info, see MSDN.")
     def playback_rate(self) -> winrt.system.Double: ...
     # System.Void Windows.Media.Playback.MediaPlayer::put_PlaybackRate(System.Double)
     @playback_rate.setter
+    @deprecated("Use PlaybackSession.PlaybackRate instead of PlaybackRate.  For more info, see MSDN.")
     def playback_rate(self, value: winrt.system.Double) -> None: ...
     # System.Boolean Windows.Media.Playback.MediaPlayer::get_IsLoopingEnabled()
     @_property
@@ -1190,24 +1197,31 @@ class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
     def auto_play(self, value: bool) -> None: ...
     # Windows.Media.Playback.MediaPlayerState Windows.Media.Playback.MediaPlayer::get_CurrentState()
     @_property
+    @deprecated("Use PlaybackSession.State instead of CurrentState.  For more info, see MSDN.")
     def current_state(self) -> MediaPlayerState: ...
     # Windows.Foundation.TimeSpan Windows.Media.Playback.MediaPlayer::get_NaturalDuration()
     @_property
+    @deprecated("Use PlaybackSession.NaturalDuration instead of NaturalDuration.  For more info, see MSDN.")
     def natural_duration(self) -> datetime.timedelta: ...
     # Windows.Media.Playback.PlaybackMediaMarkerSequence Windows.Media.Playback.MediaPlayer::get_PlaybackMediaMarkers()
     @_property
+    @deprecated("Use media tracks on MediaPlaybackItem instead of PlaybackMediaMarkers.  For more info, see MSDN.")
     def playback_media_markers(self) -> PlaybackMediaMarkerSequence: ...
     # System.Boolean Windows.Media.Playback.MediaPlayer::get_IsProtected()
     @_property
+    @deprecated("Use PlaybackSession.IsProtected instead of IsProtected.  For more info, see MSDN.")
     def is_protected(self) -> bool: ...
     # System.Double Windows.Media.Playback.MediaPlayer::get_BufferingProgress()
     @_property
+    @deprecated("Use PlaybackSession.BufferingProgress instead of BufferingProgress.  For more info, see MSDN.")
     def buffering_progress(self) -> winrt.system.Double: ...
     # System.Boolean Windows.Media.Playback.MediaPlayer::get_CanPause()
     @_property
+    @deprecated("Use PlaybackSession.CanPause instead of CanPause.  For more info, see MSDN.")
     def can_pause(self) -> bool: ...
     # System.Boolean Windows.Media.Playback.MediaPlayer::get_CanSeek()
     @_property
+    @deprecated("Use PlaybackSession.CanSeek instead of CanSeek.  For more info, see MSDN.")
     def can_seek(self) -> bool: ...
     # Windows.Media.Playback.MediaPlayerAudioDeviceType Windows.Media.Playback.MediaPlayer::get_AudioDeviceType()
     @_property
@@ -1381,13 +1395,15 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
 @typing.final
 class _IMediaEnginePlaybackSource: ...
 
+@deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
 class IMediaEnginePlaybackSource(winrt._winrt.IInspectable):
     # System.Void Windows.Media.Playback.IMediaEnginePlaybackSource::SetPlaybackSource(Windows.Media.Playback.IMediaPlaybackSource)
-    # @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
+    @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
     @abstractmethod
     def set_playback_source(self, source: IMediaPlaybackSource, /) -> None: ...
     # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.IMediaEnginePlaybackSource::get_CurrentItem()
     @_property
+    @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
     @abstractmethod
     def current_item(self) -> MediaPlaybackItem: ...
 

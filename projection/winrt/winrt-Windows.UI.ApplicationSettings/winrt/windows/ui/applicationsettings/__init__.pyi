@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -33,6 +34,7 @@ __all__ = [
     "WebAccountProviderCommandInvokedHandler",
 ]
 
+@deprecated("SettingsEdgeLocation is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsEdgeLocation(enum.IntEnum):
     RIGHT = 0
     LEFT = 1
@@ -149,34 +151,40 @@ class SettingsCommand(winrt.system.Object, windows_ui_popups.IUICommand, metacla
 @typing.final
 class SettingsPane_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.ApplicationSettings.SettingsPane Windows.UI.ApplicationSettings.SettingsPane::GetForCurrentView()
-    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_for_current_view(cls) -> SettingsPane: ...
     # System.Void Windows.UI.ApplicationSettings.SettingsPane::Show()
-    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show(cls) -> None: ...
     # Windows.UI.ApplicationSettings.SettingsEdgeLocation Windows.UI.ApplicationSettings.SettingsPane::get_Edge()
     @_property
+    @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def edge(cls) -> SettingsEdgeLocation: ...
 
 @typing.final
+@deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsPane(winrt.system.Object, metaclass=SettingsPane_Static):
     # Windows.Foundation.EventRegistrationToken Windows.UI.ApplicationSettings.SettingsPane::add_CommandsRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs>)
-    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_commands_requested(self, handler: windows_foundation.TypedEventHandler[SettingsPane, SettingsPaneCommandsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.ApplicationSettings.SettingsPane::remove_CommandsRequested(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_commands_requested(self, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
 
 @typing.final
+@deprecated("SettingsPaneCommandsRequest is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsPaneCommandsRequest(winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.SettingsCommand> Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest::get_ApplicationCommands()
     @_property
+    @deprecated("SettingsPaneCommandsRequest is deprecated and might not work on all platforms. For more info, see MSDN.")
     def application_commands(self) -> _cabc.MutableSequence[SettingsCommand]: ...
 
 @typing.final
+@deprecated("SettingsPaneCommandsRequestedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
     # Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs::get_Request()
     @_property
+    @deprecated("SettingsPaneCommandsRequestedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request(self) -> SettingsPaneCommandsRequest: ...
 
 @typing.final

@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -30,11 +31,13 @@ __all__ = [
     "UserProfilePersonalizationSettings",
 ]
 
+@deprecated("Use User instead of UserInformation. For more info, see MSDN.")
 class AccountPictureKind(enum.IntEnum):
     SMALL_IMAGE = 0
     LARGE_IMAGE = 1
     VIDEO = 2
 
+@deprecated("Use User instead of UserInformation. For more info, see MSDN.")
 class SetAccountPictureResult(enum.IntEnum):
     SUCCESS = 0
     CHANGE_DISABLED = 1
@@ -205,52 +208,55 @@ class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
 @typing.final
 class UserInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.IStorageFile Windows.System.UserProfile.UserInformation::GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_account_picture(cls, kind: AccountPictureKind, /) -> windows_storage.IStorageFile: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetDisplayNameAsync()
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_display_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetDomainNameAsync()
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_domain_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetFirstNameAsync()
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_first_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetLastNameAsync()
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_last_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.System.UserProfile.UserInformation::GetPrincipalNameAsync()
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_principal_name_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri> Windows.System.UserProfile.UserInformation::GetSessionInitiationProtocolUriAsync()
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_session_initiation_protocol_uri_async(cls) -> windows_foundation.IAsyncOperation[windows_foundation.Uri]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPictureAsync(Windows.Storage.IStorageFile)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_picture_async(cls, image: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_picture_from_stream_async(cls, image: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_pictures_async(cls, small_image: windows_storage.IStorageFile, large_image: windows_storage.IStorageFile, video: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult> Windows.System.UserProfile.UserInformation::SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def set_account_pictures_from_streams_async(cls, small_image: windows_storage_streams.IRandomAccessStream, large_image: windows_storage_streams.IRandomAccessStream, video: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[SetAccountPictureResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.UserProfile.UserInformation::add_AccountPictureChanged(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def add_account_picture_changed(cls, change_handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.UserProfile.UserInformation::remove_AccountPictureChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def remove_account_picture_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.Boolean Windows.System.UserProfile.UserInformation::get_AccountPictureChangeEnabled()
     @_property
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def account_picture_change_enabled(cls) -> bool: ...
     # System.Boolean Windows.System.UserProfile.UserInformation::get_NameAccessAllowed()
     @_property
+    @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def name_access_allowed(cls) -> bool: ...
 
 @typing.final
+@deprecated("Use User instead of UserInformation. For more info, see MSDN.")
 class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
     ...
 

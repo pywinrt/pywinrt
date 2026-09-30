@@ -1273,20 +1273,18 @@ class User_Static(winrt._winrt.IInspectable_Static):
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[User]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType)
-    # @deprecated("FindAllAsyncByType is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
+    @deprecated("FindAllAsyncByType is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
     def find_all_async(cls, type: UserType, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[User]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType,Windows.System.UserAuthenticationStatus)
-    # @deprecated("FindAllAsyncByTypeAndStatus is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
+    @deprecated("FindAllAsyncByTypeAndStatus is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
     def find_all_async(cls, type: UserType, status: UserAuthenticationStatus, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[User]]: ...
     # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType)
-    # @deprecated("FindAllAsyncByType is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
     @deprecated("Use find_all_async() instead.")
     def find_all_async_by_type(cls, type: UserType, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[User]]: ...
     # Deprecated alias of find_all_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.User>> Windows.System.User::FindAllAsync(Windows.System.UserType,Windows.System.UserAuthenticationStatus)
-    # @deprecated("FindAllAsyncByTypeAndStatus is deprecated and might not function consistently on all platforms. Instead, use FindAllAsync or GetDefault.")
     @deprecated("Use find_all_async() instead.")
     def find_all_async_by_type_and_status(cls, type: UserType, status: UserAuthenticationStatus, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[User]]: ...
     # Windows.System.User Windows.System.User::GetDefault()

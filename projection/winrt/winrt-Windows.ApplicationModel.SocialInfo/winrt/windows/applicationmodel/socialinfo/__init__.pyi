@@ -5,6 +5,7 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -26,223 +27,292 @@ __all__ = [
     "SocialUserInfo",
 ]
 
+@deprecated("SocialFeedItemStyle is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedItemStyle(enum.IntEnum):
     DEFAULT = 0
     PHOTO = 1
 
+@deprecated("SocialFeedKind is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedKind(enum.IntEnum):
     HOME_FEED = 0
     CONTACT_FEED = 1
     DASHBOARD = 2
 
+@deprecated("SocialFeedUpdateMode is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedUpdateMode(enum.IntEnum):
     APPEND = 0
     REPLACE = 1
 
+@deprecated("SocialItemBadgeStyle is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialItemBadgeStyle(enum.IntEnum):
     HIDDEN = 0
     VISIBLE = 1
     VISIBLE_WITH_COUNT = 2
 
 @typing.final
+@deprecated("SocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedChildItem(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_Timestamp()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self) -> datetime.datetime: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::put_Timestamp(Windows.Foundation.DateTime)
     @timestamp.setter
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self, value: datetime.datetime) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_TargetUri()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::put_TargetUri(Windows.Foundation.Uri)
     @target_uri.setter
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self, value: windows_foundation.Uri) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_SharedItem()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def shared_item(self) -> SocialFeedSharedItem: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::put_SharedItem(Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem)
     @shared_item.setter
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def shared_item(self, value: SocialFeedSharedItem) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialUserInfo Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_Author()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def author(self) -> SocialUserInfo: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedContent Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_PrimaryContent()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def primary_content(self) -> SocialFeedContent: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedContent Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_SecondaryContent()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def secondary_content(self) -> SocialFeedContent: ...
     # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> Windows.ApplicationModel.SocialInfo.SocialFeedChildItem::get_Thumbnails()
     @_property
+    @deprecated("ISocialFeedChildItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def thumbnails(self) -> _cabc.MutableSequence[SocialItemThumbnail]: ...
 
 @typing.final
+@deprecated("SocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedContent(winrt.system.Object):
     # System.String Windows.ApplicationModel.SocialInfo.SocialFeedContent::get_Title()
     @_property
+    @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
     def title(self) -> str: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedContent::put_Title(System.String)
     @title.setter
+    @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
     def title(self, value: str) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialFeedContent::get_TargetUri()
     @_property
+    @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedContent::put_TargetUri(Windows.Foundation.Uri)
     @target_uri.setter
+    @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self, value: windows_foundation.Uri) -> None: ...
     # System.String Windows.ApplicationModel.SocialInfo.SocialFeedContent::get_Message()
     @_property
+    @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
     def message(self) -> str: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedContent::put_Message(System.String)
     @message.setter
+    @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
     def message(self, value: str) -> None: ...
 
 @typing.final
+@deprecated("SocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedItem(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_Timestamp()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self) -> datetime.datetime: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_Timestamp(Windows.Foundation.DateTime)
     @timestamp.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self, value: datetime.datetime) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_TargetUri()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_TargetUri(Windows.Foundation.Uri)
     @target_uri.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self, value: windows_foundation.Uri) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_Style()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def style(self) -> SocialFeedItemStyle: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_Style(Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle)
     @style.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def style(self, value: SocialFeedItemStyle) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_SharedItem()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def shared_item(self) -> SocialFeedSharedItem: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_SharedItem(Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem)
     @shared_item.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def shared_item(self, value: SocialFeedSharedItem) -> None: ...
     # System.String Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_RemoteId()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remote_id(self) -> str: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_RemoteId(System.String)
     @remote_id.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remote_id(self, value: str) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedChildItem Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_ChildItem()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def child_item(self) -> SocialFeedChildItem: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_ChildItem(Windows.ApplicationModel.SocialInfo.SocialFeedChildItem)
     @child_item.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def child_item(self, value: SocialFeedChildItem) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_BadgeStyle()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def badge_style(self) -> SocialItemBadgeStyle: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_BadgeStyle(Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle)
     @badge_style.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def badge_style(self, value: SocialItemBadgeStyle) -> None: ...
     # System.Int32 Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_BadgeCountValue()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def badge_count_value(self) -> winrt.system.Int32: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_BadgeCountValue(System.Int32)
     @badge_count_value.setter
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def badge_count_value(self, value: winrt.system.Int32) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialUserInfo Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_Author()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def author(self) -> SocialUserInfo: ...
     # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.SocialInfo.SocialItemThumbnail> Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_Thumbnails()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def thumbnails(self) -> _cabc.MutableSequence[SocialItemThumbnail]: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedContent Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_PrimaryContent()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def primary_content(self) -> SocialFeedContent: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedContent Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_SecondaryContent()
     @_property
+    @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def secondary_content(self) -> SocialFeedContent: ...
 
 @typing.final
+@deprecated("SocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedSharedItem(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::get_Timestamp()
     @_property
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self) -> datetime.datetime: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::put_Timestamp(Windows.Foundation.DateTime)
     @timestamp.setter
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def timestamp(self, value: datetime.datetime) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialItemThumbnail Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::get_Thumbnail()
     @_property
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def thumbnail(self) -> SocialItemThumbnail: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::put_Thumbnail(Windows.ApplicationModel.SocialInfo.SocialItemThumbnail)
     @thumbnail.setter
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def thumbnail(self, value: SocialItemThumbnail) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::get_TargetUri()
     @_property
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::put_TargetUri(Windows.Foundation.Uri)
     @target_uri.setter
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::get_OriginalSource()
     @_property
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def original_source(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::put_OriginalSource(Windows.Foundation.Uri)
     @original_source.setter
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def original_source(self, value: windows_foundation.Uri) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialFeedContent Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem::get_Content()
     @_property
+    @deprecated("ISocialFeedSharedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
     def content(self) -> SocialFeedContent: ...
 
 @typing.final
+@deprecated("SocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialItemThumbnail(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::SetImageAsync(Windows.Storage.Streams.IInputStream)
-    # @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def set_image_async(self, image: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::get_TargetUri()
     @_property
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::put_TargetUri(Windows.Foundation.Uri)
     @target_uri.setter
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::get_ImageUri()
     @_property
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def image_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::put_ImageUri(Windows.Foundation.Uri)
     @image_uri.setter
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def image_uri(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Graphics.Imaging.BitmapSize Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::get_BitmapSize()
     @_property
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def bitmap_size(self) -> windows_graphics_imaging.BitmapSize: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::put_BitmapSize(Windows.Graphics.Imaging.BitmapSize)
     @bitmap_size.setter
+    @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
     def bitmap_size(self, value: windows_graphics_imaging.BitmapSize | tuple[winrt.system.UInt32, winrt.system.UInt32]) -> None: ...
 
 @typing.final
+@deprecated("SocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialUserInfo(winrt.system.Object):
     # System.String Windows.ApplicationModel.SocialInfo.SocialUserInfo::get_UserName()
     @_property
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def user_name(self) -> str: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialUserInfo::put_UserName(System.String)
     @user_name.setter
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def user_name(self, value: str) -> None: ...
     # Windows.Foundation.Uri Windows.ApplicationModel.SocialInfo.SocialUserInfo::get_TargetUri()
     @_property
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialUserInfo::put_TargetUri(Windows.Foundation.Uri)
     @target_uri.setter
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def target_uri(self, value: windows_foundation.Uri) -> None: ...
     # System.String Windows.ApplicationModel.SocialInfo.SocialUserInfo::get_RemoteId()
     @_property
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remote_id(self) -> str: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialUserInfo::put_RemoteId(System.String)
     @remote_id.setter
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remote_id(self, value: str) -> None: ...
     # System.String Windows.ApplicationModel.SocialInfo.SocialUserInfo::get_DisplayName()
     @_property
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_name(self) -> str: ...
     # System.Void Windows.ApplicationModel.SocialInfo.SocialUserInfo::put_DisplayName(System.String)
     @display_name.setter
+    @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def display_name(self, value: str) -> None: ...
 

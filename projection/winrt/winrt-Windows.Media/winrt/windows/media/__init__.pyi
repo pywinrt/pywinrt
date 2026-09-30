@@ -209,106 +209,116 @@ class ImageDisplayProperties(winrt.system.Object):
 @typing.final
 class MediaControl_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_ChannelDownPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_channel_down_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_ChannelDownPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_channel_down_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_ChannelUpPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_channel_up_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_ChannelUpPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_channel_up_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_FastForwardPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_fast_forward_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_FastForwardPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_fast_forward_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_NextTrackPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_next_track_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_NextTrackPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_next_track_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_PausePressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_pause_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_PausePressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_pause_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_PlayPauseTogglePressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_play_pause_toggle_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_PlayPauseTogglePressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_play_pause_toggle_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_PlayPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_play_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_PlayPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_play_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_PreviousTrackPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_previous_track_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_PreviousTrackPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_previous_track_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_RecordPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_record_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_RecordPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_record_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_RewindPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_rewind_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_RewindPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_rewind_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_SoundLevelChanged(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_sound_level_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_SoundLevelChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_sound_level_changed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_StopPressed(Windows.Foundation.EventHandler`1<System.Object>)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_stop_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.MediaControl::remove_StopPressed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def remove_stop_pressed(cls, cookie: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.String Windows.Media.MediaControl::get_TrackName()
     @_property
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def track_name(cls) -> str: ...
     # System.Void Windows.Media.MediaControl::put_TrackName(System.String)
     @track_name.setter
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def track_name(cls, value: str) -> None: ...
     # System.Boolean Windows.Media.MediaControl::get_IsPlaying()
     @_property
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def is_playing(cls) -> bool: ...
     # System.Void Windows.Media.MediaControl::put_IsPlaying(System.Boolean)
     @is_playing.setter
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def is_playing(cls, value: bool) -> None: ...
     # System.String Windows.Media.MediaControl::get_ArtistName()
     @_property
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def artist_name(cls) -> str: ...
     # System.Void Windows.Media.MediaControl::put_ArtistName(System.String)
     @artist_name.setter
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def artist_name(cls, value: str) -> None: ...
     # Windows.Foundation.Uri Windows.Media.MediaControl::get_AlbumArt()
     @_property
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def album_art(cls) -> windows_foundation.Uri: ...
     # System.Void Windows.Media.MediaControl::put_AlbumArt(Windows.Foundation.Uri)
     @album_art.setter
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def album_art(cls, value: windows_foundation.Uri) -> None: ...
     # Windows.Media.SoundLevel Windows.Media.MediaControl::get_SoundLevel()
     @_property
+    @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def sound_level(cls) -> SoundLevel: ...
 
 @typing.final
+@deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
 class MediaControl(winrt.system.Object, metaclass=MediaControl_Static):
     ...
 

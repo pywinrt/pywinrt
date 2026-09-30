@@ -325,31 +325,38 @@ class HolographicFramePrediction(winrt.system.Object):
     def timestamp(self) -> windows_perception.PerceptionTimestamp: ...
 
 @typing.final
+@deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.")
 class HolographicFramePresentationMonitor(winrt.system.Object, windows_foundation.IClosable):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Holographic.HolographicFramePresentationMonitor::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Holographic.HolographicFramePresentationReport> Windows.Graphics.Holographic.HolographicFramePresentationMonitor::ReadReports()
-    # @deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.")
+    @deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.")
     def read_reports(self) -> _cabc.Sequence[HolographicFramePresentationReport]: ...
 
 @typing.final
+@deprecated("Use HolographicFrameScanoutReport instead of HolographicFramePresentationReport. For more info, see MSDN.")
 class HolographicFramePresentationReport(winrt.system.Object):
     # Windows.Foundation.TimeSpan Windows.Graphics.Holographic.HolographicFramePresentationReport::get_AppGpuDuration()
     @_property
+    @deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.")
     def app_gpu_duration(self) -> datetime.timedelta: ...
     # Windows.Foundation.TimeSpan Windows.Graphics.Holographic.HolographicFramePresentationReport::get_AppGpuOverrun()
     @_property
+    @deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.")
     def app_gpu_overrun(self) -> datetime.timedelta: ...
     # Windows.Foundation.TimeSpan Windows.Graphics.Holographic.HolographicFramePresentationReport::get_CompositorGpuDuration()
     @_property
+    @deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.")
     def compositor_gpu_duration(self) -> datetime.timedelta: ...
     # System.UInt32 Windows.Graphics.Holographic.HolographicFramePresentationReport::get_MissedPresentationOpportunityCount()
     @_property
+    @deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.")
     def missed_presentation_opportunity_count(self) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Graphics.Holographic.HolographicFramePresentationReport::get_PresentationCount()
     @_property
+    @deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.")
     def presentation_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
@@ -455,7 +462,7 @@ class HolographicSpace_Static(winrt._winrt.IInspectable_Static):
 @typing.final
 class HolographicSpace(winrt.system.Object, metaclass=HolographicSpace_Static):
     # Windows.Graphics.Holographic.HolographicFramePresentationMonitor Windows.Graphics.Holographic.HolographicSpace::CreateFramePresentationMonitor(System.UInt32)
-    # @deprecated("Use CreateFrameScanoutMonitor instead of CreateFramePresentationMonitor. For more info, see MSDN.")
+    @deprecated("Use CreateFrameScanoutMonitor instead of CreateFramePresentationMonitor. For more info, see MSDN.")
     def create_frame_presentation_monitor(self, max_queued_reports: winrt.system.UInt32, /) -> HolographicFramePresentationMonitor: ...
     # Windows.Graphics.Holographic.HolographicFrameScanoutMonitor Windows.Graphics.Holographic.HolographicSpace::CreateFrameScanoutMonitor(System.UInt32)
     def create_frame_scanout_monitor(self, max_queued_reports: winrt.system.UInt32, /) -> HolographicFrameScanoutMonitor: ...

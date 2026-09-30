@@ -330,6 +330,7 @@ class BluetoothDevice(winrt.system.Object, windows_foundation.IClosable, metacla
     def name(self) -> str: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> Windows.Devices.Bluetooth.BluetoothDevice::get_RfcommServices()
     @_property
+    @deprecated("Use GetRfcommServicesAsync instead of RfcommServices.  For more info, see MSDN.")
     def rfcomm_services(self) -> _cabc.Sequence[windows_devices_bluetooth_rfcomm.RfcommDeviceService]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Streams.IBuffer> Windows.Devices.Bluetooth.BluetoothDevice::get_SdpRecords()
     @_property
@@ -626,7 +627,7 @@ class BluetoothLEDevice(winrt.system.Object, windows_foundation.IClosable, metac
     # Windows.Devices.Bluetooth.BluetoothLEConnectionPhy Windows.Devices.Bluetooth.BluetoothLEDevice::GetConnectionPhy()
     def get_connection_phy(self) -> BluetoothLEConnectionPhy: ...
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattService(System.Guid)
-    # @deprecated("Use GetGattServicesForUuidAsync instead of GetGattService.  For more information, see MSDN.")
+    @deprecated("Use GetGattServicesForUuidAsync instead of GetGattService.  For more information, see MSDN.")
     def get_gatt_service(self, service_uuid: _uuid.UUID, /) -> windows_devices_bluetooth_genericattributeprofile.GattDeviceService: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult> Windows.Devices.Bluetooth.BluetoothLEDevice::GetGattServicesAsync()
@@ -683,6 +684,7 @@ class BluetoothLEDevice(winrt.system.Object, windows_foundation.IClosable, metac
     def device_id(self) -> str: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> Windows.Devices.Bluetooth.BluetoothLEDevice::get_GattServices()
     @_property
+    @deprecated("Use GetGattServicesAsync instead of GattServices.  For more information, see MSDN.")
     def gatt_services(self) -> _cabc.Sequence[windows_devices_bluetooth_genericattributeprofile.GattDeviceService]: ...
     # System.String Windows.Devices.Bluetooth.BluetoothLEDevice::get_Name()
     @_property

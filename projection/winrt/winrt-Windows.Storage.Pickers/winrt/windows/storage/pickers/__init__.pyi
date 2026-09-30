@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -88,19 +89,19 @@ class FileOpenPicker_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Pickers.FileOpenPicker Windows.Storage.Pickers.FileOpenPicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FileOpenPicker: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.Pickers.FileOpenPicker::ResumePickSingleFileAsync()
-    # @deprecated("Instead, use PickSingleFileAsync")
+    @deprecated("Instead, use PickSingleFileAsync")
     def resume_pick_single_file_async(cls) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile | None]: ...
 
 @typing.final
 class FileOpenPicker(winrt.system.Object, metaclass=FileOpenPicker_Static):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.Pickers.FileOpenPicker::PickMultipleFilesAndContinue()
-    # @deprecated("Instead, use PickMultipleFilesAsync")
+    @deprecated("Instead, use PickMultipleFilesAsync")
     def pick_multiple_files_and_continue(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.Pickers.FileOpenPicker::PickMultipleFilesAsync()
     def pick_multiple_files_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[windows_storage.StorageFile]]: ...
     # System.Void Windows.Storage.Pickers.FileOpenPicker::PickSingleFileAndContinue()
-    # @deprecated("Instead, use PickSingleFileAsync")
+    @deprecated("Instead, use PickSingleFileAsync")
     def pick_single_file_and_continue(self) -> None: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.Pickers.FileOpenPicker::PickSingleFileAsync()
@@ -137,6 +138,7 @@ class FileOpenPicker(winrt.system.Object, metaclass=FileOpenPicker_Static):
     def file_type_filter(self) -> _cabc.MutableSequence[str]: ...
     # Windows.Foundation.Collections.ValueSet Windows.Storage.Pickers.FileOpenPicker::get_ContinuationData()
     @_property
+    @deprecated("Instead, use PickSingleFileAsync/PickMultipleFilesAsync")
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.System.User Windows.Storage.Pickers.FileOpenPicker::get_User()
     @_property
@@ -197,7 +199,7 @@ class FileSavePicker_Static(winrt._winrt.IInspectable_Static):
 class FileSavePicker(winrt.system.Object, metaclass=FileSavePicker_Static):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.Pickers.FileSavePicker::PickSaveFileAndContinue()
-    # @deprecated("Instead, use PickSaveFileAsync")
+    @deprecated("Instead, use PickSaveFileAsync")
     def pick_save_file_and_continue(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.Pickers.FileSavePicker::PickSaveFileAsync()
     def pick_save_file_async(self) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile | None]: ...
@@ -262,7 +264,7 @@ class FolderPicker_Static(winrt._winrt.IInspectable_Static):
 class FolderPicker(winrt.system.Object, metaclass=FolderPicker_Static):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Storage.Pickers.FolderPicker::PickFolderAndContinue()
-    # @deprecated("Instead, use PickSingleFolderAsync")
+    @deprecated("Instead, use PickSingleFolderAsync")
     def pick_folder_and_continue(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.Pickers.FolderPicker::PickSingleFolderAsync()
     def pick_single_folder_async(self) -> windows_foundation.IAsyncOperation[windows_storage.StorageFolder | None]: ...

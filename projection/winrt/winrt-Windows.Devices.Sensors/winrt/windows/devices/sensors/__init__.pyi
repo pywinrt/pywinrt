@@ -797,6 +797,7 @@ class HingeAngleSensorReadingChangedEventArgs(winrt.system.Object):
 class HumanPresenceFeatures(winrt.system.Object):
     # System.Boolean Windows.Devices.Sensors.HumanPresenceFeatures::get_IsAttentionAwareDimmingSupported()
     @_property
+    @deprecated("Use IsAdaptiveDimmingSupported instead of IsAttentionAwareDimmingSupported.")
     def is_attention_aware_dimming_supported(self) -> bool: ...
     # System.Boolean Windows.Devices.Sensors.HumanPresenceFeatures::get_IsLockOnLeaveSupported()
     @_property
@@ -994,9 +995,11 @@ class HumanPresenceSettings(winrt.system.Object, metaclass=HumanPresenceSettings
     def is_lock_on_leave_enabled(self, value: bool) -> None: ...
     # System.Boolean Windows.Devices.Sensors.HumanPresenceSettings::get_IsAttentionAwareDimmingEnabled()
     @_property
+    @deprecated("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
     def is_attention_aware_dimming_enabled(self) -> bool: ...
     # System.Void Windows.Devices.Sensors.HumanPresenceSettings::put_IsAttentionAwareDimmingEnabled(System.Boolean)
     @is_attention_aware_dimming_enabled.setter
+    @deprecated("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.")
     def is_attention_aware_dimming_enabled(self, value: bool) -> None: ...
     # System.Boolean Windows.Devices.Sensors.HumanPresenceSettings::get_IsAdaptiveDimmingEnabled()
     @_property

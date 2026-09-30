@@ -7,6 +7,7 @@ import types
 import typing
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -390,6 +391,7 @@ class TextLineBounds(enum.IntEnum):
 
 class TextReadingOrder(enum.IntEnum):
     DEFAULT = 0
+    """Deprecated: Consider using UseFlowDirection, which is an improved version of Default. For more info, see MSDN."""
     USE_FLOW_DIRECTION = 0
     DETECT_FROM_CONTENT = 1
 
@@ -1019,6 +1021,7 @@ class DependencyObject(winrt.system.Object, metaclass=DependencyObject_Static):
     # Windows.UI.Core.CoreDispatcher Microsoft.UI.Xaml.DependencyObject::get_Dispatcher()
     @_property
     @typing.final
+    @deprecated("The Dispatcher property is deprecated, Use DispatcherQueue and TryEnqueue for UI thread work. For more info, visit https://aka.ms/DispatcherQueue.Property")
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Xaml.DependencyObject::get_DispatcherQueue()
     @_property
@@ -3588,6 +3591,7 @@ class Window_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Window Microsoft.UI.Xaml.Window::get_Current()
     @_property
     @typing.final
+    @deprecated("Window.Current is deprecated and always returns null in WinUI Desktop apps. For alternate ways to track instances of Window in your app code, visit https://aka.ms/win.current.alt")
     def current(cls) -> Window: ...
 
 class Window(winrt.system.Object, metaclass=Window_Static):
@@ -3657,10 +3661,12 @@ class Window(winrt.system.Object, metaclass=Window_Static):
     # Windows.UI.Core.CoreWindow Microsoft.UI.Xaml.Window::get_CoreWindow()
     @_property
     @typing.final
+    @deprecated("The CoreWindow property is deprecated and always returns null")
     def core_window(self) -> windows_ui_core.CoreWindow: ...
     # Windows.UI.Core.CoreDispatcher Microsoft.UI.Xaml.Window::get_Dispatcher()
     @_property
     @typing.final
+    @deprecated("The Dispatcher property is deprecated and always returns null")
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Xaml.Window::get_DispatcherQueue()
     @_property

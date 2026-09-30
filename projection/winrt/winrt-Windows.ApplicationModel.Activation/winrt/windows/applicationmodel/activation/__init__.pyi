@@ -7,6 +7,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -695,6 +696,7 @@ class FileOpenPickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsW
     def caller_package_family_name(self) -> str: ...
 
 @typing.final
+@deprecated("FileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class FileOpenPickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFileOpenPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_Kind()
     @_property
@@ -713,6 +715,7 @@ class FileOpenPickerContinuationEventArgs(winrt.system.Object, IActivatedEventAr
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_Files()
     @_property
+    @deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def files(self) -> _cabc.Sequence[windows_storage.StorageFile]: ...
 
 @typing.final
@@ -740,6 +743,7 @@ class FileSavePickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsW
     def enterprise_id(self) -> str: ...
 
 @typing.final
+@deprecated("FileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class FileSavePickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFileSavePickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_Kind()
     @_property
@@ -758,9 +762,11 @@ class FileSavePickerContinuationEventArgs(winrt.system.Object, IActivatedEventAr
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.Storage.StorageFile Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_File()
     @_property
+    @deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def file(self) -> windows_storage.StorageFile: ...
 
 @typing.final
+@deprecated("FolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class FolderPickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFolderPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_Kind()
     @_property
@@ -779,6 +785,7 @@ class FolderPickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgs
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.Storage.StorageFolder Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_Folder()
     @_property
+    @deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
@@ -1155,6 +1162,7 @@ class VoiceCommandActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWit
     def result(self) -> windows_media_speechrecognition.SpeechRecognitionResult: ...
 
 @typing.final
+@deprecated("WalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletActionActivatedEventArgs(winrt.system.Object, IWalletActionActivatedEventArgs, IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_Kind()
     @_property
@@ -1167,12 +1175,15 @@ class WalletActionActivatedEventArgs(winrt.system.Object, IWalletActionActivated
     def splash_screen(self) -> SplashScreen: ...
     # System.String Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_ActionId()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def action_id(self) -> str: ...
     # Windows.ApplicationModel.Wallet.WalletActionKind Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_ActionKind()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def action_kind(self) -> windows_applicationmodel_wallet.WalletActionKind: ...
     # System.String Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_ItemId()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def item_id(self) -> str: ...
 
 @typing.final
@@ -1574,9 +1585,11 @@ class IFileOpenPickerActivatedEventArgs2(winrt._winrt.IInspectable):
 @typing.final
 class _IFileOpenPickerContinuationEventArgs: ...
 
+@deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IFileOpenPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs::get_Files()
     @_property
+    @deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
     def files(self) -> _cabc.Sequence[windows_storage.StorageFile]: ...
 
@@ -1605,18 +1618,22 @@ class IFileSavePickerActivatedEventArgs2(winrt._winrt.IInspectable):
 @typing.final
 class _IFileSavePickerContinuationEventArgs: ...
 
+@deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IFileSavePickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
     # Windows.Storage.StorageFile Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs::get_File()
     @_property
+    @deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
     def file(self) -> windows_storage.StorageFile: ...
 
 @typing.final
 class _IFolderPickerContinuationEventArgs: ...
 
+@deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IFolderPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
     # Windows.Storage.StorageFolder Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs::get_Folder()
     @_property
+    @deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
     def folder(self) -> windows_storage.StorageFolder: ...
 
@@ -1828,17 +1845,21 @@ class IVoiceCommandActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspect
 @typing.final
 class _IWalletActionActivatedEventArgs: ...
 
+@deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IWalletActionActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
     # System.String Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ActionId()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
     def action_id(self) -> str: ...
     # Windows.ApplicationModel.Wallet.WalletActionKind Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ActionKind()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
     def action_kind(self) -> windows_applicationmodel_wallet.WalletActionKind: ...
     # System.String Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ItemId()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
     def item_id(self) -> str: ...
 

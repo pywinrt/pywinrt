@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -346,61 +347,69 @@ class DisplayInformation(winrt.system.Object, metaclass=DisplayInformation_Stati
 @typing.final
 class DisplayProperties_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Graphics.Display.DisplayProperties::GetColorProfileAsync()
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def get_color_profile_async(cls) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Display.DisplayProperties::add_ColorProfileChanged(Windows.Graphics.Display.DisplayPropertiesEventHandler)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def add_color_profile_changed(cls, handler: DisplayPropertiesEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Display.DisplayProperties::remove_ColorProfileChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def remove_color_profile_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Display.DisplayProperties::add_DisplayContentsInvalidated(Windows.Graphics.Display.DisplayPropertiesEventHandler)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def add_display_contents_invalidated(cls, handler: DisplayPropertiesEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Display.DisplayProperties::remove_DisplayContentsInvalidated(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def remove_display_contents_invalidated(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Display.DisplayProperties::add_LogicalDpiChanged(Windows.Graphics.Display.DisplayPropertiesEventHandler)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def add_logical_dpi_changed(cls, handler: DisplayPropertiesEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Display.DisplayProperties::remove_LogicalDpiChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def remove_logical_dpi_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Display.DisplayProperties::add_OrientationChanged(Windows.Graphics.Display.DisplayPropertiesEventHandler)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def add_orientation_changed(cls, handler: DisplayPropertiesEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Display.DisplayProperties::remove_OrientationChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def remove_orientation_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Display.DisplayProperties::add_StereoEnabledChanged(Windows.Graphics.Display.DisplayPropertiesEventHandler)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def add_stereo_enabled_changed(cls, handler: DisplayPropertiesEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Display.DisplayProperties::remove_StereoEnabledChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def remove_stereo_enabled_changed(cls, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Graphics.Display.DisplayOrientations Windows.Graphics.Display.DisplayProperties::get_AutoRotationPreferences()
     @_property
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def auto_rotation_preferences(cls) -> DisplayOrientations: ...
     # System.Void Windows.Graphics.Display.DisplayProperties::put_AutoRotationPreferences(Windows.Graphics.Display.DisplayOrientations)
     @auto_rotation_preferences.setter
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def auto_rotation_preferences(cls, value: DisplayOrientations) -> None: ...
     # Windows.Graphics.Display.DisplayOrientations Windows.Graphics.Display.DisplayProperties::get_CurrentOrientation()
     @_property
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def current_orientation(cls) -> DisplayOrientations: ...
     # System.Single Windows.Graphics.Display.DisplayProperties::get_LogicalDpi()
     @_property
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def logical_dpi(cls) -> winrt.system.Single: ...
     # Windows.Graphics.Display.DisplayOrientations Windows.Graphics.Display.DisplayProperties::get_NativeOrientation()
     @_property
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def native_orientation(cls) -> DisplayOrientations: ...
     # Windows.Graphics.Display.ResolutionScale Windows.Graphics.Display.DisplayProperties::get_ResolutionScale()
     @_property
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def resolution_scale(cls) -> ResolutionScale: ...
     # System.Boolean Windows.Graphics.Display.DisplayProperties::get_StereoEnabled()
     @_property
+    @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def stereo_enabled(cls) -> bool: ...
 
 @typing.final
+@deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
 class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static):
     ...
 

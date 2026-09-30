@@ -184,6 +184,7 @@ class InfraredTorchMode(enum.IntEnum):
     ON = 1
     ALTERNATING_FRAME_ILLUMINATION = 2
 
+@deprecated("IsoSpeedPreset may not be available in future versions of Windows Phone. Starting with Windows Phone 8.1, use SetAutoAsync, Auto, SetValueAsync, and Value instead")
 class IsoSpeedPreset(enum.IntEnum):
     AUTO = 0
     ISO50 = 1
@@ -795,18 +796,20 @@ class IsoSpeedControl(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.IsoSpeedControl::SetAutoAsync()
     def set_auto_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.IsoSpeedControl::SetPresetAsync(Windows.Media.Devices.IsoSpeedPreset)
-    # @deprecated("SetPresetAsync may not be available in future versions of Windows Phone. Starting with Windows Phone 8.1, use SetAutoAsync, Auto, SetValueAsync, and Value instead")
+    @deprecated("SetPresetAsync may not be available in future versions of Windows Phone. Starting with Windows Phone 8.1, use SetAutoAsync, Auto, SetValueAsync, and Value instead")
     def set_preset_async(self, preset: IsoSpeedPreset, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.IsoSpeedControl::SetValueAsync(System.UInt32)
     def set_value_async(self, iso_speed: winrt.system.UInt32, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Media.Devices.IsoSpeedPreset Windows.Media.Devices.IsoSpeedControl::get_Preset()
     @_property
+    @deprecated("Preset may not be available in future versions of Windows Phone. Starting with Windows Phone 8.1, use SetAutoAsync, Auto, SetValueAsync, and Value instead")
     def preset(self) -> IsoSpeedPreset: ...
     # System.Boolean Windows.Media.Devices.IsoSpeedControl::get_Supported()
     @_property
     def supported(self) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Devices.IsoSpeedPreset> Windows.Media.Devices.IsoSpeedControl::get_SupportedPresets()
     @_property
+    @deprecated("SupportedPresets may not be available in future versions of Windows Phone. Starting with Windows Phone 8.1, use SetAutoAsync, Auto, SetValueAsync, and Value instead")
     def supported_presets(self) -> _cabc.Sequence[IsoSpeedPreset]: ...
     # System.Boolean Windows.Media.Devices.IsoSpeedControl::get_Auto()
     @_property

@@ -6,6 +6,7 @@ import enum
 import typing
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -6227,17 +6228,21 @@ class GroupStyle(winrt.system.Object, microsoft_ui_xaml_data.INotifyPropertyChan
     def header_container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
     # Microsoft.UI.Xaml.Controls.StyleSelector Microsoft.UI.Xaml.Controls.GroupStyle::get_ContainerStyleSelector()
     @_property
+    @deprecated("ContainerStyleSelector may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style_selector(self) -> StyleSelector: ...
     # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_ContainerStyleSelector(Microsoft.UI.Xaml.Controls.StyleSelector)
     @container_style_selector.setter
     @typing.final
+    @deprecated("ContainerStyleSelector may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style_selector(self, value: StyleSelector) -> None: ...
     # Microsoft.UI.Xaml.Style Microsoft.UI.Xaml.Controls.GroupStyle::get_ContainerStyle()
     @_property
+    @deprecated("ContainerStyle may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style(self) -> microsoft_ui_xaml.Style: ...
     # System.Void Microsoft.UI.Xaml.Controls.GroupStyle::put_ContainerStyle(Microsoft.UI.Xaml.Style)
     @container_style.setter
     @typing.final
+    @deprecated("ContainerStyle may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
 
 class GroupStyleSelector_Static(winrt._winrt.IInspectable_Static):
@@ -7055,10 +7060,10 @@ class ItemContainer(Control, metaclass=ItemContainer_Static):
 @typing.final
 class ItemContainerGenerator(winrt.system.Object):
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromIndex(System.Int32)
-    # @deprecated("ContainerFromIndex may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromIndex.")
+    @deprecated("ContainerFromIndex may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromIndex.")
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromItem(System.Object)
-    # @deprecated("ContainerFromItem may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromItem.")
+    @deprecated("ContainerFromItem may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromItem.")
     def container_from_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DependencyObject: ...
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::GenerateNext(System.Boolean&)
     def generate_next(self) -> tuple[microsoft_ui_xaml.DependencyObject, bool]: ...
@@ -7067,12 +7072,12 @@ class ItemContainerGenerator(winrt.system.Object):
     # Microsoft.UI.Xaml.Controls.ItemContainerGenerator Microsoft.UI.Xaml.Controls.ItemContainerGenerator::GetItemContainerGeneratorForPanel(Microsoft.UI.Xaml.Controls.Panel)
     def get_item_container_generator_for_panel(self, panel: Panel, /) -> ItemContainerGenerator: ...
     # System.Int32 Microsoft.UI.Xaml.Controls.ItemContainerGenerator::IndexFromContainer(Microsoft.UI.Xaml.DependencyObject)
-    # @deprecated("IndexFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.IndexFromContainer.")
+    @deprecated("IndexFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.IndexFromContainer.")
     def index_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
     # System.Int32 Microsoft.UI.Xaml.Controls.ItemContainerGenerator::IndexFromGeneratorPosition(Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition)
     def index_from_generator_position(self, position: microsoft_ui_xaml_controls_primitives.GeneratorPosition | tuple[winrt.system.Int32, winrt.system.Int32], /) -> winrt.system.Int32: ...
     # System.Object Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
-    # @deprecated("ItemFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ItemFromContainer.")
+    @deprecated("ItemFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ItemFromContainer.")
     def item_from_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
     # System.Void Microsoft.UI.Xaml.Controls.ItemContainerGenerator::PrepareItemContainer(Microsoft.UI.Xaml.DependencyObject)
     def prepare_item_container(self, container: microsoft_ui_xaml.DependencyObject, /) -> None: ...
@@ -10633,6 +10638,7 @@ class PasswordBox_Static(Control_Static):
     def input_scope_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_IsPasswordRevealButtonEnabledProperty()
     @_property
+    @deprecated("IsPasswordRevealButtonEnabledProperty may be altered or unavailable for releases after Windows 10.0. Instead, use PasswordRevealModeProperty.")
     def is_password_reveal_button_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PasswordBox::get_MaxLengthProperty()
     @_property
@@ -10741,9 +10747,11 @@ class PasswordBox(Control, metaclass=PasswordBox_Static):
     def max_length(self, value: winrt.system.Int32) -> None: ...
     # System.Boolean Microsoft.UI.Xaml.Controls.PasswordBox::get_IsPasswordRevealButtonEnabled()
     @_property
+    @deprecated("IsPasswordRevealButtonEnabledProperty may be altered or unavailable for releases after Windows 10.0. Instead, use PasswordRevealModeProperty.")
     def is_password_reveal_button_enabled(self) -> bool: ...
     # System.Void Microsoft.UI.Xaml.Controls.PasswordBox::put_IsPasswordRevealButtonEnabled(System.Boolean)
     @is_password_reveal_button_enabled.setter
+    @deprecated("IsPasswordRevealButtonEnabledProperty may be altered or unavailable for releases after Windows 10.0. Instead, use PasswordRevealModeProperty.")
     def is_password_reveal_button_enabled(self, value: bool) -> None: ...
     # Microsoft.UI.Xaml.Input.InputScope Microsoft.UI.Xaml.Controls.PasswordBox::get_InputScope()
     @_property
@@ -13657,15 +13665,15 @@ class ScrollViewer(ContentControl, IScrollAnchorProvider, metaclass=ScrollViewer
     # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::RegisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def register_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::ScrollToHorizontalOffset(System.Double)
-    # @deprecated("ScrollToHorizontalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
+    @deprecated("ScrollToHorizontalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def scroll_to_horizontal_offset(self, offset: winrt.system.Double, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::ScrollToVerticalOffset(System.Double)
-    # @deprecated("ScrollToVerticalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
+    @deprecated("ScrollToVerticalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def scroll_to_vertical_offset(self, offset: winrt.system.Double, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::UnregisterAnchorCandidate(Microsoft.UI.Xaml.UIElement)
     def unregister_anchor_candidate(self, element: microsoft_ui_xaml.UIElement, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ScrollViewer::ZoomToFactor(System.Single)
-    # @deprecated("ZoomToFactor may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
+    @deprecated("ZoomToFactor may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def zoom_to_factor(self, factor: winrt.system.Single, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.ScrollViewer::add_AnchorRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.ScrollViewer,Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs>)
     def add_anchor_requested(self, handler: windows_foundation.TypedEventHandler[ScrollViewer, AnchorRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...

@@ -5735,17 +5735,21 @@ class GroupStyle(winrt.system.Object, windows_ui_xaml_data.INotifyPropertyChange
     def header_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
     # Windows.UI.Xaml.Controls.StyleSelector Windows.UI.Xaml.Controls.GroupStyle::get_ContainerStyleSelector()
     @_property
+    @deprecated("ContainerStyleSelector may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style_selector(self) -> StyleSelector: ...
     # System.Void Windows.UI.Xaml.Controls.GroupStyle::put_ContainerStyleSelector(Windows.UI.Xaml.Controls.StyleSelector)
     @container_style_selector.setter
     @typing.final
+    @deprecated("ContainerStyleSelector may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style_selector(self, value: StyleSelector) -> None: ...
     # Windows.UI.Xaml.Style Windows.UI.Xaml.Controls.GroupStyle::get_ContainerStyle()
     @_property
+    @deprecated("ContainerStyle may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style(self) -> windows_ui_xaml.Style: ...
     # System.Void Windows.UI.Xaml.Controls.GroupStyle::put_ContainerStyle(Windows.UI.Xaml.Style)
     @container_style.setter
     @typing.final
+    @deprecated("ContainerStyle may be altered or unavailable for releases after Windows 8.1, and is not supported for ItemsControl.GroupStyle.")
     def container_style(self, value: windows_ui_xaml.Style) -> None: ...
     # Windows.UI.Xaml.Style Windows.UI.Xaml.Controls.GroupStyle::get_HeaderContainerStyle()
     @_property
@@ -6187,6 +6191,7 @@ class Image_Static(windows_ui_xaml.FrameworkElement_Static):
     def nine_grid_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Image::get_PlayToSourceProperty()
     @_property
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource.")
     def play_to_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Image::get_SourceProperty()
     @_property
@@ -6230,6 +6235,7 @@ class Image(windows_ui_xaml.FrameworkElement, metaclass=Image_Static):
     def nine_grid(self, value: windows_ui_xaml.Thickness | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double, winrt.system.Double]) -> None: ...
     # Windows.Media.PlayTo.PlayToSource Windows.UI.Xaml.Controls.Image::get_PlayToSource()
     @_property
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource.")
     def play_to_source(self) -> windows_media_playto.PlayToSource: ...
 
 class InkCanvas_Static(windows_ui_xaml.FrameworkElement_Static):
@@ -6315,11 +6321,11 @@ class InkToolbar(Control, metaclass=InkToolbar_Static):
     def remove_ink_drawing_attributes_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.InkToolbar::add_IsRulerButtonCheckedChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.InkToolbar,System.Object>)
-    # @deprecated("InkToolbarRulerButton is replaced by InkToolbarStencilButton starting from Windows 10 Creators Update. For more info, see MSDN.")
+    @deprecated("InkToolbarRulerButton is replaced by InkToolbarStencilButton starting from Windows 10 Creators Update. For more info, see MSDN.")
     def add_is_ruler_button_checked_changed(self, handler: windows_foundation.TypedEventHandler[InkToolbar, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
     # System.Void Windows.UI.Xaml.Controls.InkToolbar::remove_IsRulerButtonCheckedChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("InkToolbarRulerButton is replaced by InkToolbarStencilButton starting from Windows 10 Creators Update. For more info, see MSDN.")
+    @deprecated("InkToolbarRulerButton is replaced by InkToolbarStencilButton starting from Windows 10 Creators Update. For more info, see MSDN.")
     def remove_is_ruler_button_checked_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.InkToolbar::add_IsStencilButtonCheckedChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.InkToolbar,Windows.UI.Xaml.Controls.InkToolbarIsStencilButtonCheckedChangedEventArgs>)
@@ -6637,13 +6643,16 @@ class InkToolbarRulerButton_Static(InkToolbarToggleButton_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.InkToolbarRulerButton::get_RulerProperty()
     @_property
     @typing.final
+    @deprecated("InkToolbarRulerButton is deprecated starting from Windows 10 Creators Update. Please use InkToolbarStencilButton going forward. For more info, see MSDN.")
     def ruler_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
+@deprecated("InkToolbarRulerButton is deprecated starting from Windows 10 Creators Update. Please use InkToolbarStencilButton going forward. For more info, see MSDN.")
 class InkToolbarRulerButton(InkToolbarToggleButton, metaclass=InkToolbarRulerButton_Static):
     def __new__(cls) -> typing.Self: ...
     # Windows.UI.Input.Inking.InkPresenterRuler Windows.UI.Xaml.Controls.InkToolbarRulerButton::get_Ruler()
     @_property
     @typing.final
+    @deprecated("InkToolbarRulerButton is deprecated starting from Windows 10 Creators Update. Please use InkToolbarStencilButton going forward. For more info, see MSDN.")
     def ruler(self) -> windows_ui_input_inking.InkPresenterRuler: ...
 
 class InkToolbarStencilButton_Static(InkToolbarMenuButton_Static):
@@ -6790,10 +6799,10 @@ class ItemCollection(winrt.system.Object, windows_foundation_collections.IObserv
 @typing.final
 class ItemContainerGenerator(winrt.system.Object):
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromIndex(System.Int32)
-    # @deprecated("ContainerFromIndex may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromIndex.")
+    @deprecated("ContainerFromIndex may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromIndex.")
     def container_from_index(self, index: winrt.system.Int32, /) -> windows_ui_xaml.DependencyObject: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromItem(System.Object)
-    # @deprecated("ContainerFromItem may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromItem.")
+    @deprecated("ContainerFromItem may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromItem.")
     def container_from_item(self, item: winrt.system.Object, /) -> windows_ui_xaml.DependencyObject: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.ItemContainerGenerator::GenerateNext(System.Boolean&)
     def generate_next(self) -> tuple[windows_ui_xaml.DependencyObject, bool]: ...
@@ -6802,12 +6811,12 @@ class ItemContainerGenerator(winrt.system.Object):
     # Windows.UI.Xaml.Controls.ItemContainerGenerator Windows.UI.Xaml.Controls.ItemContainerGenerator::GetItemContainerGeneratorForPanel(Windows.UI.Xaml.Controls.Panel)
     def get_item_container_generator_for_panel(self, panel: Panel, /) -> ItemContainerGenerator: ...
     # System.Int32 Windows.UI.Xaml.Controls.ItemContainerGenerator::IndexFromContainer(Windows.UI.Xaml.DependencyObject)
-    # @deprecated("IndexFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.IndexFromContainer.")
+    @deprecated("IndexFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.IndexFromContainer.")
     def index_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
     # System.Int32 Windows.UI.Xaml.Controls.ItemContainerGenerator::IndexFromGeneratorPosition(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)
     def index_from_generator_position(self, position: windows_ui_xaml_controls_primitives.GeneratorPosition | tuple[winrt.system.Int32, winrt.system.Int32], /) -> winrt.system.Int32: ...
     # System.Object Windows.UI.Xaml.Controls.ItemContainerGenerator::ItemFromContainer(Windows.UI.Xaml.DependencyObject)
-    # @deprecated("ItemFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ItemFromContainer.")
+    @deprecated("ItemFromContainer may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ItemFromContainer.")
     def item_from_container(self, container: windows_ui_xaml.DependencyObject, /) -> winrt.system.Object: ...
     # System.Void Windows.UI.Xaml.Controls.ItemContainerGenerator::PrepareItemContainer(Windows.UI.Xaml.DependencyObject)
     def prepare_item_container(self, container: windows_ui_xaml.DependencyObject, /) -> None: ...
@@ -7846,6 +7855,7 @@ class MediaElement_Static(windows_ui_xaml.FrameworkElement_Static):
     def natural_video_width_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.MediaElement::get_PlayToSourceProperty()
     @_property
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource.")
     def play_to_source_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.MediaElement::get_PlaybackRateProperty()
     @_property
@@ -7867,6 +7877,7 @@ class MediaElement_Static(windows_ui_xaml.FrameworkElement_Static):
     def is_full_window_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.MediaElement::get_PlayToPreferredSourceUriProperty()
     @_property
+    @deprecated("PlayToPreferredSourceUri may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource().PreferredSourceUri.")
     def play_to_preferred_source_uri_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.MediaElement::get_StretchProperty()
     @_property
@@ -8071,6 +8082,7 @@ class MediaElement(windows_ui_xaml.FrameworkElement, metaclass=MediaElement_Stat
     def natural_video_width(self) -> winrt.system.Int32: ...
     # Windows.Media.PlayTo.PlayToSource Windows.UI.Xaml.Controls.MediaElement::get_PlayToSource()
     @_property
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource.")
     def play_to_source(self) -> windows_media_playto.PlayToSource: ...
     # Windows.UI.Xaml.Media.Stereo3DVideoPackingMode Windows.UI.Xaml.Controls.MediaElement::get_ActualStereo3DVideoPackingMode()
     @_property
@@ -8107,9 +8119,11 @@ class MediaElement(windows_ui_xaml.FrameworkElement, metaclass=MediaElement_Stat
     def stretch(self, value: windows_ui_xaml_media.Stretch) -> None: ...
     # Windows.Foundation.Uri Windows.UI.Xaml.Controls.MediaElement::get_PlayToPreferredSourceUri()
     @_property
+    @deprecated("PlayToPreferredSourceUri may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource().PreferredSourceUri.")
     def play_to_preferred_source_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.UI.Xaml.Controls.MediaElement::put_PlayToPreferredSourceUri(Windows.Foundation.Uri)
     @play_to_preferred_source_uri.setter
+    @deprecated("PlayToPreferredSourceUri may be altered or unavailable for releases after Windows 10.0. Instead, use GetAsCastingSource().PreferredSourceUri.")
     def play_to_preferred_source_uri(self, value: windows_foundation.Uri) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.MediaElement::get_IsFullWindow()
     @_property
@@ -9665,6 +9679,7 @@ class ParallaxView(windows_ui_xaml.FrameworkElement, metaclass=ParallaxView_Stat
 class PasswordBox_Static(Control_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.PasswordBox::get_IsPasswordRevealButtonEnabledProperty()
     @_property
+    @deprecated("IsPasswordRevealButtonEnabledProperty may be altered or unavailable for releases after Windows 10.0. Instead, use PasswordRevealModeProperty.")
     def is_password_reveal_button_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.PasswordBox::get_MaxLengthProperty()
     @_property
@@ -9752,9 +9767,11 @@ class PasswordBox(Control, metaclass=PasswordBox_Static):
     def max_length(self, value: winrt.system.Int32) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.PasswordBox::get_IsPasswordRevealButtonEnabled()
     @_property
+    @deprecated("IsPasswordRevealButtonEnabledProperty may be altered or unavailable for releases after Windows 10.0. Instead, use PasswordRevealModeProperty.")
     def is_password_reveal_button_enabled(self) -> bool: ...
     # System.Void Windows.UI.Xaml.Controls.PasswordBox::put_IsPasswordRevealButtonEnabled(System.Boolean)
     @is_password_reveal_button_enabled.setter
+    @deprecated("IsPasswordRevealButtonEnabledProperty may be altered or unavailable for releases after Windows 10.0. Instead, use PasswordRevealModeProperty.")
     def is_password_reveal_button_enabled(self, value: bool) -> None: ...
     # Windows.UI.Xaml.Media.SolidColorBrush Windows.UI.Xaml.Controls.PasswordBox::get_SelectionHighlightColor()
     @_property
@@ -12013,15 +12030,15 @@ class ScrollViewer(ContentControl, IScrollAnchorProvider, metaclass=ScrollViewer
     # System.Void Windows.UI.Xaml.Controls.ScrollViewer::RegisterAnchorCandidate(Windows.UI.Xaml.UIElement)
     def register_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.ScrollViewer::ScrollToHorizontalOffset(System.Double)
-    # @deprecated("ScrollToHorizontalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
+    @deprecated("ScrollToHorizontalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def scroll_to_horizontal_offset(self, offset: winrt.system.Double, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.ScrollViewer::ScrollToVerticalOffset(System.Double)
-    # @deprecated("ScrollToVerticalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
+    @deprecated("ScrollToVerticalOffset may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def scroll_to_vertical_offset(self, offset: winrt.system.Double, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.ScrollViewer::UnregisterAnchorCandidate(Windows.UI.Xaml.UIElement)
     def unregister_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.ScrollViewer::ZoomToFactor(System.Single)
-    # @deprecated("ZoomToFactor may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
+    @deprecated("ZoomToFactor may be altered or unavailable for releases after Windows 8.1. Instead, use ChangeView.")
     def zoom_to_factor(self, factor: winrt.system.Single, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.ScrollViewer::add_ViewChanged(Windows.Foundation.EventHandler`1<Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs>)
     def add_view_changed(self, handler: windows_foundation.EventHandler[ScrollViewerViewChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -15415,12 +15432,15 @@ class WebView_Static(windows_ui_xaml.FrameworkElement_Static):
     def clear_temporary_web_data_async(cls) -> windows_foundation.IAsyncAction: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_AllowedScriptNotifyUrisProperty()
     @_property
+    @deprecated("AllowedScriptNotifyUris is unavailable for releases beginning with Windows 8.1. Instead, list URIs under ApplicationContentUriRules in the package manifest. For more info, see the AllowedScriptNotifyUris documentation.")
     def allowed_script_notify_uris_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Foundation.Uri> Windows.UI.Xaml.Controls.WebView::get_AnyScriptNotifyUri()
     @_property
+    @deprecated("AnyScriptNotifyUri is unavailable for releases beginning with Windows 8.1. Instead, list URIs under ApplicationContentUriRules in the package manifest. For more info, see the AnyScriptNotifyUri documentation.")
     def any_script_notify_uri(cls) -> _cabc.MutableSequence[windows_foundation.Uri]: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_DataTransferPackageProperty()
     @_property
+    @deprecated("Use CaptureSelectedContentToDataPackageAsync instead of DataTransferPackage. For more info, see MSDN.")
     def data_transfer_package_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_SourceProperty()
     @_property
@@ -15479,7 +15499,7 @@ class WebView(windows_ui_xaml.FrameworkElement, metaclass=WebView_Static):
     # System.Void Windows.UI.Xaml.Controls.WebView::GoForward()
     def go_forward(self) -> None: ...
     # System.String Windows.UI.Xaml.Controls.WebView::InvokeScript(System.String,System.String[])
-    # @deprecated("Use InvokeScriptAsync instead of InvokeScript. For more info, see MSDN.")
+    @deprecated("Use InvokeScriptAsync instead of InvokeScript. For more info, see MSDN.")
     def invoke_script(self, script_name: str, arguments: winrt.system.Array[str] | winrt.system.ReadableBuffer, /) -> str: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.UI.Xaml.Controls.WebView::InvokeScriptAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def invoke_script_async(self, script_name: str, arguments: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[str]: ...
@@ -15496,16 +15516,16 @@ class WebView(windows_ui_xaml.FrameworkElement, metaclass=WebView_Static):
     # System.Void Windows.UI.Xaml.Controls.WebView::Stop()
     def stop(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.WebView::add_LoadCompleted(Windows.UI.Xaml.Navigation.LoadCompletedEventHandler)
-    # @deprecated("LoadCompleted may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
+    @deprecated("LoadCompleted may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
     def add_load_completed(self, handler: windows_ui_xaml_navigation.LoadCompletedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::remove_LoadCompleted(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("LoadCompleted may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
+    @deprecated("LoadCompleted may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
     def remove_load_completed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.WebView::add_NavigationFailed(Windows.UI.Xaml.Controls.WebViewNavigationFailedEventHandler)
-    # @deprecated("NavigationFailed may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
+    @deprecated("NavigationFailed may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
     def add_navigation_failed(self, handler: WebViewNavigationFailedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::remove_NavigationFailed(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("NavigationFailed may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
+    @deprecated("NavigationFailed may be altered or unavailable for releases after Windows 8.1. Instead, use NavigationCompleted.")
     def remove_navigation_failed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.WebView::add_ScriptNotify(Windows.UI.Xaml.Controls.NotifyEventHandler)
     def add_script_notify(self, handler: NotifyEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -15587,12 +15607,15 @@ class WebView(windows_ui_xaml.FrameworkElement, metaclass=WebView_Static):
     def source(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Foundation.Uri> Windows.UI.Xaml.Controls.WebView::get_AllowedScriptNotifyUris()
     @_property
+    @deprecated("AllowedScriptNotifyUris is unavailable for releases beginning with Windows 8.1. Instead, list URIs under ApplicationContentUriRules in the package manifest. For more info, see the AllowedScriptNotifyUris documentation.")
     def allowed_script_notify_uris(self) -> _cabc.MutableSequence[windows_foundation.Uri]: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::put_AllowedScriptNotifyUris(Windows.Foundation.Collections.IVector`1<Windows.Foundation.Uri>)
     @allowed_script_notify_uris.setter
+    @deprecated("AllowedScriptNotifyUris is unavailable for releases beginning with Windows 8.1. Instead, list URIs under ApplicationContentUriRules in the package manifest. For more info, see the AllowedScriptNotifyUris documentation.")
     def allowed_script_notify_uris(self, value: _cabc.MutableSequence[windows_foundation.Uri]) -> None: ...
     # Windows.ApplicationModel.DataTransfer.DataPackage Windows.UI.Xaml.Controls.WebView::get_DataTransferPackage()
     @_property
+    @deprecated("Use CaptureSelectedContentToDataPackageAsync instead of DataTransferPackage. For more info, see MSDN.")
     def data_transfer_package(self) -> windows_applicationmodel_datatransfer.DataPackage: ...
     # Windows.UI.Color Windows.UI.Xaml.Controls.WebView::get_DefaultBackgroundColor()
     @_property

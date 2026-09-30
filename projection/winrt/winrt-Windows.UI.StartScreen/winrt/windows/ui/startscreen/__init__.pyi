@@ -54,14 +54,20 @@ class TileMixedRealityModelActivationBehavior(enum.IntEnum):
 
 class TileOptions(enum.IntFlag):
     NONE = 0x0
+    """Deprecated: TileOptions.None may be altered or unavailable for release after Windows Phone 8.1."""
     SHOW_NAME_ON_LOGO = 0x1
+    """Deprecated: TileOptions.ShowNameOnLogo may be altered or unavailable for releases after Windows Phone 8.1. Instead, use SecondaryTile.VisualElements.ShowNameOnSquare150x150Logo."""
     SHOW_NAME_ON_WIDE_LOGO = 0x2
+    """Deprecated: TileOptions.ShowNameWideOnLogo may be altered or unavailable for releases after Windows Phone 8.1. Instead, use SecondaryTile.VisualElements.ShowNameOnWide310x150Logo."""
     COPY_ON_DEPLOYMENT = 0x4
+    """Deprecated: TileOptions.CopyOnDeployment may be altered or unavailable for releases after Windows Phone 8.1. Instead, use SecondaryTile.RoamingEnabled to control roaming behavior."""
 
 class TileSize(enum.IntEnum):
     DEFAULT = 0
     SQUARE30X30 = 1
+    """Deprecated: TileSize.Square30x30 may be altered or unavailable for release after Windows 10."""
     SQUARE70X70 = 2
+    """Deprecated: TileSize.Square70x70 may be altered or unavailable for release after Windows Phone 8.1."""
     SQUARE150X150 = 3
     WIDE310X150 = 4
     SQUARE310X310 = 5
@@ -154,8 +160,10 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     @typing.overload
     def __new__(cls, tile_id: str, display_name: str, arguments: str, square150x150_logo: windows_foundation.Uri, desired_size: TileSize) -> typing.Self: ...
     @typing.overload
+    @deprecated("SecondaryTile(string, string, string, string, Windows.UI.StartScreen.TileOptions, Windows.Foundation.Uri) may be altered or unavailable for releases after Windows Phone 8.1. Instead, use SecondaryTile(string, string, string, Windows.Foundation.Uri, Windows.UI.StartScreen.TileSize).")
     def __new__(cls, tile_id: str, short_name: str, display_name: str, arguments: str, tile_options: TileOptions, logo_reference: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
+    @deprecated("SecondaryTile(string, string, string, string, Windows.UI.StartScreen.TileOptions, Windows.Foundation.Uri, Windows.Foundation.Uri) may be altered or unavailable for releases after Windows Phone 8.1. Instead, use SecondaryTile(string, string, string, Windows.Foundation.Uri, Windows.UI.StartScreen.TileSize).")
     def __new__(cls, tile_id: str, short_name: str, display_name: str, arguments: str, tile_options: TileOptions, logo_reference: windows_foundation.Uri, wide_logo_reference: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
     def __new__(cls, tile_id: str) -> typing.Self: ...
@@ -217,15 +225,19 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     def remove_visual_elements_requested(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.String Windows.UI.StartScreen.SecondaryTile::get_ShortName()
     @_property
+    @deprecated("ShortName may be altered or unavailable for releases after Windows 8.1. Instead, use DisplayName.")
     def short_name(self) -> str: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_ShortName(System.String)
     @short_name.setter
+    @deprecated("ShortName may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayName.")
     def short_name(self, value: str) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTile::get_Logo()
     @_property
+    @deprecated("Logo may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.Square150x150Logo.")
     def logo(self) -> windows_foundation.Uri: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_Logo(Windows.Foundation.Uri)
     @logo.setter
+    @deprecated("Logo may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.Square150x150Logo.")
     def logo(self, value: windows_foundation.Uri) -> None: ...
     # System.String Windows.UI.StartScreen.SecondaryTile::get_TileId()
     @_property
@@ -253,9 +265,11 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     def arguments(self, value: str) -> None: ...
     # Windows.UI.StartScreen.ForegroundText Windows.UI.StartScreen.SecondaryTile::get_ForegroundText()
     @_property
+    @deprecated("ForegroundText may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.ForegroundText.")
     def foreground_text(self) -> ForegroundText: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_ForegroundText(Windows.UI.StartScreen.ForegroundText)
     @foreground_text.setter
+    @deprecated("TileOptions may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.ShowNameOnSquare150x150Logo, VisualElements.ShowNameOnWide310x150Logo, and RoamingEnabled.")
     def foreground_text(self, value: ForegroundText) -> None: ...
     # System.String Windows.UI.StartScreen.SecondaryTile::get_DisplayName()
     @_property
@@ -265,27 +279,35 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
     def display_name(self, value: str) -> None: ...
     # Windows.UI.Color Windows.UI.StartScreen.SecondaryTile::get_BackgroundColor()
     @_property
+    @deprecated("BackgroundColor may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.BackgroundColor.")
     def background_color(self) -> windows_ui.Color: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_BackgroundColor(Windows.UI.Color)
     @background_color.setter
+    @deprecated("BackgroundColor may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.BackgroundColor.")
     def background_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTile::get_WideLogo()
     @_property
+    @deprecated("WideLogo may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.Wide310x150Logo.")
     def wide_logo(self) -> windows_foundation.Uri: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_WideLogo(Windows.Foundation.Uri)
     @wide_logo.setter
+    @deprecated("WideLogo may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.Wide310x150Logo.")
     def wide_logo(self, value: windows_foundation.Uri) -> None: ...
     # Windows.UI.StartScreen.TileOptions Windows.UI.StartScreen.SecondaryTile::get_TileOptions()
     @_property
+    @deprecated("TileOptions may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.ShowNameOnSquare150x150Logo, VisualElements.ShowNameOnWide310x150Logo, and RoamingEnabled.")
     def tile_options(self) -> TileOptions: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_TileOptions(Windows.UI.StartScreen.TileOptions)
     @tile_options.setter
+    @deprecated("TileOptions may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.ShowNameOnSquare150x150Logo, VisualElements.ShowNameOnWide310x150Logo, and RoamingEnabled.")
     def tile_options(self, value: TileOptions) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTile::get_SmallLogo()
     @_property
+    @deprecated("SmallLogo may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.Square30x30Logo.")
     def small_logo(self) -> windows_foundation.Uri: ...
     # System.Void Windows.UI.StartScreen.SecondaryTile::put_SmallLogo(Windows.Foundation.Uri)
     @small_logo.setter
+    @deprecated("SmallLogo may be altered or unavailable for releases after Windows 8.1. Instead, use VisualElements.Square30x30Logo.")
     def small_logo(self, value: windows_foundation.Uri) -> None: ...
     # System.Boolean Windows.UI.StartScreen.SecondaryTile::get_RoamingEnabled()
     @_property
@@ -349,9 +371,11 @@ class SecondaryTileVisualElements(winrt.system.Object):
     def wide310x150_logo(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTileVisualElements::get_Square70x70Logo()
     @_property
+    @deprecated("SecondaryTileVisualElements.Square70x70Logo may be altered or unavailable for release after Windows Phone 8.1.")
     def square70x70_logo(self) -> windows_foundation.Uri: ...
     # System.Void Windows.UI.StartScreen.SecondaryTileVisualElements::put_Square70x70Logo(Windows.Foundation.Uri)
     @square70x70_logo.setter
+    @deprecated("SecondaryTileVisualElements.Square70x70Logo may be altered or unavailable for release after Windows Phone 8.1.")
     def square70x70_logo(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTileVisualElements::get_Square310x310Logo()
     @_property
@@ -361,9 +385,11 @@ class SecondaryTileVisualElements(winrt.system.Object):
     def square310x310_logo(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTileVisualElements::get_Square30x30Logo()
     @_property
+    @deprecated("SecondaryTileVisualElements.Square30x30Logo may be altered or unavailable for release after Windows 10.")
     def square30x30_logo(self) -> windows_foundation.Uri: ...
     # System.Void Windows.UI.StartScreen.SecondaryTileVisualElements::put_Square30x30Logo(Windows.Foundation.Uri)
     @square30x30_logo.setter
+    @deprecated("SecondaryTileVisualElements.Square30x30Logo may be altered or unavailable for release after Windows 10.")
     def square30x30_logo(self, value: windows_foundation.Uri) -> None: ...
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTileVisualElements::get_Square71x71Logo()
     @_property

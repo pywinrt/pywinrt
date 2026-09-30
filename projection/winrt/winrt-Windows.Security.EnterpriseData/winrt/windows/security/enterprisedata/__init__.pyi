@@ -58,12 +58,15 @@ class EnforcementLevel(enum.IntEnum):
 
 class FileProtectionStatus(enum.IntEnum):
     UNDETERMINED = 0
+    """Deprecated: Undetermined might be unavailable after Windows 10. Instead, use Unknown."""
     UNKNOWN = 0
     UNPROTECTED = 1
     REVOKED = 2
     PROTECTED = 3
     PROTECTED_BY_OTHER_USER = 4
+    """Deprecated: ProtectedByOtherUser might be unavailable after Windows 10. Instead, use ProtectedToOtherIdentity."""
     PROTECTED_TO_OTHER_ENTERPRISE = 5
+    """Deprecated: ProtectedToOtherEnterprise might be unavailable after Windows 10. Instead, use ProtectedToOtherIdentity."""
     NOT_PROTECTABLE = 6
     PROTECTED_TO_OTHER_IDENTITY = 7
     LICENSE_EXPIRED = 8
@@ -204,19 +207,20 @@ class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager
 @typing.final
 class FileRevocationManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.EnterpriseData.FileRevocationManager::CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)
-    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
+    @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def copy_protection_async(cls, source_storage_item: windows_storage.IStorageItem, target_storage_item: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.EnterpriseData.FileProtectionStatus> Windows.Security.EnterpriseData.FileRevocationManager::GetStatusAsync(Windows.Storage.IStorageItem)
-    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
+    @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def get_status_async(cls, storage_item: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[FileProtectionStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.EnterpriseData.FileProtectionStatus> Windows.Security.EnterpriseData.FileRevocationManager::ProtectAsync(Windows.Storage.IStorageItem,System.String)
-    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
+    @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def protect_async(cls, storage_item: windows_storage.IStorageItem, enterprise_identity: str, /) -> windows_foundation.IAsyncOperation[FileProtectionStatus]: ...
     # System.Void Windows.Security.EnterpriseData.FileRevocationManager::Revoke(System.String)
-    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
+    @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def revoke(cls, enterprise_identity: str, /) -> None: ...
 
 @typing.final
+@deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
 class FileRevocationManager(winrt.system.Object, metaclass=FileRevocationManager_Static):
     ...
 

@@ -76,6 +76,7 @@ class CurrencyFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOp
     def currency(self) -> str: ...
     # System.Void Windows.Globalization.NumberFormatting.CurrencyFormatter::put_Currency(System.String)
     @currency.setter
+    @deprecated("Currency may be read-only for releases after Windows 8.1. Instead, use a new CurrencyFormatter.")
     def currency(self, value: str) -> None: ...
     # Windows.Globalization.NumberFormatting.CurrencyFormatterMode Windows.Globalization.NumberFormatting.CurrencyFormatter::get_Mode()
     @_property
