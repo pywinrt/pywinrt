@@ -87,9 +87,6 @@ interface Microsoft.UI.Xaml.Media.IAcrylicBrushStatics
 interface Microsoft.UI.Xaml.Media.IAcrylicBrushStatics2
     guid f03ee756-8a99-5aed-bd17-4c7314acc9ff
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.GradientStop> concrete iterable
     py winrt.windows.foundation.collections._IIterable[GradientStop]
     guid 9105bb93-ac26-5bae-8c1e-df8ecf00dee6
@@ -126,7 +123,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Media
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.UI.Xaml.Media.GradientStop;{665f44fe-2e59-4c4a-ab53-076a100ccd81}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.GradientStop>
     argument Windows.UI.Xaml.Media.GradientStop
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop> shape=4 reverse=43 role=size
@@ -566,8 +563,6 @@ enum Microsoft.UI.Xaml.Media.RevealBrushState python_type
     constant NORMAL 0
     constant POINTER_OVER 1
     constant PRESSED 2
-
-enum T parameterized
 
 delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.UI.Xaml.Media.GradientStop> concrete
     py winrt.windows.foundation.collections.VectorChangedEventHandler[GradientStop]

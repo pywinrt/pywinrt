@@ -20,7 +20,6 @@ class Windows.Globalization.Collation.CharacterGroupings activatable python_type
     default Windows.Globalization.Collation.ICharacterGroupings
     requires Windows.Globalization.Collation.ICharacterGroupings
     requires Windows.Foundation.Collections.IVectorView<Windows.Globalization.Collation.CharacterGrouping>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping>
     factory Windows.Globalization.Collation.ICharacterGroupingsFactory
     constructor -
@@ -62,9 +61,6 @@ interface Windows.Globalization.Collation.ICharacterGroupings
 
 interface Windows.Globalization.Collation.ICharacterGroupingsFactory
     guid 99ea9fd9-886d-4401-9f98-69c82d4c2f78
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IIterable<Windows.Globalization.Collation.CharacterGrouping> concrete iterable
     py winrt.windows.foundation.collections._IIterable[CharacterGrouping]
@@ -123,8 +119,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Globalization.Colla
             in class type=Windows.Globalization.Collation.CharacterGrouping name=value
             out uint32 name=index
             out boolean return
-
-enum T parameterized
 
 interface Windows.Foundation.Collections.IIterable external parameterized
     py winrt.windows.foundation.collections._IIterable

@@ -323,7 +323,6 @@ class Windows.Devices.Enumeration.DeviceInformationCollection python_type iterab
     signature rc(Windows.Devices.Enumeration.DeviceInformationCollection;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Enumeration.DeviceInformation;{aba0fb95-4398-489d-8e44-e6130927011f})))
     default Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation>
     requires Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceInformation>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.DeviceInformation> shape=4 reverse=43 role=size
@@ -1249,9 +1248,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.DeviceClass> concrete iterable
     py winrt.windows.foundation.collections._IIterable[DeviceClass]
     guid 47d4be05-58f1-522e-81c6-975eb4131bb9
@@ -1689,8 +1685,6 @@ enum Windows.Devices.Enumeration.Panel python_type
     constant BOTTOM 4
     constant LEFT 5
     constant RIGHT 6
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.DeviceAccessInformation,Windows.Devices.Enumeration.DeviceAccessChangedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[DeviceAccessInformation, DeviceAccessChangedEventArgs]

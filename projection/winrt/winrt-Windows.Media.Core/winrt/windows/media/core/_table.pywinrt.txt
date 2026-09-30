@@ -753,9 +753,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Guid, Object]]
     guid f3b20528-e3b3-5331-b2d0-0c2623aee785
@@ -765,9 +762,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collection
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
 interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Imaging.BitmapPixelFormat> concrete iterable
     py winrt.windows.foundation.collections._IIterable[BitmapPixelFormat]
@@ -1183,10 +1177,6 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object
         get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43 role=pair_value
             out object return
 
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
-
 interface Windows.Media.Core.ILowLightFusionResult
     guid 78edbe35-27a0-42e0-9cd3-738d2089de9c
 
@@ -1483,7 +1473,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.Media.Core.TimedMetadataTrack;{9e6aed9e-f67a-49a9-b330-cf03b0e9cf07}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedMetadataTrack>
     argument Windows.Media.Core.TimedMetadataTrack
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedMetadataTrack> shape=4 reverse=43 role=size
@@ -1542,7 +1532,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Media.Core.Ti
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.Media.Core.TimedTextSource;{c4ed9ba6-101f-404d-a949-82f33fcd93b7}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Core.TimedTextSource>
     argument Windows.Media.Core.TimedTextSource
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Core.TimedTextSource> shape=4 reverse=43 role=size
@@ -2957,8 +2947,6 @@ class Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs python_ty
         method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.Core.IInitializeMediaStreamSourceRequestedEventArgs shape=4
             out class type=Windows.Foundation.Deferral return
 
-enum K parameterized
-
 class Windows.Media.Core.LowLightFusion static python_type
     py LowLightFusion
     factory Windows.Media.Core.ILowLightFusionStatics
@@ -3313,7 +3301,6 @@ class Windows.Media.Core.MediaStreamSamplePropertySet python_type iterable mappi
     signature rc(Windows.Media.Core.MediaStreamSamplePropertySet;pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable)))
     default Windows.Foundation.Collections.IMap<System.Guid,System.Object>
     requires Windows.Foundation.Collections.IMap<System.Guid,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.Guid,System.Object> shape=4 reverse=43 role=size
@@ -3967,8 +3954,6 @@ class Windows.Media.Core.SpeechCue activatable python_type
             out reference type=Windows.Foundation.IReference<System.Int32> return
         put put_EndPositionInInput slot=11 inputs=1 outputs=0 declaring=Windows.Media.Core.ISpeechCue shape=4
             in reference type=Windows.Foundation.IReference<System.Int32> name=value
-
-enum T parameterized
 
 enum Windows.Media.Core.TimedMetadataKind python_type
     py TimedMetadataKind
@@ -4906,8 +4891,6 @@ delegate Windows.Foundation.TypedEventHandler<Windows.Media.Core.VideoTrack,Wind
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Windows.Media.Core.VideoTrack name=sender
             in class type=Windows.Media.Core.VideoTrackOpenFailedEventArgs name=args
-
-enum V parameterized
 
 delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.Media.Core.TimedMetadataTrack> concrete
     py winrt.windows.foundation.collections.VectorChangedEventHandler[TimedMetadataTrack]

@@ -210,7 +210,6 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection activatable pyth
     signature rc(Microsoft.UI.Xaml.Media.Animation.ColorKeyFrameCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame;{02848c7e-c772-5f66-842b-fd494d0da669})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -615,7 +614,6 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection activatable pyt
     signature rc(Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrameCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame;{94c82ae6-ca62-5f52-934c-3e427e75d69a})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -1417,9 +1415,6 @@ interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement> 
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.UIElement> return
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame> concrete iterable iterator
     py winrt.windows.foundation.collections._IIterator[ColorKeyFrame]
@@ -2922,7 +2917,6 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection activatable pyt
     signature rc(Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrameCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame;{c5a9f65b-fc69-5a88-a797-34f46d761381})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -3094,7 +3088,6 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection activatable pyth
     signature rc(Microsoft.UI.Xaml.Media.Animation.PointKeyFrameCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.PointKeyFrame;{59d5c07d-a3a7-5450-9dfb-4b7e77d58f93})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.PointKeyFrame>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -3854,8 +3847,6 @@ class Microsoft.UI.Xaml.Media.Animation.SwipeHintThemeAnimation activatable pyth
         get get_ToVerticalOffsetProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ISwipeHintThemeAnimationStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
 
-enum T parameterized
-
 class Microsoft.UI.Xaml.Media.Animation.Timeline composable python_type
     py Timeline
     signature rc(Microsoft.UI.Xaml.Media.Animation.Timeline;{d0f9b330-cc2a-5b05-9786-2da4c6584581})
@@ -3929,7 +3920,6 @@ class Microsoft.UI.Xaml.Media.Animation.TimelineCollection activatable python_ty
     signature rc(Microsoft.UI.Xaml.Media.Animation.TimelineCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.Timeline;{d0f9b330-cc2a-5b05-9786-2da4c6584581})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Timeline>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Timeline>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -3992,7 +3982,6 @@ class Microsoft.UI.Xaml.Media.Animation.TransitionCollection activatable python_
     signature rc(Microsoft.UI.Xaml.Media.Animation.TransitionCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Media.Animation.Transition;{e5b71956-8e44-5a38-b41e-274d706102bf})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.Animation.Transition>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Media.Animation.Transition>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4

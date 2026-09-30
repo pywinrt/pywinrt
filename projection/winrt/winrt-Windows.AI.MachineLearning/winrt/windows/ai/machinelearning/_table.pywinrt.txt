@@ -214,9 +214,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.AI.MachineLearning.IL
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.AI.MachineLearning.ILearningModelFeatureDescriptor> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
@@ -516,10 +513,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
@@ -1241,8 +1234,6 @@ class Windows.AI.MachineLearning.ImageFeatureValue python_type
             in class type=Windows.Media.VideoFrame name=image
             out class type=Windows.AI.MachineLearning.ImageFeatureValue return
 
-enum K parameterized
-
 class Windows.AI.MachineLearning.LearningModel python_type closeable
     py LearningModel
     signature rc(Windows.AI.MachineLearning.LearningModel;{5b8e4920-489f-4e86-9128-265a327b78fa})
@@ -1315,7 +1306,6 @@ class Windows.AI.MachineLearning.LearningModelBinding python_type iterable mappi
     default Windows.AI.MachineLearning.ILearningModelBinding
     requires Windows.AI.MachineLearning.ILearningModelBinding
     requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     factory Windows.AI.MachineLearning.ILearningModelBindingFactory
     constructor -
@@ -2294,8 +2284,6 @@ class Windows.AI.MachineLearning.TensorUInt8Bit python_type closeable
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Byte> return
-
-enum V parameterized
 
 class System.Boolean external
     py winrt.system.Boolean

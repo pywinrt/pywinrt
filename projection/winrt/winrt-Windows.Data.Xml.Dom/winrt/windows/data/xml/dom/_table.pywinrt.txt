@@ -279,9 +279,6 @@ interface Windows.Data.Xml.Dom.IDtdEntity
 interface Windows.Data.Xml.Dom.IDtdNotation
     guid 8cb4e04d-6d46-4edb-ab73-df83c51ad397
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IXmlNode]
     guid f1146ffc-8c92-56e8-93f1-711f86722633
@@ -823,8 +820,6 @@ enum Windows.Data.Xml.Dom.NodeType python_type
     constant DOCUMENT_TYPE_NODE 10
     constant DOCUMENT_FRAGMENT_NODE 11
     constant NOTATION_NODE 12
-
-enum T parameterized
 
 class Windows.Data.Xml.Dom.XmlAttribute python_type
     py XmlAttribute
@@ -1984,7 +1979,6 @@ class Windows.Data.Xml.Dom.XmlNamedNodeMap python_type iterable sequence
     default Windows.Data.Xml.Dom.IXmlNamedNodeMap
     requires Windows.Data.Xml.Dom.IXmlNamedNodeMap
     requires Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode>
     property length
         get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNamedNodeMap shape=4
@@ -2046,7 +2040,6 @@ class Windows.Data.Xml.Dom.XmlNodeList python_type iterable sequence
     default Windows.Data.Xml.Dom.IXmlNodeList
     requires Windows.Data.Xml.Dom.IXmlNodeList
     requires Windows.Foundation.Collections.IVectorView<Windows.Data.Xml.Dom.IXmlNode>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Data.Xml.Dom.IXmlNode>
     property length
         get get_Length slot=6 inputs=0 outputs=1 declaring=Windows.Data.Xml.Dom.IXmlNodeList shape=4

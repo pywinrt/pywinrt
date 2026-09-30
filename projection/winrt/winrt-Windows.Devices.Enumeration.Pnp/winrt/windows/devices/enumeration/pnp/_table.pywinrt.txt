@@ -92,9 +92,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.Pnp.PnpObject> concrete iterable
     py winrt.windows.foundation.collections._IIterable[PnpObject]
     guid 30b50092-36ee-53ff-9450-029004436c60
@@ -306,7 +303,6 @@ class Windows.Devices.Enumeration.Pnp.PnpObjectCollection python_type iterable s
     signature rc(Windows.Devices.Enumeration.Pnp.PnpObjectCollection;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Enumeration.Pnp.PnpObject;{95c66258-733b-4a8f-93a3-db078ac870c1})))
     default Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.Pnp.PnpObject>
     requires Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.Pnp.PnpObject>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Devices.Enumeration.Pnp.PnpObject>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Enumeration.Pnp.PnpObject> shape=4 reverse=43 role=size
@@ -400,8 +396,6 @@ class Windows.Devices.Enumeration.Pnp.PnpObjectWatcher python_type
         method Start slot=17 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=0
     method stop
         method Stop slot=18 inputs=0 outputs=0 declaring=Windows.Devices.Enumeration.Pnp.IPnpObjectWatcher shape=0
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Enumeration.Pnp.PnpObjectWatcher,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[PnpObjectWatcher, Object]

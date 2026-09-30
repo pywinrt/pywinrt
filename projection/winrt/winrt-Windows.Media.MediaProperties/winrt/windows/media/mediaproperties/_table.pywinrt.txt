@@ -377,9 +377,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collection
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Media.Core.AudioStreamDescriptor> concrete iterable
     py winrt.windows.foundation.collections._IIterable[AudioStreamDescriptor]
     guid a3e2c972-a171-5b94-8389-e983ebc3f3b9
@@ -503,10 +500,6 @@ interface Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object
     property value
         get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object> shape=4 reverse=43 role=pair_value
             out object return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IMap<System.Guid,System.Object> concrete iterable mapping mutable_mapping
     py winrt.windows.foundation.collections._IMap[Guid, Object]
@@ -965,8 +958,6 @@ class Windows.Media.MediaProperties.ImageEncodingProperties activatable python_t
             in enum32 type=Windows.Media.MediaProperties.MediaPixelFormat name=format
             out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
 
-enum K parameterized
-
 class Windows.Media.MediaProperties.MediaEncodingProfile activatable python_type
     py MediaEncodingProfile
     signature rc(Windows.Media.MediaProperties.MediaEncodingProfile;{e7dbf5a8-1db9-4783-876b-3dfe12acfdb3})
@@ -1259,7 +1250,6 @@ class Windows.Media.MediaProperties.MediaPropertySet activatable python_type ite
     signature rc(Windows.Media.MediaProperties.MediaPropertySet;pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};g16;cinterface(IInspectable)))
     default Windows.Foundation.Collections.IMap<System.Guid,System.Object>
     requires Windows.Foundation.Collections.IMap<System.Guid,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Guid,System.Object>>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -1399,8 +1389,6 @@ class Windows.Media.MediaProperties.TimedMetadataEncodingProperties activatable 
     method set_format_user_data
         method SetFormatUserData slot=6 inputs=1 outputs=0 declaring=Windows.Media.MediaProperties.ITimedMetadataEncodingProperties shape=51
             pass_array uint8 name=value
-
-enum V parameterized
 
 class Windows.Media.MediaProperties.VideoEncodingProperties activatable python_type
     py VideoEncodingProperties

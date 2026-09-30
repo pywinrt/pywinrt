@@ -668,8 +668,6 @@ class Microsoft.UI.Xaml.DependencyObjectCollection composable python_type iterab
     base Microsoft.UI.Xaml.DependencyObject
     default Windows.Foundation.Collections.IObservableVector<Microsoft.UI.Xaml.DependencyObject>
     requires Windows.Foundation.Collections.IObservableVector<Microsoft.UI.Xaml.DependencyObject>
-    requires Windows.Foundation.Collections.IVector<T>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.DependencyObject>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.DependencyObject>
     composable Microsoft.UI.Xaml.IDependencyObjectCollectionFactory
@@ -2109,9 +2107,6 @@ interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.VisualTrans
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.VisualTransition> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.VisualTransition> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IIterable[Point]]
     guid ae44597e-d411-5b7f-bbec-6a96c94a107a
@@ -2121,9 +2116,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collection
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>> return
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Object,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Object, Object]]
@@ -2465,10 +2457,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> con
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Point> shape=4 reverse=62 role=move_next
             out boolean return
 
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
-
 interface Windows.Foundation.Collections.IKeyValuePair<System.Object,System.Object> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[Object, Object]
     guid 59e7ae0c-c29d-5ad6-bef5-dedb52a198e1
@@ -2558,7 +2546,7 @@ interface Windows.Foundation.Collections.IObservableVector<Microsoft.UI.Xaml.Dep
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Microsoft.UI.Xaml.DependencyObject;{e7beaee7-160e-50f7-8789-d63463f979fa}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.DependencyObject>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.DependencyObject>
     argument Microsoft.UI.Xaml.DependencyObject
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.DependencyObject> shape=4 reverse=43 role=size
@@ -3635,9 +3623,6 @@ interface Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.VisualTransit
             in uint32 name=index
             in class type=Microsoft.UI.Xaml.VisualTransition name=value
 
-interface Windows.Foundation.Collections.IVector<T> parameterized
-    argument T
-
 interface Microsoft.UI.Xaml.IVector3Transition
     guid 0c408bb9-f9a2-55d7-8aed-143d36d603f2
 
@@ -4095,8 +4080,6 @@ interface Microsoft.UI.Xaml.IXamlServiceProvider python_type
             in struct type=Windows.UI.Xaml.Interop.TypeName name=type
             out object return
 
-enum K parameterized
-
 class Microsoft.UI.Xaml.LaunchActivatedEventArgs python_type
     py LaunchActivatedEventArgs
     signature rc(Microsoft.UI.Xaml.LaunchActivatedEventArgs;{d505cea9-1bcb-5b29-a8be-944e00f06f78})
@@ -4313,7 +4296,6 @@ class Microsoft.UI.Xaml.ResourceDictionary composable python_type iterable mappi
     default Microsoft.UI.Xaml.IResourceDictionary
     requires Microsoft.UI.Xaml.IResourceDictionary
     requires Windows.Foundation.Collections.IMap<System.Object,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.Object,System.Object>>
     composable Microsoft.UI.Xaml.IResourceDictionaryFactory
     constructor -
@@ -4469,7 +4451,6 @@ class Microsoft.UI.Xaml.SetterBaseCollection activatable python_type iterable se
     default Microsoft.UI.Xaml.ISetterBaseCollection
     requires Microsoft.UI.Xaml.ISetterBaseCollection
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.SetterBase>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.SetterBase>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -4640,8 +4621,6 @@ delegate Microsoft.UI.Xaml.SuspendingEventHandler python_type
             in object name=sender
             in class type=Windows.ApplicationModel.SuspendingEventArgs name=e
 
-enum T parameterized
-
 class Microsoft.UI.Xaml.TargetPropertyPath activatable python_type
     py TargetPropertyPath
     signature rc(Microsoft.UI.Xaml.TargetPropertyPath;{b1442f0e-f66b-531c-979b-193fd344e2a8})
@@ -4745,7 +4724,6 @@ class Microsoft.UI.Xaml.TriggerActionCollection activatable python_type iterable
     signature rc(Microsoft.UI.Xaml.TriggerActionCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.TriggerAction;{1fa35464-a690-586c-aedf-6c88cac7d14a})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.TriggerAction>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.TriggerAction>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.TriggerAction>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -4808,7 +4786,6 @@ class Microsoft.UI.Xaml.TriggerCollection python_type iterable sequence mutable_
     signature rc(Microsoft.UI.Xaml.TriggerCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.TriggerBase;{d37da89d-0d71-58cf-a901-99a7d3e5e434})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.TriggerBase>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.TriggerBase>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.TriggerBase>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.TriggerBase> shape=4 reverse=43 role=size
@@ -6043,7 +6020,6 @@ class Microsoft.UI.Xaml.UIElementWeakCollection composable python_type iterable 
     signature rc(Microsoft.UI.Xaml.UIElementWeakCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.UIElement;{c3c01020-320c-5cf6-9d24-d396bbfa4d8b})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.UIElement>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.UIElement>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.UIElement>
     composable Microsoft.UI.Xaml.IUIElementWeakCollectionFactory
     constructor -
@@ -6121,8 +6097,6 @@ delegate Microsoft.UI.Xaml.UnhandledExceptionEventHandler python_type
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in object name=sender
             in class type=Microsoft.UI.Xaml.UnhandledExceptionEventArgs name=e
-
-enum V parameterized
 
 class Microsoft.UI.Xaml.Vector3Transition composable python_type
     py Vector3Transition

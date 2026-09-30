@@ -504,7 +504,6 @@ class Microsoft.UI.Composition.CompositionColorGradientStopCollection python_typ
     requires Microsoft.UI.Composition.ICompositionColorGradientStopCollection
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.CompositionColorGradientStop>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionColorGradientStop>
-    requires Windows.Foundation.Collections.IIterable<T>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionColorGradientStop> shape=4 reverse=43 role=size
             out uint32 return
@@ -1592,7 +1591,6 @@ class Microsoft.UI.Composition.CompositionShapeCollection python_type iterable s
     base Microsoft.UI.Composition.CompositionObject
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.CompositionShape>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.CompositionShape> shape=4 reverse=43 role=size
@@ -1726,7 +1724,6 @@ class Microsoft.UI.Composition.CompositionStrokeDashArray python_type iterable s
     base Microsoft.UI.Composition.CompositionObject
     default Windows.Foundation.Collections.IVector<System.Single>
     requires Windows.Foundation.Collections.IVector<System.Single>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<System.Single>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Single> shape=4 reverse=43 role=size
@@ -2858,12 +2855,6 @@ interface Windows.Foundation.Collections.IIterable<System.Single> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Single> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.Single> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.ICompositionAnimationBase>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, ICompositionAnimationBase]]
     guid 999d6f68-b74e-5e06-a798-d254c4895670
@@ -3095,10 +3086,6 @@ interface Microsoft.UI.Composition.IKeyFrameAnimation3
 
 interface Microsoft.UI.Composition.IKeyFrameAnimationFactory
     guid 7cccfc87-3baf-5100-b5f8-2f779f954f19
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.ICompositionAnimationBase> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, ICompositionAnimationBase]
@@ -4025,7 +4012,6 @@ class Microsoft.UI.Composition.ImplicitAnimationCollection python_type iterable 
     requires Microsoft.UI.Composition.IImplicitAnimationCollection
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.ICompositionAnimationBase>>
     requires Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.ICompositionAnimationBase>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.ICompositionAnimationBase> shape=4 reverse=43 role=size
             out uint32 return
@@ -4060,7 +4046,6 @@ class Microsoft.UI.Composition.InitialValueExpressionCollection python_type iter
     base Microsoft.UI.Composition.CompositionObject
     default Windows.Foundation.Collections.IMap<System.String,System.String>
     requires Windows.Foundation.Collections.IMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
@@ -4116,8 +4101,6 @@ class Microsoft.UI.Composition.InsetClip python_type
             out single return
         put put_BottomInset slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.IInsetClip shape=1
             in single name=value
-
-enum K parameterized
 
 class Microsoft.UI.Composition.KeyFrameAnimation composable python_type
     py KeyFrameAnimation
@@ -4642,8 +4625,6 @@ class Microsoft.UI.Composition.StepEasingFunction python_type
         put put_FinalStep slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.IStepEasingFunction shape=4
             in int32 name=value
 
-enum T parameterized
-
 delegate Windows.Foundation.TypedEventHandler<Microsoft.UI.Composition.CompositionCapabilities,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[CompositionCapabilities, Object]
     guid d81e5eac-c5ba-59aa-aed3-f8afdd07a351
@@ -4679,8 +4660,6 @@ delegate Windows.Foundation.TypedEventHandler<System.Object,Microsoft.UI.Composi
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in object name=sender
             in class type=Microsoft.UI.Composition.CompositionBatchCompletedEventArgs name=args
-
-enum V parameterized
 
 class Microsoft.UI.Composition.Vector2KeyFrameAnimation python_type
     py Vector2KeyFrameAnimation

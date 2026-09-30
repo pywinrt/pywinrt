@@ -22,12 +22,6 @@ interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scen
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Composition.Scenes.SceneNode> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, SceneAttributeSemantic]]
     guid d2e146d1-5e16-5c59-b07a-e253e65cc7e7
@@ -97,10 +91,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, SceneAttributeSemantic]
@@ -426,8 +416,6 @@ interface Windows.Foundation.Collections.IVectorView<Microsoft.UI.Composition.Sc
             out uint32 name=index
             out boolean return
 
-enum K parameterized
-
 enum Microsoft.UI.Composition.Scenes.SceneAlphaMode python_type
     py SceneAlphaMode
     signature enum(Microsoft.UI.Composition.Scenes.SceneAlphaMode;i4)
@@ -486,7 +474,6 @@ class Microsoft.UI.Composition.Scenes.SceneComponentCollection python_type itera
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent>
     requires Microsoft.UI.Composition.Scenes.ISceneComponentCollection
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneComponent>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43 role=size
@@ -586,7 +573,6 @@ class Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap python_type 
     default Microsoft.UI.Composition.Scenes.ISceneMeshMaterialAttributeMap
     requires Microsoft.UI.Composition.Scenes.ISceneMeshMaterialAttributeMap
     requires Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic>>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Microsoft.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43 role=size
@@ -750,7 +736,6 @@ class Microsoft.UI.Composition.Scenes.SceneNodeCollection python_type iterable s
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode>
     requires Microsoft.UI.Composition.Scenes.ISceneNodeCollection
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Composition.Scenes.SceneNode>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Composition.Scenes.SceneNode> shape=4 reverse=43 role=size
@@ -921,10 +906,6 @@ enum Microsoft.UI.Composition.Scenes.SceneWrappingMode python_type
     constant CLAMP_TO_EDGE 0
     constant MIRRORED_REPEAT 1
     constant REPEAT 2
-
-enum T parameterized
-
-enum V parameterized
 
 enum Microsoft.Graphics.DirectX.DirectXPixelFormat external
     py winrt.microsoft.graphics.directx.DirectXPixelFormat

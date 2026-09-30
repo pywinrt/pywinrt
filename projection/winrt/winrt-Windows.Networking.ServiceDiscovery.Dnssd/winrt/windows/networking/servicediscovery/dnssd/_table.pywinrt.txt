@@ -109,7 +109,6 @@ class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection p
     signature rc(Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance;{e246db7e-98a5-4ca1-b9e4-c253d33c35ff})))
     default Windows.Foundation.Collections.IVectorView<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>
     requires Windows.Foundation.Collections.IVectorView<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance> shape=4 reverse=43 role=size
@@ -213,9 +212,6 @@ interface Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory
 
 interface Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher
     guid cc34d9c1-db7d-4b69-983d-c6f83f205682
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
@@ -381,8 +377,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.ServiceD
             in class type=Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance name=value
             out uint32 name=index
             out boolean return
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[DnssdServiceWatcher, Object]

@@ -2,12 +2,6 @@ format 4.0
 census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.UI.Composition.Scenes
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.UI.Composition.Scenes.SceneAttributeSemantic>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, SceneAttributeSemantic]]
     guid a3e30221-7ca2-5a3c-a54a-378fee7369cc
@@ -97,10 +91,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.UI.Composition.Scenes
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Composition.Scenes.SceneNode> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.UI.Composition.Scenes.SceneAttributeSemantic> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, SceneAttributeSemantic]
@@ -426,8 +416,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.UI.Composition.Scen
             out uint32 name=index
             out boolean return
 
-enum K parameterized
-
 enum Windows.UI.Composition.Scenes.SceneAlphaMode python_type
     py SceneAlphaMode
     signature enum(Windows.UI.Composition.Scenes.SceneAlphaMode;i4)
@@ -486,7 +474,6 @@ class Windows.UI.Composition.Scenes.SceneComponentCollection python_type iterabl
     default Windows.Foundation.Collections.IVector<Windows.UI.Composition.Scenes.SceneComponent>
     requires Windows.UI.Composition.Scenes.ISceneComponentCollection
     requires Windows.Foundation.Collections.IVector<Windows.UI.Composition.Scenes.SceneComponent>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Composition.Scenes.SceneComponent>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Composition.Scenes.SceneComponent> shape=4 reverse=43 role=size
@@ -586,7 +573,6 @@ class Windows.UI.Composition.Scenes.SceneMeshMaterialAttributeMap python_type it
     default Windows.UI.Composition.Scenes.ISceneMeshMaterialAttributeMap
     requires Windows.UI.Composition.Scenes.ISceneMeshMaterialAttributeMap
     requires Windows.Foundation.Collections.IMap<System.String,Windows.UI.Composition.Scenes.SceneAttributeSemantic>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.UI.Composition.Scenes.SceneAttributeSemantic>>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,Windows.UI.Composition.Scenes.SceneAttributeSemantic> shape=4 reverse=43 role=size
@@ -750,7 +736,6 @@ class Windows.UI.Composition.Scenes.SceneNodeCollection python_type iterable seq
     default Windows.Foundation.Collections.IVector<Windows.UI.Composition.Scenes.SceneNode>
     requires Windows.UI.Composition.Scenes.ISceneNodeCollection
     requires Windows.Foundation.Collections.IVector<Windows.UI.Composition.Scenes.SceneNode>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Composition.Scenes.SceneNode>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Composition.Scenes.SceneNode> shape=4 reverse=43 role=size
@@ -921,10 +906,6 @@ enum Windows.UI.Composition.Scenes.SceneWrappingMode python_type
     constant CLAMP_TO_EDGE 0
     constant MIRRORED_REPEAT 1
     constant REPEAT 2
-
-enum T parameterized
-
-enum V parameterized
 
 class System.String external
     py winrt.system.String

@@ -303,9 +303,6 @@ interface Windows.Foundation.IGetActivationFactory python_type
 interface Windows.Foundation.IGuidHelperStatics
     guid 59c7966b-ae52-5283-ad7f-a1b9e9678add
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IWwwFormUrlDecoderEntry]
     guid 876be83b-7218-5bfb-a169-83152ef7e146
@@ -1048,8 +1045,6 @@ struct Windows.Foundation.Size python_type
     field width Width single
     field height Height single
 
-enum T parameterized
-
 enum TProgress parameterized
 
 enum TResult parameterized
@@ -1174,7 +1169,6 @@ class Windows.Foundation.WwwFormUrlDecoder python_type iterable sequence
     requires Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.IWwwFormUrlDecoderEntry>
     requires Windows.Foundation.Collections.IVectorView<Windows.Foundation.IWwwFormUrlDecoderEntry>
-    requires Windows.Foundation.Collections.IIterable<T>
     factory Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
     constructor -
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory shape=51

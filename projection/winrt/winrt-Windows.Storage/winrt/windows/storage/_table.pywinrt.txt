@@ -123,8 +123,6 @@ class Windows.Storage.ApplicationDataCompositeValue activatable python_type iter
     default Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IObservableMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IMap<K,V>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     constructor -
@@ -199,8 +197,6 @@ class Windows.Storage.ApplicationDataContainerSettings python_type iterable mapp
     default Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IObservableMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IMap<K,V>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     property size
@@ -1395,12 +1391,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
@@ -1601,10 +1591,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibrar
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.StorageLibraryChange> shape=4 reverse=62 role=move_next
             out boolean return
 
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
-
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
     guid 09335560-6c6b-5a26-9348-97b781132b20
@@ -1653,10 +1639,6 @@ interface Windows.Storage.IKnownFoldersStatics3
 
 interface Windows.Storage.IKnownFoldersStatics4
     guid 1722e6bf-9ff9-4b21-bed5-90ecb13a192e
-
-interface Windows.Foundation.Collections.IMap<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IMap<System.String,System.Object> concrete iterable mapping mutable_mapping
     py winrt.windows.foundation.collections._IMap[String, Object]
@@ -1767,7 +1749,7 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Obj
     signature pinterface({65df2bf5-bf39-41b5-aebc-5a9d865e472b};string;cinterface(IInspectable))
     base Windows.Foundation.Collections.IObservableMap
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
     property size
@@ -1810,7 +1792,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.Storage.Stora
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.Storage.StorageFolder;{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.Storage.StorageFolder>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.Storage.StorageFolder>
     argument Windows.Storage.StorageFolder
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.StorageFolder> shape=4 reverse=43 role=size
@@ -2615,8 +2597,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageLibr
             in class type=Windows.Storage.StorageLibraryChange name=value
             out uint32 name=index
             out boolean return
-
-enum K parameterized
 
 enum Windows.Storage.KnownFolderId python_type
     py KnownFolderId
@@ -3705,8 +3685,6 @@ class Windows.Storage.SystemVideoProperties python_type
         get get_TotalBitrate slot=10 inputs=0 outputs=1 declaring=Windows.Storage.ISystemVideoProperties shape=4
             out string return
 
-enum T parameterized
-
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.ApplicationData,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[ApplicationData, Object]
     guid b5348b3b-5081-5ae9-8fa3-4d22d68fb0ea
@@ -3801,8 +3779,6 @@ class Windows.Storage.UserDataPaths python_type
         method GetForUser slot=6 inputs=1 outputs=1 declaring=Windows.Storage.IUserDataPathsStatics shape=51 static
             in class type=Windows.System.User name=user
             out class type=Windows.Storage.UserDataPaths return
-
-enum V parameterized
 
 delegate Windows.Foundation.Collections.VectorChangedEventHandler<Windows.Storage.StorageFolder> concrete
     py winrt.windows.foundation.collections.VectorChangedEventHandler[StorageFolder]

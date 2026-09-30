@@ -2,9 +2,6 @@ format 4.0
 census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.Devices.Lights.Effects
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect> concrete iterable
     py winrt.windows.foundation.collections._IIterable[ILampArrayEffect]
     guid 3f108d37-6679-5590-aed2-033362fbf413
@@ -341,7 +338,6 @@ class Windows.Devices.Lights.Effects.LampArrayEffectPlaylist activatable python_
     default Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist
     requires Windows.Devices.Lights.Effects.ILampArrayEffectPlaylist
     requires Windows.Foundation.Collections.IVectorView<Windows.Devices.Lights.Effects.ILampArrayEffect>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Devices.Lights.Effects.ILampArrayEffect>
     factory Windows.Devices.Lights.Effects.ILampArrayEffectPlaylistStatics
     constructor -
@@ -477,8 +473,6 @@ class Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs python_ty
         method SetSingleColorForIndices slot=9 inputs=2 outputs=0 declaring=Windows.Devices.Lights.Effects.ILampArrayUpdateRequestedEventArgs shape=175
             in struct type=Windows.UI.Color name=desiredColor
             pass_array int32 name=lampIndexes
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Devices.Lights.Effects.LampArrayBitmapEffect,Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[LampArrayBitmapEffect, LampArrayBitmapRequestedEventArgs]

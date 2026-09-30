@@ -507,7 +507,6 @@ class Windows.Web.Http.HttpCookieCollection python_type iterable sequence
     signature rc(Windows.Web.Http.HttpCookieCollection;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Web.Http.HttpCookie;{1f5488e2-cc2d-4779-86a7-88f10687d249})))
     default Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie>
     requires Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpCookie>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie> shape=4 reverse=43 role=size
@@ -1713,9 +1712,6 @@ interface Windows.Web.Http.IHttpStringContentFactory
 interface Windows.Web.Http.IHttpTransportInformation
     guid 70127198-c6a7-4ed0-833a-83fd8b8f178d
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
@@ -2326,8 +2322,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpCookie
             in class type=Windows.Web.Http.HttpCookie name=value
             out uint32 name=index
             out boolean return
-
-enum T parameterized
 
 class System.Object external
     py winrt.system.Object

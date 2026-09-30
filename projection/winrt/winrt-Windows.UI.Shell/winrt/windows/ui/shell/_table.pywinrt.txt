@@ -121,9 +121,6 @@ interface Windows.UI.Shell.IFocusSessionManager
 interface Windows.UI.Shell.IFocusSessionManagerStatics
     guid 834df764-cb9a-5d0a-aa9f-73df4f249395
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab> concrete iterable
     py winrt.windows.foundation.collections._IIterable[WindowTab]
     guid cf5a6d72-cc50-51b6-b34d-fdd7e59d33eb
@@ -386,8 +383,6 @@ class Windows.UI.Shell.ShareWindowCommandSource python_type
     method stop
         method Stop slot=7 inputs=0 outputs=0 declaring=Windows.UI.Shell.IShareWindowCommandSource shape=0
 
-enum T parameterized
-
 class Windows.UI.Shell.TaskbarManager python_type
     py TaskbarManager
     signature rc(Windows.UI.Shell.TaskbarManager;{87490a19-1ad9-49f4-b2e8-86738dc5ac40})
@@ -555,7 +550,6 @@ class Windows.UI.Shell.WindowTabCollection python_type iterable sequence mutable
     default Windows.UI.Shell.IWindowTabCollection
     requires Windows.UI.Shell.IWindowTabCollection
     requires Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Shell.WindowTab>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Shell.WindowTab> shape=4 reverse=43 role=size

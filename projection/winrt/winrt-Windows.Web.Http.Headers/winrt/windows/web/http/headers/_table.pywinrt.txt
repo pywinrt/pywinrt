@@ -8,7 +8,6 @@ class Windows.Web.Http.Headers.HttpCacheDirectiveHeaderValueCollection python_ty
     default Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpCacheDirectiveHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpNameValueHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpNameValueHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -130,7 +129,6 @@ class Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection python_type it
     default Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpChallengeHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpChallengeHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpChallengeHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -222,7 +220,6 @@ class Windows.Web.Http.Headers.HttpConnectionOptionHeaderValueCollection python_
     default Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -314,7 +311,6 @@ class Windows.Web.Http.Headers.HttpContentCodingHeaderValueCollection python_typ
     default Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpContentCodingHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -413,7 +409,6 @@ class Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection
     default Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -530,7 +525,6 @@ class Windows.Web.Http.Headers.HttpContentHeaderCollection activatable python_ty
     default Windows.Web.Http.Headers.IHttpContentHeaderCollection
     requires Windows.Web.Http.Headers.IHttpContentHeaderCollection
     requires Windows.Foundation.Collections.IMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     requires Windows.Foundation.IStringable
     constructor -
@@ -713,7 +707,6 @@ class Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection python_type i
     default Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpCookiePairHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpCookiePairHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -881,7 +874,6 @@ class Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection python_type 
     default Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpExpectationHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpExpectationHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpExpectationHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -945,7 +937,6 @@ class Windows.Web.Http.Headers.HttpLanguageHeaderValueCollection python_type ite
     default Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpLanguageHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Globalization.Language>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Globalization.Language>
     requires Windows.Foundation.IStringable
     property size
@@ -1044,7 +1035,6 @@ class Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection
     default Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -1193,7 +1183,6 @@ class Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection pyt
     default Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -1257,7 +1246,6 @@ class Windows.Web.Http.Headers.HttpMethodHeaderValueCollection python_type itera
     default Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpMethodHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.HttpMethod>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.HttpMethod>
     requires Windows.Foundation.IStringable
     property size
@@ -1428,7 +1416,6 @@ class Windows.Web.Http.Headers.HttpProductInfoHeaderValueCollection python_type 
     default Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpProductInfoHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpProductInfoHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -1492,7 +1479,6 @@ class Windows.Web.Http.Headers.HttpRequestHeaderCollection python_type iterable 
     default Windows.Web.Http.Headers.IHttpRequestHeaderCollection
     requires Windows.Web.Http.Headers.IHttpRequestHeaderCollection
     requires Windows.Foundation.Collections.IMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     requires Windows.Foundation.IStringable
     property size
@@ -1613,7 +1599,6 @@ class Windows.Web.Http.Headers.HttpResponseHeaderCollection python_type iterable
     default Windows.Web.Http.Headers.IHttpResponseHeaderCollection
     requires Windows.Web.Http.Headers.IHttpResponseHeaderCollection
     requires Windows.Foundation.Collections.IMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     requires Windows.Foundation.IStringable
     property size
@@ -1731,7 +1716,6 @@ class Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection python_ty
     default Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection
     requires Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueCollection
     requires Windows.Foundation.Collections.IVector<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Web.Http.Headers.HttpTransferCodingHeaderValue>
     requires Windows.Foundation.IStringable
     property size
@@ -1986,12 +1970,6 @@ interface Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueFactory
 
 interface Windows.Web.Http.Headers.IHttpTransferCodingHeaderValueStatics
     guid 6ab8892a-1a98-4d32-a906-7470a9875ce5
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
@@ -2412,10 +2390,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpMethod> 
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Web.Http.HttpMethod> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, String]
@@ -4173,12 +4147,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Web.Http.HttpMethod
             in class type=Windows.Web.Http.HttpMethod name=value
             out uint32 name=index
             out boolean return
-
-enum K parameterized
-
-enum T parameterized
-
-enum V parameterized
 
 class System.Double external
     py winrt.system.Double

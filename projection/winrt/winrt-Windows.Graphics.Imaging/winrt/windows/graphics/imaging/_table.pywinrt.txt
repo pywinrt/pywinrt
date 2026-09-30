@@ -543,7 +543,6 @@ class Windows.Graphics.Imaging.BitmapPropertySet activatable python_type iterabl
     signature rc(Windows.Graphics.Imaging.BitmapPropertySet;pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;rc(Windows.Graphics.Imaging.BitmapTypedValue;{cd8044a9-2443-4000-b0cd-79316c56f589})))
     default Windows.Foundation.Collections.IMap<System.String,Windows.Graphics.Imaging.BitmapTypedValue>
     requires Windows.Foundation.Collections.IMap<System.String,Windows.Graphics.Imaging.BitmapTypedValue>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -1124,9 +1123,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Imaging.BitmapTypedValue>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, BitmapTypedValue]]
     guid 05f9430c-2f22-5638-aa89-8c9abcd54ff9
@@ -1206,10 +1202,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.Bitm
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Imaging.BitmapCodecInformation> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Graphics.Imaging.BitmapTypedValue> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, BitmapTypedValue]
@@ -1421,8 +1413,6 @@ enum Windows.Graphics.Imaging.JpegSubsamplingMode python_type
     constant Y4_CB2_CR2 2
     constant Y4_CB4_CR4 3
 
-enum K parameterized
-
 class Windows.Graphics.Imaging.PixelDataProvider python_type
     py PixelDataProvider
     signature rc(Windows.Graphics.Imaging.PixelDataProvider;{dd831f25-185c-4595-9fb9-ccbe6ec18a6f})
@@ -1554,8 +1544,6 @@ enum Windows.Graphics.Imaging.TiffCompressionMode python_type
     constant RLE 5
     constant ZIP 6
     constant LZWH_DIFFERENCING 7
-
-enum V parameterized
 
 class System.Boolean external
     py winrt.system.Boolean
