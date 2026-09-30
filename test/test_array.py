@@ -7,8 +7,11 @@ import typing
 import unittest
 import uuid
 import warnings
+from collections.abc import Callable
 
 import test_winrt.testcomponent as tc
+from typing_extensions import TypeForm
+
 from winrt.system import (
     Array,
     BufferFormat,
@@ -849,6 +852,72 @@ class TestArrayParameters(unittest.TestCase):
         # A lent array is the caller's own elements, and the call it was lent
         # for is over.
         self.assertEqual(len(kept[0]), 0)
+
+    def check_fill_array_refuses(
+        self,
+        name: str,
+        element: TypeForm[typing.Any],
+        export: Callable[[Array[typing.Any], Array[typing.Any]], object],
+    ) -> None:
+        kept: list[Array[typing.Any]] = []
+        errors: list[BufferError] = []
+
+        def handler(
+            passed: Array[typing.Any], lent: Array[typing.Any]
+        ) -> tuple[Array[typing.Any], Array[typing.Any]]:
+            kept.append(lent)
+
+            try:
+                export(passed, lent)
+            except BufferError as e:
+                errors.append(e)
+
+            for index, value in enumerate(passed):
+                lent[index] = value
+
+            return Array(element, list(passed)), Array(element, list(passed))
+
+        getattr(self.tests, f"{name}_call")(handler)
+
+        self.assertEqual(len(errors), 1)
+        self.assertRegex(str(errors[0]), "fill array cannot be exported")
+        self.assertEqual(len(kept[0]), 0)
+
+    def test_fill_array_refuses_a_memoryview(self) -> None:
+        def export(passed: Array[typing.Any], lent: Array[typing.Any]) -> None:
+            with memoryview(lent):
+                pass
+
+        self.check_fill_array_refuses("array7", Int32, export)
+        self.check_fill_array_refuses("array12", str, export)
+
+    def test_fill_array_refuses_bytes(self) -> None:
+        self.check_fill_array_refuses("array7", Int32, lambda _, lent: bytes(lent))
+
+    def test_fill_array_cannot_be_passed_on(self) -> None:
+        def export(passed: Array[str], lent: Array[str]) -> None:
+            self.tests.array12(passed, lent)
+
+        self.check_fill_array_refuses("array12", str, export)
+
+    def test_fill_array_is_read_by_item(self) -> None:
+        seen: list[tuple[list[str], Array[str], list[str]]] = []
+
+        def handler(
+            passed: Array[str], lent: Array[str]
+        ) -> tuple[Array[str], Array[str]]:
+            for index, value in enumerate(passed):
+                lent[index] = value
+
+            seen.append((list(passed), lent[:], list(lent)))
+
+            return Array(str, list(passed)), Array(str, list(passed))
+
+        self.tests.array12_call(handler)
+
+        passed, copy, items = seen[0]
+        self.assertEqual(list(copy), passed)
+        self.assertEqual(items, passed)
 
     def test_passed_array_must_hold_the_declared_element(self):
         with self.assertRaisesRegex(BufferError, "itemsize == 4, have 2"):
