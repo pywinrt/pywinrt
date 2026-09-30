@@ -853,6 +853,7 @@ class WebUIFileOpenPickerActivatedEventArgs(winrt.system.Object, windows_applica
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
+@deprecated("WebUIFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIFileOpenPickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs::get_Kind()
     @_property
@@ -871,6 +872,7 @@ class WebUIFileOpenPickerContinuationEventArgs(winrt.system.Object, windows_appl
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs::get_Files()
     @_property
+    @deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def files(self) -> _cabc.Sequence[windows_storage.StorageFile]: ...
     # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs::get_ActivatedOperation()
     @_property
@@ -904,6 +906,7 @@ class WebUIFileSavePickerActivatedEventArgs(winrt.system.Object, windows_applica
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
+@deprecated("WebUIFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIFileSavePickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs::get_Kind()
     @_property
@@ -922,12 +925,14 @@ class WebUIFileSavePickerContinuationEventArgs(winrt.system.Object, windows_appl
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.Storage.StorageFile Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs::get_File()
     @_property
+    @deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def file(self) -> windows_storage.StorageFile: ...
     # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs::get_ActivatedOperation()
     @_property
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
+@deprecated("WebUIFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIFolderPickerContinuationEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFolderPickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs::get_Kind()
     @_property
@@ -946,6 +951,7 @@ class WebUIFolderPickerContinuationEventArgs(winrt.system.Object, windows_applic
     def continuation_data(self) -> windows_foundation_collections.ValueSet: ...
     # Windows.Storage.StorageFolder Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs::get_Folder()
     @_property
+    @deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def folder(self) -> windows_storage.StorageFolder: ...
     # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs::get_ActivatedOperation()
     @_property
@@ -1514,6 +1520,7 @@ class WebUIVoiceCommandActivatedEventArgs(winrt.system.Object, windows_applicati
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
+@deprecated("WebUIWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIWalletActionActivatedEventArgs(winrt.system.Object, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWalletActionActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_Kind()
     @_property
@@ -1526,12 +1533,15 @@ class WebUIWalletActionActivatedEventArgs(winrt.system.Object, IActivatedEventAr
     def splash_screen(self) -> windows_applicationmodel_activation.SplashScreen: ...
     # System.String Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_ActionId()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def action_id(self) -> str: ...
     # Windows.ApplicationModel.Wallet.WalletActionKind Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_ActionKind()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def action_kind(self) -> windows_applicationmodel_wallet.WalletActionKind: ...
     # System.String Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_ItemId()
     @_property
+    @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     def item_id(self) -> str: ...
     # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_ActivatedOperation()
     @_property

@@ -5,6 +5,7 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -33,6 +34,7 @@ __all__ = [
     "VolumeChangeRequestedEventArgs",
 ]
 
+@deprecated("PlayToConnectionError may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionErrorStatus.")
 class PlayToConnectionError(enum.IntEnum):
     NONE = 0
     DEVICE_NOT_RESPONDING = 1
@@ -40,6 +42,7 @@ class PlayToConnectionError(enum.IntEnum):
     DEVICE_LOCKED = 3
     PROTECTED_PLAYBACK_FAILED = 4
 
+@deprecated("PlayToConnectionState may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionState.")
 class PlayToConnectionState(enum.IntEnum):
     DISCONNECTED = 0
     CONNECTED = 1
@@ -58,84 +61,98 @@ class MuteChangeRequestedEventArgs(winrt.system.Object):
     def mute(self) -> bool: ...
 
 @typing.final
+@deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
 class PlayToConnection(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToConnection::add_Error(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionErrorEventArgs>)
-    # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def add_error(self, handler: windows_foundation.TypedEventHandler[PlayToConnection, PlayToConnectionErrorEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.PlayTo.PlayToConnection::remove_Error(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def remove_error(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToConnection::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs>)
-    # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def add_state_changed(self, handler: windows_foundation.TypedEventHandler[PlayToConnection, PlayToConnectionStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.PlayTo.PlayToConnection::remove_StateChanged(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def remove_state_changed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToConnection::add_Transferred(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs>)
-    # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def add_transferred(self, handler: windows_foundation.TypedEventHandler[PlayToConnection, PlayToConnectionTransferredEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.PlayTo.PlayToConnection::remove_Transferred(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def remove_transferred(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Media.PlayTo.PlayToConnectionState Windows.Media.PlayTo.PlayToConnection::get_State()
     @_property
+    @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def state(self) -> PlayToConnectionState: ...
 
 @typing.final
+@deprecated("PlayToConnectionErrorEventArgs may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionErrorOccurredEventArgs.")
 class PlayToConnectionErrorEventArgs(winrt.system.Object):
     # Windows.Media.PlayTo.PlayToConnectionError Windows.Media.PlayTo.PlayToConnectionErrorEventArgs::get_Code()
     @_property
+    @deprecated("PlayToConnectionErrorEventArgs may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionErrorOccurredEventArgs.")
     def code(self) -> PlayToConnectionError: ...
     # System.String Windows.Media.PlayTo.PlayToConnectionErrorEventArgs::get_Message()
     @_property
+    @deprecated("PlayToConnectionErrorEventArgs may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionErrorOccurredEventArgs.")
     def message(self) -> str: ...
 
 @typing.final
+@deprecated("PlayToConnectionStateChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
     # Windows.Media.PlayTo.PlayToConnectionState Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs::get_CurrentState()
     @_property
+    @deprecated("PlayToConnectionStateChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def current_state(self) -> PlayToConnectionState: ...
     # Windows.Media.PlayTo.PlayToConnectionState Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs::get_PreviousState()
     @_property
+    @deprecated("PlayToConnectionStateChangedEventArgs may be altered or unavailable for releases after Windows 10.")
     def previous_state(self) -> PlayToConnectionState: ...
 
 @typing.final
+@deprecated("PlayToConnectionTransferredEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToConnectionTransferredEventArgs(winrt.system.Object):
     # Windows.Media.PlayTo.PlayToSource Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs::get_CurrentSource()
     @_property
+    @deprecated("PlayToConnectionTransferredEventArgs may be altered or unavailable for releases after Windows 10.")
     def current_source(self) -> PlayToSource: ...
     # Windows.Media.PlayTo.PlayToSource Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs::get_PreviousSource()
     @_property
+    @deprecated("PlayToConnectionTransferredEventArgs may be altered or unavailable for releases after Windows 10.")
     def previous_source(self) -> PlayToSource: ...
 
 @typing.final
 class PlayToManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.PlayTo.PlayToManager Windows.Media.PlayTo.PlayToManager::GetForCurrentView()
-    # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def get_for_current_view(cls) -> PlayToManager: ...
     # System.Void Windows.Media.PlayTo.PlayToManager::ShowPlayToUI()
-    # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def show_play_to_ui(cls) -> None: ...
 
 @typing.final
+@deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
 class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToManager::add_SourceRequested(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceRequestedEventArgs>)
-    # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def add_source_requested(self, handler: windows_foundation.TypedEventHandler[PlayToManager, PlayToSourceRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.PlayTo.PlayToManager::remove_SourceRequested(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def remove_source_requested(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToManager::add_SourceSelected(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceSelectedEventArgs>)
-    # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def add_source_selected(self, handler: windows_foundation.TypedEventHandler[PlayToManager, PlayToSourceSelectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.PlayTo.PlayToManager::remove_SourceSelected(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def remove_source_selected(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.Boolean Windows.Media.PlayTo.PlayToManager::get_DefaultSourceSelection()
     @_property
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def default_source_selection(self) -> bool: ...
     # System.Void Windows.Media.PlayTo.PlayToManager::put_DefaultSourceSelection(System.Boolean)
     @default_source_selection.setter
+    @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def default_source_selection(self, value: bool) -> None: ...
 
 @typing.final
@@ -234,69 +251,86 @@ class PlayToReceiver(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
+@deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
 class PlayToSource(winrt.system.Object):
     # System.Void Windows.Media.PlayTo.PlayToSource::PlayNext()
-    # @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def play_next(self) -> None: ...
     # Windows.Media.PlayTo.PlayToSource Windows.Media.PlayTo.PlayToSource::get_Next()
     @_property
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def next(self) -> PlayToSource: ...
     # System.Void Windows.Media.PlayTo.PlayToSource::put_Next(Windows.Media.PlayTo.PlayToSource)
     @next.setter
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def next(self, value: PlayToSource) -> None: ...
     # Windows.Media.PlayTo.PlayToConnection Windows.Media.PlayTo.PlayToSource::get_Connection()
     @_property
+    @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def connection(self) -> PlayToConnection: ...
     # Windows.Foundation.Uri Windows.Media.PlayTo.PlayToSource::get_PreferredSourceUri()
     @_property
+    @deprecated("PlayToSourceWithPreferredSourceUri may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def preferred_source_uri(self) -> windows_foundation.Uri: ...
     # System.Void Windows.Media.PlayTo.PlayToSource::put_PreferredSourceUri(Windows.Foundation.Uri)
     @preferred_source_uri.setter
+    @deprecated("PlayToSourceWithPreferredSourceUri may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def preferred_source_uri(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
+@deprecated("PlayToSourceDeferral may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceDeferral(winrt.system.Object):
     # System.Void Windows.Media.PlayTo.PlayToSourceDeferral::Complete()
-    # @deprecated("PlayToSourceDeferral may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToSourceDeferral may be altered or unavailable for releases after Windows 10.")
     def complete(self) -> None: ...
 
 @typing.final
+@deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceRequest(winrt.system.Object):
     # System.Void Windows.Media.PlayTo.PlayToSourceRequest::DisplayErrorString(System.String)
-    # @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
     def display_error_string(self, error_string: str, /) -> None: ...
     # Windows.Media.PlayTo.PlayToSourceDeferral Windows.Media.PlayTo.PlayToSourceRequest::GetDeferral()
-    # @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
     def get_deferral(self) -> PlayToSourceDeferral: ...
     # System.Void Windows.Media.PlayTo.PlayToSourceRequest::SetSource(Windows.Media.PlayTo.PlayToSource)
-    # @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
+    @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
     def set_source(self, value: PlayToSource, /) -> None: ...
     # Windows.Foundation.DateTime Windows.Media.PlayTo.PlayToSourceRequest::get_Deadline()
     @_property
+    @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
     def deadline(self) -> datetime.datetime: ...
 
 @typing.final
+@deprecated("PlayToSourceRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceRequestedEventArgs(winrt.system.Object):
     # Windows.Media.PlayTo.PlayToSourceRequest Windows.Media.PlayTo.PlayToSourceRequestedEventArgs::get_SourceRequest()
     @_property
+    @deprecated("PlayToSourceRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
     def source_request(self) -> PlayToSourceRequest: ...
 
 @typing.final
+@deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceSelectedEventArgs(winrt.system.Object):
     # System.String Windows.Media.PlayTo.PlayToSourceSelectedEventArgs::get_FriendlyName()
     @_property
+    @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
     def friendly_name(self) -> str: ...
     # Windows.Storage.Streams.IRandomAccessStreamWithContentType Windows.Media.PlayTo.PlayToSourceSelectedEventArgs::get_Icon()
     @_property
+    @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
     def icon(self) -> windows_storage_streams.IRandomAccessStreamWithContentType: ...
     # System.Boolean Windows.Media.PlayTo.PlayToSourceSelectedEventArgs::get_SupportsAudio()
     @_property
+    @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
     def supports_audio(self) -> bool: ...
     # System.Boolean Windows.Media.PlayTo.PlayToSourceSelectedEventArgs::get_SupportsImage()
     @_property
+    @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
     def supports_image(self) -> bool: ...
     # System.Boolean Windows.Media.PlayTo.PlayToSourceSelectedEventArgs::get_SupportsVideo()
     @_property
+    @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
     def supports_video(self) -> bool: ...
 
 @typing.final

@@ -32,6 +32,7 @@ __all__ = [
     "ILearningModelVariableDescriptorPreview",
 ]
 
+@deprecated("Use TensorKind instead of FeatureElementKindPreview. For more info, see MSDN.")
 class FeatureElementKindPreview(enum.IntEnum):
     UNDEFINED = 0
     FLOAT = 1
@@ -50,6 +51,7 @@ class FeatureElementKindPreview(enum.IntEnum):
     COMPLEX64 = 14
     COMPLEX128 = 15
 
+@deprecated("Use LearningModelDeviceKind instead of LearningModelDeviceKindPreview. For more info, see MSDN.")
 class LearningModelDeviceKindPreview(enum.IntEnum):
     LEARNING_DEVICE_ANY = 0
     LEARNING_DEVICE_CPU = 1
@@ -58,6 +60,7 @@ class LearningModelDeviceKindPreview(enum.IntEnum):
     LEARNING_DEVICE_DSP = 4
     LEARNING_DEVICE_FPGA = 5
 
+@deprecated("Use LearningModelFeatureKind instead of LearningModelFeatureKindPreview. For more info, see MSDN.")
 class LearningModelFeatureKindPreview(enum.IntEnum):
     UNDEFINED = 0
     TENSOR = 1
@@ -66,63 +69,83 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
     IMAGE = 4
 
 @typing.final
+@deprecated("Use ImageFeatureDescriptor instead of ImageVariableDescriptorPreview. For more info, see MSDN.")
 class ImageVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # Windows.Graphics.Imaging.BitmapPixelFormat Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_BitmapPixelFormat()
     @_property
+    @deprecated("Use IImageFeatureDescriptor instead of IImageVariableDescriptorPreview. For more info, see MSDN.")
     def bitmap_pixel_format(self) -> windows_graphics_imaging.BitmapPixelFormat: ...
     # System.UInt32 Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_Height()
     @_property
+    @deprecated("Use IImageFeatureDescriptor instead of IImageVariableDescriptorPreview. For more info, see MSDN.")
     def height(self) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_Width()
     @_property
+    @deprecated("Use IImageFeatureDescriptor instead of IImageVariableDescriptorPreview. For more info, see MSDN.")
     def width(self) -> winrt.system.UInt32: ...
     # System.String Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_IsRequired()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def is_required(self) -> bool: ...
     # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_ModelFeatureKind()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
     # System.String Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def name(self) -> str: ...
 
 @typing.final
+@deprecated("Use LearningModelSession instead of InferencingOptionsPreview. For more info, see MSDN.")
 class InferencingOptionsPreview(winrt.system.Object):
     # System.Boolean Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_ReclaimMemoryAfterEvaluation()
     @_property
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def reclaim_memory_after_evaluation(self) -> bool: ...
     # System.Void Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::put_ReclaimMemoryAfterEvaluation(System.Boolean)
     @reclaim_memory_after_evaluation.setter
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def reclaim_memory_after_evaluation(self, value: bool) -> None: ...
     # Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_PreferredDeviceKind()
     @_property
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def preferred_device_kind(self) -> LearningModelDeviceKindPreview: ...
     # System.Void Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::put_PreferredDeviceKind(Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview)
     @preferred_device_kind.setter
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def preferred_device_kind(self, value: LearningModelDeviceKindPreview) -> None: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_MinimizeMemoryAllocation()
     @_property
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def minimize_memory_allocation(self) -> bool: ...
     # System.Void Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::put_MinimizeMemoryAllocation(System.Boolean)
     @minimize_memory_allocation.setter
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def minimize_memory_allocation(self, value: bool) -> None: ...
     # System.Int32 Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_MaxBatchSize()
     @_property
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def max_batch_size(self) -> winrt.system.Int32: ...
     # System.Void Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::put_MaxBatchSize(System.Int32)
     @max_batch_size.setter
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def max_batch_size(self, value: winrt.system.Int32) -> None: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_IsTracingEnabled()
     @_property
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def is_tracing_enabled(self) -> bool: ...
     # System.Void Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::put_IsTracingEnabled(System.Boolean)
     @is_tracing_enabled.setter
+    @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
     def is_tracing_enabled(self, value: bool) -> None: ...
 
 @typing.final
+@deprecated("Use LearningModelBinding instead of LearningModelBindingPreview. For more info, see MSDN.")
 class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
@@ -131,19 +154,18 @@ class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str,
     def __new__(cls, model: LearningModelPreview) -> typing.Self: ...
     @typing.overload
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object)
-    # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
+    @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def bind(self, name: str, value: winrt.system.Object, /) -> None: ...
     @typing.overload
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
-    # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
+    @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def bind(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.IPropertySet, /) -> None: ...
     # Deprecated alias of bind() for pywinrt v3.x compatibility.
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)
-    # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     @deprecated("Use bind() instead.")
     def bind_with_properties(self, name: str, value: winrt.system.Object, metadata: windows_foundation_collections.IPropertySet, /) -> None: ...
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::Clear()
-    # @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
+    @deprecated("Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.")
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.AI.MachineLearning.Preview.LearningModelBindingPreview::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]: ...
@@ -158,167 +180,215 @@ class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str,
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
+@deprecated("Use LearningModel instead of LearningModelDescriptionPreview. For more info, see MSDN.")
 class LearningModelDescriptionPreview(winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Author()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def author(self) -> str: ...
     # System.String Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.String Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Domain()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def domain(self) -> str: ...
     # Windows.Foundation.Collections.IIterable`1<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_InputFeatures()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def input_features(self) -> _cabc.Iterable[ILearningModelVariableDescriptorPreview]: ...
     # Windows.Foundation.Collections.IMapView`2<System.String,System.String> Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Metadata()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def metadata(self) -> _cabc.Mapping[str, str]: ...
     # System.String Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def name(self) -> str: ...
     # Windows.Foundation.Collections.IIterable`1<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_OutputFeatures()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def output_features(self) -> _cabc.Iterable[ILearningModelVariableDescriptorPreview]: ...
     # System.Int64 Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Version()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
     def version(self) -> winrt.system.Int64: ...
 
 @typing.final
+@deprecated("Use LearningModelEvaluationResult instead of LearningModelEvaluationResultPreview. For more info, see MSDN.")
 class LearningModelEvaluationResultPreview(winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview::get_CorrelationId()
     @_property
+    @deprecated("Use ILearningModelEvaluationResult instead of ILearningModelEvaluationResultPreview. For more info, see MSDN.")
     def correlation_id(self) -> str: ...
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview::get_Outputs()
     @_property
+    @deprecated("Use ILearningModelEvaluationResult instead of ILearningModelEvaluationResultPreview. For more info, see MSDN.")
     def outputs(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
 
 @typing.final
 class LearningModelPreview_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::LoadModelFromStorageFileAsync(Windows.Storage.IStorageFile)
-    # @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
+    @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
     def load_model_from_storage_file_async(cls, model_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::LoadModelFromStreamAsync(Windows.Storage.Streams.IRandomAccessStreamReference)
-    # @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
+    @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
     def load_model_from_stream_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...
 
 @typing.final
+@deprecated("Use LearningModel instead of LearningModelPreview. For more info, see MSDN.")
 class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::EvaluateAsync(Windows.AI.MachineLearning.Preview.LearningModelBindingPreview,System.String)
-    # @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
+    @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
     def evaluate_async(self, binding: LearningModelBindingPreview, correlation_id: str, /) -> windows_foundation.IAsyncOperation[LearningModelEvaluationResultPreview]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::EvaluateFeaturesAsync(Windows.Foundation.Collections.IMap`2<System.String,System.Object>,System.String)
-    # @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
+    @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
     def evaluate_features_async(self, features: _cabc.MutableMapping[str, winrt.system.Object], correlation_id: str, /) -> windows_foundation.IAsyncOperation[LearningModelEvaluationResultPreview]: ...
     # Windows.AI.MachineLearning.Preview.InferencingOptionsPreview Windows.AI.MachineLearning.Preview.LearningModelPreview::get_InferencingOptions()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
     def inferencing_options(self) -> InferencingOptionsPreview: ...
     # System.Void Windows.AI.MachineLearning.Preview.LearningModelPreview::put_InferencingOptions(Windows.AI.MachineLearning.Preview.InferencingOptionsPreview)
     @inferencing_options.setter
+    @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
     def inferencing_options(self, value: InferencingOptionsPreview) -> None: ...
     # Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview Windows.AI.MachineLearning.Preview.LearningModelPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
     def description(self) -> LearningModelDescriptionPreview: ...
 
 @typing.final
+@deprecated("Use ILearningModelFeatureDescriptor instead of LearningModelVariableDescriptorPreview. For more info, see MSDN.")
 class LearningModelVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_IsRequired()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def is_required(self) -> bool: ...
     # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_ModelFeatureKind()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
     # System.String Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def name(self) -> str: ...
 
 @typing.final
+@deprecated("Use MapFeatureDescriptor instead of MapVariableDescriptorPreview. For more info, see MSDN.")
 class MapVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_IsRequired()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def is_required(self) -> bool: ...
     # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_ModelFeatureKind()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
     # System.String Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def name(self) -> str: ...
     # Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_Fields()
     @_property
+    @deprecated("Use IMapFeatureDescriptor instead of IMapVariableDescriptorPreview. For more info, see MSDN.")
     def fields(self) -> ILearningModelVariableDescriptorPreview: ...
     # Windows.AI.MachineLearning.Preview.FeatureElementKindPreview Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_KeyKind()
     @_property
+    @deprecated("Use IMapFeatureDescriptor instead of IMapVariableDescriptorPreview. For more info, see MSDN.")
     def key_kind(self) -> FeatureElementKindPreview: ...
     # Windows.Foundation.Collections.IIterable`1<System.Int64> Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_ValidIntegerKeys()
     @_property
+    @deprecated("Use IMapFeatureDescriptor instead of IMapVariableDescriptorPreview. For more info, see MSDN.")
     def valid_integer_keys(self) -> _cabc.Iterable[winrt.system.Int64]: ...
     # Windows.Foundation.Collections.IIterable`1<System.String> Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_ValidStringKeys()
     @_property
+    @deprecated("Use IMapFeatureDescriptor instead of IMapVariableDescriptorPreview. For more info, see MSDN.")
     def valid_string_keys(self) -> _cabc.Iterable[str]: ...
 
 @typing.final
+@deprecated("Use SequenceFeatureDescriptor instead of SequenceVariableDescriptorPreview. For more info, see MSDN.")
 class SequenceVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_IsRequired()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def is_required(self) -> bool: ...
     # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_ModelFeatureKind()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
     # System.String Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def name(self) -> str: ...
     # Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_ElementType()
     @_property
+    @deprecated("Use ISequenceFeatureDescriptor instead of ISequenceVariableDescriptorPreview. For more info, see MSDN.")
     def element_type(self) -> ILearningModelVariableDescriptorPreview: ...
 
 @typing.final
+@deprecated("Use TensorFeatureDescriptor instead of TensorVariableDescriptorPreview. For more info, see MSDN.")
 class TensorVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
     # System.String Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def description(self) -> str: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_IsRequired()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def is_required(self) -> bool: ...
     # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_ModelFeatureKind()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
     # System.String Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     def name(self) -> str: ...
     # Windows.AI.MachineLearning.Preview.FeatureElementKindPreview Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_DataType()
     @_property
+    @deprecated("Use ITensorFeatureDescriptor instead of ITensorVariableDescriptorPreview. For more info, see MSDN.")
     def data_type(self) -> FeatureElementKindPreview: ...
     # Windows.Foundation.Collections.IIterable`1<System.Int64> Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_Shape()
     @_property
+    @deprecated("Use ITensorFeatureDescriptor instead of ITensorVariableDescriptorPreview. For more info, see MSDN.")
     def shape(self) -> _cabc.Iterable[winrt.system.Int64]: ...
 
 @typing.final
 class _ILearningModelVariableDescriptorPreview: ...
 
+@deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
 class ILearningModelVariableDescriptorPreview(winrt._winrt.IInspectable):
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     @abstractmethod
     def description(self) -> str: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_IsRequired()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     @abstractmethod
     def is_required(self) -> bool: ...
     # Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_ModelFeatureKind()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     @abstractmethod
     def model_feature_kind(self) -> LearningModelFeatureKindPreview: ...
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Name()
     @_property
+    @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
     @abstractmethod
     def name(self) -> str: ...
 

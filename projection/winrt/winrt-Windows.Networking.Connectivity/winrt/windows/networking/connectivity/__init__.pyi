@@ -289,15 +289,14 @@ class ConnectionProfile(winrt.system.Object):
     def get_domain_connectivity_level(self) -> DomainConnectivityLevel: ...
     @typing.overload
     # Windows.Networking.Connectivity.DataUsage Windows.Networking.Connectivity.ConnectionProfile::GetLocalUsage(Windows.Foundation.DateTime,Windows.Foundation.DateTime)
-    # @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
+    @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
     def get_local_usage(self, start_time: datetime.datetime, end_time: datetime.datetime, /) -> DataUsage: ...
     @typing.overload
     # Windows.Networking.Connectivity.DataUsage Windows.Networking.Connectivity.ConnectionProfile::GetLocalUsage(Windows.Foundation.DateTime,Windows.Foundation.DateTime,Windows.Networking.Connectivity.RoamingStates)
-    # @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
+    @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
     def get_local_usage(self, start_time: datetime.datetime, end_time: datetime.datetime, states: RoamingStates, /) -> DataUsage: ...
     # Deprecated alias of get_local_usage() for pywinrt v3.x compatibility.
     # Windows.Networking.Connectivity.DataUsage Windows.Networking.Connectivity.ConnectionProfile::GetLocalUsage(Windows.Foundation.DateTime,Windows.Foundation.DateTime,Windows.Networking.Connectivity.RoamingStates)
-    # @deprecated("GetLocalUsage may be altered or unavailable for releases after Windows 8.1. Instead, use GetNetworkUsageAsync.")
     @deprecated("Use get_local_usage() instead.")
     def get_local_usage_per_roaming_states(self, start_time: datetime.datetime, end_time: datetime.datetime, states: RoamingStates, /) -> DataUsage: ...
     # Windows.Networking.Connectivity.NetworkConnectivityLevel Windows.Networking.Connectivity.ConnectionProfile::GetNetworkConnectivityLevel()
@@ -466,12 +465,15 @@ class DataPlanUsage(winrt.system.Object):
     def megabytes_used(self) -> winrt.system.UInt32: ...
 
 @typing.final
+@deprecated("DataUsage may be altered or unavailable for releases after Windows 8.1. Instead, use NetworkUsage.")
 class DataUsage(winrt.system.Object):
     # System.UInt64 Windows.Networking.Connectivity.DataUsage::get_BytesReceived()
     @_property
+    @deprecated("IDataUsage may be altered or unavailable for releases after Windows 8.1. Instead, use INetworkUsage.")
     def bytes_received(self) -> winrt.system.UInt64: ...
     # System.UInt64 Windows.Networking.Connectivity.DataUsage::get_BytesSent()
     @_property
+    @deprecated("IDataUsage may be altered or unavailable for releases after Windows 8.1. Instead, use INetworkUsage.")
     def bytes_sent(self) -> winrt.system.UInt64: ...
 
 @typing.final

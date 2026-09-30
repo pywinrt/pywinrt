@@ -5,6 +5,7 @@ import enum
 import typing
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -1306,14 +1307,17 @@ class GridViewItemPresenter_Static(microsoft_ui_xaml_controls.ContentPresenter_S
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_GridViewItemPresenterHorizontalContentAlignmentProperty()
     @_property
     @typing.final
+    @deprecated("Use ContentPresenter.HorizontalContentAlignment instead of GridViewItemPresenterHorizontalContentAlignment. For more info, see MSDN.")
     def grid_view_item_presenter_horizontal_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_GridViewItemPresenterPaddingProperty()
     @_property
     @typing.final
+    @deprecated("Use ContentPresenter.Padding instead of GridViewItemPresenterPadding. For more info, see MSDN.")
     def grid_view_item_presenter_padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_GridViewItemPresenterVerticalContentAlignmentProperty()
     @_property
     @typing.final
+    @deprecated("Use ContentPresenter.VerticalContentAlignment instead of GridViewItemPresenterVerticalContentAlignment. For more info, see MSDN.")
     def grid_view_item_presenter_vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_PlaceholderBackgroundProperty()
     @_property
@@ -1430,24 +1434,30 @@ class GridViewItemPresenter(microsoft_ui_xaml_controls.ContentPresenter, metacla
     def placeholder_background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
     # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_GridViewItemPresenterVerticalContentAlignment()
     @_property
+    @deprecated("Use ContentPresenter.VerticalContentAlignment instead of GridViewItemPresenterVerticalContentAlignment. For more info, see MSDN.")
     def grid_view_item_presenter_vertical_content_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::put_GridViewItemPresenterVerticalContentAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @grid_view_item_presenter_vertical_content_alignment.setter
     @typing.final
+    @deprecated("Use ContentPresenter.VerticalContentAlignment instead of GridViewItemPresenterVerticalContentAlignment. For more info, see MSDN.")
     def grid_view_item_presenter_vertical_content_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
     # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_GridViewItemPresenterPadding()
     @_property
+    @deprecated("Use ContentPresenter.Padding instead of GridViewItemPresenterPadding. For more info, see MSDN.")
     def grid_view_item_presenter_padding(self) -> microsoft_ui_xaml.Thickness: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::put_GridViewItemPresenterPadding(Microsoft.UI.Xaml.Thickness)
     @grid_view_item_presenter_padding.setter
     @typing.final
+    @deprecated("Use ContentPresenter.Padding instead of GridViewItemPresenterPadding. For more info, see MSDN.")
     def grid_view_item_presenter_padding(self, value: microsoft_ui_xaml.Thickness | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double, winrt.system.Double]) -> None: ...
     # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_GridViewItemPresenterHorizontalContentAlignment()
     @_property
+    @deprecated("Use ContentPresenter.HorizontalContentAlignment instead of GridViewItemPresenterHorizontalContentAlignment. For more info, see MSDN.")
     def grid_view_item_presenter_horizontal_content_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::put_GridViewItemPresenterHorizontalContentAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @grid_view_item_presenter_horizontal_content_alignment.setter
     @typing.final
+    @deprecated("Use ContentPresenter.HorizontalContentAlignment instead of GridViewItemPresenterHorizontalContentAlignment. For more info, see MSDN.")
     def grid_view_item_presenter_horizontal_content_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
     # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_FocusBorderBrush()
     @_property
@@ -1759,14 +1769,17 @@ class ListViewItemPresenter_Static(microsoft_ui_xaml_controls.ContentPresenter_S
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_ListViewItemPresenterHorizontalContentAlignmentProperty()
     @_property
     @typing.final
+    @deprecated("Use ContentPresenter.HorizontalContentAlignment instead of ListViewItemPresenterHorizontalContentAlignment. For more info, see MSDN.")
     def list_view_item_presenter_horizontal_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_ListViewItemPresenterPaddingProperty()
     @_property
     @typing.final
+    @deprecated("Use ContentPresenter.Padding instead of GridViewItemPresenterPadding. For more info, see MSDN.")
     def list_view_item_presenter_padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_ListViewItemPresenterVerticalContentAlignmentProperty()
     @_property
     @typing.final
+    @deprecated("Use ContentPresenter.VerticalContentAlignment instead of ListViewItemPresenterVerticalContentAlignment. For more info, see MSDN.")
     def list_view_item_presenter_vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_PlaceholderBackgroundProperty()
     @_property
@@ -1893,24 +1906,30 @@ class ListViewItemPresenter(microsoft_ui_xaml_controls.ContentPresenter, metacla
     def __new__(cls) -> typing.Self: ...
     # Microsoft.UI.Xaml.VerticalAlignment Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_ListViewItemPresenterVerticalContentAlignment()
     @_property
+    @deprecated("Use ContentPresenter.VerticalContentAlignment instead of ListViewItemPresenterVerticalContentAlignment. For more info, see MSDN.")
     def list_view_item_presenter_vertical_content_alignment(self) -> microsoft_ui_xaml.VerticalAlignment: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::put_ListViewItemPresenterVerticalContentAlignment(Microsoft.UI.Xaml.VerticalAlignment)
     @list_view_item_presenter_vertical_content_alignment.setter
     @typing.final
+    @deprecated("Use ContentPresenter.VerticalContentAlignment instead of ListViewItemPresenterVerticalContentAlignment. For more info, see MSDN.")
     def list_view_item_presenter_vertical_content_alignment(self, value: microsoft_ui_xaml.VerticalAlignment) -> None: ...
     # Microsoft.UI.Xaml.Thickness Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_ListViewItemPresenterPadding()
     @_property
+    @deprecated("Use ContentPresenter.Padding instead of GridViewItemPresenterPadding. For more info, see MSDN.")
     def list_view_item_presenter_padding(self) -> microsoft_ui_xaml.Thickness: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::put_ListViewItemPresenterPadding(Microsoft.UI.Xaml.Thickness)
     @list_view_item_presenter_padding.setter
     @typing.final
+    @deprecated("Use ContentPresenter.Padding instead of GridViewItemPresenterPadding. For more info, see MSDN.")
     def list_view_item_presenter_padding(self, value: microsoft_ui_xaml.Thickness | tuple[winrt.system.Double, winrt.system.Double, winrt.system.Double, winrt.system.Double]) -> None: ...
     # Microsoft.UI.Xaml.HorizontalAlignment Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_ListViewItemPresenterHorizontalContentAlignment()
     @_property
+    @deprecated("Use ContentPresenter.HorizontalContentAlignment instead of ListViewItemPresenterHorizontalContentAlignment. For more info, see MSDN.")
     def list_view_item_presenter_horizontal_content_alignment(self) -> microsoft_ui_xaml.HorizontalAlignment: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::put_ListViewItemPresenterHorizontalContentAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
     @list_view_item_presenter_horizontal_content_alignment.setter
     @typing.final
+    @deprecated("Use ContentPresenter.HorizontalContentAlignment instead of ListViewItemPresenterHorizontalContentAlignment. For more info, see MSDN.")
     def list_view_item_presenter_horizontal_content_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
     # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_FocusSecondaryBorderBrush()
     @_property

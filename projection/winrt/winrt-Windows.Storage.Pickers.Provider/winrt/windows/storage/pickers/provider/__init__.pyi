@@ -5,6 +5,7 @@ import datetime
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt._winrt
 import winrt.system
@@ -57,10 +58,10 @@ class FileOpenPickerUI(winrt.system.Object):
     # System.Void Windows.Storage.Pickers.Provider.FileOpenPickerUI::remove_Closing(Windows.Foundation.EventRegistrationToken)
     def remove_closing(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Storage.Pickers.Provider.FileOpenPickerUI::add_FileRemoved(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Pickers.Provider.FileOpenPickerUI,Windows.Storage.Pickers.Provider.FileRemovedEventArgs>)
-    # @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
+    @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
     def add_file_removed(self, handler: windows_foundation.TypedEventHandler[FileOpenPickerUI, FileRemovedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Storage.Pickers.Provider.FileOpenPickerUI::remove_FileRemoved(Windows.Foundation.EventRegistrationToken)
-    # @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
+    @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
     def remove_file_removed(self, token: windows_foundation.EventRegistrationToken | tuple[winrt.system.Int64], /) -> None: ...
     # System.String Windows.Storage.Pickers.Provider.FileOpenPickerUI::get_Title()
     @_property
@@ -79,9 +80,11 @@ class FileOpenPickerUI(winrt.system.Object):
     def settings_identifier(self) -> str: ...
 
 @typing.final
+@deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
 class FileRemovedEventArgs(winrt.system.Object):
     # System.String Windows.Storage.Pickers.Provider.FileRemovedEventArgs::get_Id()
     @_property
+    @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
     def id(self) -> str: ...
 
 @typing.final

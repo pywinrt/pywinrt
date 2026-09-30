@@ -1889,7 +1889,7 @@ class MediaCapture(winrt.system.Object, windows_foundation.IClosable, metaclass=
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.IMediaExtension> Windows.Media.Capture.MediaCapture::AddAudioEffectAsync(Windows.Media.Effects.IAudioEffectDefinition)
     def add_audio_effect_async(self, definition: windows_media_effects.IAudioEffectDefinition, /) -> windows_foundation.IAsyncOperation[windows_media.IMediaExtension]: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.MediaCapture::AddEffectAsync(Windows.Media.Capture.MediaStreamType,System.String,Windows.Foundation.Collections.IPropertySet)
-    # @deprecated("AddEffectAsync might not be available in future versions of Windows. Starting with Windows Threshold, use AddAudioEffectAsync and AddVideoEffectAsync instead")
+    @deprecated("AddEffectAsync might not be available in future versions of Windows. Starting with Windows Threshold, use AddAudioEffectAsync and AddVideoEffectAsync instead")
     def add_effect_async(self, media_stream_type: MediaStreamType, effect_activation_id: str, effect_settings: windows_foundation_collections.IPropertySet, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.IMediaExtension> Windows.Media.Capture.MediaCapture::AddVideoEffectAsync(Windows.Media.Effects.IVideoEffectDefinition,Windows.Media.Capture.MediaStreamType)
     def add_video_effect_async(self, definition: windows_media_effects.IVideoEffectDefinition, media_stream_type: MediaStreamType, /) -> windows_foundation.IAsyncOperation[windows_media.IMediaExtension]: ...
@@ -2330,9 +2330,11 @@ class MediaCaptureVideoProfileMediaDescription(winrt.system.Object):
     def height(self) -> winrt.system.UInt32: ...
     # System.Boolean Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription::get_IsHdrVideoSupported()
     @_property
+    @deprecated("IsHdrVideoSupported might not be available in the next major update following Windows 10, version 1709")
     def is_hdr_video_supported(self) -> bool: ...
     # System.Boolean Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription::get_IsVariablePhotoSequenceSupported()
     @_property
+    @deprecated("IsVariablePhotoSequenceSupported might not be available in the next major update following Windows 10, version 1709")
     def is_variable_photo_sequence_supported(self) -> bool: ...
     # System.UInt32 Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription::get_Width()
     @_property
