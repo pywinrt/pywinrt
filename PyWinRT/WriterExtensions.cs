@@ -89,6 +89,16 @@ static class WriterExtensions
         public int GetHashCode(TypeReference obj) => obj.FullName.GetHashCode();
     }
 
+    /// <summary>
+    /// Writes the <c>@deprecated</c> decorator for a WinRT deprecation.
+    /// </summary>
+    /// <remarks>
+    /// The message is the metadata's, so it names the WinRT spelling of the
+    /// replacement.
+    /// </remarks>
+    public static void WriteDeprecated(this IndentedTextWriter w, string? message) =>
+        w.WriteLine($"@deprecated({(message ?? "").ToPythonStringLiteral()})");
+
     public static void WritePythonMethodTyping(
         this IndentedTextWriter w,
         ProjectedMethod method,
@@ -113,19 +123,21 @@ static class WriterExtensions
 
         w.WriteLine($"# {method.Signature}");
 
-        // REVISIT: can use @warning.deprecated in Python 3.13
-        if (method.IsDeprecated)
-        {
-            w.WriteLine($"# @deprecated(\"{method.DeprecatedMessage}\")");
-        }
-
         if (aliasPyName is not null)
         {
             w.WriteLine($"@deprecated(\"Use {aliasTarget}() instead.\")");
         }
-        else if (isAbstract)
+        else
         {
-            w.WriteLine("@abstractmethod");
+            if (method.IsDeprecated)
+            {
+                w.WriteDeprecated(method.DeprecatedMessage);
+            }
+
+            if (isAbstract)
+            {
+                w.WriteLine("@abstractmethod");
+            }
         }
 
         // HACK: There are a couple of problematic methods. Subclasses of
@@ -193,6 +205,11 @@ static class WriterExtensions
             w.WriteLine("@typing.final");
         }
 
+        if (prop.GetMethod.IsDeprecated)
+        {
+            w.WriteDeprecated(prop.GetMethod.DeprecatedMessage);
+        }
+
         if (isAbstract)
         {
             w.WriteLine("@abstractmethod");
@@ -217,6 +234,11 @@ static class WriterExtensions
             if (type.IsComposable)
             {
                 w.WriteLine("@typing.final");
+            }
+
+            if (prop.SetMethod.IsDeprecated)
+            {
+                w.WriteDeprecated(prop.SetMethod.DeprecatedMessage);
             }
 
             if (isAbstract)
