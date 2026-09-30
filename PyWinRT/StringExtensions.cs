@@ -258,6 +258,52 @@ static partial class StringExtensions
         pythonConstantCache.GetOrAdd(str, static s => s.ToSnakeCase().ToUpperInvariant());
 
     /// <summary>
+    /// Quotes <paramref name="str"/> as a double-quoted Python string literal.
+    /// </summary>
+    public static string ToPythonStringLiteral(this string str)
+    {
+        var sb = new StringBuilder(str.Length + 2);
+
+        sb.Append('"');
+
+        foreach (var c in str)
+        {
+            switch (c)
+            {
+                case '\\':
+                    sb.Append(@"\\");
+                    break;
+                case '"':
+                    sb.Append("\\\"");
+                    break;
+                case '\n':
+                    sb.Append(@"\n");
+                    break;
+                case '\r':
+                    sb.Append(@"\r");
+                    break;
+                case '\t':
+                    sb.Append(@"\t");
+                    break;
+                default:
+                    if (char.IsControl(c))
+                    {
+                        sb.Append($"\\x{(int)c:x2}");
+                    }
+                    else
+                    {
+                        sb.Append(c);
+                    }
+                    break;
+            }
+        }
+
+        sb.Append('"');
+
+        return sb.ToString();
+    }
+
+    /// <summary>
     /// Converts a WinRT dotted namespace to a C++- :: namespace.
     /// </summary>
     /// <summary>

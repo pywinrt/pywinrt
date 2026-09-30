@@ -185,6 +185,12 @@ static class FileWriters
         foreach (var type in members.Enums)
         {
             w.WriteBlankLine();
+
+            if (type.IsDeprecated)
+            {
+                w.WriteDeprecated(type.DeprecatedMessage);
+            }
+
             w.WriteLine(
                 $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute ? "IntFlag" : "IntEnum")}):"
             );
@@ -199,6 +205,17 @@ static class FileWriters
                         ? $"0x{field.Constant:X}"
                         : field.Constant.ToString();
                     w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
+
+                    // PEP 702 has no way to mark an enum member deprecated, so
+                    // the message goes where an editor shows it on hover
+                    if (field.GetDeprecatedAttribute() is CustomAttribute deprecated)
+                    {
+                        var message = (
+                            $"Deprecated: {deprecated.ConstructorArguments[0].Value as string}"
+                        ).ToPythonStringLiteral()[1..^1];
+
+                        w.WriteLine($"\"\"\"{message}\"\"\"");
+                    }
                 }
             }
 
@@ -385,12 +402,7 @@ static class FileWriters
             wroteImports = true;
         }
 
-        if (
-            members
-                .Classes.Concat(members.Interfaces)
-                .Any(t => t.MethodGroups.Any(g => g.Aliases.Count != 0))
-            || members.Structs.Any(s => !s.Type.IsCustomizedStruct && s.IsPyInteger)
-        )
+        if (body.Contains("@deprecated(", StringComparison.Ordinal))
         {
             hw.WriteLine("from typing_extensions import deprecated");
             wroteImports = true;

@@ -452,6 +452,15 @@ static class TypeExtensions
         return implementedInterfaceNames.GetOrAdd(type, names);
     }
 
+    /// <summary>
+    /// Gets the WinRT <c>DeprecatedAttribute</c> of <paramref name="provider"/>,
+    /// or <c>null</c> if it has none.
+    /// </summary>
+    public static CustomAttribute? GetDeprecatedAttribute(this ICustomAttributeProvider provider) =>
+        provider.CustomAttributes.SingleOrDefault(a =>
+            a.AttributeType.FullName == "Windows.Foundation.Metadata.DeprecatedAttribute"
+        );
+
     public static bool ImplementsInterface(this TypeDefinition type, string interfaceName) =>
         GetImplementedInterfaceNames(type).Contains(interfaceName);
 

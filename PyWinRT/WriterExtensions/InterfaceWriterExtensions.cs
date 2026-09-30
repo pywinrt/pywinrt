@@ -76,6 +76,11 @@ static class InterfaceWriterExtensions
         // already has. See https://github.com/python/mypy/issues/17091.
         var typeIgnore = !hasMembers && type.Interfaces.Any() ? "  # type: ignore[misc]" : "";
 
+        if (type.IsDeprecated)
+        {
+            w.WriteDeprecated(type.DeprecatedMessage);
+        }
+
         w.WriteLine($"class {type.Name}({string.Join(", ", baseTypes)}):{typeIgnore}");
         w.Indent++;
 
