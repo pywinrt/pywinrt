@@ -476,6 +476,7 @@ namespace py::interp
         void take_back() noexcept
         {
             guard lock{*this};
+            WINRT_ASSERT(!Exported());
             size_ = 0;
             data_ = nullptr;
             owns_ = true;
@@ -519,6 +520,12 @@ namespace py::interp
         bool HoldsReferences() noexcept override
         {
             return value_owns_resources(element_);
+        }
+
+        bool IsFillArray() noexcept override
+        {
+            guard lock{*this};
+            return !owns_;
         }
 
         uint32_t Size() noexcept override
@@ -934,7 +941,8 @@ namespace py::interp
      * Nothing is copied: the callee reads, and for a lent array writes, the
      * memory the Python object exports, so the buffer has to hold exactly the
      * elements the parameter is declared with and stays borrowed until the
-     * call is over.
+     * call is over. The fill array a Python handler is given refuses the
+     * export, so it cannot be passed on to another call.
      *
      * @param writable Whether the callee writes the elements, which is what a
      * lent array - a fill array - is for.

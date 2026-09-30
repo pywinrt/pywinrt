@@ -804,6 +804,21 @@ namespace py::cpp::_winrt
 
     static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
     {
+        // A buffer keeps the pointer it was given until whoever holds it lets
+        // go, and the exporter is never asked again, so one over a fill array
+        // would still point at the caller's elements after take_back() has
+        // given them back.
+        if (self->array->IsFillArray())
+        {
+            view->obj = nullptr;
+            PyErr_SetString(
+                PyExc_BufferError,
+                "a fill array cannot be exported as a buffer: its elements belong "
+                "to the WinRT caller and go back to it when the call returns; copy "
+                "it with a slice, or assign its items");
+            return -1;
+        }
+
         // Writing an element that holds references through a buffer would put
         // a pointer in the array that nothing owns, so those elements are
         // written by item assignment, which converts the value.
