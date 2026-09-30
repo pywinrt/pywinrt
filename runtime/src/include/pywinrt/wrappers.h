@@ -32,7 +32,10 @@ namespace py
         ~delegate_callable()
         {
             auto gil = ensure_gil();
-            Py_CLEAR(_callable);
+            if (gil)
+            {
+                Py_CLEAR(_callable);
+            }
         }
 
         PyObject* callable() const noexcept
