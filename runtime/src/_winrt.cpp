@@ -5,6 +5,7 @@
 #include <pywinrt/base.h>
 #include "module_state.h"
 #include "members.h"
+#include "objects.h"
 #include "types.h"
 #include <winrt/base.h>
 
@@ -19,14 +20,6 @@ namespace py::cpp::_winrt
     {
         try
         {
-            py::pyobj_handle guid_method{};
-
-            auto ret = PyObject_GetOptionalAttrString(cls, "_guid_", guid_method.put());
-            if (ret == -1)
-            {
-                return nullptr;
-            }
-
             // Ordinary type checking is the answer for a Python class that
             // derives from this one, which is how an implementation of the
             // interface says so.
@@ -41,15 +34,31 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            if (ret == 0)
+            if (PyObject_IsTrue(derived.get()))
             {
-                // The class says nothing about an interface, so there is
-                // nothing else to ask.
                 return derived.detach();
             }
 
-            if (PyObject_IsTrue(derived.get()))
+            // A class with no entry of its own is a Python class, which only
+            // its own instances are instances of.
+            auto const info
+                = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+            if (!info)
             {
+                return derived.detach();
+            }
+
+            if (info->parameterized)
+            {
+                py::interp::set_parameterized_type_error(
+                    reinterpret_cast<PyTypeObject*>(cls)->tp_name);
+                return nullptr;
+            }
+
+            if (!info->guid)
+            {
+                // The class says nothing about an interface, so there is
+                // nothing else to ask.
                 return derived.detach();
             }
 
@@ -66,13 +75,7 @@ namespace py::cpp::_winrt
                 return derived.detach();
             }
 
-            py::pyobj_handle guid_obj{PyObject_CallNoArgs(guid_method.get())};
-            if (!guid_obj)
-            {
-                return nullptr;
-            }
-
-            auto guid = py::convert_to<winrt::guid>(guid_obj.get());
+            auto const& guid = *static_cast<winrt::guid const*>(info->guid);
             auto instance
                 = py::convert_to<winrt::Windows::Foundation::IInspectable>(obj);
             if (!instance)
