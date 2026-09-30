@@ -2204,7 +2204,6 @@ class Windows.UI.Xaml.Controls.ColumnDefinitionCollection python_type iterable s
     signature rc(Windows.UI.Xaml.Controls.ColumnDefinitionCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.ColumnDefinition;{f7f1b229-f024-467f-970a-7e705615db7b})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ColumnDefinition>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ColumnDefinition>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ColumnDefinition>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ColumnDefinition> shape=4 reverse=43 role=size
@@ -5199,7 +5198,6 @@ class Windows.UI.Xaml.Controls.HubSectionCollection python_type iterable sequenc
     signature rc(Windows.UI.Xaml.Controls.HubSectionCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.HubSection;{a4e66cb7-7fdd-4fe0-ab49-c246639dccf9})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.HubSection>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.HubSection>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.HubSection>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.HubSection> shape=4 reverse=43 role=size
@@ -6782,9 +6780,6 @@ interface Windows.Foundation.Collections.IIterable<System.Single> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Single> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.Single> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.DateTime> concrete iterable
     py winrt.windows.foundation.collections._IIterable[DateTime]
     guid 576a207d-977c-5b36-b54d-624ec86c53a3
@@ -7754,7 +7749,7 @@ interface Windows.Foundation.Collections.IObservableVector<System.Object> concre
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};cinterface(IInspectable))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<System.Object>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
@@ -7813,7 +7808,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Contr
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.UI.Xaml.Controls.GroupStyle;{71ca300b-b89e-4184-b0df-a9e95447de8d}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.GroupStyle>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.GroupStyle>
     argument Windows.UI.Xaml.Controls.GroupStyle
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.GroupStyle> shape=4 reverse=43 role=size
@@ -7872,7 +7867,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Contr
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement>
     argument Windows.UI.Xaml.Controls.ICommandBarElement
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=43 role=size
@@ -9911,9 +9906,6 @@ interface Windows.Foundation.Collections.IVector<System.Single> concrete iterabl
         method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.Single> shape=48 reverse=122 role=set_at
             in uint32 name=index
             in single name=value
-
-interface Windows.Foundation.Collections.IVector<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IVector<Windows.Foundation.DateTime> concrete iterable sequence mutable_sequence
     py winrt.windows.foundation.collections._IVector[DateTime]
@@ -12193,8 +12185,6 @@ class Windows.UI.Xaml.Controls.ItemCollection python_type iterable sequence muta
     signature rc(Windows.UI.Xaml.Controls.ItemCollection;pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};cinterface(IInspectable)))
     default Windows.Foundation.Collections.IObservableVector<System.Object>
     requires Windows.Foundation.Collections.IObservableVector<System.Object>
-    requires Windows.Foundation.Collections.IVector<T>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IVector<System.Object>
     requires Windows.Foundation.Collections.IIterable<System.Object>
     property size
@@ -17280,7 +17270,6 @@ class Windows.UI.Xaml.Controls.RowDefinitionCollection python_type iterable sequ
     signature rc(Windows.UI.Xaml.Controls.RowDefinitionCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Controls.RowDefinition;{4abae829-d80c-4a5e-a48c-f8b3d3b6533d})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.RowDefinition>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.RowDefinition>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.RowDefinition>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.RowDefinition> shape=4 reverse=43 role=size
@@ -19063,7 +19052,6 @@ class Windows.UI.Xaml.Controls.SwipeItems composable python_type iterable sequen
     default Windows.UI.Xaml.Controls.ISwipeItems
     requires Windows.UI.Xaml.Controls.ISwipeItems
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.SwipeItem>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.SwipeItem>
     factory Windows.UI.Xaml.Controls.ISwipeItemsStatics
     composable Windows.UI.Xaml.Controls.ISwipeItemsFactory
@@ -19376,8 +19364,6 @@ class Windows.UI.Xaml.Controls.SymbolIconSource composable python_type
     property symbol_property static
         get get_SymbolProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.ISymbolIconSourceStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-
-enum T parameterized
 
 class Windows.UI.Xaml.Controls.TextBlock activatable python_type
     py TextBlock
@@ -22385,7 +22371,6 @@ class Windows.UI.Xaml.Controls.UIElementCollection python_type iterable sequence
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.UIElement>
     requires Windows.UI.Xaml.Controls.IUIElementCollection
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.UIElement>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.UIElement>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.UIElement> shape=4 reverse=43 role=size

@@ -355,7 +355,6 @@ class Windows.ApplicationModel.DataTransfer.DataPackagePropertySet python_type i
     default Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet
     requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet2
     requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySet3
@@ -461,7 +460,6 @@ class Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView python_ty
     requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView4
     requires Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView5
     requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     property application_listing_uri
         get get_ApplicationListingUri slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackagePropertySetView shape=4
@@ -1166,9 +1164,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Data
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.DataTransfer.ShareProvider> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.DataTransfer.ShareProvider> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
@@ -1318,10 +1313,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem>
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Storage.IStorageItem> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
@@ -1887,8 +1878,6 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageIte
             out uint32 name=index
             out boolean return
 
-enum K parameterized
-
 class Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs python_type
     py OperationCompletedEventArgs
     signature rc(Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs;{e7af329d-051d-4fab-b1a9-47fd77f70a41})
@@ -2291,8 +2280,6 @@ delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTrans
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in class type=Windows.ApplicationModel.DataTransfer.TransferTargetWatcher name=sender
             in class type=Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs name=args
-
-enum V parameterized
 
 class System.Double external
     py winrt.system.Double

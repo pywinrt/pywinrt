@@ -22,7 +22,6 @@ class Windows.Storage.AccessCache.AccessListEntryView python_type iterable seque
     signature rc(Windows.Storage.AccessCache.AccessListEntryView;pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Storage.AccessCache.AccessListEntry;string;string)))
     default Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry>
     requires Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Storage.AccessCache.AccessListEntry> shape=4 reverse=43 role=size
@@ -167,9 +166,6 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> conc
 
 interface Windows.Storage.AccessCache.IItemRemovedEventArgs
     guid 59677e5c-55be-4c66-ba66-5eaea79d2631
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IIterable<Windows.Storage.AccessCache.AccessListEntry> concrete iterable
     py winrt.windows.foundation.collections._IIterable[AccessListEntry]
@@ -486,8 +482,6 @@ class Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList python_type
     method remove
         method Remove slot=16 inputs=1 outputs=0 declaring=Windows.Storage.AccessCache.IStorageItemAccessList shape=4 reverse=202
             in string name=token
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList,Windows.Storage.AccessCache.ItemRemovedEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[StorageItemMostRecentlyUsedList, ItemRemovedEventArgs]

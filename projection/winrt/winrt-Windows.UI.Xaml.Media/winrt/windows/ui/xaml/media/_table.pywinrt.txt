@@ -254,7 +254,6 @@ class Windows.UI.Xaml.Media.BrushCollection activatable python_type iterable seq
     signature rc(Windows.UI.Xaml.Media.BrushCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.Brush;{8806a321-1e06-422c-a1cc-01696559e021})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Brush>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.Brush>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -438,7 +437,6 @@ class Windows.UI.Xaml.Media.DoubleCollection activatable python_type iterable se
     signature rc(Windows.UI.Xaml.Media.DoubleCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};f8))
     default Windows.Foundation.Collections.IVector<System.Double>
     requires Windows.Foundation.Collections.IVector<System.Double>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<System.Double>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -651,7 +649,6 @@ class Windows.UI.Xaml.Media.GeometryCollection activatable python_type iterable 
     signature rc(Windows.UI.Xaml.Media.GeometryCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.Geometry;{fa123889-0acd-417b-b62d-5ca1bf4dfc0e})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Geometry>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.Geometry>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -808,7 +805,6 @@ class Windows.UI.Xaml.Media.GradientStopCollection activatable python_type itera
     signature rc(Windows.UI.Xaml.Media.GradientStopCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.GradientStop;{665f44fe-2e59-4c4a-ab53-076a100ccd81})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.GradientStop>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.GradientStop>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -996,9 +992,6 @@ interface Windows.Foundation.Collections.IIterable<System.Double> concrete itera
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Double> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.Double> return
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Point> concrete iterable
     py winrt.windows.foundation.collections._IIterable[Point]
@@ -2805,7 +2798,6 @@ class Windows.UI.Xaml.Media.PathFigureCollection activatable python_type iterabl
     signature rc(Windows.UI.Xaml.Media.PathFigureCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.PathFigure;{5d955c8c-5fa9-4dda-a3cc-10fcdcaa20d7})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigure>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathFigure>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.PathFigure>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -2895,7 +2887,6 @@ class Windows.UI.Xaml.Media.PathSegmentCollection activatable python_type iterab
     signature rc(Windows.UI.Xaml.Media.PathSegmentCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.PathSegment;{fcfa71cf-9ce3-474f-8157-10b6435a616b})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegment>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.PathSegment>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.PathSegment>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -3078,7 +3069,6 @@ class Windows.UI.Xaml.Media.PointCollection activatable python_type iterable seq
     signature rc(Windows.UI.Xaml.Media.PointCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Foundation.Point;f4;f4)))
     default Windows.Foundation.Collections.IVector<Windows.Foundation.Point>
     requires Windows.Foundation.Collections.IVector<Windows.Foundation.Point>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -3540,8 +3530,6 @@ enum Windows.UI.Xaml.Media.SweepDirection python_type
     constant COUNTERCLOCKWISE 0
     constant CLOCKWISE 1
 
-enum T parameterized
-
 class Windows.UI.Xaml.Media.ThemeShadow composable python_type
     py ThemeShadow
     signature rc(Windows.UI.Xaml.Media.ThemeShadow;{3eccad09-7985-5f39-8b62-6c10696dca6f})
@@ -3631,7 +3619,6 @@ class Windows.UI.Xaml.Media.TimelineMarkerCollection activatable python_type ite
     signature rc(Windows.UI.Xaml.Media.TimelineMarkerCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.TimelineMarker;{a68ef02d-45ba-4e50-8cad-aaea3a227af5})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineMarker>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.TimelineMarker>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.TimelineMarker>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
@@ -3718,7 +3705,6 @@ class Windows.UI.Xaml.Media.TransformCollection activatable python_type iterable
     signature rc(Windows.UI.Xaml.Media.TransformCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.UI.Xaml.Media.Transform;{4df74078-bfd6-4ed1-9682-d2fd8bf2fe6f})))
     default Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform>
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Media.Transform>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Media.Transform>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4

@@ -1248,9 +1248,6 @@ interface Windows.Foundation.Collections.IIterable<System.Int32> concrete iterab
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Int32> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.Int32> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Double>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Double]]
     guid 822b22ef-209f-56aa-a4c3-dc0113b25e4c
@@ -1705,7 +1702,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.UI.Xaml.Contr
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};{67918e1b-f2d5-44d1-8b84-92b87f80a350})
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Controls.ICommandBarElement>
     argument Windows.UI.Xaml.Controls.ICommandBarElement
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.ICommandBarElement> shape=4 reverse=43 role=size
@@ -5813,7 +5810,6 @@ class Microsoft.UI.Xaml.Controls.SwipeItems composable python_type iterable sequ
     default Microsoft.UI.Xaml.Controls.ISwipeItems
     requires Microsoft.UI.Xaml.Controls.ISwipeItems
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Controls.SwipeItem>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Controls.SwipeItem>
     factory Microsoft.UI.Xaml.Controls.ISwipeItemsStatics
     composable Microsoft.UI.Xaml.Controls.ISwipeItemsFactory
@@ -5902,8 +5898,6 @@ class Microsoft.UI.Xaml.Controls.SymbolIconSource composable python_type
     property symbol_property static
         get get_SymbolProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ISymbolIconSourceStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-
-enum T parameterized
 
 class Microsoft.UI.Xaml.Controls.TabView composable python_type
     py TabView
