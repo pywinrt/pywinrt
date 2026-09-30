@@ -12,6 +12,14 @@ newer than v3.2.1 is no name anybody's code uses.
 values.csv lists the properties that hand back an HResult, whose .value is
 deprecated.
 
+distributions.csv says what each distribution v3.2.1 published is in v4: the
+same name, the component that carries its namespace now, or nothing, and the
+floor to require it at. A namespace is found in the "namespaces" of each v4
+deps.json, within its top-level package, since WinUI 2 and the App SDK define
+the same Microsoft.UI.Xaml namespaces. The floor is the version in the tree,
+so the table is written from the release commit of 4.0.0 and then left alone:
+any later v4 release satisfies it.
+
 It also reports each v3.2.1 method that v4 has under neither its old name nor
 one in the table, which is the "Removed" list of README.md to check.
 
@@ -29,6 +37,7 @@ import shutil
 import subprocess
 import sys
 import tarfile
+import tomllib
 from collections.abc import Iterable, Sequence
 from pathlib import Path
 
@@ -209,10 +218,9 @@ def methods(stub: ast.Module) -> dict[str, set[str]]:
     return result
 
 
-def v3_methods() -> dict[tuple[str, str], set[str]]:
+def v3_projection() -> tarfile.TarFile:
     """
-    The methods of each (module, type) in v3.2.1, with the module named the
-    way v4 names it.
+    The projection directory of v3.2.1.
     """
     archive = subprocess.run(
         ["git", "archive", V3_TAG, "--", "projection"],
@@ -221,37 +229,140 @@ def v3_methods() -> dict[tuple[str, str], set[str]]:
         check=True,
     ).stdout
 
+    return tarfile.open(fileobj=io.BytesIO(archive))
+
+
+def read_member(tar: tarfile.TarFile, member: tarfile.TarInfo) -> bytes:
+    file = tar.extractfile(member)
+    assert file is not None
+    return file.read()
+
+
+def v3_methods(tar: tarfile.TarFile) -> dict[tuple[str, str], set[str]]:
+    """
+    The methods of each (module, type) in v3.2.1, with the module named the
+    way v4 names it.
+    """
     result: dict[tuple[str, str], set[str]] = {}
 
-    with tarfile.open(fileobj=io.BytesIO(archive)) as tar:
-        for member in tar.getmembers():
-            # projection/<family>/<package>-<Namespace>/<package>/_<package>_<ns>.pyi
-            parts = member.name.split("/")
+    for member in tar.getmembers():
+        # projection/<family>/<package>-<Namespace>/<package>/_<package>_<ns>.pyi
+        parts = member.name.split("/")
 
-            if (
-                len(parts) != 5
-                or not parts[4].startswith("_")
-                or not parts[4].endswith(".pyi")
-            ):
-                continue
+        if (
+            len(parts) != 5
+            or not parts[4].startswith("_")
+            or not parts[4].endswith(".pyi")
+        ):
+            continue
 
-            package, _, namespace = parts[2].partition("-")
+        package, _, namespace = parts[2].partition("-")
 
-            # the interop modules are written by hand and have no aliases
-            if parts[1] == "interop":
-                continue
+        # the interop modules are written by hand and have no aliases
+        if parts[1] == "interop":
+            continue
 
-            if parts[3] != package or package not in V3_PACKAGES:
-                continue
+        if parts[3] != package or package not in V3_PACKAGES:
+            continue
 
-            module = namespace_module(V3_PACKAGES[package], namespace)
-            stub = tar.extractfile(member)
-            assert stub is not None
+        module = namespace_module(V3_PACKAGES[package], namespace)
 
-            for type_name, names in methods(ast.parse(stub.read())).items():
-                result.setdefault((module, type_name), set()).update(names)
+        for type_name, names in methods(ast.parse(read_member(tar, member))).items():
+            result.setdefault((module, type_name), set()).update(names)
 
     return result
+
+
+def v3_distributions(tar: tarfile.TarFile) -> list[str]:
+    """
+    The name of each distribution that v3.2.1 published.
+    """
+    result = []
+
+    for member in tar.getmembers():
+        if not member.name.endswith("/pyproject.toml"):
+            continue
+
+        name = tomllib.loads(read_member(tar, member).decode())["project"]["name"]
+
+        # the test component is never published
+        if not name.startswith("test-winrt"):
+            result.append(name)
+
+    return sorted(result)
+
+
+def v4_distributions() -> tuple[dict[str, str], dict[tuple[str, str], str]]:
+    """
+    The version of each distribution in the tree, and the distribution that
+    carries each (top-level package, namespace).
+    """
+    paths = subprocess.run(
+        ["git", "ls-files", "*pyproject.toml"],
+        cwd=REPO_PATH,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.split()
+
+    versions = {}
+    owners = {}
+
+    for path in paths:
+        directory = (REPO_PATH / path).parent
+        project = tomllib.loads((directory / "pyproject.toml").read_text())
+        name = project["project"]["name"]
+
+        if "version" in project["project"]:
+            version = project["project"]["version"]
+        else:
+            version_file = project["tool"]["setuptools"]["dynamic"]["version"]["file"]
+            version = (directory / version_file).read_text().strip()
+
+        versions[name] = version
+
+        deps_path = directory / "deps.json"
+
+        if deps_path.exists():
+            package = "winui2" if path.startswith("projection/winui2/") else "winrt"
+
+            for namespace in json.loads(deps_path.read_text())["namespaces"]:
+                owners[(package, namespace)] = name
+
+    return versions, owners
+
+
+def distribution_rows(v3_names: list[str]) -> list[tuple[str, str, str]]:
+    """
+    (v3 distribution, v4 distribution, floor) for each of @p v3_names, with
+    the last two empty for a distribution that v4 does not have.
+    """
+    versions, owners = v4_distributions()
+    rows = []
+
+    for name in v3_names:
+        new_name = name
+
+        if new_name not in versions:
+            prefix, _, namespace = name.partition("-")
+
+            if prefix in ("winui3", "webview2"):
+                # the hand-written modules only changed their prefix
+                new_name = f"winrt-{namespace}"
+
+            # a winrt- name that is not in the tree any more is gone: the
+            # namespace of winrt-Microsoft.UI.Xaml is in the App SDK, but in
+            # v3.2.1 that was the package of its C++ headers
+            if new_name not in versions and prefix != "winrt":
+                new_name = owners.get((V3_PACKAGES[prefix], namespace), "")
+
+        if new_name not in versions:
+            new_name = ""
+
+        floor = f">={versions[new_name]}" if new_name else ""
+        rows.append((name, new_name, floor))
+
+    return rows
 
 
 def v4_stubs() -> dict[str, ast.Module]:
@@ -323,7 +434,11 @@ def main() -> None:
         generated |= generate(family)
 
     stubs = v4_stubs()
-    before = v3_methods()
+
+    with v3_projection() as tar:
+        before = v3_methods(tar)
+        v3_names = v3_distributions(tar)
+
     after = v4_methods(stubs)
 
     table = sorted(
@@ -347,6 +462,18 @@ def main() -> None:
         ["module", "type", "property"],
         sorted(hresult_properties(stubs)),
     )
+
+    distributions = distribution_rows(v3_names)
+
+    write_csv(
+        SCRIPT_PATH / "distributions.csv",
+        ["distribution", "new_distribution", "floor"],
+        distributions,
+    )
+
+    for name, new_name, _ in distributions:
+        if not new_name:
+            print(f"distribution not in v4: {name}")
 
     renamed = {(module, type_name, old) for module, type_name, old, *_ in table}
     old_names = {old for _, _, old, *_ in table}
