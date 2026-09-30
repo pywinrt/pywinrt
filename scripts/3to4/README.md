@@ -114,6 +114,23 @@ The two hand-written modules are renamed but not regrouped:
 | `winui3-Microsoft.UI.Interop`                                          | `winrt-Microsoft.UI.Interop`                                          |
 | `winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` | `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` |
 
+### Version constraints
+
+The packages whose names did not change need their constraints looked at too.
+A v4 projection package is versioned with an epoch, `4!10.0.28000.2705`, which
+sorts above every v3 version, so a v3 constraint that caps the version or pins
+it - `winrt-Windows.Foundation>=3.2,<3.3`, `~=3.2.1` or `==3.2.1` - refuses
+every v4 release. A bare floor such as `>=3.2` still resolves.
+
+`distributions.csv` in this directory lists every distribution v3.2.1
+published, with the v4 distribution it became and the first v4 version of it,
+and `inspect_source.py` (below) finds requirements on them in requirements
+files, `pyproject.toml`, `setup.cfg` and the strings of a `setup.py`.
+`winrt-sdk`, `winrt-WindowsAppSDK` and `winrt-Microsoft.UI.Xaml` shipped C++
+headers in v3 and have no v4 distribution, since nothing compiles against
+PyWinRT's headers any more; neither has `winrt-Windows.AI.ModelContextProtocol`,
+whose namespace the Windows SDK dropped.
+
 ## Renamed methods
 
 v3 named every overload of a method after its
@@ -140,13 +157,14 @@ rather than a `DeprecationWarning`.
 
 `methods.csv` in this directory maps each v3 name to its v4 name, and
 `values.csv` lists the properties that hand back an `HResult`. Both are
-written by `generate.py`.
+written by `generate.py`, as is `distributions.csv`.
 
 There is also an `inspect_source.py` script that looks for renamed methods in
 your Python files, along with the other changes that it can find by looking at
 the source: the `winui3` and `webview2` imports, the deprecated
-`HResult.value` and `EventRegistrationToken.value`, and format strings passed
-to `winrt.system.Array`.
+`HResult.value` and `EventRegistrationToken.value`, format strings passed to
+`winrt.system.Array`, and requirements on v3 distributions that were renamed,
+removed or constrained to v3.
 
 ### Usage
 
@@ -167,14 +185,35 @@ source file. The third line gives the new name that should be used.
 Some editors, like VS Code, will automatically turn the first line into a link
 that can jump to the location in the source file.
 
-With `--fix`, the script also rewrites the `winui3` and `webview2` packages to
-`winrt` in place, in the import statements and wherever a module that a plain
-`import` statement bound is used. It changes nothing else, since everything
-else it reports needs checking by hand.
+A requirements file, a `pyproject.toml` or a `setup.py` is passed the same way,
+and a requirement is reported with what it should become:
+
+    requirements.txt:2:1
+    possible match: winui3-Microsoft.UI.Xaml.Controls>=3.2,<3.3
+    rename to: winrt-Microsoft.WindowsAppSDK.WinUI>=4!2.5.1
+
+With `--fix`, the script rewrites two kinds of thing in place, and nothing
+else, since everything else it reports needs checking by hand:
+
+* the `winui3` and `webview2` packages to `winrt`, in the import statements
+  and wherever a module that a plain `import` statement bound is used;
+* each requirement it reports, except on a distribution that v4 does not
+  have. A renamed distribution gets its new name, and a constraint that
+  refuses v4 becomes a floor at the first v4 version; extras and environment
+  markers are kept. Since many v3 distributions became one v4 distribution,
+  a rewritten requirement that repeats one on the line above, on a line of its
+  own, is dropped.
 
 ### Caveats
 
-* The script does not search in comments, docstrings or string annotations.
+* The script does not search in comments, docstrings or string annotations for
+  code changes. It searches the string literals of a Python file for
+  requirements, and everything but comments in any other file.
+* A floor at the first v4 version is the least the rewritten requirement can
+  say. If the code uses something a later upstream release added, raise it.
+* Two requirements that `--fix` renames to one distribution are only merged when
+  each is on a line of its own with no comment; check a list written on one
+  line for the duplicates left in it.
 * The script doesn't do any static analysis to infer types, so it may produce
   false positives. It matches a method by its name alone, and `.value` only on
   a property that hands back an `HResult` or on a name that has `token` in it.

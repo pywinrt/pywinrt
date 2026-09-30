@@ -46,8 +46,10 @@ on:
       - '!runtime/**/*.txt'
       - runtime/CMakeLists.txt
       # except the version the runtime is published with, which the
-      # version tests read
+      # version tests read, and its pyproject.toml, which the migration
+      # script's tests read
       - runtime/version.txt
+      - runtime/pyproject.toml
       - '!runtime/setup.py'
       - table/**
       - '!table/**/*.md'
@@ -93,8 +95,10 @@ on:
       - '!runtime/**/*.txt'
       - runtime/CMakeLists.txt
       # except the version the runtime is published with, which the
-      # version tests read
+      # version tests read, and its pyproject.toml, which the migration
+      # script's tests read
       - runtime/version.txt
+      - runtime/pyproject.toml
       - '!runtime/setup.py'
       - table/**
       - '!table/**/*.md'
