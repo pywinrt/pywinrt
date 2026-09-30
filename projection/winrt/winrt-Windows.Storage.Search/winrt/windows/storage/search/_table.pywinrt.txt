@@ -490,9 +490,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Data.Text.TextSegment> concrete iterable
     py winrt.windows.foundation.collections._IIterable[TextSegment]
     guid 5498f4f3-cee4-5b72-9729-815c4ad7b9dc
@@ -1539,7 +1536,6 @@ class Windows.Storage.Search.SortEntryVector python_type iterable sequence mutab
     signature rc(Windows.Storage.Search.SortEntryVector;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};struct(Windows.Storage.Search.SortEntry;string;b1)))
     default Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry>
     requires Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Storage.Search.SortEntry>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Storage.Search.SortEntry> shape=4 reverse=43 role=size
@@ -1741,8 +1737,6 @@ class Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails python_t
         method CreateModifiedSinceQuery slot=7 inputs=1 outputs=1 declaring=Windows.Storage.Search.IStorageLibraryContentChangedTriggerDetails shape=89
             in datetime name=lastQueryTime
             out class type=Windows.Storage.Search.StorageItemQueryResult return
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Storage.Search.IStorageQueryResultBase,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[IStorageQueryResultBase, Object]

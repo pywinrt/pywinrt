@@ -56,7 +56,6 @@ class Microsoft.UI.Xaml.Documents.BlockCollection python_type iterable sequence 
     signature rc(Microsoft.UI.Xaml.Documents.BlockCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Documents.Block;{8149d507-672f-5fd5-a10a-351389ba9659})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Documents.Block>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Block> shape=4 reverse=43 role=size
@@ -422,9 +421,6 @@ interface Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Documents.T
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Documents.TextRange> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Documents.TextRange> return
-
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
 
 interface Windows.Foundation.Collections.IIterator<Microsoft.UI.Xaml.Documents.Block> concrete iterable iterator
     py winrt.windows.foundation.collections._IIterator[Block]
@@ -799,7 +795,6 @@ class Microsoft.UI.Xaml.Documents.InlineCollection python_type iterable sequence
     signature rc(Microsoft.UI.Xaml.Documents.InlineCollection;pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.UI.Xaml.Documents.Inline;{813d427a-8980-5a79-a8fa-f27919cfb24f})))
     default Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline>
     requires Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.Documents.Inline>
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Documents.Inline> shape=4 reverse=43 role=size
@@ -950,8 +945,6 @@ class Microsoft.UI.Xaml.Documents.Span composable python_type
             out class type=Microsoft.UI.Xaml.Documents.InlineCollection return
         put put_Inlines slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.ISpan shape=4
             in class type=Microsoft.UI.Xaml.Documents.InlineCollection name=value
-
-enum T parameterized
 
 class Microsoft.UI.Xaml.Documents.TextElement composable python_type
     py TextElement

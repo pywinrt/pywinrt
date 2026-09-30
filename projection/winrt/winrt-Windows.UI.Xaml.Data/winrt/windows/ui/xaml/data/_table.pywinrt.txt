@@ -290,8 +290,6 @@ interface Windows.UI.Xaml.Data.ICollectionView python_type iterable sequence mut
     guid 8be8bfe4-dbef-44df-8126-a31a89121ddc
     signature {8be8bfe4-dbef-44df-8126-a31a89121ddc}
     requires Windows.Foundation.Collections.IObservableVector<System.Object>
-    requires Windows.Foundation.Collections.IVector<T>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IVector<System.Object>
     requires Windows.Foundation.Collections.IIterable<System.Object>
     property collection_groups
@@ -513,9 +511,6 @@ interface Windows.Foundation.Collections.IIterable<System.Object> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.UI.Xaml.Data.ItemIndexRange> concrete iterable
     py winrt.windows.foundation.collections._IIterable[ItemIndexRange]
     guid 273b8073-8c16-59c2-a616-0a534483c612
@@ -583,7 +578,7 @@ interface Windows.Foundation.Collections.IObservableVector<System.Object> concre
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};cinterface(IInspectable))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<System.Object>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<System.Object>
     argument System.Object
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.Object> shape=4 reverse=43 role=size
@@ -749,9 +744,6 @@ interface Windows.Foundation.Collections.IVector<System.Object> concrete iterabl
             in uint32 name=index
             in object name=value
 
-interface Windows.Foundation.Collections.IVector<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
     py winrt.windows.foundation.collections._IVectorView[Object]
     guid a6487363-b074-5c60-ab16-866dce4ee54d
@@ -885,8 +877,6 @@ enum Windows.UI.Xaml.Data.RelativeSourceMode python_type
     constant NONE 0
     constant TEMPLATED_PARENT 1
     constant SELF 2
-
-enum T parameterized
 
 enum Windows.UI.Xaml.Data.UpdateSourceTrigger python_type
     py UpdateSourceTrigger

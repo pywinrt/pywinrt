@@ -138,9 +138,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.AI.MachineLearning.Pr
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
@@ -260,10 +257,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
@@ -486,15 +479,12 @@ class Windows.AI.MachineLearning.Preview.InferencingOptionsPreview python_type
         put put_IsTracingEnabled slot=9 inputs=1 outputs=0 declaring=Windows.AI.MachineLearning.Preview.IInferencingOptionsPreview shape=4 deprecated
             in boolean name=value
 
-enum K parameterized
-
 class Windows.AI.MachineLearning.Preview.LearningModelBindingPreview python_type iterable mapping
     py LearningModelBindingPreview
     signature rc(Windows.AI.MachineLearning.Preview.LearningModelBindingPreview;{93c901e8-6c78-4b4f-aec1-a6bb9e691624})
     default Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview
     requires Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview
     requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     factory Windows.AI.MachineLearning.Preview.ILearningModelBindingPreviewFactory
     constructor -
@@ -719,8 +709,6 @@ class Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview python_
     property shape
         get get_Shape slot=7 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ITensorVariableDescriptorPreview shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IIterable<System.Int64> return
-
-enum V parameterized
 
 class System.Int64 external
     py winrt.system.Int64

@@ -2,9 +2,6 @@ format 4.0
 census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.ApplicationModel.Search.Core
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion> concrete iterable
     py winrt.windows.foundation.collections._IIterable[SearchSuggestion]
     guid df956160-f155-5816-b38b-a2ff0629ba0e
@@ -41,7 +38,7 @@ interface Windows.Foundation.Collections.IObservableVector<Windows.ApplicationMo
     signature pinterface({5917eb53-50b4-4a0d-b309-65862b3f1dbc};rc(Windows.ApplicationModel.Search.Core.SearchSuggestion;{5b5554b0-1527-437b-95c5-8d18d2b8af55}))
     base Windows.Foundation.Collections.IObservableVector
     requires Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion>
-    requires Windows.Foundation.Collections.IIterable<T>
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Search.Core.SearchSuggestion>
     argument Windows.ApplicationModel.Search.Core.SearchSuggestion
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Search.Core.SearchSuggestion> shape=4 reverse=43 role=size
@@ -295,8 +292,6 @@ class Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs p
     property request
         get get_Request slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.Core.ISearchSuggestionsRequestedEventArgs shape=4
             out class type=Windows.ApplicationModel.Search.SearchSuggestionsRequest return
-
-enum T parameterized
 
 delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Search.Core.SearchSuggestionManager,Windows.ApplicationModel.Search.Core.RequestingFocusOnKeyboardInputEventArgs> concrete
     py winrt.windows.foundation.TypedEventHandler[SearchSuggestionManager, RequestingFocusOnKeyboardInputEventArgs]

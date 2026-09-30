@@ -148,7 +148,6 @@ class Windows.System.UserProfile.FirstSignInSettings python_type iterable mappin
     default Windows.System.UserProfile.IFirstSignInSettings
     requires Windows.System.UserProfile.IFirstSignInSettings
     requires Windows.Foundation.Collections.IMapView<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     factory Windows.System.UserProfile.IFirstSignInSettingsStatics
     property size
@@ -430,9 +429,6 @@ interface Windows.Foundation.Collections.IIterable<System.String> concrete itera
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
 
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
-
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, Object]]
     guid fe2f3d47-5d47-5499-8374-430c7cda0204
@@ -482,10 +478,6 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collection
     method move_next
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=62 role=move_next
             out boolean return
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, Object]
@@ -570,8 +562,6 @@ interface Windows.Foundation.Collections.IVectorView<System.String> concrete ite
             in string name=value
             out uint32 name=index
             out boolean return
-
-enum K parameterized
 
 class Windows.System.UserProfile.LockScreen static python_type
     py LockScreen
@@ -694,8 +684,6 @@ class Windows.System.UserProfile.UserProfilePersonalizationSettings python_type
         method TrySetWallpaperImageAsync slot=7 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserProfilePersonalizationSettings shape=51
             in class type=Windows.Storage.StorageFile name=imageFile
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-
-enum V parameterized
 
 class System.Boolean external
     py winrt.system.Boolean

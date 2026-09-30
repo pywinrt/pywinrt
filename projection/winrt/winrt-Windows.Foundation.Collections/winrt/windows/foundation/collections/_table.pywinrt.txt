@@ -373,7 +373,7 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Obj
     signature pinterface({65df2bf5-bf39-41b5-aebc-5a9d865e472b};string;cinterface(IInspectable))
     base Windows.Foundation.Collections.IObservableMap
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     argument System.String
     argument System.Object
     property size
@@ -416,7 +416,7 @@ interface Windows.Foundation.Collections.IObservableMap<System.String,System.Str
     signature pinterface({65df2bf5-bf39-41b5-aebc-5a9d865e472b};string;string)
     base Windows.Foundation.Collections.IObservableMap
     requires Windows.Foundation.Collections.IMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     argument System.String
     argument System.String
     property size
@@ -556,8 +556,6 @@ interface Windows.Foundation.Collections.IPropertySet python_type iterable mappi
     guid 8a43ed9f-f4e6-4421-acf9-1dab2986820c
     signature {8a43ed9f-f4e6-4421-acf9-1dab2986820c}
     requires Windows.Foundation.Collections.IObservableMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IMap<K,V>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     property size
@@ -729,8 +727,6 @@ class Windows.Foundation.Collections.PropertySet activatable python_type iterabl
     default Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IObservableMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IMap<K,V>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     constructor -
@@ -775,10 +771,8 @@ class Windows.Foundation.Collections.StringMap activatable python_type iterable 
     signature rc(Windows.Foundation.Collections.StringMap;pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string))
     default Windows.Foundation.Collections.IMap<System.String,System.String>
     requires Windows.Foundation.Collections.IMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
     requires Windows.Foundation.Collections.IObservableMap<System.String,System.String>
-    requires Windows.Foundation.Collections.IMap<K,V>
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -826,8 +820,6 @@ class Windows.Foundation.Collections.ValueSet activatable python_type iterable m
     default Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IPropertySet
     requires Windows.Foundation.Collections.IObservableMap<System.String,System.Object>
-    requires Windows.Foundation.Collections.IMap<K,V>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IMap<System.String,System.Object>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>>
     constructor -

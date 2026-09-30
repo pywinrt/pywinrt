@@ -2,9 +2,6 @@ format 4.0
 census 2e30db26-66c8-4551-85b9-a537376d8f99 1
 namespace Windows.Data.Json
 
-interface Windows.Foundation.Collections.IIterable<T> parameterized
-    argument T
-
 interface Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IJsonValue]
     guid cb0492b6-4113-55cf-b2c5-99eb428ba493
@@ -14,9 +11,6 @@ interface Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue> shape=4 reverse=22 role=first
             out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Data.Json.IJsonValue> return
-
-interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>> parameterized
-    argument Windows.Foundation.Collections.IKeyValuePair<K,V>
 
 interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>> concrete iterable
     py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, IJsonValue]]
@@ -117,10 +111,6 @@ interface Windows.Data.Json.IJsonValueStatics
 
 interface Windows.Data.Json.IJsonValueStatics2
     guid 1d9ecbe4-3fe8-4335-8392-93d8e36865f0
-
-interface Windows.Foundation.Collections.IKeyValuePair<K,V> parameterized
-    argument K
-    argument V
 
 interface Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue> concrete
     py winrt.windows.foundation.collections._IKeyValuePair[String, IJsonValue]
@@ -286,7 +276,6 @@ class Windows.Data.Json.JsonArray activatable python_type iterable sequence muta
     requires Windows.Data.Json.IJsonArray
     requires Windows.Data.Json.IJsonValue
     requires Windows.Foundation.Collections.IVector<Windows.Data.Json.IJsonValue>
-    requires Windows.Foundation.Collections.IIterable<T>
     requires Windows.Foundation.Collections.IIterable<Windows.Data.Json.IJsonValue>
     requires Windows.Foundation.IStringable
     factory Windows.Data.Json.IJsonArrayStatics
@@ -415,7 +404,6 @@ class Windows.Data.Json.JsonObject activatable python_type iterable mapping muta
     requires Windows.Data.Json.IJsonObject
     requires Windows.Data.Json.IJsonValue
     requires Windows.Foundation.Collections.IMap<System.String,Windows.Data.Json.IJsonValue>
-    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<K,V>>
     requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Data.Json.IJsonValue>>
     requires Windows.Data.Json.IJsonObjectWithDefaultValues
     requires Windows.Foundation.IStringable
@@ -602,12 +590,6 @@ enum Windows.Data.Json.JsonValueType python_type
     constant STRING 3
     constant ARRAY 4
     constant OBJECT 5
-
-enum K parameterized
-
-enum T parameterized
-
-enum V parameterized
 
 class System.String external
     py winrt.system.String

@@ -590,6 +590,66 @@ class TestTableParameterizedTypes(unittest.TestCase):
 
         self.assertEqual(unusable, [])
 
+    def test_a_concrete_type_requires_no_type_without_arguments(self) -> None:
+        # What a type requires is what an instance of it can be queried for,
+        # so for anything that values exist of it has to be a real interface
+        # with an IID, closed over the type arguments along the whole chain:
+        # JsonArray reaches IIterable<T> through IVector<IJsonValue>.
+        unusable = []
+
+        for parts in (
+            ("test_winrt", "testcomponent"),
+            ("winrt", "windows", "foundation"),
+            ("winrt", "windows", "foundation", "collections"),
+            ("winrt", "windows", "data", "json"),
+        ):
+            types = read(*parts)["types"]
+
+            for type_record in types:
+                if (
+                    type_record["flags"] & TYPE_PARAMETERIZED
+                    and not type_record["flags"] & TYPE_CONCRETE
+                ):
+                    continue
+
+                for index in type_record["interfaces"]:
+                    named = types[index]
+
+                    if named["flags"] & TYPE_CONCRETE:
+                        continue
+
+                    if not named["flags"] & TYPE_PARAMETERIZED:
+                        continue
+
+                    unusable.append(
+                        f"{type_record['name']} -> {named['namespace']}.{named['name']}"
+                    )
+
+        self.assertEqual(unusable, [])
+
+    def test_a_requirement_two_levels_down_is_closed(self) -> None:
+        # IObservableMap<K, V> requires IMap<K, V>, which requires
+        # IIterable<IKeyValuePair<K, V>>, so an instance of the first has to
+        # name the instance of the last with its own type arguments.
+        types = read("winrt", "windows", "foundation", "collections")["types"]
+        instances = [
+            t
+            for t in types
+            if t["name"] == "IObservableMap" and t["flags"] & TYPE_CONCRETE
+        ]
+
+        self.assertNotEqual(instances, [])
+
+        for instance in instances:
+            with self.subTest(signature=instance["signature"]):
+                required = {
+                    types[index]["name"]
+                    for index in instance["interfaces"]
+                    if types[index]["flags"] & TYPE_CONCRETE
+                }
+
+                self.assertEqual(required, {"IMap", "IIterable"})
+
 
 class TestTableProtocolRoles(unittest.TestCase):
     """The members the Python protocols of a type call."""
