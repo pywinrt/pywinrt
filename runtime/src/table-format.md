@@ -370,11 +370,11 @@ Type flags, and the words the text writes them as:
 | 7 | `concrete` | every type argument is a real type, so the record has an IID and a signature of its own |
 | 8 | `activatable` | default activatable |
 | 9 | `python_type` | the type gets a Python type object of its own in this module |
-| 10 | `iterable` | implements `IIterable<T>` |
+| 10 | `iterable` | can be iterated: implements `IIterable<T>` or `IIterator<T>` |
 | 11 | `iterator` | implements `IIterator<T>` |
-| 12 | `sequence` | implements `IVectorView<T>` |
+| 12 | `sequence` | implements `IVectorView<T>` or `IVector<T>` |
 | 13 | `mutable_sequence` | implements `IVector<T>` |
-| 14 | `mapping` | implements `IMapView<K, V>` |
+| 14 | `mapping` | implements `IMapView<K, V>` or `IMap<K, V>` |
 | 15 | `mutable_mapping` | implements `IMap<K, V>` |
 | 16 | `awaitable` | implements `IAsyncInfo` and is not `IAsyncInfo` |
 | 17 | `closeable` | implements `IClosable` |
