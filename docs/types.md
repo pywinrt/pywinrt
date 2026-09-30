@@ -233,11 +233,163 @@ empty_uuid = GuidHelper.empty
 
 ### Events
 
-!!! todo "Todo"
+An event is projected as a pair of methods, `add_<event>()` and
+`remove_<event>()`, with the event name converted to the
+`lower_case_with_underscores` [naming convention](#naming-conventions).
+`add_<event>()` takes a handler and returns an `EventRegistrationToken`;
+passing that token to `remove_<event>()` removes the handler again. An event
+can have any number of handlers, and each `add_<event>()` call registers one
+more. The token is a subclass of [`int`][int], so it can be compared, hashed
+and used as a dictionary key.
 
-    explain events
+The handler is a callable that takes two positional arguments, the object that
+raised the event and an event arguments object, and returns nothing. The types
+of both are in the stubs as the parameters of the event's delegate type.
 
-    <https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#event-handlers>
+```python
+from winrt.windows.devices.bluetooth.advertisement import (
+    BluetoothLEAdvertisementReceivedEventArgs,
+    BluetoothLEAdvertisementWatcher,
+)
+
+
+def on_received(
+    sender: BluetoothLEAdvertisementWatcher,
+    args: BluetoothLEAdvertisementReceivedEventArgs,
+) -> None:
+    print(args.bluetooth_address)
+
+
+watcher = BluetoothLEAdvertisementWatcher()
+token = watcher.add_received(on_received)
+watcher.start()
+...
+watcher.stop()
+watcher.remove_received(token)
+```
+
+Static events are added and removed on the type object rather than on an
+instance, in the same way as [static properties](#properties):
+
+```python
+from winrt.windows.applicationmodel.core import CoreApplication
+
+token = CoreApplication.add_unhandled_error_detected(on_error)
+```
+
+#### Which thread calls the handler
+
+WinRT calls the handler on whatever thread raises the event, and the handler
+runs as ordinary Python code on that thread. For most objects that is a WinRT
+thread pool thread, not one of the program's own. In a GUI app, an object that lives on the
+UI thread raises its events there, so a XAML event handler runs on the UI
+thread.
+
+This means a handler must not touch anything that belongs to a particular
+thread. With `asyncio`, hand the work to the event loop with
+[`loop.call_soon_threadsafe()`][call_soon_threadsafe] rather than doing it in
+the handler, and use an [`asyncio.Queue`][asyncio.Queue] or an
+[`asyncio.Future`][asyncio.Future] to deliver the event arguments to a
+coroutine:
+
+```python
+import asyncio
+
+from winrt.windows.devices.bluetooth.advertisement import BluetoothLEAdvertisementWatcher
+
+
+async def scan() -> None:
+    loop = asyncio.get_running_loop()
+    received = asyncio.Queue()
+
+    watcher = BluetoothLEAdvertisementWatcher()
+    token = watcher.add_received(
+        lambda sender, args: loop.call_soon_threadsafe(received.put_nowait, args)
+    )
+
+    try:
+        watcher.start()
+
+        while True:
+            args = await received.get()
+            print(args.bluetooth_address)
+    finally:
+        watcher.stop()
+        watcher.remove_received(token)
+```
+
+The sender carries on after the handler returns, so a property of the sender
+read later from a task on the event loop describes the object as it is then,
+not as it was when the event was raised. Where that matters, read the property
+in the handler and hand the value to the event loop instead of the object.
+
+Some events are designed for the handler to finish its work later: their
+event arguments have a `get_deferral()` method. The object that raised the
+event waits until the deferral is completed, so a handler can take the
+deferral, schedule a coroutine on the event loop, and have that coroutine call
+`complete()` on the deferral when it is done. Everything else the handler
+needs must still be read before the handler returns.
+
+```python
+def on_suspending(sender, args):
+    deferral = args.suspending_operation.get_deferral()
+
+    async def save() -> None:
+        try:
+            await save_state()
+        finally:
+            deferral.complete()
+
+    asyncio.run_coroutine_threadsafe(save(), loop)
+```
+
+[call_soon_threadsafe]: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe
+[asyncio.Queue]: https://docs.python.org/3/library/asyncio-queue.html#asyncio.Queue
+[asyncio.Future]: https://docs.python.org/3/library/asyncio-future.html#asyncio.Future
+
+#### Removing handlers
+
+The WinRT object keeps a reference to the handler until it is removed. A
+handler that is a closure or a bound method keeps its own object alive too, so
+an object that subscribes to an event on a WinRT object it owns will not be
+garbage collected until the handler is removed, however unreachable the pair
+become. Keep the token and remove the handler when the object is done with the
+event. [`contextlib.ExitStack`][ExitStack] pairs an `add_<event>()` with its
+`remove_<event>()` at the point of subscribing:
+
+```python
+import contextlib
+
+with contextlib.ExitStack() as stack:
+    token = frame_pool.add_frame_arrived(on_frame)
+    stack.callback(frame_pool.remove_frame_arrived, token)
+    ...
+```
+
+`remove_<event>()` stops the handler from being called again, but it does not
+wait for a call that is already in progress on another thread. A handler can
+still be running when `remove_<event>()` returns.
+
+Removing a handler is not required before the interpreter exits. An event
+that is raised while Python is shutting down, or after it has shut down, is
+dropped rather than delivered.
+
+[ExitStack]: https://docs.python.org/3/library/contextlib.html#contextlib.ExitStack
+
+#### Exceptions in handlers
+
+A handler has no Python caller to raise to, so an exception that escapes one
+goes to [`sys.unraisablehook()`][unraisablehook] and the WinRT code that raised
+the event gets the error code
+[`PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`](api/system.hresult.md#pywinrt_e_unraisable_python_exception).
+Handle exceptions inside the handler. See [Exceptions](#exceptions).
+
+[unraisablehook]: https://docs.python.org/3/library/sys.html#sys.unraisablehook
+
+!!! version-changed "Changed in version 4.0"
+
+    `EventRegistrationToken` is a subclass of `int`. Previously it was a
+    struct with a single `value` field.
 
 ## Interfaces
 
