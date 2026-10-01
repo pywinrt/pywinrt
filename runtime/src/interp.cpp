@@ -1044,27 +1044,41 @@ namespace py::interp
         }
 
         void* factory{};
-        winrt::check_hresult(
-            winrt::impl::get_runtime_activation_factory_impl<false>(
+        int32_t hr{};
+
+        {
+            // Activation may start a server in another process, and the
+            // factory may be a proxy, which is asked through its apartment.
+            auto _gil = release_gil();
+
+            hr = winrt::impl::get_runtime_activation_factory_impl<false>(
                 winrt::param::hstring{type.class_name},
                 *static_cast<winrt::guid const*>(overload.iface),
-                &factory));
+                &factory);
 
-        void* agile{};
-
-        if (static_cast<::IUnknown*>(factory)->QueryInterface(
-                winrt::guid_of<winrt::impl::IAgileObject>(), &agile)
-            == 0)
-        {
-            static_cast<::IUnknown*>(agile)->Release();
-            static_cast<::IUnknown*>(factory)->AddRef();
-
-            if (_InterlockedCompareExchangePointer(
-                    const_cast<void* volatile*>(&overload.factory), factory, nullptr))
+            if (hr == 0)
             {
-                static_cast<::IUnknown*>(factory)->Release();
+                void* agile{};
+
+                if (static_cast<::IUnknown*>(factory)->QueryInterface(
+                        winrt::guid_of<winrt::impl::IAgileObject>(), &agile)
+                    == 0)
+                {
+                    static_cast<::IUnknown*>(agile)->Release();
+                    static_cast<::IUnknown*>(factory)->AddRef();
+
+                    if (_InterlockedCompareExchangePointer(
+                            const_cast<void* volatile*>(&overload.factory),
+                            factory,
+                            nullptr))
+                    {
+                        static_cast<::IUnknown*>(factory)->Release();
+                    }
+                }
             }
         }
+
+        winrt::check_hresult(hr);
 
         return factory;
     }
