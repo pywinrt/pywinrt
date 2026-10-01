@@ -1637,6 +1637,10 @@ namespace py::interp
             {
                 auto _gil = release_gil();
                 hr = shape->invoke(entry, instance, frame.args);
+
+                // A factory that is not agile is not kept, so this is the
+                // last reference to it, and it may be a proxy.
+                queried = nullptr;
             }
 
             if (hr != 0)

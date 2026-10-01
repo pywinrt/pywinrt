@@ -613,6 +613,9 @@ namespace py::interp
 
             if (auto const info = find_type_entry(tp))
             {
+                // A field may hold the last reference to a proxy, which is let
+                // go of without the GIL, as a wrapper's is.
+                auto _gil = release_gil();
                 release_struct(
                     *info, reinterpret_cast<uint8_t*>(self) + info->blob_offset);
             }
