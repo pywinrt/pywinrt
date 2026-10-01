@@ -204,9 +204,11 @@ namespace py::cpp::_winrt
         py::pyobj_handle to_uuid_func;
         /// uuid.UUID, which is what a Guid is in Python.
         py::pytype_handle uuid_type;
-        /// Owned, and not a handle, because the first thread to import it
-        /// publishes it with a compare-exchange on the pointer itself.
-        PyObject* wrap_async_func;
+        /// winrt.runtime._internals.FutureState, which an async operation
+        /// keeps its asyncio future state in. Owned, and not a handle,
+        /// because the first thread to import it publishes it with a
+        /// compare-exchange on the pointer itself.
+        PyObject* future_state_type;
     };
 
     module_state* get_module_state() noexcept;

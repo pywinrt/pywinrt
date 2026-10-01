@@ -25,8 +25,10 @@ namespace py::interp
 {
     void find_protocol_members(type_entry& entry) noexcept;
 
+    int instance_basicsize(table::type_view const& record) noexcept;
+
     void add_protocol_slots(
         table::type_view const& record, std::vector<PyType_Slot>& slots);
 
-    bool bind_protocol_methods(table::type_view const& record, PyTypeObject* type);
+    bool bind_protocol_methods(type_entry const& entry, table::type_view const& record);
 } // namespace py::interp
