@@ -324,6 +324,8 @@
   when it lets go of the last reference to one, which a wrapper, an
   array, a struct or a nullable value may hold, or when it asks one for
   an interface.
+- Activating a class whose server runs in another process no longer stops
+  every other Python thread until the server has started.
 - Fixed a crash at exit when WinRT releases a Python object after the
   interpreter has finalized.
 - `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
