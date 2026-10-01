@@ -147,6 +147,7 @@ enum TableMemberRole : uint
     Split = 27,
     PairKey = 28,
     PairValue = 29,
+    Cancel = 30,
 }
 
 enum TableParamFlags : uint
@@ -583,6 +584,7 @@ sealed class TableWriter
         ["Windows.Foundation.Collections.IIterator`1.MoveNext"] = TableMemberRole.MoveNext,
         ["Windows.Foundation.Collections.IIterator`1.GetMany"] = TableMemberRole.GetMany,
         ["Windows.Foundation.IAsyncInfo.get_Status"] = TableMemberRole.Status,
+        ["Windows.Foundation.IAsyncInfo.Cancel"] = TableMemberRole.Cancel,
         ["Windows.Foundation.IAsyncAction.get_Completed"] = TableMemberRole.Completed,
         ["Windows.Foundation.IAsyncAction.GetResults"] = TableMemberRole.GetResults,
         ["Windows.Foundation.IAsyncActionWithProgress`1.get_Completed"] = TableMemberRole.Completed,
@@ -613,7 +615,7 @@ sealed class TableWriter
     /// something else entirely, and it is only the collection interface behind
     /// the member that makes it the one <c>len()</c> or <c>del</c> calls.
     /// </remarks>
-    private static TableMemberRole GetMemberRole(TypeReference? declaring, string name)
+    internal static TableMemberRole GetMemberRole(TypeReference? declaring, string name)
     {
         if (declaring is null)
         {
@@ -1603,6 +1605,7 @@ sealed class TableWriter
         "split",
         "pair_key",
         "pair_value",
+        "cancel",
     ];
 
     private static readonly string[] paramCategoryNames =
