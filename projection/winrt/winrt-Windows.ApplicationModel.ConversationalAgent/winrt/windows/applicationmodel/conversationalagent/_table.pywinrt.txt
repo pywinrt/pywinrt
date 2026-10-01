@@ -917,7 +917,7 @@ interface Windows.Foundation.IAsyncOperation<System.Object> concrete awaitable
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -946,7 +946,7 @@ interface Windows.Foundation.IAsyncOperation<System.String> concrete awaitable
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -975,7 +975,7 @@ interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1004,7 +1004,7 @@ interface Windows.Foundation.IAsyncOperation<System.UInt32> concrete awaitable
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1033,7 +1033,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1062,7 +1062,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1091,7 +1091,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1120,7 +1120,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1149,7 +1149,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1178,7 +1178,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1207,7 +1207,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1236,7 +1236,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1265,7 +1265,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1294,7 +1294,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Conversati
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1323,7 +1323,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1352,7 +1352,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1381,7 +1381,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1410,7 +1410,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1439,7 +1439,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1468,7 +1468,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1497,7 +1497,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInpu
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
@@ -1526,7 +1526,7 @@ interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStrea
         get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
             out enum32 type=Windows.Foundation.AsyncStatus return
     method cancel
-        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93 role=cancel
     method close
         method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
     method get_results
