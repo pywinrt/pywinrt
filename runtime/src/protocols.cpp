@@ -1178,29 +1178,12 @@ namespace py::interp
 
         /**
          * The deallocator of an async operation, which lets go of its
-         * FutureState and its interface pointer before the deallocator of
-         * winrt.system.Object lets go of the rest.
+         * FutureState before the deallocator of winrt.system.Object lets go
+         * of the rest.
          */
         void async_dealloc(PyObject* self) noexcept
         {
             clear_future_state(self);
-
-            // An operation is often a proxy for one that runs in another
-            // apartment, and releasing a proxy is a call into that apartment,
-            // which may at that moment be waiting for the GIL to run the
-            // completed handler of the next operation. The asyncio callbacks
-            // of a finished operation keep it until the end of the loop
-            // iteration that ran them, which is after the task has set up
-            // its next wait, so this is the order a coroutine that awaits two
-            // operations in a row produces.
-            {
-                auto released = std::move(
-                    reinterpret_cast<
-                        winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self)
-                        ->obj);
-                auto _gil = release_gil();
-                released = nullptr;
-            }
 
             // The instance of a parameterized async interface derives from
             // the interface, which has this deallocator too.
