@@ -316,6 +316,8 @@
   Python 3.10 reaches its own in October 2026.
 
 ### Fixed
+- Fixed a crash when Windows let go, on a thread of its own, of the `IBuffer`
+  that a Python buffer such as `bytes` was passed as.
 - Fixed a crash at exit when WinRT releases a Python object after the
   interpreter has finalized.
 - `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
