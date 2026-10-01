@@ -3,7 +3,7 @@
 // py::convert<T>() and py::convert_to<T>() dispatch to py::converter<T>,
 // specialized here for the types the runtime API itself mentions: the
 // fundamental types, strings, GUIDs, DateTime, TimeSpan, IInspectable and
-// IReference<T>. Arrays are specialized in <pywinrt/array.h>; <pywinrt/base.h>
+// std::optional<T>. Arrays are specialized in <pywinrt/array.h>; <pywinrt/base.h>
 // pulls in both, which is what makes every specialization visible before a
 // module instantiates any of them.
 //
@@ -523,9 +523,26 @@ namespace py
                 return value;
             }
 
-            return reinterpret_cast<
-                       winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(obj)
-                ->obj.as<winrt::Windows::Foundation::IInspectable>();
+            auto const& held
+                = reinterpret_cast<
+                      winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(obj)
+                      ->obj;
+
+            // A delegate is no IInspectable, so the wrapper is asked, and it
+            // may be a proxy, which is asked through its apartment.
+            winrt::Windows::Foundation::IInspectable value;
+            int32_t hr{};
+
+            {
+                auto _gil = release_gil();
+                hr = held.as(
+                    winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
+                    winrt::put_abi(value));
+            }
+
+            winrt::check_hresult(hr);
+
+            return value;
         }
     };
 
@@ -610,33 +627,6 @@ namespace py
             }
 
             return *buffer;
-        }
-    };
-
-    template<typename T>
-    struct converter<winrt::Windows::Foundation::IReference<T>>
-    {
-        static PyObject* convert(
-            winrt::Windows::Foundation::IReference<T> const& reference) noexcept
-        {
-            if (reference == nullptr)
-            {
-                Py_RETURN_NONE;
-            }
-
-            return converter<T>::convert(reference.Value());
-        }
-
-        static winrt::Windows::Foundation::IReference<T> convert_to(PyObject* obj)
-        {
-            throw_if_pyobj_null(obj);
-
-            if (Py_IsNone(obj))
-            {
-                return nullptr;
-            }
-
-            return converter<T>::convert_to(obj);
         }
     };
 
