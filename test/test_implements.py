@@ -16,6 +16,7 @@ from typing import Any
 import test_winrt.testcomponent as tc
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+from winrt.system import Array, Object
 from winrt.system.hresult import PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
 
 from ._util import catch_unraisable
@@ -178,6 +179,26 @@ class TestImplements(unittest.TestCase):
         del properties
         gc.collect()
         self.assertIsNone(ref())
+
+    def test_object_is_released_by_an_array(self) -> None:
+        # An array lets go of its elements without the GIL, which the object
+        # that stands for a Python one takes back to let go of it.
+        for element_type in (Object, tc.IRequiredOne):
+            with self.subTest(element_type=element_type.__name__):
+                replaced, kept = One(), One()
+                replaced_ref, kept_ref = weakref.ref(replaced), weakref.ref(kept)
+
+                array: Array[Any] = Array(element_type, [replaced])
+                array[0] = kept
+
+                del replaced, kept
+                gc.collect()
+                self.assertIsNone(replaced_ref(), "the element replaced")
+                self.assertIsNotNone(kept_ref(), "the array should hold it")
+
+                del array
+                gc.collect()
+                self.assertIsNone(kept_ref(), "the element of an array let go of")
 
     def test_abstract_type_is_not_instantiable(self) -> None:
         with self.assertRaisesRegex(TypeError, "abstract class IStringable"):

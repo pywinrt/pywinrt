@@ -58,6 +58,27 @@ class TestClasses(unittest.TestCase):
         # reaching one() queries for it.
         self.assertEqual(tc.Class().one(), 1)
 
+    def test_equality_is_identity(self) -> None:
+        uri = wf.Uri("http://example.com/")
+
+        # the same object, held by a wrapper of another of its interfaces
+        self.assertTrue(uri == uri.as_(wf.IStringable))
+        self.assertFalse(uri != uri.as_(wf.IStringable))
+
+        # an object of its own, whatever it holds
+        self.assertFalse(uri == wf.Uri("http://example.com/"))
+        self.assertTrue(uri != wf.Uri("http://example.com/"))
+
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "http://example.com/"
+
+        # nothing that is not a wrapper holds a WinRT object already
+        for other in (None, "http://example.com/", Stringable()):
+            with self.subTest(other=other):
+                self.assertFalse(uri == other)
+                self.assertTrue(uri != other)
+
     def test_as_and_isinstance(self) -> None:
         instance = tc.Class()
 
