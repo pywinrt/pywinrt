@@ -322,8 +322,8 @@
   process, such as a `StorageFile`, whose apartment may be waiting for the
   GIL to call a Python handler: the projection no longer holds the GIL
   when it lets go of the last reference to one, which a wrapper, an
-  array, a struct or a nullable value may hold, or to recognise one that
-  a call hands back.
+  array, a struct or a nullable value may hold, or when it asks one for
+  an interface.
 - Fixed a crash at exit when WinRT releases a Python object after the
   interpreter has finalized.
 - `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a

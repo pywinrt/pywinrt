@@ -76,17 +76,27 @@ namespace py::cpp::_winrt
             }
 
             auto const& guid = *static_cast<winrt::guid const*>(info->guid);
-            auto instance
-                = py::convert_to<winrt::Windows::Foundation::IInspectable>(obj);
+            auto const& instance
+                = reinterpret_cast<
+                      py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(obj)
+                      ->obj;
             if (!instance)
             {
                 Py_RETURN_FALSE;
             }
 
             // The question as_() asks, rather than GetIids, whose list an
-            // implementation may leave incomplete.
+            // implementation may leave incomplete. The object may be a proxy,
+            // which is asked through its apartment.
             winrt::com_ptr<::IUnknown> queried;
-            auto const hr = instance.as(guid, queried.put_void());
+            int32_t hr{};
+
+            {
+                auto _gil = py::release_gil();
+                hr = instance.as(guid, queried.put_void());
+                queried = nullptr;
+            }
+
             if (hr == winrt::impl::error_no_interface)
             {
                 Py_RETURN_FALSE;
@@ -373,47 +383,32 @@ namespace py::cpp::_winrt
         PyObject* other,
         int op) noexcept
     {
-        if (op == Py_EQ)
+        if (op != Py_EQ && op != Py_NE)
         {
-            try
-            {
-                auto other_inspectable
-                    = py::convert_to<winrt::Windows::Foundation::IInspectable>(other);
-
-                if (other_inspectable)
-                {
-                    return PyBool_FromLong(self->obj == other_inspectable);
-                }
-            }
-            catch (python_exception)
-            {
-                PyErr_Clear();
-            }
-
-            Py_RETURN_FALSE;
+            Py_RETURN_NOTIMPLEMENTED;
         }
 
-        if (op == Py_NE)
+        auto const object_type = py::get_object_type();
+        if (!object_type)
         {
-            try
-            {
-                auto other_inspectable
-                    = py::convert_to<winrt::Windows::Foundation::IInspectable>(other);
-
-                if (other_inspectable)
-                {
-                    return PyBool_FromLong(self->obj != other_inspectable);
-                }
-            }
-            catch (python_exception)
-            {
-                PyErr_Clear();
-            }
-
-            Py_RETURN_TRUE;
+            return nullptr;
         }
 
-        Py_RETURN_NOTIMPLEMENTED;
+        // Only another wrapper can hold the same object: anything else would
+        // be stood up as a new one to compare. What is compared is identity,
+        // which a proxy answers itself.
+        auto equal = false;
+
+        if (PyObject_TypeCheck(other, object_type))
+        {
+            equal = self->obj
+                    == reinterpret_cast<
+                           py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(
+                           other)
+                           ->obj;
+        }
+
+        return PyBool_FromLong(op == Py_EQ ? equal : !equal);
     }
 
     static Py_hash_t Object_hash(

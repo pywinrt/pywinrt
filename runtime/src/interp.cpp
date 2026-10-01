@@ -1070,22 +1070,18 @@ namespace py::interp
     }
 
     /**
-     * Queries @p self for the interface that declares @p overload, which a
+     * The object to ask for the interface that declares @p overload, which a
      * member reached through anything but the interface the wrapper holds has
      * to be called on.
      *
-     * Asking here is what turns a call on an object that does not implement
-     * the interface into a Python exception instead of a call through a null
-     * vtable.
-     *
-     * @returns A pointer the caller owns a reference to.
-     * @throws python_exception if @p self does not implement it.
+     * @param inner Takes the reference to the object @p self was composed
+     * over, when that is the one.
      */
-    static void* query_member(
-        member_desc const& member, overload_desc const& overload, void* self)
+    static void* member_target(
+        overload_desc const& overload,
+        void* self,
+        winrt::com_ptr<::IUnknown>& inner) noexcept
     {
-        winrt::com_ptr<::IUnknown> inner;
-
         if (overload.overridable)
         {
             // An object a Python class was composed into answers this member
@@ -1097,26 +1093,11 @@ namespace py::interp
 
             if (inner)
             {
-                self = inner.get();
+                return inner.get();
             }
         }
 
-        void* iface{};
-
-        if (static_cast<::IUnknown*>(self)->QueryInterface(
-                *static_cast<winrt::guid const*>(overload.iface), &iface)
-            != 0)
-        {
-            throw_member_not_available(
-                member.kind == table::group_kind::property ? member_kind::property
-                                                           : member_kind::method,
-                member.type_name,
-                overload.winrt_name,
-                overload.iface_name,
-                overload.in_count);
-        }
-
-        return iface;
+        return self;
     }
 
     /**
@@ -1552,9 +1533,14 @@ namespace py::interp
         }
 
         winrt::com_ptr<::IUnknown> queried;
+        winrt::com_ptr<::IUnknown> composed_over;
 
         try
         {
+            // What is asked for the interface that declares the member, which
+            // is done without the GIL along with the call.
+            ::IUnknown* asked{};
+
             if (member.is_static || member.kind == table::group_kind::constructor)
             {
                 queried.attach(
@@ -1562,12 +1548,9 @@ namespace py::interp
             }
             else if (overload.iface)
             {
-                queried.attach(
-                    static_cast<::IUnknown*>(query_member(member, overload, self)));
+                asked = static_cast<::IUnknown*>(
+                    member_target(overload, self, composed_over));
             }
-
-            auto const instance
-                = queried ? queried.get() : static_cast<::IUnknown*>(self);
 
             call_frame frame{shape->buffer_size, overload.out_size, overload.arg_count};
 
@@ -1629,18 +1612,47 @@ namespace py::interp
                 }
             }
 
-            auto const vtable = *reinterpret_cast<void* const* const*>(instance);
-            auto const entry = vtable[overload.slot];
-
             int32_t hr{};
+            auto available = true;
 
             {
                 auto _gil = release_gil();
-                hr = shape->invoke(entry, instance, frame.args);
+
+                // Asking is what turns a call on an object that does not
+                // implement the interface into a Python exception instead of a
+                // call through a null vtable.
+                if (asked)
+                {
+                    available = asked->QueryInterface(
+                                    *static_cast<winrt::guid const*>(overload.iface),
+                                    queried.put_void())
+                                == 0;
+                }
+
+                if (available)
+                {
+                    auto const instance
+                        = queried ? queried.get() : static_cast<::IUnknown*>(self);
+                    auto const vtable
+                        = *reinterpret_cast<void* const* const*>(instance);
+
+                    hr = shape->invoke(vtable[overload.slot], instance, frame.args);
+                }
 
                 // A factory that is not agile is not kept, so this is the
                 // last reference to it, and it may be a proxy.
                 queried = nullptr;
+            }
+
+            if (!available)
+            {
+                throw_member_not_available(
+                    member.kind == table::group_kind::property ? member_kind::property
+                                                               : member_kind::method,
+                    member.type_name,
+                    overload.winrt_name,
+                    overload.iface_name,
+                    overload.in_count);
             }
 
             if (hr != 0)
