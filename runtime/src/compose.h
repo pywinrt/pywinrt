@@ -29,5 +29,7 @@ namespace py::interp
         PyObject* const* args,
         Py_ssize_t nargs) noexcept;
 
+    bool is_composed_identity(void const* identity) noexcept;
+
     void* composable_inner(void* abi) noexcept;
 } // namespace py::interp

@@ -682,6 +682,16 @@ namespace py::interp
     } // namespace
 
     /**
+     * Whether @p identity, the IUnknown an object answers with, is the head of
+     * an object a Python class was composed into.
+     */
+    bool is_composed_identity(void const* identity) noexcept
+    {
+        return static_cast<shapes::com_head const*>(identity)->vtable
+               == inspectable_vtable;
+    }
+
+    /**
      * The object @p abi was composed over, or @c nullptr when it was not
      * composed at all.
      *

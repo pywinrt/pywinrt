@@ -462,20 +462,9 @@ namespace py
                 Py_RETURN_NONE;
             }
 
-            try
+            if (auto* const started = interp::python_object_of(winrt::get_abi(value)))
             {
-                winrt::com_ptr<IPywinrtObject> obj{};
-                if (value.try_as(obj))
-                {
-                    PyObject* pyobj;
-                    winrt::check_hresult(obj->GetPyObject(pyobj));
-                    return pyobj;
-                }
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
+                return started;
             }
 
             auto object_type = get_object_type();
