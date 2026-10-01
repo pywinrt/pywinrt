@@ -142,6 +142,32 @@ def renamed_package(module: str) -> str | None:
     return f"winrt{dot}{rest}"
 
 
+def runs_an_operation(node: ast.Call) -> bool:
+    """
+    Whether @p node is ``loop.run_until_complete(obj.something_async(...))``,
+    which v3 took because asyncio wrapped the operation in a task. An async
+    operation is Future-like in v4, and belongs to the loop that is running
+    when it is first used, which run_until_complete() has not started yet.
+    """
+    if not isinstance(node.func, ast.Attribute):
+        return False
+
+    if node.func.attr != "run_until_complete":
+        return False
+
+    if not node.args:
+        return False
+
+    argument = node.args[0]
+
+    if not isinstance(argument, ast.Call):
+        return False
+
+    name = receiver_name(argument.func)
+
+    return name is not None and name.endswith("_async")
+
+
 def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
     for node in ast.walk(tree):
         if isinstance(node, ast.Attribute):
@@ -182,6 +208,17 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
                     )
 
         elif isinstance(node, ast.Call):
+            if runs_an_operation(node):
+                assert isinstance(node.func, ast.Attribute)
+                assert node.func.end_lineno is not None
+                yield Match(
+                    node.func.end_lineno,
+                    attribute_column(lines, node.func),
+                    "run_until_complete() of a WinRT async operation",
+                    "asyncio.run() of a coroutine that awaits the operation",
+                )
+                continue
+
             if receiver_name(node.func) != "Array" or not node.args:
                 continue
 

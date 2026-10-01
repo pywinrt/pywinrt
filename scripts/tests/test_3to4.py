@@ -33,6 +33,7 @@ SOURCE = textwrap.dedent(
     b = Array(Int32, [1, 2])
     items.insert(0, 1)
     window = winui3.microsoft.ui.xaml.Window()
+    count = loop.run_until_complete(reader.load_async(4))
     """
 )
 
@@ -86,6 +87,9 @@ class Inspect(unittest.TestCase):
                 f"{p}:11:11",
                 'possible match: winrt.system.Array("i", ...)',
                 "rename to: winrt.system.Int32, or the enum type for an array of enums",
+                f"{p}:15:14",
+                "possible match: run_until_complete() of a WinRT async operation",
+                "rename to: asyncio.run() of a coroutine that awaits the operation",
             ],
         )
 
