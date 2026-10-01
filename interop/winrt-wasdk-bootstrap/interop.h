@@ -34,7 +34,32 @@ namespace interop
     /// which its destructor releases.
     inline constexpr char interface_capsule_name[] = "winrt.interface";
 
-    /// The destructor of an interface pointer capsule this module made.
+    /// Releases the GIL for as long as it is in scope.
+    ///
+    /// A call into an object in another apartment, or one that sends a window
+    /// on another thread a message, waits for that thread, which may itself
+    /// be waiting for the GIL to run a Python handler.
+    class gil_released
+    {
+      public:
+        gil_released() noexcept : state{PyEval_SaveThread()}
+        {
+        }
+
+        gil_released(gil_released const&) = delete;
+        gil_released& operator=(gil_released const&) = delete;
+
+        ~gil_released() noexcept
+        {
+            PyEval_RestoreThread(state);
+        }
+
+      private:
+        PyThreadState* state;
+    };
+
+    /// The destructor of an interface pointer capsule this module made, which
+    /// may hold the last reference to the object.
     inline void release_interface(PyObject* capsule) noexcept
     {
         auto const abi = PyCapsule_GetPointer(capsule, interface_capsule_name);
@@ -44,6 +69,7 @@ namespace interop
             return;
         }
 
+        gil_released const guard;
         static_cast<IUnknown*>(abi)->Release();
     }
 
