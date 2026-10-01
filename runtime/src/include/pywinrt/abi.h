@@ -209,4 +209,9 @@ namespace py
     {
         PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept;
     } // namespace cpp::_winrt
+
+    namespace interp
+    {
+        PyObject* python_object_of(void* abi) noexcept;
+    } // namespace interp
 } // namespace py
