@@ -147,6 +147,21 @@ static class WriterExtensions
             ? $"  # type: ignore[{codes}]"
             : "";
 
+        // IAsyncInfo.Cancel() is asyncio.Future.cancel() on the async
+        // operations, which says whether the operation was still running, so
+        // the runtime gives every IAsyncInfo that signature.
+        var declaring = method.Method.HasOverrides
+            ? method.Method.Overrides[0].DeclaringType
+            : method.Method.DeclaringType;
+
+        if (TableWriter.GetMemberRole(declaring, method.Method.Name) == TableMemberRole.Cancel)
+        {
+            w.WriteLine(
+                $"def {aliasPyName ?? method.PyName}({self}, msg: typing.Any | None = None) -> bool: ...{typeIgnore}"
+            );
+            return;
+        }
+
         var paramList = "";
 
         if (method.Method.Parameters.Any(p => p.IsPythonInParam))
