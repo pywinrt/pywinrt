@@ -31,6 +31,10 @@ def windows_path(path: str) -> str:
 class TestReturnsNone(unittest.TestCase):
     @async_test
     async def test_storage_folder_get_parent_async_of_drive_root(self):
+        # The second await also checks that an async operation releases its
+        # cross-apartment proxy without the GIL: the first operation is let go
+        # of after the second has set its completed handler, and the thread
+        # that runs that handler is the one the release has to call into.
         root = pathlib.Path(tempfile.gettempdir()).anchor
         folder = await ws.StorageFolder.get_folder_from_path_async(windows_path(root))
         self.assertIsNone(await folder.get_parent_async())

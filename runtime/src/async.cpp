@@ -1,5 +1,6 @@
 // The runtime side of the async projection: the blocking wait behind obj.get()
-// and obj.wait(timeout), and the hand-off of an async object to asyncio.
+// and obj.wait(timeout), and the state that makes an async object an asyncio
+// future.
 //
 // C++/WinRT implements a blocking wait by inlining a whole waiter - an event, a
 // delegate object with its own vtable, QueryInterface, AddRef and Release, and
@@ -190,28 +191,34 @@ int32_t py::async_wait(
         reinterpret_cast<void*>(set_completed));
 }
 
-PyObject* py::await_async(PyObject* obj) noexcept
+namespace
 {
-    auto state = py::cpp::_winrt::get_module_state();
-    if (!state)
+    /**
+     * winrt.runtime._internals.FutureState, imported the first time an async
+     * operation needs one.
+     */
+    PyObject* get_future_state_type() noexcept
     {
-        return nullptr;
-    }
-
-    // lazy import to avoid circular import issues
-    auto wrap_async = py::interp::load_published(state->wrap_async_func);
-
-    if (!wrap_async)
-    {
-        pyobj_handle winrt_system{PyImport_ImportModule("winrt.runtime._internals")};
-        if (!winrt_system)
+        auto state = py::cpp::_winrt::get_module_state();
+        if (!state)
         {
             return nullptr;
         }
 
-        pyobj_handle wrap_async_func{
-            PyObject_GetAttrString(winrt_system.get(), "wrap_async")};
-        if (!wrap_async_func)
+        // lazy import to avoid circular import issues
+        if (auto const type = py::interp::load_published(state->future_state_type))
+        {
+            return type;
+        }
+
+        py::pyobj_handle internals{PyImport_ImportModule("winrt.runtime._internals")};
+        if (!internals)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle type{PyObject_GetAttrString(internals.get(), "FutureState")};
+        if (!type)
         {
             return nullptr;
         }
@@ -220,29 +227,94 @@ PyObject* py::await_async(PyObject* obj) noexcept
         // got there first.
         PyObject* expected{};
 
-        if (std::atomic_ref<PyObject*>{state->wrap_async_func}.compare_exchange_strong(
-                expected, wrap_async_func.get(), std::memory_order_acq_rel))
+        if (std::atomic_ref<PyObject*>{state->future_state_type}
+                .compare_exchange_strong(
+                    expected, type.get(), std::memory_order_acq_rel))
         {
-            wrap_async = wrap_async_func.detach();
+            return type.detach();
         }
-        else
-        {
-            wrap_async = expected;
-        }
+
+        return expected;
     }
 
-    pyobj_handle awaitable{PyObject_CallOneArg(wrap_async, obj)};
-    if (!awaitable)
+    /**
+     * Where an async operation keeps its FutureState, which is the pointer
+     * after the one every projected object has.
+     */
+    PyObject*& future_state_slot(PyObject* obj) noexcept
+    {
+        return *reinterpret_cast<PyObject**>(
+            reinterpret_cast<char*>(obj) + py::object_basicsize);
+    }
+} // namespace
+
+/**
+ * The FutureState of @p obj, an async operation, which is made the first time
+ * it is asked for.
+ *
+ * @returns A new reference, or @c nullptr with a Python error set.
+ */
+PyObject* py::get_future_state(PyObject* obj) noexcept
+{
+    auto& slot = future_state_slot(obj);
+
+    if (auto const existing = interp::load_published(slot))
+    {
+        return Py_NewRef(existing);
+    }
+
+    auto const type = get_future_state_type();
+    if (!type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle await_str{PyUnicode_InternFromString("__await__")};
-    if (!await_str)
+    pyobj_handle created{PyObject_CallNoArgs(type)};
+    if (!created)
     {
         return nullptr;
     }
 
-    // __await__() expects an iterable to be returned
-    return PyObject_CallMethodNoArgs(awaitable.get(), await_str.get());
+    // Two threads can both have made one, and the operation keeps whichever
+    // got there first.
+    PyObject* expected{};
+
+    if (std::atomic_ref<PyObject*>{slot}.compare_exchange_strong(
+            expected, created.get(), std::memory_order_acq_rel))
+    {
+        return Py_NewRef(created.detach());
+    }
+
+    return Py_NewRef(expected);
+}
+
+/**
+ * Lets go of the FutureState of @p obj, an async operation that is being
+ * deallocated.
+ */
+void py::clear_future_state(PyObject* obj) noexcept
+{
+    Py_CLEAR(future_state_slot(obj));
+}
+
+/**
+ * The iterator that __await__ of an async operation returns, which is the one
+ * asyncio.Future returns: it hands the operation itself to the task awaiting
+ * it, so that the task waits for the operation's done callback.
+ */
+PyObject* py::await_async(PyObject* obj) noexcept
+{
+    pyobj_handle state{get_future_state(obj)};
+    if (!state)
+    {
+        return nullptr;
+    }
+
+    pyobj_handle iterate{PyUnicode_InternFromString("iterate")};
+    if (!iterate)
+    {
+        return nullptr;
+    }
+
+    return PyObject_CallMethodOneArg(state.get(), iterate.get(), obj);
 }
