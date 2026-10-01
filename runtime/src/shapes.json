@@ -898,11 +898,11 @@
     "families": {
         "test-winrt": {
             "forward": {
-                "": 15,
+                "": 20,
                 "f4pp": 3,
                 "f8pp": 3,
                 "i8pp": 6,
-                "p": 142,
+                "p": 157,
                 "pp": 49,
                 "ppp": 77,
                 "pppp": 25,

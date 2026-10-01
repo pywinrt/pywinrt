@@ -233,6 +233,41 @@ delegate Windows.Foundation.AsyncActionProgressHandler<System.Int32> concrete
             in parameterized type=Windows.Foundation.IAsyncActionWithProgress<System.Int32> name=asyncInfo
             in int32 name=progressInfo
 
+class TestComponent.AsyncActionSource activatable python_type
+    py AsyncActionSource
+    signature rc(TestComponent.AsyncActionSource;{8e86c8e1-7334-5de5-a8e8-6e9f270b6e66})
+    default TestComponent.IAsyncActionSource
+    requires TestComponent.IAsyncActionSource
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property defers_completed_handler
+        get get_DefersCompletedHandler slot=10 inputs=0 outputs=1 declaring=TestComponent.IAsyncActionSource shape=4
+            out boolean return
+        put put_DefersCompletedHandler slot=11 inputs=1 outputs=0 declaring=TestComponent.IAsyncActionSource shape=4
+            in boolean name=value
+    property cancel_request_count
+        get get_CancelRequestCount slot=8 inputs=0 outputs=1 declaring=TestComponent.IAsyncActionSource shape=4
+            out uint32 return
+    property has_completed_handler
+        get get_HasCompletedHandler slot=9 inputs=0 outputs=1 declaring=TestComponent.IAsyncActionSource shape=4
+            out boolean return
+    property is_operation_alive
+        get get_IsOperationAlive slot=7 inputs=0 outputs=1 declaring=TestComponent.IAsyncActionSource shape=4
+            out boolean return
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=TestComponent.IAsyncActionSource shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+    method cancel
+        method Cancel slot=14 inputs=0 outputs=0 declaring=TestComponent.IAsyncActionSource shape=0
+    method complete
+        method Complete slot=12 inputs=0 outputs=0 declaring=TestComponent.IAsyncActionSource shape=0
+    method fail
+        method Fail slot=13 inputs=1 outputs=0 declaring=TestComponent.IAsyncActionSource shape=4
+            in int32 name=error
+    method invoke_completed_handler
+        method InvokeCompletedHandler slot=15 inputs=0 outputs=0 declaring=TestComponent.IAsyncActionSource shape=0
+
 delegate Windows.Foundation.AsyncActionWithProgressCompletedHandler<System.Int32> concrete
     py winrt.windows.foundation.AsyncActionWithProgressCompletedHandler[Int32]
     guid 6676a198-e6ff-5338-b3f1-cdeb6fd49f50
@@ -266,6 +301,42 @@ delegate Windows.Foundation.AsyncOperationProgressHandler<System.Int32,System.In
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> name=asyncInfo
             in int32 name=progressInfo
+
+class TestComponent.AsyncOperationSource activatable python_type
+    py AsyncOperationSource
+    signature rc(TestComponent.AsyncOperationSource;{860833e7-ed5c-512e-875a-faf5a4252442})
+    default TestComponent.IAsyncOperationSource
+    requires TestComponent.IAsyncOperationSource
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property defers_completed_handler
+        get get_DefersCompletedHandler slot=10 inputs=0 outputs=1 declaring=TestComponent.IAsyncOperationSource shape=4
+            out boolean return
+        put put_DefersCompletedHandler slot=11 inputs=1 outputs=0 declaring=TestComponent.IAsyncOperationSource shape=4
+            in boolean name=value
+    property cancel_request_count
+        get get_CancelRequestCount slot=8 inputs=0 outputs=1 declaring=TestComponent.IAsyncOperationSource shape=4
+            out uint32 return
+    property has_completed_handler
+        get get_HasCompletedHandler slot=9 inputs=0 outputs=1 declaring=TestComponent.IAsyncOperationSource shape=4
+            out boolean return
+    property is_operation_alive
+        get get_IsOperationAlive slot=7 inputs=0 outputs=1 declaring=TestComponent.IAsyncOperationSource shape=4
+            out boolean return
+    property operation
+        get get_Operation slot=6 inputs=0 outputs=1 declaring=TestComponent.IAsyncOperationSource shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Int32> return
+    method cancel
+        method Cancel slot=14 inputs=0 outputs=0 declaring=TestComponent.IAsyncOperationSource shape=0
+    method complete
+        method Complete slot=12 inputs=1 outputs=0 declaring=TestComponent.IAsyncOperationSource shape=4
+            in int32 name=result
+    method fail
+        method Fail slot=13 inputs=1 outputs=0 declaring=TestComponent.IAsyncOperationSource shape=4
+            in int32 name=error
+    method invoke_completed_handler
+        method InvokeCompletedHandler slot=15 inputs=0 outputs=0 declaring=TestComponent.IAsyncOperationSource shape=0
 
 delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Int32,System.Int32> concrete
     py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[Int32, Int32]
@@ -460,6 +531,9 @@ delegate Windows.Foundation.EventHandler<System.Int32> concrete
             in object name=sender
             in int32 name=args
 
+interface TestComponent.IAsyncActionSource
+    guid 8e86c8e1-7334-5de5-a8e8-6e9f270b6e66
+
 interface Windows.Foundation.IAsyncActionWithProgress<System.Int32> concrete awaitable
     py winrt.windows.foundation._IAsyncActionWithProgress[Int32]
     guid 62137500-f56f-5dff-9a74-8575b9170e8e
@@ -521,6 +595,9 @@ interface Windows.Foundation.IAsyncOperation<System.Int32> concrete awaitable
     method get_results
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Int32> shape=4 reverse=62 role=get_results
             out int32 return
+
+interface TestComponent.IAsyncOperationSource
+    guid 860833e7-ed5c-512e-875a-faf5a4252442
 
 interface Windows.Foundation.IAsyncOperationWithProgress<System.Int32,System.Int32> concrete awaitable
     py winrt.windows.foundation._IAsyncOperationWithProgress[Int32, Int32]
