@@ -242,16 +242,6 @@ namespace py::interp
             return 0;
         }
 
-        int32_t __stdcall object_get_composable_inner(
-            void* /*self*/,
-            winrt::Windows::Foundation::IInspectable& /*inner*/) noexcept
-        {
-            // Only a Python subclass of a composable class has an inner
-            // object; an object that merely implements interfaces has
-            // nothing behind it.
-            return winrt::impl::error_not_implemented;
-        }
-
         /**
          * IInspectable, which is what a Python object that implements
          * interfaces is when nothing has asked for one of them yet.
@@ -268,8 +258,7 @@ namespace py::interp
             = {reinterpret_cast<shapes::vtable_entry>(&object_query_interface),
                reinterpret_cast<shapes::vtable_entry>(&object_add_ref),
                reinterpret_cast<shapes::vtable_entry>(&object_release),
-               reinterpret_cast<shapes::vtable_entry>(&object_get_py_object),
-               reinterpret_cast<shapes::vtable_entry>(&object_get_composable_inner)};
+               reinterpret_cast<shapes::vtable_entry>(&object_get_py_object)};
 
         // ----- the tearoffs ------------------------------------------------
 

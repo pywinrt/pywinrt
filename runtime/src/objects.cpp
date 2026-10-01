@@ -136,11 +136,27 @@ namespace py::interp
             throw python_exception();
         }
 
+        // A wrapper of exactly the type asked for already holds the interface
+        // it is asked for, which for a class is its default one.
+        if (info && Py_IS_TYPE(obj, info->py_type))
+        {
+            static_cast<::IUnknown*>(abi)->AddRef();
+            return abi;
+        }
+
         void* result{};
-        auto const hr = static_cast<::IUnknown*>(abi)->QueryInterface(
-            iid ? *static_cast<winrt::guid const*>(iid)
-                : winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
-            &result);
+        int32_t hr{};
+
+        {
+            // The object may be a proxy, which a query for an interface it
+            // has not been asked for before is a call into the apartment of.
+            auto _gil = release_gil();
+            hr = static_cast<::IUnknown*>(abi)->QueryInterface(
+                iid ? *static_cast<winrt::guid const*>(iid)
+                    : winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
+                &result);
+        }
+
         if (hr != 0)
         {
             winrt::check_hresult(hr);

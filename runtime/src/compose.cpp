@@ -73,8 +73,7 @@ namespace py::interp
             /// answer with.
             shapes::com_head head;
             /// py::IPywinrtObject, which is how a value that comes back to
-            /// Python is recognised as having started there, and how a call on
-            /// an overridable member finds the inner object.
+            /// Python is recognised as having started there.
             shapes::com_head py_head;
             /// IWeakReferenceSource, which is the object itself seen as one.
             shapes::com_head source_head;
@@ -501,14 +500,6 @@ namespace py::interp
             return 0;
         }
 
-        int32_t __stdcall object_get_composable_inner(
-            void* self, winrt::Windows::Foundation::IInspectable& inner) noexcept
-        {
-            inner = object_of(self)->inner;
-
-            return 0;
-        }
-
         // ----- IWeakReferenceSource and IWeakReference ----------------------
 
         int32_t __stdcall source_get_weak_reference(void* self, void** result) noexcept
@@ -599,8 +590,7 @@ namespace py::interp
             = {reinterpret_cast<shapes::vtable_entry>(&object_query_interface),
                reinterpret_cast<shapes::vtable_entry>(&object_add_ref),
                reinterpret_cast<shapes::vtable_entry>(&object_release),
-               reinterpret_cast<shapes::vtable_entry>(&object_get_py_object),
-               reinterpret_cast<shapes::vtable_entry>(&object_get_composable_inner)};
+               reinterpret_cast<shapes::vtable_entry>(&object_get_py_object)};
 
         shapes::vtable_entry const weak_source_vtable[]
             = {reinterpret_cast<shapes::vtable_entry>(&object_query_interface),
@@ -699,21 +689,25 @@ namespace py::interp
      */
     void* composable_inner(void* abi) noexcept
     {
-        winrt::com_ptr<py::IPywinrtObject> composed;
+        // Recognised by its identity, as python_object_of() recognises one,
+        // so that an object that may be a proxy is asked nothing it answers
+        // through its apartment.
+        winrt::com_ptr<::IUnknown> identity;
 
         if (static_cast<::IUnknown*>(abi)->QueryInterface(
-                winrt::guid_of<py::IPywinrtObject>(), composed.put_void())
+                winrt::guid_of<winrt::Windows::Foundation::IUnknown>(),
+                identity.put_void())
             != 0)
         {
             return nullptr;
         }
 
-        winrt::Windows::Foundation::IInspectable inner;
-
-        if (composed->GetComposableInner(inner) != 0)
+        if (!is_composed_identity(identity.get()))
         {
             return nullptr;
         }
+
+        auto inner = object_of(identity.get())->inner;
 
         return winrt::detach_abi(inner);
     }
