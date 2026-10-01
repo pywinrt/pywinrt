@@ -23,6 +23,22 @@ namespace py::cpp::_winrt
             }
         }
 
+        static void final_release(std::unique_ptr<PyWinRTBuffer> self) noexcept
+        {
+            // WinRT lets go of the buffer on whatever thread it happens to be
+            // on, and letting go of the Python buffer can run a finalizer.
+            auto gil = ensure_gil();
+            if (!gil)
+            {
+                // Releasing the view would call into an interpreter that is
+                // gone, so it is left as it is.
+                self.release();
+                return;
+            }
+
+            self.reset();
+        }
+
         uint32_t Capacity() const
         {
             return static_cast<uint32_t>(buffer.size());
