@@ -536,7 +536,9 @@ whichever comes first.
     [`Coroutine`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Coroutine)
     object and therefore cannot be used with methods like
     [`asyncio.create_task()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task).
-    They are only [`Awaitable`][Awaitable] objects.
+    What they return is a Future-like object instead: not an
+    [`asyncio.Future`][asyncio.Future], but one that `asyncio` accepts
+    wherever it accepts a future.
 
 If you are using `asyncio`, then you can use the `await` keyword to wait
 for the result of async WinRT methods:
@@ -544,6 +546,74 @@ for the result of async WinRT methods:
 ```python
 thing = await winrt_obj.get_thing_async()
 ```
+
+The operation is itself Future-like, which is what
+[`asyncio.isfuture()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.isfuture)
+checks for, so anything in `asyncio` that takes a future takes it as it is,
+without a task around it:
+
+```python
+done, pending = await asyncio.wait([op1, op2], timeout=5)
+first, second = await asyncio.gather(op1, op2)
+assert asyncio.ensure_future(op1) is op1
+```
+
+It has the methods of `asyncio.Future` too: `done()`, `result()`, `exception()`,
+`cancelled()`, `cancel()`, `add_done_callback()`, `remove_done_callback()` and
+`get_loop()`. It belongs to the event loop that is running when it is first
+awaited or one of these methods is called, and like a future it has to be
+used from that loop's thread; calling one of them with no event loop running
+raises [`RuntimeError`][RuntimeError]. An operation can be awaited any number
+of times and gives the same result each time. One that failed raises a new
+exception each time, from the error WinRT reports, so unlike with an
+`asyncio.Future` they carry the same error but are not the same object.
+
+Awaiting, the blocking `get()` and `wait()`, and the `completed` property are
+three ways of being told that an operation has finished, and WinRT accepts only
+one completed handler per operation, so use one of them for each operation.
+
+!!! note
+
+    Type checkers take the parameter of
+    [`asyncio.wait()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.wait)
+    to be a subclass of `asyncio.Future`, which an operation is not, so they
+    report an error there even though the call works.
+
+##### Cancellation
+
+`cancel()` asks WinRT to cancel the operation and returns `True`, or `False` if
+the operation has already finished or cancellation was already asked for. It
+does not wait: `done()` becomes `True` only when WinRT says that the operation
+has finished, and then `await` raises
+[`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError).
+
+An operation that is too far along to stop may finish anyway. Once `cancel()`
+has returned `True` it still counts as cancelled, as a cancelled
+`asyncio.Future` does: `await` raises `CancelledError` and `cancelled()` is
+`True`. Its `status` says how it really ended, and if that is `COMPLETED`,
+`get_results()` still returns what it produced.
+
+A task that is canceled while it awaits an operation, by
+[`asyncio.timeout()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout)
+for example, cancels the operation and stays suspended until the operation has
+stopped, so no canceled operation is left running behind a task that has moved
+on.
+
+An operation that was canceled by something other than `cancel()`, such as
+Windows canceling it because a device went away, has failed rather than been
+canceled: `await` raises [`OSError`][OSError] with `winerror` set to
+`ERROR_CANCELLED`, and `cancelled()` is `False`.
+
+!!! version-changed "Changed in version 4.0"
+
+    An async operation is Future-like. Previously it was only
+    awaitable: `ensure_future()`, `gather()` and `asyncio.wait()` made a
+    task around it, `cancel()` returned `None`, an `await` after `cancel()`
+    raised `OSError` with `ERROR_CANCELLED` instead of `CancelledError`, and a
+    second `await` of the same operation failed. `loop.run_until_complete(op)`
+    worked as well, and now raises `RuntimeError`, because an operation
+    belongs to the event loop that is running when it is first used; await it
+    in a coroutine and run that with `asyncio.run()`.
 
 !!! version-changed "Changed in version 3.2"
 
