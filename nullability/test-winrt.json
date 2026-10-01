@@ -761,6 +761,281 @@
         ]
       },
       {
+        "name": "AsyncActionSource",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.AsyncActionSource::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncActionSource::Cancel()",
+            "name": "Cancel",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncActionSource::Complete()",
+            "name": "Complete",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncActionSource::Fail(System.Int32)",
+            "name": "Fail",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "error",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncActionSource::InvokeCompletedHandler()",
+            "name": "InvokeCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.UInt32 TestComponent.AsyncActionSource::get_CancelRequestCount()",
+            "name": "get_CancelRequestCount",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean TestComponent.AsyncActionSource::get_DefersCompletedHandler()",
+            "name": "get_DefersCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean TestComponent.AsyncActionSource::get_HasCompletedHandler()",
+            "name": "get_HasCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean TestComponent.AsyncActionSource::get_IsOperationAlive()",
+            "name": "get_IsOperationAlive",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction TestComponent.AsyncActionSource::get_Operation()",
+            "name": "get_Operation",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncActionSource::put_DefersCompletedHandler(System.Boolean)",
+            "name": "put_DefersCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AsyncOperationSource",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.AsyncOperationSource::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncOperationSource::Cancel()",
+            "name": "Cancel",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncOperationSource::Complete(System.Int32)",
+            "name": "Complete",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "result",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncOperationSource::Fail(System.Int32)",
+            "name": "Fail",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "error",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncOperationSource::InvokeCompletedHandler()",
+            "name": "InvokeCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.UInt32 TestComponent.AsyncOperationSource::get_CancelRequestCount()",
+            "name": "get_CancelRequestCount",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean TestComponent.AsyncOperationSource::get_DefersCompletedHandler()",
+            "name": "get_DefersCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean TestComponent.AsyncOperationSource::get_HasCompletedHandler()",
+            "name": "get_HasCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean TestComponent.AsyncOperationSource::get_IsOperationAlive()",
+            "name": "get_IsOperationAlive",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<System.Int32> TestComponent.AsyncOperationSource::get_Operation()",
+            "name": "get_Operation",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "System.Int32"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.AsyncOperationSource::put_DefersCompletedHandler(System.Boolean)",
+            "name": "put_DefersCompletedHandler",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "Class",
         "methods": [
           {
