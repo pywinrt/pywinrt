@@ -328,6 +328,12 @@
   every other Python thread until the server has started.
 - Fixed a crash at exit when WinRT releases a Python object after the
   interpreter has finalized.
+- The interop modules no longer hold the GIL while a call may wait for another
+  thread or process: `bootstrap.initialize()` and its shutdown, which can start
+  the Windows App SDK's lifetime manager or wait for the user,
+  `DesktopWindowXamlSourceNative.attach_to_window()` and `pretranslate_message()`,
+  which can send messages to a window on another thread, and the release of an
+  interface pointer capsule.
 - `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
   `ctypes.wintypes.MSG`, or any other buffer the size of a `MSG`.
 - Fixed a Python thread state leaking every time the projection took the GIL on

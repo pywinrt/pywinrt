@@ -28,7 +28,15 @@ namespace
             return nullptr;
         }
 
-        auto const hr = native->AttachToWindow(static_cast<HWND>(hwnd));
+        HRESULT hr{};
+
+        {
+            // Parenting the island to a window on another thread sends that
+            // thread messages and waits for them.
+            interop::gil_released const guard;
+            hr = native->AttachToWindow(static_cast<HWND>(hwnd));
+        }
+
         native->Release();
         if (FAILED(hr))
         {
@@ -106,9 +114,17 @@ namespace
         }
 
         BOOL handled{};
+        HRESULT hr{};
 
-        auto const hr
-            = native2->PreTranslateMessage(static_cast<MSG const*>(view.buf), &handled);
+        {
+            // Moving the focus may activate a window on another thread. The
+            // view keeps the buffer in place meanwhile, and a XAML handler the
+            // message raises takes the GIL back for itself.
+            interop::gil_released const guard;
+            hr = native2->PreTranslateMessage(
+                static_cast<MSG const*>(view.buf), &handled);
+        }
+
         native2->Release();
         PyBuffer_Release(&view);
         if (FAILED(hr))
