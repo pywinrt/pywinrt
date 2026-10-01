@@ -163,8 +163,9 @@ There is also an `inspect_source.py` script that looks for renamed methods in
 your Python files, along with the other changes that it can find by looking at
 the source: the `winui3` and `webview2` imports, the deprecated
 `HResult.value` and `EventRegistrationToken.value`, format strings passed to
-`winrt.system.Array`, and requirements on v3 distributions that were renamed,
-removed or constrained to v3.
+`winrt.system.Array`, `run_until_complete()` called on an async operation, and
+requirements on v3 distributions that were renamed, removed or constrained to
+v3.
 
 ### Usage
 
@@ -222,6 +223,26 @@ else, since everything else it reports needs checking by hand:
 * An array of enums was spelled `Array("i", ...)` or `Array("I", ...)` in v3;
   spell it with the enum type rather than with the integer type the script
   suggests.
+
+## Async operations are Future-like
+
+What an `_async` method returns is now a Future-like object of its own, which
+`asyncio` takes wherever it takes a future, rather than an awaitable that
+`asyncio` wrapped in a task. Most code that awaits operations is unaffected;
+these are the things that behave differently:
+
+* `cancel()` returns `True` if it asked WinRT to cancel and `False` if the
+  operation had already finished. It returned `None`.
+* An `await` after `cancel()` raises `asyncio.CancelledError`. It raised
+  `OSError` with `ERROR_CANCELLED`, which is still what an operation that
+  Windows canceled raises.
+* `asyncio.ensure_future(op)` and `asyncio.gather(op)` use the operation
+  itself rather than a task around it, so `Task` methods such as `get_name()`
+  are not there. Call `asyncio.create_task()` on a coroutine that awaits the
+  operation if you need a task.
+* `loop.run_until_complete(op)` raises `RuntimeError: no running event loop`,
+  because an operation belongs to the event loop that is running when it is
+  first used. Await it in a coroutine and run that with `asyncio.run()`.
 
 ## Removed
 
