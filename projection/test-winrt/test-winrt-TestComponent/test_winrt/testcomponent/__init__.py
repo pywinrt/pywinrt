@@ -18,6 +18,8 @@ __all__ = [
     "Blittable",
     "Nested",
     "NonBlittable",
+    "AsyncActionSource",
+    "AsyncOperationSource",
     "Class",
     "Composable",
     "Derived",
