@@ -102,11 +102,18 @@ namespace py
     {
         winrt::com_array<T> array;
 
+        ~ComArray() override
+        {
+            release(array);
+        }
+
         bool Alloc(uint32_t size) noexcept override
         {
             try
             {
-                array = winrt::com_array<T>(size, empty_instance<T>::get());
+                auto replaced = std::exchange(
+                    array, winrt::com_array<T>(size, empty_instance<T>::get()));
+                release(replaced);
                 return true;
             }
             catch (...)
@@ -208,6 +215,8 @@ namespace py
 
                 // value is the element it replaced, or the one refused,
                 // released here, after the lock.
+                release(value);
+
                 if (refused)
                 {
                     SetExportedError();
@@ -241,6 +250,42 @@ namespace py
             {
                 py::to_PyErr();
                 return nullptr;
+            }
+        }
+
+      private:
+        /**
+         * Lets go of @p elements, without the GIL when they are references,
+         * any of which may be the last one to a proxy.
+         */
+        static void release(winrt::com_array<T>& elements) noexcept
+        {
+            if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>)
+            {
+                if (elements.empty())
+                {
+                    return;
+                }
+
+                auto _gil = release_gil();
+                elements.clear();
+            }
+        }
+
+        /**
+         * Lets go of @p value, without the GIL when it is a reference.
+         */
+        static void release(T& value) noexcept
+        {
+            if constexpr (std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>)
+            {
+                if (!value)
+                {
+                    return;
+                }
+
+                auto _gil = release_gil();
+                value = nullptr;
             }
         }
     };
