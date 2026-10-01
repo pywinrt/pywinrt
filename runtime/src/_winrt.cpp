@@ -281,6 +281,16 @@ namespace py::cpp::_winrt
     {
         auto tp = Py_TYPE(self);
 
+        // The object is often a proxy for one that lives in another
+        // apartment, and releasing a proxy is a call into that apartment,
+        // which may at that moment be waiting for the GIL to call back into
+        // Python, such as to run the completed handler of an async operation.
+        if (self->obj)
+        {
+            auto _gil = py::release_gil();
+            self->obj = nullptr;
+        }
+
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
