@@ -83,8 +83,6 @@ namespace py::interp
         reverse_call& calls,
         std::vector<tearoff>& tearoffs);
 
-    PyObject* python_object_of(void* abi) noexcept;
-
     bool implements_interfaces(PyTypeObject* type) noexcept;
 
     bool collect_interfaces(PyTypeObject* type, std::vector<type_entry*>& found);

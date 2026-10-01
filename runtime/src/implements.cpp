@@ -24,6 +24,7 @@
 #include <pywinrt/base.h>
 
 #include "callbacks.h"
+#include "compose.h"
 #include "implements.h"
 #include "interp.h"
 #include "module_state.h"
@@ -655,9 +656,35 @@ namespace py::interp
      */
     PyObject* python_object_of(void* abi) noexcept
     {
-        winrt::com_ptr<py::IPywinrtObject> started;
+        // Asking any object for py::IPywinrtObject would be a call into its
+        // apartment when it is a proxy, and one whose answer is always no.
+        // IUnknown is answered by the proxy itself, and an object that can
+        // answer yes answers it with a head of its own, so only those are
+        // asked. The pointer itself may be one an object composed over hands
+        // out, whose vtable is that object's.
+        winrt::com_ptr<::IUnknown> identity;
 
         if (static_cast<::IUnknown*>(abi)->QueryInterface(
+                winrt::guid_of<winrt::Windows::Foundation::IUnknown>(),
+                identity.put_void())
+            != 0)
+        {
+            return nullptr;
+        }
+
+        auto const* const head
+            = reinterpret_cast<shapes::com_head const*>(identity.get());
+        auto const started_in_python
+            = head->vtable == inspectable_vtable || is_composed_identity(head);
+
+        if (!started_in_python)
+        {
+            return nullptr;
+        }
+
+        winrt::com_ptr<py::IPywinrtObject> started;
+
+        if (identity->QueryInterface(
                 winrt::guid_of<py::IPywinrtObject>(), started.put_void())
             != 0)
         {
