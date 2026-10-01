@@ -280,7 +280,16 @@ namespace py::interp
             return nullptr;
         }
 
-        return call_member(*value, *overload, reference.get(), nullptr, 0);
+        auto const result = call_member(*value, *overload, reference.get(), nullptr, 0);
+
+        // This is the only reference to what the call returned, which may be a
+        // proxy.
+        {
+            auto _gil = release_gil();
+            reference = nullptr;
+        }
+
+        return result;
     }
 
     /**

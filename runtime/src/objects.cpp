@@ -160,6 +160,9 @@ namespace py::interp
                 return;
             }
 
+            // The capsule may outlive the wrapper it was taken from, and then
+            // this is the last reference, which may be to a proxy.
+            auto _gil = release_gil();
             static_cast<::IUnknown*>(abi)->Release();
         }
     } // namespace

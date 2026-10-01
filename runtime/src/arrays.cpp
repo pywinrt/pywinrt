@@ -644,8 +644,13 @@ namespace py::interp
 
             // What value holds now is the element it replaced, or the one
             // refused, or, when a lent array was taken back meanwhile, the one
-            // there was nowhere to put.
-            release_value(element_, value.get());
+            // there was nowhere to put. The one it replaced may hold the last
+            // reference to a proxy.
+            if (HoldsReferences())
+            {
+                auto _gil = release_gil();
+                release_value(element_, value.get());
+            }
 
             if (refused)
             {
@@ -755,9 +760,16 @@ namespace py::interp
         {
             if (data_ && owns_)
             {
-                for (uint32_t i = 0; i < size_; i++)
+                // An element may hold the last reference to a proxy, which is
+                // let go of without the GIL, as a wrapper's is.
+                if (HoldsReferences())
                 {
-                    release_value(element_, at(i));
+                    auto _gil = release_gil();
+
+                    for (uint32_t i = 0; i < size_; i++)
+                    {
+                        release_value(element_, at(i));
+                    }
                 }
 
                 ::WINRT_IMPL_CoTaskMemFree(data_);
