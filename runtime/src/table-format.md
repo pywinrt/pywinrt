@@ -488,6 +488,7 @@ for each of them and has to know what to put there.
 | 27 | `split` | `IMapView<K, V>` |
 | 28 | `pair_key` | `IKeyValuePair<K, V>` |
 | 29 | `pair_value` | `IKeyValuePair<K, V>` |
+| 30 | `cancel` | `IAsyncInfo` |
 
 The type flags say which protocols a type implements and the roles say which
 members those protocols call, so the two are written together. A name would
