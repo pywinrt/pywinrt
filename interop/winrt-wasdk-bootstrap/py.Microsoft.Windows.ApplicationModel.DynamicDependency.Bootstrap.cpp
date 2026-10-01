@@ -20,6 +20,20 @@ namespace
         unique_mddbootstrapshutdown shutdown;
     };
 
+    /// Undoes what initialize() did, unless that has been done already.
+    void shut_down(ShutdownObject& self) noexcept
+    {
+        if (!self.shutdown)
+        {
+            return;
+        }
+
+        // It removes the package dependency, which may be a call into the
+        // Dynamic Dependency Lifetime Manager in its own process.
+        interop::gil_released const guard;
+        self.shutdown.reset();
+    }
+
     static PyObject* initialize(PyObject* module, PyObject* args) noexcept
     {
         uint32_t major_minor_version;
@@ -67,8 +81,16 @@ namespace
 
         // FIXME: validate type of shutdown before casting to ShutdownObject
 
-        auto const hr
-            = InitializeNoThrow(major_minor_version, version_tag, min_version, options);
+        HRESULT hr{};
+
+        {
+            // It may start the Dynamic Dependency Lifetime Manager in a
+            // process of its own, and may show UI and wait for the user.
+            interop::gil_released const guard;
+            hr = InitializeNoThrow(
+                major_minor_version, version_tag, min_version, options);
+        }
+
         if (FAILED(hr))
         {
             Py_DECREF(shutdown);
@@ -133,6 +155,8 @@ namespace
                 PyErr_SetRaisedException(error);
             }
 #endif
+
+            shut_down(*self);
         }
 
         std::destroy_at(&self->shutdown);
@@ -142,7 +166,7 @@ namespace
 
     static PyObject* shutdown_call(PyObject* self, PyObject* /*unused*/) noexcept
     {
-        reinterpret_cast<ShutdownObject*>(self)->shutdown.reset();
+        shut_down(*reinterpret_cast<ShutdownObject*>(self));
 
         Py_RETURN_NONE;
     }
