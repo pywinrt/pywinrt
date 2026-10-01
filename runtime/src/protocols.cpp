@@ -939,9 +939,331 @@ namespace py::interp
             return convert_out(*reported->owner, arg_of_status, &status);
         }
 
-        PyMethodDef async_methods[]
-            = {{"get", async_get, METH_NOARGS, nullptr},
-               {"wait", async_wait, METH_O, nullptr},
+        // An async operation is also an asyncio future, whose methods are
+        // those of the FutureState it keeps beside its interface pointer.
+
+        /// The most arguments a future method is passed on: the state, the
+        /// operation, and add_done_callback()'s callback and context.
+        constexpr Py_ssize_t future_call_limit = 4;
+
+        /**
+         * Calls the method @p name of the FutureState of @p self, passing it
+         * @p self and then the arguments of the call being forwarded.
+         */
+        PyObject* call_future_state(
+            PyObject* self,
+            char const* name,
+            PyObject* const* args,
+            Py_ssize_t nargs,
+            PyObject* kwnames) noexcept
+        {
+            auto const kwcount = kwnames ? PyTuple_GET_SIZE(kwnames) : 0;
+
+            if (nargs + kwcount + 2 > future_call_limit)
+            {
+                PyErr_Format(PyExc_TypeError, "%s() got too many arguments", name);
+                return nullptr;
+            }
+
+            pyobj_handle state{get_future_state(self)};
+            if (!state)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle method{PyUnicode_InternFromString(name)};
+            if (!method)
+            {
+                return nullptr;
+            }
+
+            PyObject* stack[future_call_limit]{state.get(), self};
+            std::copy_n(args, nargs + kwcount, stack + 2);
+
+            return PyObject_VectorcallMethod(
+                method.get(), stack, static_cast<size_t>(nargs) + 2, kwnames);
+        }
+
+        /// The future methods that are the FutureState's methods of the same
+        /// name, which future_method<I>() passes the call on to.
+        constexpr char const* future_method_names[] = {
+            "add_done_callback",
+            "remove_done_callback",
+            "done",
+            "cancelled",
+            "result",
+            "exception",
+            "get_loop",
+        };
+
+        template<size_t I>
+        PyObject* future_method(
+            PyObject* self,
+            PyObject* const* args,
+            Py_ssize_t nargs,
+            PyObject* kwnames) noexcept
+        {
+            return call_future_state(
+                self, future_method_names[I], args, nargs, kwnames);
+        }
+
+        /**
+         * cancel() of an async operation, which is asyncio.Future.cancel().
+         *
+         * The FutureState says whether this call is the one to ask WinRT, and
+         * the request is made here because the member that makes it is the
+         * one this method shadows. It does not wait: the future is done when
+         * the operation says that it has finished.
+         */
+        PyObject* future_cancel(
+            PyObject* self,
+            PyObject* const* args,
+            Py_ssize_t nargs,
+            PyObject* kwnames) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            if (!info->protocol.cancel)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' does not support cancel()",
+                    Py_TYPE(self)->tp_name);
+                return nullptr;
+            }
+
+            pyobj_handle requested{
+                call_future_state(self, "cancel", args, nargs, kwnames)};
+            if (!requested)
+            {
+                return nullptr;
+            }
+
+            auto const request = PyObject_IsTrue(requested.get());
+            if (request == -1)
+            {
+                return nullptr;
+            }
+
+            if (!request)
+            {
+                Py_RETURN_FALSE;
+            }
+
+            pyobj_handle cancelled{
+                call_protocol(info->protocol.cancel, "cancel()", self, nullptr, 0)};
+            if (!cancelled)
+            {
+                return nullptr;
+            }
+
+            Py_RETURN_TRUE;
+        }
+
+        /**
+         * cancel() of an IAsyncInfo that is not one of the async operations,
+         * which has no future to answer for it, so WinRT is asked whether the
+         * operation is still running.
+         *
+         * It takes the optional message that cancel() of an operation takes,
+         * so that the method has one signature everywhere, and ignores it.
+         */
+        PyObject* info_cancel(
+            PyObject* self,
+            PyObject* const* /*args*/,
+            Py_ssize_t nargs,
+            PyObject* kwnames) noexcept
+        {
+            auto const kwcount = kwnames ? PyTuple_GET_SIZE(kwnames) : 0;
+
+            if (nargs + kwcount > 1)
+            {
+                PyErr_SetString(PyExc_TypeError, "cancel() takes at most 1 argument");
+                return nullptr;
+            }
+
+            if (kwcount == 1)
+            {
+                auto const keyword = PyTuple_GET_ITEM(kwnames, 0);
+
+                if (PyUnicode_CompareWithASCIIString(keyword, "msg") != 0)
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "cancel() got an unexpected keyword argument '%U'",
+                        keyword);
+                    return nullptr;
+                }
+            }
+
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle status{
+                call_protocol(info->protocol.status, "cancel()", self, nullptr, 0)};
+            if (!status)
+            {
+                return nullptr;
+            }
+
+            auto const value = PyLong_AsLong(status.get());
+            if (value == -1 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            if (value
+                != static_cast<long>(winrt::Windows::Foundation::AsyncStatus::Started))
+            {
+                Py_RETURN_FALSE;
+            }
+
+            pyobj_handle cancelled{
+                call_protocol(info->protocol.cancel, "cancel()", self, nullptr, 0)};
+            if (!cancelled)
+            {
+                return nullptr;
+            }
+
+            Py_RETURN_TRUE;
+        }
+
+        /**
+         * _asyncio_future_blocking, which a task sets on the future it is
+         * about to wait for and clears when it takes that future up.
+         */
+        PyObject* future_blocking_get(PyObject* self, void* /*unused*/) noexcept
+        {
+            pyobj_handle state{get_future_state(self)};
+            if (!state)
+            {
+                return nullptr;
+            }
+
+            return PyObject_GetAttrString(state.get(), "blocking");
+        }
+
+        int future_blocking_set(
+            PyObject* self, PyObject* value, void* /*unused*/) noexcept
+        {
+            if (!value)
+            {
+                PyErr_SetString(
+                    PyExc_AttributeError, "cannot delete _asyncio_future_blocking");
+                return -1;
+            }
+
+            auto const blocking = PyObject_IsTrue(value);
+            if (blocking == -1)
+            {
+                return -1;
+            }
+
+            pyobj_handle state{get_future_state(self)};
+            if (!state)
+            {
+                return -1;
+            }
+
+            return PyObject_SetAttrString(
+                state.get(), "blocking", blocking ? Py_True : Py_False);
+        }
+
+        /**
+         * The deallocator of an async operation, which lets go of its
+         * FutureState and its interface pointer before the deallocator of
+         * winrt.system.Object lets go of the rest.
+         */
+        void async_dealloc(PyObject* self) noexcept
+        {
+            clear_future_state(self);
+
+            // An operation is often a proxy for one that runs in another
+            // apartment, and releasing a proxy is a call into that apartment,
+            // which may at that moment be waiting for the GIL to run the
+            // completed handler of the next operation. The asyncio callbacks
+            // of a finished operation keep it until the end of the loop
+            // iteration that ran them, which is after the task has set up
+            // its next wait, so this is the order a coroutine that awaits two
+            // operations in a row produces.
+            {
+                auto released = std::move(
+                    reinterpret_cast<
+                        winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self)
+                        ->obj);
+                auto _gil = release_gil();
+                released = nullptr;
+            }
+
+            // The instance of a parameterized async interface derives from
+            // the interface, which has this deallocator too.
+            auto base = Py_TYPE(self)->tp_base;
+
+            while (base->tp_dealloc == async_dealloc)
+            {
+                base = base->tp_base;
+            }
+
+            base->tp_dealloc(self);
+        }
+
+        PyMethodDef async_methods[] = {
+            {"get", async_get, METH_NOARGS, nullptr},
+            {"wait", async_wait, METH_O, nullptr},
+            {"cancel",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_cancel)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"add_done_callback",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<0>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"remove_done_callback",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<1>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"done",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<2>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"cancelled",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<3>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"result",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<4>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"exception",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<5>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {"get_loop",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<6>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
+            {}};
+
+        PyGetSetDef async_getsets[]
+            = {{"_asyncio_future_blocking",
+                future_blocking_get,
+                future_blocking_set,
+                nullptr,
+                nullptr},
+               {}};
+
+        PyMethodDef info_methods[]
+            = {{"cancel",
+                reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(info_cancel)),
+                METH_FASTCALL | METH_KEYWORDS,
+                nullptr},
                {}};
 
         // ----- closeables -------------------------------------------------
@@ -1086,7 +1408,48 @@ namespace py::interp
 
             return true;
         }
+
+        /**
+         * Adds every getset in a NULL terminated table to @p type.
+         */
+        bool add_getsets(PyTypeObject* type, PyGetSetDef* getsets) noexcept
+        {
+            for (auto* getset = getsets; getset->name; getset++)
+            {
+                pyobj_handle descriptor{PyDescr_NewGetSet(type, getset)};
+                if (!descriptor)
+                {
+                    return false;
+                }
+
+                if (PyObject_SetAttrString(
+                        reinterpret_cast<PyObject*>(type),
+                        getset->name,
+                        descriptor.get())
+                    == -1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     } // namespace
+
+    /**
+     * The size of an instance of the type @p record describes. An async
+     * operation keeps its FutureState after the interface pointer that every
+     * projected object has.
+     */
+    int instance_basicsize(table::type_view const& record) noexcept
+    {
+        if (implements(record, table::type_flags::awaitable))
+        {
+            return static_cast<int>(object_basicsize + sizeof(PyObject*));
+        }
+
+        return static_cast<int>(object_basicsize);
+    }
 
     /**
      * Works out which member stands for each Python operation.
@@ -1182,6 +1545,9 @@ namespace py::interp
                 case table::member_role::close:
                     entry.protocol.close = &member;
                     break;
+                case table::member_role::cancel:
+                    entry.protocol.cancel = &member;
+                    break;
                 }
             }
         }
@@ -1241,6 +1607,7 @@ namespace py::interp
         if (implements(record, table::type_flags::awaitable))
         {
             slots.push_back({Py_am_await, reinterpret_cast<void*>(await_async)});
+            slots.push_back({Py_tp_dealloc, reinterpret_cast<void*>(async_dealloc)});
         }
 
         if (implements(record, table::type_flags::buffer))
@@ -1258,11 +1625,14 @@ namespace py::interp
 
     /**
      * Sets the attributes of the protocols that are methods rather than slots:
-     * insert() on a mutable sequence, get() and wait() on an awaitable, and the
-     * context manager that closes an IClosable at the end of a with statement.
+     * insert() on a mutable sequence, get(), wait() and the asyncio future on an
+     * awaitable, cancel() on IAsyncInfo itself, and the context manager that
+     * closes an IClosable at the end of a with statement.
      */
-    bool bind_protocol_methods(table::type_view const& record, PyTypeObject* type)
+    bool bind_protocol_methods(type_entry const& entry, table::type_view const& record)
     {
+        auto const type = entry.py_type;
+
         // A mapping takes precedence over a sequence, as in
         // add_protocol_slots().
         if (!implements(record, table::type_flags::mapping))
@@ -1279,6 +1649,20 @@ namespace py::interp
         if (implements(record, table::type_flags::awaitable))
         {
             if (!add_methods(type, async_methods))
+            {
+                return false;
+            }
+
+            if (!add_getsets(type, async_getsets))
+            {
+                return false;
+            }
+        }
+        else if (entry.protocol.cancel)
+        {
+            // IAsyncInfo itself, whose cancel() answers as the async
+            // operations' cancel() does.
+            if (!add_methods(type, info_methods))
             {
                 return false;
             }

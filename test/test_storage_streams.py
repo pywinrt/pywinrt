@@ -1,3 +1,4 @@
+import asyncio
 import struct
 import unittest
 import uuid
@@ -223,3 +224,28 @@ class TestWindowsStorageStreams(unittest.TestCase):
         reader = wss.DataReader(stream)
         num = await reader.load_async(10)
         self.assertEqual(num, 10)
+
+    @async_test
+    async def test_async_operation_classes(self) -> None:
+        # DataWriterStoreOperation and DataReaderLoadOperation are runtime
+        # classes rather than async interfaces, and are built as classes, so
+        # they are checked as futures of their own.
+        stream = wss.InMemoryRandomAccessStream()
+        writer = wss.DataWriter(stream)
+        writer.write_bytes(b"X" * 10)
+
+        store = writer.store_async()
+
+        self.assertIsInstance(store, wss.DataWriterStoreOperation)
+        self.assertTrue(asyncio.isfuture(store))
+        self.assertIs(asyncio.ensure_future(store), store)
+        self.assertEqual(await store, 10)
+        self.assertEqual(store.result(), 10)
+        self.assertFalse(store.cancel())
+
+        stream.seek(0)
+        load = wss.DataReader(stream).load_async(10)
+
+        self.assertIsInstance(load, wss.DataReaderLoadOperation)
+        self.assertEqual(await asyncio.gather(load), [10])
+        self.assertTrue(load.done())

@@ -1,19 +1,22 @@
 import asyncio
 import contextlib
+import contextvars
 import copy
 import ctypes
 import gc
 import sys
 import threading
+import traceback
 import unittest
 import weakref
-from typing import Generic, TypedDict, TypeVar
+from typing import Any, Generic, TypedDict, TypeVar
 from uuid import UUID
 
 import test_winrt.testcomponent as tc
 from winrt.system.hresult import (
     E_BOUNDS,
     E_FAIL,
+    E_ILLEGAL_DELEGATE_ASSIGNMENT,
     WIN32_ERROR_CANCELLED,
     PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION,
 )
@@ -982,6 +985,572 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
         self.assertEqual(actual_result, expected_result)
         self.assertListEqual(actual, expected)
+
+    @async_test
+    async def test_async_operation_is_future(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+
+        self.assertTrue(asyncio.isfuture(op))
+        # A future is taken as it is, so no task is made around it.
+        self.assertIs(asyncio.ensure_future(op), op)
+        # typeshed takes only the two Future classes here.
+        self.assertIs(asyncio.wrap_future(op), op)  # type: ignore [arg-type]
+        self.assertIs(op.get_loop(), asyncio.get_running_loop())
+        self.assertEqual(await op, 1)
+
+    @async_test
+    async def test_async_operation_gather(self) -> None:
+        op1 = tc.TestRunner.create_async_operation(10, 1)
+        op2 = tc.TestRunner.create_async_operation(20, 2)
+
+        self.assertEqual(await asyncio.gather(op1, op2), [1, 2])
+
+    @async_test
+    async def test_async_operation_asyncio_wait(self) -> None:
+        op1 = tc.TestRunner.create_async_operation(10, 1)
+        op2 = tc.TestRunner.create_async_operation(20, 2)
+
+        # typeshed takes only subclasses of asyncio.Future here, which a
+        # projected operation cannot be.
+        done, pending = await asyncio.wait([op1, op2])  # type: ignore [type-var]
+
+        self.assertEqual(done, {op1, op2})
+        self.assertEqual(pending, set())
+        self.assertEqual({op.result() for op in done}, {1, 2})
+
+    @async_test
+    async def test_async_operation_done_callback(self) -> None:
+        loop = asyncio.get_running_loop()
+        done = asyncio.Event()
+        variable: contextvars.ContextVar[str] = contextvars.ContextVar("variable")
+        seen: list[tuple[int, str, object]] = []
+
+        def callback(future: wf.IAsyncOperation[int]) -> None:
+            seen.append((threading.get_ident(), variable.get("unset"), future))
+            done.set()
+
+        op = tc.TestRunner.create_async_operation(10, 1)
+
+        variable.set("caller")
+        op.add_done_callback(callback)
+        variable.set("later")
+
+        await done.wait()
+
+        # The callback runs on the loop, in the context it was added in, and is
+        # given the operation itself.
+        self.assertEqual(seen, [(threading.get_ident(), "caller", op)])
+        self.assertIs(op.get_loop(), loop)
+
+        # One added to a finished operation is scheduled at once, in the context
+        # it is given.
+        done.clear()
+        context = contextvars.copy_context()
+        context.run(variable.set, "given")
+        op.add_done_callback(callback, context=context)
+
+        await done.wait()
+
+        self.assertEqual(seen[-1][1], "given")
+
+    @async_test
+    async def test_async_operation_remove_done_callback(self) -> None:
+        called: list[object] = []
+
+        def callback(future: wf.IAsyncOperation[int]) -> None:
+            called.append(future)
+
+        op = tc.TestRunner.create_async_operation(10, 1)
+        op.add_done_callback(callback)
+        op.add_done_callback(callback)
+
+        self.assertEqual(op.remove_done_callback(callback), 2)
+        self.assertEqual(op.remove_done_callback(callback), 0)
+
+        await op
+        await asyncio.sleep(0)
+
+        self.assertEqual(called, [])
+
+    @async_test
+    async def test_async_operation_completed_state(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+
+        self.assertFalse(op.done())
+
+        with self.assertRaises(asyncio.InvalidStateError):
+            op.result()
+
+        with self.assertRaises(asyncio.InvalidStateError):
+            op.exception()
+
+        self.assertEqual(await op, 1)
+        self.assertTrue(op.done())
+        self.assertFalse(op.cancelled())
+        self.assertEqual(op.result(), 1)
+        self.assertIsNone(op.exception())
+        # Nothing is left to cancel.
+        self.assertFalse(op.cancel())
+        self.assertEqual(op.result(), 1)
+
+    @async_test
+    async def test_async_operation_falsy_result(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 0)
+
+        self.assertEqual(await op, 0)
+        self.assertEqual(op.result(), 0)
+
+    @async_test
+    async def test_async_operation_await_twice(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+
+        self.assertEqual(await op, 1)
+        self.assertEqual(await op, 1)
+
+    @async_test
+    async def test_async_operation_error_state(self) -> None:
+        op = tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL)
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+        self.assertTrue(op.done())
+        self.assertFalse(op.cancelled())
+
+        error = op.exception()
+        self.assertIsInstance(error, OSError)
+        assert isinstance(error, OSError)
+        self.assertEqual(error.winerror, E_FAIL)
+
+    @async_test
+    async def test_async_operation_cancelled_by_python(self) -> None:
+        op = tc.TestRunner.create_async_operation(100, 1)
+
+        self.assertTrue(op.cancel("stop"))
+        # Asked once, so asking again does nothing.
+        self.assertFalse(op.cancel())
+
+        with self.assertRaises(asyncio.CancelledError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.args, ("stop",))
+        self.assertTrue(op.done())
+        self.assertTrue(op.cancelled())
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+
+        with self.assertRaises(asyncio.CancelledError):
+            op.result()
+
+        with self.assertRaises(asyncio.CancelledError):
+            op.exception()
+
+    @async_test
+    async def test_async_operation_cancelled_by_the_operation(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        # An operation that cancels itself, as Windows does when a device goes
+        # away, has failed rather than been cancelled by Python.
+        source.cancel()
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
+        self.assertEqual(source.cancel_request_count, 0)
+        self.assertTrue(op.done())
+        self.assertFalse(op.cancelled())
+        self.assertIsInstance(op.exception(), OSError)
+
+    def test_async_info_cancel(self) -> None:
+        source = tc.AsyncActionSource()
+        info = source.operation.as_(wf.IAsyncInfo)
+
+        self.assertTrue(info.cancel())
+        self.assertEqual(source.cancel_request_count, 1)
+
+        source.complete()
+
+        self.assertFalse(info.cancel())
+        self.assertEqual(source.cancel_request_count, 1)
+
+    async def _await_recording_cancellation(
+        self, op: wf.IAsyncAction, seen: list[bool]
+    ) -> None:
+        try:
+            await op
+        except asyncio.CancelledError:
+            seen.append(op.done())
+            raise
+
+    async def _assert_task_waits_for_the_operation(
+        self,
+        source: tc.AsyncActionSource,
+        op: wf.IAsyncAction,
+        task: asyncio.Task[None],
+    ) -> None:
+        # A task that was resumed by its cancellation alone would be done
+        # within a couple of loop iterations.
+        for _ in range(5):
+            await asyncio.sleep(0)
+
+        self.assertEqual(source.cancel_request_count, 1)
+        self.assertFalse(op.done())
+        self.assertFalse(task.done())
+
+    @async_test
+    async def test_async_operation_cancel_waits_for_the_operation(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+        seen: list[bool] = []
+
+        async def wait_with_timeout() -> None:
+            async with asyncio.timeout(0):
+                await self._await_recording_cancellation(op, seen)
+
+        task = asyncio.create_task(wait_with_timeout())
+
+        try:
+            await self._assert_task_waits_for_the_operation(source, op, task)
+            self.assertEqual(seen, [])
+        finally:
+            # Only the source finishes the operation, and the task does not
+            # end until it has, so a failed assertion has to finish it too.
+            source.cancel()
+
+        with self.assertRaises(TimeoutError):
+            await task
+
+        # The task was resumed by the operation finishing, not before.
+        self.assertEqual(seen, [True])
+        self.assertTrue(op.cancelled())
+
+    @async_test
+    async def test_async_operation_task_cancel_waits_for_the_operation(self) -> None:
+        for cancels in (1, 2):
+            with self.subTest(cancels=cancels):
+                source = tc.AsyncActionSource()
+                op = source.operation
+                seen: list[bool] = []
+
+                task = asyncio.create_task(self._await_recording_cancellation(op, seen))
+                await asyncio.sleep(0)
+
+                for _ in range(cancels):
+                    task.cancel()
+
+                # A second cancel() of the task does not ask the operation
+                # again.
+                try:
+                    await self._assert_task_waits_for_the_operation(source, op, task)
+                    self.assertEqual(seen, [])
+                finally:
+                    source.cancel()
+
+                with self.assertRaises(asyncio.CancelledError):
+                    await task
+
+                self.assertEqual(seen, [True])
+
+    @async_test
+    async def test_async_operation_cancel_ignored(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        self.assertTrue(op.cancel())
+
+        # An operation that finishes anyway is still a cancelled future, as an
+        # asyncio.Future that was cancelled is.
+        source.complete(1)
+
+        with self.assertRaises(asyncio.CancelledError):
+            await op
+
+        self.assertTrue(op.cancelled())
+
+    @async_test
+    async def test_async_operation_waits_for_the_handler(self) -> None:
+        source = tc.AsyncOperationSource()
+        source.defers_completed_handler = True
+        op = source.operation
+
+        self.assertFalse(op.done())
+        self.assertTrue(source.has_completed_handler)
+
+        source.complete(1)
+
+        for _ in range(5):
+            await asyncio.sleep(0)
+
+        # The status says the operation has finished before its completed
+        # handler has said so, and only the handler is believed.
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertFalse(op.done())
+
+        source.invoke_completed_handler()
+
+        self.assertEqual(await op, 1)
+        self.assertTrue(op.done())
+
+    @async_test
+    async def test_async_operation_completed_on_another_thread(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        thread = threading.Thread(target=source.complete, args=(1,))
+
+        op.done()
+        thread.start()
+
+        self.assertEqual(await op, 1)
+
+        thread.join()
+
+    @async_test
+    async def test_async_operation_released(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        source.complete(1)
+
+        self.assertEqual(await op, 1)
+
+        # Neither the future nor the completed handler that the operation
+        # keeps holds the operation once it has been awaited. The loop lets go
+        # of the callback that resumed this coroutine one iteration later.
+        del op
+        await asyncio.sleep(0)
+
+        self.assertFalse(source.is_operation_alive)
+
+    @async_test
+    async def test_async_operation_kept_while_pending(self) -> None:
+        source = tc.AsyncOperationSource()
+        given: list[int] = []
+        done = asyncio.Event()
+
+        def callback(future: wf.IAsyncOperation[int]) -> None:
+            given.append(future.result())
+            done.set()
+
+        # Nothing but the pending completion holds the operation, which is
+        # what hands it to the callback.
+        source.operation.add_done_callback(callback)
+        await asyncio.sleep(0)
+
+        self.assertTrue(source.is_operation_alive)
+
+        source.complete(1)
+        await done.wait()
+        await asyncio.sleep(0)
+
+        self.assertEqual(given, [1])
+        self.assertFalse(source.is_operation_alive)
+
+    @async_test
+    async def test_async_operation_awaited_by_two_tasks(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        async def waiter() -> int:
+            return await op
+
+        tasks = [asyncio.create_task(waiter()) for _ in range(2)]
+        await asyncio.sleep(0)
+
+        source.complete(1)
+
+        self.assertEqual(await asyncio.gather(*tasks), [1, 1])
+
+    @async_test
+    async def test_async_operation_cancelled_through_one_of_two_tasks(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        async def waiter() -> int:
+            return await op
+
+        tasks = [asyncio.create_task(waiter()) for _ in range(2)]
+        await asyncio.sleep(0)
+
+        # Both tasks wait on the one future, so cancelling either cancels the
+        # operation for both, as it would cancel a shared asyncio.Future.
+        tasks[0].cancel()
+
+        try:
+            for _ in range(5):
+                await asyncio.sleep(0)
+
+            self.assertEqual(source.cancel_request_count, 1)
+            self.assertFalse(tasks[0].done())
+            self.assertFalse(tasks[1].done())
+        finally:
+            source.cancel()
+
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        self.assertIsInstance(results[0], asyncio.CancelledError)
+        self.assertIsInstance(results[1], asyncio.CancelledError)
+
+    def test_async_operation_belongs_to_its_loop(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        async def bind() -> None:
+            self.assertFalse(op.done())
+
+        async def await_elsewhere() -> None:
+            with self.assertRaisesRegex(RuntimeError, "different loop"):
+                await op
+
+        asyncio.run(bind())
+        asyncio.run(await_elsewhere())
+
+        source.complete(1)
+
+    def test_async_operation_completed_after_its_loop_closed(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        async def bind() -> None:
+            self.assertFalse(op.done())
+
+        asyncio.run(bind())
+
+        # The completion has no loop to go to, so nothing must keep the
+        # operation for it.
+        source.complete(1)
+        del op
+
+        self.assertFalse(source.is_operation_alive)
+
+    @async_test
+    async def test_async_operation_second_wrapper(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        other = source.operation
+
+        # Two Python objects for one operation are two futures, and WinRT
+        # takes only one completed handler.
+        self.assertIsNot(other, op)
+        self.assertFalse(op.done())
+
+        # A failed attempt leaves the second one as it was, so it fails again
+        # rather than waiting for a handler that was never set.
+        for _ in range(2):
+            with self.assertRaises(OSError) as ctx:
+                other.done()
+
+            self.assertEqual(ctx.exception.winerror, E_ILLEGAL_DELEGATE_ASSIGNMENT)
+
+        # Blocking on an operation that a future waits for is the same mistake.
+        with self.assertRaises(OSError) as ctx:
+            op.get()
+
+        self.assertEqual(ctx.exception.winerror, E_ILLEGAL_DELEGATE_ASSIGNMENT)
+
+        source.complete(1)
+
+        self.assertEqual(await op, 1)
+
+    def test_async_operation_future_method_arguments(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        with self.assertRaises(TypeError):
+            op.cancel(bad=1)  # type: ignore [call-arg]
+
+        with self.assertRaises(TypeError):
+            op.add_done_callback(print, print, print)  # type: ignore [arg-type, call-arg]
+
+        info = op.as_(wf.IAsyncInfo)
+
+        with self.assertRaises(TypeError):
+            info.cancel(bad=1)  # type: ignore [call-arg]
+
+        with self.assertRaises(TypeError):
+            info.cancel(1, 2)  # type: ignore [call-arg]
+
+        self.assertEqual(source.cancel_request_count, 0)
+        self.assertTrue(info.cancel(msg="ignored"))
+        self.assertEqual(source.cancel_request_count, 1)
+
+        source.cancel()
+
+    @async_test
+    async def test_async_operation_error_raised_afresh(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        source.fail(E_FAIL)
+
+        errors: list[OSError] = []
+
+        for _ in range(3):
+            try:
+                await op
+            except OSError as error:
+                errors.append(error)
+                # As in CPython's test_future_traceback: the traceback does
+                # not grow with every await.
+                text = "".join(traceback.format_tb(error.__traceback__))
+                self.assertEqual(text.count("await op"), 1)
+
+        # Each one comes from get_results() itself, because a kept exception
+        # would hold the operation through the frames of its traceback.
+        self.assertEqual([e.winerror for e in errors], [E_FAIL] * 3)
+        self.assertIsNot(errors[1], errors[0])
+
+        reported = op.exception()
+        self.assertIsInstance(reported, OSError)
+        assert isinstance(reported, OSError)
+        self.assertEqual(reported.winerror, E_FAIL)
+
+        del op, reported, errors
+        await asyncio.sleep(0)
+
+        self.assertFalse(source.is_operation_alive)
+
+    @async_test
+    async def test_async_operation_done_callback_raises(self) -> None:
+        loop = asyncio.get_running_loop()
+        variable: contextvars.ContextVar[str] = contextvars.ContextVar("variable")
+        handled: list[tuple[object, str]] = []
+        done = asyncio.Event()
+
+        def handler(loop: asyncio.AbstractEventLoop, context: dict[str, Any]) -> None:
+            handled.append((context.get("exception"), variable.get("unset")))
+            done.set()
+
+        def callback(future: wf.IAsyncOperation[int]) -> None:
+            raise ZeroDivisionError
+
+        loop.set_exception_handler(handler)
+
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        variable.set("caller")
+        op.add_done_callback(callback)
+        source.complete(1)
+
+        await done.wait()
+
+        self.assertEqual(len(handled), 1)
+        self.assertIsInstance(handled[0][0], ZeroDivisionError)
+
+        # As in CPython's test_handle_exc_handler_correct_context: the loop
+        # reports it in the context the callback ran in. Before 3.12 the
+        # loop called the handler in whatever context it was running in.
+        if sys.version_info >= (3, 12):
+            self.assertEqual(handled[0][1], "caller")
+        self.assertEqual(await op, 1)
+
+    def test_async_operation_future_needs_a_running_loop(self) -> None:
+        op = tc.TestRunner.create_async_operation(0, 1)
+
+        with self.assertRaises(RuntimeError):
+            op.done()
+
+        # Blocking on it is still possible, since the handler was not set.
+        self.assertEqual(op.get(), 1)
 
 
 T = TypeVar("T")

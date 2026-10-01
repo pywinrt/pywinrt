@@ -1,9 +1,10 @@
 import asyncio
 from importlib.machinery import ModuleSpec
 import os
+from contextvars import Context, copy_context
 from collections.abc import (
-    Awaitable,
     Callable,
+    Generator,
     Mapping,
     MutableMapping,
     MutableSequence,
@@ -11,7 +12,7 @@ from collections.abc import (
 )
 from pathlib import Path
 import sys
-from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING
+from typing import Any, Generic, Self, TypeVar, Protocol, TYPE_CHECKING
 import warnings
 
 # NB: have to import Object from here instead of winrt.system to avoid circular import issues.
@@ -24,7 +25,7 @@ from winrt._winrt import (
 
 # Unfortunately, we can't import at runtime because of circular imports.
 if TYPE_CHECKING:
-    from winrt.windows.foundation import HResult, AsyncStatus
+    from winrt.windows.foundation import AsyncStatus
 
 
 #: The file a projection package keeps its namespace's table in, beside the
@@ -324,12 +325,10 @@ T = TypeVar("T")
 # MyPy wants covariant T but Pylance wants invariant. Invariant seems correct.
 class AsyncOp(Protocol[T]):  # type: ignore [misc]
     """
-    Protocol that matches both IAsyncAction and IAsyncOperation.
+    Protocol that matches the four async interfaces, whose objects the runtime
+    makes asyncio futures with a :class:`FutureState` each.
     """
 
-    def cancel(self) -> None: ...
-    @property
-    def error_code(self) -> "HResult": ...
     @property
     def status(self) -> "AsyncStatus": ...
     def get_results(self) -> T: ...
@@ -339,37 +338,218 @@ class AsyncOp(Protocol[T]):  # type: ignore [misc]
     def completed(self, value: Callable[[Self, "AsyncStatus"], None]) -> None: ...
 
 
-def wrap_async(op: AsyncOp[T]) -> Awaitable[T]:
+class FutureState(Generic[T]):
     """
-    Wraps a WinRT async operation in a Python Awaitable.
+    What makes one async operation an asyncio future.
 
-    This is used by the runtime to implement ``__await__`` on async operations.
+    The runtime keeps one of these beside each projected async operation and
+    implements the future's methods by calling the method of the same name
+    here, with the operation as the first argument. A projected object takes
+    no part in garbage collection, so this must not keep the operation alive
+    for longer than a wait: it holds the operation only from when the
+    completed handler is set until the completion has been delivered to the
+    event loop, which is while something is waiting for it.
 
-    Args:
-        op: The WinRT async operation to wrap.
+    Completion is known only from the completed handler. The status of an
+    operation can read ``COMPLETED`` before its handler has run, so the status
+    is never what :meth:`done` answers from.
 
-    Returns:
-        An asyncio Awaitable that will be completed when the WinRT operation
-        completes.
+    Cancelling does not complete the future. It asks WinRT to cancel, and the
+    future is done only once the operation has finished, so that a task
+    awaiting it does not move on while the operation still runs.
+
+    A result is read once and kept, but an error is not: ``get_results()`` is
+    asked again each time, which raises a new exception. One that was kept
+    would reach the operation through the frames of its traceback, and the
+    operation would never be freed.
     """
 
-    async def wait() -> T:
+    __slots__ = (
+        "blocking",
+        "_loop",
+        "_op",
+        "_callbacks",
+        "_status",
+        "_cancel_requested",
+        "_cancel_message",
+        "_results_read",
+        "_result",
+    )
+
+    def __init__(self) -> None:
+        #: The future's ``_asyncio_future_blocking``.
+        self.blocking = False
+        self._loop: asyncio.AbstractEventLoop | None = None
+        self._op: AsyncOp[T] | None = None
+        self._callbacks: list[tuple[Callable[[AsyncOp[T]], object], Context]] = []
+        self._status: AsyncStatus | None = None
+        self._cancel_requested = False
+        self._cancel_message: Any = None
+        self._results_read = False
+        self._result: T | None = None
+
+    def _attach(self, op: AsyncOp[T]) -> asyncio.AbstractEventLoop:
+        """
+        Binds the future to the running event loop and sets the completed
+        handler of the operation, the first time anything needs either.
+        """
+        if self._loop is not None:
+            return self._loop
+
         loop = asyncio.get_running_loop()
-        event = asyncio.Event()
 
-        def on_complete(op: AsyncOp[T], status: "AsyncStatus") -> None:
-            loop.call_soon_threadsafe(event.set)
+        # The handler holds the state rather than the operation, because WinRT
+        # keeps the handler for as long as the operation exists, and one that
+        # held the operation would keep it alive for good.
+        def completed(_: AsyncOp[T], status: "AsyncStatus") -> None:
+            try:
+                loop.call_soon_threadsafe(self._deliver, status)
+            except RuntimeError:
+                # The loop is closed, so nothing will run the callbacks and
+                # the operation must not be kept for them.
+                self._op = None
 
-        op.completed = on_complete
+        self._loop = loop
+        self._op = op
 
         try:
-            await event.wait()
-        except asyncio.CancelledError:
-            op.cancel()
-            # REVISIT: what if it is cancelled again?
-            await event.wait()
+            op.completed = completed
+        except BaseException:
+            self._loop = None
+            self._op = None
             raise
 
-        return op.get_results()
+        return loop
 
-    return wait()
+    def _deliver(self, status: "AsyncStatus") -> None:
+        """
+        Marks the future done, on its event loop, and schedules its callbacks.
+        """
+        assert self._loop is not None
+        op = self._op
+        assert op is not None
+        callbacks = self._callbacks
+
+        self._status = status
+        self._op = None
+        self._callbacks = []
+
+        for fn, context in callbacks:
+            self._loop.call_soon(fn, op, context=context)
+
+    def _read_results(self, op: AsyncOp[T]) -> T:
+        """
+        What ``get_results()`` returned, which is asked for once, or what it
+        raises, which it is asked for every time.
+        """
+        if not self._results_read:
+            self._result = op.get_results()
+            self._results_read = True
+
+        return self._result  # type: ignore [return-value]
+
+    def _cancelled_error(self) -> asyncio.CancelledError:
+        if self._cancel_message is None:
+            return asyncio.CancelledError()
+
+        return asyncio.CancelledError(self._cancel_message)
+
+    def get_loop(self, op: AsyncOp[T]) -> asyncio.AbstractEventLoop:
+        return self._attach(op)
+
+    def add_done_callback(
+        self,
+        op: AsyncOp[T],
+        fn: Callable[[AsyncOp[T]], object],
+        *,
+        context: Context | None = None,
+    ) -> None:
+        loop = self._attach(op)
+
+        if context is None:
+            context = copy_context()
+
+        if self._status is None:
+            self._callbacks.append((fn, context))
+        else:
+            loop.call_soon(fn, op, context=context)
+
+    def remove_done_callback(
+        self, op: AsyncOp[T], fn: Callable[[AsyncOp[T]], object]
+    ) -> int:
+        kept = [(f, context) for f, context in self._callbacks if f != fn]
+        removed = len(self._callbacks) - len(kept)
+        self._callbacks = kept
+
+        return removed
+
+    def done(self, op: AsyncOp[T]) -> bool:
+        self._attach(op)
+
+        return self._status is not None
+
+    def cancelled(self, op: AsyncOp[T]) -> bool:
+        return self.done(op) and self._cancel_requested
+
+    def result(self, op: AsyncOp[T]) -> T:
+        if not self.done(op):
+            raise asyncio.InvalidStateError("Result is not ready.")
+
+        if self._cancel_requested:
+            raise self._cancelled_error()
+
+        return self._read_results(op)
+
+    def exception(self, op: AsyncOp[T]) -> BaseException | None:
+        if not self.done(op):
+            raise asyncio.InvalidStateError("Exception is not set.")
+
+        if self._cancel_requested:
+            raise self._cancelled_error()
+
+        try:
+            self._read_results(op)
+        except Exception as error:
+            return error
+
+        return None
+
+    def cancel(self, op: AsyncOp[T], msg: Any | None = None) -> bool:
+        """
+        Says whether ``cancel(msg)`` is to ask WinRT to cancel the operation,
+        and records that it has if so. The runtime makes the request.
+        """
+        if self._status is not None:
+            return False
+
+        if self._cancel_requested:
+            return False
+
+        # With no completed handler set, nothing here knows whether the
+        # operation has finished, so WinRT is asked instead: a finished one
+        # has nothing to cancel, and nothing would ever answer the request.
+        if self._loop is None:
+            from winrt.windows.foundation import AsyncStatus
+
+            if op.status != AsyncStatus.STARTED:
+                return False
+
+        self._cancel_requested = True
+        self._cancel_message = msg
+
+        return True
+
+    def iterate(self, op: AsyncOp[T]) -> Generator[Any, None, T]:
+        """
+        What ``__await__`` of the operation returns, which waits as
+        ``asyncio.Future.__await__`` waits: by handing the operation itself to
+        the task, which waits for its done callback.
+        """
+        if not self.done(op):
+            self.blocking = True
+            yield op
+
+        if not self.done(op):
+            raise RuntimeError("await wasn't used with future")
+
+        return self.result(op)
