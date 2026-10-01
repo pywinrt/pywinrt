@@ -639,6 +639,13 @@ class ProjectedType
         {
             yield return "get";
             yield return "wait";
+            yield return "add_done_callback";
+            yield return "remove_done_callback";
+            yield return "done";
+            yield return "cancelled";
+            yield return "result";
+            yield return "exception";
+            yield return "get_loop";
         }
     }
 
