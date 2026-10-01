@@ -321,7 +321,8 @@
 - Fixed deadlocks with WinRT objects that live in another apartment or
   process, such as a `StorageFile`, whose apartment may be waiting for the
   GIL to call a Python handler: the projection no longer holds the GIL
-  when a wrapper lets go of one.
+  when a wrapper lets go of one, or to recognise one that a call hands
+  back.
 - Fixed a crash at exit when WinRT releases a Python object after the
   interpreter has finalized.
 - `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
