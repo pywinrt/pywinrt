@@ -598,19 +598,144 @@ code `PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`; see [Exceptions](#exceptions).
 
 ## Delegates
 
-!!! todo "Todo"
+A WinRT delegate is a callback. Where a method, a property or an event wants
+one, pass any Python callable that takes the delegate's parameters
+positionally. The type hints name the delegate type as an alias of
+[`Callable`][Callable] that spells out those parameters and the result, so
+there is no class to construct: pass the function itself.
 
-    explain delegates
+```python
+from winrt.windows.foundation import Deferral
 
-!!! todo "Todo"
+deferral = Deferral(lambda: print("completed"))
+```
 
-    explain exceptions in callbacks
+A delegate that has outputs returns them in the same way as a
+[method](#methods): its return value alone, or, with output parameters, a
+tuple of the return value followed by the output parameters in the order they
+are declared. A result of the wrong shape is an error, as an exception would
+be, and the caller gets the error code described below.
+
+WinRT keeps the callable alive for as long as it holds the delegate. It calls
+the callable on whatever thread it calls the delegate from, which is often not
+one of the program's own threads; see
+[Which thread calls the handler](#which-thread-calls-the-handler).
+
+A delegate that WinRT hands to Python, such as the value of an async
+operation's `completed` property, is callable and calls the delegate. It is a
+wrapper, not the Python callable that may have been set there.
+
+### Arrays in delegates
+
+A delegate's array parameters arrive as [`winrt.system.Array`](#arrays)
+objects, which WinRT has three uses for:
+
+- an array the caller passes arrives as an `Array` of its own, which the
+  callable may keep;
+- an array the caller lends to be filled arrives as an `Array` whose elements
+  are the caller's. The callable assigns them by index, `lent[i] = value`, and
+  cannot export the array as a buffer, so `memoryview(lent)`, `bytes(lent)` and
+  passing it on to another WinRT call raise [`BufferError`][BufferError]. Once
+  the call returns, the array is empty, since its elements went back to the
+  caller;
+- an array the callable returns, as its result or as an output parameter, is
+  an `Array` of the declared element type, or for a fundamental type or a
+  struct of fundamental types, any buffer of the same layout.
+
+### Exceptions in delegates
+
+A delegate has no Python caller to raise to, so an exception that escapes the
+callable goes to [`sys.unraisablehook()`][unraisablehook] and the WinRT code
+that called it gets the error code
+[`PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`](api/system.hresult.md#pywinrt_e_unraisable_python_exception).
+A delegate that returns a value then returns nothing to its caller but the
+error. Handle exceptions inside the callable. See [Exceptions](#exceptions).
+
+[Callable]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable
+[BufferError]: https://docs.python.org/3/builtins/exceptions.html#BufferError
 
 ## Arrays
 
-!!! todo "Todo"
+WinRT arrays are projected as [`winrt.system.Array`](api/system.md#array), a
+fixed-size [`Sequence`][Sequence] whose items can be assigned. It is not a
+[`MutableSequence`][MutableSequence]: its length never changes, so it has no
+`append()`, `insert()` or `del`.
 
-    document array types
+```python
+from winrt.system import Array, Int32
+from winrt.windows.foundation import Uri
+
+numbers = Array(Int32, 3)            # three zeros
+numbers = Array(Int32, [1, 2, 3])    # from an iterable
+uris = Array(Uri, [Uri("https://example.com/")])
+
+numbers[0] = 4
+numbers[-1] = 6
+```
+
+The first argument is the element type: a projected type, the Python type that
+a WinRT type is projected as, such as `str` or `bool`, or for a fundamental
+type that has no Python type of its own, one of the
+[`winrt.system`](api/system.md) aliases such as `Int32`. The second is a length,
+an iterable of elements, or, for an element type that is a fundamental type or
+a struct of fundamental types, a buffer of the same layout to copy.
+
+Indexing counts from the end for a negative index and raises
+[`IndexError`][IndexError] out of range. A slice is a new `Array` with copies
+of the elements; a slice with a step is not supported and raises
+[`NotImplementedError`][NotImplementedError]. Two arrays are equal when their
+elements are, whatever their element types, and an `Array` equals only another
+`Array`, as a `list` equals only a `list`. An array is not hashable, and its
+`repr()` names the element type and the elements:
+
+```python
+>>> Array(Int32, [1, 2, 3])
+Array(Int32, [1, 2, 3])
+```
+
+### Arrays as buffers
+
+An `Array` supports the buffer protocol, in the format given for its element
+type in the [table above](#fundamental-types). An array of fundamental types
+or of structs of fundamental types exports a writable buffer, so
+[`memoryview`][memoryview], [`struct`][struct] and similar can read and write
+its elements in place. An array whose elements hold references - strings,
+objects, or structs with a string in them - exports a read-only buffer of the
+references themselves, and while such a buffer is exported, assigning an
+element raises [`BufferError`][BufferError].
+
+### Arrays as parameters
+
+A method's array parameters take three forms:
+
+- an array passed to WinRT to read takes an `Array` of the declared element
+  type, or for a fundamental type or a struct of fundamental types, any buffer
+  of the same layout, such as an [`array.array`][array.array] or a `bytes`
+  object;
+- an array that WinRT fills takes an `Array` of the right length, or a writable
+  buffer, and WinRT writes its elements;
+- an array that WinRT returns comes back as an `Array`.
+
+```python
+from winrt.windows.security.cryptography import CryptographicBuffer
+
+buffer = CryptographicBuffer.create_from_byte_array(b"\x01\x02\x03")
+```
+
+An array of references, such as strings, has no buffer that says what it
+points at, so only an `Array` is accepted for one.
+
+Arrays that WinRT passes to a delegate are described under
+[Arrays in delegates](#arrays-in-delegates).
+
+!!! seealso "See also"
+
+    [`winrt.system.Array`](api/system.md#array) for its signature and what
+    changed in version 4.0.
+
+[IndexError]: https://docs.python.org/3/builtins/exceptions.html#IndexError
+[NotImplementedError]: https://docs.python.org/3/builtins/exceptions.html#NotImplementedError
+[array.array]: https://docs.python.org/3/library/array.html#array.array
 
 ## Exceptions
 
@@ -836,9 +961,32 @@ You must also be careful about not creating a reference cycle to the operation,
 otherwise it will cause a memory leak. This can happen if the callback is a
 closure and references an object that references the operation itself.
 
-!!! todo "Todo"
+#### Progress
 
-    add tips on how to iterate over progress events
+An operation that reports progress has a `progress` property. Setting it gives
+the operation its progress handler, a [delegate](#delegates) that WinRT calls
+with the operation and the progress value each time there is progress to
+report. An operation has one progress handler, so setting the property again
+replaces it. Set the handler before awaiting the operation, so that no report
+is missed.
+
+WinRT calls the handler on a thread of its own, as it does an
+[event handler](#which-thread-calls-the-handler), so with `asyncio` hand the
+value to the event loop with `loop.call_soon_threadsafe()`:
+
+```python
+async def download(operation) -> None:
+    loop = asyncio.get_running_loop()
+
+    def on_progress(value) -> None:
+        print("progress:", value)
+
+    operation.progress = lambda op, value: loop.call_soon_threadsafe(
+        on_progress, value
+    )
+
+    await operation
+```
 
 ### Buffers
 
