@@ -163,9 +163,9 @@ There is also an `inspect_source.py` script that looks for renamed methods in
 your Python files, along with the other changes that it can find by looking at
 the source: the `winui3` and `webview2` imports, the deprecated
 `HResult.value` and `EventRegistrationToken.value`, format strings passed to
-`winrt.system.Array`, `run_until_complete()` called on an async operation, and
-requirements on v3 distributions that were renamed, removed or constrained to
-v3.
+`winrt.system.Array`, `run_until_complete()` called on an async operation, the
+uses of `Matrix3x2` and `Matrix4x4`, whose product is `@`, and requirements on
+v3 distributions that were renamed, removed or constrained to v3.
 
 ### Usage
 
@@ -218,6 +218,8 @@ else, since everything else it reports needs checking by hand:
 * The script doesn't do any static analysis to infer types, so it may produce
   false positives. It matches a method by its name alone, and `.value` only on
   a property that hands back an `HResult` or on a name that has `token` in it.
+  It reports every use of `Matrix3x2` and `Matrix4x4`, since it cannot tell
+  which `*` has two matrices on either side of it.
 * Where v3 had several names for the overloads of one method, check the type
   hints to make sure the arguments you pass select the overload you want.
 * An array of enums was spelled `Array("i", ...)` or `Array("I", ...)` in v3;
@@ -243,6 +245,27 @@ these are the things that behave differently:
 * `loop.run_until_complete(op)` raises `RuntimeError: no running event loop`,
   because an operation belongs to the event loop that is running when it is
   first used. Await it in a coroutine and run that with `asyncio.run()`.
+
+## The product of two matrices is `@`
+
+`Matrix3x2 * Matrix3x2` and `Matrix4x4 * Matrix4x4` were the matrix product,
+as in C# and C++. In v4 the product is `@`, as it is for NumPy arrays, and `*`
+between two matrices raises `TypeError` rather than quietly becoming an
+elementwise product; `*=` follows, so `m *= other` is `m @= other`. A matrix
+times a number is still `*`, and the number can now be on either side.
+
+A vector on the left of `@` is transformed by the matrix or the rotation on
+the right, in the row vector order that `transform()` uses: `v @ m` is
+`v.transform(m)`. The quaternion keeps `*` for its product and takes `@` as
+the same thing.
+
+The buffer of a `winrt.system.Array` of `Vector2`, `Vector3`, `Vector4`,
+`Quaternion`, `Plane`, `Matrix3x2` or `Matrix4x4` is a block of floats with
+one more dimension than the element, such as `(n, 3)` for `Vector3` and
+`(n, 4, 4)` for `Matrix4x4`, rather than one item per element with a field
+per float. `numpy.asarray(array)` is then that block, ready to use; code that
+read the fields of a structured NumPy array made from one reads columns
+instead.
 
 ## Removed
 

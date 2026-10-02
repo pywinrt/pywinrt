@@ -48,6 +48,11 @@ ARRAY_FORMATS = {
 # the top-level packages that are winrt again
 PACKAGES = {"winui3", "webview2"}
 
+# the structs whose product * was, and @ is
+MATRICES = {"Matrix3x2", "Matrix4x4"}
+
+MATRIX_PRODUCT = "@ for the product of two matrices; * between two of them raises"
+
 
 def normalize(name: str) -> str:
     """
@@ -206,6 +211,24 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
                         "winrt.windows.foundation.EventRegistrationToken.value",
                         f"{receiver}, without .value: an EventRegistrationToken is an int",
                     )
+
+            if node.attr in MATRICES:
+                assert node.end_lineno is not None
+                yield Match(
+                    node.end_lineno,
+                    attribute_column(lines, node),
+                    f"winrt.windows.foundation.numerics.{node.attr}",
+                    MATRIX_PRODUCT,
+                )
+
+        elif isinstance(node, ast.Name):
+            if node.id in MATRICES:
+                yield Match(
+                    node.lineno,
+                    column(lines, node.lineno, node.col_offset),
+                    f"winrt.windows.foundation.numerics.{node.id}",
+                    MATRIX_PRODUCT,
+                )
 
         elif isinstance(node, ast.Call):
             if runs_an_operation(node):
