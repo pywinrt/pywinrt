@@ -79,6 +79,19 @@ class TestClasses(unittest.TestCase):
                 self.assertFalse(uri == other)
                 self.assertTrue(uri != other)
 
+    def test_a_wrapper_is_made_each_time_an_object_is_read(self) -> None:
+        # Two reads of one object are two wrappers, which are equal and hash
+        # the same but are not the same Python object.
+        properties = wfc.PropertySet()
+        properties.insert("uri", wf.Uri("http://example.com/"))
+
+        first = properties.lookup("uri")
+        second = properties.lookup("uri")
+
+        self.assertIsNot(first, second)
+        self.assertEqual(first, second)
+        self.assertEqual(hash(first), hash(second))
+
     def test_as_and_isinstance(self) -> None:
         instance = tc.Class()
 
