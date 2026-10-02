@@ -1017,6 +1017,122 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(await asyncio.gather(op1, op2), [1, 2])
 
+    def _record_loop_errors(self) -> list[dict[str, Any]]:
+        """
+        Collects what the running loop is asked to report, which is where an
+        error in a done callback goes.
+        """
+        errors: list[dict[str, Any]] = []
+
+        def handler(loop: asyncio.AbstractEventLoop, context: dict[str, Any]) -> None:
+            errors.append(context)
+
+        asyncio.get_running_loop().set_exception_handler(handler)
+
+        return errors
+
+    async def _run_callbacks(self) -> None:
+        """
+        Runs the loop for long enough that a completion delivered from the
+        handler reaches the done callbacks and the tasks they resume.
+        """
+        for _ in range(5):
+            await asyncio.sleep(0)
+
+    @async_test
+    async def test_async_operation_gather_timeout(self) -> None:
+        errors = self._record_loop_errors()
+        sources = [tc.AsyncOperationSource() for _ in range(2)]
+        ops = [source.operation for source in sources]
+
+        async def gather() -> list[int]:
+            async with asyncio.timeout(0):
+                return await asyncio.gather(*ops)
+
+        task = asyncio.create_task(gather())
+
+        # The timeout cancels the gathering future, which cancels each
+        # operation, and gather finishes once they have.
+        try:
+            await self._run_callbacks()
+            self.assertEqual([s.cancel_request_count for s in sources], [1, 1])
+        finally:
+            # Only the sources finish the operations, and the task does not
+            # end until they have, so a failed assertion has to finish them.
+            for source in sources:
+                source.cancel()
+
+        await self._run_callbacks()
+
+        self.assertTrue(task.done())
+
+        with self.assertRaises(TimeoutError):
+            await task
+
+        self.assertTrue(all(op.cancelled() for op in ops))
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_operation_gather_cancelled(self) -> None:
+        errors = self._record_loop_errors()
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        self.assertTrue(op.cancel("stop"))
+        source.cancel()
+
+        with self.assertRaises(asyncio.CancelledError) as ctx:
+            await asyncio.gather(op)
+
+        self.assertEqual(ctx.exception.args, ("stop",))
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_operation_gather_return_exceptions(self) -> None:
+        errors = self._record_loop_errors()
+        sources = [tc.AsyncOperationSource() for _ in range(2)]
+        op1, op2 = (source.operation for source in sources)
+
+        self.assertTrue(op1.cancel("stop"))
+        sources[0].cancel()
+        sources[1].complete(2)
+
+        results = await asyncio.gather(op1, op2, return_exceptions=True)
+
+        self.assertIsInstance(results[0], asyncio.CancelledError)
+        assert isinstance(results[0], asyncio.CancelledError)
+        self.assertEqual(results[0].args, ("stop",))
+        self.assertEqual(results[1], 2)
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_operation_shield_timeout(self) -> None:
+        errors = self._record_loop_errors()
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        with self.assertRaises(TimeoutError):
+            async with asyncio.timeout(0):
+                await asyncio.shield(op)
+
+        # The shield keeps the operation from being cancelled.
+        self.assertEqual(source.cancel_request_count, 0)
+
+        source.fail(E_FAIL)
+        await self._run_callbacks()
+
+        self.assertTrue(op.done())
+
+        # Since 3.14 the shield has the loop report an error that nothing is
+        # left to retrieve.
+        if hasattr(asyncio.tasks, "_log_on_exception"):
+            self.assertEqual(len(errors), 1)
+            self.assertIs(errors[0]["future"], op)
+            self.assertIsInstance(errors[0]["exception"], OSError)
+            self.assertEqual(errors[0]["exception"].winerror, E_FAIL)
+        else:
+            self.assertEqual(errors, [])
+
     @async_test
     async def test_async_operation_asyncio_wait(self) -> None:
         op1 = tc.TestRunner.create_async_operation(10, 1)
