@@ -217,9 +217,25 @@ static class TypeExtensions
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
                 { FullName: "Windows.Storage.Streams.IBuffer" } when usePythonCollectionTypes =>
                     "winrt.system.Buffer",
-                { IsValueType: true } when isUnpack && !type.Resolve().IsEnum =>
-                    type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes, isUnpack: true),
-                { IsValueType: true } when useStructTupleUnion && !type.Resolve().IsEnum =>
+                // The integer structs are int subclasses, so neither is unpacked
+                // into a tuple or accepted as one. An HRESULT is also accepted as
+                // a plain int, which is what the winrt.system.hresult constants
+                // are; an event token is only ever one that add_<event>() gave.
+                { FullName: "Windows.Foundation.HResult" } when useStructTupleUnion =>
+                    $"{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)} | int",
+                { IsValueType: true }
+                    when isUnpack
+                        && !type.Resolve().IsEnum
+                        && !ProjectedType.IsPyIntegerType(type.FullName) => type.ToPyTupleTyping(
+                    ns,
+                    packageMap,
+                    quoteImportedTypes,
+                    isUnpack: true
+                ),
+                { IsValueType: true }
+                    when useStructTupleUnion
+                        && !type.Resolve().IsEnum
+                        && !ProjectedType.IsPyIntegerType(type.FullName) =>
                     $"{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)} | {type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes)}",
                 _ =>
                     $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
