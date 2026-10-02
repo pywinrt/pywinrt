@@ -994,6 +994,7 @@ namespace py::interp
             "result",
             "exception",
             "get_loop",
+            "_make_cancelled_error",
         };
 
         template<size_t I>
@@ -1005,6 +1006,36 @@ namespace py::interp
         {
             return call_future_state(
                 self, future_method_names[I], args, nargs, kwnames);
+        }
+
+        /// The attributes of asyncio.Future that asyncio itself reads from
+        /// outside the future, which future_attribute<I>() answers with the
+        /// FutureState's attribute of the same name.
+        constexpr char const* future_attribute_names[] = {
+            "_cancel_message",
+            "_loop",
+        };
+
+        template<size_t I>
+        PyObject* future_attribute(PyObject* self, void* /*unused*/) noexcept
+        {
+            pyobj_handle state{get_future_state(self)};
+            if (!state)
+            {
+                return nullptr;
+            }
+
+            return PyObject_GetAttrString(state.get(), future_attribute_names[I]);
+        }
+
+        /**
+         * _source_traceback, which asyncio reports with an error that nothing
+         * retrieved. Where an operation was made is not recorded.
+         */
+        PyObject* future_source_traceback_get(
+            PyObject* /*self*/, void* /*unused*/) noexcept
+        {
+            Py_RETURN_NONE;
         }
 
         /**
@@ -1232,12 +1263,23 @@ namespace py::interp
              reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<6>)),
              METH_FASTCALL | METH_KEYWORDS,
              nullptr},
+            {"_make_cancelled_error",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(future_method<7>)),
+             METH_FASTCALL | METH_KEYWORDS,
+             nullptr},
             {}};
 
         PyGetSetDef async_getsets[]
             = {{"_asyncio_future_blocking",
                 future_blocking_get,
                 future_blocking_set,
+                nullptr,
+                nullptr},
+               {"_cancel_message", future_attribute<0>, nullptr, nullptr, nullptr},
+               {"_loop", future_attribute<1>, nullptr, nullptr, nullptr},
+               {"_source_traceback",
+                future_source_traceback_get,
+                nullptr,
                 nullptr,
                 nullptr},
                {}};

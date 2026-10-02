@@ -448,7 +448,11 @@ class FutureState(Generic[T]):
 
         return self._result  # type: ignore [return-value]
 
-    def _cancelled_error(self) -> asyncio.CancelledError:
+    def _make_cancelled_error(self, op: AsyncOp[T]) -> asyncio.CancelledError:
+        """
+        The error that a cancelled future raises, which ``asyncio.gather()``
+        asks the future for.
+        """
         if self._cancel_message is None:
             return asyncio.CancelledError()
 
@@ -496,7 +500,7 @@ class FutureState(Generic[T]):
             raise asyncio.InvalidStateError("Result is not ready.")
 
         if self._cancel_requested:
-            raise self._cancelled_error()
+            raise self._make_cancelled_error(op)
 
         return self._read_results(op)
 
@@ -505,7 +509,7 @@ class FutureState(Generic[T]):
             raise asyncio.InvalidStateError("Exception is not set.")
 
         if self._cancel_requested:
-            raise self._cancelled_error()
+            raise self._make_cancelled_error(op)
 
         try:
             self._read_results(op)
