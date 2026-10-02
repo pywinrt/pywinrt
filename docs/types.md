@@ -187,17 +187,137 @@ x, y = window.position.unpack()
 
 ## Objects
 
-!!! todo "Todo"
+A WinRT runtime class is projected as a Python class whose instances wrap
+WinRT objects. Every one derives from [`winrt.system.Object`](api/system.md#object).
 
-    explain objects aka runtime classes
+Calling the class constructs an object with the class's activation factory.
+A class with several constructors chooses one by the number of arguments, in
+the same way as [methods](#methods), and the arguments are positional only. A
+class that has no constructor raises [`TypeError`][TypeError] when it is
+called; its objects come from the methods and properties of other objects.
+
+```python
+from winrt.windows.foundation import Uri
+
+uri = Uri("https://example.com/")
+page = Uri("https://example.com/", "docs/index.html")
+```
+
+Static members - methods, [properties](#properties) and [events](#events) -
+are reached through the class rather than an instance.
+
+A runtime class that WinRT declares composable can be subclassed in Python,
+and the subclass can override the class's overridable methods, which have a
+leading underscore like the other protected members. Any other class refuses
+to be a base class with a `TypeError`.
+
+```python
+from winrt.windows.ui.xaml import Application
+
+
+class App(Application):
+    def _on_launched(self, args) -> None:
+        ...
+```
+
+A wrapper is not the WinRT object itself, and reading the same object twice,
+for example from a property, gives two wrappers. They compare equal with `==`
+and have the same `hash()`, because those ask whether the two hold the same
+WinRT object, but `is` tells them apart. Two objects that only hold equal
+values, such as two `Uri` objects of the same address, are not equal. An
+object that implements `IStringable` converts to its string with
+[`str()`][str]; `repr()` is Python's default.
+
+A null object comes back as `None`. The type hints annotate a method or
+property `| None` where WinRT's documentation says it can return null, but
+they do not yet cover every namespace, so a member without the annotation can
+still return `None` where WinRT returns null.
+
+An object that has resources to release implements `IClosable` and is a
+[context manager](#context-managers).
+
+### Query interface
+
+A WinRT object implements several interfaces, and the type that a method or
+property hands it back as is only the one its signature declares. When the
+signature says `Object`, for example, the wrapper has none of the members of
+the object's class. `as_()` asks the object for another interface, which WinRT
+calls [QueryInterface][QueryInterface], and returns a wrapper of that type:
+
+```python
+from winrt.windows.foundation import Uri
+from winrt.windows.foundation.collections import PropertySet
+
+properties = PropertySet()
+properties.insert("home", Uri("https://example.com/"))
+
+home = properties.lookup("home")  # a winrt.system.Object
+print(home.as_(Uri).host)
+```
+
+`as_()` takes a runtime class or an interface, and raises [`OSError`][OSError]
+when the object does not implement it. [`isinstance()`][isinstance] asks the
+same question without raising; see [Interfaces](#interfaces).
+
+!!! seealso "See also"
+
+    [`winrt.runtime.interop.as_interface()`](api/runtime.interop.md#as_interface) for an
+    interface that the projection does not know.
+
+[TypeError]: https://docs.python.org/3/builtins/exceptions.html#TypeError
+[QueryInterface]: https://learn.microsoft.com/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void)
 
 ### Methods
 
-!!! todo "Todo"
+Methods are named with the `lower_case_with_underscores`
+[naming convention](#naming-conventions). Their arguments are positional only,
+and a keyword argument raises [`TypeError`][TypeError].
 
-    explain method naming and overload rules
+A method with several outputs returns them as a tuple: the return value first,
+then the output parameters in the order they are declared.
 
-    <https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#method-overloading>
+WinRT supports method overloading - several methods of one type with the same
+name. Overloads usually differ in the number of parameters, and a call chooses
+the overload that takes as many arguments as it was given. Too many or too few
+arguments raise `TypeError`, as do arguments of the wrong type.
+
+```python
+folder.create_file_async("spam.txt")
+folder.create_file_async("spam.txt", CreationCollisionOption.REPLACE_EXISTING)
+```
+
+Some types have several overloads that take the same number of parameters.
+Those cannot be told apart by the number of arguments, so each one is
+projected with the unique name it has in the WinRT metadata. One of them still
+keeps the shared name: an overload that has no unique name in the metadata,
+otherwise the one that the metadata marks as the default overload.
+
+```python
+# Union(Rect, Point), the default overload
+RectHelper.union(rect, point)
+# Union(Rect, Rect)
+RectHelper.union_with_rect(rect, other_rect)
+```
+
+Overridable methods - the methods that a Python subclass of a composable class
+implements - are the exception to the rule. Python methods cannot be
+overloaded, so each overload of an overridable method keeps its own unique name
+from the metadata.
+
+!!! version-changed "Changed in version 4.0"
+
+    PyWinRT 3.x used the unique name for every overload that had one, even
+    when the overload could have been chosen by the number of arguments. For
+    the methods that are not overridable, the Windows SDK packages keep those
+    names as aliases that raise a `DeprecationWarning`, and they will be
+    removed under the [deprecation policy](versioning.md#deprecation-policy).
+    The other packages do not have them. `scripts/3to4/inspect_source.py` in
+    the repository finds them in your code.
+
+    ```python
+    # deprecated, use folder.create_file_async("spam.txt") instead
+    folder.create_file_async_overload_default_options("spam.txt")
+    ```
 
 ### Properties
 
@@ -393,9 +513,87 @@ Handle exceptions inside the handler. See [Exceptions](#exceptions).
 
 ## Interfaces
 
-!!! todo "Todo"
+A WinRT interface is projected as an abstract Python class. It cannot be
+instantiated, since an interface is something an object implements and not an
+object of its own.
 
-    explain interfaces
+A projected class does not derive from the interfaces it implements in Python,
+but [`isinstance()`][isinstance] and [`issubclass()`][issubclass] answer for
+them anyway. `isinstance(obj, IStringable)` asks the object, in the same way as
+[`as_()`](#query-interface), and `issubclass(Uri, IStringable)` is answered
+from what the projection says the class implements, including the interfaces
+it has through a base class and the interfaces those interfaces require.
+
+```python
+from winrt.windows.foundation import IStringable, Uri
+
+uri = Uri("https://example.com/")
+assert isinstance(uri, IStringable)
+assert issubclass(Uri, IStringable)
+```
+
+A parameterized interface, such as `IVector[str]`, is for type hints.
+`isinstance()` and `issubclass()` raise [`TypeError`][TypeError] for it, with
+or without type arguments, since without them there is no interface to ask
+for and with them Python refuses any parameterized generic type.
+
+An object whose declared type is an interface is an instance of that
+interface. Its exact type, which `type()` and `repr()` show with a leading
+underscore, such as `_IStringable`, is an implementation detail that may
+change, so check for the interface with `isinstance(obj, IStringable)` rather
+than comparing types.
+
+### Implementing an interface
+
+Passing a WinRT API an object of your own is rarely needed. Where a parameter
+is a collection interface, such as `IIterable` or `IMap`, pass a Python
+`list`, `dict` or other [collection](#collections) instead. For any other
+interface, use one of the runtime classes that implement it.
+
+Some APIs call back into an object that the program provides, as XAML does
+with a value converter. For those, a Python class that derives from an
+interface implements it, and its instances can be passed wherever WinRT wants
+that interface. The class defines the interface's methods and properties, and
+those of every interface the interface requires, and WinRT sees one object
+that answers to all of them. The type hints mark the members abstract, so a
+type checker reports one that is missing; at run time a missing member fails
+only when WinRT calls it.
+
+```python
+from winrt.system import Object, box_string, unbox_string
+from winrt.windows.ui.xaml.data import IValueConverter
+from winrt.windows.ui.xaml.interop import TypeName
+
+
+class UpperCase(IValueConverter):
+    def convert(
+        self, value: Object, target_type: TypeName, parameter: Object, language: str
+    ) -> Object:
+        return box_string(unbox_string(value).upper())
+
+    def convert_back(
+        self, value: Object, target_type: TypeName, parameter: Object, language: str
+    ) -> Object:
+        return value
+```
+
+Passed to WinRT and handed back again, for example by storing it in a
+collection and reading it back, the object comes back as the same Python
+object rather than as a wrapper.
+
+WinRT calls the methods on whatever thread it calls them from, as it does
+[event handlers](#which-thread-calls-the-handler). An exception that escapes
+one goes to [`sys.unraisablehook()`][unraisablehook] and WinRT gets the error
+code `PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`; see [Exceptions](#exceptions).
+
+!!! version-changed "Changed in version 4.0"
+
+    An interface refuses to be instantiated, and `issubclass()` answers for
+    the interfaces a projected class implements, where it used to answer
+    `False`. `isinstance()` and `issubclass()` raise `TypeError` for a
+    parameterized interface without type arguments.
+
+[issubclass]: https://docs.python.org/3/builtins/functions.html#issubclass
 
 ## Delegates
 
