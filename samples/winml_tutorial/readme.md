@@ -284,7 +284,7 @@ and find out what the image represents.
 def evaluate_model(session, binding):
     results = session.evaluate(binding, "RunId")
     o = results.outputs["softmaxout_1"]
-    result_tensor = winml.TensorFloat._from(o)
+    result_tensor = o.as_(winml.TensorFloat)
     return result_tensor.get_as_vector_view()
 ```
 
@@ -299,8 +299,8 @@ A few things to note about the `evaluate_model` function:
   convert the softmaxout_1 output object to the correct type in order to use it from Python.
   To convert a WinRT base object to a different static type, all WinRT classes and interfaces
   support [QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface%28refiid_void%29).
-  In Python, QueryInterface is projected as a _from static method on the type we want to convert to.
-  All WinRT classes and non-parameterized interfaces expose a _from method.
+  In Python, QueryInterface is projected as the `as_()` method of every WinRT object, which takes
+  the type we want to convert to.
 
 Adding model evaluation to `async_main` is a simple one line addition:
 
