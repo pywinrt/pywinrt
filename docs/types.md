@@ -695,7 +695,8 @@ Array(Int32, [1, 2, 3])
 ### Arrays as buffers
 
 An `Array` supports the buffer protocol, in the format given for its element
-type in the [table above](#fundamental-types). An array of fundamental types
+type in the [table above](#fundamental-types), or for one of the
+[numerics](#numerics) structs as a block of floats. An array of fundamental types
 or of structs of fundamental types exports a writable buffer, so
 [`memoryview`][memoryview], [`struct`][struct] and similar can read and write
 its elements in place. An array whose elements hold references - strings,
@@ -1188,3 +1189,102 @@ is also limited to +/-999999999 days.
 
 WinRT serializes values of this type as 100s of nanoseconds.
 It uses a signed 64-bit integer for this, so the `"q"` format string is used in Python.
+
+### Numerics
+
+The structs of [Windows.Foundation.Numerics][wfn] - `Vector2`, `Vector3`,
+`Vector4`, `Quaternion`, `Plane`, `Matrix3x2` and `Matrix4x4` - have the
+arithmetic, the methods and the constants that
+[System.Numerics][System.Numerics] gives them in .NET, such as
+`v.length()`, `v.dot(w)`, `Vector3.unit_x` and `Matrix4x4.make_rotation_z()`.
+Their fields are 32-bit floats, so a value read back from one is rounded to
+`float32` precision.
+
+The operators:
+
+| Expression | Meaning |
+|---|---|
+| `v + w`, `v - w`, `-v` | Elementwise, for the vectors, the quaternion and the matrices. |
+| `v * w`, `v / w` | Elementwise, for two vectors of the same type. |
+| `v * 2`, `2 * v`, `v / 2` | Scaling by a number, on either side; a matrix or a quaternion is multiplied by a number but not divided. |
+| `a @ b` | The matrix product of two matrices of the same type. |
+| `q * r`, `q @ r` | The Hamilton product of two quaternions, which composes their rotations; `q.concatenate(r)` is `r * q`. |
+| `v @ m` | `v.transform(m)`: a vector by a `Matrix4x4` or a `Quaternion`, and a `Vector2` by a `Matrix3x2` too. |
+| `abs(v)` | `v.length()`, for the vectors and the quaternion. |
+
+`*` between two matrices raises [`TypeError`][TypeError], so that it is never
+taken for either the matrix product or an elementwise product.
+
+The library uses row vectors: a vector is transformed by putting it on the
+left of a matrix, and a translation is in the last row of the matrix, in
+`m41`, `m42` and `m43`. A matrix on the left of a vector is not supported.
+Since transforms compose from left to right, `v @ (a @ b)` applies `a` and
+then `b`.
+
+```python
+from math import pi
+from winrt.windows.foundation.numerics import Matrix4x4, Vector3
+
+move = Matrix4x4.make_translation(10, 0, 0)
+turn = Matrix4x4.make_rotation_z(pi / 2)
+
+point = Vector3(1, 0, 0) @ (turn @ move)   # turned, then moved: (10, 1, 0)
+```
+
+A vector or a quaternion is a sequence of its components, so it unpacks and
+works with [`len()`][len], [`sum()`][sum], [`max()`][max] and the like. A
+matrix is indexed by a row and a column, counted from 0: `m[3, 0]` is `m.m41`.
+`unpack()` gives the fields of any of them as a tuple.
+
+```python
+x, y, z = Vector3(1, 2, 3)
+```
+
+#### NumPy
+
+Each of these structs supports the buffer protocol: a read-only buffer of its
+floats, in the shape `(2,)`, `(3,)` or `(4,)` for the vectors and the
+quaternion, `(4,)` for a `Plane` (the normal and then the distance), and
+`(3, 2)` or `(4, 4)` for the matrices, a row after another. An
+[`Array`](#arrays) of them is a writable block of floats with one more
+dimension, `(n, 3)` for an array of `Vector3` and `(n, 4, 4)` for an array of
+`Matrix4x4`. [NumPy][NumPy] and anything else that reads buffers sees them
+without a copy:
+
+```python
+import numpy as np
+from winrt.system import Array
+from winrt.windows.foundation.numerics import Matrix4x4, Vector3
+
+np.asarray(Matrix4x4.identity)             # a (4, 4) float32 view
+points = Array(Vector3, 1000)
+np.asarray(points)[:, 2] = 1               # writes z of every point
+```
+
+The other way around, a buffer of floats or doubles in the shape of a struct,
+or flat, is taken wherever the struct is, as a tuple of its fields is: a NumPy
+array of shape `(3,)` stands for a `Vector3` and one of shape `(4, 4)` or
+`(16,)` for a `Matrix4x4`. An `Array` of one of the structs is made from, and
+an array parameter of one takes, a block of `float32` values of shape
+`(n, 3)`, `(n, 4, 4)` and so on, or of the same floats flat:
+
+```python
+vectors = Array(Vector3, np.zeros((1000, 3), np.float32))
+```
+
+!!! version-changed "Changed in version 4.0"
+
+    `*` between two matrices was the matrix product, and is a `TypeError`;
+    the product is `@`. The structs export a buffer, the vectors and the
+    quaternion are sequences, a matrix takes `m[row, column]`, a number
+    multiplies a matrix or a quaternion from either side, and a buffer is
+    taken in place of a struct. An `Array` of these structs exported a
+    buffer of one item per element with a named field per float, and exports
+    a block of floats.
+
+[wfn]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.numerics
+[System.Numerics]: https://learn.microsoft.com/en-us/dotnet/api/system.numerics
+[NumPy]: https://numpy.org/
+[len]: https://docs.python.org/3/builtins/functions.html#len
+[sum]: https://docs.python.org/3/builtins/functions.html#sum
+[max]: https://docs.python.org/3/builtins/functions.html#max
