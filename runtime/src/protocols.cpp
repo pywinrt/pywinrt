@@ -1359,6 +1359,47 @@ namespace py::interp
         }
 
         /**
+         * len() of an IBuffer, which is the length of its buffer view.
+         */
+        Py_ssize_t ibuffer_length(PyObject* self) noexcept
+        {
+            try
+            {
+                winrt::Windows::Storage::Streams::IBuffer buffer;
+                winrt::copy_from_abi(buffer, abi_of(self));
+
+                auto _gil = release_gil();
+                return static_cast<Py_ssize_t>(buffer.Length());
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * len() of an IMemoryBufferReference, which is the length of its
+         * buffer view.
+         */
+        Py_ssize_t memory_buffer_length(PyObject* self) noexcept
+        {
+            try
+            {
+                winrt::Windows::Foundation::IMemoryBufferReference reference;
+                winrt::copy_from_abi(reference, abi_of(self));
+
+                auto _gil = release_gil();
+                return static_cast<Py_ssize_t>(reference.Capacity());
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
          * Whether @p record says the type implements @p flag.
          */
         bool implements(table::type_view const& record, uint32_t flag) noexcept
@@ -1597,12 +1638,24 @@ namespace py::interp
         {
             // Which of the two the type is decides both where the bytes
             // come from and what says how many there are, so it picks the
-            // slot rather than being asked again on every view.
+            // slots rather than being asked again on every call.
+            auto const ibuffer = implements(record, table::type_flags::buffer_length);
+
             slots.push_back(
                 {Py_bf_getbuffer,
-                 implements(record, table::type_flags::buffer_length)
-                     ? reinterpret_cast<void*>(ibuffer_view)
-                     : reinterpret_cast<void*>(memory_buffer_view)});
+                 ibuffer ? reinterpret_cast<void*>(ibuffer_view)
+                         : reinterpret_cast<void*>(memory_buffer_view)});
+
+            // A collection's len() counts its elements, which it has from the
+            // collection protocol above.
+            if (!implements(record, table::type_flags::mapping)
+                && !implements(record, table::type_flags::sequence))
+            {
+                slots.push_back(
+                    {Py_sq_length,
+                     ibuffer ? reinterpret_cast<void*>(ibuffer_length)
+                             : reinterpret_cast<void*>(memory_buffer_length)});
+            }
         }
     }
 

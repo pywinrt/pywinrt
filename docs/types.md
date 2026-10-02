@@ -1014,6 +1014,9 @@ than using the WinRT [Windows.Storage.Streams.IDataReader][IDataReader] or
 protocol via the *Windows.Foundation.IMemoryBufferReference*. Care should be
 taken since the underlying memory can be released.
 
+`len()` of a buffer is its length in bytes, and of a memory buffer reference its
+capacity, which is the length of a [`memoryview`][memoryview] of either.
+
 [bytes]: https://docs.python.org/3/builtins/stdtypes.html#bytes
 [memoryview]: https://docs.python.org/3/builtins/stdtypes.html#memoryview
 [IBuffer]: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.ibuffer
