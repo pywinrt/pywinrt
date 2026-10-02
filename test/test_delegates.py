@@ -169,6 +169,21 @@ class TestDelegate(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "takes a callable"):
             wf.Deferral(42)  # type: ignore
 
+    def test_a_delegate_read_back_is_a_wrapper(self) -> None:
+        # What WinRT hands back is the delegate it holds, which calls the
+        # callable that was set but is not that callable.
+        done = threading.Event()
+
+        def handler(sender: wf.IAsyncAction, status: wf.AsyncStatus) -> None:
+            done.set()
+
+        action = tc.TestRunner.create_async_action(10)
+        action.completed = handler
+
+        self.assertIsNot(action.completed, handler)
+        self.assertTrue(callable(action.completed))
+        self.assertTrue(done.wait(5))
+
     def test_callable_is_released(self) -> None:
         # The delegate holds a reference to the callable for as long as WinRT
         # holds the delegate, and gives it back afterwards.
