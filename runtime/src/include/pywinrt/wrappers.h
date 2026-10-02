@@ -11,6 +11,8 @@
 
 #include <pywinrt/prelude.h>
 
+#include <span>
+
 namespace py
 {
     /**
@@ -128,6 +130,17 @@ namespace py
          */
         virtual std::unique_ptr<Array> Slice(uint32_t start, uint32_t count) noexcept
             = 0;
+
+        /**
+         * The shape of one element as a block of floats when the element is
+         * one of the Windows.Foundation.Numerics structs, whose arrays export
+         * a block of floats with one more dimension rather than named fields;
+         * empty for every other element.
+         */
+        virtual std::span<Py_ssize_t const> ElementShape() noexcept
+        {
+            return {};
+        }
 
         /**
          * Whether this is the fill array of a call that is still running: the

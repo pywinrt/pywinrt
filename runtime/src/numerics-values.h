@@ -15,6 +15,7 @@
 
 #include <pywinrt/base.h>
 
+#include "numerics-traits.h"
 #include "numerics.h"
 #include "structs.h"
 #include "types.h"
@@ -29,63 +30,6 @@ namespace py::interp::numerics
 {
     namespace
     {
-        namespace num = winrt::Windows::Foundation::Numerics;
-
-        /**
-         * The C++ value and the Python name of one of the structs.
-         */
-        template<kind K>
-        struct traits;
-
-        template<>
-        struct traits<kind::vector2>
-        {
-            using type = num::float2;
-            static constexpr char const* py_name = "Vector2";
-        };
-
-        template<>
-        struct traits<kind::vector3>
-        {
-            using type = num::float3;
-            static constexpr char const* py_name = "Vector3";
-        };
-
-        template<>
-        struct traits<kind::vector4>
-        {
-            using type = num::float4;
-            static constexpr char const* py_name = "Vector4";
-        };
-
-        template<>
-        struct traits<kind::matrix3x2>
-        {
-            using type = num::float3x2;
-            static constexpr char const* py_name = "Matrix3x2";
-        };
-
-        template<>
-        struct traits<kind::matrix4x4>
-        {
-            using type = num::float4x4;
-            static constexpr char const* py_name = "Matrix4x4";
-        };
-
-        template<>
-        struct traits<kind::plane>
-        {
-            using type = num::plane;
-            static constexpr char const* py_name = "Plane";
-        };
-
-        template<>
-        struct traits<kind::quaternion>
-        {
-            using type = num::quaternion;
-            static constexpr char const* py_name = "Quaternion";
-        };
-
         /**
          * Which struct a C++ value belongs to, which is how the argument and
          * result types of a C++/WinRT function say which Python type to read

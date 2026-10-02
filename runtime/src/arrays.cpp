@@ -25,6 +25,7 @@
 #include "arrays.h"
 #include "callbacks.h"
 #include "interp.h"
+#include "numerics-buffer.h"
 #include "structs.h"
 #include "types.h"
 
@@ -343,6 +344,27 @@ namespace py::interp
         }
 
         /**
+         * The shape of one value of @p value's type as a block of floats, which
+         * only a numerics struct has, once append_format() has resolved the
+         * type.
+         */
+        std::span<Py_ssize_t const> element_shape(arg_desc const& value) noexcept
+        {
+            if (value.code != table::type_code::struct_)
+            {
+                return {};
+            }
+
+            auto const info = load_published(value.info);
+            if (!info)
+            {
+                return {};
+            }
+
+            return numerics::element_shape(info->numerics_kind);
+        }
+
+        /**
          * Copies @p count values of @p value's type, each @p width bytes, from
          * @p source into @p destination, which is zeroed storage the caller
          * owns.
@@ -537,6 +559,11 @@ namespace py::interp
         size_t ValueSize() noexcept override
         {
             return value_size_;
+        }
+
+        std::span<Py_ssize_t const> ElementShape() noexcept override
+        {
+            return element_shape(element_);
         }
 
         void* Data() noexcept override
@@ -956,8 +983,14 @@ namespace py::interp
      * call is over. The fill array a Python handler is given refuses the
      * export, so it cannot be passed on to another call.
      *
+     * An array of numerics structs is also borrowed from a block of float32
+     * values with the element's shape as its trailing dimensions, or flat,
+     * which is what a winrt.system.Array of them exports and what a NumPy
+     * array of them is.
+     *
      * @param writable Whether the callee writes the elements, which is what a
      * lent array - a fill array - is for.
+     * @param count Set to how many elements the buffer holds.
      * @returns @c false with a Python error set.
      */
     bool borrow_array(
@@ -965,7 +998,8 @@ namespace py::interp
         arg_desc& element,
         PyObject* obj,
         bool writable,
-        Py_buffer* view) noexcept
+        Py_buffer* view,
+        uint32_t& count) noexcept
     {
         uint32_t value_size{};
         if (!element_size(owner, element, value_size))
@@ -1000,9 +1034,25 @@ namespace py::interp
             return false;
         }
 
-        if (!is_buffer_compatible(*view, value_size, format.c_str()))
+        auto elements = numerics::block_count(*view, element_shape(element));
+
+        if (elements < 0)
+        {
+            if (!is_buffer_compatible(*view, value_size, format.c_str()))
+            {
+                PyBuffer_Release(view);
+                return false;
+            }
+
+            elements = view->shape[0];
+        }
+
+        count = static_cast<uint32_t>(elements);
+
+        if (static_cast<Py_ssize_t>(count) != elements)
         {
             PyBuffer_Release(view);
+            PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
             return false;
         }
 
@@ -1032,12 +1082,13 @@ namespace py::interp
 
         auto const writable = arg.category == table::param_category::fill_array;
 
-        if (!borrow_array(owner, arg, value, writable, view))
+        uint32_t count{};
+        if (!borrow_array(owner, arg, value, writable, view, count))
         {
             return false;
         }
 
-        store_argument(args, arg.offset, static_cast<uintptr_t>(view->shape[0]));
+        store_argument(args, arg.offset, static_cast<uintptr_t>(count));
         store_argument(args, arg.data_offset, reinterpret_cast<uintptr_t>(view->buf));
 
         return true;
@@ -1245,14 +1296,21 @@ namespace py::interp
         projection& owner, arg_desc& element, PyObject* value, array_out& out)
     {
         Py_buffer view{};
+        uint32_t count{};
 
-        if (!borrow_array(owner, element, value, false, &view))
+        if (!borrow_array(owner, element, value, false, &view, count))
         {
             throw python_exception();
         }
 
-        auto const count = static_cast<uint32_t>(view.shape[0]);
-        auto const width = static_cast<size_t>(view.itemsize);
+        uint32_t value_size{};
+        if (!element_size(owner, element, value_size))
+        {
+            PyBuffer_Release(&view);
+            throw python_exception();
+        }
+
+        auto const width = static_cast<size_t>(value_size);
 
         if (count == 0)
         {
