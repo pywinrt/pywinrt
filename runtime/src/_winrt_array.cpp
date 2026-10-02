@@ -1,6 +1,7 @@
 #include <pywinrt/base.h>
 #include "_winrt_array.h"
 #include "module_state.h"
+#include "numerics-buffer.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt
@@ -478,30 +479,66 @@ namespace py::cpp::_winrt
 
             auto const& view = buffer.view();
 
-            if (view.ndim != 1)
+            // An array of numerics structs is also made from the block of
+            // floats it exports, or from the same floats flat.
+            auto const element_shape = self->array->ElementShape();
+            auto elements = py::interp::numerics::block_count(view, element_shape);
+
+            if (elements < 0)
             {
-                PyErr_SetString(PyExc_TypeError, "ndim must be 1");
-                return nullptr;
+                // What else it is made from is its named fields, a whole
+                // struct per item, so any other item is a float block gone
+                // wrong, such as one of doubles.
+                if (!element_shape.empty())
+                {
+                    if (view.itemsize
+                        != static_cast<Py_ssize_t>(self->array->ValueSize()))
+                    {
+                        auto const type = self->array->WinrtElementTypeName();
+
+                        pyobj_handle name{
+                            PyUnicode_FromWideChar(type.data(), type.size())};
+                        if (!name)
+                        {
+                            return nullptr;
+                        }
+
+                        PyErr_Format(
+                            PyExc_TypeError,
+                            "a buffer for an Array of %U must hold float32 "
+                            "values, each element's in its shape or flat",
+                            name.get());
+                        return nullptr;
+                    }
+                }
+
+                if (view.ndim != 1)
+                {
+                    PyErr_SetString(PyExc_TypeError, "ndim must be 1");
+                    return nullptr;
+                }
+
+                if (view.itemsize != static_cast<Py_ssize_t>(self->array->ValueSize()))
+                {
+                    PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
+                    return nullptr;
+                }
+
+                auto format = view.format ? std::basic_string_view(view.format)
+                                          : std::basic_string_view("B");
+
+                if (format != self->array->Format())
+                {
+                    PyErr_SetString(PyExc_TypeError, "format is incorrect");
+                    return nullptr;
+                }
+
+                elements = view.len / view.itemsize;
             }
 
-            if (view.itemsize != static_cast<Py_ssize_t>(self->array->ValueSize()))
-            {
-                PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
-                return nullptr;
-            }
+            auto const size = static_cast<uint32_t>(elements);
 
-            auto format = view.format ? std::basic_string_view(view.format)
-                                      : std::basic_string_view("B");
-
-            if (format != self->array->Format())
-            {
-                PyErr_SetString(PyExc_TypeError, "format is incorrect");
-                return nullptr;
-            }
-
-            auto const size = static_cast<uint32_t>(view.len / view.itemsize);
-
-            if (static_cast<Py_ssize_t>(size) != view.len / view.itemsize)
+            if (static_cast<Py_ssize_t>(size) != elements)
             {
                 PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
                 return nullptr;
@@ -837,6 +874,40 @@ namespace py::cpp::_winrt
             }
         }
 
+        // An array of numerics structs is a block of floats with the shape of
+        // its element after its length, which is C order and not Fortran
+        // order; every other array is its elements, one dimension of them.
+        auto const element_shape = self->array->ElementShape();
+        auto const ndim = 1 + static_cast<int>(element_shape.size());
+
+        if (ndim > 1)
+        {
+            if ((flags & PyBUF_F_CONTIGUOUS) == PyBUF_F_CONTIGUOUS)
+            {
+                view->obj = nullptr;
+                PyErr_SetString(
+                    PyExc_BufferError,
+                    "an array of numerics structs is not Fortran contiguous");
+                return -1;
+            }
+        }
+
+        // The shape and the strides live as long as the view does, in one
+        // block that Array_bf_releasebuffer frees.
+        Py_ssize_t* dimensions = nullptr;
+
+        if ((flags & PyBUF_ND) == PyBUF_ND)
+        {
+            dimensions
+                = static_cast<Py_ssize_t*>(PyMem_Malloc(2 * ndim * sizeof(Py_ssize_t)));
+            if (!dimensions)
+            {
+                view->obj = nullptr;
+                PyErr_NoMemory();
+                return -1;
+            }
+        }
+
         view->readonly = readonly ? 1 : 0;
 
         // required fields
@@ -844,35 +915,51 @@ namespace py::cpp::_winrt
         view->buf = reinterpret_cast<void*>(self->array->Data());
         view->len
             = static_cast<Py_ssize_t>(self->array->Size()) * self->array->ValueSize();
-        view->itemsize = self->array->ValueSize();
-        view->ndim = 1;
+        view->itemsize = element_shape.empty()
+                             ? static_cast<Py_ssize_t>(self->array->ValueSize())
+                             : static_cast<Py_ssize_t>(sizeof(float));
+        view->internal = dimensions;
 
         if ((flags & PyBUF_FORMAT) == PyBUF_FORMAT)
         {
-            view->format = const_cast<char*>(self->array->Format().data());
+            view->format = element_shape.empty()
+                               ? const_cast<char*>(self->array->Format().data())
+                               : const_cast<char*>("f");
         }
         else
         {
             view->format = nullptr;
         }
 
-        if ((flags & PyBUF_ND) == PyBUF_ND)
+        if (dimensions)
         {
-            // HACK: using internal as a Py_ssize_t value so that we don't have
-            // to allocate/free the extra info
-            view->internal
-                = reinterpret_cast<void*>(static_cast<uintptr_t>(self->array->Size()));
-            view->shape = reinterpret_cast<Py_ssize_t*>(&view->internal);
+            view->ndim = ndim;
+            view->shape = dimensions;
+            view->shape[0] = self->array->Size();
+
+            for (int i = 1; i < ndim; i++)
+            {
+                view->shape[i] = element_shape[i - 1];
+            }
         }
         else
         {
-            view->internal = nullptr;
+            view->ndim = 1;
             view->shape = nullptr;
         }
 
+        // PyBUF_STRIDES includes PyBUF_ND, so the block is there.
         if ((flags & PyBUF_STRIDES) == PyBUF_STRIDES)
         {
-            view->strides = &(view->itemsize);
+            view->strides = dimensions + ndim;
+
+            auto stride = view->itemsize;
+
+            for (auto i = ndim; i-- > 0;)
+            {
+                view->strides[i] = stride;
+                stride *= view->shape[i];
+            }
         }
         else
         {
@@ -886,8 +973,9 @@ namespace py::cpp::_winrt
         return 0;
     }
 
-    static void Array_bf_releasebuffer(Array* self, Py_buffer* /*unused*/) noexcept
+    static void Array_bf_releasebuffer(Array* self, Py_buffer* view) noexcept
     {
+        PyMem_Free(view->internal);
         self->array->RemoveExport();
     }
 

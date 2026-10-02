@@ -280,6 +280,13 @@ namespace py::interp::numerics
          */
         std::optional<float> as_number(PyObject* obj) noexcept
         {
+            // float() of an object that is not a number parses it as text, and
+            // that takes any buffer, a struct's own included.
+            if (!PyNumber_Check(obj))
+            {
+                return std::nullopt;
+            }
+
             pyobj_handle number{PyNumber_Float(obj)};
             if (!number)
             {
@@ -291,12 +298,19 @@ namespace py::interp::numerics
         }
 
         /**
-         * Multiplication, of two values of the struct or of one and a number.
+         * Multiplication, of a value of the struct by a number on either side
+         * or of two values of the struct.
          *
-         * @tparam ScalarLeft Whether a number on the left scales the value,
-         * which the vectors offer and the matrices and the quaternion do not.
+         * A number scales the value from either side, since the product is the
+         * same both ways, though System.Numerics only offers the vectors a
+         * number on the left.
+         *
+         * @tparam TwoValues Whether two values multiply, which a vector does
+         * elementwise and a quaternion as the Hamilton product. Two matrices
+         * do not: their product is @, and * between them raises rather than
+         * answering NotImplemented, so that the message can say so.
          */
-        template<kind K, bool ScalarLeft>
+        template<kind K, bool TwoValues>
         PyObject* slot_multiply(PyObject* left, PyObject* right) noexcept
         {
             auto const entry = operand_entry<K>(left, right);
@@ -305,18 +319,15 @@ namespace py::interp::numerics
                 Py_RETURN_NOTIMPLEMENTED;
             }
 
-            if constexpr (ScalarLeft)
+            if (auto const scale = as_number(left))
             {
-                if (auto const scale = as_number(left))
+                typename traits<K>::type value;
+                if (!read_operand<K>(*entry, right, value))
                 {
-                    typename traits<K>::type value;
-                    if (!read_operand<K>(*entry, right, value))
-                    {
-                        return not_implemented();
-                    }
-
-                    return write_struct<K, K>(*entry, *scale * value);
+                    return not_implemented();
                 }
+
+                return write_struct<K, K>(*entry, value * *scale);
             }
 
             typename traits<K>::type a;
@@ -336,7 +347,81 @@ namespace py::interp::numerics
                 return not_implemented();
             }
 
+            if constexpr (TwoValues)
+            {
+                return write_struct<K, K>(*entry, a * b);
+            }
+            else
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "* between two '%s' values is not their product: use @ "
+                    "for the matrix product",
+                    traits<K>::py_name);
+                return nullptr;
+            }
+        }
+
+        /**
+         * @ between two values of the struct, which is the matrix product of
+         * two matrices and the Hamilton product of two quaternions.
+         */
+        template<kind K>
+        PyObject* slot_product(PyObject* left, PyObject* right) noexcept
+        {
+            auto const entry = operand_entry<K>(left, right);
+            if (!entry)
+            {
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            typename traits<K>::type a;
+            if (!read_operand<K>(*entry, left, a))
+            {
+                return not_implemented();
+            }
+
+            typename traits<K>::type b;
+            if (!read_operand<K>(*entry, right, b))
+            {
+                return not_implemented();
+            }
+
             return write_struct<K, K>(*entry, a * b);
+        }
+
+        /**
+         * @ with a vector on the left, which is @p Transform - the vector's
+         * transform() - by a value of one of the structs @p Operands.
+         *
+         * System.Numerics multiplies a row vector by a matrix, so the vector
+         * is on the left as it is in the library's own math. A vector on the
+         * right is NotImplemented rather than a column vector product, which
+         * would hide that convention, and so is a tuple or a buffer on the
+         * right, which could stand for more than one of the operand types.
+         */
+        template<kind K, PyCFunction Transform, kind... Operands>
+        PyObject* slot_transform(PyObject* left, PyObject* right) noexcept
+        {
+            auto const entry = find_type_entry(Py_TYPE(left));
+            if (!entry)
+            {
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            if (entry->numerics_kind != K)
+            {
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            auto const takes
+                = (... || match_struct<K, Operands>(*entry, right).has_value());
+            if (!takes)
+            {
+                return not_implemented();
+            }
+
+            return Transform(left, right);
         }
 
         /**
@@ -402,67 +487,6 @@ namespace py::interp::numerics
             }
 
             return convert(num::length(instance_value<K>(*entry, operand)));
-        }
-
-        /**
-         * The slots of a vector, which are every operator the structs have:
-         * both orders of a scalar multiplication, division by a vector or by a
-         * number, and abs().
-         */
-        template<kind K>
-        void push_vector_slots(std::vector<PyType_Slot>& slots)
-        {
-            slots.push_back({Py_nb_add, reinterpret_cast<void*>(slot_add<K>)});
-            slots.push_back(
-                {Py_nb_subtract, reinterpret_cast<void*>(slot_subtract<K>)});
-            slots.push_back(
-                {Py_nb_multiply, reinterpret_cast<void*>(slot_multiply<K, true>)});
-            slots.push_back(
-                {Py_nb_true_divide,
-                 reinterpret_cast<void*>(slot_true_divide<K, true>)});
-            slots.push_back(
-                {Py_nb_negative, reinterpret_cast<void*>(slot_negative<K>)});
-            slots.push_back(
-                {Py_nb_absolute, reinterpret_cast<void*>(slot_absolute<K>)});
-        }
-
-        /**
-         * The slots of a matrix, which has no division and no length, and
-         * whose scalar multiplication takes the number on the right only.
-         */
-        template<kind K>
-        void push_matrix_slots(std::vector<PyType_Slot>& slots)
-        {
-            slots.push_back({Py_nb_add, reinterpret_cast<void*>(slot_add<K>)});
-            slots.push_back(
-                {Py_nb_subtract, reinterpret_cast<void*>(slot_subtract<K>)});
-            slots.push_back(
-                {Py_nb_multiply, reinterpret_cast<void*>(slot_multiply<K, false>)});
-            slots.push_back(
-                {Py_nb_negative, reinterpret_cast<void*>(slot_negative<K>)});
-        }
-
-        /**
-         * The slots of a quaternion, which divides by another quaternion and
-         * by no number, and whose scalar multiplication takes the number on
-         * the right only.
-         */
-        void push_quaternion_slots(std::vector<PyType_Slot>& slots)
-        {
-            constexpr auto k = kind::quaternion;
-
-            slots.push_back({Py_nb_add, reinterpret_cast<void*>(slot_add<k>)});
-            slots.push_back(
-                {Py_nb_subtract, reinterpret_cast<void*>(slot_subtract<k>)});
-            slots.push_back(
-                {Py_nb_multiply, reinterpret_cast<void*>(slot_multiply<k, false>)});
-            slots.push_back(
-                {Py_nb_true_divide,
-                 reinterpret_cast<void*>(slot_true_divide<k, false>)});
-            slots.push_back(
-                {Py_nb_negative, reinterpret_cast<void*>(slot_negative<k>)});
-            slots.push_back(
-                {Py_nb_absolute, reinterpret_cast<void*>(slot_absolute<k>)});
         }
 
         // ----- the methods ------------------------------------------------
@@ -1151,6 +1175,72 @@ namespace py::interp::numerics
                 });
         }
 
+        /**
+         * The slots of a vector, which are every operator the structs have:
+         * both orders of a scalar multiplication, division by a vector or by a
+         * number, abs(), and @ by what transform() takes.
+         */
+        template<kind K, binaryfunc Transform>
+        void push_vector_slots(std::vector<PyType_Slot>& slots)
+        {
+            slots.push_back({Py_nb_add, reinterpret_cast<void*>(slot_add<K>)});
+            slots.push_back(
+                {Py_nb_subtract, reinterpret_cast<void*>(slot_subtract<K>)});
+            slots.push_back(
+                {Py_nb_multiply, reinterpret_cast<void*>(slot_multiply<K, true>)});
+            slots.push_back(
+                {Py_nb_matrix_multiply, reinterpret_cast<void*>(Transform)});
+            slots.push_back(
+                {Py_nb_true_divide,
+                 reinterpret_cast<void*>(slot_true_divide<K, true>)});
+            slots.push_back(
+                {Py_nb_negative, reinterpret_cast<void*>(slot_negative<K>)});
+            slots.push_back(
+                {Py_nb_absolute, reinterpret_cast<void*>(slot_absolute<K>)});
+        }
+
+        /**
+         * The slots of a matrix, which has no division and no length, and
+         * whose product is @.
+         */
+        template<kind K>
+        void push_matrix_slots(std::vector<PyType_Slot>& slots)
+        {
+            slots.push_back({Py_nb_add, reinterpret_cast<void*>(slot_add<K>)});
+            slots.push_back(
+                {Py_nb_subtract, reinterpret_cast<void*>(slot_subtract<K>)});
+            slots.push_back(
+                {Py_nb_multiply, reinterpret_cast<void*>(slot_multiply<K, false>)});
+            slots.push_back(
+                {Py_nb_matrix_multiply, reinterpret_cast<void*>(slot_product<K>)});
+            slots.push_back(
+                {Py_nb_negative, reinterpret_cast<void*>(slot_negative<K>)});
+        }
+
+        /**
+         * The slots of a quaternion, which divides by another quaternion and
+         * by no number, and whose product is both * and @.
+         */
+        void push_quaternion_slots(std::vector<PyType_Slot>& slots)
+        {
+            constexpr auto k = kind::quaternion;
+
+            slots.push_back({Py_nb_add, reinterpret_cast<void*>(slot_add<k>)});
+            slots.push_back(
+                {Py_nb_subtract, reinterpret_cast<void*>(slot_subtract<k>)});
+            slots.push_back(
+                {Py_nb_multiply, reinterpret_cast<void*>(slot_multiply<k, true>)});
+            slots.push_back(
+                {Py_nb_matrix_multiply, reinterpret_cast<void*>(slot_product<k>)});
+            slots.push_back(
+                {Py_nb_true_divide,
+                 reinterpret_cast<void*>(slot_true_divide<k, false>)});
+            slots.push_back(
+                {Py_nb_negative, reinterpret_cast<void*>(slot_negative<k>)});
+            slots.push_back(
+                {Py_nb_absolute, reinterpret_cast<void*>(slot_absolute<k>)});
+        }
+
         // ----- what each struct offers ------------------------------------
 
         PyMethodDef vector2_methods[]
@@ -1393,13 +1483,32 @@ namespace py::interp::numerics
         switch (which)
         {
         case kind::vector2:
-            push_vector_slots<kind::vector2>(slots);
+            push_vector_slots<
+                kind::vector2,
+                slot_transform<
+                    kind::vector2,
+                    method_vector2_transform,
+                    kind::matrix3x2,
+                    kind::matrix4x4,
+                    kind::quaternion>>(slots);
             break;
         case kind::vector3:
-            push_vector_slots<kind::vector3>(slots);
+            push_vector_slots<
+                kind::vector3,
+                slot_transform<
+                    kind::vector3,
+                    method_vector3_transform,
+                    kind::matrix4x4,
+                    kind::quaternion>>(slots);
             break;
         case kind::vector4:
-            push_vector_slots<kind::vector4>(slots);
+            push_vector_slots<
+                kind::vector4,
+                slot_transform<
+                    kind::vector4,
+                    method_vector4_transform,
+                    kind::matrix4x4,
+                    kind::quaternion>>(slots);
             break;
         case kind::matrix3x2:
             push_matrix_slots<kind::matrix3x2>(slots);

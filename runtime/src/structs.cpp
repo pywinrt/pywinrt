@@ -21,6 +21,7 @@
 #include "arrays.h"
 #include "generics.h"
 #include "interp.h"
+#include "numerics-buffer.h"
 #include "numerics-statics.h"
 #include "numerics.h"
 #include "objects.h"
@@ -358,10 +359,12 @@ namespace py::interp
      *
      * A value copied out of a wrapper is borrowed and needs no release; one
      * built from a tuple owns what is in it and must be released once the call
-     * it was made for is over.
+     * it was made for is over. A Windows.Foundation.Numerics struct is also
+     * read out of a buffer of its floats, and holds nothing to release.
      *
      * @throws python_exception if @p obj is neither an instance of the struct's
-     * type nor a tuple of its fields.
+     * type nor a tuple of its fields, nor for a numerics struct a buffer of
+     * them.
      */
     void struct_from_python(type_entry& info, PyObject* obj, void* out)
     {
@@ -373,6 +376,11 @@ namespace py::interp
                 out,
                 reinterpret_cast<uint8_t const*>(obj) + info.blob_offset,
                 info.size);
+            return;
+        }
+
+        if (numerics::read_buffer(info, obj, out))
+        {
             return;
         }
 
@@ -1081,6 +1089,7 @@ namespace py::interp
             {Py_tp_getset, reinterpret_cast<void*>(keep_getsets(proj, getsets))}};
 
         numerics::add_slots(entry.numerics_kind, slots);
+        numerics::add_buffer_slots(entry.numerics_kind, slots);
         slots.push_back({});
 
         PyType_Spec spec{
