@@ -78,6 +78,7 @@ static class StructWriterExtensions
                 w.WriteNumberSlotMethodsPyTyping(type);
             }
 
+            w.WriteNumberBufferPyTyping(type);
             w.WriteNumberMethodPyTyping(type);
         }
 
