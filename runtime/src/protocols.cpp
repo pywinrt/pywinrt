@@ -1325,8 +1325,16 @@ namespace py::interp
                 winrt::Windows::Storage::Streams::IBuffer buffer;
                 winrt::copy_from_abi(buffer, abi_of(self));
 
-                return fill_buffer_view(
-                    self, view, flags, buffer.data(), buffer.Length());
+                uint8_t* data{};
+                uint32_t size{};
+
+                {
+                    auto _gil = release_gil();
+                    data = buffer.data();
+                    size = buffer.Length();
+                }
+
+                return fill_buffer_view(self, view, flags, data, size);
             }
             catch (...)
             {
@@ -1347,8 +1355,16 @@ namespace py::interp
                 winrt::Windows::Foundation::IMemoryBufferReference reference;
                 winrt::copy_from_abi(reference, abi_of(self));
 
-                return fill_buffer_view(
-                    self, view, flags, reference.data(), reference.Capacity());
+                uint8_t* data{};
+                uint32_t size{};
+
+                {
+                    auto _gil = release_gil();
+                    data = reference.data();
+                    size = reference.Capacity();
+                }
+
+                return fill_buffer_view(self, view, flags, data, size);
             }
             catch (...)
             {
