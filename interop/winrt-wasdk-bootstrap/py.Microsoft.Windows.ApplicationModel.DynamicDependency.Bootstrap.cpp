@@ -34,6 +34,8 @@ namespace
         self.shutdown.reset();
     }
 
+    static void shutdown_dealloc(ShutdownObject* self) noexcept;
+
     static PyObject* initialize(PyObject* module, PyObject* args) noexcept
     {
         uint32_t major_minor_version;
@@ -79,7 +81,19 @@ namespace
             return nullptr;
         }
 
-        // FIXME: validate type of shutdown before casting to ShutdownObject
+        // Shutdown is a module attribute, which anything can rebind, so what
+        // calling it made is only a ShutdownObject if it is of the type this
+        // module made, which is the one type with this deallocator.
+        if (Py_TYPE(shutdown)->tp_dealloc
+            != reinterpret_cast<destructor>(shutdown_dealloc))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "Shutdown() made a %s, not a Shutdown object",
+                Py_TYPE(shutdown)->tp_name);
+            Py_DECREF(shutdown);
+            return nullptr;
+        }
 
         HRESULT hr{};
 
