@@ -455,6 +455,9 @@ static class NumberWriterExtensions
                     new("__mul__", "Vector2", [new ParamInfo("other", "Vector2")]),
                     new("__mul__", "Vector2", [new ParamInfo("other", "float")]),
                     new("__rmul__", "Vector2", [new ParamInfo("other", "float")]),
+                    new("__matmul__", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
+                    new("__matmul__", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
+                    new("__matmul__", "Vector2", [new ParamInfo("rotation", "Quaternion")]),
                     new("__truediv__", "Vector2", [new ParamInfo("value", "Vector2")]),
                     new("__truediv__", "Vector2", [new ParamInfo("value", "float")]),
                     new("__neg__", "Vector2", []),
@@ -462,6 +465,9 @@ static class NumberWriterExtensions
                     new("__isub__", "Vector2", [new ParamInfo("other", "Vector2")]),
                     new("__imul__", "Vector2", [new ParamInfo("other", "Vector2")]),
                     new("__imul__", "Vector2", [new ParamInfo("other", "float")]),
+                    new("__imatmul__", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
+                    new("__imatmul__", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
+                    new("__imatmul__", "Vector2", [new ParamInfo("rotation", "Quaternion")]),
                     new("__itruediv__", "Vector2", [new ParamInfo("value", "Vector2")]),
                     new("__itruediv__", "Vector2", [new ParamInfo("value", "float")]),
                     new("__abs__", "float", []),
@@ -476,6 +482,8 @@ static class NumberWriterExtensions
                     new("__mul__", "Vector3", [new ParamInfo("other", "Vector3")]),
                     new("__mul__", "Vector3", [new ParamInfo("other", "float")]),
                     new("__rmul__", "Vector3", [new ParamInfo("other", "float")]),
+                    new("__matmul__", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
+                    new("__matmul__", "Vector3", [new ParamInfo("rotation", "Quaternion")]),
                     new("__truediv__", "Vector3", [new ParamInfo("value", "Vector3")]),
                     new("__truediv__", "Vector3", [new ParamInfo("value", "float")]),
                     new("__neg__", "Vector3", []),
@@ -483,6 +491,8 @@ static class NumberWriterExtensions
                     new("__isub__", "Vector3", [new ParamInfo("other", "Vector3")]),
                     new("__imul__", "Vector3", [new ParamInfo("other", "Vector3")]),
                     new("__imul__", "Vector3", [new ParamInfo("other", "float")]),
+                    new("__imatmul__", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
+                    new("__imatmul__", "Vector3", [new ParamInfo("rotation", "Quaternion")]),
                     new("__itruediv__", "Vector3", [new ParamInfo("value", "Vector3")]),
                     new("__itruediv__", "Vector3", [new ParamInfo("value", "float")]),
                     new("__abs__", "float", []),
@@ -497,6 +507,8 @@ static class NumberWriterExtensions
                     new("__mul__", "Vector4", [new ParamInfo("other", "Vector4")]),
                     new("__mul__", "Vector4", [new ParamInfo("other", "float")]),
                     new("__rmul__", "Vector4", [new ParamInfo("other", "float")]),
+                    new("__matmul__", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                    new("__matmul__", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
                     new("__truediv__", "Vector4", [new ParamInfo("value", "Vector4")]),
                     new("__truediv__", "Vector4", [new ParamInfo("value", "float")]),
                     new("__neg__", "Vector4", []),
@@ -504,6 +516,8 @@ static class NumberWriterExtensions
                     new("__isub__", "Vector4", [new ParamInfo("other", "Vector4")]),
                     new("__imul__", "Vector4", [new ParamInfo("other", "Vector4")]),
                     new("__imul__", "Vector4", [new ParamInfo("other", "float")]),
+                    new("__imatmul__", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                    new("__imatmul__", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
                     new("__itruediv__", "Vector4", [new ParamInfo("value", "Vector4")]),
                     new("__itruediv__", "Vector4", [new ParamInfo("value", "float")]),
                     new("__abs__", "float", []),
@@ -515,13 +529,14 @@ static class NumberWriterExtensions
                 {
                     new("__add__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
                     new("__sub__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
-                    new("__mul__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
                     new("__mul__", "Matrix3x2", [new ParamInfo("other", "float")]),
+                    new("__rmul__", "Matrix3x2", [new ParamInfo("other", "float")]),
+                    new("__matmul__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
                     new("__neg__", "Matrix3x2", []),
                     new("__iadd__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
                     new("__isub__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
-                    new("__imul__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
                     new("__imul__", "Matrix3x2", [new ParamInfo("other", "float")]),
+                    new("__imatmul__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
                 }
             },
             {
@@ -530,13 +545,14 @@ static class NumberWriterExtensions
                 {
                     new("__add__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
                     new("__sub__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
-                    new("__mul__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
                     new("__mul__", "Matrix4x4", [new ParamInfo("other", "float")]),
+                    new("__rmul__", "Matrix4x4", [new ParamInfo("other", "float")]),
+                    new("__matmul__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
                     new("__neg__", "Matrix4x4", []),
                     new("__iadd__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
                     new("__isub__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
-                    new("__imul__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
                     new("__imul__", "Matrix4x4", [new ParamInfo("other", "float")]),
+                    new("__imatmul__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
                 }
             },
             {
@@ -547,12 +563,15 @@ static class NumberWriterExtensions
                     new("__sub__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__mul__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__mul__", "Quaternion", [new ParamInfo("other", "float")]),
+                    new("__rmul__", "Quaternion", [new ParamInfo("other", "float")]),
+                    new("__matmul__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__truediv__", "Quaternion", [new ParamInfo("value", "Quaternion")]),
                     new("__neg__", "Quaternion", []),
                     new("__iadd__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__isub__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__imul__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__imul__", "Quaternion", [new ParamInfo("other", "float")]),
+                    new("__imatmul__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
                     new("__itruediv__", "Quaternion", [new ParamInfo("value", "Quaternion")]),
                     new("__abs__", "float", []),
                 }
@@ -819,6 +838,35 @@ static class NumberWriterExtensions
             var returnPyType = method.IsInPlaceOperator ? "typing.Self" : method.ReturnPyType;
 
             w.WriteLine($"def {method.Name}(self{parameters}) -> {returnPyType}: ...");
+        }
+    }
+
+    /// <summary>
+    /// Writes the buffer every numerics struct exports, which is its floats,
+    /// and the indexing that reads one of them: by position for a vector or a
+    /// quaternion, which is then a sequence of its components, and by row and
+    /// column for a matrix. A <c>Plane</c> has the buffer only.
+    /// </summary>
+    public static void WriteNumberBufferPyTyping(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
+
+        switch (type.Name)
+        {
+            case "Vector2":
+            case "Vector3":
+            case "Vector4":
+            case "Quaternion":
+                w.WriteLine("def __len__(self) -> int: ...");
+                w.WriteLine("def __iter__(self) -> _cabc.Iterator[float]: ...");
+                w.WriteLine("def __getitem__(self, index: typing.SupportsIndex) -> float: ...");
+                break;
+            case "Matrix3x2":
+            case "Matrix4x4":
+                w.WriteLine(
+                    "def __getitem__(self, index: tuple[typing.SupportsIndex, typing.SupportsIndex]) -> float: ..."
+                );
+                break;
         }
     }
 
