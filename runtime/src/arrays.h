@@ -45,7 +45,8 @@ namespace py::interp
         arg_desc& element,
         PyObject* obj,
         bool writable,
-        Py_buffer* view) noexcept;
+        Py_buffer* view,
+        uint32_t& count) noexcept;
 
     bool borrow_array_argument(
         projection& owner,
