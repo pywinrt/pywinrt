@@ -187,6 +187,21 @@ This type implements the Python sequence protocol.
 | `type` | [`type`](https://docs.python.org/3/builtins/functions.html#type) | The type to use for elements of the array. This is a projected WinRT type, a Python type that a WinRT type is projected as, or one of the `winrt.system` aliases for a fundamental type. |
 | `initializer` | `int` or `iter` or `buffer` | An optional iterator of values to use to initialize the array. If an integer value is given, an empty array of that size will be initialized. For value types, any object supporting the CPython buffer protocol with the correct layout can be used as an initializer. |
 
+!!! seealso "See also"
+
+    [Arrays](../types.md#arrays) for how an array behaves and where arrays
+    appear in the projection.
+
+!!! version-changed "Changed in version 4.0"
+
+    * `Array` is a [`Sequence`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence)
+      with item assignment rather than a `MutableSequence`, and
+      `insert()` was removed.
+    * Added slicing, equality with another `Array` and a `repr()`.
+    * The element type can be one of the `winrt.system` aliases.
+    * `Array` is `@typing.final`.
+    * `Array` is safe to use from several threads on the free-threaded build.
+
 !!! deprecated "Deprecated since version 4.0"
 
     Passing a format string, such as `"I"`, in place of the type.

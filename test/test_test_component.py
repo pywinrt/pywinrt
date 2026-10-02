@@ -789,6 +789,18 @@ class TestTestComponent(unittest.TestCase):
     def test_async_action_with_progress_get(self):
         tc.TestRunner.create_async_action_with_progress(10, [1, 2]).get()
 
+    def test_async_action_progress_handler_is_replaced(self) -> None:
+        first: list[int] = []
+        second: list[int] = []
+
+        op = tc.TestRunner.create_async_action_with_progress(10, [1, 2])
+        op.progress = lambda sender, value: first.append(value)
+        op.progress = lambda sender, value: second.append(value)
+        op.get()
+
+        self.assertEqual(first, [])
+        self.assertEqual(second, [1, 2])
+
     def test_async_action_with_progress_wait(self):
         status = tc.TestRunner.create_async_action_with_progress(10, [1, 2]).wait(1)
         self.assertEqual(status, wf.AsyncStatus.COMPLETED)
