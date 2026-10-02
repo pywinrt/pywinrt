@@ -923,6 +923,11 @@ class TestArrayParameters(unittest.TestCase):
         with self.assertRaisesRegex(BufferError, "itemsize == 4, have 2"):
             self.tests.array7(Array(Int16, [1, 2]), Array(Int32, 2))
 
+    def test_values_only_from_a_buffer(self):
+        # A list holds Python objects, not the elements' layout.
+        with self.assertRaisesRegex(TypeError, "bytes-like object"):
+            self.tests.array7([1, 2], Array(Int32, 2))  # type: ignore[arg-type]
+
     def test_lent_array_must_be_writable(self):
         with self.assertRaises(BufferError):
             self.tests.array2(bytes([1, 2]), bytes(2))
