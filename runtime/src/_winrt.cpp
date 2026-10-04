@@ -762,7 +762,7 @@ namespace py::cpp::_winrt
         Py_VISIT(state->projected_method_type.get());
         Py_VISIT(state->to_uuid_func.get());
         Py_VISIT(state->uuid_type.get());
-        Py_VISIT(state->future_state_type);
+        Py_VISIT(state->wrap_async_func);
 
         for (const auto& [key, value] : state->type_cache)
         {
@@ -783,7 +783,7 @@ namespace py::cpp::_winrt
         state->projected_method_type.close();
         state->to_uuid_func.close();
         state->uuid_type.close();
-        Py_CLEAR(state->future_state_type);
+        Py_CLEAR(state->wrap_async_func);
 
         // Nothing here takes the cache lock, and traverse and free do not
         // either. The collector calls them with the world stopped on a
@@ -825,7 +825,7 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->projected_method_type);
         std::destroy_at(&state->to_uuid_func);
         std::destroy_at(&state->uuid_type);
-        Py_XDECREF(state->future_state_type);
+        Py_XDECREF(state->wrap_async_func);
 
         std::destroy_at(&state->type_cache);
 
@@ -1071,7 +1071,7 @@ namespace py::cpp::_winrt
         state->projected_method_type = std::move(projected_method_type);
         state->to_uuid_func = std::move(to_uuid_func);
         state->uuid_type = std::move(uuid_type);
-        state->future_state_type = nullptr; // lazy-initialized
+        state->wrap_async_func = nullptr; // lazy-initialized
 
         main_state.store(state, std::memory_order_release);
 

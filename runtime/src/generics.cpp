@@ -209,7 +209,7 @@ namespace py::interp
 
         PyType_Spec spec{
             entry.tp_name.c_str(),
-            instance_basicsize(record),
+            static_cast<int>(object_basicsize),
             0,
             Py_TPFLAGS_DEFAULT,
             slots.data()};
@@ -241,7 +241,7 @@ namespace py::interp
             return false;
         }
 
-        if (!bind_protocol_methods(entry, record))
+        if (!bind_protocol_methods(record, entry.py_type))
         {
             return false;
         }

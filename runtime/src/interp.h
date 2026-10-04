@@ -225,7 +225,6 @@ namespace py::interp
         member_desc* remove;
         // IAsyncInfo and the four async interfaces
         member_desc* status;
-        member_desc* cancel;
         member_desc* completed;
         member_desc* get_results;
         // IStringable
