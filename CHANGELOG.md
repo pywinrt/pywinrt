@@ -357,6 +357,7 @@
 - Fixed methods being silently dropped when two overloads could not be told
   apart.
 - Fixed the type hints of `Array` taking only a one-item tuple.
+- Fixed the type hints of event handlers refusing a handler that returns a value.
 
 [#139]: https://github.com/pywinrt/pywinrt/issues/139
 [3to4]: https://github.com/pywinrt/pywinrt/blob/main/scripts/3to4/README.md

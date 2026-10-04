@@ -271,8 +271,22 @@ static class FileWriters
             // of the TestComponent modules since most callbacks only return None or bool.
             var alias = forStub ? ": typing.TypeAlias" : "";
 
+            // The runtime ignores what a handler for a delegate with no outputs
+            // hands back, so it may return anything, which is how typeshed
+            // types a callback whose result is not used.
+            var returnTyping =
+                invoke.ReturnType.FullName == "System.Void"
+                && !invoke.Parameters.Any(p => p.IsPythonOutParam)
+                    ? "object"
+                    : invoke.ToPyReturnTyping(
+                        ns.Namespace,
+                        nullabilityInfo,
+                        packageMap,
+                        quoteImportedTypes: !forStub
+                    );
+
             w.WriteLine(
-                $"{type.Name}{alias} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns.Namespace, nullabilityInfo, packageMap, quoteImportedTypes: !forStub)}]"
+                $"{type.Name}{alias} = typing.Callable[[{string.Join(", ", paramTypes)}], {returnTyping}]"
             );
         }
     }
