@@ -267,9 +267,11 @@ static class FileWriters
                     )
                 );
 
-            // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
-            // instead of ToPyReturnTyping(). For now, this isn't a problem outside
-            // of the TestComponent modules since most callbacks only return None or bool.
+            // REVISIT: What a handler returns is an input to the runtime, so it wants
+            // the typing a parameter of the same type gets rather than
+            // ToPyReturnTyping(). Outside the TestComponent modules only seven
+            // delegates return anything - a bool, a str, an Object, or an IBuffer,
+            // which is any Python buffer either way - so none of them differs.
 
             // The runtime ignores what a handler for a delegate with no outputs
             // hands back, so it may return anything, which is how typeshed
