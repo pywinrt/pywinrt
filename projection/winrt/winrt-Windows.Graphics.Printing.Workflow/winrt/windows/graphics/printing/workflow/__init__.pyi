@@ -195,7 +195,7 @@ class PrintWorkflowForegroundSetupRequestedEventArgs(winrt.system.Object):
     def configuration(self) -> PrintWorkflowConfiguration: ...
 
 @typing.final
-class PrintWorkflowJobActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs):
+class PrintWorkflowJobActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -505,7 +505,7 @@ class PrintWorkflowTriggerDetails(winrt.system.Object):
     def print_workflow_session(self) -> PrintWorkflowBackgroundSession: ...
 
 @typing.final
-class PrintWorkflowUIActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs):
+class PrintWorkflowUIActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -595,12 +595,12 @@ class PrintWorkflowXpsDataAvailableEventArgs(winrt.system.Object):
     def operation(self) -> PrintWorkflowSubmittedOperation: ...
 
 @typing.final
-class PrintWorkflowXpsObjectModelProvider(winrt.system.Object, IPrintWorkflowObjectModelProvider):
+class PrintWorkflowXpsObjectModelProvider(IPrintWorkflowObjectModelProvider, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
 
 @typing.final
 class _IPrintWorkflowObjectModelProvider: ...
 
-class IPrintWorkflowObjectModelProvider(winrt._winrt.IInspectable):
+class IPrintWorkflowObjectModelProvider(winrt.system.Object):
     ...
 

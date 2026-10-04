@@ -19,7 +19,7 @@ class InstalledDesktopApp_Static(winrt._winrt.Object_Static):
     def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[InstalledDesktopApp]]: ...
 
 @typing.final
-class InstalledDesktopApp(winrt.system.Object, windows_foundation.IStringable, metaclass=InstalledDesktopApp_Static):
+class InstalledDesktopApp(windows_foundation.IStringable, winrt.system.Object, metaclass=InstalledDesktopApp_Static):
     # System.String Windows.System.Inventory.InstalledDesktopApp::ToString()
     def to_string(self) -> str: ...
     # System.String Windows.System.Inventory.InstalledDesktopApp::get_DisplayName()

@@ -3716,7 +3716,7 @@ class ZoomSnapPointBase(SnapPointBase, metaclass=ZoomSnapPointBase_Static):
 @typing.final
 class _IScrollController: ...
 
-class IScrollController(winrt._winrt.IInspectable):
+class IScrollController(winrt.system.Object):
     # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.Primitives.IScrollController::GetScrollAnimation(System.Int32,Windows.Foundation.Numerics.Vector2,Windows.Foundation.Numerics.Vector2,Microsoft.UI.Composition.CompositionAnimation)
     @abstractmethod
     def get_scroll_animation(self, correlation_id: winrt.system.Int32, start_position: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], end_position: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single], default_animation: microsoft_ui_composition.CompositionAnimation, /) -> microsoft_ui_composition.CompositionAnimation: ...
@@ -3775,7 +3775,7 @@ class IScrollController(winrt._winrt.IInspectable):
 @typing.final
 class _IScrollControllerPanningInfo: ...
 
-class IScrollControllerPanningInfo(winrt._winrt.IInspectable):
+class IScrollControllerPanningInfo(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.IScrollControllerPanningInfo::SetPanningElementExpressionAnimationSources(Microsoft.UI.Composition.CompositionPropertySet,System.String,System.String,System.String,System.String)
     @abstractmethod
     def set_panning_element_expression_animation_sources(self, property_set: microsoft_ui_composition.CompositionPropertySet, min_offset_property_name: str, max_offset_property_name: str, offset_property_name: str, multiplier_property_name: str, /) -> None: ...
@@ -3807,7 +3807,7 @@ class IScrollControllerPanningInfo(winrt._winrt.IInspectable):
 @typing.final
 class _IScrollSnapPointsInfo: ...
 
-class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
+class IScrollSnapPointsInfo(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation,Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     @abstractmethod
     def get_irregular_snap_points(self, orientation: microsoft_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> _cabc.Sequence[winrt.system.Single]: ...

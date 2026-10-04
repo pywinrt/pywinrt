@@ -155,7 +155,7 @@ class UserActivityContentInfo_Static(winrt._winrt.Object_Static):
     def from_json(cls, value: str, /) -> UserActivityContentInfo: ...
 
 @typing.final
-class UserActivityContentInfo(winrt.system.Object, IUserActivityContentInfo, metaclass=UserActivityContentInfo_Static):
+class UserActivityContentInfo(IUserActivityContentInfo, winrt.system.Object, metaclass=UserActivityContentInfo_Static):
     # System.String Windows.ApplicationModel.UserActivities.UserActivityContentInfo::ToJson()
     def to_json(self) -> str: ...
 
@@ -185,7 +185,7 @@ class UserActivityRequestedEventArgs(winrt.system.Object):
     def request(self) -> UserActivityRequest: ...
 
 @typing.final
-class UserActivitySession(winrt.system.Object, windows_foundation.IClosable):
+class UserActivitySession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.ApplicationModel.UserActivities.UserActivitySession::Close()
@@ -248,7 +248,7 @@ class UserActivityVisualElements(winrt.system.Object):
 @typing.final
 class _IUserActivityContentInfo: ...
 
-class IUserActivityContentInfo(winrt._winrt.IInspectable):
+class IUserActivityContentInfo(winrt.system.Object):
     # System.String Windows.ApplicationModel.UserActivities.IUserActivityContentInfo::ToJson()
     @abstractmethod
     def to_json(self) -> str: ...

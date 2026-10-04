@@ -329,7 +329,7 @@ class ValidateClusterEnvironmentResult(winrt.system.Object):
 @typing.final
 class _IClusterNativeEnvironmentOperations: ...
 
-class IClusterNativeEnvironmentOperations(winrt._winrt.IInspectable):
+class IClusterNativeEnvironmentOperations(winrt.system.Object):
     # Windows.Management.Update.Cluster.AcquireEnvironmentInfoResult Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperations::AcquireNodeEnvironmentInfo()
     @abstractmethod
     def acquire_node_environment_info(self) -> AcquireEnvironmentInfoResult: ...
@@ -352,7 +352,7 @@ class IClusterNativeEnvironmentOperations(winrt._winrt.IInspectable):
 @typing.final
 class _IClusterNativeEnvironmentOperationsPlugin: ...
 
-class IClusterNativeEnvironmentOperationsPlugin(winrt._winrt.IInspectable):
+class IClusterNativeEnvironmentOperationsPlugin(winrt.system.Object):
     # Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperations Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperationsPlugin::CreateEnvironmentOperations(System.String,System.String,Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Management.Update.Cluster.ClusterUpdateServices)
     @abstractmethod
     def create_environment_operations(self, cluster_name: str, run_id: str, options: _cabc.MutableMapping[str, str], update_services: ClusterUpdateServices, /) -> IClusterNativeEnvironmentOperations: ...
@@ -380,7 +380,7 @@ class IClusterNativeEnvironmentOperationsPlugin(winrt._winrt.IInspectable):
 @typing.final
 class _IClusterNativeNodeOperations: ...
 
-class IClusterNativeNodeOperations(winrt._winrt.IInspectable):
+class IClusterNativeNodeOperations(winrt.system.Object):
     # Windows.Management.Update.Cluster.AreRebootsPendingResult Windows.Management.Update.Cluster.IClusterNativeNodeOperations::AreAdditionalRebootsPending()
     @abstractmethod
     def are_additional_reboots_pending(self) -> AreRebootsPendingResult: ...
@@ -424,7 +424,7 @@ class IClusterNativeNodeOperations(winrt._winrt.IInspectable):
 @typing.final
 class _IClusterNativeNodeOperationsPlugin: ...
 
-class IClusterNativeNodeOperationsPlugin(winrt._winrt.IInspectable):
+class IClusterNativeNodeOperationsPlugin(winrt.system.Object):
     # Windows.Management.Update.Cluster.IClusterNativeNodeOperations Windows.Management.Update.Cluster.IClusterNativeNodeOperationsPlugin::CreateNodeOperations(System.String,System.String,Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Management.Update.Cluster.ClusterUpdateServices)
     @abstractmethod
     def create_node_operations(self, cluster_name: str, run_id: str, options: _cabc.MutableMapping[str, str], update_services: ClusterUpdateServices, /) -> IClusterNativeNodeOperations: ...
@@ -452,7 +452,7 @@ class IClusterNativeNodeOperationsPlugin(winrt._winrt.IInspectable):
 @typing.final
 class _IUpdateInstaller: ...
 
-class IUpdateInstaller(winrt._winrt.IInspectable):
+class IUpdateInstaller(winrt.system.Object):
     # Windows.Management.Update.Cluster.UpdateTaskResult Windows.Management.Update.Cluster.IUpdateInstaller::AcquireUpdateListValidationInfo(System.String&)
     @abstractmethod
     def acquire_update_list_validation_info(self) -> tuple[UpdateTaskResult, str]: ...
@@ -481,7 +481,7 @@ class IUpdateInstaller(winrt._winrt.IInspectable):
 @typing.final
 class _IUpdateInstallerPlugin: ...
 
-class IUpdateInstallerPlugin(winrt._winrt.IInspectable):
+class IUpdateInstallerPlugin(winrt.system.Object):
     # Windows.Management.Update.Cluster.IUpdateInstaller Windows.Management.Update.Cluster.IUpdateInstallerPlugin::CreateUpdateInstaller(System.String,System.String,Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Management.Update.Cluster.ClusterUpdateServices)
     @abstractmethod
     def create_update_installer(self, cluster_name: str, run_id: str, options: _cabc.MutableMapping[str, str], update_services: ClusterUpdateServices, /) -> IUpdateInstaller: ...

@@ -307,7 +307,7 @@ class AdvancedPhotoControl(winrt.system.Object):
     def supported_modes(self) -> _cabc.Sequence[AdvancedPhotoMode]: ...
 
 @typing.final
-class AudioDeviceController(winrt.system.Object, IMediaDeviceController):
+class AudioDeviceController(IMediaDeviceController, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.AudioDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> _cabc.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
     # Windows.Media.MediaProperties.IMediaEncodingProperties Windows.Media.Devices.AudioDeviceController::GetMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
@@ -442,7 +442,7 @@ class CameraOcclusionStateChangedEventArgs(winrt.system.Object):
     def state(self) -> CameraOcclusionState: ...
 
 @typing.final
-class DefaultAudioCaptureDeviceChangedEventArgs(winrt.system.Object, IDefaultAudioDeviceChangedEventArgs):
+class DefaultAudioCaptureDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventArgs, winrt.system.Object):
     # System.String Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
@@ -451,7 +451,7 @@ class DefaultAudioCaptureDeviceChangedEventArgs(winrt.system.Object, IDefaultAud
     def role(self) -> AudioDeviceRole: ...
 
 @typing.final
-class DefaultAudioRenderDeviceChangedEventArgs(winrt.system.Object, IDefaultAudioDeviceChangedEventArgs):
+class DefaultAudioRenderDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventArgs, winrt.system.Object):
     # System.String Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
@@ -1135,7 +1135,7 @@ class TorchControl(winrt.system.Object):
     def supported(self) -> bool: ...
 
 @typing.final
-class VideoDeviceController(winrt.system.Object, IMediaDeviceController):
+class VideoDeviceController(IMediaDeviceController, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.VideoDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> _cabc.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
     # System.Object Windows.Media.Devices.VideoDeviceController::GetDeviceProperty(System.String)
@@ -1375,7 +1375,7 @@ class ZoomSettings(winrt.system.Object):
 @typing.final
 class _IDefaultAudioDeviceChangedEventArgs: ...
 
-class IDefaultAudioDeviceChangedEventArgs(winrt._winrt.IInspectable):
+class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object):
     # System.String Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs::get_Id()
     @_property
     @abstractmethod
@@ -1388,7 +1388,7 @@ class IDefaultAudioDeviceChangedEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaDeviceController: ...
 
-class IMediaDeviceController(winrt._winrt.IInspectable):
+class IMediaDeviceController(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.IMediaDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
     @abstractmethod
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> _cabc.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...

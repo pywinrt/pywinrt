@@ -186,7 +186,7 @@ class CoreProximityEvaluation:
     def unpack(self) -> tuple[winrt.system.Int32, tuple[winrt.system.Single, winrt.system.Single]]: ...
 
 @typing.final
-class AcceleratorKeyEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class AcceleratorKeyEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # Windows.UI.Core.CoreAcceleratorKeyEventType Windows.UI.Core.AcceleratorKeyEventArgs::get_EventType()
     @_property
     def event_type(self) -> CoreAcceleratorKeyEventType: ...
@@ -207,7 +207,7 @@ class AcceleratorKeyEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class AutomationProviderRequestedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class AutomationProviderRequestedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Object Windows.UI.Core.AutomationProviderRequestedEventArgs::get_AutomationProvider()
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
@@ -231,7 +231,7 @@ class BackRequestedEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class CharacterReceivedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class CharacterReceivedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.UInt32 Windows.UI.Core.CharacterReceivedEventArgs::get_KeyCode()
     @_property
     def key_code(self) -> winrt.system.UInt32: ...
@@ -261,14 +261,14 @@ class ClosestInteractiveBoundsRequestedEventArgs(winrt.system.Object):
     def search_bounds(self) -> windows_foundation.Rect: ...
 
 @typing.final
-class CoreAcceleratorKeys(winrt.system.Object, ICoreAcceleratorKeys):
+class CoreAcceleratorKeys(ICoreAcceleratorKeys, winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.CoreAcceleratorKeys::add_AcceleratorKeyActivated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs>)
     def add_accelerator_key_activated(self, handler: windows_foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Core.CoreAcceleratorKeys::remove_AcceleratorKeyActivated(Windows.Foundation.EventRegistrationToken)
     def remove_accelerator_key_activated(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class CoreComponentInputSource(winrt.system.Object, ICorePointerInputSource2, ICorePointerInputSource, ICoreInputSourceBase):
+class CoreComponentInputSource(ICorePointerInputSource2, ICorePointerInputSource, ICoreInputSourceBase, winrt.system.Object):
     # System.String Windows.UI.Core.CoreComponentInputSource::GetCurrentKeyEventDeviceId()
     def get_current_key_event_device_id(self) -> str: ...
     # Windows.UI.Core.CoreVirtualKeyStates Windows.UI.Core.CoreComponentInputSource::GetCurrentKeyState(Windows.System.VirtualKey)
@@ -376,7 +376,7 @@ class CoreCursor(winrt.system.Object):
     def type(self) -> CoreCursorType: ...
 
 @typing.final
-class CoreDispatcher(winrt.system.Object, ICoreAcceleratorKeys):
+class CoreDispatcher(ICoreAcceleratorKeys, winrt.system.Object):
     # System.Void Windows.UI.Core.CoreDispatcher::ProcessEvents(Windows.UI.Core.CoreProcessEventsOption)
     def process_events(self, options: CoreProcessEventsOption, /) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.UI.Core.CoreDispatcher::RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler)
@@ -414,7 +414,7 @@ class CoreDispatcher(winrt.system.Object, ICoreAcceleratorKeys):
     def current_priority(self, value: CoreDispatcherPriority) -> None: ...
 
 @typing.final
-class CoreIndependentInputSource(winrt.system.Object, ICorePointerRedirector, ICorePointerInputSource2, ICorePointerInputSource, ICoreInputSourceBase):
+class CoreIndependentInputSource(ICorePointerRedirector, ICorePointerInputSource2, ICorePointerInputSource, ICoreInputSourceBase, winrt.system.Object):
     # System.Void Windows.UI.Core.CoreIndependentInputSource::ReleasePointerCapture()
     def release_pointer_capture(self) -> None: ...
     # System.Void Windows.UI.Core.CoreIndependentInputSource::SetPointerCapture()
@@ -496,7 +496,7 @@ class CoreIndependentInputSourceController_Static(winrt._winrt.Object_Static):
     def create_for_visual(cls, visual: windows_ui_composition.Visual, /) -> CoreIndependentInputSourceController: ...
 
 @typing.final
-class CoreIndependentInputSourceController(winrt.system.Object, windows_foundation.IClosable, metaclass=CoreIndependentInputSourceController_Static):
+class CoreIndependentInputSourceController(windows_foundation.IClosable, winrt.system.Object, metaclass=CoreIndependentInputSourceController_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.UI.Core.CoreIndependentInputSourceController::Close()
@@ -533,7 +533,7 @@ class CoreWindow_Static(winrt._winrt.Object_Static):
     def get_for_current_thread(cls) -> CoreWindow: ...
 
 @typing.final
-class CoreWindow(winrt.system.Object, ICorePointerRedirector, ICoreWindow, metaclass=CoreWindow_Static):
+class CoreWindow(ICorePointerRedirector, ICoreWindow, winrt.system.Object, metaclass=CoreWindow_Static):
     # System.Void Windows.UI.Core.CoreWindow::Activate()
     def activate(self) -> None: ...
     # System.Void Windows.UI.Core.CoreWindow::Close()
@@ -742,7 +742,7 @@ class CoreWindowDialog(winrt.system.Object):
     def min_size(self) -> windows_foundation.Size: ...
 
 @typing.final
-class CoreWindowEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class CoreWindowEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Boolean Windows.UI.Core.CoreWindowEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -824,7 +824,7 @@ class IdleDispatchedHandlerArgs(winrt.system.Object):
     def is_dispatcher_idle(self) -> bool: ...
 
 @typing.final
-class InputEnabledEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class InputEnabledEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Boolean Windows.UI.Core.InputEnabledEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -836,7 +836,7 @@ class InputEnabledEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def input_enabled(self) -> bool: ...
 
 @typing.final
-class KeyEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class KeyEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Boolean Windows.UI.Core.KeyEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -854,7 +854,7 @@ class KeyEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def device_id(self) -> str: ...
 
 @typing.final
-class PointerEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class PointerEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Core.PointerEventArgs::GetIntermediatePoints()
     def get_intermediate_points(self) -> _cabc.MutableSequence[windows_ui_input.PointerPoint]: ...
     # System.Boolean Windows.UI.Core.PointerEventArgs::get_Handled()
@@ -889,7 +889,7 @@ class SystemNavigationManager(winrt.system.Object, metaclass=SystemNavigationMan
     def app_view_back_button_visibility(self, value: AppViewBackButtonVisibility) -> None: ...
 
 @typing.final
-class TouchHitTestingEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class TouchHitTestingEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # Windows.UI.Core.CoreProximityEvaluation Windows.UI.Core.TouchHitTestingEventArgs::EvaluateProximity(Windows.Foundation.Rect)
     def evaluate_proximity(self, control_bounding_box: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> CoreProximityEvaluation: ...
     # Deprecated alias of evaluate_proximity() for pywinrt v3.x compatibility.
@@ -918,7 +918,7 @@ class TouchHitTestingEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def point(self) -> windows_foundation.Point: ...
 
 @typing.final
-class VisibilityChangedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class VisibilityChangedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Boolean Windows.UI.Core.VisibilityChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -930,7 +930,7 @@ class VisibilityChangedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def visible(self) -> bool: ...
 
 @typing.final
-class WindowActivatedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class WindowActivatedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Boolean Windows.UI.Core.WindowActivatedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -942,7 +942,7 @@ class WindowActivatedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
     def window_activation_state(self) -> CoreWindowActivationState: ...
 
 @typing.final
-class WindowSizeChangedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
+class WindowSizeChangedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     # System.Boolean Windows.UI.Core.WindowSizeChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -956,7 +956,7 @@ class WindowSizeChangedEventArgs(winrt.system.Object, ICoreWindowEventArgs):
 @typing.final
 class _ICoreAcceleratorKeys: ...
 
-class ICoreAcceleratorKeys(winrt._winrt.IInspectable):
+class ICoreAcceleratorKeys(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreAcceleratorKeys::add_AcceleratorKeyActivated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs>)
     @abstractmethod
     def add_accelerator_key_activated(self, handler: windows_foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -967,7 +967,7 @@ class ICoreAcceleratorKeys(winrt._winrt.IInspectable):
 @typing.final
 class _ICoreInputSourceBase: ...
 
-class ICoreInputSourceBase(winrt._winrt.IInspectable):
+class ICoreInputSourceBase(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreInputSourceBase::add_InputEnabled(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.InputEnabledEventArgs>)
     @abstractmethod
     def add_input_enabled(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, InputEnabledEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -990,7 +990,7 @@ class ICoreInputSourceBase(winrt._winrt.IInspectable):
 @typing.final
 class _ICorePointerInputSource: ...
 
-class ICorePointerInputSource(winrt._winrt.IInspectable):
+class ICorePointerInputSource(winrt.system.Object):
     # System.Void Windows.UI.Core.ICorePointerInputSource::ReleasePointerCapture()
     @abstractmethod
     def release_pointer_capture(self) -> None: ...
@@ -1059,7 +1059,7 @@ class ICorePointerInputSource(winrt._winrt.IInspectable):
 @typing.final
 class _ICorePointerInputSource2: ...
 
-class ICorePointerInputSource2(ICorePointerInputSource, winrt._winrt.IInspectable):
+class ICorePointerInputSource2(ICorePointerInputSource, winrt.system.Object):
     # Windows.System.DispatcherQueue Windows.UI.Core.ICorePointerInputSource2::get_DispatcherQueue()
     @_property
     @abstractmethod
@@ -1068,7 +1068,7 @@ class ICorePointerInputSource2(ICorePointerInputSource, winrt._winrt.IInspectabl
 @typing.final
 class _ICorePointerRedirector: ...
 
-class ICorePointerRedirector(winrt._winrt.IInspectable):
+class ICorePointerRedirector(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerRedirector::add_PointerRoutedAway(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.ICorePointerRedirector,Windows.UI.Core.PointerEventArgs>)
     @abstractmethod
     def add_pointer_routed_away(self, handler: windows_foundation.TypedEventHandler[ICorePointerRedirector, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -1091,7 +1091,7 @@ class ICorePointerRedirector(winrt._winrt.IInspectable):
 @typing.final
 class _ICoreWindow: ...
 
-class ICoreWindow(winrt._winrt.IInspectable):
+class ICoreWindow(winrt.system.Object):
     # System.Void Windows.UI.Core.ICoreWindow::Activate()
     @abstractmethod
     def activate(self) -> None: ...
@@ -1264,7 +1264,7 @@ class ICoreWindow(winrt._winrt.IInspectable):
 @typing.final
 class _ICoreWindowEventArgs: ...
 
-class ICoreWindowEventArgs(winrt._winrt.IInspectable):
+class ICoreWindowEventArgs(winrt.system.Object):
     # System.Boolean Windows.UI.Core.ICoreWindowEventArgs::get_Handled()
     @_property
     @abstractmethod
@@ -1277,7 +1277,7 @@ class ICoreWindowEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IInitializeWithCoreWindow: ...
 
-class IInitializeWithCoreWindow(winrt._winrt.IInspectable):
+class IInitializeWithCoreWindow(winrt.system.Object):
     # System.Void Windows.UI.Core.IInitializeWithCoreWindow::Initialize(Windows.UI.Core.CoreWindow)
     @abstractmethod
     def initialize(self, window: CoreWindow, /) -> None: ...

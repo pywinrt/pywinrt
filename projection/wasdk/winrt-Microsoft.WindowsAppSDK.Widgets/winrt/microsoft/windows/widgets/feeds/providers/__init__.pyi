@@ -102,7 +102,7 @@ class FeedManager_Static(winrt._winrt.Object_Static):
     def get_default(cls) -> FeedManager: ...
 
 @typing.final
-class FeedManager(winrt.system.Object, IFeedManager3, IFeedManager2, IFeedManager, metaclass=FeedManager_Static):
+class FeedManager(IFeedManager3, IFeedManager2, IFeedManager, winrt.system.Object, metaclass=FeedManager_Static):
     # Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo[] Microsoft.Windows.Widgets.Feeds.Providers.FeedManager::GetEnabledFeedProviders()
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.FeedManager::SendMessageToContent(System.String,System.String,System.String)
@@ -213,7 +213,7 @@ class FeedResourceResponse(winrt.system.Object):
 @typing.final
 class _IFeedAnnouncementInvokedTarget: ...
 
-class IFeedAnnouncementInvokedTarget(winrt._winrt.IInspectable):
+class IFeedAnnouncementInvokedTarget(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnnouncementInvokedTarget::OnAnnouncementInvoked(Microsoft.Windows.Widgets.Notifications.FeedAnnouncementInvokedArgs)
     @abstractmethod
     def on_announcement_invoked(self, args: microsoft_windows_widgets_notifications.FeedAnnouncementInvokedArgs, /) -> None: ...
@@ -221,7 +221,7 @@ class IFeedAnnouncementInvokedTarget(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedManager: ...
 
-class IFeedManager(winrt._winrt.IInspectable):
+class IFeedManager(winrt.system.Object):
     # Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo[] Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager::GetEnabledFeedProviders()
     @abstractmethod
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
@@ -232,7 +232,7 @@ class IFeedManager(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedManager2: ...
 
-class IFeedManager2(winrt._winrt.IInspectable):
+class IFeedManager2(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2::SendMessageToContent(System.String,System.String,System.String)
     @abstractmethod
     def send_message_to_content(self, feed_provider_definition_id: str, feed_definition_id: str, message: str, /) -> None: ...
@@ -243,7 +243,7 @@ class IFeedManager2(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedManager3: ...
 
-class IFeedManager3(winrt._winrt.IInspectable):
+class IFeedManager3(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager3::TryRemoveAnnouncementById(System.String,System.String,System.String)
     @abstractmethod
     def try_remove_announcement_by_id(self, feed_provider_definition_id: str, feed_definition_id: str, announcement_id: str, /) -> None: ...
@@ -251,7 +251,7 @@ class IFeedManager3(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedProvider: ...
 
-class IFeedProvider(winrt._winrt.IInspectable):
+class IFeedProvider(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedProvider::OnCustomQueryParametersRequested(Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersRequestedArgs)
     @abstractmethod
     def on_custom_query_parameters_requested(self, args: CustomQueryParametersRequestedArgs, /) -> None: ...
@@ -271,7 +271,7 @@ class IFeedProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedProviderAnalytics: ...
 
-class IFeedProviderAnalytics(winrt._winrt.IInspectable):
+class IFeedProviderAnalytics(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderAnalytics::OnAnalyticsInfoReported(Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs)
     @abstractmethod
     def on_analytics_info_reported(self, args: FeedAnalyticsInfoReportedArgs, /) -> None: ...
@@ -279,7 +279,7 @@ class IFeedProviderAnalytics(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedProviderErrors: ...
 
-class IFeedProviderErrors(winrt._winrt.IInspectable):
+class IFeedProviderErrors(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs)
     @abstractmethod
     def on_error_info_reported(self, args: FeedErrorInfoReportedArgs, /) -> None: ...
@@ -287,7 +287,7 @@ class IFeedProviderErrors(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedProviderMessage: ...
 
-class IFeedProviderMessage(winrt._winrt.IInspectable):
+class IFeedProviderMessage(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderMessage::OnMessageReceived(Microsoft.Windows.Widgets.Feeds.Providers.FeedMessageReceivedArgs)
     @abstractmethod
     def on_message_received(self, args: FeedMessageReceivedArgs, /) -> None: ...
@@ -295,7 +295,7 @@ class IFeedProviderMessage(winrt._winrt.IInspectable):
 @typing.final
 class _IFeedResourceProvider: ...
 
-class IFeedResourceProvider(winrt._winrt.IInspectable):
+class IFeedResourceProvider(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceProvider::OnResourceRequested(Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs)
     @abstractmethod
     def on_resource_requested(self, args: FeedResourceRequestedArgs, /) -> None: ...

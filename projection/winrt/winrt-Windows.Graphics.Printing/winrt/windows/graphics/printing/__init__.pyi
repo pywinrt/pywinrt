@@ -512,7 +512,7 @@ class PrintTaskCompletedEventArgs(winrt.system.Object):
     def completion(self) -> PrintTaskCompletion: ...
 
 @typing.final
-class PrintTaskOptions(winrt.system.Object, IPrintTaskOptionsCoreUIConfiguration, IPrintTaskOptionsCoreProperties, IPrintTaskOptionsCore):
+class PrintTaskOptions(IPrintTaskOptionsCoreUIConfiguration, IPrintTaskOptionsCoreProperties, IPrintTaskOptionsCore, winrt.system.Object):
     # Windows.Graphics.Printing.PrintPageDescription Windows.Graphics.Printing.PrintTaskOptions::GetPageDescription(System.UInt32)
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Graphics.Printing.PrintTaskOptions::GetPagePrintTicket(Windows.Graphics.Printing.PrintPageInfo)
@@ -702,13 +702,13 @@ class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskO
 @typing.final
 class _IPrintDocumentSource: ...
 
-class IPrintDocumentSource(winrt._winrt.IInspectable):
+class IPrintDocumentSource(winrt.system.Object):
     ...
 
 @typing.final
 class _IPrintTaskOptionsCore: ...
 
-class IPrintTaskOptionsCore(winrt._winrt.IInspectable):
+class IPrintTaskOptionsCore(winrt.system.Object):
     # Windows.Graphics.Printing.PrintPageDescription Windows.Graphics.Printing.IPrintTaskOptionsCore::GetPageDescription(System.UInt32)
     @abstractmethod
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
@@ -716,7 +716,7 @@ class IPrintTaskOptionsCore(winrt._winrt.IInspectable):
 @typing.final
 class _IPrintTaskOptionsCoreProperties: ...
 
-class IPrintTaskOptionsCoreProperties(winrt._winrt.IInspectable):
+class IPrintTaskOptionsCoreProperties(winrt.system.Object):
     # Windows.Graphics.Printing.PrintBinding Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties::get_Binding()
     @_property
     @abstractmethod
@@ -817,7 +817,7 @@ class IPrintTaskOptionsCoreProperties(winrt._winrt.IInspectable):
 @typing.final
 class _IPrintTaskOptionsCoreUIConfiguration: ...
 
-class IPrintTaskOptionsCoreUIConfiguration(winrt._winrt.IInspectable):
+class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration::get_DisplayedOptions()
     @_property
     @abstractmethod

@@ -140,7 +140,7 @@ class CoreDropOperationTargetRequestedEventArgs(winrt.system.Object):
 @typing.final
 class _ICoreDropOperationTarget: ...
 
-class ICoreDropOperationTarget(winrt._winrt.IInspectable):
+class ICoreDropOperationTarget(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget::DropAsync(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo)
     @abstractmethod
     def drop_async(self, drag_info: CoreDragInfo, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_datatransfer.DataPackageOperation]: ...

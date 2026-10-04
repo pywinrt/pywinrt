@@ -226,7 +226,7 @@ class EnsureReadyOptions(winrt.system.Object):
     def register_newer_if_available(self, value: bool) -> None: ...
 
 @typing.final
-class PackageCertificateEkuValidator(winrt.system.Object, IPackageValidator):
+class PackageCertificateEkuValidator(IPackageValidator, winrt.system.Object):
     def __new__(cls, expected_certificate_eku: str) -> typing.Self: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageCertificateEkuValidator::IsPackageValid(System.Object)
     def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
@@ -340,13 +340,13 @@ class PackageDeploymentResult(winrt.system.Object):
     def status(self) -> PackageDeploymentStatus: ...
 
 @typing.final
-class PackageFamilyNameValidator(winrt.system.Object, IPackageValidator):
+class PackageFamilyNameValidator(IPackageValidator, winrt.system.Object):
     def __new__(cls, expected_package_family_name: str) -> typing.Self: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageFamilyNameValidator::IsPackageValid(System.Object)
     def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
 
 @typing.final
-class PackageMinimumVersionValidator(winrt.system.Object, IPackageValidator):
+class PackageMinimumVersionValidator(IPackageValidator, winrt.system.Object):
     def __new__(cls, minimum_version: windows_applicationmodel.PackageVersion | tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16]) -> typing.Self: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageMinimumVersionValidator::IsPackageValid(System.Object)
     def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
@@ -749,7 +749,7 @@ class StagePackageOptions(winrt.system.Object):
 @typing.final
 class _IPackageValidator: ...
 
-class IPackageValidator(winrt._winrt.IInspectable):
+class IPackageValidator(winrt.system.Object):
     # System.Boolean Microsoft.Windows.Management.Deployment.IPackageValidator::IsPackageValid(System.Object)
     @abstractmethod
     def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...

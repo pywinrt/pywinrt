@@ -624,7 +624,7 @@ class CompositionColorGradientStop(CompositionObject):
     def color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
 
 @typing.final
-class CompositionColorGradientStopCollection(winrt.system.Object, winrt._winrt.MutableSequence[CompositionColorGradientStop]):
+class CompositionColorGradientStopCollection(winrt._winrt.MutableSequence[CompositionColorGradientStop], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[CompositionColorGradientStop]: ...
     @typing.overload
@@ -786,7 +786,7 @@ class CompositionEffectFactory(CompositionObject):
     def load_status(self) -> CompositionEffectFactoryLoadStatus: ...
 
 @typing.final
-class CompositionEffectSourceParameter(winrt.system.Object, windows_graphics_effects.IGraphicsEffectSource):
+class CompositionEffectSourceParameter(windows_graphics_effects.IGraphicsEffectSource, winrt.system.Object):
     def __new__(cls, name: str) -> typing.Self: ...
     # System.String Windows.UI.Composition.CompositionEffectSourceParameter::get_Name()
     @_property
@@ -1117,7 +1117,7 @@ class CompositionObject_Static(winrt._winrt.Object_Static):
     # System.Void Windows.UI.Composition.CompositionObject::StartAnimationWithIAnimationObject(Windows.UI.Composition.IAnimationObject,System.String,Windows.UI.Composition.CompositionAnimation)
     def start_animation_with_ianimation_object(cls, target: IAnimationObject, property_name: str, animation: CompositionAnimation, /) -> None: ...
 
-class CompositionObject(winrt.system.Object, IAnimationObject, windows_foundation.IClosable, metaclass=CompositionObject_Static):
+class CompositionObject(IAnimationObject, windows_foundation.IClosable, winrt.system.Object, metaclass=CompositionObject_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.UI.Composition.CompositionObject::Close()
@@ -1180,7 +1180,7 @@ class CompositionObject(winrt.system.Object, IAnimationObject, windows_foundatio
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
 @typing.final
-class CompositionPath(winrt.system.Object, windows_graphics.IGeometrySource2D):
+class CompositionPath(windows_graphics.IGeometrySource2D, winrt.system.Object):
     def __new__(cls, source: windows_graphics.IGeometrySource2D) -> typing.Self: ...
 
 @typing.final
@@ -1816,7 +1816,7 @@ class Compositor_Static(winrt._winrt.Object_Static):
     def min_global_playback_rate(cls) -> winrt.system.Single: ...
 
 @typing.final
-class Compositor(winrt.system.Object, windows_foundation.IClosable, metaclass=Compositor_Static):
+class Compositor(windows_foundation.IClosable, winrt.system.Object, metaclass=Compositor_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -3086,7 +3086,7 @@ class VisualUnorderedCollection(CompositionObject):
 @typing.final
 class _IAnimationObject: ...
 
-class IAnimationObject(winrt._winrt.IInspectable):
+class IAnimationObject(winrt.system.Object):
     # System.Void Windows.UI.Composition.IAnimationObject::PopulatePropertyInfo(System.String,Windows.UI.Composition.AnimationPropertyInfo)
     @abstractmethod
     def populate_property_info(self, property_name: str, property_info: AnimationPropertyInfo, /) -> None: ...
@@ -3094,13 +3094,13 @@ class IAnimationObject(winrt._winrt.IInspectable):
 @typing.final
 class _ICompositionAnimationBase: ...
 
-class ICompositionAnimationBase(winrt._winrt.IInspectable):
+class ICompositionAnimationBase(winrt.system.Object):
     ...
 
 @typing.final
 class _ICompositionSupportsSystemBackdrop: ...
 
-class ICompositionSupportsSystemBackdrop(winrt._winrt.IInspectable):
+class ICompositionSupportsSystemBackdrop(winrt.system.Object):
     # Windows.UI.Composition.CompositionBrush Windows.UI.Composition.ICompositionSupportsSystemBackdrop::get_SystemBackdrop()
     @_property
     @abstractmethod
@@ -3113,13 +3113,13 @@ class ICompositionSupportsSystemBackdrop(winrt._winrt.IInspectable):
 @typing.final
 class _ICompositionSurface: ...
 
-class ICompositionSurface(winrt._winrt.IInspectable):
+class ICompositionSurface(winrt.system.Object):
     ...
 
 @typing.final
 class _ICompositionSurfaceFacade: ...
 
-class ICompositionSurfaceFacade(winrt._winrt.IInspectable):
+class ICompositionSurfaceFacade(winrt.system.Object):
     # Windows.UI.Composition.ICompositionSurface Windows.UI.Composition.ICompositionSurfaceFacade::GetRealSurface()
     @abstractmethod
     def get_real_surface(self) -> ICompositionSurface: ...
@@ -3127,13 +3127,13 @@ class ICompositionSurfaceFacade(winrt._winrt.IInspectable):
 @typing.final
 class _IVisualElement: ...
 
-class IVisualElement(winrt._winrt.IInspectable):
+class IVisualElement(winrt.system.Object):
     ...
 
 @typing.final
 class _IVisualElement2: ...
 
-class IVisualElement2(winrt._winrt.IInspectable):
+class IVisualElement2(winrt.system.Object):
     # Windows.UI.Composition.Visual Windows.UI.Composition.IVisualElement2::GetVisualInternal()
     @abstractmethod
     def get_visual_internal(self) -> Visual: ...

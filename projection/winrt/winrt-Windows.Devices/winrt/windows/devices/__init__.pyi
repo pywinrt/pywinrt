@@ -19,7 +19,7 @@ __all__ = [
 ]
 
 @typing.final
-class LowLevelDevicesAggregateProvider(winrt.system.Object, ILowLevelDevicesAggregateProvider):
+class LowLevelDevicesAggregateProvider(ILowLevelDevicesAggregateProvider, winrt.system.Object):
     def __new__(cls, adc: windows_devices_adc_provider.IAdcControllerProvider, pwm: windows_devices_pwm_provider.IPwmControllerProvider, gpio: windows_devices_gpio_provider.IGpioControllerProvider, i2c: windows_devices_i2c_provider.II2cControllerProvider, spi: windows_devices_spi_provider.ISpiControllerProvider) -> typing.Self: ...
     # Windows.Devices.Adc.Provider.IAdcControllerProvider Windows.Devices.LowLevelDevicesAggregateProvider::get_AdcControllerProvider()
     @_property
@@ -53,7 +53,7 @@ class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesCo
 @typing.final
 class _ILowLevelDevicesAggregateProvider: ...
 
-class ILowLevelDevicesAggregateProvider(winrt._winrt.IInspectable):
+class ILowLevelDevicesAggregateProvider(winrt.system.Object):
     # Windows.Devices.Adc.Provider.IAdcControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_AdcControllerProvider()
     @_property
     @abstractmethod

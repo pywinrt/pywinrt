@@ -136,7 +136,7 @@ class WiFiDirectConnectionParameters_Static(winrt._winrt.Object_Static):
     def get_device_pairing_kinds(cls, configuration_method: WiFiDirectConfigurationMethod, /) -> windows_devices_enumeration.DevicePairingKinds: ...
 
 @typing.final
-class WiFiDirectConnectionParameters(winrt.system.Object, windows_devices_enumeration.IDevicePairingSettings, metaclass=WiFiDirectConnectionParameters_Static):
+class WiFiDirectConnectionParameters(windows_devices_enumeration.IDevicePairingSettings, winrt.system.Object, metaclass=WiFiDirectConnectionParameters_Static):
     def __new__(cls) -> typing.Self: ...
     # System.Int16 Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters::get_GroupOwnerIntent()
     @_property
@@ -155,7 +155,7 @@ class WiFiDirectConnectionParameters(winrt.system.Object, windows_devices_enumer
     def preference_ordered_configuration_methods(self) -> _cabc.MutableSequence[WiFiDirectConfigurationMethod]: ...
 
 @typing.final
-class WiFiDirectConnectionRequest(winrt.system.Object, windows_foundation.IClosable):
+class WiFiDirectConnectionRequest(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest::Close()
@@ -185,7 +185,7 @@ class WiFiDirectDevice_Static(winrt._winrt.Object_Static):
     def get_device_selector(cls, type: WiFiDirectDeviceSelectorType, /) -> str: ...
 
 @typing.final
-class WiFiDirectDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=WiFiDirectDevice_Static):
+class WiFiDirectDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=WiFiDirectDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.WiFiDirect.WiFiDirectDevice::Close()

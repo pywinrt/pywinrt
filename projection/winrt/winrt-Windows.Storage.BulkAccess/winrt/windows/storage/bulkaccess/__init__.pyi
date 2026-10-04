@@ -24,7 +24,7 @@ __all__ = [
 ]
 
 @typing.final
-class FileInformation(winrt.system.Object, windows_storage.IStorageFile2, windows_storage.IStorageFilePropertiesWithAvailability, windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageItem2, windows_storage.IStorageItemProperties, windows_storage.IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, windows_storage.IStorageItem, IStorageItemInformation):
+class FileInformation(windows_storage.IStorageFile2, windows_storage.IStorageFilePropertiesWithAvailability, windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageItem2, windows_storage.IStorageItemProperties, windows_storage.IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, windows_storage.IStorageItem, IStorageItemInformation, winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Storage.BulkAccess.FileInformation::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     def copy_and_replace_async(self, file_to_replace: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -251,7 +251,7 @@ class FileInformationFactory(winrt.system.Object):
     def get_virtualized_items_vector(self) -> winrt.system.Object: ...
 
 @typing.final
-class FolderInformation(winrt.system.Object, windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageFolder2, windows_storage.IStorageItem2, windows_storage_search.IStorageFolderQueryOperations, windows_storage.IStorageItemProperties, windows_storage.IStorageFolder, windows_storage.IStorageItem, IStorageItemInformation):
+class FolderInformation(windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageFolder2, windows_storage.IStorageItem2, windows_storage_search.IStorageFolderQueryOperations, windows_storage.IStorageItemProperties, windows_storage.IStorageFolder, windows_storage.IStorageItem, IStorageItemInformation, winrt.system.Object):
     # System.Boolean Windows.Storage.BulkAccess.FolderInformation::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     def are_query_options_supported(self, query_options: windows_storage_search.QueryOptions, /) -> bool: ...
     @typing.overload
@@ -462,7 +462,7 @@ class FolderInformation(winrt.system.Object, windows_storage.IStorageItemPropert
 @typing.final
 class _IStorageItemInformation: ...
 
-class IStorageItemInformation(winrt._winrt.IInspectable):
+class IStorageItemInformation(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Storage.BulkAccess.IStorageItemInformation::add_PropertiesUpdated(Windows.Foundation.TypedEventHandler`2<Windows.Storage.BulkAccess.IStorageItemInformation,System.Object>)
     @abstractmethod
     def add_properties_updated(self, changed_handler: windows_foundation.TypedEventHandler[IStorageItemInformation, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

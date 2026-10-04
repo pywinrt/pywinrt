@@ -101,7 +101,7 @@ class GameChatOverlayMessageSource(winrt.system.Object):
     def remove_message_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class GameUIProviderActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgs):
+class GameUIProviderActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     # System.Void Windows.Gaming.UI.GameUIProviderActivatedEventArgs::ReportCompleted(Windows.Foundation.Collections.ValueSet)
     def report_completed(self, results: windows_foundation_collections.ValueSet, /) -> None: ...
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Gaming.UI.GameUIProviderActivatedEventArgs::get_Kind()

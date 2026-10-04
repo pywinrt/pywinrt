@@ -2925,7 +2925,7 @@ class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
 @typing.final
 class _IScrollSnapPointsInfo: ...
 
-class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
+class IScrollSnapPointsInfo(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     @abstractmethod
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> _cabc.Sequence[winrt.system.Single]: ...

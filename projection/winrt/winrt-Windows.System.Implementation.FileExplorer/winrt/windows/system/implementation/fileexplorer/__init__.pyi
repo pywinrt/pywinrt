@@ -26,7 +26,7 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
 @typing.final
 class _ISysStorageProviderEventSource: ...
 
-class ISysStorageProviderEventSource(winrt._winrt.IInspectable):
+class ISysStorageProviderEventSource(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource::add_EventReceived(Windows.Foundation.TypedEventHandler`2<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs>)
     @abstractmethod
     def add_event_received(self, handler: windows_foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -37,7 +37,7 @@ class ISysStorageProviderEventSource(winrt._winrt.IInspectable):
 @typing.final
 class _ISysStorageProviderHandlerFactory: ...
 
-class ISysStorageProviderHandlerFactory(winrt._winrt.IInspectable):
+class ISysStorageProviderHandlerFactory(winrt.system.Object):
     # Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory::GetEventSource(System.String,System.String)
     @abstractmethod
     def get_event_source(self, sync_root_id: str, event_name: str, /) -> ISysStorageProviderEventSource: ...
@@ -48,7 +48,7 @@ class ISysStorageProviderHandlerFactory(winrt._winrt.IInspectable):
 @typing.final
 class _ISysStorageProviderHttpRequestProvider: ...
 
-class ISysStorageProviderHttpRequestProvider(winrt._winrt.IInspectable):
+class ISysStorageProviderHttpRequestProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Web.Http.HttpResponseMessage> Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider::SendRequestAsync(Windows.Web.Http.HttpRequestMessage)
     @abstractmethod
     def send_request_async(self, request: windows_web_http.HttpRequestMessage, /) -> windows_foundation.IAsyncOperation[windows_web_http.HttpResponseMessage]: ...

@@ -55,7 +55,7 @@ class NodeType(enum.IntEnum):
     NOTATION_NODE = 12
 
 @typing.final
-class DtdEntity(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class DtdEntity(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdEntity::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdEntity::CloneNode(System.Boolean)
@@ -145,7 +145,7 @@ class DtdEntity(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelec
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class DtdNotation(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class DtdNotation(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdNotation::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdNotation::CloneNode(System.Boolean)
@@ -232,7 +232,7 @@ class DtdNotation(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSel
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlAttribute(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlAttribute(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlAttribute::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlAttribute::CloneNode(System.Boolean)
@@ -325,7 +325,7 @@ class XmlAttribute(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSe
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlCDataSection(winrt.system.Object, IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlCDataSection(IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlCDataSection::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # System.Void Windows.Data.Xml.Dom.XmlCDataSection::AppendData(System.String)
@@ -427,7 +427,7 @@ class XmlCDataSection(winrt.system.Object, IXmlText, IXmlCharacterData, IXmlNode
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlComment(winrt.system.Object, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlComment(IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlComment::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # System.Void Windows.Data.Xml.Dom.XmlComment::AppendData(System.String)
@@ -550,7 +550,7 @@ class XmlDocument_Static(winrt._winrt.Object_Static):
     def load_from_uri_with_settings_async(cls, uri: windows_foundation.Uri, load_settings: XmlLoadSettings, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
 
 @typing.final
-class XmlDocument(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, metaclass=XmlDocument_Static):
+class XmlDocument(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object, metaclass=XmlDocument_Static):
     def __new__(cls) -> typing.Self: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocument::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
@@ -692,7 +692,7 @@ class XmlDocument(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSel
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlDocumentFragment(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlDocumentFragment(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentFragment::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentFragment::CloneNode(System.Boolean)
@@ -773,7 +773,7 @@ class XmlDocumentFragment(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXm
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlDocumentType(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlDocumentType(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentType::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentType::CloneNode(System.Boolean)
@@ -868,7 +868,7 @@ class XmlDomImplementation(winrt.system.Object):
     def has_feature(self, feature: str, version: winrt.system.Object, /) -> bool: ...
 
 @typing.final
-class XmlElement(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlElement(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlElement::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlElement::CloneNode(System.Boolean)
@@ -976,7 +976,7 @@ class XmlElement(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSele
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlEntityReference(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlEntityReference(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlEntityReference::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlEntityReference::CloneNode(System.Boolean)
@@ -1091,7 +1091,7 @@ class XmlLoadSettings(winrt.system.Object):
     def element_content_white_space(self, value: bool) -> None: ...
 
 @typing.final
-class XmlNamedNodeMap(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
+class XmlNamedNodeMap(winrt._winrt.Sequence[IXmlNode], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[IXmlNode]: ...
     @typing.overload
@@ -1128,7 +1128,7 @@ class XmlNamedNodeMap(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class XmlNodeList(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
+class XmlNodeList(winrt._winrt.Sequence[IXmlNode], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[IXmlNode]: ...
     @typing.overload
@@ -1153,7 +1153,7 @@ class XmlNodeList(winrt.system.Object, winrt._winrt.Sequence[IXmlNode]):
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class XmlProcessingInstruction(winrt.system.Object, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlProcessingInstruction(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlProcessingInstruction::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlProcessingInstruction::CloneNode(System.Boolean)
@@ -1243,7 +1243,7 @@ class XmlProcessingInstruction(winrt.system.Object, IXmlNode, IXmlNodeSerializer
     def target(self) -> str: ...
 
 @typing.final
-class XmlText(winrt.system.Object, IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector):
+class XmlText(IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlText::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # System.Void Windows.Data.Xml.Dom.XmlText::AppendData(System.String)
@@ -1347,7 +1347,7 @@ class XmlText(winrt.system.Object, IXmlText, IXmlCharacterData, IXmlNode, IXmlNo
 @typing.final
 class _IXmlCharacterData: ...
 
-class IXmlCharacterData(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
+class IXmlCharacterData(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # System.Void Windows.Data.Xml.Dom.IXmlCharacterData::AppendData(System.String)
     @abstractmethod
     def append_data(self, data: str, /) -> None: ...
@@ -1379,7 +1379,7 @@ class IXmlCharacterData(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt._w
 @typing.final
 class _IXmlNode: ...
 
-class IXmlNode(IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
+class IXmlNode(IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.IXmlNode::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     @abstractmethod
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
@@ -1469,7 +1469,7 @@ class IXmlNode(IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
 @typing.final
 class _IXmlNodeSelector: ...
 
-class IXmlNodeSelector(winrt._winrt.IInspectable):
+class IXmlNodeSelector(winrt.system.Object):
     # Windows.Data.Xml.Dom.XmlNodeList Windows.Data.Xml.Dom.IXmlNodeSelector::SelectNodes(System.String)
     @abstractmethod
     def select_nodes(self, xpath: str, /) -> XmlNodeList: ...
@@ -1486,7 +1486,7 @@ class IXmlNodeSelector(winrt._winrt.IInspectable):
 @typing.final
 class _IXmlNodeSerializer: ...
 
-class IXmlNodeSerializer(winrt._winrt.IInspectable):
+class IXmlNodeSerializer(winrt.system.Object):
     # System.String Windows.Data.Xml.Dom.IXmlNodeSerializer::GetXml()
     @abstractmethod
     def get_xml(self) -> str: ...
@@ -1502,7 +1502,7 @@ class IXmlNodeSerializer(winrt._winrt.IInspectable):
 @typing.final
 class _IXmlText: ...
 
-class IXmlText(IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt._winrt.IInspectable):
+class IXmlText(IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
     # Windows.Data.Xml.Dom.IXmlText Windows.Data.Xml.Dom.IXmlText::SplitText(System.UInt32)
     @abstractmethod
     def split_text(self, offset: winrt.system.UInt32, /) -> IXmlText: ...

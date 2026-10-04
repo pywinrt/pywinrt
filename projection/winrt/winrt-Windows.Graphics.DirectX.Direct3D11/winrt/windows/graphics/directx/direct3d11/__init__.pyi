@@ -66,7 +66,7 @@ class Direct3DSurfaceDescription:
 @typing.final
 class _IDirect3DDevice: ...
 
-class IDirect3DDevice(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IDirect3DDevice(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice::Trim()
     @abstractmethod
     def trim(self) -> None: ...
@@ -74,7 +74,7 @@ class IDirect3DDevice(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IDirect3DSurface: ...
 
-class IDirect3DSurface(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IDirect3DSurface(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface::get_Description()
     @_property
     @abstractmethod

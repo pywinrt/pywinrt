@@ -2207,6 +2207,6 @@ class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
 @typing.final
 class _IXamlDirectObject: ...
 
-class IXamlDirectObject(winrt._winrt.IInspectable):
+class IXamlDirectObject(winrt.system.Object):
     ...
 

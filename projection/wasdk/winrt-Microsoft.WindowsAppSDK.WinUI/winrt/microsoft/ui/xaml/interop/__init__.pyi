@@ -58,7 +58,7 @@ class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyColl
 @typing.final
 class _IBindableIterable: ...
 
-class IBindableIterable(winrt._winrt.IInspectable):
+class IBindableIterable(winrt.system.Object):
     # Microsoft.UI.Xaml.Interop.IBindableIterator Microsoft.UI.Xaml.Interop.IBindableIterable::First()
     @abstractmethod
     def first(self) -> IBindableIterator: ...
@@ -66,7 +66,7 @@ class IBindableIterable(winrt._winrt.IInspectable):
 @typing.final
 class _IBindableIterator: ...
 
-class IBindableIterator(winrt._winrt.IInspectable):
+class IBindableIterator(winrt.system.Object):
     # System.Boolean Microsoft.UI.Xaml.Interop.IBindableIterator::MoveNext()
     @abstractmethod
     def move_next(self) -> bool: ...
@@ -82,7 +82,7 @@ class IBindableIterator(winrt._winrt.IInspectable):
 @typing.final
 class _IBindableObservableVector: ...
 
-class IBindableObservableVector(IBindableVector, IBindableIterable, winrt._winrt.IInspectable):
+class IBindableObservableVector(IBindableVector, IBindableIterable, winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.IBindableObservableVector::add_VectorChanged(Microsoft.UI.Xaml.Interop.BindableVectorChangedEventHandler)
     @abstractmethod
     def add_vector_changed(self, handler: BindableVectorChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -93,7 +93,7 @@ class IBindableObservableVector(IBindableVector, IBindableIterable, winrt._winrt
 @typing.final
 class _IBindableVector: ...
 
-class IBindableVector(IBindableIterable, winrt._winrt.IInspectable):
+class IBindableVector(IBindableIterable, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Interop.IBindableVector::Append(System.Object)
     @abstractmethod
     def append(self, value: winrt.system.Object, /) -> None: ...
@@ -129,7 +129,7 @@ class IBindableVector(IBindableIterable, winrt._winrt.IInspectable):
 @typing.final
 class _IBindableVectorView: ...
 
-class IBindableVectorView(IBindableIterable, winrt._winrt.IInspectable):
+class IBindableVectorView(IBindableIterable, winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Interop.IBindableVectorView::GetAt(System.UInt32)
     @abstractmethod
     def get_at(self, index: winrt.system.UInt32, /) -> winrt.system.Object: ...
@@ -144,7 +144,7 @@ class IBindableVectorView(IBindableIterable, winrt._winrt.IInspectable):
 @typing.final
 class _INotifyCollectionChanged: ...
 
-class INotifyCollectionChanged(winrt._winrt.IInspectable):
+class INotifyCollectionChanged(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Interop.INotifyCollectionChanged::add_CollectionChanged(Microsoft.UI.Xaml.Interop.NotifyCollectionChangedEventHandler)
     @abstractmethod
     def add_collection_changed(self, handler: NotifyCollectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...

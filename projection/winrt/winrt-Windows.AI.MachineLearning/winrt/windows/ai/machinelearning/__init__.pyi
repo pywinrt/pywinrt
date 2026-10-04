@@ -91,7 +91,7 @@ class TensorKind(enum.IntEnum):
     COMPLEX128 = 15
 
 @typing.final
-class ImageFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescriptor):
+class ImageFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     # Windows.Graphics.Imaging.BitmapAlphaMode Windows.AI.MachineLearning.ImageFeatureDescriptor::get_BitmapAlphaMode()
     @_property
     def bitmap_alpha_mode(self) -> windows_graphics_imaging.BitmapAlphaMode: ...
@@ -126,7 +126,7 @@ class ImageFeatureValue_Static(winrt._winrt.Object_Static):
     def create_from_video_frame(cls, image: windows_media.VideoFrame, /) -> ImageFeatureValue: ...
 
 @typing.final
-class ImageFeatureValue(winrt.system.Object, ILearningModelFeatureValue, metaclass=ImageFeatureValue_Static):
+class ImageFeatureValue(ILearningModelFeatureValue, winrt.system.Object, metaclass=ImageFeatureValue_Static):
     # Windows.Media.VideoFrame Windows.AI.MachineLearning.ImageFeatureValue::get_VideoFrame()
     @_property
     def video_frame(self) -> windows_media.VideoFrame: ...
@@ -178,7 +178,7 @@ class LearningModel_Static(winrt._winrt.Object_Static):
     def load_from_stream_with_operator_provider_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
 
 @typing.final
-class LearningModel(winrt.system.Object, windows_foundation.IClosable, metaclass=LearningModel_Static):
+class LearningModel(windows_foundation.IClosable, winrt.system.Object, metaclass=LearningModel_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.LearningModel::Close()
@@ -209,7 +209,7 @@ class LearningModel(winrt.system.Object, windows_foundation.IClosable, metaclass
     def version(self) -> winrt.system.Int64: ...
 
 @typing.final
-class LearningModelBinding(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object]):
+class LearningModelBinding(winrt._winrt.Mapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -270,7 +270,7 @@ class LearningModelEvaluationResult(winrt.system.Object):
     def succeeded(self) -> bool: ...
 
 @typing.final
-class LearningModelSession(winrt.system.Object, windows_foundation.IClosable):
+class LearningModelSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -318,7 +318,7 @@ class LearningModelSessionOptions(winrt.system.Object):
     def close_model_on_session_creation(self, value: bool) -> None: ...
 
 @typing.final
-class MapFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescriptor):
+class MapFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.MapFeatureDescriptor::get_Description()
     @_property
     def description(self) -> str: ...
@@ -339,7 +339,7 @@ class MapFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescriptor)
     def value_descriptor(self) -> ILearningModelFeatureDescriptor: ...
 
 @typing.final
-class SequenceFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescriptor):
+class SequenceFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.SequenceFeatureDescriptor::get_Description()
     @_property
     def description(self) -> str: ...
@@ -378,7 +378,7 @@ class TensorBoolean_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[bool] | winrt.system.ReadableBuffer, /) -> TensorBoolean: ...
 
 @typing.final
-class TensorBoolean(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorBoolean_Static):
+class TensorBoolean(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorBoolean_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorBoolean::Close()
@@ -419,7 +419,7 @@ class TensorDouble_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.Double] | winrt.system.ReadableBuffer, /) -> TensorDouble: ...
 
 @typing.final
-class TensorDouble(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorDouble_Static):
+class TensorDouble(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorDouble_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorDouble::Close()
@@ -439,7 +439,7 @@ class TensorDouble(winrt.system.Object, windows_foundation.IMemoryBuffer, window
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescriptor):
+class TensorFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.TensorFeatureDescriptor::get_Description()
     @_property
     def description(self) -> str: ...
@@ -481,7 +481,7 @@ class TensorFloat_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.Single] | winrt.system.ReadableBuffer, /) -> TensorFloat: ...
 
 @typing.final
-class TensorFloat(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorFloat_Static):
+class TensorFloat(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorFloat_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorFloat::Close()
@@ -522,7 +522,7 @@ class TensorFloat16Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.Single] | winrt.system.ReadableBuffer, /) -> TensorFloat16Bit: ...
 
 @typing.final
-class TensorFloat16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorFloat16Bit_Static):
+class TensorFloat16Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorFloat16Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorFloat16Bit::Close()
@@ -563,7 +563,7 @@ class TensorInt16Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.Int16] | winrt.system.ReadableBuffer, /) -> TensorInt16Bit: ...
 
 @typing.final
-class TensorInt16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorInt16Bit_Static):
+class TensorInt16Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt16Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorInt16Bit::Close()
@@ -604,7 +604,7 @@ class TensorInt32Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.Int32] | winrt.system.ReadableBuffer, /) -> TensorInt32Bit: ...
 
 @typing.final
-class TensorInt32Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorInt32Bit_Static):
+class TensorInt32Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt32Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorInt32Bit::Close()
@@ -645,7 +645,7 @@ class TensorInt64Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, /) -> TensorInt64Bit: ...
 
 @typing.final
-class TensorInt64Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorInt64Bit_Static):
+class TensorInt64Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt64Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorInt64Bit::Close()
@@ -686,7 +686,7 @@ class TensorInt8Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> TensorInt8Bit: ...
 
 @typing.final
-class TensorInt8Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorInt8Bit_Static):
+class TensorInt8Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt8Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorInt8Bit::Close()
@@ -725,7 +725,7 @@ class TensorString_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[str] | winrt.system.ReadableBuffer, /) -> TensorString: ...
 
 @typing.final
-class TensorString(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorString_Static):
+class TensorString(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorString_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorString::Close()
@@ -766,7 +766,7 @@ class TensorUInt16Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.UInt16] | winrt.system.ReadableBuffer, /) -> TensorUInt16Bit: ...
 
 @typing.final
-class TensorUInt16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorUInt16Bit_Static):
+class TensorUInt16Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt16Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorUInt16Bit::Close()
@@ -807,7 +807,7 @@ class TensorUInt32Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.UInt32] | winrt.system.ReadableBuffer, /) -> TensorUInt32Bit: ...
 
 @typing.final
-class TensorUInt32Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorUInt32Bit_Static):
+class TensorUInt32Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt32Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorUInt32Bit::Close()
@@ -848,7 +848,7 @@ class TensorUInt64Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.UInt64] | winrt.system.ReadableBuffer, /) -> TensorUInt64Bit: ...
 
 @typing.final
-class TensorUInt64Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorUInt64Bit_Static):
+class TensorUInt64Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt64Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorUInt64Bit::Close()
@@ -889,7 +889,7 @@ class TensorUInt8Bit_Static(winrt._winrt.Object_Static):
     def create_from_shape_array_and_data_array(cls, shape: winrt.system.Array[winrt.system.Int64] | winrt.system.ReadableBuffer, data: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> TensorUInt8Bit: ...
 
 @typing.final
-class TensorUInt8Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, metaclass=TensorUInt8Bit_Static):
+class TensorUInt8Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt8Bit_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.AI.MachineLearning.TensorUInt8Bit::Close()
@@ -911,7 +911,7 @@ class TensorUInt8Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
 @typing.final
 class _ILearningModelFeatureDescriptor: ...
 
-class ILearningModelFeatureDescriptor(winrt._winrt.IInspectable):
+class ILearningModelFeatureDescriptor(winrt.system.Object):
     # System.String Windows.AI.MachineLearning.ILearningModelFeatureDescriptor::get_Description()
     @_property
     @abstractmethod
@@ -932,7 +932,7 @@ class ILearningModelFeatureDescriptor(winrt._winrt.IInspectable):
 @typing.final
 class _ILearningModelFeatureValue: ...
 
-class ILearningModelFeatureValue(winrt._winrt.IInspectable):
+class ILearningModelFeatureValue(winrt.system.Object):
     # Windows.AI.MachineLearning.LearningModelFeatureKind Windows.AI.MachineLearning.ILearningModelFeatureValue::get_Kind()
     @_property
     @abstractmethod
@@ -941,13 +941,13 @@ class ILearningModelFeatureValue(winrt._winrt.IInspectable):
 @typing.final
 class _ILearningModelOperatorProvider: ...
 
-class ILearningModelOperatorProvider(winrt._winrt.IInspectable):
+class ILearningModelOperatorProvider(winrt.system.Object):
     ...
 
 @typing.final
 class _ITensor: ...
 
-class ITensor(ILearningModelFeatureValue, winrt._winrt.IInspectable):
+class ITensor(ILearningModelFeatureValue, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<System.Int64> Windows.AI.MachineLearning.ITensor::get_Shape()
     @_property
     @abstractmethod

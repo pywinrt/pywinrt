@@ -1496,7 +1496,7 @@ class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
     def power_in_milliwatts(self) -> winrt.system.Double: ...
 
 @typing.final
-class PedometerDataThreshold(winrt.system.Object, ISensorDataThreshold):
+class PedometerDataThreshold(ISensorDataThreshold, winrt.system.Object):
     def __new__(cls, sensor: Pedometer, step_goal: winrt.system.Int32) -> typing.Self: ...
 
 @typing.final
@@ -1550,11 +1550,11 @@ class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
     def min_distance_in_millimeters(self) -> winrt.system.UInt32 | None: ...
 
 @typing.final
-class ProximitySensorDataThreshold(winrt.system.Object, ISensorDataThreshold):
+class ProximitySensorDataThreshold(ISensorDataThreshold, winrt.system.Object):
     def __new__(cls, sensor: ProximitySensor) -> typing.Self: ...
 
 @typing.final
-class ProximitySensorDisplayOnOffController(winrt.system.Object, windows_foundation.IClosable):
+class ProximitySensorDisplayOnOffController(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Sensors.ProximitySensorDisplayOnOffController::Close()
@@ -1686,7 +1686,7 @@ class WakeOnApproachOptions(winrt.system.Object):
 @typing.final
 class _IHumanPresenceSensorExtension: ...
 
-class IHumanPresenceSensorExtension(winrt._winrt.IInspectable):
+class IHumanPresenceSensorExtension(winrt.system.Object):
     # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Initialize(System.String)
     @abstractmethod
     def initialize(self, device_interface: str, /) -> None: ...
@@ -1712,6 +1712,6 @@ class IHumanPresenceSensorExtension(winrt._winrt.IInspectable):
 @typing.final
 class _ISensorDataThreshold: ...
 
-class ISensorDataThreshold(winrt._winrt.IInspectable):
+class ISensorDataThreshold(winrt.system.Object):
     ...
 

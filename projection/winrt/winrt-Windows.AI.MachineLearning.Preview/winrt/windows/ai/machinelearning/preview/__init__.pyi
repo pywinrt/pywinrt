@@ -70,7 +70,7 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
 
 @typing.final
 @deprecated("Use ImageFeatureDescriptor instead of ImageVariableDescriptorPreview. For more info, see MSDN.")
-class ImageVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
+class ImageVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     # Windows.Graphics.Imaging.BitmapPixelFormat Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_BitmapPixelFormat()
     @_property
     @deprecated("Use IImageFeatureDescriptor instead of IImageVariableDescriptorPreview. For more info, see MSDN.")
@@ -146,7 +146,7 @@ class InferencingOptionsPreview(winrt.system.Object):
 
 @typing.final
 @deprecated("Use LearningModelBinding instead of LearningModelBindingPreview. For more info, see MSDN.")
-class LearningModelBindingPreview(winrt.system.Object, winrt._winrt.Mapping[str, winrt.system.Object]):
+class LearningModelBindingPreview(winrt._winrt.Mapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -260,7 +260,7 @@ class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_S
 
 @typing.final
 @deprecated("Use ILearningModelFeatureDescriptor instead of LearningModelVariableDescriptorPreview. For more info, see MSDN.")
-class LearningModelVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
+class LearningModelVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -280,7 +280,7 @@ class LearningModelVariableDescriptorPreview(winrt.system.Object, ILearningModel
 
 @typing.final
 @deprecated("Use MapFeatureDescriptor instead of MapVariableDescriptorPreview. For more info, see MSDN.")
-class MapVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
+class MapVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -316,7 +316,7 @@ class MapVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDe
 
 @typing.final
 @deprecated("Use SequenceFeatureDescriptor instead of SequenceVariableDescriptorPreview. For more info, see MSDN.")
-class SequenceVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
+class SequenceVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -340,7 +340,7 @@ class SequenceVariableDescriptorPreview(winrt.system.Object, ILearningModelVaria
 
 @typing.final
 @deprecated("Use TensorFeatureDescriptor instead of TensorVariableDescriptorPreview. For more info, see MSDN.")
-class TensorVariableDescriptorPreview(winrt.system.Object, ILearningModelVariableDescriptorPreview):
+class TensorVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -370,7 +370,7 @@ class TensorVariableDescriptorPreview(winrt.system.Object, ILearningModelVariabl
 class _ILearningModelVariableDescriptorPreview: ...
 
 @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
-class ILearningModelVariableDescriptorPreview(winrt._winrt.IInspectable):
+class ILearningModelVariableDescriptorPreview(winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")

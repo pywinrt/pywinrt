@@ -82,7 +82,7 @@ class ChildSiteLink_Static(winrt._winrt.Object_Static):
     def create_for_system_visual(cls, parent: ContentIsland, placement_visual: windows_ui_composition.ContainerVisual, /) -> ChildSiteLink: ...
 
 @typing.final
-class ChildSiteLink(winrt.system.Object, IContentSiteLink, IContentSiteInput, IContentSiteAutomation, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ChildSiteLink_Static):
+class ChildSiteLink(IContentSiteLink, IContentSiteInput, IContentSiteAutomation, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=ChildSiteLink_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Content.ChildSiteLink::Close()
@@ -228,7 +228,7 @@ class ContentIsland_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::GetFromId(System.UInt64)
     def get_from_id(cls, id: winrt.system.UInt64, /) -> ContentIsland: ...
 
-class ContentIsland(winrt.system.Object, microsoft_ui_composition.ICompositionSupportsSystemBackdrop, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentIsland_Static):
+class ContentIsland(microsoft_ui_composition.ICompositionSupportsSystemBackdrop, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=ContentIsland_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Content.ContentIsland::Close()
@@ -465,7 +465,7 @@ class ContentIslandStateChangedEventArgs(winrt.system.Object):
 class ContentSite_Static(winrt._winrt.Object_Static):
     ...
 
-class ContentSite(winrt.system.Object, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentSite_Static):
+class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=ContentSite_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Content.ContentSite::Close()
@@ -763,7 +763,7 @@ class DesktopAttachedSiteBridge_Static(winrt._winrt.Object_Static):
     def create_from_window_id(cls, queue: microsoft_ui_dispatching.DispatcherQueue, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> DesktopAttachedSiteBridge: ...
 
 @typing.final
-class DesktopAttachedSiteBridge(winrt.system.Object, IContentSiteInput, IContentSiteBridge, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=DesktopAttachedSiteBridge_Static):
+class DesktopAttachedSiteBridge(IContentSiteInput, IContentSiteBridge, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=DesktopAttachedSiteBridge_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Content.DesktopAttachedSiteBridge::Close()
@@ -840,7 +840,7 @@ class DesktopPopupSiteBridge_Static(winrt._winrt.Object_Static):
     def create(cls, parent: ContentIsland, /) -> DesktopPopupSiteBridge: ...
 
 @typing.final
-class DesktopPopupSiteBridge(winrt.system.Object, IContentSiteLink, IContentSiteBridge, IContentSiteAutomation, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=DesktopPopupSiteBridge_Static):
+class DesktopPopupSiteBridge(IContentSiteLink, IContentSiteBridge, IContentSiteAutomation, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=DesktopPopupSiteBridge_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Content.DesktopPopupSiteBridge::Close()
@@ -946,7 +946,7 @@ class DesktopSiteBridge_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::IsSupported()
     def is_supported(cls) -> bool: ...
 
-class DesktopSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundation.IClosable, microsoft_ui.IClosableNotifier, metaclass=DesktopSiteBridge_Static):
+class DesktopSiteBridge(IContentSiteBridge, windows_foundation.IClosable, microsoft_ui.IClosableNotifier, winrt.system.Object, metaclass=DesktopSiteBridge_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Content.DesktopSiteBridge::Close()
@@ -1028,7 +1028,7 @@ class DesktopSiteBridge(winrt.system.Object, IContentSiteBridge, windows_foundat
 @typing.final
 class _IContentSiteAutomation: ...
 
-class IContentSiteAutomation(winrt._winrt.IInspectable):
+class IContentSiteAutomation(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.IContentSiteAutomation::add_FragmentRootAutomationProviderRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs>)
     @abstractmethod
     def add_fragment_root_automation_provider_requested(self, handler: windows_foundation.TypedEventHandler[IContentSiteAutomation, ContentSiteAutomationProviderRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -1069,7 +1069,7 @@ class IContentSiteAutomation(winrt._winrt.IInspectable):
 @typing.final
 class _IContentSiteBridge: ...
 
-class IContentSiteBridge(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IContentSiteBridge(windows_foundation.IClosable, winrt.system.Object):
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
     @_property
     @abstractmethod
@@ -1094,7 +1094,7 @@ class IContentSiteBridge(windows_foundation.IClosable, winrt._winrt.IInspectable
 @typing.final
 class _IContentSiteInput: ...
 
-class IContentSiteInput(winrt._winrt.IInspectable):
+class IContentSiteInput(winrt.system.Object):
     # System.Boolean Microsoft.UI.Content.IContentSiteInput::get_ProcessesKeyboardInput()
     @_property
     @abstractmethod
@@ -1115,7 +1115,7 @@ class IContentSiteInput(winrt._winrt.IInspectable):
 @typing.final
 class _IContentSiteLink: ...
 
-class IContentSiteLink(winrt._winrt.IInspectable):
+class IContentSiteLink(winrt.system.Object):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.IContentSiteLink::get_Parent()
     @_property
     @abstractmethod

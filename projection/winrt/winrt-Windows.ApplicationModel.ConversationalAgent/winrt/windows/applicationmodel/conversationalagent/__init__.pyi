@@ -168,7 +168,7 @@ class SignalDetectorResourceKind(enum.IntEnum):
     DATA_CHANNEL = 13
 
 @typing.final
-class ActivationSignalDetectionConfiguration(winrt.system.Object, windows_foundation.IClosable):
+class ActivationSignalDetectionConfiguration(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration::ApplyTrainingData(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat,Windows.Storage.Streams.IInputStream)
@@ -335,7 +335,7 @@ class ConversationalAgentSession_Static(winrt._winrt.Object_Static):
     def get_current_session_sync(cls) -> ConversationalAgentSession: ...
 
 @typing.final
-class ConversationalAgentSession(winrt.system.Object, windows_foundation.IClosable, metaclass=ConversationalAgentSession_Static):
+class ConversationalAgentSession(windows_foundation.IClosable, winrt.system.Object, metaclass=ConversationalAgentSession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession::Close()

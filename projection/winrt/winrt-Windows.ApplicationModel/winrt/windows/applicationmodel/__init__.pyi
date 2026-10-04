@@ -288,7 +288,7 @@ class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
     ...
 
 @typing.final
-class EnteredBackgroundEventArgs(winrt.system.Object, IEnteredBackgroundEventArgs):
+class EnteredBackgroundEventArgs(IEnteredBackgroundEventArgs, winrt.system.Object):
     # Windows.Foundation.Deferral Windows.ApplicationModel.EnteredBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
@@ -367,7 +367,7 @@ class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLa
     ...
 
 @typing.final
-class LeavingBackgroundEventArgs(winrt.system.Object, ILeavingBackgroundEventArgs):
+class LeavingBackgroundEventArgs(ILeavingBackgroundEventArgs, winrt.system.Object):
     # Windows.Foundation.Deferral Windows.ApplicationModel.LeavingBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
@@ -836,18 +836,18 @@ class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
     def task_id(self) -> str: ...
 
 @typing.final
-class SuspendingDeferral(winrt.system.Object, ISuspendingDeferral):
+class SuspendingDeferral(ISuspendingDeferral, winrt.system.Object):
     # System.Void Windows.ApplicationModel.SuspendingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
-class SuspendingEventArgs(winrt.system.Object, ISuspendingEventArgs):
+class SuspendingEventArgs(ISuspendingEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.SuspendingOperation Windows.ApplicationModel.SuspendingEventArgs::get_SuspendingOperation()
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
 @typing.final
-class SuspendingOperation(winrt.system.Object, ISuspendingOperation):
+class SuspendingOperation(ISuspendingOperation, winrt.system.Object):
     # Windows.ApplicationModel.SuspendingDeferral Windows.ApplicationModel.SuspendingOperation::GetDeferral()
     def get_deferral(self) -> SuspendingDeferral: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SuspendingOperation::get_Deadline()
@@ -857,7 +857,7 @@ class SuspendingOperation(winrt.system.Object, ISuspendingOperation):
 @typing.final
 class _IEnteredBackgroundEventArgs: ...
 
-class IEnteredBackgroundEventArgs(winrt._winrt.IInspectable):
+class IEnteredBackgroundEventArgs(winrt.system.Object):
     # Windows.Foundation.Deferral Windows.ApplicationModel.IEnteredBackgroundEventArgs::GetDeferral()
     @abstractmethod
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -865,7 +865,7 @@ class IEnteredBackgroundEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _ILeavingBackgroundEventArgs: ...
 
-class ILeavingBackgroundEventArgs(winrt._winrt.IInspectable):
+class ILeavingBackgroundEventArgs(winrt.system.Object):
     # Windows.Foundation.Deferral Windows.ApplicationModel.ILeavingBackgroundEventArgs::GetDeferral()
     @abstractmethod
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -873,7 +873,7 @@ class ILeavingBackgroundEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IPackageCatalogStatics2: ...
 
-class IPackageCatalogStatics2(winrt._winrt.IInspectable):
+class IPackageCatalogStatics2(winrt.system.Object):
     # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.IPackageCatalogStatics2::OpenForPackage(Windows.ApplicationModel.Package)
     @abstractmethod
     def open_for_package(self, package: Package, /) -> PackageCatalog: ...
@@ -881,7 +881,7 @@ class IPackageCatalogStatics2(winrt._winrt.IInspectable):
 @typing.final
 class _ISuspendingDeferral: ...
 
-class ISuspendingDeferral(winrt._winrt.IInspectable):
+class ISuspendingDeferral(winrt.system.Object):
     # System.Void Windows.ApplicationModel.ISuspendingDeferral::Complete()
     @abstractmethod
     def complete(self) -> None: ...
@@ -889,7 +889,7 @@ class ISuspendingDeferral(winrt._winrt.IInspectable):
 @typing.final
 class _ISuspendingEventArgs: ...
 
-class ISuspendingEventArgs(winrt._winrt.IInspectable):
+class ISuspendingEventArgs(winrt.system.Object):
     # Windows.ApplicationModel.SuspendingOperation Windows.ApplicationModel.ISuspendingEventArgs::get_SuspendingOperation()
     @_property
     @abstractmethod
@@ -898,7 +898,7 @@ class ISuspendingEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _ISuspendingOperation: ...
 
-class ISuspendingOperation(winrt._winrt.IInspectable):
+class ISuspendingOperation(winrt.system.Object):
     # Windows.ApplicationModel.SuspendingDeferral Windows.ApplicationModel.ISuspendingOperation::GetDeferral()
     @abstractmethod
     def get_deferral(self) -> SuspendingDeferral: ...

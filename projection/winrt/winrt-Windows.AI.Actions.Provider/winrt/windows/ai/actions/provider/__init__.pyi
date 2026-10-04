@@ -16,7 +16,7 @@ __all__ = [
 @typing.final
 class _IActionFeedbackHandler: ...
 
-class IActionFeedbackHandler(winrt._winrt.IInspectable):
+class IActionFeedbackHandler(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.AI.Actions.Provider.IActionFeedbackHandler::ProcessFeedbackAsync(Windows.AI.Actions.ActionInvocationContext,Windows.AI.Actions.ActionFeedback)
     @abstractmethod
     def process_feedback_async(self, context: windows_ai_actions.ActionInvocationContext, feedback: windows_ai_actions.ActionFeedback, /) -> windows_foundation.IAsyncAction: ...
@@ -24,7 +24,7 @@ class IActionFeedbackHandler(winrt._winrt.IInspectable):
 @typing.final
 class _IActionProvider: ...
 
-class IActionProvider(winrt._winrt.IInspectable):
+class IActionProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.AI.Actions.Provider.IActionProvider::InvokeAsync(Windows.AI.Actions.ActionInvocationContext)
     @abstractmethod
     def invoke_async(self, context: windows_ai_actions.ActionInvocationContext, /) -> windows_foundation.IAsyncAction: ...

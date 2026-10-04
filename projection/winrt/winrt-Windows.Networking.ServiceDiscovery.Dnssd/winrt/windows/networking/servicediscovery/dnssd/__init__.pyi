@@ -38,7 +38,7 @@ class DnssdServiceWatcherStatus(enum.IntEnum):
     ABORTED = 5
 
 @typing.final
-class DnssdRegistrationResult(winrt.system.Object, windows_foundation.IStringable):
+class DnssdRegistrationResult(windows_foundation.IStringable, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult::ToString()
     def to_string(self) -> str: ...
@@ -53,7 +53,7 @@ class DnssdRegistrationResult(winrt.system.Object, windows_foundation.IStringabl
     def status(self) -> DnssdRegistrationStatus: ...
 
 @typing.final
-class DnssdServiceInstance(winrt.system.Object, windows_foundation.IStringable):
+class DnssdServiceInstance(windows_foundation.IStringable, winrt.system.Object):
     def __new__(cls, dnssd_service_instance_name: str, host_name: windows_networking.HostName, port: winrt.system.UInt16) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance::RegisterDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)
@@ -120,7 +120,7 @@ class DnssdServiceInstance(winrt.system.Object, windows_foundation.IStringable):
     def text_attributes(self) -> _cabc.MutableMapping[str, str]: ...
 
 @typing.final
-class DnssdServiceInstanceCollection(winrt.system.Object, winrt._winrt.Sequence[DnssdServiceInstance]):
+class DnssdServiceInstanceCollection(winrt._winrt.Sequence[DnssdServiceInstance], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[DnssdServiceInstance]: ...
     @typing.overload

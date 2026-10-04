@@ -125,7 +125,7 @@ class MediaTimeRange:
     def unpack(self) -> tuple[datetime.timedelta, datetime.timedelta]: ...
 
 @typing.final
-class AudioBuffer(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable):
+class AudioBuffer(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.AudioBuffer::Close()
@@ -143,7 +143,7 @@ class AudioBuffer(winrt.system.Object, windows_foundation.IMemoryBuffer, windows
     def capacity(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class AudioFrame(winrt.system.Object, IMediaFrame, windows_foundation.IClosable):
+class AudioFrame(IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, capacity: winrt.system.UInt32) -> typing.Self: ...
@@ -781,7 +781,7 @@ class VideoFrame_Static(winrt._winrt.Object_Static):
     def create_with_software_bitmap(cls, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> VideoFrame: ...
 
 @typing.final
-class VideoFrame(winrt.system.Object, IMediaFrame, windows_foundation.IClosable, metaclass=VideoFrame_Static):
+class VideoFrame(IMediaFrame, windows_foundation.IClosable, winrt.system.Object, metaclass=VideoFrame_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -843,7 +843,7 @@ class VideoFrame(winrt.system.Object, IMediaFrame, windows_foundation.IClosable,
 @typing.final
 class _IMediaExtension: ...
 
-class IMediaExtension(winrt._winrt.IInspectable):
+class IMediaExtension(winrt.system.Object):
     # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
     @abstractmethod
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
@@ -851,7 +851,7 @@ class IMediaExtension(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaFrame: ...
 
-class IMediaFrame(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IMediaFrame(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.IMediaFrame::get_Duration()
     @_property
     @abstractmethod
@@ -900,7 +900,7 @@ class IMediaFrame(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IMediaMarker: ...
 
-class IMediaMarker(winrt._winrt.IInspectable):
+class IMediaMarker(winrt.system.Object):
     # System.String Windows.Media.IMediaMarker::get_MediaMarkerType()
     @_property
     @abstractmethod
@@ -917,7 +917,7 @@ class IMediaMarker(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaMarkers: ...
 
-class IMediaMarkers(winrt._winrt.IInspectable):
+class IMediaMarkers(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.IMediaMarker> Windows.Media.IMediaMarkers::get_Markers()
     @_property
     @abstractmethod

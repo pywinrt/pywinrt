@@ -84,7 +84,7 @@ class ResourceCandidate(winrt.system.Object):
     def value_as_string(self) -> str: ...
 
 @typing.final
-class ResourceContext(winrt.system.Object, IResourceContext):
+class ResourceContext(IResourceContext, winrt.system.Object):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.ResourceContext::get_QualifierValues()
     @_property
     def qualifier_values(self) -> _cabc.MutableMapping[str, str]: ...
@@ -108,7 +108,7 @@ class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
     def get_string_for_uri(self, resource_uri: windows_foundation.Uri, /) -> str: ...
 
 @typing.final
-class ResourceManager(winrt.system.Object, IResourceManager):
+class ResourceManager(IResourceManager, winrt.system.Object):
     @typing.overload
     def __new__(cls, file_name: str) -> typing.Self: ...
     @typing.overload
@@ -165,7 +165,7 @@ class ResourceNotFoundEventArgs(winrt.system.Object):
 @typing.final
 class _IResourceContext: ...
 
-class IResourceContext(winrt._winrt.IInspectable):
+class IResourceContext(winrt.system.Object):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.IResourceContext::get_QualifierValues()
     @_property
     @abstractmethod
@@ -174,7 +174,7 @@ class IResourceContext(winrt._winrt.IInspectable):
 @typing.final
 class _IResourceManager: ...
 
-class IResourceManager(winrt._winrt.IInspectable):
+class IResourceManager(winrt.system.Object):
     # Microsoft.Windows.ApplicationModel.Resources.ResourceContext Microsoft.Windows.ApplicationModel.Resources.IResourceManager::CreateResourceContext()
     @abstractmethod
     def create_resource_context(self) -> ResourceContext: ...

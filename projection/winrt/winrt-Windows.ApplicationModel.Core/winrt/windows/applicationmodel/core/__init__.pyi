@@ -220,7 +220,7 @@ class UnhandledErrorDetectedEventArgs(winrt.system.Object):
 @typing.final
 class _ICoreApplicationUnhandledError: ...
 
-class ICoreApplicationUnhandledError(winrt._winrt.IInspectable):
+class ICoreApplicationUnhandledError(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Core.ICoreApplicationUnhandledError::add_UnhandledErrorDetected(Windows.Foundation.EventHandler`1<Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs>)
     @abstractmethod
     def add_unhandled_error_detected(self, handler: windows_foundation.EventHandler[UnhandledErrorDetectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -231,7 +231,7 @@ class ICoreApplicationUnhandledError(winrt._winrt.IInspectable):
 @typing.final
 class _IFrameworkView: ...
 
-class IFrameworkView(winrt._winrt.IInspectable):
+class IFrameworkView(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Core.IFrameworkView::Initialize(Windows.ApplicationModel.Core.CoreApplicationView)
     @abstractmethod
     def initialize(self, application_view: CoreApplicationView, /) -> None: ...
@@ -251,7 +251,7 @@ class IFrameworkView(winrt._winrt.IInspectable):
 @typing.final
 class _IFrameworkViewSource: ...
 
-class IFrameworkViewSource(winrt._winrt.IInspectable):
+class IFrameworkViewSource(winrt.system.Object):
     # Windows.ApplicationModel.Core.IFrameworkView Windows.ApplicationModel.Core.IFrameworkViewSource::CreateView()
     @abstractmethod
     def create_view(self) -> IFrameworkView: ...

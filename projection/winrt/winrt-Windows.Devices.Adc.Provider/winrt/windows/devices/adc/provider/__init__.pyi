@@ -23,7 +23,7 @@ class ProviderAdcChannelMode(enum.IntEnum):
 @typing.final
 class _IAdcControllerProvider: ...
 
-class IAdcControllerProvider(winrt._winrt.IInspectable):
+class IAdcControllerProvider(winrt.system.Object):
     # System.Void Windows.Devices.Adc.Provider.IAdcControllerProvider::AcquireChannel(System.Int32)
     @abstractmethod
     def acquire_channel(self, channel: winrt.system.Int32, /) -> None: ...
@@ -64,7 +64,7 @@ class IAdcControllerProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IAdcProvider: ...
 
-class IAdcProvider(winrt._winrt.IInspectable):
+class IAdcProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.Provider.IAdcControllerProvider> Windows.Devices.Adc.Provider.IAdcProvider::GetControllers()
     @abstractmethod
     def get_controllers(self) -> _cabc.Sequence[IAdcControllerProvider]: ...

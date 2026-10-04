@@ -142,7 +142,7 @@ class BackgroundDownloader_Static(winrt._winrt.Object_Static):
     def request_unconstrained_downloads_async(cls, operations: _cabc.Iterable[DownloadOperation], /) -> windows_foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
 @typing.final
-class BackgroundDownloader(winrt.system.Object, IBackgroundTransferBase, metaclass=BackgroundDownloader_Static):
+class BackgroundDownloader(IBackgroundTransferBase, winrt.system.Object, metaclass=BackgroundDownloader_Static):
     @typing.overload
     def __new__(cls, completion_group: BackgroundTransferCompletionGroup) -> typing.Self: ...
     @typing.overload
@@ -320,7 +320,7 @@ class BackgroundUploader_Static(winrt._winrt.Object_Static):
     def request_unconstrained_uploads_async(cls, operations: _cabc.Iterable[UploadOperation], /) -> windows_foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
 @typing.final
-class BackgroundUploader(winrt.system.Object, IBackgroundTransferBase, metaclass=BackgroundUploader_Static):
+class BackgroundUploader(IBackgroundTransferBase, winrt.system.Object, metaclass=BackgroundUploader_Static):
     @typing.overload
     def __new__(cls, completion_group: BackgroundTransferCompletionGroup) -> typing.Self: ...
     @typing.overload
@@ -438,7 +438,7 @@ class ContentPrefetcher(winrt.system.Object, metaclass=ContentPrefetcher_Static)
     ...
 
 @typing.final
-class DownloadOperation(winrt.system.Object, IBackgroundTransferOperationPriority, IBackgroundTransferOperation):
+class DownloadOperation(IBackgroundTransferOperationPriority, IBackgroundTransferOperation, winrt.system.Object):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.DownloadOperation> Windows.Networking.BackgroundTransfer.DownloadOperation::AttachAsync()
     def attach_async(self) -> windows_foundation.IAsyncOperationWithProgress[DownloadOperation, DownloadOperation]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> Windows.Networking.BackgroundTransfer.DownloadOperation::GetDownloadedRanges()
@@ -539,7 +539,7 @@ class UnconstrainedTransferRequestResult(winrt.system.Object):
     def is_unconstrained(self) -> bool: ...
 
 @typing.final
-class UploadOperation(winrt.system.Object, IBackgroundTransferOperationPriority, IBackgroundTransferOperation):
+class UploadOperation(IBackgroundTransferOperationPriority, IBackgroundTransferOperation, winrt.system.Object):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.BackgroundTransfer.UploadOperation,Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.UploadOperation::AttachAsync()
     def attach_async(self) -> windows_foundation.IAsyncOperationWithProgress[UploadOperation, UploadOperation]: ...
     # Windows.Networking.BackgroundTransfer.ResponseInformation Windows.Networking.BackgroundTransfer.UploadOperation::GetResponseInformation()
@@ -592,7 +592,7 @@ class UploadOperation(winrt.system.Object, IBackgroundTransferOperationPriority,
 @typing.final
 class _IBackgroundTransferBase: ...
 
-class IBackgroundTransferBase(winrt._winrt.IInspectable):
+class IBackgroundTransferBase(winrt.system.Object):
     # System.Void Windows.Networking.BackgroundTransfer.IBackgroundTransferBase::SetRequestHeader(System.String,System.String)
     @abstractmethod
     def set_request_header(self, header_name: str, header_value: str, /) -> None: ...
@@ -642,7 +642,7 @@ class IBackgroundTransferBase(winrt._winrt.IInspectable):
 @typing.final
 class _IBackgroundTransferContentPartFactory: ...
 
-class IBackgroundTransferContentPartFactory(winrt._winrt.IInspectable):
+class IBackgroundTransferContentPartFactory(winrt.system.Object):
     # Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory::CreateWithName(System.String)
     @abstractmethod
     def create_with_name(self, name: str, /) -> BackgroundTransferContentPart: ...
@@ -653,7 +653,7 @@ class IBackgroundTransferContentPartFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IBackgroundTransferOperation: ...
 
-class IBackgroundTransferOperation(winrt._winrt.IInspectable):
+class IBackgroundTransferOperation(winrt.system.Object):
     # Windows.Networking.BackgroundTransfer.ResponseInformation Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation::GetResponseInformation()
     @abstractmethod
     def get_response_information(self) -> ResponseInformation: ...
@@ -689,7 +689,7 @@ class IBackgroundTransferOperation(winrt._winrt.IInspectable):
 @typing.final
 class _IBackgroundTransferOperationPriority: ...
 
-class IBackgroundTransferOperationPriority(winrt._winrt.IInspectable):
+class IBackgroundTransferOperationPriority(winrt.system.Object):
     # Windows.Networking.BackgroundTransfer.BackgroundTransferPriority Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority::get_Priority()
     @_property
     @abstractmethod

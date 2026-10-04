@@ -259,7 +259,7 @@ class KnownPerceptionVideoProfileProperties(winrt.system.Object, metaclass=Known
 
 @typing.final
 @deprecated("PerceptionColorFrame may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.VideoMediaFrame instead.")
-class PerceptionColorFrame(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionColorFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionColorFrame::Close()
@@ -282,7 +282,7 @@ class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionColorFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
-class PerceptionColorFrameReader(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionColorFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionColorFrameReader::Close()
@@ -486,7 +486,7 @@ class PerceptionColorFrameSourceWatcher(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionControlSession may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
-class PerceptionControlSession(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionControlSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionControlSession::Close()
@@ -535,7 +535,7 @@ class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionDepthFrame may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.DepthMediaFrame instead.")
-class PerceptionDepthFrame(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionDepthFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionDepthFrame::Close()
@@ -558,7 +558,7 @@ class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionDepthFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
-class PerceptionDepthFrameReader(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionDepthFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionDepthFrameReader::Close()
@@ -786,7 +786,7 @@ class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionInfraredFrame may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.InfraredMediaFrame instead.")
-class PerceptionInfraredFrame(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionInfraredFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrame::Close()
@@ -809,7 +809,7 @@ class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionInfraredFrameReader may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameReader instead.")
-class PerceptionInfraredFrameReader(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionInfraredFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrameReader::Close()

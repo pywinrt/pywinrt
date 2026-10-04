@@ -3183,7 +3183,7 @@ class ColumnDefinition(windows_ui_xaml.DependencyObject, metaclass=ColumnDefinit
     def actual_width(self) -> winrt.system.Double: ...
 
 @typing.final
-class ColumnDefinitionCollection(winrt.system.Object, winrt._winrt.MutableSequence[ColumnDefinition]):
+class ColumnDefinitionCollection(winrt._winrt.MutableSequence[ColumnDefinition], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[ColumnDefinition]: ...
     @typing.overload
@@ -4719,7 +4719,7 @@ class ControlTemplate(windows_ui_xaml.FrameworkTemplate):
 class DataTemplateSelector_Static(winrt._winrt.Object_Static):
     ...
 
-class DataTemplateSelector(winrt.system.Object, windows_ui_xaml.IElementFactory, metaclass=DataTemplateSelector_Static):
+class DataTemplateSelector(windows_ui_xaml.IElementFactory, winrt.system.Object, metaclass=DataTemplateSelector_Static):
     def __new__(cls) -> typing.Self: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.DataTemplateSelector::GetElement(Windows.UI.Xaml.ElementFactoryGetArgs)
     def get_element(self, args: windows_ui_xaml.ElementFactoryGetArgs, /) -> windows_ui_xaml.UIElement: ...
@@ -5697,7 +5697,7 @@ class GroupItem(ContentControl, metaclass=GroupItem_Static):
 class GroupStyle_Static(winrt._winrt.Object_Static):
     ...
 
-class GroupStyle(winrt.system.Object, windows_ui_xaml_data.INotifyPropertyChanged, metaclass=GroupStyle_Static):
+class GroupStyle(windows_ui_xaml_data.INotifyPropertyChanged, winrt.system.Object, metaclass=GroupStyle_Static):
     def __new__(cls) -> typing.Self: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.GroupStyle::add_PropertyChanged(Windows.UI.Xaml.Data.PropertyChangedEventHandler)
@@ -6072,7 +6072,7 @@ class HubSection(Control, metaclass=HubSection_Static):
     def content_template(self, value: windows_ui_xaml.DataTemplate) -> None: ...
 
 @typing.final
-class HubSectionCollection(winrt.system.Object, winrt._winrt.MutableSequence[HubSection]):
+class HubSectionCollection(winrt._winrt.MutableSequence[HubSection], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HubSection]: ...
     @typing.overload
@@ -6749,7 +6749,7 @@ class ItemClickEventArgs(windows_ui_xaml.RoutedEventArgs):
     def clicked_item(self) -> winrt.system.Object: ...
 
 @typing.final
-class ItemCollection(winrt.system.Object, windows_foundation_collections.IObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object]):
+class ItemCollection(windows_foundation_collections.IObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[winrt.system.Object]: ...
     @typing.overload
@@ -11695,7 +11695,7 @@ class RowDefinition(windows_ui_xaml.DependencyObject, metaclass=RowDefinition_St
     def actual_height(self) -> winrt.system.Double: ...
 
 @typing.final
-class RowDefinitionCollection(winrt.system.Object, winrt._winrt.MutableSequence[RowDefinition]):
+class RowDefinitionCollection(winrt._winrt.MutableSequence[RowDefinition], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[RowDefinition]: ...
     @typing.overload
@@ -15192,7 +15192,7 @@ class TwoPaneView(Control, metaclass=TwoPaneView_Static):
     def mode(self) -> TwoPaneViewMode: ...
 
 @typing.final
-class UIElementCollection(winrt.system.Object, winrt._winrt.MutableSequence[windows_ui_xaml.UIElement]):
+class UIElementCollection(winrt._winrt.MutableSequence[windows_ui_xaml.UIElement], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[windows_ui_xaml.UIElement]: ...
     @typing.overload
@@ -15925,7 +15925,7 @@ class WrapGrid(windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel, me
 @typing.final
 class _ICommandBarElement: ...
 
-class ICommandBarElement(winrt._winrt.IInspectable):
+class ICommandBarElement(winrt.system.Object):
     # System.Boolean Windows.UI.Xaml.Controls.ICommandBarElement::get_IsCompact()
     @_property
     @abstractmethod
@@ -15938,7 +15938,7 @@ class ICommandBarElement(winrt._winrt.IInspectable):
 @typing.final
 class _ICommandBarElement2: ...
 
-class ICommandBarElement2(winrt._winrt.IInspectable):
+class ICommandBarElement2(winrt.system.Object):
     # System.Int32 Windows.UI.Xaml.Controls.ICommandBarElement2::get_DynamicOverflowOrder()
     @_property
     @abstractmethod
@@ -15955,7 +15955,7 @@ class ICommandBarElement2(winrt._winrt.IInspectable):
 @typing.final
 class _IInsertionPanel: ...
 
-class IInsertionPanel(winrt._winrt.IInspectable):
+class IInsertionPanel(winrt.system.Object):
     # System.Void Windows.UI.Xaml.Controls.IInsertionPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     @abstractmethod
     def get_insertion_indexes(self, position: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -15963,7 +15963,7 @@ class IInsertionPanel(winrt._winrt.IInspectable):
 @typing.final
 class _IItemContainerMapping: ...
 
-class IItemContainerMapping(winrt._winrt.IInspectable):
+class IItemContainerMapping(winrt.system.Object):
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.IItemContainerMapping::ContainerFromIndex(System.Int32)
     @abstractmethod
     def container_from_index(self, index: winrt.system.Int32, /) -> windows_ui_xaml.DependencyObject: ...
@@ -15980,7 +15980,7 @@ class IItemContainerMapping(winrt._winrt.IInspectable):
 @typing.final
 class _INavigate: ...
 
-class INavigate(winrt._winrt.IInspectable):
+class INavigate(winrt.system.Object):
     # System.Boolean Windows.UI.Xaml.Controls.INavigate::Navigate(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
     def navigate(self, source_page_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], /) -> bool: ...
@@ -15988,7 +15988,7 @@ class INavigate(winrt._winrt.IInspectable):
 @typing.final
 class _IScrollAnchorProvider: ...
 
-class IScrollAnchorProvider(winrt._winrt.IInspectable):
+class IScrollAnchorProvider(winrt.system.Object):
     # System.Void Windows.UI.Xaml.Controls.IScrollAnchorProvider::RegisterAnchorCandidate(Windows.UI.Xaml.UIElement)
     @abstractmethod
     def register_anchor_candidate(self, element: windows_ui_xaml.UIElement, /) -> None: ...
@@ -16003,7 +16003,7 @@ class IScrollAnchorProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ISemanticZoomInformation: ...
 
-class ISemanticZoomInformation(winrt._winrt.IInspectable):
+class ISemanticZoomInformation(winrt.system.Object):
     # System.Void Windows.UI.Xaml.Controls.ISemanticZoomInformation::CompleteViewChange()
     @abstractmethod
     def complete_view_change(self) -> None: ...

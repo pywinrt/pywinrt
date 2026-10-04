@@ -50,7 +50,7 @@ class RoundingAlgorithm(enum.IntEnum):
     ROUND_HALF_TO_ODD = 10
 
 @typing.final
-class CurrencyFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions):
+class CurrencyFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @typing.overload
     def __new__(cls, currency_code: str) -> typing.Self: ...
     @typing.overload
@@ -146,7 +146,7 @@ class CurrencyFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOp
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class DecimalFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions):
+class DecimalFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @typing.overload
     def __new__(cls, languages: _cabc.Iterable[str], geographic_region: str) -> typing.Self: ...
     @typing.overload
@@ -227,7 +227,7 @@ class DecimalFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOpt
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class IncrementNumberRounder(winrt.system.Object, INumberRounder):
+class IncrementNumberRounder(INumberRounder, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Double Windows.Globalization.NumberFormatting.IncrementNumberRounder::RoundDouble(System.Double)
     def round_double(self, value: winrt.system.Double, /) -> winrt.system.Double: ...
@@ -276,7 +276,7 @@ class NumeralSystemTranslator(winrt.system.Object):
     def resolved_language(self) -> str: ...
 
 @typing.final
-class PercentFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions):
+class PercentFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @typing.overload
     def __new__(cls, languages: _cabc.Iterable[str], geographic_region: str) -> typing.Self: ...
     @typing.overload
@@ -357,7 +357,7 @@ class PercentFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOpt
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class PermilleFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions):
+class PermilleFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @typing.overload
     def __new__(cls, languages: _cabc.Iterable[str], geographic_region: str) -> typing.Self: ...
     @typing.overload
@@ -438,7 +438,7 @@ class PermilleFormatter(winrt.system.Object, ISignedZeroOption, INumberRounderOp
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class SignificantDigitsNumberRounder(winrt.system.Object, INumberRounder):
+class SignificantDigitsNumberRounder(INumberRounder, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Double Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder::RoundDouble(System.Double)
     def round_double(self, value: winrt.system.Double, /) -> winrt.system.Double: ...
@@ -468,7 +468,7 @@ class SignificantDigitsNumberRounder(winrt.system.Object, INumberRounder):
 @typing.final
 class _INumberFormatter: ...
 
-class INumberFormatter(winrt._winrt.IInspectable):
+class INumberFormatter(winrt.system.Object):
     # System.String Windows.Globalization.NumberFormatting.INumberFormatter::Format(System.Double)
     @abstractmethod
     def format(self, value: winrt.system.Double, /) -> str: ...
@@ -486,7 +486,7 @@ class INumberFormatter(winrt._winrt.IInspectable):
 @typing.final
 class _INumberFormatter2: ...
 
-class INumberFormatter2(winrt._winrt.IInspectable):
+class INumberFormatter2(winrt.system.Object):
     # System.String Windows.Globalization.NumberFormatting.INumberFormatter2::FormatDouble(System.Double)
     @abstractmethod
     def format_double(self, value: winrt.system.Double, /) -> str: ...
@@ -500,7 +500,7 @@ class INumberFormatter2(winrt._winrt.IInspectable):
 @typing.final
 class _INumberFormatterOptions: ...
 
-class INumberFormatterOptions(winrt._winrt.IInspectable):
+class INumberFormatterOptions(winrt.system.Object):
     # System.Int32 Windows.Globalization.NumberFormatting.INumberFormatterOptions::get_FractionDigits()
     @_property
     @abstractmethod
@@ -561,7 +561,7 @@ class INumberFormatterOptions(winrt._winrt.IInspectable):
 @typing.final
 class _INumberParser: ...
 
-class INumberParser(winrt._winrt.IInspectable):
+class INumberParser(winrt.system.Object):
     # Windows.Foundation.IReference`1<System.Double> Windows.Globalization.NumberFormatting.INumberParser::ParseDouble(System.String)
     @abstractmethod
     def parse_double(self, text: str, /) -> winrt.system.Double | None: ...
@@ -575,7 +575,7 @@ class INumberParser(winrt._winrt.IInspectable):
 @typing.final
 class _INumberRounder: ...
 
-class INumberRounder(winrt._winrt.IInspectable):
+class INumberRounder(winrt.system.Object):
     # System.Double Windows.Globalization.NumberFormatting.INumberRounder::RoundDouble(System.Double)
     @abstractmethod
     def round_double(self, value: winrt.system.Double, /) -> winrt.system.Double: ...
@@ -598,7 +598,7 @@ class INumberRounder(winrt._winrt.IInspectable):
 @typing.final
 class _INumberRounderOption: ...
 
-class INumberRounderOption(winrt._winrt.IInspectable):
+class INumberRounderOption(winrt.system.Object):
     # Windows.Globalization.NumberFormatting.INumberRounder Windows.Globalization.NumberFormatting.INumberRounderOption::get_NumberRounder()
     @_property
     @abstractmethod
@@ -611,7 +611,7 @@ class INumberRounderOption(winrt._winrt.IInspectable):
 @typing.final
 class _ISignedZeroOption: ...
 
-class ISignedZeroOption(winrt._winrt.IInspectable):
+class ISignedZeroOption(winrt.system.Object):
     # System.Boolean Windows.Globalization.NumberFormatting.ISignedZeroOption::get_IsZeroSigned()
     @_property
     @abstractmethod
@@ -624,7 +624,7 @@ class ISignedZeroOption(winrt._winrt.IInspectable):
 @typing.final
 class _ISignificantDigitsOption: ...
 
-class ISignificantDigitsOption(winrt._winrt.IInspectable):
+class ISignificantDigitsOption(winrt.system.Object):
     # System.Int32 Windows.Globalization.NumberFormatting.ISignificantDigitsOption::get_SignificantDigits()
     @_property
     @abstractmethod

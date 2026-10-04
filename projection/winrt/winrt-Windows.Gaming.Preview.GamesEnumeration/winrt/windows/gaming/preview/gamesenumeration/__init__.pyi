@@ -71,7 +71,7 @@ class GameList(winrt.system.Object, metaclass=GameList_Static):
     ...
 
 @typing.final
-class GameListEntry(winrt.system.Object, IGameListEntry):
+class GameListEntry(IGameListEntry, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.GameListEntry::LaunchAsync()
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)
@@ -185,7 +185,7 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
 @typing.final
 class _IGameListEntry: ...
 
-class IGameListEntry(winrt._winrt.IInspectable):
+class IGameListEntry(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::LaunchAsync()
     @abstractmethod
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...

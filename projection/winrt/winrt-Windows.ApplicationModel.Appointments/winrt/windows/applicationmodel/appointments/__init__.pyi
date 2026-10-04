@@ -520,7 +520,7 @@ class AppointmentException(winrt.system.Object):
     def is_deleted(self) -> bool: ...
 
 @typing.final
-class AppointmentInvitee(winrt.system.Object, IAppointmentParticipant):
+class AppointmentInvitee(IAppointmentParticipant, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.ApplicationModel.Appointments.AppointmentParticipantRole Windows.ApplicationModel.Appointments.AppointmentInvitee::get_Role()
     @_property
@@ -683,7 +683,7 @@ class AppointmentManagerForUser(winrt.system.Object):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class AppointmentOrganizer(winrt.system.Object, IAppointmentParticipant):
+class AppointmentOrganizer(IAppointmentParticipant, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Appointments.AppointmentOrganizer::get_DisplayName()
     @_property
@@ -1015,7 +1015,7 @@ class FindAppointmentsOptions(winrt.system.Object):
 @typing.final
 class _IAppointmentParticipant: ...
 
-class IAppointmentParticipant(winrt._winrt.IInspectable):
+class IAppointmentParticipant(winrt.system.Object):
     # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_Address()
     @_property
     @abstractmethod

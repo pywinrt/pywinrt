@@ -233,7 +233,7 @@ class ManipulationVelocities:
 class AttachableInputObject_Static(winrt._winrt.Object_Static):
     ...
 
-class AttachableInputObject(winrt.system.Object, windows_foundation.IClosable, metaclass=AttachableInputObject_Static):
+class AttachableInputObject(windows_foundation.IClosable, winrt.system.Object, metaclass=AttachableInputObject_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.UI.Input.AttachableInputObject::Close()
@@ -1319,7 +1319,7 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
 @typing.final
 class _IPointerPointTransform: ...
 
-class IPointerPointTransform(winrt._winrt.IInspectable):
+class IPointerPointTransform(winrt.system.Object):
     # Windows.Foundation.Rect Windows.UI.Input.IPointerPointTransform::TransformBounds(Windows.Foundation.Rect)
     @abstractmethod
     def transform_bounds(self, rect: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Rect: ...

@@ -59,7 +59,7 @@ class IRawElementProviderSimple(microsoft_ui_xaml.DependencyObject):
 @typing.final
 class _IAnnotationProvider: ...
 
-class IAnnotationProvider(winrt._winrt.IInspectable):
+class IAnnotationProvider(winrt.system.Object):
     # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IAnnotationProvider::get_AnnotationTypeId()
     @_property
     @abstractmethod
@@ -84,7 +84,7 @@ class IAnnotationProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ICustomNavigationProvider: ...
 
-class ICustomNavigationProvider(winrt._winrt.IInspectable):
+class ICustomNavigationProvider(winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Automation.Provider.ICustomNavigationProvider::NavigateCustom(Microsoft.UI.Xaml.Automation.Peers.AutomationNavigationDirection)
     @abstractmethod
     def navigate_custom(self, direction: microsoft_ui_xaml_automation_peers.AutomationNavigationDirection, /) -> winrt.system.Object: ...
@@ -92,7 +92,7 @@ class ICustomNavigationProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IDockProvider: ...
 
-class IDockProvider(winrt._winrt.IInspectable):
+class IDockProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IDockProvider::SetDockPosition(Microsoft.UI.Xaml.Automation.DockPosition)
     @abstractmethod
     def set_dock_position(self, dock_position: microsoft_ui_xaml_automation.DockPosition, /) -> None: ...
@@ -104,7 +104,7 @@ class IDockProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IDragProvider: ...
 
-class IDragProvider(winrt._winrt.IInspectable):
+class IDragProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.IDragProvider::GetGrabbedItems()
     @abstractmethod
     def get_grabbed_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -124,7 +124,7 @@ class IDragProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IDropTargetProvider: ...
 
-class IDropTargetProvider(winrt._winrt.IInspectable):
+class IDropTargetProvider(winrt.system.Object):
     # System.String Microsoft.UI.Xaml.Automation.Provider.IDropTargetProvider::get_DropEffect()
     @_property
     @abstractmethod
@@ -137,7 +137,7 @@ class IDropTargetProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IExpandCollapseProvider: ...
 
-class IExpandCollapseProvider(winrt._winrt.IInspectable):
+class IExpandCollapseProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IExpandCollapseProvider::Collapse()
     @abstractmethod
     def collapse(self) -> None: ...
@@ -152,7 +152,7 @@ class IExpandCollapseProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IGridItemProvider: ...
 
-class IGridItemProvider(winrt._winrt.IInspectable):
+class IGridItemProvider(winrt.system.Object):
     # System.Int32 Microsoft.UI.Xaml.Automation.Provider.IGridItemProvider::get_Column()
     @_property
     @abstractmethod
@@ -177,7 +177,7 @@ class IGridItemProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IGridProvider: ...
 
-class IGridProvider(winrt._winrt.IInspectable):
+class IGridProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IGridProvider::GetItem(System.Int32,System.Int32)
     @abstractmethod
     def get_item(self, row: winrt.system.Int32, column: winrt.system.Int32, /) -> IRawElementProviderSimple: ...
@@ -193,7 +193,7 @@ class IGridProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IInvokeProvider: ...
 
-class IInvokeProvider(winrt._winrt.IInspectable):
+class IInvokeProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IInvokeProvider::Invoke()
     @abstractmethod
     def invoke(self) -> None: ...
@@ -201,7 +201,7 @@ class IInvokeProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IItemContainerProvider: ...
 
-class IItemContainerProvider(winrt._winrt.IInspectable):
+class IItemContainerProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.IItemContainerProvider::FindItemByProperty(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple,Microsoft.UI.Xaml.Automation.AutomationProperty,System.Object)
     @abstractmethod
     def find_item_by_property(self, start_after: IRawElementProviderSimple, automation_property: microsoft_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> IRawElementProviderSimple: ...
@@ -209,7 +209,7 @@ class IItemContainerProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IMultipleViewProvider: ...
 
-class IMultipleViewProvider(winrt._winrt.IInspectable):
+class IMultipleViewProvider(winrt.system.Object):
     # System.Int32[] Microsoft.UI.Xaml.Automation.Provider.IMultipleViewProvider::GetSupportedViews()
     @abstractmethod
     def get_supported_views(self) -> winrt.system.Array[winrt.system.Int32]: ...
@@ -227,7 +227,7 @@ class IMultipleViewProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IObjectModelProvider: ...
 
-class IObjectModelProvider(winrt._winrt.IInspectable):
+class IObjectModelProvider(winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Automation.Provider.IObjectModelProvider::GetUnderlyingObjectModel()
     @abstractmethod
     def get_underlying_object_model(self) -> winrt.system.Object: ...
@@ -235,7 +235,7 @@ class IObjectModelProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IRangeValueProvider: ...
 
-class IRangeValueProvider(winrt._winrt.IInspectable):
+class IRangeValueProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IRangeValueProvider::SetValue(System.Double)
     @abstractmethod
     def set_value(self, value: winrt.system.Double, /) -> None: ...
@@ -267,7 +267,7 @@ class IRangeValueProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IScrollItemProvider: ...
 
-class IScrollItemProvider(winrt._winrt.IInspectable):
+class IScrollItemProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollItemProvider::ScrollIntoView()
     @abstractmethod
     def scroll_into_view(self) -> None: ...
@@ -275,7 +275,7 @@ class IScrollItemProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IScrollProvider: ...
 
-class IScrollProvider(winrt._winrt.IInspectable):
+class IScrollProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IScrollProvider::Scroll(Microsoft.UI.Xaml.Automation.ScrollAmount,Microsoft.UI.Xaml.Automation.ScrollAmount)
     @abstractmethod
     def scroll(self, horizontal_amount: microsoft_ui_xaml_automation.ScrollAmount, vertical_amount: microsoft_ui_xaml_automation.ScrollAmount, /) -> None: ...
@@ -310,7 +310,7 @@ class IScrollProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ISelectionItemProvider: ...
 
-class ISelectionItemProvider(winrt._winrt.IInspectable):
+class ISelectionItemProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ISelectionItemProvider::AddToSelection()
     @abstractmethod
     def add_to_selection(self) -> None: ...
@@ -332,7 +332,7 @@ class ISelectionItemProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ISelectionProvider: ...
 
-class ISelectionProvider(winrt._winrt.IInspectable):
+class ISelectionProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ISelectionProvider::GetSelection()
     @abstractmethod
     def get_selection(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -348,7 +348,7 @@ class ISelectionProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ISpreadsheetItemProvider: ...
 
-class ISpreadsheetItemProvider(winrt._winrt.IInspectable):
+class ISpreadsheetItemProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetItemProvider::GetAnnotationObjects()
     @abstractmethod
     def get_annotation_objects(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -363,7 +363,7 @@ class ISpreadsheetItemProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ISpreadsheetProvider: ...
 
-class ISpreadsheetProvider(winrt._winrt.IInspectable):
+class ISpreadsheetProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ISpreadsheetProvider::GetItemByName(System.String)
     @abstractmethod
     def get_item_by_name(self, name: str, /) -> IRawElementProviderSimple: ...
@@ -371,7 +371,7 @@ class ISpreadsheetProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IStylesProvider: ...
 
-class IStylesProvider(winrt._winrt.IInspectable):
+class IStylesProvider(winrt.system.Object):
     # System.String Microsoft.UI.Xaml.Automation.Provider.IStylesProvider::get_ExtendedProperties()
     @_property
     @abstractmethod
@@ -404,7 +404,7 @@ class IStylesProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ISynchronizedInputProvider: ...
 
-class ISynchronizedInputProvider(winrt._winrt.IInspectable):
+class ISynchronizedInputProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ISynchronizedInputProvider::Cancel()
     @abstractmethod
     def cancel(self) -> None: ...
@@ -415,7 +415,7 @@ class ISynchronizedInputProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITableItemProvider: ...
 
-class ITableItemProvider(winrt._winrt.IInspectable):
+class ITableItemProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableItemProvider::GetColumnHeaderItems()
     @abstractmethod
     def get_column_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -426,7 +426,7 @@ class ITableItemProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITableProvider: ...
 
-class ITableProvider(winrt._winrt.IInspectable):
+class ITableProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Provider.ITableProvider::GetColumnHeaders()
     @abstractmethod
     def get_column_headers(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -441,7 +441,7 @@ class ITableProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITextChildProvider: ...
 
-class ITextChildProvider(winrt._winrt.IInspectable):
+class ITextChildProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Provider.ITextChildProvider::get_TextContainer()
     @_property
     @abstractmethod
@@ -454,7 +454,7 @@ class ITextChildProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITextEditProvider: ...
 
-class ITextEditProvider(ITextProvider, winrt._winrt.IInspectable):
+class ITextEditProvider(ITextProvider, winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextEditProvider::GetActiveComposition()
     @abstractmethod
     def get_active_composition(self) -> ITextRangeProvider: ...
@@ -465,7 +465,7 @@ class ITextEditProvider(ITextProvider, winrt._winrt.IInspectable):
 @typing.final
 class _ITextProvider: ...
 
-class ITextProvider(winrt._winrt.IInspectable):
+class ITextProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider[] Microsoft.UI.Xaml.Automation.Provider.ITextProvider::GetSelection()
     @abstractmethod
     def get_selection(self) -> winrt.system.Array[ITextRangeProvider]: ...
@@ -490,7 +490,7 @@ class ITextProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITextProvider2: ...
 
-class ITextProvider2(ITextProvider, winrt._winrt.IInspectable):
+class ITextProvider2(ITextProvider, winrt.system.Object):
     # Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider Microsoft.UI.Xaml.Automation.Provider.ITextProvider2::GetCaretRange(System.Boolean&)
     @abstractmethod
     def get_caret_range(self) -> tuple[ITextRangeProvider, bool]: ...
@@ -501,7 +501,7 @@ class ITextProvider2(ITextProvider, winrt._winrt.IInspectable):
 @typing.final
 class _ITextRangeProvider: ...
 
-class ITextRangeProvider(winrt._winrt.IInspectable):
+class ITextRangeProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider::AddToSelection()
     @abstractmethod
     def add_to_selection(self) -> None: ...
@@ -560,7 +560,7 @@ class ITextRangeProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITextRangeProvider2: ...
 
-class ITextRangeProvider2(ITextRangeProvider, winrt._winrt.IInspectable):
+class ITextRangeProvider2(ITextRangeProvider, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITextRangeProvider2::ShowContextMenu()
     @abstractmethod
     def show_context_menu(self) -> None: ...
@@ -568,7 +568,7 @@ class ITextRangeProvider2(ITextRangeProvider, winrt._winrt.IInspectable):
 @typing.final
 class _IToggleProvider: ...
 
-class IToggleProvider(winrt._winrt.IInspectable):
+class IToggleProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IToggleProvider::Toggle()
     @abstractmethod
     def toggle(self) -> None: ...
@@ -580,7 +580,7 @@ class IToggleProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITransformProvider: ...
 
-class ITransformProvider(winrt._winrt.IInspectable):
+class ITransformProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider::Move(System.Double,System.Double)
     @abstractmethod
     def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
@@ -606,7 +606,7 @@ class ITransformProvider(winrt._winrt.IInspectable):
 @typing.final
 class _ITransformProvider2: ...
 
-class ITransformProvider2(ITransformProvider, winrt._winrt.IInspectable):
+class ITransformProvider2(ITransformProvider, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.ITransformProvider2::Zoom(System.Double)
     @abstractmethod
     def zoom(self, zoom: winrt.system.Double, /) -> None: ...
@@ -633,7 +633,7 @@ class ITransformProvider2(ITransformProvider, winrt._winrt.IInspectable):
 @typing.final
 class _IValueProvider: ...
 
-class IValueProvider(winrt._winrt.IInspectable):
+class IValueProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IValueProvider::SetValue(System.String)
     @abstractmethod
     def set_value(self, value: str, /) -> None: ...
@@ -649,7 +649,7 @@ class IValueProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IVirtualizedItemProvider: ...
 
-class IVirtualizedItemProvider(winrt._winrt.IInspectable):
+class IVirtualizedItemProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IVirtualizedItemProvider::Realize()
     @abstractmethod
     def realize(self) -> None: ...
@@ -657,7 +657,7 @@ class IVirtualizedItemProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IWindowProvider: ...
 
-class IWindowProvider(winrt._winrt.IInspectable):
+class IWindowProvider(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Automation.Provider.IWindowProvider::Close()
     @abstractmethod
     def close(self) -> None: ...

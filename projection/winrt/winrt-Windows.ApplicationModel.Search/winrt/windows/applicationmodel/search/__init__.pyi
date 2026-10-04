@@ -164,7 +164,7 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
 
 @typing.final
 @deprecated("SearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-class SearchPaneQueryChangedEventArgs(winrt.system.Object, ISearchPaneQueryChangedEventArgs):
+class SearchPaneQueryChangedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs::get_Language()
     @_property
     @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -238,7 +238,7 @@ class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
 
 @typing.final
 @deprecated("SearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
-class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object, ISearchPaneQueryChangedEventArgs):
+class SearchPaneSuggestionsRequestedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_Language()
     @_property
     @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -311,7 +311,7 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
 class _ISearchPaneQueryChangedEventArgs: ...
 
 @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-class ISearchPaneQueryChangedEventArgs(winrt._winrt.IInspectable):
+class ISearchPaneQueryChangedEventArgs(winrt.system.Object):
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()
     @_property
     @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")

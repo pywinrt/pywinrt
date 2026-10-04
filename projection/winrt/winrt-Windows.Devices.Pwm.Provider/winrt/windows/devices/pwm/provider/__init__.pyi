@@ -17,7 +17,7 @@ __all__ = [
 @typing.final
 class _IPwmControllerProvider: ...
 
-class IPwmControllerProvider(winrt._winrt.IInspectable):
+class IPwmControllerProvider(winrt.system.Object):
     # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::AcquirePin(System.Int32)
     @abstractmethod
     def acquire_pin(self, pin: winrt.system.Int32, /) -> None: ...
@@ -56,7 +56,7 @@ class IPwmControllerProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IPwmProvider: ...
 
-class IPwmProvider(winrt._winrt.IInspectable):
+class IPwmProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.Provider.IPwmControllerProvider> Windows.Devices.Pwm.Provider.IPwmProvider::GetControllers()
     @abstractmethod
     def get_controllers(self) -> _cabc.Sequence[IPwmControllerProvider]: ...

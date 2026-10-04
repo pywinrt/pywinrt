@@ -545,13 +545,13 @@ class VisualInteractionSource(microsoft_ui_composition.CompositionObject, ICompo
 @typing.final
 class _ICompositionInteractionSource: ...
 
-class ICompositionInteractionSource(winrt._winrt.IInspectable):
+class ICompositionInteractionSource(winrt.system.Object):
     ...
 
 @typing.final
 class _IInteractionTrackerOwner: ...
 
-class IInteractionTrackerOwner(winrt._winrt.IInspectable):
+class IInteractionTrackerOwner(winrt.system.Object):
     # System.Void Microsoft.UI.Composition.Interactions.IInteractionTrackerOwner::CustomAnimationStateEntered(Microsoft.UI.Composition.Interactions.InteractionTracker,Microsoft.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs)
     @abstractmethod
     def custom_animation_state_entered(self, sender: InteractionTracker, args: InteractionTrackerCustomAnimationStateEnteredArgs, /) -> None: ...

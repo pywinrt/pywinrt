@@ -29,7 +29,7 @@ class RemoteTextConnectionOptions(enum.IntFlag):
     ENABLE_PREDICTED_KEY_REPORTING = 0x1
 
 @typing.final
-class RemoteTextConnection(winrt.system.Object, windows_foundation.IClosable):
+class RemoteTextConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload

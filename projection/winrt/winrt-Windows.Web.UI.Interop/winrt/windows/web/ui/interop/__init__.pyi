@@ -44,7 +44,7 @@ class WebViewControlProcessCapabilityState(enum.IntEnum):
     ENABLED = 2
 
 @typing.final
-class WebViewControl(winrt.system.Object, windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl):
+class WebViewControl(windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl, winrt.system.Object):
     # System.Void Windows.Web.UI.Interop.WebViewControl::AddInitializeScript(System.String)
     def add_initialize_script(self, script: str, /) -> None: ...
     # Windows.Foundation.Uri Windows.Web.UI.Interop.WebViewControl::BuildLocalStreamUri(System.String,System.String)

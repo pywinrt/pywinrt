@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class Task(winrt.system.Object, windows_applicationmodel_background.IBackgroundTask):
+class Task(windows_applicationmodel_background.IBackgroundTask, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Void Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task::Run(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
     def run(self, task_instance: windows_applicationmodel_background.IBackgroundTaskInstance, /) -> None: ...

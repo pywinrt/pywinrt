@@ -595,7 +595,7 @@ class InputCursor_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Input.InputCursor Microsoft.UI.Input.InputCursor::CreateFromCoreCursor(Windows.UI.Core.CoreCursor)
     def create_from_core_cursor(cls, cursor: windows_ui_core.CoreCursor, /) -> InputCursor: ...
 
-class InputCursor(winrt.system.Object, windows_foundation.IClosable, metaclass=InputCursor_Static):
+class InputCursor(windows_foundation.IClosable, winrt.system.Object, metaclass=InputCursor_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Input.InputCursor::Close()
@@ -1155,7 +1155,7 @@ class PointerPredictor_Static(winrt._winrt.Object_Static):
     def create_for_input_pointer_source(cls, input_pointer_source: InputPointerSource, /) -> PointerPredictor: ...
 
 @typing.final
-class PointerPredictor(winrt.system.Object, windows_foundation.IClosable, metaclass=PointerPredictor_Static):
+class PointerPredictor(windows_foundation.IClosable, winrt.system.Object, metaclass=PointerPredictor_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.UI.Input.PointerPredictor::Close()
@@ -1238,7 +1238,7 @@ class WindowRectChangingEventArgs(winrt.system.Object):
 @typing.final
 class _IPointerPointTransform: ...
 
-class IPointerPointTransform(winrt._winrt.IInspectable):
+class IPointerPointTransform(winrt.system.Object):
     # System.Boolean Microsoft.UI.Input.IPointerPointTransform::TryTransform(Windows.Foundation.Point,Windows.Foundation.Point&)
     @abstractmethod
     def try_transform(self, in_point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> tuple[bool, windows_foundation.Point]: ...

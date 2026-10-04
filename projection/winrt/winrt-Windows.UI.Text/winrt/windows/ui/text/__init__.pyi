@@ -464,7 +464,7 @@ class FontWeights(winrt.system.Object, metaclass=FontWeights_Static):
     ...
 
 @typing.final
-class RichEditTextDocument(winrt.system.Object, ITextDocument):
+class RichEditTextDocument(ITextDocument, winrt.system.Object):
     # System.Int32 Windows.UI.Text.RichEditTextDocument::ApplyDisplayUpdates()
     def apply_display_updates(self) -> winrt.system.Int32: ...
     # System.Int32 Windows.UI.Text.RichEditTextDocument::BatchDisplayUpdates()
@@ -548,7 +548,7 @@ class RichEditTextDocument(winrt.system.Object, ITextDocument):
     def alignment_includes_trailing_whitespace(self, value: bool) -> None: ...
 
 @typing.final
-class RichEditTextRange(winrt.system.Object, ITextRange):
+class RichEditTextRange(ITextRange, winrt.system.Object):
     # System.Boolean Windows.UI.Text.RichEditTextRange::CanPaste(System.Int32)
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
     # System.Void Windows.UI.Text.RichEditTextRange::ChangeCase(Windows.UI.Text.LetterCase)
@@ -714,7 +714,7 @@ class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
 @typing.final
 class _ITextCharacterFormat: ...
 
-class ITextCharacterFormat(winrt._winrt.IInspectable):
+class ITextCharacterFormat(winrt.system.Object):
     # Windows.UI.Text.ITextCharacterFormat Windows.UI.Text.ITextCharacterFormat::GetClone()
     @abstractmethod
     def get_clone(self) -> ITextCharacterFormat: ...
@@ -916,7 +916,7 @@ class ITextCharacterFormat(winrt._winrt.IInspectable):
 @typing.final
 class _ITextDocument: ...
 
-class ITextDocument(winrt._winrt.IInspectable):
+class ITextDocument(winrt.system.Object):
     # System.Int32 Windows.UI.Text.ITextDocument::ApplyDisplayUpdates()
     @abstractmethod
     def apply_display_updates(self) -> winrt.system.Int32: ...
@@ -1009,7 +1009,7 @@ class ITextDocument(winrt._winrt.IInspectable):
 @typing.final
 class _ITextParagraphFormat: ...
 
-class ITextParagraphFormat(winrt._winrt.IInspectable):
+class ITextParagraphFormat(winrt.system.Object):
     # System.Void Windows.UI.Text.ITextParagraphFormat::AddTab(System.Single,Windows.UI.Text.TabAlignment,Windows.UI.Text.TabLeader)
     @abstractmethod
     def add_tab(self, position: winrt.system.Single, align: TabAlignment, leader: TabLeader, /) -> None: ...
@@ -1197,7 +1197,7 @@ class ITextParagraphFormat(winrt._winrt.IInspectable):
 @typing.final
 class _ITextRange: ...
 
-class ITextRange(winrt._winrt.IInspectable):
+class ITextRange(winrt.system.Object):
     # System.Boolean Windows.UI.Text.ITextRange::CanPaste(System.Int32)
     @abstractmethod
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
@@ -1378,7 +1378,7 @@ class ITextRange(winrt._winrt.IInspectable):
 @typing.final
 class _ITextSelection: ...
 
-class ITextSelection(ITextRange, winrt._winrt.IInspectable):
+class ITextSelection(ITextRange, winrt.system.Object):
     # System.Int32 Windows.UI.Text.ITextSelection::EndKey(Windows.UI.Text.TextRangeUnit,System.Boolean)
     @abstractmethod
     def end_key(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...

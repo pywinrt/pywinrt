@@ -110,7 +110,7 @@ class SyndicationAttribute(winrt.system.Object):
     def name(self, value: str) -> None: ...
 
 @typing.final
-class SyndicationCategory(winrt.system.Object, ISyndicationNode):
+class SyndicationCategory(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, term: str) -> typing.Self: ...
     @typing.overload
@@ -175,7 +175,7 @@ class SyndicationCategory(winrt.system.Object, ISyndicationNode):
     def element_extensions(self) -> _cabc.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationClient(winrt.system.Object, ISyndicationClient):
+class SyndicationClient(ISyndicationClient, winrt.system.Object):
     @typing.overload
     def __new__(cls, server_credential: windows_security_credentials.PasswordCredential) -> typing.Self: ...
     @typing.overload
@@ -216,7 +216,7 @@ class SyndicationClient(winrt.system.Object, ISyndicationClient):
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
 @typing.final
-class SyndicationContent(winrt.system.Object, ISyndicationText, ISyndicationNode):
+class SyndicationContent(ISyndicationText, ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, text: str, type: SyndicationTextType) -> typing.Self: ...
     @typing.overload
@@ -296,7 +296,7 @@ class SyndicationError(winrt.system.Object, metaclass=SyndicationError_Static):
     ...
 
 @typing.final
-class SyndicationFeed(winrt.system.Object, ISyndicationNode):
+class SyndicationFeed(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, title: str, subtitle: str, uri: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
@@ -423,7 +423,7 @@ class SyndicationFeed(winrt.system.Object, ISyndicationNode):
     def element_extensions(self) -> _cabc.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationGenerator(winrt.system.Object, ISyndicationNode):
+class SyndicationGenerator(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, text: str) -> typing.Self: ...
     @typing.overload
@@ -486,7 +486,7 @@ class SyndicationGenerator(winrt.system.Object, ISyndicationNode):
     def element_extensions(self) -> _cabc.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationItem(winrt.system.Object, ISyndicationNode):
+class SyndicationItem(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, title: str, content: SyndicationContent, uri: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
@@ -613,7 +613,7 @@ class SyndicationItem(winrt.system.Object, ISyndicationNode):
     def element_extensions(self) -> _cabc.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationLink(winrt.system.Object, ISyndicationNode):
+class SyndicationLink(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, uri: windows_foundation.Uri) -> typing.Self: ...
     @typing.overload
@@ -696,7 +696,7 @@ class SyndicationLink(winrt.system.Object, ISyndicationNode):
     def element_extensions(self) -> _cabc.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationNode(winrt.system.Object, ISyndicationNode):
+class SyndicationNode(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, node_name: str, node_namespace: str, node_value: str) -> typing.Self: ...
     @typing.overload
@@ -741,7 +741,7 @@ class SyndicationNode(winrt.system.Object, ISyndicationNode):
     def element_extensions(self) -> _cabc.MutableSequence[ISyndicationNode]: ...
 
 @typing.final
-class SyndicationPerson(winrt.system.Object, ISyndicationNode):
+class SyndicationPerson(ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
@@ -806,7 +806,7 @@ class SyndicationPerson(winrt.system.Object, ISyndicationNode):
     def email(self, value: str) -> None: ...
 
 @typing.final
-class SyndicationText(winrt.system.Object, ISyndicationText, ISyndicationNode):
+class SyndicationText(ISyndicationText, ISyndicationNode, winrt.system.Object):
     @typing.overload
     def __new__(cls, text: str) -> typing.Self: ...
     @typing.overload
@@ -873,7 +873,7 @@ class SyndicationText(winrt.system.Object, ISyndicationText, ISyndicationNode):
 @typing.final
 class _ISyndicationClient: ...
 
-class ISyndicationClient(winrt._winrt.IInspectable):
+class ISyndicationClient(winrt.system.Object):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> Windows.Web.Syndication.ISyndicationClient::RetrieveFeedAsync(Windows.Foundation.Uri)
     @abstractmethod
     def retrieve_feed_async(self, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress]: ...
@@ -924,7 +924,7 @@ class ISyndicationClient(winrt._winrt.IInspectable):
 @typing.final
 class _ISyndicationNode: ...
 
-class ISyndicationNode(winrt._winrt.IInspectable):
+class ISyndicationNode(winrt.system.Object):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.Syndication.ISyndicationNode::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     @abstractmethod
     def get_xml_document(self, format: SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
@@ -980,7 +980,7 @@ class ISyndicationNode(winrt._winrt.IInspectable):
 @typing.final
 class _ISyndicationText: ...
 
-class ISyndicationText(ISyndicationNode, winrt._winrt.IInspectable):
+class ISyndicationText(ISyndicationNode, winrt.system.Object):
     # System.String Windows.Web.Syndication.ISyndicationText::get_Text()
     @_property
     @abstractmethod

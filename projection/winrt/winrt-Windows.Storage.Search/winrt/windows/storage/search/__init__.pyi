@@ -173,7 +173,7 @@ class ContentIndexerQuery(winrt.system.Object):
     def query_folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
-class IndexableContent(winrt.system.Object, IIndexableContent):
+class IndexableContent(IIndexableContent, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Search.IndexableContent::get_StreamContentType()
     @_property
@@ -272,7 +272,7 @@ class QueryOptions(winrt.system.Object):
     def storage_provider_id_filter(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class SortEntryVector(winrt.system.Object, winrt._winrt.MutableSequence[SortEntry]):
+class SortEntryVector(winrt._winrt.MutableSequence[SortEntry], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[SortEntry]: ...
     @typing.overload
@@ -316,7 +316,7 @@ class SortEntryVector(winrt.system.Object, winrt._winrt.MutableSequence[SortEntr
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class StorageFileQueryResult(winrt.system.Object, IStorageQueryResultBase):
+class StorageFileQueryResult(IStorageQueryResultBase, winrt.system.Object):
     # System.Void Windows.Storage.Search.StorageFileQueryResult::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageFileQueryResult::FindStartIndexAsync(System.Object)
@@ -350,7 +350,7 @@ class StorageFileQueryResult(winrt.system.Object, IStorageQueryResultBase):
     def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
-class StorageFolderQueryResult(winrt.system.Object, IStorageQueryResultBase):
+class StorageFolderQueryResult(IStorageQueryResultBase, winrt.system.Object):
     # System.Void Windows.Storage.Search.StorageFolderQueryResult::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageFolderQueryResult::FindStartIndexAsync(System.Object)
@@ -382,7 +382,7 @@ class StorageFolderQueryResult(winrt.system.Object, IStorageQueryResultBase):
     def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
-class StorageItemQueryResult(winrt.system.Object, IStorageQueryResultBase):
+class StorageItemQueryResult(IStorageQueryResultBase, winrt.system.Object):
     # System.Void Windows.Storage.Search.StorageItemQueryResult::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageItemQueryResult::FindStartIndexAsync(System.Object)
@@ -449,7 +449,7 @@ class ValueAndLanguage(winrt.system.Object):
 @typing.final
 class _IIndexableContent: ...
 
-class IIndexableContent(winrt._winrt.IInspectable):
+class IIndexableContent(winrt.system.Object):
     # System.String Windows.Storage.Search.IIndexableContent::get_Id()
     @_property
     @abstractmethod
@@ -482,7 +482,7 @@ class IIndexableContent(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageFolderQueryOperations: ...
 
-class IStorageFolderQueryOperations(winrt._winrt.IInspectable):
+class IStorageFolderQueryOperations(winrt.system.Object):
     # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     @abstractmethod
     def are_query_options_supported(self, query_options: QueryOptions, /) -> bool: ...
@@ -562,7 +562,7 @@ class IStorageFolderQueryOperations(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageQueryResultBase: ...
 
-class IStorageQueryResultBase(winrt._winrt.IInspectable):
+class IStorageQueryResultBase(winrt.system.Object):
     # System.Void Windows.Storage.Search.IStorageQueryResultBase::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     @abstractmethod
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...

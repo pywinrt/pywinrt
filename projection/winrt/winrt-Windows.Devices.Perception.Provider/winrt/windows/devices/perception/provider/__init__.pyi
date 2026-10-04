@@ -226,7 +226,7 @@ class PerceptionPropertyChangeRequest(winrt.system.Object):
 
 @typing.final
 @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
-class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.IClosable):
+class PerceptionVideoFrameAllocator(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, max_outstanding_frame_count_for_write: winrt.system.UInt32, format: windows_graphics_imaging.BitmapPixelFormat, resolution: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], alpha: windows_graphics_imaging.BitmapAlphaMode) -> typing.Self: ...
@@ -243,7 +243,7 @@ class PerceptionVideoFrameAllocator(winrt.system.Object, windows_foundation.IClo
 class _IPerceptionFrameProvider: ...
 
 @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
-class IPerceptionFrameProvider(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IPerceptionFrameProvider(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Devices.Perception.Provider.IPerceptionFrameProvider::SetProperty(Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest)
     @deprecated("IPerceptionFrameProvider may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod
@@ -276,7 +276,7 @@ class IPerceptionFrameProvider(windows_foundation.IClosable, winrt._winrt.IInspe
 class _IPerceptionFrameProviderManager: ...
 
 @deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
-class IPerceptionFrameProviderManager(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IPerceptionFrameProviderManager(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Devices.Perception.Provider.IPerceptionFrameProvider Windows.Devices.Perception.Provider.IPerceptionFrameProviderManager::GetFrameProvider(Windows.Devices.Perception.Provider.PerceptionFrameProviderInfo)
     @deprecated("IPerceptionFrameProviderManager may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     @abstractmethod

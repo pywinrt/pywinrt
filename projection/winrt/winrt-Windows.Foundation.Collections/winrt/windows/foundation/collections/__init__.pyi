@@ -38,7 +38,7 @@ class CollectionChange(enum.IntEnum):
     ITEM_CHANGED = 3
 
 @typing.final
-class PropertySet(winrt.system.Object, IPropertySet, IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
+class PropertySet(IPropertySet, IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -69,7 +69,7 @@ class PropertySet(winrt.system.Object, IPropertySet, IObservableMap[str, winrt.s
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class StringMap(winrt.system.Object, IObservableMap[str, str], winrt._winrt.MutableMapping[str, str]):
+class StringMap(IObservableMap[str, str], winrt._winrt.MutableMapping[str, str], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -100,7 +100,7 @@ class StringMap(winrt.system.Object, IObservableMap[str, str], winrt._winrt.Muta
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ValueSet(winrt.system.Object, IPropertySet, IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
+class ValueSet(IPropertySet, IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -133,7 +133,7 @@ class ValueSet(winrt.system.Object, IPropertySet, IObservableMap[str, winrt.syst
 @typing.final
 class _IIterable: ...
 
-class IIterable[T](winrt._winrt.IInspectable):
+class IIterable[T](winrt.system.Object):
     # Windows.Foundation.Collections.IIterator`1<T> Windows.Foundation.Collections.IIterable`1::First()
     @abstractmethod
     def first(self) -> IIterator[T]: ...
@@ -141,7 +141,7 @@ class IIterable[T](winrt._winrt.IInspectable):
 @typing.final
 class _IIterator: ...
 
-class IIterator[T](winrt._winrt.IInspectable):
+class IIterator[T](winrt.system.Object):
     # System.UInt32 Windows.Foundation.Collections.IIterator`1::GetMany(T[])
     @abstractmethod
     def get_many(self, items: winrt.system.Array[T] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
@@ -160,7 +160,7 @@ class IIterator[T](winrt._winrt.IInspectable):
 @typing.final
 class _IKeyValuePair: ...
 
-class IKeyValuePair[K, V](winrt._winrt.IInspectable):
+class IKeyValuePair[K, V](winrt.system.Object):
     # K Windows.Foundation.Collections.IKeyValuePair`2::get_Key()
     @_property
     @abstractmethod
@@ -173,7 +173,7 @@ class IKeyValuePair[K, V](winrt._winrt.IInspectable):
 @typing.final
 class _IMapChangedEventArgs: ...
 
-class IMapChangedEventArgs[K](winrt._winrt.IInspectable):
+class IMapChangedEventArgs[K](winrt.system.Object):
     # Windows.Foundation.Collections.CollectionChange Windows.Foundation.Collections.IMapChangedEventArgs`1::get_CollectionChange()
     @_property
     @abstractmethod
@@ -186,7 +186,7 @@ class IMapChangedEventArgs[K](winrt._winrt.IInspectable):
 @typing.final
 class _IMapView: ...
 
-class IMapView[K, V](IIterable[IKeyValuePair[K, V]], winrt._winrt.Mapping[K, V], winrt._winrt.IInspectable):
+class IMapView[K, V](IIterable[IKeyValuePair[K, V]], winrt._winrt.Mapping[K, V], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[K]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -208,7 +208,7 @@ class IMapView[K, V](IIterable[IKeyValuePair[K, V]], winrt._winrt.Mapping[K, V],
 @typing.final
 class _IMap: ...
 
-class IMap[K, V](IIterable[IKeyValuePair[K, V]], winrt._winrt.MutableMapping[K, V], winrt._winrt.IInspectable):
+class IMap[K, V](IIterable[IKeyValuePair[K, V]], winrt._winrt.MutableMapping[K, V], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[K]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -241,7 +241,7 @@ class IMap[K, V](IIterable[IKeyValuePair[K, V]], winrt._winrt.MutableMapping[K, 
 @typing.final
 class _IObservableMap: ...
 
-class IObservableMap[K, V](IMap[K, V], winrt._winrt.IInspectable):
+class IObservableMap[K, V](IMap[K, V], winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableMap`2::add_MapChanged(Windows.Foundation.Collections.MapChangedEventHandler`2<K,V>)
     @abstractmethod
     def add_map_changed(self, vhnd: MapChangedEventHandler[K, V], /) -> windows_foundation.EventRegistrationToken: ...
@@ -252,7 +252,7 @@ class IObservableMap[K, V](IMap[K, V], winrt._winrt.IInspectable):
 @typing.final
 class _IObservableVector: ...
 
-class IObservableVector[T](IVector[T], winrt._winrt.IInspectable):
+class IObservableVector[T](IVector[T], winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableVector`1::add_VectorChanged(Windows.Foundation.Collections.VectorChangedEventHandler`1<T>)
     @abstractmethod
     def add_vector_changed(self, vhnd: VectorChangedEventHandler[T], /) -> windows_foundation.EventRegistrationToken: ...
@@ -263,13 +263,13 @@ class IObservableVector[T](IVector[T], winrt._winrt.IInspectable):
 @typing.final
 class _IPropertySet: ...
 
-class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt._winrt.IInspectable):  # type: ignore[misc]
+class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt.system.Object):  # type: ignore[misc]
     ...
 
 @typing.final
 class _IVectorChangedEventArgs: ...
 
-class IVectorChangedEventArgs(winrt._winrt.IInspectable):
+class IVectorChangedEventArgs(winrt.system.Object):
     # Windows.Foundation.Collections.CollectionChange Windows.Foundation.Collections.IVectorChangedEventArgs::get_CollectionChange()
     @_property
     @abstractmethod
@@ -282,7 +282,7 @@ class IVectorChangedEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IVectorView: ...
 
-class IVectorView[T](IIterable[T], winrt._winrt.Sequence[T], winrt._winrt.IInspectable):
+class IVectorView[T](IIterable[T], winrt._winrt.Sequence[T], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[T]: ...
     @typing.overload
@@ -306,7 +306,7 @@ class IVectorView[T](IIterable[T], winrt._winrt.Sequence[T], winrt._winrt.IInspe
 @typing.final
 class _IVector: ...
 
-class IVector[T](IIterable[T], winrt._winrt.MutableSequence[T], winrt._winrt.IInspectable):
+class IVector[T](IIterable[T], winrt._winrt.MutableSequence[T], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[T]: ...
     @typing.overload

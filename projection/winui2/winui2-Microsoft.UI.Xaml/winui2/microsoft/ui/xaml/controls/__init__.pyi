@@ -1660,7 +1660,7 @@ class ItemsRepeaterScrollHost(windows_ui_xaml.FrameworkElement):
 class ItemsSourceView_Static(winrt._winrt.Object_Static):
     ...
 
-class ItemsSourceView(winrt.system.Object, windows_ui_xaml_interop.INotifyCollectionChanged, metaclass=ItemsSourceView_Static):
+class ItemsSourceView(windows_ui_xaml_interop.INotifyCollectionChanged, winrt.system.Object, metaclass=ItemsSourceView_Static):
     def __new__(cls, source: winrt.system.Object) -> typing.Self: ...
     @typing.final
     # System.Object Microsoft.UI.Xaml.Controls.ItemsSourceView::GetAt(System.Int32)
@@ -5747,7 +5747,7 @@ class XamlControlsResources(windows_ui_xaml.ResourceDictionary, metaclass=XamlCo
 @typing.final
 class _IAnimatedVisual: ...
 
-class IAnimatedVisual(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IAnimatedVisual(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
     @_property
     @abstractmethod
@@ -5764,7 +5764,7 @@ class IAnimatedVisual(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IAnimatedVisual2: ...
 
-class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::CreateAnimations()
     @abstractmethod
     def create_animations(self) -> None: ...
@@ -5775,7 +5775,7 @@ class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt._win
 @typing.final
 class _IAnimatedVisualSource: ...
 
-class IAnimatedVisualSource(winrt._winrt.IInspectable):
+class IAnimatedVisualSource(winrt.system.Object):
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Windows.UI.Composition.Compositor,System.Object&)
     @abstractmethod
     def try_create_animated_visual(self, compositor: windows_ui_composition.Compositor, /) -> tuple[IAnimatedVisual, winrt.system.Object]: ...
@@ -5783,7 +5783,7 @@ class IAnimatedVisualSource(winrt._winrt.IInspectable):
 @typing.final
 class _IAnimatedVisualSource2: ...
 
-class IAnimatedVisualSource2(IAnimatedVisualSource, winrt._winrt.IInspectable):
+class IAnimatedVisualSource2(IAnimatedVisualSource, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::SetColorProperty(System.String,Windows.UI.Color)
     @abstractmethod
     def set_color_property(self, property_name: str, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> None: ...
@@ -5795,7 +5795,7 @@ class IAnimatedVisualSource2(IAnimatedVisualSource, winrt._winrt.IInspectable):
 @typing.final
 class _IAnimatedVisualSource3: ...
 
-class IAnimatedVisualSource3(winrt._winrt.IInspectable):
+class IAnimatedVisualSource3(winrt.system.Object):
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual2 Microsoft.UI.Xaml.Controls.IAnimatedVisualSource3::TryCreateAnimatedVisual(Windows.UI.Composition.Compositor,System.Object&,System.Boolean)
     @abstractmethod
     def try_create_animated_visual(self, compositor: windows_ui_composition.Compositor, create_animations: bool, /) -> tuple[IAnimatedVisual2, winrt.system.Object]: ...
@@ -5803,7 +5803,7 @@ class IAnimatedVisualSource3(winrt._winrt.IInspectable):
 @typing.final
 class _IDynamicAnimatedVisualSource: ...
 
-class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt._winrt.IInspectable):
+class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::add_AnimatedVisualInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object>)
     @abstractmethod
     def add_animated_visual_invalidated(self, handler: windows_foundation.TypedEventHandler[IDynamicAnimatedVisualSource, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -5814,7 +5814,7 @@ class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt._winrt.IInspecta
 @typing.final
 class _IKeyIndexMapping: ...
 
-class IKeyIndexMapping(winrt._winrt.IInspectable):
+class IKeyIndexMapping(winrt.system.Object):
     # System.Int32 Microsoft.UI.Xaml.Controls.IKeyIndexMapping::IndexFromKey(System.String)
     @abstractmethod
     def index_from_key(self, key: str, /) -> winrt.system.Int32: ...

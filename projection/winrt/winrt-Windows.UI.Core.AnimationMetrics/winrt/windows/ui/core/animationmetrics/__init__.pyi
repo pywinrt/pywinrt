@@ -109,7 +109,7 @@ class AnimationDescription(winrt.system.Object):
     def z_order(self) -> winrt.system.Int32: ...
 
 @typing.final
-class OpacityAnimation(winrt.system.Object, IPropertyAnimation):
+class OpacityAnimation(IPropertyAnimation, winrt.system.Object):
     # System.Single Windows.UI.Core.AnimationMetrics.OpacityAnimation::get_FinalOpacity()
     @_property
     def final_opacity(self) -> winrt.system.Single: ...
@@ -133,7 +133,7 @@ class OpacityAnimation(winrt.system.Object, IPropertyAnimation):
     def type(self) -> PropertyAnimationType: ...
 
 @typing.final
-class PropertyAnimation(winrt.system.Object, IPropertyAnimation):
+class PropertyAnimation(IPropertyAnimation, winrt.system.Object):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.PropertyAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -151,7 +151,7 @@ class PropertyAnimation(winrt.system.Object, IPropertyAnimation):
     def type(self) -> PropertyAnimationType: ...
 
 @typing.final
-class ScaleAnimation(winrt.system.Object, IPropertyAnimation):
+class ScaleAnimation(IPropertyAnimation, winrt.system.Object):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.ScaleAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -184,7 +184,7 @@ class ScaleAnimation(winrt.system.Object, IPropertyAnimation):
     def normalized_origin(self) -> windows_foundation.Point: ...
 
 @typing.final
-class TranslationAnimation(winrt.system.Object, IPropertyAnimation):
+class TranslationAnimation(IPropertyAnimation, winrt.system.Object):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.TranslationAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -204,7 +204,7 @@ class TranslationAnimation(winrt.system.Object, IPropertyAnimation):
 @typing.final
 class _IPropertyAnimation: ...
 
-class IPropertyAnimation(winrt._winrt.IInspectable):
+class IPropertyAnimation(winrt.system.Object):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control1()
     @_property
     @abstractmethod
