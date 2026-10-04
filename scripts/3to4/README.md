@@ -218,8 +218,10 @@ else, since everything else it reports needs checking by hand:
 * The script doesn't do any static analysis to infer types, so it may produce
   false positives. It matches a method by its name alone, and `.value` only on
   a property that hands back an `HResult` or on a name that has `token` in it.
-  It reports every use of `Matrix3x2` and `Matrix4x4`, since it cannot tell
-  which `*` has two matrices on either side of it.
+  It reports every use of `Matrix3x2` and `Matrix4x4`, under whatever name
+  they are imported as, since it cannot tell which `*` has two matrices on
+  either side of it; a matrix that only comes out of a property or a method,
+  with its type never named, is not seen.
 * Where v3 had several names for the overloads of one method, check the type
   hints to make sure the arguments you pass select the overload you want.
 * An array of enums was spelled `Array("i", ...)` or `Array("I", ...)` in v3;
