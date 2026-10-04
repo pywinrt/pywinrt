@@ -33,6 +33,8 @@ SOURCE = textwrap.dedent(
     b = Array(Int32, [1, 2])
     items.insert(0, 1)
     window = winui3.microsoft.ui.xaml.Window()
+    from winrt.windows.foundation.numerics import Matrix4x4 as M
+    product = M.identity * Matrix4x4.identity
     """
 )
 
@@ -86,6 +88,15 @@ class Inspect(unittest.TestCase):
                 f"{p}:11:11",
                 'possible match: winrt.system.Array("i", ...)',
                 "rename to: winrt.system.Int32, or the enum type for an array of enums",
+                # the matrices, under the name they were imported as too
+                f"{p}:16:11",
+                "possible match: winrt.windows.foundation.numerics.Matrix4x4",
+                "rename to: @ for the product of two matrices; * between two of them"
+                " raises",
+                f"{p}:16:24",
+                "possible match: winrt.windows.foundation.numerics.Matrix4x4",
+                "rename to: @ for the product of two matrices; * between two of them"
+                " raises",
             ],
         )
 
