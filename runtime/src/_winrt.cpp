@@ -378,8 +378,45 @@ namespace py::cpp::_winrt
         return PyObject_CallMethodOneArg(arg, from.get(), self);
     }
 
+    /**
+     * _from(): the object seen as IInspectable, which is what as_(Object)
+     * calls, as as_() calls _from() of any other type it is given. Every
+     * projected type has a _from() of its own, so this one answers for
+     * winrt.system.Object alone.
+     */
+    static PyObject* Object_from(PyObject* cls, PyObject* arg) noexcept
+    {
+        auto const object_type = py::get_object_type();
+        if (!object_type)
+        {
+            return nullptr;
+        }
+
+        if (cls != reinterpret_cast<PyObject*>(object_type))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' is not an interface a WinRT object can be seen as",
+                reinterpret_cast<PyTypeObject*>(cls)->tp_name);
+            return nullptr;
+        }
+
+        try
+        {
+            return py::interp::wrap_abi(
+                object_type, py::interp::unwrap_abi(arg, nullptr));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef Object_methods[]
-        = {{"as_", reinterpret_cast<PyCFunction>(Object_as), METH_O, nullptr}, {}};
+        = {{"as_", reinterpret_cast<PyCFunction>(Object_as), METH_O, nullptr},
+           {"_from", Object_from, METH_O | METH_CLASS, nullptr},
+           {}};
 
     static PyGetSetDef Object_getset[]
         = {{"_iids_",

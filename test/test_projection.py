@@ -20,6 +20,7 @@ import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+from winrt.system import Object
 from winrt.system.hresult import E_FAIL
 
 BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
@@ -57,6 +58,16 @@ class TestClasses(unittest.TestCase):
         # Class implements IRequiredOne, which is not its default interface, so
         # reaching one() queries for it.
         self.assertEqual(tc.Class().one(), 1)
+
+    def test_as_object(self) -> None:
+        uri = wf.Uri("http://example.com/")
+        obj = uri.as_(Object)
+
+        # IInspectable, which is what a winrt.system.Object holds
+        self.assertIs(type(obj), Object)
+        self.assertTrue(obj == uri)
+        self.assertEqual(obj._runtime_class_name_, "Windows.Foundation.Uri")
+        self.assertEqual(obj.as_(wf.Uri).to_string(), "http://example.com/")
 
     def test_equality_is_identity(self) -> None:
         uri = wf.Uri("http://example.com/")
