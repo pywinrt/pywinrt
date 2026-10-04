@@ -90,6 +90,17 @@ class TestClasses(unittest.TestCase):
                 self.assertFalse(uri == other)
                 self.assertTrue(uri != other)
 
+        class EqualToAnything:
+            def __eq__(self, other: object) -> bool:
+                return True
+
+            def __ne__(self, other: object) -> bool:
+                return False
+
+        # which is left to answer for itself, as Python's own types do
+        self.assertTrue(uri == EqualToAnything())
+        self.assertFalse(uri != EqualToAnything())
+
     def test_a_wrapper_is_made_each_time_an_object_is_read(self) -> None:
         # Two reads of one object are two wrappers, which are equal and hash
         # the same but are not the same Python object.
