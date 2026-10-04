@@ -171,7 +171,7 @@ namespace py::cpp::_winrt
 
     struct module_state
     {
-        py::pytype_handle inspectable_meta_type;
+        py::pytype_handle object_meta_type;
         py::pytype_handle object_type;
         py::pytype_handle array_type;
         py::pytype_handle mapping_iter_type;
@@ -217,5 +217,5 @@ namespace py::cpp::_winrt
 
 namespace py
 {
-    PyTypeObject* get_inspectable_meta_type() noexcept;
+    PyTypeObject* get_object_meta_type() noexcept;
 } // namespace py

@@ -16,7 +16,7 @@ static class ObjectWriterExtensions
 
         if (type.PyRequiresMetaclass)
         {
-            var baseType = "winrt._winrt.IInspectable_Static";
+            var baseType = "winrt._winrt.Object_Static";
 
             if (type.Type.BaseType is TypeReference b && b.Namespace != "System")
             {

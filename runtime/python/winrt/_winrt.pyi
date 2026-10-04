@@ -102,7 +102,7 @@ _TFrom = TypeVar("_TFrom", bound=_SupportsFrom)
 
 # these classes don't actually exist but are just used to simplify type checking
 
-class IInspectable_Static(type):
+class Object_Static(type):
     def __instancecheck__(self, instance: Any) -> bool: ...
     def __subclasscheck__(self, subclass: type) -> bool: ...
 
@@ -112,7 +112,7 @@ class IInspectable_Static(type):
 # wrapper, so they are declared here but not required of a subclass. The
 # members of the interface itself are abstract, because implementing them is
 # what deriving from it means.
-class IInspectable(metaclass=IInspectable_Static):
+class IInspectable(metaclass=Object_Static):
     def as_(self, type: TypeForm[_TFrom], /) -> _TFrom: ...
     @property
     def _iids_(self) -> Array[UUID]: ...

@@ -519,7 +519,7 @@ namespace py::interp
             Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
             implements_slots};
 
-        auto const metaclass = get_inspectable_meta_type();
+        auto const metaclass = get_object_meta_type();
         if (!metaclass)
         {
             return false;
@@ -583,7 +583,7 @@ namespace py::interp
         // A class's statics live on a metaclass of its own, which has to
         // derive from the metaclass of its base for Python to accept the
         // pair. A class with no statics simply reuses one.
-        auto* metaclass = base_type ? Py_TYPE(base_type) : get_inspectable_meta_type();
+        auto* metaclass = base_type ? Py_TYPE(base_type) : get_object_meta_type();
         if (!metaclass)
         {
             return false;
