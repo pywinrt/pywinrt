@@ -92,6 +92,14 @@ _VT = TypeVar("_VT")
 _VT_co = TypeVar("_VT_co", covariant=True)  # Value type covariant containers.
 _TObject = TypeVar("_TObject", bound=IInspectable)
 
+# What as_() asks of the type it is given, a projected one or an interop
+# interface alike: as_(type) is type._from_(obj).
+class _SupportsFrom(Protocol):
+    @classmethod
+    def _from_(cls, obj: Object, /) -> Self: ...
+
+_TFrom = TypeVar("_TFrom", bound=_SupportsFrom)
+
 # these classes don't actually exist but are just used to simplify type checking
 
 class IInspectable_Static(type):
@@ -105,11 +113,15 @@ class IInspectable_Static(type):
 # members of the interface itself are abstract, because implementing them is
 # what deriving from it means.
 class IInspectable(metaclass=IInspectable_Static):
-    def as_(self, type: TypeForm[_TObject], /) -> _TObject: ...
+    def as_(self, type: TypeForm[_TFrom], /) -> _TFrom: ...
     @property
     def _iids_(self) -> Array[UUID]: ...
     @property
     def _runtime_class_name_(self) -> str: ...
+    # what as_() calls, which the runtime gives the projected name of an
+    # interface as well as the wrapper
+    @classmethod
+    def _from_(cls, obj: IInspectable, /) -> Self: ...
 
 class Sequence(Generic[_T_co]):
     # collections.abc.Sequence mixin methods
@@ -167,7 +179,6 @@ class MutableMapping(Mapping[_KT, _VT]):
 # actual runtime classes
 
 class Object(IInspectable):
-    def as_(self, type: TypeForm[_TObject], /) -> _TObject: ...
     @property
     def _iids_(self) -> Array[UUID]: ...
     @property
