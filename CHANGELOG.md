@@ -355,6 +355,7 @@
 - Fixed `@typing.overload` missing from the type hints of overloaded methods.
 - Fixed methods being silently dropped when two overloads could not be told
   apart.
+- Fixed the type hints of `Array` taking only a one-item tuple.
 
 [#139]: https://github.com/pywinrt/pywinrt/issues/139
 [3to4]: https://github.com/pywinrt/pywinrt/blob/main/scripts/3to4/README.md
