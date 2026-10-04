@@ -205,5 +205,5 @@ class IGameListEntry(winrt._winrt.IInspectable):
     @abstractmethod
     def properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
 
-GameListChangedEventHandler: typing.TypeAlias = typing.Callable[[GameListEntry], object]
-GameListRemovedEventHandler: typing.TypeAlias = typing.Callable[[str], object]
+type GameListChangedEventHandler = typing.Callable[[GameListEntry], object]
+type GameListRemovedEventHandler = typing.Callable[[str], object]

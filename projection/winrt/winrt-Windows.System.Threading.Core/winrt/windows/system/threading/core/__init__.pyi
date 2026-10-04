@@ -56,4 +56,4 @@ class SignalNotifier(winrt.system.Object, metaclass=SignalNotifier_Static):
     # System.Void Windows.System.Threading.Core.SignalNotifier::Terminate()
     def terminate(self) -> None: ...
 
-SignalHandler: typing.TypeAlias = typing.Callable[[SignalNotifier, bool], object]
+type SignalHandler = typing.Callable[[SignalNotifier, bool], object]

@@ -2107,5 +2107,5 @@ class XamlLight(windows_ui_xaml.DependencyObject, metaclass=XamlLight_Static):
     # System.Void Windows.UI.Xaml.Media.XamlLight::OnDisconnected(Windows.UI.Xaml.UIElement)
     def _on_disconnected(self, old_element: windows_ui_xaml.UIElement, /) -> None: ...
 
-RateChangedRoutedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], object]
-TimelineMarkerRoutedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], object]
+type RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], object]
+type TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], object]

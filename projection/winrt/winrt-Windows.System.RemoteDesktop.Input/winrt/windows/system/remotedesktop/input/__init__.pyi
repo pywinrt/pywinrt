@@ -53,4 +53,4 @@ class RemoteTextConnection(winrt.system.Object, windows_foundation.IClosable):
     @is_enabled.setter
     def is_enabled(self, value: bool) -> None: ...
 
-RemoteTextConnectionDataHandler: typing.TypeAlias = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], bool]
+type RemoteTextConnectionDataHandler = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], bool]

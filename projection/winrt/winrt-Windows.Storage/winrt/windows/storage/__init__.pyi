@@ -1755,5 +1755,5 @@ class IStreamedFileDataRequest(winrt._winrt.IInspectable):
     @abstractmethod
     def fail_and_close(self, failure_mode: StreamedFileFailureMode, /) -> None: ...
 
-ApplicationDataSetVersionHandler: typing.TypeAlias = typing.Callable[[SetVersionRequest], object]
-StreamedFileDataRequestedHandler: typing.TypeAlias = typing.Callable[[StreamedFileDataRequest], object]
+type ApplicationDataSetVersionHandler = typing.Callable[[SetVersionRequest], object]
+type StreamedFileDataRequestedHandler = typing.Callable[[StreamedFileDataRequest], object]

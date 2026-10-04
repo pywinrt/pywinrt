@@ -207,6 +207,6 @@ class IMediaProtectionServiceRequest(winrt._winrt.IInspectable):
     @abstractmethod
     def type(self) -> _uuid.UUID: ...
 
-ComponentLoadFailedEventHandler: typing.TypeAlias = typing.Callable[[MediaProtectionManager, ComponentLoadFailedEventArgs], object]
-RebootNeededEventHandler: typing.TypeAlias = typing.Callable[[MediaProtectionManager], object]
-ServiceRequestedEventHandler: typing.TypeAlias = typing.Callable[[MediaProtectionManager, ServiceRequestedEventArgs], object]
+type ComponentLoadFailedEventHandler = typing.Callable[[MediaProtectionManager, ComponentLoadFailedEventArgs], object]
+type RebootNeededEventHandler = typing.Callable[[MediaProtectionManager], object]
+type ServiceRequestedEventHandler = typing.Callable[[MediaProtectionManager, ServiceRequestedEventArgs], object]

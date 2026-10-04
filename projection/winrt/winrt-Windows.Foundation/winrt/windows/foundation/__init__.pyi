@@ -53,10 +53,6 @@ __all__ = [
     "EventHandler",
     "TypedEventHandler",
 ]
-T = typing.TypeVar('T')
-TProgress = typing.TypeVar('TProgress')
-TResult = typing.TypeVar('TResult')
-TSender = typing.TypeVar('TSender')
 
 class AsyncStatus(enum.IntEnum):
     CANCELED = 2
@@ -403,7 +399,7 @@ class IAsyncAction(IAsyncInfo, winrt._winrt.IInspectable):
 @typing.final
 class _IAsyncActionWithProgress: ...
 
-class IAsyncActionWithProgress(IAsyncInfo, winrt._winrt.IInspectable, typing.Generic[TProgress]):
+class IAsyncActionWithProgress[TProgress](IAsyncInfo, winrt._winrt.IInspectable):
     @typing.final
     def __await__(self) -> _cabc.Generator[typing.Any]: ...
     @typing.final
@@ -456,7 +452,7 @@ class IAsyncInfo(winrt._winrt.IInspectable):
 @typing.final
 class _IAsyncOperationWithProgress: ...
 
-class IAsyncOperationWithProgress(IAsyncInfo, winrt._winrt.IInspectable, typing.Generic[TResult, TProgress]):
+class IAsyncOperationWithProgress[TResult, TProgress](IAsyncInfo, winrt._winrt.IInspectable):
     @typing.final
     def __await__(self) -> _cabc.Generator[typing.Any, None, TResult]: ...
     @typing.final
@@ -486,7 +482,7 @@ class IAsyncOperationWithProgress(IAsyncInfo, winrt._winrt.IInspectable, typing.
 @typing.final
 class _IAsyncOperation: ...
 
-class IAsyncOperation(IAsyncInfo, winrt._winrt.IInspectable, typing.Generic[TResult]):
+class IAsyncOperation[TResult](IAsyncInfo, winrt._winrt.IInspectable):
     @typing.final
     def __await__(self) -> _cabc.Generator[typing.Any, None, TResult]: ...
     @typing.final
@@ -676,7 +672,7 @@ class IPropertyValue(winrt._winrt.IInspectable):
 @typing.final
 class _IReferenceArray: ...
 
-class IReferenceArray(IPropertyValue, winrt._winrt.IInspectable, typing.Generic[T]):
+class IReferenceArray[T](IPropertyValue, winrt._winrt.IInspectable):
     # T[] Windows.Foundation.IReferenceArray`1::get_Value()
     @_property
     @abstractmethod
@@ -685,7 +681,7 @@ class IReferenceArray(IPropertyValue, winrt._winrt.IInspectable, typing.Generic[
 @typing.final
 class _IReference: ...
 
-class IReference(IPropertyValue, winrt._winrt.IInspectable, typing.Generic[T]):
+class IReference[T](IPropertyValue, winrt._winrt.IInspectable):
     # T Windows.Foundation.IReference`1::get_Value()
     @_property
     @abstractmethod
@@ -712,12 +708,12 @@ class IWwwFormUrlDecoderEntry(winrt._winrt.IInspectable):
     @abstractmethod
     def value(self) -> str: ...
 
-AsyncActionCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncAction, AsyncStatus], object]
-AsyncActionProgressHandler: typing.TypeAlias = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], object]
-AsyncActionWithProgressCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], object]
-AsyncOperationCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], object]
-AsyncOperationProgressHandler: typing.TypeAlias = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], object]
-AsyncOperationWithProgressCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], object]
-DeferralCompletedHandler: typing.TypeAlias = typing.Callable[[], object]
-EventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, T], object]
-TypedEventHandler: typing.TypeAlias = typing.Callable[[TSender, TResult], object]
+type AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], object]
+type AsyncActionProgressHandler[TProgress] = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], object]
+type AsyncActionWithProgressCompletedHandler[TProgress] = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], object]
+type AsyncOperationCompletedHandler[TResult] = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], object]
+type AsyncOperationProgressHandler[TResult, TProgress] = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], object]
+type AsyncOperationWithProgressCompletedHandler[TResult, TProgress] = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], object]
+type DeferralCompletedHandler = typing.Callable[[], object]
+type EventHandler[T] = typing.Callable[[winrt.system.Object, T], object]
+type TypedEventHandler[TSender, TResult] = typing.Callable[[TSender, TResult], object]
