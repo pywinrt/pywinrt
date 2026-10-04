@@ -77,7 +77,7 @@ class Buffer_Static(winrt._winrt.Object_Static):
     def create_memory_buffer_over_ibuffer(cls, input: winrt.system.Buffer, /) -> windows_foundation.MemoryBuffer: ...
 
 @typing.final
-class Buffer(winrt.system.Object, IBuffer, metaclass=Buffer_Static):
+class Buffer(IBuffer, winrt.system.Object, metaclass=Buffer_Static):
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
     def __len__(self) -> int: ...
@@ -98,7 +98,7 @@ class DataReader_Static(winrt._winrt.Object_Static):
     def from_buffer(cls, buffer: winrt.system.Buffer, /) -> DataReader: ...
 
 @typing.final
-class DataReader(winrt.system.Object, windows_foundation.IClosable, IDataReader, metaclass=DataReader_Static):
+class DataReader(windows_foundation.IClosable, IDataReader, winrt.system.Object, metaclass=DataReader_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, input_stream: IInputStream) -> typing.Self: ...
@@ -165,7 +165,7 @@ class DataReader(winrt.system.Object, windows_foundation.IClosable, IDataReader,
     def unconsumed_buffer_length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class DataReaderLoadOperation(winrt.system.Object, windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo):
+class DataReaderLoadOperation(windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Storage.Streams.DataReaderLoadOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Storage.Streams.DataReaderLoadOperation::Close()
@@ -189,7 +189,7 @@ class DataReaderLoadOperation(winrt.system.Object, windows_foundation.IAsyncOper
     def completed(self, value: windows_foundation.AsyncOperationCompletedHandler[winrt.system.UInt32]) -> None: ...
 
 @typing.final
-class DataWriter(winrt.system.Object, windows_foundation.IClosable, IDataWriter):
+class DataWriter(windows_foundation.IClosable, IDataWriter, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -265,7 +265,7 @@ class DataWriter(winrt.system.Object, windows_foundation.IClosable, IDataWriter)
     def unstored_buffer_length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class DataWriterStoreOperation(winrt.system.Object, windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo):
+class DataWriterStoreOperation(windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Storage.Streams.DataWriterStoreOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Storage.Streams.DataWriterStoreOperation::Close()
@@ -289,7 +289,7 @@ class DataWriterStoreOperation(winrt.system.Object, windows_foundation.IAsyncOpe
     def completed(self, value: windows_foundation.AsyncOperationCompletedHandler[winrt.system.UInt32]) -> None: ...
 
 @typing.final
-class FileInputStream(winrt.system.Object, IInputStream, windows_foundation.IClosable):
+class FileInputStream(IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.Streams.FileInputStream::Close()
@@ -298,7 +298,7 @@ class FileInputStream(winrt.system.Object, IInputStream, windows_foundation.IClo
     def read_async(self, buffer: winrt.system.Buffer, count: winrt.system.UInt32, options: InputStreamOptions, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.Buffer, winrt.system.UInt32]: ...
 
 @typing.final
-class FileOutputStream(winrt.system.Object, IOutputStream, windows_foundation.IClosable):
+class FileOutputStream(IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.Streams.FileOutputStream::Close()
@@ -352,7 +352,7 @@ class FileRandomAccessStream_Static(winrt._winrt.Object_Static):
     def open_transacted_write_for_user_with_options_async(cls, user: windows_system.User, file_path: str, open_options: windows_storage.StorageOpenOptions, open_disposition: FileOpenDisposition, /) -> windows_foundation.IAsyncOperation[windows_storage.StorageStreamTransaction]: ...
 
 @typing.final
-class FileRandomAccessStream(winrt.system.Object, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, metaclass=FileRandomAccessStream_Static):
+class FileRandomAccessStream(IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object, metaclass=FileRandomAccessStream_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.FileRandomAccessStream::CloneStream()
@@ -388,7 +388,7 @@ class FileRandomAccessStream(winrt.system.Object, IRandomAccessStream, IOutputSt
     def position(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class InMemoryRandomAccessStream(winrt.system.Object, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable):
+class InMemoryRandomAccessStream(IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -425,7 +425,7 @@ class InMemoryRandomAccessStream(winrt.system.Object, IRandomAccessStream, IOutp
     def position(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class InputStreamOverStream(winrt.system.Object, IInputStream, windows_foundation.IClosable):
+class InputStreamOverStream(IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.Streams.InputStreamOverStream::Close()
@@ -434,7 +434,7 @@ class InputStreamOverStream(winrt.system.Object, IInputStream, windows_foundatio
     def read_async(self, buffer: winrt.system.Buffer, count: winrt.system.UInt32, options: InputStreamOptions, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.Buffer, winrt.system.UInt32]: ...
 
 @typing.final
-class OutputStreamOverStream(winrt.system.Object, IOutputStream, windows_foundation.IClosable):
+class OutputStreamOverStream(IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.Streams.OutputStreamOverStream::Close()
@@ -464,7 +464,7 @@ class RandomAccessStream(winrt.system.Object, metaclass=RandomAccessStream_Stati
     ...
 
 @typing.final
-class RandomAccessStreamOverStream(winrt.system.Object, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable):
+class RandomAccessStreamOverStream(IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.RandomAccessStreamOverStream::CloneStream()
@@ -509,14 +509,14 @@ class RandomAccessStreamReference_Static(winrt._winrt.Object_Static):
     def create_from_uri(cls, uri: windows_foundation.Uri, /) -> RandomAccessStreamReference: ...
 
 @typing.final
-class RandomAccessStreamReference(winrt.system.Object, IRandomAccessStreamReference, metaclass=RandomAccessStreamReference_Static):
+class RandomAccessStreamReference(IRandomAccessStreamReference, winrt.system.Object, metaclass=RandomAccessStreamReference_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Storage.Streams.RandomAccessStreamReference::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[IRandomAccessStreamWithContentType]: ...
 
 @typing.final
 class _IBuffer: ...
 
-class IBuffer(winrt._winrt.IInspectable):
+class IBuffer(winrt.system.Object):
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
     def __len__(self) -> int: ...
@@ -536,7 +536,7 @@ class IBuffer(winrt._winrt.IInspectable):
 @typing.final
 class _IContentTypeProvider: ...
 
-class IContentTypeProvider(winrt._winrt.IInspectable):
+class IContentTypeProvider(winrt.system.Object):
     # System.String Windows.Storage.Streams.IContentTypeProvider::get_ContentType()
     @_property
     @abstractmethod
@@ -545,7 +545,7 @@ class IContentTypeProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IDataReader: ...
 
-class IDataReader(winrt._winrt.IInspectable):
+class IDataReader(winrt.system.Object):
     # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IDataReader::DetachBuffer()
     @abstractmethod
     def detach_buffer(self) -> winrt.system.Buffer: ...
@@ -635,7 +635,7 @@ class IDataReader(winrt._winrt.IInspectable):
 @typing.final
 class _IDataWriter: ...
 
-class IDataWriter(winrt._winrt.IInspectable):
+class IDataWriter(winrt.system.Object):
     # Windows.Storage.Streams.IBuffer Windows.Storage.Streams.IDataWriter::DetachBuffer()
     @abstractmethod
     def detach_buffer(self) -> winrt.system.Buffer: ...
@@ -732,7 +732,7 @@ class IDataWriter(winrt._winrt.IInspectable):
 @typing.final
 class _IInputStream: ...
 
-class IInputStream(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IInputStream(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IBuffer,System.UInt32> Windows.Storage.Streams.IInputStream::ReadAsync(Windows.Storage.Streams.IBuffer,System.UInt32,Windows.Storage.Streams.InputStreamOptions)
     @abstractmethod
     def read_async(self, buffer: winrt.system.Buffer, count: winrt.system.UInt32, options: InputStreamOptions, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.Buffer, winrt.system.UInt32]: ...
@@ -740,7 +740,7 @@ class IInputStream(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IInputStreamReference: ...
 
-class IInputStreamReference(winrt._winrt.IInspectable):
+class IInputStreamReference(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Storage.Streams.IInputStreamReference::OpenSequentialReadAsync()
     @abstractmethod
     def open_sequential_read_async(self) -> windows_foundation.IAsyncOperation[IInputStream]: ...
@@ -748,7 +748,7 @@ class IInputStreamReference(winrt._winrt.IInspectable):
 @typing.final
 class _IOutputStream: ...
 
-class IOutputStream(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IOutputStream(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.Streams.IOutputStream::FlushAsync()
     @abstractmethod
     def flush_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -759,7 +759,7 @@ class IOutputStream(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IPropertySetSerializer: ...
 
-class IPropertySetSerializer(winrt._winrt.IInspectable):
+class IPropertySetSerializer(winrt.system.Object):
     # System.Void Windows.Storage.Streams.IPropertySetSerializer::Deserialize(Windows.Foundation.Collections.IPropertySet,Windows.Storage.Streams.IBuffer)
     @abstractmethod
     def deserialize(self, property_set: windows_foundation_collections.IPropertySet, buffer: winrt.system.Buffer, /) -> None: ...
@@ -770,7 +770,7 @@ class IPropertySetSerializer(winrt._winrt.IInspectable):
 @typing.final
 class _IRandomAccessStream: ...
 
-class IRandomAccessStream(IOutputStream, IInputStream, windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IRandomAccessStream(IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object):
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.IRandomAccessStream::CloneStream()
     @abstractmethod
     def clone_stream(self) -> IRandomAccessStream: ...
@@ -807,7 +807,7 @@ class IRandomAccessStream(IOutputStream, IInputStream, windows_foundation.IClosa
 @typing.final
 class _IRandomAccessStreamReference: ...
 
-class IRandomAccessStreamReference(winrt._winrt.IInspectable):
+class IRandomAccessStreamReference(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Storage.Streams.IRandomAccessStreamReference::OpenReadAsync()
     @abstractmethod
     def open_read_async(self) -> windows_foundation.IAsyncOperation[IRandomAccessStreamWithContentType]: ...
@@ -815,6 +815,6 @@ class IRandomAccessStreamReference(winrt._winrt.IInspectable):
 @typing.final
 class _IRandomAccessStreamWithContentType: ...
 
-class IRandomAccessStreamWithContentType(IContentTypeProvider, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt._winrt.IInspectable):  # type: ignore[misc]
+class IRandomAccessStreamWithContentType(IContentTypeProvider, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object):  # type: ignore[misc]
     ...
 

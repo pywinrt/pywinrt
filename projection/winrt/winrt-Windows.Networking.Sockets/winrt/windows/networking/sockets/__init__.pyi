@@ -214,7 +214,7 @@ class RoundTripTimeStatistics:
     def unpack(self) -> tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class ControlChannelTrigger(winrt.system.Object, windows_foundation.IClosable):
+class ControlChannelTrigger(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -270,7 +270,7 @@ class DatagramSocket_Static(winrt._winrt.Object_Static):
     def get_endpoint_pairs_with_sort_options_async(cls, remote_host_name: windows_networking.HostName, remote_service_name: str, sort_options: windows_networking.HostNameSortOptions, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[windows_networking.EndpointPair]]: ...
 
 @typing.final
-class DatagramSocket(winrt.system.Object, windows_foundation.IClosable, metaclass=DatagramSocket_Static):
+class DatagramSocket(windows_foundation.IClosable, winrt.system.Object, metaclass=DatagramSocket_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -418,7 +418,7 @@ class DatagramSocketMessageReceivedEventArgs(winrt.system.Object):
     def remote_port(self) -> str: ...
 
 @typing.final
-class MessageWebSocket(winrt.system.Object, IWebSocket, windows_foundation.IClosable):
+class MessageWebSocket(IWebSocket, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -463,7 +463,7 @@ class MessageWebSocket(winrt.system.Object, IWebSocket, windows_foundation.IClos
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
-class MessageWebSocketControl(winrt.system.Object, IWebSocketControl2, IWebSocketControl):
+class MessageWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system.Object):
     # Windows.Networking.Sockets.SocketMessageType Windows.Networking.Sockets.MessageWebSocketControl::get_MessageType()
     @_property
     def message_type(self) -> SocketMessageType: ...
@@ -523,7 +523,7 @@ class MessageWebSocketControl(winrt.system.Object, IWebSocketControl2, IWebSocke
     def ignorable_server_certificate_errors(self) -> _cabc.MutableSequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
 
 @typing.final
-class MessageWebSocketInformation(winrt.system.Object, IWebSocketInformation2, IWebSocketInformation):
+class MessageWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, winrt.system.Object):
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.MessageWebSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -560,7 +560,7 @@ class MessageWebSocketMessageReceivedEventArgs(winrt.system.Object):
     def is_message_complete(self) -> bool: ...
 
 @typing.final
-class ServerMessageWebSocket(winrt.system.Object, windows_foundation.IClosable):
+class ServerMessageWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -613,7 +613,7 @@ class ServerMessageWebSocketInformation(winrt.system.Object):
     def protocol(self) -> str: ...
 
 @typing.final
-class ServerStreamWebSocket(winrt.system.Object, windows_foundation.IClosable):
+class ServerStreamWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -721,7 +721,7 @@ class StreamSocket_Static(winrt._winrt.Object_Static):
     def get_endpoint_pairs_with_sort_options_async(cls, remote_host_name: windows_networking.HostName, remote_service_name: str, sort_options: windows_networking.HostNameSortOptions, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[windows_networking.EndpointPair]]: ...
 
 @typing.final
-class StreamSocket(winrt.system.Object, windows_foundation.IClosable, metaclass=StreamSocket_Static):
+class StreamSocket(windows_foundation.IClosable, winrt.system.Object, metaclass=StreamSocket_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -897,7 +897,7 @@ class StreamSocketInformation(winrt.system.Object):
     def server_intermediate_certificates(self) -> _cabc.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
 @typing.final
-class StreamSocketListener(winrt.system.Object, windows_foundation.IClosable):
+class StreamSocketListener(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -1001,7 +1001,7 @@ class StreamSocketListenerInformation(winrt.system.Object):
     def local_port(self) -> str: ...
 
 @typing.final
-class StreamWebSocket(winrt.system.Object, IWebSocket, windows_foundation.IClosable):
+class StreamWebSocket(IWebSocket, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -1041,7 +1041,7 @@ class StreamWebSocket(winrt.system.Object, IWebSocket, windows_foundation.IClosa
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
-class StreamWebSocketControl(winrt.system.Object, IWebSocketControl2, IWebSocketControl):
+class StreamWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system.Object):
     # System.Boolean Windows.Networking.Sockets.StreamWebSocketControl::get_NoDelay()
     @_property
     def no_delay(self) -> bool: ...
@@ -1089,7 +1089,7 @@ class StreamWebSocketControl(winrt.system.Object, IWebSocketControl2, IWebSocket
     def ignorable_server_certificate_errors(self) -> _cabc.MutableSequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
 
 @typing.final
-class StreamWebSocketInformation(winrt.system.Object, IWebSocketInformation2, IWebSocketInformation):
+class StreamWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, winrt.system.Object):
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.StreamWebSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -1131,7 +1131,7 @@ class WebSocketError(winrt.system.Object, metaclass=WebSocketError_Static):
     ...
 
 @typing.final
-class WebSocketKeepAlive(winrt.system.Object, windows_applicationmodel_background.IBackgroundTask):
+class WebSocketKeepAlive(windows_applicationmodel_background.IBackgroundTask, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Networking.Sockets.WebSocketKeepAlive::Run(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
     def run(self, task_instance: windows_applicationmodel_background.IBackgroundTaskInstance, /) -> None: ...
@@ -1158,7 +1158,7 @@ class WebSocketServerCustomValidationRequestedEventArgs(winrt.system.Object):
 @typing.final
 class _IControlChannelTriggerEventDetails: ...
 
-class IControlChannelTriggerEventDetails(winrt._winrt.IInspectable):
+class IControlChannelTriggerEventDetails(winrt.system.Object):
     # Windows.Networking.Sockets.ControlChannelTrigger Windows.Networking.Sockets.IControlChannelTriggerEventDetails::get_ControlChannelTrigger()
     @_property
     @abstractmethod
@@ -1167,7 +1167,7 @@ class IControlChannelTriggerEventDetails(winrt._winrt.IInspectable):
 @typing.final
 class _IControlChannelTriggerResetEventDetails: ...
 
-class IControlChannelTriggerResetEventDetails(winrt._winrt.IInspectable):
+class IControlChannelTriggerResetEventDetails(winrt.system.Object):
     # System.Boolean Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails::get_HardwareSlotReset()
     @_property
     @abstractmethod
@@ -1184,7 +1184,7 @@ class IControlChannelTriggerResetEventDetails(winrt._winrt.IInspectable):
 @typing.final
 class _IWebSocket: ...
 
-class IWebSocket(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IWebSocket(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Foundation.IClosable::Close()
     @abstractmethod
@@ -1217,7 +1217,7 @@ class IWebSocket(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IWebSocketControl: ...
 
-class IWebSocketControl(winrt._winrt.IInspectable):
+class IWebSocketControl(winrt.system.Object):
     # System.UInt32 Windows.Networking.Sockets.IWebSocketControl::get_OutboundBufferSizeInBytes()
     @_property
     @abstractmethod
@@ -1250,7 +1250,7 @@ class IWebSocketControl(winrt._winrt.IInspectable):
 @typing.final
 class _IWebSocketControl2: ...
 
-class IWebSocketControl2(IWebSocketControl, winrt._winrt.IInspectable):
+class IWebSocketControl2(IWebSocketControl, winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Windows.Security.Cryptography.Certificates.ChainValidationResult> Windows.Networking.Sockets.IWebSocketControl2::get_IgnorableServerCertificateErrors()
     @_property
     @abstractmethod
@@ -1259,7 +1259,7 @@ class IWebSocketControl2(IWebSocketControl, winrt._winrt.IInspectable):
 @typing.final
 class _IWebSocketInformation: ...
 
-class IWebSocketInformation(winrt._winrt.IInspectable):
+class IWebSocketInformation(winrt.system.Object):
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.IWebSocketInformation::get_BandwidthStatistics()
     @_property
     @abstractmethod
@@ -1276,7 +1276,7 @@ class IWebSocketInformation(winrt._winrt.IInspectable):
 @typing.final
 class _IWebSocketInformation2: ...
 
-class IWebSocketInformation2(IWebSocketInformation, winrt._winrt.IInspectable):
+class IWebSocketInformation2(IWebSocketInformation, winrt.system.Object):
     # Windows.Security.Cryptography.Certificates.Certificate Windows.Networking.Sockets.IWebSocketInformation2::get_ServerCertificate()
     @_property
     @abstractmethod

@@ -226,7 +226,7 @@ class ApplicationData_Static(winrt._winrt.Object_Static):
     def current(cls) -> ApplicationData: ...
 
 @typing.final
-class ApplicationData(winrt.system.Object, windows_foundation.IClosable, metaclass=ApplicationData_Static):
+class ApplicationData(windows_foundation.IClosable, winrt.system.Object, metaclass=ApplicationData_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -282,7 +282,7 @@ class ApplicationData(winrt.system.Object, windows_foundation.IClosable, metacla
     def shared_local_folder(self) -> StorageFolder: ...
 
 @typing.final
-class ApplicationDataCompositeValue(winrt.system.Object, windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
+class ApplicationDataCompositeValue(windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -313,7 +313,7 @@ class ApplicationDataCompositeValue(winrt.system.Object, windows_foundation_coll
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ApplicationDataContainer(winrt.system.Object, windows_foundation.IClosable):
+class ApplicationDataContainer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.ApplicationDataContainer::Close()
@@ -336,7 +336,7 @@ class ApplicationDataContainer(winrt.system.Object, windows_foundation.IClosable
     def values(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class ApplicationDataContainerSettings(winrt.system.Object, windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
+class ApplicationDataContainerSettings(windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -657,7 +657,7 @@ class StorageFile_Static(winrt._winrt.Object_Static):
     def replace_with_streamed_file_from_uri_async(cls, file_to_replace: IStorageFile, uri: windows_foundation.Uri, thumbnail: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
 
 @typing.final
-class StorageFile(winrt.system.Object, IStorageFile2, IStorageFilePropertiesWithAvailability, IStorageItemPropertiesWithProvider, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, metaclass=StorageFile_Static):
+class StorageFile(IStorageFile2, IStorageFilePropertiesWithAvailability, IStorageItemPropertiesWithProvider, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, winrt.system.Object, metaclass=StorageFile_Static):
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     def copy_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -835,7 +835,7 @@ class StorageFolder_Static(winrt._winrt.Object_Static):
     def get_folder_from_path_for_user_async(cls, user: windows_system.User, path: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
 
 @typing.final
-class StorageFolder(winrt.system.Object, IStorageItemPropertiesWithProvider, IStorageFolder2, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, windows_storage_search.IStorageFolderQueryOperations, IStorageFolder, IStorageItem, metaclass=StorageFolder_Static):
+class StorageFolder(IStorageItemPropertiesWithProvider, IStorageFolder2, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, windows_storage_search.IStorageFolderQueryOperations, IStorageFolder, IStorageItem, winrt.system.Object, metaclass=StorageFolder_Static):
     # System.Boolean Windows.Storage.StorageFolder::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     def are_query_options_supported(self, query_options: windows_storage_search.QueryOptions, /) -> bool: ...
     @typing.overload
@@ -1141,7 +1141,7 @@ class StorageProvider(winrt.system.Object):
     def id(self) -> str: ...
 
 @typing.final
-class StorageStreamTransaction(winrt.system.Object, windows_foundation.IClosable):
+class StorageStreamTransaction(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.StorageStreamTransaction::Close()
@@ -1153,7 +1153,7 @@ class StorageStreamTransaction(winrt.system.Object, windows_foundation.IClosable
     def stream(self) -> windows_storage_streams.IRandomAccessStream: ...
 
 @typing.final
-class StreamedFileDataRequest(winrt.system.Object, IStreamedFileDataRequest, windows_storage_streams.IOutputStream, windows_foundation.IClosable):
+class StreamedFileDataRequest(IStreamedFileDataRequest, windows_storage_streams.IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Storage.StreamedFileDataRequest::Close()
@@ -1445,7 +1445,7 @@ class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
 @typing.final
 class _IStorageFile: ...
 
-class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, winrt._winrt.IInspectable):
+class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     @abstractmethod
     def copy_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
@@ -1518,7 +1518,7 @@ class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storag
 @typing.final
 class _IStorageFile2: ...
 
-class IStorageFile2(winrt._winrt.IInspectable):
+class IStorageFile2(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile2::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
     @abstractmethod
     def open_async(self, access_mode: FileAccessMode, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
@@ -1537,7 +1537,7 @@ class IStorageFile2(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageFilePropertiesWithAvailability: ...
 
-class IStorageFilePropertiesWithAvailability(winrt._winrt.IInspectable):
+class IStorageFilePropertiesWithAvailability(winrt.system.Object):
     # System.Boolean Windows.Storage.IStorageFilePropertiesWithAvailability::get_IsAvailable()
     @_property
     @abstractmethod
@@ -1546,7 +1546,7 @@ class IStorageFilePropertiesWithAvailability(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageFolder: ...
 
-class IStorageFolder(IStorageItem, winrt._winrt.IInspectable):
+class IStorageFolder(IStorageItem, winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.IStorageFolder::CreateFileAsync(System.String)
     @abstractmethod
@@ -1605,7 +1605,7 @@ class IStorageFolder(IStorageItem, winrt._winrt.IInspectable):
 @typing.final
 class _IStorageFolder2: ...
 
-class IStorageFolder2(winrt._winrt.IInspectable):
+class IStorageFolder2(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.IStorageFolder2::TryGetItemAsync(System.String)
     @abstractmethod
     def try_get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[IStorageItem | None]: ...
@@ -1613,7 +1613,7 @@ class IStorageFolder2(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageItem: ...
 
-class IStorageItem(winrt._winrt.IInspectable):
+class IStorageItem(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageItem::DeleteAsync()
     @abstractmethod
@@ -1664,7 +1664,7 @@ class IStorageItem(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageItem2: ...
 
-class IStorageItem2(IStorageItem, winrt._winrt.IInspectable):
+class IStorageItem2(IStorageItem, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageItem2::GetParentAsync()
     @abstractmethod
     def get_parent_async(self) -> windows_foundation.IAsyncOperation[StorageFolder | None]: ...
@@ -1675,7 +1675,7 @@ class IStorageItem2(IStorageItem, winrt._winrt.IInspectable):
 @typing.final
 class _IStorageItemProperties: ...
 
-class IStorageItemProperties(winrt._winrt.IInspectable):
+class IStorageItemProperties(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties::GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
     @abstractmethod
@@ -1716,7 +1716,7 @@ class IStorageItemProperties(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageItemProperties2: ...
 
-class IStorageItemProperties2(IStorageItemProperties, winrt._winrt.IInspectable):
+class IStorageItemProperties2(IStorageItemProperties, winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
     @abstractmethod
@@ -1741,7 +1741,7 @@ class IStorageItemProperties2(IStorageItemProperties, winrt._winrt.IInspectable)
 @typing.final
 class _IStorageItemPropertiesWithProvider: ...
 
-class IStorageItemPropertiesWithProvider(IStorageItemProperties, winrt._winrt.IInspectable):
+class IStorageItemPropertiesWithProvider(IStorageItemProperties, winrt.system.Object):
     # Windows.Storage.StorageProvider Windows.Storage.IStorageItemPropertiesWithProvider::get_Provider()
     @_property
     @abstractmethod
@@ -1750,7 +1750,7 @@ class IStorageItemPropertiesWithProvider(IStorageItemProperties, winrt._winrt.II
 @typing.final
 class _IStreamedFileDataRequest: ...
 
-class IStreamedFileDataRequest(winrt._winrt.IInspectable):
+class IStreamedFileDataRequest(winrt.system.Object):
     # System.Void Windows.Storage.IStreamedFileDataRequest::FailAndClose(Windows.Storage.StreamedFileFailureMode)
     @abstractmethod
     def fail_and_close(self, failure_mode: StreamedFileFailureMode, /) -> None: ...

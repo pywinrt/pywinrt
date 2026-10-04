@@ -101,7 +101,7 @@ class ImageScanner(winrt.system.Object, metaclass=ImageScanner_Static):
     def flatbed_configuration(self) -> ImageScannerFlatbedConfiguration: ...
 
 @typing.final
-class ImageScannerAutoConfiguration(winrt.system.Object, IImageScannerFormatConfiguration):
+class ImageScannerAutoConfiguration(IImageScannerFormatConfiguration, winrt.system.Object):
     # System.Boolean Windows.Devices.Scanners.ImageScannerAutoConfiguration::IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)
     def is_format_supported(self, value: ImageScannerFormat, /) -> bool: ...
     # Windows.Devices.Scanners.ImageScannerFormat Windows.Devices.Scanners.ImageScannerAutoConfiguration::get_Format()
@@ -115,7 +115,7 @@ class ImageScannerAutoConfiguration(winrt.system.Object, IImageScannerFormatConf
     def default_format(self) -> ImageScannerFormat: ...
 
 @typing.final
-class ImageScannerFeederConfiguration(winrt.system.Object, IImageScannerSourceConfiguration, IImageScannerFormatConfiguration):
+class ImageScannerFeederConfiguration(IImageScannerSourceConfiguration, IImageScannerFormatConfiguration, winrt.system.Object):
     # System.Boolean Windows.Devices.Scanners.ImageScannerFeederConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
     def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...
     # System.Boolean Windows.Devices.Scanners.ImageScannerFeederConfiguration::IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)
@@ -264,7 +264,7 @@ class ImageScannerFeederConfiguration(winrt.system.Object, IImageScannerSourceCo
     def actual_resolution(self) -> ImageScannerResolution: ...
 
 @typing.final
-class ImageScannerFlatbedConfiguration(winrt.system.Object, IImageScannerSourceConfiguration, IImageScannerFormatConfiguration):
+class ImageScannerFlatbedConfiguration(IImageScannerSourceConfiguration, IImageScannerFormatConfiguration, winrt.system.Object):
     # System.Boolean Windows.Devices.Scanners.ImageScannerFlatbedConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
     def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...
     # System.Boolean Windows.Devices.Scanners.ImageScannerFlatbedConfiguration::IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)
@@ -380,7 +380,7 @@ class ImageScannerScanResult(winrt.system.Object):
 @typing.final
 class _IImageScannerFormatConfiguration: ...
 
-class IImageScannerFormatConfiguration(winrt._winrt.IInspectable):
+class IImageScannerFormatConfiguration(winrt.system.Object):
     # System.Boolean Windows.Devices.Scanners.IImageScannerFormatConfiguration::IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)
     @abstractmethod
     def is_format_supported(self, value: ImageScannerFormat, /) -> bool: ...
@@ -400,7 +400,7 @@ class IImageScannerFormatConfiguration(winrt._winrt.IInspectable):
 @typing.final
 class _IImageScannerSourceConfiguration: ...
 
-class IImageScannerSourceConfiguration(IImageScannerFormatConfiguration, winrt._winrt.IInspectable):
+class IImageScannerSourceConfiguration(IImageScannerFormatConfiguration, winrt.system.Object):
     # System.Boolean Windows.Devices.Scanners.IImageScannerSourceConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
     @abstractmethod
     def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...

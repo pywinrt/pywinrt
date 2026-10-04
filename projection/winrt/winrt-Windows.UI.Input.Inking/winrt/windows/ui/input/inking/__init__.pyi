@@ -228,7 +228,7 @@ class InkInputProcessingConfiguration(winrt.system.Object):
     def mode(self, value: InkInputProcessingMode) -> None: ...
 
 @typing.final
-class InkManager(winrt.system.Object, IInkRecognizerContainer, IInkStrokeContainer):
+class InkManager(IInkRecognizerContainer, IInkStrokeContainer, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.UI.Input.Inking.InkManager::AddStroke(Windows.UI.Input.Inking.InkStroke)
     def add_stroke(self, stroke: InkStroke, /) -> None: ...
@@ -387,7 +387,7 @@ class InkPresenter(winrt.system.Object):
     def input_configuration(self) -> InkInputConfiguration: ...
 
 @typing.final
-class InkPresenterProtractor(winrt.system.Object, IInkPresenterStencil):
+class InkPresenterProtractor(IInkPresenterStencil, winrt.system.Object):
     def __new__(cls, ink_presenter: InkPresenter) -> typing.Self: ...
     # System.Double Windows.UI.Input.Inking.InkPresenterProtractor::get_Radius()
     @_property
@@ -460,7 +460,7 @@ class InkPresenterProtractor(winrt.system.Object, IInkPresenterStencil):
     def kind(self) -> InkPresenterStencilKind: ...
 
 @typing.final
-class InkPresenterRuler(winrt.system.Object, IInkPresenterStencil):
+class InkPresenterRuler(IInkPresenterStencil, winrt.system.Object):
     def __new__(cls, ink_presenter: InkPresenter) -> typing.Self: ...
     # System.Double Windows.UI.Input.Inking.InkPresenterRuler::get_Width()
     @_property
@@ -531,7 +531,7 @@ class InkRecognizer(winrt.system.Object):
     def name(self) -> str: ...
 
 @typing.final
-class InkRecognizerContainer(winrt.system.Object, IInkRecognizerContainer):
+class InkRecognizerContainer(IInkRecognizerContainer, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognizer> Windows.UI.Input.Inking.InkRecognizerContainer::GetRecognizers()
     def get_recognizers(self) -> _cabc.Sequence[InkRecognizer]: ...
@@ -612,7 +612,7 @@ class InkStrokeBuilder(winrt.system.Object):
     def set_default_drawing_attributes(self, drawing_attributes: InkDrawingAttributes, /) -> None: ...
 
 @typing.final
-class InkStrokeContainer(winrt.system.Object, IInkStrokeContainer):
+class InkStrokeContainer(IInkStrokeContainer, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.UI.Input.Inking.InkStrokeContainer::AddStroke(Windows.UI.Input.Inking.InkStroke)
     def add_stroke(self, stroke: InkStroke, /) -> None: ...
@@ -788,7 +788,7 @@ class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static)
 @typing.final
 class _IInkPointFactory: ...
 
-class IInkPointFactory(winrt._winrt.IInspectable):
+class IInkPointFactory(winrt.system.Object):
     # Windows.UI.Input.Inking.InkPoint Windows.UI.Input.Inking.IInkPointFactory::CreateInkPoint(Windows.Foundation.Point,System.Single)
     @abstractmethod
     def create_ink_point(self, position: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], pressure: winrt.system.Single, /) -> InkPoint: ...
@@ -796,7 +796,7 @@ class IInkPointFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IInkPresenterRulerFactory: ...
 
-class IInkPresenterRulerFactory(winrt._winrt.IInspectable):
+class IInkPresenterRulerFactory(winrt.system.Object):
     # Windows.UI.Input.Inking.InkPresenterRuler Windows.UI.Input.Inking.IInkPresenterRulerFactory::Create(Windows.UI.Input.Inking.InkPresenter)
     @abstractmethod
     def create(self, ink_presenter: InkPresenter, /) -> InkPresenterRuler: ...
@@ -804,7 +804,7 @@ class IInkPresenterRulerFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IInkPresenterStencil: ...
 
-class IInkPresenterStencil(winrt._winrt.IInspectable):
+class IInkPresenterStencil(winrt.system.Object):
     # Windows.UI.Color Windows.UI.Input.Inking.IInkPresenterStencil::get_BackgroundColor()
     @_property
     @abstractmethod
@@ -845,7 +845,7 @@ class IInkPresenterStencil(winrt._winrt.IInspectable):
 @typing.final
 class _IInkRecognizerContainer: ...
 
-class IInkRecognizerContainer(winrt._winrt.IInspectable):
+class IInkRecognizerContainer(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkRecognizer> Windows.UI.Input.Inking.IInkRecognizerContainer::GetRecognizers()
     @abstractmethod
     def get_recognizers(self) -> _cabc.Sequence[InkRecognizer]: ...
@@ -859,7 +859,7 @@ class IInkRecognizerContainer(winrt._winrt.IInspectable):
 @typing.final
 class _IInkStrokeContainer: ...
 
-class IInkStrokeContainer(winrt._winrt.IInspectable):
+class IInkStrokeContainer(winrt.system.Object):
     # System.Void Windows.UI.Input.Inking.IInkStrokeContainer::AddStroke(Windows.UI.Input.Inking.InkStroke)
     @abstractmethod
     def add_stroke(self, stroke: InkStroke, /) -> None: ...

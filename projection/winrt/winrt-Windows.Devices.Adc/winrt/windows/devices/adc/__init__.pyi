@@ -23,7 +23,7 @@ class AdcChannelMode(enum.IntEnum):
     DIFFERENTIAL = 1
 
 @typing.final
-class AdcChannel(winrt.system.Object, windows_foundation.IClosable):
+class AdcChannel(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Adc.AdcChannel::Close()

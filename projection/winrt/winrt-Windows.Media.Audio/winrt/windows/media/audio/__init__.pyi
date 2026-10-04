@@ -168,7 +168,7 @@ class SpatialAudioModel(enum.IntEnum):
     FOLD_DOWN = 1
 
 @typing.final
-class AudioDeviceInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable):
+class AudioDeviceInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -224,7 +224,7 @@ class AudioDeviceInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNod
     def encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
-class AudioDeviceOutputNode(winrt.system.Object, IAudioNodeWithListener, IAudioNode, windows_foundation.IClosable):
+class AudioDeviceOutputNode(IAudioNodeWithListener, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioDeviceOutputNode::Close()
@@ -291,7 +291,7 @@ class AudioEffectsPackConfiguration(winrt.system.Object, metaclass=AudioEffectsP
     def status(self) -> AudioEffectsPackStatus: ...
 
 @typing.final
-class AudioFileInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable):
+class AudioFileInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -383,7 +383,7 @@ class AudioFileInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode,
     def encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
-class AudioFileOutputNode(winrt.system.Object, IAudioNode, windows_foundation.IClosable):
+class AudioFileOutputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioFileOutputNode::Close()
@@ -432,7 +432,7 @@ class AudioFrameCompletedEventArgs(winrt.system.Object):
     def frame(self) -> windows_media.AudioFrame: ...
 
 @typing.final
-class AudioFrameInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable):
+class AudioFrameInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioFrameInputNode::AddFrame(Windows.Media.AudioFrame)
@@ -506,7 +506,7 @@ class AudioFrameInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode
     def encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
-class AudioFrameOutputNode(winrt.system.Object, IAudioNode, windows_foundation.IClosable):
+class AudioFrameOutputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioFrameOutputNode::Close()
@@ -548,7 +548,7 @@ class AudioGraph_Static(winrt._winrt.Object_Static):
     def create_async(cls, settings: AudioGraphSettings, /) -> windows_foundation.IAsyncOperation[CreateAudioGraphResult]: ...
 
 @typing.final
-class AudioGraph(winrt.system.Object, windows_foundation.IClosable, metaclass=AudioGraph_Static):
+class AudioGraph(windows_foundation.IClosable, winrt.system.Object, metaclass=AudioGraph_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioGraph::Close()
@@ -693,7 +693,7 @@ class AudioGraph(winrt.system.Object, windows_foundation.IClosable, metaclass=Au
     def samples_per_quantum(self) -> winrt.system.Int32: ...
 
 @typing.final
-class AudioGraphBatchUpdater(winrt.system.Object, windows_foundation.IClosable):
+class AudioGraphBatchUpdater(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioGraphBatchUpdater::Close()
@@ -916,7 +916,7 @@ class AudioPlaybackConnection_Static(winrt._winrt.Object_Static):
     def try_create_from_id(cls, id: str, /) -> AudioPlaybackConnection | None: ...
 
 @typing.final
-class AudioPlaybackConnection(winrt.system.Object, windows_foundation.IClosable, metaclass=AudioPlaybackConnection_Static):
+class AudioPlaybackConnection(windows_foundation.IClosable, winrt.system.Object, metaclass=AudioPlaybackConnection_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Audio.AudioPlaybackConnection::Close()
@@ -1001,7 +1001,7 @@ class AudioStateMonitor(winrt.system.Object, metaclass=AudioStateMonitor_Static)
     def sound_level(self) -> windows_media.SoundLevel: ...
 
 @typing.final
-class AudioSubmixNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable):
+class AudioSubmixNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -1126,7 +1126,7 @@ class CreateMediaSourceAudioInputNodeResult(winrt.system.Object):
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
-class EchoEffectDefinition(winrt.system.Object, windows_media_effects.IAudioEffectDefinition):
+class EchoEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt.system.Object):
     def __new__(cls, audio_graph: AudioGraph) -> typing.Self: ...
     # System.Double Windows.Media.Audio.EchoEffectDefinition::get_WetDryMix()
     @_property
@@ -1175,7 +1175,7 @@ class EqualizerBand(winrt.system.Object):
     def bandwidth(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class EqualizerEffectDefinition(winrt.system.Object, windows_media_effects.IAudioEffectDefinition):
+class EqualizerEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt.system.Object):
     def __new__(cls, audio_graph: AudioGraph) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Audio.EqualizerBand> Windows.Media.Audio.EqualizerEffectDefinition::get_Bands()
     @_property
@@ -1194,7 +1194,7 @@ class FrameInputNodeQuantumStartedEventArgs(winrt.system.Object):
     def required_samples(self) -> winrt.system.Int32: ...
 
 @typing.final
-class LimiterEffectDefinition(winrt.system.Object, windows_media_effects.IAudioEffectDefinition):
+class LimiterEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt.system.Object):
     def __new__(cls, audio_graph: AudioGraph) -> typing.Self: ...
     # System.UInt32 Windows.Media.Audio.LimiterEffectDefinition::get_Release()
     @_property
@@ -1216,7 +1216,7 @@ class LimiterEffectDefinition(winrt.system.Object, windows_media_effects.IAudioE
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class MediaSourceAudioInputNode(winrt.system.Object, IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable):
+class MediaSourceAudioInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -1308,7 +1308,7 @@ class MediaSourceAudioInputNode(winrt.system.Object, IAudioInputNode2, IAudioInp
     def position(self) -> datetime.timedelta: ...
 
 @typing.final
-class ReverbEffectDefinition(winrt.system.Object, windows_media_effects.IAudioEffectDefinition):
+class ReverbEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt.system.Object):
     def __new__(cls, audio_graph: AudioGraph) -> typing.Self: ...
     # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_HighEQGain()
     @_property
@@ -1538,7 +1538,7 @@ class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioForma
 @typing.final
 class _IAudioInputNode: ...
 
-class IAudioInputNode(IAudioNode, windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IAudioInputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Media.Audio.IAudioInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
     @abstractmethod
@@ -1562,7 +1562,7 @@ class IAudioInputNode(IAudioNode, windows_foundation.IClosable, winrt._winrt.IIn
 @typing.final
 class _IAudioInputNode2: ...
 
-class IAudioInputNode2(IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IAudioInputNode2(IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     # Windows.Media.Audio.AudioNodeEmitter Windows.Media.Audio.IAudioInputNode2::get_Emitter()
     @_property
     @abstractmethod
@@ -1571,7 +1571,7 @@ class IAudioInputNode2(IAudioInputNode, IAudioNode, windows_foundation.IClosable
 @typing.final
 class _IAudioNode: ...
 
-class IAudioNode(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IAudioNode(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Media.Audio.IAudioNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
     @abstractmethod
     def disable_effects_by_definition(self, definition: windows_media_effects.IAudioEffectDefinition, /) -> None: ...
@@ -1615,7 +1615,7 @@ class IAudioNode(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _IAudioNodeWithListener: ...
 
-class IAudioNodeWithListener(IAudioNode, windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IAudioNodeWithListener(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     # Windows.Media.Audio.AudioNodeListener Windows.Media.Audio.IAudioNodeWithListener::get_Listener()
     @_property
     @abstractmethod

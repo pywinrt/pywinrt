@@ -104,7 +104,7 @@ class ComponentRenewal(winrt.system.Object, metaclass=ComponentRenewal_Static):
     ...
 
 @typing.final
-class HdcpSession(winrt.system.Object, windows_foundation.IClosable):
+class HdcpSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -197,7 +197,7 @@ class ServiceRequestedEventArgs(winrt.system.Object):
 @typing.final
 class _IMediaProtectionServiceRequest: ...
 
-class IMediaProtectionServiceRequest(winrt._winrt.IInspectable):
+class IMediaProtectionServiceRequest(winrt.system.Object):
     # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
     @_property
     @abstractmethod

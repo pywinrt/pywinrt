@@ -43,7 +43,7 @@ class UserDataAccountPartnerAccountInfo(winrt.system.Object):
     def priority(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class UserDataAccountProviderAddAccountOperation(winrt.system.Object, IUserDataAccountProviderOperation):
+class UserDataAccountProviderAddAccountOperation(IUserDataAccountProviderOperation, winrt.system.Object):
     # System.Void Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation::ReportCompleted(System.String)
     def report_completed(self, user_data_account_id: str, /) -> None: ...
     # Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation::get_ContentKinds()
@@ -57,7 +57,7 @@ class UserDataAccountProviderAddAccountOperation(winrt.system.Object, IUserDataA
     def kind(self) -> UserDataAccountProviderOperationKind: ...
 
 @typing.final
-class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object, IUserDataAccountProviderOperation):
+class UserDataAccountProviderResolveErrorsOperation(IUserDataAccountProviderOperation, winrt.system.Object):
     # System.Void Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation::get_Kind()
@@ -68,7 +68,7 @@ class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object, IUserDa
     def user_data_account_id(self) -> str: ...
 
 @typing.final
-class UserDataAccountProviderSettingsOperation(winrt.system.Object, IUserDataAccountProviderOperation):
+class UserDataAccountProviderSettingsOperation(IUserDataAccountProviderOperation, winrt.system.Object):
     # System.Void Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation::get_Kind()
@@ -81,7 +81,7 @@ class UserDataAccountProviderSettingsOperation(winrt.system.Object, IUserDataAcc
 @typing.final
 class _IUserDataAccountProviderOperation: ...
 
-class IUserDataAccountProviderOperation(winrt._winrt.IInspectable):
+class IUserDataAccountProviderOperation(winrt.system.Object):
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation::get_Kind()
     @_property
     @abstractmethod

@@ -112,7 +112,7 @@ class PrintSupportCommunicationErrorDetectedEventArgs(winrt.system.Object):
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
-class PrintSupportEnterpriseManagementUIEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs):
+class PrintSupportEnterpriseManagementUIEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -340,7 +340,7 @@ class PrintSupportSessionInfo(winrt.system.Object):
     def source_app_info(self) -> windows_applicationmodel.AppInfo: ...
 
 @typing.final
-class PrintSupportSettingsActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs):
+class PrintSupportSettingsActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs::get_Kind()

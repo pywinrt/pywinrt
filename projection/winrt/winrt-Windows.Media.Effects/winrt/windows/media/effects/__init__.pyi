@@ -118,7 +118,7 @@ class AudioEffect(winrt.system.Object):
     def state(self) -> AudioEffectState: ...
 
 @typing.final
-class AudioEffectDefinition(winrt.system.Object, IAudioEffectDefinition):
+class AudioEffectDefinition(IAudioEffectDefinition, winrt.system.Object):
     @typing.overload
     def __new__(cls, activatable_class_id: str) -> typing.Self: ...
     @typing.overload
@@ -210,7 +210,7 @@ class ProcessVideoFrameContext(winrt.system.Object):
     def output_frame(self) -> windows_media.VideoFrame: ...
 
 @typing.final
-class VideoCompositorDefinition(winrt.system.Object, IVideoCompositorDefinition):
+class VideoCompositorDefinition(IVideoCompositorDefinition, winrt.system.Object):
     @typing.overload
     def __new__(cls, activatable_class_id: str) -> typing.Self: ...
     @typing.overload
@@ -223,7 +223,7 @@ class VideoCompositorDefinition(winrt.system.Object, IVideoCompositorDefinition)
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoEffectDefinition(winrt.system.Object, IVideoEffectDefinition):
+class VideoEffectDefinition(IVideoEffectDefinition, winrt.system.Object):
     @typing.overload
     def __new__(cls, activatable_class_id: str) -> typing.Self: ...
     @typing.overload
@@ -236,7 +236,7 @@ class VideoEffectDefinition(winrt.system.Object, IVideoEffectDefinition):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoTransformEffectDefinition(winrt.system.Object, IVideoEffectDefinition):
+class VideoTransformEffectDefinition(IVideoEffectDefinition, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Media.Effects.VideoTransformEffectDefinition::get_ActivatableClassId()
     @_property
@@ -320,7 +320,7 @@ class VideoTransformSphericalProjection(winrt.system.Object):
 @typing.final
 class _IAudioEffectDefinition: ...
 
-class IAudioEffectDefinition(winrt._winrt.IInspectable):
+class IAudioEffectDefinition(winrt.system.Object):
     # System.String Windows.Media.Effects.IAudioEffectDefinition::get_ActivatableClassId()
     @_property
     @abstractmethod
@@ -333,7 +333,7 @@ class IAudioEffectDefinition(winrt._winrt.IInspectable):
 @typing.final
 class _IBasicAudioEffect: ...
 
-class IBasicAudioEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable):
+class IBasicAudioEffect(windows_media.IMediaExtension, winrt.system.Object):
     # System.Void Windows.Media.Effects.IBasicAudioEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -358,7 +358,7 @@ class IBasicAudioEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable
 @typing.final
 class _IBasicVideoEffect: ...
 
-class IBasicVideoEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable):
+class IBasicVideoEffect(windows_media.IMediaExtension, winrt.system.Object):
     # System.Void Windows.Media.Effects.IBasicVideoEffect::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -391,7 +391,7 @@ class IBasicVideoEffect(windows_media.IMediaExtension, winrt._winrt.IInspectable
 @typing.final
 class _IVideoCompositor: ...
 
-class IVideoCompositor(windows_media.IMediaExtension, winrt._winrt.IInspectable):
+class IVideoCompositor(windows_media.IMediaExtension, winrt.system.Object):
     # System.Void Windows.Media.Effects.IVideoCompositor::Close(Windows.Media.Effects.MediaEffectClosedReason)
     @abstractmethod
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -412,7 +412,7 @@ class IVideoCompositor(windows_media.IMediaExtension, winrt._winrt.IInspectable)
 @typing.final
 class _IVideoCompositorDefinition: ...
 
-class IVideoCompositorDefinition(winrt._winrt.IInspectable):
+class IVideoCompositorDefinition(winrt.system.Object):
     # System.String Windows.Media.Effects.IVideoCompositorDefinition::get_ActivatableClassId()
     @_property
     @abstractmethod
@@ -425,7 +425,7 @@ class IVideoCompositorDefinition(winrt._winrt.IInspectable):
 @typing.final
 class _IVideoEffectDefinition: ...
 
-class IVideoEffectDefinition(winrt._winrt.IInspectable):
+class IVideoEffectDefinition(winrt.system.Object):
     # System.String Windows.Media.Effects.IVideoEffectDefinition::get_ActivatableClassId()
     @_property
     @abstractmethod

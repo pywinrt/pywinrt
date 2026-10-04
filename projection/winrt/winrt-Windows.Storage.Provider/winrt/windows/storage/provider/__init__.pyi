@@ -509,7 +509,7 @@ class StorageProviderSearchQueryOptions(winrt.system.Object):
     def user_query(self) -> str: ...
 
 @typing.final
-class StorageProviderSearchResult(winrt.system.Object, IStorageProviderQueryResult):
+class StorageProviderSearchResult(IStorageProviderQueryResult, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderSearchResult::get_ResultId()
     @_property
@@ -610,7 +610,7 @@ class StorageProviderStatusUI(winrt.system.Object):
     def more_info_ui(self, value: StorageProviderMoreInfoUI) -> None: ...
 
 @typing.final
-class StorageProviderSuggestionResult(winrt.system.Object, IStorageProviderQueryResult):
+class StorageProviderSuggestionResult(IStorageProviderQueryResult, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Storage.Provider.StorageProviderSuggestionResult::get_ResultId()
     @_property
@@ -786,7 +786,7 @@ class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProvi
 @typing.final
 class _IStorageProviderItemPropertySource: ...
 
-class IStorageProviderItemPropertySource(winrt._winrt.IInspectable):
+class IStorageProviderItemPropertySource(winrt.system.Object):
     # Windows.Foundation.Collections.IIterable`1<Windows.Storage.Provider.StorageProviderItemProperty> Windows.Storage.Provider.IStorageProviderItemPropertySource::GetItemProperties(System.String)
     @abstractmethod
     def get_item_properties(self, item_path: str, /) -> _cabc.Iterable[StorageProviderItemProperty]: ...
@@ -794,7 +794,7 @@ class IStorageProviderItemPropertySource(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderKnownFolderSyncInfoSource: ...
 
-class IStorageProviderKnownFolderSyncInfoSource(winrt._winrt.IInspectable):
+class IStorageProviderKnownFolderSyncInfoSource(winrt.system.Object):
     # Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource::GetKnownFolderSyncInfo()
     @abstractmethod
     def get_known_folder_sync_info(self) -> StorageProviderKnownFolderSyncInfo: ...
@@ -808,7 +808,7 @@ class IStorageProviderKnownFolderSyncInfoSource(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderKnownFolderSyncInfoSourceFactory: ...
 
-class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt._winrt.IInspectable):
+class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt.system.Object):
     # Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSource Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfoSourceFactory::GetKnownFolderSyncInfoSource()
     @abstractmethod
     def get_known_folder_sync_info_source(self) -> IStorageProviderKnownFolderSyncInfoSource: ...
@@ -816,7 +816,7 @@ class IStorageProviderKnownFolderSyncInfoSourceFactory(winrt._winrt.IInspectable
 @typing.final
 class _IStorageProviderPropertyCapabilities: ...
 
-class IStorageProviderPropertyCapabilities(winrt._winrt.IInspectable):
+class IStorageProviderPropertyCapabilities(winrt.system.Object):
     # System.Boolean Windows.Storage.Provider.IStorageProviderPropertyCapabilities::IsPropertySupported(System.String)
     @abstractmethod
     def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
@@ -824,7 +824,7 @@ class IStorageProviderPropertyCapabilities(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderQueryResult: ...
 
-class IStorageProviderQueryResult(winrt._winrt.IInspectable):
+class IStorageProviderQueryResult(winrt.system.Object):
     # System.String Windows.Storage.Provider.IStorageProviderQueryResult::get_FilePath()
     @_property
     @abstractmethod
@@ -865,7 +865,7 @@ class IStorageProviderQueryResult(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderSearchHandler: ...
 
-class IStorageProviderSearchHandler(winrt._winrt.IInspectable):
+class IStorageProviderSearchHandler(winrt.system.Object):
     # Windows.Storage.Provider.StorageProviderQueryResultSet Windows.Storage.Provider.IStorageProviderSearchHandler::Find(Windows.Storage.Provider.StorageProviderSearchQueryOptions)
     @abstractmethod
     def find(self, options: StorageProviderSearchQueryOptions, /) -> StorageProviderQueryResultSet: ...
@@ -876,7 +876,7 @@ class IStorageProviderSearchHandler(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderSearchHandlerFactory: ...
 
-class IStorageProviderSearchHandlerFactory(winrt._winrt.IInspectable):
+class IStorageProviderSearchHandlerFactory(winrt.system.Object):
     # Windows.Storage.Provider.IStorageProviderSearchHandler Windows.Storage.Provider.IStorageProviderSearchHandlerFactory::CreateSearchHandler(System.String)
     @abstractmethod
     def create_search_handler(self, cloud_provider_id: str, /) -> IStorageProviderSearchHandler: ...
@@ -884,7 +884,7 @@ class IStorageProviderSearchHandlerFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderShareLinkSource: ...
 
-class IStorageProviderShareLinkSource(winrt._winrt.IInspectable):
+class IStorageProviderShareLinkSource(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri> Windows.Storage.Provider.IStorageProviderShareLinkSource::CreateLinkAsync(Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem>)
     @abstractmethod
     def create_link_async(self, storage_item_list: _cabc.Sequence[windows_storage.IStorageItem], /) -> windows_foundation.IAsyncOperation[windows_foundation.Uri]: ...
@@ -898,7 +898,7 @@ class IStorageProviderShareLinkSource(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderStatusUISource: ...
 
-class IStorageProviderStatusUISource(winrt._winrt.IInspectable):
+class IStorageProviderStatusUISource(winrt.system.Object):
     # Windows.Storage.Provider.StorageProviderStatusUI Windows.Storage.Provider.IStorageProviderStatusUISource::GetStatusUI()
     @abstractmethod
     def get_status_ui(self) -> StorageProviderStatusUI: ...
@@ -912,7 +912,7 @@ class IStorageProviderStatusUISource(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderStatusUISourceFactory: ...
 
-class IStorageProviderStatusUISourceFactory(winrt._winrt.IInspectable):
+class IStorageProviderStatusUISourceFactory(winrt.system.Object):
     # Windows.Storage.Provider.IStorageProviderStatusUISource Windows.Storage.Provider.IStorageProviderStatusUISourceFactory::GetStatusUISource(System.String)
     @abstractmethod
     def get_status_ui_source(self, sync_root_id: str, /) -> IStorageProviderStatusUISource: ...
@@ -920,7 +920,7 @@ class IStorageProviderStatusUISourceFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderSuggestionsHandler: ...
 
-class IStorageProviderSuggestionsHandler(winrt._winrt.IInspectable):
+class IStorageProviderSuggestionsHandler(winrt.system.Object):
     # System.Void Windows.Storage.Provider.IStorageProviderSuggestionsHandler::Add(Windows.Storage.Provider.StorageProviderResultKind,System.String)
     @abstractmethod
     def add(self, kind: StorageProviderResultKind, remote_file_id: str, /) -> None: ...
@@ -940,7 +940,7 @@ class IStorageProviderSuggestionsHandler(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderSuggestionsHandlerFactory: ...
 
-class IStorageProviderSuggestionsHandlerFactory(winrt._winrt.IInspectable):
+class IStorageProviderSuggestionsHandlerFactory(winrt.system.Object):
     # Windows.Storage.Provider.IStorageProviderSuggestionsHandler Windows.Storage.Provider.IStorageProviderSuggestionsHandlerFactory::CreateSuggestionsHandler(System.String)
     @abstractmethod
     def create_suggestions_handler(self, cloud_provider_id: str, /) -> IStorageProviderSuggestionsHandler: ...
@@ -948,7 +948,7 @@ class IStorageProviderSuggestionsHandlerFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderUICommand: ...
 
-class IStorageProviderUICommand(winrt._winrt.IInspectable):
+class IStorageProviderUICommand(winrt.system.Object):
     # System.Void Windows.Storage.Provider.IStorageProviderUICommand::Invoke()
     @abstractmethod
     def invoke(self) -> None: ...
@@ -972,7 +972,7 @@ class IStorageProviderUICommand(winrt._winrt.IInspectable):
 @typing.final
 class _IStorageProviderUriSource: ...
 
-class IStorageProviderUriSource(winrt._winrt.IInspectable):
+class IStorageProviderUriSource(winrt.system.Object):
     # System.Void Windows.Storage.Provider.IStorageProviderUriSource::GetContentInfoForPath(System.String,Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult)
     @abstractmethod
     def get_content_info_for_path(self, path: str, result: StorageProviderGetContentInfoForPathResult, /) -> None: ...

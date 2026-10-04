@@ -70,7 +70,7 @@ class ProviderI2cConnectionSettings(winrt.system.Object):
 @typing.final
 class _II2cControllerProvider: ...
 
-class II2cControllerProvider(winrt._winrt.IInspectable):
+class II2cControllerProvider(winrt.system.Object):
     # Windows.Devices.I2c.Provider.II2cDeviceProvider Windows.Devices.I2c.Provider.II2cControllerProvider::GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)
     @abstractmethod
     def get_device_provider(self, settings: ProviderI2cConnectionSettings, /) -> II2cDeviceProvider: ...
@@ -78,7 +78,7 @@ class II2cControllerProvider(winrt._winrt.IInspectable):
 @typing.final
 class _II2cDeviceProvider: ...
 
-class II2cDeviceProvider(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class II2cDeviceProvider(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Devices.I2c.Provider.II2cDeviceProvider::Read(System.Byte[])
     @abstractmethod
     def read(self, buffer: winrt.system.Array[winrt.system.UInt8] | winrt.system.WriteableBuffer, /) -> None: ...
@@ -105,7 +105,7 @@ class II2cDeviceProvider(windows_foundation.IClosable, winrt._winrt.IInspectable
 @typing.final
 class _II2cProvider: ...
 
-class II2cProvider(winrt._winrt.IInspectable):
+class II2cProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.I2c.Provider.II2cControllerProvider>> Windows.Devices.I2c.Provider.II2cProvider::GetControllersAsync()
     @abstractmethod
     def get_controllers_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[II2cControllerProvider]]: ...

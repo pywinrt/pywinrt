@@ -326,7 +326,7 @@ class HolographicFramePrediction(winrt.system.Object):
 
 @typing.final
 @deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.")
-class HolographicFramePresentationMonitor(winrt.system.Object, windows_foundation.IClosable):
+class HolographicFramePresentationMonitor(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Holographic.HolographicFramePresentationMonitor::Close()
@@ -378,7 +378,7 @@ class HolographicFrameRenderingReport(winrt.system.Object):
     def system_relative_target_latch_time(self) -> datetime.timedelta: ...
 
 @typing.final
-class HolographicFrameScanoutMonitor(winrt.system.Object, windows_foundation.IClosable):
+class HolographicFrameScanoutMonitor(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Holographic.HolographicFrameScanoutMonitor::Close()
@@ -405,7 +405,7 @@ class HolographicFrameScanoutReport(winrt.system.Object):
     def system_relative_scanout_start_time(self) -> datetime.timedelta: ...
 
 @typing.final
-class HolographicQuadLayer(winrt.system.Object, windows_foundation.IClosable):
+class HolographicQuadLayer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload

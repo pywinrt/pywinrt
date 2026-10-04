@@ -100,7 +100,7 @@ class PopupMenu(winrt.system.Object):
     def commands(self) -> _cabc.MutableSequence[IUICommand]: ...
 
 @typing.final
-class UICommand(winrt.system.Object, IUICommand):
+class UICommand(IUICommand, winrt.system.Object):
     @typing.overload
     def __new__(cls, label: str) -> typing.Self: ...
     @typing.overload
@@ -129,7 +129,7 @@ class UICommand(winrt.system.Object, IUICommand):
     def id(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
-class UICommandSeparator(winrt.system.Object, IUICommand):
+class UICommandSeparator(IUICommand, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.UI.Popups.UICommandSeparator::get_Label()
     @_property
@@ -153,7 +153,7 @@ class UICommandSeparator(winrt.system.Object, IUICommand):
 @typing.final
 class _IUICommand: ...
 
-class IUICommand(winrt._winrt.IInspectable):
+class IUICommand(winrt.system.Object):
     # System.Object Windows.UI.Popups.IUICommand::get_Id()
     @_property
     @abstractmethod

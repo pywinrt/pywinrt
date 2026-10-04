@@ -147,7 +147,7 @@ class ErrorDetails(winrt.system.Object, metaclass=ErrorDetails_Static):
     def long_description(self) -> str: ...
 
 @typing.final
-class FileLoggingSession(winrt.system.Object, IFileLoggingSession, windows_foundation.IClosable):
+class FileLoggingSession(IFileLoggingSession, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, name: str) -> typing.Self: ...
@@ -182,7 +182,7 @@ class LogFileGeneratedEventArgs(winrt.system.Object):
     def file(self) -> windows_storage.StorageFile: ...
 
 @typing.final
-class LoggingActivity(winrt.system.Object, ILoggingTarget, windows_foundation.IClosable):
+class LoggingActivity(ILoggingTarget, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -284,7 +284,7 @@ class LoggingActivity(winrt.system.Object, ILoggingTarget, windows_foundation.IC
     def channel(self) -> LoggingChannel: ...
 
 @typing.final
-class LoggingChannel(winrt.system.Object, ILoggingTarget, ILoggingChannel, windows_foundation.IClosable):
+class LoggingChannel(ILoggingTarget, ILoggingChannel, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -1102,7 +1102,7 @@ class LoggingOptions(winrt.system.Object):
     def activity_id(self, value: _uuid.UUID) -> None: ...
 
 @typing.final
-class LoggingSession(winrt.system.Object, ILoggingSession, windows_foundation.IClosable):
+class LoggingSession(ILoggingSession, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, name: str) -> typing.Self: ...
@@ -1127,7 +1127,7 @@ class LoggingSession(winrt.system.Object, ILoggingSession, windows_foundation.IC
     def name(self) -> str: ...
 
 @typing.final
-class RuntimeBrokerErrorSettings(winrt.system.Object, IErrorReportingSettings):
+class RuntimeBrokerErrorSettings(IErrorReportingSettings, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Diagnostics.ErrorOptions Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings::GetErrorOptions()
     def get_error_options(self) -> ErrorOptions: ...
@@ -1146,7 +1146,7 @@ class TracingStatusChangedEventArgs(winrt.system.Object):
 @typing.final
 class _IErrorReportingSettings: ...
 
-class IErrorReportingSettings(winrt._winrt.IInspectable):
+class IErrorReportingSettings(winrt.system.Object):
     # Windows.Foundation.Diagnostics.ErrorOptions Windows.Foundation.Diagnostics.IErrorReportingSettings::GetErrorOptions()
     @abstractmethod
     def get_error_options(self) -> ErrorOptions: ...
@@ -1157,7 +1157,7 @@ class IErrorReportingSettings(winrt._winrt.IInspectable):
 @typing.final
 class _IFileLoggingSession: ...
 
-class IFileLoggingSession(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class IFileLoggingSession(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Foundation.Diagnostics.IFileLoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
     @abstractmethod
@@ -1190,7 +1190,7 @@ class IFileLoggingSession(windows_foundation.IClosable, winrt._winrt.IInspectabl
 @typing.final
 class _ILoggingChannel: ...
 
-class ILoggingChannel(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class ILoggingChannel(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Foundation.Diagnostics.ILoggingChannel::LogMessage(System.String)
     @abstractmethod
@@ -1237,7 +1237,7 @@ class ILoggingChannel(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _ILoggingSession: ...
 
-class ILoggingSession(windows_foundation.IClosable, winrt._winrt.IInspectable):
+class ILoggingSession(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Foundation.Diagnostics.ILoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
     @abstractmethod
@@ -1264,7 +1264,7 @@ class ILoggingSession(windows_foundation.IClosable, winrt._winrt.IInspectable):
 @typing.final
 class _ILoggingTarget: ...
 
-class ILoggingTarget(winrt._winrt.IInspectable):
+class ILoggingTarget(winrt.system.Object):
     @typing.overload
     # System.Boolean Windows.Foundation.Diagnostics.ILoggingTarget::IsEnabled()
     @abstractmethod

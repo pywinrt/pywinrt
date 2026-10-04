@@ -113,7 +113,7 @@ class SpiDevice_Static(winrt._winrt.Object_Static):
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
-class SpiDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=SpiDevice_Static):
+class SpiDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=SpiDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.Spi.SpiDevice::Close()
@@ -136,7 +136,7 @@ class SpiDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=Spi
 @typing.final
 class _ISpiDeviceStatics: ...
 
-class ISpiDeviceStatics(winrt._winrt.IInspectable):
+class ISpiDeviceStatics(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Spi.SpiDevice> Windows.Devices.Spi.ISpiDeviceStatics::FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)
     @abstractmethod
     def from_id_async(self, bus_id: str, settings: SpiConnectionSettings, /) -> windows_foundation.IAsyncOperation[SpiDevice]: ...

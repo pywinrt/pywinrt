@@ -56,7 +56,7 @@ class PeriodicForceEffectKind(enum.IntEnum):
     SAWTOOTH_WAVE_DOWN = 4
 
 @typing.final
-class ConditionForceEffect(winrt.system.Object, IForceFeedbackEffect):
+class ConditionForceEffect(IForceFeedbackEffect, winrt.system.Object):
     def __new__(cls, effect_kind: ConditionForceEffectKind) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ConditionForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
     def set_parameters(self, direction: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], positive_coefficient: winrt.system.Single, negative_coefficient: winrt.system.Single, max_positive_magnitude: winrt.system.Single, max_negative_magnitude: winrt.system.Single, dead_zone: winrt.system.Single, bias: winrt.system.Single, /) -> None: ...
@@ -78,7 +78,7 @@ class ConditionForceEffect(winrt.system.Object, IForceFeedbackEffect):
     def state(self) -> ForceFeedbackEffectState: ...
 
 @typing.final
-class ConstantForceEffect(winrt.system.Object, IForceFeedbackEffect):
+class ConstantForceEffect(IForceFeedbackEffect, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ConstantForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,Windows.Foundation.TimeSpan)
     def set_parameters(self, vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], duration: datetime.timedelta, /) -> None: ...
@@ -133,7 +133,7 @@ class ForceFeedbackMotor(winrt.system.Object):
     def supported_axes(self) -> ForceFeedbackEffectAxes: ...
 
 @typing.final
-class PeriodicForceEffect(winrt.system.Object, IForceFeedbackEffect):
+class PeriodicForceEffect(IForceFeedbackEffect, winrt.system.Object):
     def __new__(cls, effect_kind: PeriodicForceEffectKind) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,System.Single,System.Single,System.Single,Windows.Foundation.TimeSpan)
     def set_parameters(self, vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], frequency: winrt.system.Single, phase: winrt.system.Single, bias: winrt.system.Single, duration: datetime.timedelta, /) -> None: ...
@@ -157,7 +157,7 @@ class PeriodicForceEffect(winrt.system.Object, IForceFeedbackEffect):
     def kind(self) -> PeriodicForceEffectKind: ...
 
 @typing.final
-class RampForceEffect(winrt.system.Object, IForceFeedbackEffect):
+class RampForceEffect(IForceFeedbackEffect, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.RampForceEffect::SetParameters(Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Vector3,Windows.Foundation.TimeSpan)
     def set_parameters(self, start_vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], end_vector: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], duration: datetime.timedelta, /) -> None: ...
@@ -180,7 +180,7 @@ class RampForceEffect(winrt.system.Object, IForceFeedbackEffect):
 @typing.final
 class _IForceFeedbackEffect: ...
 
-class IForceFeedbackEffect(winrt._winrt.IInspectable):
+class IForceFeedbackEffect(winrt.system.Object):
     # System.Void Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect::Start()
     @abstractmethod
     def start(self) -> None: ...

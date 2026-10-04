@@ -75,6 +75,6 @@ class SizeInt32:
 @typing.final
 class _IGeometrySource2D: ...
 
-class IGeometrySource2D(winrt._winrt.IInspectable):
+class IGeometrySource2D(winrt.system.Object):
     ...
 

@@ -785,7 +785,7 @@ class DispatcherQueueTimer(winrt.system.Object):
     def is_running(self) -> bool: ...
 
 @typing.final
-class FolderLauncherOptions(winrt.system.Object, ILauncherViewOptions):
+class FolderLauncherOptions(ILauncherViewOptions, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Storage.IStorageItem> Windows.System.FolderLauncherOptions::get_ItemsToSelect()
     @_property
@@ -989,7 +989,7 @@ class Launcher(winrt.system.Object, metaclass=Launcher_Static):
     ...
 
 @typing.final
-class LauncherOptions(winrt.system.Object, ILauncherViewOptions):
+class LauncherOptions(ILauncherViewOptions, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.System.LauncherOptions::get_TreatAsUntrusted()
     @_property
@@ -1429,7 +1429,7 @@ class UserWatcher(winrt.system.Object):
 @typing.final
 class _ILauncherViewOptions: ...
 
-class ILauncherViewOptions(winrt._winrt.IInspectable):
+class ILauncherViewOptions(winrt.system.Object):
     # Windows.UI.ViewManagement.ViewSizePreference Windows.System.ILauncherViewOptions::get_DesiredRemainingView()
     @_property
     @abstractmethod

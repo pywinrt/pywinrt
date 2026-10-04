@@ -18,7 +18,7 @@ class SceneLightingEffectReflectanceModel(enum.IntEnum):
     PHYSICALLY_BASED_BLINN_PHONG = 1
 
 @typing.final
-class SceneLightingEffect(winrt.system.Object, windows_graphics_effects.IGraphicsEffect, windows_graphics_effects.IGraphicsEffectSource):
+class SceneLightingEffect(windows_graphics_effects.IGraphicsEffect, windows_graphics_effects.IGraphicsEffectSource, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.UI.Composition.Effects.SceneLightingEffect::get_Name()
     @_property

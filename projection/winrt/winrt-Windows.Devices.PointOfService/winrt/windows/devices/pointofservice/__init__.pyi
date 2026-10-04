@@ -398,7 +398,7 @@ class BarcodeScanner_Static(winrt._winrt.Object_Static):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class BarcodeScanner(winrt.system.Object, windows_foundation.IClosable, metaclass=BarcodeScanner_Static):
+class BarcodeScanner(windows_foundation.IClosable, winrt.system.Object, metaclass=BarcodeScanner_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.BarcodeScanner::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
@@ -849,7 +849,7 @@ class CashDrawer_Static(winrt._winrt.Object_Static):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class CashDrawer(winrt.system.Object, windows_foundation.IClosable, metaclass=CashDrawer_Static):
+class CashDrawer(windows_foundation.IClosable, winrt.system.Object, metaclass=CashDrawer_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.CashDrawer::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
@@ -935,7 +935,7 @@ class CashDrawerCloseAlarm(winrt.system.Object):
     def alarm_timeout(self, value: datetime.timedelta) -> None: ...
 
 @typing.final
-class CashDrawerClosedEventArgs(winrt.system.Object, ICashDrawerEventSourceEventArgs):
+class CashDrawerClosedEventArgs(ICashDrawerEventSourceEventArgs, winrt.system.Object):
     # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.CashDrawerClosedEventArgs::get_CashDrawer()
     @_property
     def cash_drawer(self) -> CashDrawer: ...
@@ -952,7 +952,7 @@ class CashDrawerEventSource(winrt.system.Object):
     def remove_drawer_opened(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class CashDrawerOpenedEventArgs(winrt.system.Object, ICashDrawerEventSourceEventArgs):
+class CashDrawerOpenedEventArgs(ICashDrawerEventSourceEventArgs, winrt.system.Object):
     # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.CashDrawerOpenedEventArgs::get_CashDrawer()
     @_property
     def cash_drawer(self) -> CashDrawer: ...
@@ -973,7 +973,7 @@ class CashDrawerStatusUpdatedEventArgs(winrt.system.Object):
     def status(self) -> CashDrawerStatus: ...
 
 @typing.final
-class ClaimedBarcodeScanner(winrt.system.Object, windows_foundation.IClosable):
+class ClaimedBarcodeScanner(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.PointOfService.ClaimedBarcodeScanner::Close()
@@ -1062,7 +1062,7 @@ class ClaimedBarcodeScannerClosedEventArgs(winrt.system.Object):
     ...
 
 @typing.final
-class ClaimedCashDrawer(winrt.system.Object, windows_foundation.IClosable):
+class ClaimedCashDrawer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.PointOfService.ClaimedCashDrawer::Close()
@@ -1105,7 +1105,7 @@ class ClaimedCashDrawerClosedEventArgs(winrt.system.Object):
     ...
 
 @typing.final
-class ClaimedJournalPrinter(winrt.system.Object, ICommonClaimedPosPrinterStation):
+class ClaimedJournalPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
     # Windows.Devices.PointOfService.JournalPrintJob Windows.Devices.PointOfService.ClaimedJournalPrinter::CreateJob()
     def create_job(self) -> JournalPrintJob: ...
     # System.Boolean Windows.Devices.PointOfService.ClaimedJournalPrinter::ValidateData(System.String)
@@ -1181,7 +1181,7 @@ class ClaimedLineDisplay_Static(winrt._winrt.Object_Static):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class ClaimedLineDisplay(winrt.system.Object, windows_foundation.IClosable, metaclass=ClaimedLineDisplay_Static):
+class ClaimedLineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=ClaimedLineDisplay_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.ClaimedLineDisplay::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
@@ -1275,7 +1275,7 @@ class ClaimedLineDisplayClosedEventArgs(winrt.system.Object):
     ...
 
 @typing.final
-class ClaimedMagneticStripeReader(winrt.system.Object, windows_foundation.IClosable):
+class ClaimedMagneticStripeReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.ClaimedMagneticStripeReader::AuthenticateDeviceAsync(System.Byte[])
@@ -1369,7 +1369,7 @@ class ClaimedMagneticStripeReaderClosedEventArgs(winrt.system.Object):
     ...
 
 @typing.final
-class ClaimedPosPrinter(winrt.system.Object, windows_foundation.IClosable):
+class ClaimedPosPrinter(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.PointOfService.ClaimedPosPrinter::Close()
@@ -1434,7 +1434,7 @@ class ClaimedPosPrinterClosedEventArgs(winrt.system.Object):
     ...
 
 @typing.final
-class ClaimedReceiptPrinter(winrt.system.Object, ICommonClaimedPosPrinterStation):
+class ClaimedReceiptPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
     # Windows.Devices.PointOfService.ReceiptPrintJob Windows.Devices.PointOfService.ClaimedReceiptPrinter::CreateJob()
     def create_job(self) -> ReceiptPrintJob: ...
     # System.Boolean Windows.Devices.PointOfService.ClaimedReceiptPrinter::ValidateData(System.String)
@@ -1510,7 +1510,7 @@ class ClaimedReceiptPrinter(winrt.system.Object, ICommonClaimedPosPrinterStation
     def line_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ClaimedSlipPrinter(winrt.system.Object, ICommonClaimedPosPrinterStation):
+class ClaimedSlipPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
     # System.Void Windows.Devices.PointOfService.ClaimedSlipPrinter::ChangePrintSide(Windows.Devices.PointOfService.PosPrinterPrintSide)
     def change_print_side(self, print_side: PosPrinterPrintSide, /) -> None: ...
     # System.Void Windows.Devices.PointOfService.ClaimedSlipPrinter::CloseJaws()
@@ -1602,7 +1602,7 @@ class ClaimedSlipPrinter(winrt.system.Object, ICommonClaimedPosPrinterStation):
     def line_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class JournalPrintJob(winrt.system.Object, IPosPrinterJob):
+class JournalPrintJob(IPosPrinterJob, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.JournalPrintJob::ExecuteAsync()
     def execute_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Void Windows.Devices.PointOfService.JournalPrintJob::FeedPaperByLine(System.Int32)
@@ -1627,7 +1627,7 @@ class JournalPrintJob(winrt.system.Object, IPosPrinterJob):
     def print_newline(self) -> None: ...
 
 @typing.final
-class JournalPrinterCapabilities(winrt.system.Object, ICommonPosPrintStationCapabilities):
+class JournalPrinterCapabilities(ICommonPosPrintStationCapabilities, winrt.system.Object):
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.JournalPrinterCapabilities::get_CartridgeSensors()
     @_property
     def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...
@@ -1707,7 +1707,7 @@ class LineDisplay_Static(winrt._winrt.Object_Static):
     def statistics_category_selector(cls) -> LineDisplayStatisticsCategorySelector: ...
 
 @typing.final
-class LineDisplay(winrt.system.Object, windows_foundation.IClosable, metaclass=LineDisplay_Static):
+class LineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=LineDisplay_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.LineDisplayPowerStatus> Windows.Devices.PointOfService.LineDisplay::CheckPowerStatusAsync()
@@ -1958,7 +1958,7 @@ class LineDisplayStoredBitmap(winrt.system.Object):
     def escape_sequence(self) -> str: ...
 
 @typing.final
-class LineDisplayWindow(winrt.system.Object, windows_foundation.IClosable):
+class LineDisplayWindow(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.PointOfService.LineDisplayWindow::Close()
@@ -2051,7 +2051,7 @@ class MagneticStripeReader_Static(winrt._winrt.Object_Static):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class MagneticStripeReader(winrt.system.Object, windows_foundation.IClosable, metaclass=MagneticStripeReader_Static):
+class MagneticStripeReader(windows_foundation.IClosable, winrt.system.Object, metaclass=MagneticStripeReader_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.MagneticStripeReader::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
@@ -2338,7 +2338,7 @@ class PosPrinter_Static(winrt._winrt.Object_Static):
     def get_device_selector_with_connection_types(cls, connection_types: PosConnectionTypes, /) -> str: ...
 
 @typing.final
-class PosPrinter(winrt.system.Object, windows_foundation.IClosable, metaclass=PosPrinter_Static):
+class PosPrinter(windows_foundation.IClosable, winrt.system.Object, metaclass=PosPrinter_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.PosPrinter::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
@@ -2537,7 +2537,7 @@ class PosPrinterStatusUpdatedEventArgs(winrt.system.Object):
     def status(self) -> PosPrinterStatus: ...
 
 @typing.final
-class ReceiptPrintJob(winrt.system.Object, IReceiptOrSlipJob, IPosPrinterJob):
+class ReceiptPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Devices.PointOfService.ReceiptPrintJob::CutPaper()
     def cut_paper(self) -> None: ...
@@ -2630,7 +2630,7 @@ class ReceiptPrintJob(winrt.system.Object, IReceiptOrSlipJob, IPosPrinterJob):
     def stamp_paper(self) -> None: ...
 
 @typing.final
-class ReceiptPrinterCapabilities(winrt.system.Object, ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities):
+class ReceiptPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities, winrt.system.Object):
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.ReceiptPrinterCapabilities::get_CartridgeSensors()
     @_property
     def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...
@@ -2726,7 +2726,7 @@ class ReceiptPrinterCapabilities(winrt.system.Object, ICommonReceiptSlipCapabili
     def is_superscript_supported(self) -> bool: ...
 
 @typing.final
-class SlipPrintJob(winrt.system.Object, IReceiptOrSlipJob, IPosPrinterJob):
+class SlipPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
     # System.Void Windows.Devices.PointOfService.SlipPrintJob::DrawRuledLine(System.String,Windows.Devices.PointOfService.PosPrinterLineDirection,System.UInt32,Windows.Devices.PointOfService.PosPrinterLineStyle,System.UInt32)
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.SlipPrintJob::ExecuteAsync()
@@ -2805,7 +2805,7 @@ class SlipPrintJob(winrt.system.Object, IReceiptOrSlipJob, IPosPrinterJob):
     def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: bool, /) -> None: ...
 
 @typing.final
-class SlipPrinterCapabilities(winrt.system.Object, ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities):
+class SlipPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities, winrt.system.Object):
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.SlipPrinterCapabilities::get_CartridgeSensors()
     @_property
     def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...
@@ -2916,7 +2916,7 @@ class UnifiedPosErrorData(winrt.system.Object):
 @typing.final
 class _ICashDrawerEventSourceEventArgs: ...
 
-class ICashDrawerEventSourceEventArgs(winrt._winrt.IInspectable):
+class ICashDrawerEventSourceEventArgs(winrt.system.Object):
     # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.ICashDrawerEventSourceEventArgs::get_CashDrawer()
     @_property
     @abstractmethod
@@ -2925,7 +2925,7 @@ class ICashDrawerEventSourceEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _ICommonClaimedPosPrinterStation: ...
 
-class ICommonClaimedPosPrinterStation(winrt._winrt.IInspectable):
+class ICommonClaimedPosPrinterStation(winrt.system.Object):
     # System.Boolean Windows.Devices.PointOfService.ICommonClaimedPosPrinterStation::ValidateData(System.String)
     @abstractmethod
     def validate_data(self, data: str, /) -> bool: ...
@@ -3005,7 +3005,7 @@ class ICommonClaimedPosPrinterStation(winrt._winrt.IInspectable):
 @typing.final
 class _ICommonPosPrintStationCapabilities: ...
 
-class ICommonPosPrintStationCapabilities(winrt._winrt.IInspectable):
+class ICommonPosPrintStationCapabilities(winrt.system.Object):
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.ICommonPosPrintStationCapabilities::get_CartridgeSensors()
     @_property
     @abstractmethod
@@ -3062,7 +3062,7 @@ class ICommonPosPrintStationCapabilities(winrt._winrt.IInspectable):
 @typing.final
 class _ICommonReceiptSlipCapabilities: ...
 
-class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt._winrt.IInspectable):
+class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt.system.Object):
     # System.Boolean Windows.Devices.PointOfService.ICommonReceiptSlipCapabilities::get_Is180RotationSupported()
     @_property
     @abstractmethod
@@ -3103,7 +3103,7 @@ class ICommonReceiptSlipCapabilities(ICommonPosPrintStationCapabilities, winrt._
 @typing.final
 class _IPosPrinterJob: ...
 
-class IPosPrinterJob(winrt._winrt.IInspectable):
+class IPosPrinterJob(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.IPosPrinterJob::ExecuteAsync()
     @abstractmethod
     def execute_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -3126,7 +3126,7 @@ class IPosPrinterJob(winrt._winrt.IInspectable):
 @typing.final
 class _IReceiptOrSlipJob: ...
 
-class IReceiptOrSlipJob(IPosPrinterJob, winrt._winrt.IInspectable):
+class IReceiptOrSlipJob(IPosPrinterJob, winrt.system.Object):
     # System.Void Windows.Devices.PointOfService.IReceiptOrSlipJob::DrawRuledLine(System.String,Windows.Devices.PointOfService.PosPrinterLineDirection,System.UInt32,Windows.Devices.PointOfService.PosPrinterLineStyle,System.UInt32)
     @abstractmethod
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
