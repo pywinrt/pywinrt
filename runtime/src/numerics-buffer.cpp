@@ -9,6 +9,7 @@
 
 #include "numerics-buffer.h"
 
+#include "_winrt_array.h"
 #include "numerics-traits.h"
 #include "types.h"
 
@@ -412,7 +413,7 @@ namespace py::interp::numerics
 
         /**
          * Whether @p view holds one value of the shape @p shape as values of
-         * the type @p code, from float_code(): in that shape, or flat.
+         * the type @p code, from float_code(), in exactly that shape.
          */
         bool holds_value(
             Py_buffer const& view,
@@ -441,16 +442,46 @@ namespace py::interp::numerics
                 return false;
             }
 
-            if (view.ndim == 1)
-            {
-                if (view.shape[0] == count_of(shape))
-                {
-                    return true;
-                }
-            }
-
             return std::ranges::equal(
                 std::span{view.shape, static_cast<size_t>(view.ndim)}, shape);
+        }
+        /**
+         * The shape of an array of values of the shape @p element, spelled as
+         * a Python tuple with n for the count, for a message.
+         */
+        std::string block_text(std::span<Py_ssize_t const> element)
+        {
+            std::string text{"(n"};
+
+            for (auto const dimension : element)
+            {
+                text += ", ";
+                text += std::to_string(dimension);
+            }
+
+            return text + ")";
+        }
+
+        /**
+         * The shape @p view has, spelled as a Python tuple, for a message.
+         */
+        std::string view_shape_text(Py_buffer const& view)
+        {
+            if (!view.shape)
+            {
+                return "()";
+            }
+
+            return shape_text({view.shape, static_cast<size_t>(view.ndim)});
+        }
+
+        /**
+         * The name of a WinRT type as a Python string, for a message.
+         */
+        PyObject* name_of(std::wstring_view name) noexcept
+        {
+            return PyUnicode_FromWideChar(
+                name.data(), static_cast<Py_ssize_t>(name.size()));
         }
     } // namespace
 
@@ -532,8 +563,8 @@ namespace py::interp::numerics
 
     /**
      * How many values of the shape @p element the buffer @p view holds as a
-     * block of float32 values with @p element as its trailing dimensions, or
-     * flat; or -1, with no error set, when it holds anything else.
+     * block of float32 values with @p element as its trailing dimensions; or
+     * -1, with no error set, when it holds anything else.
      *
      * This is what an array of numerics structs exports, so it is also what
      * one is made from and what a parameter that takes one borrows.
@@ -561,18 +592,6 @@ namespace py::interp::numerics
             return -1;
         }
 
-        auto const floats = count_of(element);
-
-        if (view.ndim == 1)
-        {
-            if (view.shape[0] % floats != 0)
-            {
-                return -1;
-            }
-
-            return view.shape[0] / floats;
-        }
-
         if (view.ndim != static_cast<int>(element.size()) + 1)
         {
             return -1;
@@ -590,14 +609,130 @@ namespace py::interp::numerics
     }
 
     /**
+     * Sets the TypeError for the buffer @p view, which is not the block of
+     * float32 values an array of the numerics struct named @p element, of the
+     * shape @p shape, is made from.
+     */
+    void set_block_error(
+        Py_buffer const& view,
+        std::wstring_view element,
+        std::span<Py_ssize_t const> shape) noexcept
+    {
+        pyobj_handle name{name_of(element)};
+        if (!name)
+        {
+            return;
+        }
+
+        try
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "a buffer for an Array of %U must hold float32 values of shape "
+                "%s, not '%s' of shape %s",
+                name.get(),
+                block_text(shape).c_str(),
+                view.format ? view.format : "B",
+                view_shape_text(view).c_str());
+        }
+        catch (...)
+        {
+            PyErr_NoMemory();
+        }
+    }
+
+    /**
+     * Refuses @p obj as the buffer an array of the numerics struct named
+     * @p element is made from or a parameter borrows, when @p obj is a value
+     * of the numerics types itself: a struct, which is one value rather than
+     * an array of them, or a winrt.system.Array of another of the structs,
+     * whose floats would fit but mean something else, as a Quaternion is not
+     * a Vector4. memoryview() or numpy.asarray() of the Array is plain floats,
+     * and is taken.
+     *
+     * @returns @c false with a TypeError set when @p obj is refused.
+     */
+    bool check_array_source(std::wstring_view element, PyObject* obj) noexcept
+    {
+        if (auto const entry = find_type_entry(Py_TYPE(obj)))
+        {
+            if (entry->numerics_kind != kind::none)
+            {
+                pyobj_handle name{name_of(element)};
+                if (!name)
+                {
+                    return false;
+                }
+
+                if (std::ranges::equal(element, std::string_view{entry->winrt_name}))
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "a '%s' is not an Array of %U: pass [value] for an Array "
+                        "of one",
+                        Py_TYPE(obj)->tp_name,
+                        name.get());
+                    return false;
+                }
+
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "a '%s' is not an Array of %U",
+                    Py_TYPE(obj)->tp_name,
+                    name.get());
+                return false;
+            }
+        }
+
+        auto const array = py::cpp::_winrt::Array_Get(obj);
+        if (!array)
+        {
+            return true;
+        }
+
+        if (array->ElementShape().empty())
+        {
+            return true;
+        }
+
+        auto const other = array->WinrtElementTypeName();
+        if (other == element)
+        {
+            return true;
+        }
+
+        pyobj_handle name{name_of(element)};
+        if (!name)
+        {
+            return false;
+        }
+
+        pyobj_handle other_name{name_of(other)};
+        if (!other_name)
+        {
+            return false;
+        }
+
+        PyErr_Format(
+            PyExc_TypeError,
+            "an Array of %U is not an Array of %U: memoryview() of it reads its "
+            "floats as one",
+            other_name.get(),
+            name.get());
+        return false;
+    }
+
+    /**
      * Reads a value of the numerics struct @p info out of the buffer @p obj
      * exports, which holds the struct's floats as float or double values in
-     * the struct's shape or flat: a NumPy array of shape (3,) is a Vector3 and
-     * one of shape (4, 4) or (16,) a Matrix4x4. Each double is converted the
-     * way a field given in a tuple is.
+     * exactly the struct's shape: a NumPy array of shape (3,) is a Vector3 and
+     * one of shape (4, 4) a Matrix4x4. Each double is converted the way a
+     * field given in a tuple is.
      *
-     * A value of another of the structs is not read as this one, though its
-     * floats would fit, because a Quaternion is not a Vector4.
+     * A value of the numerics types is not read as this one, though its floats
+     * would fit: another of the structs, because a Quaternion is not a
+     * Vector4, nor a winrt.system.Array of them, which is not one value.
+     * memoryview() or numpy.asarray() of either is plain floats, and is read.
      *
      * @returns @c false, with no error set, when @p info is no numerics struct
      * or @p obj exports no buffer, so that the caller goes on to what else it
@@ -626,6 +761,28 @@ namespace py::interp::numerics
             }
         }
 
+        if (auto const array = py::cpp::_winrt::Array_Get(obj))
+        {
+            if (!array->ElementShape().empty())
+            {
+                auto const element = array->WinrtElementTypeName();
+
+                pyobj_handle name{name_of(element)};
+                if (!name)
+                {
+                    throw python_exception();
+                }
+
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "an Array of %U is not a '%s': memoryview() of it reads its "
+                    "floats as one",
+                    name.get(),
+                    info.py_type ? info.py_type->tp_name : info.winrt_name);
+                throw python_exception();
+            }
+        }
+
         buffer_view buffer{obj, PyBUF_RECORDS_RO};
         if (!buffer)
         {
@@ -638,25 +795,14 @@ namespace py::interp::numerics
 
         if (!holds_value(view, code, shape))
         {
-            auto expected = shape_text(shape);
-
-            if (shape.size() > 1)
-            {
-                expected += " or (" + std::to_string(floats) + ",)";
-            }
-
-            auto const actual
-                = view.shape ? shape_text({view.shape, static_cast<size_t>(view.ndim)})
-                             : std::string{"()"};
-
             PyErr_Format(
                 PyExc_TypeError,
                 "a buffer read as '%s' must hold floats or doubles of shape %s, "
                 "not '%s' of shape %s",
                 info.py_type ? info.py_type->tp_name : info.winrt_name,
-                expected.c_str(),
+                shape_text(shape).c_str(),
                 view.format ? view.format : "B",
-                actual.c_str());
+                view_shape_text(view).c_str());
             throw python_exception();
         }
 

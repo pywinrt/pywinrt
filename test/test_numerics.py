@@ -1257,13 +1257,27 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(v + floats, wfn.Vector3(2, 3, 4))
         self.assertEqual(v + doubles, wfn.Vector3(2, 3, 4))
 
-        # a matrix from its rows, or flat
+        # a matrix from a block in its shape, and not from flat floats, which
+        # could be its rows or its columns
         rows: typing.Any = (
             memoryview(array.array("f", range(16))).cast("B").cast("f", (4, 4))
         )
         flat: typing.Any = array.array("f", range(16))
         self.assertEqual(wfn.Matrix4x4() + rows, wfn.Matrix4x4(*range(16)))
-        self.assertEqual(wfn.Matrix4x4() + flat, wfn.Matrix4x4(*range(16)))
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix4x4' and "
+            r"'array.array'",
+        ):
+            wfn.Matrix4x4() + flat
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"must hold floats or doubles of shape \(4, 4\), not 'f' of shape "
+            r"\(16,\)",
+        ):
+            wfn.Quaternion.make_from_rotation_matrix(flat)
 
         identity: typing.Any = memoryview(wfn.Matrix4x4.identity)
         self.assertEqual(
@@ -1286,8 +1300,8 @@ class TestNumerics(unittest.TestCase):
 
         with self.assertRaisesRegex(
             TypeError,
-            r"must hold floats or doubles of shape \(4, 4\) or \(16,\), not 'f' "
-            r"of shape \(4,\)",
+            r"must hold floats or doubles of shape \(4, 4\), not 'f' of shape "
+            r"\(4,\)",
         ):
             wfn.Quaternion.make_from_rotation_matrix(array.array("f", range(4)))  # type: ignore
 
@@ -1299,6 +1313,42 @@ class TestNumerics(unittest.TestCase):
             r"'[\w+\.]*Quaternion'",
         ):
             wfn.Vector4() + wfn.Quaternion()  # type: ignore
+
+        # nor is an Array of them one value, though its floats are in the shape
+        # of one; memoryview() of it is plain floats, which say what they are
+        identity_rows = Array(
+            wfn.Vector4,
+            [
+                wfn.Vector4.unit_x,
+                wfn.Vector4.unit_y,
+                wfn.Vector4.unit_z,
+                wfn.Vector4.unit_w,
+            ],
+        )
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"an Array of Windows.Foundation.Numerics.Vector4 is not a "
+            r"'[\w+\.]*Matrix4x4': memoryview\(\) of it reads its floats as one",
+        ):
+            wfn.Quaternion.make_from_rotation_matrix(identity_rows)  # type: ignore
+
+        self.assertEqual(
+            wfn.Quaternion.make_from_rotation_matrix(memoryview(identity_rows)),  # type: ignore
+            wfn.Quaternion.identity,
+        )
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix3x2' and "
+            r"'[\w+\.]*Array'",
+        ):
+            wfn.Matrix3x2() + Array(wfn.Vector2, 3)  # type: ignore
+
+        self.assertEqual(
+            wfn.Matrix3x2() + memoryview(Array(wfn.Vector2, 3)),  # type: ignore
+            wfn.Matrix3x2(),
+        )
 
     def test_array_buffer(self) -> None:
         a = Array(wfn.Vector3, [wfn.Vector3(1, 2, 3), wfn.Vector3(4, 5, 6)])
@@ -1328,28 +1378,81 @@ class TestNumerics(unittest.TestCase):
 
     def test_array_from_buffer(self) -> None:
         flat = array.array("f", range(6))
-        a = Array(wfn.Vector3, flat)
+        a = Array(wfn.Vector3, memoryview(flat).cast("B").cast("f", (2, 3)))
         self.assertEqual(list(a), [wfn.Vector3(0, 1, 2), wfn.Vector3(3, 4, 5)])
 
         self.assertEqual(Array(wfn.Vector3, memoryview(a)), a)
-        self.assertEqual(
-            Array(wfn.Vector3, memoryview(flat).cast("B").cast("f", (2, 3))), a
-        )
+        # an Array of the same struct is copied
+        self.assertEqual(Array(wfn.Vector3, a), a)
 
-        m = Array(wfn.Matrix4x4, array.array("f", range(32)))
+        m = Array(
+            wfn.Matrix4x4,
+            memoryview(array.array("f", range(32))).cast("B").cast("f", (2, 4, 4)),
+        )
         self.assertEqual(len(m), 2)
         self.assertEqual(m[1], wfn.Matrix4x4(*range(16, 32)))
         self.assertEqual(Array(wfn.Matrix4x4, memoryview(m)), m)
 
+        # flat floats are not an array of them, which has a shape
         with self.assertRaisesRegex(
             TypeError,
             r"a buffer for an Array of Windows.Foundation.Numerics.Vector3 must "
-            r"hold float32 values",
+            r"hold float32 values of shape \(n, 3\), not 'f' of shape \(6,\)",
+        ):
+            Array(wfn.Vector3, flat)
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"of shape \(n, 4, 4\), not 'f' of shape \(32,\)",
+        ):
+            Array(wfn.Matrix4x4, array.array("f", range(32)))
+
+        with self.assertRaisesRegex(
+            TypeError, r"of shape \(n, 3\), not 'f' of shape \(4,\)"
         ):
             Array(wfn.Vector3, array.array("f", range(4)))
 
-        with self.assertRaisesRegex(TypeError, "must hold float32 values"):
+        with self.assertRaisesRegex(
+            TypeError, r"float32 values of shape \(n, 3\), not 'd' of shape \(6,\)"
+        ):
             Array(wfn.Vector3, array.array("d", range(6)))
+
+        # one value is not an array of them
+        with self.assertRaisesRegex(
+            TypeError,
+            r"a '[\w+\.]*Vector3' is not an Array of "
+            r"Windows.Foundation.Numerics.Vector3: pass \[value\] for an Array of "
+            r"one",
+        ):
+            Array(wfn.Vector3, wfn.Vector3(1, 2, 3))
+
+        self.assertEqual(
+            list(Array(wfn.Vector3, [wfn.Vector3(1, 2, 3)])), [wfn.Vector3(1, 2, 3)]
+        )
+
+        # nor is a value of another of the structs, or an Array of them,
+        # though the floats fit; memoryview() of the Array reads them as these
+        with self.assertRaisesRegex(
+            TypeError,
+            r"a '[\w+\.]*Quaternion' is not an Array of "
+            r"Windows.Foundation.Numerics.Vector4$",
+        ):
+            Array(wfn.Vector4, wfn.Quaternion(1, 2, 3, 4))
+
+        q = Array(wfn.Quaternion, [wfn.Quaternion(1, 2, 3, 4), wfn.Quaternion.identity])
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"an Array of Windows.Foundation.Numerics.Quaternion is not an Array of "
+            r"Windows.Foundation.Numerics.Vector4: memoryview\(\) of it reads its "
+            r"floats as one",
+        ):
+            Array(wfn.Vector4, q)
+
+        self.assertEqual(
+            list(Array(wfn.Vector4, memoryview(q))),
+            [wfn.Vector4(1, 2, 3, 4), wfn.Vector4(0, 0, 0, 1)],
+        )
 
     def test_itruediv(self) -> None:
         v2 = wfn.Vector2(1, 2)

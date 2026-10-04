@@ -471,6 +471,17 @@ namespace py::cpp::_winrt
 
         if (PyObject_CheckBuffer(arg1))
         {
+            auto const element_shape = self->array->ElementShape();
+
+            if (!element_shape.empty())
+            {
+                if (!py::interp::numerics::check_array_source(
+                        self->array->WinrtElementTypeName(), arg1))
+                {
+                    return nullptr;
+                }
+            }
+
             py::buffer_view buffer{arg1, PyBUF_FULL_RO};
             if (!buffer)
             {
@@ -480,34 +491,31 @@ namespace py::cpp::_winrt
             auto const& view = buffer.view();
 
             // An array of numerics structs is also made from the block of
-            // floats it exports, or from the same floats flat.
-            auto const element_shape = self->array->ElementShape();
+            // floats it exports.
             auto elements = py::interp::numerics::block_count(view, element_shape);
 
             if (elements < 0)
             {
+                auto format = view.format ? std::basic_string_view(view.format)
+                                          : std::basic_string_view("B");
+
                 // What else it is made from is its named fields, a whole
-                // struct per item, so any other item is a float block gone
-                // wrong, such as one of doubles.
+                // struct per item, so any other buffer is a float block gone
+                // wrong, such as one of doubles or a flat one.
                 if (!element_shape.empty())
                 {
                     if (view.itemsize
                         != static_cast<Py_ssize_t>(self->array->ValueSize()))
                     {
-                        auto const type = self->array->WinrtElementTypeName();
+                        py::interp::numerics::set_block_error(
+                            view, self->array->WinrtElementTypeName(), element_shape);
+                        return nullptr;
+                    }
 
-                        pyobj_handle name{
-                            PyUnicode_FromWideChar(type.data(), type.size())};
-                        if (!name)
-                        {
-                            return nullptr;
-                        }
-
-                        PyErr_Format(
-                            PyExc_TypeError,
-                            "a buffer for an Array of %U must hold float32 "
-                            "values, each element's in its shape or flat",
-                            name.get());
+                    if (format != self->array->Format())
+                    {
+                        py::interp::numerics::set_block_error(
+                            view, self->array->WinrtElementTypeName(), element_shape);
                         return nullptr;
                     }
                 }
@@ -523,9 +531,6 @@ namespace py::cpp::_winrt
                     PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
                     return nullptr;
                 }
-
-                auto format = view.format ? std::basic_string_view(view.format)
-                                          : std::basic_string_view("B");
 
                 if (format != self->array->Format())
                 {

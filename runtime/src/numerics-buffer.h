@@ -10,6 +10,7 @@
 #include "numerics.h"
 
 #include <span>
+#include <string_view>
 #include <vector>
 
 namespace py::interp::numerics
@@ -20,6 +21,13 @@ namespace py::interp::numerics
 
     Py_ssize_t block_count(
         Py_buffer const& view, std::span<Py_ssize_t const> element) noexcept;
+
+    void set_block_error(
+        Py_buffer const& view,
+        std::wstring_view element,
+        std::span<Py_ssize_t const> shape) noexcept;
+
+    bool check_array_source(std::wstring_view element, PyObject* obj) noexcept;
 
     bool read_buffer(type_entry& info, PyObject* obj, void* out);
 } // namespace py::interp::numerics
