@@ -285,14 +285,6 @@
   namespaces as the App SDK's WinUI component and the two cannot be imported
   from one package; nothing else needed a prefix of its own. See
   the [v3 to v4 migration guide][3to4] for the full list of renames.
-- BREAKING: An async operation is now Future-like itself, so
-  `asyncio.wait()`, `asyncio.gather()` and `asyncio.ensure_future()` take it
-  as it is, with no task around it. `cancel()` returns `True` if it asked
-  WinRT to cancel and `False` if the operation had already finished, and a
-  task awaiting a cancelled operation waits for it to stop and then raises
-  `asyncio.CancelledError`, where it used to raise `OSError`.
-  `loop.run_until_complete(op)` raises `RuntimeError`; await the operation in
-  a coroutine instead. See the [v3 to v4 migration guide][3to4].
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a
