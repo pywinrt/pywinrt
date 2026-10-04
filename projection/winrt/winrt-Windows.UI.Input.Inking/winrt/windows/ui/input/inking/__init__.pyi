@@ -117,7 +117,7 @@ class PenTipShape(enum.IntEnum):
     RECTANGLE = 1
 
 @typing.final
-class InkDrawingAttributes_Static(winrt._winrt.IInspectable_Static):
+class InkDrawingAttributes_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.Inking.InkDrawingAttributes Windows.UI.Input.Inking.InkDrawingAttributes::CreateForPencil()
     def create_for_pencil(cls) -> InkDrawingAttributes: ...
 
@@ -758,7 +758,7 @@ class InkUnprocessedInput(winrt.system.Object):
     def ink_presenter(self) -> InkPresenter: ...
 
 @typing.final
-class PenAndInkSettings_Static(winrt._winrt.IInspectable_Static):
+class PenAndInkSettings_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.Inking.PenAndInkSettings Windows.UI.Input.Inking.PenAndInkSettings::GetDefault()
     def get_default(cls) -> PenAndInkSettings: ...
 

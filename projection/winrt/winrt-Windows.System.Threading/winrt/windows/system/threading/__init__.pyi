@@ -30,7 +30,7 @@ class WorkItemPriority(enum.IntEnum):
     HIGH = 1
 
 @typing.final
-class ThreadPool_Static(winrt._winrt.IInspectable_Static):
+class ThreadPool_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler)
     def run_async(cls, handler: WorkItemHandler, /) -> windows_foundation.IAsyncAction: ...
@@ -54,7 +54,7 @@ class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
     ...
 
 @typing.final
-class ThreadPoolTimer_Static(winrt._winrt.IInspectable_Static):
+class ThreadPoolTimer_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_periodic_timer(cls, handler: TimerElapsedHandler, period: datetime.timedelta, /) -> ThreadPoolTimer: ...

@@ -115,7 +115,7 @@ class MdmSession(winrt.system.Object):
     def state(self) -> MdmSessionState: ...
 
 @typing.final
-class MdmSessionManager_Static(winrt._winrt.IInspectable_Static):
+class MdmSessionManager_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Management.MdmSessionManager::DeleteSessionById(System.String)
     def delete_session_by_id(cls, session_id: str, /) -> None: ...
     # Windows.Management.MdmSession Windows.Management.MdmSessionManager::GetSessionById(System.String)

@@ -40,7 +40,7 @@ class HttpDiagnosticRequestInitiator(enum.IntEnum):
     BEACON = 12
 
 @typing.final
-class HttpDiagnosticProvider_Static(winrt._winrt.IInspectable_Static):
+class HttpDiagnosticProvider_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Diagnostics.HttpDiagnosticProvider Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)
     def create_from_process_diagnostic_info(cls, process_diagnostic_info: windows_system_diagnostics.ProcessDiagnosticInfo, /) -> HttpDiagnosticProvider: ...
 

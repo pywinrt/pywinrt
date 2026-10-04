@@ -27,7 +27,7 @@ class OemSupportInfo(winrt.system.Object):
     def support_provider(self) -> str: ...
 
 @typing.final
-class SmbiosInformation_Static(winrt._winrt.IInspectable_Static):
+class SmbiosInformation_Static(winrt._winrt.Object_Static):
     # System.String Windows.System.Profile.SystemManufacturers.SmbiosInformation::get_SerialNumber()
     @_property
     def serial_number(cls) -> str: ...
@@ -61,7 +61,7 @@ class SystemSupportDeviceInfo(winrt.system.Object):
     def system_sku(self) -> str: ...
 
 @typing.final
-class SystemSupportInfo_Static(winrt._winrt.IInspectable_Static):
+class SystemSupportInfo_Static(winrt._winrt.Object_Static):
     # System.String Windows.System.Profile.SystemManufacturers.SystemSupportInfo::get_LocalSystemEdition()
     @_property
     def local_system_edition(cls) -> str: ...

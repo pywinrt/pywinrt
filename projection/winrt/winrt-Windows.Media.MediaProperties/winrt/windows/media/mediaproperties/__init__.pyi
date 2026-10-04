@@ -90,7 +90,7 @@ class VideoEncodingQuality(enum.IntEnum):
     UHD4320P = 9
 
 @typing.final
-class AudioEncodingProperties_Static(winrt._winrt.IInspectable_Static):
+class AudioEncodingProperties_Static(winrt._winrt.Object_Static):
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.MediaProperties.AudioEncodingProperties::CreateAac(System.UInt32,System.UInt32,System.UInt32)
     def create_aac(cls, sample_rate: winrt.system.UInt32, channel_count: winrt.system.UInt32, bitrate: winrt.system.UInt32, /) -> AudioEncodingProperties: ...
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.MediaProperties.AudioEncodingProperties::CreateAacAdts(System.UInt32,System.UInt32,System.UInt32)
@@ -156,7 +156,7 @@ class AudioEncodingProperties(winrt.system.Object, IMediaEncodingProperties, met
     def type(self) -> str: ...
 
 @typing.final
-class Av1ProfileIds_Static(winrt._winrt.IInspectable_Static):
+class Av1ProfileIds_Static(winrt._winrt.Object_Static):
     # System.Int32 Windows.Media.MediaProperties.Av1ProfileIds::get_HighChromaSubsampling444BitDepth10()
     @_property
     def high_chroma_subsampling444_bit_depth10(cls) -> winrt.system.Int32: ...
@@ -217,7 +217,7 @@ class ContainerEncodingProperties(winrt.system.Object, IMediaEncodingProperties)
     def type(self) -> str: ...
 
 @typing.final
-class H264ProfileIds_Static(winrt._winrt.IInspectable_Static):
+class H264ProfileIds_Static(winrt._winrt.Object_Static):
     # System.Int32 Windows.Media.MediaProperties.H264ProfileIds::get_Baseline()
     @_property
     def baseline(cls) -> winrt.system.Int32: ...
@@ -254,7 +254,7 @@ class H264ProfileIds(winrt.system.Object, metaclass=H264ProfileIds_Static):
     ...
 
 @typing.final
-class HevcProfileIds_Static(winrt._winrt.IInspectable_Static):
+class HevcProfileIds_Static(winrt._winrt.Object_Static):
     # System.Int32 Windows.Media.MediaProperties.HevcProfileIds::get_MainChromaSubsampling420BitDepth10()
     @_property
     def main_chroma_subsampling420_bit_depth10(cls) -> winrt.system.Int32: ...
@@ -327,7 +327,7 @@ class HevcProfileIds(winrt.system.Object, metaclass=HevcProfileIds_Static):
     ...
 
 @typing.final
-class ImageEncodingProperties_Static(winrt._winrt.IInspectable_Static):
+class ImageEncodingProperties_Static(winrt._winrt.Object_Static):
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::CreateBmp()
     def create_bmp(cls) -> ImageEncodingProperties: ...
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::CreateHeif()
@@ -372,7 +372,7 @@ class ImageEncodingProperties(winrt.system.Object, IMediaEncodingProperties, met
     def type(self) -> str: ...
 
 @typing.final
-class MediaEncodingProfile_Static(winrt._winrt.IInspectable_Static):
+class MediaEncodingProfile_Static(winrt._winrt.Object_Static):
     # Windows.Media.MediaProperties.MediaEncodingProfile Windows.Media.MediaProperties.MediaEncodingProfile::CreateAlac(Windows.Media.MediaProperties.AudioEncodingQuality)
     def create_alac(cls, quality: AudioEncodingQuality, /) -> MediaEncodingProfile: ...
     # Windows.Media.MediaProperties.MediaEncodingProfile Windows.Media.MediaProperties.MediaEncodingProfile::CreateAv1(Windows.Media.MediaProperties.VideoEncodingQuality)
@@ -437,7 +437,7 @@ class MediaEncodingProfile(winrt.system.Object, metaclass=MediaEncodingProfile_S
     def audio(self, value: AudioEncodingProperties) -> None: ...
 
 @typing.final
-class MediaEncodingSubtypes_Static(winrt._winrt.IInspectable_Static):
+class MediaEncodingSubtypes_Static(winrt._winrt.Object_Static):
     # System.String Windows.Media.MediaProperties.MediaEncodingSubtypes::get_Argb32()
     @_property
     def argb32(cls) -> str: ...
@@ -645,7 +645,7 @@ class MediaRatio(winrt.system.Object):
     def denominator(self, value: winrt.system.UInt32) -> None: ...
 
 @typing.final
-class Mpeg2ProfileIds_Static(winrt._winrt.IInspectable_Static):
+class Mpeg2ProfileIds_Static(winrt._winrt.Object_Static):
     # System.Int32 Windows.Media.MediaProperties.Mpeg2ProfileIds::get_High()
     @_property
     def high(cls) -> winrt.system.Int32: ...
@@ -667,7 +667,7 @@ class Mpeg2ProfileIds(winrt.system.Object, metaclass=Mpeg2ProfileIds_Static):
     ...
 
 @typing.final
-class TimedMetadataEncodingProperties_Static(winrt._winrt.IInspectable_Static):
+class TimedMetadataEncodingProperties_Static(winrt._winrt.Object_Static):
     # Windows.Media.MediaProperties.TimedMetadataEncodingProperties Windows.Media.MediaProperties.TimedMetadataEncodingProperties::CreatePgs()
     def create_pgs(cls) -> TimedMetadataEncodingProperties: ...
     # Windows.Media.MediaProperties.TimedMetadataEncodingProperties Windows.Media.MediaProperties.TimedMetadataEncodingProperties::CreateSrt()
@@ -700,7 +700,7 @@ class TimedMetadataEncodingProperties(winrt.system.Object, IMediaEncodingPropert
     def type(self) -> str: ...
 
 @typing.final
-class VideoEncodingProperties_Static(winrt._winrt.IInspectable_Static):
+class VideoEncodingProperties_Static(winrt._winrt.Object_Static):
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.MediaProperties.VideoEncodingProperties::CreateAv1()
     def create_av1(cls) -> VideoEncodingProperties: ...
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.MediaProperties.VideoEncodingProperties::CreateH264()
@@ -773,7 +773,7 @@ class VideoEncodingProperties(winrt.system.Object, IMediaEncodingProperties, met
     def spherical_video_frame_format(self) -> SphericalVideoFrameFormat: ...
 
 @typing.final
-class Vp9ProfileIds_Static(winrt._winrt.IInspectable_Static):
+class Vp9ProfileIds_Static(winrt._winrt.Object_Static):
     # System.Int32 Windows.Media.MediaProperties.Vp9ProfileIds::get_Profile0ChromaSubsampling420BitDepth8()
     @_property
     def profile0_chroma_subsampling420_bit_depth8(cls) -> winrt.system.Int32: ...

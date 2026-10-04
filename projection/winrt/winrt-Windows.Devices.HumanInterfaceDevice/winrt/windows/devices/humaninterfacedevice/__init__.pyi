@@ -105,7 +105,7 @@ class HidCollection(winrt.system.Object):
     def usage_page(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HidDevice_Static(winrt._winrt.IInspectable_Static):
+class HidDevice_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.HumanInterfaceDevice.HidDevice> Windows.Devices.HumanInterfaceDevice.HidDevice::FromIdAsync(System.String,Windows.Storage.FileAccessMode)
     def from_id_async(cls, device_id: str, access_mode: windows_storage.FileAccessMode, /) -> windows_foundation.IAsyncOperation[HidDevice]: ...
     @typing.overload

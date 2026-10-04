@@ -65,7 +65,7 @@ class ConnectionRequestedEventArgs(winrt.system.Object):
     def peer_information(self) -> PeerInformation: ...
 
 @typing.final
-class PeerFinder_Static(winrt._winrt.IInspectable_Static):
+class PeerFinder_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Sockets.StreamSocket> Windows.Networking.Proximity.PeerFinder::ConnectAsync(Windows.Networking.Proximity.PeerInformation)
     def connect_async(cls, peer_information: PeerInformation, /) -> windows_foundation.IAsyncOperation[windows_networking_sockets.StreamSocket]: ...
     # Windows.Networking.Proximity.PeerWatcher Windows.Networking.Proximity.PeerFinder::CreateWatcher()
@@ -188,7 +188,7 @@ class PeerWatcher(winrt.system.Object):
     def status(self) -> PeerWatcherStatus: ...
 
 @typing.final
-class ProximityDevice_Static(winrt._winrt.IInspectable_Static):
+class ProximityDevice_Static(winrt._winrt.Object_Static):
     # Windows.Networking.Proximity.ProximityDevice Windows.Networking.Proximity.ProximityDevice::FromId(System.String)
     def from_id(cls, device_id: str, /) -> ProximityDevice: ...
     # Windows.Networking.Proximity.ProximityDevice Windows.Networking.Proximity.ProximityDevice::GetDefault()

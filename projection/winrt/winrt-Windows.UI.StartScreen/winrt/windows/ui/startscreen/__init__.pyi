@@ -75,7 +75,7 @@ class TileSize(enum.IntEnum):
     SQUARE44X44 = 7
 
 @typing.final
-class JumpList_Static(winrt._winrt.IInspectable_Static):
+class JumpList_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.UI.StartScreen.JumpList::IsSupported()
     def is_supported(cls) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.StartScreen.JumpList> Windows.UI.StartScreen.JumpList::LoadCurrentAsync()
@@ -96,7 +96,7 @@ class JumpList(winrt.system.Object, metaclass=JumpList_Static):
     def items(self) -> _cabc.MutableSequence[JumpListItem]: ...
 
 @typing.final
-class JumpListItem_Static(winrt._winrt.IInspectable_Static):
+class JumpListItem_Static(winrt._winrt.Object_Static):
     # Windows.UI.StartScreen.JumpListItem Windows.UI.StartScreen.JumpListItem::CreateSeparator()
     def create_separator(cls) -> JumpListItem: ...
     # Windows.UI.StartScreen.JumpListItem Windows.UI.StartScreen.JumpListItem::CreateWithArguments(System.String,System.String)
@@ -139,7 +139,7 @@ class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
     def removed_by_user(self) -> bool: ...
 
 @typing.final
-class SecondaryTile_Static(winrt._winrt.IInspectable_Static):
+class SecondaryTile_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.UI.StartScreen.SecondaryTile::Exists(System.String)
     def exists(cls, tile_id: str, /) -> bool: ...
     @typing.overload
@@ -408,7 +408,7 @@ class SecondaryTileVisualElements(winrt.system.Object):
     def mixed_reality_model(self) -> TileMixedRealityModel: ...
 
 @typing.final
-class StartScreenManager_Static(winrt._winrt.IInspectable_Static):
+class StartScreenManager_Static(winrt._winrt.Object_Static):
     # Windows.UI.StartScreen.StartScreenManager Windows.UI.StartScreen.StartScreenManager::GetDefault()
     def get_default(cls) -> StartScreenManager: ...
     # Windows.UI.StartScreen.StartScreenManager Windows.UI.StartScreen.StartScreenManager::GetForUser(Windows.System.User)

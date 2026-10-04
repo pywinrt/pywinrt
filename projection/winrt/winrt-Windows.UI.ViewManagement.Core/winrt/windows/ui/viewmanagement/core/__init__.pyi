@@ -52,7 +52,7 @@ class CoreInputViewXYFocusTransferDirection(enum.IntEnum):
     LEFT = 3
 
 @typing.final
-class CoreFrameworkInputView_Static(winrt._winrt.IInspectable_Static):
+class CoreFrameworkInputView_Static(winrt._winrt.Object_Static):
     # Windows.UI.ViewManagement.Core.CoreFrameworkInputView Windows.UI.ViewManagement.Core.CoreFrameworkInputView::GetForCurrentView()
     def get_for_current_view(cls) -> CoreFrameworkInputView: ...
     # Windows.UI.ViewManagement.Core.CoreFrameworkInputView Windows.UI.ViewManagement.Core.CoreFrameworkInputView::GetForUIContext(Windows.UI.UIContext)
@@ -91,7 +91,7 @@ class CoreFrameworkInputViewOcclusionsChangedEventArgs(winrt.system.Object):
     def occlusions(self) -> _cabc.Sequence[CoreInputViewOcclusion]: ...
 
 @typing.final
-class CoreInputView_Static(winrt._winrt.IInspectable_Static):
+class CoreInputView_Static(winrt._winrt.Object_Static):
     # Windows.UI.ViewManagement.Core.CoreInputView Windows.UI.ViewManagement.Core.CoreInputView::GetForCurrentView()
     def get_for_current_view(cls) -> CoreInputView: ...
     # Windows.UI.ViewManagement.Core.CoreInputView Windows.UI.ViewManagement.Core.CoreInputView::GetForUIContext(Windows.UI.UIContext)
@@ -218,7 +218,7 @@ class CoreInputViewTransferringXYFocusEventArgs(winrt.system.Object):
     def origin(self) -> windows_foundation.Rect: ...
 
 @typing.final
-class UISettingsController_Static(winrt._winrt.IInspectable_Static):
+class UISettingsController_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.ViewManagement.Core.UISettingsController> Windows.UI.ViewManagement.Core.UISettingsController::RequestDefaultAsync()
     def request_default_async(cls) -> windows_foundation.IAsyncOperation[UISettingsController]: ...
 

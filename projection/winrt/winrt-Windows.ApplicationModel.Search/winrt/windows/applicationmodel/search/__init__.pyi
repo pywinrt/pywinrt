@@ -54,7 +54,7 @@ class LocalContentSuggestionSettings(winrt.system.Object):
     def properties_to_match(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class SearchPane_Static(winrt._winrt.IInspectable_Static):
+class SearchPane_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Search.SearchPane Windows.ApplicationModel.Search.SearchPane::GetForCurrentView()
     @deprecated("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
     def get_for_current_view(cls) -> SearchPane: ...

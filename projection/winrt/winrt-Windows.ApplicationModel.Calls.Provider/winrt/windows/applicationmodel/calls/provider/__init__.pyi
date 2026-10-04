@@ -61,7 +61,7 @@ class PhoneCallOrigin(winrt.system.Object):
     def display_picture(self, value: windows_storage.StorageFile) -> None: ...
 
 @typing.final
-class PhoneCallOriginManager_Static(winrt._winrt.IInspectable_Static):
+class PhoneCallOriginManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager::RequestSetAsActiveCallOriginAppAsync()
     @deprecated("PhoneCallOriginManager is deprecated and might not work for all platforms. For more info, see MSDN.")
     def request_set_as_active_call_origin_app_async(cls) -> windows_foundation.IAsyncOperation[bool]: ...

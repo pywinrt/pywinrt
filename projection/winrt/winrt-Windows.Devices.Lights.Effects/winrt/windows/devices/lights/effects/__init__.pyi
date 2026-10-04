@@ -204,7 +204,7 @@ class LampArrayCustomEffect(winrt.system.Object, ILampArrayEffect):
     def z_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class LampArrayEffectPlaylist_Static(winrt._winrt.IInspectable_Static):
+class LampArrayEffectPlaylist_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::PauseAll(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist>)
     def pause_all(cls, value: _cabc.Iterable[LampArrayEffectPlaylist], /) -> None: ...
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::StartAll(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist>)

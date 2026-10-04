@@ -23,7 +23,7 @@ class LicenseRefreshOption(enum.IntEnum):
     ALL_LICENSES = 1
 
 @typing.final
-class LicenseManager_Static(winrt._winrt.IInspectable_Static):
+class LicenseManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::AddLicenseAsync(Windows.Storage.Streams.IBuffer)
     def add_license_async(cls, license: winrt.system.Buffer, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::GetSatisfactionInfosAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>)

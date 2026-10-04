@@ -268,7 +268,7 @@ class AudioDeviceOutputNode(winrt.system.Object, IAudioNodeWithListener, IAudioN
     def listener(self, value: AudioNodeListener) -> None: ...
 
 @typing.final
-class AudioEffectsPackConfiguration_Static(winrt._winrt.IInspectable_Static):
+class AudioEffectsPackConfiguration_Static(winrt._winrt.Object_Static):
     # Windows.Media.Audio.AudioEffectsPackConfiguration Windows.Media.Audio.AudioEffectsPackConfiguration::GetForDeviceId(System.String,System.String)
     def get_for_device_id(cls, effects_pack_id: str, device_id: str, /) -> AudioEffectsPackConfiguration: ...
     # System.Boolean Windows.Media.Audio.AudioEffectsPackConfiguration::IsDeviceIdSupported(System.String,System.String)
@@ -543,7 +543,7 @@ class AudioFrameOutputNode(winrt.system.Object, IAudioNode, windows_foundation.I
     def encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
-class AudioGraph_Static(winrt._winrt.IInspectable_Static):
+class AudioGraph_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Audio.CreateAudioGraphResult> Windows.Media.Audio.AudioGraph::CreateAsync(Windows.Media.Audio.AudioGraphSettings)
     def create_async(cls, settings: AudioGraphSettings, /) -> windows_foundation.IAsyncOperation[CreateAudioGraphResult]: ...
 
@@ -834,7 +834,7 @@ class AudioNodeEmitterConeProperties(winrt.system.Object):
     def outer_angle_gain(self) -> winrt.system.Double: ...
 
 @typing.final
-class AudioNodeEmitterDecayModel_Static(winrt._winrt.IInspectable_Static):
+class AudioNodeEmitterDecayModel_Static(winrt._winrt.Object_Static):
     # Windows.Media.Audio.AudioNodeEmitterDecayModel Windows.Media.Audio.AudioNodeEmitterDecayModel::CreateCustom(System.Double,System.Double)
     def create_custom(cls, min_gain: winrt.system.Double, max_gain: winrt.system.Double, /) -> AudioNodeEmitterDecayModel: ...
     # Windows.Media.Audio.AudioNodeEmitterDecayModel Windows.Media.Audio.AudioNodeEmitterDecayModel::CreateNatural(System.Double,System.Double,System.Double,System.Double)
@@ -865,7 +865,7 @@ class AudioNodeEmitterNaturalDecayModelProperties(winrt.system.Object):
     def unity_gain_distance(self) -> winrt.system.Double: ...
 
 @typing.final
-class AudioNodeEmitterShape_Static(winrt._winrt.IInspectable_Static):
+class AudioNodeEmitterShape_Static(winrt._winrt.Object_Static):
     # Windows.Media.Audio.AudioNodeEmitterShape Windows.Media.Audio.AudioNodeEmitterShape::CreateCone(System.Double,System.Double,System.Double)
     def create_cone(cls, inner_angle: winrt.system.Double, outer_angle: winrt.system.Double, outer_angle_gain: winrt.system.Double, /) -> AudioNodeEmitterShape: ...
     # Windows.Media.Audio.AudioNodeEmitterShape Windows.Media.Audio.AudioNodeEmitterShape::CreateOmnidirectional()
@@ -909,7 +909,7 @@ class AudioNodeListener(winrt.system.Object):
     def doppler_velocity(self, value: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> None: ...
 
 @typing.final
-class AudioPlaybackConnection_Static(winrt._winrt.IInspectable_Static):
+class AudioPlaybackConnection_Static(winrt._winrt.Object_Static):
     # System.String Windows.Media.Audio.AudioPlaybackConnection::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
     # Windows.Media.Audio.AudioPlaybackConnection Windows.Media.Audio.AudioPlaybackConnection::TryCreateFromId(System.String)
@@ -950,7 +950,7 @@ class AudioPlaybackConnectionOpenResult(winrt.system.Object):
     def status(self) -> AudioPlaybackConnectionOpenResultStatus: ...
 
 @typing.final
-class AudioStateMonitor_Static(winrt._winrt.IInspectable_Static):
+class AudioStateMonitor_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Media.Audio.AudioStateMonitor Windows.Media.Audio.AudioStateMonitor::CreateForCaptureMonitoring()
     def create_for_capture_monitoring(cls) -> AudioStateMonitor: ...
@@ -1462,7 +1462,7 @@ class SetDefaultSpatialAudioFormatResult(winrt.system.Object):
     def status(self) -> SetDefaultSpatialAudioFormatStatus: ...
 
 @typing.final
-class SpatialAudioDeviceConfiguration_Static(winrt._winrt.IInspectable_Static):
+class SpatialAudioDeviceConfiguration_Static(winrt._winrt.Object_Static):
     # Windows.Media.Audio.SpatialAudioDeviceConfiguration Windows.Media.Audio.SpatialAudioDeviceConfiguration::GetForDeviceId(System.String)
     def get_for_device_id(cls, device_id: str, /) -> SpatialAudioDeviceConfiguration: ...
 
@@ -1490,7 +1490,7 @@ class SpatialAudioDeviceConfiguration(winrt.system.Object, metaclass=SpatialAudi
     def is_spatial_audio_supported(self) -> bool: ...
 
 @typing.final
-class SpatialAudioFormatConfiguration_Static(winrt._winrt.IInspectable_Static):
+class SpatialAudioFormatConfiguration_Static(winrt._winrt.Object_Static):
     # Windows.Media.Audio.SpatialAudioFormatConfiguration Windows.Media.Audio.SpatialAudioFormatConfiguration::GetDefault()
     def get_default(cls) -> SpatialAudioFormatConfiguration: ...
 
@@ -1508,7 +1508,7 @@ class SpatialAudioFormatConfiguration(winrt.system.Object, metaclass=SpatialAudi
     def mixed_reality_exclusive_mode_policy(self, value: MixedRealitySpatialAudioFormatPolicy) -> None: ...
 
 @typing.final
-class SpatialAudioFormatSubtype_Static(winrt._winrt.IInspectable_Static):
+class SpatialAudioFormatSubtype_Static(winrt._winrt.Object_Static):
     # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSHeadphoneX()
     @_property
     def d_t_s_headphone_x(cls) -> str: ...

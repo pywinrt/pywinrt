@@ -33,7 +33,7 @@ class VideoScalerStatus(enum.IntEnum):
     FAILURE = 7
 
 @typing.final
-class VideoScaler_Static(winrt._winrt.IInspectable_Static):
+class VideoScaler_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Video.VideoScaler> Microsoft.Windows.AI.Video.VideoScaler::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[VideoScaler]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Video.VideoScaler::EnsureReadyAsync()

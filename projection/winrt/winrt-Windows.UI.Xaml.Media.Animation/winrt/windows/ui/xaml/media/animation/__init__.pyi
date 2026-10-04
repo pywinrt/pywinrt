@@ -435,14 +435,14 @@ class ConnectedAnimation(winrt.system.Object):
     @configuration.setter
     def configuration(self, value: ConnectedAnimationConfiguration) -> None: ...
 
-class ConnectedAnimationConfiguration_Static(winrt._winrt.IInspectable_Static):
+class ConnectedAnimationConfiguration_Static(winrt._winrt.Object_Static):
     ...
 
 class ConnectedAnimationConfiguration(winrt.system.Object, metaclass=ConnectedAnimationConfiguration_Static):
     ...
 
 @typing.final
-class ConnectedAnimationService_Static(winrt._winrt.IInspectable_Static):
+class ConnectedAnimationService_Static(winrt._winrt.Object_Static):
     # Windows.UI.Xaml.Media.Animation.ConnectedAnimationService Windows.UI.Xaml.Media.Animation.ConnectedAnimationService::GetForCurrentView()
     def get_for_current_view(cls) -> ConnectedAnimationService: ...
 
@@ -1084,7 +1084,7 @@ class KeySpline(windows_ui_xaml.DependencyObject):
     def control_point1(self, value: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
 
 @typing.final
-class KeyTimeHelper_Static(winrt._winrt.IInspectable_Static):
+class KeyTimeHelper_Static(winrt._winrt.Object_Static):
     # Windows.UI.Xaml.Media.Animation.KeyTime Windows.UI.Xaml.Media.Animation.KeyTimeHelper::FromTimeSpan(Windows.Foundation.TimeSpan)
     def from_time_span(cls, time_span: datetime.timedelta, /) -> KeyTime: ...
 
@@ -1517,7 +1517,7 @@ class ReorderThemeTransition(Transition):
     def __new__(cls) -> typing.Self: ...
 
 @typing.final
-class RepeatBehaviorHelper_Static(winrt._winrt.IInspectable_Static):
+class RepeatBehaviorHelper_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper::Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)
     def equals(cls, target: RepeatBehavior | tuple[winrt.system.Double, datetime.timedelta, RepeatBehaviorType], value: RepeatBehavior | tuple[winrt.system.Double, datetime.timedelta, RepeatBehaviorType], /) -> bool: ...
     # Windows.UI.Xaml.Media.Animation.RepeatBehavior Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper::FromCount(System.Double)

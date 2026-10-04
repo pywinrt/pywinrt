@@ -288,7 +288,7 @@ class MediaFrameSourceGetPropertyResult(winrt.system.Object):
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class MediaFrameSourceGroup_Static(winrt._winrt.IInspectable_Static):
+class MediaFrameSourceGroup_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> Windows.Media.Capture.Frames.MediaFrameSourceGroup::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[MediaFrameSourceGroup]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.Frames.MediaFrameSourceGroup> Windows.Media.Capture.Frames.MediaFrameSourceGroup::FromIdAsync(System.String)

@@ -239,7 +239,7 @@ class ZoomUnit(enum.IntEnum):
     SMALL_INCREMENT = 4
 
 @typing.final
-class AnnotationPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class AnnotationPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.AnnotationPatternIdentifiers::get_AnnotationTypeIdProperty()
     @_property
     def annotation_type_id_property(cls) -> AutomationProperty: ...
@@ -291,7 +291,7 @@ class AutomationAnnotation(microsoft_ui_xaml.DependencyObject, metaclass=Automat
     def element(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
-class AutomationElementIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class AutomationElementIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.AutomationElementIdentifiers::get_AcceleratorKeyProperty()
     @_property
     def accelerator_key_property(cls) -> AutomationProperty: ...
@@ -415,7 +415,7 @@ class AutomationElementIdentifiers(winrt.system.Object, metaclass=AutomationElem
     ...
 
 @typing.final
-class AutomationProperties_Static(winrt._winrt.IInspectable_Static):
+class AutomationProperties_Static(winrt._winrt.Object_Static):
     # System.String Microsoft.UI.Xaml.Automation.AutomationProperties::GetAcceleratorKey(Microsoft.UI.Xaml.DependencyObject)
     def get_accelerator_key(cls, element: microsoft_ui_xaml.DependencyObject, /) -> str: ...
     # System.String Microsoft.UI.Xaml.Automation.AutomationProperties::GetAccessKey(Microsoft.UI.Xaml.DependencyObject)
@@ -619,7 +619,7 @@ class AutomationProperty(winrt.system.Object):
     ...
 
 @typing.final
-class DockPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class DockPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.DockPatternIdentifiers::get_DockPositionProperty()
     @_property
     def dock_position_property(cls) -> AutomationProperty: ...
@@ -629,7 +629,7 @@ class DockPatternIdentifiers(winrt.system.Object, metaclass=DockPatternIdentifie
     ...
 
 @typing.final
-class DragPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class DragPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.DragPatternIdentifiers::get_DropEffectProperty()
     @_property
     def drop_effect_property(cls) -> AutomationProperty: ...
@@ -648,7 +648,7 @@ class DragPatternIdentifiers(winrt.system.Object, metaclass=DragPatternIdentifie
     ...
 
 @typing.final
-class DropTargetPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class DropTargetPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.DropTargetPatternIdentifiers::get_DropTargetEffectProperty()
     @_property
     def drop_target_effect_property(cls) -> AutomationProperty: ...
@@ -661,7 +661,7 @@ class DropTargetPatternIdentifiers(winrt.system.Object, metaclass=DropTargetPatt
     ...
 
 @typing.final
-class ExpandCollapsePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class ExpandCollapsePatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.ExpandCollapsePatternIdentifiers::get_ExpandCollapseStateProperty()
     @_property
     def expand_collapse_state_property(cls) -> AutomationProperty: ...
@@ -671,7 +671,7 @@ class ExpandCollapsePatternIdentifiers(winrt.system.Object, metaclass=ExpandColl
     ...
 
 @typing.final
-class GridItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class GridItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.GridItemPatternIdentifiers::get_ColumnProperty()
     @_property
     def column_property(cls) -> AutomationProperty: ...
@@ -693,7 +693,7 @@ class GridItemPatternIdentifiers(winrt.system.Object, metaclass=GridItemPatternI
     ...
 
 @typing.final
-class GridPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class GridPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.GridPatternIdentifiers::get_ColumnCountProperty()
     @_property
     def column_count_property(cls) -> AutomationProperty: ...
@@ -706,7 +706,7 @@ class GridPatternIdentifiers(winrt.system.Object, metaclass=GridPatternIdentifie
     ...
 
 @typing.final
-class MultipleViewPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class MultipleViewPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.MultipleViewPatternIdentifiers::get_CurrentViewProperty()
     @_property
     def current_view_property(cls) -> AutomationProperty: ...
@@ -719,7 +719,7 @@ class MultipleViewPatternIdentifiers(winrt.system.Object, metaclass=MultipleView
     ...
 
 @typing.final
-class RangeValuePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class RangeValuePatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.RangeValuePatternIdentifiers::get_IsReadOnlyProperty()
     @_property
     def is_read_only_property(cls) -> AutomationProperty: ...
@@ -744,7 +744,7 @@ class RangeValuePatternIdentifiers(winrt.system.Object, metaclass=RangeValuePatt
     ...
 
 @typing.final
-class ScrollPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class ScrollPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.ScrollPatternIdentifiers::get_HorizontalScrollPercentProperty()
     @_property
     def horizontal_scroll_percent_property(cls) -> AutomationProperty: ...
@@ -772,7 +772,7 @@ class ScrollPatternIdentifiers(winrt.system.Object, metaclass=ScrollPatternIdent
     ...
 
 @typing.final
-class SelectionItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class SelectionItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.SelectionItemPatternIdentifiers::get_IsSelectedProperty()
     @_property
     def is_selected_property(cls) -> AutomationProperty: ...
@@ -785,7 +785,7 @@ class SelectionItemPatternIdentifiers(winrt.system.Object, metaclass=SelectionIt
     ...
 
 @typing.final
-class SelectionPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class SelectionPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.SelectionPatternIdentifiers::get_CanSelectMultipleProperty()
     @_property
     def can_select_multiple_property(cls) -> AutomationProperty: ...
@@ -801,7 +801,7 @@ class SelectionPatternIdentifiers(winrt.system.Object, metaclass=SelectionPatter
     ...
 
 @typing.final
-class SpreadsheetItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class SpreadsheetItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.SpreadsheetItemPatternIdentifiers::get_FormulaProperty()
     @_property
     def formula_property(cls) -> AutomationProperty: ...
@@ -811,7 +811,7 @@ class SpreadsheetItemPatternIdentifiers(winrt.system.Object, metaclass=Spreadshe
     ...
 
 @typing.final
-class StylesPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class StylesPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.StylesPatternIdentifiers::get_ExtendedPropertiesProperty()
     @_property
     def extended_properties_property(cls) -> AutomationProperty: ...
@@ -839,7 +839,7 @@ class StylesPatternIdentifiers(winrt.system.Object, metaclass=StylesPatternIdent
     ...
 
 @typing.final
-class TableItemPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class TableItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.TableItemPatternIdentifiers::get_ColumnHeaderItemsProperty()
     @_property
     def column_header_items_property(cls) -> AutomationProperty: ...
@@ -852,7 +852,7 @@ class TableItemPatternIdentifiers(winrt.system.Object, metaclass=TableItemPatter
     ...
 
 @typing.final
-class TablePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class TablePatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.TablePatternIdentifiers::get_ColumnHeadersProperty()
     @_property
     def column_headers_property(cls) -> AutomationProperty: ...
@@ -868,7 +868,7 @@ class TablePatternIdentifiers(winrt.system.Object, metaclass=TablePatternIdentif
     ...
 
 @typing.final
-class TogglePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class TogglePatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.TogglePatternIdentifiers::get_ToggleStateProperty()
     @_property
     def toggle_state_property(cls) -> AutomationProperty: ...
@@ -878,7 +878,7 @@ class TogglePatternIdentifiers(winrt.system.Object, metaclass=TogglePatternIdent
     ...
 
 @typing.final
-class TransformPattern2Identifiers_Static(winrt._winrt.IInspectable_Static):
+class TransformPattern2Identifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.TransformPattern2Identifiers::get_CanZoomProperty()
     @_property
     def can_zoom_property(cls) -> AutomationProperty: ...
@@ -897,7 +897,7 @@ class TransformPattern2Identifiers(winrt.system.Object, metaclass=TransformPatte
     ...
 
 @typing.final
-class TransformPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class TransformPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.TransformPatternIdentifiers::get_CanMoveProperty()
     @_property
     def can_move_property(cls) -> AutomationProperty: ...
@@ -913,7 +913,7 @@ class TransformPatternIdentifiers(winrt.system.Object, metaclass=TransformPatter
     ...
 
 @typing.final
-class ValuePatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class ValuePatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.ValuePatternIdentifiers::get_IsReadOnlyProperty()
     @_property
     def is_read_only_property(cls) -> AutomationProperty: ...
@@ -926,7 +926,7 @@ class ValuePatternIdentifiers(winrt.system.Object, metaclass=ValuePatternIdentif
     ...
 
 @typing.final
-class WindowPatternIdentifiers_Static(winrt._winrt.IInspectable_Static):
+class WindowPatternIdentifiers_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Automation.AutomationProperty Microsoft.UI.Xaml.Automation.WindowPatternIdentifiers::get_CanMaximizeProperty()
     @_property
     def can_maximize_property(cls) -> AutomationProperty: ...

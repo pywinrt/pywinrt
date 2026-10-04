@@ -97,7 +97,7 @@ class SortEntry:
     def unpack(self) -> tuple[str, bool]: ...
 
 @typing.final
-class ContentIndexer_Static(winrt._winrt.IInspectable_Static):
+class ContentIndexer_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer()
     def get_indexer(cls) -> ContentIndexer: ...

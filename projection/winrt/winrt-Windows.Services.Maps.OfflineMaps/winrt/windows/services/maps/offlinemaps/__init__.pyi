@@ -39,7 +39,7 @@ class OfflineMapPackageStatus(enum.IntEnum):
     DELETING = 3
 
 @typing.final
-class OfflineMapPackage_Static(winrt._winrt.IInspectable_Static):
+class OfflineMapPackage_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesAsync(Windows.Devices.Geolocation.Geopoint)
     def find_packages_async(cls, query_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesInBoundingBoxAsync(Windows.Devices.Geolocation.GeoboundingBox)

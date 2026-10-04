@@ -432,7 +432,7 @@ class AppActivationResult(winrt.system.Object):
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
-class AppDiagnosticInfo_Static(winrt._winrt.IInspectable_Static):
+class AppDiagnosticInfo_Static(winrt._winrt.Object_Static):
     # Windows.System.AppDiagnosticInfoWatcher Windows.System.AppDiagnosticInfo::CreateWatcher()
     def create_watcher(cls) -> AppDiagnosticInfoWatcher: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.DiagnosticAccessStatus> Windows.System.AppDiagnosticInfo::RequestAccessAsync()
@@ -679,7 +679,7 @@ class AppUriHandlerRegistration(winrt.system.Object):
     def package_family_name(self) -> str: ...
 
 @typing.final
-class AppUriHandlerRegistrationManager_Static(winrt._winrt.IInspectable_Static):
+class AppUriHandlerRegistrationManager_Static(winrt._winrt.Object_Static):
     # Windows.System.AppUriHandlerRegistrationManager Windows.System.AppUriHandlerRegistrationManager::GetDefault()
     def get_default(cls) -> AppUriHandlerRegistrationManager: ...
     # Windows.System.AppUriHandlerRegistrationManager Windows.System.AppUriHandlerRegistrationManager::GetForPackage(System.String)
@@ -701,7 +701,7 @@ class AppUriHandlerRegistrationManager(winrt.system.Object, metaclass=AppUriHand
     def package_family_name(self) -> str: ...
 
 @typing.final
-class DateTimeSettings_Static(winrt._winrt.IInspectable_Static):
+class DateTimeSettings_Static(winrt._winrt.Object_Static):
     # System.Void Windows.System.DateTimeSettings::SetSystemDateTime(Windows.Foundation.DateTime)
     def set_system_date_time(cls, utc_date_time: datetime.datetime, /) -> None: ...
 
@@ -710,7 +710,7 @@ class DateTimeSettings(winrt.system.Object, metaclass=DateTimeSettings_Static):
     ...
 
 @typing.final
-class DispatcherQueue_Static(winrt._winrt.IInspectable_Static):
+class DispatcherQueue_Static(winrt._winrt.Object_Static):
     # Windows.System.DispatcherQueue Windows.System.DispatcherQueue::GetForCurrentThread()
     def get_for_current_thread(cls) -> DispatcherQueue: ...
 
@@ -741,7 +741,7 @@ class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
     def has_thread_access(self) -> bool: ...
 
 @typing.final
-class DispatcherQueueController_Static(winrt._winrt.IInspectable_Static):
+class DispatcherQueueController_Static(winrt._winrt.Object_Static):
     # Windows.System.DispatcherQueueController Windows.System.DispatcherQueueController::CreateOnDedicatedThread()
     def create_on_dedicated_thread(cls) -> DispatcherQueueController: ...
 
@@ -798,7 +798,7 @@ class FolderLauncherOptions(winrt.system.Object, ILauncherViewOptions):
     def desired_remaining_view(self, value: windows_ui_viewmanagement.ViewSizePreference) -> None: ...
 
 @typing.final
-class KnownUserProperties_Static(winrt._winrt.IInspectable_Static):
+class KnownUserProperties_Static(winrt._winrt.Object_Static):
     # System.String Windows.System.KnownUserProperties::get_AccountName()
     @_property
     def account_name(cls) -> str: ...
@@ -844,7 +844,7 @@ class LaunchUriResult(winrt.system.Object):
     def status(self) -> LaunchUriStatus: ...
 
 @typing.final
-class Launcher_Static(winrt._winrt.IInspectable_Static):
+class Launcher_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.System.Launcher::FindAppUriHandlersAsync(Windows.Foundation.Uri)
     def find_app_uri_handlers_async(cls, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[windows_applicationmodel.AppInfo]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.System.Launcher::FindFileHandlersAsync(System.String)
@@ -1083,7 +1083,7 @@ class LauncherUIOptions(winrt.system.Object):
     def invocation_point(self, value: windows_foundation.Point | None) -> None: ...
 
 @typing.final
-class MemoryManager_Static(winrt._winrt.IInspectable_Static):
+class MemoryManager_Static(winrt._winrt.Object_Static):
     # Windows.System.AppMemoryReport Windows.System.MemoryManager::GetAppMemoryReport()
     def get_app_memory_report(cls) -> AppMemoryReport: ...
     # Windows.System.ProcessMemoryReport Windows.System.MemoryManager::GetProcessMemoryReport()
@@ -1120,7 +1120,7 @@ class MemoryManager(winrt.system.Object, metaclass=MemoryManager_Static):
     ...
 
 @typing.final
-class ProcessLauncher_Static(winrt._winrt.IInspectable_Static):
+class ProcessLauncher_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.ProcessLauncherResult> Windows.System.ProcessLauncher::RunToCompletionAsync(System.String,System.String)
     def run_to_completion_async(cls, file_name: str, args: str, /) -> windows_foundation.IAsyncOperation[ProcessLauncherResult]: ...
@@ -1185,7 +1185,7 @@ class ProtocolForResultsOperation(winrt.system.Object):
     def report_completed(self, data: windows_foundation_collections.ValueSet, /) -> None: ...
 
 @typing.final
-class RemoteLauncher_Static(winrt._winrt.IInspectable_Static):
+class RemoteLauncher_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteLaunchUriStatus> Windows.System.RemoteLauncher::LaunchUriAsync(Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Uri)
     def launch_uri_async(cls, remote_system_connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, uri: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[RemoteLaunchUriStatus]: ...
@@ -1222,7 +1222,7 @@ class RemoteLauncherOptions(winrt.system.Object):
     def preferred_app_ids(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class ShutdownManager_Static(winrt._winrt.IInspectable_Static):
+class ShutdownManager_Static(winrt._winrt.Object_Static):
     # System.Void Windows.System.ShutdownManager::BeginShutdown(Windows.System.ShutdownKind,Windows.Foundation.TimeSpan)
     def begin_shutdown(cls, shutdown_kind: ShutdownKind, timeout: datetime.timedelta, /) -> None: ...
     # System.Void Windows.System.ShutdownManager::CancelShutdown()
@@ -1245,7 +1245,7 @@ class ShutdownManager(winrt.system.Object, metaclass=ShutdownManager_Static):
     ...
 
 @typing.final
-class TimeZoneSettings_Static(winrt._winrt.IInspectable_Static):
+class TimeZoneSettings_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.System.AutoUpdateTimeZoneStatus> Windows.System.TimeZoneSettings::AutoUpdateTimeZoneAsync(Windows.Foundation.TimeSpan)
     def auto_update_time_zone_async(cls, timeout: datetime.timedelta, /) -> windows_foundation.IAsyncOperation[AutoUpdateTimeZoneStatus]: ...
     # System.Void Windows.System.TimeZoneSettings::ChangeTimeZoneByDisplayName(System.String)
@@ -1265,7 +1265,7 @@ class TimeZoneSettings(winrt.system.Object, metaclass=TimeZoneSettings_Static):
     ...
 
 @typing.final
-class User_Static(winrt._winrt.IInspectable_Static):
+class User_Static(winrt._winrt.Object_Static):
     # Windows.System.UserWatcher Windows.System.User::CreateWatcher()
     def create_watcher(cls) -> UserWatcher: ...
     @typing.overload
@@ -1341,7 +1341,7 @@ class UserChangedEventArgs(winrt.system.Object):
     def changed_property_kinds(self) -> _cabc.Sequence[UserWatcherUpdateKind]: ...
 
 @typing.final
-class UserDeviceAssociation_Static(winrt._winrt.IInspectable_Static):
+class UserDeviceAssociation_Static(winrt._winrt.Object_Static):
     # Windows.System.User Windows.System.UserDeviceAssociation::FindUserFromDeviceId(System.String)
     def find_user_from_device_id(cls, device_id: str, /) -> User: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.UserDeviceAssociation::add_UserDeviceAssociationChanged(Windows.Foundation.EventHandler`1<Windows.System.UserDeviceAssociationChangedEventArgs>)
@@ -1366,7 +1366,7 @@ class UserDeviceAssociationChangedEventArgs(winrt.system.Object):
     def old_user(self) -> User: ...
 
 @typing.final
-class UserPicker_Static(winrt._winrt.IInspectable_Static):
+class UserPicker_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.System.UserPicker::IsSupported()
     def is_supported(cls) -> bool: ...
 

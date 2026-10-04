@@ -50,7 +50,7 @@ class WalletItemSystemStore(winrt.system.Object):
     def remove_items_changed(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class WalletManagerSystem_Static(winrt._winrt.IInspectable_Static):
+class WalletManagerSystem_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.System.WalletItemSystemStore> Windows.ApplicationModel.Wallet.System.WalletManagerSystem::RequestStoreAsync()
     @deprecated("IWalletManagerSystemStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[WalletItemSystemStore]: ...

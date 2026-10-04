@@ -29,7 +29,7 @@ class DecimalValue:
     def unpack(self) -> tuple[winrt.system.UInt16, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt32, winrt.system.UInt64]: ...
 
 @typing.final
-class DecimalHelper_Static(winrt._winrt.IInspectable_Static):
+class DecimalHelper_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::Abs(Microsoft.Windows.Foundation.DecimalValue)
     def abs(cls, value: DecimalValue | tuple[winrt.system.UInt16, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt32, winrt.system.UInt64], /) -> DecimalValue: ...
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::Add(Microsoft.Windows.Foundation.DecimalValue,Microsoft.Windows.Foundation.DecimalValue)

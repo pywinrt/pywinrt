@@ -42,7 +42,7 @@ class PerformLocalActionRequestedEventArgs(winrt.system.Object):
     def action(self) -> RemoteDesktopLocalAction: ...
 
 @typing.final
-class RemoteDesktopConnectionInfo_Static(winrt._winrt.IInspectable_Static):
+class RemoteDesktopConnectionInfo_Static(winrt._winrt.Object_Static):
     # Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo::GetForLaunchUri(Windows.Foundation.Uri,Windows.UI.WindowId)
     def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64], /) -> RemoteDesktopConnectionInfo: ...
 
@@ -56,7 +56,7 @@ class RemoteDesktopConnectionInfo(winrt.system.Object, metaclass=RemoteDesktopCo
     def switch_to_local_session(self) -> None: ...
 
 @typing.final
-class RemoteDesktopConnectionRemoteInfo_Static(winrt._winrt.IInspectable_Static):
+class RemoteDesktopConnectionRemoteInfo_Static(winrt._winrt.Object_Static):
     # Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo::GetForLaunchUri(Windows.Foundation.Uri)
     def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, /) -> RemoteDesktopConnectionRemoteInfo: ...
     # System.Boolean Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo::IsSwitchSupported()
@@ -90,7 +90,7 @@ class RemoteDesktopInfo(winrt.system.Object):
     def id(self) -> str: ...
 
 @typing.final
-class RemoteDesktopRegistrar_Static(winrt._winrt.IInspectable_Static):
+class RemoteDesktopRegistrar_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar::IsSwitchToLocalSessionEnabled()
     def is_switch_to_local_session_enabled(cls) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar::add_ConnectionCenterRequested(Windows.Foundation.EventHandler`1<System.Object>)

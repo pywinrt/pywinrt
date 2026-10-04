@@ -332,7 +332,7 @@ class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object, ISp
     def type(self) -> SpeechRecognitionConstraintType: ...
 
 @typing.final
-class SpeechRecognizer_Static(winrt._winrt.IInspectable_Static):
+class SpeechRecognizer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.SpeechRecognition.SpeechRecognizer::TrySetSystemSpeechLanguageAsync(Windows.Globalization.Language)
     def try_set_system_speech_language_async(cls, speech_language: windows_globalization.Language, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Globalization.Language> Windows.Media.SpeechRecognition.SpeechRecognizer::get_SupportedGrammarLanguages()

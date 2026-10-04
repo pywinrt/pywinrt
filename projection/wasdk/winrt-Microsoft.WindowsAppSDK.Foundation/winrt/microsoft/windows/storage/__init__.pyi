@@ -32,7 +32,7 @@ class ApplicationDataLocality(enum.IntEnum):
     MACHINE = 1000
 
 @typing.final
-class ApplicationData_Static(winrt._winrt.IInspectable_Static):
+class ApplicationData_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.Storage.ApplicationData Microsoft.Windows.Storage.ApplicationData::GetDefault()
     def get_default(cls) -> ApplicationData: ...
     # Microsoft.Windows.Storage.ApplicationData Microsoft.Windows.Storage.ApplicationData::GetForPackageFamily(System.String)

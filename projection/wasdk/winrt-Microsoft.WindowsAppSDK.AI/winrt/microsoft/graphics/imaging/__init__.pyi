@@ -25,7 +25,7 @@ class ImageBufferPixelFormat(enum.IntEnum):
     BGR8 = 137352
 
 @typing.final
-class ImageBuffer_Static(winrt._winrt.IInspectable_Static):
+class ImageBuffer_Static(winrt._winrt.Object_Static):
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Graphics.Imaging.ImageBuffer::CreateForBuffer(Windows.Storage.Streams.IBuffer,Microsoft.Graphics.Imaging.ImageBufferPixelFormat,System.Int32,System.Int32,System.Int32)
     def create_for_buffer(cls, buffer: winrt.system.Buffer, pixel_format: ImageBufferPixelFormat, width: winrt.system.Int32, height: winrt.system.Int32, row_stride: winrt.system.Int32, /) -> ImageBuffer: ...
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Graphics.Imaging.ImageBuffer::CreateForSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)

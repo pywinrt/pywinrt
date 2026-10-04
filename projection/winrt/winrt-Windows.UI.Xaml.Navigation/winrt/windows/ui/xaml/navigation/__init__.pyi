@@ -37,7 +37,7 @@ class NavigationMode(enum.IntEnum):
     FORWARD = 2
     REFRESH = 3
 
-class FrameNavigationOptions_Static(winrt._winrt.IInspectable_Static):
+class FrameNavigationOptions_Static(winrt._winrt.Object_Static):
     ...
 
 class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):

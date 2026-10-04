@@ -1462,7 +1462,7 @@ class InfoBar(windows_ui_xaml_controls.Control, metaclass=InfoBar_Static):
     @typing.final
     def template_settings(self) -> InfoBarTemplateSettings: ...
 
-class InfoBarClosedEventArgs_Static(winrt._winrt.IInspectable_Static):
+class InfoBarClosedEventArgs_Static(winrt._winrt.Object_Static):
     ...
 
 class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventArgs_Static):
@@ -1471,7 +1471,7 @@ class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventAr
     @typing.final
     def reason(self) -> InfoBarCloseReason: ...
 
-class InfoBarClosingEventArgs_Static(winrt._winrt.IInspectable_Static):
+class InfoBarClosingEventArgs_Static(winrt._winrt.Object_Static):
     ...
 
 class InfoBarClosingEventArgs(winrt.system.Object, metaclass=InfoBarClosingEventArgs_Static):
@@ -1657,7 +1657,7 @@ class ItemsRepeaterScrollHost(windows_ui_xaml.FrameworkElement):
     @_property
     def current_anchor(self) -> windows_ui_xaml.UIElement: ...
 
-class ItemsSourceView_Static(winrt._winrt.IInspectable_Static):
+class ItemsSourceView_Static(winrt._winrt.Object_Static):
     ...
 
 class ItemsSourceView(winrt.system.Object, windows_ui_xaml_interop.INotifyCollectionChanged, metaclass=ItemsSourceView_Static):

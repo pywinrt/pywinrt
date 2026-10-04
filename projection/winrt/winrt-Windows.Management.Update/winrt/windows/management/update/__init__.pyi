@@ -186,7 +186,7 @@ class WindowsUpdateManagerScanMode(enum.IntEnum):
     WHAT_IF = 100
 
 @typing.final
-class PreviewBuildsManager_Static(winrt._winrt.IInspectable_Static):
+class PreviewBuildsManager_Static(winrt._winrt.Object_Static):
     # Windows.Management.Update.PreviewBuildsManager Windows.Management.Update.PreviewBuildsManager::GetDefault()
     def get_default(cls) -> PreviewBuildsManager: ...
     # System.Boolean Windows.Management.Update.PreviewBuildsManager::IsSupported()
@@ -701,7 +701,7 @@ class WindowsUpdateActionResult(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class WindowsUpdateAdministrator_Static(winrt._winrt.IInspectable_Static):
+class WindowsUpdateAdministrator_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Management.Update.WindowsUpdateAdministrator::CancelRestartRequest(System.String)
     def cancel_restart_request(cls, request_restart_token: str, /) -> None: ...
     # Windows.Management.Update.WindowsUpdateGetAdministratorResult Windows.Management.Update.WindowsUpdateAdministrator::GetRegisteredAdministrator(System.String)

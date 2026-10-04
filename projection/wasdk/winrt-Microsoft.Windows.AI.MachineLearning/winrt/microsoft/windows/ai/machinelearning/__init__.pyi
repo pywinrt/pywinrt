@@ -146,7 +146,7 @@ class ExecutionProvider(winrt.system.Object):
     def ready_state(self) -> ExecutionProviderReadyState: ...
 
 @typing.final
-class ExecutionProviderCatalog_Static(winrt._winrt.IInspectable_Static):
+class ExecutionProviderCatalog_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog::GetDefault()
     def get_default(cls) -> ExecutionProviderCatalog: ...
 
@@ -190,7 +190,7 @@ class ModelCatalog(winrt.system.Object):
     def sources(self) -> _cabc.MutableSequence[ModelCatalogSource]: ...
 
 @typing.final
-class ModelCatalogSource_Static(winrt._winrt.IInspectable_Static):
+class ModelCatalogSource_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.MachineLearning.ModelCatalogSource> Microsoft.Windows.AI.MachineLearning.ModelCatalogSource::CreateFromUriAsync(Windows.Foundation.Uri)
     def create_from_uri_async(cls, location: windows_foundation.Uri, /) -> windows_foundation.IAsyncOperation[ModelCatalogSource]: ...
