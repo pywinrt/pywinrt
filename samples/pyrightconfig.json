@@ -1,0 +1,14 @@
+{
+  // The packages are generated rather than installed, and the lint job in
+  // .github/workflows/lint.yaml copies them into _install/lint, as it does
+  // for mypy.
+  "extraPaths": ["../_install/lint"],
+  // the newest released Python, so that a check does not depend on which
+  // interpreter runs pyright, as mypy.ini does
+  "pythonVersion": "3.14",
+  // A sample is what users copy, so it must not use a deprecated name.
+  "reportDeprecated": "error",
+  // PyInstaller, which only samples/winui2/build.py imports, is not
+  // installed; its stubs are bundled with pyright, which is all a check needs.
+  "reportMissingModuleSource": "none"
+}
