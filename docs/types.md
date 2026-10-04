@@ -858,11 +858,11 @@ whichever comes first.
     WinRT async methods look like Python coroutines (methods defined with
     `async def`) but they are not. This means they do not return a
     [`Coroutine`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Coroutine)
-    object and therefore cannot be used with methods like
-    [`asyncio.create_task()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task).
-    What they return is a Future-like object instead: not an
-    [`asyncio.Future`][asyncio.Future], but one that `asyncio` accepts
-    wherever it accepts a future.
+    object and therefore cannot be passed to
+    [`asyncio.create_task()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task)
+    or `TaskGroup.create_task()`. They are only [`Awaitable`][Awaitable]
+    objects, so await one in a coroutine of your own and make the task from
+    that.
 
 If you are using `asyncio`, then you can use the `await` keyword to wait
 for the result of async WinRT methods:
@@ -871,73 +871,69 @@ for the result of async WinRT methods:
 thing = await winrt_obj.get_thing_async()
 ```
 
-The operation is itself Future-like, which is what
-[`asyncio.isfuture()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.isfuture)
-checks for, so anything in `asyncio` that takes a future takes it as it is,
-without a task around it:
+To put a time limit on operations, use
+[`asyncio.timeout()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout),
+and to run several at once, an
+[`asyncio.TaskGroup`](https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup)
+with a coroutine for each:
 
 ```python
-done, pending = await asyncio.wait([op1, op2], timeout=5)
-first, second = await asyncio.gather(op1, op2)
-assert asyncio.ensure_future(op1) is op1
+from winrt.windows.storage import FileIO
+
+async def read(file) -> str:
+    return await FileIO.read_text_async(file)
+
+async with asyncio.timeout(10):
+    async with asyncio.TaskGroup() as group:
+        first = group.create_task(read(file1))
+        second = group.create_task(read(file2))
+
+print(first.result(), second.result())
 ```
 
-It has the methods of `asyncio.Future` too: `done()`, `result()`, `exception()`,
-`cancelled()`, `cancel()`, `add_done_callback()`, `remove_done_callback()` and
-`get_loop()`. It belongs to the event loop that is running when it is first
-awaited or one of these methods is called, and like a future it has to be
-used from that loop's thread; calling one of them with no event loop running
-raises [`RuntimeError`][RuntimeError]. An operation can be awaited any number
-of times and gives the same result each time. One that failed raises a new
-exception each time, from the error WinRT reports, so unlike with an
-`asyncio.Future` they carry the same error but are not the same object.
+Where `asyncio` needs a future, such as in
+[`asyncio.wait()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.wait),
+it makes a task around the operation. Make the tasks yourself with
+[`asyncio.ensure_future()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.ensure_future)
+to match what it hands back with the operations.
 
-Awaiting, the blocking `get()` and `wait()`, and the `completed` property are
-three ways of being told that an operation has finished, and WinRT accepts only
-one completed handler per operation, so use one of them for each operation.
-
-!!! note
-
-    Type checkers take the parameter of
-    [`asyncio.wait()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.wait)
-    to be a subclass of `asyncio.Future`, which an operation is not, so they
-    report an error there even though the call works.
+An operation that has finished can be awaited again, and gives the same result
+or fails in the same way each time. Awaiting, the blocking `get()` and
+`wait()`, and the `completed` property are three ways of being told that an
+operation has finished, and WinRT accepts only one completed handler per
+operation, so use one of them for each operation that is still running. To
+wait for one in several places, await a task made with `ensure_future()`.
 
 ##### Cancellation
 
-`cancel()` asks WinRT to cancel the operation and returns `True`, or `False` if
-the operation has already finished or cancellation was already asked for. It
-does not wait: `done()` becomes `True` only when WinRT says that the operation
-has finished, and then `await` raises
-[`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError).
+A task that is canceled while it awaits an operation, by `asyncio.timeout()` or
+by a `TaskGroup` whose other task failed, for example, asks WinRT to cancel the
+operation and stays suspended until the operation has finished, so no canceled
+operation is left running behind a task that has moved on. Then it raises
+[`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError),
+which `asyncio.timeout()` turns into `TimeoutError`, even if the operation was
+too far along to stop and finished anyway.
 
-An operation that is too far along to stop may finish anyway. Once `cancel()`
-has returned `True` it still counts as cancelled, as a cancelled
-`asyncio.Future` does: `await` raises `CancelledError` and `cancelled()` is
-`True`. Its `status` says how it really ended, and if that is `COMPLETED`,
-`get_results()` still returns what it produced.
+Canceling the task again while it waits for that gives up waiting: the task
+ends at once and the operation is left to finish by itself. That is the way out
+of an operation that never answers the request. If the operation fails after
+that, its error goes to the event loop's
+[exception handler](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_exception_handler),
+as an error that nothing retrieved from a future does.
 
-A task that is canceled while it awaits an operation, by
-[`asyncio.timeout()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout)
-for example, cancels the operation and stays suspended until the operation has
-stopped, so no canceled operation is left running behind a task that has moved
-on.
+A task that is canceled before it has started never awaits its operation, so
+the operation is not asked to stop.
 
-An operation that was canceled by something other than `cancel()`, such as
-Windows canceling it because a device went away, has failed rather than been
-canceled: `await` raises [`OSError`][OSError] with `winerror` set to
-`ERROR_CANCELLED`, and `cancelled()` is `False`.
+The operation's own `cancel()` is `IAsyncInfo.Cancel()`, which asks WinRT to
+cancel it and returns nothing. An `await` of an operation canceled that way
+raises [`OSError`][OSError] with `winerror` set to `ERROR_CANCELLED`, as it does
+for one that Windows canceled, because a device went away, for example.
 
 !!! version-changed "Changed in version 4.0"
 
-    An async operation is Future-like. Previously it was only
-    awaitable: `ensure_future()`, `gather()` and `asyncio.wait()` made a
-    task around it, `cancel()` returned `None`, an `await` after `cancel()`
-    raised `OSError` with `ERROR_CANCELLED` instead of `CancelledError`, and a
-    second `await` of the same operation failed. `loop.run_until_complete(op)`
-    worked as well, and now raises `RuntimeError`, because an operation
-    belongs to the event loop that is running when it is first used; await it
-    in a coroutine and run that with `asyncio.run()`.
+    An operation that has finished can be awaited again. Previously a second
+    `await` failed. An error that an operation reports after the task awaiting
+    it gave up waiting goes to the event loop's exception handler.
 
 !!! version-changed "Changed in version 3.2"
 
