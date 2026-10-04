@@ -242,26 +242,6 @@ class TestThreads(unittest.TestCase):
 
         self.assertEqual(shared.status, wf.AsyncStatus.COMPLETED)
 
-    def test_one_future_state(self) -> None:
-        # The first use of an operation as a future makes its state, and every
-        # thread here makes that first use of the same operations at once.
-        sources = [tc.AsyncActionSource() for _ in range(50)]
-        ops = [source.operation for source in sources]
-
-        def work(i: int) -> None:
-            for op in ops:
-                self.assertIs(op._asyncio_future_blocking, False)
-                op.cancel()
-
-        run_together(work)
-
-        for source, op in zip(sources, ops):
-            # The state the threads raced to make is the one that stays.
-            op._asyncio_future_blocking = True
-            self.assertIs(op._asyncio_future_blocking, True)
-            self.assertGreaterEqual(source.cancel_request_count, 1)
-            source.cancel()
-
     def test_one_registry(self) -> None:
         # Every thread converts a value of a type the registry resolves by
         # name, and all of them must come back as the one type.

@@ -477,7 +477,7 @@ namespace py::interp
         // it derives from, so unlike every other wrapper this one is a base.
         PyType_Spec spec{
             entry.tp_name.c_str(),
-            instance_basicsize(record),
+            static_cast<int>(object_basicsize),
             0,
             Py_TPFLAGS_DEFAULT | (generic ? Py_TPFLAGS_BASETYPE : 0),
             slots.data()};
@@ -541,7 +541,7 @@ namespace py::interp
             return false;
         }
 
-        return bind_protocol_methods(entry, record);
+        return bind_protocol_methods(record, entry.py_type);
     }
 
     /**
@@ -670,7 +670,7 @@ namespace py::interp
         // to be derivable because the projection derives from it.
         PyType_Spec spec{
             entry.tp_name.c_str(),
-            is_static ? 0 : instance_basicsize(record),
+            is_static ? 0 : static_cast<int>(object_basicsize),
             0,
             Py_TPFLAGS_DEFAULT | (composable ? Py_TPFLAGS_BASETYPE : 0),
             slots.data()};
@@ -700,7 +700,7 @@ namespace py::interp
             return false;
         }
 
-        return bind_protocol_methods(entry, record);
+        return bind_protocol_methods(record, entry.py_type);
     }
 
     /**
