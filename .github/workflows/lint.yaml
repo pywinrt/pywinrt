@@ -12,6 +12,8 @@ on:
       - .github/workflows/lint.yaml
       - mypy.ini
       - ruff.toml
+      - samples/pyrightconfig.json
+      - samples/requirements-dev.txt
       - '**/*.py'
       - '**/*.pyi'
   pull_request:
@@ -19,6 +21,8 @@ on:
       - .github/workflows/lint.yaml
       - mypy.ini
       - ruff.toml
+      - samples/pyrightconfig.json
+      - samples/requirements-dev.txt
       - '**/*.py'
       - '**/*.pyi'
 
@@ -44,3 +48,11 @@ jobs:
       # editor checks the same thing as CI does
       - name: Run mypy
         run: pipx run mypy
+      # what the samples import besides winrt, so that pyright resolves it
+      - name: Install the samples' dependencies
+        run: |
+          python -m venv _install/samples-venv
+          _install/samples-venv/Scripts/python -m pip install -r samples/requirements-dev.txt
+      # the settings are in samples/pyrightconfig.json
+      - name: Run pyright over the samples
+        run: pipx run pyright -p samples --pythonpath _install/samples-venv/Scripts/python.exe
