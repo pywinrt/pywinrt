@@ -113,24 +113,34 @@ jobs:
           - architecture: 'arm64'
             vs-arch: 'ARM64'
             runs-on: windows-11-vs2026-arm
+          # The free-threaded build, where a bug in releasing the GIL would
+          # show. FindPython takes the GIL-enabled library of the same
+          # install unless told to look for the free-threaded one.
+          - python-version: '3.14t'
+            architecture: 'x64'
+            release-type: 'Release'
+            vs-arch: 'x64'
+            runs-on: windows-2025-vs2026
+            cmake-args: '-DPython3_FIND_ABI="ANY;ANY;ANY;ON"'
     name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        id: python
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
           architecture: ${{ matrix.architecture }}
-      - run: python -m pip install -r requirements.txt
+      - run: ${{ steps.python.outputs.python-path }} -m pip install -r requirements.txt
       # XAML islands refuse to start unless the application manifest declares
       # maxversiontested, and the manifest in the interpreter that setup-python
       # installs does not. Without this, test_xaml_host skips.
       - name: declare maxversiontested in the interpreter's manifest
-        run: ./scripts/fix_python_manifest_for_xaml_islands.ps1 (Get-Command python).Source
+        run: ./scripts/fix_python_manifest_for_xaml_islands.ps1 "${{ steps.python.outputs.python-path }}"
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
       - name: configure
-        run: cmake -S . -B _build/projection -A ${{ matrix.vs-arch }}
+        run: cmake -S . -B _build/projection -A ${{ matrix.vs-arch }} -DPython3_EXECUTABLE="${{ steps.python.outputs.python-path }}" ${{ matrix.cmake-args }}
       - name: build
         run: cmake --build _build/projection --config ${{ matrix.release-type }} --parallel --verbose
       - name: install
@@ -138,7 +148,7 @@ jobs:
       - name: test
         env:
           PYTHONPATH: _install/projection
-        run: python -X dev -m unittest -v
+        run: ${{ steps.python.outputs.python-path }} -X dev -m unittest -v
   mingw:
     runs-on: windows-latest
     strategy:
