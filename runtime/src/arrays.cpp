@@ -1023,6 +1023,25 @@ namespace py::interp
             }
         }
 
+        // An array of numerics structs is borrowed from the block of floats an
+        // Array of them exports, or from plain floats in that shape, but not
+        // from a value of the numerics types that means something else.
+        auto const shape = element_shape(element);
+        std::wstring name;
+
+        if (!shape.empty())
+        {
+            if (!element_name(owner, element, name))
+            {
+                return false;
+            }
+
+            if (!numerics::check_array_source(name, obj))
+            {
+                return false;
+            }
+        }
+
         // A winrt.system.Array whose elements hold references exports them
         // read-only, so that Python cannot write a pointer into it, but the
         // memory is its own, and a callee fills a lent one all the same.
@@ -1034,10 +1053,29 @@ namespace py::interp
             return false;
         }
 
-        auto elements = numerics::block_count(*view, element_shape(element));
+        auto elements = numerics::block_count(*view, shape);
 
         if (elements < 0)
         {
+            // What else it borrows is its named fields, a whole struct per
+            // item, so any other buffer is a float block gone wrong.
+            if (!shape.empty())
+            {
+                if (view->itemsize != static_cast<Py_ssize_t>(value_size))
+                {
+                    numerics::set_block_error(*view, name, shape);
+                    PyBuffer_Release(view);
+                    return false;
+                }
+
+                if (!view->format || format != view->format)
+                {
+                    numerics::set_block_error(*view, name, shape);
+                    PyBuffer_Release(view);
+                    return false;
+                }
+            }
+
             if (!is_buffer_compatible(*view, value_size, format.c_str()))
             {
                 PyBuffer_Release(view);
