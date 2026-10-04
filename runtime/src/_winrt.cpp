@@ -448,18 +448,19 @@ namespace py::cpp::_winrt
         }
 
         // Only another wrapper can hold the same object: anything else would
-        // be stood up as a new one to compare. What is compared is identity,
-        // which a proxy answers itself.
-        auto equal = false;
-
-        if (PyObject_TypeCheck(other, object_type))
+        // be stood up as a new one to compare, so it is left to answer for
+        // itself, and Python falls back on identity if it does not. What is
+        // compared is identity, which a proxy answers itself.
+        if (!PyObject_TypeCheck(other, object_type))
         {
-            equal = self->obj
-                    == reinterpret_cast<
-                           py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(
-                           other)
-                           ->obj;
+            Py_RETURN_NOTIMPLEMENTED;
         }
+
+        auto const equal
+            = self->obj
+              == reinterpret_cast<
+                     py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(other)
+                     ->obj;
 
         return PyBool_FromLong(op == Py_EQ ? equal : !equal);
     }
