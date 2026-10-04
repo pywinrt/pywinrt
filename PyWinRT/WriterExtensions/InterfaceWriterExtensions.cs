@@ -57,7 +57,7 @@ static class InterfaceWriterExtensions
             baseTypes.Add(mixin);
         }
 
-        baseTypes.Add("winrt._winrt.IInspectable");
+        baseTypes.Add("winrt.system.Object");
 
         // An interface that declares no members of its own but inherits
         // abstract ones from a required interface is not abstract as far as

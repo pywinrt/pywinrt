@@ -40,7 +40,7 @@ from any other capsule.
 ## `as_interface`
 
 ```python
-as_interface(obj: IInspectable | None, iid: UUID | type[IInspectable], /) -> InterfaceCapsule | None
+as_interface(obj: Object | None, iid: UUID | type[Object], /) -> InterfaceCapsule | None
 ```
 
 An interface of a WinRT object, as an interface pointer capsule, or `None` for

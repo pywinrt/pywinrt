@@ -227,9 +227,16 @@ static class ObjectWriterExtensions
             w.WriteDeprecated(type.DeprecatedMessage);
         }
 
-        w.WriteLine(
-            $"class {type.Name}{type.Type.PyTypeParameters}({type.Type.BaseType?.ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.BaseType), packageMap) ?? "winrt.system.Object"}{interfaces}{collection}{metaclass}):"
-        );
+        // Every interface derives from winrt.system.Object in the stubs, so
+        // Object comes after a class's interfaces: ahead of them is an order no
+        // MRO allows.
+        var bases = type.Type.BaseType is { FullName: not "System.Object" } explicitBase
+            ? explicitBase.ToPyTypeName(ns, new TypeRefNullabilityInfo(explicitBase), packageMap)
+                + interfaces
+                + collection
+            : $"{interfaces}{collection}, winrt.system.Object"[2..];
+
+        w.WriteLine($"class {type.Name}{type.Type.PyTypeParameters}({bases}{metaclass}):");
         w.Indent++;
 
         if (type.IsStatic)
