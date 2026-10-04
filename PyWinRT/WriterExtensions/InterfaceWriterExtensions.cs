@@ -184,28 +184,6 @@ static class InterfaceWriterExtensions
             w.WriteLine($"def get(self) -> {returnType}: ...");
             w.WriteLine("@typing.final");
             w.WriteLine($"def wait(self, timeout: float) -> {statusTypeName}: ...");
-
-            // The runtime makes an async operation an asyncio future, which
-            // is what these and cancel() are.
-            w.WriteLine("_asyncio_future_blocking: bool");
-            w.WriteLine("@typing.final");
-            w.WriteLine(
-                "def add_done_callback(self, fn: _cabc.Callable[[typing.Self], object], /, *, context: _contextvars.Context | None = None) -> None: ..."
-            );
-            w.WriteLine("@typing.final");
-            w.WriteLine(
-                "def remove_done_callback(self, fn: _cabc.Callable[[typing.Self], object], /) -> int: ..."
-            );
-            w.WriteLine("@typing.final");
-            w.WriteLine("def done(self) -> bool: ...");
-            w.WriteLine("@typing.final");
-            w.WriteLine("def cancelled(self) -> bool: ...");
-            w.WriteLine("@typing.final");
-            w.WriteLine($"def result(self) -> {returnType}: ...");
-            w.WriteLine("@typing.final");
-            w.WriteLine("def exception(self) -> BaseException | None: ...");
-            w.WriteLine("@typing.final");
-            w.WriteLine("def get_loop(self) -> _asyncio.AbstractEventLoop: ...");
         }
 
         foreach (var group in methodGroups)
