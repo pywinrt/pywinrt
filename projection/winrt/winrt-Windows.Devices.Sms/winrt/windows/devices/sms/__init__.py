@@ -53,5 +53,5 @@ __all__ = [
     "SmsMessageReceivedEventHandler",
 ]
 
-SmsDeviceStatusChangedEventHandler = typing.Callable[[SmsDevice], None]
-SmsMessageReceivedEventHandler = typing.Callable[[SmsDevice, SmsMessageReceivedEventArgs], None]
+SmsDeviceStatusChangedEventHandler = typing.Callable[[SmsDevice], object]
+SmsMessageReceivedEventHandler = typing.Callable[[SmsDevice, SmsMessageReceivedEventArgs], object]

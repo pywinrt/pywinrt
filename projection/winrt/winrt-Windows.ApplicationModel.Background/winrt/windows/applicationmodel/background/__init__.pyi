@@ -1168,6 +1168,6 @@ class _IBackgroundTrigger: ...
 class IBackgroundTrigger(winrt._winrt.IInspectable):
     ...
 
-BackgroundTaskCanceledEventHandler: typing.TypeAlias = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
-BackgroundTaskCompletedEventHandler: typing.TypeAlias = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], None]
-BackgroundTaskProgressEventHandler: typing.TypeAlias = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], None]
+BackgroundTaskCanceledEventHandler: typing.TypeAlias = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], object]
+BackgroundTaskCompletedEventHandler: typing.TypeAlias = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], object]
+BackgroundTaskProgressEventHandler: typing.TypeAlias = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], object]

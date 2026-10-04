@@ -54,12 +54,12 @@ TSender = typing.TypeVar('TSender')
 winrt.runtime._internals.mixin_sequence(WwwFormUrlDecoder)
 winrt.runtime._internals.alias_field(EventRegistrationToken, "value")
 winrt.runtime._internals.alias_field(HResult, "value")
-AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], None]
-AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], None]
-AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]
-AsyncOperationCompletedHandler = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], None]
-AsyncOperationProgressHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], None]
-AsyncOperationWithProgressCompletedHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], None]
-DeferralCompletedHandler = typing.Callable[[], None]
-EventHandler = typing.Callable[[winrt.system.Object, T], None]
-TypedEventHandler = typing.Callable[[TSender, TResult], None]
+AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], object]
+AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], object]
+AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], object]
+AsyncOperationCompletedHandler = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], object]
+AsyncOperationProgressHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], object]
+AsyncOperationWithProgressCompletedHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], object]
+DeferralCompletedHandler = typing.Callable[[], object]
+EventHandler = typing.Callable[[winrt.system.Object, T], object]
+TypedEventHandler = typing.Callable[[TSender, TResult], object]

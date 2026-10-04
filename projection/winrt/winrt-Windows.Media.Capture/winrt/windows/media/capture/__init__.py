@@ -137,5 +137,5 @@ winrt.runtime._internals.alias_method(MediaCapture, "initialize_with_settings_as
 winrt.runtime._internals.alias_method(MediaCapture, "prepare_low_lag_record_to_custom_sink_id_async", "prepare_low_lag_record_to_custom_sink_async")
 winrt.runtime._internals.alias_method(MediaCapture, "start_preview_to_custom_sink_id_async", "start_preview_to_custom_sink_async")
 winrt.runtime._internals.alias_method(MediaCapture, "start_record_to_custom_sink_id_async", "start_record_to_custom_sink_async")
-MediaCaptureFailedEventHandler = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], None]
-RecordLimitationExceededEventHandler = typing.Callable[[MediaCapture], None]
+MediaCaptureFailedEventHandler = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], object]
+RecordLimitationExceededEventHandler = typing.Callable[[MediaCapture], object]

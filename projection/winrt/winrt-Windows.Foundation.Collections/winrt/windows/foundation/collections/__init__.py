@@ -41,5 +41,5 @@ winrt.runtime._internals.mixin_mutable_sequence(_IObservableVector)
 winrt.runtime._internals.mixin_mutable_mapping(_IPropertySet)
 winrt.runtime._internals.mixin_sequence(_IVectorView)
 winrt.runtime._internals.mixin_mutable_sequence(_IVector)
-MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
-VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]
+MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], object]
+VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], object]

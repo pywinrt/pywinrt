@@ -823,4 +823,4 @@ class IPrintTaskOptionsCoreUIConfiguration(winrt._winrt.IInspectable):
     @abstractmethod
     def displayed_options(self) -> _cabc.MutableSequence[str]: ...
 
-PrintTaskSourceRequestedHandler: typing.TypeAlias = typing.Callable[[PrintTaskSourceRequestedArgs], None]
+PrintTaskSourceRequestedHandler: typing.TypeAlias = typing.Callable[[PrintTaskSourceRequestedArgs], object]

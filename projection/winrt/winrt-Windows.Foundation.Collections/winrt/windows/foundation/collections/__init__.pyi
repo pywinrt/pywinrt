@@ -362,5 +362,5 @@ class IVector(IIterable[T], winrt._winrt.MutableSequence[T], winrt._winrt.IInspe
     @abstractmethod
     def size(self) -> winrt.system.UInt32: ...
 
-MapChangedEventHandler: typing.TypeAlias = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
-VectorChangedEventHandler: typing.TypeAlias = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]
+MapChangedEventHandler: typing.TypeAlias = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], object]
+VectorChangedEventHandler: typing.TypeAlias = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], object]

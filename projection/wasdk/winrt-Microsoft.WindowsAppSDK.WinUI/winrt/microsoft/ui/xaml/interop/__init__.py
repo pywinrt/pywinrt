@@ -20,5 +20,5 @@ __all__ = [
     "NotifyCollectionChangedEventHandler",
 ]
 
-BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], None]
-NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], None]
+BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], object]
+NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], object]

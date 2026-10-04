@@ -116,4 +116,4 @@ Param6Handler = typing.Callable[[winrt.system.Int16], tuple[winrt.system.Int16, 
 Param7Handler = typing.Callable[[winrt.system.Int32], tuple[winrt.system.Int32, winrt.system.Int32]]
 Param8Handler = typing.Callable[[winrt.system.Int64], tuple[winrt.system.Int64, winrt.system.Int64]]
 Param9Handler = typing.Callable[[winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single]]
-TestHandler = typing.Callable[[ITests], None]
+TestHandler = typing.Callable[[ITests], object]

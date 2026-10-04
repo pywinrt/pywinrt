@@ -1198,5 +1198,5 @@ class ISmsTextMessage(ISmsMessage, winrt._winrt.IInspectable):
     @abstractmethod
     def to(self, value: str) -> None: ...
 
-SmsDeviceStatusChangedEventHandler: typing.TypeAlias = typing.Callable[[SmsDevice], None]
-SmsMessageReceivedEventHandler: typing.TypeAlias = typing.Callable[[SmsDevice, SmsMessageReceivedEventArgs], None]
+SmsDeviceStatusChangedEventHandler: typing.TypeAlias = typing.Callable[[SmsDevice], object]
+SmsMessageReceivedEventHandler: typing.TypeAlias = typing.Callable[[SmsDevice, SmsMessageReceivedEventArgs], object]

@@ -73,4 +73,4 @@ winrt.runtime._internals.alias_static_method(SmartCardProvisioning, "request_att
 winrt.runtime._internals.alias_static_method(SmartCardProvisioning, "request_virtual_smart_card_creation_async_with_card_id", "request_virtual_smart_card_creation_async")
 winrt.runtime._internals.alias_static_method(SmartCardReader, "get_device_selector_with_kind", "get_device_selector")
 winrt.runtime._internals.alias_method(SmartCardTriggerDetails, "try_launch_current_app_with_behavior_async", "try_launch_current_app_async")
-SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], None]
+SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], object]

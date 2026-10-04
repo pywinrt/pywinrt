@@ -136,8 +136,8 @@ class PageStackEntry(windows_ui_xaml.DependencyObject, metaclass=PageStackEntry_
     @_property
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-LoadCompletedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
-NavigatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
-NavigatingCancelEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigatingCancelEventArgs], None]
-NavigationFailedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationFailedEventArgs], None]
-NavigationStoppedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
+LoadCompletedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationEventArgs], object]
+NavigatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationEventArgs], object]
+NavigatingCancelEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigatingCancelEventArgs], object]
+NavigationFailedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationFailedEventArgs], object]
+NavigationStoppedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NavigationEventArgs], object]

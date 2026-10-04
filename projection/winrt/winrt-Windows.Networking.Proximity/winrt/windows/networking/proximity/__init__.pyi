@@ -279,7 +279,7 @@ class TriggeredConnectionStateChangedEventArgs(winrt.system.Object):
     @_property
     def state(self) -> TriggeredConnectState: ...
 
-DeviceArrivedEventHandler: typing.TypeAlias = typing.Callable[[ProximityDevice], None]
-DeviceDepartedEventHandler: typing.TypeAlias = typing.Callable[[ProximityDevice], None]
-MessageReceivedHandler: typing.TypeAlias = typing.Callable[[ProximityDevice, ProximityMessage], None]
-MessageTransmittedHandler: typing.TypeAlias = typing.Callable[[ProximityDevice, winrt.system.Int64], None]
+DeviceArrivedEventHandler: typing.TypeAlias = typing.Callable[[ProximityDevice], object]
+DeviceDepartedEventHandler: typing.TypeAlias = typing.Callable[[ProximityDevice], object]
+MessageReceivedHandler: typing.TypeAlias = typing.Callable[[ProximityDevice, ProximityMessage], object]
+MessageTransmittedHandler: typing.TypeAlias = typing.Callable[[ProximityDevice, winrt.system.Int64], object]
