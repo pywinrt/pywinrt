@@ -291,7 +291,7 @@ namespace py::interp
         }
 
         /**
-         * _from(): the object seen as this type, which is what as_() calls.
+         * _from_(): the object seen as this type, which is what as_() calls.
          */
         PyObject* type_from(PyObject* cls, PyObject* arg) noexcept
         {
@@ -389,12 +389,14 @@ namespace py::interp
         }
 
         PyMethodDef class_methods[]
-            = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
+            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
+               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {}};
 
         PyMethodDef implements_methods[]
-            = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
+            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
+               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
                {}};
@@ -411,7 +413,8 @@ namespace py::interp
                {}};
 
         PyMethodDef generic_implements_methods[]
-            = {{"_from", type_from, METH_O | METH_CLASS, nullptr},
+            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
+               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
                {"__class_getitem__",
@@ -650,7 +653,7 @@ namespace py::interp
 
         std::vector<PyType_Slot> slots;
 
-        // _from() and _assign_array_() say what to do with an instance, so a
+        // _from_() and _assign_array_() say what to do with an instance, so a
         // static class, which has none, does not get them.
         if (entry.guid)
         {
@@ -701,6 +704,31 @@ namespace py::interp
         }
 
         return bind_protocol_methods(record, entry.py_type);
+    }
+
+    /**
+     * _from(): what _from_() was called until 4.0, kept so that code written
+     * before as_() existed goes on working. It calls _from_() rather than
+     * doing the same thing itself, so that it cannot come to differ.
+     */
+    PyObject* deprecated_from(PyObject* cls, PyObject* arg) noexcept
+    {
+        if (PyErr_WarnEx(
+                PyExc_DeprecationWarning,
+                "_from() is deprecated: use obj.as_(type) instead",
+                1)
+            < 0)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle from{PyUnicode_InternFromString("_from_")};
+        if (!from)
+        {
+            return nullptr;
+        }
+
+        return PyObject_CallMethodOneArg(cls, from.get(), arg);
     }
 
     /**

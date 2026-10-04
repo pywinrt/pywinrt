@@ -369,7 +369,7 @@ namespace py::cpp::_winrt
             return Py_NewRef(self);
         }
 
-        pyobj_handle from{PyUnicode_InternFromString("_from")};
+        pyobj_handle from{PyUnicode_InternFromString("_from_")};
         if (!from)
         {
             return nullptr;
@@ -379,9 +379,9 @@ namespace py::cpp::_winrt
     }
 
     /**
-     * _from(): the object seen as IInspectable, which is what as_(Object)
-     * calls, as as_() calls _from() of any other type it is given. Every
-     * projected type has a _from() of its own, so this one answers for
+     * _from_(): the object seen as IInspectable, which is what as_(Object)
+     * calls, as as_() calls _from_() of any other type it is given. Every
+     * projected type has a _from_() of its own, so this one answers for
      * winrt.system.Object alone.
      */
     static PyObject* Object_from(PyObject* cls, PyObject* arg) noexcept
@@ -415,7 +415,8 @@ namespace py::cpp::_winrt
 
     static PyMethodDef Object_methods[]
         = {{"as_", reinterpret_cast<PyCFunction>(Object_as), METH_O, nullptr},
-           {"_from", Object_from, METH_O | METH_CLASS, nullptr},
+           {"_from_", Object_from, METH_O | METH_CLASS, nullptr},
+           {"_from", py::interp::deprecated_from, METH_O | METH_CLASS, nullptr},
            {}};
 
     static PyGetSetDef Object_getset[]
