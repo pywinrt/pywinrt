@@ -35,6 +35,11 @@ SOURCE = textwrap.dedent(
     window = winui3.microsoft.ui.xaml.Window()
     from winrt.windows.foundation.numerics import Matrix4x4 as M
     product = M.identity * Matrix4x4.identity
+    args = ToastActivatedEventArgs._from(event)
+    value = wf.IPropertyValue._from(
+        inputs["name"]
+    )
+    stream = IRandomAccessStream._from(a or b)
     """
 )
 
@@ -97,6 +102,16 @@ class Inspect(unittest.TestCase):
                 "possible match: winrt.windows.foundation.numerics.Matrix4x4",
                 "rename to: @ for the product of two matrices; * between two of them"
                 " raises",
+                f"{p}:17:32",
+                "possible match: ToastActivatedEventArgs._from",
+                "rename to: event.as_(ToastActivatedEventArgs)",
+                # an argument written over several lines is put on one
+                f"{p}:18:27",
+                "possible match: wf.IPropertyValue._from",
+                'rename to: inputs["name"].as_(wf.IPropertyValue)',
+                f"{p}:21:30",
+                "possible match: IRandomAccessStream._from",
+                "rename to: (a or b).as_(IRandomAccessStream)",
             ],
         )
 
