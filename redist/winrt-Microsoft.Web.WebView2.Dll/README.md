@@ -8,4 +8,5 @@ per architecture.
 
 `winrt-Microsoft.Web.WebView2`
 depends on this package and imports it, which puts the `.dll` on the DLL
-search path. There is nothing else in it.
+search path. Its `load()` loads the `.dll` into the process, for code that
+looks for it by name without searching that path.
