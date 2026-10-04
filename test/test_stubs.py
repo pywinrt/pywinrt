@@ -18,13 +18,13 @@ def _line_before(module: types.ModuleType, prefix: str) -> str:
 
 
 class TestStubs(unittest.TestCase):
-    def test_deprecated_method(self):
+    def test_deprecated_method(self) -> None:
         self.assertEqual(
             _line_before(wsp, "def pick_single_file_and_continue("),
             '@deprecated("Instead, use PickSingleFileAsync")',
         )
 
-    def test_deprecated_class(self):
+    def test_deprecated_class(self) -> None:
         self.assertEqual(
             _line_before(wsysp, "class BackgroundEnergyManager("),
             '@deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")',

@@ -5,7 +5,7 @@ import winrt.windows.graphics.directx.direct3d11 as wgdd
 
 
 class TestDirectX(unittest.TestCase):
-    def test_struct_containing_enum_pos(self):
+    def test_struct_containing_enum_pos(self) -> None:
         msd = wgdd.Direct3DMultisampleDescription(1, 2)
         sd = wgdd.Direct3DSurfaceDescription(
             4, 8, wgd.DirectXPixelFormat.R16_G16_B16_A16_FLOAT, msd
@@ -19,7 +19,7 @@ class TestDirectX(unittest.TestCase):
         self.assertEqual(msd2.count, 1)
         self.assertEqual(msd2.quality, 2)
 
-    def test_struct_containing_enum_kwd(self):
+    def test_struct_containing_enum_kwd(self) -> None:
         msd = wgdd.Direct3DMultisampleDescription(1, 2)
         sd = wgdd.Direct3DSurfaceDescription(
             format=wgd.DirectXPixelFormat.R16_G16_B16_A16_FLOAT,

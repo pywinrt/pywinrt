@@ -10,7 +10,7 @@ from ._util import async_test
 
 
 class TestWindowsStorageStreams(unittest.TestCase):
-    def test_DataReader(self):
+    def test_DataReader(self) -> None:
         bool_value = True
         buffer_value = b"\x02\x04\x05"
         byte_value = 6
@@ -113,7 +113,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
                 self.assertEqual(reader.read_uint32(), uint32_value)
                 self.assertEqual(reader.read_uint64(), uint64_value)
 
-    def test_DataWriter(self):
+    def test_DataWriter(self) -> None:
         bool_value = True
         buffer_value = b"\x02\x04\x05"
         byte_value = 6
@@ -208,7 +208,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
                     self.assertEqual(actual, expected)
 
     @async_test
-    async def test_async(self):
+    async def test_async(self) -> None:
         """
         Regression test for https://github.com/pywinrt/python-winsdk/issues/21
         """

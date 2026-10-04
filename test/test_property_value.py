@@ -8,11 +8,11 @@ from winrt.system import Array, Char16
 
 
 class TestPropertyValue(unittest.TestCase):
-    def test_create_empty(self):
+    def test_create_empty(self) -> None:
         o = wf.PropertyValue.create_empty()
         self.assertIsNone(o)
 
-    def test_create_uint8(self):
+    def test_create_uint8(self) -> None:
         o = wf.PropertyValue.create_uint8(250)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT8)
@@ -20,7 +20,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint8(2**8))
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint8(-1))
 
-    def test_create_int16(self):
+    def test_create_int16(self) -> None:
         o = wf.PropertyValue.create_int16(-32000)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT16)
@@ -30,7 +30,7 @@ class TestPropertyValue(unittest.TestCase):
             OverflowError, lambda: wf.PropertyValue.create_int16(-(2**15 + 1))
         )
 
-    def test_create_uint16(self):
+    def test_create_uint16(self) -> None:
         o = wf.PropertyValue.create_uint16(65000)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT16)
@@ -38,7 +38,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint16(2**16))
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint16(-1))
 
-    def test_create_int32(self):
+    def test_create_int32(self) -> None:
         o = wf.PropertyValue.create_int32(-2147483640)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT32)
@@ -48,7 +48,7 @@ class TestPropertyValue(unittest.TestCase):
             OverflowError, lambda: wf.PropertyValue.create_int32(-(2**31 + 1))
         )
 
-    def test_create_uint32(self):
+    def test_create_uint32(self) -> None:
         o = wf.PropertyValue.create_uint32(4294967290)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT32)
@@ -56,7 +56,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint32(2**32))
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint32(-1))
 
-    def test_create_int64(self):
+    def test_create_int64(self) -> None:
         o = wf.PropertyValue.create_int64(-9223372036854775800)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT64)
@@ -66,7 +66,7 @@ class TestPropertyValue(unittest.TestCase):
             OverflowError, lambda: wf.PropertyValue.create_int32(-(2**63 + 1))
         )
 
-    def test_create_uint64(self):
+    def test_create_uint64(self) -> None:
         o = wf.PropertyValue.create_uint64(18446744073709551610)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT64)
@@ -74,31 +74,31 @@ class TestPropertyValue(unittest.TestCase):
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint64(2**64))
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint64(-1))
 
-    def test_create_single(self):
+    def test_create_single(self) -> None:
         o = wf.PropertyValue.create_single(3.14)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.SINGLE)
         self.assertAlmostEqual(ipv.get_single(), 3.14, 5)
 
-    def test_create_double(self):
+    def test_create_double(self) -> None:
         o = wf.PropertyValue.create_double(3.14)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.DOUBLE)
         self.assertEqual(ipv.get_double(), 3.14)
 
-    def test_create_char16(self):
+    def test_create_char16(self) -> None:
         o = wf.PropertyValue.create_char16("c")
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.CHAR16)
         self.assertEqual(ipv.get_char16(), "c")
 
-    def test_create_boolean(self):
+    def test_create_boolean(self) -> None:
         o = wf.PropertyValue.create_boolean(True)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.BOOLEAN)
         self.assertTrue(ipv.get_boolean())
 
-    def test_create_string(self):
+    def test_create_string(self) -> None:
         o = wf.PropertyValue.create_string("Ni!")
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.STRING)
@@ -106,28 +106,28 @@ class TestPropertyValue(unittest.TestCase):
 
     # # TODO: CreateInspectable
 
-    def test_create_datetime(self):
+    def test_create_datetime(self) -> None:
         now = datetime.now(UTC)
         o = wf.PropertyValue.create_date_time(now)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.DATE_TIME)
         self.assertEqual(ipv.get_date_time(), now)
 
-    def test_create_TimeSpan(self):
+    def test_create_TimeSpan(self) -> None:
         td = timedelta(days=-1, seconds=2, microseconds=3)
         o = wf.PropertyValue.create_time_span(td)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.TIME_SPAN)
         self.assertEqual(ipv.get_time_span(), td)
 
-    def test_create_Guid(self):
+    def test_create_Guid(self) -> None:
         u = UUID("01234567-89ab-cdef-0123456789abcdef")
         o = wf.PropertyValue.create_guid(u)
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.GUID)
         self.assertEqual(ipv.get_guid(), u)
 
-    def test_create_Point(self):
+    def test_create_Point(self) -> None:
         o = wf.PropertyValue.create_point(wf.Point(2, 4))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.POINT)
@@ -135,7 +135,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(s.x, 2)
         self.assertEqual(s.y, 4)
 
-    def test_create_Size(self):
+    def test_create_Size(self) -> None:
         o = wf.PropertyValue.create_size(wf.Size(2, 4))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.SIZE)
@@ -143,7 +143,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(s.width, 2)
         self.assertEqual(s.height, 4)
 
-    def test_create_Rect(self):
+    def test_create_Rect(self) -> None:
         o = wf.PropertyValue.create_rect(wf.Rect(2, 4, 6, 8))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.RECT)
@@ -153,7 +153,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(s.width, 6)
         self.assertEqual(s.height, 8)
 
-    def test_create_uint8_array(self):
+    def test_create_uint8_array(self) -> None:
         o = wf.PropertyValue.create_uint8_array(bytes([1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT8_ARRAY)
@@ -162,7 +162,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_int16_array(self):
+    def test_create_int16_array(self) -> None:
         o = wf.PropertyValue.create_int16_array(array("h", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT16_ARRAY)
@@ -171,7 +171,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_uint16_array(self):
+    def test_create_uint16_array(self) -> None:
         o = wf.PropertyValue.create_uint16_array(array("H", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT16_ARRAY)
@@ -180,7 +180,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_int32_array(self):
+    def test_create_int32_array(self) -> None:
         o = wf.PropertyValue.create_int32_array(array("i", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT32_ARRAY)
@@ -189,7 +189,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_uint32_array(self):
+    def test_create_uint32_array(self) -> None:
         o = wf.PropertyValue.create_uint32_array(array("I", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT32_ARRAY)
@@ -198,7 +198,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_int64_array(self):
+    def test_create_int64_array(self) -> None:
         o = wf.PropertyValue.create_int64_array(array("q", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT64_ARRAY)
@@ -207,7 +207,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_uint64_array(self):
+    def test_create_uint64_array(self) -> None:
         o = wf.PropertyValue.create_uint64_array(array("Q", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.UINT64_ARRAY)
@@ -216,7 +216,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_double_array(self):
+    def test_create_double_array(self) -> None:
         o = wf.PropertyValue.create_double_array(array("d", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.DOUBLE_ARRAY)
@@ -225,7 +225,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_single_array(self):
+    def test_create_single_array(self) -> None:
         o = wf.PropertyValue.create_single_array(array("f", [1, 2, 3, 4, 5]))
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.SINGLE_ARRAY)
@@ -234,7 +234,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], x + 1)
 
-    def test_create_char16_array(self):
+    def test_create_char16_array(self) -> None:
         o = wf.PropertyValue.create_char16_array(
             Array(Char16, ["A", "B", "C", "D", "E"])
         )
@@ -245,7 +245,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], chr(x + ord("A")))
 
-    def test_create_guid_array(self):
+    def test_create_guid_array(self) -> None:
         uuids = [uuid4() for _ in range(5)]
         o = wf.PropertyValue.create_guid_array(Array(UUID, uuids))
         ipv = o.as_(wf.IPropertyValue)
@@ -255,7 +255,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], uuids[x])
 
-    def test_create_date_time_array(self):
+    def test_create_date_time_array(self) -> None:
         now = [datetime.now(UTC) for _ in range(5)]
         o = wf.PropertyValue.create_date_time_array(Array(datetime, now))
         ipv = o.as_(wf.IPropertyValue)
@@ -265,7 +265,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], now[x])
 
-    def test_create_time_span_array(self):
+    def test_create_time_span_array(self) -> None:
         times = [timedelta(x) for x in range(5)]
         o = wf.PropertyValue.create_time_span_array(Array(timedelta, times))
         ipv = o.as_(wf.IPropertyValue)
@@ -275,7 +275,7 @@ class TestPropertyValue(unittest.TestCase):
         for x in range(5):
             self.assertEqual(a[x], times[x])
 
-    def test_create_point_array(self):
+    def test_create_point_array(self) -> None:
         actual = [wf.Point(x, x + 1) for x in range(5)]
         o = wf.PropertyValue.create_point_array(Array(wf.Point, actual))
         ipv = o.as_(wf.IPropertyValue)
@@ -286,7 +286,7 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x].x, actual[x].x)
             self.assertEqual(a[x].y, actual[x].y)
 
-    def test_create_size_array(self):
+    def test_create_size_array(self) -> None:
         actual = [wf.Size(x, x + 1) for x in range(5)]
         o = wf.PropertyValue.create_size_array(Array(wf.Size, actual))
         ipv = o.as_(wf.IPropertyValue)
@@ -297,7 +297,7 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x].width, actual[x].width)
             self.assertEqual(a[x].height, actual[x].height)
 
-    def test_create_rect_array(self):
+    def test_create_rect_array(self) -> None:
         actual = [wf.Rect(x, x + 1, x + 2, x + 3) for x in range(5)]
         o = wf.PropertyValue.create_rect_array(Array(wf.Rect, actual))
         ipv = o.as_(wf.IPropertyValue)

@@ -6,12 +6,12 @@ import winrt.windows.storage.streams as wss
 
 
 class TestBuffer(unittest.TestCase):
-    def test_new(self):
+    def test_new(self) -> None:
         buf = wss.Buffer(5)
         self.assertEqual(buf.length, 0)
         self.assertEqual(buf.capacity, 5)
 
-    def test_buffer_protocol(self):
+    def test_buffer_protocol(self) -> None:
         buf = wss.Buffer(5)
         with memoryview(buf) as mv:
             self.assertEqual(len(mv), 0)
@@ -20,7 +20,7 @@ class TestBuffer(unittest.TestCase):
         with memoryview(buf) as mv:
             self.assertEqual(len(mv), 5)
 
-    def test_memory_buffer(self):
+    def test_memory_buffer(self) -> None:
         data = b"ABCDE"
 
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(data)
@@ -56,10 +56,10 @@ class TestBuffer(unittest.TestCase):
             self.assertEqual(len(mv), 0)
 
     @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
-    def test_is_collections_abc_buffer_subclass(self):
+    def test_is_collections_abc_buffer_subclass(self) -> None:
         from collections.abc import Buffer
 
-        self.assertTrue(issubclass(wss.Buffer, Buffer))  # type: ignore
+        self.assertTrue(issubclass(wss.Buffer, Buffer))
         # FIXME: IMemoryBufferReference is not currently runtime-checkable
         # due to missing __buffer__ method.
         # self.assertTrue(issubclass(wf.IMemoryBufferReference, Buffer))  # type: ignore
