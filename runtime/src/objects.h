@@ -51,4 +51,6 @@ namespace py::interp
         projection& proj, type_entry& entry, table::type_view const& record);
 
     void set_parameterized_type_error(char const* name) noexcept;
+
+    PyObject* deprecated_from(PyObject* cls, PyObject* arg) noexcept;
 } // namespace py::interp

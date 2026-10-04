@@ -35,7 +35,7 @@ class DesktopWindowXamlSourceNative:
         )
 
     @classmethod
-    def _from(cls, obj: Object) -> Self:
+    def _from_(cls, obj: Object) -> Self:
         self = super().__new__(cls)
         self._native = _runtime.as_interface(obj, _IID_IDESKTOPWINDOWXAMLSOURCENATIVE)
         return self

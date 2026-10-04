@@ -15,6 +15,7 @@ import importlib
 import sys
 import unittest
 import uuid
+from typing import Any
 
 import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
@@ -53,6 +54,19 @@ class TestClasses(unittest.TestCase):
     def test_a_class_that_cannot_be_activated(self) -> None:
         with self.assertRaises(TypeError):
             tc.TestRunner()
+
+    def test_from_is_a_deprecated_alias_of_from_(self) -> None:
+        uri = wf.Uri("https://example.com")
+        # neither name is in the type hints
+        classes: tuple[Any, ...] = (wf.IStringable, wf.Uri, Object)
+
+        for cls in classes:
+            with self.subTest(cls=cls):
+                with self.assertWarns(DeprecationWarning):
+                    seen = cls._from(uri)
+
+                self.assertIs(type(seen), type(cls._from_(uri)))
+                self.assertEqual(seen, uri)
 
     def test_a_member_of_a_required_interface(self) -> None:
         # Class implements IRequiredOne, which is not its default interface, so
