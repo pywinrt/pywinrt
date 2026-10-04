@@ -204,7 +204,7 @@ class Array(collections.abc.Sequence[_T]):
     def __init__(
         self,
         type: TypeForm[_T],
-        initializer: tuple[_T],
+        initializer: tuple[_T, ...],
         /,
     ) -> None: ...
     @overload
@@ -212,7 +212,7 @@ class Array(collections.abc.Sequence[_T]):
     def __init__(
         self,
         type: str,
-        initializer: int | Buffer | list[Any] | tuple[Any],
+        initializer: int | Buffer | list[Any] | tuple[Any, ...],
     ) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
