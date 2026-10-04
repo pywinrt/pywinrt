@@ -427,24 +427,12 @@ static class FileWriters
     {
         var wroteAny = false;
 
-        if (body.Contains("_asyncio."))
-        {
-            wroteAny = true;
-            w.WriteLine("import asyncio as _asyncio");
-        }
-
         // collections.abc is aliased because WinRT has members named
         // "collections" that would shadow the module inside a class body.
         if (body.Contains("_cabc."))
         {
             wroteAny = true;
             w.WriteLine("import collections.abc as _cabc");
-        }
-
-        if (body.Contains("_contextvars."))
-        {
-            wroteAny = true;
-            w.WriteLine("import contextvars as _contextvars");
         }
 
         if (body.Contains("datetime."))
