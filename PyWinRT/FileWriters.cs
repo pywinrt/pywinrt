@@ -228,10 +228,11 @@ static class FileWriters
     /// </summary>
     /// <param name="forStub">
     /// Whether this is <c>__init__.pyi</c> rather than <c>__init__.py</c>. A
-    /// stub is read and not executed, so it says <c>typing.TypeAlias</c> and
-    /// names a type from another namespace directly. The aliases in
-    /// <c>__init__.py</c> are assignments evaluated when the module is
-    /// imported, and it only imports those namespaces while type checking -
+    /// stub is read and not executed, so it declares each alias with a
+    /// <c>type</c> statement, which scopes a generic delegate's parameters to
+    /// the alias, and names a type from another namespace directly. The
+    /// aliases in <c>__init__.py</c> are assignments evaluated when the module
+    /// is imported, and it only imports those namespaces while type checking -
     /// not every package a namespace refers to is necessarily installed - so
     /// there the names are quoted.
     /// </param>
@@ -269,7 +270,6 @@ static class FileWriters
             // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
             // instead of ToPyReturnTyping(). For now, this isn't a problem outside
             // of the TestComponent modules since most callbacks only return None or bool.
-            var alias = forStub ? ": typing.TypeAlias" : "";
 
             // The runtime ignores what a handler for a delegate with no outputs
             // hands back, so it may return anything, which is how typeshed
@@ -285,8 +285,10 @@ static class FileWriters
                         quoteImportedTypes: !forStub
                     );
 
+            var declaration = forStub ? $"type {type.Name}{type.Type.PyTypeParameters}" : type.Name;
+
             w.WriteLine(
-                $"{type.Name}{alias} = typing.Callable[[{string.Join(", ", paramTypes)}], {returnTyping}]"
+                $"{declaration} = typing.Callable[[{string.Join(", ", paramTypes)}], {returnTyping}]"
             );
         }
     }
@@ -371,19 +373,6 @@ static class FileWriters
 
         w.WriteBlankLine();
         w.WriteAll(members, allExtensionTypes);
-
-        foreach (
-            var type in members
-                .Interfaces.SelectMany(i => i.Type.GenericParameters.Select(p => p.Name))
-                .Concat(
-                    members.Delegates.SelectMany(d => d.Type.GenericParameters.Select(p => p.Name))
-                )
-                .Distinct()
-                .Order()
-        )
-        {
-            w.WriteLine($"{type} = typing.TypeVar('{type}')");
-        }
 
         w.WriteEnums(members);
         w.WriteBlankLine();

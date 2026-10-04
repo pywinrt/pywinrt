@@ -217,15 +217,6 @@ static class ObjectWriterExtensions
             )
         );
 
-        var generic = "";
-
-        // typing.Generic is redundant when there is a collection type
-        if (type.IsGeneric && string.IsNullOrEmpty(collection))
-        {
-            generic =
-                $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p), packageMap)))}]";
-        }
-
         if (!type.IsComposable)
         {
             w.WriteLine("@typing.final");
@@ -237,7 +228,7 @@ static class ObjectWriterExtensions
         }
 
         w.WriteLine(
-            $"class {type.Name}({type.Type.BaseType?.ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.BaseType), packageMap) ?? "winrt.system.Object"}{interfaces}{collection}{generic}{metaclass}):"
+            $"class {type.Name}{type.Type.PyTypeParameters}({type.Type.BaseType?.ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.BaseType), packageMap) ?? "winrt.system.Object"}{interfaces}{collection}{metaclass}):"
         );
         w.Indent++;
 

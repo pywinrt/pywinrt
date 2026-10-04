@@ -30,6 +30,18 @@ static class TypeExtensions
         public bool IsStaticClass =>
             type.GetCategory() == Category.Class
             && type.Attributes.HasFlag(TypeAttributes.Abstract);
+
+        /// <summary>
+        /// The PEP 695 type parameter list a stub declares a generic type
+        /// with, such as <c>[K, V]</c>, or nothing for a type that is not
+        /// generic. A stub is read and not executed, so it can use the syntax
+        /// whatever the runtime floor is, and the parameters are then scoped
+        /// to the type rather than module-level TypeVars.
+        /// </summary>
+        public string PyTypeParameters =>
+            type.HasGenericParameters
+                ? $"[{string.Join(", ", type.GenericParameters.Select(p => p.Name))}]"
+                : "";
     }
 
     /// <summary>

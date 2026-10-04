@@ -59,15 +59,6 @@ static class InterfaceWriterExtensions
 
         baseTypes.Add("winrt._winrt.IInspectable");
 
-        // typing.Generic is written last because that is where a stub is
-        // expected to name it and where the type parameters read best
-        if (type.IsGeneric && !type.Interfaces.Any(i => i.ContainsGenericParameter))
-        {
-            baseTypes.Add(
-                $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p), packageMap)))}]"
-            );
-        }
-
         // An interface that declares no members of its own but inherits
         // abstract ones from a required interface is not abstract as far as
         // mypy is concerned, so it reports the inherited members as
@@ -81,7 +72,9 @@ static class InterfaceWriterExtensions
             w.WriteDeprecated(type.DeprecatedMessage);
         }
 
-        w.WriteLine($"class {type.Name}({string.Join(", ", baseTypes)}):{typeIgnore}");
+        w.WriteLine(
+            $"class {type.Name}{type.Type.PyTypeParameters}({string.Join(", ", baseTypes)}):{typeIgnore}"
+        );
         w.Indent++;
 
         if (type.Namespace == "Windows.Foundation" && type.Name == "IClosable")
