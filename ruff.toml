@@ -6,18 +6,17 @@
 # hundred undefined names.
 target-version = "py311"
 
+# The generated stubs declare their type parameters with PEP 695 syntax, which
+# ruff checks against the target version although a stub is never executed.
+[per-file-target-version]
+"projection/**/*.pyi" = "py312"
+
 [lint]
 select = [
     # pyupgrade: the 3.11 floor makes the legacy typing spellings unnecessary
     "UP",
     # flake8-pyi: the conventions that a type stub is read by
     "PYI",
-]
-ignore = [
-    # The generated TypeVars - T, K, V, TResult, TProgress - are module-level
-    # names that the namespace package exports, so giving them the underscore
-    # that a stub-private name wants would change what the package exports.
-    "PYI001",
 ]
 
 [lint.per-file-ignores]
