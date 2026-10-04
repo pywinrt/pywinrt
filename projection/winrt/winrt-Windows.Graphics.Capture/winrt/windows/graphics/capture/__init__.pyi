@@ -41,7 +41,7 @@ class GraphicsCaptureDirtyRegionMode(enum.IntEnum):
     REPORT_AND_RENDER = 1
 
 @typing.final
-class Direct3D11CaptureFrame(winrt.system.Object, windows_foundation.IClosable):
+class Direct3D11CaptureFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Capture.Direct3D11CaptureFrame::Close()
@@ -73,7 +73,7 @@ class Direct3D11CaptureFramePool_Static(winrt._winrt.Object_Static):
     def create_free_threaded(cls, device: windows_graphics_directx_direct3d11.IDirect3DDevice, pixel_format: windows_graphics_directx.DirectXPixelFormat, number_of_buffers: winrt.system.Int32, size: windows_graphics.SizeInt32 | tuple[winrt.system.Int32, winrt.system.Int32], /) -> Direct3D11CaptureFramePool: ...
 
 @typing.final
-class Direct3D11CaptureFramePool(winrt.system.Object, windows_foundation.IClosable, metaclass=Direct3D11CaptureFramePool_Static):
+class Direct3D11CaptureFramePool(windows_foundation.IClosable, winrt.system.Object, metaclass=Direct3D11CaptureFramePool_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Capture.Direct3D11CaptureFramePool::Close()
@@ -135,7 +135,7 @@ class GraphicsCaptureSession_Static(winrt._winrt.Object_Static):
     def is_supported(cls) -> bool: ...
 
 @typing.final
-class GraphicsCaptureSession(winrt.system.Object, windows_foundation.IClosable, metaclass=GraphicsCaptureSession_Static):
+class GraphicsCaptureSession(windows_foundation.IClosable, winrt.system.Object, metaclass=GraphicsCaptureSession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Capture.GraphicsCaptureSession::Close()
@@ -179,7 +179,7 @@ class GraphicsCaptureSession(winrt.system.Object, windows_foundation.IClosable, 
 @typing.final
 class _IDisplayGraphicsCaptureSession: ...
 
-class IDisplayGraphicsCaptureSession(winrt._winrt.IInspectable):
+class IDisplayGraphicsCaptureSession(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowId> Windows.Graphics.Capture.IDisplayGraphicsCaptureSession::GetWindowExclusionList()
     @abstractmethod
     def get_window_exclusion_list(self) -> _cabc.Sequence[windows_ui.WindowId]: ...

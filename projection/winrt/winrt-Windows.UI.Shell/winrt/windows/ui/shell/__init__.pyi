@@ -226,7 +226,7 @@ class WindowTabCloseRequestedEventArgs(winrt.system.Object):
     def tab(self) -> WindowTab: ...
 
 @typing.final
-class WindowTabCollection(winrt.system.Object, winrt._winrt.MutableSequence[WindowTab]):
+class WindowTabCollection(winrt._winrt.MutableSequence[WindowTab], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[WindowTab]: ...
     @typing.overload
@@ -382,7 +382,7 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
 @typing.final
 class _IAdaptiveCard: ...
 
-class IAdaptiveCard(winrt._winrt.IInspectable):
+class IAdaptiveCard(winrt.system.Object):
     # System.String Windows.UI.Shell.IAdaptiveCard::ToJson()
     @abstractmethod
     def to_json(self) -> str: ...
@@ -390,7 +390,7 @@ class IAdaptiveCard(winrt._winrt.IInspectable):
 @typing.final
 class _IAdaptiveCardBuilderStatics: ...
 
-class IAdaptiveCardBuilderStatics(winrt._winrt.IInspectable):
+class IAdaptiveCardBuilderStatics(winrt.system.Object):
     # Windows.UI.Shell.IAdaptiveCard Windows.UI.Shell.IAdaptiveCardBuilderStatics::CreateAdaptiveCardFromJson(System.String)
     @abstractmethod
     def create_adaptive_card_from_json(self, value: str, /) -> IAdaptiveCard: ...

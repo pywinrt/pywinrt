@@ -318,7 +318,7 @@ class UserNotificationChangedKind(enum.IntEnum):
     REMOVED = 1
 
 @typing.final
-class AdaptiveNotificationText(winrt.system.Object, IAdaptiveNotificationContent):
+class AdaptiveNotificationText(IAdaptiveNotificationContent, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.AdaptiveNotificationText::get_Hints()
     @_property
@@ -1189,7 +1189,7 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
 @typing.final
 class _IAdaptiveNotificationContent: ...
 
-class IAdaptiveNotificationContent(winrt._winrt.IInspectable):
+class IAdaptiveNotificationContent(winrt.system.Object):
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.UI.Notifications.IAdaptiveNotificationContent::get_Hints()
     @_property
     @abstractmethod

@@ -324,7 +324,7 @@ class VpnChannelConfiguration(winrt.system.Object):
     def server_uris(self) -> _cabc.Sequence[windows_foundation.Uri]: ...
 
 @typing.final
-class VpnCredential(winrt.system.Object, IVpnCredential):
+class VpnCredential(IVpnCredential, winrt.system.Object):
     # System.String Windows.Networking.Vpn.VpnCredential::get_AdditionalPin()
     @_property
     def additional_pin(self) -> str: ...
@@ -339,7 +339,7 @@ class VpnCredential(winrt.system.Object, IVpnCredential):
     def passkey_credential(self) -> windows_security_credentials.PasswordCredential: ...
 
 @typing.final
-class VpnCustomCheckBox(winrt.system.Object, IVpnCustomPrompt):
+class VpnCustomCheckBox(IVpnCustomPrompt, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.Vpn.VpnCustomCheckBox::get_InitialCheckState()
     @_property
@@ -370,7 +370,7 @@ class VpnCustomCheckBox(winrt.system.Object, IVpnCustomPrompt):
     def bordered(self, value: bool) -> None: ...
 
 @typing.final
-class VpnCustomComboBox(winrt.system.Object, IVpnCustomPrompt):
+class VpnCustomComboBox(IVpnCustomPrompt, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Networking.Vpn.VpnCustomComboBox::get_OptionsText()
     @_property
@@ -401,7 +401,7 @@ class VpnCustomComboBox(winrt.system.Object, IVpnCustomPrompt):
     def bordered(self, value: bool) -> None: ...
 
 @typing.final
-class VpnCustomEditBox(winrt.system.Object, IVpnCustomPrompt):
+class VpnCustomEditBox(IVpnCustomPrompt, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.Vpn.VpnCustomEditBox::get_NoEcho()
     @_property
@@ -438,7 +438,7 @@ class VpnCustomEditBox(winrt.system.Object, IVpnCustomPrompt):
     def bordered(self, value: bool) -> None: ...
 
 @typing.final
-class VpnCustomErrorBox(winrt.system.Object, IVpnCustomPrompt):
+class VpnCustomErrorBox(IVpnCustomPrompt, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Networking.Vpn.VpnCustomErrorBox::get_Label()
     @_property
@@ -460,7 +460,7 @@ class VpnCustomErrorBox(winrt.system.Object, IVpnCustomPrompt):
     def bordered(self, value: bool) -> None: ...
 
 @typing.final
-class VpnCustomPromptBooleanInput(winrt.system.Object, IVpnCustomPromptElement):
+class VpnCustomPromptBooleanInput(IVpnCustomPromptElement, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.Vpn.VpnCustomPromptBooleanInput::get_InitialValue()
     @_property
@@ -491,7 +491,7 @@ class VpnCustomPromptBooleanInput(winrt.system.Object, IVpnCustomPromptElement):
     def compulsory(self, value: bool) -> None: ...
 
 @typing.final
-class VpnCustomPromptOptionSelector(winrt.system.Object, IVpnCustomPromptElement):
+class VpnCustomPromptOptionSelector(IVpnCustomPromptElement, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.Vpn.VpnCustomPromptOptionSelector::get_Emphasized()
     @_property
@@ -519,7 +519,7 @@ class VpnCustomPromptOptionSelector(winrt.system.Object, IVpnCustomPromptElement
     def selected_index(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class VpnCustomPromptText(winrt.system.Object, IVpnCustomPromptElement):
+class VpnCustomPromptText(IVpnCustomPromptElement, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.Vpn.VpnCustomPromptText::get_Emphasized()
     @_property
@@ -547,7 +547,7 @@ class VpnCustomPromptText(winrt.system.Object, IVpnCustomPromptElement):
     def text(self, value: str) -> None: ...
 
 @typing.final
-class VpnCustomPromptTextInput(winrt.system.Object, IVpnCustomPromptElement):
+class VpnCustomPromptTextInput(IVpnCustomPromptElement, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Networking.Vpn.VpnCustomPromptTextInput::get_Emphasized()
     @_property
@@ -584,7 +584,7 @@ class VpnCustomPromptTextInput(winrt.system.Object, IVpnCustomPromptElement):
     def text(self) -> str: ...
 
 @typing.final
-class VpnCustomTextBox(winrt.system.Object, IVpnCustomPrompt):
+class VpnCustomTextBox(IVpnCustomPrompt, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Networking.Vpn.VpnCustomTextBox::get_Label()
     @_property
@@ -650,7 +650,7 @@ class VpnDomainNameInfo(winrt.system.Object):
     def web_proxy_uris(self) -> _cabc.MutableSequence[windows_foundation.Uri]: ...
 
 @typing.final
-class VpnForegroundActivatedEventArgs(winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs):
+class VpnForegroundActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Networking.Vpn.VpnForegroundActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -745,7 +745,7 @@ class VpnNamespaceInfo(winrt.system.Object):
     def dns_servers(self, value: _cabc.MutableSequence[windows_networking.HostName]) -> None: ...
 
 @typing.final
-class VpnNativeProfile(winrt.system.Object, IVpnProfile):
+class VpnNativeProfile(IVpnProfile, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Networking.Vpn.VpnAuthenticationMethod Windows.Networking.Vpn.VpnNativeProfile::get_UserAuthenticationMethod()
     @_property
@@ -886,7 +886,7 @@ class VpnPickedCredential(winrt.system.Object):
     def passkey_credential(self) -> windows_security_credentials.PasswordCredential: ...
 
 @typing.final
-class VpnPlugInProfile(winrt.system.Object, IVpnProfile):
+class VpnPlugInProfile(IVpnProfile, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Networking.Vpn.VpnPlugInProfile::get_VpnPluginPackageFamilyName()
     @_property
@@ -1058,7 +1058,7 @@ class VpnTrafficFilterAssignment(winrt.system.Object):
 @typing.final
 class _IVpnChannelStatics: ...
 
-class IVpnChannelStatics(winrt._winrt.IInspectable):
+class IVpnChannelStatics(winrt.system.Object):
     # System.Void Windows.Networking.Vpn.IVpnChannelStatics::ProcessEventAsync(System.Object,System.Object)
     @abstractmethod
     def process_event_async(self, third_party_plug_in: winrt.system.Object, event: winrt.system.Object, /) -> None: ...
@@ -1066,7 +1066,7 @@ class IVpnChannelStatics(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnCredential: ...
 
-class IVpnCredential(winrt._winrt.IInspectable):
+class IVpnCredential(winrt.system.Object):
     # System.String Windows.Networking.Vpn.IVpnCredential::get_AdditionalPin()
     @_property
     @abstractmethod
@@ -1087,7 +1087,7 @@ class IVpnCredential(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnCustomPrompt: ...
 
-class IVpnCustomPrompt(winrt._winrt.IInspectable):
+class IVpnCustomPrompt(winrt.system.Object):
     # System.Boolean Windows.Networking.Vpn.IVpnCustomPrompt::get_Bordered()
     @_property
     @abstractmethod
@@ -1116,7 +1116,7 @@ class IVpnCustomPrompt(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnCustomPromptElement: ...
 
-class IVpnCustomPromptElement(winrt._winrt.IInspectable):
+class IVpnCustomPromptElement(winrt.system.Object):
     # System.Boolean Windows.Networking.Vpn.IVpnCustomPromptElement::get_Compulsory()
     @_property
     @abstractmethod
@@ -1145,7 +1145,7 @@ class IVpnCustomPromptElement(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnDomainNameInfoFactory: ...
 
-class IVpnDomainNameInfoFactory(winrt._winrt.IInspectable):
+class IVpnDomainNameInfoFactory(winrt.system.Object):
     # Windows.Networking.Vpn.VpnDomainNameInfo Windows.Networking.Vpn.IVpnDomainNameInfoFactory::CreateVpnDomainNameInfo(System.String,Windows.Networking.Vpn.VpnDomainNameType,Windows.Foundation.Collections.IIterable`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IIterable`1<Windows.Networking.HostName>)
     @abstractmethod
     def create_vpn_domain_name_info(self, name: str, name_type: VpnDomainNameType, dns_server_list: _cabc.Iterable[windows_networking.HostName], proxy_server_list: _cabc.Iterable[windows_networking.HostName], /) -> VpnDomainNameInfo: ...
@@ -1153,7 +1153,7 @@ class IVpnDomainNameInfoFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnInterfaceIdFactory: ...
 
-class IVpnInterfaceIdFactory(winrt._winrt.IInspectable):
+class IVpnInterfaceIdFactory(winrt.system.Object):
     # Windows.Networking.Vpn.VpnInterfaceId Windows.Networking.Vpn.IVpnInterfaceIdFactory::CreateVpnInterfaceId(System.Byte[])
     @abstractmethod
     def create_vpn_interface_id(self, address: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> VpnInterfaceId: ...
@@ -1161,7 +1161,7 @@ class IVpnInterfaceIdFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnNamespaceInfoFactory: ...
 
-class IVpnNamespaceInfoFactory(winrt._winrt.IInspectable):
+class IVpnNamespaceInfoFactory(winrt.system.Object):
     # Windows.Networking.Vpn.VpnNamespaceInfo Windows.Networking.Vpn.IVpnNamespaceInfoFactory::CreateVpnNamespaceInfo(System.String,Windows.Foundation.Collections.IVector`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IVector`1<Windows.Networking.HostName>)
     @abstractmethod
     def create_vpn_namespace_info(self, name: str, dns_server_list: _cabc.MutableSequence[windows_networking.HostName], proxy_server_list: _cabc.MutableSequence[windows_networking.HostName], /) -> VpnNamespaceInfo: ...
@@ -1169,7 +1169,7 @@ class IVpnNamespaceInfoFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnPacketBufferFactory: ...
 
-class IVpnPacketBufferFactory(winrt._winrt.IInspectable):
+class IVpnPacketBufferFactory(winrt.system.Object):
     # Windows.Networking.Vpn.VpnPacketBuffer Windows.Networking.Vpn.IVpnPacketBufferFactory::CreateVpnPacketBuffer(Windows.Networking.Vpn.VpnPacketBuffer,System.UInt32,System.UInt32)
     @abstractmethod
     def create_vpn_packet_buffer(self, parent_buffer: VpnPacketBuffer, offset: winrt.system.UInt32, length: winrt.system.UInt32, /) -> VpnPacketBuffer: ...
@@ -1177,7 +1177,7 @@ class IVpnPacketBufferFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnPlugIn: ...
 
-class IVpnPlugIn(winrt._winrt.IInspectable):
+class IVpnPlugIn(winrt.system.Object):
     # System.Void Windows.Networking.Vpn.IVpnPlugIn::Connect(Windows.Networking.Vpn.VpnChannel)
     @abstractmethod
     def connect(self, channel: VpnChannel, /) -> None: ...
@@ -1197,7 +1197,7 @@ class IVpnPlugIn(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnPlugInReconnectTransport: ...
 
-class IVpnPlugInReconnectTransport(winrt._winrt.IInspectable):
+class IVpnPlugInReconnectTransport(winrt.system.Object):
     # System.Void Windows.Networking.Vpn.IVpnPlugInReconnectTransport::ReconnectTransport(Windows.Networking.Vpn.VpnChannel,System.Object)
     @abstractmethod
     def reconnect_transport(self, channel: VpnChannel, context: winrt.system.Object, /) -> None: ...
@@ -1205,7 +1205,7 @@ class IVpnPlugInReconnectTransport(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnProfile: ...
 
-class IVpnProfile(winrt._winrt.IInspectable):
+class IVpnProfile(winrt.system.Object):
     # System.Boolean Windows.Networking.Vpn.IVpnProfile::get_AlwaysOn()
     @_property
     @abstractmethod
@@ -1250,7 +1250,7 @@ class IVpnProfile(winrt._winrt.IInspectable):
 @typing.final
 class _IVpnRouteFactory: ...
 
-class IVpnRouteFactory(winrt._winrt.IInspectable):
+class IVpnRouteFactory(winrt.system.Object):
     # Windows.Networking.Vpn.VpnRoute Windows.Networking.Vpn.IVpnRouteFactory::CreateVpnRoute(Windows.Networking.HostName,System.Byte)
     @abstractmethod
     def create_vpn_route(self, address: windows_networking.HostName, prefix_size: winrt.system.UInt8, /) -> VpnRoute: ...

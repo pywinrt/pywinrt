@@ -487,7 +487,7 @@ class Colors(winrt.system.Object, metaclass=Colors_Static):
 @typing.final
 class _IClosableNotifier: ...
 
-class IClosableNotifier(winrt._winrt.IInspectable):
+class IClosableNotifier(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     @abstractmethod
     def add_closed(self, handler: ClosableNotifierHandler, /) -> windows_foundation.EventRegistrationToken: ...

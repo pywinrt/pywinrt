@@ -28,7 +28,7 @@ class McpMessageFilterResponse(winrt.system.Object):
 @typing.final
 class _IMcpMessageFilterExperimental: ...
 
-class IMcpMessageFilterExperimental(winrt._winrt.IInspectable):
+class IMcpMessageFilterExperimental(winrt.system.Object):
     # System.Void Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental::Initialize(System.String,System.UInt32,System.String,System.String,System.UInt32)
     @abstractmethod
     def initialize(self, client_app_user_model_id: str, client_process_id: winrt.system.UInt32, server_identity: str, server_name: str, server_process_id: winrt.system.UInt32, /) -> None: ...
@@ -39,7 +39,7 @@ class IMcpMessageFilterExperimental(winrt._winrt.IInspectable):
 @typing.final
 class _IMcpMessageFilterExperimental2: ...
 
-class IMcpMessageFilterExperimental2(winrt._winrt.IInspectable):
+class IMcpMessageFilterExperimental2(winrt.system.Object):
     # System.Boolean Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2::Initialize(System.String,System.UInt32,System.String,System.UInt32,System.String)
     @abstractmethod
     def initialize(self, client_process_identifier: str, client_process_id: winrt.system.UInt32, server_process_identifier: str, server_process_id: winrt.system.UInt32, server_id: str, /) -> bool: ...
@@ -50,7 +50,7 @@ class IMcpMessageFilterExperimental2(winrt._winrt.IInspectable):
 @typing.final
 class _IMcpMessageFilterResponseExperimental: ...
 
-class IMcpMessageFilterResponseExperimental(winrt._winrt.IInspectable):
+class IMcpMessageFilterResponseExperimental(winrt.system.Object):
     # System.Boolean Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental::get_IsAllowed()
     @_property
     @abstractmethod
@@ -71,7 +71,7 @@ class IMcpMessageFilterResponseExperimental(winrt._winrt.IInspectable):
 @typing.final
 class _IMcpMessageFilterResponseExperimental2: ...
 
-class IMcpMessageFilterResponseExperimental2(winrt._winrt.IInspectable):
+class IMcpMessageFilterResponseExperimental2(winrt.system.Object):
     # System.Void Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2::Allow()
     @abstractmethod
     def allow(self) -> None: ...

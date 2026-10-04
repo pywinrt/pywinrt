@@ -182,7 +182,7 @@ class SmsEncodedLength:
 
 @typing.final
 @deprecated("DeleteSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
-class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
+class DeleteSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Close()
@@ -207,7 +207,7 @@ class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAc
 
 @typing.final
 @deprecated("DeleteSmsMessagesOperation may be altered or unavailable for releases after Windows 10.")
-class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
+class DeleteSmsMessagesOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Close()
@@ -232,7 +232,7 @@ class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncA
 
 @typing.final
 @deprecated("GetSmsDeviceOperation may be altered or unavailable for releases after Windows 10.")
-class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.IAsyncOperation[SmsDevice], windows_foundation.IAsyncInfo):
+class GetSmsDeviceOperation(windows_foundation.IAsyncOperation[SmsDevice], windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Close()
@@ -257,7 +257,7 @@ class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.IAsyncOperat
 
 @typing.final
 @deprecated("GetSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
-class GetSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncOperation[ISmsMessage], windows_foundation.IAsyncInfo):
+class GetSmsMessageOperation(windows_foundation.IAsyncOperation[ISmsMessage], windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Close()
@@ -282,7 +282,7 @@ class GetSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncOpera
 
 @typing.final
 @deprecated("GetSmsMessagesOperation may be altered or unavailable for releases after Windows 10.")
-class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncOperationWithProgress[_cabc.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.IAsyncInfo):
+class GetSmsMessagesOperation(windows_foundation.IAsyncOperationWithProgress[_cabc.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Close()
@@ -313,7 +313,7 @@ class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.IAsyncOper
 
 @typing.final
 @deprecated("SendSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
-class SendSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo):
+class SendSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Close()
@@ -337,7 +337,7 @@ class SendSmsMessageOperation(winrt.system.Object, windows_foundation.IAsyncActi
     def completed(self, value: windows_foundation.AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
-class SmsAppMessage(winrt.system.Object, ISmsMessageBase):
+class SmsAppMessage(ISmsMessageBase, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Int32 Windows.Devices.Sms.SmsAppMessage::get_ProtocolId()
     @_property
@@ -423,7 +423,7 @@ class SmsAppMessage(winrt.system.Object, ISmsMessageBase):
 
 @typing.final
 @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
-class SmsBinaryMessage(winrt.system.Object, ISmsBinaryMessage, ISmsMessage):
+class SmsBinaryMessage(ISmsBinaryMessage, ISmsMessage, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Byte[] Windows.Devices.Sms.SmsBinaryMessage::GetData()
     @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
@@ -447,7 +447,7 @@ class SmsBinaryMessage(winrt.system.Object, ISmsBinaryMessage, ISmsMessage):
     def message_class(self) -> SmsMessageClass: ...
 
 @typing.final
-class SmsBroadcastMessage(winrt.system.Object, ISmsMessageBase):
+class SmsBroadcastMessage(ISmsMessageBase, winrt.system.Object):
     # System.String Windows.Devices.Sms.SmsBroadcastMessage::get_Body()
     @_property
     def body(self) -> str: ...
@@ -511,7 +511,7 @@ class SmsDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
-class SmsDevice(winrt.system.Object, ISmsDevice, metaclass=SmsDevice_Static):
+class SmsDevice(ISmsDevice, winrt.system.Object, metaclass=SmsDevice_Static):
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.SmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
     @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
@@ -771,7 +771,7 @@ class SmsSendMessageResult(winrt.system.Object):
     def transport_failure_cause(self) -> winrt.system.Int32: ...
 
 @typing.final
-class SmsStatusMessage(winrt.system.Object, ISmsMessageBase):
+class SmsStatusMessage(ISmsMessageBase, winrt.system.Object):
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsStatusMessage::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -820,7 +820,7 @@ class SmsTextMessage_Static(winrt._winrt.Object_Static):
 
 @typing.final
 @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
-class SmsTextMessage(winrt.system.Object, ISmsTextMessage, ISmsMessage, metaclass=SmsTextMessage_Static):
+class SmsTextMessage(ISmsTextMessage, ISmsMessage, winrt.system.Object, metaclass=SmsTextMessage_Static):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.SmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
     @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
@@ -881,7 +881,7 @@ class SmsTextMessage(winrt.system.Object, ISmsTextMessage, ISmsMessage, metaclas
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class SmsTextMessage2(winrt.system.Object, ISmsMessageBase):
+class SmsTextMessage2(ISmsMessageBase, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Devices.Sms.SmsMessageType Windows.Devices.Sms.SmsTextMessage2::get_MessageType()
     @_property
@@ -948,7 +948,7 @@ class SmsTextMessage2(winrt.system.Object, ISmsMessageBase):
     def teleservice_id(self) -> winrt.system.Int32: ...
 
 @typing.final
-class SmsVoicemailMessage(winrt.system.Object, ISmsMessageBase):
+class SmsVoicemailMessage(ISmsMessageBase, winrt.system.Object):
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsVoicemailMessage::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -978,7 +978,7 @@ class SmsVoicemailMessage(winrt.system.Object, ISmsMessageBase):
     def to(self) -> str: ...
 
 @typing.final
-class SmsWapMessage(winrt.system.Object, ISmsMessageBase):
+class SmsWapMessage(ISmsMessageBase, winrt.system.Object):
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsWapMessage::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -1020,7 +1020,7 @@ class SmsWapMessage(winrt.system.Object, ISmsMessageBase):
 class _ISmsBinaryMessage: ...
 
 @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
-class ISmsBinaryMessage(ISmsMessage, winrt._winrt.IInspectable):
+class ISmsBinaryMessage(ISmsMessage, winrt.system.Object):
     # System.Byte[] Windows.Devices.Sms.ISmsBinaryMessage::GetData()
     @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
     @abstractmethod
@@ -1044,7 +1044,7 @@ class ISmsBinaryMessage(ISmsMessage, winrt._winrt.IInspectable):
 class _ISmsDevice: ...
 
 @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
-class ISmsDevice(winrt._winrt.IInspectable):
+class ISmsDevice(winrt.system.Object):
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.ISmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
     @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     @abstractmethod
@@ -1093,7 +1093,7 @@ class ISmsDevice(winrt._winrt.IInspectable):
 @typing.final
 class _ISmsMessage: ...
 
-class ISmsMessage(winrt._winrt.IInspectable):
+class ISmsMessage(winrt.system.Object):
     # System.UInt32 Windows.Devices.Sms.ISmsMessage::get_Id()
     @_property
     @abstractmethod
@@ -1106,7 +1106,7 @@ class ISmsMessage(winrt._winrt.IInspectable):
 @typing.final
 class _ISmsMessageBase: ...
 
-class ISmsMessageBase(winrt._winrt.IInspectable):
+class ISmsMessageBase(winrt.system.Object):
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.ISmsMessageBase::get_CellularClass()
     @_property
     @abstractmethod
@@ -1132,7 +1132,7 @@ class ISmsMessageBase(winrt._winrt.IInspectable):
 class _ISmsTextMessage: ...
 
 @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
-class ISmsTextMessage(ISmsMessage, winrt._winrt.IInspectable):
+class ISmsTextMessage(ISmsMessage, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.ISmsBinaryMessage> Windows.Devices.Sms.ISmsTextMessage::ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)
     @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")
     @abstractmethod

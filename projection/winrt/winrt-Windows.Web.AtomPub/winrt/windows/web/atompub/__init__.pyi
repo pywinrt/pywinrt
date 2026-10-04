@@ -21,7 +21,7 @@ __all__ = [
 ]
 
 @typing.final
-class AtomPubClient(winrt.system.Object, windows_web_syndication.ISyndicationClient):
+class AtomPubClient(windows_web_syndication.ISyndicationClient, winrt.system.Object):
     @typing.overload
     def __new__(cls, server_credential: windows_security_credentials.PasswordCredential) -> typing.Self: ...
     @typing.overload
@@ -84,7 +84,7 @@ class AtomPubClient(winrt.system.Object, windows_web_syndication.ISyndicationCli
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
 @typing.final
-class ResourceCollection(winrt.system.Object, windows_web_syndication.ISyndicationNode):
+class ResourceCollection(windows_web_syndication.ISyndicationNode, winrt.system.Object):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.ResourceCollection::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Web.AtomPub.ResourceCollection::get_Accepts()
@@ -137,7 +137,7 @@ class ResourceCollection(winrt.system.Object, windows_web_syndication.ISyndicati
     def element_extensions(self) -> _cabc.MutableSequence[windows_web_syndication.ISyndicationNode]: ...
 
 @typing.final
-class ServiceDocument(winrt.system.Object, windows_web_syndication.ISyndicationNode):
+class ServiceDocument(windows_web_syndication.ISyndicationNode, winrt.system.Object):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.ServiceDocument::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.AtomPub.Workspace> Windows.Web.AtomPub.ServiceDocument::get_Workspaces()
@@ -181,7 +181,7 @@ class ServiceDocument(winrt.system.Object, windows_web_syndication.ISyndicationN
     def element_extensions(self) -> _cabc.MutableSequence[windows_web_syndication.ISyndicationNode]: ...
 
 @typing.final
-class Workspace(winrt.system.Object, windows_web_syndication.ISyndicationNode):
+class Workspace(windows_web_syndication.ISyndicationNode, winrt.system.Object):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.Workspace::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.AtomPub.ResourceCollection> Windows.Web.AtomPub.Workspace::get_Collections()

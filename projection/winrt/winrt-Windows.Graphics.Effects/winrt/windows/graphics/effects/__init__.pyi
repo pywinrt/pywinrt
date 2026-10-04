@@ -15,7 +15,7 @@ __all__ = [
 @typing.final
 class _IGraphicsEffect: ...
 
-class IGraphicsEffect(IGraphicsEffectSource, winrt._winrt.IInspectable):
+class IGraphicsEffect(IGraphicsEffectSource, winrt.system.Object):
     # System.String Windows.Graphics.Effects.IGraphicsEffect::get_Name()
     @_property
     @abstractmethod
@@ -28,6 +28,6 @@ class IGraphicsEffect(IGraphicsEffectSource, winrt._winrt.IInspectable):
 @typing.final
 class _IGraphicsEffectSource: ...
 
-class IGraphicsEffectSource(winrt._winrt.IInspectable):
+class IGraphicsEffectSource(winrt.system.Object):
     ...
 

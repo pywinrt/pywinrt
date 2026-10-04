@@ -84,7 +84,7 @@ class TestImplements(unittest.TestCase):
 
         properties = wfc.PropertySet()
         # a Python object that implements a WinRT interface is not a wrapper
-        properties.insert("one", obj)  # type: ignore[arg-type]
+        properties.insert("one", obj)
 
         self.assertIs(properties.lookup("one"), obj)
 
@@ -92,7 +92,7 @@ class TestImplements(unittest.TestCase):
         # An object that is not a runtime class answers with the name of the
         # first interface it implements, which is what C++/WinRT does.
         self.assertEqual(
-            tc.TestRunner.expect_object(One()),  # type: ignore[arg-type]
+            tc.TestRunner.expect_object(One()),
             "TestComponent.IRequiredOne",
         )
 
@@ -168,7 +168,7 @@ class TestImplements(unittest.TestCase):
 
         properties = wfc.PropertySet()
         # a Python object that implements a WinRT interface is not a wrapper
-        properties.insert("one", obj)  # type: ignore[arg-type]
+        properties.insert("one", obj)
 
         del obj
         gc.collect()

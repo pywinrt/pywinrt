@@ -371,7 +371,7 @@ class MediaItemDisplayProperties(winrt.system.Object):
     def video_properties(self) -> windows_media.VideoDisplayProperties: ...
 
 @typing.final
-class MediaPlaybackAudioTrackList(winrt.system.Object, windows_media_core.ISingleSelectMediaTrackList, winrt._winrt.Sequence[windows_media_core.AudioTrack]):
+class MediaPlaybackAudioTrackList(windows_media_core.ISingleSelectMediaTrackList, winrt._winrt.Sequence[windows_media_core.AudioTrack], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[windows_media_core.AudioTrack]: ...
     @typing.overload
@@ -629,7 +629,7 @@ class MediaPlaybackItem_Static(winrt._winrt.Object_Static):
     def find_from_media_source(cls, source: windows_media_core.MediaSource, /) -> MediaPlaybackItem: ...
 
 @typing.final
-class MediaPlaybackItem(winrt.system.Object, IMediaPlaybackSource, metaclass=MediaPlaybackItem_Static):
+class MediaPlaybackItem(IMediaPlaybackSource, winrt.system.Object, metaclass=MediaPlaybackItem_Static):
     @typing.overload
     def __new__(cls, source: windows_media_core.MediaSource, start_time: datetime.timedelta) -> typing.Self: ...
     @typing.overload
@@ -720,7 +720,7 @@ class MediaPlaybackItemOpenedEventArgs(winrt.system.Object):
     def item(self) -> MediaPlaybackItem: ...
 
 @typing.final
-class MediaPlaybackList(winrt.system.Object, IMediaPlaybackSource):
+class MediaPlaybackList(IMediaPlaybackSource, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.MediaPlaybackList::MoveNext()
     def move_next(self) -> MediaPlaybackItem: ...
@@ -969,7 +969,7 @@ class MediaPlaybackSphericalVideoProjection(winrt.system.Object):
     def frame_format(self, value: windows_media_mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
 @typing.final
-class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, winrt._winrt.Sequence[windows_media_core.TimedMetadataTrack]):
+class MediaPlaybackTimedMetadataTrackList(winrt._winrt.Sequence[windows_media_core.TimedMetadataTrack], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[windows_media_core.TimedMetadataTrack]: ...
     @typing.overload
@@ -997,7 +997,7 @@ class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, winrt._winrt.Sequ
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class MediaPlaybackVideoTrackList(winrt.system.Object, windows_media_core.ISingleSelectMediaTrackList, winrt._winrt.Sequence[windows_media_core.VideoTrack]):
+class MediaPlaybackVideoTrackList(windows_media_core.ISingleSelectMediaTrackList, winrt._winrt.Sequence[windows_media_core.VideoTrack], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[windows_media_core.VideoTrack]: ...
     @typing.overload
@@ -1027,7 +1027,7 @@ class MediaPlaybackVideoTrackList(winrt.system.Object, windows_media_core.ISingl
     def selected_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class MediaPlayer(winrt.system.Object, windows_foundation.IClosable):
+class MediaPlayer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls) -> typing.Self: ...
@@ -1330,7 +1330,7 @@ class MediaPlayerRateChangedEventArgs(winrt.system.Object):
     def new_rate(self) -> winrt.system.Double: ...
 
 @typing.final
-class MediaPlayerSurface(winrt.system.Object, windows_foundation.IClosable):
+class MediaPlayerSurface(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Playback.MediaPlayerSurface::Close()
@@ -1396,7 +1396,7 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
 class _IMediaEnginePlaybackSource: ...
 
 @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
-class IMediaEnginePlaybackSource(winrt._winrt.IInspectable):
+class IMediaEnginePlaybackSource(winrt.system.Object):
     # System.Void Windows.Media.Playback.IMediaEnginePlaybackSource::SetPlaybackSource(Windows.Media.Playback.IMediaPlaybackSource)
     @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
     @abstractmethod
@@ -1410,6 +1410,6 @@ class IMediaEnginePlaybackSource(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaPlaybackSource: ...
 
-class IMediaPlaybackSource(winrt._winrt.IInspectable):
+class IMediaPlaybackSource(winrt.system.Object):
     ...
 

@@ -101,7 +101,7 @@ class I2cDevice_Static(winrt._winrt.Object_Static):
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
-class I2cDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=I2cDevice_Static):
+class I2cDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=I2cDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Devices.I2c.I2cDevice::Close()
@@ -128,7 +128,7 @@ class I2cDevice(winrt.system.Object, windows_foundation.IClosable, metaclass=I2c
 @typing.final
 class _II2cDeviceStatics: ...
 
-class II2cDeviceStatics(winrt._winrt.IInspectable):
+class II2cDeviceStatics(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.I2c.I2cDevice> Windows.Devices.I2c.II2cDeviceStatics::FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)
     @abstractmethod
     def from_id_async(self, device_id: str, settings: I2cConnectionSettings, /) -> windows_foundation.IAsyncOperation[I2cDevice]: ...

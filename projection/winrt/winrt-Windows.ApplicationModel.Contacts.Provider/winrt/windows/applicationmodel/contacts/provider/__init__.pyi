@@ -62,7 +62,7 @@ class ContactRemovedEventArgs(winrt.system.Object):
 @typing.final
 class _IContactProvider: ...
 
-class IContactProvider(winrt._winrt.IInspectable):
+class IContactProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.Provider.IContactProvider::GetContactFromRemoteIdAsync(System.String)
     @abstractmethod
     def get_contact_from_remote_id_async(self, contact_remote_id: str, /) -> windows_foundation.IAsyncOperation[windows_applicationmodel_contacts.Contact]: ...

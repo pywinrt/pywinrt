@@ -205,7 +205,7 @@ class ApplicationExecutionState(enum.IntEnum):
     CLOSED_BY_USER = 4
 
 @typing.final
-class AppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IAppointmentsProviderAddAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs):
+class AppointmentsProviderAddAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderAddAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -226,7 +226,7 @@ class AppointmentsProviderAddAppointmentActivatedEventArgs(winrt.system.Object, 
     def add_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation: ...
 
 @typing.final
-class AppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IAppointmentsProviderRemoveAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs):
+class AppointmentsProviderRemoveAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderRemoveAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -247,7 +247,7 @@ class AppointmentsProviderRemoveAppointmentActivatedEventArgs(winrt.system.Objec
     def remove_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation: ...
 
 @typing.final
-class AppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IAppointmentsProviderReplaceAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs):
+class AppointmentsProviderReplaceAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderReplaceAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -268,7 +268,7 @@ class AppointmentsProviderReplaceAppointmentActivatedEventArgs(winrt.system.Obje
     def replace_appointment_operation(self) -> windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation: ...
 
 @typing.final
-class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs):
+class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -295,7 +295,7 @@ class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(winrt.system.
     def roaming_id(self) -> str: ...
 
 @typing.final
-class AppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IAppointmentsProviderShowTimeFrameActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs):
+class AppointmentsProviderShowTimeFrameActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderShowTimeFrameActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -319,13 +319,13 @@ class AppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Object, I
     def time_to_show(self) -> datetime.datetime: ...
 
 @typing.final
-class BackgroundActivatedEventArgs(winrt.system.Object, IBackgroundActivatedEventArgs):
+class BackgroundActivatedEventArgs(IBackgroundActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
 @typing.final
-class BarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IBarcodeScannerPreviewActivatedEventArgs, IActivatedEventArgs):
+class BarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsWithUser, IBarcodeScannerPreviewActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -343,7 +343,7 @@ class BarcodeScannerPreviewActivatedEventArgs(winrt.system.Object, IActivatedEve
     def connection_id(self) -> str: ...
 
 @typing.final
-class CachedFileUpdaterActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, ICachedFileUpdaterActivatedEventArgs, IActivatedEventArgs):
+class CachedFileUpdaterActivatedEventArgs(IActivatedEventArgsWithUser, ICachedFileUpdaterActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -361,7 +361,7 @@ class CachedFileUpdaterActivatedEventArgs(winrt.system.Object, IActivatedEventAr
     def cached_file_updater_ui(self) -> windows_storage_provider.CachedFileUpdaterUI: ...
 
 @typing.final
-class CameraSettingsActivatedEventArgs(winrt.system.Object, ICameraSettingsActivatedEventArgs, IActivatedEventArgs):
+class CameraSettingsActivatedEventArgs(ICameraSettingsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -379,7 +379,7 @@ class CameraSettingsActivatedEventArgs(winrt.system.Object, ICameraSettingsActiv
     def video_device_extension(self) -> winrt.system.Object: ...
 
 @typing.final
-class CommandLineActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, ICommandLineActivatedEventArgs, IActivatedEventArgs):
+class CommandLineActivatedEventArgs(IActivatedEventArgsWithUser, ICommandLineActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -414,7 +414,7 @@ class CommandLineActivationOperation(winrt.system.Object):
     def current_directory_path(self) -> str: ...
 
 @typing.final
-class ContactCallActivatedEventArgs(winrt.system.Object, IContactCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs):
+class ContactCallActivatedEventArgs(IContactCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -438,7 +438,7 @@ class ContactCallActivatedEventArgs(winrt.system.Object, IContactCallActivatedEv
     def service_user_id(self) -> str: ...
 
 @typing.final
-class ContactMapActivatedEventArgs(winrt.system.Object, IContactMapActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs):
+class ContactMapActivatedEventArgs(IContactMapActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -459,7 +459,7 @@ class ContactMapActivatedEventArgs(winrt.system.Object, IContactMapActivatedEven
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
 
 @typing.final
-class ContactMessageActivatedEventArgs(winrt.system.Object, IContactMessageActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs):
+class ContactMessageActivatedEventArgs(IContactMessageActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -483,7 +483,7 @@ class ContactMessageActivatedEventArgs(winrt.system.Object, IContactMessageActiv
     def service_user_id(self) -> str: ...
 
 @typing.final
-class ContactPanelActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IActivatedEventArgs, IContactPanelActivatedEventArgs):
+class ContactPanelActivatedEventArgs(IActivatedEventArgsWithUser, IActivatedEventArgs, IContactPanelActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -504,7 +504,7 @@ class ContactPanelActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWit
     def contact_panel(self) -> windows_applicationmodel_contacts.ContactPanel: ...
 
 @typing.final
-class ContactPickerActivatedEventArgs(winrt.system.Object, IContactPickerActivatedEventArgs, IActivatedEventArgs):
+class ContactPickerActivatedEventArgs(IContactPickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -519,7 +519,7 @@ class ContactPickerActivatedEventArgs(winrt.system.Object, IContactPickerActivat
     def contact_picker_ui(self) -> windows_applicationmodel_contacts_provider.ContactPickerUI: ...
 
 @typing.final
-class ContactPostActivatedEventArgs(winrt.system.Object, IContactPostActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs):
+class ContactPostActivatedEventArgs(IContactPostActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -543,7 +543,7 @@ class ContactPostActivatedEventArgs(winrt.system.Object, IContactPostActivatedEv
     def service_user_id(self) -> str: ...
 
 @typing.final
-class ContactVideoCallActivatedEventArgs(winrt.system.Object, IContactVideoCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs):
+class ContactVideoCallActivatedEventArgs(IContactVideoCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -567,7 +567,7 @@ class ContactVideoCallActivatedEventArgs(winrt.system.Object, IContactVideoCallA
     def service_user_id(self) -> str: ...
 
 @typing.final
-class DeviceActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDeviceActivatedEventArgs, IActivatedEventArgs):
+class DeviceActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDeviceActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -594,7 +594,7 @@ class DeviceActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser,
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class DevicePairingActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IDevicePairingActivatedEventArgs, IActivatedEventArgs):
+class DevicePairingActivatedEventArgs(IActivatedEventArgsWithUser, IDevicePairingActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -612,7 +612,7 @@ class DevicePairingActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWi
     def device_information(self) -> windows_devices_enumeration.DeviceInformation: ...
 
 @typing.final
-class DialReceiverActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDialReceiverActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs):
+class DialReceiverActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDialReceiverActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -642,7 +642,7 @@ class DialReceiverActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWit
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class FileActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IFileActivatedEventArgsWithCallerPackageFamilyName, IFileActivatedEventArgsWithNeighboringFiles, IFileActivatedEventArgs, IActivatedEventArgs):
+class FileActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IFileActivatedEventArgsWithCallerPackageFamilyName, IFileActivatedEventArgsWithNeighboringFiles, IFileActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -675,7 +675,7 @@ class FileActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, I
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class FileOpenPickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFileOpenPickerActivatedEventArgs2, IFileOpenPickerActivatedEventArgs, IActivatedEventArgs):
+class FileOpenPickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileOpenPickerActivatedEventArgs2, IFileOpenPickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -697,7 +697,7 @@ class FileOpenPickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsW
 
 @typing.final
 @deprecated("FileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class FileOpenPickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFileOpenPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
+class FileOpenPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileOpenPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -719,7 +719,7 @@ class FileOpenPickerContinuationEventArgs(winrt.system.Object, IActivatedEventAr
     def files(self) -> _cabc.Sequence[windows_storage.StorageFile]: ...
 
 @typing.final
-class FileSavePickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFileSavePickerActivatedEventArgs2, IFileSavePickerActivatedEventArgs, IActivatedEventArgs):
+class FileSavePickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileSavePickerActivatedEventArgs2, IFileSavePickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -744,7 +744,7 @@ class FileSavePickerActivatedEventArgs(winrt.system.Object, IActivatedEventArgsW
 
 @typing.final
 @deprecated("FileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class FileSavePickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFileSavePickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
+class FileSavePickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileSavePickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -767,7 +767,7 @@ class FileSavePickerContinuationEventArgs(winrt.system.Object, IActivatedEventAr
 
 @typing.final
 @deprecated("FolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class FolderPickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IFolderPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
+class FolderPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFolderPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -789,7 +789,7 @@ class FolderPickerContinuationEventArgs(winrt.system.Object, IActivatedEventArgs
     def folder(self) -> windows_storage.StorageFolder: ...
 
 @typing.final
-class LaunchActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, ILaunchActivatedEventArgs2, IViewSwitcherProvider, IPrelaunchActivatedEventArgs, IApplicationViewActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs):
+class LaunchActivatedEventArgs(IActivatedEventArgsWithUser, ILaunchActivatedEventArgs2, IViewSwitcherProvider, IPrelaunchActivatedEventArgs, IApplicationViewActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -822,7 +822,7 @@ class LaunchActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser,
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class LockScreenActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, ILockScreenActivatedEventArgs, IActivatedEventArgs):
+class LockScreenActivatedEventArgs(IActivatedEventArgsWithUser, ILockScreenActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -840,7 +840,7 @@ class LockScreenActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithU
     def info(self) -> winrt.system.Object: ...
 
 @typing.final
-class LockScreenCallActivatedEventArgs(winrt.system.Object, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, ILockScreenCallActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs):
+class LockScreenCallActivatedEventArgs(IViewSwitcherProvider, IApplicationViewActivatedEventArgs, ILockScreenCallActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -867,7 +867,7 @@ class LockScreenCallActivatedEventArgs(winrt.system.Object, IViewSwitcherProvide
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class LockScreenComponentActivatedEventArgs(winrt.system.Object, IActivatedEventArgs):
+class LockScreenComponentActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -879,7 +879,7 @@ class LockScreenComponentActivatedEventArgs(winrt.system.Object, IActivatedEvent
     def splash_screen(self) -> SplashScreen: ...
 
 @typing.final
-class PhoneCallActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IPhoneCallActivatedEventArgs, IActivatedEventArgs):
+class PhoneCallActivatedEventArgs(IActivatedEventArgsWithUser, IPhoneCallActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -897,7 +897,7 @@ class PhoneCallActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUs
     def line_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class PickerReturnedActivatedEventArgs(winrt.system.Object, IPickerReturnedActivatedEventArgs, IActivatedEventArgs):
+class PickerReturnedActivatedEventArgs(IPickerReturnedActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -912,7 +912,7 @@ class PickerReturnedActivatedEventArgs(winrt.system.Object, IPickerReturnedActiv
     def picker_operation_id(self) -> str: ...
 
 @typing.final
-class Print3DWorkflowActivatedEventArgs(winrt.system.Object, IPrint3DWorkflowActivatedEventArgs, IActivatedEventArgs):
+class Print3DWorkflowActivatedEventArgs(IPrint3DWorkflowActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -927,7 +927,7 @@ class Print3DWorkflowActivatedEventArgs(winrt.system.Object, IPrint3DWorkflowAct
     def workflow(self) -> windows_devices_printers_extensions.Print3DWorkflow: ...
 
 @typing.final
-class PrintTaskSettingsActivatedEventArgs(winrt.system.Object, IPrintTaskSettingsActivatedEventArgs, IActivatedEventArgs):
+class PrintTaskSettingsActivatedEventArgs(IPrintTaskSettingsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -942,7 +942,7 @@ class PrintTaskSettingsActivatedEventArgs(winrt.system.Object, IPrintTaskSetting
     def configuration(self) -> windows_devices_printers_extensions.PrintTaskConfiguration: ...
 
 @typing.final
-class ProtocolActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IActivatedEventArgs):
+class ProtocolActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -972,7 +972,7 @@ class ProtocolActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUse
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class ProtocolForResultsActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IProtocolForResultsActivatedEventArgs, IActivatedEventArgs):
+class ProtocolForResultsActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IProtocolForResultsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1005,7 +1005,7 @@ class ProtocolForResultsActivatedEventArgs(winrt.system.Object, IActivatedEventA
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class RestrictedLaunchActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IRestrictedLaunchActivatedEventArgs, IActivatedEventArgs):
+class RestrictedLaunchActivatedEventArgs(IActivatedEventArgsWithUser, IRestrictedLaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1023,7 +1023,7 @@ class RestrictedLaunchActivatedEventArgs(winrt.system.Object, IActivatedEventArg
     def shared_context(self) -> winrt.system.Object: ...
 
 @typing.final
-class SearchActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IViewSwitcherProvider, ISearchActivatedEventArgsWithLinguisticDetails, IApplicationViewActivatedEventArgs, ISearchActivatedEventArgs, IActivatedEventArgs):
+class SearchActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, ISearchActivatedEventArgsWithLinguisticDetails, IApplicationViewActivatedEventArgs, ISearchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1053,7 +1053,7 @@ class SearchActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser,
     def view_switcher(self) -> windows_ui_viewmanagement.ActivationViewSwitcher: ...
 
 @typing.final
-class ShareTargetActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IShareTargetActivatedEventArgs, IActivatedEventArgs):
+class ShareTargetActivatedEventArgs(IActivatedEventArgsWithUser, IShareTargetActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1081,7 +1081,7 @@ class SplashScreen(winrt.system.Object):
     def image_location(self) -> windows_foundation.Rect: ...
 
 @typing.final
-class StartupTaskActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IStartupTaskActivatedEventArgs, IActivatedEventArgs):
+class StartupTaskActivatedEventArgs(IActivatedEventArgsWithUser, IStartupTaskActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1105,7 +1105,7 @@ class TileActivatedInfo(winrt.system.Object):
     def recently_shown_notifications(self) -> _cabc.Sequence[windows_ui_notifications.ShownTileNotification]: ...
 
 @typing.final
-class ToastNotificationActivatedEventArgs(winrt.system.Object, IApplicationViewActivatedEventArgs, IActivatedEventArgsWithUser, IToastNotificationActivatedEventArgs, IActivatedEventArgs):
+class ToastNotificationActivatedEventArgs(IApplicationViewActivatedEventArgs, IActivatedEventArgsWithUser, IToastNotificationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1129,7 +1129,7 @@ class ToastNotificationActivatedEventArgs(winrt.system.Object, IApplicationViewA
     def user_input(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
-class UserDataAccountProviderActivatedEventArgs(winrt.system.Object, IUserDataAccountProviderActivatedEventArgs, IActivatedEventArgs):
+class UserDataAccountProviderActivatedEventArgs(IUserDataAccountProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1144,7 +1144,7 @@ class UserDataAccountProviderActivatedEventArgs(winrt.system.Object, IUserDataAc
     def operation(self) -> windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation: ...
 
 @typing.final
-class VoiceCommandActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IVoiceCommandActivatedEventArgs, IActivatedEventArgs):
+class VoiceCommandActivatedEventArgs(IActivatedEventArgsWithUser, IVoiceCommandActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1163,7 +1163,7 @@ class VoiceCommandActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWit
 
 @typing.final
 @deprecated("WalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class WalletActionActivatedEventArgs(winrt.system.Object, IWalletActionActivatedEventArgs, IActivatedEventArgs):
+class WalletActionActivatedEventArgs(IWalletActionActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1187,7 +1187,7 @@ class WalletActionActivatedEventArgs(winrt.system.Object, IWalletActionActivated
     def item_id(self) -> str: ...
 
 @typing.final
-class WebAccountProviderActivatedEventArgs(winrt.system.Object, IActivatedEventArgsWithUser, IWebAccountProviderActivatedEventArgs, IActivatedEventArgs):
+class WebAccountProviderActivatedEventArgs(IActivatedEventArgsWithUser, IWebAccountProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1205,7 +1205,7 @@ class WebAccountProviderActivatedEventArgs(winrt.system.Object, IActivatedEventA
     def operation(self) -> windows_security_authentication_web_provider.IWebAccountProviderOperation: ...
 
 @typing.final
-class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, IWebAuthenticationBrokerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs):
+class WebAuthenticationBrokerContinuationEventArgs(IWebAuthenticationBrokerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1225,7 +1225,7 @@ class WebAuthenticationBrokerContinuationEventArgs(winrt.system.Object, IWebAuth
 @typing.final
 class _IActivatedEventArgs: ...
 
-class IActivatedEventArgs(winrt._winrt.IInspectable):
+class IActivatedEventArgs(winrt.system.Object):
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.IActivatedEventArgs::get_Kind()
     @_property
     @abstractmethod
@@ -1242,7 +1242,7 @@ class IActivatedEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IActivatedEventArgsWithUser: ...
 
-class IActivatedEventArgsWithUser(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IActivatedEventArgsWithUser(IActivatedEventArgs, winrt.system.Object):
     # Windows.System.User Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser::get_User()
     @_property
     @abstractmethod
@@ -1251,7 +1251,7 @@ class IActivatedEventArgsWithUser(IActivatedEventArgs, winrt._winrt.IInspectable
 @typing.final
 class _IApplicationViewActivatedEventArgs: ...
 
-class IApplicationViewActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IApplicationViewActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.Int32 Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs::get_CurrentlyShownApplicationViewId()
     @_property
     @abstractmethod
@@ -1260,7 +1260,7 @@ class IApplicationViewActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInsp
 @typing.final
 class _IAppointmentsProviderActivatedEventArgs: ...
 
-class IAppointmentsProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IAppointmentsProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs::get_Verb()
     @_property
     @abstractmethod
@@ -1269,7 +1269,7 @@ class IAppointmentsProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.
 @typing.final
 class _IAppointmentsProviderAddAppointmentActivatedEventArgs: ...
 
-class IAppointmentsProviderAddAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IAppointmentsProviderAddAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs::get_AddAppointmentOperation()
     @_property
     @abstractmethod
@@ -1278,7 +1278,7 @@ class IAppointmentsProviderAddAppointmentActivatedEventArgs(IAppointmentsProvide
 @typing.final
 class _IAppointmentsProviderRemoveAppointmentActivatedEventArgs: ...
 
-class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs::get_RemoveAppointmentOperation()
     @_property
     @abstractmethod
@@ -1287,7 +1287,7 @@ class IAppointmentsProviderRemoveAppointmentActivatedEventArgs(IAppointmentsProv
 @typing.final
 class _IAppointmentsProviderReplaceAppointmentActivatedEventArgs: ...
 
-class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs::get_ReplaceAppointmentOperation()
     @_property
     @abstractmethod
@@ -1296,7 +1296,7 @@ class IAppointmentsProviderReplaceAppointmentActivatedEventArgs(IAppointmentsPro
 @typing.final
 class _IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs: ...
 
-class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_InstanceStartDate()
     @_property
     @abstractmethod
@@ -1313,7 +1313,7 @@ class IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IAppointment
 @typing.final
 class _IAppointmentsProviderShowTimeFrameActivatedEventArgs: ...
 
-class IAppointmentsProviderShowTimeFrameActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IAppointmentsProviderShowTimeFrameActivatedEventArgs(IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.TimeSpan Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs::get_Duration()
     @_property
     @abstractmethod
@@ -1326,7 +1326,7 @@ class IAppointmentsProviderShowTimeFrameActivatedEventArgs(IAppointmentsProvider
 @typing.final
 class _IBackgroundActivatedEventArgs: ...
 
-class IBackgroundActivatedEventArgs(winrt._winrt.IInspectable):
+class IBackgroundActivatedEventArgs(winrt.system.Object):
     # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     @abstractmethod
@@ -1335,7 +1335,7 @@ class IBackgroundActivatedEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IBarcodeScannerPreviewActivatedEventArgs: ...
 
-class IBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs::get_ConnectionId()
     @_property
     @abstractmethod
@@ -1344,7 +1344,7 @@ class IBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgs, winrt._winrt
 @typing.final
 class _ICachedFileUpdaterActivatedEventArgs: ...
 
-class ICachedFileUpdaterActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class ICachedFileUpdaterActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Storage.Provider.CachedFileUpdaterUI Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs::get_CachedFileUpdaterUI()
     @_property
     @abstractmethod
@@ -1353,7 +1353,7 @@ class ICachedFileUpdaterActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IIn
 @typing.final
 class _ICameraSettingsActivatedEventArgs: ...
 
-class ICameraSettingsActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class ICameraSettingsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.Object Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs::get_VideoDeviceController()
     @_property
     @abstractmethod
@@ -1366,7 +1366,7 @@ class ICameraSettingsActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspe
 @typing.final
 class _ICommandLineActivatedEventArgs: ...
 
-class ICommandLineActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class ICommandLineActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.CommandLineActivationOperation Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs::get_Operation()
     @_property
     @abstractmethod
@@ -1375,7 +1375,7 @@ class ICommandLineActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspecta
 @typing.final
 class _IContactActivatedEventArgs: ...
 
-class IContactActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IContactActivatedEventArgs::get_Verb()
     @_property
     @abstractmethod
@@ -1384,7 +1384,7 @@ class IContactActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable)
 @typing.final
 class _IContactCallActivatedEventArgs: ...
 
-class IContactCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1401,7 +1401,7 @@ class IContactCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEvent
 @typing.final
 class _IContactMapActivatedEventArgs: ...
 
-class IContactMapActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactMapActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Contacts.ContactAddress Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs::get_Address()
     @_property
     @abstractmethod
@@ -1414,7 +1414,7 @@ class IContactMapActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventA
 @typing.final
 class _IContactMessageActivatedEventArgs: ...
 
-class IContactMessageActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactMessageActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1431,7 +1431,7 @@ class IContactMessageActivatedEventArgs(IContactActivatedEventArgs, IActivatedEv
 @typing.final
 class _IContactPanelActivatedEventArgs: ...
 
-class IContactPanelActivatedEventArgs(winrt._winrt.IInspectable):
+class IContactPanelActivatedEventArgs(winrt.system.Object):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1444,7 +1444,7 @@ class IContactPanelActivatedEventArgs(winrt._winrt.IInspectable):
 @typing.final
 class _IContactPickerActivatedEventArgs: ...
 
-class IContactPickerActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactPickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Contacts.Provider.ContactPickerUI Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs::get_ContactPickerUI()
     @_property
     @abstractmethod
@@ -1453,7 +1453,7 @@ class IContactPickerActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspec
 @typing.final
 class _IContactPostActivatedEventArgs: ...
 
-class IContactPostActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactPostActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1470,7 +1470,7 @@ class IContactPostActivatedEventArgs(IContactActivatedEventArgs, IActivatedEvent
 @typing.final
 class _IContactVideoCallActivatedEventArgs: ...
 
-class IContactVideoCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactVideoCallActivatedEventArgs(IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Contacts.Contact Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs::get_Contact()
     @_property
     @abstractmethod
@@ -1487,7 +1487,7 @@ class IContactVideoCallActivatedEventArgs(IContactActivatedEventArgs, IActivated
 @typing.final
 class _IContactsProviderActivatedEventArgs: ...
 
-class IContactsProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContactsProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs::get_Verb()
     @_property
     @abstractmethod
@@ -1496,7 +1496,7 @@ class IContactsProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IIns
 @typing.final
 class _IContinuationActivatedEventArgs: ...
 
-class IContinuationActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IContinuationActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs::get_ContinuationData()
     @_property
     @abstractmethod
@@ -1505,7 +1505,7 @@ class IContinuationActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspect
 @typing.final
 class _IDeviceActivatedEventArgs: ...
 
-class IDeviceActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IDeviceActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs::get_DeviceInformationId()
     @_property
     @abstractmethod
@@ -1518,7 +1518,7 @@ class IDeviceActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
 @typing.final
 class _IDevicePairingActivatedEventArgs: ...
 
-class IDevicePairingActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IDevicePairingActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Devices.Enumeration.DeviceInformation Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs::get_DeviceInformation()
     @_property
     @abstractmethod
@@ -1527,7 +1527,7 @@ class IDevicePairingActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspec
 @typing.final
 class _IDialReceiverActivatedEventArgs: ...
 
-class IDialReceiverActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IDialReceiverActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs::get_AppName()
     @_property
     @abstractmethod
@@ -1536,7 +1536,7 @@ class IDialReceiverActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEvent
 @typing.final
 class _IFileActivatedEventArgs: ...
 
-class IFileActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.IStorageItem> Windows.ApplicationModel.Activation.IFileActivatedEventArgs::get_Files()
     @_property
     @abstractmethod
@@ -1549,7 +1549,7 @@ class IFileActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
 @typing.final
 class _IFileActivatedEventArgsWithCallerPackageFamilyName: ...
 
-class IFileActivatedEventArgsWithCallerPackageFamilyName(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileActivatedEventArgsWithCallerPackageFamilyName(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName::get_CallerPackageFamilyName()
     @_property
     @abstractmethod
@@ -1558,7 +1558,7 @@ class IFileActivatedEventArgsWithCallerPackageFamilyName(IActivatedEventArgs, wi
 @typing.final
 class _IFileActivatedEventArgsWithNeighboringFiles: ...
 
-class IFileActivatedEventArgsWithNeighboringFiles(IFileActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileActivatedEventArgsWithNeighboringFiles(IFileActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Storage.Search.StorageFileQueryResult Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles::get_NeighboringFilesQuery()
     @_property
     @abstractmethod
@@ -1567,7 +1567,7 @@ class IFileActivatedEventArgsWithNeighboringFiles(IFileActivatedEventArgs, IActi
 @typing.final
 class _IFileOpenPickerActivatedEventArgs: ...
 
-class IFileOpenPickerActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileOpenPickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Storage.Pickers.Provider.FileOpenPickerUI Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs::get_FileOpenPickerUI()
     @_property
     @abstractmethod
@@ -1576,7 +1576,7 @@ class IFileOpenPickerActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspe
 @typing.final
 class _IFileOpenPickerActivatedEventArgs2: ...
 
-class IFileOpenPickerActivatedEventArgs2(winrt._winrt.IInspectable):
+class IFileOpenPickerActivatedEventArgs2(winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2::get_CallerPackageFamilyName()
     @_property
     @abstractmethod
@@ -1586,7 +1586,7 @@ class IFileOpenPickerActivatedEventArgs2(winrt._winrt.IInspectable):
 class _IFileOpenPickerContinuationEventArgs: ...
 
 @deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class IFileOpenPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileOpenPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs::get_Files()
     @_property
     @deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1596,7 +1596,7 @@ class IFileOpenPickerContinuationEventArgs(IContinuationActivatedEventArgs, IAct
 @typing.final
 class _IFileSavePickerActivatedEventArgs: ...
 
-class IFileSavePickerActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileSavePickerActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Storage.Pickers.Provider.FileSavePickerUI Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs::get_FileSavePickerUI()
     @_property
     @abstractmethod
@@ -1605,7 +1605,7 @@ class IFileSavePickerActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspe
 @typing.final
 class _IFileSavePickerActivatedEventArgs2: ...
 
-class IFileSavePickerActivatedEventArgs2(winrt._winrt.IInspectable):
+class IFileSavePickerActivatedEventArgs2(winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2::get_CallerPackageFamilyName()
     @_property
     @abstractmethod
@@ -1619,7 +1619,7 @@ class IFileSavePickerActivatedEventArgs2(winrt._winrt.IInspectable):
 class _IFileSavePickerContinuationEventArgs: ...
 
 @deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class IFileSavePickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFileSavePickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Storage.StorageFile Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs::get_File()
     @_property
     @deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1630,7 +1630,7 @@ class IFileSavePickerContinuationEventArgs(IContinuationActivatedEventArgs, IAct
 class _IFolderPickerContinuationEventArgs: ...
 
 @deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class IFolderPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IFolderPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Storage.StorageFolder Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs::get_Folder()
     @_property
     @deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1640,7 +1640,7 @@ class IFolderPickerContinuationEventArgs(IContinuationActivatedEventArgs, IActiv
 @typing.final
 class _ILaunchActivatedEventArgs: ...
 
-class ILaunchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class ILaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs::get_Arguments()
     @_property
     @abstractmethod
@@ -1653,7 +1653,7 @@ class ILaunchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
 @typing.final
 class _ILaunchActivatedEventArgs2: ...
 
-class ILaunchActivatedEventArgs2(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class ILaunchActivatedEventArgs2(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Activation.TileActivatedInfo Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2::get_TileActivatedInfo()
     @_property
     @abstractmethod
@@ -1662,7 +1662,7 @@ class ILaunchActivatedEventArgs2(ILaunchActivatedEventArgs, IActivatedEventArgs,
 @typing.final
 class _ILockScreenActivatedEventArgs: ...
 
-class ILockScreenActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class ILockScreenActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.Object Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs::get_Info()
     @_property
     @abstractmethod
@@ -1671,7 +1671,7 @@ class ILockScreenActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectab
 @typing.final
 class _ILockScreenCallActivatedEventArgs: ...
 
-class ILockScreenCallActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class ILockScreenCallActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.Calls.LockScreenCallUI Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs::get_CallUI()
     @_property
     @abstractmethod
@@ -1680,7 +1680,7 @@ class ILockScreenCallActivatedEventArgs(ILaunchActivatedEventArgs, IActivatedEve
 @typing.final
 class _IPhoneCallActivatedEventArgs: ...
 
-class IPhoneCallActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IPhoneCallActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.Guid Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs::get_LineId()
     @_property
     @abstractmethod
@@ -1689,7 +1689,7 @@ class IPhoneCallActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectabl
 @typing.final
 class _IPickerReturnedActivatedEventArgs: ...
 
-class IPickerReturnedActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IPickerReturnedActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs::get_PickerOperationId()
     @_property
     @abstractmethod
@@ -1698,7 +1698,7 @@ class IPickerReturnedActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspe
 @typing.final
 class _IPrelaunchActivatedEventArgs: ...
 
-class IPrelaunchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IPrelaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.Boolean Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs::get_PrelaunchActivated()
     @_property
     @abstractmethod
@@ -1707,7 +1707,7 @@ class IPrelaunchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectabl
 @typing.final
 class _IPrint3DWorkflowActivatedEventArgs: ...
 
-class IPrint3DWorkflowActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IPrint3DWorkflowActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Devices.Printers.Extensions.Print3DWorkflow Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs::get_Workflow()
     @_property
     @abstractmethod
@@ -1716,7 +1716,7 @@ class IPrint3DWorkflowActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInsp
 @typing.final
 class _IPrintTaskSettingsActivatedEventArgs: ...
 
-class IPrintTaskSettingsActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IPrintTaskSettingsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Devices.Printers.Extensions.PrintTaskConfiguration Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs::get_Configuration()
     @_property
     @abstractmethod
@@ -1725,7 +1725,7 @@ class IPrintTaskSettingsActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IIn
 @typing.final
 class _IProtocolActivatedEventArgs: ...
 
-class IProtocolActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IProtocolActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Foundation.Uri Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs::get_Uri()
     @_property
     @abstractmethod
@@ -1734,7 +1734,7 @@ class IProtocolActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable
 @typing.final
 class _IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData: ...
 
-class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData::get_CallerPackageFamilyName()
     @_property
     @abstractmethod
@@ -1747,7 +1747,7 @@ class IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(IActivatedEv
 @typing.final
 class _IProtocolForResultsActivatedEventArgs: ...
 
-class IProtocolForResultsActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IProtocolForResultsActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.System.ProtocolForResultsOperation Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs::get_ProtocolForResultsOperation()
     @_property
     @abstractmethod
@@ -1756,7 +1756,7 @@ class IProtocolForResultsActivatedEventArgs(IActivatedEventArgs, winrt._winrt.II
 @typing.final
 class _IRestrictedLaunchActivatedEventArgs: ...
 
-class IRestrictedLaunchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IRestrictedLaunchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.Object Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs::get_SharedContext()
     @_property
     @abstractmethod
@@ -1765,7 +1765,7 @@ class IRestrictedLaunchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IIns
 @typing.final
 class _ISearchActivatedEventArgs: ...
 
-class ISearchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class ISearchActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.ISearchActivatedEventArgs::get_Language()
     @_property
     @abstractmethod
@@ -1778,7 +1778,7 @@ class ISearchActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
 @typing.final
 class _ISearchActivatedEventArgsWithLinguisticDetails: ...
 
-class ISearchActivatedEventArgsWithLinguisticDetails(winrt._winrt.IInspectable):
+class ISearchActivatedEventArgsWithLinguisticDetails(winrt.system.Object):
     # Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails::get_LinguisticDetails()
     @_property
     @abstractmethod
@@ -1787,7 +1787,7 @@ class ISearchActivatedEventArgsWithLinguisticDetails(winrt._winrt.IInspectable):
 @typing.final
 class _IShareTargetActivatedEventArgs: ...
 
-class IShareTargetActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IShareTargetActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs::get_ShareOperation()
     @_property
     @abstractmethod
@@ -1796,7 +1796,7 @@ class IShareTargetActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspecta
 @typing.final
 class _IStartupTaskActivatedEventArgs: ...
 
-class IStartupTaskActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IStartupTaskActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs::get_TaskId()
     @_property
     @abstractmethod
@@ -1805,7 +1805,7 @@ class IStartupTaskActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspecta
 @typing.final
 class _IToastNotificationActivatedEventArgs: ...
 
-class IToastNotificationActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IToastNotificationActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs::get_Argument()
     @_property
     @abstractmethod
@@ -1818,7 +1818,7 @@ class IToastNotificationActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IIn
 @typing.final
 class _IUserDataAccountProviderActivatedEventArgs: ...
 
-class IUserDataAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IUserDataAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs::get_Operation()
     @_property
     @abstractmethod
@@ -1827,7 +1827,7 @@ class IUserDataAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt._win
 @typing.final
 class _IViewSwitcherProvider: ...
 
-class IViewSwitcherProvider(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IViewSwitcherProvider(IActivatedEventArgs, winrt.system.Object):
     # Windows.UI.ViewManagement.ActivationViewSwitcher Windows.ApplicationModel.Activation.IViewSwitcherProvider::get_ViewSwitcher()
     @_property
     @abstractmethod
@@ -1836,7 +1836,7 @@ class IViewSwitcherProvider(IActivatedEventArgs, winrt._winrt.IInspectable):
 @typing.final
 class _IVoiceCommandActivatedEventArgs: ...
 
-class IVoiceCommandActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IVoiceCommandActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Media.SpeechRecognition.SpeechRecognitionResult Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs::get_Result()
     @_property
     @abstractmethod
@@ -1846,7 +1846,7 @@ class IVoiceCommandActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspect
 class _IWalletActionActivatedEventArgs: ...
 
 @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
-class IWalletActionActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IWalletActionActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # System.String Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs::get_ActionId()
     @_property
     @deprecated("IWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1866,7 +1866,7 @@ class IWalletActionActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspect
 @typing.final
 class _IWebAccountProviderActivatedEventArgs: ...
 
-class IWebAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.IInspectable):
+class IWebAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
     # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs::get_Operation()
     @_property
     @abstractmethod
@@ -1875,7 +1875,7 @@ class IWebAccountProviderActivatedEventArgs(IActivatedEventArgs, winrt._winrt.II
 @typing.final
 class _IWebAuthenticationBrokerContinuationEventArgs: ...
 
-class IWebAuthenticationBrokerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt._winrt.IInspectable):
+class IWebAuthenticationBrokerContinuationEventArgs(IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
     # Windows.Security.Authentication.Web.WebAuthenticationResult Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs::get_WebAuthenticationResult()
     @_property
     @abstractmethod

@@ -51,7 +51,7 @@ __all__ = [
 ]
 
 @typing.final
-class HttpCacheDirectiveHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpNameValueHeaderValue]):
+class HttpCacheDirectiveHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpNameValueHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpNameValueHeaderValue]: ...
     @typing.overload
@@ -132,7 +132,7 @@ class HttpChallengeHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpChallengeHeaderValue]: ...
 
 @typing.final
-class HttpChallengeHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpChallengeHeaderValue_Static):
+class HttpChallengeHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpChallengeHeaderValue_Static):
     @typing.overload
     def __new__(cls, scheme: str) -> typing.Self: ...
     @typing.overload
@@ -150,7 +150,7 @@ class HttpChallengeHeaderValue(winrt.system.Object, windows_foundation.IStringab
     def token(self) -> str: ...
 
 @typing.final
-class HttpChallengeHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpChallengeHeaderValue]):
+class HttpChallengeHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpChallengeHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpChallengeHeaderValue]: ...
     @typing.overload
@@ -207,7 +207,7 @@ class HttpConnectionOptionHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpConnectionOptionHeaderValue]: ...
 
 @typing.final
-class HttpConnectionOptionHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpConnectionOptionHeaderValue_Static):
+class HttpConnectionOptionHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpConnectionOptionHeaderValue_Static):
     def __new__(cls, token: str) -> typing.Self: ...
     # System.String Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue::ToString()
     def to_string(self) -> str: ...
@@ -216,7 +216,7 @@ class HttpConnectionOptionHeaderValue(winrt.system.Object, windows_foundation.IS
     def token(self) -> str: ...
 
 @typing.final
-class HttpConnectionOptionHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpConnectionOptionHeaderValue]):
+class HttpConnectionOptionHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpConnectionOptionHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpConnectionOptionHeaderValue]: ...
     @typing.overload
@@ -273,7 +273,7 @@ class HttpContentCodingHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpContentCodingHeaderValue]: ...
 
 @typing.final
-class HttpContentCodingHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpContentCodingHeaderValue_Static):
+class HttpContentCodingHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpContentCodingHeaderValue_Static):
     def __new__(cls, content_coding: str) -> typing.Self: ...
     # System.String Windows.Web.Http.Headers.HttpContentCodingHeaderValue::ToString()
     def to_string(self) -> str: ...
@@ -282,7 +282,7 @@ class HttpContentCodingHeaderValue(winrt.system.Object, windows_foundation.IStri
     def content_coding(self) -> str: ...
 
 @typing.final
-class HttpContentCodingHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpContentCodingHeaderValue]):
+class HttpContentCodingHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpContentCodingHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpContentCodingHeaderValue]: ...
     @typing.overload
@@ -339,7 +339,7 @@ class HttpContentCodingWithQualityHeaderValue_Static(winrt._winrt.Object_Static)
     def try_parse(cls, input: str, /) -> tuple[bool, HttpContentCodingWithQualityHeaderValue]: ...
 
 @typing.final
-class HttpContentCodingWithQualityHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpContentCodingWithQualityHeaderValue_Static):
+class HttpContentCodingWithQualityHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpContentCodingWithQualityHeaderValue_Static):
     @typing.overload
     def __new__(cls, content_coding: str) -> typing.Self: ...
     @typing.overload
@@ -354,7 +354,7 @@ class HttpContentCodingWithQualityHeaderValue(winrt.system.Object, windows_found
     def quality(self) -> winrt.system.Double | None: ...
 
 @typing.final
-class HttpContentCodingWithQualityHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpContentCodingWithQualityHeaderValue]):
+class HttpContentCodingWithQualityHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpContentCodingWithQualityHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpContentCodingWithQualityHeaderValue]: ...
     @typing.overload
@@ -411,7 +411,7 @@ class HttpContentDispositionHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpContentDispositionHeaderValue]: ...
 
 @typing.final
-class HttpContentDispositionHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpContentDispositionHeaderValue_Static):
+class HttpContentDispositionHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpContentDispositionHeaderValue_Static):
     def __new__(cls, disposition_type: str) -> typing.Self: ...
     # System.String Windows.Web.Http.Headers.HttpContentDispositionHeaderValue::ToString()
     def to_string(self) -> str: ...
@@ -450,7 +450,7 @@ class HttpContentDispositionHeaderValue(winrt.system.Object, windows_foundation.
     def parameters(self) -> _cabc.MutableSequence[HttpNameValueHeaderValue]: ...
 
 @typing.final
-class HttpContentHeaderCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableMapping[str, str]):
+class HttpContentHeaderCollection(windows_foundation.IStringable, winrt._winrt.MutableMapping[str, str], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -544,7 +544,7 @@ class HttpContentRangeHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpContentRangeHeaderValue]: ...
 
 @typing.final
-class HttpContentRangeHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpContentRangeHeaderValue_Static):
+class HttpContentRangeHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpContentRangeHeaderValue_Static):
     @typing.overload
     def __new__(cls, length: winrt.system.UInt64) -> typing.Self: ...
     @typing.overload
@@ -577,7 +577,7 @@ class HttpCookiePairHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpCookiePairHeaderValue]: ...
 
 @typing.final
-class HttpCookiePairHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpCookiePairHeaderValue_Static):
+class HttpCookiePairHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpCookiePairHeaderValue_Static):
     @typing.overload
     def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
@@ -595,7 +595,7 @@ class HttpCookiePairHeaderValue(winrt.system.Object, windows_foundation.IStringa
     def name(self) -> str: ...
 
 @typing.final
-class HttpCookiePairHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpCookiePairHeaderValue]):
+class HttpCookiePairHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpCookiePairHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpCookiePairHeaderValue]: ...
     @typing.overload
@@ -652,7 +652,7 @@ class HttpCredentialsHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpCredentialsHeaderValue]: ...
 
 @typing.final
-class HttpCredentialsHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpCredentialsHeaderValue_Static):
+class HttpCredentialsHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpCredentialsHeaderValue_Static):
     @typing.overload
     def __new__(cls, scheme: str) -> typing.Self: ...
     @typing.overload
@@ -677,7 +677,7 @@ class HttpDateOrDeltaHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpDateOrDeltaHeaderValue]: ...
 
 @typing.final
-class HttpDateOrDeltaHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpDateOrDeltaHeaderValue_Static):
+class HttpDateOrDeltaHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpDateOrDeltaHeaderValue_Static):
     # System.String Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue::ToString()
     def to_string(self) -> str: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue::get_Date()
@@ -695,7 +695,7 @@ class HttpExpectationHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpExpectationHeaderValue]: ...
 
 @typing.final
-class HttpExpectationHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpExpectationHeaderValue_Static):
+class HttpExpectationHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpExpectationHeaderValue_Static):
     @typing.overload
     def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
@@ -716,7 +716,7 @@ class HttpExpectationHeaderValue(winrt.system.Object, windows_foundation.IString
     def parameters(self) -> _cabc.MutableSequence[HttpNameValueHeaderValue]: ...
 
 @typing.final
-class HttpExpectationHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpExpectationHeaderValue]):
+class HttpExpectationHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpExpectationHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpExpectationHeaderValue]: ...
     @typing.overload
@@ -766,7 +766,7 @@ class HttpExpectationHeaderValueCollection(winrt.system.Object, windows_foundati
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpLanguageHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[windows_globalization.Language]):
+class HttpLanguageHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[windows_globalization.Language], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[windows_globalization.Language]: ...
     @typing.overload
@@ -823,7 +823,7 @@ class HttpLanguageRangeWithQualityHeaderValue_Static(winrt._winrt.Object_Static)
     def try_parse(cls, input: str, /) -> tuple[bool, HttpLanguageRangeWithQualityHeaderValue]: ...
 
 @typing.final
-class HttpLanguageRangeWithQualityHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpLanguageRangeWithQualityHeaderValue_Static):
+class HttpLanguageRangeWithQualityHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpLanguageRangeWithQualityHeaderValue_Static):
     @typing.overload
     def __new__(cls, language_range: str) -> typing.Self: ...
     @typing.overload
@@ -838,7 +838,7 @@ class HttpLanguageRangeWithQualityHeaderValue(winrt.system.Object, windows_found
     def quality(self) -> winrt.system.Double | None: ...
 
 @typing.final
-class HttpLanguageRangeWithQualityHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpLanguageRangeWithQualityHeaderValue]):
+class HttpLanguageRangeWithQualityHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpLanguageRangeWithQualityHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpLanguageRangeWithQualityHeaderValue]: ...
     @typing.overload
@@ -895,7 +895,7 @@ class HttpMediaTypeHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpMediaTypeHeaderValue]: ...
 
 @typing.final
-class HttpMediaTypeHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpMediaTypeHeaderValue_Static):
+class HttpMediaTypeHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpMediaTypeHeaderValue_Static):
     def __new__(cls, media_type: str) -> typing.Self: ...
     # System.String Windows.Web.Http.Headers.HttpMediaTypeHeaderValue::ToString()
     def to_string(self) -> str: ...
@@ -923,7 +923,7 @@ class HttpMediaTypeWithQualityHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpMediaTypeWithQualityHeaderValue]: ...
 
 @typing.final
-class HttpMediaTypeWithQualityHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpMediaTypeWithQualityHeaderValue_Static):
+class HttpMediaTypeWithQualityHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpMediaTypeWithQualityHeaderValue_Static):
     @typing.overload
     def __new__(cls, media_type: str) -> typing.Self: ...
     @typing.overload
@@ -953,7 +953,7 @@ class HttpMediaTypeWithQualityHeaderValue(winrt.system.Object, windows_foundatio
     def parameters(self) -> _cabc.MutableSequence[HttpNameValueHeaderValue]: ...
 
 @typing.final
-class HttpMediaTypeWithQualityHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpMediaTypeWithQualityHeaderValue]):
+class HttpMediaTypeWithQualityHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpMediaTypeWithQualityHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpMediaTypeWithQualityHeaderValue]: ...
     @typing.overload
@@ -1003,7 +1003,7 @@ class HttpMediaTypeWithQualityHeaderValueCollection(winrt.system.Object, windows
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpMethodHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[windows_web_http.HttpMethod]):
+class HttpMethodHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[windows_web_http.HttpMethod], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[windows_web_http.HttpMethod]: ...
     @typing.overload
@@ -1060,7 +1060,7 @@ class HttpNameValueHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpNameValueHeaderValue]: ...
 
 @typing.final
-class HttpNameValueHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpNameValueHeaderValue_Static):
+class HttpNameValueHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpNameValueHeaderValue_Static):
     @typing.overload
     def __new__(cls, name: str) -> typing.Self: ...
     @typing.overload
@@ -1085,7 +1085,7 @@ class HttpProductHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpProductHeaderValue]: ...
 
 @typing.final
-class HttpProductHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpProductHeaderValue_Static):
+class HttpProductHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpProductHeaderValue_Static):
     @typing.overload
     def __new__(cls, product_name: str) -> typing.Self: ...
     @typing.overload
@@ -1107,7 +1107,7 @@ class HttpProductInfoHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpProductInfoHeaderValue]: ...
 
 @typing.final
-class HttpProductInfoHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpProductInfoHeaderValue_Static):
+class HttpProductInfoHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpProductInfoHeaderValue_Static):
     @typing.overload
     def __new__(cls, product_comment: str) -> typing.Self: ...
     @typing.overload
@@ -1122,7 +1122,7 @@ class HttpProductInfoHeaderValue(winrt.system.Object, windows_foundation.IString
     def product(self) -> HttpProductHeaderValue: ...
 
 @typing.final
-class HttpProductInfoHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpProductInfoHeaderValue]):
+class HttpProductInfoHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpProductInfoHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpProductInfoHeaderValue]: ...
     @typing.overload
@@ -1172,7 +1172,7 @@ class HttpProductInfoHeaderValueCollection(winrt.system.Object, windows_foundati
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpRequestHeaderCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableMapping[str, str]):
+class HttpRequestHeaderCollection(windows_foundation.IStringable, winrt._winrt.MutableMapping[str, str], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -1285,7 +1285,7 @@ class HttpRequestHeaderCollection(winrt.system.Object, windows_foundation.IStrin
     def user_agent(self) -> HttpProductInfoHeaderValueCollection: ...
 
 @typing.final
-class HttpResponseHeaderCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableMapping[str, str]):
+class HttpResponseHeaderCollection(windows_foundation.IStringable, winrt._winrt.MutableMapping[str, str], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -1366,7 +1366,7 @@ class HttpTransferCodingHeaderValue_Static(winrt._winrt.Object_Static):
     def try_parse(cls, input: str, /) -> tuple[bool, HttpTransferCodingHeaderValue]: ...
 
 @typing.final
-class HttpTransferCodingHeaderValue(winrt.system.Object, windows_foundation.IStringable, metaclass=HttpTransferCodingHeaderValue_Static):
+class HttpTransferCodingHeaderValue(windows_foundation.IStringable, winrt.system.Object, metaclass=HttpTransferCodingHeaderValue_Static):
     def __new__(cls, input: str) -> typing.Self: ...
     # System.String Windows.Web.Http.Headers.HttpTransferCodingHeaderValue::ToString()
     def to_string(self) -> str: ...
@@ -1378,7 +1378,7 @@ class HttpTransferCodingHeaderValue(winrt.system.Object, windows_foundation.IStr
     def value(self) -> str: ...
 
 @typing.final
-class HttpTransferCodingHeaderValueCollection(winrt.system.Object, windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpTransferCodingHeaderValue]):
+class HttpTransferCodingHeaderValueCollection(windows_foundation.IStringable, winrt._winrt.MutableSequence[HttpTransferCodingHeaderValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[HttpTransferCodingHeaderValue]: ...
     @typing.overload

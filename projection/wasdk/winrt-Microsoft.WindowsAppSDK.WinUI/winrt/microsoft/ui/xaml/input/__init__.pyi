@@ -1080,7 +1080,7 @@ class XamlUICommand(microsoft_ui_xaml.DependencyObject, ICommand, metaclass=Xaml
 @typing.final
 class _ICommand: ...
 
-class ICommand(winrt._winrt.IInspectable):
+class ICommand(winrt.system.Object):
     # System.Boolean Microsoft.UI.Xaml.Input.ICommand::CanExecute(System.Object)
     @abstractmethod
     def can_execute(self, parameter: winrt.system.Object, /) -> bool: ...

@@ -79,7 +79,7 @@ class VideoOrientation(enum.IntEnum):
     ROTATE270 = 270
 
 @typing.final
-class BasicProperties(winrt.system.Object, IStorageItemExtraProperties):
+class BasicProperties(IStorageItemExtraProperties, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.BasicProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -103,7 +103,7 @@ class BasicProperties(winrt.system.Object, IStorageItemExtraProperties):
     def size(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class DocumentProperties(winrt.system.Object, IStorageItemExtraProperties):
+class DocumentProperties(IStorageItemExtraProperties, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.DocumentProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -149,7 +149,7 @@ class GeotagHelper(winrt.system.Object, metaclass=GeotagHelper_Static):
     ...
 
 @typing.final
-class ImageProperties(winrt.system.Object, IStorageItemExtraProperties):
+class ImageProperties(IStorageItemExtraProperties, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.ImageProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -215,7 +215,7 @@ class ImageProperties(winrt.system.Object, IStorageItemExtraProperties):
     def width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class MusicProperties(winrt.system.Object, IStorageItemExtraProperties):
+class MusicProperties(IStorageItemExtraProperties, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.MusicProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -305,7 +305,7 @@ class MusicProperties(winrt.system.Object, IStorageItemExtraProperties):
     def writers(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class StorageItemContentProperties(winrt.system.Object, IStorageItemExtraProperties):
+class StorageItemContentProperties(IStorageItemExtraProperties, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.DocumentProperties> Windows.Storage.FileProperties.StorageItemContentProperties::GetDocumentPropertiesAsync()
     def get_document_properties_async(self) -> windows_foundation.IAsyncOperation[DocumentProperties]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.ImageProperties> Windows.Storage.FileProperties.StorageItemContentProperties::GetImagePropertiesAsync()
@@ -328,7 +328,7 @@ class StorageItemContentProperties(winrt.system.Object, IStorageItemExtraPropert
     def save_properties_async_overload_default(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class StorageItemThumbnail(winrt.system.Object, windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable):
+class StorageItemThumbnail(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.FileProperties.StorageItemThumbnail::CloneStream()
@@ -379,7 +379,7 @@ class StorageItemThumbnail(winrt.system.Object, windows_storage_streams.IRandomA
     def position(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class VideoProperties(winrt.system.Object, IStorageItemExtraProperties):
+class VideoProperties(IStorageItemExtraProperties, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.VideoProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -459,7 +459,7 @@ class VideoProperties(winrt.system.Object, IStorageItemExtraProperties):
 @typing.final
 class _IStorageItemExtraProperties: ...
 
-class IStorageItemExtraProperties(winrt._winrt.IInspectable):
+class IStorageItemExtraProperties(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.IStorageItemExtraProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     @abstractmethod
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...

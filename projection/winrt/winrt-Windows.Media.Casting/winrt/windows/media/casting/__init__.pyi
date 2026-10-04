@@ -51,7 +51,7 @@ class CastingPlaybackTypes(enum.IntFlag):
     PICTURE = 0x4
 
 @typing.final
-class CastingConnection(winrt.system.Object, windows_foundation.IClosable):
+class CastingConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Casting.CastingConnection::Close()

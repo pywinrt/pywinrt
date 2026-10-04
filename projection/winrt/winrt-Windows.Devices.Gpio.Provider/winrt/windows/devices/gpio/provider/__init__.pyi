@@ -55,7 +55,7 @@ class GpioPinProviderValueChangedEventArgs(winrt.system.Object):
 @typing.final
 class _IGpioControllerProvider: ...
 
-class IGpioControllerProvider(winrt._winrt.IInspectable):
+class IGpioControllerProvider(winrt.system.Object):
     # Windows.Devices.Gpio.Provider.IGpioPinProvider Windows.Devices.Gpio.Provider.IGpioControllerProvider::OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)
     @abstractmethod
     def open_pin_provider(self, pin: winrt.system.Int32, sharing_mode: ProviderGpioSharingMode, /) -> IGpioPinProvider: ...
@@ -67,7 +67,7 @@ class IGpioControllerProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IGpioPinProvider: ...
 
-class IGpioPinProvider(winrt._winrt.IInspectable):
+class IGpioPinProvider(winrt.system.Object):
     # Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode Windows.Devices.Gpio.Provider.IGpioPinProvider::GetDriveMode()
     @abstractmethod
     def get_drive_mode(self) -> ProviderGpioPinDriveMode: ...
@@ -109,7 +109,7 @@ class IGpioPinProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IGpioProvider: ...
 
-class IGpioProvider(winrt._winrt.IInspectable):
+class IGpioProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Gpio.Provider.IGpioControllerProvider> Windows.Devices.Gpio.Provider.IGpioProvider::GetControllers()
     @abstractmethod
     def get_controllers(self) -> _cabc.Sequence[IGpioControllerProvider]: ...

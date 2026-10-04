@@ -49,7 +49,7 @@ class AccessListEntry:
     def unpack(self) -> tuple[str, str]: ...
 
 @typing.final
-class AccessListEntryView(winrt.system.Object, winrt._winrt.Sequence[AccessListEntry]):
+class AccessListEntryView(winrt._winrt.Sequence[AccessListEntry], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[AccessListEntry]: ...
     @typing.overload
@@ -92,7 +92,7 @@ class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplic
     ...
 
 @typing.final
-class StorageItemAccessList(winrt.system.Object, IStorageItemAccessList):
+class StorageItemAccessList(IStorageItemAccessList, winrt.system.Object):
     @typing.overload
     # System.String Windows.Storage.AccessCache.StorageItemAccessList::Add(Windows.Storage.IStorageItem)
     def add(self, file: windows_storage.IStorageItem, /) -> str: ...
@@ -159,7 +159,7 @@ class StorageItemAccessList(winrt.system.Object, IStorageItemAccessList):
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class StorageItemMostRecentlyUsedList(winrt.system.Object, IStorageItemAccessList):
+class StorageItemMostRecentlyUsedList(IStorageItemAccessList, winrt.system.Object):
     @typing.overload
     # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem)
     def add(self, file: windows_storage.IStorageItem, /) -> str: ...
@@ -246,7 +246,7 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object, IStorageItemAccessLis
 @typing.final
 class _IStorageItemAccessList: ...
 
-class IStorageItemAccessList(winrt._winrt.IInspectable):
+class IStorageItemAccessList(winrt.system.Object):
     @typing.overload
     # System.String Windows.Storage.AccessCache.IStorageItemAccessList::Add(Windows.Storage.IStorageItem)
     @abstractmethod

@@ -1934,7 +1934,7 @@ class CoreWebView2FrameInfo(winrt.system.Object):
     def parent_frame_info(self) -> CoreWebView2FrameInfo: ...
 
 @typing.final
-class CoreWebView2HttpHeadersCollectionIterator(winrt.system.Object, windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, str]]):
+class CoreWebView2HttpHeadersCollectionIterator(windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, str]], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> windows_foundation_collections.IKeyValuePair[str, str]: ...
     # System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator::GetMany(Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>[])
@@ -2959,7 +2959,7 @@ class CoreWebView2Settings(winrt.system.Object):
     def is_non_client_region_support_enabled(self, value: bool) -> None: ...
 
 @typing.final
-class CoreWebView2SharedBuffer(winrt.system.Object, windows_foundation.IClosable):
+class CoreWebView2SharedBuffer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer::Close()
@@ -3151,7 +3151,7 @@ class CoreWebView2WindowFeatures(winrt.system.Object):
 @typing.final
 class _ICoreWebView2DispatchAdapter: ...
 
-class ICoreWebView2DispatchAdapter(winrt._winrt.IInspectable):
+class ICoreWebView2DispatchAdapter(winrt.system.Object):
     # System.Void Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter::Clean()
     @abstractmethod
     def clean(self) -> None: ...

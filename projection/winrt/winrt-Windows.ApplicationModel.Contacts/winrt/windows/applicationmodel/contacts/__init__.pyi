@@ -596,7 +596,7 @@ class ContactBatch(winrt.system.Object):
     def status(self) -> ContactBatchStatus: ...
 
 @typing.final
-class ContactCardDelayedDataLoader(winrt.system.Object, windows_foundation.IClosable):
+class ContactCardDelayedDataLoader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader::Close()
@@ -736,7 +736,7 @@ class ContactEmail(winrt.system.Object):
     def address(self, value: str) -> None: ...
 
 @typing.final
-class ContactField(winrt.system.Object, IContactField):
+class ContactField(IContactField, winrt.system.Object):
     @typing.overload
     def __new__(cls, value: str, type: ContactFieldType) -> typing.Self: ...
     @typing.overload
@@ -757,7 +757,7 @@ class ContactField(winrt.system.Object, IContactField):
     def value(self) -> str: ...
 
 @typing.final
-class ContactFieldFactory(winrt.system.Object, IContactInstantMessageFieldFactory, IContactLocationFieldFactory, IContactFieldFactory):
+class ContactFieldFactory(IContactInstantMessageFieldFactory, IContactLocationFieldFactory, IContactFieldFactory, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     @typing.overload
     # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.ContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
@@ -853,7 +853,7 @@ class ContactInformation(winrt.system.Object):
     def phone_numbers(self) -> _cabc.Sequence[ContactField]: ...
 
 @typing.final
-class ContactInstantMessageField(winrt.system.Object, IContactField):
+class ContactInstantMessageField(IContactField, winrt.system.Object):
     @typing.overload
     def __new__(cls, user_name: str) -> typing.Self: ...
     @typing.overload
@@ -1251,7 +1251,7 @@ class ContactListSyncManager(winrt.system.Object):
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
 @typing.final
-class ContactLocationField(winrt.system.Object, IContactField):
+class ContactLocationField(IContactField, winrt.system.Object):
     @typing.overload
     def __new__(cls, unstructured_address: str) -> typing.Self: ...
     @typing.overload
@@ -1761,7 +1761,7 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
 @typing.final
 class _IContactField: ...
 
-class IContactField(winrt._winrt.IInspectable):
+class IContactField(winrt.system.Object):
     # Windows.ApplicationModel.Contacts.ContactFieldCategory Windows.ApplicationModel.Contacts.IContactField::get_Category()
     @_property
     @abstractmethod
@@ -1782,7 +1782,7 @@ class IContactField(winrt._winrt.IInspectable):
 @typing.final
 class _IContactFieldFactory: ...
 
-class IContactFieldFactory(winrt._winrt.IInspectable):
+class IContactFieldFactory(winrt.system.Object):
     @typing.overload
     # Windows.ApplicationModel.Contacts.ContactField Windows.ApplicationModel.Contacts.IContactFieldFactory::CreateField(System.String,Windows.ApplicationModel.Contacts.ContactFieldType)
     @abstractmethod
@@ -1811,7 +1811,7 @@ class IContactFieldFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IContactInstantMessageFieldFactory: ...
 
-class IContactInstantMessageFieldFactory(winrt._winrt.IInspectable):
+class IContactInstantMessageFieldFactory(winrt.system.Object):
     @typing.overload
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
     @abstractmethod
@@ -1840,7 +1840,7 @@ class IContactInstantMessageFieldFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IContactLocationFieldFactory: ...
 
-class IContactLocationFieldFactory(winrt._winrt.IInspectable):
+class IContactLocationFieldFactory(winrt.system.Object):
     @typing.overload
     # Windows.ApplicationModel.Contacts.ContactLocationField Windows.ApplicationModel.Contacts.IContactLocationFieldFactory::CreateLocation(System.String)
     @abstractmethod

@@ -403,7 +403,7 @@ class TimedTextSize:
     def unpack(self) -> tuple[winrt.system.Double, winrt.system.Double, TimedTextUnit]: ...
 
 @typing.final
-class AudioStreamDescriptor(winrt.system.Object, IMediaStreamDescriptor2, IMediaStreamDescriptor):
+class AudioStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, winrt.system.Object):
     def __new__(cls, encoding_properties: windows_media_mediaproperties.AudioEncodingProperties) -> typing.Self: ...
     # Windows.Media.Core.AudioStreamDescriptor Windows.Media.Core.AudioStreamDescriptor::Copy()
     def copy(self) -> AudioStreamDescriptor: ...
@@ -445,7 +445,7 @@ class AudioStreamDescriptor(winrt.system.Object, IMediaStreamDescriptor2, IMedia
     def label(self, value: str) -> None: ...
 
 @typing.final
-class AudioTrack(winrt.system.Object, IMediaTrack):
+class AudioTrack(IMediaTrack, winrt.system.Object):
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.Core.AudioTrack::GetEncodingProperties()
     def get_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.AudioTrack::add_OpenFailed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.AudioTrack,Windows.Media.Core.AudioTrackOpenFailedEventArgs>)
@@ -499,7 +499,7 @@ class AudioTrackSupportInfo(winrt.system.Object):
     def media_source_status(self) -> MediaSourceStatus: ...
 
 @typing.final
-class ChapterCue(winrt.system.Object, IMediaCue):
+class ChapterCue(IMediaCue, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Media.Core.ChapterCue::get_Title()
     @_property
@@ -714,7 +714,7 @@ class CodecSubtypes(winrt.system.Object, metaclass=CodecSubtypes_Static):
     ...
 
 @typing.final
-class DataCue(winrt.system.Object, IMediaCue):
+class DataCue(IMediaCue, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Storage.Streams.IBuffer Windows.Media.Core.DataCue::get_Data()
     @_property
@@ -751,7 +751,7 @@ class FaceDetectedEventArgs(winrt.system.Object):
     def result_frame(self) -> FaceDetectionEffectFrame: ...
 
 @typing.final
-class FaceDetectionEffect(winrt.system.Object, windows_media.IMediaExtension):
+class FaceDetectionEffect(windows_media.IMediaExtension, winrt.system.Object):
     # System.Void Windows.Media.Core.FaceDetectionEffect::SetProperties(Windows.Foundation.Collections.IPropertySet)
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.FaceDetectionEffect::add_FaceDetected(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.FaceDetectionEffect,Windows.Media.Core.FaceDetectedEventArgs>)
@@ -772,7 +772,7 @@ class FaceDetectionEffect(winrt.system.Object, windows_media.IMediaExtension):
     def desired_detection_interval(self, value: datetime.timedelta) -> None: ...
 
 @typing.final
-class FaceDetectionEffectDefinition(winrt.system.Object, windows_media_effects.IVideoEffectDefinition):
+class FaceDetectionEffectDefinition(windows_media_effects.IVideoEffectDefinition, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Boolean Windows.Media.Core.FaceDetectionEffectDefinition::get_SynchronousDetectionEnabled()
     @_property
@@ -794,7 +794,7 @@ class FaceDetectionEffectDefinition(winrt.system.Object, windows_media_effects.I
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class FaceDetectionEffectFrame(winrt.system.Object, windows_media.IMediaFrame, windows_foundation.IClosable):
+class FaceDetectionEffectFrame(windows_media.IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Core.FaceDetectionEffectFrame::Close()
@@ -855,7 +855,7 @@ class HighDynamicRangeOutput(winrt.system.Object):
     def frame_controllers(self) -> _cabc.Sequence[windows_media_devices_core.FrameController]: ...
 
 @typing.final
-class ImageCue(winrt.system.Object, IMediaCue):
+class ImageCue(IMediaCue, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Media.Core.ImageCue::get_SoftwareBitmap()
     @_property
@@ -921,7 +921,7 @@ class LowLightFusion(winrt.system.Object, metaclass=LowLightFusion_Static):
     ...
 
 @typing.final
-class LowLightFusionResult(winrt.system.Object, windows_foundation.IClosable):
+class LowLightFusionResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Core.LowLightFusionResult::Close()
@@ -1003,7 +1003,7 @@ class MediaSource_Static(winrt._winrt.Object_Static):
     def create_from_uri(cls, uri: windows_foundation.Uri, /) -> MediaSource: ...
 
 @typing.final
-class MediaSource(winrt.system.Object, windows_foundation.IClosable, windows_media_playback.IMediaPlaybackSource, metaclass=MediaSource_Static):
+class MediaSource(windows_foundation.IClosable, windows_media_playback.IMediaPlaybackSource, winrt.system.Object, metaclass=MediaSource_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Core.MediaSource::Close()
@@ -1141,7 +1141,7 @@ class MediaStreamSample(winrt.system.Object, metaclass=MediaStreamSample_Static)
     def direct3d11_surface(self) -> windows_graphics_directx_direct3d11.IDirect3DSurface: ...
 
 @typing.final
-class MediaStreamSamplePropertySet(winrt.system.Object, winrt._winrt.MutableMapping[_uuid.UUID, winrt.system.Object]):
+class MediaStreamSamplePropertySet(winrt._winrt.MutableMapping[_uuid.UUID, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[_uuid.UUID]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -1182,7 +1182,7 @@ class MediaStreamSampleProtectionProperties(winrt.system.Object):
     def set_sub_sample_mapping(self, value: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> None: ...
 
 @typing.final
-class MediaStreamSource(winrt.system.Object, IMediaSource):
+class MediaStreamSource(IMediaSource, winrt.system.Object):
     @typing.overload
     def __new__(cls, descriptor: IMediaStreamDescriptor) -> typing.Self: ...
     @typing.overload
@@ -1445,7 +1445,7 @@ class MseStreamSource_Static(winrt._winrt.Object_Static):
     def is_content_type_supported(cls, content_type: str, /) -> bool: ...
 
 @typing.final
-class MseStreamSource(winrt.system.Object, IMediaSource, metaclass=MseStreamSource_Static):
+class MseStreamSource(IMediaSource, winrt.system.Object, metaclass=MseStreamSource_Static):
     def __new__(cls) -> typing.Self: ...
     # Windows.Media.Core.MseSourceBuffer Windows.Media.Core.MseStreamSource::AddSourceBuffer(System.String)
     def add_source_buffer(self, mime_type: str, /) -> MseSourceBuffer: ...
@@ -1488,7 +1488,7 @@ class MseStreamSource(winrt.system.Object, IMediaSource, metaclass=MseStreamSour
     def live_seekable_range(self, value: MseTimeRange | None) -> None: ...
 
 @typing.final
-class SceneAnalysisEffect(winrt.system.Object, windows_media.IMediaExtension):
+class SceneAnalysisEffect(windows_media.IMediaExtension, winrt.system.Object):
     # System.Void Windows.Media.Core.SceneAnalysisEffect::SetProperties(Windows.Foundation.Collections.IPropertySet)
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.SceneAnalysisEffect::add_SceneAnalyzed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.SceneAnalysisEffect,Windows.Media.Core.SceneAnalyzedEventArgs>)
@@ -1506,7 +1506,7 @@ class SceneAnalysisEffect(winrt.system.Object, windows_media.IMediaExtension):
     def high_dynamic_range_analyzer(self) -> HighDynamicRangeControl: ...
 
 @typing.final
-class SceneAnalysisEffectDefinition(winrt.system.Object, windows_media_effects.IVideoEffectDefinition):
+class SceneAnalysisEffectDefinition(windows_media_effects.IVideoEffectDefinition, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Media.Core.SceneAnalysisEffectDefinition::get_ActivatableClassId()
     @_property
@@ -1516,7 +1516,7 @@ class SceneAnalysisEffectDefinition(winrt.system.Object, windows_media_effects.I
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class SceneAnalysisEffectFrame(winrt.system.Object, windows_media.IMediaFrame, windows_foundation.IClosable):
+class SceneAnalysisEffectFrame(windows_media.IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Media.Core.SceneAnalysisEffectFrame::Close()
@@ -1571,7 +1571,7 @@ class SceneAnalyzedEventArgs(winrt.system.Object):
     def result_frame(self) -> SceneAnalysisEffectFrame: ...
 
 @typing.final
-class SpeechCue(winrt.system.Object, IMediaCue):
+class SpeechCue(IMediaCue, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.TimeSpan Windows.Media.Core.SpeechCue::get_StartTime()
     @_property
@@ -1611,7 +1611,7 @@ class SpeechCue(winrt.system.Object, IMediaCue):
     def end_position_in_input(self, value: winrt.system.Int32 | None) -> None: ...
 
 @typing.final
-class TimedMetadataStreamDescriptor(winrt.system.Object, IMediaStreamDescriptor2, IMediaStreamDescriptor):
+class TimedMetadataStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, winrt.system.Object):
     def __new__(cls, encoding_properties: windows_media_mediaproperties.TimedMetadataEncodingProperties) -> typing.Self: ...
     # Windows.Media.Core.TimedMetadataStreamDescriptor Windows.Media.Core.TimedMetadataStreamDescriptor::Copy()
     def copy(self) -> TimedMetadataStreamDescriptor: ...
@@ -1641,7 +1641,7 @@ class TimedMetadataStreamDescriptor(winrt.system.Object, IMediaStreamDescriptor2
     def encoding_properties(self) -> windows_media_mediaproperties.TimedMetadataEncodingProperties: ...
 
 @typing.final
-class TimedMetadataTrack(winrt.system.Object, IMediaTrack):
+class TimedMetadataTrack(IMediaTrack, winrt.system.Object):
     def __new__(cls, id: str, language: str, kind: TimedMetadataKind) -> typing.Self: ...
     # System.Void Windows.Media.Core.TimedMetadataTrack::AddCue(Windows.Media.Core.IMediaCue)
     def add_cue(self, cue: IMediaCue, /) -> None: ...
@@ -1730,7 +1730,7 @@ class TimedTextBouten(winrt.system.Object):
     def color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
 
 @typing.final
-class TimedTextCue(winrt.system.Object, IMediaCue):
+class TimedTextCue(IMediaCue, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.TimeSpan Windows.Media.Core.TimedTextCue::get_StartTime()
     @_property
@@ -2082,7 +2082,7 @@ class TimedTextSubformat(winrt.system.Object):
     def length(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class VideoStabilizationEffect(winrt.system.Object, windows_media.IMediaExtension):
+class VideoStabilizationEffect(windows_media.IMediaExtension, winrt.system.Object):
     # Windows.Media.Capture.VideoStreamConfiguration Windows.Media.Core.VideoStabilizationEffect::GetRecommendedStreamConfiguration(Windows.Media.Devices.VideoDeviceController,Windows.Media.MediaProperties.VideoEncodingProperties)
     def get_recommended_stream_configuration(self, controller: windows_media_devices.VideoDeviceController, desired_properties: windows_media_mediaproperties.VideoEncodingProperties, /) -> windows_media_capture.VideoStreamConfiguration: ...
     # System.Void Windows.Media.Core.VideoStabilizationEffect::SetProperties(Windows.Foundation.Collections.IPropertySet)
@@ -2099,7 +2099,7 @@ class VideoStabilizationEffect(winrt.system.Object, windows_media.IMediaExtensio
     def enabled(self, value: bool) -> None: ...
 
 @typing.final
-class VideoStabilizationEffectDefinition(winrt.system.Object, windows_media_effects.IVideoEffectDefinition):
+class VideoStabilizationEffectDefinition(windows_media_effects.IVideoEffectDefinition, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.String Windows.Media.Core.VideoStabilizationEffectDefinition::get_ActivatableClassId()
     @_property
@@ -2115,7 +2115,7 @@ class VideoStabilizationEffectEnabledChangedEventArgs(winrt.system.Object):
     def reason(self) -> VideoStabilizationEffectEnabledChangedReason: ...
 
 @typing.final
-class VideoStreamDescriptor(winrt.system.Object, IMediaStreamDescriptor2, IMediaStreamDescriptor):
+class VideoStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, winrt.system.Object):
     def __new__(cls, encoding_properties: windows_media_mediaproperties.VideoEncodingProperties) -> typing.Self: ...
     # Windows.Media.Core.VideoStreamDescriptor Windows.Media.Core.VideoStreamDescriptor::Copy()
     def copy(self) -> VideoStreamDescriptor: ...
@@ -2145,7 +2145,7 @@ class VideoStreamDescriptor(winrt.system.Object, IMediaStreamDescriptor2, IMedia
     def encoding_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
 
 @typing.final
-class VideoTrack(winrt.system.Object, IMediaTrack):
+class VideoTrack(IMediaTrack, winrt.system.Object):
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.Core.VideoTrack::GetEncodingProperties()
     def get_encoding_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.VideoTrack::add_OpenFailed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.VideoTrack,Windows.Media.Core.VideoTrackOpenFailedEventArgs>)
@@ -2195,7 +2195,7 @@ class VideoTrackSupportInfo(winrt.system.Object):
 @typing.final
 class _IMediaCue: ...
 
-class IMediaCue(winrt._winrt.IInspectable):
+class IMediaCue(winrt.system.Object):
     # Windows.Foundation.TimeSpan Windows.Media.Core.IMediaCue::get_Duration()
     @_property
     @abstractmethod
@@ -2224,13 +2224,13 @@ class IMediaCue(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaSource: ...
 
-class IMediaSource(winrt._winrt.IInspectable):
+class IMediaSource(winrt.system.Object):
     ...
 
 @typing.final
 class _IMediaStreamDescriptor: ...
 
-class IMediaStreamDescriptor(winrt._winrt.IInspectable):
+class IMediaStreamDescriptor(winrt.system.Object):
     # System.Boolean Windows.Media.Core.IMediaStreamDescriptor::get_IsSelected()
     @_property
     @abstractmethod
@@ -2255,7 +2255,7 @@ class IMediaStreamDescriptor(winrt._winrt.IInspectable):
 @typing.final
 class _IMediaStreamDescriptor2: ...
 
-class IMediaStreamDescriptor2(IMediaStreamDescriptor, winrt._winrt.IInspectable):
+class IMediaStreamDescriptor2(IMediaStreamDescriptor, winrt.system.Object):
     # System.String Windows.Media.Core.IMediaStreamDescriptor2::get_Label()
     @_property
     @abstractmethod
@@ -2268,7 +2268,7 @@ class IMediaStreamDescriptor2(IMediaStreamDescriptor, winrt._winrt.IInspectable)
 @typing.final
 class _IMediaTrack: ...
 
-class IMediaTrack(winrt._winrt.IInspectable):
+class IMediaTrack(winrt.system.Object):
     # System.String Windows.Media.Core.IMediaTrack::get_Id()
     @_property
     @abstractmethod
@@ -2293,7 +2293,7 @@ class IMediaTrack(winrt._winrt.IInspectable):
 @typing.final
 class _ISingleSelectMediaTrackList: ...
 
-class ISingleSelectMediaTrackList(winrt._winrt.IInspectable):
+class ISingleSelectMediaTrackList(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.ISingleSelectMediaTrackList::add_SelectedIndexChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object>)
     @abstractmethod
     def add_selected_index_changed(self, handler: windows_foundation.TypedEventHandler[ISingleSelectMediaTrackList, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -2312,7 +2312,7 @@ class ISingleSelectMediaTrackList(winrt._winrt.IInspectable):
 @typing.final
 class _ITimedMetadataTrackProvider: ...
 
-class ITimedMetadataTrackProvider(winrt._winrt.IInspectable):
+class ITimedMetadataTrackProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Core.TimedMetadataTrack> Windows.Media.Core.ITimedMetadataTrackProvider::get_TimedMetadataTracks()
     @_property
     @abstractmethod

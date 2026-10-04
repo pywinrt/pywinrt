@@ -481,7 +481,7 @@ class RichEditTextDocument(winrt.system.Object):
     def selection(self) -> ITextSelection: ...
 
 @typing.final
-class RichEditTextRange(winrt.system.Object, ITextRange):
+class RichEditTextRange(ITextRange, winrt.system.Object):
     # System.Boolean Microsoft.UI.Text.RichEditTextRange::CanPaste(System.Int32)
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
     # System.Void Microsoft.UI.Text.RichEditTextRange::ChangeCase(Microsoft.UI.Text.LetterCase)
@@ -641,7 +641,7 @@ class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
 @typing.final
 class _ITextCharacterFormat: ...
 
-class ITextCharacterFormat(winrt._winrt.IInspectable):
+class ITextCharacterFormat(winrt.system.Object):
     # Microsoft.UI.Text.ITextCharacterFormat Microsoft.UI.Text.ITextCharacterFormat::GetClone()
     @abstractmethod
     def get_clone(self) -> ITextCharacterFormat: ...
@@ -843,7 +843,7 @@ class ITextCharacterFormat(winrt._winrt.IInspectable):
 @typing.final
 class _ITextParagraphFormat: ...
 
-class ITextParagraphFormat(winrt._winrt.IInspectable):
+class ITextParagraphFormat(winrt.system.Object):
     # System.Void Microsoft.UI.Text.ITextParagraphFormat::AddTab(System.Single,Microsoft.UI.Text.TabAlignment,Microsoft.UI.Text.TabLeader)
     @abstractmethod
     def add_tab(self, position: winrt.system.Single, align: TabAlignment, leader: TabLeader, /) -> None: ...
@@ -1031,7 +1031,7 @@ class ITextParagraphFormat(winrt._winrt.IInspectable):
 @typing.final
 class _ITextRange: ...
 
-class ITextRange(winrt._winrt.IInspectable):
+class ITextRange(winrt.system.Object):
     # System.Boolean Microsoft.UI.Text.ITextRange::CanPaste(System.Int32)
     @abstractmethod
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
@@ -1212,7 +1212,7 @@ class ITextRange(winrt._winrt.IInspectable):
 @typing.final
 class _ITextSelection: ...
 
-class ITextSelection(ITextRange, winrt._winrt.IInspectable):
+class ITextSelection(ITextRange, winrt.system.Object):
     # System.Int32 Microsoft.UI.Text.ITextSelection::EndKey(Microsoft.UI.Text.TextRangeUnit,System.Boolean)
     @abstractmethod
     def end_key(self, unit: TextRangeUnit, extend: bool, /) -> winrt.system.Int32: ...

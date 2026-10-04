@@ -212,7 +212,7 @@ class PasswordCredential(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class PasswordCredentialPropertyStore(winrt.system.Object, windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object]):
+class PasswordCredentialPropertyStore(windows_foundation_collections.IPropertySet, windows_foundation_collections.IObservableMap[str, winrt.system.Object], winrt._winrt.MutableMapping[str, winrt.system.Object], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -259,7 +259,7 @@ class PasswordVault(winrt.system.Object):
     def retrieve_all(self) -> _cabc.Sequence[PasswordCredential]: ...
 
 @typing.final
-class WebAccount(winrt.system.Object, IWebAccount):
+class WebAccount(IWebAccount, winrt.system.Object):
     def __new__(cls, web_account_provider: WebAccountProvider, user_name: str, state: WebAccountState) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Security.Credentials.WebAccount::GetPictureAsync(Windows.Security.Credentials.WebAccountPictureSize)
     def get_picture_async(self, desized_size: WebAccountPictureSize, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
@@ -318,7 +318,7 @@ class WebAccountProvider(winrt.system.Object):
 @typing.final
 class _IKeyCredentialCacheConfigurationFactory: ...
 
-class IKeyCredentialCacheConfigurationFactory(winrt._winrt.IInspectable):
+class IKeyCredentialCacheConfigurationFactory(winrt.system.Object):
     # Windows.Security.Credentials.KeyCredentialCacheConfiguration Windows.Security.Credentials.IKeyCredentialCacheConfigurationFactory::CreateInstance(Windows.Security.Credentials.KeyCredentialCacheOption,Windows.Foundation.TimeSpan,System.UInt32)
     @abstractmethod
     def create_instance(self, cache_option: KeyCredentialCacheOption, timeout: datetime.timedelta, usage_count: winrt.system.UInt32, /) -> KeyCredentialCacheConfiguration: ...
@@ -326,7 +326,7 @@ class IKeyCredentialCacheConfigurationFactory(winrt._winrt.IInspectable):
 @typing.final
 class _IWebAccount: ...
 
-class IWebAccount(winrt._winrt.IInspectable):
+class IWebAccount(winrt.system.Object):
     # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.IWebAccount::get_State()
     @_property
     @abstractmethod

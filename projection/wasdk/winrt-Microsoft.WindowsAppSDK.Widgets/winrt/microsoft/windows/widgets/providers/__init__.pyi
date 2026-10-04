@@ -130,7 +130,7 @@ class WidgetManager_Static(winrt._winrt.Object_Static):
     def get_default(cls) -> WidgetManager: ...
 
 @typing.final
-class WidgetManager(winrt.system.Object, IWidgetManager2, IWidgetManager, metaclass=WidgetManager_Static):
+class WidgetManager(IWidgetManager2, IWidgetManager, winrt.system.Object, metaclass=WidgetManager_Static):
     # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::DeleteWidget(System.String)
     def delete_widget(self, widget_id: str, /) -> None: ...
     # System.String[] Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetIds()
@@ -253,7 +253,7 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
 @typing.final
 class _IWidgetManager: ...
 
-class IWidgetManager(winrt._winrt.IInspectable):
+class IWidgetManager(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::DeleteWidget(System.String)
     @abstractmethod
     def delete_widget(self, widget_id: str, /) -> None: ...
@@ -273,7 +273,7 @@ class IWidgetManager(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetManager2: ...
 
-class IWidgetManager2(winrt._winrt.IInspectable):
+class IWidgetManager2(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager2::SendMessageToContent(System.String,System.String)
     @abstractmethod
     def send_message_to_content(self, widget_id: str, message: str, /) -> None: ...
@@ -281,7 +281,7 @@ class IWidgetManager2(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetProvider: ...
 
-class IWidgetProvider(winrt._winrt.IInspectable):
+class IWidgetProvider(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Activate(Microsoft.Windows.Widgets.Providers.WidgetContext)
     @abstractmethod
     def activate(self, widget_context: WidgetContext, /) -> None: ...
@@ -304,7 +304,7 @@ class IWidgetProvider(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetProvider2: ...
 
-class IWidgetProvider2(winrt._winrt.IInspectable):
+class IWidgetProvider2(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider2::OnCustomizationRequested(Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs)
     @abstractmethod
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
@@ -312,7 +312,7 @@ class IWidgetProvider2(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetProviderAnalytics: ...
 
-class IWidgetProviderAnalytics(winrt._winrt.IInspectable):
+class IWidgetProviderAnalytics(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics::OnAnalyticsInfoReported(Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs)
     @abstractmethod
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
@@ -320,7 +320,7 @@ class IWidgetProviderAnalytics(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetProviderErrors: ...
 
-class IWidgetProviderErrors(winrt._winrt.IInspectable):
+class IWidgetProviderErrors(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs)
     @abstractmethod
     def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...
@@ -328,7 +328,7 @@ class IWidgetProviderErrors(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetProviderMessage: ...
 
-class IWidgetProviderMessage(winrt._winrt.IInspectable):
+class IWidgetProviderMessage(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderMessage::OnMessageReceived(Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs)
     @abstractmethod
     def on_message_received(self, args: WidgetMessageReceivedArgs, /) -> None: ...
@@ -336,7 +336,7 @@ class IWidgetProviderMessage(winrt._winrt.IInspectable):
 @typing.final
 class _IWidgetResourceProvider: ...
 
-class IWidgetResourceProvider(winrt._winrt.IInspectable):
+class IWidgetResourceProvider(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetResourceProvider::OnResourceRequested(Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs)
     @abstractmethod
     def on_resource_requested(self, args: WidgetResourceRequestedArgs, /) -> None: ...

@@ -187,7 +187,7 @@ class AsyncOperationSource(winrt.system.Object):
     def operation(self) -> windows_foundation.IAsyncOperation[winrt.system.Int32]: ...
 
 @typing.final
-class Class(winrt.system.Object, IRequiredOne):
+class Class(IRequiredOne, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Int32 TestComponent.Class::One()
     def one(self) -> winrt.system.Int32: ...
@@ -204,7 +204,7 @@ class Composable_Static(winrt._winrt.Object_Static):
     # System.Int32 TestComponent.Composable::ExpectRequiredTwo(TestComponent.IRequiredTwo)
     def expect_required_two(cls, t: IRequiredTwo, /) -> winrt.system.Int32: ...
 
-class Composable(winrt.system.Object, IRequiredFour, IRequiredThree, IRequiredTwo, IRequiredOne, metaclass=Composable_Static):
+class Composable(IRequiredFour, IRequiredThree, IRequiredTwo, IRequiredOne, winrt.system.Object, metaclass=Composable_Static):
     @typing.overload
     def __new__(cls) -> typing.Self: ...
     @typing.overload
@@ -320,7 +320,7 @@ class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
 @typing.final
 class _IRequiredFour: ...
 
-class IRequiredFour(IRequiredThree, IRequiredTwo, IRequiredOne, winrt._winrt.IInspectable):
+class IRequiredFour(IRequiredThree, IRequiredTwo, IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.IRequiredFour::Four()
     @abstractmethod
     def four(self) -> winrt.system.Int32: ...
@@ -328,7 +328,7 @@ class IRequiredFour(IRequiredThree, IRequiredTwo, IRequiredOne, winrt._winrt.IIn
 @typing.final
 class _IRequiredOne: ...
 
-class IRequiredOne(winrt._winrt.IInspectable):
+class IRequiredOne(winrt.system.Object):
     # System.Int32 TestComponent.IRequiredOne::One()
     @abstractmethod
     def one(self) -> winrt.system.Int32: ...
@@ -336,7 +336,7 @@ class IRequiredOne(winrt._winrt.IInspectable):
 @typing.final
 class _IRequiredThree: ...
 
-class IRequiredThree(IRequiredTwo, IRequiredOne, winrt._winrt.IInspectable):
+class IRequiredThree(IRequiredTwo, IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.IRequiredThree::Three()
     @abstractmethod
     def three(self) -> winrt.system.Int32: ...
@@ -344,7 +344,7 @@ class IRequiredThree(IRequiredTwo, IRequiredOne, winrt._winrt.IInspectable):
 @typing.final
 class _IRequiredTwo: ...
 
-class IRequiredTwo(IRequiredOne, winrt._winrt.IInspectable):
+class IRequiredTwo(IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.IRequiredTwo::Two()
     @abstractmethod
     def two(self) -> winrt.system.Int32: ...
@@ -352,7 +352,7 @@ class IRequiredTwo(IRequiredOne, winrt._winrt.IInspectable):
 @typing.final
 class _ITests: ...
 
-class ITests(winrt._winrt.IInspectable):
+class ITests(winrt.system.Object):
     # System.Boolean[] TestComponent.ITests::Array1(System.Boolean[],System.Boolean[],System.Boolean[]&)
     @abstractmethod
     def array1(self, a: winrt.system.Array[bool] | winrt.system.ReadableBuffer, b: winrt.system.Array[bool] | winrt.system.WriteableBuffer, /) -> tuple[winrt.system.Array[bool], winrt.system.Array[bool]]: ...

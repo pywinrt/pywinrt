@@ -162,7 +162,7 @@ class BitmapSize:
     def unpack(self) -> tuple[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class BitmapBuffer(winrt.system.Object, windows_foundation.IMemoryBuffer, windows_foundation.IClosable):
+class BitmapBuffer(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # System.Void Windows.Graphics.Imaging.BitmapBuffer::Close()
@@ -232,7 +232,7 @@ class BitmapDecoder_Static(winrt._winrt.Object_Static):
     def webp_decoder_id(cls) -> _uuid.UUID: ...
 
 @typing.final
-class BitmapDecoder(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmapFrame, metaclass=BitmapDecoder_Static):
+class BitmapDecoder(IBitmapFrameWithSoftwareBitmap, IBitmapFrame, winrt.system.Object, metaclass=BitmapDecoder_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapFrame> Windows.Graphics.Imaging.BitmapDecoder::GetFrameAsync(System.UInt32)
     def get_frame_async(self, frame_index: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[BitmapFrame]: ...
     @typing.overload
@@ -393,7 +393,7 @@ class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
     def encoder_information(self) -> BitmapCodecInformation: ...
 
 @typing.final
-class BitmapFrame(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmapFrame):
+class BitmapFrame(IBitmapFrameWithSoftwareBitmap, IBitmapFrame, winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapFrame::GetPixelDataAsync()
     def get_pixel_data_async(self) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
@@ -452,19 +452,19 @@ class BitmapFrame(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmapFr
     def pixel_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class BitmapProperties(winrt.system.Object, IBitmapPropertiesView):
+class BitmapProperties(IBitmapPropertiesView, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.BitmapProperties::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_properties_async(self, properties_to_retrieve: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[BitmapPropertySet]: ...
     # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapProperties::SetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
     def set_properties_async(self, properties_to_set: _cabc.Mapping[str, BitmapTypedValue] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[str, BitmapTypedValue]], /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class BitmapPropertiesView(winrt.system.Object, IBitmapPropertiesView):
+class BitmapPropertiesView(IBitmapPropertiesView, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.BitmapPropertiesView::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_properties_async(self, properties_to_retrieve: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[BitmapPropertySet]: ...
 
 @typing.final
-class BitmapPropertySet(winrt.system.Object, winrt._winrt.MutableMapping[str, BitmapTypedValue]):
+class BitmapPropertySet(winrt._winrt.MutableMapping[str, BitmapTypedValue], winrt.system.Object):
     def __len__(self) -> int: ...
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -541,7 +541,7 @@ class BitmapTypedValue(winrt.system.Object):
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class ImageStream(winrt.system.Object, windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable):
+class ImageStream(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Graphics.Imaging.ImageStream::CloneStream()
@@ -620,7 +620,7 @@ class SoftwareBitmap_Static(winrt._winrt.Object_Static):
     def create_copy_with_alpha_from_surface_async(cls, surface: windows_graphics_directx_direct3d11.IDirect3DSurface, alpha: BitmapAlphaMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
 
 @typing.final
-class SoftwareBitmap(winrt.system.Object, windows_foundation.IClosable, metaclass=SoftwareBitmap_Static):
+class SoftwareBitmap(windows_foundation.IClosable, winrt.system.Object, metaclass=SoftwareBitmap_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     @typing.overload
@@ -670,7 +670,7 @@ class SoftwareBitmap(winrt.system.Object, windows_foundation.IClosable, metaclas
 @typing.final
 class _IBitmapFrame: ...
 
-class IBitmapFrame(winrt._winrt.IInspectable):
+class IBitmapFrame(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync()
     @abstractmethod
@@ -726,7 +726,7 @@ class IBitmapFrame(winrt._winrt.IInspectable):
 @typing.final
 class _IBitmapFrameWithSoftwareBitmap: ...
 
-class IBitmapFrameWithSoftwareBitmap(IBitmapFrame, winrt._winrt.IInspectable):
+class IBitmapFrameWithSoftwareBitmap(IBitmapFrame, winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync()
     @abstractmethod
@@ -751,7 +751,7 @@ class IBitmapFrameWithSoftwareBitmap(IBitmapFrame, winrt._winrt.IInspectable):
 @typing.final
 class _IBitmapPropertiesView: ...
 
-class IBitmapPropertiesView(winrt._winrt.IInspectable):
+class IBitmapPropertiesView(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.IBitmapPropertiesView::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     @abstractmethod
     def get_properties_async(self, properties_to_retrieve: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[BitmapPropertySet]: ...
