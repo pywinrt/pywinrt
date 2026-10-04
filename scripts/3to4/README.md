@@ -162,10 +162,10 @@ written by `generate.py`, as is `distributions.csv`.
 There is also an `inspect_source.py` script that looks for renamed methods in
 your Python files, along with the other changes that it can find by looking at
 the source: the `winui3` and `webview2` imports, the deprecated
-`HResult.value` and `EventRegistrationToken.value`, format strings passed to
-`winrt.system.Array`, the uses of `Matrix3x2` and `Matrix4x4`, whose product is
-`@`, and requirements on v3 distributions that were renamed, removed or
-constrained to v3.
+`HResult.value` and `EventRegistrationToken.value`, the deprecated `_from()`,
+format strings passed to `winrt.system.Array`, the uses of `Matrix3x2` and
+`Matrix4x4`, whose product is `@`, and requirements on v3 distributions that
+were renamed, removed or constrained to v3.
 
 ### Usage
 
@@ -218,6 +218,7 @@ else, since everything else it reports needs checking by hand:
 * The script doesn't do any static analysis to infer types, so it may produce
   false positives. It matches a method by its name alone, and `.value` only on
   a property that hands back an `HResult` or on a name that has `token` in it.
+  It reports every call of a method named `_from`, whatever it is called on.
   It reports every use of `Matrix3x2` and `Matrix4x4`, under whatever name
   they are imported as, since it cannot tell which `*` has two matrices on
   either side of it; a matrix that only comes out of a property or a method,
@@ -227,6 +228,12 @@ else, since everything else it reports needs checking by hand:
 * An array of enums was spelled `Array("i", ...)` or `Array("I", ...)` in v3;
   spell it with the enum type rather than with the integer type the script
   suggests.
+
+## `_from()` is `as_()`
+
+`Type._from(obj)` is deprecated and raises a `DeprecationWarning`. Write
+`obj.as_(Type)` instead, which has done the same thing since v3. The script
+reports each call with the `as_()` call that replaces it.
 
 ## The product of two matrices is `@`
 
