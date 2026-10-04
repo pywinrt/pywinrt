@@ -487,7 +487,7 @@ namespace py::cpp::_winrt
     // <pywinrt/abi.h> rather than spelled again here so that the asserts that
     // guard the layout guard this too.
     static PyType_Spec Object_type_spec
-        = {"_winrt.Object",
+        = {"winrt.system.Object",
            py::object_basicsize,
            0,
            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
@@ -620,7 +620,7 @@ namespace py::cpp::_winrt
     };
 
     static PyType_Spec MappingIter_type_spec
-        = {"_winrt.MappingIter",
+        = {"winrt._winrt.MappingIter",
            sizeof(MappingIter_object),
            0,
            Py_TPFLAGS_DEFAULT,
