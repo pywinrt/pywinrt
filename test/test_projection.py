@@ -20,7 +20,7 @@ import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
-from winrt.system import Object
+from winrt.system import Array, Int32, Object
 from winrt.system.hresult import E_FAIL
 
 BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
@@ -58,6 +58,18 @@ class TestClasses(unittest.TestCase):
         # Class implements IRequiredOne, which is not its default interface, so
         # reaching one() queries for it.
         self.assertEqual(tc.Class().one(), 1)
+
+    def test_runtime_types_are_named_for_their_module(self) -> None:
+        # Object and Array are named for the module they are imported from,
+        # which is what reprs and error messages show.
+        for cls in (Object, Array):
+            with self.subTest(cls=cls):
+                self.assertEqual(cls.__module__, "winrt.system")
+
+        self.assertEqual(repr(Object), "<class 'winrt.system.Object'>")
+
+        with self.assertRaisesRegex(TypeError, "'winrt.system.Array' and 'int'"):
+            Array(Int32, [1]) + 1  # type: ignore
 
     def test_as_object(self) -> None:
         uri = wf.Uri("http://example.com/")
