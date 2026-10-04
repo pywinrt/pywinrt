@@ -813,7 +813,7 @@ class TestArrayParameters(unittest.TestCase):
         self.check_reverse("array15", tc.Nested, values)
 
     def test_interface(self):
-        passed = Array(IStringable, [IStringable._from(Uri("https://example.com"))])
+        passed = Array(IStringable, [Uri("https://example.com").as_(IStringable)])
         lent = Array(IStringable, 1)
 
         returned, received = self.tests.array16(passed, lent)

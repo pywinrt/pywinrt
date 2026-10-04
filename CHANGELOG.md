@@ -301,6 +301,7 @@
   `[Windows.Foundation.Metadata.Overload]` attribute are still available as
   aliases, but calling one raises a `DeprecationWarning`. They will be removed
   in a future release.
+- `Type._from(obj)` is deprecated in favor of `obj.as_(Type)`.
 
 ### Removed
 - Dropped support for Python 3.9 and Python 3.10. PyWinRT now requires
