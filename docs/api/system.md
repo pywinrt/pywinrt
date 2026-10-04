@@ -122,7 +122,13 @@ class Object
 A wrapper around the WinRT `System.Object` type.
 
 This is the base type of all WinRT runtime objects and cannot be
-instantiated directly.
+instantiated directly. A Python class that implements a WinRT interface is
+an `Object` too: `isinstance()` and `issubclass()` say so, although it does
+not derive from `Object`, which holds a WinRT object that a Python
+implementation does not have.
+
+!!! version-changed "Changed in version 4.0"
+    A Python implementation of a WinRT interface is an instance of `Object`.
 
 **Type casting**
 
