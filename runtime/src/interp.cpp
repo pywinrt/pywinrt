@@ -1652,11 +1652,21 @@ namespace py::interp
 
                     hr = shape->invoke(vtable[overload.slot], instance, frame.args);
                 }
-
-                // A factory that is not agile is not kept, so this is the
-                // last reference to it, and it may be a proxy.
-                queried = nullptr;
             }
+
+            // A factory that is not agile is not kept, so this is the last
+            // reference to it, and it may be a proxy, whose release is a call
+            // of its own that may replace the error info the failed call left
+            // on the thread. So it is let go of once that has been read, and
+            // without the GIL, since a call into a proxy may wait for it.
+            auto const release_queried = [&queried]() noexcept
+            {
+                if (queried)
+                {
+                    auto _gil = release_gil();
+                    queried = nullptr;
+                }
+            };
 
             if (!available)
             {
@@ -1680,9 +1690,12 @@ namespace py::interp
                 catch (...)
                 {
                     to_PyErr(&site);
+                    release_queried();
                     return nullptr;
                 }
             }
+
+            release_queried();
 
             if (overload.out_count == 0)
             {
