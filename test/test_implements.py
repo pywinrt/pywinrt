@@ -109,9 +109,8 @@ class TestImplements(unittest.TestCase):
             def get_string(self) -> str:
                 return "hi"
 
-        # _from_() is internal to the runtime, so no stub declares it, and
         # WinRT only ever calls the members this implements
-        seen = wf.IPropertyValue._from_(Value())  # type: ignore[attr-defined, abstract]
+        seen = wf.IPropertyValue._from_(Value())  # type: ignore[abstract]
 
         self.assertEqual(seen.type, wf.PropertyType.STRING)
         self.assertFalse(seen.is_numeric_scalar)
@@ -137,7 +136,7 @@ class TestImplements(unittest.TestCase):
                 return None
 
         action = Action()  # type: ignore[abstract]
-        seen = wf.IAsyncAction._from_(action)  # type: ignore[attr-defined, abstract]
+        seen = wf.IAsyncAction._from_(action)
 
         status = []
         seen.completed = lambda sender, value: status.append(value)
