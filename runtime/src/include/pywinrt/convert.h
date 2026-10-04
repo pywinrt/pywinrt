@@ -493,15 +493,9 @@ namespace py
                 throw python_exception();
             }
 
-            auto result
-                = PyObject_IsInstance(obj, reinterpret_cast<PyObject*>(object_type));
-
-            if (result == -1)
-            {
-                throw python_exception();
-            }
-
-            if (result == 0)
+            // The layout, not isinstance(), which a Python implementation of an
+            // interface passes without holding a WinRT object.
+            if (!PyObject_TypeCheck(obj, object_type))
             {
                 // Not a wrapper, but a Python class that derives from the
                 // public name of a projected interface is an implementation

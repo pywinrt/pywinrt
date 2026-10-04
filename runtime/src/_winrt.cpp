@@ -4,6 +4,7 @@
 
 #include <pywinrt/base.h>
 #include "module_state.h"
+#include "implements.h"
 #include "members.h"
 #include "objects.h"
 #include "types.h"
@@ -14,6 +15,17 @@
 namespace py::cpp::_winrt
 {
     // BEGIN: class _winrt.Object_Static:
+
+    /**
+     * Whether @p cls is the wrapper type of the interface @p info describes,
+     * as opposed to the interface's public name or a class.
+     */
+    static bool is_interface_wrapper(
+        py::interp::type_entry const& info, PyObject* cls) noexcept
+    {
+        return info.category == py::table::category::interface_
+               && reinterpret_cast<PyTypeObject*>(cls) == info.py_type;
+    }
 
     static PyObject* Object_Static_instancecheck(PyObject* cls, PyObject* obj) noexcept
     {
@@ -38,11 +50,33 @@ namespace py::cpp::_winrt
                 return derived.detach();
             }
 
+            auto const object_type = py::get_object_type();
+            if (!object_type)
+            {
+                return nullptr;
+            }
+
+            // A Python implementation of an interface is a WinRT object too,
+            // though it does not derive from Object, whose instances hold a
+            // WinRT object it has none of.
+            if (cls == reinterpret_cast<PyObject*>(object_type))
+            {
+                return PyBool_FromLong(py::interp::implements_interfaces(Py_TYPE(obj)));
+            }
+
             // A class with no entry of its own is a Python class, which only
             // its own instances are instances of.
             auto const info
                 = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
             if (!info)
+            {
+                return derived.detach();
+            }
+
+            // The wrapper type an interface's instances are returned as is an
+            // ordinary type; the interface's public name is what answers by
+            // asking the object.
+            if (is_interface_wrapper(*info, cls))
             {
                 return derived.detach();
             }
@@ -59,12 +93,6 @@ namespace py::cpp::_winrt
                 // The class says nothing about an interface, so there is
                 // nothing else to ask.
                 return derived.detach();
-            }
-
-            auto const object_type = py::get_object_type();
-            if (!object_type)
-            {
-                return nullptr;
             }
 
             if (!PyObject_TypeCheck(obj, object_type))
@@ -202,9 +230,32 @@ namespace py::cpp::_winrt
                 return derived.detach();
             }
 
+            auto const object_type = py::get_object_type();
+            if (!object_type)
+            {
+                return nullptr;
+            }
+
+            // As for instances: a Python implementation of an interface.
+            // type.__subclasscheck__() has refused anything that is not a
+            // class, but a class need not be a type object.
+            if (cls == reinterpret_cast<PyObject*>(object_type))
+            {
+                return PyBool_FromLong(
+                    PyType_Check(subclass)
+                    && py::interp::implements_interfaces(
+                        reinterpret_cast<PyTypeObject*>(subclass)));
+            }
+
             auto const info
                 = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
             if (!info)
+            {
+                return derived.detach();
+            }
+
+            // As for instances.
+            if (is_interface_wrapper(*info, cls))
             {
                 return derived.detach();
             }
@@ -1066,8 +1117,10 @@ namespace py::cpp::_winrt
             return -1;
         }
 
-        py::pytype_handle object_type{
-            py::register_python_type(module, &Object_type_spec, nullptr, nullptr)};
+        // Object's metaclass is what makes a Python implementation of an
+        // interface an instance of it, as the type hints say.
+        py::pytype_handle object_type{py::register_python_type(
+            module, &Object_type_spec, nullptr, object_meta_type.get())};
         if (!object_type)
         {
             return -1;

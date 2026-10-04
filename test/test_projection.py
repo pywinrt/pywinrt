@@ -47,6 +47,35 @@ class TestModule(unittest.TestCase):
         self.assertIs(sys.modules["test_winrt.testcomponent"].Class, before)
 
 
+class TestObject(unittest.TestCase):
+    """
+    winrt.system.Object is the type of everything WinRT can hold: a wrapped
+    WinRT object, and a Python implementation of an interface, which does not
+    derive from it.
+    """
+
+    def test_a_wrapped_object_is_one(self) -> None:
+        uri = wf.Uri("https://example.com")
+        self.assertIsInstance(uri, Object)
+        self.assertIsInstance(uri.as_(wf.IStringable), Object)
+        self.assertTrue(issubclass(wf.Uri, Object))
+
+    def test_a_python_implementation_is_one(self) -> None:
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "stringable"
+
+        self.assertIsInstance(Stringable(), Object)
+        self.assertTrue(issubclass(Stringable, Object))
+        self.assertTrue(issubclass(wf.IStringable, Object))
+
+    def test_nothing_else_is_one(self) -> None:
+        self.assertNotIsInstance(wf.Point(1, 2), Object)
+        self.assertNotIsInstance(object(), Object)
+        self.assertFalse(issubclass(wf.Point, Object))
+        self.assertFalse(issubclass(int, Object))
+
+
 class TestClasses(unittest.TestCase):
     def test_activation(self) -> None:
         self.assertIsInstance(tc.Class(), tc.Class)
