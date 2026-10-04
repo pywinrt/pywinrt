@@ -70,7 +70,7 @@ class UnicodeEncoding(enum.IntEnum):
     UTF16_B_E = 2
 
 @typing.final
-class Buffer_Static(winrt._winrt.IInspectable_Static):
+class Buffer_Static(winrt._winrt.Object_Static):
     # Windows.Storage.Streams.Buffer Windows.Storage.Streams.Buffer::CreateCopyFromMemoryBuffer(Windows.Foundation.IMemoryBuffer)
     def create_copy_from_memory_buffer(cls, input: windows_foundation.IMemoryBuffer, /) -> Buffer: ...
     # Windows.Foundation.MemoryBuffer Windows.Storage.Streams.Buffer::CreateMemoryBufferOverIBuffer(Windows.Storage.Streams.IBuffer)
@@ -93,7 +93,7 @@ class Buffer(winrt.system.Object, IBuffer, metaclass=Buffer_Static):
     def capacity(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class DataReader_Static(winrt._winrt.IInspectable_Static):
+class DataReader_Static(winrt._winrt.Object_Static):
     # Windows.Storage.Streams.DataReader Windows.Storage.Streams.DataReader::FromBuffer(Windows.Storage.Streams.IBuffer)
     def from_buffer(cls, buffer: winrt.system.Buffer, /) -> DataReader: ...
 
@@ -309,7 +309,7 @@ class FileOutputStream(winrt.system.Object, IOutputStream, windows_foundation.IC
     def write_async(self, buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class FileRandomAccessStream_Static(winrt._winrt.IInspectable_Static):
+class FileRandomAccessStream_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.Streams.FileRandomAccessStream::OpenAsync(System.String,Windows.Storage.FileAccessMode)
     def open_async(cls, file_path: str, access_mode: windows_storage.FileAccessMode, /) -> windows_foundation.IAsyncOperation[IRandomAccessStream]: ...
@@ -445,7 +445,7 @@ class OutputStreamOverStream(winrt.system.Object, IOutputStream, windows_foundat
     def write_async(self, buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class RandomAccessStream_Static(winrt._winrt.IInspectable_Static):
+class RandomAccessStream_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperationWithProgress`2<System.UInt64,System.UInt64> Windows.Storage.Streams.RandomAccessStream::CopyAndCloseAsync(Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)
     def copy_and_close_async(cls, source: IInputStream, destination: IOutputStream, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt64, winrt.system.UInt64]: ...
     @typing.overload
@@ -500,7 +500,7 @@ class RandomAccessStreamOverStream(winrt.system.Object, IRandomAccessStream, IOu
     def position(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class RandomAccessStreamReference_Static(winrt._winrt.IInspectable_Static):
+class RandomAccessStreamReference_Static(winrt._winrt.Object_Static):
     # Windows.Storage.Streams.RandomAccessStreamReference Windows.Storage.Streams.RandomAccessStreamReference::CreateFromFile(Windows.Storage.IStorageFile)
     def create_from_file(cls, file: windows_storage.IStorageFile, /) -> RandomAccessStreamReference: ...
     # Windows.Storage.Streams.RandomAccessStreamReference Windows.Storage.Streams.RandomAccessStreamReference::CreateFromStream(Windows.Storage.Streams.IRandomAccessStream)

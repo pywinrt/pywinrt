@@ -464,7 +464,7 @@ class TextInputProvider(winrt.system.Object):
     def selection_bounds(self) -> windows_foundation.Rect | None: ...
 
 @typing.final
-class TextInputService_Static(winrt._winrt.IInspectable_Static):
+class TextInputService_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.Preview.Text.TextInputService Windows.UI.Input.Preview.Text.TextInputService::GetForCurrentThread()
     def get_for_current_thread(cls) -> TextInputService: ...
 

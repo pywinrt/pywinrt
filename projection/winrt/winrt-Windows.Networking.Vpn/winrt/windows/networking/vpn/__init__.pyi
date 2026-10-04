@@ -184,7 +184,7 @@ class VpnAppId(winrt.system.Object):
     def type(self, value: VpnAppIdType) -> None: ...
 
 @typing.final
-class VpnChannel_Static(winrt._winrt.IInspectable_Static):
+class VpnChannel_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Networking.Vpn.VpnChannel::ProcessEventAsync(System.Object,System.Object)
     def process_event_async(cls, third_party_plug_in: winrt.system.Object, event: winrt.system.Object, /) -> None: ...
 

@@ -232,7 +232,7 @@ class PackageCertificateEkuValidator(winrt.system.Object, IPackageValidator):
     def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
 
 @typing.final
-class PackageDeploymentManager_Static(winrt._winrt.IInspectable_Static):
+class PackageDeploymentManager_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.Management.Deployment.PackageDeploymentManager Microsoft.Windows.Management.Deployment.PackageDeploymentManager::GetDefault()
     def get_default(cls) -> PackageDeploymentManager: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageDeploymentManager::IsPackageDeploymentFeatureSupported(Microsoft.Windows.Management.Deployment.PackageDeploymentFeature)
@@ -352,7 +352,7 @@ class PackageMinimumVersionValidator(winrt.system.Object, IPackageValidator):
     def is_package_valid(self, appx_packaging_object: winrt.system.Object, /) -> bool: ...
 
 @typing.final
-class PackageRuntimeManager_Static(winrt._winrt.IInspectable_Static):
+class PackageRuntimeManager_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.Management.Deployment.PackageRuntimeManager Microsoft.Windows.Management.Deployment.PackageRuntimeManager::GetDefault()
     def get_default(cls) -> PackageRuntimeManager: ...
 
@@ -481,7 +481,7 @@ class PackageValidationHandler(winrt.system.Object):
     def handler(self) -> windows_foundation.TypedEventHandler[PackageValidationEventSource, PackageValidationEventArgs]: ...
 
 @typing.final
-class PackageVolume_Static(winrt._winrt.IInspectable_Static):
+class PackageVolume_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.Management.Deployment.PackageVolume> Microsoft.Windows.Management.Deployment.PackageVolume::AddAsync(System.String)
     def add_async(cls, package_store_path: str, /) -> windows_foundation.IAsyncOperation[PackageVolume]: ...
     # Microsoft.Windows.Management.Deployment.PackageVolume Microsoft.Windows.Management.Deployment.PackageVolume::FindPackageVolumeByName(System.String)

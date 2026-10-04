@@ -13,7 +13,7 @@ __all__ = [
 ]
 
 @typing.final
-class HolographicKeyboard_Static(winrt._winrt.IInspectable_Static):
+class HolographicKeyboard_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Holographic.HolographicKeyboard Windows.ApplicationModel.Holographic.HolographicKeyboard::GetDefault()
     def get_default(cls) -> HolographicKeyboard: ...
 

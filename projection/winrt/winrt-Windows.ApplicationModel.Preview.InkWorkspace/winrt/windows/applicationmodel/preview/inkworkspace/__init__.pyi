@@ -12,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class InkWorkspaceHostedAppManager_Static(winrt._winrt.IInspectable_Static):
+class InkWorkspaceHostedAppManager_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager::GetForCurrentApp()
     def get_for_current_app(cls) -> InkWorkspaceHostedAppManager: ...
 

@@ -376,7 +376,7 @@ class PrintPageDescription:
     def unpack(self) -> tuple[tuple[winrt.system.Single, winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class PrintManager_Static(winrt._winrt.IInspectable_Static):
+class PrintManager_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Printing.PrintManager Windows.Graphics.Printing.PrintManager::GetForCurrentView()
     def get_for_current_view(cls) -> PrintManager: ...
     # System.Boolean Windows.Graphics.Printing.PrintManager::IsSupported()
@@ -648,7 +648,7 @@ class PrintTaskSourceRequestedDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class StandardPrintTaskOptions_Static(winrt._winrt.IInspectable_Static):
+class StandardPrintTaskOptions_Static(winrt._winrt.Object_Static):
     # System.String Windows.Graphics.Printing.StandardPrintTaskOptions::get_Copies()
     @_property
     def copies(cls) -> str: ...

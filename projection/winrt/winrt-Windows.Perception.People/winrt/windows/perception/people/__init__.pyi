@@ -84,7 +84,7 @@ class JointPose:
     def unpack(self) -> tuple[tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], winrt.system.Single, JointPoseAccuracy]: ...
 
 @typing.final
-class EyesPose_Static(winrt._winrt.IInspectable_Static):
+class EyesPose_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.Perception.People.EyesPose::IsSupported()
     def is_supported(cls) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Input.GazeInputAccessStatus> Windows.Perception.People.EyesPose::RequestAccessAsync()

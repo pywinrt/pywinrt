@@ -24,7 +24,7 @@ class AppTaskState(enum.IntEnum):
     ERROR = 4
 
 @typing.final
-class AppTaskContent_Static(winrt._winrt.IInspectable_Static):
+class AppTaskContent_Static(winrt._winrt.Object_Static):
     # Windows.UI.Shell.Tasks.AppTaskContent Windows.UI.Shell.Tasks.AppTaskContent::CreateGeneratedAssetsResult(Windows.UI.Shell.Tasks.AppTaskResultAsset[])
     def create_generated_assets_result(cls, assets: winrt.system.Array[AppTaskResultAsset] | winrt.system.ReadableBuffer, /) -> AppTaskContent: ...
     # Windows.UI.Shell.Tasks.AppTaskContent Windows.UI.Shell.Tasks.AppTaskContent::CreatePreviewThumbnail(Windows.Foundation.Uri,System.String)
@@ -47,7 +47,7 @@ class AppTaskContent(winrt.system.Object, metaclass=AppTaskContent_Static):
     def set_text_input(self, placeholder_text: str, action_uri_template: str, /) -> None: ...
 
 @typing.final
-class AppTaskInfo_Static(winrt._winrt.IInspectable_Static):
+class AppTaskInfo_Static(winrt._winrt.Object_Static):
     # Windows.UI.Shell.Tasks.AppTaskInfo Windows.UI.Shell.Tasks.AppTaskInfo::Create(System.String,System.String,Windows.Foundation.Uri,Windows.Foundation.Uri,Windows.UI.Shell.Tasks.AppTaskContent)
     def create(cls, title: str, subtitle: str, deep_link: windows_foundation.Uri, icon_uri: windows_foundation.Uri, content: AppTaskContent, /) -> AppTaskInfo: ...
     # Windows.UI.Shell.Tasks.AppTaskInfo[] Windows.UI.Shell.Tasks.AppTaskInfo::FindAll()

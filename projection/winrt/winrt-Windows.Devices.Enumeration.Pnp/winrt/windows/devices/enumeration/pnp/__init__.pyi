@@ -33,7 +33,7 @@ class PnpObjectType(enum.IntEnum):
     ASSOCIATION_ENDPOINT_PROTOCOL = 9
 
 @typing.final
-class PnpObject_Static(winrt._winrt.IInspectable_Static):
+class PnpObject_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.Pnp.PnpObject> Windows.Devices.Enumeration.Pnp.PnpObject::CreateFromIdAsync(Windows.Devices.Enumeration.Pnp.PnpObjectType,System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def create_from_id_async(cls, type: PnpObjectType, id: str, requested_properties: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[PnpObject]: ...
     @typing.overload

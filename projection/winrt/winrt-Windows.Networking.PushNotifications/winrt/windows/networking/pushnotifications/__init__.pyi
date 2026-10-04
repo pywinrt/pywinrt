@@ -48,7 +48,7 @@ class PushNotificationChannel(winrt.system.Object):
     def uri(self) -> str: ...
 
 @typing.final
-class PushNotificationChannelManager_Static(winrt._winrt.IInspectable_Static):
+class PushNotificationChannelManager_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManager::CreatePushNotificationChannelForApplicationAsync()
     def create_push_notification_channel_for_application_async(cls) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...

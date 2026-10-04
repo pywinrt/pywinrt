@@ -20,7 +20,7 @@ __all__ = [
 ]
 
 @typing.final
-class LockApplicationHost_Static(winrt._winrt.IInspectable_Static):
+class LockApplicationHost_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.LockScreen.LockApplicationHost Windows.ApplicationModel.LockScreen.LockApplicationHost::GetForCurrentView()
     def get_for_current_view(cls) -> LockApplicationHost: ...
 

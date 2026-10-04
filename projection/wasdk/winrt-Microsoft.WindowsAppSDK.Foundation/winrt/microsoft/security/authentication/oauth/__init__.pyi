@@ -58,7 +58,7 @@ class AuthFailure(winrt.system.Object):
     def state(self) -> str: ...
 
 @typing.final
-class AuthRequestParams_Static(winrt._winrt.IInspectable_Static):
+class AuthRequestParams_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Microsoft.Security.Authentication.OAuth.AuthRequestParams Microsoft.Security.Authentication.OAuth.AuthRequestParams::CreateForAuthorizationCodeRequest(System.String)
     def create_for_authorization_code_request(cls, client_id: str, /) -> AuthRequestParams: ...
@@ -155,7 +155,7 @@ class AuthResponse(winrt.system.Object):
     def token_type(self) -> str: ...
 
 @typing.final
-class ClientAuthentication_Static(winrt._winrt.IInspectable_Static):
+class ClientAuthentication_Static(winrt._winrt.Object_Static):
     # Microsoft.Security.Authentication.OAuth.ClientAuthentication Microsoft.Security.Authentication.OAuth.ClientAuthentication::CreateForBasicAuthorization(System.String,System.String)
     def create_for_basic_authorization(cls, client_id: str, client_secret: str, /) -> ClientAuthentication: ...
 
@@ -182,7 +182,7 @@ class ClientAuthentication(winrt.system.Object, metaclass=ClientAuthentication_S
     def additional_headers(self) -> _cabc.MutableMapping[str, str]: ...
 
 @typing.final
-class OAuth2Manager_Static(winrt._winrt.IInspectable_Static):
+class OAuth2Manager_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.Security.Authentication.OAuth.OAuth2Manager::CompleteAuthRequest(Windows.Foundation.Uri)
     def complete_auth_request(cls, response_uri: windows_foundation.Uri, /) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Security.Authentication.OAuth.AuthRequestResult> Microsoft.Security.Authentication.OAuth.OAuth2Manager::RequestAuthWithParamsAsync(Microsoft.UI.WindowId,Windows.Foundation.Uri,Microsoft.Security.Authentication.OAuth.AuthRequestParams)
@@ -220,7 +220,7 @@ class TokenFailure(winrt.system.Object):
     def kind(self) -> TokenFailureKind: ...
 
 @typing.final
-class TokenRequestParams_Static(winrt._winrt.IInspectable_Static):
+class TokenRequestParams_Static(winrt._winrt.Object_Static):
     # Microsoft.Security.Authentication.OAuth.TokenRequestParams Microsoft.Security.Authentication.OAuth.TokenRequestParams::CreateForAuthorizationCodeRequest(Microsoft.Security.Authentication.OAuth.AuthResponse)
     def create_for_authorization_code_request(cls, auth_response: AuthResponse, /) -> TokenRequestParams: ...
     # Microsoft.Security.Authentication.OAuth.TokenRequestParams Microsoft.Security.Authentication.OAuth.TokenRequestParams::CreateForClientCredentials()

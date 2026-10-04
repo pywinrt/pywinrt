@@ -372,7 +372,7 @@ class AudioDeviceModulesManager(winrt.system.Object):
     def remove_module_notification_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class CallControl_Static(winrt._winrt.IInspectable_Static):
+class CallControl_Static(winrt._winrt.Object_Static):
     # Windows.Media.Devices.CallControl Windows.Media.Devices.CallControl::FromId(System.String)
     def from_id(cls, device_id: str, /) -> CallControl: ...
     # Windows.Media.Devices.CallControl Windows.Media.Devices.CallControl::GetDefault()
@@ -911,7 +911,7 @@ class LowLagPhotoSequenceControl(winrt.system.Object):
     def supported(self) -> bool: ...
 
 @typing.final
-class MediaDevice_Static(winrt._winrt.IInspectable_Static):
+class MediaDevice_Static(winrt._winrt.Object_Static):
     # System.String Windows.Media.Devices.MediaDevice::GetAudioCaptureSelector()
     def get_audio_capture_selector(cls) -> str: ...
     # System.String Windows.Media.Devices.MediaDevice::GetAudioRenderSelector()

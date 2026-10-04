@@ -355,7 +355,7 @@ class VerticalCharacterAlignment(enum.IntEnum):
     BOTTOM = 2
 
 @typing.final
-class FontWeights_Static(winrt._winrt.IInspectable_Static):
+class FontWeights_Static(winrt._winrt.Object_Static):
     # Windows.UI.Text.FontWeight Microsoft.UI.Text.FontWeights::get_Black()
     @_property
     def black(cls) -> windows_ui_text.FontWeight: ...
@@ -608,7 +608,7 @@ class RichEditTextRange(winrt.system.Object, ITextRange):
     def story_length(self) -> winrt.system.Int32: ...
 
 @typing.final
-class TextConstants_Static(winrt._winrt.IInspectable_Static):
+class TextConstants_Static(winrt._winrt.Object_Static):
     # Windows.UI.Color Microsoft.UI.Text.TextConstants::get_AutoColor()
     @_property
     def auto_color(cls) -> windows_ui.Color: ...

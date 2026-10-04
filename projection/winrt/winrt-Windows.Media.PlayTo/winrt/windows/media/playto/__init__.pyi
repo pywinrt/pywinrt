@@ -123,7 +123,7 @@ class PlayToConnectionTransferredEventArgs(winrt.system.Object):
     def previous_source(self) -> PlayToSource: ...
 
 @typing.final
-class PlayToManager_Static(winrt._winrt.IInspectable_Static):
+class PlayToManager_Static(winrt._winrt.Object_Static):
     # Windows.Media.PlayTo.PlayToManager Windows.Media.PlayTo.PlayToManager::GetForCurrentView()
     @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def get_for_current_view(cls) -> PlayToManager: ...

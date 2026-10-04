@@ -61,7 +61,7 @@ class XmlnsDefinition:
     def __replace__(self, /, **changes: typing.Any) -> XmlnsDefinition: ...
     def unpack(self) -> tuple[str, str]: ...
 
-class MarkupExtension_Static(winrt._winrt.IInspectable_Static):
+class MarkupExtension_Static(winrt._winrt.Object_Static):
     ...
 
 class MarkupExtension(winrt.system.Object, metaclass=MarkupExtension_Static):
@@ -85,7 +85,7 @@ class ProvideValueTargetProperty(winrt.system.Object):
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
-class XamlBinaryWriter_Static(winrt._winrt.IInspectable_Static):
+class XamlBinaryWriter_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Markup.XamlBinaryWriterErrorInformation Microsoft.UI.Xaml.Markup.XamlBinaryWriter::Write(Windows.Foundation.Collections.IVector`1<Windows.Storage.Streams.IRandomAccessStream>,Windows.Foundation.Collections.IVector`1<Windows.Storage.Streams.IRandomAccessStream>,Microsoft.UI.Xaml.Markup.IXamlMetadataProvider)
     def write(cls, input_streams: _cabc.MutableSequence[windows_storage_streams.IRandomAccessStream], output_streams: _cabc.MutableSequence[windows_storage_streams.IRandomAccessStream], xaml_metadata_provider: IXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
 
@@ -94,7 +94,7 @@ class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
     ...
 
 @typing.final
-class XamlBindingHelper_Static(winrt._winrt.IInspectable_Static):
+class XamlBindingHelper_Static(winrt._winrt.Object_Static):
     # System.Object Microsoft.UI.Xaml.Markup.XamlBindingHelper::ConvertValue(Windows.UI.Xaml.Interop.TypeName,System.Object)
     def convert_value(cls, type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], value: winrt.system.Object, /) -> winrt.system.Object: ...
     # Microsoft.UI.Xaml.Markup.IDataTemplateComponent Microsoft.UI.Xaml.Markup.XamlBindingHelper::GetDataTemplateComponent(Microsoft.UI.Xaml.DependencyObject)
@@ -154,7 +154,7 @@ class XamlBindingHelper(winrt.system.Object, metaclass=XamlBindingHelper_Static)
     ...
 
 @typing.final
-class XamlMarkupHelper_Static(winrt._winrt.IInspectable_Static):
+class XamlMarkupHelper_Static(winrt._winrt.Object_Static):
     # System.Void Microsoft.UI.Xaml.Markup.XamlMarkupHelper::UnloadObject(Microsoft.UI.Xaml.DependencyObject)
     def unload_object(cls, element: microsoft_ui_xaml.DependencyObject, /) -> None: ...
 
@@ -163,7 +163,7 @@ class XamlMarkupHelper(winrt.system.Object, metaclass=XamlMarkupHelper_Static):
     ...
 
 @typing.final
-class XamlReader_Static(winrt._winrt.IInspectable_Static):
+class XamlReader_Static(winrt._winrt.Object_Static):
     # System.Object Microsoft.UI.Xaml.Markup.XamlReader::Load(System.String)
     def load(cls, xaml: str, /) -> winrt.system.Object: ...
     # System.Object Microsoft.UI.Xaml.Markup.XamlReader::LoadWithInitialTemplateValidation(System.String)

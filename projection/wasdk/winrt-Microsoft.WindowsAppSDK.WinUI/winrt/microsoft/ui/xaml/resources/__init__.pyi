@@ -10,7 +10,7 @@ __all__ = [
     "CustomXamlResourceLoader",
 ]
 
-class CustomXamlResourceLoader_Static(winrt._winrt.IInspectable_Static):
+class CustomXamlResourceLoader_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader::get_Current()
     @_property
     def current(cls) -> CustomXamlResourceLoader: ...

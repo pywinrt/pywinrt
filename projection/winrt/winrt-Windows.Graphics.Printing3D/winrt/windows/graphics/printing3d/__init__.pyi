@@ -120,7 +120,7 @@ class Printing3DBufferDescription:
     def unpack(self) -> tuple[Printing3DBufferFormat, winrt.system.UInt32]: ...
 
 @typing.final
-class Print3DManager_Static(winrt._winrt.IInspectable_Static):
+class Print3DManager_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Printing3D.Print3DManager Windows.Graphics.Printing3D.Print3DManager::GetForCurrentView()
     def get_for_current_view(cls) -> Print3DManager: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Graphics.Printing3D.Print3DManager::ShowPrintUIAsync()
@@ -183,7 +183,7 @@ class Print3DTaskSourceRequestedArgs(winrt.system.Object):
     def set_source(self, source: Printing3D3MFPackage, /) -> None: ...
 
 @typing.final
-class Printing3D3MFPackage_Static(winrt._winrt.IInspectable_Static):
+class Printing3D3MFPackage_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Printing3D.Printing3D3MFPackage> Windows.Graphics.Printing3D.Printing3D3MFPackage::LoadAsync(Windows.Storage.Streams.IRandomAccessStream)
     def load_async(cls, value: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[Printing3D3MFPackage]: ...
 
@@ -225,7 +225,7 @@ class Printing3D3MFPackage(winrt.system.Object, metaclass=Printing3D3MFPackage_S
     def compression(self, value: Printing3DPackageCompression) -> None: ...
 
 @typing.final
-class Printing3DBaseMaterial_Static(winrt._winrt.IInspectable_Static):
+class Printing3DBaseMaterial_Static(winrt._winrt.Object_Static):
     # System.String Windows.Graphics.Printing3D.Printing3DBaseMaterial::get_Abs()
     @_property
     def abs(cls) -> str: ...

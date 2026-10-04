@@ -21,7 +21,7 @@ class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     UNKNOWN_FAILURE = 2
 
 @typing.final
-class PlatformTelemetryClient_Static(winrt._winrt.IInspectable_Static):
+class PlatformTelemetryClient_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String)
     def register(cls, id: str, /) -> PlatformTelemetryRegistrationResult: ...

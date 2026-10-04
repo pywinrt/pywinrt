@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class CorePerceptionAutomation_Static(winrt._winrt.IInspectable_Static):
+class CorePerceptionAutomation_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Perception.Automation.Core.CorePerceptionAutomation::SetActivationFactoryProvider(Windows.Foundation.IGetActivationFactory)
     def set_activation_factory_provider(cls, provider: windows_foundation.IGetActivationFactory, /) -> None: ...
 

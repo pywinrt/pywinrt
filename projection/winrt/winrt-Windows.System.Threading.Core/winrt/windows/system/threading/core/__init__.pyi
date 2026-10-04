@@ -27,7 +27,7 @@ class PreallocatedWorkItem(winrt.system.Object):
     def run_async(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class SignalNotifier_Static(winrt._winrt.IInspectable_Static):
+class SignalNotifier_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToEvent(System.String,Windows.System.Threading.Core.SignalHandler)
     def attach_to_event(cls, name: str, handler: SignalHandler, /) -> SignalNotifier: ...

@@ -121,7 +121,7 @@ class TargetedContentCollection(winrt.system.Object):
     def properties(self) -> _cabc.Mapping[str, TargetedContentValue]: ...
 
 @typing.final
-class TargetedContentContainer_Static(winrt._winrt.IInspectable_Static):
+class TargetedContentContainer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.TargetedContent.TargetedContentContainer> Windows.Services.TargetedContent.TargetedContentContainer::GetAsync(System.String)
     def get_async(cls, content_id: str, /) -> windows_foundation.IAsyncOperation[TargetedContentContainer]: ...
 
@@ -207,7 +207,7 @@ class TargetedContentStateChangedEventArgs(winrt.system.Object):
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
-class TargetedContentSubscription_Static(winrt._winrt.IInspectable_Static):
+class TargetedContentSubscription_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.TargetedContent.TargetedContentSubscription> Windows.Services.TargetedContent.TargetedContentSubscription::GetAsync(System.String)
     def get_async(cls, subscription_id: str, /) -> windows_foundation.IAsyncOperation[TargetedContentSubscription]: ...
     # Windows.Services.TargetedContent.TargetedContentSubscriptionOptions Windows.Services.TargetedContent.TargetedContentSubscription::GetOptions(System.String)

@@ -119,7 +119,7 @@ class GazeExitedPreviewEventArgs(winrt.system.Object):
     def current_point(self) -> GazePointPreview: ...
 
 @typing.final
-class GazeInputSourcePreview_Static(winrt._winrt.IInspectable_Static):
+class GazeInputSourcePreview_Static(winrt._winrt.Object_Static):
     # Windows.Devices.Input.Preview.GazeDeviceWatcherPreview Windows.Devices.Input.Preview.GazeInputSourcePreview::CreateWatcher()
     def create_watcher(cls) -> GazeDeviceWatcherPreview: ...
     # Windows.Devices.Input.Preview.GazeInputSourcePreview Windows.Devices.Input.Preview.GazeInputSourcePreview::GetForCurrentView()

@@ -125,7 +125,7 @@ class HttpCacheDirectiveHeaderValueCollection(winrt.system.Object, windows_found
     def max_age(self, value: datetime.timedelta | None) -> None: ...
 
 @typing.final
-class HttpChallengeHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpChallengeHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpChallengeHeaderValue Windows.Web.Http.Headers.HttpChallengeHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpChallengeHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpChallengeHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpChallengeHeaderValue&)
@@ -200,7 +200,7 @@ class HttpChallengeHeaderValueCollection(winrt.system.Object, windows_foundation
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpConnectionOptionHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpConnectionOptionHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpConnectionOptionHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue&)
@@ -266,7 +266,7 @@ class HttpConnectionOptionHeaderValueCollection(winrt.system.Object, windows_fou
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpContentCodingHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpContentCodingHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpContentCodingHeaderValue Windows.Web.Http.Headers.HttpContentCodingHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpContentCodingHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpContentCodingHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpContentCodingHeaderValue&)
@@ -332,7 +332,7 @@ class HttpContentCodingHeaderValueCollection(winrt.system.Object, windows_founda
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpContentCodingWithQualityHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpContentCodingWithQualityHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpContentCodingWithQualityHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValue&)
@@ -404,7 +404,7 @@ class HttpContentCodingWithQualityHeaderValueCollection(winrt.system.Object, win
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpContentDispositionHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpContentDispositionHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpContentDispositionHeaderValue Windows.Web.Http.Headers.HttpContentDispositionHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpContentDispositionHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpContentDispositionHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpContentDispositionHeaderValue&)
@@ -537,7 +537,7 @@ class HttpContentHeaderCollection(winrt.system.Object, windows_foundation.IStrin
     def content_language(self) -> HttpLanguageHeaderValueCollection: ...
 
 @typing.final
-class HttpContentRangeHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpContentRangeHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpContentRangeHeaderValue Windows.Web.Http.Headers.HttpContentRangeHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpContentRangeHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpContentRangeHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpContentRangeHeaderValue&)
@@ -570,7 +570,7 @@ class HttpContentRangeHeaderValue(winrt.system.Object, windows_foundation.IStrin
     def length(self) -> winrt.system.UInt64 | None: ...
 
 @typing.final
-class HttpCookiePairHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpCookiePairHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpCookiePairHeaderValue Windows.Web.Http.Headers.HttpCookiePairHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpCookiePairHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpCookiePairHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpCookiePairHeaderValue&)
@@ -645,7 +645,7 @@ class HttpCookiePairHeaderValueCollection(winrt.system.Object, windows_foundatio
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpCredentialsHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpCredentialsHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpCredentialsHeaderValue Windows.Web.Http.Headers.HttpCredentialsHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpCredentialsHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpCredentialsHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpCredentialsHeaderValue&)
@@ -670,7 +670,7 @@ class HttpCredentialsHeaderValue(winrt.system.Object, windows_foundation.IString
     def token(self) -> str: ...
 
 @typing.final
-class HttpDateOrDeltaHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpDateOrDeltaHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpDateOrDeltaHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpDateOrDeltaHeaderValue&)
@@ -688,7 +688,7 @@ class HttpDateOrDeltaHeaderValue(winrt.system.Object, windows_foundation.IString
     def delta(self) -> datetime.timedelta | None: ...
 
 @typing.final
-class HttpExpectationHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpExpectationHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpExpectationHeaderValue Windows.Web.Http.Headers.HttpExpectationHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpExpectationHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpExpectationHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpExpectationHeaderValue&)
@@ -816,7 +816,7 @@ class HttpLanguageHeaderValueCollection(winrt.system.Object, windows_foundation.
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpLanguageRangeWithQualityHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpLanguageRangeWithQualityHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpLanguageRangeWithQualityHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValue&)
@@ -888,7 +888,7 @@ class HttpLanguageRangeWithQualityHeaderValueCollection(winrt.system.Object, win
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpMediaTypeHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpMediaTypeHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpMediaTypeHeaderValue Windows.Web.Http.Headers.HttpMediaTypeHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpMediaTypeHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpMediaTypeHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpMediaTypeHeaderValue&)
@@ -916,7 +916,7 @@ class HttpMediaTypeHeaderValue(winrt.system.Object, windows_foundation.IStringab
     def parameters(self) -> _cabc.MutableSequence[HttpNameValueHeaderValue]: ...
 
 @typing.final
-class HttpMediaTypeWithQualityHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpMediaTypeWithQualityHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpMediaTypeWithQualityHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValue&)
@@ -1053,7 +1053,7 @@ class HttpMethodHeaderValueCollection(winrt.system.Object, windows_foundation.IS
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class HttpNameValueHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpNameValueHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpNameValueHeaderValue Windows.Web.Http.Headers.HttpNameValueHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpNameValueHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpNameValueHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpNameValueHeaderValue&)
@@ -1078,7 +1078,7 @@ class HttpNameValueHeaderValue(winrt.system.Object, windows_foundation.IStringab
     def name(self) -> str: ...
 
 @typing.final
-class HttpProductHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpProductHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpProductHeaderValue Windows.Web.Http.Headers.HttpProductHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpProductHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpProductHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpProductHeaderValue&)
@@ -1100,7 +1100,7 @@ class HttpProductHeaderValue(winrt.system.Object, windows_foundation.IStringable
     def version(self) -> str: ...
 
 @typing.final
-class HttpProductInfoHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpProductInfoHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpProductInfoHeaderValue Windows.Web.Http.Headers.HttpProductInfoHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpProductInfoHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpProductInfoHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpProductInfoHeaderValue&)
@@ -1359,7 +1359,7 @@ class HttpResponseHeaderCollection(winrt.system.Object, windows_foundation.IStri
     def www_authenticate(self) -> HttpChallengeHeaderValueCollection: ...
 
 @typing.final
-class HttpTransferCodingHeaderValue_Static(winrt._winrt.IInspectable_Static):
+class HttpTransferCodingHeaderValue_Static(winrt._winrt.Object_Static):
     # Windows.Web.Http.Headers.HttpTransferCodingHeaderValue Windows.Web.Http.Headers.HttpTransferCodingHeaderValue::Parse(System.String)
     def parse(cls, input: str, /) -> HttpTransferCodingHeaderValue: ...
     # System.Boolean Windows.Web.Http.Headers.HttpTransferCodingHeaderValue::TryParse(System.String,Windows.Web.Http.Headers.HttpTransferCodingHeaderValue&)

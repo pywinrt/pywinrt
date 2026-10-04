@@ -121,7 +121,7 @@ class ImageFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescripto
     def name(self) -> str: ...
 
 @typing.final
-class ImageFeatureValue_Static(winrt._winrt.IInspectable_Static):
+class ImageFeatureValue_Static(winrt._winrt.Object_Static):
     # Windows.AI.MachineLearning.ImageFeatureValue Windows.AI.MachineLearning.ImageFeatureValue::CreateFromVideoFrame(Windows.Media.VideoFrame)
     def create_from_video_frame(cls, image: windows_media.VideoFrame, /) -> ImageFeatureValue: ...
 
@@ -135,7 +135,7 @@ class ImageFeatureValue(winrt.system.Object, ILearningModelFeatureValue, metacla
     def kind(self) -> LearningModelFeatureKind: ...
 
 @typing.final
-class LearningModel_Static(winrt._winrt.IInspectable_Static):
+class LearningModel_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.LearningModel Windows.AI.MachineLearning.LearningModel::LoadFromFilePath(System.String)
     def load_from_file_path(cls, file_path: str, /) -> LearningModel: ...
@@ -240,7 +240,7 @@ class LearningModelBinding(winrt.system.Object, winrt._winrt.Mapping[str, winrt.
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class LearningModelDevice_Static(winrt._winrt.IInspectable_Static):
+class LearningModelDevice_Static(winrt._winrt.Object_Static):
     # Windows.AI.MachineLearning.LearningModelDevice Windows.AI.MachineLearning.LearningModelDevice::CreateFromDirect3D11Device(Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
     def create_from_direct3d11_device(cls, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> LearningModelDevice: ...
 
@@ -357,7 +357,7 @@ class SequenceFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescri
     def element_descriptor(self) -> ILearningModelFeatureDescriptor: ...
 
 @typing.final
-class TensorBoolean_Static(winrt._winrt.IInspectable_Static):
+class TensorBoolean_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorBoolean Windows.AI.MachineLearning.TensorBoolean::Create()
     def create(cls) -> TensorBoolean: ...
@@ -398,7 +398,7 @@ class TensorBoolean(winrt.system.Object, windows_foundation.IMemoryBuffer, windo
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorDouble_Static(winrt._winrt.IInspectable_Static):
+class TensorDouble_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorDouble Windows.AI.MachineLearning.TensorDouble::Create()
     def create(cls) -> TensorDouble: ...
@@ -460,7 +460,7 @@ class TensorFeatureDescriptor(winrt.system.Object, ILearningModelFeatureDescript
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorFloat_Static(winrt._winrt.IInspectable_Static):
+class TensorFloat_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorFloat Windows.AI.MachineLearning.TensorFloat::Create()
     def create(cls) -> TensorFloat: ...
@@ -501,7 +501,7 @@ class TensorFloat(winrt.system.Object, windows_foundation.IMemoryBuffer, windows
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorFloat16Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorFloat16Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorFloat16Bit Windows.AI.MachineLearning.TensorFloat16Bit::Create()
     def create(cls) -> TensorFloat16Bit: ...
@@ -542,7 +542,7 @@ class TensorFloat16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wi
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorInt16Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorInt16Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorInt16Bit Windows.AI.MachineLearning.TensorInt16Bit::Create()
     def create(cls) -> TensorInt16Bit: ...
@@ -583,7 +583,7 @@ class TensorInt16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorInt32Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorInt32Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorInt32Bit Windows.AI.MachineLearning.TensorInt32Bit::Create()
     def create(cls) -> TensorInt32Bit: ...
@@ -624,7 +624,7 @@ class TensorInt32Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorInt64Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorInt64Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorInt64Bit Windows.AI.MachineLearning.TensorInt64Bit::Create()
     def create(cls) -> TensorInt64Bit: ...
@@ -665,7 +665,7 @@ class TensorInt64Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, wind
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorInt8Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorInt8Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorInt8Bit Windows.AI.MachineLearning.TensorInt8Bit::Create()
     def create(cls) -> TensorInt8Bit: ...
@@ -706,7 +706,7 @@ class TensorInt8Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, windo
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorString_Static(winrt._winrt.IInspectable_Static):
+class TensorString_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorString Windows.AI.MachineLearning.TensorString::Create()
     def create(cls) -> TensorString: ...
@@ -745,7 +745,7 @@ class TensorString(winrt.system.Object, windows_foundation.IMemoryBuffer, window
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorUInt16Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorUInt16Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorUInt16Bit Windows.AI.MachineLearning.TensorUInt16Bit::Create()
     def create(cls) -> TensorUInt16Bit: ...
@@ -786,7 +786,7 @@ class TensorUInt16Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, win
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorUInt32Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorUInt32Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorUInt32Bit Windows.AI.MachineLearning.TensorUInt32Bit::Create()
     def create(cls) -> TensorUInt32Bit: ...
@@ -827,7 +827,7 @@ class TensorUInt32Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, win
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorUInt64Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorUInt64Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorUInt64Bit Windows.AI.MachineLearning.TensorUInt64Bit::Create()
     def create(cls) -> TensorUInt64Bit: ...
@@ -868,7 +868,7 @@ class TensorUInt64Bit(winrt.system.Object, windows_foundation.IMemoryBuffer, win
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorUInt8Bit_Static(winrt._winrt.IInspectable_Static):
+class TensorUInt8Bit_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.AI.MachineLearning.TensorUInt8Bit Windows.AI.MachineLearning.TensorUInt8Bit::Create()
     def create(cls) -> TensorUInt8Bit: ...

@@ -135,7 +135,7 @@ class KeyCredentialCacheConfiguration(winrt.system.Object):
     def usage_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class KeyCredentialManager_Static(winrt._winrt.IInspectable_Static):
+class KeyCredentialManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncAction Windows.Security.Credentials.KeyCredentialManager::DeleteAsync(System.String)
     def delete_async(cls, name: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredentialManager::GetSecureId()

@@ -75,7 +75,7 @@ class PopupAnchor(enum.IntEnum):
     PARENT_ISLAND = 2
 
 @typing.final
-class ChildSiteLink_Static(winrt._winrt.IInspectable_Static):
+class ChildSiteLink_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Content.ChildSiteLink Microsoft.UI.Content.ChildSiteLink::Create(Microsoft.UI.Content.ContentIsland,Microsoft.UI.Composition.ContainerVisual)
     def create(cls, parent: ContentIsland, placement_visual: microsoft_ui_composition.ContainerVisual, /) -> ChildSiteLink: ...
     # Microsoft.UI.Content.ChildSiteLink Microsoft.UI.Content.ChildSiteLink::CreateForSystemVisual(Microsoft.UI.Content.ContentIsland,Windows.UI.Composition.ContainerVisual)
@@ -159,7 +159,7 @@ class ChildSiteLink(winrt.system.Object, IContentSiteLink, IContentSiteInput, IC
     @_property
     def is_closed(self) -> bool: ...
 
-class ContentCoordinateConverter_Static(winrt._winrt.IInspectable_Static):
+class ContentCoordinateConverter_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Content.ContentCoordinateConverter::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> ContentCoordinateConverter: ...
 
@@ -210,7 +210,7 @@ class ContentEnvironmentStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_display_scale_change(self) -> bool: ...
 
-class ContentIsland_Static(winrt._winrt.IInspectable_Static):
+class ContentIsland_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::Create(Microsoft.UI.Composition.Visual)
     def create(cls, root: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.ContentIsland::CreateForSystemVisual(Microsoft.UI.Dispatching.DispatcherQueue,Windows.UI.Composition.Visual)
@@ -409,7 +409,7 @@ class ContentIslandAutomationProviderRequestedEventArgs(winrt.system.Object):
     @automation_provider.setter
     def automation_provider(self, value: winrt.system.Object) -> None: ...
 
-class ContentIslandEnvironment_Static(winrt._winrt.IInspectable_Static):
+class ContentIslandEnvironment_Static(winrt._winrt.Object_Static):
     ...
 
 class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvironment_Static):
@@ -462,7 +462,7 @@ class ContentIslandStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_local_to_parent_transform_matrix_change(self) -> bool: ...
 
-class ContentSite_Static(winrt._winrt.IInspectable_Static):
+class ContentSite_Static(winrt._winrt.Object_Static):
     ...
 
 class ContentSite(winrt.system.Object, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, metaclass=ContentSite_Static):
@@ -620,7 +620,7 @@ class ContentSiteAutomationProviderRequestedEventArgs(winrt.system.Object):
     @automation_provider.setter
     def automation_provider(self, value: winrt.system.Object) -> None: ...
 
-class ContentSiteEnvironment_Static(winrt._winrt.IInspectable_Static):
+class ContentSiteEnvironment_Static(winrt._winrt.Object_Static):
     ...
 
 class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironment_Static):
@@ -653,7 +653,7 @@ class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironme
     @typing.final
     def display_scale(self, value: winrt.system.Single) -> None: ...
 
-class ContentSiteEnvironmentView_Static(winrt._winrt.IInspectable_Static):
+class ContentSiteEnvironmentView_Static(winrt._winrt.Object_Static):
     ...
 
 class ContentSiteEnvironmentView(winrt.system.Object, metaclass=ContentSiteEnvironmentView_Static):
@@ -676,7 +676,7 @@ class ContentSiteRequestedStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_requested_size_change(self) -> bool: ...
 
-class ContentSiteView_Static(winrt._winrt.IInspectable_Static):
+class ContentSiteView_Static(winrt._winrt.Object_Static):
     ...
 
 class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
@@ -758,7 +758,7 @@ class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
     def automation_option(self) -> ContentAutomationOptions: ...
 
 @typing.final
-class DesktopAttachedSiteBridge_Static(winrt._winrt.IInspectable_Static):
+class DesktopAttachedSiteBridge_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Content.DesktopAttachedSiteBridge Microsoft.UI.Content.DesktopAttachedSiteBridge::CreateFromWindowId(Microsoft.UI.Dispatching.DispatcherQueue,Microsoft.UI.WindowId)
     def create_from_window_id(cls, queue: microsoft_ui_dispatching.DispatcherQueue, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> DesktopAttachedSiteBridge: ...
 
@@ -835,7 +835,7 @@ class DesktopChildSiteBridge(DesktopSiteBridge, metaclass=DesktopChildSiteBridge
     def site_view(self) -> ContentSiteView: ...
 
 @typing.final
-class DesktopPopupSiteBridge_Static(winrt._winrt.IInspectable_Static):
+class DesktopPopupSiteBridge_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Content.DesktopPopupSiteBridge Microsoft.UI.Content.DesktopPopupSiteBridge::Create(Microsoft.UI.Content.ContentIsland)
     def create(cls, parent: ContentIsland, /) -> DesktopPopupSiteBridge: ...
 
@@ -942,7 +942,7 @@ class DesktopPopupSiteBridge(winrt.system.Object, IContentSiteLink, IContentSite
     @_property
     def is_closed(self) -> bool: ...
 
-class DesktopSiteBridge_Static(winrt._winrt.IInspectable_Static):
+class DesktopSiteBridge_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.UI.Content.DesktopSiteBridge::IsSupported()
     def is_supported(cls) -> bool: ...
 

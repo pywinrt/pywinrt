@@ -36,7 +36,7 @@ class WebAuthenticationStatus(enum.IntEnum):
     ERROR_HTTP = 2
 
 @typing.final
-class WebAuthenticationBroker_Static(winrt._winrt.IInspectable_Static):
+class WebAuthenticationBroker_Static(winrt._winrt.Object_Static):
     @typing.overload
     # System.Void Windows.Security.Authentication.Web.WebAuthenticationBroker::AuthenticateAndContinue(Windows.Foundation.Uri)
     def authenticate_and_continue(cls, request_uri: windows_foundation.Uri, /) -> None: ...

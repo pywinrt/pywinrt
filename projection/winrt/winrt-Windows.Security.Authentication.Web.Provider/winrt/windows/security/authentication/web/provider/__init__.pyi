@@ -84,7 +84,7 @@ class WebAccountClientView(winrt.system.Object):
     def type(self) -> WebAccountClientViewType: ...
 
 @typing.final
-class WebAccountManager_Static(winrt._winrt.IInspectable_Static):
+class WebAccountManager_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Provider.WebAccountManager::AddWebAccountAsync(System.String,System.String,Windows.Foundation.Collections.IMapView`2<System.String,System.String>)
     def add_web_account_async(cls, web_account_id: str, web_account_user_name: str, props: _cabc.Mapping[str, str], /) -> windows_foundation.IAsyncOperation[windows_security_credentials.WebAccount]: ...

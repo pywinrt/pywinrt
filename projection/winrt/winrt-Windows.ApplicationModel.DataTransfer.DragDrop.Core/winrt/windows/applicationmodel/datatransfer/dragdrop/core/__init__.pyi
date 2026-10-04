@@ -28,7 +28,7 @@ class CoreDragUIContentMode(enum.IntFlag):
     DEFERRED = 0x1
 
 @typing.final
-class CoreDragDropManager_Static(winrt._winrt.IInspectable_Static):
+class CoreDragDropManager_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager::GetForCurrentView()
     def get_for_current_view(cls) -> CoreDragDropManager: ...
 

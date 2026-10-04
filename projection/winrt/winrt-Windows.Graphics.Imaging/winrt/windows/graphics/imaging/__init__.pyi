@@ -190,7 +190,7 @@ class BitmapCodecInformation(winrt.system.Object):
     def mime_types(self) -> _cabc.Sequence[str]: ...
 
 @typing.final
-class BitmapDecoder_Static(winrt._winrt.IInspectable_Static):
+class BitmapDecoder_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapDecoder> Windows.Graphics.Imaging.BitmapDecoder::CreateAsync(Windows.Storage.Streams.IRandomAccessStream)
     def create_async(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapDecoder]: ...
@@ -304,7 +304,7 @@ class BitmapDecoder(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmap
     def pixel_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class BitmapEncoder_Static(winrt._winrt.IInspectable_Static):
+class BitmapEncoder_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream)
     def create_async(cls, encoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
@@ -585,7 +585,7 @@ class PixelDataProvider(winrt.system.Object):
     def detach_pixel_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @typing.final
-class SoftwareBitmap_Static(winrt._winrt.IInspectable_Static):
+class SoftwareBitmap_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Convert(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapPixelFormat)
     def convert(cls, source: SoftwareBitmap, format: BitmapPixelFormat, /) -> SoftwareBitmap: ...

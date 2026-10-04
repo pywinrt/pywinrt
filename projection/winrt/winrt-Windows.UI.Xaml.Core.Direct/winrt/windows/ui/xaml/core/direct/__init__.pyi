@@ -2087,7 +2087,7 @@ class XamlTypeIndex(enum.IntEnum):
     XAML_UI_COMMAND = 969
 
 @typing.final
-class XamlDirect_Static(winrt._winrt.IInspectable_Static):
+class XamlDirect_Static(winrt._winrt.Object_Static):
     # Windows.UI.Xaml.Core.Direct.XamlDirect Windows.UI.Xaml.Core.Direct.XamlDirect::GetDefault()
     def get_default(cls) -> XamlDirect: ...
 

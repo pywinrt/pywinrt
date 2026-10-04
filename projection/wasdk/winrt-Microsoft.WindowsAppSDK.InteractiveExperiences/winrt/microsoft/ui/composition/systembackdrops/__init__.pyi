@@ -47,7 +47,7 @@ class SystemBackdropTheme(enum.IntEnum):
     DARK = 2
 
 @typing.final
-class DesktopAcrylicController_Static(winrt._winrt.IInspectable_Static):
+class DesktopAcrylicController_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::IsSupported()
     def is_supported(cls) -> bool: ...
 
@@ -122,7 +122,7 @@ class DesktopAcrylicController(winrt.system.Object, microsoft_ui.IClosableNotifi
     def is_closed(self) -> bool: ...
 
 @typing.final
-class MicaController_Static(winrt._winrt.IInspectable_Static):
+class MicaController_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.MicaController::IsSupported()
     def is_supported(cls) -> bool: ...
 

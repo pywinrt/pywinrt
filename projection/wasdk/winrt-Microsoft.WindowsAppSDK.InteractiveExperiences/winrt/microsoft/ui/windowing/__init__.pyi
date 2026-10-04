@@ -81,7 +81,7 @@ class TitleBarTheme(enum.IntEnum):
     DARK = 3
 
 @typing.final
-class AppWindow_Static(winrt._winrt.IInspectable_Static):
+class AppWindow_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create()
     def create(cls) -> AppWindow: ...
@@ -235,7 +235,7 @@ class AppWindowClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class AppWindowPresenter_Static(winrt._winrt.IInspectable_Static):
+class AppWindowPresenter_Static(winrt._winrt.Object_Static):
     ...
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
@@ -245,7 +245,7 @@ class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Stati
     def kind(self) -> AppWindowPresenterKind: ...
 
 @typing.final
-class AppWindowTitleBar_Static(winrt._winrt.IInspectable_Static):
+class AppWindowTitleBar_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.UI.Windowing.AppWindowTitleBar::IsCustomizationSupported()
     def is_customization_supported(cls) -> bool: ...
 
@@ -377,7 +377,7 @@ class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresen
     def initial_size(self, value: CompactOverlaySize) -> None: ...
 
 @typing.final
-class DisplayArea_Static(winrt._winrt.IInspectable_Static):
+class DisplayArea_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Windowing.DisplayAreaWatcher Microsoft.UI.Windowing.DisplayArea::CreateWatcher()
     def create_watcher(cls) -> DisplayAreaWatcher: ...
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Windowing.DisplayArea> Microsoft.UI.Windowing.DisplayArea::FindAll()

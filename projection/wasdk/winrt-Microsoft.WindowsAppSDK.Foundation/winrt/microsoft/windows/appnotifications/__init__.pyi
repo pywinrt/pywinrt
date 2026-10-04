@@ -103,7 +103,7 @@ class AppNotificationActivatedEventArgs(winrt.system.Object):
     def arguments(self) -> _cabc.MutableMapping[str, str]: ...
 
 @typing.final
-class AppNotificationManager_Static(winrt._winrt.IInspectable_Static):
+class AppNotificationManager_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.Windows.AppNotifications.AppNotificationManager::IsSupported()
     def is_supported(cls) -> bool: ...
     # Microsoft.Windows.AppNotifications.AppNotificationManager Microsoft.Windows.AppNotifications.AppNotificationManager::get_Default()

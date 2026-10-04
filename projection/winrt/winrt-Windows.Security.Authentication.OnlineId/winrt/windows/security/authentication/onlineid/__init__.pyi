@@ -92,7 +92,7 @@ class OnlineIdServiceTicketRequest(winrt.system.Object):
     def service(self) -> str: ...
 
 @typing.final
-class OnlineIdSystemAuthenticator_Static(winrt._winrt.IInspectable_Static):
+class OnlineIdSystemAuthenticator_Static(winrt._winrt.Object_Static):
     # Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> OnlineIdSystemAuthenticatorForUser: ...
     # Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator::get_Default()

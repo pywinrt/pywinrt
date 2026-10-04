@@ -34,7 +34,7 @@ class AIFeatureReadyState(enum.IntEnum):
     OS_UPDATE_NEEDED = 6
 
 @typing.final
-class AICapabilities_Static(winrt._winrt.IInspectable_Static):
+class AICapabilities_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.Windows.AI.AICapabilities::HasAICapability(Microsoft.Windows.AI.AICapabilityCategory)
     def has_a_i_capability(cls, category: AICapabilityCategory, /) -> bool: ...
 

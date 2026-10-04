@@ -43,7 +43,7 @@ class DisplayMonitorUsageKind(enum.IntEnum):
     SPECIAL_PURPOSE = 2
 
 @typing.final
-class DisplayMonitor_Static(winrt._winrt.IInspectable_Static):
+class DisplayMonitor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Display.DisplayMonitor> Windows.Devices.Display.DisplayMonitor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[DisplayMonitor]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Display.DisplayMonitor> Windows.Devices.Display.DisplayMonitor::FromInterfaceIdAsync(System.String)

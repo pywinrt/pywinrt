@@ -95,7 +95,7 @@ class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
     def source_app_user_model_id(self) -> str: ...
 
 @typing.final
-class GlobalSystemMediaTransportControlsSessionManager_Static(winrt._winrt.IInspectable_Static):
+class GlobalSystemMediaTransportControlsSessionManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager> Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager::RequestAsync()
     def request_async(cls) -> windows_foundation.IAsyncOperation[GlobalSystemMediaTransportControlsSessionManager]: ...
 

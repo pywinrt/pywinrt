@@ -230,7 +230,7 @@ class ManipulationVelocities:
     def __replace__(self, /, **changes: typing.Any) -> ManipulationVelocities: ...
     def unpack(self) -> tuple[tuple[winrt.system.Single, winrt.system.Single], winrt.system.Single, winrt.system.Single]: ...
 
-class AttachableInputObject_Static(winrt._winrt.IInspectable_Static):
+class AttachableInputObject_Static(winrt._winrt.Object_Static):
     ...
 
 class AttachableInputObject(winrt.system.Object, windows_foundation.IClosable, metaclass=AttachableInputObject_Static):
@@ -270,7 +270,7 @@ class DraggingEventArgs(winrt.system.Object):
     def contact_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class EdgeGesture_Static(winrt._winrt.IInspectable_Static):
+class EdgeGesture_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.EdgeGesture Windows.UI.Input.EdgeGesture::GetForCurrentView()
     def get_for_current_view(cls) -> EdgeGesture: ...
 
@@ -296,7 +296,7 @@ class EdgeGestureEventArgs(winrt.system.Object):
     def kind(self) -> EdgeGestureKind: ...
 
 @typing.final
-class GamepadNavigationConfiguration_Static(winrt._winrt.IInspectable_Static):
+class GamepadNavigationConfiguration_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.GamepadNavigationConfiguration Windows.UI.Input.GamepadNavigationConfiguration::TryGetForCurrentProcess()
     def try_get_for_current_process(cls) -> GamepadNavigationConfiguration: ...
     # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::get_IsSupported()
@@ -547,7 +547,7 @@ class InputActivationListenerActivationChangedEventArgs(winrt.system.Object):
     def state(self) -> InputActivationState: ...
 
 @typing.final
-class KeyboardDeliveryInterceptor_Static(winrt._winrt.IInspectable_Static):
+class KeyboardDeliveryInterceptor_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.KeyboardDeliveryInterceptor Windows.UI.Input.KeyboardDeliveryInterceptor::GetForCurrentView()
     def get_for_current_view(cls) -> KeyboardDeliveryInterceptor: ...
 
@@ -766,7 +766,7 @@ class PhysicalGestureRecognizer(winrt.system.Object):
     def is_active(self) -> bool: ...
 
 @typing.final
-class PointerPoint_Static(winrt._winrt.IInspectable_Static):
+class PointerPoint_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.UI.Input.PointerPoint Windows.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32)
     def get_current_point(cls, pointer_id: winrt.system.UInt32, /) -> PointerPoint: ...
@@ -898,7 +898,7 @@ class PointerPointProperties(winrt.system.Object):
     def z_distance(self) -> winrt.system.Single | None: ...
 
 @typing.final
-class PointerVisualizationSettings_Static(winrt._winrt.IInspectable_Static):
+class PointerVisualizationSettings_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.PointerVisualizationSettings Windows.UI.Input.PointerVisualizationSettings::GetForCurrentView()
     def get_for_current_view(cls) -> PointerVisualizationSettings: ...
 
@@ -918,7 +918,7 @@ class PointerVisualizationSettings(winrt.system.Object, metaclass=PointerVisuali
     def is_barrel_button_feedback_enabled(self, value: bool) -> None: ...
 
 @typing.final
-class RadialController_Static(winrt._winrt.IInspectable_Static):
+class RadialController_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.RadialController Windows.UI.Input.RadialController::CreateForCurrentView()
     def create_for_current_view(cls) -> RadialController: ...
     # System.Boolean Windows.UI.Input.RadialController::IsSupported()
@@ -1019,7 +1019,7 @@ class RadialControllerButtonReleasedEventArgs(winrt.system.Object):
     def simple_haptics_controller(self) -> windows_devices_haptics.SimpleHapticsController: ...
 
 @typing.final
-class RadialControllerConfiguration_Static(winrt._winrt.IInspectable_Static):
+class RadialControllerConfiguration_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.RadialControllerConfiguration Windows.UI.Input.RadialControllerConfiguration::GetForCurrentView()
     def get_for_current_view(cls) -> RadialControllerConfiguration: ...
     # System.Boolean Windows.UI.Input.RadialControllerConfiguration::get_IsAppControllerEnabled()
@@ -1087,7 +1087,7 @@ class RadialControllerMenu(winrt.system.Object):
     def items(self) -> _cabc.MutableSequence[RadialControllerMenuItem]: ...
 
 @typing.final
-class RadialControllerMenuItem_Static(winrt._winrt.IInspectable_Static):
+class RadialControllerMenuItem_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.UI.Input.RadialControllerMenuItem Windows.UI.Input.RadialControllerMenuItem::CreateFromFontGlyph(System.String,System.String,System.String)
     def create_from_font_glyph(cls, display_text: str, glyph: str, font_family: str, /) -> RadialControllerMenuItem: ...
@@ -1270,7 +1270,7 @@ class TappedEventArgs(winrt.system.Object):
     def contact_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class TouchpadGesturesController_Static(winrt._winrt.IInspectable_Static):
+class TouchpadGesturesController_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.TouchpadGesturesController Windows.UI.Input.TouchpadGesturesController::CreateForProcess()
     def create_for_process(cls) -> TouchpadGesturesController: ...
     # System.Boolean Windows.UI.Input.TouchpadGesturesController::IsSupported()

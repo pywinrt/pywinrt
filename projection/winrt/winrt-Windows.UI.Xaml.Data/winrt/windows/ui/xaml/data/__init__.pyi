@@ -171,14 +171,14 @@ class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Stati
     @typing.final
     def parent_binding(self) -> Binding: ...
 
-class BindingExpressionBase_Static(winrt._winrt.IInspectable_Static):
+class BindingExpressionBase_Static(winrt._winrt.Object_Static):
     ...
 
 class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase_Static):
     ...
 
 @typing.final
-class BindingOperations_Static(winrt._winrt.IInspectable_Static):
+class BindingOperations_Static(winrt._winrt.Object_Static):
     # System.Void Windows.UI.Xaml.Data.BindingOperations::SetBinding(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyProperty,Windows.UI.Xaml.Data.BindingBase)
     def set_binding(cls, target: windows_ui_xaml.DependencyObject, dp: windows_ui_xaml.DependencyProperty, binding: BindingBase, /) -> None: ...
 
@@ -226,7 +226,7 @@ class CollectionViewSource(windows_ui_xaml.DependencyObject, metaclass=Collectio
     @_property
     def view(self) -> ICollectionView: ...
 
-class CurrentChangingEventArgs_Static(winrt._winrt.IInspectable_Static):
+class CurrentChangingEventArgs_Static(winrt._winrt.Object_Static):
     ...
 
 class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEventArgs_Static):
@@ -246,7 +246,7 @@ class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEve
     @typing.final
     def is_cancelable(self) -> bool: ...
 
-class ItemIndexRange_Static(winrt._winrt.IInspectable_Static):
+class ItemIndexRange_Static(winrt._winrt.Object_Static):
     ...
 
 class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
@@ -264,7 +264,7 @@ class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
     @typing.final
     def length(self) -> winrt.system.UInt32: ...
 
-class PropertyChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
+class PropertyChangedEventArgs_Static(winrt._winrt.Object_Static):
     ...
 
 class PropertyChangedEventArgs(winrt.system.Object, metaclass=PropertyChangedEventArgs_Static):

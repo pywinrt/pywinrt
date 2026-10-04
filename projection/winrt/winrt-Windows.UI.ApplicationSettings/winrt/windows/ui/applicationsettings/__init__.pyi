@@ -55,7 +55,7 @@ class WebAccountAction(enum.IntEnum):
     MORE = 4
 
 @typing.final
-class AccountsSettingsPane_Static(winrt._winrt.IInspectable_Static):
+class AccountsSettingsPane_Static(winrt._winrt.Object_Static):
     # Windows.UI.ApplicationSettings.AccountsSettingsPane Windows.UI.ApplicationSettings.AccountsSettingsPane::GetForCurrentView()
     def get_for_current_view(cls) -> AccountsSettingsPane: ...
     # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPane::Show()
@@ -121,7 +121,7 @@ class CredentialCommand(winrt.system.Object):
     def password_credential(self) -> windows_security_credentials.PasswordCredential: ...
 
 @typing.final
-class SettingsCommand_Static(winrt._winrt.IInspectable_Static):
+class SettingsCommand_Static(winrt._winrt.Object_Static):
     # Windows.UI.ApplicationSettings.SettingsCommand Windows.UI.ApplicationSettings.SettingsCommand::get_AccountsCommand()
     @_property
     def accounts_command(cls) -> SettingsCommand: ...
@@ -149,7 +149,7 @@ class SettingsCommand(winrt.system.Object, windows_ui_popups.IUICommand, metacla
     def id(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
-class SettingsPane_Static(winrt._winrt.IInspectable_Static):
+class SettingsPane_Static(winrt._winrt.Object_Static):
     # Windows.UI.ApplicationSettings.SettingsPane Windows.UI.ApplicationSettings.SettingsPane::GetForCurrentView()
     @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_for_current_view(cls) -> SettingsPane: ...

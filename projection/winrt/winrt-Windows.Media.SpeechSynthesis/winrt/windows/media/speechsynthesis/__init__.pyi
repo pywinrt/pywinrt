@@ -82,7 +82,7 @@ class SpeechSynthesisStream(winrt.system.Object, windows_media_core.ITimedMetada
     def position(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class SpeechSynthesizer_Static(winrt._winrt.IInspectable_Static):
+class SpeechSynthesizer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.SpeechSynthesis.SpeechSynthesizer::TrySetDefaultVoiceAsync(Windows.Media.SpeechSynthesis.VoiceInformation)
     def try_set_default_voice_async(cls, voice: VoiceInformation, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.SpeechSynthesis.VoiceInformation> Windows.Media.SpeechSynthesis.SpeechSynthesizer::get_AllVoices()

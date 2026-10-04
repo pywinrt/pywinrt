@@ -70,7 +70,7 @@ class HdmiDisplayHdr2086Metadata:
     def unpack(self) -> tuple[winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16, winrt.system.UInt16]: ...
 
 @typing.final
-class HdmiDisplayInformation_Static(winrt._winrt.IInspectable_Static):
+class HdmiDisplayInformation_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Display.Core.HdmiDisplayInformation Windows.Graphics.Display.Core.HdmiDisplayInformation::GetForCurrentView()
     def get_for_current_view(cls) -> HdmiDisplayInformation: ...
 

@@ -67,7 +67,7 @@ class UserPresenceStatus(enum.IntEnum):
     ABSENT = 1
 
 @typing.final
-class PowerManager_Static(winrt._winrt.IInspectable_Static):
+class PowerManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.System.Power.PowerManager::add_BatteryStatusChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_battery_status_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Windows.System.Power.PowerManager::remove_BatteryStatusChanged(Windows.Foundation.EventRegistrationToken)

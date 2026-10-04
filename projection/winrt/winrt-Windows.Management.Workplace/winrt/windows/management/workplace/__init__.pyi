@@ -19,7 +19,7 @@ class MessagingSyncPolicy(enum.IntEnum):
     REQUIRED = 2
 
 @typing.final
-class MdmPolicy_Static(winrt._winrt.IInspectable_Static):
+class MdmPolicy_Static(winrt._winrt.Object_Static):
     # Windows.Management.Workplace.MessagingSyncPolicy Windows.Management.Workplace.MdmPolicy::GetMessagingSyncPolicy()
     def get_messaging_sync_policy(cls) -> MessagingSyncPolicy: ...
     # System.Boolean Windows.Management.Workplace.MdmPolicy::IsBrowserAllowed()
@@ -36,7 +36,7 @@ class MdmPolicy(winrt.system.Object, metaclass=MdmPolicy_Static):
     ...
 
 @typing.final
-class WorkplaceSettings_Static(winrt._winrt.IInspectable_Static):
+class WorkplaceSettings_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.Management.Workplace.WorkplaceSettings::get_IsMicrosoftAccountOptional()
     @_property
     def is_microsoft_account_optional(cls) -> bool: ...

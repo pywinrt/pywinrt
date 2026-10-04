@@ -28,7 +28,7 @@ class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
     def node_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class SpatialGraphInteropPreview_Static(winrt._winrt.IInspectable_Static):
+class SpatialGraphInteropPreview_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid)
     def create_coordinate_system_for_node(cls, node_id: _uuid.UUID, /) -> windows_perception_spatial.SpatialCoordinateSystem: ...

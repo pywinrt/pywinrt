@@ -208,7 +208,7 @@ class WriteActivationMode(enum.IntEnum):
     AFTER_WRITE = 2
 
 @typing.final
-class CachedFileUpdater_Static(winrt._winrt.IInspectable_Static):
+class CachedFileUpdater_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Storage.Provider.CachedFileUpdater::SetUpdateInformation(Windows.Storage.IStorageFile,System.String,Windows.Storage.Provider.ReadActivationMode,Windows.Storage.Provider.WriteActivationMode,Windows.Storage.Provider.CachedFileOptions)
     def set_update_information(cls, file: windows_storage.IStorageFile, content_id: str, read_mode: ReadActivationMode, write_mode: WriteActivationMode, options: CachedFileOptions, /) -> None: ...
 
@@ -329,7 +329,7 @@ class StorageProviderGetPathForContentUriResult(winrt.system.Object):
     def path(self, value: str) -> None: ...
 
 @typing.final
-class StorageProviderItemProperties_Static(winrt._winrt.IInspectable_Static):
+class StorageProviderItemProperties_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncAction Windows.Storage.Provider.StorageProviderItemProperties::SetAsync(Windows.Storage.IStorageItem,Windows.Foundation.Collections.IIterable`1<Windows.Storage.Provider.StorageProviderItemProperty>)
     def set_async(cls, item: windows_storage.IStorageItem, item_properties: _cabc.Iterable[StorageProviderItemProperty], /) -> windows_foundation.IAsyncAction: ...
 
@@ -765,7 +765,7 @@ class StorageProviderSyncRootInfo(winrt.system.Object):
     def fallback_file_type_info(self) -> _cabc.MutableSequence[StorageProviderFileTypeInfo]: ...
 
 @typing.final
-class StorageProviderSyncRootManager_Static(winrt._winrt.IInspectable_Static):
+class StorageProviderSyncRootManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Provider.StorageProviderSyncRootInfo> Windows.Storage.Provider.StorageProviderSyncRootManager::GetCurrentSyncRoots()
     def get_current_sync_roots(cls) -> _cabc.Sequence[StorageProviderSyncRootInfo]: ...
     # Windows.Storage.Provider.StorageProviderSyncRootInfo Windows.Storage.Provider.StorageProviderSyncRootManager::GetSyncRootInformationForFolder(Windows.Storage.IStorageFolder)

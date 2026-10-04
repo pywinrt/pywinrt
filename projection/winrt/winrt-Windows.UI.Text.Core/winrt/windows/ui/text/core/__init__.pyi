@@ -355,7 +355,7 @@ class CoreTextSelectionUpdatingEventArgs(winrt.system.Object):
     def selection(self) -> CoreTextRange: ...
 
 @typing.final
-class CoreTextServicesConstants_Static(winrt._winrt.IInspectable_Static):
+class CoreTextServicesConstants_Static(winrt._winrt.Object_Static):
     # System.Char Windows.UI.Text.Core.CoreTextServicesConstants::get_HiddenCharacter()
     @_property
     def hidden_character(cls) -> winrt.system.Char16: ...
@@ -365,7 +365,7 @@ class CoreTextServicesConstants(winrt.system.Object, metaclass=CoreTextServicesC
     ...
 
 @typing.final
-class CoreTextServicesManager_Static(winrt._winrt.IInspectable_Static):
+class CoreTextServicesManager_Static(winrt._winrt.Object_Static):
     # Windows.UI.Text.Core.CoreTextServicesManager Windows.UI.Text.Core.CoreTextServicesManager::GetForCurrentView()
     def get_for_current_view(cls) -> CoreTextServicesManager: ...
 

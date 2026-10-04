@@ -73,7 +73,7 @@ class WebErrorStatus(enum.IntEnum):
     HTTP_VERSION_NOT_SUPPORTED = 505
 
 @typing.final
-class WebError_Static(winrt._winrt.IInspectable_Static):
+class WebError_Static(winrt._winrt.Object_Static):
     # Windows.Web.WebErrorStatus Windows.Web.WebError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> WebErrorStatus: ...
 

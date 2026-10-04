@@ -93,7 +93,7 @@ class StoreSystemFeature(enum.IntEnum):
     ARCHITECTURE_ARM64 = 34
 
 @typing.final
-class DeliveryOptimizationSettings_Static(winrt._winrt.IInspectable_Static):
+class DeliveryOptimizationSettings_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings::GetCurrentSettings()
     def get_current_settings(cls) -> DeliveryOptimizationSettings: ...
 
@@ -107,7 +107,7 @@ class DeliveryOptimizationSettings(winrt.system.Object, metaclass=DeliveryOptimi
     def download_mode_source(self) -> DeliveryOptimizationDownloadModeSource: ...
 
 @typing.final
-class StoreConfiguration_Static(winrt._winrt.IInspectable_Static):
+class StoreConfiguration_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>> Windows.ApplicationModel.Store.Preview.StoreConfiguration::FilterUnsupportedSystemFeaturesAsync(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>)
     def filter_unsupported_system_features_async(cls, system_features: _cabc.Iterable[StoreSystemFeature], /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StoreSystemFeature]]: ...
     # System.String Windows.ApplicationModel.Store.Preview.StoreConfiguration::GetEnterpriseStoreWebAccountId()
@@ -188,7 +188,7 @@ class StoreHardwareManufacturerInfo(winrt.system.Object):
     def store_content_modifier_id(self) -> str: ...
 
 @typing.final
-class StorePreview_Static(winrt._winrt.IInspectable_Static):
+class StorePreview_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>> Windows.ApplicationModel.Store.Preview.StorePreview::LoadAddOnProductInfosAsync()
     def load_add_on_product_infos_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorePreviewProductInfo]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults> Windows.ApplicationModel.Store.Preview.StorePreview::RequestProductPurchaseByProductIdAndSkuIdAsync(System.String,System.String)
@@ -253,7 +253,7 @@ class StorePreviewSkuInfo(winrt.system.Object):
     def title(self) -> str: ...
 
 @typing.final
-class WebAuthenticationCoreManagerHelper_Static(winrt._winrt.IInspectable_Static):
+class WebAuthenticationCoreManagerHelper_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult> Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper::RequestTokenWithUIElementHostingAsync(Windows.Security.Authentication.Web.Core.WebTokenRequest,Windows.UI.Xaml.UIElement)
     def request_token_with_ui_element_hosting_async(cls, request: windows_security_authentication_web_core.WebTokenRequest, ui_element: windows_ui_xaml.UIElement, /) -> windows_foundation.IAsyncOperation[windows_security_authentication_web_core.WebTokenRequestResult]: ...

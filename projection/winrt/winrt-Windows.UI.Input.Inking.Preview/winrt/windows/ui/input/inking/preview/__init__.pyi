@@ -14,7 +14,7 @@ __all__ = [
 ]
 
 @typing.final
-class PalmRejectionDelayZonePreview_Static(winrt._winrt.IInspectable_Static):
+class PalmRejectionDelayZonePreview_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect)
     def create_for_visual(cls, input_panel_visual: windows_ui_composition.Visual, input_panel_rect: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> PalmRejectionDelayZonePreview: ...

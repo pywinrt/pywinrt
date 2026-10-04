@@ -199,7 +199,7 @@ class AppContentIndexListener(winrt.system.Object):
     def remove_index_statistics_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class AppContentIndexer_Static(winrt._winrt.IInspectable_Static):
+class AppContentIndexer_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.Search.AppContentIndex.DeleteIndexResult Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::DeleteIndex(System.String,Microsoft.Windows.Search.AppContentIndex.DeleteIndexWhileInUseBehavior)
     def delete_index(cls, index_name: str, delete_index_while_in_use_behavior: DeleteIndexWhileInUseBehavior, /) -> DeleteIndexResult: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::GetExistingIndexes()
@@ -276,7 +276,7 @@ class AppContentIndexer(winrt.system.Object, windows_foundation.IClosable, metac
     def listener(self) -> AppContentIndexListener: ...
 
 @typing.final
-class AppIndexContentRegion_Static(winrt._winrt.IInspectable_Static):
+class AppIndexContentRegion_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::CreateFromBitmap(System.String,Windows.Graphics.Imaging.SoftwareBitmap)
     def create_from_bitmap(cls, region_id: str, image: windows_graphics_imaging.SoftwareBitmap, /) -> AppIndexContentRegion: ...
@@ -323,7 +323,7 @@ class AppIndexImageQuery(winrt.system.Object):
     def query_phrase(self) -> str: ...
 
 @typing.final
-class AppIndexImageQuerySession_Static(winrt._winrt.IInspectable_Static):
+class AppIndexImageQuerySession_Static(winrt._winrt.Object_Static):
     # System.Int32 Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::get_MaxMatchesPerResult()
     @_property
     def max_matches_per_result(cls) -> winrt.system.Int32: ...
@@ -364,7 +364,7 @@ class AppIndexImageQuerySession(winrt.system.Object, windows_foundation.IClosabl
     @desired_matches_per_result.setter
     def desired_matches_per_result(self, value: winrt.system.Int32) -> None: ...
 
-class AppIndexQueryMatch_Static(winrt._winrt.IInspectable_Static):
+class AppIndexQueryMatch_Static(winrt._winrt.Object_Static):
     ...
 
 class AppIndexQueryMatch(winrt.system.Object, metaclass=AppIndexQueryMatch_Static):
@@ -393,7 +393,7 @@ class AppIndexTextQuery(winrt.system.Object):
     def query_phrase(self) -> str: ...
 
 @typing.final
-class AppIndexTextQuerySession_Static(winrt._winrt.IInspectable_Static):
+class AppIndexTextQuerySession_Static(winrt._winrt.Object_Static):
     # System.Int32 Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::get_MaxMatchesPerResult()
     @_property
     def max_matches_per_result(cls) -> winrt.system.Int32: ...
@@ -711,7 +711,7 @@ class IndexStatistics(winrt.system.Object):
     @_property
     def requiring_reindexing_count(self) -> winrt.system.Int32: ...
 
-class IndexableAppContent_Static(winrt._winrt.IInspectable_Static):
+class IndexableAppContent_Static(winrt._winrt.Object_Static):
     ...
 
 class IndexableAppContent(winrt.system.Object, metaclass=IndexableAppContent_Static):

@@ -97,7 +97,7 @@ class FeedErrorInfoReportedArgs(winrt.system.Object):
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
-class FeedManager_Static(winrt._winrt.IInspectable_Static):
+class FeedManager_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.Widgets.Feeds.Providers.FeedManager Microsoft.Windows.Widgets.Feeds.Providers.FeedManager::GetDefault()
     def get_default(cls) -> FeedManager: ...
 

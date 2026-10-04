@@ -228,7 +228,7 @@ class LearningModelEvaluationResultPreview(winrt.system.Object):
     def outputs(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
 
 @typing.final
-class LearningModelPreview_Static(winrt._winrt.IInspectable_Static):
+class LearningModelPreview_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::LoadModelFromStorageFileAsync(Windows.Storage.IStorageFile)
     @deprecated("Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.")
     def load_model_from_storage_file_async(cls, model_file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[LearningModelPreview]: ...

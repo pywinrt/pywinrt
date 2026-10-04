@@ -137,7 +137,7 @@ class AdvancedColorInfo(winrt.system.Object):
     def white_point(self) -> windows_foundation.Point: ...
 
 @typing.final
-class BrightnessOverride_Static(winrt._winrt.IInspectable_Static):
+class BrightnessOverride_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Display.BrightnessOverride Windows.Graphics.Display.BrightnessOverride::GetDefaultForSystem()
     def get_default_for_system(cls) -> BrightnessOverride: ...
     # Windows.Graphics.Display.BrightnessOverride Windows.Graphics.Display.BrightnessOverride::GetForCurrentView()
@@ -180,7 +180,7 @@ class BrightnessOverride(winrt.system.Object, metaclass=BrightnessOverride_Stati
     def is_supported(self) -> bool: ...
 
 @typing.final
-class BrightnessOverrideSettings_Static(winrt._winrt.IInspectable_Static):
+class BrightnessOverrideSettings_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Display.BrightnessOverrideSettings Windows.Graphics.Display.BrightnessOverrideSettings::CreateFromDisplayBrightnessOverrideScenario(Windows.Graphics.Display.DisplayBrightnessOverrideScenario)
     def create_from_display_brightness_override_scenario(cls, override_scenario: DisplayBrightnessOverrideScenario, /) -> BrightnessOverrideSettings: ...
     # Windows.Graphics.Display.BrightnessOverrideSettings Windows.Graphics.Display.BrightnessOverrideSettings::CreateFromLevel(System.Double)
@@ -198,7 +198,7 @@ class BrightnessOverrideSettings(winrt.system.Object, metaclass=BrightnessOverri
     def desired_nits(self) -> winrt.system.Single: ...
 
 @typing.final
-class ColorOverrideSettings_Static(winrt._winrt.IInspectable_Static):
+class ColorOverrideSettings_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Display.ColorOverrideSettings Windows.Graphics.Display.ColorOverrideSettings::CreateFromDisplayColorOverrideScenario(Windows.Graphics.Display.DisplayColorOverrideScenario)
     def create_from_display_color_override_scenario(cls, override_scenario: DisplayColorOverrideScenario, /) -> ColorOverrideSettings: ...
 
@@ -209,7 +209,7 @@ class ColorOverrideSettings(winrt.system.Object, metaclass=ColorOverrideSettings
     def desired_display_color_override_scenario(self) -> DisplayColorOverrideScenario: ...
 
 @typing.final
-class DisplayEnhancementOverride_Static(winrt._winrt.IInspectable_Static):
+class DisplayEnhancementOverride_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Display.DisplayEnhancementOverride Windows.Graphics.Display.DisplayEnhancementOverride::GetForCurrentView()
     def get_for_current_view(cls) -> DisplayEnhancementOverride: ...
 
@@ -270,7 +270,7 @@ class DisplayEnhancementOverrideCapabilitiesChangedEventArgs(winrt.system.Object
     def capabilities(self) -> DisplayEnhancementOverrideCapabilities: ...
 
 @typing.final
-class DisplayInformation_Static(winrt._winrt.IInspectable_Static):
+class DisplayInformation_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Display.DisplayInformation Windows.Graphics.Display.DisplayInformation::GetForCurrentView()
     def get_for_current_view(cls) -> DisplayInformation: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Display.DisplayInformation::add_DisplayContentsInvalidated(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Display.DisplayInformation,System.Object>)
@@ -345,7 +345,7 @@ class DisplayInformation(winrt.system.Object, metaclass=DisplayInformation_Stati
     def screen_width_in_raw_pixels(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class DisplayProperties_Static(winrt._winrt.IInspectable_Static):
+class DisplayProperties_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Graphics.Display.DisplayProperties::GetColorProfileAsync()
     @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
     def get_color_profile_async(cls) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
@@ -414,7 +414,7 @@ class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static)
     ...
 
 @typing.final
-class DisplayServices_Static(winrt._winrt.IInspectable_Static):
+class DisplayServices_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.DisplayId[] Windows.Graphics.Display.DisplayServices::FindAll()
     def find_all(cls) -> winrt.system.Array[windows_graphics.DisplayId]: ...
 

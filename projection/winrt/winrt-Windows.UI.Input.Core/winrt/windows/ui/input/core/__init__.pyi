@@ -15,7 +15,7 @@ __all__ = [
 ]
 
 @typing.final
-class RadialControllerIndependentInputSource_Static(winrt._winrt.IInspectable_Static):
+class RadialControllerIndependentInputSource_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.Core.RadialControllerIndependentInputSource Windows.UI.Input.Core.RadialControllerIndependentInputSource::CreateForView(Windows.ApplicationModel.Core.CoreApplicationView)
     def create_for_view(cls, view: windows_applicationmodel_core.CoreApplicationView, /) -> RadialControllerIndependentInputSource: ...
 

@@ -14,7 +14,7 @@ __all__ = [
 ]
 
 @typing.final
-class InstalledDesktopApp_Static(winrt._winrt.IInspectable_Static):
+class InstalledDesktopApp_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.Inventory.InstalledDesktopApp>> Windows.System.Inventory.InstalledDesktopApp::GetInventoryAsync()
     def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[InstalledDesktopApp]]: ...
 

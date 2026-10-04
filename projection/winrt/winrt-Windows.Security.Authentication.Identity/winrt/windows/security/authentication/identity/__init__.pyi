@@ -33,7 +33,7 @@ class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
     def tenant_name(self) -> str: ...
 
 @typing.final
-class EnterpriseKeyCredentialRegistrationManager_Static(winrt._winrt.IInspectable_Static):
+class EnterpriseKeyCredentialRegistrationManager_Static(winrt._winrt.Object_Static):
     # Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager::get_Current()
     @_property
     def current(cls) -> EnterpriseKeyCredentialRegistrationManager: ...

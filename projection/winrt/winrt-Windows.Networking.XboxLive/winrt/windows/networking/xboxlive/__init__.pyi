@@ -92,7 +92,7 @@ class XboxLiveSocketKind(enum.IntEnum):
     STREAM = 2
 
 @typing.final
-class XboxLiveDeviceAddress_Static(winrt._winrt.IInspectable_Static):
+class XboxLiveDeviceAddress_Static(winrt._winrt.Object_Static):
     # Windows.Networking.XboxLive.XboxLiveDeviceAddress Windows.Networking.XboxLive.XboxLiveDeviceAddress::CreateFromSnapshotBase64(System.String)
     def create_from_snapshot_base64(cls, base64: str, /) -> XboxLiveDeviceAddress: ...
     # Windows.Networking.XboxLive.XboxLiveDeviceAddress Windows.Networking.XboxLive.XboxLiveDeviceAddress::CreateFromSnapshotBuffer(Windows.Storage.Streams.IBuffer)
@@ -130,7 +130,7 @@ class XboxLiveDeviceAddress(winrt.system.Object, metaclass=XboxLiveDeviceAddress
     def network_access_kind(self) -> XboxLiveNetworkAccessKind: ...
 
 @typing.final
-class XboxLiveEndpointPair_Static(winrt._winrt.IInspectable_Static):
+class XboxLiveEndpointPair_Static(winrt._winrt.Object_Static):
     # Windows.Networking.XboxLive.XboxLiveEndpointPair Windows.Networking.XboxLive.XboxLiveEndpointPair::FindEndpointPairByHostNamesAndPorts(Windows.Networking.HostName,System.String,Windows.Networking.HostName,System.String)
     def find_endpoint_pair_by_host_names_and_ports(cls, local_host_name: windows_networking.HostName, local_port: str, remote_host_name: windows_networking.HostName, remote_port: str, /) -> XboxLiveEndpointPair: ...
     # Windows.Networking.XboxLive.XboxLiveEndpointPair Windows.Networking.XboxLive.XboxLiveEndpointPair::FindEndpointPairBySocketAddressBytes(System.Byte[],System.Byte[])
@@ -195,7 +195,7 @@ class XboxLiveEndpointPairStateChangedEventArgs(winrt.system.Object):
     def old_state(self) -> XboxLiveEndpointPairState: ...
 
 @typing.final
-class XboxLiveEndpointPairTemplate_Static(winrt._winrt.IInspectable_Static):
+class XboxLiveEndpointPairTemplate_Static(winrt._winrt.Object_Static):
     # Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::GetTemplateByName(System.String)
     def get_template_by_name(cls, name: str, /) -> XboxLiveEndpointPairTemplate: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::get_Templates()
@@ -265,7 +265,7 @@ class XboxLiveInboundEndpointPairCreatedEventArgs(winrt.system.Object):
     def endpoint_pair(self) -> XboxLiveEndpointPair: ...
 
 @typing.final
-class XboxLiveQualityOfServiceMeasurement_Static(winrt._winrt.IInspectable_Static):
+class XboxLiveQualityOfServiceMeasurement_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement::ClearPrivatePayload()
     def clear_private_payload(cls) -> None: ...
     # System.Void Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement::PublishPrivatePayloadBytes(System.Byte[])

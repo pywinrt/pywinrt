@@ -12,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class InputActivationListenerPreview_Static(winrt._winrt.IInspectable_Static):
+class InputActivationListenerPreview_Static(winrt._winrt.Object_Static):
     # Windows.UI.Input.InputActivationListener Windows.UI.Input.Preview.InputActivationListenerPreview::CreateForApplicationWindow(Windows.UI.WindowManagement.AppWindow)
     def create_for_application_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> windows_ui_input.InputActivationListener: ...
 

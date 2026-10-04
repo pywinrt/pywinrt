@@ -37,7 +37,7 @@ class CompositionDebugHeatMaps(winrt.system.Object):
     def show_redraw(self, subtree: windows_ui_composition.Visual, /) -> None: ...
 
 @typing.final
-class CompositionDebugSettings_Static(winrt._winrt.IInspectable_Static):
+class CompositionDebugSettings_Static(winrt._winrt.Object_Static):
     # Windows.UI.Composition.Diagnostics.CompositionDebugSettings Windows.UI.Composition.Diagnostics.CompositionDebugSettings::TryGetSettings(Windows.UI.Composition.Compositor)
     def try_get_settings(cls, compositor: windows_ui_composition.Compositor, /) -> CompositionDebugSettings | None: ...
 

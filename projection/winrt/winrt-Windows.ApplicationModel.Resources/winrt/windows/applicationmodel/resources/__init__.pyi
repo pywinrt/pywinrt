@@ -13,7 +13,7 @@ __all__ = [
 ]
 
 @typing.final
-class ResourceLoader_Static(winrt._winrt.IInspectable_Static):
+class ResourceLoader_Static(winrt._winrt.Object_Static):
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetDefaultPriPath(System.String)
     def get_default_pri_path(cls, package_full_name: str, /) -> str: ...
     @typing.overload

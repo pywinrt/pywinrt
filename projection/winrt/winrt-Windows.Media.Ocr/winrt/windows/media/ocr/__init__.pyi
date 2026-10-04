@@ -19,7 +19,7 @@ __all__ = [
 ]
 
 @typing.final
-class OcrEngine_Static(winrt._winrt.IInspectable_Static):
+class OcrEngine_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.Media.Ocr.OcrEngine::IsLanguageSupported(Windows.Globalization.Language)
     def is_language_supported(cls, language: windows_globalization.Language, /) -> bool: ...
     # Windows.Media.Ocr.OcrEngine Windows.Media.Ocr.OcrEngine::TryCreateFromLanguage(Windows.Globalization.Language)

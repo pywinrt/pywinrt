@@ -24,7 +24,7 @@ class CompanionWindowRequestResultStatus(enum.IntEnum):
     REJECTED_BY_COMPANION_APP = 4
 
 @typing.final
-class CompanionWindowCoordinator_Static(winrt._winrt.IInspectable_Static):
+class CompanionWindowCoordinator_Static(winrt._winrt.Object_Static):
     # Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator::GetForWindow(Windows.UI.WindowId)
     def get_for_window(cls, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64], /) -> CompanionWindowCoordinator: ...
 
@@ -43,7 +43,7 @@ class CompanionWindowCoordinator(winrt.system.Object, metaclass=CompanionWindowC
     def companion_window_id(self) -> windows_ui.WindowId: ...
 
 @typing.final
-class CompanionWindowRequest_Static(winrt._winrt.IInspectable_Static):
+class CompanionWindowRequest_Static(winrt._winrt.Object_Static):
     # Windows.UI.Shell.CompanionWindows.CompanionWindowRequest Windows.UI.Shell.CompanionWindows.CompanionWindowRequest::GetFromLaunchUri(Windows.Foundation.Uri)
     def get_from_launch_uri(cls, launch_uri: windows_foundation.Uri, /) -> CompanionWindowRequest: ...
 

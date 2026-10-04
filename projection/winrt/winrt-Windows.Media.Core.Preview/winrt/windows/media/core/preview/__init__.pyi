@@ -13,7 +13,7 @@ __all__ = [
 ]
 
 @typing.final
-class SoundLevelBroker_Static(winrt._winrt.IInspectable_Static):
+class SoundLevelBroker_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.Preview.SoundLevelBroker::add_SoundLevelChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_sound_level_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Core.Preview.SoundLevelBroker::remove_SoundLevelChanged(Windows.Foundation.EventRegistrationToken)

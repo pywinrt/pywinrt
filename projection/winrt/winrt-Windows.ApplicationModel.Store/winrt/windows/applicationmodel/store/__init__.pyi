@@ -49,7 +49,7 @@ class ProductType(enum.IntEnum):
     CONSUMABLE = 2
 
 @typing.final
-class CurrentApp_Static(winrt._winrt.IInspectable_Static):
+class CurrentApp_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::GetAppPurchaseCampaignIdAsync()
     def get_app_purchase_campaign_id_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::GetAppReceiptAsync()
@@ -107,7 +107,7 @@ class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
     ...
 
 @typing.final
-class CurrentAppSimulator_Static(winrt._winrt.IInspectable_Static):
+class CurrentAppSimulator_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::GetAppPurchaseCampaignIdAsync()
     def get_app_purchase_campaign_id_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::GetAppReceiptAsync()

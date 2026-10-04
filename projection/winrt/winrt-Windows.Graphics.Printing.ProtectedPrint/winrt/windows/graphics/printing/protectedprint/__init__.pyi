@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class WindowsProtectedPrintInfo_Static(winrt._winrt.IInspectable_Static):
+class WindowsProtectedPrintInfo_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.Graphics.Printing.ProtectedPrint.WindowsProtectedPrintInfo::get_IsProtectedPrintEnabled()
     @_property
     def is_protected_print_enabled(cls) -> bool: ...

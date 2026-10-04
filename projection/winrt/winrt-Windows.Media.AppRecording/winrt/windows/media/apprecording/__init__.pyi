@@ -27,7 +27,7 @@ class AppRecordingSaveScreenshotOption(enum.IntEnum):
     HDR_CONTENT_VISIBLE = 1
 
 @typing.final
-class AppRecordingManager_Static(winrt._winrt.IInspectable_Static):
+class AppRecordingManager_Static(winrt._winrt.Object_Static):
     # Windows.Media.AppRecording.AppRecordingManager Windows.Media.AppRecording.AppRecordingManager::GetDefault()
     def get_default(cls) -> AppRecordingManager: ...
 

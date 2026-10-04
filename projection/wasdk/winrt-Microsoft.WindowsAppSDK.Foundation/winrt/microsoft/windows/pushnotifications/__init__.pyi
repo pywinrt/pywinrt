@@ -63,7 +63,7 @@ class PushNotificationCreateChannelResult(winrt.system.Object):
     def status(self) -> PushNotificationChannelStatus: ...
 
 @typing.final
-class PushNotificationManager_Static(winrt._winrt.IInspectable_Static):
+class PushNotificationManager_Static(winrt._winrt.Object_Static):
     # System.Boolean Microsoft.Windows.PushNotifications.PushNotificationManager::IsSupported()
     def is_supported(cls) -> bool: ...
     # Microsoft.Windows.PushNotifications.PushNotificationManager Microsoft.Windows.PushNotifications.PushNotificationManager::get_Default()

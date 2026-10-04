@@ -29,7 +29,7 @@ class NotifyCollectionChangedAction(enum.IntEnum):
     MOVE = 3
     RESET = 4
 
-class NotifyCollectionChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
+class NotifyCollectionChangedEventArgs_Static(winrt._winrt.Object_Static):
     ...
 
 class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyCollectionChangedEventArgs_Static):

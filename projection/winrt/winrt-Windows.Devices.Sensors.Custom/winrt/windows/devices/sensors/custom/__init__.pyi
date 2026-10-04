@@ -18,7 +18,7 @@ __all__ = [
 ]
 
 @typing.final
-class CustomSensor_Static(winrt._winrt.IInspectable_Static):
+class CustomSensor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Custom.CustomSensor> Windows.Devices.Sensors.Custom.CustomSensor::FromIdAsync(System.String)
     def from_id_async(cls, sensor_id: str, /) -> windows_foundation.IAsyncOperation[CustomSensor]: ...
     # System.String Windows.Devices.Sensors.Custom.CustomSensor::GetDeviceSelector(System.Guid)
