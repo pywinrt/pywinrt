@@ -1011,7 +1011,15 @@ protocol via the *Windows.Foundation.IMemoryBufferReference*. Care should be
 taken since the underlying memory can be released.
 
 `len()` of a buffer is its length in bytes, and of a memory buffer reference its
-capacity, which is the length of a [`memoryview`][memoryview] of either.
+capacity, which is the length of a [`memoryview`][memoryview] of either. So
+an empty one is false, as an empty `bytes` is: a new `Buffer(16)` is false
+until its `length` is set, and so is a closed memory buffer reference. Compare
+with `None` to ask whether there is a buffer at all.
+
+!!! version-changed "Changed in version 4.0"
+
+    A buffer and a memory buffer reference have a `len()`, and are false when
+    they are empty. They had no `len()` and were always true.
 
 [bytes]: https://docs.python.org/3/builtins/stdtypes.html#bytes
 [memoryview]: https://docs.python.org/3/builtins/stdtypes.html#memoryview
@@ -1262,7 +1270,10 @@ np.asarray(points)[:, 2] = 1               # writes z of every point
 The other way around, a buffer of floats or doubles in exactly the shape of a
 struct is taken wherever the struct is, as a tuple of its fields is: a NumPy
 array of shape `(3,)` stands for a `Vector3` and one of shape `(4, 4)` for a
-`Matrix4x4`. An `Array` of one of the structs is made from, and an array
+`Matrix4x4`. The exceptions are a method whose overloads take different
+structs, such as `transform()`, and `@` with a vector on the left, which pick
+what to do by the type of the struct they are given, so they take the struct
+itself and not a tuple or a buffer. An `Array` of one of the structs is made from, and an array
 parameter of one takes, a block of `float32` values of shape `(n, 3)`,
 `(n, 4, 4)` and so on:
 
