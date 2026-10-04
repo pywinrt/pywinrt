@@ -147,7 +147,26 @@ def renamed_package(module: str) -> str | None:
     return f"winrt{dot}{rest}"
 
 
+def matrix_names(tree: ast.AST) -> dict[str, str]:
+    """
+    The names the matrices go by in @p tree: their own, and any that
+    ``from ... import Matrix4x4 as M`` gives them, each with the matrix it
+    stands for.
+    """
+    names = {matrix: matrix for matrix in MATRICES}
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.ImportFrom):
+            for alias in node.names:
+                if alias.name in MATRICES and alias.asname:
+                    names[alias.asname] = alias.name
+
+    return names
+
+
 def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
+    matrices = matrix_names(tree)
+
     for node in ast.walk(tree):
         if isinstance(node, ast.Attribute):
             method = METHODS.get(node.attr)
@@ -196,11 +215,11 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
                 )
 
         elif isinstance(node, ast.Name):
-            if node.id in MATRICES:
+            if node.id in matrices:
                 yield Match(
                     node.lineno,
                     column(lines, node.lineno, node.col_offset),
-                    f"winrt.windows.foundation.numerics.{node.id}",
+                    f"winrt.windows.foundation.numerics.{matrices[node.id]}",
                     MATRIX_PRODUCT,
                 )
 
