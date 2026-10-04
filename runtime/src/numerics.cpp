@@ -307,8 +307,11 @@ namespace py::interp::numerics
          *
          * @tparam TwoValues Whether two values multiply, which a vector does
          * elementwise and a quaternion as the Hamilton product. Two matrices
-         * do not: their product is @, and * between them raises rather than
-         * answering NotImplemented, so that the message can say so.
+         * do not: their product is @, and * between two of them raises rather
+         * than answering NotImplemented, so that the message can say so. A
+         * tuple of a matrix's fields or a buffer of its floats is no matrix
+         * for that, so * with one is NotImplemented and the other operand
+         * answers, as NumPy's elementwise product does for an ndarray.
          */
         template<kind K, bool TwoValues>
         PyObject* slot_multiply(PyObject* left, PyObject* right) noexcept
@@ -341,18 +344,28 @@ namespace py::interp::numerics
                 return write_struct<K, K>(*entry, a * *scale);
             }
 
-            typename traits<K>::type b;
-            if (!read_operand<K>(*entry, right, b))
-            {
-                return not_implemented();
-            }
-
             if constexpr (TwoValues)
             {
+                typename traits<K>::type b;
+                if (!read_operand<K>(*entry, right, b))
+                {
+                    return not_implemented();
+                }
+
                 return write_struct<K, K>(*entry, a * b);
             }
             else
             {
+                if (!Py_IS_TYPE(left, entry->py_type))
+                {
+                    Py_RETURN_NOTIMPLEMENTED;
+                }
+
+                if (!Py_IS_TYPE(right, entry->py_type))
+                {
+                    Py_RETURN_NOTIMPLEMENTED;
+                }
+
                 PyErr_Format(
                     PyExc_TypeError,
                     "* between two '%s' values is not their product: use @ "

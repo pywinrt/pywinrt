@@ -283,7 +283,14 @@ namespace py::interp::numerics
 
             if (PyTuple_GET_SIZE(key) != 2)
             {
-                return matrix_key_error<K>(key);
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' is indexed by a row and a column, as m[row, column], "
+                    "not by %zd %s",
+                    traits<K>::py_name,
+                    PyTuple_GET_SIZE(key),
+                    PyTuple_GET_SIZE(key) == 1 ? "index" : "indices");
+                return nullptr;
             }
 
             auto const row = matrix_index(PyTuple_GET_ITEM(key, 0), shape[0], "row");
