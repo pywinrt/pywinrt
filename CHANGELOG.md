@@ -286,6 +286,7 @@
   from one package; nothing else needed a prefix of its own. See
   the [v3 to v4 migration guide][3to4] for the full list of renames.
 - The type hints of generic interfaces infer variance, so `IIterable[Uri]` is an `IIterable[Object]`.
+- A Python implementation of a WinRT interface is an instance of `winrt.system.Object`.
 
 ### Deprecated
 - Passing a format string to `winrt.system.Array` is deprecated and raises a
