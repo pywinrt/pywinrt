@@ -7,7 +7,7 @@ from winrt import (
 
 
 class TestBootstrap(unittest.TestCase):
-    def test_initialize_no_match(self):
+    def test_initialize_no_match(self) -> None:
         with self.assertRaises(OSError):
             bootstrap.initialize("99.99")
 

@@ -5,7 +5,7 @@ import winrt.windows.storage.streams as wss
 
 
 class TestBuffer(unittest.TestCase):
-    def test_from_buffer(self):
+    def test_from_buffer(self) -> None:
         SIZE = 5
 
         buf = wss.Buffer(SIZE)

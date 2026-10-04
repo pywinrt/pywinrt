@@ -28,21 +28,21 @@ from test._util import async_test, catch_unraisable
 
 
 class TestTestComponent(unittest.TestCase):
-    def test_struct_subclass(self):
+    def test_struct_subclass(self) -> None:
         # subclassing a struct type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
             class s(tc.Blittable):  # type: ignore
                 pass
 
-    def test_class_subclass(self):
+    def test_class_subclass(self) -> None:
         # subclassing a class type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
             class s(tc.Class):  # type: ignore
                 pass
 
-    def test_composable_subclass(self):
+    def test_composable_subclass(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -52,7 +52,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 0)
         self.assertEqual(c.one(), 1)
 
-    def test_composable_subclass_with_interface(self):
+    def test_composable_subclass_with_interface(self) -> None:
         class C(tc.Override, tc.IRequiredOne):
             @override
             def one(self) -> int:
@@ -67,7 +67,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertIsInstance(c, tc.Override)
         self.assertIsInstance(c, tc.IRequiredOne)
 
-    def test_composable_subclass_of_a_composed_class(self):
+    def test_composable_subclass_of_a_composed_class(self) -> None:
         # Derived derives from Composable and is composable in turn, so a
         # Python class composed into it has three objects behind it and the
         # members of both classes.
@@ -81,7 +81,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 0)
         self.assertEqual(c.one(), 1)
 
-    def test_composable_runtime_class_name(self):
+    def test_composable_runtime_class_name(self) -> None:
         # C++/WinRT names a composed object after the first interface the
         # derived object implements itself, so a subclass of a class that
         # leaves nothing to be overridden has no name of its own.
@@ -96,7 +96,7 @@ class TestTestComponent(unittest.TestCase):
             tc.TestRunner.expect_object(D()), "TestComponent.IOverrideOverrides"
         )
 
-    def test_declared_runtime_class_name(self):
+    def test_declared_runtime_class_name(self) -> None:
         # A class may say what it is called instead, which is what a XAML
         # metadata provider needs.
         class C(tc.Composable):
@@ -104,7 +104,7 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(tc.TestRunner.expect_object(C()), "Spam.Eggs")
 
-    def test_overriding_new(self):
+    def test_overriding_new(self) -> None:
         class C(tc.Composable):
             @override
             def __new__(cls):
@@ -116,7 +116,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
 
-    def test_overriding_method(self):
+    def test_overriding_method(self) -> None:
         event = threading.Event()
         base_event = threading.Event()
 
@@ -132,7 +132,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertTrue(event.is_set())
         self.assertFalse(base_event.is_set())
 
-    def test_overriding_and_calling_super(self):
+    def test_overriding_and_calling_super(self) -> None:
         event = threading.Event()
         base_event = threading.Event()
 
@@ -166,7 +166,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
 
-    def test_object_round_trip(self):
+    def test_object_round_trip(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -191,7 +191,7 @@ class TestTestComponent(unittest.TestCase):
             "user-created subclass instance should survive round-trip from WinRT-land",
         )
 
-    def test_object_lifetime_py(self):
+    def test_object_lifetime_py(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -206,7 +206,7 @@ class TestTestComponent(unittest.TestCase):
             "object should be collected when no Python or WinRT references exist",
         )
 
-    def test_object_lifetime_winrt(self):
+    def test_object_lifetime_winrt(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -236,18 +236,18 @@ class TestTestComponent(unittest.TestCase):
             wr(), "object should be collected when WinRT references are gone"
         )
 
-    def test_composable_isinstance(self):
+    def test_composable_isinstance(self) -> None:
         d = tc.Derived()
 
         self.assertIsInstance(d, tc.Composable)
         self.assertIsInstance(d, tc.IRequiredOne)
 
-    def test_composable_issubclass(self):
-        self.assertTrue(issubclass(tc.Derived, tc.Composable))  # type: ignore
+    def test_composable_issubclass(self) -> None:
+        self.assertTrue(issubclass(tc.Derived, tc.Composable))
         # FIXME: runtime subclass checking for interfaces is not implemented
         # self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))  # type: ignore
 
-    def test_object_equality(self):
+    def test_object_equality(self) -> None:
         c1 = tc.Derived()
         c2 = c1.as_(tc.Composable)
         c3 = tc.Derived()
@@ -279,7 +279,7 @@ class TestTestComponent(unittest.TestCase):
             "WinRT object any any other type should not be equal",
         )
 
-    def test_object_hashable(self):
+    def test_object_hashable(self) -> None:
         c1 = tc.Derived()
         c2 = c1.as_(tc.Composable)
 
@@ -295,7 +295,7 @@ class TestTestComponent(unittest.TestCase):
             "different wrappers of the same WinRT object instance should hash the same",
         )
 
-    def test_struct_new(self):
+    def test_struct_new(self) -> None:
         b = tc.Blittable()
         self.assertEqual(b.a, 0)
 
@@ -316,26 +316,26 @@ class TestTestComponent(unittest.TestCase):
         n = tc.NonBlittable(c=s)
         self.assertEqual(n.c, s)
 
-    def test_struct_hashable(self):
+    def test_struct_hashable(self) -> None:
         b = tc.Blittable()
 
         self.assertEqual(hash(b), hash(tc.Blittable()))
 
-    def test_struct_equality(self):
+    def test_struct_equality(self) -> None:
         b1 = tc.Blittable()
         b2 = tc.Blittable()
 
         self.assertEqual(b1, b2)
         self.assertFalse(b1 != b2)
 
-    def test_struct_inequality(self):
+    def test_struct_inequality(self) -> None:
         b1 = tc.Blittable()
         b2 = tc.Blittable(1)
 
         self.assertNotEqual(b1, b2)
         self.assertFalse(b1 == b2)
 
-    def test_struct_comparison(self):
+    def test_struct_comparison(self) -> None:
         b1 = tc.Blittable()
         b2 = tc.Blittable()
 
@@ -351,20 +351,20 @@ class TestTestComponent(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "'>=' not supported"):
             b1 >= b2  # type: ignore
 
-    def test_struct_repr(self):
+    def test_struct_repr(self) -> None:
         nb = tc.NonBlittable(True, "b", "c", 4)
         r = repr(nb)
 
         self.assertEqual(r, "NonBlittable(a=True, b='b', c='c', d=4)")
         self.assertEqual(eval("tc." + r), nb)
 
-    def test_struct_readonly(self):
+    def test_struct_readonly(self) -> None:
         b = tc.Blittable()
 
         with self.assertRaisesRegex(AttributeError, "is not writable"):
             b.a = 1  # type: ignore
 
-    def test_blittable_default(self):
+    def test_blittable_default(self) -> None:
         b = tc.Blittable()
 
         self.assertEqual(b.a, 0)
@@ -378,7 +378,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(b.i, 0)
         self.assertEqual(b.j, UUID("00000000-0000-0000-0000-000000000000"))
 
-    def test_blittable(self):
+    def test_blittable(self) -> None:
         b = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -394,7 +394,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(b.i, 9)
         self.assertEqual(b.j, UUID("10000000-1000-1000-1000-100000000000"))
 
-    def test_non_blittable_default(self):
+    def test_non_blittable_default(self) -> None:
         nb = tc.NonBlittable()
 
         self.assertIs(nb.a, False)
@@ -402,7 +402,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(nb.c, "")
         self.assertIsNone(nb.d)
 
-    def test_non_blittable(self):
+    def test_non_blittable(self) -> None:
         nb = tc.NonBlittable(True, "b", "c", 4)
 
         self.assertIs(nb.a, True)
@@ -410,7 +410,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(nb.c, "c")
         self.assertEqual(nb.d, 4)
 
-    def test_nested_default(self):
+    def test_nested_default(self) -> None:
         n = tc.Nested()
 
         self.assertEqual(n.blittable.a, 0)
@@ -429,7 +429,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(n.non_blittable.c, "")
         self.assertIsNone(n.non_blittable.d)
 
-    def test_nested(self):
+    def test_nested(self) -> None:
         n = tc.Nested(
             tc.Blittable(
                 1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
@@ -453,10 +453,10 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(n.non_blittable.c, "c")
         self.assertEqual(n.non_blittable.d, 4)
 
-    def test_test_runner(self):
+    def test_test_runner(self) -> None:
         tc.TestRunner.test_self()
 
-    def test_dict_to_map(self):
+    def test_dict_to_map(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
         # collection3 is one of the few methods that takes an IMap input
@@ -469,7 +469,7 @@ class TestTestComponent(unittest.TestCase):
 
         # TODO: test wrong type in dict. currently this will cause an abort
 
-    def test_dict_to_map_view(self):
+    def test_dict_to_map_view(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
         # collection4 is one of the few methods that takes an IMapView input
@@ -482,7 +482,7 @@ class TestTestComponent(unittest.TestCase):
 
         # TODO: test wrong type in dict. currently this will cause an abort
 
-    def test_list_to_vector(self):
+    def test_list_to_vector(self) -> None:
         arg = ["1", "2", "3", "4"]
         tests = tc.TestRunner.make_tests()
         # collection5 is one of the few methods that takes an IVector input
@@ -495,7 +495,7 @@ class TestTestComponent(unittest.TestCase):
 
         # TODO: test wrong type in list. currently this will cause an abort
 
-    def test_list_to_vector_out_of_range(self):
+    def test_list_to_vector_out_of_range(self) -> None:
         class ShortSequence:
             """A sequence that claims to have more items than it does."""
 
@@ -517,7 +517,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(ctx.exception.winerror, E_BOUNDS)
         self.assertEqual(exceptions, [])
 
-    def test_list_to_vector_view(self):
+    def test_list_to_vector_view(self) -> None:
         arg = ["1", "2", "3", "4"]
         tests = tc.TestRunner.make_tests()
         # collection6 is one of the few methods that takes an IVectorView input
@@ -539,7 +539,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(len(exceptions), 1)
         self.assertEqual(exceptions[0].exc_type, TypeError)
 
-    def test_tuple_to_struct(self):
+    def test_tuple_to_struct(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # can pass unspecialized tuple as projected struct
@@ -548,7 +548,7 @@ class TestTestComponent(unittest.TestCase):
             tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
         )
 
-    def test_tuple_to_struct_wrong_arity(self):
+    def test_tuple_to_struct_wrong_arity(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # passing 9-tuple as 10-field struct results in TypeError
@@ -558,7 +558,7 @@ class TestTestComponent(unittest.TestCase):
                 tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             )
 
-    def test_tuple_to_struct_wrong_type(self):
+    def test_tuple_to_struct_wrong_type(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # passing wrong type for one of the tuple elements results in TypeError
@@ -568,7 +568,7 @@ class TestTestComponent(unittest.TestCase):
                 tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             )
 
-    def test_tuple_to_struct_nested(self):
+    def test_tuple_to_struct_nested(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # nested structs can also be tuples
@@ -581,26 +581,26 @@ class TestTestComponent(unittest.TestCase):
         )
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_bool(self):
+    def test_struct_replace_bool(self) -> None:
         orig = tc.NonBlittable(True, "b", "c", 4)
         cpy = copy.replace(orig, a=False)
         self.assertIs(cpy.a, False)
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_str(self):
+    def test_struct_replace_str(self) -> None:
         orig = tc.NonBlittable(True, "b", "c", 4)
         cpy = copy.replace(orig, b="B", c="C")
         self.assertEqual(cpy.b, "B")
         self.assertEqual(cpy.c, "C")
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_ireference(self):
+    def test_struct_replace_ireference(self) -> None:
         orig = tc.NonBlittable(True, "b", "c", 4)
         cpy = copy.replace(orig, d=None)
         self.assertIsNone(cpy.d)
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_int(self):
+    def test_struct_replace_int(self) -> None:
         orig = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -617,7 +617,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(cpy.j, UUID("10000000-1000-1000-1000-100000000000"))
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_float(self):
+    def test_struct_replace_float(self) -> None:
         orig = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -627,7 +627,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertAlmostEqual(cpy.i, 2.2)
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_uuid(self):
+    def test_struct_replace_uuid(self) -> None:
         orig = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -635,7 +635,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(cpy.a, 1)
         self.assertEqual(cpy.j, UUID("20000000-2000-2000-2000-200000000000"))
 
-    def test_struct_unpack(self):
+    def test_struct_unpack(self) -> None:
         nb = tc.NonBlittable(True, "b", "c", 4)
         a, b, c, d = nb.unpack()
         self.assertIs(a, True)
@@ -643,7 +643,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c, "c")
         self.assertEqual(d, 4)
 
-    def test_struct_unpack_nested(self):
+    def test_struct_unpack_nested(self) -> None:
         n = tc.Nested(
             tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             tc.NonBlittable(True, "b", "c", 4),
@@ -664,14 +664,14 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(y, "c")
         self.assertEqual(z, 4)
 
-    def test_dict_to_iter_of_ikeyvaluepair(self):
+    def test_dict_to_iter_of_ikeyvaluepair(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
         ret, out = tests.collection2(arg)
         self.assertDictEqual({i.key: i.value for i in ret}, arg)
         self.assertDictEqual({i.key: i.value for i in out}, arg)
 
-    def test_async_action_get_sta(self):
+    def test_async_action_get_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
             with self.assertRaises(RuntimeError):
@@ -679,10 +679,10 @@ class TestTestComponent(unittest.TestCase):
         finally:
             wr.uninit_apartment()
 
-    def test_async_action_get(self):
+    def test_async_action_get(self) -> None:
         tc.TestRunner.create_async_action(10).get()
 
-    def test_async_action_get_cancel(self):
+    def test_async_action_get_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(10)
         op.cancel()
         with self.assertRaises(OSError) as ctx:
@@ -690,13 +690,13 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
 
-    def test_async_action_get_error(self):
+    def test_async_action_get_error(self) -> None:
         with self.assertRaises(OSError) as ctx:
             tc.TestRunner.create_async_action_with_error(10, E_FAIL).get()
 
         self.assertEqual(ctx.exception.winerror, E_FAIL)
 
-    def test_async_action_wait_sta(self):
+    def test_async_action_wait_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
             with self.assertRaises(RuntimeError):
@@ -704,15 +704,15 @@ class TestTestComponent(unittest.TestCase):
         finally:
             wr.uninit_apartment()
 
-    def test_async_action_wait(self):
+    def test_async_action_wait(self) -> None:
         status = tc.TestRunner.create_async_action(10).wait(1)
         self.assertEqual(status, wf.AsyncStatus.COMPLETED)
 
-    def test_async_action_wait_timeout(self):
+    def test_async_action_wait_timeout(self) -> None:
         status = tc.TestRunner.create_async_action(1000).wait(0.1)
         self.assertEqual(status, wf.AsyncStatus.STARTED)
 
-    def test_async_action_wait_not_a_duration(self):
+    def test_async_action_wait_not_a_duration(self) -> None:
         # A timeout that is not a positive number of seconds asks for the
         # status as it stands rather than for a wait. Each one gets its own
         # operation because a WinRT async object accepts only one completed
@@ -722,22 +722,22 @@ class TestTestComponent(unittest.TestCase):
                 op = tc.TestRunner.create_async_action(1000)
                 self.assertEqual(op.wait(timeout), wf.AsyncStatus.STARTED)
 
-    def test_async_action_wait_cancel(self):
+    def test_async_action_wait_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(10)
         op.cancel()
         status = op.wait(1)
         self.assertEqual(status, wf.AsyncStatus.CANCELED)
 
-    def test_async_action_wait_error(self):
+    def test_async_action_wait_error(self) -> None:
         status = tc.TestRunner.create_async_action_with_error(10, E_FAIL).wait(1)
         self.assertEqual(status, wf.AsyncStatus.ERROR)
 
-    def test_async_operation_get(self):
+    def test_async_operation_get(self) -> None:
         expected = 1
         actual = tc.TestRunner.create_async_operation(10, expected).get()
         self.assertEqual(expected, actual)
 
-    def test_async_operation_get_sta(self):
+    def test_async_operation_get_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
             with self.assertRaises(RuntimeError):
@@ -745,7 +745,7 @@ class TestTestComponent(unittest.TestCase):
         finally:
             wr.uninit_apartment()
 
-    def test_async_operation_get_cancel(self):
+    def test_async_operation_get_cancel(self) -> None:
         op = tc.TestRunner.create_async_operation(10, 1)
         op.cancel()
         with self.assertRaises(OSError) as ctx:
@@ -753,13 +753,13 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
 
-    def test_async_operation_get_error(self):
+    def test_async_operation_get_error(self) -> None:
         with self.assertRaises(OSError) as ctx:
             tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL).get()
 
         self.assertEqual(ctx.exception.winerror, E_FAIL)
 
-    def test_async_operation_wait_sta(self):
+    def test_async_operation_wait_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
             with self.assertRaises(RuntimeError):
@@ -767,25 +767,25 @@ class TestTestComponent(unittest.TestCase):
         finally:
             wr.uninit_apartment()
 
-    def test_async_operation_wait(self):
+    def test_async_operation_wait(self) -> None:
         status = tc.TestRunner.create_async_operation(10, 1).wait(1)
         self.assertEqual(status, wf.AsyncStatus.COMPLETED)
 
-    def test_async_operation_wait_timeout(self):
+    def test_async_operation_wait_timeout(self) -> None:
         status = tc.TestRunner.create_async_operation(1000, 1).wait(0.1)
         self.assertEqual(status, wf.AsyncStatus.STARTED)
 
-    def test_async_operation_wait_cancel(self):
+    def test_async_operation_wait_cancel(self) -> None:
         op = tc.TestRunner.create_async_operation(10, 1)
         op.cancel()
         status = op.wait(1)
         self.assertEqual(status, wf.AsyncStatus.CANCELED)
 
-    def test_async_operation_wait_error(self):
+    def test_async_operation_wait_error(self) -> None:
         status = tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL).wait(1)
         self.assertEqual(status, wf.AsyncStatus.ERROR)
 
-    def test_async_action_with_progress_get(self):
+    def test_async_action_with_progress_get(self) -> None:
         tc.TestRunner.create_async_action_with_progress(10, [1, 2]).get()
 
     def test_async_action_progress_handler_is_replaced(self) -> None:
@@ -800,32 +800,32 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(first, [])
         self.assertEqual(second, [1, 2])
 
-    def test_async_action_with_progress_wait(self):
+    def test_async_action_with_progress_wait(self) -> None:
         status = tc.TestRunner.create_async_action_with_progress(10, [1, 2]).wait(1)
         self.assertEqual(status, wf.AsyncStatus.COMPLETED)
 
-    def test_async_operation_with_progress_get(self):
+    def test_async_operation_with_progress_get(self) -> None:
         expected = 3
         actual = tc.TestRunner.create_async_operation_with_progress(
             10, [1, 2], expected
         ).get()
         self.assertEqual(expected, actual)
 
-    def test_async_operation_with_progress_wait(self):
+    def test_async_operation_with_progress_wait(self) -> None:
         status = tc.TestRunner.create_async_operation_with_progress(10, [1, 2], 3).wait(
             1
         )
         self.assertEqual(status, wf.AsyncStatus.COMPLETED)
 
     @async_test
-    async def test_async_action(self):
+    async def test_async_action(self) -> None:
         op = tc.TestRunner.create_async_action(10)
         await op
 
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
     @async_test
-    async def test_async_action_cancel(self):
+    async def test_async_action_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(500)
 
         with self.assertRaises(asyncio.TimeoutError):
@@ -836,7 +836,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
 
     @async_test
-    async def test_async_action_cancel_with_shield(self):
+    async def test_async_action_cancel_with_shield(self) -> None:
         op = tc.TestRunner.create_async_action(500)
 
         with self.assertRaises(asyncio.TimeoutError):
@@ -853,7 +853,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
     @async_test
-    async def test_async_action_cancel_with_cancel(self):
+    async def test_async_action_cancel_with_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(500)
 
         with self.assertRaises(asyncio.TimeoutError):
@@ -873,7 +873,7 @@ class TestTestComponent(unittest.TestCase):
         await asyncio.sleep(0.5)
 
     @async_test
-    async def test_async_action_error(self):
+    async def test_async_action_error(self) -> None:
         op = tc.TestRunner.create_async_action_with_error(10, E_FAIL)
 
         with self.assertRaises(OSError) as ctx:
@@ -882,7 +882,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(ctx.exception.winerror, E_FAIL)
 
     @async_test
-    async def test_async_action_with_progress(self):
+    async def test_async_action_with_progress(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
 
@@ -900,7 +900,7 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter(self):
+    async def test_async_action_with_progress_iter(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
 
@@ -914,7 +914,7 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter_cancel(self):
+    async def test_async_action_with_progress_iter_cancel(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(500, expected)
         asyncio.get_running_loop().call_later(0.1, op.cancel)
@@ -930,7 +930,7 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter_cancel2(self):
+    async def test_async_action_with_progress_iter_cancel2(self) -> None:
         expected = [1, 2, 3, 4, 5]
         op = tc.TestRunner.create_async_action_with_progress(100, expected)
 
@@ -950,7 +950,7 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter_error(self):
+    async def test_async_action_with_progress_iter_error(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress_with_error(
             10, expected, E_FAIL
@@ -967,7 +967,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(actual, expected)
 
     @async_test
-    async def test_async_operation(self):
+    async def test_async_operation(self) -> None:
         op = tc.TestRunner.create_async_operation(10, 1)
         result = await op
 
@@ -975,7 +975,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(result, 1)
 
     @async_test
-    async def test_async_operation_with_progress(self):
+    async def test_async_operation_with_progress(self) -> None:
         expected = [1, 2, 3]
         expected_result = 4
         op = tc.TestRunner.create_async_operation_with_progress(
@@ -1584,7 +1584,7 @@ class WinrtAiter(Generic[T]):
                 raise RuntimeError("unexpected status")
 
             # FIXME: shutdown() was introduced in 3.13, so we can't use it generally
-            loop.call_soon_threadsafe(queue.shutdown)  # type: ignore [attr-defined]
+            loop.call_soon_threadsafe(queue.shutdown)
 
         self._op.progress = on_progress
         self._op.completed = on_completed
@@ -1598,7 +1598,7 @@ class WinrtAiter(Generic[T]):
     async def __anext__(self) -> T:
         try:
             return await self._queue.get()
-        except asyncio.QueueShutDown:  # type: ignore [attr-defined]
+        except asyncio.QueueShutDown:
             # this acts as signal that the operation is done
             pass
 
@@ -1623,6 +1623,6 @@ class WinrtAiter(Generic[T]):
         while True:
             try:
                 await self._queue.get()
-            except asyncio.QueueShutDown:  # type: ignore [attr-defined]
+            except asyncio.QueueShutDown:
                 self._result.pop("exception", None)
                 break

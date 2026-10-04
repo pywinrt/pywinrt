@@ -82,11 +82,11 @@ pointer_size = 8 if is_64bits else 4
 
 
 class TestWinRTArray(unittest.TestCase):
-    def test_empty_constructor(self):
+    def test_empty_constructor(self) -> None:
         with self.assertRaises(TypeError):
             Array()  # type: ignore
 
-    def test_bool(self):
+    def test_bool(self) -> None:
         a = Array(bool, [False, True])
 
         self.assertEqual(a._winrt_element_type_name_, "Boolean")
@@ -102,7 +102,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "?")
             self.assertTrue(m.c_contiguous)
 
-    def test_int8(self):
+    def test_int8(self) -> None:
         a = Array(Int8, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int8")
@@ -117,7 +117,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "b")
             self.assertTrue(m.c_contiguous)
 
-    def test_uint8(self):
+    def test_uint8(self) -> None:
         a = Array(UInt8, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt8")
@@ -132,7 +132,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "B")
             self.assertTrue(m.c_contiguous)
 
-    def test_int16(self):
+    def test_int16(self) -> None:
         a = Array(Int16, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int16")
@@ -147,7 +147,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "h")
             self.assertTrue(m.c_contiguous)
 
-    def test_uint16(self):
+    def test_uint16(self) -> None:
         a = Array(UInt16, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt16")
@@ -162,7 +162,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "H")
             self.assertTrue(m.c_contiguous)
 
-    def test_int32(self):
+    def test_int32(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int32")
@@ -177,7 +177,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "i")
             self.assertTrue(m.c_contiguous)
 
-    def test_uint32(self):
+    def test_uint32(self) -> None:
         a = Array(UInt32, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt32")
@@ -192,7 +192,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "I")
             self.assertTrue(m.c_contiguous)
 
-    def test_int64(self):
+    def test_int64(self) -> None:
         a = Array(Int64, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "Int64")
@@ -207,7 +207,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "q")
             self.assertTrue(m.c_contiguous)
 
-    def test_uint64(self):
+    def test_uint64(self) -> None:
         a = Array(UInt64, [1, 2, 3])
 
         self.assertEqual(a._winrt_element_type_name_, "UInt64")
@@ -222,7 +222,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "Q")
             self.assertTrue(m.c_contiguous)
 
-    def test_char(self):
+    def test_char(self) -> None:
         a = Array(Char16, ["A", "B", "\u1234"])
 
         self.assertEqual(a._winrt_element_type_name_, "Char16")
@@ -237,7 +237,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "u")
             self.assertTrue(m.c_contiguous)
 
-    def test_enum(self):
+    def test_enum(self) -> None:
         a = Array(PropertyType, [PropertyType.INT32, PropertyType.STRING])
 
         self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.PropertyType")
@@ -252,7 +252,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "i")
             self.assertTrue(m.c_contiguous)
 
-    def test_flags_enum(self):
+    def test_flags_enum(self) -> None:
         a = Array(FileAttributes, [FileAttributes.DIRECTORY, FileAttributes.READ_ONLY])
 
         self.assertEqual(a._winrt_element_type_name_, "Windows.Storage.FileAttributes")
@@ -267,7 +267,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "I")
             self.assertTrue(m.c_contiguous)
 
-    def test_string(self):
+    def test_string(self) -> None:
         a = Array(str, ["A", "B", "CDE"])
 
         self.assertEqual(a._winrt_element_type_name_, "String")
@@ -282,7 +282,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
-    def test_object(self):
+    def test_object(self) -> None:
         a = Array(Object, 3)
 
         self.assertEqual(a._winrt_element_type_name_, "Object")
@@ -297,7 +297,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
-    def test_guid(self):
+    def test_guid(self) -> None:
         actual = [
             uuid.UUID("00112233-4455-6677-8899-AABBCCDDEEFF"),
             uuid.uuid4(),
@@ -319,7 +319,7 @@ class TestWinRTArray(unittest.TestCase):
 
             self.assertEqual(m[0:1].hex(), "33221100554477668899aabbccddeeff")
 
-    def test_windows_foundation_datetime(self):
+    def test_windows_foundation_datetime(self) -> None:
         actual = [
             datetime.datetime.now(datetime.UTC),
             datetime.datetime(2000, 1, 1, tzinfo=datetime.UTC),
@@ -338,7 +338,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "q")
             self.assertTrue(m.c_contiguous)
 
-    def test_windows_foundation_timespan(self):
+    def test_windows_foundation_timespan(self) -> None:
         actual = [
             datetime.timedelta(0),
             datetime.timedelta(1),
@@ -357,7 +357,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "q")
             self.assertTrue(m.c_contiguous)
 
-    def test_windows_foundation_point(self):
+    def test_windows_foundation_point(self) -> None:
         actual = [
             Point(1, 2),
             Point(3, 4),
@@ -376,7 +376,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "T{f:x:f:y:}")
             self.assertTrue(m.c_contiguous)
 
-    def test_windows_foundation_size(self):
+    def test_windows_foundation_size(self) -> None:
         actual = [
             Size(1, 2),
             Size(3, 4),
@@ -395,7 +395,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "T{f:width:f:height:}")
             self.assertTrue(m.c_contiguous)
 
-    def test_windows_foundation_rect(self):
+    def test_windows_foundation_rect(self) -> None:
         actual = [
             Rect(1, 2, 3, 4),
             Rect(3, 4, 5, 6),
@@ -414,7 +414,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "T{f:x:f:y:f:width:f:height:}")
             self.assertTrue(m.c_contiguous)
 
-    def test_runtime_type(self):
+    def test_runtime_type(self) -> None:
         a = Array(Uri, [Uri("https://example.com")])
 
         self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.Uri")
@@ -429,7 +429,7 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
-    def test_interface(self):
+    def test_interface(self) -> None:
         a = Array(IPropertyValue, 2)
 
         self.assertEqual(
@@ -446,13 +446,13 @@ class TestWinRTArray(unittest.TestCase):
             self.assertEqual(m.format, "P")
             self.assertTrue(m.c_contiguous)
 
-    def test_ambiguous_builtin_types(self):
+    def test_ambiguous_builtin_types(self) -> None:
         for builtin in (int, float):
             with self.subTest(type=builtin):
                 with self.assertRaises(TypeError):
                     Array(builtin, 3)
 
-    def test_sequence_protocol(self):
+    def test_sequence_protocol(self) -> None:
         a = Array(UInt8, list(range(10)))
 
         for i, v in enumerate(a):
@@ -466,7 +466,7 @@ class TestWinRTArray(unittest.TestCase):
         self.assertEqual(a.count(5), 1)
         self.assertEqual(a.index(5), 5)
 
-    def test_guid_is_uuid_itself(self):
+    def test_guid_is_uuid_itself(self) -> None:
         class UUID:
             pass
 
@@ -478,7 +478,7 @@ class TestWinRTArray(unittest.TestCase):
                 with self.assertRaises(TypeError):
                     Array(impostor, 1)
 
-    def test_assign_array_that_assigns_nothing(self):
+    def test_assign_array_that_assigns_nothing(self) -> None:
         class Foo:
             @classmethod
             def _assign_array_(cls, a: object) -> None:
@@ -489,14 +489,17 @@ class TestWinRTArray(unittest.TestCase):
                 with self.assertRaisesRegex(TypeError, "Foo"):
                     Array(Foo, *args)
 
-    def test_copy_from_buffer(self):
+    def test_copy_from_buffer(self) -> None:
         values = [blittable(1), blittable(2)]
 
         a = Array(tc.Blittable, memoryview(Array(tc.Blittable, values)))
 
         self.assertEqual(list(a), values)
 
-    def test_no_copy_of_references_from_buffer(self):
+    def test_no_copy_of_references_from_buffer(self) -> None:
+        element: typing.Any
+        values: list[typing.Any]
+
         for element, values in (
             (str, ["a", "b"]),
             (Uri, [Uri("https://example.com")]),
@@ -508,7 +511,10 @@ class TestWinRTArray(unittest.TestCase):
                 with self.assertRaisesRegex(TypeError, "hold references"):
                     Array(element, memoryview(source))
 
-    def test_references_are_read_only_as_a_buffer(self):
+    def test_references_are_read_only_as_a_buffer(self) -> None:
+        element: typing.Any
+        values: list[typing.Any]
+
         for element, values in (
             (str, ["a", "b"]),
             (Uri, [Uri("https://example.com")]),
@@ -521,7 +527,10 @@ class TestWinRTArray(unittest.TestCase):
                     with m.cast("B") as b, self.assertRaises(TypeError):
                         b[0] = 1
 
-    def test_references_are_not_replaced_while_exported(self):
+    def test_references_are_not_replaced_while_exported(self) -> None:
+        element: typing.Any
+        values: list[typing.Any]
+
         for element, values, value in (
             (str, ["a"], "b"),
             (Uri, [Uri("https://example.com")], Uri("https://example.org")),
@@ -540,7 +549,7 @@ class TestWinRTArray(unittest.TestCase):
 
                 self.assertEqual(str(a[0]), str(value))
 
-    def test_values_are_replaced_while_exported(self):
+    def test_values_are_replaced_while_exported(self) -> None:
         a = Array(Int32, [1, 2])
 
         with memoryview(a) as m:
@@ -548,7 +557,7 @@ class TestWinRTArray(unittest.TestCase):
 
             self.assertEqual(m[0], 3)
 
-    def test_values_are_writable_as_a_buffer(self):
+    def test_values_are_writable_as_a_buffer(self) -> None:
         a = Array(Int32, [1, 2])
 
         with memoryview(a) as m:
@@ -557,13 +566,13 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(list(a), [3, 2])
 
-    def test_is_a_sequence_but_not_a_mutable_sequence(self):
+    def test_is_a_sequence_but_not_a_mutable_sequence(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         self.assertIsInstance(a, collections.abc.Sequence)
         self.assertNotIsInstance(a, collections.abc.MutableSequence)
 
-    def test_item_assignment(self):
+    def test_item_assignment(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         a[0] = 4
@@ -574,7 +583,7 @@ class TestWinRTArray(unittest.TestCase):
         with self.assertRaises(IndexError):
             a[3] = 7
 
-    def test_size_is_fixed(self):
+    def test_size_is_fixed(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         with self.assertRaises(TypeError):
@@ -589,7 +598,7 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(list(a), [1, 2, 3])
 
-    def test_index_out_of_range(self):
+    def test_index_out_of_range(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         for index in (3, -4):
@@ -600,7 +609,10 @@ class TestWinRTArray(unittest.TestCase):
         with self.assertRaises(TypeError):
             a["0"]  # type: ignore
 
-    def test_slice(self):
+    def test_slice(self) -> None:
+        element: typing.Any
+        values: list[typing.Any]
+
         for element, values in (
             (Int32, [1, 2, 3, 4]),
             (str, ["a", "b", "c", "d"]),
@@ -628,7 +640,7 @@ class TestWinRTArray(unittest.TestCase):
                         )
                         self.assertEqual(list(b), values[key])
 
-    def test_slice_is_a_copy(self):
+    def test_slice_is_a_copy(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         b = a[:2]
@@ -643,13 +655,13 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(str(c[0]), "https://example.com/")
 
-    def test_slice_step(self):
+    def test_slice_step(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         with self.assertRaises(NotImplementedError):
             a[::2]
 
-    def test_equality(self):
+    def test_equality(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         self.assertEqual(a, Array(Int32, [1, 2, 3]))
@@ -660,12 +672,12 @@ class TestWinRTArray(unittest.TestCase):
             Array(tc.Blittable, [blittable(1)]), Array(tc.Blittable, [blittable(1)])
         )
 
-    def test_equality_across_element_types(self):
+    def test_equality_across_element_types(self) -> None:
         # as with array.array, it is the values that compare
         self.assertEqual(Array(Int32, [1, 2]), Array(Int64, [1, 2]))
         self.assertNotEqual(Array(Int32, [1, 2]), Array(Int64, [1, 3]))
 
-    def test_equals_only_an_array(self):
+    def test_equals_only_an_array(self) -> None:
         a = Array(Int32, [1, 2, 3])
 
         # as a list equals only a list
@@ -678,7 +690,7 @@ class TestWinRTArray(unittest.TestCase):
         self.assertFalse(Array(Char16, ["a", "b"]) == "ab")
         self.assertEqual(list(a), [1, 2, 3])
 
-    def test_equality_propagates_errors(self):
+    def test_equality_propagates_errors(self) -> None:
         class Unequal(IStringable):
             def to_string(self) -> str:
                 return "unequal"
@@ -686,16 +698,17 @@ class TestWinRTArray(unittest.TestCase):
             def __eq__(self, other):
                 raise ZeroDivisionError
 
-        a = Array(IStringable, [Unequal()])
+        # mypy, unlike pyright, cannot infer an interface from a list of a class
+        a = Array(IStringable, [Unequal()])  # type: ignore[misc]
 
         with self.assertRaises(ZeroDivisionError):
-            _ = a == Array(IStringable, [Unequal()])
+            _ = a == Array(IStringable, [Unequal()])  # type: ignore[misc]
 
-    def test_not_hashable(self):
+    def test_not_hashable(self) -> None:
         with self.assertRaises(TypeError):
             hash(Array(Int32, [1]))
 
-    def test_repr(self):
+    def test_repr(self) -> None:
         self.assertEqual(repr(Array(Int32, [1, 2, 3])), "Array(Int32, [1, 2, 3])")
         self.assertEqual(repr(Array(str, ["a"])), "Array(String, ['a'])")
         self.assertEqual(repr(Array(Int32)), "Array(Int32, [])")
@@ -710,7 +723,7 @@ class TestWinRTArray(unittest.TestCase):
 #: ArrayN member does the same thing with them: it fills the array it is lent
 #: from the array it is passed, and hands the same values back as an output
 #: and as the return value.
-ARRAY_MEMBERS = [
+ARRAY_MEMBERS: list[tuple[str, typing.Any, list[typing.Any]]] = [
     ("array1", bool, [True, False, True]),
     ("array2", UInt8, [1, 2, 3]),
     ("array3", UInt16, [1, 2, 3]),
@@ -791,28 +804,28 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(len(seen), 1)
         self.assertEqual(seen[0][1], len(seen[0][0]))
 
-    def test_fundamental_types(self):
+    def test_fundamental_types(self) -> None:
         for name, element, values in ARRAY_MEMBERS:
             with self.subTest(member=name):
                 self.check_forward(name, element, values)
                 self.check_reverse(name, element, values)
 
-    def test_blittable_struct(self):
+    def test_blittable_struct(self) -> None:
         values = [blittable(1), blittable(2)]
         self.check_forward("array13", tc.Blittable, values)
         self.check_reverse("array13", tc.Blittable, values)
 
-    def test_non_blittable_struct(self):
+    def test_non_blittable_struct(self) -> None:
         values = [non_blittable(1), non_blittable(2)]
         self.check_forward("array14", tc.NonBlittable, values)
         self.check_reverse("array14", tc.NonBlittable, values)
 
-    def test_nested_struct(self):
+    def test_nested_struct(self) -> None:
         values = [nested(1), nested(2)]
         self.check_forward("array15", tc.Nested, values)
         self.check_reverse("array15", tc.Nested, values)
 
-    def test_interface(self):
+    def test_interface(self) -> None:
         passed = Array(IStringable, [Uri("https://example.com").as_(IStringable)])
         lent = Array(IStringable, 1)
 
@@ -821,7 +834,7 @@ class TestArrayParameters(unittest.TestCase):
         for array in (lent, received, returned):
             self.assertEqual([str(value) for value in array], ["https://example.com/"])
 
-    def test_interface_reverse(self):
+    def test_interface_reverse(self) -> None:
         seen = []
 
         def handler(passed, lent):
@@ -836,7 +849,7 @@ class TestArrayParameters(unittest.TestCase):
 
         self.assertEqual(len(seen), 1)
 
-    def test_lent_array_is_taken_back(self):
+    def test_lent_array_is_taken_back(self) -> None:
         kept = []
 
         def handler(passed, lent):
@@ -919,20 +932,20 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(list(copy), passed)
         self.assertEqual(items, passed)
 
-    def test_passed_array_must_hold_the_declared_element(self):
+    def test_passed_array_must_hold_the_declared_element(self) -> None:
         with self.assertRaisesRegex(BufferError, "itemsize == 4, have 2"):
             self.tests.array7(Array(Int16, [1, 2]), Array(Int32, 2))
 
-    def test_values_only_from_a_buffer(self):
+    def test_values_only_from_a_buffer(self) -> None:
         # A list holds Python objects, not the elements' layout.
         with self.assertRaisesRegex(TypeError, "bytes-like object"):
             self.tests.array7([1, 2], Array(Int32, 2))  # type: ignore[arg-type]
 
-    def test_lent_array_must_be_writable(self):
+    def test_lent_array_must_be_writable(self) -> None:
         with self.assertRaises(BufferError):
             self.tests.array2(bytes([1, 2]), bytes(2))
 
-    def test_any_buffer_of_the_right_shape(self):
+    def test_any_buffer_of_the_right_shape(self) -> None:
         lent = stdlib_array.array("i", [0, 0, 0])
 
         returned, received = self.tests.array7(stdlib_array.array("i", [1, 2, 3]), lent)
@@ -941,7 +954,7 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(list(received), [1, 2, 3])
         self.assertEqual(list(returned), [1, 2, 3])
 
-    def test_references_only_from_an_array(self):
+    def test_references_only_from_an_array(self) -> None:
         # The same bytes and format as an array of strings, but nothing says
         # what the pointers point at.
         pointers = memoryview(bytes(3 * pointer_size)).cast("P")
@@ -958,13 +971,13 @@ class TestArrayParameters(unittest.TestCase):
                 Array(tc.NonBlittable, 1),
             )
 
-    def test_references_only_from_an_array_of_the_declared_element(self):
+    def test_references_only_from_an_array_of_the_declared_element(self) -> None:
         uris = Array(Uri, [Uri("https://example.com")])
 
         with self.assertRaisesRegex(TypeError, "IStringable, not of .*Uri"):
             self.tests.array16(uris, Array(IStringable, 1))
 
-    def test_references_returned_only_in_an_array(self):
+    def test_references_returned_only_in_an_array(self) -> None:
         def handler(passed, lent):
             return memoryview(Array(str, list(passed))), Array(str, list(passed))
 
@@ -983,17 +996,17 @@ class TestScalarAliases(unittest.TestCase):
     the three annotations each one carries.
     """
 
-    def test_array_of_each_alias(self):
+    def test_array_of_each_alias(self) -> None:
         for alias, buffer_format, _, _, winrt_name in SCALAR_ALIASES:
             with self.subTest(winrt_type=winrt_name):
-                a = Array(alias, 3)
+                a: Array[typing.Any] = Array(alias, 3)
 
                 self.assertEqual(a._winrt_element_type_name_, winrt_name)
 
                 with memoryview(a) as m:
                     self.assertEqual(m.format, buffer_format)
 
-    def test_buffer_format_comes_first(self):
+    def test_buffer_format_comes_first(self) -> None:
         # Code written against the single string these aliases used to carry
         # reads the first annotation by position, so the buffer format is the
         # one that has to come first.
@@ -1001,7 +1014,7 @@ class TestScalarAliases(unittest.TestCase):
             with self.subTest(winrt_type=winrt_name):
                 self.assertEqual(typing.get_args(alias)[1], buffer_format)
 
-    def test_annotations_are_found_by_type(self):
+    def test_annotations_are_found_by_type(self) -> None:
         for alias, buffer_format, struct_format, signature, name in SCALAR_ALIASES:
             with self.subTest(winrt_type=name):
                 annotations = typing.get_args(alias)[1:]
@@ -1014,7 +1027,7 @@ class TestScalarAliases(unittest.TestCase):
                     found = [a for a in annotations if isinstance(a, kind)]
                     self.assertEqual(found, [expected])
 
-    def test_struct_format_matches_the_element(self):
+    def test_struct_format_matches_the_element(self) -> None:
         # The struct module has no "u" format at all, which is why Char16 is
         # the one alias whose struct format is not its buffer format.
         for alias, _, struct_format, _, winrt_name in SCALAR_ALIASES:
@@ -1029,15 +1042,15 @@ class TestDeprecatedFormatStrings(unittest.TestCase):
     says which spelling replaced it.
     """
 
-    def test_each_format_string_warns(self):
+    def test_each_format_string_warns(self) -> None:
         for buffer_format, winrt_name in FORMAT_STRINGS:
             with self.subTest(format=buffer_format):
                 with self.assertWarns(DeprecationWarning):
-                    a = Array(buffer_format, 3)
+                    a: Array[typing.Any] = Array(buffer_format, 3)  # type: ignore[deprecated]
 
                 self.assertEqual(a._winrt_element_type_name_, winrt_name)
 
-    def test_naming_the_type_does_not_warn(self):
+    def test_naming_the_type_does_not_warn(self) -> None:
         with warnings.catch_warnings():
             warnings.simplefilter("error", DeprecationWarning)
 

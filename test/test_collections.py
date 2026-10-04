@@ -11,7 +11,7 @@ from ._util import async_test
 
 
 class TestCollectionsStringMap(unittest.TestCase):
-    def test_string_map(self):
+    def test_string_map(self) -> None:
         m = wfc.StringMap()
         m.insert("hello", "world")
 
@@ -30,7 +30,7 @@ class TestCollectionsStringMap(unittest.TestCase):
         with self.assertRaises(OSError):
             m.remove("hello")
 
-    def test_string_map_is_mapping(self):
+    def test_string_map_is_mapping(self) -> None:
         m = wfc.StringMap()
 
         self.assertIsInstance(m, collections.abc.Mapping)
@@ -82,7 +82,7 @@ class TestCollectionsStringMap(unittest.TestCase):
             m.popitem()
 
     @async_test
-    async def test_string_map_changed_event(self):
+    async def test_string_map_changed_event(self) -> None:
         loop = asyncio.get_running_loop()
         future = loop.create_future()
 
@@ -114,7 +114,7 @@ class TestCollectionsStringMap(unittest.TestCase):
 
 
 class TestCollectionsPropertySet(unittest.TestCase):
-    def test_value_set(self):
+    def test_value_set(self) -> None:
         m = wfc.PropertySet()
         m.insert("hello", box_string("world"))
 
@@ -133,7 +133,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
         with self.assertRaises(OSError):
             m.remove("hello")
 
-    def test_test_property_set_is_mapping(self):
+    def test_test_property_set_is_mapping(self) -> None:
         m = wfc.PropertySet()
         self.assertFalse(m, "Empty set should be falsy")
 
@@ -194,19 +194,19 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
 
 class TestCollectionsVector(unittest.TestCase):
-    def setUp(self):
+    def setUp(self) -> None:
         self.vector = tc.TestRunner.create_string_vector()
         self.vector.extend(["a", "b"])
 
-    def test_negative_index_counts_from_the_end(self):
+    def test_negative_index_counts_from_the_end(self) -> None:
         self.assertEqual(self.vector[-1], "b")
         self.assertEqual(self.vector[-2], "a")
 
-    def test_negative_index_out_of_range(self):
+    def test_negative_index_out_of_range(self) -> None:
         with self.assertRaisesRegex(IndexError, "index out of range"):
             self.vector[-3]
 
-    def test_index_out_of_range(self):
+    def test_index_out_of_range(self) -> None:
         with self.assertRaisesRegex(IndexError, "index out of range"):
             self.vector[2]
 
@@ -215,7 +215,7 @@ class TestCollectionsVector(unittest.TestCase):
         with self.assertRaises(IndexError):
             self.vector[2**32]
 
-    def test_view_index(self):
+    def test_view_index(self) -> None:
         view, _ = tc.TestRunner.make_tests().collection6(["a", "b"])
 
         self.assertEqual(view[-1], "b")
@@ -226,17 +226,17 @@ class TestCollectionsVector(unittest.TestCase):
         with self.assertRaisesRegex(IndexError, "index out of range"):
             view[2]
 
-    def test_reversed(self):
+    def test_reversed(self) -> None:
         self.assertEqual(list(reversed(self.vector)), ["b", "a"])
 
-    def test_negative_index_assign_and_del(self):
+    def test_negative_index_assign_and_del(self) -> None:
         self.vector[-1] = "z"
         self.assertEqual(list(self.vector), ["a", "z"])
 
         del self.vector[-2]
         self.assertEqual(list(self.vector), ["z"])
 
-    def test_assign_and_del_out_of_range(self):
+    def test_assign_and_del_out_of_range(self) -> None:
         for index in (2, -3):
             with self.assertRaisesRegex(IndexError, "index out of range"):
                 self.vector[index] = "z"
@@ -253,15 +253,15 @@ class TestCollectionsVector(unittest.TestCase):
 
         self.assertEqual(list(self.vector), ["a", "b"])
 
-    def test_insert(self):
+    def test_insert(self) -> None:
         self.vector.insert(1, "x")
         self.assertEqual(list(self.vector), ["a", "x", "b"])
 
-    def test_insert_negative_index_counts_from_the_end(self):
+    def test_insert_negative_index_counts_from_the_end(self) -> None:
         self.vector.insert(-1, "x")
         self.assertEqual(list(self.vector), ["a", "x", "b"])
 
-    def test_insert_out_of_range_inserts_at_the_nearer_end(self):
+    def test_insert_out_of_range_inserts_at_the_nearer_end(self) -> None:
         self.vector.insert(-100, "x")
         self.vector.insert(100, "y")
         self.assertEqual(list(self.vector), ["x", "a", "b", "y"])

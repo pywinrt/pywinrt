@@ -8,7 +8,7 @@ ON_CI = os.environ.get("CI")
 
 class TestGraphicsCaptureInterop(unittest.TestCase):
     @unittest.skipIf(ON_CI, "CI does not have a monitor")
-    def test_create_for_monitor(self):
+    def test_create_for_monitor(self) -> None:
         """test create_for_monitor() method"""
         item = create_for_monitor(0)
         self.assertIsInstance(item.display_name, str)

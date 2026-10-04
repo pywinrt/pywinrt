@@ -9,7 +9,7 @@ ON_CI = os.environ.get("CI")
 
 @unittest.skipIf(ON_CI, "Windows App Runtime not installed on CI")
 class TestAppNotifications(unittest.TestCase):
-    def test_default_manager(self):
+    def test_default_manager(self) -> None:
         with bootstrap.initialize():
             manager = an.AppNotificationManager.default
             manager.register()

@@ -5,7 +5,7 @@ import winrt.windows.foundation as wf
 
 
 class TestUri(unittest.TestCase):
-    def test_activate_uri(self):
+    def test_activate_uri(self) -> None:
         u = wf.Uri("http://microsoft.com")
         self.assertEqual(u.domain, "microsoft.com")
         self.assertEqual(u.absolute_canonical_uri, "http://microsoft.com/")
@@ -16,7 +16,7 @@ class TestUri(unittest.TestCase):
         self.assertEqual(u.query, "")
         self.assertEqual(u.query_parsed.size, 0)
 
-    def test_activate_uri2(self):
+    def test_activate_uri2(self) -> None:
         u = wf.Uri("http://microsoft.com", "surface/studio")
         self.assertEqual(u.domain, "microsoft.com")
         self.assertEqual(
@@ -29,7 +29,7 @@ class TestUri(unittest.TestCase):
         self.assertEqual(u.query, "")
         self.assertEqual(u.query_parsed.size, 0)
 
-    def test_combine_uri(self):
+    def test_combine_uri(self) -> None:
         u1 = wf.Uri("http://microsoft.com")
         u = u1.combine_uri("surface/studio")
         self.assertEqual(u.domain, "microsoft.com")
@@ -43,7 +43,7 @@ class TestUri(unittest.TestCase):
         self.assertEqual(u.query, "")
         self.assertEqual(u.query_parsed.size, 0)
 
-    def test_activate_query_parsed(self):
+    def test_activate_query_parsed(self) -> None:
         u = wf.Uri("http://microsoft.com?projection=python&platform=windows")
         self.assertEqual(u.query, "?projection=python&platform=windows")
 

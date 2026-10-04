@@ -12,14 +12,14 @@ ON_CI = os.environ.get("CI")
 
 
 class TestGeolocation(unittest.TestCase):
-    def test_pinterface_qi(self):
+    def test_pinterface_qi(self) -> None:
         locator = wdg.Geolocator()
         op = locator.get_geoposition_async()
         # FIXME: runtime type checking for generic interfaces is not implemented
         # self.assertIsInstance(op, wf.IAsyncOperation[wdg.Geoposition])
         op.cancel()
 
-    def test_struct_ctor(self):
+    def test_struct_ctor(self) -> None:
         basic_pos = wdg.BasicGeoposition(latitude=47.1, longitude=-122.1, altitude=0.0)
         self.assertEqual(basic_pos.latitude, 47.1)
         self.assertEqual(basic_pos.longitude, -122.1)
@@ -32,7 +32,7 @@ class TestGeolocation(unittest.TestCase):
         for x in ["latitude", "longitude", "altitude"]:
             self.assertEqual(getattr(basic_pos, x), getattr(center, x))
 
-    def test_iiterable_wrapping(self):
+    def test_iiterable_wrapping(self) -> None:
         basic_pos1 = wdg.BasicGeoposition(47.1, -122.1, 0.0)
         basic_pos2 = wdg.BasicGeoposition(47.2, -122.2, 0.0)
 
@@ -46,7 +46,7 @@ class TestGeolocation(unittest.TestCase):
         self.assertAlmostEqual(se.longitude, basic_pos1.longitude)
 
     @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
-    def test_GetGeopositionAsync(self):
+    def test_GetGeopositionAsync(self) -> None:
         """test async method using IAsyncOperation Completed callback"""
         op_future = Future[wdg.Geoposition]()
 
@@ -79,7 +79,7 @@ class TestGeolocation(unittest.TestCase):
 
     @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
     @async_test
-    async def test_GetGeopositionAsync_await(self):
+    async def test_GetGeopositionAsync_await(self) -> None:
         """test async method by directly awaiting IAsyncOperation"""
 
         locator = wdg.Geolocator()
