@@ -3835,9 +3835,9 @@ class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
     @abstractmethod
     def are_vertical_snap_points_regular(self) -> bool: ...
 
-DragCompletedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], object]
-DragDeltaEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], object]
-DragStartedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragStartedEventArgs], object]
-ItemsChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, ItemsChangedEventArgs], object]
-RangeBaseValueChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, RangeBaseValueChangedEventArgs], object]
-ScrollEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, ScrollEventArgs], object]
+type DragCompletedEventHandler = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], object]
+type DragDeltaEventHandler = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], object]
+type DragStartedEventHandler = typing.Callable[[winrt.system.Object, DragStartedEventArgs], object]
+type ItemsChangedEventHandler = typing.Callable[[winrt.system.Object, ItemsChangedEventArgs], object]
+type RangeBaseValueChangedEventHandler = typing.Callable[[winrt.system.Object, RangeBaseValueChangedEventArgs], object]
+type ScrollEventHandler = typing.Callable[[winrt.system.Object, ScrollEventArgs], object]

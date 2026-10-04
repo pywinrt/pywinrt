@@ -980,4 +980,4 @@ class IStorageProviderUriSource(winrt._winrt.IInspectable):
     @abstractmethod
     def get_path_for_content_uri(self, content_uri: str, result: StorageProviderGetPathForContentUriResult, /) -> None: ...
 
-StorageProviderKnownFolderSyncRequestedHandler: typing.TypeAlias = typing.Callable[[StorageProviderKnownFolderSyncRequestArgs], object]
+type StorageProviderKnownFolderSyncRequestedHandler = typing.Callable[[StorageProviderKnownFolderSyncRequestArgs], object]

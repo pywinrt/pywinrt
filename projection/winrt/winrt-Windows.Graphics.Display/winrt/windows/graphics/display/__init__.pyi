@@ -422,4 +422,4 @@ class DisplayServices_Static(winrt._winrt.IInspectable_Static):
 class DisplayServices(winrt.system.Object, metaclass=DisplayServices_Static):
     ...
 
-DisplayPropertiesEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object], object]
+type DisplayPropertiesEventHandler = typing.Callable[[winrt.system.Object], object]

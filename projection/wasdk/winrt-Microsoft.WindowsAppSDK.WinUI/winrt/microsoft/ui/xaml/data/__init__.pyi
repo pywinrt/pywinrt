@@ -510,5 +510,5 @@ class IValueConverter(winrt._winrt.IInspectable):
     @abstractmethod
     def convert_back(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
 
-CurrentChangingEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], object]
-PropertyChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], object]
+type CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], object]
+type PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], object]
