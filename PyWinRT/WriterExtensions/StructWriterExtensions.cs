@@ -65,8 +65,11 @@ static class StructWriterExtensions
             );
         }
 
+        // A field is given as a parameter is, so it takes what an input
+        // parameter of its type takes: a tuple of a struct's fields, and a
+        // plain int for an HResult.
         w.WriteLine(
-            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap)} = {f.FieldType.GetDefaultPyValueForStub(ns, packageMap)}"))}) -> {type.Name}: ..."
+            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap, useStructTupleUnion: true)} = {f.FieldType.GetDefaultPyValueForStub(ns, packageMap)}"))}) -> {type.Name}: ..."
         );
 
         w.WriteLine($"def __replace__(self, /, **changes: typing.Any) -> {type.Name}: ...");
