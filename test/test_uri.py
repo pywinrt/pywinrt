@@ -1,4 +1,5 @@
 import unittest
+from uuid import UUID
 
 import winrt.windows.foundation as wf
 
@@ -63,3 +64,10 @@ class TestUri(unittest.TestCase):
         t = qp.index_of(e0)
         self.assertTrue(t[0])
         self.assertEqual(t[1], 0)
+
+    def test_runtime_class_name_and_iids(self) -> None:
+        uri = wf.Uri("https://example.com")
+
+        self.assertEqual(uri._runtime_class_name_, "Windows.Foundation.Uri")
+        # IStringable, one of the interfaces Uri implements
+        self.assertIn(UUID("96369f54-8eb6-48f0-abce-c1b211e627c3"), list(uri._iids_))

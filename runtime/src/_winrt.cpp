@@ -316,8 +316,16 @@ namespace py::cpp::_winrt
     {
         try
         {
-            auto name = winrt::get_interfaces(self->obj);
-            return convert(name);
+            // The object may be a proxy, which this asks across apartments.
+            auto const object = self->obj;
+            winrt::com_array<winrt::guid> iids;
+
+            {
+                auto _gil = py::release_gil();
+                iids = winrt::get_interfaces(object);
+            }
+
+            return convert(iids);
         }
         catch (...)
         {
@@ -336,7 +344,15 @@ namespace py::cpp::_winrt
     {
         try
         {
-            auto name = winrt::get_class_name(self->obj);
+            // The object may be a proxy, which this asks across apartments.
+            auto const object = self->obj;
+            winrt::hstring name;
+
+            {
+                auto _gil = py::release_gil();
+                name = winrt::get_class_name(object);
+            }
+
             return convert(name);
         }
         catch (...)
