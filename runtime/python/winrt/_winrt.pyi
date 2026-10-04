@@ -178,11 +178,7 @@ class MutableMapping(Mapping[_KT, _VT]):
 
 # actual runtime classes
 
-class Object(IInspectable):
-    @property
-    def _iids_(self) -> Array[UUID]: ...
-    @property
-    def _runtime_class_name_(self) -> str: ...
+class Object(IInspectable): ...
 
 # The real ABC rather than the Sequence above, because an Array is registered
 # as one and is accepted wherever a collections.abc.Sequence is.
