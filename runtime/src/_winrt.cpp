@@ -13,10 +13,9 @@
 
 namespace py::cpp::_winrt
 {
-    // BEGIN: class _winrt.IInspectable_Static:
+    // BEGIN: class _winrt.Object_Static:
 
-    static PyObject* IInspectable_Static_instancecheck(
-        PyObject* cls, PyObject* obj) noexcept
+    static PyObject* Object_Static_instancecheck(PyObject* cls, PyObject* obj) noexcept
     {
         try
         {
@@ -181,7 +180,7 @@ namespace py::cpp::_winrt
         return false;
     }
 
-    static PyObject* IInspectable_Static_subclasscheck(
+    static PyObject* Object_Static_subclasscheck(
         PyObject* cls, PyObject* subclass) noexcept
     {
         try
@@ -248,30 +247,30 @@ namespace py::cpp::_winrt
         }
     }
 
-    static PyMethodDef IInspectable_Static_methods[]
+    static PyMethodDef Object_Static_methods[]
         = {{"__instancecheck__",
-            reinterpret_cast<PyCFunction>(IInspectable_Static_instancecheck),
+            reinterpret_cast<PyCFunction>(Object_Static_instancecheck),
             METH_O,
             nullptr},
            {"__subclasscheck__",
-            reinterpret_cast<PyCFunction>(IInspectable_Static_subclasscheck),
+            reinterpret_cast<PyCFunction>(Object_Static_subclasscheck),
             METH_O,
             nullptr},
            {}};
 
-    static PyType_Slot IInspectable_Static_type_slots[]
+    static PyType_Slot Object_Static_type_slots[]
         = {{Py_tp_base, reinterpret_cast<void*>(&PyType_Type)},
-           {Py_tp_methods, reinterpret_cast<void*>(IInspectable_Static_methods)},
+           {Py_tp_methods, reinterpret_cast<void*>(Object_Static_methods)},
            {}};
 
-    static PyType_Spec IInspectable_Static_type_spec
-        = {"winrt._winrt.IInspectable_Static",
+    static PyType_Spec Object_Static_type_spec
+        = {"winrt._winrt.Object_Static",
            0,
            0,
            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
-           IInspectable_Static_type_slots};
+           Object_Static_type_slots};
 
-    // END: class _winrt.IInspectable_Static:
+    // END: class _winrt.Object_Static:
 
     // BEGIN: class _winrt.Object:
 
@@ -810,7 +809,7 @@ namespace py::cpp::_winrt
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
 
-        Py_VISIT(state->inspectable_meta_type.get());
+        Py_VISIT(state->object_meta_type.get());
         Py_VISIT(state->object_type.get());
         Py_VISIT(state->array_type.get());
         Py_VISIT(state->mapping_iter_type.get());
@@ -831,7 +830,7 @@ namespace py::cpp::_winrt
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
 
-        state->inspectable_meta_type.close();
+        state->object_meta_type.close();
         state->object_type.close();
         state->array_type.close();
         state->mapping_iter_type.close();
@@ -873,7 +872,7 @@ namespace py::cpp::_winrt
         main_state.compare_exchange_strong(
             expected, nullptr, std::memory_order_acq_rel);
 
-        std::destroy_at(&state->inspectable_meta_type);
+        std::destroy_at(&state->object_meta_type);
         std::destroy_at(&state->object_type);
         std::destroy_at(&state->array_type);
         std::destroy_at(&state->mapping_iter_type);
@@ -1037,7 +1036,7 @@ namespace py::cpp::_winrt
         // not call traverse, clear or free before it has, so constructing the
         // handles and maps first is what lets those three assume them.
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        std::construct_at(&state->inspectable_meta_type);
+        std::construct_at(&state->object_meta_type);
         std::construct_at(&state->object_type);
         std::construct_at(&state->array_type);
         std::construct_at(&state->mapping_iter_type);
@@ -1060,9 +1059,9 @@ namespace py::cpp::_winrt
             return -1;
         }
 
-        py::pytype_handle inspectable_meta_type{py::register_python_type(
-            module, &IInspectable_Static_type_spec, nullptr, nullptr)};
-        if (!inspectable_meta_type)
+        py::pytype_handle object_meta_type{py::register_python_type(
+            module, &Object_Static_type_spec, nullptr, nullptr)};
+        if (!object_meta_type)
         {
             return -1;
         }
@@ -1119,7 +1118,7 @@ namespace py::cpp::_winrt
             return -1;
         }
 
-        state->inspectable_meta_type = std::move(inspectable_meta_type);
+        state->object_meta_type = std::move(object_meta_type);
         state->object_type = std::move(object_type);
         state->array_type = std::move(array_type);
         state->mapping_iter_type = std::move(mapping_iter_type);
@@ -1195,7 +1194,7 @@ py::cpp::_winrt::module_state* py::cpp::_winrt::try_get_module_state() noexcept
  * The metaclass of the projected types, or @c nullptr with a Python error set
  * when winrt._winrt is not loaded.
  */
-PyTypeObject* py::get_inspectable_meta_type() noexcept
+PyTypeObject* py::get_object_meta_type() noexcept
 {
     auto state = py::cpp::_winrt::get_module_state();
     if (!state)
@@ -1203,7 +1202,7 @@ PyTypeObject* py::get_inspectable_meta_type() noexcept
         return nullptr;
     }
 
-    return state->inspectable_meta_type.get();
+    return state->object_meta_type.get();
 }
 
 /**
