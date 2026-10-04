@@ -199,7 +199,7 @@ class LightSensorChromaticity:
     def unpack(self) -> tuple[winrt.system.Double, winrt.system.Double]: ...
 
 @typing.final
-class Accelerometer_Static(winrt._winrt.IInspectable_Static):
+class Accelerometer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Accelerometer> Windows.Devices.Sensors.Accelerometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Accelerometer]: ...
     @typing.overload
@@ -316,7 +316,7 @@ class AccelerometerShakenEventArgs(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class ActivitySensor_Static(winrt._winrt.IInspectable_Static):
+class ActivitySensor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.ActivitySensor> Windows.Devices.Sensors.ActivitySensor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[ActivitySensor]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.ActivitySensor> Windows.Devices.Sensors.ActivitySensor::GetDefaultAsync()
@@ -397,7 +397,7 @@ class AdaptiveDimmingOptions(winrt.system.Object):
     def allow_when_external_display_connected(self, value: bool) -> None: ...
 
 @typing.final
-class Altimeter_Static(winrt._winrt.IInspectable_Static):
+class Altimeter_Static(winrt._winrt.Object_Static):
     # Windows.Devices.Sensors.Altimeter Windows.Devices.Sensors.Altimeter::GetDefault()
     def get_default(cls) -> Altimeter: ...
 
@@ -453,7 +453,7 @@ class AltimeterReadingChangedEventArgs(winrt.system.Object):
     def reading(self) -> AltimeterReading: ...
 
 @typing.final
-class Barometer_Static(winrt._winrt.IInspectable_Static):
+class Barometer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Barometer> Windows.Devices.Sensors.Barometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Barometer]: ...
     # Windows.Devices.Sensors.Barometer Windows.Devices.Sensors.Barometer::GetDefault()
@@ -525,7 +525,7 @@ class BarometerReadingChangedEventArgs(winrt.system.Object):
     def reading(self) -> BarometerReading: ...
 
 @typing.final
-class Compass_Static(winrt._winrt.IInspectable_Static):
+class Compass_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Compass> Windows.Devices.Sensors.Compass::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Compass]: ...
     # Windows.Devices.Sensors.Compass Windows.Devices.Sensors.Compass::GetDefault()
@@ -627,7 +627,7 @@ class DetectedPerson(winrt.system.Object):
     def person_id(self) -> winrt.system.Int32 | None: ...
 
 @typing.final
-class Gyrometer_Static(winrt._winrt.IInspectable_Static):
+class Gyrometer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Gyrometer> Windows.Devices.Sensors.Gyrometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Gyrometer]: ...
     # Windows.Devices.Sensors.Gyrometer Windows.Devices.Sensors.Gyrometer::GetDefault()
@@ -756,7 +756,7 @@ class HingeAngleReading(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class HingeAngleSensor_Static(winrt._winrt.IInspectable_Static):
+class HingeAngleSensor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.HingeAngleSensor> Windows.Devices.Sensors.HingeAngleSensor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[HingeAngleSensor]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.HingeAngleSensor> Windows.Devices.Sensors.HingeAngleSensor::GetDefaultAsync()
@@ -819,7 +819,7 @@ class HumanPresenceFeatures(winrt.system.Object):
     def is_onlooker_detection_supported(self) -> bool: ...
 
 @typing.final
-class HumanPresenceSensor_Static(winrt._winrt.IInspectable_Static):
+class HumanPresenceSensor_Static(winrt._winrt.Object_Static):
     # Windows.Devices.Sensors.HumanPresenceSensor Windows.Devices.Sensors.HumanPresenceSensor::FromId(System.String)
     def from_id(cls, sensor_id: str, /) -> HumanPresenceSensor: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.HumanPresenceSensor> Windows.Devices.Sensors.HumanPresenceSensor::FromIdAsync(System.String)
@@ -935,7 +935,7 @@ class HumanPresenceSensorReadingUpdate(winrt.system.Object):
     def onlooker_presence(self, value: HumanPresence | None) -> None: ...
 
 @typing.final
-class HumanPresenceSettings_Static(winrt._winrt.IInspectable_Static):
+class HumanPresenceSettings_Static(winrt._winrt.Object_Static):
     # Windows.Devices.Sensors.HumanPresenceSettings Windows.Devices.Sensors.HumanPresenceSettings::GetCurrentSettings()
     def get_current_settings(cls) -> HumanPresenceSettings: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.HumanPresenceSettings> Windows.Devices.Sensors.HumanPresenceSettings::GetCurrentSettingsAsync()
@@ -1027,7 +1027,7 @@ class HumanPresenceSettings(winrt.system.Object, metaclass=HumanPresenceSettings
     def onlooker_detection_options(self) -> OnlookerDetectionOptions: ...
 
 @typing.final
-class Inclinometer_Static(winrt._winrt.IInspectable_Static):
+class Inclinometer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Inclinometer> Windows.Devices.Sensors.Inclinometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Inclinometer]: ...
     @typing.overload
@@ -1139,7 +1139,7 @@ class InclinometerReadingChangedEventArgs(winrt.system.Object):
     def reading(self) -> InclinometerReading: ...
 
 @typing.final
-class LightSensor_Static(winrt._winrt.IInspectable_Static):
+class LightSensor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.LightSensor> Windows.Devices.Sensors.LightSensor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[LightSensor]: ...
     # Windows.Devices.Sensors.LightSensor Windows.Devices.Sensors.LightSensor::GetDefault()
@@ -1237,7 +1237,7 @@ class LockOnLeaveOptions(winrt.system.Object):
     def allow_when_external_display_connected(self, value: bool) -> None: ...
 
 @typing.final
-class Magnetometer_Static(winrt._winrt.IInspectable_Static):
+class Magnetometer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Magnetometer> Windows.Devices.Sensors.Magnetometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Magnetometer]: ...
     # Windows.Devices.Sensors.Magnetometer Windows.Devices.Sensors.Magnetometer::GetDefault()
@@ -1351,7 +1351,7 @@ class OnlookerDetectionOptions(winrt.system.Object):
     def action(self, value: OnlookerDetectionAction) -> None: ...
 
 @typing.final
-class OrientationSensor_Static(winrt._winrt.IInspectable_Static):
+class OrientationSensor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.OrientationSensor> Windows.Devices.Sensors.OrientationSensor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[OrientationSensor]: ...
     @typing.overload
@@ -1451,7 +1451,7 @@ class OrientationSensorReadingChangedEventArgs(winrt.system.Object):
     def reading(self) -> OrientationSensorReading: ...
 
 @typing.final
-class Pedometer_Static(winrt._winrt.IInspectable_Static):
+class Pedometer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Pedometer> Windows.Devices.Sensors.Pedometer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Pedometer]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Pedometer> Windows.Devices.Sensors.Pedometer::GetDefaultAsync()
@@ -1521,7 +1521,7 @@ class PedometerReadingChangedEventArgs(winrt.system.Object):
     def reading(self) -> PedometerReading: ...
 
 @typing.final
-class ProximitySensor_Static(winrt._winrt.IInspectable_Static):
+class ProximitySensor_Static(winrt._winrt.Object_Static):
     # Windows.Devices.Sensors.ProximitySensor Windows.Devices.Sensors.ProximitySensor::FromId(System.String)
     def from_id(cls, sensor_id: str, /) -> ProximitySensor: ...
     # System.String Windows.Devices.Sensors.ProximitySensor::GetDeviceSelector()
@@ -1633,7 +1633,7 @@ class SensorRotationMatrix(winrt.system.Object):
     def m33(self) -> winrt.system.Single: ...
 
 @typing.final
-class SimpleOrientationSensor_Static(winrt._winrt.IInspectable_Static):
+class SimpleOrientationSensor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.SimpleOrientationSensor> Windows.Devices.Sensors.SimpleOrientationSensor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SimpleOrientationSensor]: ...
     # Windows.Devices.Sensors.SimpleOrientationSensor Windows.Devices.Sensors.SimpleOrientationSensor::GetDefault()

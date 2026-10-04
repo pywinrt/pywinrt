@@ -753,7 +753,7 @@ class PrintTaskOptionChangedEventArgs(winrt.system.Object):
     def option_id(self) -> winrt.system.Object: ...
 
 @typing.final
-class PrintTaskOptionDetails_Static(winrt._winrt.IInspectable_Static):
+class PrintTaskOptionDetails_Static(winrt._winrt.Object_Static):
     # Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails::GetFromPrintTaskOptions(Windows.Graphics.Printing.PrintTaskOptions)
     def get_from_print_task_options(cls, print_task_options: windows_graphics_printing.PrintTaskOptions, /) -> PrintTaskOptionDetails: ...
 

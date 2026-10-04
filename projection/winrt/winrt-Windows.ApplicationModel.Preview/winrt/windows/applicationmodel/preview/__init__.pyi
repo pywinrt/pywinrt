@@ -41,7 +41,7 @@ class StartupAppInfoPreview(winrt.system.Object):
     def publisher(self) -> str: ...
 
 @typing.final
-class StartupAppsManagerPreview_Static(winrt._winrt.IInspectable_Static):
+class StartupAppsManagerPreview_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Preview.StartupAppsManagerPreview Windows.ApplicationModel.Preview.StartupAppsManagerPreview::GetDefault()
     def get_default(cls) -> StartupAppsManagerPreview: ...
 

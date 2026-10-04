@@ -59,7 +59,7 @@ class YearFormat(enum.IntEnum):
     FULL = 3
 
 @typing.final
-class DateTimeFormatter_Static(winrt._winrt.IInspectable_Static):
+class DateTimeFormatter_Static(winrt._winrt.Object_Static):
     # Windows.Globalization.DateTimeFormatting.DateTimeFormatter Windows.Globalization.DateTimeFormatting.DateTimeFormatter::get_LongDate()
     @_property
     def long_date(cls) -> DateTimeFormatter: ...

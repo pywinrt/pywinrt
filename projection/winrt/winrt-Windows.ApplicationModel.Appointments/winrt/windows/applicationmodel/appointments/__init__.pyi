@@ -548,7 +548,7 @@ class AppointmentInvitee(winrt.system.Object, IAppointmentParticipant):
     def address(self, value: str) -> None: ...
 
 @typing.final
-class AppointmentManager_Static(winrt._winrt.IInspectable_Static):
+class AppointmentManager_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Appointments.AppointmentManagerForUser Windows.ApplicationModel.Appointments.AppointmentManager::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> AppointmentManagerForUser: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Appointments.AppointmentStore> Windows.ApplicationModel.Appointments.AppointmentManager::RequestStoreAsync(Windows.ApplicationModel.Appointments.AppointmentStoreAccessType)
@@ -699,7 +699,7 @@ class AppointmentOrganizer(winrt.system.Object, IAppointmentParticipant):
     def address(self, value: str) -> None: ...
 
 @typing.final
-class AppointmentProperties_Static(winrt._winrt.IInspectable_Static):
+class AppointmentProperties_Static(winrt._winrt.Object_Static):
     # System.String Windows.ApplicationModel.Appointments.AppointmentProperties::get_HasInvitees()
     @_property
     def has_invitees(cls) -> str: ...

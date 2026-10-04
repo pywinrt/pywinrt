@@ -53,7 +53,7 @@ class AppListEntry(winrt.system.Object):
     def app_info(self) -> windows_applicationmodel.AppInfo: ...
 
 @typing.final
-class CoreApplication_Static(winrt._winrt.IInspectable_Static):
+class CoreApplication_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView()
     def create_new_view(cls) -> CoreApplicationView: ...

@@ -44,7 +44,7 @@ class WindowId:
     def __replace__(self, /, **changes: typing.Any) -> WindowId: ...
 
 @typing.final
-class ColorHelper_Static(winrt._winrt.IInspectable_Static):
+class ColorHelper_Static(winrt._winrt.Object_Static):
     # Windows.UI.Color Microsoft.UI.ColorHelper::FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)
     def from_argb(cls, a: winrt.system.UInt8, r: winrt.system.UInt8, g: winrt.system.UInt8, b: winrt.system.UInt8, /) -> windows_ui.Color: ...
     # System.String Microsoft.UI.ColorHelper::ToDisplayName(Windows.UI.Color)
@@ -55,7 +55,7 @@ class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
     ...
 
 @typing.final
-class Colors_Static(winrt._winrt.IInspectable_Static):
+class Colors_Static(winrt._winrt.Object_Static):
     # Windows.UI.Color Microsoft.UI.Colors::get_AliceBlue()
     @_property
     def alice_blue(cls) -> windows_ui.Color: ...

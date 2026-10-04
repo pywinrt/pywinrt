@@ -163,7 +163,7 @@ class Deferral(winrt.system.Object, IClosable):
     def complete(self) -> None: ...
 
 @typing.final
-class GuidHelper_Static(winrt._winrt.IInspectable_Static):
+class GuidHelper_Static(winrt._winrt.Object_Static):
     # System.Guid Windows.Foundation.GuidHelper::CreateNewGuid()
     def create_new_guid(cls) -> _uuid.UUID: ...
     # System.Boolean Windows.Foundation.GuidHelper::Equals(System.Guid& modopt(System.Runtime.CompilerServices.IsConst),System.Guid& modopt(System.Runtime.CompilerServices.IsConst))
@@ -187,7 +187,7 @@ class MemoryBuffer(winrt.system.Object, IMemoryBuffer, IClosable):
     def create_reference(self) -> IMemoryBufferReference: ...
 
 @typing.final
-class PropertyValue_Static(winrt._winrt.IInspectable_Static):
+class PropertyValue_Static(winrt._winrt.Object_Static):
     # System.Object Windows.Foundation.PropertyValue::CreateBoolean(System.Boolean)
     def create_boolean(cls, value: bool, /) -> winrt.system.Object: ...
     # System.Object Windows.Foundation.PropertyValue::CreateBooleanArray(System.Boolean[])
@@ -272,7 +272,7 @@ class PropertyValue(winrt.system.Object, metaclass=PropertyValue_Static):
     ...
 
 @typing.final
-class Uri_Static(winrt._winrt.IInspectable_Static):
+class Uri_Static(winrt._winrt.Object_Static):
     # System.String Windows.Foundation.Uri::EscapeComponent(System.String)
     def escape_component(cls, to_escape: str, /) -> str: ...
     # System.String Windows.Foundation.Uri::UnescapeComponent(System.String)

@@ -23,7 +23,7 @@ class AppContainerNameAndAccess:
     def unpack(self) -> tuple[str, winrt.system.UInt32]: ...
 
 @typing.final
-class SecurityDescriptorHelpers_Static(winrt._winrt.IInspectable_Static):
+class SecurityDescriptorHelpers_Static(winrt._winrt.Object_Static):
     # System.String Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers::GetSddlForAppContainerNames(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess[],System.String,System.UInt32)
     def get_sddl_for_app_container_names(cls, access_requests: winrt.system.Array[AppContainerNameAndAccess] | winrt.system.ReadableBuffer, principal_string_sid: str, principal_access_mask: winrt.system.UInt32, /) -> str: ...
     # System.Byte[] Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers::GetSecurityDescriptorBytesFromAppContainerNames(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess[],System.String,System.UInt32)

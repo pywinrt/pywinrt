@@ -12,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class XamlControlsXamlMetaDataProvider_Static(winrt._winrt.IInspectable_Static):
+class XamlControlsXamlMetaDataProvider_Static(winrt._winrt.Object_Static):
     # System.Void Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::Initialize()
     def initialize(cls) -> None: ...
 

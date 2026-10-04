@@ -123,7 +123,7 @@ class BackgroundUploadProgress:
     def unpack(self) -> tuple[winrt.system.UInt64, winrt.system.UInt64, winrt.system.UInt64, winrt.system.UInt64, BackgroundTransferStatus, bool, bool]: ...
 
 @typing.final
-class BackgroundDownloader_Static(winrt._winrt.IInspectable_Static):
+class BackgroundDownloader_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation>> Windows.Networking.BackgroundTransfer.BackgroundDownloader::GetCurrentDownloadsAsync()
     def get_current_downloads_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[DownloadOperation]]: ...
@@ -264,7 +264,7 @@ class BackgroundTransferContentPart(winrt.system.Object):
     def set_text(self, value: str, /) -> None: ...
 
 @typing.final
-class BackgroundTransferError_Static(winrt._winrt.IInspectable_Static):
+class BackgroundTransferError_Static(winrt._winrt.Object_Static):
     # Windows.Web.WebErrorStatus Windows.Networking.BackgroundTransfer.BackgroundTransferError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> windows_web.WebErrorStatus: ...
 
@@ -273,7 +273,7 @@ class BackgroundTransferError(winrt.system.Object, metaclass=BackgroundTransferE
     ...
 
 @typing.final
-class BackgroundTransferGroup_Static(winrt._winrt.IInspectable_Static):
+class BackgroundTransferGroup_Static(winrt._winrt.Object_Static):
     # Windows.Networking.BackgroundTransfer.BackgroundTransferGroup Windows.Networking.BackgroundTransfer.BackgroundTransferGroup::CreateGroup(System.String)
     def create_group(cls, name: str, /) -> BackgroundTransferGroup: ...
 
@@ -301,7 +301,7 @@ class BackgroundTransferRangesDownloadedEventArgs(winrt.system.Object):
     def was_download_restarted(self) -> bool: ...
 
 @typing.final
-class BackgroundUploader_Static(winrt._winrt.IInspectable_Static):
+class BackgroundUploader_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.UploadOperation>> Windows.Networking.BackgroundTransfer.BackgroundUploader::GetCurrentUploadsAsync()
     def get_current_uploads_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[UploadOperation]]: ...
@@ -419,7 +419,7 @@ class BackgroundUploader(winrt.system.Object, IBackgroundTransferBase, metaclass
     def completion_group(self) -> BackgroundTransferCompletionGroup: ...
 
 @typing.final
-class ContentPrefetcher_Static(winrt._winrt.IInspectable_Static):
+class ContentPrefetcher_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.Uri Windows.Networking.BackgroundTransfer.ContentPrefetcher::get_IndirectContentUri()
     @_property
     def indirect_content_uri(cls) -> windows_foundation.Uri: ...

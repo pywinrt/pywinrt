@@ -121,7 +121,7 @@ class PowerThermalChannelDataReceivedEventArgs(winrt.system.Object):
     def get_data(self) -> winrt.system.Array[PowerThermalChannelData]: ...
 
 @typing.final
-class PowerThermalChannelDiagnostics_Static(winrt._winrt.IInspectable_Static):
+class PowerThermalChannelDiagnostics_Static(winrt._winrt.Object_Static):
     # Windows.System.Power.Thermal.PowerThermalChannelData[] Windows.System.Power.Thermal.PowerThermalChannelDiagnostics::GetDataForChannels(Windows.System.Power.Thermal.PowerThermalChannelId[])
     def get_data_for_channels(cls, channel_ids: winrt.system.Array[PowerThermalChannelId] | winrt.system.ReadableBuffer, /) -> winrt.system.Array[PowerThermalChannelData]: ...
     # Windows.System.Power.Thermal.PowerThermalChannelDiagnostics Windows.System.Power.Thermal.PowerThermalChannelDiagnostics::get_Current()
@@ -133,7 +133,7 @@ class PowerThermalChannelDiagnostics(winrt.system.Object, metaclass=PowerThermal
     ...
 
 @typing.final
-class PowerThermalChannelFinder_Static(winrt._winrt.IInspectable_Static):
+class PowerThermalChannelFinder_Static(winrt._winrt.Object_Static):
     # Windows.System.Power.Thermal.PowerThermalChannelId[] Windows.System.Power.Thermal.PowerThermalChannelFinder::FindChannels(System.Guid)
     def find_channels(cls, channel_interface_type: _uuid.UUID, /) -> winrt.system.Array[PowerThermalChannelId]: ...
 

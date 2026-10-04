@@ -25,7 +25,7 @@ class NamedPolicyKind(enum.IntEnum):
     STRING = 5
 
 @typing.final
-class NamedPolicy_Static(winrt._winrt.IInspectable_Static):
+class NamedPolicy_Static(winrt._winrt.Object_Static):
     # Windows.Management.Policies.NamedPolicyData Windows.Management.Policies.NamedPolicy::GetPolicyFromPath(System.String,System.String)
     def get_policy_from_path(cls, area: str, name: str, /) -> NamedPolicyData: ...
     # Windows.Management.Policies.NamedPolicyData Windows.Management.Policies.NamedPolicy::GetPolicyFromPathForUser(Windows.System.User,System.String,System.String)

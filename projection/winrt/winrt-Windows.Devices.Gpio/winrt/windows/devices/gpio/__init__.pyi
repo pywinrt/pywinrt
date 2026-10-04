@@ -158,7 +158,7 @@ class GpioChangeReader(winrt.system.Object, windows_foundation.IClosable):
     def length(self) -> winrt.system.Int32: ...
 
 @typing.final
-class GpioController_Static(winrt._winrt.IInspectable_Static):
+class GpioController_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Gpio.GpioController>> Windows.Devices.Gpio.GpioController::GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)
     def get_controllers_async(cls, provider: windows_devices_gpio_provider.IGpioProvider, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[GpioController]]: ...
     # Windows.Devices.Gpio.GpioController Windows.Devices.Gpio.GpioController::GetDefault()

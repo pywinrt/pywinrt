@@ -15,7 +15,7 @@ __all__ = [
 ]
 
 @typing.final
-class CommunicationBlockingAccessManager_Static(winrt._winrt.IInspectable_Static):
+class CommunicationBlockingAccessManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::IsBlockedNumberAsync(System.String)
     def is_blocked_number_async(cls, number: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Boolean Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::ShowBlockNumbersUI(Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -35,7 +35,7 @@ class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=Communic
     ...
 
 @typing.final
-class CommunicationBlockingAppManager_Static(winrt._winrt.IInspectable_Static):
+class CommunicationBlockingAppManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync()
     def request_set_as_active_blocking_app_async(cls) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Void Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI()

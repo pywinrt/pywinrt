@@ -363,7 +363,7 @@ class PhotoImportItemImportedEventArgs(winrt.system.Object):
     def imported_item(self) -> PhotoImportItem: ...
 
 @typing.final
-class PhotoImportManager_Static(winrt._winrt.IInspectable_Static):
+class PhotoImportManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Media.Import.PhotoImportSource>> Windows.Media.Import.PhotoImportManager::FindAllSourcesAsync()
     def find_all_sources_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[PhotoImportSource]]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Import.PhotoImportOperation> Windows.Media.Import.PhotoImportManager::GetPendingOperations()
@@ -463,7 +463,7 @@ class PhotoImportSidecar(winrt.system.Object):
     def size_in_bytes(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class PhotoImportSource_Static(winrt._winrt.IInspectable_Static):
+class PhotoImportSource_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Import.PhotoImportSource> Windows.Media.Import.PhotoImportSource::FromFolderAsync(Windows.Storage.IStorageFolder)
     def from_folder_async(cls, source_root_folder: windows_storage.IStorageFolder, /) -> windows_foundation.IAsyncOperation[PhotoImportSource]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Import.PhotoImportSource> Windows.Media.Import.PhotoImportSource::FromIdAsync(System.String)

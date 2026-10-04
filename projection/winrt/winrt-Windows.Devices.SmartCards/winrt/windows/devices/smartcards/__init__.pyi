@@ -236,7 +236,7 @@ class CardRemovedEventArgs(winrt.system.Object):
     def smart_card(self) -> SmartCard: ...
 
 @typing.final
-class KnownSmartCardAppletIds_Static(winrt._winrt.IInspectable_Static):
+class KnownSmartCardAppletIds_Static(winrt._winrt.Object_Static):
     # Windows.Storage.Streams.IBuffer Windows.Devices.SmartCards.KnownSmartCardAppletIds::get_PaymentSystemEnvironment()
     @_property
     def payment_system_environment(cls) -> winrt.system.Buffer: ...
@@ -261,7 +261,7 @@ class SmartCard(winrt.system.Object):
     def reader(self) -> SmartCardReader: ...
 
 @typing.final
-class SmartCardAppletIdGroup_Static(winrt._winrt.IInspectable_Static):
+class SmartCardAppletIdGroup_Static(winrt._winrt.Object_Static):
     # System.UInt16 Windows.Devices.SmartCards.SmartCardAppletIdGroup::get_MaxAppletIds()
     @_property
     def max_applet_ids(cls) -> winrt.system.UInt16: ...
@@ -428,7 +428,7 @@ class SmartCardConnection(winrt.system.Object, windows_foundation.IClosable):
     def transmit_async(self, command: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
 
 @typing.final
-class SmartCardCryptogramGenerator_Static(winrt._winrt.IInspectable_Static):
+class SmartCardCryptogramGenerator_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGenerator> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::GetSmartCardCryptogramGeneratorAsync()
     def get_smart_card_cryptogram_generator_async(cls) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGenerator]: ...
     # System.Boolean Windows.Devices.SmartCards.SmartCardCryptogramGenerator::IsSupported()
@@ -667,7 +667,7 @@ class SmartCardCryptogramStorageKeyInfo(winrt.system.Object):
     def operational_requirements(self) -> str: ...
 
 @typing.final
-class SmartCardEmulator_Static(winrt._winrt.IInspectable_Static):
+class SmartCardEmulator_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration>> Windows.Devices.SmartCards.SmartCardEmulator::GetAppletIdGroupRegistrationsAsync()
     def get_applet_id_group_registrations_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[SmartCardAppletIdGroupRegistration]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardEmulator> Windows.Devices.SmartCards.SmartCardEmulator::GetDefaultAsync()
@@ -812,7 +812,7 @@ class SmartCardPinResetRequest(winrt.system.Object):
     def deadline(self) -> datetime.datetime: ...
 
 @typing.final
-class SmartCardProvisioning_Static(winrt._winrt.IInspectable_Static):
+class SmartCardProvisioning_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardProvisioning> Windows.Devices.SmartCards.SmartCardProvisioning::FromSmartCardAsync(Windows.Devices.SmartCards.SmartCard)
     def from_smart_card_async(cls, card: SmartCard, /) -> windows_foundation.IAsyncOperation[SmartCardProvisioning]: ...
     @typing.overload
@@ -857,7 +857,7 @@ class SmartCardProvisioning(winrt.system.Object, metaclass=SmartCardProvisioning
     def smart_card(self) -> SmartCard: ...
 
 @typing.final
-class SmartCardReader_Static(winrt._winrt.IInspectable_Static):
+class SmartCardReader_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardReader> Windows.Devices.SmartCards.SmartCardReader::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SmartCardReader]: ...
     @typing.overload

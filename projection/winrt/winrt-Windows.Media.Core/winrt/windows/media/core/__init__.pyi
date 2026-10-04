@@ -551,7 +551,7 @@ class CodecQuery(winrt.system.Object):
     def find_all_async(self, kind: CodecKind, category: CodecCategory, sub_type: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CodecInfo]]: ...
 
 @typing.final
-class CodecSubtypes_Static(winrt._winrt.IInspectable_Static):
+class CodecSubtypes_Static(winrt._winrt.Object_Static):
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioLossless()
     @_property
     def audio_format_w_m_audio_lossless(cls) -> str: ...
@@ -906,7 +906,7 @@ class InitializeMediaStreamSourceRequestedEventArgs(winrt.system.Object):
     def source(self) -> MediaStreamSource: ...
 
 @typing.final
-class LowLightFusion_Static(winrt._winrt.IInspectable_Static):
+class LowLightFusion_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Core.LowLightFusionResult,System.Double> Windows.Media.Core.LowLightFusion::FuseAsync(Windows.Foundation.Collections.IIterable`1<Windows.Graphics.Imaging.SoftwareBitmap>)
     def fuse_async(cls, frame_set: _cabc.Iterable[windows_graphics_imaging.SoftwareBitmap], /) -> windows_foundation.IAsyncOperationWithProgress[LowLightFusionResult, winrt.system.Double]: ...
     # System.Int32 Windows.Media.Core.LowLightFusion::get_MaxSupportedFrameCount()
@@ -978,7 +978,7 @@ class MediaCueEventArgs(winrt.system.Object):
     def cue(self) -> IMediaCue: ...
 
 @typing.final
-class MediaSource_Static(winrt._winrt.IInspectable_Static):
+class MediaSource_Static(winrt._winrt.Object_Static):
     # Windows.Media.Core.MediaSource Windows.Media.Core.MediaSource::CreateFromAdaptiveMediaSource(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)
     def create_from_adaptive_media_source(cls, media_source: windows_media_streaming_adaptive.AdaptiveMediaSource, /) -> MediaSource: ...
     # Windows.Media.Core.MediaSource Windows.Media.Core.MediaSource::CreateFromDownloadOperation(Windows.Networking.BackgroundTransfer.DownloadOperation)
@@ -1086,7 +1086,7 @@ class MediaSourceStateChangedEventArgs(winrt.system.Object):
     def old_state(self) -> MediaSourceState: ...
 
 @typing.final
-class MediaStreamSample_Static(winrt._winrt.IInspectable_Static):
+class MediaStreamSample_Static(winrt._winrt.Object_Static):
     # Windows.Media.Core.MediaStreamSample Windows.Media.Core.MediaStreamSample::CreateFromBuffer(Windows.Storage.Streams.IBuffer,Windows.Foundation.TimeSpan)
     def create_from_buffer(cls, buffer: winrt.system.Buffer, timestamp: datetime.timedelta, /) -> MediaStreamSample: ...
     # Windows.Media.Core.MediaStreamSample Windows.Media.Core.MediaStreamSample::CreateFromDirect3D11Surface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Foundation.TimeSpan)
@@ -1440,7 +1440,7 @@ class MseSourceBufferList(winrt.system.Object):
     def buffers(self) -> _cabc.Sequence[MseSourceBuffer]: ...
 
 @typing.final
-class MseStreamSource_Static(winrt._winrt.IInspectable_Static):
+class MseStreamSource_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.Media.Core.MseStreamSource::IsContentTypeSupported(System.String)
     def is_content_type_supported(cls, content_type: str, /) -> bool: ...
 
@@ -1883,7 +1883,7 @@ class TimedTextRuby(winrt.system.Object):
     def align(self, value: TimedTextRubyAlign) -> None: ...
 
 @typing.final
-class TimedTextSource_Static(winrt._winrt.IInspectable_Static):
+class TimedTextSource_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Media.Core.TimedTextSource Windows.Media.Core.TimedTextSource::CreateFromStream(Windows.Storage.Streams.IRandomAccessStream)
     def create_from_stream(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> TimedTextSource: ...

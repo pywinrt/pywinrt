@@ -181,7 +181,7 @@ class StreamedFileFailureMode(enum.IntEnum):
     INCOMPLETE = 2
 
 @typing.final
-class AppDataPaths_Static(winrt._winrt.IInspectable_Static):
+class AppDataPaths_Static(winrt._winrt.Object_Static):
     # Windows.Storage.AppDataPaths Windows.Storage.AppDataPaths::GetDefault()
     def get_default(cls) -> AppDataPaths: ...
     # Windows.Storage.AppDataPaths Windows.Storage.AppDataPaths::GetForUser(Windows.System.User)
@@ -218,7 +218,7 @@ class AppDataPaths(winrt.system.Object, metaclass=AppDataPaths_Static):
     def roaming_app_data(self) -> str: ...
 
 @typing.final
-class ApplicationData_Static(winrt._winrt.IInspectable_Static):
+class ApplicationData_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.ApplicationData> Windows.Storage.ApplicationData::GetForUserAsync(Windows.System.User)
     def get_for_user_async(cls, user: windows_system.User, /) -> windows_foundation.IAsyncOperation[ApplicationData]: ...
     # Windows.Storage.ApplicationData Windows.Storage.ApplicationData::get_Current()
@@ -366,7 +366,7 @@ class ApplicationDataContainerSettings(winrt.system.Object, windows_foundation_c
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class CachedFileManager_Static(winrt._winrt.IInspectable_Static):
+class CachedFileManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Provider.FileUpdateStatus> Windows.Storage.CachedFileManager::CompleteUpdatesAsync(Windows.Storage.IStorageFile)
     def complete_updates_async(cls, file: IStorageFile, /) -> windows_foundation.IAsyncOperation[windows_storage_provider.FileUpdateStatus]: ...
     # System.Void Windows.Storage.CachedFileManager::DeferUpdates(Windows.Storage.IStorageFile)
@@ -377,7 +377,7 @@ class CachedFileManager(winrt.system.Object, metaclass=CachedFileManager_Static)
     ...
 
 @typing.final
-class DownloadsFolder_Static(winrt._winrt.IInspectable_Static):
+class DownloadsFolder_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.DownloadsFolder::CreateFileAsync(System.String)
     def create_file_async(cls, desired_name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
@@ -424,7 +424,7 @@ class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
     ...
 
 @typing.final
-class FileIO_Static(winrt._winrt.IInspectable_Static):
+class FileIO_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.FileIO::AppendLinesAsync(Windows.Storage.IStorageFile,Windows.Foundation.Collections.IIterable`1<System.String>)
     def append_lines_async(cls, file: IStorageFile, lines: _cabc.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
@@ -497,7 +497,7 @@ class FileIO(winrt.system.Object, metaclass=FileIO_Static):
     ...
 
 @typing.final
-class KnownFolders_Static(winrt._winrt.IInspectable_Static):
+class KnownFolders_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.KnownFolders::GetFolderAsync(Windows.Storage.KnownFolderId)
     def get_folder_async(cls, folder_id: KnownFolderId, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.KnownFolders::GetFolderForUserAsync(Windows.System.User,Windows.Storage.KnownFolderId)
@@ -551,7 +551,7 @@ class KnownFolders(winrt.system.Object, metaclass=KnownFolders_Static):
     ...
 
 @typing.final
-class PathIO_Static(winrt._winrt.IInspectable_Static):
+class PathIO_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.PathIO::AppendLinesAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def append_lines_async(cls, absolute_path: str, lines: _cabc.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
@@ -640,7 +640,7 @@ class SetVersionRequest(winrt.system.Object):
     def desired_version(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class StorageFile_Static(winrt._winrt.IInspectable_Static):
+class StorageFile_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CreateStreamedFileAsync(System.String,Windows.Storage.StreamedFileDataRequestedHandler,Windows.Storage.Streams.IRandomAccessStreamReference)
     def create_streamed_file_async(cls, display_name_with_extension: str, data_requested: StreamedFileDataRequestedHandler, thumbnail: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFile::CreateStreamedFileFromUriAsync(System.String,Windows.Foundation.Uri,Windows.Storage.Streams.IRandomAccessStreamReference)
@@ -828,7 +828,7 @@ class StorageFile(winrt.system.Object, IStorageFile2, IStorageFilePropertiesWith
     def provider(self) -> StorageProvider: ...
 
 @typing.final
-class StorageFolder_Static(winrt._winrt.IInspectable_Static):
+class StorageFolder_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::GetFolderFromPathAsync(System.String)
     def get_folder_from_path_async(cls, path: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::GetFolderFromPathForUserAsync(Windows.System.User,System.String)
@@ -1037,7 +1037,7 @@ class StorageFolder(winrt.system.Object, IStorageItemPropertiesWithProvider, ISt
     def provider(self) -> StorageProvider: ...
 
 @typing.final
-class StorageLibrary_Static(winrt._winrt.IInspectable_Static):
+class StorageLibrary_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageLibrary> Windows.Storage.StorageLibrary::GetLibraryAsync(Windows.Storage.KnownLibraryId)
     def get_library_async(cls, library_id: KnownLibraryId, /) -> windows_foundation.IAsyncOperation[StorageLibrary]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageLibrary> Windows.Storage.StorageLibrary::GetLibraryForUserAsync(Windows.System.User,Windows.Storage.KnownLibraryId)
@@ -1120,7 +1120,7 @@ class StorageLibraryChangeTrackerOptions(winrt.system.Object):
     def track_change_details(self, value: bool) -> None: ...
 
 @typing.final
-class StorageLibraryLastChangeId_Static(winrt._winrt.IInspectable_Static):
+class StorageLibraryLastChangeId_Static(winrt._winrt.Object_Static):
     # System.UInt64 Windows.Storage.StorageLibraryLastChangeId::get_Unknown()
     @_property
     def unknown(cls) -> winrt.system.UInt64: ...
@@ -1172,7 +1172,7 @@ class SystemAudioProperties(winrt.system.Object):
     def encoding_bitrate(self) -> str: ...
 
 @typing.final
-class SystemDataPaths_Static(winrt._winrt.IInspectable_Static):
+class SystemDataPaths_Static(winrt._winrt.Object_Static):
     # Windows.Storage.SystemDataPaths Windows.Storage.SystemDataPaths::GetDefault()
     def get_default(cls) -> SystemDataPaths: ...
 
@@ -1312,7 +1312,7 @@ class SystemPhotoProperties(winrt.system.Object):
     def people_names(self) -> str: ...
 
 @typing.final
-class SystemProperties_Static(winrt._winrt.IInspectable_Static):
+class SystemProperties_Static(winrt._winrt.Object_Static):
     # Windows.Storage.SystemAudioProperties Windows.Storage.SystemProperties::get_Audio()
     @_property
     def audio(cls) -> SystemAudioProperties: ...
@@ -1376,7 +1376,7 @@ class SystemVideoProperties(winrt.system.Object):
     def total_bitrate(self) -> str: ...
 
 @typing.final
-class UserDataPaths_Static(winrt._winrt.IInspectable_Static):
+class UserDataPaths_Static(winrt._winrt.Object_Static):
     # Windows.Storage.UserDataPaths Windows.Storage.UserDataPaths::GetDefault()
     def get_default(cls) -> UserDataPaths: ...
     # Windows.Storage.UserDataPaths Windows.Storage.UserDataPaths::GetForUser(Windows.System.User)

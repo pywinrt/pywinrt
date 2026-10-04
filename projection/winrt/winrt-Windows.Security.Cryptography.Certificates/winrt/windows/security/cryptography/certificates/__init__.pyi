@@ -202,7 +202,7 @@ class CertificateChain(winrt.system.Object):
     def validate_with_parameters(self, parameter: ChainValidationParameters, /) -> ChainValidationResult: ...
 
 @typing.final
-class CertificateEnrollmentManager_Static(winrt._winrt.IInspectable_Static):
+class CertificateEnrollmentManager_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager::CreateRequestAsync(Windows.Security.Cryptography.Certificates.CertificateRequestProperties)
     def create_request_async(cls, request: CertificateRequestProperties, /) -> windows_foundation.IAsyncOperation[str]: ...
     @typing.overload
@@ -483,7 +483,7 @@ class CertificateStore(winrt.system.Object):
     def name(self) -> str: ...
 
 @typing.final
-class CertificateStores_Static(winrt._winrt.IInspectable_Static):
+class CertificateStores_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate>> Windows.Security.Cryptography.Certificates.CertificateStores::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[Certificate]]: ...
@@ -566,7 +566,7 @@ class ChainValidationParameters(winrt.system.Object):
     def certificate_chain_policy(self, value: CertificateChainPolicy) -> None: ...
 
 @typing.final
-class CmsAttachedSignature_Static(winrt._winrt.IInspectable_Static):
+class CmsAttachedSignature_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Security.Cryptography.Certificates.CmsAttachedSignature::GenerateSignatureAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.CmsSignerInfo>,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>)
     def generate_signature_async(cls, data: winrt.system.Buffer, signers: _cabc.Iterable[CmsSignerInfo], certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
 
@@ -586,7 +586,7 @@ class CmsAttachedSignature(winrt.system.Object, metaclass=CmsAttachedSignature_S
     def signers(self) -> _cabc.Sequence[CmsSignerInfo]: ...
 
 @typing.final
-class CmsDetachedSignature_Static(winrt._winrt.IInspectable_Static):
+class CmsDetachedSignature_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Security.Cryptography.Certificates.CmsDetachedSignature::GenerateSignatureAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.CmsSignerInfo>,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>)
     def generate_signature_async(cls, data: windows_storage_streams.IInputStream, signers: _cabc.Iterable[CmsSignerInfo], certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
 
@@ -634,7 +634,7 @@ class CmsTimestampInfo(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class KeyAlgorithmNames_Static(winrt._winrt.IInspectable_Static):
+class KeyAlgorithmNames_Static(winrt._winrt.Object_Static):
     # System.String Windows.Security.Cryptography.Certificates.KeyAlgorithmNames::get_Dsa()
     @_property
     def dsa(cls) -> str: ...
@@ -671,7 +671,7 @@ class KeyAlgorithmNames(winrt.system.Object, metaclass=KeyAlgorithmNames_Static)
     ...
 
 @typing.final
-class KeyAttestationHelper_Static(winrt._winrt.IInspectable_Static):
+class KeyAttestationHelper_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(System.String)
     def decrypt_tpm_attestation_credential_async(cls, credential: str, /) -> windows_foundation.IAsyncOperation[str]: ...
@@ -690,7 +690,7 @@ class KeyAttestationHelper(winrt.system.Object, metaclass=KeyAttestationHelper_S
     ...
 
 @typing.final
-class KeyStorageProviderNames_Static(winrt._winrt.IInspectable_Static):
+class KeyStorageProviderNames_Static(winrt._winrt.Object_Static):
     # System.String Windows.Security.Cryptography.Certificates.KeyStorageProviderNames::get_PlatformKeyStorageProvider()
     @_property
     def platform_key_storage_provider(cls) -> str: ...
@@ -755,7 +755,7 @@ class PfxImportParameters(winrt.system.Object):
     def container_name_prefix(self, value: str) -> None: ...
 
 @typing.final
-class StandardCertificateStoreNames_Static(winrt._winrt.IInspectable_Static):
+class StandardCertificateStoreNames_Static(winrt._winrt.Object_Static):
     # System.String Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames::get_IntermediateCertificationAuthorities()
     @_property
     def intermediate_certification_authorities(cls) -> str: ...

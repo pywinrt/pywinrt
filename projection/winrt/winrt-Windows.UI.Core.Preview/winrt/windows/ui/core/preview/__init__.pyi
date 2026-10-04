@@ -15,7 +15,7 @@ __all__ = [
 ]
 
 @typing.final
-class CoreAppWindowPreview_Static(winrt._winrt.IInspectable_Static):
+class CoreAppWindowPreview_Static(winrt._winrt.Object_Static):
     # System.Int32 Windows.UI.Core.Preview.CoreAppWindowPreview::GetIdFromWindow(Windows.UI.WindowManagement.AppWindow)
     def get_id_from_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> winrt.system.Int32: ...
 
@@ -35,7 +35,7 @@ class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class SystemNavigationManagerPreview_Static(winrt._winrt.IInspectable_Static):
+class SystemNavigationManagerPreview_Static(winrt._winrt.Object_Static):
     # Windows.UI.Core.Preview.SystemNavigationManagerPreview Windows.UI.Core.Preview.SystemNavigationManagerPreview::GetForCurrentView()
     def get_for_current_view(cls) -> SystemNavigationManagerPreview: ...
 

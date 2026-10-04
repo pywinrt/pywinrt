@@ -39,7 +39,7 @@ class DragUIContentMode(enum.IntEnum):
     DEFERRED = 1
 
 @typing.final
-class DragDropManager_Static(winrt._winrt.IInspectable_Static):
+class DragDropManager_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Input.DragDrop.DragDropManager Microsoft.UI.Input.DragDrop.DragDropManager::GetForIsland(Microsoft.UI.Content.ContentIsland)
     def get_for_island(cls, content: microsoft_ui_content.ContentIsland, /) -> DragDropManager: ...
 

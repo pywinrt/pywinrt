@@ -133,7 +133,7 @@ class GenerateStructuredJsonResponseResult(winrt.system.Object):
     def text(self) -> str: ...
 
 @typing.final
-class LanguageModel_Static(winrt._winrt.IInspectable_Static):
+class LanguageModel_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Text.LanguageModel> Microsoft.Windows.AI.Text.LanguageModel::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[LanguageModel]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Text.LanguageModel::EnsureReadyAsync()
@@ -215,7 +215,7 @@ class LanguageModelEmbeddingVectorResult(winrt.system.Object):
     def status(self) -> LanguageModelResponseStatus: ...
 
 @typing.final
-class LanguageModelLowRankAdapter_Static(winrt._winrt.IInspectable_Static):
+class LanguageModelLowRankAdapter_Static(winrt._winrt.Object_Static):
     # Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult Microsoft.Windows.AI.Text.LanguageModelLowRankAdapter::CreateFromPath(System.String)
     def create_from_path(cls, file_path: str, /) -> LanguageModelLowRankAdapterResult: ...
 

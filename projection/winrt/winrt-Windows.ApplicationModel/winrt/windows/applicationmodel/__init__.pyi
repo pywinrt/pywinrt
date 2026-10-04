@@ -165,7 +165,7 @@ class AppDisplayInfo(winrt.system.Object):
     def display_name(self) -> str: ...
 
 @typing.final
-class AppInfo_Static(winrt._winrt.IInspectable_Static):
+class AppInfo_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.AppInfo Windows.ApplicationModel.AppInfo::GetFromAppUserModelId(System.String)
     def get_from_app_user_model_id(cls, app_user_model_id: str, /) -> AppInfo: ...
     # Windows.ApplicationModel.AppInfo Windows.ApplicationModel.AppInfo::GetFromAppUserModelIdForUser(Windows.System.User,System.String)
@@ -250,7 +250,7 @@ class AppInstallerInfo(winrt.system.Object):
     def version(self) -> PackageVersion: ...
 
 @typing.final
-class AppInstance_Static(winrt._winrt.IInspectable_Static):
+class AppInstance_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.AppInstance Windows.ApplicationModel.AppInstance::FindOrRegisterInstanceForKey(System.String)
     def find_or_register_instance_for_key(cls, key: str, /) -> AppInstance: ...
     # Windows.ApplicationModel.Activation.IActivatedEventArgs Windows.ApplicationModel.AppInstance::GetActivatedEventArgs()
@@ -275,7 +275,7 @@ class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
     def key(self) -> str: ...
 
 @typing.final
-class DesignMode_Static(winrt._winrt.IInspectable_Static):
+class DesignMode_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.ApplicationModel.DesignMode::get_DesignModeEnabled()
     @_property
     def design_mode_enabled(cls) -> bool: ...
@@ -336,7 +336,7 @@ class FullTrustProcessLaunchResult(winrt.system.Object):
     def launch_result(self) -> FullTrustLaunchResult: ...
 
 @typing.final
-class FullTrustProcessLauncher_Static(winrt._winrt.IInspectable_Static):
+class FullTrustProcessLauncher_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.FullTrustProcessLauncher::LaunchFullTrustProcessForAppAsync(System.String)
     def launch_full_trust_process_for_app_async(cls, full_trust_package_relative_app_id: str, /) -> windows_foundation.IAsyncAction: ...
@@ -384,7 +384,7 @@ class LimitedAccessFeatureRequestResult(winrt.system.Object):
     def status(self) -> LimitedAccessFeatureStatus: ...
 
 @typing.final
-class LimitedAccessFeatures_Static(winrt._winrt.IInspectable_Static):
+class LimitedAccessFeatures_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.LimitedAccessFeatureRequestResult Windows.ApplicationModel.LimitedAccessFeatures::TryUnlockFeature(System.String,System.String,System.String)
     def try_unlock_feature(cls, feature_id: str, token: str, attestation: str, /) -> LimitedAccessFeatureRequestResult: ...
 
@@ -393,7 +393,7 @@ class LimitedAccessFeatures(winrt.system.Object, metaclass=LimitedAccessFeatures
     ...
 
 @typing.final
-class Package_Static(winrt._winrt.IInspectable_Static):
+class Package_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.Package Windows.ApplicationModel.Package::get_Current()
     @_property
     def current(cls) -> Package: ...
@@ -524,7 +524,7 @@ class Package(winrt.system.Object, metaclass=Package_Static):
     def install_date(self) -> datetime.datetime: ...
 
 @typing.final
-class PackageCatalog_Static(winrt._winrt.IInspectable_Static):
+class PackageCatalog_Static(winrt._winrt.Object_Static):
     # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.PackageCatalog::OpenForCurrentPackage()
     def open_for_current_package(cls) -> PackageCatalog: ...
     # Windows.ApplicationModel.PackageCatalog Windows.ApplicationModel.PackageCatalog::OpenForCurrentUser()
@@ -607,7 +607,7 @@ class PackageCatalogRemoveResourcePackagesResult(winrt.system.Object):
     def packages_removed(self) -> _cabc.Sequence[Package]: ...
 
 @typing.final
-class PackageContentGroup_Static(winrt._winrt.IInspectable_Static):
+class PackageContentGroup_Static(winrt._winrt.Object_Static):
     # System.String Windows.ApplicationModel.PackageContentGroup::get_RequiredGroupName()
     @_property
     def required_group_name(cls) -> str: ...
@@ -816,7 +816,7 @@ class PackageUpdatingEventArgs(winrt.system.Object):
     def target_package(self) -> Package: ...
 
 @typing.final
-class StartupTask_Static(winrt._winrt.IInspectable_Static):
+class StartupTask_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.StartupTask> Windows.ApplicationModel.StartupTask::GetAsync(System.String)
     def get_async(cls, task_id: str, /) -> windows_foundation.IAsyncOperation[StartupTask]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.StartupTask>> Windows.ApplicationModel.StartupTask::GetForCurrentPackageAsync()

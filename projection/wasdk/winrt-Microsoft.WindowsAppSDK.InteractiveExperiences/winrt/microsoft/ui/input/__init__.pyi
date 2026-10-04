@@ -370,7 +370,7 @@ class FocusChangedEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class FocusNavigationRequest_Static(winrt._winrt.IInspectable_Static):
+class FocusNavigationRequest_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Microsoft.UI.Input.FocusNavigationRequest Microsoft.UI.Input.FocusNavigationRequest::Create(Microsoft.UI.Input.FocusNavigationReason)
     def create(cls, reason: FocusNavigationReason, /) -> FocusNavigationRequest: ...
@@ -591,7 +591,7 @@ class InputActivationListener(InputObject, metaclass=InputActivationListener_Sta
 class InputActivationListenerActivationChangedEventArgs(winrt.system.Object):
     ...
 
-class InputCursor_Static(winrt._winrt.IInspectable_Static):
+class InputCursor_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Input.InputCursor Microsoft.UI.Input.InputCursor::CreateFromCoreCursor(Windows.UI.Core.CoreCursor)
     def create_from_core_cursor(cls, cursor: windows_ui_core.CoreCursor, /) -> InputCursor: ...
 
@@ -743,7 +743,7 @@ class InputLightDismissEventArgs(winrt.system.Object):
     ...
 
 @typing.final
-class InputNonClientPointerSource_Static(winrt._winrt.IInspectable_Static):
+class InputNonClientPointerSource_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Input.InputNonClientPointerSource Microsoft.UI.Input.InputNonClientPointerSource::GetForWindowId(Microsoft.UI.WindowId)
     def get_for_window_id(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> InputNonClientPointerSource: ...
 
@@ -809,7 +809,7 @@ class InputNonClientPointerSource(winrt.system.Object, metaclass=InputNonClientP
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-class InputObject_Static(winrt._winrt.IInspectable_Static):
+class InputObject_Static(winrt._winrt.Object_Static):
     ...
 
 class InputObject(winrt.system.Object, metaclass=InputObject_Static):
@@ -1053,7 +1053,7 @@ class PointerEventArgs(winrt.system.Object):
     def key_modifiers(self) -> windows_system.VirtualKeyModifiers: ...
 
 @typing.final
-class PointerPoint_Static(winrt._winrt.IInspectable_Static):
+class PointerPoint_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Input.PointerPoint Microsoft.UI.Input.PointerPoint::GetCurrentPoint(System.UInt32)
     def get_current_point(cls, pointer_id: winrt.system.UInt32, /) -> PointerPoint: ...
 
@@ -1150,7 +1150,7 @@ class PointerPointProperties(winrt.system.Object):
     def y_tilt(self) -> winrt.system.Single: ...
 
 @typing.final
-class PointerPredictor_Static(winrt._winrt.IInspectable_Static):
+class PointerPredictor_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Input.PointerPredictor Microsoft.UI.Input.PointerPredictor::CreateForInputPointerSource(Microsoft.UI.Input.InputPointerSource)
     def create_for_input_pointer_source(cls, input_pointer_source: InputPointerSource, /) -> PointerPredictor: ...
 

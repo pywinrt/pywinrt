@@ -75,7 +75,7 @@ class AdaptiveMediaSourceResourceType(enum.IntEnum):
     MEDIA_SEGMENT_INDEX = 5
 
 @typing.final
-class AdaptiveMediaSource_Static(winrt._winrt.IInspectable_Static):
+class AdaptiveMediaSource_Static(winrt._winrt.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String)
     def create_from_stream_async(cls, stream: windows_storage_streams.IInputStream, uri: windows_foundation.Uri, content_type: str, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...

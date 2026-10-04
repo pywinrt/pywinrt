@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class InteractiveSession_Static(winrt._winrt.IInspectable_Static):
+class InteractiveSession_Static(winrt._winrt.Object_Static):
     # System.Boolean Windows.System.RemoteDesktop.InteractiveSession::get_IsRemote()
     @_property
     def is_remote(cls) -> bool: ...

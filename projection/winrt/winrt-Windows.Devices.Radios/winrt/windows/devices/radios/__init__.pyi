@@ -37,7 +37,7 @@ class RadioState(enum.IntEnum):
     DISABLED = 3
 
 @typing.final
-class Radio_Static(winrt._winrt.IInspectable_Static):
+class Radio_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Radios.Radio> Windows.Devices.Radios.Radio::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Radio]: ...
     # System.String Windows.Devices.Radios.Radio::GetDeviceSelector()

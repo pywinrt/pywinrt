@@ -68,7 +68,7 @@ class RecognizedTextBoundingBox:
     def unpack(self) -> tuple[tuple[winrt.system.Single, winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single]]: ...
 
 @typing.final
-class ImageDescriptionGenerator_Static(winrt._winrt.IInspectable_Static):
+class ImageDescriptionGenerator_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator> Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[ImageDescriptionGenerator]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator::EnsureReadyAsync()
@@ -95,7 +95,7 @@ class ImageDescriptionResult(winrt.system.Object):
     def status(self) -> ImageDescriptionResultStatus: ...
 
 @typing.final
-class ImageObjectExtractor_Static(winrt._winrt.IInspectable_Static):
+class ImageObjectExtractor_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> Microsoft.Windows.AI.Imaging.ImageObjectExtractor::CreateWithImageBufferAsync(Microsoft.Graphics.Imaging.ImageBuffer)
     def create_with_image_buffer_async(cls, image_buffer: microsoft_graphics_imaging.ImageBuffer, /) -> windows_foundation.IAsyncOperation[ImageObjectExtractor]: ...
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Imaging.ImageObjectExtractor> Microsoft.Windows.AI.Imaging.ImageObjectExtractor::CreateWithSoftwareBitmapAsync(Windows.Graphics.Imaging.SoftwareBitmap)
@@ -130,7 +130,7 @@ class ImageObjectExtractorHint(winrt.system.Object):
     def include_rects(self) -> _cabc.Sequence[windows_graphics.RectInt32]: ...
 
 @typing.final
-class ImageObjectRemover_Static(winrt._winrt.IInspectable_Static):
+class ImageObjectRemover_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Imaging.ImageObjectRemover> Microsoft.Windows.AI.Imaging.ImageObjectRemover::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[ImageObjectRemover]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Imaging.ImageObjectRemover::EnsureReadyAsync()
@@ -150,7 +150,7 @@ class ImageObjectRemover(winrt.system.Object, windows_foundation.IClosable, meta
     def remove_from_software_bitmap(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, software_bitmap_mask: windows_graphics_imaging.SoftwareBitmap, /) -> windows_graphics_imaging.SoftwareBitmap: ...
 
 @typing.final
-class ImageScaler_Static(winrt._winrt.IInspectable_Static):
+class ImageScaler_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Imaging.ImageScaler> Microsoft.Windows.AI.Imaging.ImageScaler::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[ImageScaler]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Imaging.ImageScaler::EnsureReadyAsync()
@@ -212,7 +212,7 @@ class RecognizedWord(winrt.system.Object):
     def text(self) -> str: ...
 
 @typing.final
-class TextRecognizer_Static(winrt._winrt.IInspectable_Static):
+class TextRecognizer_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Imaging.TextRecognizer> Microsoft.Windows.AI.Imaging.TextRecognizer::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[TextRecognizer]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Imaging.TextRecognizer::EnsureReadyAsync()

@@ -90,7 +90,7 @@ class RemoteFileKind(enum.IntEnum):
     PHOTO = 1
     FILE = 2
 
-class ActionEntity_Static(winrt._winrt.IInspectable_Static):
+class ActionEntity_Static(winrt._winrt.Object_Static):
     ...
 
 class ActionEntity(winrt.system.Object, windows_foundation.IClosable, metaclass=ActionEntity_Static):
@@ -121,7 +121,7 @@ class ActionEntityDisplayInfo(winrt.system.Object, windows_foundation.IClosable)
     @_property
     def title(self) -> str: ...
 
-class ActionEntityFactory_Static(winrt._winrt.IInspectable_Static):
+class ActionEntityFactory_Static(winrt._winrt.Object_Static):
     ...
 
 class ActionEntityFactory(winrt.system.Object, windows_foundation.IClosable, metaclass=ActionEntityFactory_Static):
@@ -274,7 +274,7 @@ class ActionInvocationHelpDetails(winrt.system.Object, windows_foundation.IClosa
     @description.setter
     def description(self, value: str) -> None: ...
 
-class ActionRuntime_Static(winrt._winrt.IInspectable_Static):
+class ActionRuntime_Static(winrt._winrt.Object_Static):
     # Windows.AI.Actions.ActionRuntime Windows.AI.Actions.ActionRuntime::GetDefault()
     def get_default(cls) -> ActionRuntime: ...
 
@@ -357,7 +357,7 @@ class ContactActionEntity(ActionEntity):
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
 
-class CustomActionEntityStore_Static(winrt._winrt.IInspectable_Static):
+class CustomActionEntityStore_Static(winrt._winrt.Object_Static):
     ...
 
 class CustomActionEntityStore(winrt.system.Object, windows_foundation.IClosable, metaclass=CustomActionEntityStore_Static):

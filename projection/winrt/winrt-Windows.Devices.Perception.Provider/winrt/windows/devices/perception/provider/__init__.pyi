@@ -35,7 +35,7 @@ __all__ = [
 ]
 
 @typing.final
-class KnownPerceptionFrameKind_Static(winrt._winrt.IInspectable_Static):
+class KnownPerceptionFrameKind_Static(winrt._winrt.Object_Static):
     # System.String Windows.Devices.Perception.Provider.KnownPerceptionFrameKind::get_Color()
     @_property
     @deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -164,7 +164,7 @@ class PerceptionFrameProviderInfo(winrt.system.Object):
     def device_kind(self, value: str) -> None: ...
 
 @typing.final
-class PerceptionFrameProviderManagerService_Static(winrt._winrt.IInspectable_Static):
+class PerceptionFrameProviderManagerService_Static(winrt._winrt.Object_Static):
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::PublishFrameForProvider(Windows.Devices.Perception.Provider.IPerceptionFrameProvider,Windows.Devices.Perception.Provider.PerceptionFrame)
     @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def publish_frame_for_provider(cls, provider: IPerceptionFrameProvider, frame: PerceptionFrame, /) -> None: ...

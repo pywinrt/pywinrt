@@ -76,7 +76,7 @@ class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
     def value_changed_events(self) -> _cabc.Sequence[windows_devices_bluetooth_genericattributeprofile.GattValueChangedEventArgs]: ...
 
 @typing.final
-class GattServiceProviderConnection_Static(winrt._winrt.IInspectable_Static):
+class GattServiceProviderConnection_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::get_AllServices()
     @_property
     def all_services(cls) -> _cabc.Mapping[str, GattServiceProviderConnection]: ...
