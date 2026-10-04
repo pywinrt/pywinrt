@@ -201,7 +201,6 @@ namespace py::table
         split = 27,
         pair_key = 28,
         pair_value = 29,
-        cancel = 30,
     };
 
     enum class param_category : uint32_t

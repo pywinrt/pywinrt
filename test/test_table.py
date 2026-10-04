@@ -97,7 +97,6 @@ ROLE_APPEND = 23
 ROLE_REMOVE_AT_END = 24
 ROLE_CLEAR = 25
 ROLE_REPLACE_ALL = 26
-ROLE_CANCEL = 30
 
 # The members each protocol calls, by the type flag that claims it. A
 # collection is called in both directions - Python reading a WinRT one, and
@@ -123,7 +122,7 @@ REQUIRED_ROLES = {
         ROLE_MOVE_NEXT,
         ROLE_GET_MANY,
     },
-    TYPE_AWAITABLE: {ROLE_STATUS, ROLE_CANCEL, ROLE_COMPLETED, ROLE_GET_RESULTS},
+    TYPE_AWAITABLE: {ROLE_STATUS, ROLE_COMPLETED, ROLE_GET_RESULTS},
     TYPE_STRINGABLE: {ROLE_TO_STRING},
     TYPE_CLOSEABLE: {ROLE_CLOSE},
 }
