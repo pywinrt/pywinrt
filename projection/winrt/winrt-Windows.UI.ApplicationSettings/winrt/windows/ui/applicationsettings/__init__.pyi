@@ -216,6 +216,6 @@ class WebAccountProviderCommand(winrt.system.Object):
     @_property
     def web_account_provider(self) -> windows_security_credentials.WebAccountProvider: ...
 
-CredentialCommandCredentialDeletedHandler: typing.TypeAlias = typing.Callable[[CredentialCommand], object]
-WebAccountCommandInvokedHandler: typing.TypeAlias = typing.Callable[[WebAccountCommand, WebAccountInvokedArgs], object]
-WebAccountProviderCommandInvokedHandler: typing.TypeAlias = typing.Callable[[WebAccountProviderCommand], object]
+type CredentialCommandCredentialDeletedHandler = typing.Callable[[CredentialCommand], object]
+type WebAccountCommandInvokedHandler = typing.Callable[[WebAccountCommand, WebAccountInvokedArgs], object]
+type WebAccountProviderCommandInvokedHandler = typing.Callable[[WebAccountProviderCommand], object]

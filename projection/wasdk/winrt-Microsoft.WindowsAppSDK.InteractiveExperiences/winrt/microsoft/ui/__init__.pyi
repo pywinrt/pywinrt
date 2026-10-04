@@ -505,4 +505,4 @@ class IClosableNotifier(winrt._winrt.IInspectable):
     @abstractmethod
     def is_closed(self) -> bool: ...
 
-ClosableNotifierHandler: typing.TypeAlias = typing.Callable[[], object]
+type ClosableNotifierHandler = typing.Callable[[], object]

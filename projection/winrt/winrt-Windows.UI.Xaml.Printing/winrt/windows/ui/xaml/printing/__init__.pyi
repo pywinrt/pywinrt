@@ -95,6 +95,6 @@ class PrintDocument(windows_ui_xaml.DependencyObject, metaclass=PrintDocument_St
     @typing.final
     def document_source(self) -> windows_graphics_printing.IPrintDocumentSource: ...
 
-AddPagesEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, AddPagesEventArgs], object]
-GetPreviewPageEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, GetPreviewPageEventArgs], object]
-PaginateEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, PaginateEventArgs], object]
+type AddPagesEventHandler = typing.Callable[[winrt.system.Object, AddPagesEventArgs], object]
+type GetPreviewPageEventHandler = typing.Callable[[winrt.system.Object, GetPreviewPageEventArgs], object]
+type PaginateEventHandler = typing.Callable[[winrt.system.Object, PaginateEventArgs], object]

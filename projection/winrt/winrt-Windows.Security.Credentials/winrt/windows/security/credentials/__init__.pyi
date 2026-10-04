@@ -340,4 +340,4 @@ class IWebAccount(winrt._winrt.IInspectable):
     @abstractmethod
     def web_account_provider(self) -> WebAccountProvider: ...
 
-AttestationChallengeHandler: typing.TypeAlias = typing.Callable[[winrt.system.Buffer], winrt.system.Buffer]
+type AttestationChallengeHandler = typing.Callable[[winrt.system.Buffer], winrt.system.Buffer]

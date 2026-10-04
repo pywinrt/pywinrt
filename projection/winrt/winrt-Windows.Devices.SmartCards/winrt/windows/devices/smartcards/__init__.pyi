@@ -923,4 +923,4 @@ class SmartCardTriggerDetails(winrt.system.Object):
     @_property
     def smart_card(self) -> SmartCard: ...
 
-SmartCardPinResetHandler: typing.TypeAlias = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], object]
+type SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], object]

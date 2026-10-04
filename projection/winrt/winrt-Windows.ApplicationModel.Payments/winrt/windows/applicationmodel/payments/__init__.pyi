@@ -473,4 +473,4 @@ class PaymentToken(winrt.system.Object):
     @_property
     def payment_method_id(self) -> str: ...
 
-PaymentRequestChangedHandler: typing.TypeAlias = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], object]
+type PaymentRequestChangedHandler = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], object]

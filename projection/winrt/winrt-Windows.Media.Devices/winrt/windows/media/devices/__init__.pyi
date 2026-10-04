@@ -1399,7 +1399,7 @@ class IMediaDeviceController(winrt._winrt.IInspectable):
     @abstractmethod
     def set_media_stream_properties_async(self, media_stream_type: windows_media_capture.MediaStreamType, media_encoding_properties: windows_media_mediaproperties.IMediaEncodingProperties, /) -> windows_foundation.IAsyncAction: ...
 
-CallControlEventHandler: typing.TypeAlias = typing.Callable[[CallControl], object]
-DialRequestedEventHandler: typing.TypeAlias = typing.Callable[[CallControl, DialRequestedEventArgs], object]
-KeypadPressedEventHandler: typing.TypeAlias = typing.Callable[[CallControl, KeypadPressedEventArgs], object]
-RedialRequestedEventHandler: typing.TypeAlias = typing.Callable[[CallControl, RedialRequestedEventArgs], object]
+type CallControlEventHandler = typing.Callable[[CallControl], object]
+type DialRequestedEventHandler = typing.Callable[[CallControl, DialRequestedEventArgs], object]
+type KeypadPressedEventHandler = typing.Callable[[CallControl, KeypadPressedEventArgs], object]
+type RedialRequestedEventHandler = typing.Callable[[CallControl, RedialRequestedEventArgs], object]

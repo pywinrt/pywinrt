@@ -243,4 +243,4 @@ class MachineProvisioningProgressReporter(winrt.system.Object, metaclass=Machine
     @_property
     def session_state(self) -> DeploymentSessionStateChange: ...
 
-DeploymentSessionHeartbeatRequested: typing.TypeAlias = typing.Callable[[DeploymentSessionHeartbeatRequestedEventArgs], object]
+type DeploymentSessionHeartbeatRequested = typing.Callable[[DeploymentSessionHeartbeatRequestedEventArgs], object]

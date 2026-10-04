@@ -170,5 +170,5 @@ class INotifyCollectionChanged(winrt._winrt.IInspectable):
     @abstractmethod
     def remove_collection_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-BindableVectorChangedEventHandler: typing.TypeAlias = typing.Callable[[IBindableObservableVector, winrt.system.Object], object]
-NotifyCollectionChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], object]
+type BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], object]
+type NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], object]

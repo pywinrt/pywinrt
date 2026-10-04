@@ -282,5 +282,5 @@ class IPerceptionFrameProviderManager(windows_foundation.IClosable, winrt._winrt
     @abstractmethod
     def get_frame_provider(self, frame_provider_info: PerceptionFrameProviderInfo, /) -> IPerceptionFrameProvider: ...
 
-PerceptionStartFaceAuthenticationHandler: typing.TypeAlias = typing.Callable[[PerceptionFaceAuthenticationGroup], bool]
-PerceptionStopFaceAuthenticationHandler: typing.TypeAlias = typing.Callable[[PerceptionFaceAuthenticationGroup], object]
+type PerceptionStartFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], bool]
+type PerceptionStopFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], object]

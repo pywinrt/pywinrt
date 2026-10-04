@@ -179,4 +179,4 @@ class IUICommand(winrt._winrt.IInspectable):
     @abstractmethod
     def label(self, value: str) -> None: ...
 
-UICommandInvokedHandler: typing.TypeAlias = typing.Callable[[IUICommand], object]
+type UICommandInvokedHandler = typing.Callable[[IUICommand], object]
