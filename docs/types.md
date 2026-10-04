@@ -1209,7 +1209,9 @@ The operators:
 | `abs(v)` | `v.length()`, for the vectors and the quaternion. |
 
 `*` between two matrices raises [`TypeError`][TypeError], so that it is never
-taken for either the matrix product or an elementwise product.
+taken for either the matrix product or an elementwise product. With anything
+else that is not a number, `*` leaves the answer to the other operand, so a
+matrix and a NumPy array give NumPy's elementwise product either way round.
 
 The library uses row vectors: a vector is transformed by putting it on the
 left of a matrix, and a translation is in the last row of the matrix, in
@@ -1257,15 +1259,38 @@ points = Array(Vector3, 1000)
 np.asarray(points)[:, 2] = 1               # writes z of every point
 ```
 
-The other way around, a buffer of floats or doubles in the shape of a struct,
-or flat, is taken wherever the struct is, as a tuple of its fields is: a NumPy
-array of shape `(3,)` stands for a `Vector3` and one of shape `(4, 4)` or
-`(16,)` for a `Matrix4x4`. An `Array` of one of the structs is made from, and
-an array parameter of one takes, a block of `float32` values of shape
-`(n, 3)`, `(n, 4, 4)` and so on, or of the same floats flat:
+The other way around, a buffer of floats or doubles in exactly the shape of a
+struct is taken wherever the struct is, as a tuple of its fields is: a NumPy
+array of shape `(3,)` stands for a `Vector3` and one of shape `(4, 4)` for a
+`Matrix4x4`. An `Array` of one of the structs is made from, and an array
+parameter of one takes, a block of `float32` values of shape `(n, 3)`,
+`(n, 4, 4)` and so on:
 
 ```python
 vectors = Array(Vector3, np.zeros((1000, 3), np.float32))
+```
+
+Flat floats are not taken for a shape, as NumPy does not take them for one
+either: sixteen floats in a row could be the rows of a matrix or its columns.
+Give them their shape with `reshape()`, or with
+`memoryview(data).cast("B").cast("f", (4, 4))` for an
+[`array.array`](https://docs.python.org/3/library/array.html). A tuple is
+another thing: it is the fields of the struct, in the order its constructor
+takes them, so a `Matrix4x4` is sixteen numbers in a tuple as it is in
+`Matrix4x4(...)`.
+
+A value of one of the structs, or an `Array` of them, is not taken as another
+of the structs, although its floats would fit, because a `Quaternion` is not
+a `Vector4` and three `Vector2` are not a `Matrix3x2`. To read its floats as
+another one on purpose, pass `np.asarray(value)` or `memoryview(value)`, which
+are plain floats:
+
+```python
+from winrt.windows.foundation.numerics import Quaternion, Vector4
+
+rotations = Array(Quaternion, 2)
+Array(Vector4, rotations)                  # TypeError
+Array(Vector4, memoryview(rotations))      # the same floats, as two Vector4
 ```
 
 !!! version-changed "Changed in version 4.0"
