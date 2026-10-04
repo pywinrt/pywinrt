@@ -30,11 +30,9 @@ def add_dll_directory(path: str) -> int: ...
 def load_projection(module: types.ModuleType, table_path: str) -> None: ...
 def remove_dll_directory(cookie: int) -> None: ...
 @overload
-def as_interface(
-    obj: IInspectable, iid: UUID | type[IInspectable], /
-) -> InterfaceCapsule: ...
+def as_interface(obj: Object, iid: UUID | type[Object], /) -> InterfaceCapsule: ...
 @overload
-def as_interface(obj: None, iid: UUID | type[IInspectable], /) -> None: ...
+def as_interface(obj: None, iid: UUID | type[Object], /) -> None: ...
 @overload
 def wrap_interface(
     capsule: InterfaceCapsule, type: TypeForm[_TObject], /
@@ -42,7 +40,7 @@ def wrap_interface(
 @overload
 def wrap_interface(capsule: InterfaceCapsule, qualified_name: str, /) -> Any: ...
 @overload
-def wrap_interface(capsule: None, type: type[IInspectable] | str, /) -> None: ...
+def wrap_interface(capsule: None, type: type[Object] | str, /) -> None: ...
 def hresult_error(
     hresult: int, error_info: InterfaceCapsule | None = None, /
 ) -> OSError: ...
@@ -90,7 +88,7 @@ _T_co = TypeVar("_T_co", covariant=True)  # Any type covariant containers.
 _KT = TypeVar("_KT")
 _VT = TypeVar("_VT")
 _VT_co = TypeVar("_VT_co", covariant=True)  # Value type covariant containers.
-_TObject = TypeVar("_TObject", bound=IInspectable)
+_TObject = TypeVar("_TObject", bound=Object)
 
 # What as_() asks of the type it is given, a projected one or an interop
 # interface alike: as_(type) is type._from_(obj).
@@ -101,27 +99,6 @@ class _SupportsFrom(Protocol):
 _TFrom = TypeVar("_TFrom", bound=_SupportsFrom)
 
 # these classes don't actually exist but are just used to simplify type checking
-
-class Object_Static(type):
-    def __instancecheck__(self, instance: Any) -> bool: ...
-    def __subclasscheck__(self, subclass: type) -> bool: ...
-
-# A Python class that implements a WinRT interface derives from the projected
-# name of that interface, and therefore from this, without being a wrapper
-# around a WinRT object: the three members below are what the runtime gives a
-# wrapper, so they are declared here but not required of a subclass. The
-# members of the interface itself are abstract, because implementing them is
-# what deriving from it means.
-class IInspectable(metaclass=Object_Static):
-    def as_(self, type: TypeForm[_TFrom], /) -> _TFrom: ...
-    @property
-    def _iids_(self) -> Array[UUID]: ...
-    @property
-    def _runtime_class_name_(self) -> str: ...
-    # what as_() calls, which the runtime gives the projected name of an
-    # interface as well as the wrapper
-    @classmethod
-    def _from_(cls, obj: IInspectable, /) -> Self: ...
 
 class Sequence(Generic[_T_co]):
     # collections.abc.Sequence mixin methods
@@ -178,7 +155,28 @@ class MutableMapping(Mapping[_KT, _VT]):
 
 # actual runtime classes
 
-class Object(IInspectable): ...
+class Object_Static(type):
+    def __instancecheck__(self, instance: Any) -> bool: ...
+    def __subclasscheck__(self, subclass: type) -> bool: ...
+
+# The type of everything WinRT can hold. A Python class that implements a WinRT
+# interface derives from the projected name of that interface, and therefore
+# from this, without being a wrapper around a WinRT object (at run time it does
+# not derive from Object, and isinstance() says it is one all the same): the
+# three members below are what the runtime gives a wrapper, so they are
+# declared here but not required of a subclass. The members of the interface
+# itself are abstract, because implementing them is what deriving from it
+# means.
+class Object(metaclass=Object_Static):
+    def as_(self, type: TypeForm[_TFrom], /) -> _TFrom: ...
+    @property
+    def _iids_(self) -> Array[UUID]: ...
+    @property
+    def _runtime_class_name_(self) -> str: ...
+    # what as_() calls, which the runtime gives the projected name of an
+    # interface as well as the wrapper
+    @classmethod
+    def _from_(cls, obj: Object, /) -> Self: ...
 
 # The real ABC rather than the Sequence above, because an Array is registered
 # as one and is accepted wherever a collections.abc.Sequence is.
