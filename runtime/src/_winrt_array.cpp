@@ -1001,7 +1001,7 @@ namespace py::cpp::_winrt
         {},
     };
 
-    PyType_Spec Array_type_spec
-        = {"_winrt.Array", sizeof(Array), 0, Py_TPFLAGS_DEFAULT, Array_type_slots};
+    PyType_Spec Array_type_spec = {
+        "winrt.system.Array", sizeof(Array), 0, Py_TPFLAGS_DEFAULT, Array_type_slots};
 
 } // namespace py::cpp::_winrt
