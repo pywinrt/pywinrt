@@ -5,11 +5,11 @@ from winrt.windows.foundation import GuidHelper
 
 
 class TestGuidHelper(unittest.TestCase):
-    def test_empty(self):
+    def test_empty(self) -> None:
         # this tests that static properties in general work
         self.assertEqual(GuidHelper.empty, uuid.UUID(bytes=bytes(16)))
 
-    def test_equals(self):
+    def test_equals(self) -> None:
         # Equals takes both of its GUIDs by reference, which is the only
         # method in the Windows SDK that does. Passing one by value instead
         # costs nothing on x64 and corrupts the stack on x86.

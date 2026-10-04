@@ -945,7 +945,7 @@ class MissingTable(unittest.TestCase):
 
         return caught.exception
 
-    def test_it_names_the_module_and_the_table_it_wanted(self):
+    def test_it_names_the_module_and_the_table_it_wanted(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             error = self.load(directory)
             table = pathlib.Path(directory) / "_table.pywinrt"
@@ -957,7 +957,7 @@ class MissingTable(unittest.TestCase):
             self.assertIn(error.name, str(error))
             self.assertIn(str(table), str(error))
 
-    def test_it_keeps_what_the_operating_system_said(self):
+    def test_it_keeps_what_the_operating_system_said(self) -> None:
         # the cause is what says whether the file was missing, locked or
         # unreadable, which is the part that tells the two apart
         with tempfile.TemporaryDirectory() as directory:

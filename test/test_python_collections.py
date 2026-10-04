@@ -56,7 +56,7 @@ class LoggingMapping:
         return iter(self.items)
 
 
-class LoggingList(list):  # type: ignore[type-arg]
+class LoggingList(list):
     """A list that records every operation, including the ones that change it."""
 
     log: list[str]
@@ -90,7 +90,7 @@ class LoggingList(list):  # type: ignore[type-arg]
         super().append(value)
 
 
-class LoggingDict(dict):  # type: ignore[type-arg]
+class LoggingDict(dict):
     """A dict that records every operation, including the ones that change it."""
 
     log: list[str]

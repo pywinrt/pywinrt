@@ -21,11 +21,11 @@ the manifest.
 
 
 class TestXamlHost(unittest.TestCase):
-    def test_no_instanciation(self):
+    def test_no_instanciation(self) -> None:
         with self.assertRaisesRegex(TypeError, r"cannot create '.*' instances"):
             DesktopWindowXamlSourceNative()
 
-    def test_no_subclass(self):
+    def test_no_subclass(self) -> None:
         with self.assertRaisesRegex(TypeError, r"not an acceptable base type"):
 
             class _(DesktopWindowXamlSourceNative):  # type: ignore
@@ -35,7 +35,7 @@ class TestXamlHost(unittest.TestCase):
         not is_maxversiontested_in_manifest(),
         f"Manifest for '{get_activation_context_detailed_information()[0]}' does not specify maxversiontested",
     )
-    def test_xaml_host(self):
+    def test_xaml_host(self) -> None:
         with WindowsXamlManager.initialize_for_current_thread():
             source = DesktopWindowXamlSource()
             native = source.as_(DesktopWindowXamlSourceNative)

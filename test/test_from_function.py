@@ -4,7 +4,7 @@ import winrt.windows.foundation.collections as wfc
 
 
 class TestQueryInterface(unittest.TestCase):
-    def test_as_function(self):
+    def test_as_function(self) -> None:
         propset = wfc.PropertySet()
         propset.insert("strmap", wfc.StringMap())
         self.assertTrue(propset.has_key("strmap"))

@@ -30,35 +30,35 @@ def windows_path(path: str) -> str:
 
 class TestReturnsNone(unittest.TestCase):
     @async_test
-    async def test_storage_folder_get_parent_async_of_drive_root(self):
+    async def test_storage_folder_get_parent_async_of_drive_root(self) -> None:
         root = pathlib.Path(tempfile.gettempdir()).anchor
         folder = await ws.StorageFolder.get_folder_from_path_async(windows_path(root))
         self.assertIsNone(await folder.get_parent_async())
 
     @async_test
-    async def test_storage_folder_try_get_item_async_not_found(self):
+    async def test_storage_folder_try_get_item_async_not_found(self) -> None:
         with tempfile.TemporaryDirectory() as path:
             folder = await ws.StorageFolder.get_folder_from_path_async(
                 windows_path(path)
             )
             self.assertIsNone(await folder.try_get_item_async("missing"))
 
-    def test_process_diagnostic_info_try_get_for_process_id_not_found(self):
+    def test_process_diagnostic_info_try_get_for_process_id_not_found(self) -> None:
         # Process ids are multiples of 4, so this one cannot exist.
         self.assertIsNone(wsd.ProcessDiagnosticInfo.try_get_for_process_id(0xFFFFFFFD))
 
 
 class TestAcceptsNone(unittest.TestCase):
-    def test_device_information_find_all_async_additional_properties(self):
+    def test_device_information_find_all_async_additional_properties(self) -> None:
         devices = wde.DeviceInformation.find_all_async(NO_DEVICES, None).get()
         self.assertEqual(devices.size, 0)
 
-    def test_query_options_file_type_filter(self):
+    def test_query_options_file_type_filter(self) -> None:
         options = wss.QueryOptions(wss.CommonFileQuery.DEFAULT_QUERY, None)
         self.assertEqual(list(options.file_type_filter), [])
 
     @async_test
-    async def test_retrieve_properties_async_properties_to_retrieve(self):
+    async def test_retrieve_properties_async_properties_to_retrieve(self) -> None:
         with tempfile.TemporaryDirectory() as path:
             folder = await ws.StorageFolder.get_folder_from_path_async(
                 windows_path(path)
