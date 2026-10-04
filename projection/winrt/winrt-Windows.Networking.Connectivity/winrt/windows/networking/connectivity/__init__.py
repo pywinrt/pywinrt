@@ -53,4 +53,4 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_method(ConnectionProfile, "get_local_usage_per_roaming_states", "get_local_usage")
-NetworkStatusChangedEventHandler = typing.Callable[[winrt.system.Object], None]
+NetworkStatusChangedEventHandler = typing.Callable[[winrt.system.Object], object]

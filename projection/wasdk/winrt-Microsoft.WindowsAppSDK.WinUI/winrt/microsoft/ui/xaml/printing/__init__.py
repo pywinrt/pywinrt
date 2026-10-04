@@ -18,6 +18,6 @@ __all__ = [
     "PaginateEventHandler",
 ]
 
-AddPagesEventHandler = typing.Callable[[winrt.system.Object, AddPagesEventArgs], None]
-GetPreviewPageEventHandler = typing.Callable[[winrt.system.Object, GetPreviewPageEventArgs], None]
-PaginateEventHandler = typing.Callable[[winrt.system.Object, PaginateEventArgs], None]
+AddPagesEventHandler = typing.Callable[[winrt.system.Object, AddPagesEventArgs], object]
+GetPreviewPageEventHandler = typing.Callable[[winrt.system.Object, GetPreviewPageEventArgs], object]
+PaginateEventHandler = typing.Callable[[winrt.system.Object, PaginateEventArgs], object]

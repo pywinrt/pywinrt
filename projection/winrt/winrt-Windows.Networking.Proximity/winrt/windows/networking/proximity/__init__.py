@@ -29,7 +29,7 @@ winrt.runtime._internals.alias_static_method(PeerFinder, "start_with_message", "
 winrt.runtime._internals.alias_method(ProximityDevice, "publish_binary_message_with_callback", "publish_binary_message")
 winrt.runtime._internals.alias_method(ProximityDevice, "publish_message_with_callback", "publish_message")
 winrt.runtime._internals.alias_method(ProximityDevice, "publish_uri_message_with_callback", "publish_uri_message")
-DeviceArrivedEventHandler = typing.Callable[[ProximityDevice], None]
-DeviceDepartedEventHandler = typing.Callable[[ProximityDevice], None]
-MessageReceivedHandler = typing.Callable[[ProximityDevice, ProximityMessage], None]
-MessageTransmittedHandler = typing.Callable[[ProximityDevice, winrt.system.Int64], None]
+DeviceArrivedEventHandler = typing.Callable[[ProximityDevice], object]
+DeviceDepartedEventHandler = typing.Callable[[ProximityDevice], object]
+MessageReceivedHandler = typing.Callable[[ProximityDevice, ProximityMessage], object]
+MessageTransmittedHandler = typing.Callable[[ProximityDevice, winrt.system.Int64], object]

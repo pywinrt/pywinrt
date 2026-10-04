@@ -1620,10 +1620,10 @@ class IWebUINavigatedEventArgs(winrt._winrt.IInspectable):
     @abstractmethod
     def navigated_operation(self) -> WebUINavigatedOperation: ...
 
-ActivatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgs], None]
-BackgroundActivatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel_activation.IBackgroundActivatedEventArgs], None]
-EnteredBackgroundEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel.IEnteredBackgroundEventArgs], None]
-LeavingBackgroundEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel.ILeavingBackgroundEventArgs], None]
-NavigatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, IWebUINavigatedEventArgs], None]
-ResumingEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object], None]
-SuspendingEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel.ISuspendingEventArgs], None]
+ActivatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel_activation.IActivatedEventArgs], object]
+BackgroundActivatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel_activation.IBackgroundActivatedEventArgs], object]
+EnteredBackgroundEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel.IEnteredBackgroundEventArgs], object]
+LeavingBackgroundEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel.ILeavingBackgroundEventArgs], object]
+NavigatedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, IWebUINavigatedEventArgs], object]
+ResumingEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object], object]
+SuspendingEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, windows_applicationmodel.ISuspendingEventArgs], object]

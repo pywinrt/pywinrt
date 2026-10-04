@@ -21,5 +21,5 @@ __all__ = [
 
 winrt.runtime._internals.alias_static_method(GameList, "find_all_async_package_family_name", "find_all_async")
 winrt.runtime._internals.alias_method(GameListEntry, "set_launcher_executable_file_with_params_async", "set_launcher_executable_file_async")
-GameListChangedEventHandler = typing.Callable[[GameListEntry], None]
-GameListRemovedEventHandler = typing.Callable[[str], None]
+GameListChangedEventHandler = typing.Callable[[GameListEntry], object]
+GameListRemovedEventHandler = typing.Callable[[str], object]

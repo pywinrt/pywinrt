@@ -314,4 +314,4 @@ class XamlRenderingBackgroundTask(winrt.system.Object, metaclass=XamlRenderingBa
     # System.Void Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask::OnRun(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
     def _on_run(self, task_instance: windows_applicationmodel_background.IBackgroundTaskInstance, /) -> None: ...
 
-DownloadProgressEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], None]
+DownloadProgressEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], object]

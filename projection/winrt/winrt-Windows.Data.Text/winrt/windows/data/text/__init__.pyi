@@ -283,5 +283,5 @@ class WordsSegmenter(winrt.system.Object):
     @_property
     def resolved_language(self) -> str: ...
 
-SelectableWordSegmentsTokenizingHandler: typing.TypeAlias = typing.Callable[[_cabc.Iterable[SelectableWordSegment], _cabc.Iterable[SelectableWordSegment]], None]
-WordSegmentsTokenizingHandler: typing.TypeAlias = typing.Callable[[_cabc.Iterable[WordSegment], _cabc.Iterable[WordSegment]], None]
+SelectableWordSegmentsTokenizingHandler: typing.TypeAlias = typing.Callable[[_cabc.Iterable[SelectableWordSegment], _cabc.Iterable[SelectableWordSegment]], object]
+WordSegmentsTokenizingHandler: typing.TypeAlias = typing.Callable[[_cabc.Iterable[WordSegment], _cabc.Iterable[WordSegment]], object]

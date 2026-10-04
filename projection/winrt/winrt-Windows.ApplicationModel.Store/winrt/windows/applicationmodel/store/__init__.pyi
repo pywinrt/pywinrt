@@ -318,4 +318,4 @@ class UnfulfilledConsumable(winrt.system.Object):
     @_property
     def transaction_id(self) -> _uuid.UUID: ...
 
-LicenseChangedEventHandler: typing.TypeAlias = typing.Callable[[], None]
+LicenseChangedEventHandler: typing.TypeAlias = typing.Callable[[], object]

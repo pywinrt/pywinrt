@@ -2385,5 +2385,5 @@ class VideoStreamConfiguration(winrt.system.Object):
     @_property
     def output_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
 
-MediaCaptureFailedEventHandler: typing.TypeAlias = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], None]
-RecordLimitationExceededEventHandler: typing.TypeAlias = typing.Callable[[MediaCapture], None]
+MediaCaptureFailedEventHandler: typing.TypeAlias = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], object]
+RecordLimitationExceededEventHandler: typing.TypeAlias = typing.Callable[[MediaCapture], object]

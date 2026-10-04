@@ -765,5 +765,5 @@ class TransferTargetWatcher(winrt.system.Object, metaclass=TransferTargetWatcher
     # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::remove_Updated(Windows.Foundation.EventRegistrationToken)
     def remove_updated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-DataProviderHandler: typing.TypeAlias = typing.Callable[[DataProviderRequest], None]
-ShareProviderHandler: typing.TypeAlias = typing.Callable[[ShareProviderOperation], None]
+DataProviderHandler: typing.TypeAlias = typing.Callable[[DataProviderRequest], object]
+ShareProviderHandler: typing.TypeAlias = typing.Callable[[ShareProviderOperation], object]

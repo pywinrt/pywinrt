@@ -42,4 +42,4 @@ __all__ = [
     "PrintTaskSourceRequestedHandler",
 ]
 
-PrintTaskSourceRequestedHandler = typing.Callable[[PrintTaskSourceRequestedArgs], None]
+PrintTaskSourceRequestedHandler = typing.Callable[[PrintTaskSourceRequestedArgs], object]

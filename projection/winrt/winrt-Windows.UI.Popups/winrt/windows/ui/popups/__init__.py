@@ -20,4 +20,4 @@ __all__ = [
 
 winrt.runtime._internals.alias_method(PopupMenu, "show_async_with_rect", "show_for_selection_async")
 winrt.runtime._internals.alias_method(PopupMenu, "show_async_with_rect_and_placement", "show_for_selection_async")
-UICommandInvokedHandler = typing.Callable[[IUICommand], None]
+UICommandInvokedHandler = typing.Callable[[IUICommand], object]

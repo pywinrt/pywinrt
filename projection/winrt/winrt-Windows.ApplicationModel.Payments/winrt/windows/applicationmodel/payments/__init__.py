@@ -35,4 +35,4 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_method(PaymentMediator, "submit_payment_request_with_change_handler_async", "submit_payment_request_async")
-PaymentRequestChangedHandler = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], None]
+PaymentRequestChangedHandler = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], object]

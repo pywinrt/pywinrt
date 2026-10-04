@@ -37,5 +37,5 @@ __all__ = [
 ]
 
 winrt.runtime._internals.mixin_mutable_sequence(_ICollectionView)
-CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], None]
-PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], None]
+CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], object]
+PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], object]

@@ -129,4 +129,4 @@ class DispatcherQueueTimer(winrt.system.Object):
     @_property
     def is_running(self) -> bool: ...
 
-DispatcherQueueHandler: typing.TypeAlias = typing.Callable[[], None]
+DispatcherQueueHandler: typing.TypeAlias = typing.Callable[[], object]

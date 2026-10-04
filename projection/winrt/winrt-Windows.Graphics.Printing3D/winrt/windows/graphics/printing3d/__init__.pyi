@@ -653,4 +653,4 @@ class Printing3DTextureResource(winrt.system.Object):
     @name.setter
     def name(self, value: str) -> None: ...
 
-Print3DTaskSourceRequestedHandler: typing.TypeAlias = typing.Callable[[Print3DTaskSourceRequestedArgs], None]
+Print3DTaskSourceRequestedHandler: typing.TypeAlias = typing.Callable[[Print3DTaskSourceRequestedArgs], object]

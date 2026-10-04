@@ -60,5 +60,5 @@ winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "share_file_wi
 winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "share_folder_with_telemetry_async", "share_folder_async")
 winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "start_process_silently_with_telemetry_async", "start_process_silently_async")
 winrt.runtime._internals.alias_method(IsolatedWindowsEnvironment, "terminate_with_telemetry_async", "terminate_async")
-HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], None]
-MessageReceivedCallback = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], None]
+HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], object]
+MessageReceivedCallback = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], object]

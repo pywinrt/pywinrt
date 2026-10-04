@@ -25,4 +25,4 @@ __all__ = [
 ]
 
 PerceptionStartFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], bool]
-PerceptionStopFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], None]
+PerceptionStopFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], object]

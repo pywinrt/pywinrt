@@ -22,8 +22,8 @@ __all__ = [
     "NavigationStoppedEventHandler",
 ]
 
-LoadCompletedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
-NavigatedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
-NavigatingCancelEventHandler = typing.Callable[[winrt.system.Object, NavigatingCancelEventArgs], None]
-NavigationFailedEventHandler = typing.Callable[[winrt.system.Object, NavigationFailedEventArgs], None]
-NavigationStoppedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
+LoadCompletedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], object]
+NavigatedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], object]
+NavigatingCancelEventHandler = typing.Callable[[winrt.system.Object, NavigatingCancelEventArgs], object]
+NavigationFailedEventHandler = typing.Callable[[winrt.system.Object, NavigationFailedEventArgs], object]
+NavigationStoppedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], object]

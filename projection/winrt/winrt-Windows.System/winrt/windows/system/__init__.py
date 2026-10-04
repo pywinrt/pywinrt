@@ -105,4 +105,4 @@ winrt.runtime._internals.alias_static_method(RemoteLauncher, "launch_uri_with_op
 winrt.runtime._internals.alias_static_method(ShutdownManager, "enter_power_state_with_time_span", "enter_power_state")
 winrt.runtime._internals.alias_static_method(User, "find_all_async_by_type", "find_all_async")
 winrt.runtime._internals.alias_static_method(User, "find_all_async_by_type_and_status", "find_all_async")
-DispatcherQueueHandler = typing.Callable[[], None]
+DispatcherQueueHandler = typing.Callable[[], object]

@@ -88,10 +88,10 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_static_method(WebUIView, "create_with_uri_async", "create_async")
-ActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IActivatedEventArgs"], None]
-BackgroundActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IBackgroundActivatedEventArgs"], None]
-EnteredBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.IEnteredBackgroundEventArgs"], None]
-LeavingBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ILeavingBackgroundEventArgs"], None]
-NavigatedEventHandler = typing.Callable[[winrt.system.Object, IWebUINavigatedEventArgs], None]
-ResumingEventHandler = typing.Callable[[winrt.system.Object], None]
-SuspendingEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ISuspendingEventArgs"], None]
+ActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IActivatedEventArgs"], object]
+BackgroundActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IBackgroundActivatedEventArgs"], object]
+EnteredBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.IEnteredBackgroundEventArgs"], object]
+LeavingBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ILeavingBackgroundEventArgs"], object]
+NavigatedEventHandler = typing.Callable[[winrt.system.Object, IWebUINavigatedEventArgs], object]
+ResumingEventHandler = typing.Callable[[winrt.system.Object], object]
+SuspendingEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ISuspendingEventArgs"], object]

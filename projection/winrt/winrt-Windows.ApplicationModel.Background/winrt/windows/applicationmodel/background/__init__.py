@@ -114,6 +114,6 @@ winrt.runtime._internals.alias_method(DeviceServicingTrigger, "request_async_wit
 winrt.runtime._internals.alias_method(DeviceUseTrigger, "request_async_simple", "request_async")
 winrt.runtime._internals.alias_method(DeviceUseTrigger, "request_async_with_arguments", "request_async")
 winrt.runtime._internals.alias_method(MediaProcessingTrigger, "request_async_with_arguments", "request_async")
-BackgroundTaskCanceledEventHandler = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
-BackgroundTaskCompletedEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], None]
-BackgroundTaskProgressEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], None]
+BackgroundTaskCanceledEventHandler = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], object]
+BackgroundTaskCompletedEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], object]
+BackgroundTaskProgressEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], object]

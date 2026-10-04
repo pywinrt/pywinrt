@@ -27,4 +27,4 @@ winrt.runtime._internals.alias_static_method(CurrentApp, "request_product_purcha
 winrt.runtime._internals.alias_static_method(CurrentApp, "request_product_purchase_with_results_async", "request_product_purchase_async")
 winrt.runtime._internals.alias_static_method(CurrentAppSimulator, "request_product_purchase_with_display_properties_async", "request_product_purchase_async")
 winrt.runtime._internals.alias_static_method(CurrentAppSimulator, "request_product_purchase_with_results_async", "request_product_purchase_async")
-LicenseChangedEventHandler = typing.Callable[[], None]
+LicenseChangedEventHandler = typing.Callable[[], object]

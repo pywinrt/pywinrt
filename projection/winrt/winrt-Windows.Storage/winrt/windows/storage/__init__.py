@@ -148,5 +148,5 @@ winrt.runtime._internals.alias_method(_IStorageItemProperties2, "get_thumbnail_a
 winrt.runtime._internals.alias_method(_IStorageItemProperties2, "get_thumbnail_async_overload_default_size_default_options", "get_thumbnail_async")
 winrt.runtime._internals.alias_method(_IStorageItemPropertiesWithProvider, "get_thumbnail_async_overload_default_options", "get_thumbnail_async")
 winrt.runtime._internals.alias_method(_IStorageItemPropertiesWithProvider, "get_thumbnail_async_overload_default_size_default_options", "get_thumbnail_async")
-ApplicationDataSetVersionHandler = typing.Callable[[SetVersionRequest], None]
-StreamedFileDataRequestedHandler = typing.Callable[[StreamedFileDataRequest], None]
+ApplicationDataSetVersionHandler = typing.Callable[[SetVersionRequest], object]
+StreamedFileDataRequestedHandler = typing.Callable[[StreamedFileDataRequest], object]

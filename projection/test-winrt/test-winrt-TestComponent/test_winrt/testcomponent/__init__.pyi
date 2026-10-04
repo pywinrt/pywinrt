@@ -753,4 +753,4 @@ Param6Handler: typing.TypeAlias = typing.Callable[[winrt.system.Int16], tuple[wi
 Param7Handler: typing.TypeAlias = typing.Callable[[winrt.system.Int32], tuple[winrt.system.Int32, winrt.system.Int32]]
 Param8Handler: typing.TypeAlias = typing.Callable[[winrt.system.Int64], tuple[winrt.system.Int64, winrt.system.Int64]]
 Param9Handler: typing.TypeAlias = typing.Callable[[winrt.system.Single], tuple[winrt.system.Single, winrt.system.Single]]
-TestHandler: typing.TypeAlias = typing.Callable[[ITests], None]
+TestHandler: typing.TypeAlias = typing.Callable[[ITests], object]

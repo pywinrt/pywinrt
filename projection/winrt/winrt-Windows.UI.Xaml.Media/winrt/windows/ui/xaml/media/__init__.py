@@ -115,5 +115,5 @@ winrt.runtime._internals.alias_static_method(LoadedImageSurface, "start_load_fro
 winrt.runtime._internals.alias_static_method(LoadedImageSurface, "start_load_from_uri_with_size", "start_load_from_uri")
 winrt.runtime._internals.alias_static_method(VisualTreeHelper, "find_all_elements_in_host_coordinates_point", "find_elements_in_host_coordinates")
 winrt.runtime._internals.alias_static_method(VisualTreeHelper, "find_elements_in_host_coordinates_point", "find_elements_in_host_coordinates")
-RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], None]
-TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], None]
+RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], object]
+TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], object]

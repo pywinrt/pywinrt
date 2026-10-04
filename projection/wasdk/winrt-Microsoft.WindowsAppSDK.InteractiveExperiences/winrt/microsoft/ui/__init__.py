@@ -17,4 +17,4 @@ __all__ = [
     "ClosableNotifierHandler",
 ]
 
-ClosableNotifierHandler = typing.Callable[[], None]
+ClosableNotifierHandler = typing.Callable[[], object]

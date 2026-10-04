@@ -1282,5 +1282,5 @@ class IInitializeWithCoreWindow(winrt._winrt.IInspectable):
     @abstractmethod
     def initialize(self, window: CoreWindow, /) -> None: ...
 
-DispatchedHandler: typing.TypeAlias = typing.Callable[[], None]
-IdleDispatchedHandler: typing.TypeAlias = typing.Callable[[IdleDispatchedHandlerArgs], None]
+DispatchedHandler: typing.TypeAlias = typing.Callable[[], object]
+IdleDispatchedHandler: typing.TypeAlias = typing.Callable[[IdleDispatchedHandlerArgs], object]

@@ -2953,9 +2953,9 @@ class IScrollSnapPointsInfo(winrt._winrt.IInspectable):
     @abstractmethod
     def are_vertical_snap_points_regular(self) -> bool: ...
 
-DragCompletedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], None]
-DragDeltaEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], None]
-DragStartedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragStartedEventArgs], None]
-ItemsChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, ItemsChangedEventArgs], None]
-RangeBaseValueChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, RangeBaseValueChangedEventArgs], None]
-ScrollEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, ScrollEventArgs], None]
+DragCompletedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], object]
+DragDeltaEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], object]
+DragStartedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, DragStartedEventArgs], object]
+ItemsChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, ItemsChangedEventArgs], object]
+RangeBaseValueChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, RangeBaseValueChangedEventArgs], object]
+ScrollEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, ScrollEventArgs], object]

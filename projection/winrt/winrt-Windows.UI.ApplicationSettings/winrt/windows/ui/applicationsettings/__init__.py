@@ -27,6 +27,6 @@ __all__ = [
     "WebAccountProviderCommandInvokedHandler",
 ]
 
-CredentialCommandCredentialDeletedHandler = typing.Callable[[CredentialCommand], None]
-WebAccountCommandInvokedHandler = typing.Callable[[WebAccountCommand, WebAccountInvokedArgs], None]
-WebAccountProviderCommandInvokedHandler = typing.Callable[[WebAccountProviderCommand], None]
+CredentialCommandCredentialDeletedHandler = typing.Callable[[CredentialCommand], object]
+WebAccountCommandInvokedHandler = typing.Callable[[WebAccountCommand, WebAccountInvokedArgs], object]
+WebAccountProviderCommandInvokedHandler = typing.Callable[[WebAccountProviderCommand], object]

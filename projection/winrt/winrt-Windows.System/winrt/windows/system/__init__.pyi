@@ -1439,4 +1439,4 @@ class ILauncherViewOptions(winrt._winrt.IInspectable):
     @abstractmethod
     def desired_remaining_view(self, value: windows_ui_viewmanagement.ViewSizePreference) -> None: ...
 
-DispatcherQueueHandler: typing.TypeAlias = typing.Callable[[], None]
+DispatcherQueueHandler: typing.TypeAlias = typing.Callable[[], object]

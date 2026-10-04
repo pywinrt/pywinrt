@@ -30,6 +30,6 @@ __all__ = [
     "ServiceRequestedEventHandler",
 ]
 
-ComponentLoadFailedEventHandler = typing.Callable[[MediaProtectionManager, ComponentLoadFailedEventArgs], None]
-RebootNeededEventHandler = typing.Callable[[MediaProtectionManager], None]
-ServiceRequestedEventHandler = typing.Callable[[MediaProtectionManager, ServiceRequestedEventArgs], None]
+ComponentLoadFailedEventHandler = typing.Callable[[MediaProtectionManager, ComponentLoadFailedEventArgs], object]
+RebootNeededEventHandler = typing.Callable[[MediaProtectionManager], object]
+ServiceRequestedEventHandler = typing.Callable[[MediaProtectionManager, ServiceRequestedEventArgs], object]
