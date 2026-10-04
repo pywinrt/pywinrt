@@ -2,6 +2,7 @@ import array
 import math
 import os
 import struct
+import sys
 import typing
 import unittest
 
@@ -827,11 +828,44 @@ class TestNumerics(unittest.TestCase):
         ):
             wfn.Matrix4x4() * wfn.Matrix4x4()  # type: ignore
 
-        with self.assertRaisesRegex(
-            TypeError,
-            r"\* between two 'Matrix4x4' values is not their product: use @",
-        ):
+        # a tuple of the fields is no matrix for *, so the other side answers,
+        # which for a tuple is repetition
+        with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
             wfn.Matrix4x4() * tuple(range(16))  # type: ignore
+
+        with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
+            tuple(range(16)) * wfn.Matrix4x4()  # type: ignore
+
+        self.assertEqual(
+            wfn.Matrix4x4.identity @ tuple(range(16)),  # type: ignore
+            wfn.Matrix4x4(*range(16)),
+        )
+
+    @unittest.skipIf(sys.version_info < (3, 12), "__buffer__ is new in 3.12")
+    def test_matrix_mul_buffer_is_not_implemented(self) -> None:
+        class Rows:
+            """
+            A block of floats in a matrix's shape that answers * itself, as
+            a NumPy array does.
+            """
+
+            def __buffer__(self, flags: int, /) -> "memoryview[float]":
+                return (
+                    memoryview(array.array("f", range(16))).cast("B").cast("f", (4, 4))
+                )
+
+            def __rmul__(self, other: object) -> str:
+                return "rmul"
+
+            def __mul__(self, other: object) -> str:
+                return "mul"
+
+        rows: typing.Any = Rows()
+
+        self.assertEqual(wfn.Matrix4x4() * rows, "rmul")
+        self.assertEqual(rows * wfn.Matrix4x4(), "mul")
+        # @ still reads it as the matrix it is shaped as
+        self.assertEqual(wfn.Matrix4x4.identity @ rows, wfn.Matrix4x4(*range(16)))
 
     def test_truediv(self) -> None:
         self.assertEqual(
@@ -1228,8 +1262,13 @@ class TestNumerics(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, r"as m\[row, column\], not by 'slice'"):
             m[0:2]  # type: ignore
 
-        with self.assertRaisesRegex(TypeError, r"as m\[row, column\], not by 'tuple'"):
+        with self.assertRaisesRegex(
+            TypeError, r"as m\[row, column\], not by 3 indices"
+        ):
             m[0, 1, 2]  # type: ignore
+
+        with self.assertRaisesRegex(TypeError, r"as m\[row, column\], not by 1 index"):
+            m[(0,)]  # type: ignore
 
         with self.assertRaisesRegex(IndexError, "row index out of range"):
             m[4, 0]
