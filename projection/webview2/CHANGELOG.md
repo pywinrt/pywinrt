@@ -26,6 +26,8 @@ releases before v4.0 are.
   copy named by the `WEBVIEW2_PATH` environment variable, which is how a
   machine with no access to `nuget.org` builds it.
 
+- Added `load()` to `winrt.microsoft.web.webview2.dll` for WinUI on App SDK 2.x.
+
 ### Changed
 - Updated WebView2 to 1.0.4191.47. Twelve types are new, covering the worker
   APIs - `CoreWebView2ServiceWorker`, `CoreWebView2DedicatedWorker`,

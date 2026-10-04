@@ -61,6 +61,39 @@ with bootstrap.initialize(options=bootstrap.InitializeOptions.ON_NO_MATCH_SHOW_U
     not been extensively tested yet. See [Microsoft's Docs](https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/framework-packages/use-the-dynamic-dependency-api)
     for more information.
 
+## WebView2
+
+An application that is not packaged gets `Microsoft.Web.WebView2.Core.dll`
+from the `winrt-Microsoft.Web.WebView2.Dll` package. On Windows App SDK 2.x, a
+WebView2 control that uses its default environment needs that `.dll` loaded
+before it is created:
+
+```python
+from winrt.microsoft.web.webview2 import dll
+
+dll.load()
+```
+
+The control uses its default environment when `source` is set or
+`ensure_core_webview2_async()` is called with no environment. Without the
+call, it never initializes in the first case and fails with
+`ERROR_MOD_NOT_FOUND` in the second. An application that passes its own
+`CoreWebView2Environment` to `ensure_core_webview2_async()` before setting
+`source` does not need it. This is a WinUI bug,
+[microsoft/microsoft-ui-xaml#12158](https://github.com/microsoft/microsoft-ui-xaml/issues/12158),
+and the call may not be needed once it is fixed.
+
+The default environment keeps its user data, the browser profile and caches,
+in a folder next to `python.exe`, which may not be writable and is not where
+an application's data belongs. Setting the `WEBVIEW2_USER_DATA_FOLDER`
+environment variable before the control is created moves it:
+
+```python
+import os
+
+os.environ["WEBVIEW2_USER_DATA_FOLDER"] = r"C:\path\to\user\data"
+```
+
 ## Interop modules
 
 There are also special modules that provide extra functionality
