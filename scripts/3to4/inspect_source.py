@@ -164,6 +164,43 @@ def matrix_names(tree: ast.AST) -> dict[str, str]:
     return names
 
 
+def source_of(lines: list[str], node: ast.expr) -> str:
+    """
+    The text of @p node, on one line.
+    """
+    segment = ast.get_source_segment("\n".join(lines), node)
+    assert segment is not None
+    return " ".join(segment.split()) if "\n" in segment else segment
+
+
+def from_match(lines: list[str], node: ast.Call) -> Match:
+    """
+    A call of _from(), which as_() replaces: ``Type._from(obj)`` is
+    ``obj.as_(Type)``.
+    """
+    assert isinstance(node.func, ast.Attribute)
+    cls = source_of(lines, node.func.value)
+    rename_to = "obj.as_(type)"
+
+    if len(node.args) == 1 and not node.keywords:
+        arg = node.args[0]
+        obj = source_of(lines, arg)
+
+        # what binds less tightly than an attribute needs parentheses
+        if not isinstance(arg, (ast.Name, ast.Attribute, ast.Call, ast.Subscript)):
+            obj = f"({obj})"
+
+        rename_to = f"{obj}.as_({cls})"
+
+    assert node.func.end_lineno is not None
+    return Match(
+        node.func.end_lineno,
+        attribute_column(lines, node.func),
+        f"{cls}._from",
+        rename_to,
+    )
+
+
 def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
     matrices = matrix_names(tree)
 
@@ -224,6 +261,10 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
                 )
 
         elif isinstance(node, ast.Call):
+            if isinstance(node.func, ast.Attribute) and node.func.attr == "_from":
+                yield from_match(lines, node)
+                continue
+
             if receiver_name(node.func) != "Array" or not node.args:
                 continue
 
