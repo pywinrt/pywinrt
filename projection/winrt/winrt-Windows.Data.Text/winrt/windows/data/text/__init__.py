@@ -32,5 +32,5 @@ __all__ = [
 winrt.runtime._internals.alias_method(TextConversionGenerator, "get_candidates_with_max_count_async", "get_candidates_async")
 winrt.runtime._internals.alias_method(TextPredictionGenerator, "get_candidates_with_max_count_async", "get_candidates_async")
 winrt.runtime._internals.alias_method(TextPredictionGenerator, "get_candidates_with_parameters_async", "get_candidates_async")
-SelectableWordSegmentsTokenizingHandler = typing.Callable[[_cabc.Iterable[SelectableWordSegment], _cabc.Iterable[SelectableWordSegment]], None]
-WordSegmentsTokenizingHandler = typing.Callable[[_cabc.Iterable[WordSegment], _cabc.Iterable[WordSegment]], None]
+SelectableWordSegmentsTokenizingHandler = typing.Callable[[_cabc.Iterable[SelectableWordSegment], _cabc.Iterable[SelectableWordSegment]], object]
+WordSegmentsTokenizingHandler = typing.Callable[[_cabc.Iterable[WordSegment], _cabc.Iterable[WordSegment]], object]

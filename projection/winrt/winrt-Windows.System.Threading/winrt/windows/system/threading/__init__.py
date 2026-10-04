@@ -24,6 +24,6 @@ winrt.runtime._internals.alias_static_method(ThreadPool, "run_with_priority_and_
 winrt.runtime._internals.alias_static_method(ThreadPool, "run_with_priority_async", "run_async")
 winrt.runtime._internals.alias_static_method(ThreadPoolTimer, "create_periodic_timer_with_completion", "create_periodic_timer")
 winrt.runtime._internals.alias_static_method(ThreadPoolTimer, "create_timer_with_completion", "create_timer")
-TimerDestroyedHandler = typing.Callable[[ThreadPoolTimer], None]
-TimerElapsedHandler = typing.Callable[[ThreadPoolTimer], None]
-WorkItemHandler = typing.Callable[["windows_foundation.IAsyncAction"], None]
+TimerDestroyedHandler = typing.Callable[[ThreadPoolTimer], object]
+TimerElapsedHandler = typing.Callable[[ThreadPoolTimer], object]
+WorkItemHandler = typing.Callable[["windows_foundation.IAsyncAction"], object]

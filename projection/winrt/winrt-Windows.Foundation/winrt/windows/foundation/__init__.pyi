@@ -712,12 +712,12 @@ class IWwwFormUrlDecoderEntry(winrt._winrt.IInspectable):
     @abstractmethod
     def value(self) -> str: ...
 
-AsyncActionCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncAction, AsyncStatus], None]
-AsyncActionProgressHandler: typing.TypeAlias = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], None]
-AsyncActionWithProgressCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]
-AsyncOperationCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], None]
-AsyncOperationProgressHandler: typing.TypeAlias = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], None]
-AsyncOperationWithProgressCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], None]
-DeferralCompletedHandler: typing.TypeAlias = typing.Callable[[], None]
-EventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, T], None]
-TypedEventHandler: typing.TypeAlias = typing.Callable[[TSender, TResult], None]
+AsyncActionCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncAction, AsyncStatus], object]
+AsyncActionProgressHandler: typing.TypeAlias = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], object]
+AsyncActionWithProgressCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], object]
+AsyncOperationCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], object]
+AsyncOperationProgressHandler: typing.TypeAlias = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], object]
+AsyncOperationWithProgressCompletedHandler: typing.TypeAlias = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], object]
+DeferralCompletedHandler: typing.TypeAlias = typing.Callable[[], object]
+EventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object, T], object]
+TypedEventHandler: typing.TypeAlias = typing.Callable[[TSender, TResult], object]

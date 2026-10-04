@@ -114,9 +114,9 @@ __all__ = [
     "ScrollEventHandler",
 ]
 
-DragCompletedEventHandler = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], None]
-DragDeltaEventHandler = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], None]
-DragStartedEventHandler = typing.Callable[[winrt.system.Object, DragStartedEventArgs], None]
-ItemsChangedEventHandler = typing.Callable[[winrt.system.Object, ItemsChangedEventArgs], None]
-RangeBaseValueChangedEventHandler = typing.Callable[[winrt.system.Object, RangeBaseValueChangedEventArgs], None]
-ScrollEventHandler = typing.Callable[[winrt.system.Object, ScrollEventArgs], None]
+DragCompletedEventHandler = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], object]
+DragDeltaEventHandler = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], object]
+DragStartedEventHandler = typing.Callable[[winrt.system.Object, DragStartedEventArgs], object]
+ItemsChangedEventHandler = typing.Callable[[winrt.system.Object, ItemsChangedEventArgs], object]
+RangeBaseValueChangedEventHandler = typing.Callable[[winrt.system.Object, RangeBaseValueChangedEventArgs], object]
+ScrollEventHandler = typing.Callable[[winrt.system.Object, ScrollEventArgs], object]

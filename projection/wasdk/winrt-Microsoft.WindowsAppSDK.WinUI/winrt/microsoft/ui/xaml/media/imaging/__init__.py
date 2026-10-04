@@ -26,4 +26,4 @@ __all__ = [
     "DownloadProgressEventHandler",
 ]
 
-DownloadProgressEventHandler = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], None]
+DownloadProgressEventHandler = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], object]

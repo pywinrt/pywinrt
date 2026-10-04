@@ -23,4 +23,4 @@ __all__ = [
     "DeploymentSessionHeartbeatRequested",
 ]
 
-DeploymentSessionHeartbeatRequested = typing.Callable[[DeploymentSessionHeartbeatRequestedEventArgs], None]
+DeploymentSessionHeartbeatRequested = typing.Callable[[DeploymentSessionHeartbeatRequestedEventArgs], object]

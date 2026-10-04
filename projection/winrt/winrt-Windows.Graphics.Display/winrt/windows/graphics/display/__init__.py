@@ -30,4 +30,4 @@ __all__ = [
     "DisplayPropertiesEventHandler",
 ]
 
-DisplayPropertiesEventHandler = typing.Callable[[winrt.system.Object], None]
+DisplayPropertiesEventHandler = typing.Callable[[winrt.system.Object], object]

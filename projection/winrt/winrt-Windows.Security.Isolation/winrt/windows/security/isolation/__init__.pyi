@@ -675,5 +675,5 @@ class IsolatedWindowsHostMessenger_Static(winrt._winrt.IInspectable_Static):
 class IsolatedWindowsHostMessenger(winrt.system.Object, metaclass=IsolatedWindowsHostMessenger_Static):
     ...
 
-HostMessageReceivedCallback: typing.TypeAlias = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], None]
-MessageReceivedCallback: typing.TypeAlias = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], None]
+HostMessageReceivedCallback: typing.TypeAlias = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], object]
+MessageReceivedCallback: typing.TypeAlias = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], object]

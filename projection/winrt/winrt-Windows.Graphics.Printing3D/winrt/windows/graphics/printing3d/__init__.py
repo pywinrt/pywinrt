@@ -50,4 +50,4 @@ __all__ = [
 winrt.runtime._internals.alias_method(Printing3DModel, "try_partial_repair_with_time_async", "try_partial_repair_async")
 winrt.runtime._internals.alias_method(Printing3DModel, "try_reduce_faces_with_options_and_time_async", "try_reduce_faces_async")
 winrt.runtime._internals.alias_method(Printing3DModel, "try_reduce_faces_with_options_async", "try_reduce_faces_async")
-Print3DTaskSourceRequestedHandler = typing.Callable[[Print3DTaskSourceRequestedArgs], None]
+Print3DTaskSourceRequestedHandler = typing.Callable[[Print3DTaskSourceRequestedArgs], object]

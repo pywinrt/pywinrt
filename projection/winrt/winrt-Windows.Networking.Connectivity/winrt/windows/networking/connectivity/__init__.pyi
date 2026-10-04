@@ -665,4 +665,4 @@ class WwanConnectionProfileDetails(winrt.system.Object):
     @_property
     def purpose_guids(self) -> _cabc.Sequence[_uuid.UUID]: ...
 
-NetworkStatusChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object], None]
+NetworkStatusChangedEventHandler: typing.TypeAlias = typing.Callable[[winrt.system.Object], object]

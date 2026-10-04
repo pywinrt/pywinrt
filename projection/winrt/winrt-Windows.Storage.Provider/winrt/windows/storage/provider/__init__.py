@@ -70,4 +70,4 @@ __all__ = [
     "StorageProviderKnownFolderSyncRequestedHandler",
 ]
 
-StorageProviderKnownFolderSyncRequestedHandler = typing.Callable[[StorageProviderKnownFolderSyncRequestArgs], None]
+StorageProviderKnownFolderSyncRequestedHandler = typing.Callable[[StorageProviderKnownFolderSyncRequestArgs], object]

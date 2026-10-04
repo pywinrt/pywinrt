@@ -18,4 +18,4 @@ __all__ = [
     "DispatcherQueueHandler",
 ]
 
-DispatcherQueueHandler = typing.Callable[[], None]
+DispatcherQueueHandler = typing.Callable[[], object]

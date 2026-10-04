@@ -87,6 +87,6 @@ class ThreadPoolTimer(winrt.system.Object, metaclass=ThreadPoolTimer_Static):
     @_property
     def period(self) -> datetime.timedelta: ...
 
-TimerDestroyedHandler: typing.TypeAlias = typing.Callable[[ThreadPoolTimer], None]
-TimerElapsedHandler: typing.TypeAlias = typing.Callable[[ThreadPoolTimer], None]
-WorkItemHandler: typing.TypeAlias = typing.Callable[[windows_foundation.IAsyncAction], None]
+TimerDestroyedHandler: typing.TypeAlias = typing.Callable[[ThreadPoolTimer], object]
+TimerElapsedHandler: typing.TypeAlias = typing.Callable[[ThreadPoolTimer], object]
+WorkItemHandler: typing.TypeAlias = typing.Callable[[windows_foundation.IAsyncAction], object]
