@@ -134,7 +134,6 @@ ROLES = (
     "split",
     "pair_key",
     "pair_value",
-    "cancel",
 )
 
 PARAM_CATEGORIES = ("in", "out", "pass_array", "fill_array", "receive_array")

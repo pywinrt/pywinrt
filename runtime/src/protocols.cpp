@@ -1178,7 +1178,6 @@ namespace py::interp
                 case table::member_role::split:
                 case table::member_role::pair_key:
                 case table::member_role::pair_value:
-                case table::member_role::cancel:
                     continue;
                 case table::member_role::size:
                     entry.protocol.size = &member;
