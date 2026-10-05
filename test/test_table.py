@@ -21,6 +21,7 @@ interfaces is compared against the published values, which is what
 import enum
 import importlib
 import importlib.util
+import json
 import pathlib
 import struct
 import sys
@@ -474,6 +475,156 @@ class TestTableContents(unittest.TestCase):
                     # a reference is resolved through the type registry, which
                     # knows a type by its fully qualified Python name
                     self.assertIn(".", type_record["py_name"])
+
+
+# The census that every member's forward shape id was assigned from.
+SHAPES_JSON = pathlib.Path(__file__).parent.parent / "runtime" / "src" / "shapes.json"
+
+# How a struct field of each type code is spelled in a shape key. A field keeps
+# its exact width, because it is laid out in memory rather than passed.
+FIELD_CODES = {
+    1: "b",
+    2: "i1",
+    3: "u1",
+    4: "i2",
+    5: "u2",
+    6: "i4",
+    7: "u4",
+    8: "i8",
+    9: "u8",
+    10: "f4",
+    11: "f8",
+    12: "c2",
+    13: "p",
+    15: "i4",
+    16: "i8",
+    17: "p",
+    18: "i8",
+    19: "i8",
+    20: "i4",
+    21: "u4",
+    23: "p",
+    24: "p",
+    25: "p",
+    26: "p",
+    27: "p",
+}
+
+GUID_FIELDS = "u4u2u2" + "u1" * 8
+
+# The type codes of what the metadata declares as a struct of its own: the
+# guid, the hresult, the event token, the datetime and the timespan.
+STRUCT_CODES = {14: GUID_FIELDS, 15: "i4", 16: "i8", 18: "i8", 19: "i8"}
+
+CODE_INT64 = 8
+CODE_UINT64 = 9
+CODE_SINGLE = 10
+CODE_DOUBLE = 11
+CODE_STRUCT = 22
+
+PARAM_IN = 0
+PARAM_OUT = 1
+
+
+class ShapeKeys:
+    """
+    Rebuilds a member's ABI call shape key from the table records alone, as
+    ``PyWinRT/AbiShapes.cs`` builds it from the metadata.
+
+    Every output, every half of an array and every input passed by reference
+    is a pointer; an input of 32 bits or less is widened to one, a 64-bit
+    integer is ``i8`` whatever its sign, and a struct is its fields flattened.
+    """
+
+    def __init__(self) -> None:
+        self.tables: dict[str, dict[str, Any]] = {}
+
+    def table(self, namespace: str) -> dict[str, Any]:
+        if namespace not in self.tables:
+            package = "test_winrt" if namespace == "TestComponent" else "winrt"
+            self.tables[namespace] = read(package, *namespace.lower().split("."))
+
+        return self.tables[namespace]
+
+    def fields(self, table: dict[str, Any], ref: int) -> str:
+        record = table["types"][ref]
+
+        # a struct from another namespace is laid out in that namespace's table
+        if record["flags"] & TYPE_EXTERNAL:
+            owner = self.table(record["namespace"])
+            record = defined(owner)[record["name"]]
+            table = owner
+
+        return "".join(
+            self.fields(table, field["type"])
+            if field["code"] == CODE_STRUCT
+            else STRUCT_CODES.get(field["code"]) or FIELD_CODES[field["code"]]
+            for field in record["fields"]
+        )
+
+    def argument(self, table: dict[str, Any], param: dict[str, Any]) -> str:
+        if param["category"] != PARAM_IN:
+            # an output, or a count and a pointer for an array
+            return "p" if param["category"] == PARAM_OUT else "pp"
+
+        code = param["code"]
+
+        if param["is_by_reference"]:
+            return "p"
+
+        if code == CODE_STRUCT:
+            return "{" + self.fields(table, param["type"]) + "}"
+
+        if code in STRUCT_CODES:
+            return "{" + STRUCT_CODES[code] + "}"
+
+        if code in (CODE_INT64, CODE_UINT64):
+            return "i8"
+
+        return {CODE_SINGLE: "f4", CODE_DOUBLE: "f8"}.get(code, "p")
+
+    def key(self, table: dict[str, Any], member: dict[str, Any]) -> str:
+        return "".join(self.argument(table, param) for param in member["params"])
+
+
+class TestShapeKeys(unittest.TestCase):
+    """
+    A member the census has no shape for is still described in full, so that a
+    later runtime can call it from its parameters alone (the rule in
+    ``runtime/src/table-format.md``). This checks that the records really are
+    enough: the key rebuilt from them names the shape the generator gave the
+    member, for every member with one.
+    """
+
+    def test_the_records_rebuild_every_shape(self) -> None:
+        census = json.loads(SHAPES_JSON.read_text())["shape_ids"]
+        keys = ShapeKeys()
+        checked = 0
+        wrong = []
+
+        for namespace in (
+            "TestComponent",
+            "Windows.Foundation",
+            "Windows.Foundation.Collections",
+        ):
+            table = keys.table(namespace)
+
+            for type_record in table["types"]:
+                for group in type_record["groups"]:
+                    for member in group["members"]:
+                        if member["forward_shape"] == NO_REF:
+                            continue
+
+                        key = keys.key(table, member)
+                        checked += 1
+
+                        if census.get(key) != member["forward_shape"]:
+                            wrong.append(
+                                (type_record["name"], member["winrt_name"], key)
+                            )
+
+        self.assertEqual(wrong, [])
+        self.assertGreater(checked, 0)
 
 
 class TestStructLayout(unittest.TestCase):
