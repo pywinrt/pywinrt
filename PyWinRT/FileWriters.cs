@@ -267,23 +267,24 @@ static class FileWriters
                     )
                 );
 
-            // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
-            // instead of ToPyReturnTyping(). For now, this isn't a problem outside
-            // of the TestComponent modules since most callbacks only return None or bool.
-
             // The runtime ignores what a handler for a delegate with no outputs
             // hands back, so it may return anything, which is how typeshed
-            // types a callback whose result is not used.
+            // types a callback whose result is not used. The widened typing of
+            // the other outputs is for the type checker, which reads the stub;
+            // in __init__.py a union with a quoted name would raise TypeError
+            // at import time.
             var returnTyping =
                 invoke.ReturnType.FullName == "System.Void"
                 && !invoke.Parameters.Any(p => p.IsPythonOutParam)
                     ? "object"
-                    : invoke.ToPyReturnTyping(
-                        ns.Namespace,
-                        nullabilityInfo,
-                        packageMap,
-                        quoteImportedTypes: !forStub
-                    );
+                : forStub
+                    ? invoke.ToPyCallbackReturnTyping(ns.Namespace, nullabilityInfo, packageMap)
+                : invoke.ToPyReturnTyping(
+                    ns.Namespace,
+                    nullabilityInfo,
+                    packageMap,
+                    quoteImportedTypes: true
+                );
 
             var declaration = forStub ? $"type {type.Name}{type.Type.PyTypeParameters}" : type.Name;
 
