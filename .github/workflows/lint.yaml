@@ -56,4 +56,4 @@ jobs:
       # the settings are in pyrightconfig.json, which the editor reads too; the
       # directories listed are the ones that are clean in strict mode so far
       - name: Run pyright
-        run: pipx run pyright --pythonpath _install/samples-venv/Scripts/python.exe test samples
+        run: pipx run pyright --pythonpath _install/samples-venv/Scripts/python.exe test samples runtime/python

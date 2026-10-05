@@ -41,7 +41,7 @@ def _installed_files() -> list[tuple[str, str, str]]:
     it is now. A distribution installed from a wheel records what it put where;
     one that did not record it is something this can say nothing about.
     """
-    files = []
+    files: list[tuple[str, str, str]] = []
 
     for distribution in distributions():
         for file in distribution.files or []:
