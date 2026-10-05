@@ -24,7 +24,7 @@ import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
 from typing_extensions import override
 
-from test._util import async_test, catch_unraisable
+from ._util import async_test, catch_unraisable
 
 
 class TestTestComponent(unittest.TestCase):
