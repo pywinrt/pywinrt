@@ -263,7 +263,7 @@ class IObservableVector[T](IVector[T], winrt.system.Object):
 @typing.final
 class _IPropertySet: ...
 
-class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt.system.Object):  # type: ignore[misc]
+class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt.system.Object, metaclass=winrt._winrt.Object_Static):
     ...
 
 @typing.final
