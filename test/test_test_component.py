@@ -824,8 +824,9 @@ class TestTestComponent(unittest.TestCase):
         second: list[int] = []
 
         op = tc.TestRunner.create_async_action_with_progress(10, [1, 2])
-        op.progress = lambda sender, value: first.append(value)
-        op.progress = lambda sender, value: second.append(value)
+        # https://github.com/microsoft/pyright/issues/11833
+        op.progress = lambda sender, value: first.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
+        op.progress = lambda sender, value: second.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
         op.get()
 
         self.assertEqual(first, [])
