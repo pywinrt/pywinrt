@@ -453,7 +453,7 @@ def package_edits(source: str, tree: ast.AST, lines: list[str]) -> list[Edit]:
             for line in range(node.lineno, node.end_lineno + 1):
                 statements[line] = type(node)
 
-    edits = []
+    edits: list[Edit] = []
     previous = ""
 
     for token in tokenize.generate_tokens(io.StringIO(source).readline):
@@ -519,7 +519,7 @@ def fix(
             text[: edit.column] + edit.new + text[edit.column + len(edit.old) :]
         )
 
-    dropped = set()
+    dropped: set[int] = set()
 
     for number in sorted(requirement_lines):
         requirement = requirement_of(lines[number - 1])
