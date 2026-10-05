@@ -198,6 +198,10 @@ static class WriterExtensions
             _ => "",
         };
 
+        // mypy reports the clash on the decorator and pyright on the definition
+        var pyrightIgnore =
+            typeIgnore == "" ? "" : "  # pyright: ignore[reportIncompatibleMethodOverride]";
+
         w.WriteLine($"@_property{typeIgnore}");
 
         if (type.IsComposable && prop.SetMethod == null)
@@ -215,7 +219,7 @@ static class WriterExtensions
             w.WriteLine("@abstractmethod");
         }
 
-        w.WriteLine($"def {name}({self}) -> {propType}: ...");
+        w.WriteLine($"def {name}({self}) -> {propType}: ...{pyrightIgnore}");
 
         if (prop.SetMethod is not null)
         {
@@ -246,7 +250,7 @@ static class WriterExtensions
                 w.WriteLine("@abstractmethod");
             }
 
-            w.WriteLine($"def {name}({self}, value: {setType}) -> None: ...");
+            w.WriteLine($"def {name}({self}, value: {setType}) -> None: ...{pyrightIgnore}");
         }
     }
 }
