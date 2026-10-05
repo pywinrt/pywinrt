@@ -201,7 +201,7 @@ class TestThreads(unittest.TestCase):
         tests = tc.TestRunner.make_tests()
 
         def work(i: int) -> None:
-            seen = []
+            seen: list[str] = []
 
             def handler(value: str) -> tuple[str, str]:
                 seen.append(value)
