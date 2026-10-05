@@ -239,6 +239,7 @@ class AppWindowPresenter_Static(winrt._winrt.Object_Static):
     ...
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
+    def __init_subclass__(cls, *, runtime_class_name: str | None = None) -> None: ...
     # Microsoft.UI.Windowing.AppWindowPresenterKind Microsoft.UI.Windowing.AppWindowPresenter::get_Kind()
     @_property
     @typing.final

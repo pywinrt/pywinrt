@@ -216,6 +216,7 @@ class AppWindowPresentationConfiguration_Static(winrt._winrt.Object_Static):
     ...
 
 class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindowPresentationConfiguration_Static):
+    def __init_subclass__(cls, *, runtime_class_name: str | None = None) -> None: ...
     # Windows.UI.WindowManagement.AppWindowPresentationKind Windows.UI.WindowManagement.AppWindowPresentationConfiguration::get_Kind()
     @_property
     @typing.final
