@@ -250,7 +250,7 @@ INCLUDE_DIRS = [
 # An interop module reaches the runtime through Python objects only, so it
 # needs no header from winrt-runtime, and one written against raw COM needs no
 # C++/WinRT header either.
-HEADERS = """INCLUDE_DIRS = []"""
+HEADERS = """INCLUDE_DIRS: list[str] = []"""
 
 # One written against C++/WinRT carries the whole closure of the namespaces it
 # includes, winrt/base.h among them, written beside its setup.py by
@@ -265,7 +265,7 @@ CPPWINRT_HEADERS = """INCLUDE_DIRS = [
 # are published separately, so each module names the component that ships what
 # it includes.
 APP_SDK_INIT = """
-WINDOWS_APP_SDK_PATHS = {{}}
+WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {{}}
 
 for name in [{envs}]:
     try:

@@ -9,9 +9,9 @@ from setuptools.command.bdist_wheel import bdist_wheel
 from setuptools.command.build_ext import build_ext
 from setuptools.command.build_py import build_py
 
-INCLUDE_DIRS = []
+INCLUDE_DIRS: list[str] = []
 
-WINDOWS_APP_SDK_PATHS = {}
+WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {}
 
 for name in ["WASDK_FOUNDATION_PATH", "WASDK_RUNTIME_PATH"]:
     try:
