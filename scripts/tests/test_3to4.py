@@ -56,13 +56,13 @@ def run(path: Path, *args: str) -> list[str]:
 
 
 class Inspect(unittest.TestCase):
-    def setUp(self):
+    def setUp(self) -> None:
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
         self.path = Path(directory.name) / "backend.py"
         self.path.write_bytes(SOURCE.encode())
 
-    def test_report(self):
+    def test_report(self) -> None:
         p = self.path
 
         self.assertEqual(
@@ -115,7 +115,7 @@ class Inspect(unittest.TestCase):
             ],
         )
 
-    def test_fix_rewrites_the_packages_only(self):
+    def test_fix_rewrites_the_packages_only(self) -> None:
         self.assertEqual(
             run(self.path, "--fix")[-1], f"{self.path}: rewrote 3 package names"
         )
@@ -166,7 +166,7 @@ SETUP = textwrap.dedent(
 
 
 class Requirements(unittest.TestCase):
-    def setUp(self):
+    def setUp(self) -> None:
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
         self.directory = Path(directory.name)
@@ -176,7 +176,7 @@ class Requirements(unittest.TestCase):
         path.write_bytes(text.encode())
         return path
 
-    def test_report(self):
+    def test_report(self) -> None:
         p = self.write("requirements.txt", REQUIREMENTS)
         winui = floor("winrt-Microsoft.WindowsAppSDK.WinUI")
         interactive = floor("winrt-Microsoft.WindowsAppSDK.InteractiveExperiences")
@@ -204,7 +204,7 @@ class Requirements(unittest.TestCase):
             ],
         )
 
-    def test_fix(self):
+    def test_fix(self) -> None:
         p = self.write("requirements.txt", REQUIREMENTS)
         winui = floor("winrt-Microsoft.WindowsAppSDK.WinUI")
         interactive = floor("winrt-Microsoft.WindowsAppSDK.InteractiveExperiences")
@@ -231,7 +231,7 @@ class Requirements(unittest.TestCase):
             ),
         )
 
-    def test_fix_merges_a_toml_array(self):
+    def test_fix_merges_a_toml_array(self) -> None:
         p = self.write(
             "pyproject.toml",
             textwrap.dedent(
@@ -263,7 +263,7 @@ class Requirements(unittest.TestCase):
             ),
         )
 
-    def test_python_strings_only(self):
+    def test_python_strings_only(self) -> None:
         p = self.write("setup.py", SETUP)
         webview2 = floor("winrt-Microsoft.Web.WebView2")
 
@@ -293,7 +293,7 @@ class Tables(unittest.TestCase):
     are written by hand.
     """
 
-    def test_every_new_distribution_is_in_the_tree(self):
+    def test_every_new_distribution_is_in_the_tree(self) -> None:
         repo = SCRIPT.parent.parent.parent
         names: set[str] = set()
 
@@ -312,7 +312,7 @@ class Tables(unittest.TestCase):
                 with self.subTest(row["distribution"]):
                     self.assertIn(row["new_distribution"], names)
 
-    def test_readme_agrees(self):
+    def test_readme_agrees(self) -> None:
         readme = (SCRIPT.parent / "README.md").read_text()
         # | `a` ... | `b` | rows of the three tables of renamed distributions
         rows = [

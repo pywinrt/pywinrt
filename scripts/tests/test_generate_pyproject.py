@@ -19,7 +19,7 @@ class InteropBuildRequirement(unittest.TestCase):
     What an interop package needs of winrt-runtime to build from its sdist.
     """
 
-    def test_no_interop_package_build_requires_winrt_runtime(self):
+    def test_no_interop_package_build_requires_winrt_runtime(self) -> None:
         for package in sorted(versions.INTEROP_PATH.glob("winrt-*")):
             with self.subTest(package=package.name):
                 pyproject = tomllib.loads(
