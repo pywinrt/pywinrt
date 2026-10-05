@@ -4,7 +4,6 @@ from typing import NamedTuple
 from contextlib import contextmanager
 import io
 import json
-import os
 import re
 from pathlib import Path
 
