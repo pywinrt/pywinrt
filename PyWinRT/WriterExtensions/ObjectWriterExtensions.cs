@@ -255,6 +255,20 @@ static class ObjectWriterExtensions
             didWriteLine = true;
         }
 
+        // A Python class derived from a composable class is the only kind of
+        // class Python can make a runtime class of, so the name its instances
+        // give WinRT is taken there rather than by winrt.system.Object, which
+        // an implementation of an interface derives from too. A composable
+        // class only derives from another, so the first in a hierarchy is
+        // where it is declared.
+        if (type.IsComposable && type.Type.BaseType is null or { FullName: "System.Object" })
+        {
+            w.WriteLine(
+                "def __init_subclass__(cls, *, runtime_class_name: str | None = None) -> None: ..."
+            );
+            didWriteLine = true;
+        }
+
         if (type.IsPyCloseable)
         {
             w.WriteLine("def __enter__(self) -> typing.Self: ...");
