@@ -23,7 +23,7 @@ for name in ["WASDK_INTERACTIVE_EXPERIENCES_PATH"]:
 
 
 class build_ext_ex(build_ext):
-    def build_extension(self, ext):
+    def build_extension(self, ext: Extension) -> None:
         # nothing in the projection uses dynamic_cast or typeid, so disabling
         # RTTI costs nothing and makes the module about 15% smaller
         if self.compiler.compiler_type == "msvc":
