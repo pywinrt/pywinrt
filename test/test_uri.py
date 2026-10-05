@@ -1,4 +1,5 @@
 import unittest
+from collections.abc import Sequence
 from uuid import UUID
 
 import winrt.windows.foundation as wf
@@ -64,6 +65,17 @@ class TestUri(unittest.TestCase):
         t = qp.index_of(e0)
         self.assertTrue(t[0])
         self.assertEqual(t[1], 0)
+
+    def test_query_parsed_is_a_sequence(self) -> None:
+        # the type checkers check the call
+        def names(entries: Sequence[wf.IWwwFormUrlDecoderEntry]) -> list[str]:
+            return [e.name for e in entries]
+
+        qp = wf.Uri(
+            "http://microsoft.com?projection=python&platform=windows"
+        ).query_parsed
+
+        self.assertEqual(names(qp), ["projection", "platform"])
 
     def test_runtime_class_name_and_iids(self) -> None:
         uri = wf.Uri("https://example.com")

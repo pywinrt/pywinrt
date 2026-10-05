@@ -8,7 +8,8 @@ static class SeqWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap
+        IReadOnlyDictionary<string, string> packageMap,
+        bool isMutable
     )
     {
         var method = type.GetMethod("GetAt", 1);
@@ -25,11 +26,21 @@ static class SeqWriterExtensions
 
         w.WriteLine("def __len__(self) -> int: ...");
         w.WriteLine($"def __iter__(self) -> _cabc.Iterator[{elementType}]: ...");
-        w.WriteLine("@typing.overload");
+
+        // A slice is a winrt.system.Array, which is not a MutableSequence as
+        // collections.abc.MutableSequence says the slice of one is. mypy
+        // reports an overloaded method on its first decorator and pyright on
+        // its last definition.
+        var mypyIgnore = isMutable ? "  # type: ignore[override]" : "";
+        var pyrightIgnore = isMutable
+            ? "  # pyright: ignore[reportIncompatibleMethodOverride]"
+            : "";
+
+        w.WriteLine($"@typing.overload{mypyIgnore}");
         w.WriteLine($"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ...");
         w.WriteLine("@typing.overload");
         w.WriteLine(
-            $"def __getitem__(self, index: slice) -> winrt.system.Array[{elementType}]: ..."
+            $"def __getitem__(self, index: slice) -> winrt.system.Array[{elementType}]: ...{pyrightIgnore}"
         );
     }
 
@@ -66,6 +77,10 @@ static class SeqWriterExtensions
         w.WriteLine("@typing.overload");
         w.WriteLine(
             $"def __setitem__(self, index: slice, value: _cabc.Iterable[{valParamType}]) -> None: ..."
+        );
+        // InsertAt, with the position counted and clamped as a list does
+        w.WriteLine(
+            $"def insert(self, index: typing.SupportsIndex, value: {valParamType}) -> None: ..."
         );
     }
 }
