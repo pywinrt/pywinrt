@@ -5,7 +5,58 @@ static class NumberWriterExtensions
     private record ParamInfo(string Name, string PyType)
     {
         public string CppWinrtType => cppWinrtTypeFromPyType[PyType];
+
+        /// <summary>
+        /// The type this parameter is written with in a method or a factory
+        /// function: a struct or a tuple of its fields, as every other struct
+        /// parameter is and as the runtime takes it.
+        /// </summary>
+        /// <remarks>
+        /// An operator takes the struct alone, and so does a method whose
+        /// overloads take the same number of arguments, because the runtime
+        /// picks one of those by the exact type of the struct it is given.
+        /// </remarks>
+        public string PyInType =>
+            PyType switch
+            {
+                "float" => "float",
+                "Plane" =>
+                    $"Plane | tuple[{new ParamInfo(Name, "Vector3").PyInType}, winrt.system.Single]",
+                _ =>
+                    $"{PyType} | tuple[{string.Join(", ", Enumerable.Repeat("winrt.system.Single", fieldCounts[PyType]))}]",
+            };
     };
+
+    private static readonly IReadOnlyDictionary<string, int> fieldCounts = new Dictionary<
+        string,
+        int
+    >
+    {
+        { "Vector2", 2 },
+        { "Vector3", 3 },
+        { "Vector4", 4 },
+        { "Matrix3x2", 6 },
+        { "Matrix4x4", 16 },
+        { "Quaternion", 4 },
+    };
+
+    /// <summary>
+    /// The parameters of one overload of a method or a factory function, each
+    /// written as <see cref="ParamInfo.PyInType"/> unless another overload
+    /// takes as many arguments.
+    /// </summary>
+    private static string FormatInParameters(
+        IReadOnlyList<ParamInfo> parameters,
+        IEnumerable<IReadOnlyList<ParamInfo>> overloads
+    )
+    {
+        var byExactType = overloads.Count(o => o.Count == parameters.Count) > 1;
+
+        return string.Join(
+            "",
+            parameters.Select(p => $", {p.Name}: {(byExactType ? p.PyType : p.PyInType)}")
+        );
+    }
 
     private record FactoryInfo(
         string PyName,
@@ -805,9 +856,9 @@ static class NumberWriterExtensions
 
         foreach (var func in functions)
         {
-            var parameters = string.Join(
-                "",
-                func.Parameters.Select(p => $", {p.Name}: {p.PyType}")
+            var parameters = FormatInParameters(
+                func.Parameters,
+                functions.Where(f => f.PyName == func.PyName).Select(f => f.Parameters)
             );
 
             if (functions.Count(f => f.PyName == func.PyName) > 1)
@@ -874,9 +925,9 @@ static class NumberWriterExtensions
     {
         foreach (var method in extraMethods[type.Name])
         {
-            var parameters = string.Join(
-                "",
-                method.Parameters.Select(p => $", {p.Name}: {p.PyType}")
+            var parameters = FormatInParameters(
+                method.Parameters,
+                extraMethods[type.Name].Where(m => m.Name == method.Name).Select(m => m.Parameters)
             );
 
             if (extraMethods[type.Name].Count(m => m.Name == method.Name) > 1)
