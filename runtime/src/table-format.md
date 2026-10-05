@@ -425,15 +425,32 @@ Python input arguments, which is what selects between them at the call.
 
 A member with no forward shape cannot be called, and one with no reverse
 shape cannot be answered from Python. Two different things leave a member
-that way. A member of a **parameterized definition** has no ABI until its
-type arguments are known - `IVector<T>.Append` passes a `T` - so the
-definition's record carries none and the record of each concrete instance
-carries its own. Otherwise the table was generated against a **census that
+that way. A member of a **parameterized definition** that passes a `T` by
+value has no ABI until its type arguments are known - `IVector<T>.Append`
+passes one - so it has no shape in the definition's record, and the record of
+each concrete instance carries its own; one that passes none by value has its
+shape in the definition too, such as `GetAt`, which returns its `T` through a
+pointer, or `ReplaceAll`, which passes an array of them.
+Otherwise the table was generated against a **census that
 does not have the shape**, which only a third-party projection can be,
 since the census is taken over everything this tree projects. The generator
 warns in that case rather than refusing, so the rest of the namespace is
 still projected; a reader tells the two apart by the `parameterized` flag on
 the declaring type, and raises either way when the member is used.
+
+A member whose shape the census lacks is still described in full: its parameter
+records carry every type code, flag (`by_reference` included) and struct
+layout that its shape key is computed from, exactly as they would if the
+census had the shape. That is a rule of the format, not a coincidence of it.
+It keeps open a fix that needs no new table: a later `winrt-runtime` could
+make a call that no census shape covers through a generic caller that works
+from the parameter records, and every table already published with the
+generator's warning would start working on that runtime. So a change to the
+format may not drop anything the shape key is computed from. A member of a
+parameterized definition is not described that way and need not be: its
+records are the open form, with a type parameter written as `object`, which
+the `parameterized` flag on the declaring type says, and each concrete
+instance describes its own members in full.
 
 Member flags:
 
