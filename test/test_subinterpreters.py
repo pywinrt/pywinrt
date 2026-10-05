@@ -33,8 +33,10 @@ else:
 
 
 class TestSubinterpreters(unittest.TestCase):
-    @unittest.skipIf(run_in_subinterp is None, "_testcapi is not available")
     def test_legacy_subinterpreter_is_refused(self) -> None:
+        if run_in_subinterp is None:
+            self.skipTest("_testcapi is not available")
+
         self.assertEqual(run_in_subinterp(REFUSED), 0)
 
     def test_isolated_subinterpreter_is_refused(self) -> None:
