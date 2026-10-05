@@ -60,12 +60,14 @@ static class InterfaceWriterExtensions
         baseTypes.Add("winrt.system.Object");
 
         // An interface that declares no members of its own but inherits
-        // abstract ones from a required interface is not abstract as far as
-        // mypy is concerned, so it reports the inherited members as
-        // unimplemented. Declaring abc.ABCMeta as the metaclass, which is what
-        // mypy suggests, conflicts with the metaclass the projected type
-        // already has. See https://github.com/python/mypy/issues/17091.
-        var typeIgnore = !hasMembers && type.Interfaces.Any() ? "  # type: ignore[misc]" : "";
+        // abstract ones from a required interface is abstract to mypy only if
+        // it names an ABCMeta as its metaclass, which Object_Static is in the
+        // stubs; otherwise mypy reports the inherited members as unimplemented.
+        // See https://github.com/python/mypy/issues/17091.
+        if (!hasMembers && type.Interfaces.Any())
+        {
+            baseTypes.Add("metaclass=winrt._winrt.Object_Static");
+        }
 
         if (type.IsDeprecated)
         {
@@ -73,7 +75,7 @@ static class InterfaceWriterExtensions
         }
 
         w.WriteLine(
-            $"class {type.Name}{type.Type.PyTypeParameters}({string.Join(", ", baseTypes)}):{typeIgnore}"
+            $"class {type.Name}{type.Type.PyTypeParameters}({string.Join(", ", baseTypes)}):"
         );
         w.Indent++;
 
