@@ -22,12 +22,12 @@ class PlatformTelemetryRegistrationStatus(enum.IntEnum):
 
 @typing.final
 class PlatformTelemetryClient_Static(winrt._winrt.Object_Static):
-    @typing.overload
+    @typing.overload  # type: ignore[override]
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String)
     def register(cls, id: str, /) -> PlatformTelemetryRegistrationResult: ...
     @typing.overload
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String,Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings)
-    def register(cls, id: str, settings: PlatformTelemetryRegistrationSettings, /) -> PlatformTelemetryRegistrationResult: ...
+    def register(cls, id: str, settings: PlatformTelemetryRegistrationSettings, /) -> PlatformTelemetryRegistrationResult: ...  # pyright: ignore[reportIncompatibleMethodOverride]
     # Deprecated alias of register() for pywinrt v3.x compatibility.
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String,Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings)
     @deprecated("Use register() instead.")
