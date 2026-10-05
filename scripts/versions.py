@@ -284,7 +284,7 @@ def release_tags() -> dict[str, str]:
     """
     The tag that releases each unit, keyed the way published_versions() is.
     """
-    tags = {}
+    tags: dict[str, str] = {}
 
     for family, version in published_versions().items():
         epoch, _, release = version.rpartition("!")
@@ -373,7 +373,7 @@ def runtime_functions_called(package_path: Path) -> set[str]:
 
     for path in package_path.glob("winrt/**/*.py"):
         tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
-        aliases = set()
+        aliases: set[str] = set()
 
         for node in ast.walk(tree):
             if isinstance(node, ast.Import):
