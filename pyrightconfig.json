@@ -29,13 +29,12 @@
     "scripts/2to3"
   ],
 
-  // One installed set of the generated projection packages. _install/debug is
-  // the one the test run, the samples and editor completion share; CI has only
-  // _install/lint, which the lint job copies from the source tree, as it does
-  // for mypy. Excluding a directory above only keeps it out of the workspace
-  // scan: imports still resolve through an extra path, so completion sees just
-  // the packages the code actually imports.
-  "extraPaths": ["_install/debug", "_install/lint"],
+  // The packages merged as they are installed, which scripts/merge-packages.py
+  // copies from the source tree into _typing for the build and the lint job, as
+  // it does for mypy. Excluding a directory above only keeps it out of the
+  // workspace scan: imports still resolve through an extra path, so completion
+  // sees just the packages the code actually imports.
+  "extraPaths": ["_typing"],
 
   // the newest released Python, so that a check does not depend on which
   // interpreter runs pyright, as mypy.ini does

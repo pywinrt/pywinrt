@@ -34,6 +34,9 @@ bld/
 /_build/
 /_install/
 
+# the packages merged for the type checkers
+/_typing/
+
 # Build tools
 /_tools/
 
