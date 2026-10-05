@@ -59,7 +59,8 @@ class TestBuffer(unittest.TestCase):
     def test_is_collections_abc_buffer_subclass(self) -> None:
         from collections.abc import Buffer
 
-        self.assertTrue(issubclass(wss.Buffer, Buffer))
+        # https://github.com/microsoft/pyright/issues/11834
+        self.assertTrue(issubclass(wss.Buffer, Buffer))  # pyright: ignore[reportGeneralTypeIssues]
 
         with (
             wf.MemoryBuffer(4) as memory_buffer,
