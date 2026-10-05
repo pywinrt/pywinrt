@@ -45,7 +45,7 @@ from ._util import catch_unraisable
 
 #: Every winrt.system scalar alias with the three formats it is annotated
 #: with - buffer, struct and WinRT signature - and the WinRT type it names.
-SCALAR_ALIASES = [
+SCALAR_ALIASES: list[tuple[TypeForm[typing.Any], str, str, str, str]] = [
     (Int8, "b", "b", "i1", "Int8"),
     (UInt8, "B", "B", "u1", "UInt8"),
     (Int16, "h", "h", "i2", "Int16"),
@@ -695,7 +695,7 @@ class TestWinRTArray(unittest.TestCase):
             def to_string(self) -> str:
                 return "unequal"
 
-            def __eq__(self, other):
+            def __eq__(self, other: object) -> bool:
                 raise ZeroDivisionError
 
         # mypy, unlike pyright, cannot infer an interface from a list of a class
@@ -776,7 +776,9 @@ class TestArrayParameters(unittest.TestCase):
     def setUp(self) -> None:
         self.tests = tc.TestRunner.make_tests()
 
-    def check_forward(self, name: str, element, values: list) -> None:
+    def check_forward(
+        self, name: str, element: TypeForm[typing.Any], values: list[typing.Any]
+    ) -> None:
         passed = Array(element, values)
         lent = Array(element, len(values))
 
@@ -786,10 +788,14 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(list(received), values)
         self.assertEqual(list(returned), values)
 
-    def check_reverse(self, name: str, element, values: list) -> None:
-        seen = []
+    def check_reverse(
+        self, name: str, element: TypeForm[typing.Any], values: list[typing.Any]
+    ) -> None:
+        seen: list[tuple[list[typing.Any], int]] = []
 
-        def handler(passed, lent):
+        def handler(
+            passed: Array[typing.Any], lent: Array[typing.Any]
+        ) -> tuple[Array[typing.Any], Array[typing.Any]]:
             seen.append((list(passed), len(lent)))
 
             for index, value in enumerate(passed):
@@ -835,9 +841,11 @@ class TestArrayParameters(unittest.TestCase):
             self.assertEqual([str(value) for value in array], ["https://example.com/"])
 
     def test_interface_reverse(self) -> None:
-        seen = []
+        seen: list[list[str]] = []
 
-        def handler(passed, lent):
+        def handler(
+            passed: Array[IStringable], lent: Array[IStringable]
+        ) -> tuple[Array[IStringable], Array[IStringable]]:
             seen.append([str(value) for value in passed])
 
             for index, value in enumerate(passed):
@@ -850,9 +858,11 @@ class TestArrayParameters(unittest.TestCase):
         self.assertEqual(len(seen), 1)
 
     def test_lent_array_is_taken_back(self) -> None:
-        kept = []
+        kept: list[Array[bool]] = []
 
-        def handler(passed, lent):
+        def handler(
+            passed: Array[bool], lent: Array[bool]
+        ) -> tuple[Array[bool], Array[bool]]:
             kept.append(lent)
 
             for index, value in enumerate(passed):
@@ -978,14 +988,17 @@ class TestArrayParameters(unittest.TestCase):
             self.tests.array16(uris, Array(IStringable, 1))
 
     def test_references_returned_only_in_an_array(self) -> None:
-        def handler(passed, lent):
+        def handler(
+            passed: Array[str], lent: Array[str]
+        ) -> tuple[memoryview, Array[str]]:
             return memoryview(Array(str, list(passed))), Array(str, list(passed))
 
         with (
             self.assertRaises(OSError),
             catch_unraisable() as exceptions,
         ):
-            self.tests.array12_call(handler)
+            # the wrong return type is what is being tested
+            self.tests.array12_call(handler)  # type: ignore[arg-type]
 
         self.assertIsInstance(exceptions[0].exc_value, TypeError)
 
