@@ -389,7 +389,7 @@ static class ObjectWriterExtensions
 
         foreach (var group in type.MethodGroups.Where(g => !g.IsStatic))
         {
-            foreach (var method in group.Overloads)
+            foreach (var method in group.StubOverloads)
             {
                 if (group.IsOverloaded)
                 {
@@ -401,7 +401,7 @@ static class ObjectWriterExtensions
                     && !group.IsOverridable
                     && method.IsExclusiveTo
                     // mypy rule: @typing.final can only be applied to the first overload
-                    && method == group.Overloads[0]
+                    && method == group.StubOverloads[0]
                 )
                 {
                     // HACK: There are a couple of problematic methods. Subclasses of
