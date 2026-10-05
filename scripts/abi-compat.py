@@ -253,7 +253,7 @@ class Tree:
 
 
 def describe(tree: Tree) -> str:
-    parts = []
+    parts: list[str] = []
 
     if (table_format := tree.table_format) is not None:
         parts.append(f"table format {table_format[0]}.{table_format[1]}")
