@@ -47,14 +47,14 @@ from winrt.windows.ui.notifications import (
 # with a Windows message loop.
 sys.coinit_flags = 0  # type: ignore
 
-from comtypes import (  # noqa: E402
+from comtypes import (  # noqa: E402  # pyright: ignore[reportMissingTypeStubs]
     CLSCTX_LOCAL_SERVER,
-    COMMETHOD,
+    COMMETHOD,  # pyright: ignore[reportUnknownVariableType]
     GUID,
     COMObject,
     IUnknown,
 )
-from comtypes.server.localserver import (  # noqa: E402
+from comtypes.server.localserver import (  # noqa: E402  # pyright: ignore[reportMissingTypeStubs]
     REGCLS_MULTIPLEUSE,
     ClassFactory,
     run as run_local_server,
@@ -133,7 +133,7 @@ class NotificationActivationHandler(COMObject):
         self,
         appUserModelId: str,
         invokedArgs: str,
-        data: "ctypes._Pointer[NOTIFICATION_USER_INPUT_DATA]",
+        data: "ctypes._Pointer[NOTIFICATION_USER_INPUT_DATA]",  # pyright: ignore[reportPrivateUsage]
         count: int,
     ):
         try:
