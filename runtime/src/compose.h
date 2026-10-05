@@ -29,6 +29,8 @@ namespace py::interp
         PyObject* const* args,
         Py_ssize_t nargs) noexcept;
 
+    PyObject* init_subclass(PyObject* cls, PyObject* args, PyObject* kwds) noexcept;
+
     bool is_composed_identity(void const* identity) noexcept;
 
     void* composable_inner(void* abi) noexcept;

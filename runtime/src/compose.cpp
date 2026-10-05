@@ -632,6 +632,14 @@ namespace py::interp
             return false;
         }
 
+        /// Where init_subclass() keeps the name a class declared, which a
+        /// class derived from it inherits.
+        // REVISIT: once Python 3.11 is no longer supported, this could be type
+        // data of the metaclass (PEP 697, PyObject_GetTypeData()) rather than
+        // an attribute of the class, so that it is neither visible nor
+        // writable from Python.
+        constexpr char declared_class_name[] = "_declared_runtime_class_name_";
+
         /**
          * The name GetRuntimeClassName answers with.
          *
@@ -647,17 +655,14 @@ namespace py::interp
 
             if (PyObject_GetOptionalAttrString(
                     reinterpret_cast<PyObject*>(type),
-                    "_runtime_class_name_",
+                    declared_class_name,
                     declared.put())
                 < 0)
             {
                 throw python_exception();
             }
 
-            // _winrt.Object has an attribute of that name too - the name a
-            // WinRT object answers with - so what settles it is a class that
-            // has written a string there.
-            if (declared && PyUnicode_Check(declared.get()))
+            if (declared)
             {
                 return convert_to<winrt::hstring>(declared.get());
             }
@@ -670,6 +675,70 @@ namespace py::interp
             return winrt::to_hstring(named->winrt_name);
         }
     } // namespace
+
+    /**
+     * The __init_subclass__() of a composable class, which takes the name that
+     * instances of a Python class derived from it answer GetRuntimeClassName
+     * with, as the runtime_class_name keyword of the class statement.
+     *
+     * Any other keyword goes on to the classes after Object in the MRO, as
+     * Python's own __init_subclass__() would pass it.
+     */
+    PyObject* init_subclass(PyObject* cls, PyObject* args, PyObject* kwds) noexcept
+    {
+        pyobj_handle rest{kwds ? PyDict_Copy(kwds) : PyDict_New()};
+        if (!rest)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle name{};
+        if (PyDict_PopString(rest.get(), "runtime_class_name", name.put()) < 0)
+        {
+            return nullptr;
+        }
+
+        if (name && name.get() != Py_None)
+        {
+            if (!PyUnicode_Check(name.get()))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "runtime_class_name must be str, not %.200s",
+                    Py_TYPE(name.get())->tp_name);
+                return nullptr;
+            }
+
+            if (PyObject_SetAttrString(cls, declared_class_name, name.get()) < 0)
+            {
+                return nullptr;
+            }
+        }
+
+        auto* const object_type = get_object_type();
+        if (!object_type)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle parent{PyObject_CallFunctionObjArgs(
+            reinterpret_cast<PyObject*>(&PySuper_Type),
+            reinterpret_cast<PyObject*>(object_type),
+            cls,
+            nullptr)};
+        if (!parent)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle method{PyObject_GetAttrString(parent.get(), "__init_subclass__")};
+        if (!method)
+        {
+            return nullptr;
+        }
+
+        return PyObject_Call(method.get(), args, rest.get());
+    }
 
     /**
      * Whether @p identity, the IUnknown an object answers with, is the head of

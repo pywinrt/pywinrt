@@ -36,6 +36,7 @@
   `isinstance` check over `typing.get_args` rather than by its position. They
   are subclasses of `str`, and the buffer format comes first, so the single
   string the aliases used to carry reads back the same as it did.
+- A subclass of a composable class names its runtime class with `runtime_class_name=`.
 
 ### Changed
 - A projection package no longer contains a compiled extension module. Each
