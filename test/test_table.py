@@ -600,7 +600,7 @@ class TestShapeKeys(unittest.TestCase):
         census = json.loads(SHAPES_JSON.read_text())["shape_ids"]
         keys = ShapeKeys()
         checked = 0
-        wrong = []
+        wrong: list[tuple[str, str, str]] = []
 
         for namespace in (
             "TestComponent",
@@ -699,7 +699,7 @@ class TestTableParameterizedTypes(unittest.TestCase):
         # exist of must not, and working that out means composing the type
         # arguments along the whole chain of required interfaces rather than
         # one level at a time.
-        unusable = []
+        unusable: list[str] = []
 
         for parts in (
             ("test_winrt", "testcomponent"),
@@ -746,7 +746,7 @@ class TestTableParameterizedTypes(unittest.TestCase):
         # so for anything that values exist of it has to be a real interface
         # with an IID, closed over the type arguments along the whole chain:
         # JsonArray reaches IIterable<T> through IVector<IJsonValue>.
-        unusable = []
+        unusable: list[str] = []
 
         for parts in (
             ("test_winrt", "testcomponent"),
@@ -1010,7 +1010,7 @@ class TestTableGuids(unittest.TestCase):
         self.assertGreater(count, 0)
 
     def test_a_sample_against_the_published_values(self) -> None:
-        found = set()
+        found: set[tuple[str, str]] = set()
 
         for parts in (
             ("winrt", "windows", "foundation"),
@@ -1152,7 +1152,7 @@ struct Test.Missing.Inner external
             path.write_bytes(data)
             name = f"_failed_projection_{path.parent.name}"
 
-            errors = []
+            errors: list[ImportError] = []
 
             for _ in range(2):
                 with self.assertRaises(ImportError) as caught:
