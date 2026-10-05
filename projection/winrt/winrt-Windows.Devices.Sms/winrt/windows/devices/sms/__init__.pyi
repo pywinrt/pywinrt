@@ -709,7 +709,7 @@ class SmsMessageReceivedTriggerDetails(winrt.system.Object):
 @typing.final
 class SmsMessageRegistration_Static(winrt._winrt.Object_Static):
     # Windows.Devices.Sms.SmsMessageRegistration Windows.Devices.Sms.SmsMessageRegistration::Register(System.String,Windows.Devices.Sms.SmsFilterRules)
-    def register(cls, id: str, filter_rules: SmsFilterRules, /) -> SmsMessageRegistration: ...
+    def register(cls, id: str, filter_rules: SmsFilterRules, /) -> SmsMessageRegistration: ...  # type: ignore[override]
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.SmsMessageRegistration> Windows.Devices.Sms.SmsMessageRegistration::get_AllRegistrations()
     @_property
     def all_registrations(cls) -> _cabc.Sequence[SmsMessageRegistration]: ...
