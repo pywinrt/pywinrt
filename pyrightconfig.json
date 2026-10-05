@@ -42,8 +42,8 @@
   "pythonVersion": "3.14",
   "pythonPlatform": "Windows",
 
-  // A clean strict run is the goal. CI checks the directories that are clean
-  // so far; see lint.yaml.
+  // Strict as the top-level mode, because an execution environment's rule
+  // overrides are honored only then, not for the paths of a "strict" list.
   "typeCheckingMode": "strict",
 
   // PyInstaller, which only samples/winui2/build.py imports, is not installed;
