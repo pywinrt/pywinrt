@@ -1309,7 +1309,7 @@ class TestNumerics(unittest.TestCase):
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix4x4' and "
             r"'array.array'",
         ):
-            wfn.Matrix4x4() + flat
+            _ = wfn.Matrix4x4() + flat
 
         with self.assertRaisesRegex(
             TypeError,
