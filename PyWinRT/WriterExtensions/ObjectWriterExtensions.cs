@@ -36,11 +36,25 @@ static class ObjectWriterExtensions
 
             foreach (var group in type.MethodGroups.Where(g => g.IsStatic))
             {
+                // The stubs declare winrt._winrt.Object_Static as an ABCMeta,
+                // so a static register() is an incompatible override of
+                // ABCMeta.register(), which is not there at run time. mypy
+                // reports an overloaded method on its first decorator and
+                // pyright on its last definition. A method that is not
+                // overloaded is one line, where pyright honors mypy's ignore.
+                var shadowsAbcMeta = group.PyName == "register";
+                var mypyIgnore = shadowsAbcMeta ? "  # type: ignore[override]" : "";
+                var pyrightIgnore = shadowsAbcMeta
+                    ? "  # pyright: ignore[reportIncompatibleMethodOverride]"
+                    : "";
+
                 foreach (var method in group.Overloads)
                 {
                     if (group.IsOverloaded)
                     {
-                        w.WriteLine("@typing.overload");
+                        w.WriteLine(
+                            $"@typing.overload{(method == group.Overloads[0] ? mypyIgnore : "")}"
+                        );
                     }
 
                     if (
@@ -54,7 +68,18 @@ static class ObjectWriterExtensions
                         w.WriteLine("@typing.final");
                     }
 
-                    w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, "cls");
+                    w.WritePythonMethodTyping(
+                        method,
+                        ns,
+                        nullabilityMap,
+                        packageMap,
+                        "cls",
+                        ignoreComment: group.IsOverloaded
+                            ? method == group.Overloads[^1]
+                                ? pyrightIgnore
+                                : ""
+                            : mypyIgnore
+                    );
 
                     hasMembers = true;
                 }
