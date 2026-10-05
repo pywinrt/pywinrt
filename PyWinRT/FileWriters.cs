@@ -267,25 +267,24 @@ static class FileWriters
                     )
                 );
 
-            // REVISIT: What a handler returns is an input to the runtime, so it wants
-            // the typing a parameter of the same type gets rather than
-            // ToPyReturnTyping(). Outside the TestComponent modules only seven
-            // delegates return anything - a bool, a str, an Object, or an IBuffer,
-            // which is any Python buffer either way - so none of them differs.
-
             // The runtime ignores what a handler for a delegate with no outputs
             // hands back, so it may return anything, which is how typeshed
-            // types a callback whose result is not used.
+            // types a callback whose result is not used. The widened typing of
+            // the other outputs is for the type checker, which reads the stub;
+            // in __init__.py a union with a quoted name would raise TypeError
+            // at import time.
             var returnTyping =
                 invoke.ReturnType.FullName == "System.Void"
                 && !invoke.Parameters.Any(p => p.IsPythonOutParam)
                     ? "object"
-                    : invoke.ToPyReturnTyping(
-                        ns.Namespace,
-                        nullabilityInfo,
-                        packageMap,
-                        quoteImportedTypes: !forStub
-                    );
+                : forStub
+                    ? invoke.ToPyCallbackReturnTyping(ns.Namespace, nullabilityInfo, packageMap)
+                : invoke.ToPyReturnTyping(
+                    ns.Namespace,
+                    nullabilityInfo,
+                    packageMap,
+                    quoteImportedTypes: true
+                );
 
             var declaration = forStub ? $"type {type.Name}{type.Type.PyTypeParameters}" : type.Name;
 
