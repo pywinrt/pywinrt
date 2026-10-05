@@ -289,7 +289,7 @@ static class ObjectWriterExtensions
         if (type.IsComposable && type.Type.BaseType is null or { FullName: "System.Object" })
         {
             w.WriteLine(
-                "def __init_subclass__(cls, *, runtime_class_name: str | None = None) -> None: ..."
+                "def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ..."
             );
             didWriteLine = true;
         }
