@@ -1,3 +1,4 @@
+from types import TracebackType
 from typing import Self
 
 from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
@@ -10,7 +11,13 @@ RUNTIME_VERSION: str
 class Shutdown:
     def __call__(self) -> None: ...
     def __enter__(self) -> Self: ...
-    def __exit__(self, *args) -> None: ...
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+        /,
+    ) -> None: ...
 
 def initialize(
     major_minor_version: int,
