@@ -125,6 +125,19 @@ class ProjectedMethodGroup
             return overloads;
         }
 
+        // Only one base's overloads can come first, so pyright is satisfied
+        // for one of them. None of the projected metadata has such a method,
+        // so this is how the first one would be noticed.
+        if (overloadedBases.Count > 1)
+        {
+            Console.Error.WriteLine(
+                $"warning: {overloads[0].Method.DeclaringType.FullName}: the overloads of "
+                    + $"{overloads[0].PyName}() come from {string.Join(" and ", overloadedBases.Order())}, "
+                    + "and the stub can list only one of them first, so pyright may report the "
+                    + "others as an incompatible override (https://github.com/microsoft/pyright/issues/11836)"
+            );
+        }
+
         return
         [
             .. overloads.Where(m => overloadedBases.Contains(InheritedFrom(m))),
