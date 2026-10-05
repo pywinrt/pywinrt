@@ -815,6 +815,6 @@ class IRandomAccessStreamReference(winrt.system.Object):
 @typing.final
 class _IRandomAccessStreamWithContentType: ...
 
-class IRandomAccessStreamWithContentType(IContentTypeProvider, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object):  # type: ignore[misc]
+class IRandomAccessStreamWithContentType(IContentTypeProvider, IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object, metaclass=winrt._winrt.Object_Static):
     ...
 
