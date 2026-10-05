@@ -138,15 +138,17 @@ class TestImplements(unittest.TestCase):
         action = Action()  # type: ignore[abstract]
         seen = wf.IAsyncAction._from_(action)
 
-        status = []
-        seen.completed = lambda sender, value: status.append(value)
+        status: list[wf.AsyncStatus] = []
+        # https://github.com/microsoft/pyright/issues/11833
+        seen.completed = lambda sender, value: status.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
 
         self.assertIsNotNone(action.handler)
 
         action.handler(seen, wf.AsyncStatus.COMPLETED)
 
         self.assertEqual(status, [wf.AsyncStatus.COMPLETED])
-        self.assertIsNotNone(seen.completed)
+        # https://github.com/microsoft/pyright/issues/11833, narrowed to the lambda
+        self.assertIsNotNone(seen.completed)  # pyright: ignore[reportUnknownMemberType, reportUnknownArgumentType]
 
     def test_missing_method_is_unraisable(self) -> None:
         class Incomplete(tc.IRequiredOne):
