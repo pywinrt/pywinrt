@@ -1249,9 +1249,12 @@ The operators:
 | `abs(v)` | `v.length()`, for the vectors and the quaternion. |
 
 `*` between two matrices raises [`TypeError`][TypeError], so that it is never
-taken for either the matrix product or an elementwise product. With anything
-else that is not a number, `*` leaves the answer to the other operand, so a
-matrix and a NumPy array give NumPy's elementwise product either way round.
+taken for either the matrix product or an elementwise product. Otherwise an
+operator takes a value of the struct, or a number where it scales, and with
+anything else it leaves the answer to the other operand. So a struct and a
+NumPy array give NumPy's answer either way round, and a tuple raises
+`TypeError`, although a method takes a tuple of a struct's fields in place of
+the struct.
 
 The library uses row vectors: a vector is transformed by putting it on the
 left of a matrix, and a translation is in the last row of the matrix, in
@@ -1300,12 +1303,12 @@ np.asarray(points)[:, 2] = 1               # writes z of every point
 ```
 
 The other way around, a buffer of floats or doubles in exactly the shape of a
-struct is taken wherever the struct is, as a tuple of its fields is: a NumPy
-array of shape `(3,)` stands for a `Vector3` and one of shape `(4, 4)` for a
-`Matrix4x4`. The exceptions are a method whose overloads take different
-structs, such as `transform()`, and `@` with a vector on the left, which pick
-what to do by the type of the struct they are given, so they take the struct
-itself and not a tuple or a buffer. An `Array` of one of the structs is made from, and an array
+struct is taken wherever a method takes the struct, as a tuple of its fields
+is: a NumPy array of shape `(3,)` stands for a `Vector3` and one of shape
+`(4, 4)` for a `Matrix4x4`. The exception is a method whose overloads take
+different structs, such as `transform()`, which picks what to do by the type of
+the struct it is given, so it takes the struct itself and not a tuple or a
+buffer. An operator takes neither, as above. An `Array` of one of the structs is made from, and an array
 parameter of one takes, a block of `float32` values of shape `(n, 3)`,
 `(n, 4, 4)` and so on:
 
@@ -1342,9 +1345,10 @@ Array(Vector4, memoryview(rotations))      # the same floats, as two Vector4
     the product is `@`. The structs export a buffer, the vectors and the
     quaternion are sequences, a matrix takes `m[row, column]`, a number
     multiplies a matrix or a quaternion from either side, and a buffer is
-    taken in place of a struct. An `Array` of these structs exported a
-    buffer of one item per element with a named field per float, and exports
-    a block of floats.
+    taken in place of a struct where a method takes one. An operator took a
+    tuple of a struct's fields in place of the struct, and takes only the
+    struct. An `Array` of these structs exported a buffer of one item per
+    element with a named field per float, and exports a block of floats.
 
 [wfn]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.numerics
 [System.Numerics]: https://learn.microsoft.com/en-us/dotnet/api/system.numerics
