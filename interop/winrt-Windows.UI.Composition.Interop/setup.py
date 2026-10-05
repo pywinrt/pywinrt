@@ -3,7 +3,7 @@
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 
-INCLUDE_DIRS = []
+INCLUDE_DIRS: list[str] = []
 
 
 class build_ext_ex(build_ext):
