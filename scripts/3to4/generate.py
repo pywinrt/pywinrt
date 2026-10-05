@@ -73,7 +73,7 @@ WINUI2 = tool_path("Microsoft.UI.Xaml") / "lib" / "uap10.0"
 # The families that pywinrt v3.2.1 published, as scripts/generate-pywinrt.py
 # generates them: the top-level Python package, what is projected and what is
 # only referenced.
-FAMILIES = {
+FAMILIES: dict[str, tuple[str, list[str], list[str]]] = {
     "winrt": ("winrt", [f"winrt;{WINDOWS_SDK}"], []),
     "webview2": (
         "winrt",
@@ -157,7 +157,7 @@ def generate(family: str) -> set[tuple[str, str, str, str, str]]:
 
     result = subprocess.run(args, capture_output=True, text=True, check=True)
 
-    rows = set()
+    rows: set[tuple[str, str, str, str, str]] = set()
 
     for init_path in output.glob("*/**/__init__.py"):
         module = module_name(output / init_path.relative_to(output).parts[0], init_path)
@@ -277,7 +277,7 @@ def v3_distributions(tar: tarfile.TarFile) -> list[str]:
     """
     The name of each distribution that v3.2.1 published.
     """
-    result = []
+    result: list[str] = []
 
     for member in tar.getmembers():
         if not member.name.endswith("/pyproject.toml"):
@@ -305,8 +305,8 @@ def v4_distributions() -> tuple[dict[str, str], dict[tuple[str, str], str]]:
         check=True,
     ).stdout.split()
 
-    versions = {}
-    owners = {}
+    versions: dict[str, str] = {}
+    owners: dict[tuple[str, str], str] = {}
 
     for path in paths:
         directory = (REPO_PATH / path).parent
@@ -338,7 +338,7 @@ def distribution_rows(v3_names: list[str]) -> list[tuple[str, str, str]]:
     the last two empty for a distribution that v4 does not have.
     """
     versions, owners = v4_distributions()
-    rows = []
+    rows: list[tuple[str, str, str]] = []
 
     for name in v3_names:
         new_name = name
@@ -369,7 +369,7 @@ def v4_stubs() -> dict[str, ast.Module]:
     """
     The committed v4 stub of each module.
     """
-    result = {}
+    result: dict[str, ast.Module] = {}
 
     for family in FAMILIES:
         family_path = REPO_PATH / "projection" / family
@@ -400,7 +400,7 @@ def hresult_properties(stubs: dict[str, ast.Module]) -> set[tuple[str, str, str]
     (module, type, property) for each property in @p stubs that hands back an
     HResult.
     """
-    result = set()
+    result: set[tuple[str, str, str]] = set()
 
     for module, stub in stubs.items():
         for node in stub.body:
