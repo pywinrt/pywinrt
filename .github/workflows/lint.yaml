@@ -12,7 +12,7 @@ on:
       - .github/workflows/lint.yaml
       - mypy.ini
       - ruff.toml
-      - samples/pyrightconfig.json
+      - pyrightconfig.json
       - samples/requirements-dev.txt
       - '**/*.py'
       - '**/*.pyi'
@@ -21,7 +21,7 @@ on:
       - .github/workflows/lint.yaml
       - mypy.ini
       - ruff.toml
-      - samples/pyrightconfig.json
+      - pyrightconfig.json
       - samples/requirements-dev.txt
       - '**/*.py'
       - '**/*.pyi'
@@ -53,6 +53,7 @@ jobs:
         run: |
           python -m venv _install/samples-venv
           _install/samples-venv/Scripts/python -m pip install -r samples/requirements-dev.txt
-      # the settings are in samples/pyrightconfig.json
-      - name: Run pyright over the samples
-        run: pipx run pyright -p samples --pythonpath _install/samples-venv/Scripts/python.exe
+      # the settings are in pyrightconfig.json, which the editor reads too; the
+      # directories listed are the ones that are clean in strict mode so far
+      - name: Run pyright
+        run: pipx run pyright --pythonpath _install/samples-venv/Scripts/python.exe test samples
