@@ -559,20 +559,38 @@ that answers to all of them. The type hints mark the members abstract, so a
 type checker reports one that is missing; at run time a missing member fails
 only when WinRT calls it.
 
+The type hints of a member say what a caller may pass, which is more than the
+WinRT type: a tuple for a struct, a Python collection for a collection
+interface, any buffer for an `IBuffer`. A method of an implementation can be
+called from Python as well as by WinRT, and only a call from WinRT is
+converted, so it takes the same types, as `target_type` does below.
+
 ```python
+from typing_extensions import override
+
 from winrt.system import Object, box_string, unbox_string
 from winrt.windows.ui.xaml.data import IValueConverter
-from winrt.windows.ui.xaml.interop import TypeName
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 
 class UpperCase(IValueConverter):
+    @override
     def convert(
-        self, value: Object, target_type: TypeName, parameter: Object, language: str
+        self,
+        value: Object,
+        target_type: TypeName | tuple[str, TypeKind],
+        parameter: Object,
+        language: str,
     ) -> Object:
         return box_string(unbox_string(value).upper())
 
+    @override
     def convert_back(
-        self, value: Object, target_type: TypeName, parameter: Object, language: str
+        self,
+        value: Object,
+        target_type: TypeName | tuple[str, TypeKind],
+        parameter: Object,
+        language: str,
     ) -> Object:
         return value
 ```
