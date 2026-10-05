@@ -192,6 +192,16 @@ class TestCollectionsPropertySet(unittest.TestCase):
         with self.assertRaises(KeyError):
             m.popitem()
 
+    def test_property_set_is_a_mutable_mapping(self) -> None:
+        # the type checkers check the call
+        def keys(m: collections.abc.MutableMapping[str, Object]) -> list[str]:
+            return list(m)
+
+        m = wfc.PropertySet()
+        m["hello"] = box_string("world")
+
+        self.assertEqual(keys(m), ["hello"])
+
 
 class TestCollectionsVector(unittest.TestCase):
     def setUp(self) -> None:

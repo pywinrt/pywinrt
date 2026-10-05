@@ -194,11 +194,11 @@ static class ObjectWriterExtensions
 
             if (type.IsPyMutableMapping)
             {
-                collection = $", winrt._winrt.MutableMapping[{keyType}, {valueType}]";
+                collection = $", _cabc.MutableMapping[{keyType}, {valueType}]";
             }
             else
             {
-                collection = $", winrt._winrt.Mapping[{keyType}, {valueType}]";
+                collection = $", _cabc.Mapping[{keyType}, {valueType}]";
             }
         }
         else if (type.IsPySequence)
@@ -217,11 +217,11 @@ static class ObjectWriterExtensions
 
             if (type.IsPyMutableSequence)
             {
-                collection = $", winrt._winrt.MutableSequence[{elementType}]";
+                collection = $", _cabc.MutableSequence[{elementType}]";
             }
             else
             {
-                collection = $", winrt._winrt.Sequence[{elementType}]";
+                collection = $", _cabc.Sequence[{elementType}]";
             }
         }
 
@@ -336,7 +336,13 @@ static class ObjectWriterExtensions
         }
         else if (type.IsPySequence)
         {
-            w.WriteSeqPythonSpecialMethods(type, ns, nullabilityMap, packageMap);
+            w.WriteSeqPythonSpecialMethods(
+                type,
+                ns,
+                nullabilityMap,
+                packageMap,
+                isMutable: type.IsPyMutableSequence
+            );
 
             if (type.IsPyMutableSequence)
             {
