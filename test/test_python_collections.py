@@ -12,9 +12,11 @@ which is what reaches the members that only a mutable collection has.
 
 import sys
 import unittest
-from typing import Any
+from collections.abc import Iterable, Mapping, MutableMapping, MutableSequence, Sequence
+from typing import Any, SupportsIndex
 
 import test_winrt.testcomponent as tc
+from winrt.windows.foundation.collections import IKeyValuePair
 from winrt.system.hresult import E_BOUNDS, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
 
 from ._util import catch_unraisable
@@ -56,7 +58,7 @@ class LoggingMapping:
         return iter(self.items)
 
 
-class LoggingList(list):
+class LoggingList(list[str]):
     """A list that records every operation, including the ones that change it."""
 
     log: list[str]
@@ -69,15 +71,15 @@ class LoggingList(list):
         self.log.append("len")
         return super().__len__()
 
-    def __getitem__(self, index: Any) -> Any:
+    def __getitem__(self, index: SupportsIndex | slice) -> Any:
         self.log.append("getitem")
         return super().__getitem__(index)
 
-    def __setitem__(self, index: Any, value: Any) -> None:
+    def __setitem__(self, index: SupportsIndex | slice, value: Any) -> None:
         self.log.append("setitem")
         super().__setitem__(index, value)
 
-    def __delitem__(self, index: Any) -> None:
+    def __delitem__(self, index: SupportsIndex | slice) -> None:
         self.log.append("delslice" if isinstance(index, slice) else "delitem")
         super().__delitem__(index)
 
@@ -90,7 +92,7 @@ class LoggingList(list):
         super().append(value)
 
 
-class LoggingDict(dict):
+class LoggingDict(dict[str, str]):
     """A dict that records every operation, including the ones that change it."""
 
     log: list[str]
@@ -318,7 +320,7 @@ class TestCollectionFromAHandler(unittest.TestCase):
     def test_a_handler_hands_back_an_iterable(self) -> None:
         handed: list[LoggingList] = []
 
-        def handler(items):
+        def handler(items: Iterable[str]) -> tuple[LoggingList, LoggingList]:
             handed.append(LoggingList(items))
             handed.append(LoggingList(items))
             return handed[-2], handed[-1]
@@ -330,7 +332,7 @@ class TestCollectionFromAHandler(unittest.TestCase):
     def test_a_handler_hands_back_a_vector(self) -> None:
         handed: list[LoggingList] = []
 
-        def handler(items):
+        def handler(items: MutableSequence[str]) -> tuple[LoggingList, LoggingList]:
             handed.append(LoggingList(items))
             handed.append(LoggingList(items))
             return handed[-2], handed[-1]
@@ -353,7 +355,7 @@ class TestCollectionFromAHandler(unittest.TestCase):
     def test_a_handler_hands_back_a_vector_view(self) -> None:
         handed: list[LoggingList] = []
 
-        def handler(items):
+        def handler(items: Sequence[str]) -> tuple[LoggingList, LoggingList]:
             handed.append(LoggingList(items))
             handed.append(LoggingList(items))
             return handed[-2], handed[-1]
@@ -368,8 +370,10 @@ class TestCollectionFromAHandler(unittest.TestCase):
     def test_a_handler_hands_back_a_map(self) -> None:
         handed: list[LoggingDict] = []
 
-        def handler(entries):
-            values = {key: entries.lookup(key) for key in entries}
+        def handler(
+            entries: MutableMapping[str, str],
+        ) -> tuple[LoggingDict, LoggingDict]:
+            values = dict(entries)
             handed.append(LoggingDict(values))
             handed.append(LoggingDict(values))
             return handed[-2], handed[-1]
@@ -388,8 +392,8 @@ class TestCollectionFromAHandler(unittest.TestCase):
     def test_a_handler_hands_back_a_map_view(self) -> None:
         handed: list[LoggingDict] = []
 
-        def handler(entries):
-            values = {key: entries.lookup(key) for key in entries}
+        def handler(entries: Mapping[str, str]) -> tuple[LoggingDict, LoggingDict]:
+            values = dict(entries)
             handed.append(LoggingDict(values))
             handed.append(LoggingDict(values))
             return handed[-2], handed[-1]
@@ -401,7 +405,9 @@ class TestCollectionFromAHandler(unittest.TestCase):
     def test_a_handler_hands_back_an_iterable_of_pairs(self) -> None:
         handed: list[LoggingDict] = []
 
-        def handler(pairs):
+        def handler(
+            pairs: Iterable[IKeyValuePair[str, str]],
+        ) -> tuple[LoggingDict, LoggingDict]:
             values = {pair.key: pair.value for pair in pairs}
             handed.append(LoggingDict(values))
             handed.append(LoggingDict(values))
@@ -421,7 +427,8 @@ class TestCollectionElements(unittest.TestCase):
         actual: list[int] = []
 
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
-        op.progress = lambda sender, value: actual.append(value)
+        # https://github.com/microsoft/pyright/issues/11833
+        op.progress = lambda sender, value: actual.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
         op.get()
 
         self.assertListEqual(actual, expected)
