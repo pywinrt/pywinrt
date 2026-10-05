@@ -86,15 +86,16 @@ class TestClasses(unittest.TestCase):
 
     def test_from_is_a_deprecated_alias_of_from_(self) -> None:
         uri = wf.Uri("https://example.com")
-        # neither name is in the type hints
+        # _from is not in the type hints
         classes: tuple[Any, ...] = (wf.IStringable, wf.Uri, Object)
 
         for cls in classes:
             with self.subTest(cls=cls):
                 with self.assertWarns(DeprecationWarning):
-                    seen = cls._from(uri)
+                    seen: object = cls._from(uri)
 
-                self.assertIs(type(seen), type(cls._from_(uri)))
+                fresh: object = cls._from_(uri)
+                self.assertIs(type(seen), type(fresh))
                 self.assertEqual(seen, uri)
 
     def test_a_member_of_a_required_interface(self) -> None:
@@ -336,7 +337,7 @@ class TestMembers(unittest.TestCase):
     def test_a_descriptor_names_itself(self) -> None:
         # the members of a wrapper type are built from the table, so its stub
         # is the interface's and names none of them
-        descriptor = tc._ITests.simple  # type: ignore[attr-defined]
+        descriptor = getattr(tc._ITests, "simple")
 
         self.assertEqual(descriptor.__name__, "simple")
         self.assertIs(descriptor.__objclass__, tc._ITests)
