@@ -35,7 +35,7 @@ def get_sbom_components(wheel: zipfile.ZipFile) -> set[str]:
     The root component is the distribution itself rather than something
     redistributed, so it is not one of these.
     """
-    components = set()
+    components: set[str] = set()
 
     for name in wheel.namelist():
         if not name.endswith(".json"):
@@ -88,7 +88,7 @@ def check_wheel(path: Path) -> list[str]:
     """
     Everything wrong with one wheel, as a list of lines to print.
     """
-    problems = []
+    problems: list[str] = []
 
     with zipfile.ZipFile(path) as wheel:
         binaries = get_binaries(wheel)
