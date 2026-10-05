@@ -219,7 +219,7 @@ class Member:
     reverse: int = NO_REF
     role: int = 0
     flags: int = 0
-    params: list[Param] = field(default_factory=list)
+    params: list[Param] = field(default_factory=list[Param])
 
 
 @dataclass
@@ -227,7 +227,7 @@ class Group:
     kind: int
     py: str
     flags: int = 0
-    members: list[Member] = field(default_factory=list)
+    members: list[Member] = field(default_factory=list[Member])
 
 
 @dataclass
@@ -254,14 +254,14 @@ class Type:
     signature: str = ""
     base: str | None = None
     default: str | None = None
-    requires: list[str] = field(default_factory=list)
-    arguments: list[str] = field(default_factory=list)
-    factories: list[str] = field(default_factory=list)
-    composable: list[str] = field(default_factory=list)
-    overridable: list[str] = field(default_factory=list)
-    fields: list[Field] = field(default_factory=list)
-    constants: list[Constant] = field(default_factory=list)
-    groups: list[Group] = field(default_factory=list)
+    requires: list[str] = field(default_factory=list[str])
+    arguments: list[str] = field(default_factory=list[str])
+    factories: list[str] = field(default_factory=list[str])
+    composable: list[str] = field(default_factory=list[str])
+    overridable: list[str] = field(default_factory=list[str])
+    fields: list[Field] = field(default_factory=list[Field])
+    constants: list[Constant] = field(default_factory=list[Constant])
+    groups: list[Group] = field(default_factory=list[Group])
 
 
 @dataclass
@@ -271,7 +271,7 @@ class Table:
     lineage: str
     revision: int
     namespace: str
-    types: list[Type] = field(default_factory=list)
+    types: list[Type] = field(default_factory=list[Type])
 
 
 def compile_table(source: Path | str, destination: Path | str) -> None:
@@ -629,7 +629,7 @@ def build(table: Table) -> bytes:
     to one of them becomes: an index the runtime resolves without searching.
     """
     types = table.types
-    index = {}
+    index: dict[str, int] = {}
 
     for position, type_ in enumerate(types):
         if type_.name in index:
@@ -745,7 +745,7 @@ def build(table: Table) -> bytes:
 
     directory_offset = _align(HEADER_SIZE, 8)
     offset = _align(directory_offset + len(sections) * SECTION_ENTRY_SIZE, 8)
-    offsets = {}
+    offsets: dict[str, int] = {}
 
     for tag, size in sections:
         offsets[tag] = offset
