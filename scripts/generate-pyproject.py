@@ -1,4 +1,4 @@
-from collections.abc import Iterator
+from collections.abc import Generator
 import hashlib
 from typing import NamedTuple
 from contextlib import contextmanager
@@ -269,7 +269,7 @@ PYTHON_KEYWORDS = {
 
 
 @contextmanager
-def open_if_changed(path: Path) -> Iterator[io.StringIO]:
+def open_if_changed(path: Path) -> Generator[io.StringIO]:
     """
     Opens a text buffer for path. On exit, the file is written only if what was
     written to the buffer differs from what the file already holds.
