@@ -5,7 +5,6 @@ import types
 from typing import (
     Any,
     ClassVar,
-    Generic,
     Protocol,
     Self,
     SupportsIndex,
@@ -13,7 +12,7 @@ from typing import (
     final,
     overload,
 )
-from collections.abc import ItemsView, Iterable, Iterator, KeysView, ValuesView
+from collections.abc import Iterator
 from uuid import UUID
 
 from typing_extensions import Buffer, TypeForm, deprecated
@@ -85,10 +84,6 @@ def unbox_time_span(value: Object) -> timedelta: ...
 def read_table(data: bytes | bytearray | memoryview) -> dict[str, Any]: ...
 
 _T = TypeVar("_T")
-_T_co = TypeVar("_T_co", covariant=True)  # Any type covariant containers.
-_KT = TypeVar("_KT")
-_VT = TypeVar("_VT")
-_VT_co = TypeVar("_VT_co", covariant=True)  # Value type covariant containers.
 _TObject = TypeVar("_TObject", bound=Object)
 
 # What as_() asks of the type it is given, a projected one or an interop
@@ -98,63 +93,6 @@ class _SupportsFrom(Protocol):
     def _from_(cls, obj: Object, /) -> Self: ...
 
 _TFrom = TypeVar("_TFrom", bound=_SupportsFrom)
-
-# these classes don't actually exist but are just used to simplify type checking
-
-class Sequence(Generic[_T_co]):
-    # collections.abc.Sequence mixin methods
-    def index(self, value: Any, start: int = 0, stop: int = ...) -> int: ...
-    def count(self, value: Any) -> int: ...
-    def __reversed__(self) -> Iterator[_T_co]: ...
-
-class MutableSequence(Sequence[_T]):
-    # insert_at, with the position counted and clamped as a list does
-    def insert(self, index: SupportsIndex, value: _T) -> None: ...
-    # collections.abc.MutableSequence mixin methods
-    def extend(self, values: Iterable[_T]) -> None: ...
-    def reverse(self) -> None: ...
-    def pop(self, index: int = -1) -> _T: ...
-    def remove(self, value: _T) -> None: ...
-    def __iadd__(self, values: Iterable[_T]) -> Self: ...
-
-class Mapping(Generic[_KT, _VT_co]):
-    # collections.abc.Mapping mixin methods
-    @overload
-    def get(self, key: _KT, /) -> _VT_co | None: ...
-    @overload
-    def get(self, key: _KT, /, default: _VT_co | _T) -> _VT_co | _T: ...
-    def items(self) -> ItemsView[_KT, _VT_co]: ...
-    def keys(self) -> KeysView[_KT]: ...
-    def values(self) -> ValuesView[_VT_co]: ...
-    def __eq__(self, other: object, /) -> bool: ...
-
-class SupportsKeysAndGetItem(Protocol[_KT, _VT_co]):
-    def keys(self) -> Iterable[_KT]: ...
-    def __getitem__(self, key: _KT, /) -> _VT_co: ...
-
-class MutableMapping(Mapping[_KT, _VT]):
-    # collections.abc.MutableMapping mixin methods
-    @overload
-    def pop(self, key: _KT, /) -> _VT: ...
-    @overload
-    def pop(self, key: _KT, /, default: _VT) -> _VT: ...
-    @overload
-    def pop(self, key: _KT, /, default: _T) -> _VT | _T: ...
-    def popitem(self) -> tuple[_KT, _VT]: ...
-    @overload
-    def setdefault(
-        self: MutableMapping[_KT, _T | None], key: _KT, default: None = None, /
-    ) -> _T | None: ...
-    @overload
-    def setdefault(self, key: _KT, default: _VT, /) -> _VT: ...
-    @overload
-    def update(self, m: SupportsKeysAndGetItem[_KT, _VT], /, **kwargs: _VT) -> None: ...
-    @overload
-    def update(self, m: Iterable[tuple[_KT, _VT]], /, **kwargs: _VT) -> None: ...
-    @overload
-    def update(self, **kwargs: _VT) -> None: ...
-
-# actual runtime classes
 
 # Declared as an ABCMeta although at run time it derives from type: a type
 # checker requires an abstract member to be implemented only under ABCMeta, and
@@ -182,8 +120,6 @@ class Object(metaclass=Object_Static):
     @classmethod
     def _from_(cls, obj: Object, /) -> Self: ...
 
-# The real ABC rather than the Sequence above, because an Array is registered
-# as one and is accepted wherever a collections.abc.Sequence is.
 @final
 class Array(collections.abc.Sequence[_T]):
     _winrt_element_type_name_: str
