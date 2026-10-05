@@ -997,8 +997,7 @@ class TestArrayParameters(unittest.TestCase):
             self.assertRaises(OSError),
             catch_unraisable() as exceptions,
         ):
-            # the wrong return type is what is being tested
-            self.tests.array12_call(handler)  # type: ignore[arg-type]
+            self.tests.array12_call(handler)
 
         self.assertIsInstance(exceptions[0].exc_value, TypeError)
 
