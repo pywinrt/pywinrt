@@ -1,3 +1,5 @@
+using Mono.Cecil;
+
 /// <summary>
 /// A deprecated Python name that is aliased to a method of a
 /// <see cref="ProjectedMethodGroup"/>.
@@ -31,6 +33,7 @@ class ProjectedMethodGroup
     {
         Overloads = overloads;
         Aliases = aliases;
+        StubOverloads = OrderForStub(overloads);
 
         var first = overloads[0];
 
@@ -83,6 +86,20 @@ class ProjectedMethodGroup
     public IReadOnlyList<ProjectedMethod> Overloads { get; }
 
     /// <summary>
+    /// Gets the overloads in the order the type stubs list them: the ones a
+    /// base type the stub derives from has overloads of come first, so that a
+    /// type checker comparing them with the base finds them before the ones the
+    /// type adds, and the rest follow; each in order of Python arguments.
+    /// </summary>
+    /// <remarks>
+    /// The order only matters to pyright, which stops comparing at the first
+    /// overload the base has no match for
+    /// (https://github.com/microsoft/pyright/issues/11836). The overloads take
+    /// different numbers of arguments, so callers see no difference.
+    /// </remarks>
+    public IReadOnlyList<ProjectedMethod> StubOverloads { get; }
+
+    /// <summary>
     /// Gets the deprecated aliases of methods in this group, if any.
     /// </summary>
     public IReadOnlyList<MethodAlias> Aliases { get; }
@@ -92,4 +109,55 @@ class ProjectedMethodGroup
     /// and therefore requires <c>@typing.overload</c> in the type stubs.
     /// </summary>
     public bool IsOverloaded => Overloads.Count > 1;
+
+    private static IReadOnlyList<ProjectedMethod> OrderForStub(
+        IReadOnlyList<ProjectedMethod> overloads
+    )
+    {
+        var overloadedBases = overloads
+            .GroupBy(InheritedFrom)
+            .Where(g => g.Key is not null && g.Count() > 1)
+            .Select(g => g.Key)
+            .ToHashSet();
+
+        if (overloadedBases.Count == 0)
+        {
+            return overloads;
+        }
+
+        return
+        [
+            .. overloads.Where(m => overloadedBases.Contains(InheritedFrom(m))),
+            .. overloads.Where(m => !overloadedBases.Contains(InheritedFrom(m))),
+        ];
+    }
+
+    /// <summary>
+    /// The interface that <paramref name="method"/> belongs to, if the stub of
+    /// the type it is a member of derives from that interface; an interface
+    /// that is exclusive to a class is not one of the class's bases.
+    /// </summary>
+    private static string? InheritedFrom(ProjectedMethod method)
+    {
+        var declaring = method.Method.DeclaringType.Resolve();
+
+        if (declaring.IsInterface)
+        {
+            return declaring.IsExclusiveTo ? null : declaring.FullName;
+        }
+
+        // A runtime class lists every method of the interfaces it implements as
+        // its own, and says which interface method each one implements.
+        foreach (var implemented in method.Method.Overrides)
+        {
+            var iface = implemented.DeclaringType.Resolve();
+
+            if (!iface.IsExclusiveTo)
+            {
+                return iface.FullName;
+            }
+        }
+
+        return null;
+    }
 }
