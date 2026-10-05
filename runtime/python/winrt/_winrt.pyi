@@ -105,10 +105,9 @@ class Object_Static(abc.ABCMeta):
 # interface derives from the projected name of that interface, and therefore
 # from this, without being a wrapper around a WinRT object (at run time it does
 # not derive from Object, and isinstance() says it is one all the same): the
-# three members below are what the runtime gives a wrapper, so they are
-# declared here but not required of a subclass. The members of the interface
-# itself are abstract, because implementing them is what deriving from it
-# means.
+# runtime gives it the three members below as it gives a wrapper. The members
+# of the interface itself are abstract, because implementing them is what
+# deriving from it means.
 class Object(metaclass=Object_Static):
     def as_(self, type: TypeForm[_TFrom], /) -> _TFrom: ...
     @property
