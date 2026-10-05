@@ -10,7 +10,7 @@ INCLUDE_DIRS = [
     os.fspath(pathlib.Path(__file__).parent / "cppwinrt"),
 ]
 
-WINDOWS_APP_SDK_PATHS = {}
+WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {}
 
 for name in ["WASDK_INTERACTIVE_EXPERIENCES_PATH"]:
     try:
