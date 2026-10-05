@@ -371,6 +371,62 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
+    /// <summary>
+    /// Gets the Python type hint for what a handler of a WinRT delegate returns.
+    /// </summary>
+    /// <remarks>
+    /// What a handler returns is an input to the runtime, as the arguments of a
+    /// call are, so each output takes what a parameter of its type takes: a
+    /// tuple for a struct, a Python collection, any buffer for an array.
+    /// </remarks>
+    public static string ToPyCallbackReturnTyping(
+        this MethodDefinition method,
+        string ns,
+        MethodNullabilityInfo nullabilityInfo,
+        IReadOnlyDictionary<string, string> packageMap,
+        bool quoteImportedTypes = false
+    )
+    {
+        string Output(TypeReference type, TypeRefNullabilityInfo nullability, bool isArray) =>
+            isArray
+                ? $"winrt.system.Array[{type.ToPyTypeName(ns, nullability, packageMap, default, quoteImportedTypes)}] | winrt.system.ReadableBuffer"
+                : type.ToPyTypeName(
+                    ns,
+                    nullability,
+                    packageMap,
+                    default,
+                    quoteImportedTypes,
+                    useStructTupleUnion: true,
+                    useKeyValuePairIterMappingUnion: true
+                );
+
+        var outputs = method
+            .Parameters.Where(p => p.IsPythonOutParam)
+            .Select(p =>
+                Output(
+                    p.ParameterType,
+                    nullabilityInfo.Parameters[p.Index].Type,
+                    p.GetCategory() == ParamCategory.ReceiveArray
+                )
+            )
+            .ToList();
+
+        if (method.ReturnType.FullName != "System.Void")
+        {
+            outputs.Insert(
+                0,
+                Output(method.ReturnType, nullabilityInfo.Return.Type, method.ReturnType.IsArray)
+            );
+        }
+
+        return outputs.Count switch
+        {
+            0 => "None",
+            1 => outputs[0],
+            _ => $"tuple[{string.Join(", ", outputs)}]",
+        };
+    }
+
     public static string ToPyReturnTyping(
         this MethodDefinition method,
         string ns,
