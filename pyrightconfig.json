@@ -11,17 +11,21 @@
   // analysed. The first three patterns are pyright's own defaults, which
   // setting this key would otherwise replace; "**/.*" is what covers
   // .mypy_cache and .ruff_cache. "**/build" is what setuptools leaves next to a
-  // package it built. The generated __init__.py binds the names it exports from
-  // the projection table at import time, which a type checker cannot follow;
-  // the stubs beside it are what describes those modules. scripts/2to3 is the
-  // PyWinRT 2.x to 3.x migration script, which is kept as it was written for 3.0.
+  // package it built. scripts/2to3 is the PyWinRT 2.x to 3.x migration script,
+  // which is kept as it was written for 3.0.
+  //
+  // The projection and interop packages are checked as installed, merged into
+  // one tree, by pyrightconfig.lint.json: an interop package is a subpackage
+  // of a projection package, so from the source tree each of them is a second
+  // copy of a module that imports resolve to elsewhere.
   "exclude": [
     "**/node_modules",
     "**/__pycache__",
     "**/.*",
     "_*/**",
     "**/build",
-    "projection/**/*.py",
+    "projection/**",
+    "interop/*/winrt/**",
     "scripts/2to3"
   ],
 
@@ -54,21 +58,6 @@
       "reportUnnecessaryIsInstance": "none",
       "reportUnnecessaryComparison": "none",
       "reportPrivateUsage": "none"
-    },
-    // The generated stubs refer to the deprecated types and members WinRT
-    // still has. A property of a PEP 695 generic class whose type refers back
-    // to the class is reported as redeclared until
-    // https://github.com/microsoft/pyright/issues/11835 is fixed.
-    // TODO: a stub imports winrt._winrt, winrt.system and every namespace its
-    // types and their inherited interfaces refer to, whether it uses them or
-    // not. Choose them from the written stub, as its standard library imports
-    // are, then remove reportUnusedImport.
-    {
-      "root": "projection",
-      "reportDeprecated": "none",
-      "reportRedeclaration": "none",
-      "reportFunctionMemberAccess": "none",
-      "reportUnusedImport": "none"
     },
     // The scripts import each other as top-level modules, and their tests
     // import them through the scripts package. They use no WinRT types.

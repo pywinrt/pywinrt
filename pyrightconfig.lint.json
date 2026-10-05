@@ -1,0 +1,33 @@
+{
+  // The projection and interop packages as they are installed: merged into one
+  // tree, which is what an interop package needs, being a subpackage of a
+  // projection package. The lint job in .github/workflows/lint.yaml copies
+  // them into _install/lint and runs pyright with this file; everything else
+  // is in pyrightconfig.json, which Pylance reads.
+  "extends": "pyrightconfig.json",
+
+  "include": ["_install/lint"],
+  "exclude": ["**/__pycache__"],
+
+  // only the merged tree: a copy anywhere else would be a second identity of
+  // the module being checked
+  "extraPaths": ["_install/lint"],
+
+  "executionEnvironments": [
+    // The generated stubs refer to the deprecated types and members WinRT
+    // still has. A property of a PEP 695 generic class whose type refers back
+    // to the class is reported as redeclared until
+    // https://github.com/microsoft/pyright/issues/11835 is fixed.
+    // TODO: a stub imports winrt._winrt, winrt.system and every namespace its
+    // types and their inherited interfaces refer to, whether it uses them or
+    // not. Choose them from the written stub, as its standard library imports
+    // are, then remove reportUnusedImport.
+    {
+      "root": "_install/lint",
+      "reportDeprecated": "none",
+      "reportRedeclaration": "none",
+      "reportFunctionMemberAccess": "none",
+      "reportUnusedImport": "none"
+    }
+  ]
+}
