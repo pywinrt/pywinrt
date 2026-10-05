@@ -1,4 +1,6 @@
 # WARNING: Please don't edit this file. It was automatically generated.
+# setuptools does not annotate the build_ext methods this file overrides.
+# pyright: reportUnknownMemberType=false
 
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext

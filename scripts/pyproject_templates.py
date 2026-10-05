@@ -199,6 +199,8 @@ include = ["{root_package}*"]
 """
 
 SETUP_PY = """# WARNING: Please don't edit this file. It was automatically generated.
+# setuptools does not annotate the build_ext methods this file overrides.
+# pyright: reportUnknownMemberType=false
 {setup_py_imports}
 from setuptools import Extension, setup
 {setuptools_command_imports}
