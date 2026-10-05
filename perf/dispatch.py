@@ -117,8 +117,8 @@ mapping = {{f"key{{i}}": f"value{{i}}" for i in range({ITEMS})}}
 class Case(NamedTuple):
     name: str
     """What the case is called in the output."""
-    count: int
-    """How many times the statement is run per timing."""
+    number: int
+    """How many times the statement is run per timing, as timeit calls it."""
     scale: int
     """How many calls one run of the statement makes, for the per-call average."""
     setup: str
@@ -239,10 +239,10 @@ def main(patterns: list[str]) -> None:
         times = timeit.repeat(
             case.stmt,
             setup=COMMON + case.setup,
-            number=case.count,
+            number=case.number,
             repeat=REPEAT,
         )
-        per_call = min(times) / (case.count * case.scale)
+        per_call = min(times) / (case.number * case.scale)
         print(f"{case.name:{width}}  {int(per_call * 1e9):>9_}", flush=True)
 
 
