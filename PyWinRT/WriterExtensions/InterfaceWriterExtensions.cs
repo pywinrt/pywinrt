@@ -42,13 +42,13 @@ static class InterfaceWriterExtensions
         var mixin = type switch
         {
             { Namespace: "Windows.Foundation.Collections", Name: "IMap" } =>
-                "winrt._winrt.MutableMapping[K, V]",
+                "_cabc.MutableMapping[K, V]",
             { Namespace: "Windows.Foundation.Collections", Name: "IMapView" } =>
-                "winrt._winrt.Mapping[K, V]",
+                "_cabc.Mapping[K, V]",
             { Namespace: "Windows.Foundation.Collections", Name: "IVector" } =>
-                "winrt._winrt.MutableSequence[T]",
+                "_cabc.MutableSequence[T]",
             { Namespace: "Windows.Foundation.Collections", Name: "IVectorView" } =>
-                "winrt._winrt.Sequence[T]",
+                "_cabc.Sequence[T]",
             _ => null,
         };
 
@@ -125,7 +125,13 @@ static class InterfaceWriterExtensions
             && (type.Name == "IVector" || type.Name == "IVectorView")
         )
         {
-            w.WriteSeqPythonSpecialMethods(type, ns, nullabilityMap, packageMap);
+            w.WriteSeqPythonSpecialMethods(
+                type,
+                ns,
+                nullabilityMap,
+                packageMap,
+                isMutable: type.Name == "IVector"
+            );
 
             if (type.Name == "IVector")
             {
