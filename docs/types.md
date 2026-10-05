@@ -613,7 +613,9 @@ class UpperCase(IValueConverter):
 
 Passed to WinRT and handed back again, for example by storing it in a
 collection and reading it back, the object comes back as the same Python
-object rather than as a wrapper.
+object rather than as a wrapper. It has the members of
+[`Object`](api/system.md#object) as a wrapper does, so `as_()` of an interface
+its class implements is the object itself.
 
 WinRT calls the methods on whatever thread it calls them from, as it does
 [event handlers](#which-thread-calls-the-handler). An exception that escapes

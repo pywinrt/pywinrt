@@ -125,10 +125,12 @@ This is the base type of all WinRT runtime objects and cannot be
 instantiated directly. A Python class that implements a WinRT interface is
 an `Object` too: `isinstance()` and `issubclass()` say so, although it does
 not derive from `Object`, which holds a WinRT object that a Python
-implementation does not have.
+implementation does not have, and its instances have the members below,
+which answer what WinRT is told about them.
 
 !!! version-changed "Changed in version 4.0"
-    A Python implementation of a WinRT interface is an instance of `Object`.
+    A Python implementation of a WinRT interface is an instance of `Object`,
+    with its members.
 
 **Type casting**
 
@@ -163,7 +165,10 @@ at runtime:
 _runtime_class_name_: str
 ```
 
-Gets the WinRT runtime class name of the object.
+Gets the WinRT runtime class name of the object. A Python implementation of
+an interface is no runtime class, so it gives the name of the first interface
+among its class's bases: `class Converter(IValueConverter)` answers with the
+name of `IValueConverter`.
 
 !!! version-added "Added in version 2.1"
 
