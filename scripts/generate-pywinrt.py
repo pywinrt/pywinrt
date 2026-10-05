@@ -23,31 +23,44 @@ RUNTIME_PATH = REPO_ROOT_PATH / "runtime"
 # compiles the trampolines from. See runtime/src/table-format.md.
 RUNTIME_SRC_PATH = RUNTIME_PATH / "src"
 
-DOTNET: list[str] = []
-PYWINRT_EXE: str | pathlib.Path
+DOTNET = ["dotnet"] if "--dotnet" in sys.argv else []
 
 # must match <TargetFramework> in PyWinRT/PyWinRT.csproj
 PYWINRT_TFM = "net10.0"
 PYWINRT_BUILD_PATH = REPO_ROOT_PATH / "PyWinRT" / "bin"
 
-if "--dotnet" in sys.argv:
-    DOTNET.append("dotnet")
-    PYWINRT_EXE = "pywinrt"
 
-    subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
+def find_pywinrt() -> str | pathlib.Path:
+    """
+    The PyWinRT this run uses: the dotnet tool with --dotnet, otherwise the
+    one built in this repository, the Debug build with --debug.
+    """
+    if DOTNET:
+        subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
 
-elif "--debug" in sys.argv:
-    PYWINRT_EXE = PYWINRT_BUILD_PATH / "Debug" / PYWINRT_TFM / "PyWinRT.exe"
+        return "pywinrt"
 
-    if not PYWINRT_EXE.exists():
-        raise RuntimeError("PyWinRT.exe not found. Please run `dotnet build PyWinRT`")
-else:
-    PYWINRT_EXE = PYWINRT_BUILD_PATH / "Release" / PYWINRT_TFM / "PyWinRT.exe"
+    if "--debug" in sys.argv:
+        exe = PYWINRT_BUILD_PATH / "Debug" / PYWINRT_TFM / "PyWinRT.exe"
 
-    if not PYWINRT_EXE.exists():
+        if not exe.exists():
+            raise RuntimeError(
+                "PyWinRT.exe not found. Please run `dotnet build PyWinRT`"
+            )
+
+        return exe
+
+    exe = PYWINRT_BUILD_PATH / "Release" / PYWINRT_TFM / "PyWinRT.exe"
+
+    if not exe.exists():
         raise RuntimeError(
             "PyWinRT.exe not found. Please run `dotnet build PyWinRT -c Release`"
         )
+
+    return exe
+
+
+PYWINRT_EXE = find_pywinrt()
 
 
 # generate code for windows sdk
