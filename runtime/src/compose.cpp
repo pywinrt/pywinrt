@@ -698,7 +698,11 @@ namespace py::interp
             return nullptr;
         }
 
-        if (name && name.get() != Py_None)
+        // Leaving the keyword out is how a class says it has no name of its
+        // own, so None is refused like anything else that is not a str: a
+        // class inherits the name of the class it derives from, which None
+        // would seem to take away and could not.
+        if (name)
         {
             if (!PyUnicode_Check(name.get()))
             {
