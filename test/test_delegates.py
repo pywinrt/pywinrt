@@ -47,7 +47,7 @@ class TestDelegateShapes(unittest.TestCase):
         Hands ``call`` a handler that echoes what it is given and asserts that
         it was given ``expected``.
         """
-        seen = []
+        seen: list[tuple[Any, ...]] = []
 
         def handler(*args: Any) -> Any:
             seen.append(args)
@@ -115,7 +115,7 @@ class TestDelegateShapes(unittest.TestCase):
         # TestHandler takes the ITests the component hands it and returns
         # nothing, so this is the one shape with an interface pointer in and
         # no output at all.
-        seen = []
+        seen: list[tc.ITests] = []
 
         tc.TestRunner.test_consumer(lambda callee: seen.append(callee))
 
@@ -207,7 +207,7 @@ class TestDelegate(unittest.TestCase):
 
 class TestEvent(unittest.TestCase):
     def test_add_and_remove(self) -> None:
-        calls = []
+        calls: list[object] = []
 
         obj = tc.Override()
         token = obj.add_overridable_called(lambda sender, args: calls.append(sender))
@@ -223,7 +223,7 @@ class TestEvent(unittest.TestCase):
     def test_parameterized_handler(self) -> None:
         # MapChangedEventHandler<K, V> is an instance of a parameterized
         # delegate, which is still a callable and not an interface to unwrap.
-        seen = []
+        seen: list[str] = []
 
         m = wfc.StringMap()
         token = m.add_map_changed(lambda sender, args: seen.append(args.key))
