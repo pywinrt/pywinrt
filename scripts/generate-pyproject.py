@@ -858,7 +858,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
     # offering them in the [all] extra. That also carries a namespace that
     # moves between components across releases: the whole set moves in one
     # resolver transaction, so the new owner is never installed beside the old.
-    same_family = (
+    same_family: set[str] = (
         {dep for dep in referenced if package_families[dep] == family}
         if component
         else set()
