@@ -11,6 +11,7 @@ import zipfile
 from pathlib import Path
 from typing import Any
 
+from hatchling.builders.config import BuilderConfig
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
 NUGET_PACKAGE = "Microsoft.Web.WebView2"
@@ -124,7 +125,7 @@ def get_sbom() -> dict[str, Any]:
     }
 
 
-class DllBuildHook(BuildHookInterface):
+class DllBuildHook(BuildHookInterface[BuilderConfig]):
     """
     Puts the redistributed .dll into the wheel being built.
     """
