@@ -828,25 +828,26 @@ class TestNumerics(unittest.TestCase):
         ):
             wfn.Matrix4x4() * wfn.Matrix4x4()  # type: ignore
 
-        # a tuple of the fields is no matrix for *, so the other side answers,
-        # which for a tuple is repetition
+        # a tuple of the fields is no matrix for an operator, so the other side
+        # answers, which for * and a tuple is repetition
         with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
             wfn.Matrix4x4() * tuple(range(16))  # type: ignore
 
         with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
             tuple(range(16)) * wfn.Matrix4x4()  # type: ignore
 
-        self.assertEqual(
-            wfn.Matrix4x4.identity @ tuple(range(16)),  # type: ignore
-            wfn.Matrix4x4(*range(16)),
-        )
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for @: '[\w+\.]*Matrix4x4' and 'tuple'",
+        ):
+            wfn.Matrix4x4.identity @ tuple(range(16))  # type: ignore
 
     @unittest.skipIf(sys.version_info < (3, 12), "__buffer__ is new in 3.12")
-    def test_matrix_mul_buffer_is_not_implemented(self) -> None:
+    def test_matrix_buffer_operand_is_not_implemented(self) -> None:
         class Rows:
             """
-            A block of floats in a matrix's shape that answers * itself, as
-            a NumPy array does.
+            A block of floats in a matrix's shape that answers the operators
+            itself, as a NumPy array does.
             """
 
             def __buffer__(self, flags: int, /) -> "memoryview[float]":
@@ -854,18 +855,65 @@ class TestNumerics(unittest.TestCase):
                     memoryview(array.array("f", range(16))).cast("B").cast("f", (4, 4))
                 )
 
+            def __radd__(self, other: object) -> str:
+                return "radd"
+
             def __rmul__(self, other: object) -> str:
                 return "rmul"
 
             def __mul__(self, other: object) -> str:
                 return "mul"
 
+            def __rmatmul__(self, other: object) -> str:
+                return "rmatmul"
+
         rows: typing.Any = Rows()
 
+        self.assertEqual(wfn.Matrix4x4() + rows, "radd")
         self.assertEqual(wfn.Matrix4x4() * rows, "rmul")
         self.assertEqual(rows * wfn.Matrix4x4(), "mul")
-        # @ still reads it as the matrix it is shaped as
-        self.assertEqual(wfn.Matrix4x4.identity @ rows, wfn.Matrix4x4(*range(16)))
+        self.assertEqual(wfn.Matrix4x4.identity @ rows, "rmatmul")
+
+    def test_tuple_is_not_an_operand(self) -> None:
+        # A tuple of the fields is taken where a method takes the struct, but
+        # beside an operator it reads as a sequence, so the other side answers.
+        v = wfn.Vector3(1, 0, 0)
+        t: typing.Any = (0, 1, 0)
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for \+: '[\w+\.]*Vector3' and 'tuple'",
+        ):
+            _ = v + t
+
+        with self.assertRaisesRegex(TypeError, "can only concatenate tuple"):
+            _ = t + v
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for -: '[\w+\.]*Vector3' and 'tuple'",
+        ):
+            _ = v - t
+
+        with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
+            _ = v * t
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: '[\w+\.]*Vector3' and 'tuple'",
+        ):
+            _ = v / t
+
+        q: typing.Any = (0, 0, 0, 1)
+
+        with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
+            _ = wfn.Quaternion.identity * q
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for @: '[\w+\.]*Quaternion' and 'tuple'",
+        ):
+            _ = wfn.Quaternion.identity @ q
 
     def test_truediv(self) -> None:
         self.assertEqual(
@@ -1287,14 +1335,15 @@ class TestNumerics(unittest.TestCase):
             iter(m)  # type: ignore
 
     def test_buffer_as_value(self) -> None:
-        # A buffer stands for a struct the way a tuple does, which the stubs
-        # leave out, so the buffers are typed as Any.
+        # A buffer stands for a struct where a method takes one, the way a
+        # tuple does, which the stubs leave out, so the buffers are typed as
+        # Any.
         floats: typing.Any = array.array("f", [1, 1, 1])
         doubles: typing.Any = array.array("d", [1, 1, 1])
 
         v = wfn.Vector3(1, 2, 3)
-        self.assertEqual(v + floats, wfn.Vector3(2, 3, 4))
-        self.assertEqual(v + doubles, wfn.Vector3(2, 3, 4))
+        self.assertEqual(v.dot(floats), 6)
+        self.assertEqual(v.dot(doubles), 6)
 
         # a matrix from a block in its shape, and not from flat floats, which
         # could be its rows or its columns
@@ -1302,14 +1351,9 @@ class TestNumerics(unittest.TestCase):
             memoryview(array.array("f", range(16))).cast("B").cast("f", (4, 4))
         )
         flat: typing.Any = array.array("f", range(16))
-        self.assertEqual(wfn.Matrix4x4() + rows, wfn.Matrix4x4(*range(16)))
 
-        with self.assertRaisesRegex(
-            TypeError,
-            r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix4x4' and "
-            r"'array.array'",
-        ):
-            _ = wfn.Matrix4x4() + flat
+        if not ON_MINGW:
+            self.assertEqual(wfn.Matrix4x4().lerp(rows, 1), wfn.Matrix4x4(*range(16)))
 
         with self.assertRaisesRegex(
             TypeError,
@@ -1325,10 +1369,10 @@ class TestNumerics(unittest.TestCase):
 
         with self.assertRaisesRegex(
             TypeError,
-            r"unsupported operand type\(s\) for \+: '[\w+\.]*Vector3' and "
-            r"'array.array'",
+            r"a buffer read as '[\w+\.]*Vector3' must hold floats or doubles of "
+            r"shape \(3,\), not 'f' of shape \(2,\)",
         ):
-            v + array.array("f", [1, 1])  # type: ignore
+            v.dot(array.array("f", [1, 1]))  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
@@ -1377,17 +1421,18 @@ class TestNumerics(unittest.TestCase):
             wfn.Quaternion.identity,
         )
 
-        with self.assertRaisesRegex(
-            TypeError,
-            r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix3x2' and "
-            r"'[\w+\.]*Array'",
-        ):
-            wfn.Matrix3x2() + Array(wfn.Vector2, 3)  # type: ignore
+        if not ON_MINGW:
+            with self.assertRaisesRegex(
+                TypeError,
+                r"an Array of Windows.Foundation.Numerics.Vector2 is not a "
+                r"'[\w+\.]*Matrix3x2': memoryview\(\) of it reads its floats as one",
+            ):
+                wfn.Matrix3x2().lerp(Array(wfn.Vector2, 3), 1)  # type: ignore
 
-        self.assertEqual(
-            wfn.Matrix3x2() + memoryview(Array(wfn.Vector2, 3)),  # type: ignore
-            wfn.Matrix3x2(),
-        )
+            self.assertEqual(
+                wfn.Matrix3x2().lerp(memoryview(Array(wfn.Vector2, 3)), 1),  # type: ignore
+                wfn.Matrix3x2(),
+            )
 
     def test_array_buffer(self) -> None:
         a = Array(wfn.Vector3, [wfn.Vector3(1, 2, 3), wfn.Vector3(4, 5, 6)])

@@ -190,40 +190,26 @@ namespace py::interp::numerics
         // ----- the number slots -------------------------------------------
 
         /**
-         * NotImplemented, which is what makes CPython raise the message that
-         * names both operands, or @c nullptr when an operand could not be read
-         * for some reason other than its type.
-         */
-        PyObject* not_implemented() noexcept
-        {
-            if (PyErr_Occurred())
-            {
-                return nullptr;
-            }
-
-            Py_RETURN_NOTIMPLEMENTED;
-        }
-
-        /**
-         * Reads one operand of a number slot, clearing the error when it is of
-         * a type the operator does not take so that the slot can hand back
-         * NotImplemented.
+         * Reads one operand of a number slot, which is taken only as a value of
+         * the struct itself.
+         *
+         * A tuple of the struct's fields or a buffer of its floats is taken
+         * where a method takes the struct, but not as an operand: the slot
+         * hands back NotImplemented, so that a NumPy array beside a struct
+         * gives NumPy's answer, and a tuple, which beside an operator reads as
+         * a Python sequence, raises TypeError.
          */
         template<kind K>
         bool read_operand(
             type_entry& entry, PyObject* obj, typename traits<K>::type& out) noexcept
         {
-            if (read_struct<K, K>(entry, obj, out))
+            if (!Py_IS_TYPE(obj, entry.py_type))
             {
-                return true;
+                return false;
             }
 
-            if (PyErr_ExceptionMatches(PyExc_TypeError))
-            {
-                PyErr_Clear();
-            }
-
-            return false;
+            out = instance_value<K>(entry, obj);
+            return true;
         }
 
         template<kind K>
@@ -238,13 +224,13 @@ namespace py::interp::numerics
             typename traits<K>::type a;
             if (!read_operand<K>(*entry, left, a))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             typename traits<K>::type b;
             if (!read_operand<K>(*entry, right, b))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             return write_struct<K, K>(*entry, a + b);
@@ -262,13 +248,13 @@ namespace py::interp::numerics
             typename traits<K>::type a;
             if (!read_operand<K>(*entry, left, a))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             typename traits<K>::type b;
             if (!read_operand<K>(*entry, right, b))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             return write_struct<K, K>(*entry, a - b);
@@ -308,10 +294,7 @@ namespace py::interp::numerics
          * @tparam TwoValues Whether two values multiply, which a vector does
          * elementwise and a quaternion as the Hamilton product. Two matrices
          * do not: their product is @, and * between two of them raises rather
-         * than answering NotImplemented, so that the message can say so. A
-         * tuple of a matrix's fields or a buffer of its floats is no matrix
-         * for that, so * with one is NotImplemented and the other operand
-         * answers, as NumPy's elementwise product does for an ndarray.
+         * than answering NotImplemented, so that the message can say so.
          */
         template<kind K, bool TwoValues>
         PyObject* slot_multiply(PyObject* left, PyObject* right) noexcept
@@ -327,7 +310,7 @@ namespace py::interp::numerics
                 typename traits<K>::type value;
                 if (!read_operand<K>(*entry, right, value))
                 {
-                    return not_implemented();
+                    Py_RETURN_NOTIMPLEMENTED;
                 }
 
                 return write_struct<K, K>(*entry, value * *scale);
@@ -336,7 +319,7 @@ namespace py::interp::numerics
             typename traits<K>::type a;
             if (!read_operand<K>(*entry, left, a))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             if (auto const scale = as_number(right))
@@ -349,18 +332,13 @@ namespace py::interp::numerics
                 typename traits<K>::type b;
                 if (!read_operand<K>(*entry, right, b))
                 {
-                    return not_implemented();
+                    Py_RETURN_NOTIMPLEMENTED;
                 }
 
                 return write_struct<K, K>(*entry, a * b);
             }
             else
             {
-                if (!Py_IS_TYPE(left, entry->py_type))
-                {
-                    Py_RETURN_NOTIMPLEMENTED;
-                }
-
                 if (!Py_IS_TYPE(right, entry->py_type))
                 {
                     Py_RETURN_NOTIMPLEMENTED;
@@ -391,13 +369,13 @@ namespace py::interp::numerics
             typename traits<K>::type a;
             if (!read_operand<K>(*entry, left, a))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             typename traits<K>::type b;
             if (!read_operand<K>(*entry, right, b))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             return write_struct<K, K>(*entry, a * b);
@@ -431,7 +409,7 @@ namespace py::interp::numerics
                 = (... || match_struct<K, Operands>(*entry, right).has_value());
             if (!takes)
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             return Transform(left, right);
@@ -455,7 +433,7 @@ namespace py::interp::numerics
             typename traits<K>::type a;
             if (!read_operand<K>(*entry, left, a))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             if constexpr (ByScalar)
@@ -469,7 +447,7 @@ namespace py::interp::numerics
             typename traits<K>::type b;
             if (!read_operand<K>(*entry, right, b))
             {
-                return not_implemented();
+                Py_RETURN_NOTIMPLEMENTED;
             }
 
             return write_struct<K, K>(*entry, a / b);
