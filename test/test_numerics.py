@@ -874,6 +874,21 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(rows * wfn.Matrix4x4(), "mul")
         self.assertEqual(wfn.Matrix4x4.identity @ rows, "rmatmul")
 
+    def test_methods_take_a_tuple(self) -> None:
+        # as every struct parameter does, which the stubs say, so these calls
+        # type-check as written
+        self.assertEqual(wfn.Vector3(1, 0, 0).dot((0, 1, 0)), 0)
+        self.assertEqual(
+            wfn.Matrix4x4.make_translation((1, 2, 3)).translation(),
+            wfn.Vector3(1, 2, 3),
+        )
+
+        if not ON_MINGW:
+            self.assertEqual(
+                wfn.Plane.make_from_vertices((0, 0, 0), (1, 0, 0), (0, 1, 0)).normal,
+                wfn.Vector3(0, 0, 1),
+            )
+
     def test_tuple_is_not_an_operand(self) -> None:
         # A tuple of the fields is taken where a method takes the struct, but
         # beside an operator it reads as a sequence, so the other side answers.
