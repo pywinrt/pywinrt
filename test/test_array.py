@@ -86,6 +86,17 @@ class TestWinRTArray(unittest.TestCase):
         with self.assertRaises(TypeError):
             Array()  # type: ignore
 
+    def test_constructor_takes_no_keywords(self) -> None:
+        # the stub says so too, which is what makes these ignores needed
+        with self.assertRaisesRegex(TypeError, "keyword arguments are not supported"):
+            Array(Int32, size=2)  # type: ignore
+
+        with self.assertRaisesRegex(TypeError, "keyword arguments are not supported"):
+            Array(Int32, initializer=bytes(8))  # type: ignore
+
+        with self.assertRaisesRegex(TypeError, "keyword arguments are not supported"):
+            Array(type=Int32)  # type: ignore
+
     def test_bool(self) -> None:
         a = Array(bool, [False, True])
 

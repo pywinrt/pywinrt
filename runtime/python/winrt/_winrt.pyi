@@ -131,12 +131,14 @@ class Array(collections.abc.Sequence[_T]):
         self,
         type: TypeForm[_T],
         size: int,
+        /,
     ) -> None: ...
     @overload
     def __init__(
         self,
         type: TypeForm[_T],
         initializer: Buffer,
+        /,
     ) -> None: ...
     @overload
     def __init__(
@@ -158,6 +160,7 @@ class Array(collections.abc.Sequence[_T]):
         self,
         type: str,
         initializer: int | Buffer | list[Any] | tuple[Any, ...],
+        /,
     ) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
