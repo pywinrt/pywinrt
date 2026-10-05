@@ -127,6 +127,31 @@ class Inspect(unittest.TestCase):
             .replace("= winui3.", "= winrt."),
         )
 
+    def test_a_form_feed_ends_no_line(self) -> None:
+        # ast numbers lines past a form feed, which a page break is, as if it
+        # were not there
+        self.path.write_bytes(
+            b"import os\n\x0c\nargs = ToastActivatedEventArgs._from(event)\n"
+        )
+
+        self.assertEqual(
+            run(self.path),
+            [
+                f"{self.path}:3:32",
+                "possible match: ToastActivatedEventArgs._from",
+                "rename to: event.as_(ToastActivatedEventArgs)",
+            ],
+        )
+
+    def test_fix_after_a_form_feed(self) -> None:
+        self.path.write_bytes(b"\x0c\nimport winui3.microsoft.ui.xaml\n")
+
+        run(self.path, "--fix")
+
+        self.assertEqual(
+            self.path.read_bytes(), b"\x0c\nimport winrt.microsoft.ui.xaml\n"
+        )
+
 
 def floor(distribution: str) -> str:
     """
