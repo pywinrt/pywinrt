@@ -108,7 +108,8 @@ static class WriterExtensions
         string self = "self",
         bool isAbstract = false,
         string? aliasPyName = null,
-        string? aliasTarget = null
+        string? aliasTarget = null,
+        string ignoreComment = ""
     )
     {
         var nullabilityInfo = nullabilityMap.GetValueOrDefault(
@@ -156,7 +157,7 @@ static class WriterExtensions
         }
 
         w.WriteLine(
-            $"def {aliasPyName ?? method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, packageMap, method.GenericArgMap)}: ...{typeIgnore}"
+            $"def {aliasPyName ?? method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, packageMap, method.GenericArgMap)}: ...{typeIgnore}{ignoreComment}"
         );
     }
 
