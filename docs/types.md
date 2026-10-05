@@ -220,6 +220,20 @@ class App(Application):
         ...
 ```
 
+WinRT asks such an object for its runtime class name, which by default is the
+name of the first overridable interface its class implements, or nothing when
+the class has none. A XAML metadata provider looks types up by that name, so a
+subclass can give its own with the `runtime_class_name` keyword, and a class
+derived from it inherits that name:
+
+```python
+from winrt.windows.ui.xaml.controls import Page
+
+
+class MainPage(Page, runtime_class_name="MyApp.MainPage"):
+    ...
+```
+
 A wrapper is not the WinRT object itself, and reading the same object twice,
 for example from a property, gives two wrappers. They compare equal with `==`
 and have the same `hash()`, because those ask whether the two hold the same

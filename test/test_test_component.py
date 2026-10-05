@@ -98,11 +98,42 @@ class TestTestComponent(unittest.TestCase):
 
     def test_declared_runtime_class_name(self) -> None:
         # A class may say what it is called instead, which is what a XAML
-        # metadata provider needs.
-        class C(tc.Composable):
-            _runtime_class_name_ = "Spam.Eggs"
+        # metadata provider needs, and a class derived from it inherits that.
+        class C(tc.Composable, runtime_class_name="Spam.Eggs"):
+            pass
+
+        class D(C):
+            pass
+
+        class E(C, runtime_class_name="Spam.Ham"):
+            pass
 
         self.assertEqual(tc.TestRunner.expect_object(C()), "Spam.Eggs")
+        self.assertEqual(C()._runtime_class_name_, "Spam.Eggs")
+        self.assertEqual(tc.TestRunner.expect_object(D()), "Spam.Eggs")
+        self.assertEqual(tc.TestRunner.expect_object(E()), "Spam.Ham")
+
+    def test_declared_runtime_class_name_misspelled(self) -> None:
+        with self.assertRaises(TypeError):
+
+            class _(tc.Composable, runtime_class_nam="Spam.Eggs"):  # pyright: ignore[reportGeneralTypeIssues, reportCallIssue]
+                pass
+
+    def test_declared_runtime_class_name_must_be_str(self) -> None:
+        with self.assertRaisesRegex(TypeError, "must be str, not int"):
+
+            class _(tc.Composable, runtime_class_name=1):  # pyright: ignore[reportGeneralTypeIssues, reportArgumentType]
+                pass
+
+    def test_implementation_has_no_declared_runtime_class_name(self) -> None:
+        # A Python implementation of an interface is named after the first
+        # interface it implements, as C++/WinRT names one.
+        with self.assertRaises(TypeError):
+
+            class _(wf.IStringable, runtime_class_name="Spam.Eggs"):  # pyright: ignore[reportGeneralTypeIssues, reportCallIssue]
+                @override
+                def to_string(self) -> str:
+                    return "spam"
 
     def test_overriding_new(self) -> None:
         class C(tc.Composable):

@@ -394,6 +394,18 @@ namespace py::interp
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {}};
 
+        // A composable class only derives from another, so the first in a
+        // hierarchy takes the keywords of a Python class derived from it.
+        PyMethodDef composable_root_methods[]
+            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
+               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
+               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+               {"__init_subclass__",
+                reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(init_subclass)),
+                METH_VARARGS | METH_KEYWORDS | METH_CLASS,
+                nullptr},
+               {}};
+
         PyMethodDef implements_methods[]
             = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
                {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
@@ -657,7 +669,10 @@ namespace py::interp
         // static class, which has none, does not get them.
         if (entry.guid)
         {
-            slots.push_back({Py_tp_methods, reinterpret_cast<void*>(class_methods)});
+            auto* const methods
+                = composable && !base_type ? composable_root_methods : class_methods;
+
+            slots.push_back({Py_tp_methods, reinterpret_cast<void*>(methods)});
         }
 
         slots.push_back({Py_tp_new, reinterpret_cast<void*>(class_new)});
