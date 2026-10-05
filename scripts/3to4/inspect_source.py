@@ -112,6 +112,20 @@ class Requirement(NamedTuple):
     edit: Edit | None
 
 
+def split_lines(source: str, keepends: bool = False) -> list[str]:
+    """
+    The lines of @p source as ast numbers them, which ends a line at \\n,
+    \\r\\n and \\r only, where str.splitlines() ends one at a form feed and
+    other separators too.
+    """
+    lines = io.StringIO(source, newline="").readlines()
+
+    if keepends:
+        return lines
+
+    return [line.rstrip("\r\n") for line in lines]
+
+
 def column(lines: list[str], line: int, offset: int) -> int:
     """
     The character column of the UTF-8 byte @p offset that ast reports.
@@ -510,7 +524,7 @@ def fix(
     is dropped; several v3 names often became one v4 distribution. Returns how
     many were dropped.
     """
-    lines = source.splitlines(keepends=True)
+    lines = split_lines(source, keepends=True)
 
     for edit in sorted(edits, reverse=True):
         text = lines[edit.line - 1]
@@ -563,7 +577,7 @@ if __name__ == "__main__":
 
     for path in args.files:
         source = path.read_bytes().decode()
-        lines = source.splitlines()
+        lines = split_lines(source)
         python = path.suffix == ".py"
         tree = ast.parse(source, path) if python else None
         requirements = list(find_requirements(source, lines, python))
