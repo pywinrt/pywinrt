@@ -1089,7 +1089,7 @@ class DependencyObjectCollection(DependencyObject, windows_foundation_collection
 @typing.final
 class DependencyProperty_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.DependencyProperty::Register(System.String,Windows.UI.Xaml.Interop.TypeName,Windows.UI.Xaml.Interop.TypeName,Microsoft.UI.Xaml.PropertyMetadata)
-    def register(cls, name: str, property_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], owner_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], type_metadata: PropertyMetadata, /) -> DependencyProperty: ...
+    def register(cls, name: str, property_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], owner_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], type_metadata: PropertyMetadata, /) -> DependencyProperty: ...  # type: ignore[override]
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.DependencyProperty::RegisterAttached(System.String,Windows.UI.Xaml.Interop.TypeName,Windows.UI.Xaml.Interop.TypeName,Microsoft.UI.Xaml.PropertyMetadata)
     def register_attached(cls, name: str, property_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], owner_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], default_metadata: PropertyMetadata, /) -> DependencyProperty: ...
     # System.Object Microsoft.UI.Xaml.DependencyProperty::get_UnsetValue()

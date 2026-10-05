@@ -478,7 +478,7 @@ class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
 class IsolatedWindowsEnvironmentOwnerRegistration_Static(winrt._winrt.Object_Static):
     # Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration::Register(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData)
     @deprecated("IsolatedWindowsEnvironmentOwnerRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def register(cls, owner_name: str, owner_registration_data: IsolatedWindowsEnvironmentOwnerRegistrationData, /) -> IsolatedWindowsEnvironmentOwnerRegistrationResult: ...
+    def register(cls, owner_name: str, owner_registration_data: IsolatedWindowsEnvironmentOwnerRegistrationData, /) -> IsolatedWindowsEnvironmentOwnerRegistrationResult: ...  # type: ignore[override]
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration::Unregister(System.String)
     @deprecated("IsolatedWindowsEnvironmentOwnerRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def unregister(cls, owner_name: str, /) -> None: ...
