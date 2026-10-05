@@ -1,3 +1,4 @@
+import abc
 import collections.abc
 from datetime import datetime, timedelta
 import types
@@ -155,7 +156,10 @@ class MutableMapping(Mapping[_KT, _VT]):
 
 # actual runtime classes
 
-class Object_Static(type):
+# Declared as an ABCMeta although at run time it derives from type: a type
+# checker requires an abstract member to be implemented only under ABCMeta, and
+# the members of an interface are abstract.
+class Object_Static(abc.ABCMeta):
     def __instancecheck__(self, instance: Any) -> bool: ...
     def __subclasscheck__(self, subclass: type) -> bool: ...
 
