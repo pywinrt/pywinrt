@@ -26,6 +26,7 @@ Once Nuget is installed, run:
 
 - Ruff
 - mypy
+- pyright
 - ClangFormat
 - CSharpier (`dotnet tool restore`)
 
@@ -136,11 +137,33 @@ does:
 
     pipx run ruff check
 
-mypy reads the packages from one directory, `_install/lint`, and they are
-generated into several, so the lint job copies them together first with the
-`merge packages` step of that workflow. Run that step, then:
+mypy reads the packages from one directory, `_typing`, and they are generated
+into several, so `scripts/merge-packages.py` copies them together as they would
+be installed. Every CMake build runs it, and so does the lint job; to refresh
+`_typing` without a build, run it yourself:
 
+    py .\scripts\merge-packages.py
     pipx run mypy
+
+The mypy extension of VS Code bundles a mypy and a `typing_extensions` of its
+own, which can be too old for the stubs: as of October 2026, version 2026.6.0
+of the extension bundles mypy 1.15.0 and `typing_extensions` 4.12.2, and the
+stubs use `TypeForm`, which `typing_extensions` 4.13.0 added, so it reports
+errors the lint job does not. Set
+`"mypy-type-checker.importStrategy": "fromEnvironment"` and select a virtual
+environment with a current mypy as the interpreter it runs under.
+
+pyright, and Pylance with it, reads `pyrightconfig.json`. The lint job also
+checks the merged packages with `pyrightconfig.lint.json`; an editor shows a
+file under `projection/` or `interop/*/winrt/` as it is in the source tree,
+where an interop package is a second copy of a module, so the lint job is the
+authority for those files. Both runs need what the checked code imports,
+`samples/requirements-dev.txt`, `hatchling` and `setuptools`, installed in the
+environment pyright is pointed at, which is the interpreter selected in the
+editor or the one given with `--pythonpath`:
+
+    pipx run pyright --pythonpath .venv\Scripts\python.exe
+    pipx run pyright -p pyrightconfig.lint.json --pythonpath .venv\Scripts\python.exe
 
 ## Building the documentation
 
