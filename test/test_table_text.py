@@ -15,6 +15,7 @@ straight to the runtime's own reader.
 """
 
 import unittest
+from typing import Any
 
 import winrt._winrt
 from winrt.table import TableTextError, build, parse
@@ -135,11 +136,11 @@ CODE_STRUCT = 22
 NO_REF = 0xFFFFFFFF
 
 
-def read(text: str = TABLE) -> dict:
+def read(text: str = TABLE) -> dict[str, Any]:
     return winrt._winrt.read_table(build(parse(text)))
 
 
-def types(table: dict) -> dict[str, dict]:
+def types(table: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return {f"{t['namespace']}.{t['name']}": t for t in table["types"]}
 
 
