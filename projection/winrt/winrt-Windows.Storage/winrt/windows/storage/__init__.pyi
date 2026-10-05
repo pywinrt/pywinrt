@@ -901,14 +901,14 @@ class StorageFolder(IStorageItemPropertiesWithProvider, IStorageFolder2, IStorag
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.StorageFolder::GetFileAsync(System.String)
     def get_file_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFile]: ...
     @typing.overload
-    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync()
-    def get_files_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFile]]: ...
-    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync(Windows.Storage.Search.CommonFileQuery)
     def get_files_async(self, query: windows_storage_search.CommonFileQuery, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFile]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync(Windows.Storage.Search.CommonFileQuery,System.UInt32,System.UInt32)
     def get_files_async(self, query: windows_storage_search.CommonFileQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFile]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync()
+    def get_files_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFile]]: ...
     # Deprecated alias of get_files_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile>> Windows.Storage.StorageFolder::GetFilesAsync()
     @deprecated("Use get_files_async() instead.")
@@ -920,14 +920,14 @@ class StorageFolder(IStorageItemPropertiesWithProvider, IStorageFolder2, IStorag
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageFolder::GetFolderAsync(System.String)
     def get_folder_async(self, name: str, /) -> windows_foundation.IAsyncOperation[StorageFolder]: ...
     @typing.overload
-    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync()
-    def get_folders_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFolder]]: ...
-    @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery)
     def get_folders_async(self, query: windows_storage_search.CommonFolderQuery, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFolder]]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync(Windows.Storage.Search.CommonFolderQuery,System.UInt32,System.UInt32)
     def get_folders_async(self, query: windows_storage_search.CommonFolderQuery, start_index: winrt.system.UInt32, max_items_to_retrieve: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFolder]]: ...
+    @typing.overload
+    # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync()
+    def get_folders_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[StorageFolder]]: ...
     # Deprecated alias of get_folders_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>> Windows.Storage.StorageFolder::GetFoldersAsync()
     @deprecated("Use get_folders_async() instead.")
