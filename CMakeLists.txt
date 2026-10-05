@@ -101,3 +101,10 @@ add_subdirectory(runtime)
 add_subdirectory(interop)
 add_subdirectory(projection)
 add_subdirectory(redist)
+
+# What the type checkers and an editor read: the packages of the source tree
+# merged into _typing as they are installed, refreshed by every build. The
+# script copies only what changed.
+add_custom_target(typing ALL
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/scripts/merge-packages.py"
+    VERBATIM)
