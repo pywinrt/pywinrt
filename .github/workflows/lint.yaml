@@ -13,6 +13,7 @@ on:
       - mypy.ini
       - ruff.toml
       - pyrightconfig.json
+      - pyrightconfig.lint.json
       - samples/requirements-dev.txt
       - '**/*.py'
       - '**/*.pyi'
@@ -22,6 +23,7 @@ on:
       - mypy.ini
       - ruff.toml
       - pyrightconfig.json
+      - pyrightconfig.lint.json
       - samples/requirements-dev.txt
       - '**/*.py'
       - '**/*.pyi'
@@ -53,12 +55,18 @@ jobs:
       # editor checks the same thing as CI does
       - name: Run mypy
         run: pipx run mypy
-      # what the samples import besides winrt, so that pyright resolves it
-      - name: Install the samples' dependencies
+      # what the checked code imports besides winrt, so that pyright resolves
+      # it: the samples' dependencies, and the build backends that the build
+      # hook and the generated setup.py files extend
+      - name: Install what the checked code imports
         run: |
-          python -m venv _install/samples-venv
-          _install/samples-venv/Scripts/python -m pip install -r samples/requirements-dev.txt
+          python -m venv _install/pyright-venv
+          _install/pyright-venv/Scripts/python -m pip install -r samples/requirements-dev.txt hatchling setuptools
       # the settings are in pyrightconfig.json, which the editor reads too; the
       # directories listed are the ones that are clean in strict mode so far
       - name: Run pyright
-        run: pipx run pyright --pythonpath _install/samples-venv/Scripts/python.exe test samples runtime/python
+        run: pipx run pyright --pythonpath _install/pyright-venv/Scripts/python.exe test samples runtime table interop
+      # the projection and interop packages merged as installed, which
+      # pyrightconfig.lint.json says how to check
+      - name: Run pyright over the merged packages
+        run: pipx run pyright -p pyrightconfig.lint.json --pythonpath _install/pyright-venv/Scripts/python.exe
