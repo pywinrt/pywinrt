@@ -188,19 +188,27 @@ static class TypeExtensions
                     $"_cabc.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
                 GenericInstanceType gen =>
                     $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
+                // An [in] struct that the metadata spells `T& modopt(IsConst)`,
+                // passed by reference, takes what one passed by value does.
                 ByReferenceType t => t.ElementType.ToPyTypeName(
                     ns,
                     nullabilityInfo,
                     packageMap,
                     map,
-                    quoteImportedTypes
+                    quoteImportedTypes,
+                    usePythonCollectionTypes,
+                    useStructTupleUnion,
+                    useKeyValuePairIterMappingUnion
                 ),
                 OptionalModifierType t => t.ElementType.ToPyTypeName(
                     ns,
                     nullabilityInfo,
                     packageMap,
                     map,
-                    quoteImportedTypes
+                    quoteImportedTypes,
+                    usePythonCollectionTypes,
+                    useStructTupleUnion,
+                    useKeyValuePairIterMappingUnion
                 ),
                 ArrayType t => t.ElementType.ToPyTypeName(
                     ns,
