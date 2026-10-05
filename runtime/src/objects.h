@@ -53,4 +53,11 @@ namespace py::interp
     void set_parameterized_type_error(char const* name) noexcept;
 
     PyObject* deprecated_from(PyObject* cls, PyObject* arg) noexcept;
+
+    PyObject* object_as(PyObject* self, PyObject* arg) noexcept;
+
+    PyObject* iids_of(winrt::Windows::Foundation::IInspectable object) noexcept;
+
+    PyObject* runtime_class_name_of(
+        winrt::Windows::Foundation::IInspectable object) noexcept;
 } // namespace py::interp
