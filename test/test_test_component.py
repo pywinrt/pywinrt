@@ -125,6 +125,17 @@ class TestTestComponent(unittest.TestCase):
             class _(tc.Composable, runtime_class_name=1):  # pyright: ignore[reportGeneralTypeIssues, reportArgumentType]
                 pass
 
+    def test_declared_runtime_class_name_is_not_none(self) -> None:
+        # A class inherits the name of the class it derives from, which None
+        # would seem to take away and could not, so it is refused.
+        class C(tc.Composable, runtime_class_name="Spam.Eggs"):
+            pass
+
+        with self.assertRaisesRegex(TypeError, "must be str, not NoneType"):
+
+            class _(C, runtime_class_name=None):  # pyright: ignore[reportGeneralTypeIssues, reportArgumentType]
+                pass
+
     def test_implementation_has_no_declared_runtime_class_name(self) -> None:
         # A Python implementation of an interface is named after the first
         # interface it implements, as C++/WinRT names one.
