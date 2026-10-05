@@ -295,7 +295,7 @@ class Tables(unittest.TestCase):
 
     def test_every_new_distribution_is_in_the_tree(self):
         repo = SCRIPT.parent.parent.parent
-        names = set()
+        names: set[str] = set()
 
         for pattern in (
             "projection/*/*/pyproject.toml",
