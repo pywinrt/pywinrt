@@ -1,3 +1,4 @@
+from abc import ABCMeta
 import asyncio
 from importlib.machinery import ModuleSpec
 import os
@@ -10,7 +11,7 @@ from collections.abc import (
 )
 from pathlib import Path
 import sys
-from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING
+from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING, cast
 import warnings
 
 # NB: have to import Object from here instead of winrt.system to avoid circular import issues.
@@ -190,6 +191,17 @@ def alias_field(typ: type, name: str) -> None:
 # https://github.com/python/cpython/issues/103968#issuecomment-1589928055
 
 
+def _register(abc_type: type, typ: type) -> None:
+    """
+    Registers typ as a virtual subclass of abc_type.
+
+    The collections.abc types are ABCMeta instances at run time, but typeshed
+    derives most of them from typing.Protocol without saying so, which leaves
+    pyright without their register() method.
+    """
+    cast(ABCMeta, abc_type).register(typ)
+
+
 def mixin_sequence(typ: type) -> None:
     """
     Adds missing Python mapping methods to types that implement IVectorView and
@@ -211,7 +223,7 @@ def mixin_sequence(typ: type) -> None:
     if not hasattr(typ, "__reversed__"):
         typ.__reversed__ = Sequence.__reversed__  # type: ignore
 
-    Sequence.register(typ)
+    _register(Sequence, typ)
 
 
 def mixin_mutable_sequence(typ: type) -> None:
@@ -243,7 +255,7 @@ def mixin_mutable_sequence(typ: type) -> None:
     if not hasattr(typ, "__iadd__"):
         typ.__iadd__ = MutableSequence.__iadd__  # type: ignore
 
-    MutableSequence.register(typ)
+    _register(MutableSequence, typ)
 
 
 def mixin_mapping(typ: type) -> None:
@@ -286,7 +298,7 @@ def mixin_mapping(typ: type) -> None:
     ):
         typ.__ne__ = Mapping.__ne__  # type: ignore
 
-    Mapping.register(typ)
+    _register(Mapping, typ)
 
 
 def mixin_mutable_mapping(typ: type) -> None:
@@ -314,7 +326,7 @@ def mixin_mutable_mapping(typ: type) -> None:
     if not hasattr(typ, "update"):
         typ.update = MutableMapping.update  # type: ignore
 
-    MutableMapping.register(typ)
+    _register(MutableMapping, typ)
 
 
 T = TypeVar("T")
