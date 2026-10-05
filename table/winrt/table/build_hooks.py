@@ -25,13 +25,14 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from hatchling.builders.config import BuilderConfig
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 from hatchling.plugin import hookimpl
 
 from winrt.table import TABLE_NAME, TABLE_TEXT_NAME, compile_table
 
 
-class TableBuildHook(BuildHookInterface):
+class TableBuildHook(BuildHookInterface[BuilderConfig]):
     PLUGIN_NAME = "winrt-table-compiler"
 
     def initialize(self, version: str, build_data: dict[str, Any]) -> None:
