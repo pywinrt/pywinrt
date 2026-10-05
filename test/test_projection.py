@@ -273,6 +273,24 @@ class TestClasses(unittest.TestCase):
                     isinstance(instance, interface),
                 )
 
+    def test_as_something_with_no_from(self) -> None:
+        uri = wf.Uri("http://example.com/")
+
+        with self.assertRaisesRegex(
+            TypeError, r"as_\(\) takes a WinRT class or interface, not 'int'"
+        ):
+            uri.as_(int)  # type: ignore
+
+        with self.assertRaisesRegex(
+            TypeError, r"as_\(\) takes a WinRT class or interface, not a 'str'"
+        ):
+            uri.as_("IStringable")  # type: ignore
+
+    def test_as_a_bare_generic_interface(self) -> None:
+        # as isinstance() says it
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            wdj.JsonArray().as_(wfc.IVector)  # pyright: ignore[reportUnknownArgumentType]
+
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
             tc.Class().as_(tc.IRequiredTwo)

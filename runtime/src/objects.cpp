@@ -291,18 +291,40 @@ namespace py::interp
         }
 
         /**
+         * Refuses @p cls as a type a WinRT object can be seen as.
+         * @returns nullptr, for the caller to return.
+         */
+        PyObject* not_seen_as(PyObject* cls) noexcept
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' is not an interface a WinRT object can be seen as",
+                reinterpret_cast<PyTypeObject*>(cls)->tp_name);
+            return nullptr;
+        }
+
+        /**
          * _from_(): the object seen as this type, which is what as_() calls.
          */
         PyObject* type_from(PyObject* cls, PyObject* arg) noexcept
         {
             auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
-            if (!info || !info->guid)
+            if (!info)
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "'%s' is not an interface a WinRT object can be seen as",
+                return not_seen_as(cls);
+            }
+
+            // isinstance() refuses it with the same words
+            if (info->parameterized)
+            {
+                set_parameterized_type_error(
                     reinterpret_cast<PyTypeObject*>(cls)->tp_name);
                 return nullptr;
+            }
+
+            if (!info->guid)
+            {
+                return not_seen_as(cls);
             }
 
             try
