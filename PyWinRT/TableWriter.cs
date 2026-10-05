@@ -1087,7 +1087,9 @@ sealed class TableWriter
     /// refused, so that the rest of the namespace is still projected and only
     /// the calls that have no trampoline are lost. The run reports every
     /// missing shape once, by shape rather than by member, because a shape is
-    /// what a report upstream has to name.
+    /// what a report upstream has to name. The member's parameters are written
+    /// in full either way, which runtime/src/table-format.md makes a rule of
+    /// the format.
     /// </remarks>
     private uint GetShapeId(string key) =>
         census.ShapeIds.TryGetValue(key, out var id) ? (uint)id : NoRef;
