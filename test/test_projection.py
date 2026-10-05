@@ -436,8 +436,7 @@ class TestStructs(unittest.TestCase):
         tests = tc.TestRunner.make_tests()
 
         self.assertEqual(
-            # the tuple of an in-out struct parameter is not in the stub
-            tests.param13(BLITTABLE_FIELDS, BLITTABLE_FIELDS),  # type: ignore[arg-type]
+            tests.param13(BLITTABLE_FIELDS, BLITTABLE_FIELDS),
             (tc.Blittable(*BLITTABLE_FIELDS), tc.Blittable(*BLITTABLE_FIELDS)),
         )
 
