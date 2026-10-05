@@ -1,4 +1,15 @@
-"""
+import argparse
+import os
+import re
+import shutil
+import subprocess
+import sys
+import textwrap
+import zipfile
+from dataclasses import dataclass
+from pathlib import Path
+
+DESCRIPTION = """
 Checks the compatibility promise between two versions of the tree.
 
 The promise has two halves. A projection table is read by any winrt-runtime of
@@ -40,17 +51,6 @@ mismatch, and each is skipped when the baseline has nothing it would check.
 The interop modules of the current tree share no C ABI with the runtime, so
 nothing compiled in it is checked against an older runtime.
 """
-
-import argparse
-import os
-import re
-import shutil
-import subprocess
-import sys
-import textwrap
-import zipfile
-from dataclasses import dataclass
-from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent.parent
 
@@ -535,7 +535,7 @@ def scenario_b(baseline: Tree, current_install: Path, work: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+        description=DESCRIPTION, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument(
         "--baseline",
