@@ -60,6 +60,9 @@ class TestBuffer(unittest.TestCase):
         from collections.abc import Buffer
 
         self.assertTrue(issubclass(wss.Buffer, Buffer))
-        # FIXME: IMemoryBufferReference is not currently runtime-checkable
-        # due to missing __buffer__ method.
-        # self.assertTrue(issubclass(wf.IMemoryBufferReference, Buffer))  # type: ignore
+
+        with (
+            wf.MemoryBuffer(4) as memory_buffer,
+            memory_buffer.create_reference() as reference,
+        ):
+            self.assertIsInstance(reference, Buffer)
