@@ -968,7 +968,10 @@ class _Guids:
 
 
 def main(argv: list[str] | None = None) -> None:
-    parser = argparse.ArgumentParser(description=__doc__.strip().splitlines()[0])
+    parser = argparse.ArgumentParser(
+        description="Compiles the text form of a projection table into the binary "
+        "the runtime reads."
+    )
     parser.add_argument("source", type=Path, help="the _table.pywinrt.txt to read")
     parser.add_argument("destination", type=Path, help="the _table.pywinrt to write")
 
