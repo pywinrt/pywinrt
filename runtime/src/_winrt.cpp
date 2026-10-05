@@ -364,24 +364,7 @@ namespace py::cpp::_winrt
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
         void* /*unused*/) noexcept
     {
-        try
-        {
-            // The object may be a proxy, which this asks across apartments.
-            auto const object = self->obj;
-            winrt::com_array<winrt::guid> iids;
-
-            {
-                auto _gil = py::release_gil();
-                iids = winrt::get_interfaces(object);
-            }
-
-            return convert(iids);
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
+        return py::interp::iids_of(self->obj);
     }
 
     PyDoc_STRVAR(
@@ -392,62 +375,7 @@ namespace py::cpp::_winrt
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
         void* /*unused*/) noexcept
     {
-        try
-        {
-            // The object may be a proxy, which this asks across apartments.
-            auto const object = self->obj;
-            winrt::hstring name;
-
-            {
-                auto _gil = py::release_gil();
-                name = winrt::get_class_name(object);
-            }
-
-            return convert(name);
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static PyObject* Object_as(PyObject* self, PyObject* arg) noexcept
-    {
-        if (reinterpret_cast<PyObject*>(Py_TYPE(self)) == arg)
-        {
-            return Py_NewRef(self);
-        }
-
-        // as_(type) is type._from_(self), which every projected type and
-        // interop interface has, so what has none is refused for what it is
-        // rather than for the attribute it lacks.
-        pyobj_handle from;
-
-        if (PyObject_GetOptionalAttrString(arg, "_from_", from.put()) < 0)
-        {
-            return nullptr;
-        }
-
-        if (!from)
-        {
-            if (PyType_Check(arg))
-            {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "as_() takes a WinRT class or interface, not '%s'",
-                    reinterpret_cast<PyTypeObject*>(arg)->tp_name);
-                return nullptr;
-            }
-
-            PyErr_Format(
-                PyExc_TypeError,
-                "as_() takes a WinRT class or interface, not a '%s'",
-                Py_TYPE(arg)->tp_name);
-            return nullptr;
-        }
-
-        return PyObject_CallOneArg(from.get(), self);
+        return py::interp::runtime_class_name_of(self->obj);
     }
 
     /**
@@ -486,7 +414,7 @@ namespace py::cpp::_winrt
     }
 
     static PyMethodDef Object_methods[]
-        = {{"as_", reinterpret_cast<PyCFunction>(Object_as), METH_O, nullptr},
+        = {{"as_", py::interp::object_as, METH_O, nullptr},
            {"_from_", Object_from, METH_O | METH_CLASS, nullptr},
            {"_from", py::interp::deprecated_from, METH_O | METH_CLASS, nullptr},
            {}};

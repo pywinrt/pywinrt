@@ -96,6 +96,51 @@ class TestImplements(unittest.TestCase):
             "TestComponent.IRequiredOne",
         )
 
+    def test_object_members(self) -> None:
+        # An implementation is a WinRT object as a wrapper is, so it has
+        # Object's members, which answer what WinRT is told about it.
+        obj = Four()
+
+        self.assertIs(obj.as_(tc.IRequiredTwo), obj)
+        self.assertIs(obj.as_(Object), obj)
+
+        with self.assertRaises(OSError):
+            obj.as_(wf.IStringable)
+
+        self.assertEqual(obj._runtime_class_name_, "TestComponent.IRequiredFour")
+
+        # the first interface among the class's bases names it
+        class StringableFirst(wf.IStringable, wf.IClosable):
+            def to_string(self) -> str:
+                return ""
+
+            def close(self) -> None:
+                pass
+
+        class ClosableFirst(wf.IClosable, wf.IStringable):
+            def to_string(self) -> str:
+                return ""
+
+            def close(self) -> None:
+                pass
+
+        self.assertEqual(
+            StringableFirst()._runtime_class_name_, "Windows.Foundation.IStringable"
+        )
+        self.assertEqual(
+            ClosableFirst()._runtime_class_name_, "Windows.Foundation.IClosable"
+        )
+        # _guid_() is internal to the runtime, so no stub declares it
+        self.assertLessEqual(
+            {
+                tc.IRequiredOne._guid_(),  # type: ignore[attr-defined]
+                tc.IRequiredTwo._guid_(),  # type: ignore[attr-defined]
+                tc.IRequiredThree._guid_(),  # type: ignore[attr-defined]
+                tc.IRequiredFour._guid_(),  # type: ignore[attr-defined]
+            },
+            set(obj._iids_),
+        )
+
     def test_property(self) -> None:
         class Value(wf.IPropertyValue):
             @property

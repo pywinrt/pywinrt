@@ -410,6 +410,54 @@ namespace py::interp
             return PyBaseObject_Type.tp_new(type, no_args.get(), nullptr);
         }
 
+        /**
+         * The object WinRT is given for @p self, a Python implementation of an
+         * interface, which is what it answers WinRT's questions with.
+         */
+        winrt::Windows::Foundation::IInspectable identity_of(PyObject* self)
+        {
+            return {unwrap_abi(self, nullptr), winrt::take_ownership_from_abi};
+        }
+
+        // An implementation holds no WinRT object of its own, unlike a wrapper,
+        // so it answers what Object's members ask through the one WinRT is given.
+
+        PyObject* implements_iids_get(PyObject* self, void* /*unused*/) noexcept
+        {
+            try
+            {
+                return iids_of(identity_of(self));
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+        }
+
+        PyObject* implements_runtime_class_name_get(
+            PyObject* self, void* /*unused*/) noexcept
+        {
+            try
+            {
+                return runtime_class_name_of(identity_of(self));
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+        }
+
+        PyGetSetDef implements_getset[]
+            = {{"_iids_", implements_iids_get, nullptr, nullptr, nullptr},
+               {"_runtime_class_name_",
+                implements_runtime_class_name_get,
+                nullptr,
+                nullptr,
+                nullptr},
+               {}};
+
         PyMethodDef class_methods[]
             = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
                {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
@@ -429,7 +477,8 @@ namespace py::interp
                {}};
 
         PyMethodDef implements_methods[]
-            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
+            = {{"as_", object_as, METH_O, nullptr},
+               {"_from_", type_from, METH_O | METH_CLASS, nullptr},
                {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
@@ -447,7 +496,8 @@ namespace py::interp
                {}};
 
         PyMethodDef generic_implements_methods[]
-            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
+            = {{"as_", object_as, METH_O, nullptr},
+               {"_from_", type_from, METH_O | METH_CLASS, nullptr},
                {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
                {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
@@ -544,6 +594,7 @@ namespace py::interp
                {Py_tp_methods,
                 reinterpret_cast<void*>(
                     generic ? generic_implements_methods : implements_methods)},
+               {Py_tp_getset, reinterpret_cast<void*>(implements_getset)},
                {}};
 
         PyType_Spec implements_spec{
@@ -766,6 +817,97 @@ namespace py::interp
         }
 
         return PyObject_CallMethodOneArg(cls, from.get(), arg);
+    }
+
+    /**
+     * as_(): @p self seen as @p arg, which is what arg._from_() makes of it. A
+     * wrapper answers it, and so does a Python implementation of an interface.
+     */
+    PyObject* object_as(PyObject* self, PyObject* arg) noexcept
+    {
+        if (reinterpret_cast<PyObject*>(Py_TYPE(self)) == arg)
+        {
+            return Py_NewRef(self);
+        }
+
+        // as_(type) is type._from_(self), which every projected type and
+        // interop interface has, so what has none is refused for what it is
+        // rather than for the attribute it lacks.
+        pyobj_handle from;
+
+        if (PyObject_GetOptionalAttrString(arg, "_from_", from.put()) < 0)
+        {
+            return nullptr;
+        }
+
+        if (!from)
+        {
+            if (PyType_Check(arg))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "as_() takes a WinRT class or interface, not '%s'",
+                    reinterpret_cast<PyTypeObject*>(arg)->tp_name);
+                return nullptr;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "as_() takes a WinRT class or interface, not a '%s'",
+                Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+
+        return PyObject_CallOneArg(from.get(), self);
+    }
+
+    /**
+     * _iids_: the interfaces @p object says it implements, as GetIids answers.
+     * The object may be a proxy, which this asks across apartments.
+     */
+    PyObject* iids_of(winrt::Windows::Foundation::IInspectable object) noexcept
+    {
+        try
+        {
+            winrt::com_array<winrt::guid> iids;
+
+            {
+                auto _gil = release_gil();
+                iids = winrt::get_interfaces(object);
+            }
+
+            return convert(iids);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+    }
+
+    /**
+     * _runtime_class_name_: what @p object answers GetRuntimeClassName with.
+     * The object may be a proxy, which this asks across apartments.
+     */
+    PyObject* runtime_class_name_of(
+        winrt::Windows::Foundation::IInspectable object) noexcept
+    {
+        try
+        {
+            winrt::hstring name;
+
+            {
+                auto _gil = release_gil();
+                name = winrt::get_class_name(object);
+            }
+
+            return convert(name);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
     }
 
     /**
