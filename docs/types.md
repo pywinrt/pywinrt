@@ -270,8 +270,10 @@ print(home.as_(Uri).host)
 ```
 
 `as_()` takes a runtime class or an interface, and raises [`OSError`][OSError]
-when the object does not implement it. [`isinstance()`][isinstance] asks the
-same question without raising; see [Interfaces](#interfaces).
+when the object does not implement it. Given anything else, a parameterized
+interface such as `IVector[str]` included, it raises [`TypeError`][TypeError].
+[`isinstance()`][isinstance] asks the same question without raising; see
+[Interfaces](#interfaces).
 
 !!! seealso "See also"
 

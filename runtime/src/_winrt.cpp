@@ -419,13 +419,35 @@ namespace py::cpp::_winrt
             return Py_NewRef(self);
         }
 
-        pyobj_handle from{PyUnicode_InternFromString("_from_")};
-        if (!from)
+        // as_(type) is type._from_(self), which every projected type and
+        // interop interface has, so what has none is refused for what it is
+        // rather than for the attribute it lacks.
+        pyobj_handle from;
+
+        if (PyObject_GetOptionalAttrString(arg, "_from_", from.put()) < 0)
         {
             return nullptr;
         }
 
-        return PyObject_CallMethodOneArg(arg, from.get(), self);
+        if (!from)
+        {
+            if (PyType_Check(arg))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "as_() takes a WinRT class or interface, not '%s'",
+                    reinterpret_cast<PyTypeObject*>(arg)->tp_name);
+                return nullptr;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "as_() takes a WinRT class or interface, not a '%s'",
+                Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+
+        return PyObject_CallOneArg(from.get(), self);
     }
 
     /**
