@@ -8,6 +8,7 @@ import pathlib
 
 from setuptools import Extension, setup
 from setuptools.command.bdist_wheel import bdist_wheel
+from setuptools.command.build import build
 from setuptools.command.build_ext import build_ext
 from setuptools.command.build_py import build_py
 
@@ -37,7 +38,7 @@ PAYLOAD_DLL_PATHS = {
 }
 
 
-def get_sbom() -> dict:
+def get_sbom() -> dict[str, object]:
     """
     The bill of materials that PEP 770 puts in the wheel.
 
@@ -81,7 +82,9 @@ class build_py_ex(build_py):
         # Windows looks for an extension module's dependencies in the
         # directory the module was loaded from, so the bootstrapper goes
         # beside the .pyd that links it rather than in a package of its own.
-        plat_name = self.get_finalized_command("build").plat_name
+        build_command = self.get_finalized_command("build")
+        assert isinstance(build_command, build)
+        plat_name = build_command.plat_name
         nuget_path = WINDOWS_APP_SDK_PATHS["WASDK_FOUNDATION_PATH"]
         destination = pathlib.Path(self.build_lib, "winrt")
 
@@ -93,7 +96,7 @@ class build_py_ex(build_py):
 
 
 class bdist_wheel_ex(bdist_wheel):
-    def write_wheelfile(self, wheelfile_base: str, *args, **kwargs) -> None:
+    def write_wheelfile(self, wheelfile_base: str, *args: str, **kwargs: str) -> None:
         bdist_wheel.write_wheelfile(self, wheelfile_base, *args, **kwargs)
 
         # Nothing in setuptools writes a PEP 770 bill of materials, and this
