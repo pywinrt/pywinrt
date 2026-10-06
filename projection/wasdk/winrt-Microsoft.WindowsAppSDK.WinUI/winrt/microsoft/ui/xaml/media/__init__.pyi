@@ -628,6 +628,7 @@ class EllipseGeometry(Geometry, metaclass=EllipseGeometry_Static):
     def center(self, value: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
 
 class FontFamily_Static(winrt._winrt.Object_Static):
+    def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> FontFamily_Static: ...
     # Microsoft.UI.Xaml.Media.FontFamily Microsoft.UI.Xaml.Media.FontFamily::get_XamlAutoFontFamily()
     @_property
     @typing.final

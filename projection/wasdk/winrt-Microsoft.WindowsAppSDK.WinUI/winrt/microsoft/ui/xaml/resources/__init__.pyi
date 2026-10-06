@@ -11,6 +11,7 @@ __all__ = [
 ]
 
 class CustomXamlResourceLoader_Static(winrt._winrt.Object_Static):
+    def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CustomXamlResourceLoader_Static: ...
     # Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader Microsoft.UI.Xaml.Resources.CustomXamlResourceLoader::get_Current()
     @_property
     def current(cls) -> CustomXamlResourceLoader: ...
