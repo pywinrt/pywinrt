@@ -34,6 +34,20 @@ static class ObjectWriterExtensions
 
             var hasMembers = false;
 
+            // pyright checks the keywords of a class statement against the
+            // metaclass's __new__ when the metaclass declares one, and
+            // ABCMeta's, which winrt._winrt.Object_Static inherits in the
+            // stubs, takes any keyword, so the runtime_class_name keyword
+            // that __init_subclass__ takes below is declared here as well.
+            if (type.IsComposable && type.Type.BaseType is null or { FullName: "System.Object" })
+            {
+                w.WriteLine(
+                    $"def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> {type.Name}_Static: ..."
+                );
+
+                hasMembers = true;
+            }
+
             foreach (var group in type.MethodGroups.Where(g => g.IsStatic))
             {
                 // The stubs declare winrt._winrt.Object_Static as an ABCMeta,
