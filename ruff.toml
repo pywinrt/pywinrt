@@ -24,6 +24,10 @@ select = [
 # modules beside them have, so they keep their docstrings (PYI021) and name
 # their default values rather than hiding them behind "..." (PYI011).
 "interop/**/*.pyi" = ["PYI011", "PYI021"]
+# A composable class's metaclass declares a __new__ that returns the metaclass
+# by name, since mypy and pyright refuse Self in a metaclass, and ruff does not
+# know a class deriving from winrt._winrt.Object_Static for a metaclass (PYI034).
+"projection/**/*.pyi" = ["PYI034"]
 
 [format]
 # A generated file is changed through its generator, never by a formatter run
