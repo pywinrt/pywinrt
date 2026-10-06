@@ -27,6 +27,74 @@ namespace py::cpp::_winrt
                && reinterpret_cast<PyTypeObject*>(cls) == info.py_type;
     }
 
+    /**
+     * Whether @p type is a projected class or interface that implements the
+     * interface whose IID is @p iid, or derives from one that does. A class
+     * lists every interface it implements, and an interface every one it
+     * requires, so nothing past the table records of @p type's bases needs to
+     * be read, and nothing needs to be imported.
+     */
+    static bool implements_interface(PyTypeObject* type, winrt::guid const& iid)
+    {
+        auto const matches = [&iid](void const* guid)
+        {
+            return guid && *static_cast<winrt::guid const*>(guid) == iid;
+        };
+
+        auto* const mro = type->tp_mro;
+        if (!mro)
+        {
+            return false;
+        }
+
+        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
+        {
+            auto* const base = PyTuple_GET_ITEM(mro, i);
+            if (!PyType_Check(base))
+            {
+                continue;
+            }
+
+            auto* const entry
+                = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(base));
+            if (!entry)
+            {
+                continue;
+            }
+
+            // The metaclass that carries a class's statics is remembered with
+            // the class's entry, and it implements nothing.
+            if (reinterpret_cast<PyTypeObject*>(base) == entry->statics)
+            {
+                continue;
+            }
+
+            if (matches(entry->guid))
+            {
+                return true;
+            }
+
+            auto const& table = *entry->owner->table;
+            auto const interfaces = table.type(entry->index).interfaces();
+
+            for (uint32_t j = 0; j < interfaces.size(); j++)
+            {
+                auto const record = table.type(interfaces[j]);
+                if (record.flags() & py::table::type_flags::parameterized)
+                {
+                    continue;
+                }
+
+                if (matches(record.guid()))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     static PyObject* Object_Static_instancecheck(PyObject* cls, PyObject* obj) noexcept
     {
         try
@@ -98,8 +166,16 @@ namespace py::cpp::_winrt
             if (!PyObject_TypeCheck(obj, object_type))
             {
                 // The query below asks a WinRT object what it holds, which
-                // only something that holds a WinRT object can answer.
-                return derived.detach();
+                // only something that holds a WinRT object can answer. A
+                // Python implementation answers for the interfaces its class
+                // implements, as issubclass() does, which as_() agrees with.
+                if (info->category != py::table::category::interface_)
+                {
+                    return derived.detach();
+                }
+
+                return PyBool_FromLong(implements_interface(
+                    Py_TYPE(obj), *static_cast<winrt::guid const*>(info->guid)));
             }
 
             auto const& guid = *static_cast<winrt::guid const*>(info->guid);
@@ -138,74 +214,6 @@ namespace py::cpp::_winrt
             py::to_PyErr();
             return nullptr;
         }
-    }
-
-    /**
-     * Whether @p type is a projected class or interface that implements the
-     * interface whose IID is @p iid, or derives from one that does. A class
-     * lists every interface it implements, and an interface every one it
-     * requires, so nothing past the table records of @p type's bases needs to
-     * be read, and nothing needs to be imported.
-     */
-    static bool implements_interface(PyTypeObject* type, winrt::guid const& iid)
-    {
-        auto const matches = [&iid](void const* guid)
-        {
-            return guid && *static_cast<winrt::guid const*>(guid) == iid;
-        };
-
-        auto* const mro = type->tp_mro;
-        if (!mro)
-        {
-            return false;
-        }
-
-        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(mro); i++)
-        {
-            auto* const base = PyTuple_GET_ITEM(mro, i);
-            if (!PyType_Check(base))
-            {
-                continue;
-            }
-
-            auto* const entry
-                = py::interp::find_type_entry(reinterpret_cast<PyTypeObject*>(base));
-            if (!entry)
-            {
-                continue;
-            }
-
-            // The metaclass that carries a class's statics is remembered with
-            // the class's entry, and it implements nothing.
-            if (reinterpret_cast<PyTypeObject*>(base) == entry->statics)
-            {
-                continue;
-            }
-
-            if (matches(entry->guid))
-            {
-                return true;
-            }
-
-            auto const& table = *entry->owner->table;
-            auto const interfaces = table.type(entry->index).interfaces();
-
-            for (uint32_t j = 0; j < interfaces.size(); j++)
-            {
-                auto const record = table.type(interfaces[j]);
-                if (record.flags() & py::table::type_flags::parameterized)
-                {
-                    continue;
-                }
-
-                if (matches(record.guid()))
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
     }
 
     static PyObject* Object_Static_subclasscheck(

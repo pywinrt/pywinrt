@@ -179,8 +179,23 @@ class TestClasses(unittest.TestCase):
 
     def test_isinstance_agrees_with_as(self) -> None:
         # A class does not derive from its interfaces, so isinstance() asks the
-        # object, and it has to give the answer as_() gets.
-        for instance in (tc.Class(), tc.Composable()):
+        # object, and it has to give the answer as_() gets. A Python
+        # implementation derives from one interface and implements the ones it
+        # requires as well.
+        class Four(tc.IRequiredFour):
+            def one(self) -> int:
+                return 1
+
+            def two(self) -> int:
+                return 2
+
+            def three(self) -> int:
+                return 3
+
+            def four(self) -> int:
+                return 4
+
+        for instance in (tc.Class(), tc.Composable(), Four()):
             for interface in (
                 tc.IRequiredOne,
                 tc.IRequiredTwo,
