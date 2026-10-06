@@ -575,6 +575,11 @@ that answers to all of them. The type hints mark the members abstract, so a
 type checker reports one that is missing; at run time a missing member fails
 only when WinRT calls it.
 
+The class cannot also derive from an [abstract base class][abc], such as one
+from `collections.abc`: Python reports a metaclass conflict, because the
+metaclass of a WinRT type is not [`ABCMeta`][ABCMeta], although the type hints
+declare it one so that a type checker enforces the abstract members.
+
 The type hints of a member say what a caller may pass, which is more than the
 WinRT type: a tuple for a struct, a Python collection for a collection
 interface, any buffer for an `IBuffer`. A method of an implementation can be
@@ -630,6 +635,8 @@ code `PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`; see [Exceptions](#exceptions).
     parameterized interface without type arguments.
 
 [issubclass]: https://docs.python.org/3/builtins/functions.html#issubclass
+[abc]: https://docs.python.org/3/library/abc.html
+[ABCMeta]: https://docs.python.org/3/library/abc.html#abc.ABCMeta
 
 ## Delegates
 
