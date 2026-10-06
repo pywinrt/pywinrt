@@ -788,6 +788,7 @@ class TextElement(microsoft_ui_xaml.DependencyObject, metaclass=TextElement_Stat
     def name(self) -> str: ...
 
 class TextHighlighter_Static(winrt._winrt.Object_Static):
+    def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> TextHighlighter_Static: ...
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Documents.TextHighlighter::get_BackgroundProperty()
     @_property
     @typing.final

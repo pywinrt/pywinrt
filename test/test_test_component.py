@@ -116,13 +116,13 @@ class TestTestComponent(unittest.TestCase):
     def test_declared_runtime_class_name_misspelled(self) -> None:
         with self.assertRaises(TypeError):
 
-            class _(tc.Composable, runtime_class_nam="Spam.Eggs"):  # pyright: ignore[reportGeneralTypeIssues, reportCallIssue]
+            class _(tc.Composable, runtime_class_nam="Spam.Eggs"):  # pyright: ignore[reportGeneralTypeIssues]
                 pass
 
     def test_declared_runtime_class_name_must_be_str(self) -> None:
         with self.assertRaisesRegex(TypeError, "must be str, not int"):
 
-            class _(tc.Composable, runtime_class_name=1):  # pyright: ignore[reportGeneralTypeIssues, reportArgumentType]
+            class _(tc.Composable, runtime_class_name=1):  # pyright: ignore[reportArgumentType]
                 pass
 
     def test_declared_runtime_class_name_is_not_none(self) -> None:
@@ -133,7 +133,7 @@ class TestTestComponent(unittest.TestCase):
 
         with self.assertRaisesRegex(TypeError, "must be str, not NoneType"):
 
-            class _(C, runtime_class_name=None):  # pyright: ignore[reportGeneralTypeIssues, reportArgumentType]
+            class _(C, runtime_class_name=None):  # pyright: ignore[reportArgumentType]
                 pass
 
     def test_implementation_has_no_declared_runtime_class_name(self) -> None:
@@ -141,7 +141,7 @@ class TestTestComponent(unittest.TestCase):
         # interface it implements, as C++/WinRT names one.
         with self.assertRaises(TypeError):
 
-            class _(wf.IStringable, runtime_class_name="Spam.Eggs"):  # pyright: ignore[reportGeneralTypeIssues, reportCallIssue]
+            class _(wf.IStringable, runtime_class_name="Spam.Eggs"):
                 @override
                 def to_string(self) -> str:
                     return "spam"
