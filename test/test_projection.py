@@ -301,10 +301,43 @@ class TestClasses(unittest.TestCase):
         ):
             uri.as_("IStringable")  # type: ignore
 
+    def test_as_something_with_no_from_by_its_qualified_name(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError,
+            r"as_\(\) takes a WinRT class or interface, "
+            r"not 'winrt.windows.foundation.AsyncStatus'",
+        ):
+            wf.Uri("http://example.com/").as_(wf.AsyncStatus)  # type: ignore
+
+    def test_as_an_instance(self) -> None:
+        # An instance finds its class's _from_(), but it names no type.
+        uri = wf.Uri("http://example.com/")
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"as_\(\) takes a WinRT class or interface, "
+            r"not a 'winrt.windows.foundation.Uri'",
+        ):
+            uri.as_(uri)  # type: ignore
+
     def test_as_a_bare_generic_interface(self) -> None:
         # as isinstance() says it
         with self.assertRaisesRegex(TypeError, "takes type arguments"):
             wdj.JsonArray().as_(wfc.IVector)  # pyright: ignore[reportUnknownArgumentType]
+
+    def test_as_a_parameterized_interface(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError, r"as_\(\) cannot take a parameterized interface"
+        ):
+            wdj.JsonArray().as_(wfc.IVector[wdj.IJsonValue])
+
+    def test_as_a_parameterized_type(self) -> None:
+        # Only an interface is said to be one.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"as_\(\) takes a WinRT class or interface, not a 'types.GenericAlias'",
+        ):
+            wdj.JsonArray().as_(list[int])  # type: ignore
 
     def test_as_an_interface_the_object_does_not_implement(self) -> None:
         with self.assertRaises(OSError):
