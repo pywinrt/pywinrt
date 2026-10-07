@@ -564,7 +564,10 @@ than comparing types.
 Passing a WinRT API an object of your own is rarely needed. Where a parameter
 is a collection interface, such as `IIterable` or `IMap`, pass a Python
 `list`, `dict` or other [collection](#collections) instead. For any other
-interface, use one of the runtime classes that implement it.
+interface, use one of the runtime classes that implement it. A parameterized
+interface, such as `IVector[str]`, cannot be implemented in Python at all: an
+object of a class that derives from one raises [`TypeError`][TypeError] when
+it is passed to WinRT.
 
 Some APIs call back into an object that the program provides, as XAML does
 with a value converter. For those, a Python class that derives from an
