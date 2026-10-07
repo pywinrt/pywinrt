@@ -136,6 +136,17 @@ class TestTestComponent(unittest.TestCase):
             class _(C, runtime_class_name=None):  # pyright: ignore[reportArgumentType]
                 pass
 
+    def test_declared_runtime_class_name_set_afterwards_must_be_str(self) -> None:
+        class C(tc.Composable, runtime_class_name="Spam.Eggs"):
+            pass
+
+        setattr(C, "_declared_runtime_class_name_", 1)
+
+        with self.assertRaisesRegex(
+            TypeError, "_declared_runtime_class_name_ must be str, not int"
+        ):
+            C()
+
     def test_implementation_has_no_declared_runtime_class_name(self) -> None:
         # A Python implementation of an interface is named after the first
         # interface it implements, as C++/WinRT names one.
