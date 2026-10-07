@@ -152,6 +152,39 @@ class Inspect(unittest.TestCase):
             self.path.read_bytes(), b"\x0c\nimport winrt.microsoft.ui.xaml\n"
         )
 
+    def test_a_lone_carriage_return_ends_a_line(self) -> None:
+        # as ast ends one, in the file of an old Mac editor
+        p = self.path
+        p.write_bytes(
+            b"import os\r"
+            b"import winui3.microsoft.ui.xaml\r"
+            b'REQUIRES = ["winui3-Microsoft.UI.Xaml>=3.2"]\r'
+        )
+        winui = floor("winrt-Microsoft.WindowsAppSDK.WinUI")
+
+        self.assertEqual(
+            run(p),
+            [
+                f"{p}:2:8",
+                "possible match: winui3.microsoft.ui.xaml",
+                "rename to: winrt.microsoft.ui.xaml",
+                f"{p}:3:14",
+                "possible match: winui3-Microsoft.UI.Xaml>=3.2",
+                f"rename to: winrt-Microsoft.WindowsAppSDK.WinUI{winui}",
+            ],
+        )
+
+        run(p, "--fix")
+
+        self.assertEqual(
+            p.read_bytes(),
+            b"import os\r"
+            b"import winrt.microsoft.ui.xaml\r"
+            b'REQUIRES = ["winrt-Microsoft.WindowsAppSDK.WinUI'
+            + winui.encode()
+            + b'"]\r',
+        )
+
 
 def floor(distribution: str) -> str:
     """
