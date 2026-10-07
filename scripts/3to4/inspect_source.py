@@ -126,6 +126,15 @@ def split_lines(source: str, keepends: bool = False) -> list[str]:
     return [line.rstrip("\r\n") for line in lines]
 
 
+def tokens(source: str) -> Iterator[tokenize.TokenInfo]:
+    """
+    The tokens of the Python code @p source, numbered by the lines of
+    split_lines(), where io.StringIO without newline="" ends a line at \\n
+    alone.
+    """
+    return tokenize.generate_tokens(io.StringIO(source, newline="").readline)
+
+
 def column(lines: list[str], line: int, offset: int) -> int:
     """
     The character column of the UTF-8 byte @p offset that ast reports.
@@ -379,7 +388,7 @@ def string_spans(source: str) -> list[tuple[tuple[int, int], tuple[int, int]]]:
     """
     return [
         (token.start, token.end)
-        for token in tokenize.generate_tokens(io.StringIO(source).readline)
+        for token in tokens(source)
         if token.type == tokenize.STRING
     ]
 
@@ -470,7 +479,7 @@ def package_edits(source: str, tree: ast.AST, lines: list[str]) -> list[Edit]:
     edits: list[Edit] = []
     previous = ""
 
-    for token in tokenize.generate_tokens(io.StringIO(source).readline):
+    for token in tokens(source):
         if token.type in (tokenize.NL, tokenize.COMMENT):
             continue
 
