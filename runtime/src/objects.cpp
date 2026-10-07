@@ -819,6 +819,51 @@ namespace py::interp
         return PyObject_CallMethodOneArg(cls, from.get(), arg);
     }
 
+    namespace
+    {
+        /**
+         * The name @p type is written with in Python, qualified by its module
+         * unless that is builtins or __main__, as
+         * PyType_GetFullyQualifiedName() gives it from 3.13.
+         */
+        PyObject* qualified_name_of(PyTypeObject* type) noexcept
+        {
+#if PY_VERSION_HEX >= 0x030D0000
+            return PyType_GetFullyQualifiedName(type);
+#else
+            pyobj_handle qualname{PyType_GetQualName(type)};
+            if (!qualname)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle module{PyObject_GetAttrString(
+                reinterpret_cast<PyObject*>(type), "__module__")};
+            if (!module)
+            {
+                return nullptr;
+            }
+
+            if (!PyUnicode_Check(module.get()))
+            {
+                return qualname.detach();
+            }
+
+            if (PyUnicode_CompareWithASCIIString(module.get(), "builtins") == 0)
+            {
+                return qualname.detach();
+            }
+
+            if (PyUnicode_CompareWithASCIIString(module.get(), "__main__") == 0)
+            {
+                return qualname.detach();
+            }
+
+            return PyUnicode_FromFormat("%U.%U", module.get(), qualname.get());
+#endif
+        }
+    } // namespace
+
     /**
      * as_(): @p self seen as @p arg, which is what arg._from_() makes of it. A
      * wrapper answers it, and so does a Python implementation of an interface.
@@ -830,8 +875,46 @@ namespace py::interp
             return Py_NewRef(self);
         }
 
-        // as_(type) is type._from_(self), which every projected type and
-        // interop interface has, so what has none is refused for what it is
+        // A parameterized interface named with its type arguments, such as
+        // IVector[int], is a types.GenericAlias, which looks attributes up on
+        // the interface it parameterizes.
+        if (PyObject_TypeCheck(arg, &Py_GenericAliasType))
+        {
+            pyobj_handle origin_from;
+
+            if (PyObject_GetOptionalAttrString(arg, "_from_", origin_from.put()) < 0)
+            {
+                return nullptr;
+            }
+
+            if (origin_from)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError, "as_() cannot take a parameterized interface");
+                return nullptr;
+            }
+        }
+
+        // as_(type) is type._from_(self). Only a type is asked for it, since an
+        // instance would find its class's.
+        if (!PyType_Check(arg))
+        {
+            pyobj_handle name{qualified_name_of(Py_TYPE(arg))};
+            if (!name)
+            {
+                return nullptr;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "as_() takes a WinRT class or interface, not a '%U'",
+                name.get());
+            return nullptr;
+        }
+
+        // Every projected class with instances, projected interface and
+        // interop interface has _from_(), and a struct, an enum or a static
+        // class has none, so a type without it is refused for what it is
         // rather than for the attribute it lacks.
         pyobj_handle from;
 
@@ -842,19 +925,16 @@ namespace py::interp
 
         if (!from)
         {
-            if (PyType_Check(arg))
+            pyobj_handle name{qualified_name_of(reinterpret_cast<PyTypeObject*>(arg))};
+            if (!name)
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "as_() takes a WinRT class or interface, not '%s'",
-                    reinterpret_cast<PyTypeObject*>(arg)->tp_name);
                 return nullptr;
             }
 
             PyErr_Format(
                 PyExc_TypeError,
-                "as_() takes a WinRT class or interface, not a '%s'",
-                Py_TYPE(arg)->tp_name);
+                "as_() takes a WinRT class or interface, not '%U'",
+                name.get());
             return nullptr;
         }
 
