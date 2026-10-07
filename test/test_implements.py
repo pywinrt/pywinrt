@@ -254,6 +254,35 @@ class TestImplements(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "abstract class IIterable"):
             wfc.IIterable[int]()  # type: ignore[abstract]
 
+    def test_parameterized_interface_is_not_implementable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
+
+            class _(wfc.IVector[int]):
+                pass
+
+    def test_parameterized_interface_is_not_implementable_with_a_composable(
+        self,
+    ) -> None:
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
+
+            class _(tc.Composable, wfc.IIterable[int]):
+                pass
+
+    def test_parameterized_interface_is_not_implementable_behind_a_mixin(
+        self,
+    ) -> None:
+        # A mixin whose __init_subclass__() does not call the next one hides the
+        # class statement from every base after it, so only the interface not
+        # being a base type refuses this one.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
+
+            class _(Silent, wfc.IIterable[int]):
+                pass
+
     def test_subclass_takes_no_arguments_without_init(self) -> None:
         with self.assertRaisesRegex(TypeError, "takes no arguments"):
             One(1)  # type: ignore[call-arg]

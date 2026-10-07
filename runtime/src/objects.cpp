@@ -597,11 +597,15 @@ namespace py::interp
                {Py_tp_getset, reinterpret_cast<void*>(implements_getset)},
                {}};
 
+        // Which instance of a parameterized interface a class implements would
+        // be named by its base's type arguments, which only the class's
+        // __orig_bases__ keep and nothing reads, so Python refuses to derive
+        // from one.
         PyType_Spec implements_spec{
             implements_name,
             0,
             0,
-            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+            Py_TPFLAGS_DEFAULT | (generic ? 0 : Py_TPFLAGS_BASETYPE),
             implements_slots};
 
         auto const metaclass = get_object_meta_type();

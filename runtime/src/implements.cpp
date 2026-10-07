@@ -463,6 +463,17 @@ namespace py::interp
                 continue;
             }
 
+            // Python refuses to derive from a parameterized interface, but a
+            // metaclass's mro() can still name one.
+            if (entry->parameterized)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' takes type arguments, so Python cannot implement it",
+                    reinterpret_cast<PyTypeObject*>(base)->tp_name);
+                return false;
+            }
+
             add(entry);
 
             // An interface lists what it requires transitively, and an object
