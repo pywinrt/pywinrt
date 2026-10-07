@@ -9,9 +9,11 @@
   "include": ["_typing"],
   "exclude": ["**/__pycache__"],
 
-  // only the merged tree: a copy anywhere else would be a second identity of
-  // the module being checked
-  "extraPaths": ["_typing"],
+  // Not even the merged tree on extraPaths: pyright treats a package found
+  // there as local code, and holds only one found through the interpreter's
+  // sys.path, where the lint job's .pth file puts _typing, to what its modules
+  // export.
+  "extraPaths": [],
 
   "executionEnvironments": [
     // The generated stubs refer to the deprecated types and members WinRT

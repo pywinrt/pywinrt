@@ -49,9 +49,11 @@ def sources() -> dict[pathlib.PurePath, pathlib.Path]:
     # Only the stubs of a projection package: its __init__.py binds the names
     # it exports from the projection table at import time, which a type
     # checker cannot follow, and the stub beside it is what both checkers
-    # read. So every .py merged is code rather than glue.
+    # read. So every .py merged is code rather than glue. The py.typed
+    # markers come too: pyright holds an installed package that has one to
+    # what its modules export.
     for distribution in sorted(ROOT.glob("projection/*/*")):
-        add(found, distribution, ("*.pyi",))
+        add(found, distribution, ("*.pyi", "py.typed"))
 
     # the runtime, the table compiler and the interop packages live outside of
     # projection/, so winrt.system, winrt.runtime and winrt._winrt come from
@@ -62,7 +64,7 @@ def sources() -> dict[pathlib.PurePath, pathlib.Path]:
         ROOT / "runtime" / "python",
         ROOT / "table",
     ]:
-        add(found, distribution, ("*.py", "*.pyi"))
+        add(found, distribution, ("*.py", "*.pyi", "py.typed"))
 
     return found
 
