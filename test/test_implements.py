@@ -256,29 +256,55 @@ class TestImplements(unittest.TestCase):
 
     def test_parameterized_interface_is_not_implementable(self) -> None:
         # Which instance of the interface the class implements is named by its
-        # base's type arguments, which nothing reads, so it is refused wherever
-        # WinRT is given the object, as Object's members are.
-        class Numbers(wfc.IIterable[int]):
+        # base's type arguments, which nothing reads, so the class statement is
+        # refused.
+        with self.assertRaisesRegex(
+            TypeError, r"'[\w.]*IVector' takes type arguments, so Python cannot"
+        ):
+
+            class _(wfc.IVector[int]):
+                pass
+
+    def test_parameterized_interface_is_refused_after_another(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError, r"'[\w.]*IIterable' takes type arguments"
+        ):
+
+            class _(tc.IRequiredOne, wfc.IIterable[int]):
+                def one(self) -> int:
+                    return 1
+
+    def test_parameterized_interface_is_refused_after_a_composable(self) -> None:
+        # A composable class calls the next __init_subclass__() with the
+        # keywords it does not take itself.
+        with self.assertRaisesRegex(
+            TypeError, r"'[\w.]*IIterable' takes type arguments"
+        ):
+
+            class _(tc.Composable, wfc.IIterable[int]):
+                pass
+
+    def test_parameterized_interface_is_refused_when_used(self) -> None:
+        # A base whose __init_subclass__() does not call the next one hides the
+        # class statement from the interface, so the object is refused wherever
+        # WinRT is given it instead, as Object's members are.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        class Numbers(Silent, wfc.IIterable[int]):
             def first(self) -> wfc.IIterator[int]:
                 raise NotImplementedError
 
-        class Vector(wfc.IVector[int]):
-            pass
+        message = (
+            r"'[\w.]*IIterable' takes type arguments, so Python cannot implement it"
+        )
 
-        for obj, name in (
-            (Numbers(), "IIterable"),
-            (Vector(), "IVector"),  # type: ignore[abstract]  # pyright: ignore[reportAbstractUsage]
-        ):
-            message = (
-                rf"'[\w.]*{name}' takes type arguments, so Python cannot implement it"
-            )
+        with self.assertRaisesRegex(TypeError, message):
+            wfc.PropertySet().insert("obj", Numbers())
 
-            with self.subTest(name=name):
-                with self.assertRaisesRegex(TypeError, message):
-                    wfc.PropertySet().insert("obj", obj)
-
-                with self.assertRaisesRegex(TypeError, message):
-                    _ = obj._iids_
+        with self.assertRaisesRegex(TypeError, message):
+            _ = Numbers()._iids_
 
     def test_subclass_takes_no_arguments_without_init(self) -> None:
         with self.assertRaisesRegex(TypeError, "takes no arguments"):
