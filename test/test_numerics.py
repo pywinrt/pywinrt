@@ -919,6 +919,16 @@ class TestNumerics(unittest.TestCase):
         ):
             _ = v / t
 
+        # A buffer of floats is taken where a method takes the struct as well,
+        # but not beside an operator, and array.array has no answer of its own.
+        a: typing.Any = array.array("f", [1, 1, 1])
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for \+: '[\w+\.]*Vector3' and 'array.array'",
+        ):
+            _ = v + a
+
         q: typing.Any = (0, 0, 0, 1)
 
         with self.assertRaisesRegex(TypeError, "can't multiply sequence"):
