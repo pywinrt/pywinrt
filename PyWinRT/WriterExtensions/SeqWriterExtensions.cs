@@ -78,9 +78,10 @@ static class SeqWriterExtensions
         w.WriteLine(
             $"def __setitem__(self, index: slice, value: _cabc.Iterable[{valParamType}]) -> None: ..."
         );
-        // InsertAt, with the position counted and clamped as a list does
+        // InsertAt, with the position counted and clamped as a list does, and
+        // positional-only, as the runtime takes no keywords
         w.WriteLine(
-            $"def insert(self, index: typing.SupportsIndex, value: {valParamType}) -> None: ..."
+            $"def insert(self, index: typing.SupportsIndex, value: {valParamType}, /) -> None: ..."
         );
     }
 }
