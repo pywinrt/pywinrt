@@ -254,6 +254,32 @@ class TestImplements(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "abstract class IIterable"):
             wfc.IIterable[int]()  # type: ignore[abstract]
 
+    def test_parameterized_interface_is_not_implementable(self) -> None:
+        # Which instance of the interface the class implements is named by its
+        # base's type arguments, which nothing reads, so it is refused wherever
+        # WinRT is given the object, as Object's members are.
+        class Numbers(wfc.IIterable[int]):
+            def first(self) -> wfc.IIterator[int]:
+                raise NotImplementedError
+
+        class Vector(wfc.IVector[int]):
+            pass
+
+        for obj, name in (
+            (Numbers(), "IIterable"),
+            (Vector(), "IVector"),  # type: ignore[abstract]  # pyright: ignore[reportAbstractUsage]
+        ):
+            message = (
+                rf"'[\w.]*{name}' takes type arguments, so Python cannot implement it"
+            )
+
+            with self.subTest(name=name):
+                with self.assertRaisesRegex(TypeError, message):
+                    wfc.PropertySet().insert("obj", obj)
+
+                with self.assertRaisesRegex(TypeError, message):
+                    _ = obj._iids_
+
     def test_subclass_takes_no_arguments_without_init(self) -> None:
         with self.assertRaisesRegex(TypeError, "takes no arguments"):
             One(1)  # type: ignore[call-arg]

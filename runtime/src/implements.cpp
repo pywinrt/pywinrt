@@ -463,6 +463,18 @@ namespace py::interp
                 continue;
             }
 
+            // Which instance of a parameterized interface the class implements
+            // is named by the type arguments of its base, which only the
+            // class's __orig_bases__ keep and nothing here reads.
+            if (entry->parameterized)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' takes type arguments, so Python cannot implement it",
+                    reinterpret_cast<PyTypeObject*>(base)->tp_name);
+                return false;
+            }
+
             add(entry);
 
             // An interface lists what it requires transitively, and an object
