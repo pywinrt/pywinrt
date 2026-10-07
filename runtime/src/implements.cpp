@@ -463,8 +463,8 @@ namespace py::interp
                 continue;
             }
 
-            // The class statement refuses a parameterized interface already,
-            // unless a base's __init_subclass__() does not call the next one.
+            // Python refuses to derive from a parameterized interface, but a
+            // metaclass's mro() can still name one.
             if (entry->parameterized)
             {
                 PyErr_Format(

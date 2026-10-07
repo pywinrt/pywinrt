@@ -255,56 +255,33 @@ class TestImplements(unittest.TestCase):
             wfc.IIterable[int]()  # type: ignore[abstract]
 
     def test_parameterized_interface_is_not_implementable(self) -> None:
-        # Which instance of the interface the class implements is named by its
-        # base's type arguments, which nothing reads, so the class statement is
-        # refused.
-        with self.assertRaisesRegex(
-            TypeError, r"'[\w.]*IVector' takes type arguments, so Python cannot"
-        ):
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
             class _(wfc.IVector[int]):
                 pass
 
-    def test_parameterized_interface_is_refused_after_another(self) -> None:
-        with self.assertRaisesRegex(
-            TypeError, r"'[\w.]*IIterable' takes type arguments"
-        ):
-
-            class _(tc.IRequiredOne, wfc.IIterable[int]):
-                def one(self) -> int:
-                    return 1
-
-    def test_parameterized_interface_is_refused_after_a_composable(self) -> None:
-        # A composable class calls the next __init_subclass__() with the
-        # keywords it does not take itself.
-        with self.assertRaisesRegex(
-            TypeError, r"'[\w.]*IIterable' takes type arguments"
-        ):
+    def test_parameterized_interface_is_not_implementable_with_a_composable(
+        self,
+    ) -> None:
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
             class _(tc.Composable, wfc.IIterable[int]):
                 pass
 
-    def test_parameterized_interface_is_refused_when_used(self) -> None:
-        # A base whose __init_subclass__() does not call the next one hides the
-        # class statement from the interface, so the object is refused wherever
-        # WinRT is given it instead, as Object's members are.
+    def test_parameterized_interface_is_not_implementable_behind_a_mixin(
+        self,
+    ) -> None:
+        # A mixin whose __init_subclass__() does not call the next one hides the
+        # class statement from every base after it, so only the interface not
+        # being a base type refuses this one.
         class Silent:
             def __init_subclass__(cls) -> None:
                 pass
 
-        class Numbers(Silent, wfc.IIterable[int]):
-            def first(self) -> wfc.IIterator[int]:
-                raise NotImplementedError
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
-        message = (
-            r"'[\w.]*IIterable' takes type arguments, so Python cannot implement it"
-        )
-
-        with self.assertRaisesRegex(TypeError, message):
-            wfc.PropertySet().insert("obj", Numbers())
-
-        with self.assertRaisesRegex(TypeError, message):
-            _ = Numbers()._iids_
+            class _(Silent, wfc.IIterable[int]):
+                pass
 
     def test_subclass_takes_no_arguments_without_init(self) -> None:
         with self.assertRaisesRegex(TypeError, "takes no arguments"):
