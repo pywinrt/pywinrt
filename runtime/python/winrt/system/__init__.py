@@ -123,6 +123,7 @@ __all__ = [
     "Char16",
     "Object",
     "Array",
+    "Buffer",
     "ReadableBuffer",
     "WriteableBuffer",
     "box_boolean",
