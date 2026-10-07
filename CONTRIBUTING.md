@@ -160,10 +160,27 @@ where an interop package is a second copy of a module, so the lint job is the
 authority for those files. Both runs need what the checked code imports,
 `samples/requirements-dev.txt`, `hatchling` and `setuptools`, installed in the
 environment pyright is pointed at, which is the interpreter selected in the
-editor or the one given with `--pythonpath`:
+editor or the one given with `--pythonpath`. The lint job also puts `_typing`
+on that environment's path with a `.pth` file, so that the second run checks
+the merged packages as installed ones, which includes that a module exports
+what the stubs import from it:
 
-    pipx run pyright --pythonpath .venv\Scripts\python.exe
-    pipx run pyright -p pyrightconfig.lint.json --pythonpath .venv\Scripts\python.exe
+    py -m venv _install\pyright-venv
+    _install\pyright-venv\Scripts\python -m pip install -r samples\requirements-dev.txt hatchling setuptools
+    Set-Content _install\pyright-venv\Lib\site-packages\_typing.pth "$PWD\_typing"
+    _install\pyright-venv\Scripts\python -c "import sys; assert r'$PWD\_typing' in sys.path, sys.path"
+    pipx run pyright --pythonpath _install\pyright-venv\Scripts\python.exe
+    pipx run pyright -p pyrightconfig.lint.json --pythonpath _install\pyright-venv\Scripts\python.exe
+
+That environment is for analysis only: with `_typing` on its path, `import
+winrt` finds stubs and pure-Python modules with no extension module behind
+them, so run nothing from it and install no `winrt-*` package into it. The
+tests run on their own interpreters with an install tree on `PYTHONPATH`, as
+above. As the editor's interpreter it gives no more than any environment with
+those packages: the editor reads `pyrightconfig.json`, which finds `_typing`
+through `extraPaths` with any interpreter, and pyright treats what it finds
+there as local code, so only the lint job's second run checks what the
+packages export.
 
 ## Building the documentation
 

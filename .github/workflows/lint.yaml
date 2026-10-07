@@ -48,11 +48,15 @@ jobs:
         run: pipx run mypy
       # what the checked code imports besides winrt, so that pyright resolves
       # it: the samples' dependencies, and the build backends that the build
-      # hook and the generated setup.py files extend
+      # hook and the generated setup.py files extend; and _typing, as if it
+      # were installed, which the last line checks, since pyright resolves the
+      # merged packages without it and only stops checking their exports
       - name: Install what the checked code imports
         run: |
           python -m venv _install/pyright-venv
           _install/pyright-venv/Scripts/python -m pip install -r samples/requirements-dev.txt hatchling setuptools
+          Set-Content _install/pyright-venv/Lib/site-packages/_typing.pth "$PWD\_typing"
+          _install/pyright-venv/Scripts/python -c "import sys; assert r'$PWD\_typing' in sys.path, sys.path"
       # the settings are in pyrightconfig.json, which the editor reads too
       - name: Run pyright
         run: pipx run pyright --pythonpath _install/pyright-venv/Scripts/python.exe
