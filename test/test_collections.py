@@ -271,6 +271,10 @@ class TestCollectionsVector(unittest.TestCase):
         self.vector.insert(-1, "x")
         self.assertEqual(list(self.vector), ["a", "x", "b"])
 
+    def test_insert_takes_no_keywords(self) -> None:
+        with self.assertRaisesRegex(TypeError, "takes no keyword arguments"):
+            self.vector.insert(index=1, value="x")  # type: ignore[call-arg]
+
     def test_insert_out_of_range_inserts_at_the_nearer_end(self) -> None:
         self.vector.insert(-100, "x")
         self.vector.insert(100, "y")
