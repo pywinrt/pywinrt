@@ -664,6 +664,19 @@ namespace py::interp
 
             if (declared)
             {
+                // init_subclass() sets only a str, but nothing keeps the
+                // class from having it set to something else afterwards,
+                // until the REVISIT above is taken.
+                if (!PyUnicode_Check(declared.get()))
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "%s must be str, not %.200s",
+                        declared_class_name,
+                        Py_TYPE(declared.get())->tp_name);
+                    throw python_exception();
+                }
+
                 return convert_to<winrt::hstring>(declared.get());
             }
 
