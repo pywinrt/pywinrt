@@ -411,6 +411,26 @@ namespace py::interp
         }
 
         /**
+         * The __init_subclass__() of a parameterized interface, which refuses
+         * the class statement: which instance of the interface the class
+         * implements is named by the type arguments of its base, which only
+         * the class's __orig_bases__ keep and nothing reads.
+         */
+        PyObject* generic_init_subclass(
+            PyObject* /*unused*/,
+            PyTypeObject* defining_class,
+            PyObject* const* /*unused*/,
+            Py_ssize_t /*unused*/,
+            PyObject* /*unused*/) noexcept
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' takes type arguments, so Python cannot implement it",
+                defining_class->tp_name);
+            return nullptr;
+        }
+
+        /**
          * The object WinRT is given for @p self, a Python implementation of an
          * interface, which is what it answers WinRT's questions with.
          */
@@ -505,6 +525,11 @@ namespace py::interp
                 Py_GenericAlias,
                 METH_O | METH_CLASS,
                 PyDoc_STR("See PEP 585")},
+               {"__init_subclass__",
+                reinterpret_cast<PyCFunction>(
+                    reinterpret_cast<void*>(generic_init_subclass)),
+                METH_METHOD | METH_FASTCALL | METH_KEYWORDS | METH_CLASS,
+                nullptr},
                {}};
     } // namespace
 

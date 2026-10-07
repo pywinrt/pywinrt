@@ -463,9 +463,8 @@ namespace py::interp
                 continue;
             }
 
-            // Which instance of a parameterized interface the class implements
-            // is named by the type arguments of its base, which only the
-            // class's __orig_bases__ keep and nothing here reads.
+            // The class statement refuses a parameterized interface already,
+            // unless a base's __init_subclass__() does not call the next one.
             if (entry->parameterized)
             {
                 PyErr_Format(
