@@ -617,9 +617,21 @@ namespace py::cpp::_winrt
         return key.detach();
     }
 
+    static void MappingIter_dealloc(MappingIter_object* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+
+        Py_CLEAR(self->_iter);
+        Py_CLEAR(self->_key);
+
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
     PyDoc_STRVAR(MappingIter_doc, "Utility class for wrapping KeyValuePair iterators.");
 
     static PyType_Slot MappingIter_type_slots[] = {
+        {Py_tp_dealloc, reinterpret_cast<void*>(MappingIter_dealloc)},
         {Py_tp_members, reinterpret_cast<void*>(MappingIter_members)},
         {Py_tp_init, reinterpret_cast<void*>(MappingIter_init)},
         {Py_tp_iter, reinterpret_cast<void*>(PyObject_SelfIter)},

@@ -1,7 +1,8 @@
 import asyncio
 import collections.abc
+import sys
 import unittest
-from typing import cast
+from typing import Any, cast
 
 import test_winrt.testcomponent as tc
 import winrt.windows.foundation.collections as wfc
@@ -80,6 +81,18 @@ class TestCollectionsStringMap(unittest.TestCase):
 
         with self.assertRaises(KeyError):
             m.popitem()
+
+    def test_key_iterator_lets_go_of_the_pairs(self) -> None:
+        m = wfc.StringMap()
+        m["hello"] = "world"
+
+        keys = iter(m)
+        pairs = cast(Any, keys)._iter
+        held = sys.getrefcount(pairs)
+
+        del keys
+
+        self.assertEqual(sys.getrefcount(pairs), held - 1)
 
     @async_test
     async def test_string_map_changed_event(self) -> None:
