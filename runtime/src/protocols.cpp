@@ -15,6 +15,7 @@
 #include "arrays.h"
 #include "async.h"
 #include "interp.h"
+#include "module_state.h"
 #include "objects.h"
 #include "protocols.h"
 #include "runtime.h"
@@ -1040,8 +1041,74 @@ namespace py::interp
         }
 
         /**
+         * The COM identity of the object @p abi points at, which every
+         * wrapper of it shares. Borrowed, since the caller's own reference
+         * keeps the object alive.
+         */
+        void* identity_of(void* abi)
+        {
+            winrt::com_ptr<::IUnknown> identity;
+
+            // IUnknown is answered by a proxy itself, so this is no call into
+            // another apartment.
+            winrt::check_hresult(
+                static_cast<::IUnknown*>(abi)->QueryInterface(
+                    winrt::guid_of<winrt::Windows::Foundation::IUnknown>(),
+                    identity.put_void()));
+
+            return identity.get();
+        }
+
+        /**
+         * Counts one more buffer exported from the object whose identity is
+         * @p identity.
+         */
+        void remember_export(void* identity)
+        {
+            auto const s = py::cpp::_winrt::get_module_state();
+            if (!s)
+            {
+                throw python_exception();
+            }
+
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
+            s->buffer_exports[identity]++;
+        }
+
+        /**
+         * Counts one buffer fewer exported from the object whose identity is
+         * @p identity.
+         */
+        void forget_export(void* identity) noexcept
+        {
+            auto const s = py::cpp::_winrt::try_get_module_state();
+            if (!s)
+            {
+                return;
+            }
+
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
+            auto const found = s->buffer_exports.find(identity);
+            if (found == s->buffer_exports.end())
+            {
+                return;
+            }
+
+            if (--found->second == 0)
+            {
+                s->buffer_exports.erase(found);
+            }
+        }
+
+        /**
          * __buffer__ of an IMemoryBufferReference, whose length is its
          * Capacity.
+         *
+         * Closing the reference frees the memory once its IMemoryBuffer is
+         * closed or released too, so each export is counted, and may_close()
+         * refuses to close the reference while one is outstanding. An IBuffer
+         * has no Close, and a view holds the object, so its exports need no
+         * count.
          */
         int memory_buffer_view(PyObject* self, Py_buffer* view, int flags) noexcept
         {
@@ -1059,7 +1126,17 @@ namespace py::interp
                     size = reference.Capacity();
                 }
 
-                return fill_buffer_view(self, view, flags, data, size);
+                auto const identity = identity_of(abi_of(self));
+                remember_export(identity);
+
+                if (fill_buffer_view(self, view, flags, data, size) < 0)
+                {
+                    forget_export(identity);
+                    return -1;
+                }
+
+                view->internal = identity;
+                return 0;
             }
             catch (...)
             {
@@ -1067,6 +1144,14 @@ namespace py::interp
                 to_PyErr();
                 return -1;
             }
+        }
+
+        /**
+         * __release_buffer__ of an IMemoryBufferReference.
+         */
+        void memory_buffer_release(PyObject* /*self*/, Py_buffer* view) noexcept
+        {
+            forget_export(view->internal);
         }
 
         /**
@@ -1312,6 +1397,13 @@ namespace py::interp
                  ibuffer ? reinterpret_cast<void*>(ibuffer_view)
                          : reinterpret_cast<void*>(memory_buffer_view)});
 
+            if (!ibuffer)
+            {
+                slots.push_back(
+                    {Py_bf_releasebuffer,
+                     reinterpret_cast<void*>(memory_buffer_release)});
+            }
+
             // A collection's len() counts its elements, which it has from the
             // collection protocol above.
             if (!implements(record, table::type_flags::mapping)
@@ -1323,6 +1415,52 @@ namespace py::interp
                              : reinterpret_cast<void*>(memory_buffer_length)});
             }
         }
+    }
+
+    /**
+     * Whether the object @p abi points at may be closed, which it may not
+     * while a buffer of it is exported: the buffer points at memory that
+     * closing it can free. So, as closing an mmap does, closing it raises
+     * BufferError, whichever wrapper of the object the close is called on.
+     *
+     * @returns @c false with BufferError set when it may not be closed.
+     */
+    bool may_close(void* abi) noexcept
+    {
+        auto const s = py::cpp::_winrt::try_get_module_state();
+        if (!s)
+        {
+            return true;
+        }
+
+        auto exported = false;
+
+        try
+        {
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
+            if (s->buffer_exports.empty())
+            {
+                return true;
+            }
+
+            exported = s->buffer_exports.contains(identity_of(abi));
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return false;
+        }
+
+        if (exported)
+        {
+            PyErr_SetString(
+                PyExc_BufferError,
+                "cannot close an IMemoryBufferReference while a buffer of it is "
+                "exported");
+            return false;
+        }
+
+        return true;
     }
 
     /**

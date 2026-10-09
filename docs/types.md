@@ -1052,8 +1052,13 @@ than using the WinRT [Windows.Storage.Streams.IDataReader][IDataReader] or
 [Windows.Storage.Streams.IDataWriter][IDataWriter] classes.
 
 [Windows.Foundation.IMemoryBuffer][IMemoryBuffer] may also be accessed using the Python buffer
-protocol via the *Windows.Foundation.IMemoryBufferReference*. Care should be
-taken since the underlying memory can be released.
+protocol via the *Windows.Foundation.IMemoryBufferReference*. Closing the
+reference frees the memory once the memory buffer is closed or released too,
+so while a [`memoryview`][memoryview] or a NumPy array of the reference exists,
+closing it raises [`BufferError`][BufferError], as closing an [`mmap`][mmap]
+does, and the reference stays open. Release the view, or copy what it holds,
+before the end of a `with` block that closes the reference. A close made by
+WinRT itself cannot be refused.
 
 `len()` of a buffer is its length in bytes, and of a memory buffer reference its
 capacity, which is the length of a [`memoryview`][memoryview] of either. So
@@ -1068,6 +1073,7 @@ with `None` to ask whether there is a buffer at all.
 
 [bytes]: https://docs.python.org/3/builtins/stdtypes.html#bytes
 [memoryview]: https://docs.python.org/3/builtins/stdtypes.html#memoryview
+[mmap]: https://docs.python.org/3/library/mmap.html
 [IBuffer]: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.ibuffer
 [IMemoryBuffer]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.imemorybuffer
 [IDataReader]: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.idatareader
