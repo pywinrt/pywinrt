@@ -163,7 +163,7 @@ class Windows.Graphics.Imaging.BitmapBuffer python_type closeable memory_buffer
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_plane_count
         method GetPlaneCount slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapBuffer shape=4
