@@ -333,7 +333,7 @@ interface Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUr
         method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.IWwwFormUrlDecoderEntry> shape=4 reverse=62 role=move_next
             out boolean return
 
-interface Windows.Foundation.IMemoryBuffer python_type closeable
+interface Windows.Foundation.IMemoryBuffer python_type closeable memory_buffer
     py _IMemoryBuffer
     guid fbc4dd2a-245b-11e4-af98-689423260cf8
     signature {fbc4dd2a-245b-11e4-af98-689423260cf8}
@@ -804,7 +804,7 @@ interface Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
 interface Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
     guid 5b8c6b3d-24ae-41b5-a1bf-f0c3d544845b
 
-class Windows.Foundation.MemoryBuffer python_type closeable
+class Windows.Foundation.MemoryBuffer python_type closeable memory_buffer
     py MemoryBuffer
     signature rc(Windows.Foundation.MemoryBuffer;{fbc4dd2a-245b-11e4-af98-689423260cf8})
     default Windows.Foundation.IMemoryBuffer

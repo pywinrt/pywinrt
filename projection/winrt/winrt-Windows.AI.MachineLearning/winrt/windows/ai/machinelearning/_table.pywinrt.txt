@@ -1530,7 +1530,7 @@ class Windows.AI.MachineLearning.SequenceFeatureDescriptor python_type
         get get_ElementDescriptor slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ISequenceFeatureDescriptor shape=4
             out interface type=Windows.AI.MachineLearning.ILearningModelFeatureDescriptor return
 
-class Windows.AI.MachineLearning.TensorBoolean python_type closeable
+class Windows.AI.MachineLearning.TensorBoolean python_type closeable memory_buffer
     py TensorBoolean
     signature rc(Windows.AI.MachineLearning.TensorBoolean;{50f311ed-29e9-4a5c-a44d-8fc512584eed})
     default Windows.AI.MachineLearning.ITensorBoolean
@@ -1585,7 +1585,7 @@ class Windows.AI.MachineLearning.TensorBoolean python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBoolean shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Boolean> return
 
-class Windows.AI.MachineLearning.TensorDouble python_type closeable
+class Windows.AI.MachineLearning.TensorDouble python_type closeable memory_buffer
     py TensorDouble
     signature rc(Windows.AI.MachineLearning.TensorDouble;{91e41252-7a8f-4f0e-a28f-9637ffc8a3d0})
     default Windows.AI.MachineLearning.ITensorDouble
@@ -1665,7 +1665,7 @@ class Windows.AI.MachineLearning.TensorFeatureDescriptor python_type
         get get_TensorKind slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFeatureDescriptor shape=4
             out enum32 type=Windows.AI.MachineLearning.TensorKind return
 
-class Windows.AI.MachineLearning.TensorFloat python_type closeable
+class Windows.AI.MachineLearning.TensorFloat python_type closeable memory_buffer
     py TensorFloat
     signature rc(Windows.AI.MachineLearning.TensorFloat;{f2282d82-aa02-42c8-a0c8-df1efc9676e1})
     default Windows.AI.MachineLearning.ITensorFloat
@@ -1720,7 +1720,7 @@ class Windows.AI.MachineLearning.TensorFloat python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Single> return
 
-class Windows.AI.MachineLearning.TensorFloat16Bit python_type closeable
+class Windows.AI.MachineLearning.TensorFloat16Bit python_type closeable memory_buffer
     py TensorFloat16Bit
     signature rc(Windows.AI.MachineLearning.TensorFloat16Bit;{0ab994fc-5b89-4c3c-b5e4-5282a5316c0a})
     default Windows.AI.MachineLearning.ITensorFloat16Bit
@@ -1775,7 +1775,7 @@ class Windows.AI.MachineLearning.TensorFloat16Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Single> return
 
-class Windows.AI.MachineLearning.TensorInt16Bit python_type closeable
+class Windows.AI.MachineLearning.TensorInt16Bit python_type closeable memory_buffer
     py TensorInt16Bit
     signature rc(Windows.AI.MachineLearning.TensorInt16Bit;{98a32d39-e6d6-44af-8afa-baebc44dc020})
     default Windows.AI.MachineLearning.ITensorInt16Bit
@@ -1830,7 +1830,7 @@ class Windows.AI.MachineLearning.TensorInt16Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int16> return
 
-class Windows.AI.MachineLearning.TensorInt32Bit python_type closeable
+class Windows.AI.MachineLearning.TensorInt32Bit python_type closeable memory_buffer
     py TensorInt32Bit
     signature rc(Windows.AI.MachineLearning.TensorInt32Bit;{2c0c28d3-207c-4486-a7d2-884522c5e589})
     default Windows.AI.MachineLearning.ITensorInt32Bit
@@ -1885,7 +1885,7 @@ class Windows.AI.MachineLearning.TensorInt32Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int32> return
 
-class Windows.AI.MachineLearning.TensorInt64Bit python_type closeable
+class Windows.AI.MachineLearning.TensorInt64Bit python_type closeable memory_buffer
     py TensorInt64Bit
     signature rc(Windows.AI.MachineLearning.TensorInt64Bit;{499665ba-1fa2-45ad-af25-a0bd9bda4c87})
     default Windows.AI.MachineLearning.ITensorInt64Bit
@@ -1940,7 +1940,7 @@ class Windows.AI.MachineLearning.TensorInt64Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.Int64> return
 
-class Windows.AI.MachineLearning.TensorInt8Bit python_type closeable
+class Windows.AI.MachineLearning.TensorInt8Bit python_type closeable memory_buffer
     py TensorInt8Bit
     signature rc(Windows.AI.MachineLearning.TensorInt8Bit;{cddd97c5-ffd8-4fef-aefb-30e1a485b2ee})
     default Windows.AI.MachineLearning.ITensorInt8Bit
@@ -2015,7 +2015,7 @@ enum Windows.AI.MachineLearning.TensorKind python_type
     constant COMPLEX64 14
     constant COMPLEX128 15
 
-class Windows.AI.MachineLearning.TensorString python_type closeable
+class Windows.AI.MachineLearning.TensorString python_type closeable memory_buffer
     py TensorString
     signature rc(Windows.AI.MachineLearning.TensorString;{582335c8-bdb1-4610-bc75-35e9cbf009b7})
     default Windows.AI.MachineLearning.ITensorString
@@ -2065,7 +2065,7 @@ class Windows.AI.MachineLearning.TensorString python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorString shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
 
-class Windows.AI.MachineLearning.TensorUInt16Bit python_type closeable
+class Windows.AI.MachineLearning.TensorUInt16Bit python_type closeable memory_buffer
     py TensorUInt16Bit
     signature rc(Windows.AI.MachineLearning.TensorUInt16Bit;{68140f4b-23c0-42f3-81f6-a891c011bc3f})
     default Windows.AI.MachineLearning.ITensorUInt16Bit
@@ -2120,7 +2120,7 @@ class Windows.AI.MachineLearning.TensorUInt16Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt16> return
 
-class Windows.AI.MachineLearning.TensorUInt32Bit python_type closeable
+class Windows.AI.MachineLearning.TensorUInt32Bit python_type closeable memory_buffer
     py TensorUInt32Bit
     signature rc(Windows.AI.MachineLearning.TensorUInt32Bit;{d8c9c2ff-7511-45a3-bfac-c38f370d2237})
     default Windows.AI.MachineLearning.ITensorUInt32Bit
@@ -2175,7 +2175,7 @@ class Windows.AI.MachineLearning.TensorUInt32Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
 
-class Windows.AI.MachineLearning.TensorUInt64Bit python_type closeable
+class Windows.AI.MachineLearning.TensorUInt64Bit python_type closeable memory_buffer
     py TensorUInt64Bit
     signature rc(Windows.AI.MachineLearning.TensorUInt64Bit;{2e70ffad-04bf-4825-839a-82baef8c7886})
     default Windows.AI.MachineLearning.ITensorUInt64Bit
@@ -2230,7 +2230,7 @@ class Windows.AI.MachineLearning.TensorUInt64Bit python_type closeable
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64Bit shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt64> return
 
-class Windows.AI.MachineLearning.TensorUInt8Bit python_type closeable
+class Windows.AI.MachineLearning.TensorUInt8Bit python_type closeable memory_buffer
     py TensorUInt8Bit
     signature rc(Windows.AI.MachineLearning.TensorUInt8Bit;{58e1ae27-622b-48e3-be22-d867aed1daac})
     default Windows.AI.MachineLearning.ITensorUInt8Bit
