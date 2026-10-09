@@ -15,7 +15,8 @@ class TestBuffer(unittest.TestCase):
         create_reference(). The reference's own buffer export stays, since it
         is the only one WebView2's CoreWebView2SharedBuffer.buffer has.
         """
-        return memory_buffer.create_reference()  # type: ignore[deprecated]
+        with self.assertWarns(DeprecationWarning):
+            return memory_buffer.create_reference()  # type: ignore[deprecated]
 
     def test_new(self) -> None:
         buf = wss.Buffer(5)
@@ -143,6 +144,15 @@ class TestBuffer(unittest.TestCase):
 
         view.release()
         bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ).close()
+
+    def test_create_reference_is_deprecated(self) -> None:
+        bitmap = wgi.SoftwareBitmap(wgi.BitmapPixelFormat.BGRA8, 2, 2)
+
+        with bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ) as locked:
+            with self.assertWarnsRegex(
+                DeprecationWarning, "use the IMemoryBuffer itself as a buffer"
+            ):
+                locked.create_reference().close()  # type: ignore[deprecated]
 
     @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
     def test_is_collections_abc_buffer_subclass(self) -> None:

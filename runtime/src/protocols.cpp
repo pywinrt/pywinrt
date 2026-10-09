@@ -1365,6 +1365,8 @@ namespace py::interp
                 case table::member_role::split:
                 case table::member_role::pair_key:
                 case table::member_role::pair_value:
+                // Checked by call_member itself, to warn that it is deprecated.
+                case table::member_role::create_reference:
                     continue;
                 case table::member_role::size:
                     entry.protocol.size = &member;
