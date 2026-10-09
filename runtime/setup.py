@@ -59,6 +59,7 @@ setup(
                 "src/implements.cpp",
                 "src/interp.cpp",
                 "src/members.cpp",
+                "src/numerics-buffer.cpp",
                 "src/numerics-statics.cpp",
                 "src/numerics.cpp",
                 "src/objects.cpp",

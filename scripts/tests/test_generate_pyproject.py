@@ -6,6 +6,8 @@ the whole tree when it runs: an sdist is built from these files, and once one
 is on PyPI they cannot be changed.
 """
 
+import ast
+import re
 import tomllib
 import unittest
 
@@ -30,3 +32,41 @@ class InteropBuildRequirement(unittest.TestCase):
                 self.assertNotIn("winrt-runtime", [r.name for r in build])
                 self.assertNotIn("environment", pyproject["tool"]["cibuildwheel"])
                 self.assertNotIn("build-frontend", pyproject["tool"]["cibuildwheel"])
+
+
+class RuntimeSources(unittest.TestCase):
+    """
+    The source files winrt-runtime is compiled from.
+
+    CMake and setup.py each list them, and a file that only CMake lists still
+    builds and passes the tests while the wheel and the sdist fail to link.
+    """
+
+    def test_setup_py_and_cmake_compile_every_source_file(self) -> None:
+        on_disk = sorted(
+            f.relative_to(versions.RUNTIME_PATH).as_posix()
+            for f in (versions.RUNTIME_PATH / "src").glob("*.cpp")
+        )
+
+        setup_py = ast.parse(
+            (versions.RUNTIME_PATH / "setup.py").read_text(encoding="utf-8")
+        )
+        sources = next(
+            k.value
+            for n in ast.walk(setup_py)
+            if isinstance(n, ast.Call)
+            for k in n.keywords
+            if k.arg == "sources"
+        )
+        self.assertEqual(sorted(ast.literal_eval(sources)), on_disk)
+
+        cmake = (versions.RUNTIME_PATH / "CMakeLists.txt").read_text(encoding="utf-8")
+        match = re.search(r"set\(WINRT_RUNTIME_SOURCES\s+(.*?)\)", cmake, re.DOTALL)
+        assert match is not None
+        self.assertEqual(
+            sorted(
+                s.strip('"').replace("${WINRT_RUNTIME_SRC_PATH}", "src")
+                for s in match[1].split()
+            ),
+            on_disk,
+        )
