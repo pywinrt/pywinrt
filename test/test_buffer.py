@@ -55,6 +55,43 @@ class TestBuffer(unittest.TestCase):
         with memoryview(mbr) as mv:
             self.assertEqual(len(mv), 0)
 
+    def test_memory_buffer_reference_is_not_closed_while_exported(self) -> None:
+        with wf.MemoryBuffer(4) as memory_buffer:
+            reference = memory_buffer.create_reference()
+            view = memoryview(reference)
+            view[0] = 42
+
+            with self.assertRaises(BufferError):
+                reference.close()
+
+            with self.assertRaises(BufferError):
+                reference.as_(wf.IClosable).close()
+
+            with self.assertRaises(BufferError):
+                with reference:
+                    pass
+
+        # closing the memory buffer alone leaves the memory to the reference
+        self.assertEqual(len(reference), 4)
+        self.assertEqual(view[0], 42)
+
+        view.release()
+        reference.close()
+        self.assertEqual(len(reference), 0)
+
+    def test_memory_buffer_reference_waits_for_every_export(self) -> None:
+        with wf.MemoryBuffer(4) as memory_buffer:
+            reference = memory_buffer.create_reference()
+
+            with memoryview(reference):
+                with memoryview(reference):
+                    pass
+
+                with self.assertRaises(BufferError):
+                    reference.close()
+
+            reference.close()
+
     @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
     def test_is_collections_abc_buffer_subclass(self) -> None:
         from collections.abc import Buffer

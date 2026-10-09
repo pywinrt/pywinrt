@@ -22,6 +22,7 @@
 #include "interp.h"
 #include "module_state.h"
 #include "objects.h"
+#include "protocols.h"
 #include "structs.h"
 #include "types.h"
 
@@ -1544,6 +1545,14 @@ namespace py::interp
         if (!ensure_prepared(*member.owner, overload))
         {
             return nullptr;
+        }
+
+        if (overload.role == table::member_role::close)
+        {
+            if (!may_close(self))
+            {
+                return nullptr;
+            }
         }
 
         winrt::com_ptr<::IUnknown> queried;

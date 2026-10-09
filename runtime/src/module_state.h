@@ -198,6 +198,10 @@ namespace py::cpp::_winrt
         /// WinRT signature of the instance. Borrowed: the entry that built one
         /// owns it, and they are let go of together.
         std::unordered_map<std::string_view, PyTypeObject*> generic_types;
+        /// How many buffers are exported from each memory buffer reference,
+        /// by its COM identity, which every wrapper of the object shares.
+        /// Borrowed: an export holds the object until it is released.
+        std::unordered_map<void*, uint32_t> buffer_exports;
         /// Guards what the projections build after their packages have been
         /// imported. Taken before the cache lock when both are.
         build_mutex build_lock;

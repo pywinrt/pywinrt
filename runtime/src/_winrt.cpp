@@ -894,6 +894,7 @@ namespace py::cpp::_winrt
 
         std::destroy_at(&state->type_entries);
         std::destroy_at(&state->generic_types);
+        std::destroy_at(&state->buffer_exports);
 
         std::destroy_at(&state->projections);
     }
@@ -1056,6 +1057,7 @@ namespace py::cpp::_winrt
         std::construct_at(&state->projections);
         std::construct_at(&state->type_entries);
         std::construct_at(&state->generic_types);
+        std::construct_at(&state->buffer_exports);
 
         // The slot below says the same, but CPython only enforces it in an
         // interpreter configured to check, which a legacy subinterpreter on a

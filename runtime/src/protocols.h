@@ -29,4 +29,6 @@ namespace py::interp
         table::type_view const& record, std::vector<PyType_Slot>& slots);
 
     bool bind_protocol_methods(table::type_view const& record, PyTypeObject* type);
+
+    bool may_close(void* abi) noexcept;
 } // namespace py::interp
