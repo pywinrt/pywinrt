@@ -69,6 +69,7 @@ class ProjectedMethod
                 : method.Name;
             Signature = method.ToString();
             DeprecatedMessage = deprecated?.ConstructorArguments[0].Value as string;
+            ProjectionDeprecatedMessage = GetProjectionDeprecation(method);
 
             foreach (var o in method.Overrides)
             {
@@ -113,6 +114,59 @@ class ProjectedMethod
         public bool IsOverridable { get; }
         public bool IsDeprecated { get; }
         public string? DeprecatedMessage { get; }
+        public string? ProjectionDeprecatedMessage { get; }
+    }
+
+    /// <summary>
+    /// The members this projection deprecates of its own accord, by the
+    /// interface that declares them and their WinRT name, with the message the
+    /// stubs give.
+    /// </summary>
+    /// <remarks>
+    /// WinRT's own <c>[Deprecated]</c> is Microsoft's, so it is only marked in
+    /// the stubs. These are this project's: the runtime warns when one is
+    /// called, which it knows from the member's role in the table, and a later
+    /// major release stops projecting it.
+    /// </remarks>
+    private static readonly Dictionary<string, string> projectionDeprecations = new(
+        StringComparer.Ordinal
+    )
+    {
+        ["Windows.Foundation.IMemoryBuffer.CreateReference"] =
+            "Use the IMemoryBuffer itself as a buffer instead, e.g. with memoryview().",
+    };
+
+    /// <summary>
+    /// Gets the message of the projection's own deprecation of
+    /// <paramref name="method"/>, or <c>null</c> when it has none.
+    /// </summary>
+    /// <remarks>
+    /// A runtime class redeclares the members of its interfaces, so a member of
+    /// one is found through the interface member it overrides.
+    /// </remarks>
+    private static string? GetProjectionDeprecation(MethodDefinition method)
+    {
+        if (method.DeclaringType.IsInterface)
+        {
+            return projectionDeprecations.GetValueOrDefault(
+                $"{method.DeclaringType.FullName}.{method.Name}"
+            );
+        }
+
+        foreach (var o in method.Overrides)
+        {
+            if (
+                projectionDeprecations.TryGetValue(
+                    $"{o.DeclaringType.GetElementType().FullName}.{o.Name}",
+                    out var message
+                )
+            )
+            {
+                return message;
+            }
+        }
+
+        return null;
     }
 
     private static readonly ConcurrentDictionary<MethodDefinition, MethodInfo> methodInfoCache =
@@ -287,4 +341,10 @@ class ProjectedMethod
     /// Gets the message associated with the deprecation of the method.
     /// </summary>
     public string? DeprecatedMessage => info.DeprecatedMessage;
+
+    /// <summary>
+    /// Gets the message of the projection's own deprecation of the method, or
+    /// <c>null</c> when it has none.
+    /// </summary>
+    public string? ProjectionDeprecatedMessage => info.ProjectionDeprecatedMessage;
 }
