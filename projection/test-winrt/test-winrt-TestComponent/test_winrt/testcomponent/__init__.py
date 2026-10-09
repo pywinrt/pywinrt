@@ -23,6 +23,7 @@ __all__ = [
     "Class",
     "Composable",
     "Derived",
+    "DerivedOverride",
     "OverloadClass",
     "Override",
     "TestRunner",

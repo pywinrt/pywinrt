@@ -21,6 +21,7 @@ __all__ = [
     "Class",
     "Composable",
     "Derived",
+    "DerivedOverride",
     "OverloadClass",
     "Override",
     "TestRunner",
@@ -232,6 +233,23 @@ class Derived_Static(Composable_Static):
 
 class Derived(Composable, metaclass=Derived_Static):
     def __new__(cls) -> typing.Self: ...
+
+class DerivedOverride_Static(Override_Static):
+    ...
+
+class DerivedOverride(Override, metaclass=DerivedOverride_Static):
+    def __new__(cls) -> typing.Self: ...
+    @typing.final
+    # System.Void TestComponent.DerivedOverride::CallDerivedOverridable()
+    def call_derived_overridable(self) -> None: ...
+    # System.Void TestComponent.DerivedOverride::OnDerivedOverridable()
+    def _on_derived_overridable(self) -> None: ...
+    @typing.final
+    # Windows.Foundation.EventRegistrationToken TestComponent.DerivedOverride::add_DerivedOverridableCalled(Windows.Foundation.EventHandler`1<System.Object>)
+    def add_derived_overridable_called(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # System.Void TestComponent.DerivedOverride::remove_DerivedOverridableCalled(Windows.Foundation.EventRegistrationToken)
+    def remove_derived_overridable_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 class OverloadClass_Static(winrt._winrt.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> OverloadClass_Static: ...
