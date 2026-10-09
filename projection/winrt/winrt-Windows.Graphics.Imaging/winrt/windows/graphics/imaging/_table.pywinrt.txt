@@ -153,7 +153,7 @@ struct Windows.Graphics.Imaging.BitmapBounds python_type
     field width Width uint32
     field height Height uint32
 
-class Windows.Graphics.Imaging.BitmapBuffer python_type closeable
+class Windows.Graphics.Imaging.BitmapBuffer python_type closeable memory_buffer
     py BitmapBuffer
     signature rc(Windows.Graphics.Imaging.BitmapBuffer;{a53e04c4-399c-438c-b28f-a63a6b83d1a1})
     default Windows.Graphics.Imaging.IBitmapBuffer
