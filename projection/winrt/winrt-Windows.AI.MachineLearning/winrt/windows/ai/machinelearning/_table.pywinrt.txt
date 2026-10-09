@@ -1579,7 +1579,7 @@ class Windows.AI.MachineLearning.TensorBoolean python_type closeable memory_buff
             pass_array boolean name=data
             out class type=Windows.AI.MachineLearning.TensorBoolean return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorBoolean shape=4
@@ -1634,7 +1634,7 @@ class Windows.AI.MachineLearning.TensorDouble python_type closeable memory_buffe
             pass_array double name=data
             out class type=Windows.AI.MachineLearning.TensorDouble return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorDouble shape=4
@@ -1714,7 +1714,7 @@ class Windows.AI.MachineLearning.TensorFloat python_type closeable memory_buffer
             pass_array single name=data
             out class type=Windows.AI.MachineLearning.TensorFloat return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat shape=4
@@ -1769,7 +1769,7 @@ class Windows.AI.MachineLearning.TensorFloat16Bit python_type closeable memory_b
             pass_array single name=data
             out class type=Windows.AI.MachineLearning.TensorFloat16Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorFloat16Bit shape=4
@@ -1824,7 +1824,7 @@ class Windows.AI.MachineLearning.TensorInt16Bit python_type closeable memory_buf
             pass_array int16 name=data
             out class type=Windows.AI.MachineLearning.TensorInt16Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt16Bit shape=4
@@ -1879,7 +1879,7 @@ class Windows.AI.MachineLearning.TensorInt32Bit python_type closeable memory_buf
             pass_array int32 name=data
             out class type=Windows.AI.MachineLearning.TensorInt32Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt32Bit shape=4
@@ -1934,7 +1934,7 @@ class Windows.AI.MachineLearning.TensorInt64Bit python_type closeable memory_buf
             pass_array int64 name=data
             out class type=Windows.AI.MachineLearning.TensorInt64Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt64Bit shape=4
@@ -1989,7 +1989,7 @@ class Windows.AI.MachineLearning.TensorInt8Bit python_type closeable memory_buff
             pass_array uint8 name=data
             out class type=Windows.AI.MachineLearning.TensorInt8Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorInt8Bit shape=4
@@ -2059,7 +2059,7 @@ class Windows.AI.MachineLearning.TensorString python_type closeable memory_buffe
             pass_array string name=data
             out class type=Windows.AI.MachineLearning.TensorString return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorString shape=4
@@ -2114,7 +2114,7 @@ class Windows.AI.MachineLearning.TensorUInt16Bit python_type closeable memory_bu
             pass_array uint16 name=data
             out class type=Windows.AI.MachineLearning.TensorUInt16Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt16Bit shape=4
@@ -2169,7 +2169,7 @@ class Windows.AI.MachineLearning.TensorUInt32Bit python_type closeable memory_bu
             pass_array uint32 name=data
             out class type=Windows.AI.MachineLearning.TensorUInt32Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt32Bit shape=4
@@ -2224,7 +2224,7 @@ class Windows.AI.MachineLearning.TensorUInt64Bit python_type closeable memory_bu
             pass_array uint64 name=data
             out class type=Windows.AI.MachineLearning.TensorUInt64Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt64Bit shape=4
@@ -2279,7 +2279,7 @@ class Windows.AI.MachineLearning.TensorUInt8Bit python_type closeable memory_buf
             pass_array uint8 name=data
             out class type=Windows.AI.MachineLearning.TensorUInt8Bit return
     method create_reference
-        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22
+        method CreateReference slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IMemoryBuffer shape=4 reverse=22 role=create_reference
             out interface type=Windows.Foundation.IMemoryBufferReference return
     method get_as_vector_view
         method GetAsVectorView slot=6 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.ITensorUInt8Bit shape=4

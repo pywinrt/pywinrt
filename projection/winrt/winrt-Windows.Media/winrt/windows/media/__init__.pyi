@@ -133,6 +133,7 @@ class AudioBuffer(windows_foundation.IMemoryBuffer, windows_foundation.IClosable
     # System.Void Windows.Media.AudioBuffer::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IMemoryBufferReference Windows.Media.AudioBuffer::CreateReference()
+    @deprecated("Use the IMemoryBuffer itself as a buffer instead, e.g. with memoryview().")
     def create_reference(self) -> windows_foundation.IMemoryBufferReference: ...
     # System.UInt32 Windows.Media.AudioBuffer::get_Length()
     @_property
