@@ -1270,6 +1270,28 @@ class TestTestComponent(unittest.TestCase):
 
         source.complete()
 
+    def test_async_handlers_refuse_none(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            op.completed = None  # type: ignore[assignment]
+
+        self.assertFalse(source.has_completed_handler)
+        source.complete()
+
+    def test_async_progress_refuses_none(self) -> None:
+        # A C++/WinRT coroutine, which dereferences a null handler.
+        op = tc.TestRunner.create_async_action_with_progress(0, [])
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            op.progress = None  # type: ignore[assignment]
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            op.completed = None  # type: ignore[assignment]
+
+        op.get()
+
     async def _await_recording_cancellation(
         self, op: wf.IAsyncAction, seen: list[bool]
     ) -> None:
