@@ -113,10 +113,7 @@ static class WriterExtensions
         string ignoreComment = ""
     )
     {
-        var nullabilityInfo = nullabilityMap.GetValueOrDefault(
-            method.Signature,
-            new MethodNullabilityInfo(method.Method)
-        );
+        var nullabilityInfo = method.GetNullability(nullabilityMap);
 
         if (aliasPyName is not null)
         {
@@ -178,10 +175,7 @@ static class WriterExtensions
     )
     {
         var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
-        var getterNullabilityInfo = nullabilityMap.GetValueOrDefault(
-            prop.GetMethod.Signature,
-            new MethodNullabilityInfo(prop.GetMethod.Method)
-        );
+        var getterNullabilityInfo = prop.GetMethod.GetNullability(nullabilityMap);
         var propType = prop.Property.PropertyType.ToPyTypeName(
             ns,
             getterNullabilityInfo.Return.Type,

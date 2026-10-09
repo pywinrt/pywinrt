@@ -152,6 +152,8 @@ static class TypeExtensions
                             default,
                             quoteImportedTypes
                         ),
+                // a nullability rule by type; the rules by member are in
+                // NullabilityRules
                 GenericInstanceType gen
                     when gen.ElementType.FullName == "Windows.Foundation.IReference`1" =>
                     $"{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)} | None",
