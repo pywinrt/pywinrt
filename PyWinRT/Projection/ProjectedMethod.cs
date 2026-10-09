@@ -69,7 +69,10 @@ class ProjectedMethod
                 : method.Name;
             Signature = method.ToString();
             DeprecatedMessage = deprecated?.ConstructorArguments[0].Value as string;
-            ProjectionDeprecatedMessage = GetProjectionDeprecation(method);
+            InterfaceMembers = GetInterfaceMembers(method);
+            ProjectionDeprecatedMessage = InterfaceMembers
+                .Select(m => projectionDeprecations.GetValueOrDefault(m))
+                .FirstOrDefault(m => m is not null);
 
             foreach (var o in method.Overrides)
             {
@@ -115,6 +118,7 @@ class ProjectedMethod
         public bool IsDeprecated { get; }
         public string? DeprecatedMessage { get; }
         public string? ProjectionDeprecatedMessage { get; }
+        public IReadOnlyList<string> InterfaceMembers { get; }
     }
 
     /// <summary>
@@ -137,37 +141,23 @@ class ProjectedMethod
     };
 
     /// <summary>
-    /// Gets the message of the projection's own deprecation of
-    /// <paramref name="method"/>, or <c>null</c> when it has none.
+    /// Gets the interface members <paramref name="method"/> stands for, each as
+    /// the full name of the interface that declares it and its WinRT name.
     /// </summary>
     /// <remarks>
-    /// A runtime class redeclares the members of its interfaces, so a member of
-    /// one is found through the interface member it overrides.
+    /// A member of an interface stands for itself. A runtime class redeclares
+    /// the members of its interfaces, so a member of one stands for the
+    /// interface members it overrides.
     /// </remarks>
-    private static string? GetProjectionDeprecation(MethodDefinition method)
-    {
-        if (method.DeclaringType.IsInterface)
-        {
-            return projectionDeprecations.GetValueOrDefault(
-                $"{method.DeclaringType.FullName}.{method.Name}"
-            );
-        }
-
-        foreach (var o in method.Overrides)
-        {
-            if (
-                projectionDeprecations.TryGetValue(
-                    $"{o.DeclaringType.GetElementType().FullName}.{o.Name}",
-                    out var message
-                )
-            )
-            {
-                return message;
-            }
-        }
-
-        return null;
-    }
+    private static IReadOnlyList<string> GetInterfaceMembers(MethodDefinition method) =>
+        method.DeclaringType.IsInterface
+            ? [$"{method.DeclaringType.FullName}.{method.Name}"]
+            :
+            [
+                .. method.Overrides.Select(o =>
+                    $"{o.DeclaringType.GetElementType().FullName}.{o.Name}"
+                ),
+            ];
 
     private static readonly ConcurrentDictionary<MethodDefinition, MethodInfo> methodInfoCache =
         new(Environment.ProcessorCount * 4, 1 << 17, ReferenceEqualityComparer.Instance);
@@ -347,4 +337,10 @@ class ProjectedMethod
     /// <c>null</c> when it has none.
     /// </summary>
     public string? ProjectionDeprecatedMessage => info.ProjectionDeprecatedMessage;
+
+    /// <summary>
+    /// Gets the interface members the method stands for, each as the full name
+    /// of the interface that declares it and its WinRT name.
+    /// </summary>
+    public IReadOnlyList<string> InterfaceMembers => info.InterfaceMembers;
 }

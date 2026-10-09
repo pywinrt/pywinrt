@@ -156,6 +156,12 @@ class MethodNullabilityInfo
     public string Name { get; }
     public ReturnNullabilityInfo Return { get; }
     public IList<ParameterNullabilityInfo> Parameters { get; }
+
+    /// <summary>
+    /// Gets a copy whose return may be null.
+    /// </summary>
+    public MethodNullabilityInfo WithMaybeNullReturn() =>
+        new(Signature, Name, new ReturnNullabilityInfo(Return.Type.WithMaybeNull()), Parameters);
 }
 
 class ReturnNullabilityInfo
@@ -324,4 +330,68 @@ class TypeRefNullabilityInfo
     /// </summary>
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public string? Evidence { get; }
+
+    /// <summary>
+    /// Gets a copy that may be null.
+    /// </summary>
+    public TypeRefNullabilityInfo WithMaybeNull() =>
+        new(Name, Args, AllowNull, maybeNull: true, Evidence);
+}
+
+/// <summary>
+/// The nullability the projection assumes for a member by rule, on top of what
+/// the curated files say.
+/// </summary>
+/// <remarks>
+/// Nothing is null unless a curated fact or a rule says so. A rule is applied
+/// when the stubs are written rather than written into the files, so that the
+/// files keep meaning curated fact. These rules name an interface member, so
+/// each covers every type that implements the interface, in any projection,
+/// with nothing to add for each one. A rule about a type wherever it appears,
+/// such as <c>IReference&lt;T&gt;</c> being nullable, is in
+/// <see cref="TypeExtensions.ToPyTypeName"/>, which does not know the member.
+/// </remarks>
+static class NullabilityRules
+{
+    /// <summary>
+    /// The interface members whose return may be null, each as the full name of
+    /// the interface that declares it and its WinRT name.
+    /// </summary>
+    /// <remarks>
+    /// An async operation's Completed and Progress handlers read back null
+    /// before one is set, and again once a finished operation has run its
+    /// Completed handler and let go of it, whoever implements the operation.
+    /// </remarks>
+    private static readonly HashSet<string> maybeNullReturns = new(StringComparer.Ordinal)
+    {
+        "Windows.Foundation.IAsyncAction.get_Completed",
+        "Windows.Foundation.IAsyncActionWithProgress`1.get_Completed",
+        "Windows.Foundation.IAsyncActionWithProgress`1.get_Progress",
+        "Windows.Foundation.IAsyncOperation`1.get_Completed",
+        "Windows.Foundation.IAsyncOperationWithProgress`2.get_Completed",
+        "Windows.Foundation.IAsyncOperationWithProgress`2.get_Progress",
+    };
+
+    /// <summary>
+    /// Gets the nullability of <paramref name="method"/>: what
+    /// <paramref name="nullabilityMap"/> says, or the default, with the rules
+    /// applied.
+    /// </summary>
+    public static MethodNullabilityInfo GetNullability(
+        this ProjectedMethod method,
+        IReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+    )
+    {
+        var info = nullabilityMap.GetValueOrDefault(
+            method.Signature,
+            new MethodNullabilityInfo(method.Method)
+        );
+
+        if (method.InterfaceMembers.Any(maybeNullReturns.Contains))
+        {
+            return info.WithMaybeNullReturn();
+        }
+
+        return info;
+    }
 }
