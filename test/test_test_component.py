@@ -91,9 +91,16 @@ class TestTestComponent(unittest.TestCase):
         class D(tc.Override):
             pass
 
+        class E(tc.DerivedOverride):
+            pass
+
         self.assertEqual(tc.TestRunner.expect_object(C()), "")
         self.assertEqual(
             tc.TestRunner.expect_object(D()), "TestComponent.IOverrideOverrides"
+        )
+        self.assertEqual(
+            tc.TestRunner.expect_object(E()),
+            "TestComponent.IDerivedOverrideOverrides",
         )
 
     def test_declared_runtime_class_name(self) -> None:
@@ -201,6 +208,27 @@ class TestTestComponent(unittest.TestCase):
         c.call_overridable()
         self.assertTrue(event.is_set())
         self.assertTrue(base_event.is_set())
+
+    def test_overriding_methods_of_every_base(self) -> None:
+        # Each class in the chain declares its own overridable interface, and
+        # the composed object answers all of them, not only the one the class
+        # derived from declares.
+        called: list[str] = []
+
+        class C(tc.DerivedOverride):
+            @override
+            def _on_overridable(self) -> None:
+                called.append("base")
+
+            @override
+            def _on_derived_overridable(self) -> None:
+                called.append("derived")
+
+        c = C()
+        c.call_overridable()
+        c.call_derived_overridable()
+
+        self.assertEqual(called, ["base", "derived"])
 
     def test_unhandled_exception_in_override(self) -> None:
         class C(tc.Override):
