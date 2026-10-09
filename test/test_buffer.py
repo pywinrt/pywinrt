@@ -7,6 +7,16 @@ import winrt.windows.storage.streams as wss
 
 
 class TestBuffer(unittest.TestCase):
+    def reference_of(
+        self, memory_buffer: wf.IMemoryBuffer
+    ) -> wf.IMemoryBufferReference:
+        """
+        A reference to the memory of a memory buffer, made with the deprecated
+        create_reference(). The reference's own buffer export stays, since it
+        is the only one WebView2's CoreWebView2SharedBuffer.buffer has.
+        """
+        return memory_buffer.create_reference()  # type: ignore[deprecated]
+
     def test_new(self) -> None:
         buf = wss.Buffer(5)
         self.assertEqual(buf.length, 0)
@@ -25,7 +35,7 @@ class TestBuffer(unittest.TestCase):
         data = b"ABCDE"
 
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(data)
-        with mb.create_reference() as mbr, memoryview(mbr) as mv:
+        with self.reference_of(mb) as mbr, memoryview(mbr) as mv:
             self.assertEqual(mv, data)
 
     def test_len(self) -> None:
@@ -40,7 +50,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_len(self) -> None:
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(b"ABCDE")
-        with mb.create_reference() as mbr:
+        with self.reference_of(mb) as mbr:
             self.assertEqual(len(mbr), mbr.capacity)
 
             with memoryview(mbr) as mv:
@@ -48,7 +58,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_len_closed(self) -> None:
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(b"ABCDE")
-        mbr = mb.create_reference()
+        mbr = self.reference_of(mb)
         mbr.close()
 
         self.assertEqual(len(mbr), 0)
@@ -58,7 +68,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_reference_is_not_closed_while_exported(self) -> None:
         with wf.MemoryBuffer(4) as memory_buffer:
-            reference = memory_buffer.create_reference()
+            reference = self.reference_of(memory_buffer)
             view = memoryview(reference)
             view[0] = 42
 
@@ -82,7 +92,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_reference_waits_for_every_export(self) -> None:
         with wf.MemoryBuffer(4) as memory_buffer:
-            reference = memory_buffer.create_reference()
+            reference = self.reference_of(memory_buffer)
 
             with memoryview(reference):
                 with memoryview(reference):
@@ -143,7 +153,7 @@ class TestBuffer(unittest.TestCase):
 
         with (
             wf.MemoryBuffer(4) as memory_buffer,
-            memory_buffer.create_reference() as reference,
+            self.reference_of(memory_buffer) as reference,
         ):
             self.assertIsInstance(memory_buffer, Buffer)
             self.assertIsInstance(reference, Buffer)
