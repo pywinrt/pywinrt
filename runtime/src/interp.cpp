@@ -259,6 +259,25 @@ namespace py::interp
                 overload.iface_name,
                 flags};
         }
+
+        /**
+         * Whether @p arg of @p member refuses None, which WinRT would be given as a
+         * null delegate.
+         *
+         * The only delegates an async operation takes are its Completed and
+         * Progress handlers, and the operations C++/WinRT implements with a
+         * coroutine dereference a null one, which takes the process down. None
+         * means nothing there anyway, since a handler can be set only once.
+         */
+        bool refuses_none(member_desc const& member, arg_desc const& arg) noexcept
+        {
+            if (arg.code != table::type_code::delegate)
+            {
+                return false;
+            }
+
+            return member.declaring->protocol.completed != nullptr;
+        }
     } // namespace
 
     /**
@@ -1610,6 +1629,19 @@ namespace py::interp
                             reinterpret_cast<uintptr_t>(
                                 compose ? compose->outer : nullptr));
                         continue;
+                    }
+
+                    if (Py_IsNone(args[next_arg]))
+                    {
+                        if (refuses_none(member, arg))
+                        {
+                            PyErr_Format(
+                                PyExc_TypeError,
+                                "'%U' of '%s' takes a callable, not None",
+                                member.py_name,
+                                member.type_name);
+                            throw python_exception();
+                        }
                     }
 
                     convert_in(*member.owner, arg, args[next_arg++], frame);
