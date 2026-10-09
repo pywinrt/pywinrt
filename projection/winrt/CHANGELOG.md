@@ -12,7 +12,11 @@ releases before v4.0 are.
 
 ## [Unreleased]
 
+### Added
+- The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
+
 ### Changed
+- The type hints of the `completed` and `progress` getters include `None`.
 - BREAKING: `TileUpdateManagerForUser.create_tile_updater_for_application()` is
   now `create_tile_updater_for_application_for_user()`. The old name is the
   overload that takes an application id, so it could not be kept as an alias.
@@ -25,6 +29,9 @@ releases before v4.0 are.
   namespace. `Windows.AI.Agents.Mcp` covers Model Context Protocol in this
   release, but it is not the same API: the classes for enumerating and
   describing servers are gone and what is there now filters messages.
+
+### Deprecated
+- `create_reference()` is marked `@deprecated` in the type hints.
 
 ### Fixed
 - Fixed the type hint of `Matrix4x4.translation()`, which said `Vector2`
