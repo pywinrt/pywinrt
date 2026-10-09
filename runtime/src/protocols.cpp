@@ -1003,6 +1003,18 @@ namespace py::interp
         }
 
         /**
+         * The object @p self wraps, to be asked for the buffer interface a
+         * caller needs: a class wrapper holds its default interface, which
+         * need not be that one.
+         */
+        winrt::Windows::Foundation::IInspectable object_of(PyObject* self)
+        {
+            winrt::Windows::Foundation::IInspectable object;
+            winrt::copy_from_abi(object, abi_of(self));
+            return object;
+        }
+
+        /**
          * __buffer__ of an IBuffer.
          *
          * This is the one protocol a table cannot describe. Where the bytes
@@ -1018,14 +1030,15 @@ namespace py::interp
         {
             try
             {
-                winrt::Windows::Storage::Streams::IBuffer buffer;
-                winrt::copy_from_abi(buffer, abi_of(self));
+                auto const object = object_of(self);
 
                 uint8_t* data{};
                 uint32_t size{};
 
                 {
                     auto _gil = release_gil();
+                    auto const buffer
+                        = object.as<winrt::Windows::Storage::Streams::IBuffer>();
                     data = buffer.data();
                     size = buffer.Length();
                 }
@@ -1114,14 +1127,16 @@ namespace py::interp
         {
             try
             {
-                winrt::Windows::Foundation::IMemoryBufferReference reference;
-                winrt::copy_from_abi(reference, abi_of(self));
+                auto const object = object_of(self);
 
                 uint8_t* data{};
                 uint32_t size{};
 
                 {
                     auto _gil = release_gil();
+                    auto const reference
+                        = object
+                              .as<winrt::Windows::Foundation::IMemoryBufferReference>();
                     data = reference.data();
                     size = reference.Capacity();
                 }
@@ -1212,10 +1227,7 @@ namespace py::interp
         {
             try
             {
-                // A class wrapper holds its default interface, which for a
-                // BitmapBuffer is not IMemoryBuffer.
-                winrt::Windows::Foundation::IInspectable object;
-                winrt::copy_from_abi(object, abi_of(self));
+                auto const object = object_of(self);
 
                 winrt::Windows::Foundation::IMemoryBufferReference reference{nullptr};
                 uint8_t* data{};
@@ -1263,11 +1275,11 @@ namespace py::interp
         {
             try
             {
-                winrt::Windows::Storage::Streams::IBuffer buffer;
-                winrt::copy_from_abi(buffer, abi_of(self));
+                auto const object = object_of(self);
 
                 auto _gil = release_gil();
-                return static_cast<Py_ssize_t>(buffer.Length());
+                return static_cast<Py_ssize_t>(
+                    object.as<winrt::Windows::Storage::Streams::IBuffer>().Length());
             }
             catch (...)
             {
@@ -1284,11 +1296,12 @@ namespace py::interp
         {
             try
             {
-                winrt::Windows::Foundation::IMemoryBufferReference reference;
-                winrt::copy_from_abi(reference, abi_of(self));
+                auto const object = object_of(self);
 
                 auto _gil = release_gil();
-                return static_cast<Py_ssize_t>(reference.Capacity());
+                return static_cast<Py_ssize_t>(
+                    object.as<winrt::Windows::Foundation::IMemoryBufferReference>()
+                        .Capacity());
             }
             catch (...)
             {
