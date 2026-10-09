@@ -81,6 +81,7 @@ TYPE_FLAGS = {
     "buffer_length": 1 << 20,
     "integer": 1 << 21,
     "flags_enum": 1 << 22,
+    "memory_buffer": 1 << 23,
 }
 
 GROUP_KINDS = ("method", "property", "event", "constructor")
