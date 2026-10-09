@@ -507,6 +507,31 @@ class TestWinRTArray(unittest.TestCase):
 
         self.assertEqual(list(a), values)
 
+    def test_list_that_grows_while_converted(self) -> None:
+        items: list[object] = [1, 2, 3]
+
+        class Grow:
+            def __index__(self) -> int:
+                items.append(4)
+                return 1
+
+        items[0] = Grow()
+
+        self.assertEqual(list(Array(Int64, items)), [1, 2, 3])
+
+    def test_list_that_shrinks_while_converted(self) -> None:
+        items: list[object] = [1, 2, 3]
+
+        class Shrink:
+            def __index__(self) -> int:
+                items.clear()
+                return 1
+
+        items[0] = Shrink()
+
+        with self.assertRaises(IndexError):
+            Array(Int64, items)
+
     def test_no_copy_of_references_from_buffer(self) -> None:
         element: typing.Any
         values: list[typing.Any]

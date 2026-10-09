@@ -599,11 +599,20 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            PyObject** items = PySequence_Fast_ITEMS(arg1);
-
+            // Converting an element can run Python code that changes the
+            // list, so each item is taken as it is reached rather than
+            // borrowed from the list's storage. As array.array does, the
+            // length is the one the list had to begin with, and a list that
+            // shrank raises IndexError.
             for (uint32_t i = 0; i < self->array->Size(); i++)
             {
-                if (!self->array->Set(i, items[i]))
+                pyobj_handle item{PySequence_GetItem(arg1, i)};
+                if (!item)
+                {
+                    return nullptr;
+                }
+
+                if (!self->array->Set(i, item.get()))
                 {
                     return nullptr;
                 }
