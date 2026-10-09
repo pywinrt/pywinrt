@@ -383,6 +383,7 @@ Type flags, and the words the text writes them as:
 | 20 | `buffer_length` | the buffer length is `Length` rather than `Capacity` |
 | 21 | `integer` | a struct that is one integer, projected as a subclass of `int` |
 | 22 | `flags_enum` | an enum that is a set of bits, projected as an `enum.IntFlag` |
+| 23 | `memory_buffer` | implements `IMemoryBuffer`, whose buffer is exported through a reference the runtime creates for each export |
 
 ### Group record, 16 bytes
 
