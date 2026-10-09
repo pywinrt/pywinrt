@@ -90,11 +90,12 @@ static class WriterExtensions
     }
 
     /// <summary>
-    /// Writes the <c>@deprecated</c> decorator for a WinRT deprecation.
+    /// Writes the <c>@deprecated</c> decorator for a WinRT deprecation or one of
+    /// the projection's own.
     /// </summary>
     /// <remarks>
-    /// The message is the metadata's, so it names the WinRT spelling of the
-    /// replacement.
+    /// A WinRT deprecation's message is the metadata's, so it names the WinRT
+    /// spelling of the replacement.
     /// </remarks>
     public static void WriteDeprecated(this IndentedTextWriter w, string? message) =>
         w.WriteLine($"@deprecated({(message ?? "").ToPythonStringLiteral()})");
@@ -133,6 +134,10 @@ static class WriterExtensions
             if (method.IsDeprecated)
             {
                 w.WriteDeprecated(method.DeprecatedMessage);
+            }
+            else if (method.ProjectionDeprecatedMessage is string message)
+            {
+                w.WriteDeprecated(message);
             }
 
             if (isAbstract)

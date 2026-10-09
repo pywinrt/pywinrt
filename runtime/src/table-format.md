@@ -474,6 +474,11 @@ the Python side of a projected collection calls `GetView` or `IndexOf`, but the
 vtable of a collection the runtime assembles over a Python object has a slot
 for each of them and has to know what to put there.
 
+`create_reference` is the one role no protocol calls: the buffer of an
+`IMemoryBuffer` is exported through a reference the runtime creates itself, and
+the role marks the member this projection deprecates in its favor, which the
+runtime warns about when it is called.
+
 | value | role | declared by |
 |---|---|---|
 | 0 | `none` | |
@@ -506,6 +511,7 @@ for each of them and has to know what to put there.
 | 27 | `split` | `IMapView<K, V>` |
 | 28 | `pair_key` | `IKeyValuePair<K, V>` |
 | 29 | `pair_value` | `IKeyValuePair<K, V>` |
+| 30 | `create_reference` | `IMemoryBuffer` |
 
 The type flags say which protocols a type implements and the roles say which
 members those protocols call, so the two are written together. A name would
