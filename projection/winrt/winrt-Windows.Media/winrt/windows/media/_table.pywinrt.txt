@@ -13,7 +13,7 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concr
             in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
-class Windows.Media.AudioBuffer python_type closeable
+class Windows.Media.AudioBuffer python_type closeable memory_buffer
     py AudioBuffer
     signature rc(Windows.Media.AudioBuffer;{35175827-724b-4c6a-b130-f6537f9ae0d0})
     default Windows.Media.IAudioBuffer
