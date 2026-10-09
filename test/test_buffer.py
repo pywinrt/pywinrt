@@ -2,6 +2,7 @@ import sys
 import unittest
 
 import winrt.windows.foundation as wf
+import winrt.windows.graphics.imaging as wgi
 import winrt.windows.storage.streams as wss
 
 
@@ -92,6 +93,47 @@ class TestBuffer(unittest.TestCase):
 
             reference.close()
 
+    def test_memory_buffer_exports_a_buffer(self) -> None:
+        with wf.MemoryBuffer(4) as memory_buffer:
+            with memoryview(memory_buffer) as view:
+                self.assertEqual(len(view), 4)
+                view[0] = 42
+
+            with memoryview(memory_buffer) as view:
+                self.assertEqual(view[0], 42)
+
+    def test_memory_buffer_view_outlives_the_buffer(self) -> None:
+        memory_buffer = wf.MemoryBuffer(4)
+        view = memoryview(memory_buffer)
+        view[0] = 42
+
+        memory_buffer.close()
+        del memory_buffer
+
+        self.assertEqual(view[0], 42)
+        view.release()
+
+    def test_closed_memory_buffer_exports_nothing(self) -> None:
+        memory_buffer = wf.MemoryBuffer(4)
+        memory_buffer.close()
+
+        with memoryview(memory_buffer) as view:
+            self.assertEqual(len(view), 0)
+
+    def test_bitmap_stays_locked_while_a_view_exists(self) -> None:
+        bitmap = wgi.SoftwareBitmap(wgi.BitmapPixelFormat.BGRA8, 2, 2)
+
+        with bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ_WRITE) as locked:
+            view = memoryview(locked)
+
+        self.assertEqual(len(view), 2 * 2 * 4)
+
+        with self.assertRaises(PermissionError):
+            bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ)
+
+        view.release()
+        bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ).close()
+
     @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
     def test_is_collections_abc_buffer_subclass(self) -> None:
         from collections.abc import Buffer
@@ -103,4 +145,5 @@ class TestBuffer(unittest.TestCase):
             wf.MemoryBuffer(4) as memory_buffer,
             memory_buffer.create_reference() as reference,
         ):
+            self.assertIsInstance(memory_buffer, Buffer)
             self.assertIsInstance(reference, Buffer)
