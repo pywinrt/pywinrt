@@ -119,6 +119,7 @@ namespace py::table
         inline constexpr uint32_t buffer_length = 1 << 20;
         inline constexpr uint32_t integer = 1 << 21;
         inline constexpr uint32_t flags_enum = 1 << 22;
+        inline constexpr uint32_t memory_buffer = 1 << 23;
     } // namespace type_flags
 
     enum class group_kind : uint32_t

@@ -1155,6 +1155,108 @@ namespace py::interp
         }
 
         /**
+         * Closes and lets go of the reference @p abi, which an export of the
+         * IMemoryBuffer @p self created, without the GIL. A release cannot
+         * raise, so a failure to close is reported as unraisable.
+         */
+        void close_own_reference(PyObject* self, void* abi) noexcept
+        {
+            winrt::Windows::Foundation::IMemoryBufferReference reference{nullptr};
+            winrt::attach_abi(reference, abi);
+
+            winrt::hresult failure;
+
+            {
+                auto _gil = release_gil();
+
+                try
+                {
+                    reference.Close();
+                }
+                catch (...)
+                {
+                    failure = winrt::to_hresult();
+                }
+
+                reference = nullptr;
+            }
+
+            if (failure == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                winrt::throw_hresult(failure);
+            }
+            catch (...)
+            {
+                to_PyErr();
+            }
+
+            PyErr_WriteUnraisable(self);
+        }
+
+        /**
+         * __buffer__ of an IMemoryBuffer.
+         *
+         * Its memory is reached through an IMemoryBufferReference, and closing
+         * one frees the memory once the buffer is closed or released too. So
+         * each export creates a reference that only the view can reach, and
+         * closes it when the view is released: the memory stays for as long
+         * as the view, whatever is done with the buffer meanwhile.
+         */
+        int memory_buffer_owner_view(
+            PyObject* self, Py_buffer* view, int flags) noexcept
+        {
+            try
+            {
+                // A class wrapper holds its default interface, which for a
+                // BitmapBuffer is not IMemoryBuffer.
+                winrt::Windows::Foundation::IInspectable object;
+                winrt::copy_from_abi(object, abi_of(self));
+
+                winrt::Windows::Foundation::IMemoryBufferReference reference{nullptr};
+                uint8_t* data{};
+                uint32_t size{};
+
+                {
+                    auto _gil = release_gil();
+                    reference = object.as<winrt::Windows::Foundation::IMemoryBuffer>()
+                                    .CreateReference();
+                    data = reference.data();
+                    size = reference.Capacity();
+                }
+
+                auto const abi = winrt::detach_abi(reference);
+
+                if (fill_buffer_view(self, view, flags, data, size) < 0)
+                {
+                    close_own_reference(self, abi);
+                    return -1;
+                }
+
+                view->internal = abi;
+                return 0;
+            }
+            catch (...)
+            {
+                view->obj = nullptr;
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * __release_buffer__ of an IMemoryBuffer.
+         */
+        void memory_buffer_owner_release(PyObject* self, Py_buffer* view) noexcept
+        {
+            close_own_reference(self, view->internal);
+        }
+
+        /**
          * len() of an IBuffer, which is the length of its buffer view.
          */
         Py_ssize_t ibuffer_length(PyObject* self) noexcept
@@ -1414,6 +1516,14 @@ namespace py::interp
                      ibuffer ? reinterpret_cast<void*>(ibuffer_length)
                              : reinterpret_cast<void*>(memory_buffer_length)});
             }
+        }
+        else if (implements(record, table::type_flags::memory_buffer))
+        {
+            slots.push_back(
+                {Py_bf_getbuffer, reinterpret_cast<void*>(memory_buffer_owner_view)});
+            slots.push_back(
+                {Py_bf_releasebuffer,
+                 reinterpret_cast<void*>(memory_buffer_owner_release)});
         }
     }
 

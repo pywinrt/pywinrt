@@ -1051,14 +1051,23 @@ Using native Python classes to access the memory is significantly more efficient
 than using the WinRT [Windows.Storage.Streams.IDataReader][IDataReader] or
 [Windows.Storage.Streams.IDataWriter][IDataWriter] classes.
 
-[Windows.Foundation.IMemoryBuffer][IMemoryBuffer] may also be accessed using the Python buffer
-protocol via the *Windows.Foundation.IMemoryBufferReference*. Closing the
-reference frees the memory once the memory buffer is closed or released too,
-so while a [`memoryview`][memoryview] or a NumPy array of the reference exists,
-closing it raises [`BufferError`][BufferError], as closing an [`mmap`][mmap]
-does, and the reference stays open. Release the view, or copy what it holds,
-before the end of a `with` block that closes the reference. A close made by
-WinRT itself cannot be refused.
+A [Windows.Foundation.IMemoryBuffer][IMemoryBuffer] - a `MemoryBuffer`, the
+`BitmapBuffer` of `SoftwareBitmap.lock_buffer()`, the `AudioBuffer` of
+`AudioFrame.lock_buffer()`, a tensor - supports the buffer protocol too, so
+[`memoryview`][memoryview] or `numpy.frombuffer()` reads and writes its memory
+directly. A view keeps the memory for as long as it exists, whatever is done
+with the buffer meanwhile, so it may outlive the `with` block that closes the
+buffer. A `SoftwareBitmap` stays locked while a view of its `BitmapBuffer`
+exists.
+
+A *Windows.Foundation.IMemoryBufferReference* supports the buffer protocol as
+well, and is what WebView2's `CoreWebView2SharedBuffer.buffer` returns. Closing
+the reference frees the memory once the memory buffer is closed or released
+too, so while a [`memoryview`][memoryview] or a NumPy array of the reference
+exists, closing it raises [`BufferError`][BufferError], as closing an
+[`mmap`][mmap] does, and the reference stays open. Release the view, or copy
+what it holds, before the end of a `with` block that closes the reference. A
+close made by WinRT itself cannot be refused.
 
 `len()` of a buffer is its length in bytes, and of a memory buffer reference its
 capacity, which is the length of a [`memoryview`][memoryview] of either. So
