@@ -50,7 +50,6 @@ on:
       # script's tests read
       - runtime/version.txt
       - runtime/pyproject.toml
-      - '!runtime/setup.py'
       - table/**
       - '!table/**/*.md'
       - '!table/**/*.toml'
@@ -99,7 +98,6 @@ on:
       # script's tests read
       - runtime/version.txt
       - runtime/pyproject.toml
-      - '!runtime/setup.py'
       - table/**
       - '!table/**/*.md'
       - '!table/**/*.toml'
