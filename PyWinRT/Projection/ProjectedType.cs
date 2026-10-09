@@ -52,6 +52,7 @@ class ProjectedType
 
         IsPyBuffer = iMemoryReference || iBuffer;
         PyBufferSize = iBuffer ? "Length" : "Capacity";
+        IsPyMemoryBuffer = type.ImplementsInterface("Windows.Foundation.IMemoryBuffer");
 
         var sortedInterfaces = DependencySort(
             type.Interfaces.Select(i => i.InterfaceType.Resolve())
@@ -235,6 +236,12 @@ class ProjectedType
     /// True if the type implements Windows.Storage.Streams.IBuffer or Windows.Storage.Streams.IMemoryBufferReference.
     /// </summary>
     public bool IsPyBuffer { get; }
+
+    /// <summary>
+    /// True if the type implements Windows.Foundation.IMemoryBuffer, whose
+    /// buffer the runtime exports through a reference of its own.
+    /// </summary>
+    public bool IsPyMemoryBuffer { get; }
 
     /// <summary>
     /// True if the type is a WinRT struct that is projected as a Python int

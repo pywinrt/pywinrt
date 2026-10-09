@@ -325,6 +325,13 @@ static class ObjectWriterExtensions
             didWriteLine = true;
         }
 
+        if (type.IsPyMemoryBuffer)
+        {
+            w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
+            w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
+            didWriteLine = true;
+        }
+
         if (type.IsPyMapping)
         {
             w.WriteMapPythonSpecialMethods(

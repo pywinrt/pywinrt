@@ -64,6 +64,7 @@ enum TableTypeFlags : uint
     BufferLength = 1 << 20,
     Integer = 1 << 21,
     FlagsEnum = 1 << 22,
+    MemoryBuffer = 1 << 23,
 }
 
 enum TableGroupKind : uint
@@ -537,6 +538,11 @@ sealed class TableWriter
             {
                 record.Flags |= TableTypeFlags.BufferLength;
             }
+        }
+
+        if (type.IsPyMemoryBuffer)
+        {
+            record.Flags |= TableTypeFlags.MemoryBuffer;
         }
     }
 
@@ -1538,6 +1544,7 @@ sealed class TableWriter
         ((uint)TableTypeFlags.BufferLength, "buffer_length"),
         ((uint)TableTypeFlags.Integer, "integer"),
         ((uint)TableTypeFlags.FlagsEnum, "flags_enum"),
+        ((uint)TableTypeFlags.MemoryBuffer, "memory_buffer"),
     ];
 
     private static readonly string[] groupKindNames =

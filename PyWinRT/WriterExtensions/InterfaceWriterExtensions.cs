@@ -97,6 +97,12 @@ static class InterfaceWriterExtensions
             w.WriteLine("def __len__(self) -> int: ...");
         }
 
+        if (type.Namespace == "Windows.Foundation" && type.Name == "IMemoryBuffer")
+        {
+            w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
+            w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
+        }
+
         if (
             type.Namespace == "Windows.Foundation.Collections"
             && (type.Name == "IMap" || type.Name == "IMapView")
