@@ -843,34 +843,58 @@ namespace py::interp
             }
         }
 
-        auto const overridables = entry.owner->table->type(entry.index).overridables();
-
+        // Each WinRT class in the chain lists the overridable interfaces it
+        // declares itself, and the Python class may override a member of any of
+        // them, so every class in the MRO is asked, from the one derived from
+        // to the root. The bases are types already built, so nothing is
+        // imported here. The first interface found names the object, as the
+        // first one the most derived class declares does in C++/WinRT.
         type_entry* named{};
 
-        for (uint32_t i = 0; i < overridables.size(); i++)
+        auto const* const mro = type->tp_mro;
+
+        for (Py_ssize_t m = 0; m < PyTuple_GET_SIZE(mro); m++)
         {
-            auto* const iface = ensure_named_entry(*entry.owner, overridables[i]);
-            if (!iface)
+            auto* const base = find_type_entry(
+                reinterpret_cast<PyTypeObject*>(PyTuple_GET_ITEM(mro, m)));
+            if (!base)
             {
-                return nullptr;
+                continue;
             }
 
-            // An overridable interface is exclusive to the class, so the
-            // class's own record is where its members are written down.
-            if (!ensure_interface_vtable(*iface, entry))
+            if (base->category != table::category::class_)
             {
-                return nullptr;
+                continue;
             }
 
-            if (!named)
-            {
-                named = iface;
-            }
+            auto const overridables
+                = base->owner->table->type(base->index).overridables();
 
-            if (std::find(interfaces.begin(), interfaces.end(), iface)
-                == interfaces.end())
+            for (uint32_t i = 0; i < overridables.size(); i++)
             {
-                interfaces.push_back(iface);
+                auto* const iface = ensure_named_entry(*base->owner, overridables[i]);
+                if (!iface)
+                {
+                    return nullptr;
+                }
+
+                // An overridable interface is exclusive to the class, so the
+                // class's own record is where its members are written down.
+                if (!ensure_interface_vtable(*iface, *base))
+                {
+                    return nullptr;
+                }
+
+                if (!named)
+                {
+                    named = iface;
+                }
+
+                if (std::find(interfaces.begin(), interfaces.end(), iface)
+                    == interfaces.end())
+                {
+                    interfaces.push_back(iface);
+                }
             }
         }
 
