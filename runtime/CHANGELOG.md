@@ -10,5 +10,17 @@ repository](../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Added
+- An `IMemoryBuffer` such as a `MemoryBuffer` now supports the buffer protocol.
+
+### Changed
+- `op.completed = None` and `op.progress = None` now raise `TypeError`.
+
+### Deprecated
+- `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
+
 ### Fixed
+- Fixed `Array(T, list)` reading freed memory if a conversion edits the list.
+- Fixed closing an `IMemoryBufferReference` with a live `memoryview` crashing.
+- Fixed `_measure_override()` and the like never called on a `Grid` subclass.
 - Fixed iterating over a WinRT map, or its keys or items, leaking memory.
