@@ -393,7 +393,7 @@ class IAsyncAction(IAsyncInfo, winrt.system.Object):
     # Windows.Foundation.AsyncActionCompletedHandler Windows.Foundation.IAsyncAction::get_Completed()
     @_property
     @abstractmethod
-    def completed(self) -> AsyncActionCompletedHandler: ...
+    def completed(self) -> AsyncActionCompletedHandler | None: ...
     # System.Void Windows.Foundation.IAsyncAction::put_Completed(Windows.Foundation.AsyncActionCompletedHandler)
     @completed.setter
     @abstractmethod
@@ -415,7 +415,7 @@ class IAsyncActionWithProgress[TProgress](IAsyncInfo, winrt.system.Object):
     # Windows.Foundation.AsyncActionProgressHandler`1<TProgress> Windows.Foundation.IAsyncActionWithProgress`1::get_Progress()
     @_property
     @abstractmethod
-    def progress(self) -> AsyncActionProgressHandler[TProgress]: ...
+    def progress(self) -> AsyncActionProgressHandler[TProgress] | None: ...
     # System.Void Windows.Foundation.IAsyncActionWithProgress`1::put_Progress(Windows.Foundation.AsyncActionProgressHandler`1<TProgress>)
     @progress.setter
     @abstractmethod
@@ -423,7 +423,7 @@ class IAsyncActionWithProgress[TProgress](IAsyncInfo, winrt.system.Object):
     # Windows.Foundation.AsyncActionWithProgressCompletedHandler`1<TProgress> Windows.Foundation.IAsyncActionWithProgress`1::get_Completed()
     @_property
     @abstractmethod
-    def completed(self) -> AsyncActionWithProgressCompletedHandler[TProgress]: ...
+    def completed(self) -> AsyncActionWithProgressCompletedHandler[TProgress] | None: ...
     # System.Void Windows.Foundation.IAsyncActionWithProgress`1::put_Completed(Windows.Foundation.AsyncActionWithProgressCompletedHandler`1<TProgress>)
     @completed.setter
     @abstractmethod
@@ -468,7 +468,7 @@ class IAsyncOperationWithProgress[TResult, TProgress](IAsyncInfo, winrt.system.O
     # Windows.Foundation.AsyncOperationProgressHandler`2<TResult,TProgress> Windows.Foundation.IAsyncOperationWithProgress`2::get_Progress()
     @_property
     @abstractmethod
-    def progress(self) -> AsyncOperationProgressHandler[TResult, TProgress]: ...
+    def progress(self) -> AsyncOperationProgressHandler[TResult, TProgress] | None: ...
     # System.Void Windows.Foundation.IAsyncOperationWithProgress`2::put_Progress(Windows.Foundation.AsyncOperationProgressHandler`2<TResult,TProgress>)
     @progress.setter
     @abstractmethod
@@ -476,7 +476,7 @@ class IAsyncOperationWithProgress[TResult, TProgress](IAsyncInfo, winrt.system.O
     # Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<TResult,TProgress> Windows.Foundation.IAsyncOperationWithProgress`2::get_Completed()
     @_property
     @abstractmethod
-    def completed(self) -> AsyncOperationWithProgressCompletedHandler[TResult, TProgress]: ...
+    def completed(self) -> AsyncOperationWithProgressCompletedHandler[TResult, TProgress] | None: ...
     # System.Void Windows.Foundation.IAsyncOperationWithProgress`2::put_Completed(Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<TResult,TProgress>)
     @completed.setter
     @abstractmethod
@@ -498,7 +498,7 @@ class IAsyncOperation[TResult](IAsyncInfo, winrt.system.Object):
     # Windows.Foundation.AsyncOperationCompletedHandler`1<TResult> Windows.Foundation.IAsyncOperation`1::get_Completed()
     @_property
     @abstractmethod
-    def completed(self) -> AsyncOperationCompletedHandler[TResult]: ...
+    def completed(self) -> AsyncOperationCompletedHandler[TResult] | None: ...
     # System.Void Windows.Foundation.IAsyncOperation`1::put_Completed(Windows.Foundation.AsyncOperationCompletedHandler`1<TResult>)
     @completed.setter
     @abstractmethod
