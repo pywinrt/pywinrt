@@ -148,6 +148,7 @@ enum TableMemberRole : uint
     Split = 27,
     PairKey = 28,
     PairValue = 29,
+    CreateReference = 30,
 }
 
 enum TableParamFlags : uint
@@ -602,6 +603,7 @@ sealed class TableWriter
         ["Windows.Foundation.IStringable.ToString"] = TableMemberRole.ToString,
         ["Windows.Foundation.IReference`1.get_Value"] = TableMemberRole.Value,
         ["Windows.Foundation.IClosable.Close"] = TableMemberRole.Close,
+        ["Windows.Foundation.IMemoryBuffer.CreateReference"] = TableMemberRole.CreateReference,
     };
 
     /// <summary>
@@ -1612,6 +1614,7 @@ sealed class TableWriter
         "split",
         "pair_key",
         "pair_value",
+        "create_reference",
     ];
 
     private static readonly string[] paramCategoryNames =
