@@ -1579,6 +1579,82 @@
         ]
       },
       {
+        "name": "DerivedOverride",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.DerivedOverride::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.DerivedOverride::CallDerivedOverridable()",
+            "name": "CallDerivedOverridable",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.DerivedOverride::OnDerivedOverridable()",
+            "name": "OnDerivedOverridable",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken TestComponent.DerivedOverride::add_DerivedOverridableCalled(Windows.Foundation.EventHandler`1<System.Object>)",
+            "name": "add_DerivedOverridableCalled",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void TestComponent.DerivedOverride::remove_DerivedOverridableCalled(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_DerivedOverridableCalled",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "IRequiredFour",
         "methods": [
           {

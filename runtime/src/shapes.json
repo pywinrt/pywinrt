@@ -898,19 +898,19 @@
     "families": {
         "test-winrt": {
             "forward": {
-                "": 20,
+                "": 22,
                 "f4pp": 3,
                 "f8pp": 3,
                 "i8pp": 6,
                 "p": 157,
-                "pp": 49,
-                "ppp": 77,
+                "pp": 50,
+                "ppp": 78,
                 "pppp": 25,
                 "ppppp": 3,
                 "pppppppp": 32,
                 "{bc2pp}pp": 2,
                 "{bc2pp}ppp": 2,
-                "{i8}": 4,
+                "{i8}": 5,
                 "{i8}pp": 2,
                 "{u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1bc2pp}ppp": 2,
                 "{u1u2u4u8i2i4i8f4f8u4u2u2u1u1u1u1u1u1u1u1}pp": 2,
@@ -1092,7 +1092,7 @@
                     "System.Guid"
                 ]
             },
-            "implementable_interfaces": 52,
+            "implementable_interfaces": 53,
             "delegates": 50
         },
         "wasdk": {

@@ -509,6 +509,31 @@ class TestComponent.Derived composable python_type
             out object name=innerInterface implicit
             out class type=TestComponent.Derived return
 
+class TestComponent.DerivedOverride composable python_type
+    py DerivedOverride
+    signature rc(TestComponent.DerivedOverride;{cf8df027-661b-528a-ad5c-456201e0348b})
+    base TestComponent.Override
+    default TestComponent.IDerivedOverride
+    requires TestComponent.IDerivedOverride
+    requires TestComponent.IDerivedOverrideOverrides
+    composable TestComponent.IDerivedOverrideFactory
+    overridable TestComponent.IDerivedOverrideOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IDerivedOverrideFactory shape=117
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.DerivedOverride return
+    event derived_overridable_called
+        add add_DerivedOverridableCalled slot=7 inputs=1 outputs=1 declaring=TestComponent.IDerivedOverride shape=51
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DerivedOverridableCalled slot=8 inputs=1 outputs=0 declaring=TestComponent.IDerivedOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method call_derived_overridable
+        method CallDerivedOverridable slot=6 inputs=0 outputs=0 declaring=TestComponent.IDerivedOverride shape=0
+    method _on_derived_overridable
+        method OnDerivedOverridable slot=6 inputs=0 outputs=0 declaring=TestComponent.IDerivedOverrideOverrides shape=0 reverse=16 overridable
+
 delegate Windows.Foundation.EventHandler<System.Object> concrete
     py winrt.windows.foundation.EventHandler[Object]
     guid c50898f6-c536-5f47-8583-8b2c2438a13b
@@ -651,6 +676,15 @@ interface TestComponent.IDerived
 
 interface TestComponent.IDerivedFactory
     guid 4021afb8-c131-5be1-9cb9-be65d135f931
+
+interface TestComponent.IDerivedOverride
+    guid cf8df027-661b-528a-ad5c-456201e0348b
+
+interface TestComponent.IDerivedOverrideFactory
+    guid c15e6e14-0292-5eea-b3b8-5beb022f2d2e
+
+interface TestComponent.IDerivedOverrideOverrides
+    guid 29af5e3f-1046-5a3e-88c7-a2eadac91378
 
 interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
     py winrt.windows.foundation.collections._IIterable[Object]
