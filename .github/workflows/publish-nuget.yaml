@@ -3,6 +3,11 @@ on:
   push:
     tags: [v*]
 
+# the push is authenticated with an API key of its own rather than with the
+# workflow's token, which only has to check out the repository
+permissions:
+  contents: read
+
 jobs:
   build_and_publish:
     runs-on: windows-latest
