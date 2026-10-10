@@ -966,6 +966,15 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
     @async_test
+    async def test_async_action_await_twice(self) -> None:
+        op = tc.TestRunner.create_async_action(10)
+
+        await op
+        await op
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+
+    @async_test
     async def test_async_action_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(500)
 
@@ -1391,6 +1400,21 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertFalse(source.has_completed_handler)
         source.complete()
+
+    def test_async_completed_takes_one_handler(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        def handler(sender: wf.IAsyncOperation[int], status: wf.AsyncStatus) -> None:
+            pass
+
+        op.completed = handler
+
+        with self.assertRaises(OSError) as ctx:
+            op.completed = handler
+
+        self.assertEqual(ctx.exception.winerror, E_ILLEGAL_DELEGATE_ASSIGNMENT)
+        source.complete(1)
 
     def test_async_progress_refuses_none(self) -> None:
         # A C++/WinRT coroutine, which dereferences a null handler.

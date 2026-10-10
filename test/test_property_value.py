@@ -147,6 +147,16 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.DATE_TIME)
         self.assertEqual(ipv.get_date_time(), now)
 
+    @unittest.skipIf(
+        datetime(2024, 6, 1, 12).astimezone().utcoffset() == timedelta(0),
+        "the local time zone is UTC",
+    )
+    def test_create_datetime_naive_is_local_time(self) -> None:
+        naive = datetime(2024, 6, 1, 12)
+        o = wf.PropertyValue.create_date_time(naive)
+        ipv = o.as_(wf.IPropertyValue)
+        self.assertEqual(ipv.get_date_time(), naive.astimezone(UTC))
+
     def test_create_TimeSpan(self) -> None:
         td = timedelta(days=-1, seconds=2, microseconds=3)
         o = wf.PropertyValue.create_time_span(td)

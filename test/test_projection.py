@@ -22,6 +22,7 @@ import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+import winrt.windows.globalization as wg
 import winrt.windows.storage as ws
 import winrt.windows.storage.provider as wsp
 from winrt.system import Array, Int32, Object
@@ -369,6 +370,19 @@ class TestClasses(unittest.TestCase):
         self.assertEqual(instance.value, 0)
         instance.value = 7
         self.assertEqual(instance.value, 7)
+
+    def test_a_property_cannot_be_deleted(self) -> None:
+        # the stubs declare no deleter, so pyright refuses these too
+        with self.assertRaises(AttributeError):
+            del tc.Composable().value  # pyright: ignore[reportAttributeAccessIssue]
+
+        with self.assertRaises(AttributeError):
+            del wf.Uri("https://example.com/").host  # pyright: ignore[reportAttributeAccessIssue]
+
+    def test_a_keyword_name_gets_an_underscore(self) -> None:
+        # CurrencyIdentifiers.TRY, the Turkish lira
+        self.assertEqual(wg.CurrencyIdentifiers.try_, "TRY")
+        self.assertFalse(hasattr(wg.CurrencyIdentifiers, "try"))
 
     def test_a_derived_class_reaches_its_base(self) -> None:
         instance = tc.Derived()

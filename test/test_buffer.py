@@ -198,6 +198,15 @@ class TestBuffer(unittest.TestCase):
         with memoryview(memory_buffer) as view:
             self.assertEqual(len(view), 0)
 
+    def test_with_closes_the_memory_buffer(self) -> None:
+        memory_buffer = wf.MemoryBuffer(4)
+
+        with memory_buffer as entered:
+            self.assertIs(entered, memory_buffer)
+
+        with memoryview(memory_buffer) as view:
+            self.assertEqual(len(view), 0)
+
     def test_bitmap_stays_locked_while_a_view_exists(self) -> None:
         bitmap = wgi.SoftwareBitmap(wgi.BitmapPixelFormat.BGRA8, 2, 2)
 
