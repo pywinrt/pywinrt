@@ -155,7 +155,7 @@ class TestImplements(unittest.TestCase):
                 return "hi"
 
         # WinRT only ever calls the members this implements
-        seen = wf.IPropertyValue._from_(Value())  # type: ignore[abstract]
+        seen = wf.IPropertyValue._query_interface_(Value())  # type: ignore[abstract]
 
         self.assertEqual(seen.type, wf.PropertyType.STRING)
         self.assertFalse(seen.is_numeric_scalar)
@@ -181,7 +181,7 @@ class TestImplements(unittest.TestCase):
                 return None
 
         action = Action()  # type: ignore[abstract]
-        seen = wf.IAsyncAction._from_(action)
+        seen = wf.IAsyncAction._query_interface_(action)
 
         status: list[wf.AsyncStatus] = []
         # https://github.com/microsoft/pyright/issues/11833
