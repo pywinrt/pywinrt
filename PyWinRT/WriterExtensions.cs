@@ -179,7 +179,8 @@ static class WriterExtensions
         var propType = prop.Property.PropertyType.ToPyTypeName(
             ns,
             getterNullabilityInfo.Return.Type,
-            packageMap
+            packageMap,
+            useBufferProtocol: false
         );
 
         w.WriteLine($"# {prop.GetMethod.Signature}");
