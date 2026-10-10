@@ -1160,7 +1160,7 @@ class Windows.Devices.Usb.UsbDescriptor python_type
             out uint8 return
     method read_descriptor_buffer
         method ReadDescriptorBuffer slot=8 inputs=1 outputs=0 declaring=Windows.Devices.Usb.IUsbDescriptor shape=4
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
 
 class Windows.Devices.Usb.UsbDevice python_type closeable
     py UsbDevice
@@ -1207,7 +1207,7 @@ class Windows.Devices.Usb.UsbDevice python_type closeable
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
         method SendControlInTransferAsync slot=8 inputs=2 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=117
             in class type=Windows.Devices.Usb.UsbSetupPacket name=setupPacket
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IBuffer> return
     method send_control_out_transfer_async
         method SendControlOutTransferAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Usb.IUsbDevice shape=51

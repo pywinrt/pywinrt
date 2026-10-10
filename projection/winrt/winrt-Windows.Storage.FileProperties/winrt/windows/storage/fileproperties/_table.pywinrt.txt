@@ -1117,7 +1117,7 @@ class Windows.Storage.FileProperties.StorageItemThumbnail python_type closeable
             out interface type=Windows.Storage.Streams.IOutputStream return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
