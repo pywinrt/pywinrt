@@ -128,6 +128,13 @@ an [`enum.IntEnum`](https://docs.python.org/3/library/enum.html#enum.IntEnum) ty
 or if the `[Flags]` attribute is present, the type is
 projected as an [`enum.IntFlag`](https://docs.python.org/3/library/enum.html#enum.IntFlag) type.
 
+A newer version of Windows can return a value that the installed package
+was generated without. Such a value is still an instance of the enum: it
+equals its number and is named with it, as in `"99"`, but it is not one of the
+enum's members, so it is not listed when the enum is iterated. Calling an enum
+with a number it has no member for gives the same kind of value rather than a
+`ValueError`. A flags enum keeps a bit it has no member for in the same way.
+
 An array of enums is named with the enum type itself, as in
 `Array(SomeEnum, 3)`. A buffer passed where such an array is expected uses
 the `"i"` format string for a regular enum and `"I"` for a flags enum.
