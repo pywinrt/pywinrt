@@ -39,6 +39,7 @@ all = [
     "winrt-Windows.UI[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml.Controls[all]>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Data[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml.Input[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml.Interop[all]>=4!10.0.28000.2705",
     "winrt-Windows.UI.Xaml.Media[all]>=4!10.0.28000.2705",

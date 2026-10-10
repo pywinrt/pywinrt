@@ -49,6 +49,7 @@ all = [
     "winrt-Windows.Devices.Printers.Extensions[all]>=4!10.0.28000.2705",
     "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
     "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Graphics.Printing[all]>=4!10.0.28000.2705",
     "winrt-Windows.Media.SpeechRecognition[all]>=4!10.0.28000.2705",
     "winrt-Windows.Security.Authentication.Web[all]>=4!10.0.28000.2705",
     "winrt-Windows.Security.Authentication.Web.Provider[all]>=4!10.0.28000.2705",

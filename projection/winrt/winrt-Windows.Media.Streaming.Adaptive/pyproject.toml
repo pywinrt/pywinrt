@@ -34,6 +34,7 @@ dependencies = [
 all = [
     "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
     "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Media.Core[all]>=4!10.0.28000.2705",
     "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
     "winrt-Windows.Web.Http[all]>=4!10.0.28000.2705",
 ]

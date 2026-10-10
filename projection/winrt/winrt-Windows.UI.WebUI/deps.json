@@ -26,6 +26,7 @@
         "winrt-Windows.Devices.Printers.Extensions",
         "winrt-Windows.Foundation",
         "winrt-Windows.Foundation.Collections",
+        "winrt-Windows.Graphics.Printing",
         "winrt-Windows.Media.SpeechRecognition",
         "winrt-Windows.Security.Authentication.Web",
         "winrt-Windows.Security.Authentication.Web.Provider",

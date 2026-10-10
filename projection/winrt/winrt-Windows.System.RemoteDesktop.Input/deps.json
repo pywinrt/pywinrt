@@ -9,5 +9,6 @@
     "required": [
     ],
     "referenced": [
+        "winrt-Windows.Foundation"
     ]
 }
