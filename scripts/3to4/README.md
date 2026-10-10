@@ -186,6 +186,9 @@ source file. The third line gives the new name that should be used.
 Some editors, like VS Code, will automatically turn the first line into a link
 that can jump to the location in the source file.
 
+A file the script cannot read or parse is named on standard error and skipped,
+the rest are still inspected, and the script then exits with status 1.
+
 A requirements file, a `pyproject.toml` or a `setup.py` is passed the same way,
 and a requirement is reported with what it should become:
 

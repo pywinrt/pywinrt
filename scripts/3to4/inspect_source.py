@@ -4,6 +4,7 @@ import csv
 import io
 import pathlib
 import re
+import sys
 import tokenize
 from collections.abc import Iterator
 from typing import NamedTuple
@@ -420,6 +421,19 @@ def find_requirements(source: str, lines: list[str], python: bool) -> Iterator[M
             yield Match(number, found.start(), match_text, new_text)
 
 
+def read(path: pathlib.Path, python: bool) -> str:
+    """
+    The text of @p path: Python in the encoding its BOM or coding cookie
+    declares, as the interpreter reads it, and anything else as UTF-8, with or
+    without a BOM.
+    """
+    if python:
+        with tokenize.open(path) as f:
+            return f.read()
+
+    return path.read_bytes().decode("utf-8-sig")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Find what may need changing to move code from PyWinRT v3 to v4."
@@ -428,13 +442,28 @@ if __name__ == "__main__":
         "files", help="Files to inspect", nargs="+", type=pathlib.Path, metavar="file"
     )
     args = parser.parse_args()
+    # a file that cannot be read is reported and the rest are still inspected
+    failed = False
 
     for path in args.files:
-        source = path.read_bytes().decode()
-        lines = split_lines(source)
         # a stub is Python too, and its imports are what the report is about
         python = path.suffix in (".py", ".pyi")
-        tree = ast.parse(source, path) if python else None
+
+        try:
+            source = read(path, python)
+            tree = ast.parse(source, path) if python else None
+        except (OSError, UnicodeDecodeError) as error:
+            print(f"{path}: cannot read: {error}", file=sys.stderr)
+            failed = True
+            continue
+        except SyntaxError as error:
+            # an unknown coding cookie is one too, and has no position
+            where = f"{path}:{error.lineno}:{error.offset}" if error.lineno else path
+            print(f"{where}: cannot parse: {error.msg}", file=sys.stderr)
+            failed = True
+            continue
+
+        lines = split_lines(source)
         matches = list(find(tree, lines)) if tree else []
         matches += find_requirements(source, lines, python)
 
@@ -442,3 +471,5 @@ if __name__ == "__main__":
             print(f"{path}:{match.line}:{match.column + 1}")
             print("possible match:", match.name)
             print("rename to:", match.rename_to)
+
+    sys.exit(1 if failed else 0)
