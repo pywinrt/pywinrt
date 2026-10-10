@@ -1048,13 +1048,15 @@ async def download(operation) -> None:
 
 ### Buffers
 
-[Windows.Storage.Streams.IBuffer][IBuffer] is projected as
+A method parameter of type [Windows.Storage.Streams.IBuffer][IBuffer] takes
+any Python object that implements the buffer protocol, for example, a
+[`bytearray`](https://docs.python.org/3/builtins/stdtypes.html#bytearray),
+[`bytes`][bytes], or a [`memoryview`][memoryview], and WinRT reads or writes
+its memory directly, without a copy. The type hints name such a parameter
 [`winrt.system.Buffer`](api/system.md#buffer),
 which is an alias for [`collections.abc.Buffer`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer).
-When used as a method parameter, any Python object that implements the buffer
-protocol can be used, for example, a [`bytearray`](https://docs.python.org/3/builtins/stdtypes.html#bytearray),
-[`bytes`][bytes], or a [`memoryview`][memoryview], and WinRT reads or writes
-its memory directly, without a copy.
+An `IBuffer` that WinRT hands back is typed as `IBuffer`, which supports the
+buffer protocol and `len()` too and has `length` and `capacity`.
 
 Where WinRT writes into the buffer, as `read_async()` of a stream does, the
 object has to be writable, so a `bytearray` rather than `bytes`, and a read-only

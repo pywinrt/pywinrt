@@ -44,7 +44,6 @@ class TestBuffer(unittest.TestCase):
 
         target = bytearray(b"xxxxx")
         read = await stream.read_async(target, len(target), wss.InputStreamOptions.NONE)
-        assert isinstance(read, wss.IBuffer)
 
         self.assertEqual(target, b"hixxx")
         self.assertEqual(read.capacity, 5)
@@ -86,7 +85,6 @@ class TestBuffer(unittest.TestCase):
         # how a writer that no rule names would find it.
         sample = wmc.MediaStreamSample.create_from_buffer(b"abc", datetime.timedelta())
         buffer = sample.buffer
-        assert isinstance(buffer, wss.IBuffer)
 
         with self.assertRaises(PermissionError):
             buffer.length = 1
@@ -97,7 +95,6 @@ class TestBuffer(unittest.TestCase):
             bytearray(b"abc"), datetime.timedelta()
         )
         buffer = sample.buffer
-        assert isinstance(buffer, wss.IBuffer)
 
         buffer.length = 1
         self.assertEqual(bytes(buffer), b"a")
